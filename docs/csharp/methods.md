@@ -4,12 +4,12 @@ description: Información general sobre métodos, parámetros de método y valor
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810578"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495543"
 ---
 # <a name="methods-in-c"></a>Métodos de C#
 
@@ -61,7 +61,7 @@ También se pueden usar *argumentos con nombre* en lugar de argumentos posiciona
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-Un método se puede invocar con argumentos posicionales y argumentos con nombre. Pero un argumento posicional no puede seguir a un argumento con nombre. En el ejemplo siguiente se invoca el método `TestMotorcycle.Drive` del ejemplo anterior con un argumento posicional y un argumento con nombre.
+Un método se puede invocar con argumentos posicionales y argumentos con nombre. Pero los argumentos con nombre solo pueden ir detrás de argumentos posicionales si están en la posición correcta. En el ejemplo siguiente se invoca el método `TestMotorcycle.Drive` del ejemplo anterior con un argumento posicional y un argumento con nombre.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 

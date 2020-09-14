@@ -1,21 +1,21 @@
 ---
-title: Introducción al lenguaje C# y .NET Framework
+title: Introducción al lenguaje C# y .NET
 description: Conozca los conceptos básicos de C# y .NET. Obtenga información general sobre el lenguaje C# y el ecosistema .NET.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 55b90d10a1d8ac8534ba98e1cc5af906d69822a6
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9e84726a8f6056c5beeedae9081a68980150efdd
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100839"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465174"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introducción al lenguaje C# y .NET Framework
+# <a name="introduction-to-the-c-language-and-net"></a>Introducción al lenguaje C# y .NET
 
-C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que permite a los desarrolladores crear una gran variedad de aplicaciones seguras y sólidas que se ejecutan en el ecosistema de .NET. El ecosistema de .NET está compuesto por todas las implementaciones de .NET, incluidas, entre otras, [.NET Core](../../core/index.yml) y [.NET Framework](../../framework/index.yml). Este artículo se centra en .NET Framework. Puede usar C# para crear aplicaciones cliente de Windows, servicios web XML, componentes distribuidos, aplicaciones cliente-servidor, aplicaciones de base de datos y muchas, muchas más cosas.
+C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que permite a los desarrolladores crear una gran variedad de aplicaciones seguras y sólidas que se ejecutan en el ecosistema de .NET. El ecosistema de .NET está compuesto por todas las implementaciones de .NET, incluidas, entre otras, [.NET Core](../../core/introduction.md) y [.NET Framework](../../framework/index.yml). Este artículo se centra en .NET Framework. Puede usar C# para crear aplicaciones cliente de Windows, servicios web XML, componentes distribuidos, aplicaciones cliente-servidor, aplicaciones de base de datos y muchas, muchas más cosas.
 
 > [!NOTE]
 > En la documentación de Visual C# se supone que comprende los conceptos básicos de programación. Si es principiante, puede que quiera examinar Visual C# Express, que está disponible en Internet. También puede aprovechar los libros y recursos web sobre C# para aprender sobre habilidades prácticas de programación.
@@ -44,19 +44,19 @@ Los siguientes son recursos adicionales de C#:
 - Para más información sobre aspectos específicos del lenguaje C#, consulte la [referencia de C#](../language-reference/index.md).
 - Para más información sobre LINQ, consulte [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).
 
-## <a name="net-framework-platform-architecture"></a>Arquitectura de la plataforma .NET Framework
+## <a name="net-platform-architecture"></a>Arquitectura de la plataforma .NET
 
-Los programas de C# se ejecutan en .NET Framework, un componente integral de Windows que incluye un sistema de ejecución virtual denominado Common Language Runtime (CLR) y un conjunto unificado de bibliotecas de clases. El CLR es la implementación comercial de Microsoft de Common Language Infrastructure (CLI), un estándar internacional que es la base para la creación de entornos de ejecución y desarrollo en los que los lenguajes y las bibliotecas trabajan juntos sin problemas.
+Los programas de C# se ejecutan en .NET, un componente integral de Windows que incluye un sistema de ejecución virtual llamado Common Language Runtime (CLR) y un conjunto unificado de bibliotecas de clases. El CLR es la implementación comercial de Microsoft de Common Language Infrastructure (CLI), un estándar internacional que es la base para la creación de entornos de ejecución y desarrollo en los que los lenguajes y las bibliotecas trabajan juntos sin problemas.
 
 El código fuente escrito en C# se compila en un [lenguaje intermedio (IL)](../../standard/managed-code.md) que guarda conformidad con la especificación de CLI. El código y los recursos IL, como mapas de bits y cadenas, se almacenan en disco en un archivo ejecutable denominado ensamblado, normalmente con la extensión .exe o .dll. Un ensamblado contiene un manifiesto que proporciona información sobre los tipos, la versión, la referencia cultural y los requisitos de seguridad del ensamblado.
 
-Cuando se ejecuta el programa de C#, el ensamblado se carga en el CLR, el cual podría realizar diversas acciones en función de la información en el manifiesto. Luego, si se cumplen los requisitos de seguridad, el CLR realiza la compilación Just-In-Time (JIT) para convertir el código IL en instrucciones máquina nativas. El CLR también proporciona otros servicios relacionados con la recolección de elementos no utilizados, el control de excepciones y la administración de recursos. El código que se ejecuta en el CLR se conoce a veces como "código administrado", a diferencia del "código no administrado" que se compila en lenguaje de máquina nativo destinado a un sistema específico. En el siguiente diagrama se ilustran las relaciones de tiempo de compilación y tiempo de ejecución de archivos de código fuente de C#, las bibliotecas de clases de .NET Framework, los ensamblados y el CLR.
+Cuando se ejecuta el programa de C#, el ensamblado se carga en el CLR, el cual podría realizar diversas acciones en función de la información en el manifiesto. Luego, si se cumplen los requisitos de seguridad, el CLR realiza la compilación Just-In-Time (JIT) para convertir el código IL en instrucciones máquina nativas. El CLR también proporciona otros servicios relacionados con la recolección de elementos no utilizados, el control de excepciones y la administración de recursos. El código que se ejecuta en el CLR se conoce a veces como "código administrado", a diferencia del "código no administrado" que se compila en lenguaje de máquina nativo destinado a un sistema específico. En el diagrama siguiente se ilustran las relaciones de tiempo de compilación y tiempo de ejecución de los archivos de código fuente de C#, las bibliotecas de clases de .NET, los ensamblados y el CLR.
 
 ![Desde el código fuente de C# a la ejecución de máquina](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)
 
-La interoperabilidad entre lenguajes es una característica fundamental de .NET Framework. Debido a que el código IL generado por el compilador de C# cumple la especificación de tipo común (CTS), este código puede interactuar con el código generado a partir de las versiones .NET de Visual Basic, Visual C++ o cualquiera de los más de 20 lenguajes compatibles con CTS. Un solo ensamblado puede contener varios módulos escritos en diferentes lenguajes .NET y los tipos se pueden hacer referencia mutuamente igual que si estuvieran escritos en el mismo lenguaje.
+La interoperabilidad entre lenguajes es una característica principal de .NET. Debido a que el código IL generado por el compilador de C# cumple la especificación de tipo común (CTS), este código puede interactuar con el código generado a partir de las versiones .NET de Visual Basic, Visual C++ o cualquiera de los más de 20 lenguajes compatibles con CTS. Un solo ensamblado puede contener varios módulos escritos en diferentes lenguajes .NET y los tipos se pueden hacer referencia mutuamente igual que si estuvieran escritos en el mismo lenguaje.
 
-Además de los servicios de tiempo de ejecución, .NET Framework también incluye una amplia biblioteca de más de 4000 clases organizadas en espacios de nombres que proporcionan una gran variedad de funciones útiles para todo, desde la entrada y la salida de archivos, pasando por la manipulación de cadenas para el análisis XML, hasta controles de formularios Windows Forms. La aplicación de C# típica usa mucho la biblioteca de clases de .NET Framework para controlar tareas comunes de infraestructura.
+Además de los servicios de tiempo de ejecución, .NET también incluye una amplia biblioteca de más de 4000 clases organizadas en espacios de nombres que proporcionan una gran variedad de funciones útiles para todo, desde la entrada y la salida de archivos, pasando por la manipulación de cadenas para el análisis XML, hasta controles de Windows Forms. En una aplicación de C# típica se usa la biblioteca de clases de .NET de forma extensa para controlar tareas comunes de infraestructura.
 
 Para más información sobre .NET Framework, consulte [Introducción a Microsoft .NET Framework](../../framework/get-started/overview.md).
 

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: 5e75fec12390cb694126c5bec684c40caa378915
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dff93496dfeceaf67777abe0b02ee2d620b3a5ca
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89139104"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466045"
 ---
 # <a name="event-c-reference"></a>event (Referencia de C#)
 
@@ -23,7 +23,7 @@ La palabra clave `event` se usa para declarar un evento en una clase de publicad
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo declarar y generar un evento que usa <xref:System.EventHandler> como el tipo de delegado subyacente. Para obtener el código de ejemplo completo que también muestra cómo usar el tipo delegado <xref:System.EventHandler%601> genérico y cómo suscribirse a un evento y crear un método de controlador de evento, consulte [Procedimiento Publicar eventos que cumplan las directrices de .NET Framework](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
+En el ejemplo siguiente se muestra cómo declarar y generar un evento que usa <xref:System.EventHandler> como el tipo de delegado subyacente. Para obtener el código de ejemplo completo que también muestra cómo usar el tipo delegado <xref:System.EventHandler%601> genérico y cómo suscribirse a un evento y crear un método de controlador de evento, vea [Procedimiento para publicar eventos que cumplan las directrices de .NET](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 

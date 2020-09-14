@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo controlar el recorte de aplicacion
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142263"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465421"
 ---
 # <a name="trimming-options"></a>Opciones de recorte
 
@@ -25,7 +25,7 @@ Al usar `Microsoft.NET.Sdk`, se realizará un recorte en el nivel de ensamblado 
 
 ## <a name="trimming-granularity"></a>Granularidad del recorte
 
-La siguiente configuración de granularidad controla la agresividad con la que se descarta el IL sin usar. Se puede establecer como una propiedad o como metadatos en un [ensamblado individual](#Trimmed-assemblies).
+La siguiente configuración de granularidad controla la agresividad con la que se descarta el IL sin usar. Se puede establecer como una propiedad o como metadatos en un [ensamblado individual](#trimmed-assemblies).
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -39,7 +39,7 @@ Los ensamblados con metadatos de `<IsTrimmable>true</IsTrimmable>`, pero sin un 
 
 ## <a name="trimmed-assemblies"></a>Ensamblados recortados
 
-Al publicar una aplicación recortada, el SDK calcula un elemento `ItemGroup` llamado `ManagedAssemblyToLink` que representa el conjunto de archivos que se va a procesar para el recorte. `ManagedAssemblyToLink` puede tener metadatos que controlan el comportamiento de recorte por ensamblado. Para establecer estos metadatos, cree un destino que se ejecute antes del destino `PrepareForILLink` integrado. En este ejemplo se muestra cómo habilitar el recorte de `MyAssembly`:
+Al publicar una aplicación recortada, el SDK calcula un elemento `ItemGroup` llamado `ManagedAssemblyToLink` que representa el conjunto de archivos que se va a procesar para el recorte. `ManagedAssemblyToLink` puede tener metadatos que controlan el comportamiento de recorte por ensamblado. Para establecer estos metadatos, cree un destino que se ejecute antes del destino `PrepareForILLink` integrado. En el ejemplo siguiente se muestra cómo habilitar el recorte de `MyAssembly`.
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -60,7 +60,7 @@ No agregue ni quite elementos de `ManagedAssemblyToLink`, porque el SDK procesa 
 
 - `<TrimMode>copyused</TrimMode>` o `<TrimMode>link</TrimMode>`
 
-  Controle la [granularidad del recorte](#Trimming-granularity) de este ensamblado. Esto tiene prioridad sobre el valor global de `TrimMode`. La configuración del valor `TrimMode` en un ensamblado implica `<IsTrimmable>true</IsTrimmable>`.
+  Controle la [granularidad del recorte](#trimming-granularity) de este ensamblado. Esto tiene prioridad sobre el valor global de `TrimMode`. La configuración del valor `TrimMode` en un ensamblado implica `<IsTrimmable>true</IsTrimmable>`.
 
 ## <a name="root-assemblies"></a>Ensamblados raíz
 
@@ -106,7 +106,7 @@ Esto incluirá advertencias sobre toda la aplicación, incluidas las de su propi
 
 ## <a name="warning-versions"></a>Versiones de advertencias
 
-El análisis de recorte respeta la propiedad [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) que controla la versión de las advertencias de análisis en el SDK. Hay otra propiedad que controla la versión de las advertencias de análisis de recorte de forma independiente (similar a `WarningLevel` para el compilador):
+El análisis de recorte respeta la propiedad [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) que controla la versión de las advertencias de análisis en el SDK. Hay otra propiedad que controla la versión de las advertencias de análisis de recorte de forma independiente (similar a `WarningLevel` para el compilador):
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

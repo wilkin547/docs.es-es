@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo documentar el código con comentar
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146322"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465304"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
@@ -35,7 +35,7 @@ Para generar el archivo XML en tiempo de compilación, realice una de las siguie
 
 - Si está desarrollando una aplicación mediante Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Propiedades**. En el cuadro de diálogo de propiedades, seleccione la pestaña **Compilar** y active **Archivo de documentación XML**. También puede cambiar la ubicación en la que el compilador escribe el archivo.
 
-- Si está compilando una aplicación de .NET Framework desde la línea de comandos, agregue la [opción del compilador -doc](language-reference/compiler-options/doc-compiler-option.md) al compilar.  
+- Si va a compilar una aplicación de .NET desde la línea de comandos, agregue la [opción del compilador -doc](language-reference/compiler-options/doc-compiler-option.md) al realizar la compilación.  
 
 Los comentarios de documentación XML usan tres barras diagonales (`///`) y un cuerpo de comentario con formato XML. Por ejemplo:
 
@@ -54,7 +54,7 @@ La biblioteca de ejemplo es compatible con cuatro operaciones aritméticas princ
 Ahora le interesa crear un documento de referencia de API desde el código para los desarrolladores de otras empresas que usan la biblioteca, pero no tienen acceso al código fuente.
 Como se mencionó anteriormente, las etiquetas de documentación XML pueden utilizarse para lograr esto. Ahora recibirá una introducción a las etiquetas XML estándares que admite el compilador de C#.
 
-## <a name="summary"></a>\<summary>
+## \<summary>
 
 La etiqueta `<summary>` agrega información breve sobre un tipo o miembro.
 Vamos a demostrar su uso agregándola a la definición de clase `Math` y al primer método `Add`. No dude en aplicarla al resto del código.
@@ -63,27 +63,27 @@ Vamos a demostrar su uso agregándola a la definición de clase `Math` y al prim
 
 La etiqueta `<summary>` es importante y se recomienda incluirla, dado que su contenido es la principal fuente de información sobre el tipo o el miembro en IntelliSense o en un documento de referencia de API.
 
-## <a name="remarks"></a>\<remarks>
+## \<remarks>
 
 La etiqueta `<remarks>` complementa la información sobre los tipos o los miembros que proporciona la etiqueta `<summary>`. En este ejemplo, solo la agregará a la clase.
 
 [!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-## <a name="returns"></a>\<returns>
+## \<returns>
 
 La etiqueta `<returns>` describe el valor devuelto de una declaración de método.
 Al igual que antes, en el ejemplo siguiente se muestra la etiqueta `<returns>` en el primer método `Add`. Puede hacer lo mismo en otros métodos.
 
 [!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-## <a name="value"></a>\<value>
+## \<value>
 
 La etiqueta `<value>` es similar a la etiqueta `<returns>`, salvo que se usa para propiedades.
 Supongamos que su biblioteca `Math` tenía una propiedad estática denominada `PI`. A continuación le mostramos cómo usaría esta etiqueta:
 
 [!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a>\<example>
+## \<example>
 
 La etiqueta `<example>` se usa para incluir un ejemplo en la documentación XML.
 Esto implica usar la etiqueta secundaria `<code>`.
@@ -92,14 +92,14 @@ Esto implica usar la etiqueta secundaria `<code>`.
 
 La etiqueta `code` conserva los saltos de línea y la sangría en los ejemplos más largos.
 
-## <a name="para"></a>\<para>
+## \<para>
 
 La etiqueta `<para>` se usa para dar formato al contenido dentro de la etiqueta primaria. `<para>` suele usarse dentro de una etiqueta, como `<remarks>` o `<returns>`, para dividir el texto en párrafos.
 Puede dar formato al contenido de la etiqueta `<remarks>` de su definición de clase.
 
 [!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-## <a name="c"></a>\<c>
+## \<c>
 
 También en el ámbito del formato, puede usar la etiqueta `<c>` para marcar una parte del texto como código.
 Es como la etiqueta `<code>`, pero insertada. Es útil si quiere mostrar un ejemplo de código rápido como parte del contenido de la etiqueta.
@@ -107,7 +107,7 @@ Vamos a actualizar la documentación de la clase `Math`.
 
 [!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<exception>
+## \<exception>
 
 Mediante el uso de la etiqueta `<exception>`, permite que los desarrolladores sepan que un método puede producir excepciones específicas.
 Si examina su biblioteca `Math`, verá que los dos métodos `Add` producen una excepción si se cumple una determinada condición. En cambio, no resulta tan obvio que el método entero `Divide` también produce una si el parámetro `b` es cero. Vamos a agregar documentación de la excepción a este método.
@@ -117,7 +117,7 @@ Si examina su biblioteca `Math`, verá que los dos métodos `Add` producen una e
 El atributo `cref` representa una referencia a una excepción que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia. El compilador emitirá una advertencia si su valor no puede resolverse.
 
-## <a name="see"></a>\<see>
+## \<see>
 
 La etiqueta `<see>` le permite crear un vínculo interactivo a una página de documentación para otro elemento de código. En el siguiente ejemplo, crearemos un vínculo interactivo entre los dos métodos `Add`.
 
@@ -126,7 +126,7 @@ La etiqueta `<see>` le permite crear un vínculo interactivo a una página de do
 `cref` es un atributo **necesario** que representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
-## <a name="seealso"></a>\<seealso>
+## \<seealso>
 
 La etiqueta `<seealso>` se usa de la misma manera que la etiqueta `<see>`. La única diferencia es que su contenido se suele colocar en una sección "Vea también". Aquí vamos a agregar una etiqueta `seealso` en el método entero `Add` para hacer referencia a otros métodos de la clase que aceptan parámetros enteros:
 
@@ -135,33 +135,33 @@ La etiqueta `<seealso>` se usa de la misma manera que la etiqueta `<see>`. La ú
 El atributo `cref` representa una referencia a un tipo o a su miembro que está disponible desde el entorno de compilación actual.
 Puede ser cualquier tipo definido en el proyecto o un ensamblado de referencia.
 
-## <a name="param"></a>\<param>
+## \<param>
 
-La etiqueta `<param>` se usa para describir los parámetros de un método. Este es un ejemplo sobre el método doble `Add`: El parámetro que describe la etiqueta se especifica en el atributo **necesario** `name`.
+La etiqueta `<param>` se usa para describir los parámetros de un método. Aquí se muestra un ejemplo del método doble `Add`: el parámetro que la etiqueta describe se especifica en el atributo **necesario** `name`.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-## <a name="typeparam"></a>\<typeparam>
+## \<typeparam>
 
 La etiqueta `<typeparam>` se usa igual que la etiqueta `<param>`, pero sirve para que las declaraciones de método o tipo genérico describan un parámetro genérico.
 Agregue un método genérico rápido a su clase `Math` para comprobar si una cantidad es mayor que otra.
 
 [!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-## <a name="paramref"></a>\<paramref>
+## \<paramref>
 
 Puede darse la situación de que esté describiendo lo que hace un método en una etiqueta `<summary>` y le interese hacer referencia a un parámetro. La etiqueta `<paramref>` es perfecta para esto. Vamos a actualizar el resumen del método doble `Add`. Igual que en la etiqueta `<param>`, el nombre del parámetro se especifica en el atributo **necesario** `name`.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-## <a name="typeparamref"></a>\<typeparamref>
+## \<typeparamref>
 
 La etiqueta `<typeparamref>` se usa igual que la etiqueta `<paramref>`, pero sirve para que las declaraciones de método o tipo genérico describan un parámetro genérico.
 Puede usar el mismo método genérico que ha creado previamente.
 
 [!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a>\<list>
+## \<list>
 
 La etiqueta `<list>` se usa para dar formato a la información de la documentación en una lista ordenada, una lista sin ordenar o una tabla. Cree una lista sin ordenar con todas las operaciones matemáticas que admita su biblioteca `Math`.
 
@@ -169,13 +169,13 @@ La etiqueta `<list>` se usa para dar formato a la información de la documentaci
 
 Para crear una lista ordenada o una tabla, cambie el atributo `type` a `number` o `table`, respectivamente.
 
-## <a name="inheritdoc"></a>\<inheritdoc>
+## \<inheritdoc>
 
 Puede usar la etiqueta `<inheritdoc>` para heredar comentarios XML de clases base, interfaces y métodos similares. Esto elimina la acción de copiar y pegar no deseada de comentarios XML duplicados y mantiene los comentarios XML sincronizados automáticamente.
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
-### <a name="put-it-all-together"></a>En resumen
+### <a name="put-it-all-together"></a>Colocación de todo junto
 
 Si ha seguido este tutorial y ha aplicado las etiquetas al código en los casos en que era necesario, el código debe ser ahora similar al siguiente:
 
@@ -185,7 +185,7 @@ Desde su código, puede generar un sitio web de documentación detallada complet
 Es una pesadilla para los desarrolladores que quieran contribuir a este código, ya que hay mucha información que examinar.
 Afortunadamente, hay una etiqueta XML que le ayudará a resolverlo:
 
-## <a name="include"></a>\<include>
+## \<include>
 
 La etiqueta `<include>` le permite hacer referencia a los comentarios de un archivo XML independiente que describen los tipos y los miembros del código fuente, en vez de colocar los comentarios de documentación directamente en el archivo de código fuente.
 
@@ -211,7 +211,7 @@ El atributo `id`, que se puede usar en lugar de `name`, representa el identifica
 ### <a name="user-defined-tags"></a>Etiquetas definidas por el usuario
 
 Todas las etiquetas descritas anteriormente son las que reconoce el compilador de C#, pero el usuario puede definir sus propias etiquetas.
-Las herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Herramientas como Sandcastle proporcionan compatibilidad con etiquetas adicionales como [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) y [\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm), e incluso permiten [documentar espacios de nombres](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 También se pueden usar herramientas de generación de documentación internas o personalizadas con las etiquetas estándar y se admiten varios formatos de salida, de HTML a PDF.
 
 ## <a name="recommendations"></a>Recomendaciones

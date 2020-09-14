@@ -1,20 +1,20 @@
 ---
 title: Publicación de eventos que cumplan las directrices de .NET Framework (guía de programación de C#)
-description: Aprenda a publicar eventos que cumplan las instrucciones de .NET. Todos los eventos de la biblioteca de clases de .NET Framework se basan en el delegado EventHandler.
+description: Aprenda a publicar eventos que cumplan las instrucciones de .NET. Todos los eventos de la biblioteca de clases de .NET se basan en el delegado EventHandler.
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 1b802e236026911b55bafcb3f48d487c43bba174
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8cc8b0a9fdaeeb6ab6290630c5d78044c2696b9a
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302118"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466175"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>Procedimiento Publicar eventos que cumplan las directrices de .NET (guía de programación de C#)
 
-En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón de .NET estándar a las clases y structs. Todos los eventos de la biblioteca de clases de .NET Framework se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:
+En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón de .NET estándar a las clases y structs. Todos los eventos de la biblioteca de clases de .NET se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);

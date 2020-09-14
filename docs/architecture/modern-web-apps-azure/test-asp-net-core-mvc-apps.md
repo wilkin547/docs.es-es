@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126520"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465642"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -106,7 +106,7 @@ Si una clase de aplicación determinada tiene muchos métodos para probar (y, po
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Pruebas unitarias de aplicaciones ASP.NET Core
 
-En una aplicación ASP.NET Core bien diseñada, la mayor parte de la complejidad y la lógica de negocios se encapsulará en entidades de negocio y una variedad de servicios. La propia aplicación ASP.NET Core MVC con sus controladores, filtros, modelos de vista y vistas, no debería requerir muchas pruebas unitarias. Gran parte de la funcionalidad de una acción determinada se encuentra fuera del propio método de acción. Comprobar si el enrutamiento funciona correctamente o el control de errores global, no se puede realizar de forma eficaz con una prueba unitaria. Del mismo modo, los filtros, incluidos los de autenticación y validación del modelo y los de autorización, no se pueden someter a pruebas unitarias con una prueba que tiene como objetivo el método de acción de un controlador. Sin estas fuentes de comportamiento, la mayoría de los métodos de acción deberían ser pequeños, y delegar la mayor parte de su trabajo a servicios que se puedan probar de forma independiente al controlador que los usa.
+En una aplicación ASP.NET Core bien diseñada, la mayor parte de la complejidad y la lógica de negocios se encapsulará en entidades de negocio y una variedad de servicios. La propia aplicación ASP.NET Core MVC con sus controladores, filtros, modelos de vista y vistas, no debería requerir muchas pruebas unitarias. Gran parte de la funcionalidad de una acción determinada se encuentra fuera del propio método de acción. Con una prueba unitaria no se puede comprobar de forma eficaz si el enrutamiento o el control de errores globales funcionan correctamente. Del mismo modo, los filtros, incluidos los de autenticación y validación del modelo y los de autorización, no se pueden someter a pruebas unitarias con una prueba que tiene como objetivo el método de acción de un controlador. Sin estas fuentes de comportamiento, la mayoría de los métodos de acción deberían ser pequeños, y delegar la mayor parte de su trabajo a servicios que se puedan probar de forma independiente al controlador que los usa.
 
 En ocasiones tendrá que refactorizar el código para poder realizar pruebas unitarias en él. Con frecuencia, esto implica la identificación de abstracciones y el uso de la inserción de dependencias para tener acceso a la abstracción en el código que se quiere probar, en lugar de codificar directamente en la infraestructura. Por ejemplo, considere este método de acción simple para mostrar imágenes:
 
@@ -121,7 +121,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-La realización de pruebas unitarias en este método se complica debido a su dependencia directa de `System.IO.File`, que usa para leer el sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe mencionar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerlo con una prueba funcional en breve.
+La realización de pruebas unitarias en este método se complica debido a su dependencia directa de `System.IO.File`, que usa para leer el sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe destacar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerlo con una prueba funcional en breve.
 
 Si no se pueden realizar directamente pruebas unitarias del comportamiento del sistema de archivos y no se puede probar la ruta, ¿qué se puede probar? Después de la refactorización para que las pruebas unitarias sean posibles, puede detectar varios casos de prueba y comportamiento que falta, como el control de errores. ¿Qué hace el método cuando no se encuentra un archivo? ¿Qué debería hacer? En este ejemplo, el método refactorizado tiene el aspecto siguiente:
 
@@ -155,9 +155,9 @@ La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core debe
 
 Para las aplicaciones ASP.NET Core, la clase `TestServer` facilita considerablemente la escritura de pruebas funcionales. Para configurar un elemento `TestServer`, use directamente `WebHostBuilder` (o `HostBuilder`), como lo haría para su aplicación, o bien el tipo `WebApplicationFactory` (disponible a partir de la versión 2.1). Intente que el host de prueba coincida lo máximo posible con el host de producción para que las pruebas ejecuten un comportamiento similar al que tendrá la aplicación en la fase de producción. La clase `WebApplicationFactory` es útil para configurar ContentRoot de TestServer, que ASP.NET Core usa para localizar recursos estáticos como las vistas.
 
-Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente IClassFixture\<WebApplicationFactory\<TEntry>>, donde TEntry es la clase Startup de la aplicación web. Después de agregar esto, el accesorio de prueba puede crear un cliente con el método CreateClient de la fábrica:
+Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente `IClassFixture\<WebApplicationFactory\<TEntry>>`, donde `TEntry` es la clase `Startup` de la aplicación web. Después de agregarlo, el accesorio de prueba puede crear un cliente con el método `CreateClient` de la fábrica:
 
-```cs
+```csharp
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
@@ -171,9 +171,9 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Con frecuencia, le interesará configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para ello, debe crear una subclase de WebApplicationFactory\<TEntry> propia y reemplazar su método ConfigureWebHost. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
+Con frecuencia, le interesará configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para ello, cree una subclase propia de `WebApplicationFactory\<TEntry>` e invalide su método `ConfigureWebHost`. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
 
-```cs
+```csharp
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Esta prueba funcional ejecuta la pila de la aplicación ASP.NET Core MVC o Razor Pages completa, incluidos todo el software intermedio, filtros, enlazadores, etc., que puedan estar definidos. Comprueba que una ruta determinada ("/") devuelve el código de estado correcto esperado y la salida HTML. Lo hace sin configurar un servidor web real y de ese modo evita gran parte de la fragilidad que supone el uso de un servidor web real para realizar pruebas (por ejemplo, problemas con la configuración de firewall). Las pruebas funcionales que se ejecutan en TestServer normalmente son más lentas que las pruebas unitarias y de integración, pero son mucho más rápidas que las que se ejecutarían a través de la red a un servidor web de prueba. Use pruebas funcionales para garantizar que la pila de front-end de la aplicación funciona según lo previsto. Estas pruebas son especialmente útiles al buscar duplicados en controladores o páginas, y solucionar la duplicación mediante la adición de filtros. Idealmente, esta refactorización no cambiará el comportamiento de la aplicación, y un conjunto de pruebas funcionales comprobará que sea así.
+Esta prueba funcional ejecuta la pila de la aplicación ASP.NET Core MVC o Razor Pages completa, incluido todo el middleware, los filtros y los enlazadores, que puedan estar definidos. Comprueba que una ruta determinada ("/") devuelve el código de estado correcto esperado y la salida HTML. Lo hace sin configurar un servidor web real y evita gran parte de la fragilidad que supone el uso de un servidor web real para realizar pruebas (por ejemplo, problemas con la configuración de firewall). Las pruebas funcionales que se ejecutan en TestServer normalmente son más lentas que las pruebas unitarias y de integración, pero son mucho más rápidas que las que se ejecutarían a través de la red a un servidor web de prueba. Use pruebas funcionales para garantizar que la pila de front-end de la aplicación funciona según lo previsto. Estas pruebas son especialmente útiles al buscar duplicados en controladores o páginas, y solucionar la duplicación mediante la adición de filtros. Idealmente, esta refactorización no cambiará el comportamiento de la aplicación, y un conjunto de pruebas funcionales comprobará que sea así.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Referencias: prueba de aplicaciones ASP.NET Core MVC
 >

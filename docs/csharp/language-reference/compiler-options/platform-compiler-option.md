@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124869"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466019"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Opciones del compilador de C#)
 
@@ -35,7 +35,7 @@ anycpu (valor predeterminado), anycpu32bitpreferred, ARM, x64, x86 o Itanium.
 
 - **anycpu** (valor predeterminado) compila el ensamblado de forma que se pueda ejecutar en cualquier plataforma. La aplicación se ejecuta como un proceso de 64 bits siempre que sea posible y recurre a 32 bits solo cuando el modo está disponible.
 
-- **anycpu32bitpreferred** compila el ensamblado de forma que se pueda ejecutar en cualquier plataforma. La aplicación se ejecuta en modo de 32 bits en sistemas que admiten aplicaciones de 64 y 32 bits. Solo puede especificar esta opción para los proyectos que tienen como destino .NET Framework 4.5.
+- **anycpu32bitpreferred** compila el ensamblado de forma que se pueda ejecutar en cualquier plataforma. La aplicación se ejecuta en modo de 32 bits en sistemas que admiten aplicaciones de 64 y 32 bits. Solo puede especificar esta opción para los proyectos que tienen como destino .NET Framework 4.5 o versiones posteriores.
 
 - **ARM** compila el ensamblado de forma que pueda ejecutarse en un equipo que tenga un procesador Advanced RISC Machine (ARM).
 
@@ -57,7 +57,7 @@ En un sistema operativo de Windows de 64 bits:
 
 - Los archivos ejecutables compilados con **-platform:anycpu32bitpreferred** se ejecutan en el CLR de 32 bits.
 
-La configuración **anycpu32bitpreferred** es válida solo para archivos ejecutables (.exe) y requiere .NET Framework 4.5.
+El valor **anycpu32bitpreferred** solo es válido para archivos ejecutables (.EXE) y requiere .NET Framework 4.5 o una versión posterior.
 
 Para obtener más información sobre cómo desarrollar una aplicación para que se ejecute en un sistema operativo Windows de 64 bits, consulte [Aplicaciones de 64 bits](../../../framework/64-bit-apps.md).
 
@@ -67,7 +67,7 @@ Para obtener más información sobre cómo desarrollar una aplicación para que 
 
 2. Haga clic en la página de propiedades de **Compilar**.
 
-3. Modifique la propiedad **Destino de la plataforma** y, para los proyectos que tienen como destino .NET Framework 4.5, active o desactive la casilla **Preferencia de 32 bits**.
+3. Modifique la propiedad **Destino de la plataforma** y, para los proyectos que tienen como destino .NET Framework 4.5 o una versión posterior, active o desactive la casilla **Preferencia de 32 bits**.
 
 > [!NOTE]
 > `-platform` no está disponible en el entorno de desarrollo de Visual C# Express.

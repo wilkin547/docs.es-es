@@ -3,12 +3,12 @@ title: Introducción a los eventos
 description: Obtenga información sobre los eventos en .NET Core y nuestros objetivos de diseño del lenguaje para los eventos en esta introducción.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4da44c151244e8b5de34f550040c271131d9598c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146119"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465239"
 ---
 # <a name="introduction-to-events"></a>Introducción a los eventos
 
@@ -77,7 +77,7 @@ Cancela la suscripción con el operador `-=`:
 fileLister.Progress -= onProgress;
 ```
 
-Es importante tener en cuenta que he declarado una variable local para la expresión que representa el controlador de eventos. Eso garantiza que la cancelación de la suscripción quita el controlador.
+Es importante que declare una variable local para la expresión que representa el controlador de eventos. Eso garantiza que la cancelación de la suscripción quita el controlador.
 Si, en su lugar, ha usado el cuerpo de la expresión lambda, está intentando quitar un controlador que nunca ha estado asociado, lo que no produce ninguna acción.
 
 En el artículo siguiente, obtendrá más información sobre los modelos de eventos típicos y las diferentes variaciones de este ejemplo.

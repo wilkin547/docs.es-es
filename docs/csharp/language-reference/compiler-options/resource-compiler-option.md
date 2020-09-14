@@ -12,12 +12,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 963004820f56272b4f1b1d92ccc4d0a60493a4a0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128704"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465694"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (Opciones del compilador de C#)
 Inserta el recurso especificado en el archivo de salida.  
@@ -30,7 +30,7 @@ Inserta el recurso especificado en el archivo de salida.
   
 ## <a name="arguments"></a>Argumentos  
  `filename`  
- El archivo de recursos de .NET Framework que quiere insertar en el archivo de salida.  
+ El archivo de recursos de .NET que quiere insertar en el archivo de salida.  
   
  `identifier` (opcional)  
  El nombre lógico del recurso; nombre que se usa para cargar el recurso. El valor predeterminado es el nombre del archivo.  
@@ -43,7 +43,7 @@ Inserta el recurso especificado en el archivo de salida.
   
  De manera predeterminada, los recursos son públicos en el ensamblado cuando se crean mediante el compilador de C#. Para que sean privados, especifique el modificador de accesibilidad `private`. No se permite ninguna otra accesibilidad distinta de `public` o `private`.  
   
- Si `filename` es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede obtener acceso a él con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Para todos los demás recursos, use los métodos `GetManifestResource` de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.  
+ Si `filename` es un archivo de recursos de .NET creado, por ejemplo, con [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede acceder a él con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Para todos los demás recursos, use los métodos `GetManifestResource` de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.  
   
  **-res** es la forma abreviada de **-resource**.  
   

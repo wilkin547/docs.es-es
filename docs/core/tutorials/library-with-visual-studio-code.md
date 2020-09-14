@@ -2,12 +2,12 @@
 title: Creación de una biblioteca de clases .NET Standard mediante Visual Studio Code
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio Code.
 ms.date: 06/08/2020
-ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810864"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495517"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: Creación de una biblioteca .NET Standard mediante Visual Studio Code
 
@@ -56,6 +56,8 @@ Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "S
    dotnet new classlib -o StringLibrary
    ```
 
+   El comando `-o` o `--output` especifica la ubicación para colocar la salida generada.
+
    La salida del terminal se parece al ejemplo siguiente:
 
    ```output
@@ -63,7 +65,7 @@ Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "S
    Processing post-creation actions...
    Running 'dotnet restore' on StringLibrary\StringLibrary.csproj...
      Determining projects to restore...
-     Restore completed in 328.13 ms for C:\Projects\ClassLibraryProjects\StringLibrary\StringLibrary.csproj.
+     Restored C:\Projects\ClassLibraryProjects\StringLibrary\StringLibrary.csproj (in 328 ms).
    Restore succeeded.
    ```
 
@@ -110,11 +112,10 @@ Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "S
    La salida del terminal se parece al ejemplo siguiente:
 
    ```output
-   Microsoft (R) Build Engine version 16.6.0 for .NET Core
+   Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     You are using a preview version of .NET Core. See: https://aka.ms/dotnet-core-preview
      StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
@@ -139,7 +140,7 @@ Agregue una aplicación de consola que use la biblioteca de clases. La aplicaci�
    Processing post-creation actions...
    Running 'dotnet restore' on ShowCase\ShowCase.csproj...  
      Determining projects to restore...
-     Restore completed in 210.78 ms for C:\Projects\ClassLibraryProjects\ShowCase\ShowCase.csproj.
+     Restored C:\Projects\ClassLibraryProjects\ShowCase\ShowCase.csproj (in 210 ms).
    Restore succeeded.
    ```
 
@@ -200,9 +201,9 @@ En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a l
    Input: A string that starts with an uppercase letter
    Begins with uppercase? : Yes
 
-   A string that starts with a lowercase letter
-   Input: A string that starts with a lowercase letter
-   Begins with uppercase? : Yes
+   a string that starts with a lowercase letter
+   Input: a string that starts with a lowercase letter
+   Begins with uppercase? : No
    ```
 
 ## <a name="additional-resources"></a>Recursos adicionales

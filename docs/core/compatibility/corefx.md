@@ -2,12 +2,12 @@
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d8d886785ff71f22a3b2da65e973d899cf0371f6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720217"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465897"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -17,6 +17,8 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Propiedades obsoletas en ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
+| [Las comprobaciones intrínsecas de IsSupported de hardware pueden diferir en los tipos anidados](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [Nombres de parámetros modificados en ensamblados de referencia](#parameter-names-changed-in-reference-assemblies) | 5.0 |
 | [Rutas de acceso de URI con caracteres que no son ASCII se analizan correctamente en UNIX](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
 | [Reconocimiento de URI de rutas UNC en UNIX](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
@@ -50,6 +52,14 @@ En esta página se documentan los siguientes cambios importantes:
 | [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [obsolete-consoleloggeroptions-properties](../../../includes/core-changes/corefx/5.0/obsolete-consoleloggeroptions-properties.md)]
+
+***
+
+[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
 

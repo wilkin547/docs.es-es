@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
+ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656670"
+ms.lasthandoff: 09/06/2020
+ms.locfileid: "89501914"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -123,7 +123,7 @@ Para obtener más información, vea los siguientes recursos:
 
   Especifica la ruta de acceso del directorio de salida.
   
-  Si no se especifica, el valor predeterminado es *[project_file_folder]./bin/[configuration]/[framework]/publish/* para un archivo ejecutable dependiente del marco y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
+  Si no se especifica, el valor predeterminado es *[carpeta_de_archivo_de-_proyecto]./bin/[configuración]/[marco]/publish/* para un archivo ejecutable dependiente del marco y archivos binarios multiplataforma. El valor predeterminado es *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* para un archivo ejecutable autocontenido.
 
   En un proyecto web, si la carpeta de salida se encuentra en la carpeta del proyecto, los comandos `dotnet publish` posteriores dan como resultado carpetas de salida anidadas. Por ejemplo, si la carpeta del proyecto es *myproject* y la carpeta de salida de la publicación es *myproject/publish*, y ejecuta `dotnet publish` dos veces, la segunda ejecución coloca los archivos de contenido, como *.config* y *.json*, en *myproject/publish/publish*. Para evitar el anidamiento de carpetas de publicación, especifique una que no esté **directamente** en la carpeta del proyecto, o bien excluya la carpeta de publicación del proyecto. Para excluir una carpeta de publicación denominada *publishoutput*, agregue el elemento siguiente a un elemento `PropertyGroup` en el archivo *.csproj*:
 

@@ -4,13 +4,13 @@ description: El comando dotnet new crea proyectos de .NET Core basados en la pla
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 04/10/2020
-ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 09/01/2020
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173125"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495478"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,15 +62,15 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Aplicación de consola                          | [console](#console)             | [C#], F#, VB | Común/Consola                        | 1.0        |
 | Biblioteca de clases                                | [classlib](#classlib)           | [C#], F#, VB | Común/Biblioteca                        | 1.0        |
-| Aplicación WPF                              | [wpf](#wpf)                     | [C#]         | Común/WPF                            | 3.0        |
-| Biblioteca de clases de WPF                            | [wpflib](#wpf)                  | [C#]         | Común/WPF                            | 3.0        |
-| Biblioteca de controles personalizados WPF                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Común/WPF                            | 3.0        |
-| Biblioteca de controles de usuario de WPF                     | [wpfusercontrollib](#wpf)       | [C#]         | Común/WPF                            | 3.0        |
-| Aplicación de Windows Forms (WinForms)         | [winforms](#winforms)           | [C#]         | Común/WinForms                       | 3.0        |
-| Biblioteca de clases de Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#]         | Común/WinForms                       | 3.0        |
+| Aplicación WPF                              | [wpf](#wpf)                     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de clases de WPF                            | [wpflib](#wpf)                  | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de controles personalizados WPF                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Biblioteca de controles de usuario de WPF                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Común/WPF                            | 3.0 (5.0 para VB)|
+| Aplicación de Windows Forms (WinForms)         | [winforms](#winforms)           | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
+| Biblioteca de clases de Windows Forms (WinForms)       | [winformslib](#winforms)        | [C#], VB     | Común/WinForms                       | 3.0 (5.0 para VB)|
 | Servicio Worker                               | [worker](#web-others)           | [C#]         | Común/Worker/Web                     | 3.0        |
 | Proyecto de prueba unitaria                            | [mstest](#test)                 | [C#], F#, VB | Prueba/MSTest                           | 1.0        |
-| Proyecto de prueba de NUnit 3                         | [nunit](#nunit)                  | [C#], F#, VB | Prueba/NUnit                            | 2.1.400    |
+| Proyecto de prueba de NUnit 3                         | [nunit](#nunit)                 | [C#], F#, VB | Prueba/NUnit                            | 2.1.400    |
 | Elemento de prueba de NUnit 3                            | `nunit-test`                    | [C#], F#, VB | Prueba/NUnit                            | 2.2        |
 | Proyecto de prueba de xUnit                           | [xunit](#test)                  | [C#], F#, VB | Prueba/xUnit                            | 1.0        |
 | Componente Razor                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
@@ -78,7 +78,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor Aplicación de servidor                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Aplicación de Blazor WebAssembly                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
+| Aplicación de Blazor WebAssembly                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | Vacío de ASP.NET Core                           | [web](#web)                     | [C#], F#     | Web/Vacío                             | 1.0        |
 | Aplicación web de ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicación web de ASP.NET Core                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
