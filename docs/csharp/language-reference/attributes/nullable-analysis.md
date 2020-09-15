@@ -2,12 +2,12 @@
 title: 'Atributos reservados de C#: Análisis estático que admite un valor NULL'
 ms.date: 04/14/2020
 description: El compilador interpreta estos atributos para proporcionar un mejor análisis estático para los tipos de referencia que aceptan y que no aceptan valores NULL.
-ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102715"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656318"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Los atributos reservados contribuyen al análisis estático del estado NULL del compilador.
 
@@ -57,10 +57,10 @@ Considere una propiedad de lectura y escritura que nunca devuelve `null` porque 
 ```csharp
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName;
+private string _screenName;
 ```
 
 Al compilar el código anterior en un contexto en el que se desconocen los valores NULL, todo es correcto. Una vez que se habilitan los tipos de referencia que admiten un valor NULL, la propiedad `ScreenName` se convierte en una referencia que no acepta valores NULL. Eso es correcto para el descriptor de acceso `get`: nunca devuelve `null`. No es necesario que los autores de la llamada comprueben `null` en la propiedad devuelta. Pero ahora, al establecer la propiedad en `null`, se genera una advertencia. Para continuar admitiendo este tipo de código, agregue el atributo <xref:System.Diagnostics.CodeAnalysis.AllowNullAttribute?displayProperty=nameWithType> a la propiedad, como se muestra en el código siguiente:
@@ -69,10 +69,10 @@ Al compilar el código anterior en un contexto en el que se desconocen los valor
 [AllowNull]
 public string ScreenName
 {
-   get => screenName;
-   set => screenName = value ?? GenerateRandomScreenName();
+   get => _screenName;
+   set => _screenName = value ?? GenerateRandomScreenName();
 }
-private string screenName = GenerateRandomScreenName();
+private string _screenName = GenerateRandomScreenName();
 ```
 
 Es posible que tenga que agregar una directiva `using` para <xref:System.Diagnostics.CodeAnalysis> a fin de usar este y otros atributos descritos en este artículo. El atributo se aplica a la propiedad, no al descriptor de acceso `set`. El atributo `AllowNull` especifica *condiciones previas* y solo se aplica a las entradas. El descriptor de acceso `get` tiene un valor devuelto, pero no tiene argumentos de entrada. Por tanto, el atributo `AllowNull` solo se aplica al descriptor de acceso `set`.
@@ -132,14 +132,14 @@ Probablemente haya escrito un método como este para devolver `null` cuando no s
 Por los motivos descritos en [Definiciones genéricas y nulabilidad](../../nullable-migration-strategies.md#generic-definitions-and-nullability), esa técnica no funciona con los métodos genéricos. Puede tener un método genérico que siga un patrón similar:
 
 ```csharp
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 No puede especificar que el valor devuelto sea `T?`. El método devuelve `null` cuando no se encuentra el elemento buscado. Como no puede declarar un tipo de valor devuelto `T?`, agregue la anotación `MaybeNull` al valor devuelto del método:
 
 ```csharp
 [return: MaybeNull]
-public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
+public T Find<T>(IEnumerable<T> sequence, Func<T, bool> predicate)
 ```
 
 El código anterior informa a los autores de la llamada de que el contrato implica un tipo que no acepta valores NULL, pero el valor devuelto *puede* realmente ser NULL.  Use el atributo `MaybeNull` cuando la API deba ser un tipo que no acepta valores NULL, normalmente un parámetro de tipo genérico, pero puede haber casos en los que se devuelva `null`.
@@ -162,7 +162,7 @@ EnsureCapacity<string>(messages, 50);
 Después de habilitar los tipos de referencia NULL, querrá asegurarse de que el código anterior se compila sin advertencias. Cuando el método devuelve un valor, se garantiza que el argumento `storage` no es NULL. Pero es aceptable llamar a `EnsureCapacity` con una referencia nula. Puede convertir a `storage` en un tipo de referencia que acepte valores NULL y agregar la condición posterior `NotNull` a la declaración del parámetro:
 
 ```csharp
-public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
+public void EnsureCapacity<T>([NotNull] ref T[]? storage, int size)
 ```
 
 En el código anterior se expresa con claridad el contrato existente: Los autores de la llamada pueden pasar una variable con el valor `null`, pero se garantiza que el valor devuelto nunca será NULL. El atributo `NotNull` es muy útil para los argumentos `ref` y `out`, donde `null` se puede pasar como argumento, pero se garantiza que ese argumento no será NULL cuando el método devuelva un valor.
@@ -177,7 +177,7 @@ Las condiciones posteriores condicionales se especifican mediante los atributos 
 Es probable que esté familiarizado con el método `string` de <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. Este método devuelve `true` cuando el argumento es NULL o una cadena vacía. Es una forma de comprobación de valores NULL: No es necesario que los autores de la llamada comprueben los valores NULL del argumento si el método devuelve `false`. Para hacer que un método como este admita valores NULL, tendría que establecer el argumento en un tipo de referencia que admite un valor NULL y agregar el atributo `NotNullWhen`:
 
 ```csharp
-bool IsNullOrEmpty([NotNullWhen(false)]string? value);
+bool IsNullOrEmpty([NotNullWhen(false)] string? value);
 ```
 
 Esto informa al compilador de que no es necesario comprobar los valores NULL en el código cuyo valor devuelto sea `false`. La adición del atributo informa al análisis estático del compilador que `IsNullOrEmpty` realiza la comprobación de valores NULL necesaria: cuando devuelve `false`, el argumento de entrada no es `null`.
@@ -246,38 +246,44 @@ En el primer caso, puede agregar el atributo `DoesNotReturn` a la declaración d
 [DoesNotReturn]
 private void FailFast()
 {
-   throw new InvalidOperationException();
+    throw new InvalidOperationException();
 }
 
 public void SetState(object containedField)
 {
-   if (!isInitialized)
-      FailFast();
+    if (!isInitialized)
+    {
+        FailFast();
+    }
 
-   // unreachable code:
-   this.field = containedField;
+    // unreachable code:
+    _field = containedField;
 }
 ```
 
 En el segundo caso, se agrega el atributo `DoesNotReturnIf` a un parámetro booleano del método. Puede modificar el ejemplo anterior de esta manera:
 
 ```csharp
-private void FailFast([DoesNotReturnIf(false)]bool isValid)
+private void FailFast([DoesNotReturnIf(false)] bool isValid)
 {
-   if (!isValid)
-       throw new InvalidOperationException();
+    if (!isValid)
+    {
+        throw new InvalidOperationException();
+    }
 }
 
 public void SetState(object containedField)
 {
-   FailFast(isInitialized);
+    FailFast(isInitialized);
 
-   // unreachable code when "isInitialized" is false:
-   this.field = containedField;
+    // unreachable code when "isInitialized" is false:
+    _field = containedField;
 }
 ```
 
 ## <a name="summary"></a>Resumen
+
+[!INCLUDE [C# version alert](../../includes/csharp-version-alert.md)]
 
 Agregar tipos de referencia que aceptan valores NULL proporciona un vocabulario inicial para describir las expectativas de las API para las variables que podrían ser `null`. Los atributos adicionales proporcionan un vocabulario más completo para describir el estado NULL de las variables como condiciones previas y posteriores. Estos atributos describen con más claridad las expectativas y proporcionan una mejor experiencia para los desarrolladores que usan las API.
 

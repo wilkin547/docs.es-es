@@ -2,12 +2,12 @@
 title: Cambios importantes
 description: Obtenga información sobre los cambios de cada versión de .NET Core.
 ms.date: 11/27/2019
-ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: eea6542acb9fa659af764bfd3a2af00fd9740191
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810903"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656280"
 ---
 # <a name="breaking-change-selectors"></a>Selectores de cambios importantes
 
@@ -43,6 +43,7 @@ Seleccione el área de tecnología de .NET Core que le interesa. Los cambios ind
 > - [Serialización](serialization.md)
 > - [Visual Basic](visualbasic.md)
 > - [Windows Forms](winforms.md)
+> - [WPF](wpf.md)
 
 ## <a name="github-issues-and-announcements"></a>Incidencias y anuncios de GitHub
 

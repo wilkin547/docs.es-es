@@ -2,12 +2,12 @@
 title: Tutoriales e introducción técnica
 description: Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Tutoriales e introducción técnica
 ms.date: 04/28/2018
-ms.openlocfilehash: cff418d9b6e931a3082d8a2f8b818e7275139578
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 4db6d449d27dcd4316d61305c8c2a8c2aa0bc65b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987874"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516130"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales e introducción técnica
 
@@ -212,7 +212,7 @@ La implementación de contenedores de Windows con .NET Framework/ASP.NET comple
 
 Como conclusión principal, el uso de Azure Container Instances es una opción muy atractiva para escenarios de desarrollo/pruebas y para canalizaciones de CI/CD.
 
-## <a name="next-steps"></a>Pasos siguientes
+### <a name="next-steps"></a>Pasos siguientes
 
 Explore este contenido más en profundidad en la wiki de GitHub:
 
@@ -274,7 +274,7 @@ Con Kubernetes, los desarrolladores pueden progresar desde pensar en máquinas f
 
 - Comprobaciones de estado de aplicaciones
 
-## <a name="next-steps"></a>Pasos siguientes
+### <a name="next-steps"></a>Pasos siguientes
 
 Explore este contenido más en profundidad en la wiki de GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
@@ -302,7 +302,7 @@ El objetivo de este tutorial es aprender a implementar una aplicación basada en
 
 La implementación en Azure App Service para contenedores ofrece las ventajas de los contenedores junto con las ventajas de PaaS de Azure App Service. El servicio de aplicación se puede escalar fácilmente de manera vertical y horizontal y puede configurarse para ajustarlo automáticamente a las exigencias cambiantes. Las actualizaciones se pueden realizar sin tiempo de inactividad y la configuración de la implementación continua desde un registro también se configura fácilmente.
 
-## <a name="next-steps"></a>Pasos siguientes
+### <a name="next-steps"></a>Pasos siguientes
 
 Explore este contenido más en profundidad en la wiki de GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
