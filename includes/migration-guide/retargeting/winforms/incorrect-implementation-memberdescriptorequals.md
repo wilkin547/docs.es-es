@@ -33,7 +33,7 @@ Si la aplicación está destinada a .NET Framework 4.6.1 o una versión anterior
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6.2       |

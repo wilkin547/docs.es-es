@@ -35,7 +35,7 @@ De forma predeterminada, las aplicaciones que tienen como destino versiones de .
 
 El valor `true` selecciona el algoritmo antiguo y el valor `false` el nuevo.
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.7         |

@@ -22,7 +22,7 @@ Esta característica está habilitada de forma predeterminada para las aplicacio
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.7         |

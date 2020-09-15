@@ -30,7 +30,7 @@ O bien, en la configuración:
 </configuration>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.7         |

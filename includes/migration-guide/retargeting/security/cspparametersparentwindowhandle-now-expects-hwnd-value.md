@@ -39,7 +39,7 @@ Los usuarios que hayan identificado que el valor correcto para pasar era la dire
 
 En cambio, los usuarios que quieran incluir el comportamiento nuevo en el entorno de ejecución de .NET Framework 4.7 cuando la aplicación se carga bajo versiones anteriores de .NET Framework, pueden establecer el modificador de AppContext en `false`.
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.7         |

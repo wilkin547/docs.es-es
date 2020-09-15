@@ -24,7 +24,7 @@ Si no desea este comportamiento, puede restaurar el comportamiento anterior si e
 </configuration>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6.2       |

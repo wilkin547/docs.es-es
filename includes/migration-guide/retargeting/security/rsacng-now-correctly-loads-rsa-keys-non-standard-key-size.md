@@ -16,7 +16,7 @@ En las versiones de .NET Framework anteriores a la 4.6.2, los clientes con tama�
 
 Si no hay ninguna lógica de control de excepciones que se base en el comportamiento anterior en el que se inicia una excepción <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> cuando se usan tamaños de clave no estándar, considere la posibilidad de quitar la lógica.
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6.2       |

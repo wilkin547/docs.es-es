@@ -16,7 +16,7 @@ Para las aplicaciones destinadas a .NET Framework 4.5.2 o versiones anteriores, 
 
 Si es necesario, esta interrupción se puede evitar seleccionando .NET Framework 4.5.2 o una versión anterior como destino. Como alternativa, se puede realizar el preprocesamiento de los pares suplentes no válidos en código XML válido antes de escribirlos.
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6         |

@@ -20,7 +20,7 @@ A partir de las aplicaciones que se ejecutan en .NET Framework 4.7.1, se puede u
 <AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.SignedXmlUseLegacyCertificatePrivateKey=true" />
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6.2       |

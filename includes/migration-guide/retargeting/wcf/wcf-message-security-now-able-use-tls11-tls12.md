@@ -22,7 +22,7 @@ En .NET Framework 4.7, la compatibilidad con TLS1.1 y TLS1.2 en la seguridad de 
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.7         |

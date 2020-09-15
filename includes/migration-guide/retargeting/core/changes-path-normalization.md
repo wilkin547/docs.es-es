@@ -42,7 +42,7 @@ Las aplicaciones que tienen como destino .NET Framework 4.6.1 o versiones anteri
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.6.2       |

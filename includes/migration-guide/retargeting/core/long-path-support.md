@@ -34,7 +34,7 @@ Para las aplicaciones que tienen como destino versiones anteriores de .NET Frame
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.6.2       |

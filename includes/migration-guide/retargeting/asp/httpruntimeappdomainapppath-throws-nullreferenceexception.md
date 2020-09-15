@@ -19,7 +19,7 @@ Puede hacer lo siguiente para responder a este cambio:
 - Controle `T:System.NullReferenceException` si la aplicación se ejecuta en .NET Framework 4.6.2.
 - Actualice a .NET Framework 4.7, que restaura el comportamiento anterior e inicia una excepción `T:System.ArgumentNullException`.
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Borde        |
 | Versión | 4.6.2       |

@@ -30,7 +30,7 @@ Además, las aplicaciones que tienen como destino una versión anterior de .NET 
 </runtime>
 ```
 
-| Nombre    | Valor       |
+| NOMBRE    | Valor       |
 |:--------|:------------|
 | Ámbito   | Secundaria       |
 | Versión | 4.6.2       |
