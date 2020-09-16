@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 9ed728fa8d1d56c835aa27645a28921aa4f641e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116602"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544458"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
@@ -25,7 +25,7 @@ Un servicio de datos puede exponer datos binarios de objetos grandes. Estos dato
 
 - Entrada de vínculo multimedia: entidad con una referencia a un flujo de recursos multimedia relacionado.
 
-Con WCF Data Services, se define un flujo de recursos binarios mediante la implementación de un proveedor de datos de streaming. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a una entidad específica como un objeto <xref:System.IO.Stream>. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
+Con WCF Data Services, se define un flujo de recursos binarios mediante la implementación de un proveedor de datos de streaming. La implementación del proveedor de transmisión por secuencias proporciona al servicio de datos la secuencia de recursos multimedia asociada a una entidad específica como un <xref:System.IO.Stream> objeto. Esta implementación permite que el servicio de datos acepte y devuelva los recursos multimedia a través del protocolo HTTP como flujos de datos binarios de un tipo MIME especificado.
 
 La configuración de un servicio de datos para que admita la transmisión por secuencias de datos binarios requiere los siguientes pasos:
 
@@ -39,7 +39,7 @@ La configuración de un servicio de datos para que admita la transmisión por se
 
 5. Habilite el acceso a los recursos binarios en el servidor o en un origen de datos.
 
-Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad en la [serie post Data Services streaming Provider series: Implementing a streaming Provider (Part 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). El código fuente del ejemplo de streaming de datos de transmisión por secuencias está disponible en [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
+Los ejemplos de este tema se basan en un ejemplo de servicio fotográfico de streaming, que se describe en profundidad en la [serie post Data Services streaming Provider series: Implementing a streaming Provider (Part 1)](/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). El código fuente del ejemplo de streaming de datos de transmisión por secuencias está disponible en [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definir una entrada de vínculo multimedia en el modelo de datos
 
@@ -53,7 +53,7 @@ Para indicar que una entidad es una entrada de vínculo multimedia, agregue el a
 
 También debe agregar el espacio de nombres `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` a la entidad o a la raíz del archivo .edmx o del archivo .csdl que definen el modelo de datos.
 
-Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementing a streaming Provider (Part 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
+Para obtener un ejemplo de un servicio de datos que usa el proveedor de Entity Framework y expone un recurso multimedia, vea la [serie post Data Services streaming Provider: Implementing a streaming Provider (Part 1)](/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Proveedor de reflexión**
 
@@ -67,7 +67,7 @@ Cuando se usan proveedores de servicios personalizados, implemente la interfaz <
 
 Para crear un servicio de datos que admita flujos de datos binarios, debe implementar la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Esta implementación habilita el servicio de datos para devolver al cliente datos binarios como flujo y utilizar los datos binarios como flujo enviado desde el cliente. El servicio de datos crea una instancia de esta interfaz cuando sea necesario para acceder a los datos binarios como flujo. La interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider> especifica los siguientes miembros:
 
-|Nombre de miembro|Descripción|
+|Nombre del miembro|Descripción|
 |-----------------|-----------------|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|El servicio de datos invoca este método para eliminar el recurso multimedia correspondiente cuando se elimina su entrada de vínculo multimedia. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que elimina el recurso multimedia asociado con la entrada de vínculo multimedia proporcionada.|
 |<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|El servicio de datos invoca este método para devolver un recurso multimedia como un flujo. Cuando se implementa <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, este método contiene el código que proporciona un flujo que el servicio de datos utiliza para devolver el recurso multimedia que está asociado a la entrada de vínculo multimedia proporcionada.|
@@ -79,7 +79,7 @@ Para crear un servicio de datos que admita flujos de datos binarios, debe implem
 
 ## <a name="creating-the-streaming-data-service"></a>Crear el servicio de transmisión de datos por secuencias
 
-Para proporcionar al tiempo de ejecución de WCF Data Services acceso a la implementación de <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, el servicio de datos que cree también debe implementar la interfaz de <xref:System.IServiceProvider>. En el siguiente ejemplo se muestra cómo implementar el método <xref:System.IServiceProvider.GetService%2A> para devolver una instancia de la clase `PhotoServiceStreamProvider` que implemente la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Para proporcionar al tiempo de ejecución de WCF Data Services acceso a la <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementación, el servicio de datos que cree también debe implementar la <xref:System.IServiceProvider> interfaz. En el siguiente ejemplo se muestra cómo implementar el método <xref:System.IServiceProvider.GetService%2A> para devolver una instancia de la clase `PhotoServiceStreamProvider` que implemente la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -91,11 +91,11 @@ Para obtener información general sobre cómo crear un servicio de datos, vea [c
 Cuando se crea un servicio de datos en una aplicación Web de ASP.NET, se utiliza Windows Communication Foundation (WCF) para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 KB. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
 
 > [!NOTE]
-> Debe usar un modo de transferencia de <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> para asegurarse de que WCF transmite los datos binarios en los mensajes de solicitud y respuesta, y no los almacena en búfer.
+> Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que WCF transmite los datos binarios en los mensajes de solicitud y respuesta, y no los almacena en búfer.
 
 Para obtener más información, consulte [transferencia de mensajes de streaming](../../wcf/feature-details/streaming-message-transfer.md) y [cuotas de transporte](../../wcf/feature-details/transport-quotas.md).
 
-De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las solicitudes a 4 MB. Para permitir que el servicio de datos reciba flujos de más de 4 MB cuando se ejecute en IIS, también debe establecer el atributo `maxRequestLength` del [Elemento httpRuntime (esquema de configuración de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la sección configuración de `<system.web />`, como se muestra en el ejemplo siguiente:
+De forma predeterminada, Internet Information Services (IIS) también limita el tamaño de las solicitudes a 4 MB. Para permitir que el servicio de datos reciba flujos de más de 4 MB cuando se ejecute en IIS, también debe establecer el `maxRequestLength` atributo del [Elemento httpRuntime (esquema de configuración de ASP.net)](/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) en la `<system.web />` sección de configuración, como se muestra en el ejemplo siguiente:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usar flujos de datos en una aplicación cliente
 
@@ -125,7 +125,7 @@ A continuación se enumeran algunas de las consideraciones que debe tener en cue
 
 - Cuando implemente los métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, debe utilizar el objeto eTag y los valores Content-Type y que se proporcionan como parámetros de método. No establezca el objeto eTag ni los encabezados Content-Type en la implementación del proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que la Servidor de desarrollo de ASP.NET no admite este tipo de codificación, no puede usar este servidor web para hospedar un servicio de transmisión de datos que debe aceptar secuencias binarias de gran tamaño. Para obtener más información sobre Servidor de desarrollo de ASP.NET, vea [servidores Web en Visual Studio para proyectos Web de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que la Servidor de desarrollo de ASP.NET no admite este tipo de codificación, no puede usar este servidor web para hospedar un servicio de transmisión de datos que debe aceptar secuencias binarias de gran tamaño. Para obtener más información sobre Servidor de desarrollo de ASP.NET, vea [servidores Web en Visual Studio para proyectos Web de ASP.net](/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 
@@ -141,4 +141,4 @@ Para obtener más información, vea [control de versiones del servicio de datos]
 
 - [Proveedores de Data Services](data-services-providers-wcf-data-services.md)
 - [Proveedores de servicios de datos personalizados](custom-data-service-providers-wcf-data-services.md)
-- [Trabajo con datos binarios](working-with-binary-data-wcf-data-services.md)
+- [Trabajar con datos binarios](working-with-binary-data-wcf-data-services.md)

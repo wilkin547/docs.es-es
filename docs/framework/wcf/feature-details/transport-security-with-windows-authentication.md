@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244769"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545212"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Seguridad del transporte con la autenticación de Windows
 En el siguiente escenario se muestra un servicio y un cliente de Windows Communication Foundation (WCF) protegidos por la seguridad de Windows. Para obtener más información acerca de la programación, consulte [Cómo: proteger un servicio con credenciales de Windows](../how-to-secure-a-service-with-windows-credentials.md).  
@@ -25,8 +25,8 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 |Modo de seguridad|Transporte|  
 |Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (al utilizar la autenticación integrada de Windows)<br /><br /> Sí (al utilizar la autenticación integrada de Windows)|  
-|Integridad|Yes|  
-|Confidencialidad|Yes|  
+|Integridad|Sí|  
+|Confidencialidad|Sí|  
 |Transporte|NET.TCP|  
 |Enlace|<xref:System.ServiceModel.NetTcpBinding>|  
   
@@ -122,4 +122,4 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 
 - [Información general sobre seguridad](security-overview.md)
 - [Procedimiento para proteger un servicio con credenciales de Windows](../how-to-secure-a-service-with-windows-credentials.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

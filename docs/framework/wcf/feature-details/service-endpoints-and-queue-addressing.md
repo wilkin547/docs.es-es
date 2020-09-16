@@ -2,12 +2,12 @@
 title: Extremos de servicio y direccionamiento de la cola
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fb74ba52c0f08d9e9976ddc8dd6d59037ec32e4b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600392"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546294"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Extremos de servicio y direccionamiento de la cola
 En este tema se aborda cómo los clientes direccionan servicios que leen de las colas y cómo los puntos de conexión de servicio se asignan a las colas. Como recordatorio, en la siguiente ilustración se muestra la implementación de la aplicación en cola de Windows Communication Foundation clásico (WCF).  
@@ -21,7 +21,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Los nombres de ruta de acceso se asignan a "FormatNames" para determinar aspectos adicionales de la dirección, incluido el protocolo de enrutamiento y transferencia del administrador de cola. El Administrador de la cola admite dos protocolos de transferencia: protocolo MSMQ nativo y SOAP Reliable Messaging Protocol (SRMP).  
   
- Para obtener más información acerca de la ruta de acceso y los nombres de formato de MSMQ, vea [acerca de Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
+ Para obtener más información acerca de la ruta de acceso y los nombres de formato de MSMQ, vea [acerca de Message Queue Server](/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding y direccionamiento del servicio  
  Al direccionar un mensaje a un servicio, el esquema en el URI se selecciona basándose en el transporte utilizado para la comunicación. Cada transporte en WCF tiene un esquema único. El esquema debe reflejar la naturaleza de transporte utilizada para la comunicación. Por ejemplo, net.tcp, net.pipe, HTTP, etc.  
@@ -30,15 +30,15 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  El direccionamiento de una cola en WCF se basa en el siguiente patrón:  
   
- net. MSMQ:// \<*host-name*> /[Private/]\<*queue-name*>  
+ net. MSMQ:// \<*host-name*> /[Private/] \<*queue-name*>  
   
  donde:  
   
-- \<*host-name*>es el nombre del equipo que hospeda la cola de destino.  
+- \<*host-name*> es el nombre del equipo que hospeda la cola de destino.  
   
 - [privado] es opcional. Se utiliza al direccionar una cola de destino que es una cola privada. Para direccionar una cola pública, no debe especificar privado. Tenga en cuenta que, a diferencia de las rutas de acceso de MSMQ, no hay "$" en el formulario URI de WCF.  
   
-- \<*queue-name*>es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \<*queue-name*>  =  \<*name-of-queue*> [;* subqueue-Name*].  
+- \<*queue-name*> es el nombre de la cola. El nombre de la cola también puede hacer referencia a una subcola. Por lo tanto, \<*queue-name*>  =  \<*name-of-queue*> [;* subqueue-Name*].  
   
  Ejemplo1: Para direccional una cola privada PurchaseOrders hospedada en el equipo abc atadatum.com, el URI sería net.msmq://abc.adatum.com/private/PurchaseOrders.  
   
@@ -51,7 +51,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
 ### <a name="multiple-contracts-in-a-queue"></a>Varios contratos en una cola  
  Los mensajes en una cola pueden implementar diferentes contratos. En este caso, es esencial que una de las condiciones siguientes sea verdadera para leer correctamente y procesar todos los mensajes:  
   
-- Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el método recomendado.  
+- Especifique un punto de conexión para un servicio que implementa todos los contratos. Éste es el enfoque recomendado.  
   
 - Especifique varios puntos de conexión con contratos diferentes, pero asegúrese de que todos los puntos de conexión utilicen el mismo objeto `NetMsmqBinding`. La lógica de distribución en ServiceModel utiliza una bomba de mensaje que lee los mensajes del canal de transporte para su distribución, lo que eventualmente desmultiplexa mensajes basados en el contrato a extremos diferentes. Una bomba de mensaje se crea para un par de escucha URI/enlace. La dirección de la cola es utilizada como URI de escucha por el agente de escucha puesto en cola. Si todos los extremos utilizan el mismo objeto de enlace, ello garantiza que se utiliza una única bomba de mensaje para leer el mensaje y desmultiplexarlo a los extremos pertinentes basados en el contrato.  
   
@@ -73,8 +73,8 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
 |Dirección de cola basada en URI WCF|Utilizar la propiedad de Active Directory|Propiedad del protocolo de transferencia de la cola|Nombres de formato de MSMQ resultantes|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |`Net.msmq://<machine-name>/private/abc`|False (valor predeterminado)|Native (valor predeterminado)|`DIRECT=OS:machine-name\private$\abc`|  
-|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
-|`Net.msmq://<machine-name>/private/abc`|True|Nativa|`PUBLIC=some-guid`(el GUID de la cola)|  
+|`Net.msmq://<machine-name>/private/abc`|Falso|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|Verdadero|Nativa|`PUBLIC=some-guid` (el GUID de la cola)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Leer los mensajes de la cola de mensajes no enviados o la cola de mensajes dudosos  
  Para leer los mensajes de una cola de mensajes dudosos que es una subcola de la cola de destino, abra `ServiceHost` con la dirección de la subcola.  
@@ -87,7 +87,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  Al utilizar una cola de mensajes no enviados personalizada, observe que la cola de mensajes no enviados debe estar situada en el equipo local. Como tal, el URI para la cola de mensajes no enviados está restringido a la forma:  
   
- net. MSMQ://localhost/[Private/] \<*custom-dead-letter-queue-name*> .  
+ net. MSMQ://localhost/[Private/]  \<*custom-dead-letter-queue-name*> .  
   
  Un servicio WCF comprueba que todos los mensajes que recibe se dirigieron a la cola concreta en la que escucha. Si la cola de destino del mensaje no coincide con la cola donde se encuentra, el servicio no procesa el mensaje. Se trata de una cuestión que los servicios que escuchan a una cola de mensajes no enviados deben abordar porque cualquier mensaje en la cola de mensajes no enviados debía ser entregado a otra parte. Para leer los mensajes de una cola de mensajes no enviados o de una cola de mensajes dudosos, debe utilizarse `ServiceBehavior` con el parámetro <xref:System.ServiceModel.AddressFilterMode.Any>. Para obtener un ejemplo, vea [colas de mensajes con problemas de entrega](../samples/dead-letter-queues.md).  
   
@@ -96,7 +96,7 @@ En este tema se aborda cómo los clientes direccionan servicios que leen de las 
   
  MSMQ. FormatName:\<*MSMQ-format-name*>>  
   
- MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
+ MSMQ-Format-Name tiene el formato especificado por MSMQ en [About Message Queuing](/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Observe que solo puede utilizar los nombres de formato directos, y los nombres de formato públicos y privados (requiere la integración de Active Directory) al recibir los mensajes de una cola utilizando `MsmqIntegrationBinding`. Sin embargo, se aconseja que utilice los nombres de formato directos. Por ejemplo, en Windows Vista, el uso de cualquier otro nombre de formato produce un error porque el sistema intenta abrir una subcola, que solo se puede abrir con nombres de formato directo.  
   

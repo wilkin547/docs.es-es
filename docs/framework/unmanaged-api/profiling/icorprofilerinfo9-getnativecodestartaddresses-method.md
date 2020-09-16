@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 99706fdc3d60a5e1a7f85400c1184d5acc808e42
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca1643dfa980fa647164accf6432082428124acb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449739"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541244"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses (método)
 
@@ -40,11 +40,11 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `reJitId`
 
-  \[en] la identidad de la función recompilada con JIT.
+  \[en] la identidad de la función con compilación JIT.
 
 - `cCodeStartAddresses`
 
-  \[en] el tamaño máximo de la matriz de `codeStartAddresses`.
+  \[en] tamaño máximo de la `codeStartAddresses` matriz.
 
 - `pcCodeStartAddresses`
 
@@ -52,22 +52,22 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 - `codeStartAddresses`
 
-  \[out] una matriz de `UINT_PTR`, cada una de las cuales es la dirección inicial de un cuerpo nativo para la función especificada.
+  \[out] una matriz de `UINT_PTR` , cada una de las cuales es la dirección inicial de un cuerpo nativo para la función especificada.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Cuando la compilación en capas está habilitada, una función puede tener más de un cuerpo de código nativo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/dependencies.md?pivots=os-windows).
+**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).
 
 **Encabezado:** CorProf.idl, CorProf.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorProfilerInfo9](icorprofilerinfo9-interface.md)

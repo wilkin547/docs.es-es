@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 27f2b7d3146199f1c3e9a228202618c992e2a1ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd3156e0fa8ea976d2297ffc0767cd948c9c96b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601366"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550487"
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de control de acceso
 Puede controlar el acceso de varias maneras con Windows Communication Foundation (WCF). Este tema aborda brevemente los diversos mecanismos y proporciona sugerencias sobre cuándo utilizar cada uno; está destinado a ayudarle a seleccionar el mecanismo correcto a utilizar. Las tecnologías de acceso están listadas por orden de complejidad. La más simple es <xref:System.Security.Permissions.PrincipalPermissionAttribute>; la más compleja es el modelo de identidad.  
@@ -46,7 +46,7 @@ Puede controlar el acceso de varias maneras con Windows Communication Foundation
   
  También puede usar AzMan y el proveedor de roles ASP.NET si ya tiene acceso a una instalación existente de AzMan y desea autorizar a los usuarios del servicio mediante las características de la combinación de proveedor de roles y AzMan.  
   
- Para obtener más información acerca de AzMan y el proveedor de roles ASP.NET, consulte [Cómo: usar el administrador de autorización (AzMan) con ASP.NET 2,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)). Para obtener más información sobre el uso de AzMan y el proveedor de roles para los servicios WCF, consulte [Cómo: usar el proveedor de funciones del administrador de autorización de ASP.net con un servicio](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ Para obtener más información acerca de AzMan y el proveedor de roles ASP.NET, consulte [Cómo: usar el administrador de autorización (AzMan) con ASP.NET 2,0](/previous-versions/msp-n-p/ff649313(v=pandp.10)). Para obtener más información sobre el uso de AzMan y el proveedor de roles para los servicios WCF, consulte [Cómo: usar el proveedor de funciones del administrador de autorización de ASP.net con un servicio](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelo de identidad  
  El modelo de identidad es un conjunto de API que le permiten administrar demandas y directivas para autorizar a los clientes. Con el modelo de identidad, puede examinar cada demanda contenida en credenciales que el llamador utiliza para autenticarse a sí mismo para el servicio, comparar las demandas con el conjunto de directivas para el servicio y conceder o denegar acceso basándose en la comparación.  

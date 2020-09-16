@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: fd7828cccb1a19a17e899525d863021d3670fbdd
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5fc29432bdd55daff2d60d641a4cea4925278032
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389760"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543022"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creación de servicios interoperables de WS-I Basic Profile 1.1
-Para configurar un extremo de servicio WCF para que sea interoperable con ASP.NET clientes de servicio Web:  
+Para configurar un extremo de servicio WCF para que sea interoperable con clientes de servicios Web de ASP.NET:  
   
 - Utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como tipo de enlace para su extremo de servicio.  
   
@@ -29,12 +29,12 @@ Las características siguientes de la clase <xref:System.ServiceModel.BasicHttpB
   
 - La seguridad de mensaje que controla el valor <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> proporciona compatibilidad con WS-Security conforme a WS-I Basic Security Profile 1.0. Deje esta propiedad en su valor predeterminado, que es <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>, para no usar WS-Security.  
   
-Para que los metadatos de un servicio WCF estén disponibles para ASP.NET, use las herramientas de generación de cliente de servicio web: Herramienta de lenguaje de descripción de [servicios web (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)Herramienta de detección de [servicios web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)y la característica **Agregar referencia web** en Visual Studio. Habilite la publicación de metadatos. Para obtener más información, consulte Publicación de [extremos](publishing-metadata-endpoints.md)de metadatos .  
+Para que los metadatos de un servicio WCF estén disponibles para ASP.NET, use las herramientas de generación de cliente de servicio Web: [herramienta lenguaje de descripción de servicios web (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [herramienta de detección de servicios web (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))y la característica **Agregar referencia Web** en Visual Studio. Habilitar la publicación de metadatos. Para obtener más información, consulte [publicación de puntos de conexión de metadatos](publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- En el código de ejemplo siguiente se muestra cómo agregar un extremo WCF que es compatible con ASP.NET clientes de servicio Web en código y, alternativamente, en un archivo de configuración.  
+ En el código de ejemplo siguiente se muestra cómo agregar un punto de conexión de WCF que es compatible con los clientes del servicio Web ASP.NET en el código y, como alternativa, en un archivo de configuración.  
   
 ### <a name="code"></a>Código  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

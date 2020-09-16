@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: aa750ef088ee045c8d1045b2509d8fc4bde014ce
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 24b24e4c35c85edb1f960ae18a58cbc5893690d0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854629"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536228"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Procedimiento para ejecutar una consulta parametrizada de Entity SQL mediante EntityCommand
-En este tema se muestra cómo ejecutar [!INCLUDE[esql](../../../../../includes/esql-md.md)] una consulta que tiene parámetros mediante un <xref:System.Data.EntityClient.EntityCommand> objeto.  
+En este tema se muestra cómo ejecutar una [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta que tiene parámetros mediante un <xref:System.Data.EntityClient.EntityCommand> objeto.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   
@@ -32,5 +32,5 @@ En este tema se muestra cómo ejecutar [!INCLUDE[esql](../../../../../includes/e
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Ejecutar una consulta con parámetros](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
+- [Cómo: Ejecutar una consulta parametrizada](/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
 - [Lenguaje Entity SQL](./language-reference/entity-sql-language.md)

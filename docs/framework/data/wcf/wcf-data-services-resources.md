@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-ms.openlocfilehash: 8b86944808aa7a35341f4fdafb3a92c6d9d127ec
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9b0534c2d11b723458b52e219ba1ce2de4b3c550
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900852"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541531"
 ---
 # <a name="wcf-data-services-resources"></a>Recursos de Servicios de datos de WCF
 WCF Data Services temas de introducción se pueden encontrar en las siguientes ubicaciones. Muchos de estos temas también contienen vínculos a temas relacionados que contienen información más detallada.  
@@ -32,7 +32,7 @@ WCF Data Services temas de introducción se pueden encontrar en las siguientes u
  [Foro de WCF Data Services](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataservices)  
  Compatibilidad con la programación de datos para desarrolladores de WCF Data Services.  
   
- [Blog del equipo de Servicios de datos de WCF](https://docs.microsoft.com/archive/blogs/astoriateam/)  
+ [Blog del equipo de Servicios de datos de WCF](/archive/blogs/astoriateam/)  
  Blog que contiene actualizaciones y análisis de WCF Data Services características y funcionalidades.  
   
  [Sitio web de OData](https://www.odata.org/)  
@@ -44,10 +44,10 @@ WCF Data Services temas de introducción se pueden encontrar en las siguientes u
  [Blog de OData](https://www.odata.org/blog/)  
  Blog que contiene discusiones sobre la programación de OData.  
   
- [Información general: WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
+ [Información general: WCF Data Services](/previous-versions/visualstudio/visual-studio-2008/cc956153(v=msdn.10))  
  Notas del producto que proporcionan más información de alto nivel sobre las ventajas de WCF Data Services.  
   
- [Uso de Microsoft WCF Data Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
+ [Usar Microsoft WCF Data Services](/previous-versions/visualstudio/visual-studio-2008/cc907912(v=msdn.10))  
  Notas del producto que proporcionan información adicional y ejemplos para la creación de servicios de datos y para obtener acceso a los servicios de datos en aplicaciones cliente.  
   
  [El modelo entidad-relación: hacia una vista unificada de los datos de](https://dl.acm.org/doi/10.1145/320434.320440) Peter PIN-Shan Chen, Massachusetts Institute of Technology  

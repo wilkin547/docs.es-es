@@ -3,12 +3,12 @@ title: Host de servicio WCF (WcfSvcHost.exe)
 description: Use el host de servicio WCF para hospedar y probar un servicio que ha implementado. Puede probar el servicio mediante el cliente de prueba WCF o su propio cliente.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2ac1d6318d8a82a82c08f38305ee6f92ad3f52a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245731"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544601"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de servicio WCF (WcfSvcHost.exe)
 
@@ -52,7 +52,7 @@ Para asegurarse de que se usa el cliente de prueba WCF, haga clic con el botón 
 
 #### <a name="using-a-custom-client"></a>Utilizar un cliente personalizado
 
-Para usar un cliente personalizado, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** en Visual Studio, seleccione **propiedades**y, a continuación, seleccione la pestaña **depurar** . Haga clic en **iniciar proyecto** y edite el `/client` parámetro en el cuadro de diálogo argumentos de la **línea de comandos** para que apunte al cliente personalizado, tal y como se indica en el ejemplo siguiente.
+Para usar un cliente personalizado, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** en Visual Studio, seleccione **propiedades**y, a continuación, seleccione la pestaña **depurar** . Haga clic en **iniciar proyecto** y edite el `/client` parámetro en el cuadro de diálogo argumentos de la **línea de comandos** para que apunte al cliente personalizado, como se indica en el ejemplo siguiente.
 
 `/client:"path/CustomClient.exe"`
 
@@ -120,8 +120,8 @@ Puede modificar el acceso mediante la herramienta de netsh.exe de Windows Vista 
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Para obtener más información sobre netsh.exe, vea[el tema sobre cómo usar la herramienta de Netsh.exe y los modificadores de línea de comandos](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10)).
+Para obtener más información sobre netsh.exe, vea[el tema sobre cómo usar la herramienta de Netsh.exe y los modificadores de línea de comandos](/previous-versions/tn-archive/bb490939(v=technet.10)).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cliente de prueba de WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

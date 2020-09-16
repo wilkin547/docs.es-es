@@ -2,12 +2,12 @@
 title: Control del consumo de recursos y mejora del rendimiento
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 16d6f29235455ff30e115b7aff3425412bc7ba6a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802260"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543074"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Control del consumo de recursos y mejora del rendimiento
 En este tema se describen las distintas propiedades de las distintas áreas de la arquitectura Windows Communication Foundation (WCF) que funcionan para controlar el consumo de recursos y afectar a las métricas de rendimiento.
@@ -41,13 +41,13 @@ En este tema se describen las distintas propiedades de las distintas áreas de l
 > [!NOTE]
 > El código de serialización generado previamente solo puede usarse en aplicaciones cliente, no en servicios.
 
- La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Para obtener más información, vea [Cómo: mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
+ La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Para obtener más información, vea [Cómo: mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).
 
 ## <a name="performance-issues-when-hosting-wcf-services-under-aspnet"></a>Problemas de rendimiento al hospedar los servicios WCF bajo ASP.NET
 
-Cuando un servicio WCF se hospeda bajo IIS y ASP.NET, la configuración de IIS y ASP.NET puede afectar al rendimiento y al consumo de memoria del servicio WCF.  Para obtener más información sobre el rendimiento de ASP.NET, vea [mejorar el rendimiento de ASP.net](https://docs.microsoft.com/previous-versions/msp-n-p/ff647787(v=pandp.10)). Una configuración que quizá pueda tener consecuencias imprevistas es la propiedad <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que es una propiedad de la clase <xref:System.Web.Configuration.ProcessModelSection>. Si la aplicación tiene un número fijo o pequeño de clientes, al establecer <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> en 2 se podría observar un aumento del rendimiento en un equipo con varios procesadores que tenga un uso de CPU próximo al 100%. Esta mejora del rendimiento tiene su precio: aumentará también el consumo de memoria, lo que podría disminuir la escalabilidad.
+Cuando un servicio WCF se hospeda bajo IIS y ASP.NET, la configuración de IIS y ASP.NET puede afectar al rendimiento y al consumo de memoria del servicio WCF.  Para obtener más información sobre el rendimiento de ASP.NET, vea [mejorar el rendimiento de ASP.net](/previous-versions/msp-n-p/ff647787(v=pandp.10)). Una configuración que quizá pueda tener consecuencias imprevistas es la propiedad <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, que es una propiedad de la clase <xref:System.Web.Configuration.ProcessModelSection>. Si la aplicación tiene un número fijo o pequeño de clientes, al establecer <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> en 2 se podría observar un aumento del rendimiento en un equipo con varios procesadores que tenga un uso de CPU próximo al 100%. Esta mejora del rendimiento tiene su precio: aumentará también el consumo de memoria, lo que podría disminuir la escalabilidad.
 
 ## <a name="see-also"></a>Vea también
 
 - [Administración y diagnóstico](./diagnostics/index.md)
-- [Grandes datos y streaming](./feature-details/large-data-and-streaming.md)
+- [Datos de gran tamaño y secuencias](./feature-details/large-data-and-streaming.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: aff96c5d0ee6bbf2bbe2f9e3b3ae091caa781f7a
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 1ba99cda512bc5e18c646b09f26672a39c1cf53c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "81432723"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548197"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entidades de caracteres XML y XAML
 
@@ -37,9 +37,9 @@ Normalmente, el marcado XAML usa las mismas entidades de caracteres y secuencias
 
 La excepción principal es que las llaves ({ y }) son importantes en XAML porque estos caracteres informan al procesador XAML de que la secuencia de caracteres incluida entre ellas se debe interpretar como una extensión de marcado. Para más información sobre las extensiones de marcado, vea [Markup Extensions for XAML Overview](markup-extensions-overview.md).
 
-Sin embargo, puede mostrar las llaves como caracteres literales si usa una secuencia de escape específica de XAML y no de XML. Para obtener más [ {} ](escape-sequence-markup-extension.md)información, vea Secuencia de escape - Extensión de marcado .
+Sin embargo, puede mostrar las llaves como caracteres literales si usa una secuencia de escape específica de XAML y no de XML. Para obtener más información, consulte [ {} secuencia de escape: extensión de marcado](escape-sequence-markup-extension.md).
 
-Tenga en cuenta\\que una barra diagonal inversa ( ) no requiere una secuencia de escape cuando se controla como una cadena.
+Tenga en cuenta que una barra diagonal inversa ( \\ ) no requiere una secuencia de escape cuando se controla como una cadena.
 
 ## <a name="xml-character-entities"></a>Entidades de caracteres XML
 
@@ -48,12 +48,12 @@ Como se mencionó anteriormente, la mayoría de las entidades de caracteres y de
 |Carácter|Entidad|Notas|
 |---------------|------------|-----------|
 |& (y comercial)|\&amp;|Debe usarse tanto para los valores de atributo como para el contenido de un elemento.|
-|> (mayor que el carácter)|\&gt;|Debe usarse para un valor de atributo, pero > es aceptable como el contenido de un elemento siempre que < no lo preceda.|
-|< (menos que el carácter)|\&lt;|Debe usarse para un \< valor de atributo, pero es aceptable como el contenido de un elemento siempre y cuando > no lo siga.|
+|> (carácter mayor que)|\&gt;|Se debe usar para un valor de atributo, pero > es aceptable como contenido de un elemento siempre que < no lo preceda.|
+|< (carácter menor que)|\&lt;|Debe usarse para un valor de atributo, pero \< is acceptable as the content of an element as long as > no lo sigue.|
 |" (comillas dobles rectas)|\&quot;|Debe usarse para un valor de atributo, pero las comillas dobles rectas (") son aceptables como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|
 |' (comilla simple recta)|\&apos;|Debe usarse para un valor de atributo, pero una comilla simple recta (') es aceptable como contenido de un elemento. Tenga en cuenta que los valores de atributo se pueden incluir entre comillas simples rectas (') o entre comillas dobles rectas ("); el carácter que aparece primero define el carácter que cierra el valor del atributo, mientras que el otro tipo de comillas se puede usar como valor literal dentro del valor.|
-|(asignaciones de caracteres numéricos)|&#*[entero]*; o & x *[hex]*;|XAML admite las asignaciones de caracteres numéricos en la codificación que está activa.|
-|(espacio de no separación)|&\#160; (suponiendo codificación UTF-8)|Para los elementos de documentos dinámicos o los elementos que aceptan texto como <xref:System.Windows.Controls.TextBox> de WPF, los espacios de no separación no se normalizan fuera del marcado, ni siquiera en `xml:space="default"`. (Para obtener más información, vea [Procesamiento de espacio en blanco en XAML](white-space-processing.md).)|
+|(asignaciones de caracteres numéricos)|&#*[entero]*; o & # x *[Hex]*;|XAML admite las asignaciones de caracteres numéricos en la codificación que está activa.|
+|(espacio de no separación)|&\#160; (suponiendo la codificación UTF-8)|Para los elementos de documentos dinámicos o los elementos que aceptan texto como <xref:System.Windows.Controls.TextBox> de WPF, los espacios de no separación no se normalizan fuera del marcado, ni siquiera en `xml:space="default"`. (Para obtener más información, vea [procesamiento de espacios en blanco en XAML](white-space-processing.md)).|
 
 ## <a name="xml-comment-format"></a>Formato de los comentarios XML
 
@@ -61,11 +61,11 @@ XAML usa el formato de comentario XML: el inicio del comentario es `<!--`, el fi
 
 ## <a name="xml-processing-instructions"></a>Instrucciones de procesamiento de XML
 
-XAML controla las instrucciones de procesamiento de XML de acuerdo con las especificaciones de XML, que indican que las instrucciones deben pasarse. El procesamiento XAML en los servicios XAML de .NET no usa ninguna instrucción de procesamiento. Otros marcos existentes que usan XAML tampoco usan las instrucciones de procesamiento de XAML. 
+XAML controla las instrucciones de procesamiento de XML de acuerdo con las especificaciones de XML, que indican que las instrucciones deben pasarse. El procesamiento de XAML en los servicios XAML de .NET no usa ninguna instrucción de procesamiento. Otros marcos existentes que usan XAML tampoco usan las instrucciones de procesamiento de XAML. 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre XAML (WPF)](../fundamentals/xaml.md)
-- [Extensiones de marcado y XAML de WPF](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Extensiones de marcado y XAML de WPF](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)
 - [Gramática de XamlName](xamlname-grammar.md)
 - [Procesamiento de espacios en blanco en XAML](white-space-processing.md)

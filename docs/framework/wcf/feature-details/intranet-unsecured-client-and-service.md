@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1edbfe2d0d25ea9f2145f879673fc9f0a6ee7f96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579285"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547198"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Cliente y servicio de intranet no protegidos
 En la ilustración siguiente se muestra un servicio de Windows Communication Foundation simple (WCF) desarrollado para proporcionar información sobre una red privada segura a una aplicación WCF. No es necesaria la seguridad porque los datos son de poca importancia, se espera que la red sea intrínsecamente segura, o bien la seguridad la proporciona una capa por debajo de la infraestructura de WCF.  
@@ -27,8 +27,8 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 |Integridad|None|  
 |Confidencialidad|None|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -71,7 +71,7 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -116,4 +116,4 @@ En la ilustración siguiente se muestra un servicio de Windows Communication Fou
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

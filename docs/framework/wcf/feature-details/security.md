@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595153"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546320"
 ---
 # <a name="windows-communication-foundation-security"></a>Seguridad en Windows Communication Foundation
 En los temas de esta sección se describen las características de seguridad de Windows Communication Foundation (WCF) y cómo usarlas para proteger los mensajes.  
   
- Para obtener más información acerca de Windows Server AppFabric y la seguridad, vea [modelo de seguridad para Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10)) .  
+ Para obtener más información acerca de Windows Server AppFabric y la seguridad, vea [modelo de seguridad para Windows Server AppFabric](/previous-versions/appfabric/ee677202(v=azure.10)) .  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre seguridad](security-overview.md)  

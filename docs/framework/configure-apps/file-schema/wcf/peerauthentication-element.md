@@ -2,12 +2,12 @@
 title: <peerAuthentication> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 4c29c84a2cc56a890c8273e410ba31b5f3900732
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 093b0c4b6a7fbf54455ec523b52c1f3a9884cfa8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400081"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536020"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication> (Elemento)
 Especifica las opciones de autenticación de clientes punto a punto.  
@@ -46,25 +46,25 @@ Especifica las opciones de autenticación de clientes punto a punto.
   
 ## <a name="customcertificatevalidatortype-attribute"></a>Atributo customCertificateValidatorType  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |String|Especifica el nombre de tipo y el ensamblado y otros datos utilizados para buscar el tipo. Como mínimo, se requieren un espacio de nombres y un nombre de tipo. La información opcionales incluye: nombre de ensamblado, número de versión, referencia cultural y token de clave pública.|  
   
 ## <a name="certificatevalidationmode-attribute"></a>Atributo certificateValidationMode  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Enumeración|Uno de los siguientes valores: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. De manera predeterminada, es `ChainTrust`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>Atributo revocationMode  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Enumeración|Uno de los siguientes valores: `NoCheck`, `Online`, `Offline`. De manera predeterminada, es `Online`.<br /><br /> Para obtener más información, consulte [trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>Atributo trustedStoreLocation  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Enumeración|Puede ser uno de los siguientes valores: `LocalMachine` o `CurrentUser`. De manera predeterminada, es `CurrentUser`. Si la aplicación cliente se está ejecutando bajo una cuenta del sistema, entonces el certificado está normalmente bajo `LocalMachine`. Si la aplicación cliente se está ejecutando en una cuenta de usuario, entonces el certificado se encuentra normalmente en `CurrentUser`.|  
   
@@ -101,7 +101,7 @@ Especifica las opciones de autenticación de clientes punto a punto.
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
@@ -109,7 +109,7 @@ Especifica las opciones de autenticación de clientes punto a punto.
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticación del mensaje del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticación personalizada de canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

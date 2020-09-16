@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 4e07aa7aac82fae5cfd1bfc759ef724cf87a873a
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 21d3dcb05e48154eb3f9f10d8308dc14bd046ae1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246941"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546346"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows
 
@@ -139,4 +139,4 @@ Como la opción de "autohospedaje", el entorno de hospedaje de servicio de Windo
 - [Configuración simplificada](../simplified-configuration.md)
 - [Hospedaje en una aplicación administrada](hosting-in-a-managed-application.md)
 - [Servicios de hospedaje](../hosting-services.md)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

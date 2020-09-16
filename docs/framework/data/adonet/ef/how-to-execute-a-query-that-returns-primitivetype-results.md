@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: a00448f1c521d468db4cdaa957f92772194c8b43
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: ef212b31e9a7eda5adb037ff2b91f298ae6e948e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854874"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546762"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
 En este tema se muestra cómo ejecutar un comando en un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.PrimitiveType> usando un objeto <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   

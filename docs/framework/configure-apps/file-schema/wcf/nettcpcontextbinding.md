@@ -2,12 +2,12 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 360cdf76e013d085022f45eba5f8549e11cd68d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 88b3da6c81d771db255f6c0a4e86984c9ba294fe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140704"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546157"
 ---
 # \<netTcpContextBinding>
 Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requiere que se firme el nivel de protección. El contextExchangeMechanism para NetTcpContextBinding es SOAPHeader.  
@@ -90,8 +90,8 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica si se establecen sesiones confiables entre los puntos de conexión del canal.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<reliableSession>](/previous-versions/ms731375(v=vs.90))|Especifica si se establecen sesiones confiables entre los puntos de conexión del canal.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -99,7 +99,7 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>

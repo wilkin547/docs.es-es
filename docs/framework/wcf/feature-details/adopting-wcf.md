@@ -2,18 +2,18 @@
 title: Adoptación de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: a31bd5382e67565bd54272c5c7f400eacd5297d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 40a2eac1e282640f0df70a7eca16e3b2401c0764
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576543"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546013"
 ---
 # <a name="adopt-windows-communication-foundation"></a>Adopción de Windows Communication Foundation
 
 Puede optar por usar Windows Communication Foundation (WCF) para el nuevo desarrollo mientras continúa manteniendo las aplicaciones existentes desarrolladas mediante ASP.NET. Dado que WCF pretende ser la opción más adecuada para facilitar la comunicación con las aplicaciones compiladas con la .NET Framework en cualquier escenario, puede actuar como una herramienta estándar para resolver una gran variedad de problemas de comunicación de software de una forma que ASP.NET no pueda.
 
-Las nuevas aplicaciones WCF se pueden implementar en los mismos equipos que los servicios Web de ASP.NET existentes. Si los servicios Web de ASP.NET existentes usan una versión de la .NET Framework anterior a la 2,0, puede usar la herramienta de registro de IIS de ASP.NET para implementar de forma selectiva el .NET Framework 2,0 en las aplicaciones de IIS en las que se van a hospedar nuevas aplicaciones WCF. Esa herramienta está documentada en [ASP.net IIS registration Tool (Aspnet_regiis. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))y tiene una interfaz de usuario integrada en la consola de administración de IIS 6,0.
+Las nuevas aplicaciones WCF se pueden implementar en los mismos equipos que los servicios Web de ASP.NET existentes. Si los servicios Web de ASP.NET existentes usan una versión de la .NET Framework anterior a la 2,0, puede usar la herramienta de registro de IIS de ASP.NET para implementar de forma selectiva el .NET Framework 2,0 en las aplicaciones de IIS en las que se van a hospedar nuevas aplicaciones WCF. Esa herramienta está documentada en [ASP.net IIS registration Tool (Aspnet_regiis.exe)](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))y tiene una interfaz de usuario integrada en la consola de administración de IIS 6,0.
 
 WCF se puede usar para agregar nuevas características a los servicios Web de ASP.NET existentes agregando servicios WCF configurados para ejecutarse en el modo de compatibilidad de ASP.NET a las aplicaciones de servicio Web ASP.NET existentes en IIS. Debido al modo de compatibilidad de ASP.NET, el código de los nuevos servicios WCF puede obtener acceso y actualizar la misma información de estado de la aplicación que el código ASP.NET existente, mediante la <xref:System.Web.HttpContext> clase. Las aplicaciones también pueden compartir las mismas bibliotecas de clases.
 

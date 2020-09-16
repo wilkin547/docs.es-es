@@ -3,12 +3,12 @@ title: Cadenas de conexión en el Entity Framework ADO.NET
 description: Obtenga información sobre las cadenas de conexión en el Entity Framework, que contienen información para conectarse al proveedor de datos ADO.NET y acerca de los archivos de asignación y de modelo.
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36b7724bc8dbb8f427f4bbf748b7b7801adea8db
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286875"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542762"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Cadenas de conexión en el Entity Framework ADO.NET
 
@@ -16,7 +16,7 @@ Una cadena de conexión contiene información de inicialización que se transfie
 
 El proveedor de EntityClient utiliza la cadena de conexión al obtener acceso a los metadatos del modelo y de asignación y al conectar con el origen de datos. Se puede obtener acceso a la cadena de conexión o establecerse a través de la propiedad <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La clase <xref:System.Data.EntityClient.EntityConnectionStringBuilder> se puede utilizar para construir mediante programación los parámetros de la cadena de conexión o tener acceso a ellos. Para obtener más información, vea [Cómo: compilar una cadena de conexión de EntityConnection](how-to-build-an-entityconnection-connection-string.md).
 
-Las [herramientas de Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) generan una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [Administración de conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
+Las [herramientas de Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) generan una cadena de conexión que se almacena en el archivo de configuración de la aplicación. <xref:System.Data.Objects.ObjectContext> recupera esta información de conexión automáticamente al crear consultas de objetos. Se puede tener acceso al elemento  <xref:System.Data.EntityClient.EntityConnection> que usa una instancia de <xref:System.Data.Objects.ObjectContext> desde la propiedad <xref:System.Data.Objects.ObjectContext.Connection%2A>. Para obtener más información, consulte [Administración de conexiones y transacciones](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
 
 ## <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 
@@ -93,7 +93,7 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>Compatibilidad con la cadena de sustitución &#124;&#124; de DataDirectory y el operador raíz de la aplicación web (~)
 
-`DataDirectory`y el operador ~ se utilizan en <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte de las `Metadata` `Provider Connection String` palabras clave y. El elemento <xref:System.Data.EntityClient.EntityConnection> reenvía `DataDirectory` y el operador ~ a <xref:System.Data.Metadata.Edm.MetadataWorkspace> y al proveedor de almacenamiento, respectivamente.
+`DataDirectory` y el operador ~ se utilizan en <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> como parte de las `Metadata` `Provider Connection String` palabras clave y. El elemento <xref:System.Data.EntityClient.EntityConnection> reenvía `DataDirectory` y el operador ~ a <xref:System.Data.Metadata.Edm.MetadataWorkspace> y al proveedor de almacenamiento, respectivamente.
 
 |Término|Descripción|
 |----------|-----------------|
@@ -108,9 +108,9 @@ Una ruta de acceso que comience con  `DataDirectory` o con el operador ~ no se p
 
 La resolución de la cadena de sustitución `DataDirectory` y el operador ~ no es recursiva. Por ejemplo, cuando `DataDirectory` incluye el carácter `~`, se lanza una excepción. De esta forma se evita una recursividad infinita.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Trabajar con proveedores de datos](working-with-data-providers.md)
 - [Consideraciones de implementación](deployment-considerations.md)
-- [Administrar conexiones y transacciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
+- [Administrar conexiones y transacciones](/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [Cadenas de conexión](../connection-strings.md)

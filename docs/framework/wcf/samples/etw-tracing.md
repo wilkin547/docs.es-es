@@ -3,12 +3,12 @@ title: Seguimiento ETW
 description: Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E) mediante el seguimiento de eventos para Windows (ETW) y ETWTraceListener.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244431"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547146"
 ---
 # <a name="etw-tracing"></a>Seguimiento ETW
 Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E) mediante el Seguimiento de eventos para Windows (ETW) y `ETWTraceListener` que se proporciona este ejemplo. El ejemplo se basa en el [Introducción](getting-started-sample.md) e incluye el seguimiento de ETW.  
@@ -51,7 +51,7 @@ Este ejemplo muestra cómo implementar el seguimiento de un extremo a otro (E2E)
  Antes de utilizar este agente de escucha, se debe iniciar una Sesión de seguimiento de ETW. Esta sesión se puede iniciar utilizando Logman.exe o Tracelog.exe. Un archivo SetupETW.bat está incluido con este ejemplo para que pueda preparar la Sesión de seguimiento ETW junto con un archivo CleanupETW.bat para cerrar la sesión y completar el archivo de registro.  
   
 > [!NOTE]
-> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema. Para obtener más información acerca de estas herramientas, consulte<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema. Para obtener más información acerca de estas herramientas, consulte <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Al utilizar ETWTraceListener, los rastros están registrados en archivos .etl binarios. Con el seguimiento ServiceModel activado, todos los rastros generados aparecen en el mismo archivo. Use la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) para ver los archivos de registro. ETL y. svclog. El visor crea una vista de un extremo a otro del sistema que permite hacer el seguimiento un mensaje de su origen a su destino y punto de consumo.  
   
@@ -109,4 +109,4 @@ logman stop Wcf
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Ejemplos de supervisión de AppFabric](/previous-versions/appfabric/ff383407(v=azure.10))

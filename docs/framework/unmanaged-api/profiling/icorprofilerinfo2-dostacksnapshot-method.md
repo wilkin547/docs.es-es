@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: b9a7142de01d818390b740a795f70a4606952780
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497379"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547828"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
 Recorre los marcos administrados de la pila para el subproceso especificado y envía información al generador de perfiles a través de una devolución de llamada.  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  El orden en el que se recorre la pila es el inverso de cómo se insertaron los fotogramas en la pila: primero el fotograma (última inserción), el marco principal (primero insertado).  
   
- Para obtener más información sobre cómo programar el generador de perfiles para guiar pilas administradas, consulte [recorrido de la pila del generador de perfiles en el .NET Framework 2,0: aspectos básicos y más allá](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
+ Para obtener más información sobre cómo programar el generador de perfiles para guiar pilas administradas, consulte [recorrido de la pila del generador de perfiles en el .NET Framework 2,0: aspectos básicos y más allá](/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Un recorrido de pila puede ser sincrónico o asincrónico, como se explica en las secciones siguientes.  
   
@@ -85,7 +85,7 @@ HRESULT DoStackSnapshot(
   
  Para obtener un SEED, se suspende directamente el subproceso de destino y se recorre su pila, hasta que encuentre el marco administrado de nivel superior. Una vez suspendido el subproceso de destino, obtenga el contexto de registro actual del subproceso de destino. A continuación, determine si el contexto de registro apunta a código no administrado llamando a [ICorProfilerInfo:: getfunctionfromip (](icorprofilerinfo-getfunctionfromip-method.md) ; si devuelve un `FunctionID` valor igual a cero, el marco es código no administrado. Ahora, recorra la pila hasta llegar al primer marco administrado y, a continuación, calcule el contexto de inicialización basándose en el contexto de registro para ese marco.  
   
- Llame a `DoStackSnapshot` con el contexto de inicialización para iniciar el recorrido de pila asincrónico. Si no proporciona una inicialización, `DoStackSnapshot` puede omitir los marcos administrados en la parte superior de la pila y, por consiguiente, le proporcionará un recorrido de pila incompleto. Si proporciona una inicialización, debe apuntar a código generado por JIT o por el generador de imágenes nativas (Ngen. exe); de lo contrario, `DoStackSnapshot` devuelve el código de error CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Llame a `DoStackSnapshot` con el contexto de inicialización para iniciar el recorrido de pila asincrónico. Si no proporciona una inicialización, `DoStackSnapshot` puede omitir los marcos administrados en la parte superior de la pila y, por consiguiente, le proporcionará un recorrido de pila incompleto. Si proporciona una inicialización, debe apuntar a código generado por JIT o por el generador de imágenes nativas (Ngen.exe); de lo contrario, `DoStackSnapshot` devuelve el código de error CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
  Los recorridos de pila asincrónicos pueden causar fácilmente interbloqueos o infracciones de acceso, a menos que siga estas directrices:  
   
@@ -106,7 +106,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

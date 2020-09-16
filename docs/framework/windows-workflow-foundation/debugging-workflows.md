@@ -2,12 +2,12 @@
 title: Depurar flujos de trabajo
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802640"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543841"
 ---
 # <a name="debugging-workflows"></a>Depurar flujos de trabajo
 
@@ -31,7 +31,7 @@ La depuración del flujo de trabajo también admite el uso de la infraestructura
 
 ## <a name="remote-debugging"></a>Remote Debugging
 
-La depuración remota de Windows Workflow Foundation (WF) es igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
+La depuración remota de Windows Workflow Foundation (WF) es igual que la depuración remota de otros componentes de Visual Studio. Para obtener información sobre cómo usar la depuración remota, vea [Cómo: habilitar la depuración remota](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Si la aplicación de flujo de trabajo tiene como destino la arquitectura x86 y se hospeda en un equipo que ejecuta un sistema operativo de 64 bits, la depuración remota no funcionará a menos que Visual Studio esté instalado en el equipo remoto o el destino de la aplicación de flujo de trabajo se cambie a **cualquier CPU**.

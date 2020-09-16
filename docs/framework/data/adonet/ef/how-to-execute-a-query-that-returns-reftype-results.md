@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: c9f3b7e19770c89bbb200913bf7fcf44f901ea99
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 88cdb29d8b2bc56929108da738747f4e21cded4c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854579"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546788"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados RefType
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.RefType> usando un <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, vea [Cómo: Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   

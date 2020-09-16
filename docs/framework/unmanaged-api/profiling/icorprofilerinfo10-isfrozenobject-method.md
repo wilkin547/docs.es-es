@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 21f9cb415f913a9c865a487f6e80523344db811e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3755260b885768de6b5b2d6342c0ad590a95caff
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452193"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548675"
 ---
 # <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10:: IsFrozenObject (método)
 
@@ -33,22 +33,22 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 
 - `objectId`
 
-  \[en] el objeto que se va a examinar.
+  \[en] objeto que se va a examinar.
 
 - `pbFrozen`
 
-  \[out] un `BOOL` que indica si el objeto está en un segmento de solo lectura.
+  \[out] un valor de `BOOL` tipo que indica si el objeto está en un segmento de solo lectura.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/dependencies.md?pivots=os-windows).
+**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).
 
 **Encabezado:** CorProf.idl, CorProf.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorProfilerInfo10](icorprofilerinfo10-interface.md)

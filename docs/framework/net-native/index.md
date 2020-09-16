@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128372"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543938"
 ---
 # <a name="compiling-apps-with-net-native"></a>Compilar aplicaciones con .NET Native
 
@@ -38,7 +38,7 @@ En el caso de los usuarios de las aplicaciones, .NET Native ofrece estas ventaja
 - Uso optimizado de la memoria de la aplicación.
 
 > [!IMPORTANT]
-> En la gran mayoría de las aplicaciones y los escenarios, .NET Native ofrece tiempos de inicio significativamente más rápidos y un rendimiento superior en comparación con una aplicación compilada en IL o en una imagen de NGEN. Sin embargo, los resultados pueden variar. Para asegurarse de que la aplicación se ha beneficiado de las mejoras de rendimiento de .NET Native, debe comparar su rendimiento con el de la versión nativa de non-.NET de la aplicación. Para obtener más información, vea [información general sobre la sesión de rendimiento](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> En la gran mayoría de las aplicaciones y los escenarios, .NET Native ofrece tiempos de inicio significativamente más rápidos y un rendimiento superior en comparación con una aplicación compilada en IL o en una imagen de NGEN. Sin embargo, los resultados pueden variar. Para asegurarse de que la aplicación se ha beneficiado de las mejoras de rendimiento de .NET Native, debe comparar su rendimiento con el de la versión nativa de non-.NET de la aplicación. Para obtener más información, vea [información general sobre la sesión de rendimiento](/visualstudio/profiling/performance-session-overview).
 
 Pero .NET Native implica más que una compilación en código nativo. Transforma la manera en que se compilan y ejecutan las aplicaciones de .NET Framework. En concreto:
 

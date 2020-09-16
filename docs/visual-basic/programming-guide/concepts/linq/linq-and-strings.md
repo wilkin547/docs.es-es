@@ -2,17 +2,17 @@
 title: LINQ y cadenas
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353280"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549854"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ y cadenas (Visual Basic)
 Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas. Puede resultar especialmente útil con datos semiestructurados de archivos de texto. Las consultas LINQ se pueden combinar con funciones de cadena tradicionales y expresiones regulares. Por ejemplo, puede usar el método <xref:System.String.Split%2A> o <xref:System.Text.RegularExpressions.Regex.Split%2A> para crear una matriz de cadenas que después puede consultar o modificar mediante LINQ. Puede usar el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> en la cláusula `where` de una consulta LINQ. Y puede usar LINQ para consultar o modificar los resultados <xref:System.Text.RegularExpressions.MatchCollection> que se han devuelto mediante una expresión regular.  
   
- También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para más información, vea [Cómo generar un XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md).  
+ También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para obtener más información, vea [Cómo: generar XML a partir de archivos CSV](../../../../standard/linq/generate-xml-csv-files.md).  
   
  Los ejemplos de esta sección se dividen en dos categorías:  
   
@@ -22,7 +22,7 @@ Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas
  [Cómo: contar las repeticiones de una palabra en una cadena (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
  Muestra cómo usar LINQ para consultas simples en texto.  
   
- [Cómo: buscar frases que contengan un conjunto especificado de palabras (LINQ) (Visual Basic)](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
+ [Cómo: Buscar frases que contengan un conjunto especificado de palabras (LINQ) (Visual Basic)](how-to-query-for-sentences-that-contain-a-specified-set-of-words.md)
 
  Muestra cómo dividir archivos de texto en límites arbitrarios y cómo realizar consultas en cada parte.  
   
@@ -38,7 +38,7 @@ Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas
  [Cómo: buscar la diferencia de conjuntos entre dos listas (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  
  Muestra cómo encontrar todas las cadenas que se encuentran en una lista pero no en la otra.  
   
- [Cómo: ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
+ [Cómo ordenar o filtrar datos de texto por palabra o campo (LINQ) (Visual Basic)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)  
  Muestra cómo ordenar líneas de texto según cualquier palabra o campo.  
   
  [Cómo: reordenar los campos de un archivo delimitado (LINQ) (Visual Basic)](how-to-reorder-the-fields-of-a-delimited-file.md)  
@@ -62,4 +62,4 @@ Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas
 ## <a name="see-also"></a>Vea también
 
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
-- [Generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Cómo: generar XML a partir de archivos CSV](../../../../standard/linq/generate-xml-csv-files.md)

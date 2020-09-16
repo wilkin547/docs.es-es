@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7dd73b755c7aed91a1fd59baaf9d5e090a36768
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600443"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541466"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Información general sobre seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) es una plataforma de programación distribuida basada en mensajes SOAP, y la protección de los mensajes entre clientes y servicios es esencial para proteger los datos. WCF proporciona una plataforma versátil e interoperable para intercambiar mensajes seguros basados en la infraestructura de seguridad existente y en los estándares de seguridad reconocidos para los mensajes SOAP.  
@@ -113,4 +113,4 @@ Windows Communication Foundation (WCF) es una plataforma de programación distri
 - [Enlaces proporcionados por el sistema](../system-provided-bindings.md)
 - [Información general acerca de la creación de puntos finales](../endpoint-creation-overview.md)
 - [Extensión de la seguridad](../extending/extending-security.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

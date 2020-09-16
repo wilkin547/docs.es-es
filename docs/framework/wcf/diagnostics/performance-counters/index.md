@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 73bb02379308fbfe507137e61ac8d84e6b9760b4
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 7c8a134039526abf046136ac383fbaff3a5abbfe
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395895"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541218"
 ---
 # <a name="wcf-performance-counters"></a>Contadores de rendimiento de WCF
 Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de rendimiento para ayudarle a medir el rendimiento de la aplicación.  
   
 ## <a name="enabling-performance-counters"></a>Habilitación de contadores de rendimiento  
- Puede habilitar los contadores de rendimiento para un servicio WCF a través del archivo de configuración app. config del servicio WCF de la siguiente manera:  
+ Puede habilitar los contadores de rendimiento para un servicio WCF a través del archivo de configuración app.config del servicio WCF de la siguiente manera:  
   
 ```xml  
 <configuration>  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) incluye un gran conjunto de contadores de
   
 - Off: los contadores de rendimiento ServiceModel* están deshabilitados.  
   
- Si desea habilitar los contadores de rendimiento para todas las aplicaciones WCF, puede colocar los valores de configuración en el archivo Machine. config.  Consulte la sección **aumento del tamaño de la memoria para los contadores de rendimiento** más adelante para obtener más información sobre cómo configurar la memoria suficiente para los contadores de rendimiento de su equipo.  
+ Si desea habilitar los contadores de rendimiento para todas las aplicaciones WCF, puede colocar los valores de configuración en el archivo de Machine.config.  Consulte la sección **aumento del tamaño de la memoria para los contadores de rendimiento** más adelante para obtener más información sobre cómo configurar la memoria suficiente para los contadores de rendimiento de su equipo.  
   
  Si usa puntos de extensibilidad de WCF como invocadores de operación personalizados, también debe emitir sus propios contadores de rendimiento. Esto se debe a que, si implementa un punto de extensibilidad, WCF ya no puede emitir los datos de contador de rendimiento estándar en la ruta de acceso predeterminada. Si no implementa la compatibilidad con el contador de rendimiento manual, puede que no vea los datos de contador de rendimiento que espera.  
   
@@ -50,8 +50,8 @@ sg.Diagnostic.PerformanceCounters = PerformanceCounterScope.All;
 config.Save();  
 ```  
   
-## <a name="viewing-performance-data"></a>Ver los datos de rendimiento  
- Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**, haga clic en **ejecutar** y escriba `perfmon.exe` en el cuadro de diálogo.  
+## <a name="viewing-performance-data"></a>Visualización de datos de rendimiento  
+ Para ver los datos capturados por los contadores de rendimiento, utilice el monitor de rendimiento (Perfmon.exe) incluido en Windows. Puede iniciar esta herramienta; para ello, vaya a **Inicio**y haga clic en **Ejecutar** y escriba `perfmon.exe` en el cuadro de diálogo.  
   
 > [!NOTE]
 > Se pueden lanzar instancias del contador de rendimiento antes de que el distribuidor del punto de conexión haya procesado los últimos mensajes. Esto puede dar lugar a que no se capturen los datos de rendimiento de algunos mensajes.  
@@ -127,7 +127,7 @@ Se instalan varios archivos en la carpeta de instalación del SDK para que pueda
 - *\_SMSvcHostPerfCounters. VRG*
 - *\_TransactionBridgePerfCounters. VRG*
   
-Para obtener más información sobre cómo obtener acceso a los contadores mediante programación, vea [arquitectura de programación del contador de rendimiento](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
+Para obtener más información sobre cómo obtener acceso a los contadores mediante programación, vea [arquitectura de programación del contador de rendimiento](/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   
 ## <a name="see-also"></a>Vea también
 

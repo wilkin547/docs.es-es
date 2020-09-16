@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: db9ce146da1d6fee8db32a0be43903eaa61e52de
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8c502c082c2cf90d87c195df531de686e2a6d914
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501760"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544263"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode (Método)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -50,8 +50,8 @@ HRESULT GetActiveReJitRequestILCode(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugFunction3 (Interfaz)](icordebugfunction3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)
-- [ReJIT: Guía de procedimientos](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Guía de procedimientos](/archive/blogs/davbr/rejit-a-how-to-guide)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5b78c808de4a16060d37844ad0f17e89fa6f6d84
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548083"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Cómo: Llamar a una función de Windows que adopta tipos sin signo (Visual Basic)
 
@@ -76,11 +76,11 @@ Si está consumiendo una clase, un módulo o una estructura que tiene miembros d
     > La realización de una llamada a código no administrado, como la interfaz de programación de aplicaciones (API) de Windows, expone el código a posibles riesgos de seguridad.
 
     > [!IMPORTANT]
-    > La llamada a la API de Windows requiere el permiso del código no administrado, lo que puede afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, vea <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
+    > La llamada a la API de Windows requiere el permiso del código no administrado, lo que puede afectar a su ejecución en situaciones de confianza parcial. Para obtener más información, vea <xref:System.Security.Permissions.SecurityPermission> y [permisos de acceso del código](/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100)).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos](../../language-reference/data-types/index.md)
+- [Tipo de datos](../../language-reference/data-types/index.md)
 - [Tipo de datos Integer](../../language-reference/data-types/integer-data-type.md)
 - [Tipo de datos UInteger](../../language-reference/data-types/uinteger-data-type.md)
 - [Declare Statement](../../language-reference/statements/declare-statement.md)

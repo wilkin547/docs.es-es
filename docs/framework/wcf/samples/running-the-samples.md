@@ -2,36 +2,36 @@
 title: Ejecución de los ejemplos de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: f4c7a7fa759d7339dee3d189540fb85f3883f828
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 57f760fa8bf4a3abf83492ac455dfaed2b327e7e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594574"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545108"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Ejecución de los ejemplos de Windows Communication Foundation
 Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una configuración de un solo equipo o entre equipos. Tal y como se proporcionan, los ejemplos están listos para ejecutarse en un equipo único. En una configuración de equipos cruzada, es necesario modificar la configuración del archivo de configuración de un ejemplo. Los procedimientos siguientes explican cómo ejecutar un ejemplo en mismo equipo y en configuraciones de equipos cruzadas. Observe que hay variaciones en los pasos para los servicios hospedados en Internet Information Services (IIS) y los ejemplos autohospedados. La mayoría de los ejemplos se hospedan en IIS; vea la información readme del ejemplo para determinar cómo se hospeda.  
   
- En Windows Vista, los ejemplos que no se hospedan en IIS requieren privilegios elevados para registrar un agente de escucha con http. sys. Utilice Httpcfg.exe para registrar las direcciones de escucha del servicio con la cuenta bajo la que el servicio se está ejecutando o inicie el servicio desde un símbolo del sistema que se ejecuta con privilegios de administrador.  
+ En Windows Vista, los ejemplos que no se hospedan en IIS requieren privilegios elevados para registrar un agente de escucha con Http.sys. Utilice Httpcfg.exe para registrar las direcciones de escucha del servicio con la cuenta bajo la que el servicio se está ejecutando o inicie el servicio desde un símbolo del sistema que se ejecuta con privilegios de administrador.  
   
 > [!NOTE]
 > Antes de compilar o ejecutar cualquiera de los ejemplos de WCF, asegúrese de que ha realizado el [procedimiento de instalación único para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1. Si IIS hospeda el servicio, asegúrese de que puede tener acceso al servicio mediante un explorador escribiendo la dirección siguiente: `http://localhost/servicemodelsamples/service.svc` . Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+1. Si IIS hospeda el servicio, asegúrese de que puede tener acceso al servicio mediante un explorador escribiendo la dirección siguiente: `http://localhost/servicemodelsamples/service.svc` . Como respuesta se debe mostrar una página de confirmación. Si no se muestra la página de confirmación, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 2. Si el servicio es autohospedado, ejecute Service.exe desde \service\bin, bajo la carpeta específica del lenguaje. La actividad del servicio se muestra en la ventana de la consola del servicio.  
   
-3. Ejecute Client. exe desde \client\bin\ \\ , desde la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente.  
+3. Ejecute Client.exe desde \client\bin\ \\ , en la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente.  
   
-4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
 1. Si el servicio se hospeda en IIS:  
   
-    1. En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El archivo por lotes Setupvroot. bat incluido con [el procedimiento de instalación único para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md) se puede usar para crear el directorio de disco y el directorio virtual.  
+    1. En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El archivo por lotes Setupvroot.bat incluido con [el procedimiento de instalación único para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md) se puede usar para crear el directorio de disco y el directorio virtual.  
   
     2. Copie los archivos de programa de servicio del directorio %SystemDrive%\Inetpub \wwwroot\servicemodelsamples al directorio virtual ServiceModelSamples del equipo de servicio. Asegúrese de que incluye los archivos en el directorio \bin.  
   
@@ -53,7 +53,7 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
   
     1. Si el servicio no se está ejecutando bajo una cuenta de dominio, abra el archivo de configuración del cliente y cambie el valor de dirección de la definición de extremo para que coincida con la nueva dirección de su servicio. Reemplace cualquier referencia a "localhost" con un nombre de dominio completo en la dirección.  
   
-    2. Si el servicio se está ejecutando bajo una cuenta de dominio, regenere la configuración del cliente ejecutando Svcutil.exe en el servicio. Para obtener más información acerca de cómo ejecutar SvcUtil. exe, consulte [compilar los ejemplos de Windows Communication Foundation](building-the-samples.md). Utilice el archivo generado en lugar del archivo de configuración en el ejemplo. El archivo de configuración generado tiene información de identidad adicional y contiene todos los valores necesarios para conectarse al punto de conexión de servicio, aunque se trate de la configuración predeterminada. Para obtener más información acerca de la información de identidad, vea [identidad de servicio y autenticación](../feature-details/service-identity-and-authentication.md), y [\<identity>](../../configure-apps/file-schema/wcf/identity.md) .  
+    2. Si el servicio se está ejecutando bajo una cuenta de dominio, regenere la configuración del cliente ejecutando Svcutil.exe en el servicio. Para obtener más información sobre la ejecución de Svcutil.exe, vea [Building the Windows Communication Foundation samples](building-the-samples.md). Utilice el archivo generado en lugar del archivo de configuración en el ejemplo. El archivo de configuración generado tiene información de identidad adicional y contiene todos los valores necesarios para conectarse al punto de conexión de servicio, aunque se trate de la configuración predeterminada. Para obtener más información acerca de la información de identidad, vea [identidad de servicio y autenticación](../feature-details/service-identity-and-authentication.md), y [\<identity>](../../configure-apps/file-schema/wcf/identity.md) .  
   
 4. En el equipo cliente, inicie Client.exe desde el símbolo del sistema.  
   
@@ -82,4 +82,4 @@ Los ejemplos de Windows Communication Foundation (WCF) se pueden ejecutar en una
 ## <a name="see-also"></a>Vea también
 
 - [Compilación de los ejemplos de Windows Communication Foundation](building-the-samples.md)
-- [Sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))
+- [Sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

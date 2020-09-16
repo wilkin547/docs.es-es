@@ -3,12 +3,12 @@ title: Migración de .NET Remoting a WCF
 description: Obtenga información sobre cómo migrar una aplicación que usa .NET Remoting para usar WCF. Puede realizar varios escenarios comunes de comunicación remota en WCF.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: f6f526db09806008314980b71233b208d25359fc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246160"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542855"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -285,7 +285,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>¿Por qué migrar de Remoting a WCF?  
   
-- **.NET Remoting es un producto heredado.** Tal y como se describe en [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), se considera un producto heredado y no se recomienda para el nuevo desarrollo. Se recomienda WCF o ASP.NET Web API para aplicaciones nuevas y existentes.  
+- **.NET Remoting es un producto heredado.** Tal y como se describe en [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)), se considera un producto heredado y no se recomienda para el nuevo desarrollo. Se recomienda WCF o ASP.NET Web API para aplicaciones nuevas y existentes.  
   
 - **WCF usa los estándares multiplataforma.** WCF se diseñó teniendo en cuenta la interoperabilidad multiplataforma y admite muchos estándares del sector (SOAP, WS-Security, WS-Trust, etc.). Un servicio WCF puede interoperar con clientes que se ejecuten en sistemas operativos distintos de Windows. La comunicación remota se diseñó principalmente para entornos en los que las aplicaciones cliente y servidor se ejecutan con .NET Framework en un sistema operativo Windows.
   

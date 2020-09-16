@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 118159617a7f4c27ecc5e8fe077c28cfefac8537
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6f0ae05d3397e8fd981037dc58be1f80a661b5c5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536007"
 ---
 # \<peerAuthentication>
 Especifica los valores de autenticación para un certificado del mismo nivel usado por el remitente del mensaje.  
@@ -54,7 +54,7 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
 ## <a name="remarks"></a>Comentarios  
  El elemento `<authentication>` corresponde a la clase <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>. Este elemento especifica un validador, que se invoca durante la autenticación entre vecinos en la malla. Cuando un nuevo par intenta establecer una conexión de vecino, pasa su propia credencial al par que responde. El validador del contestador se invoca para comprobar la credencial de la parte remota. Cuando una conexión del mismo nivel se establece en la malla, se autentican ambos pares mutuamente, lo que significa que se invocan los validadores en ambos extremos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
@@ -62,7 +62,7 @@ Especifica los valores de autenticación para un certificado del mismo nivel usa
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.PeerAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticación del mensaje del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticación personalizada de canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

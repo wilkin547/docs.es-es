@@ -5,12 +5,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: bd9a08fca0159a24cb3faba2470dc43ee1178523
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ade7a3a285484c309611656ce1afc9deb269ce7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374789"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546183"
 ---
 # <a name="xml-in-visual-basic"></a>XML en Visual Basic
 
@@ -27,9 +27,9 @@ Visual Basic proporciona compatibilidad con lenguajes integrados que permite int
 |[Manipular XML en Visual Basic](manipulating-xml.md)|Describe cómo cargar y analizar XML mediante Visual Basic.|  
 |[Obtener acceso a XML en Visual Basic](accessing-xml.md)|Describe las propiedades de eje XML y los métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para tener acceso a elementos y atributos XML.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Xml.Linq>
 - [Literales XML](../../../language-reference/xml-literals/index.md)
 - [Propiedades de eje XML](../../../language-reference/xml-axis/index.md)
-- [LINQ to XML](../../concepts/linq/linq-to-xml.md)
+- [LINQ to XML](../../../../standard/linq/linq-xml-overview.md)

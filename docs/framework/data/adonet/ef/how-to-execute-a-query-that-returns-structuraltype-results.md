@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2314f2a2-b1c3-40c4-95bb-cdf9b21a7b53
-ms.openlocfilehash: 7b649abb21b8f6ebbbd8aadc279b2902b3e21e25
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: e9b9c806dd77ea90399aaefdaa751cbd0ab938e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854538"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546749"
 ---
 # <a name="how-to-execute-a-query-that-returns-structuraltype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados StructuralType
 En este tema se muestra cómo ejecutar un comando contra un modelo conceptual usando un objeto <xref:System.Data.EntityClient.EntityCommand>, y cómo recuperar los resultados de <xref:System.Data.Metadata.Edm.StructuralType> usando un <xref:System.Data.EntityClient.EntityDataReader>. Las clases <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.RowType> y <xref:System.Data.Metadata.Edm.ComplexType> se derivan de la clase <xref:System.Data.Metadata.Edm.StructuralType>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   

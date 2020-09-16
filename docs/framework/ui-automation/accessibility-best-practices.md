@@ -6,12 +6,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 2980881bbcd34ca82f6cca7723cf976e0890f463
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 1c01cfe8fdfb285ee5cbc586cc0c549365ef72ee
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557091"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543152"
 ---
 # <a name="accessibility-best-practices"></a>Prácticas recomendadas de accesibilidad
 
@@ -132,8 +132,8 @@ ms.locfileid: "87557091"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usar la API de entrada estándar con llamadas independientes del dispositivo  
  Las llamadas independientes del dispositivo garantizan la igualdad de las características del teclado y del mouse, a la vez que proporcionan una tecnología de asistencia con la información necesaria sobre la interfaz de usuario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Automation.Peers>
-- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90)) (Ejemplo de un control personalizado NumericUpDown y compatibilidad para Automatización de la interfaz de usuario)
-- [Directrices para el diseño de la interfaz de usuario de teclado](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90)) (Ejemplo de un control personalizado NumericUpDown y compatibilidad para Automatización de la interfaz de usuario)
+- [Directrices para el diseño de la interfaz de usuario de teclado](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

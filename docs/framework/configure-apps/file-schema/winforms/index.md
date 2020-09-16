@@ -2,12 +2,12 @@
 title: Sección de configuración de Windows Forms
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
-ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8a6f13da9bf05d87c45d86a09261d0c7245f5b00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151837"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546913"
 ---
 # <a name="windows-forms-configuration-section"></a>Sección de configuración de Windows Forms
 Las opciones de configuración de Windows Forms permiten a una aplicación de Windows Forms almacenar y recuperar información sobre configuraciones de aplicaciones personalizadas, como la compatibilidad multimonitor, la compatibilidad con valores altos de PPP y otras opciones de configuración predefinidos.
@@ -53,4 +53,4 @@ El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento puede inclu
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de los archivos de configuración](../index.md)
-- [Compatibilidad con PPP alta en Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Compatibilidad con PPP alta en Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595120"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542892"
 ---
 # <a name="trusted-subsystem"></a>Subsistema de confianza
 Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de una red. Los servicios Web están diseñados para que el acceso a recursos adicionales (como bases de datos u otros servicios Web) se encapsule en la lógica empresarial del servicio Web. Estos recursos deben protegerse frente al acceso no autorizado. La siguiente ilustración describe un proceso de subsistema de confianza.  
@@ -31,14 +31,14 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Message|  
+|Modo de seguridad|Mensaje|  
 |Interoperabilidad|Solo Windows Communication Foundation (WCF).|  
 |Autenticación (servicio)|El servicio de token de seguridad autentica y autoriza clientes.|  
 |Autenticación (cliente)|El subsistema de confianza autentica al cliente y el recurso autentica al servicio del subsistema de confianza.|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
 |Transporte|HTTP entre el cliente y el servicio del subsistema de confianza.<br /><br /> NET.TCP entre el servicio del subsistema de confianza y el recurso (servicio back-end).|  
-|Enlace|<xref:System.ServiceModel.WSHttpBinding>etc<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding> etc <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Recurso (servicio back-end)  
   
@@ -213,4 +213,4 @@ Un cliente obtiene acceso a uno o varios servicios Web distribuidos a través de
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,12 +2,12 @@
 title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600677"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545987"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
@@ -88,4 +88,4 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 ## <a name="see-also"></a>Vea también
 
 - [Configuración de WAS para su uso con WCF](configuring-the-wpa--service-for-use-with-wcf.md)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

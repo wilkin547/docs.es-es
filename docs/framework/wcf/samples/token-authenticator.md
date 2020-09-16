@@ -2,12 +2,12 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: f4b49edd3b5a2cecd203feed713c7694450f7497
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596557"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548597"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens en Windows Communication Foundation (WCF) se usa para validar el token utilizado con el mensaje, comprobar que es autocoherente y autenticar la identidad asociada con el token.
@@ -330,16 +330,16 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
+    > El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup.bat.  
   
 2. Inicie service.exe desde \service\bin.  
   
 3. Inicie client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. Copie los archivos de programa del servicio en el directorio del servicio en el equipo de servicio. Copie también los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-3. Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Tenga en cuenta que el archivo Setup. bat se debe ejecutar desde un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.  
+3. Debe tener un certificado de servidor con el nombre del sujeto que contiene el nombre de dominio completo del equipo. El archivo App.config del servicio debe actualizarse para reflejar este nuevo nombre de certificado. Puede crear uno utilizando el archivo Setup.bat si establece la variable `%SERVER_NAME%` en el nombre de host completo del equipo en el que se ejecutará el servicio. Tenga en cuenta que el archivo de setup.bat se debe ejecutar desde un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador.  
   
 4. Copie el certificado de servidor en el almacén CurrentUser-TrustedPeople del cliente. No necesita hacerlo excepto cuando un emisor de confianza del cliente emite el certificado de servidor.  
   
@@ -361,8 +361,8 @@ static void DisplayIdentityInformation()
   
 9. En el equipo cliente, inicie Client.exe desde un símbolo del sistema.  
   
-10. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
-1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
+1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.

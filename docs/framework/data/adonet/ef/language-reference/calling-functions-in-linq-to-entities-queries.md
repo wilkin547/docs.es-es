@@ -3,12 +3,12 @@ title: Llamar a funciones en consultas de LINQ to Entities
 description: Use estos artículos para ver cómo las clases EntityFunctions y SqlFunctions proporcionan acceso a las funciones canónicas y de base de datos como parte de la Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: faa6406713592f10e5e7371cd73f29bec4b03b7b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286862"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546053"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Llamar a funciones en consultas de LINQ to Entities
 Los temas de esta sección describen cómo realizar llamadas a funciones en consultas de LINQ to Entities.  
@@ -36,9 +36,9 @@ Los temas de esta sección describen cómo realizar llamadas a funciones en cons
   
  [Procedimiento para llamar a funciones definidas por el modelo como métodos de objeto](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)
 - [Funciones canónicas](canonical-functions.md)
-- [.edmx, Información general sobre el archivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Cómo: Definir funciones personalizadas en el modelo conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
+- [.edmx, Información general sobre el archivo](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Cómo: Definir funciones personalizadas en el modelo conceptual](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))
