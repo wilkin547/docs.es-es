@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598884"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535363"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
 En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio de Windows Communication Foundation (WCF) públicos y no seguros:  
@@ -21,14 +21,14 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 |--------------------|-----------------|  
 |Modo de seguridad|None|  
 |Transporte|HTTP|  
-|Enlace|<xref:System.ServiceModel.BasicHttpBinding>en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
+|Enlace|<xref:System.ServiceModel.BasicHttpBinding> en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
 |Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
 |Authentication|None|  
 |Integridad|None|  
 |Confidencialidad|None|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -68,7 +68,7 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -113,4 +113,4 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 
 - [Escenarios de seguridad comunes](common-security-scenarios.md)
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,12 +2,12 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 58ea5aa54a0f6acbc8d2400dd04eeba9ff498055
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: c19f341d869ee983531fa5c90c0d7c94978dadb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545045"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535376"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 
@@ -23,7 +23,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  Se recomienda cerrar siempre o eliminar una conexión cuando termine de utilizarla, para que la conexión pueda regresar al grupo. Es posible que las conexiones que no se cierran explícitamente no puedan regresar al grupo. Por ejemplo, una conexión que se ha salido del ámbito pero que no se ha cerrado explícitamente solo se devolverá al grupo de conexión si se ha alcanzado el tamaño máximo del grupo y la conexión aún es válida.
 
- Para obtener más información sobre OLE DB la agrupación de sesiones o de recursos, y cómo deshabilitar la agrupación invalidando los valores predeterminados del servicio de proveedor de OLE DB, consulte la [Guía del programador de OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms713643(v=vs.85)).
+ Para obtener más información sobre OLE DB la agrupación de sesiones o de recursos, y cómo deshabilitar la agrupación invalidando los valores predeterminados del servicio de proveedor de OLE DB, consulte la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="odbc"></a>ODBC
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.
@@ -62,7 +62,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
  En la siguiente tabla se describen los valores <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> que puede utilizar para ajustar el comportamiento de agrupación de conexiones.
 
-|Name|Predeterminado|Descripción|
+|Nombre|Valor predeterminado|Descripción|
 |----------|-------------|-----------------|
 |`Connection Lifetime`|0|Cuando una conexión se devuelve al grupo, su hora de creación se compara con la hora actual y, si ese marco temporal (en segundos) supera el valor especificado por `Connection Lifetime`, la conexión se destruye. Esto resulta de utilidad en configuraciones agrupadas para forzar el equilibrio de carga entre un servidor en ejecución y uno que acaba de conectarse.<br /><br /> Un valor de cero (0) hará que las conexiones agrupadas tengan el tiempo de espera máximo.|
 |`Enlist`|'true'|Cuando es `true`, el concentrador inscribe automáticamente la conexión en el contexto de transacción actual del subproceso de creación, si existe un contexto de transacción.|
@@ -72,6 +72,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 
 ## <a name="see-also"></a>Vea también
 
-- [Agrupación de conexiones](connection-pooling.md)
-- [Performance Counters](performance-counters.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Agrupar conexiones](connection-pooling.md)
+- [Contadores de rendimiento](performance-counters.md)
+- [Información general de ADO.NET](ado-net-overview.md)

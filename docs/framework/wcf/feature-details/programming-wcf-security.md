@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244990"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535903"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
 En este tema se describen las tareas de programación fundamentales que se usan para crear una aplicación Secure Windows Communication Foundation (WCF). En este tema solo se trata la autenticación, la confidencialidad y la integridad, que se conocen colectivamente como *seguridad de transferencia*. En este tema no se trata la autorización (el control de acceso a los recursos o servicios). para obtener información sobre la autorización, vea [autorización](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Para obtener una introducción valiosa a los conceptos de seguridad, especialmente en relación con WCF, vea el conjunto de tutoriales de patrones y prácticas de MSDN en [escenarios, patrones e instrucciones de implementación para Web Services Enhancements (WSE) 3,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
+> Para obtener una introducción valiosa a los conceptos de seguridad, especialmente en relación con WCF, vea el conjunto de tutoriales de patrones y prácticas de MSDN en [escenarios, patrones e instrucciones de implementación para Web Services Enhancements (WSE) 3,0](/previous-versions/msp-n-p/ff648183(v=pandp.10)).  
   
  La programación de la seguridad de WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
   
