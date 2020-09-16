@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81645354"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541789"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> (Elemento)
 Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publisher> evidencia para la seguridad de acceso del código (CAS).  
@@ -37,7 +37,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |`false`|No crea ninguna <xref:System.Security.Policy.Publisher> evidencia.|  
 |`true`|Crea una <xref:System.Security.Policy.Publisher> evidencia. Este es el valor predeterminado.|  
@@ -55,7 +55,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
-> En el .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga de ensamblados. Para obtener más información, consulte la sección "simplificación de la Directiva de seguridad" en [cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> En el .NET Framework 4 y versiones posteriores, este elemento no tiene ningún efecto en los tiempos de carga de ensamblados. Para obtener más información, consulte la sección "simplificación de la Directiva de seguridad" en [cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes).  
   
  El Common Language Runtime (CLR) intenta comprobar la firma Authenticode en el momento de la carga para crear una <xref:System.Security.Policy.Publisher> evidencia para el ensamblado. Sin embargo, de forma predeterminada, la mayoría de las aplicaciones no necesitan <xref:System.Security.Policy.Publisher> evidencia. La Directiva CAS estándar no se basa en <xref:System.Security.Policy.PublisherMembershipCondition> . Debe evitar el costo de inicio innecesario asociado con la comprobación de la firma del publicador, a menos que la aplicación se ejecute en un equipo con una directiva de CA personalizada o que pretenda satisfacer las demandas de <xref:System.Security.Permissions.PublisherIdentityPermission> en un entorno de confianza parcial. (Las peticiones de permisos de identidad siempre se realizan correctamente en un entorno de plena confianza).  
   
@@ -76,7 +76,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de configuración en tiempo de ejecución](index.md)
 - [Esquema de los archivos de configuración](../index.md)

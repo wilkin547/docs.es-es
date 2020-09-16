@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: c4c4cbf74cb17cf43e79c42ff42d1e68122fd534
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a0294f425552df3329d158d69a6d503b2f008780
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319712"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542338"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 Determina si el tipo de una expresión es del tipo especificado o uno de sus subtipos.  
@@ -35,11 +35,11 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `true` si `expression` es de tipo T y T es un tipo base o un tipo derivado de `type`; NULL si `expression` es nulo en tiempo de ejecución; de lo contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
- Las expresiones `expression IS NOT OF (type)` y `expression IS NOT OF (ONLY type)` son sintácticamente equivalentes a `NOT (expression IS OF (type))` y `NOT (expression IS OF (ONLY type))`, respectivamente.  
+ Las expresiones `expression IS NOT OF (type)` y `expression IS NOT OF (ONLY type)` son sintácticamente equivalentes a `NOT (expression IS OF (type))` y `NOT (expression IS OF (ONLY type))` , respectivamente.  
   
  En la tabla siguiente se muestra el comportamiento del operador `IS OF` en algunos patrones de esquina típicos. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   
-|Modelo|Comportamiento|  
+|Patrón|Comportamiento|  
 |-------------|--------------|  
 |null IS OF (EntityType)|Produce|  
 |null IS OF (ComplexType)|Produce|  
@@ -52,9 +52,9 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |RowType IS OF (RowType)|Produce|  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente consulta [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa el operador IS OF para determinar el tipo de una expresión de consulta y, a continuación, usa el operador TREAT para convertir un objeto del tipo Course en una colección de objetos del tipo OnsiteCourse. La consulta se basa en el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
+ La consulta de siguiente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa el operador is of para determinar el tipo de una expresión de consulta y, a continuación, usa el operador TREAT para convertir un objeto del tipo Course en una colección de objetos del tipo OnsiteCourse. La consulta se basa en el [modelo School](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
- [! code-SQL [DP EntityServices Concepts # TREAT_ISOF] ~/samples/snippets/tsql/VS_Snippets_Data/dp EntityServices Concepts/TSQL/EntitySql. SQL # TREAT_ISOF)]  
+ [! code-SQL [DP EntityServices Concepts # TREAT_ISOF] ~/samples/Snippets/TSQL/VS_Snippets_Data/DP EntityServices Concepts/TSQL/EntitySql. SQL # treat_isof)]  
   
 ## <a name="see-also"></a>Vea también
 
