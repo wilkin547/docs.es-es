@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 6330a4c2733729da264065d1eec8c3c9eaf9f05c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501032"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553361"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -76,7 +76,7 @@ Los dispositivos Windows RT están bastante bloqueados. Simplemente no se pueden
 
 En una serie de escenarios descritos en las secciones siguientes, la aplicación de escritorio de la interfaz de usuario del generador de perfiles debe consumir algunas nuevas API de Windows Runtime. Querrá consultar la documentación para saber qué Windows Runtime API se pueden usar desde aplicaciones de escritorio y si su comportamiento es diferente cuando se llama desde aplicaciones de escritorio y aplicaciones de la tienda Windows.
 
-Si la interfaz de usuario del generador de perfiles está escrita en código administrado, habrá que realizar algunos pasos para que el consumo de esas Windows Runtime API sea fácil. Para obtener más información, consulte el artículo [aplicaciones de escritorio administradas y Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
+Si la interfaz de usuario del generador de perfiles está escrita en código administrado, habrá que realizar algunos pasos para que el consumo de esas Windows Runtime API sea fácil. Para obtener más información, consulte el artículo [aplicaciones de escritorio administradas y Windows Runtime](/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Carga del archivo DLL del generador de perfiles
 
@@ -94,11 +94,11 @@ Uno de los primeros obstáculos será la carga de inicio y la carga de conexión
 
 **Firma de la DLL del generador de perfiles**
 
-Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos modos para hacer esto:
+Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos formas de hacerlo:
 
 - Asegúrese de que la DLL del generador de perfiles está firmada.
 
-- Indique al usuario que debe instalar una licencia de Desarrollador en su máquina con Windows 8 antes de usar la herramienta. Esto puede realizarse automáticamente desde Visual Studio o manualmente desde un símbolo del sistema. Para obtener más información, consulte [obtener una licencia de desarrollador](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
+- Indique al usuario que debe instalar una licencia de Desarrollador en su máquina con Windows 8 antes de usar la herramienta. Esto puede realizarse automáticamente desde Visual Studio o manualmente desde un símbolo del sistema. Para obtener más información, consulte [obtener una licencia de desarrollador](/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Permisos del sistema de archivos**
 
@@ -122,7 +122,7 @@ Si el proceso a intenta generar el proceso de la aplicación de la tienda Window
 
 En primer lugar, querrá preguntar al usuario de Profiler qué aplicación de la tienda Windows se va a iniciar. En el caso de las aplicaciones de escritorio, quizás muestre un cuadro de diálogo de búsqueda de archivos y el usuario encontraría y seleccione un archivo. exe. Pero las aplicaciones de la tienda Windows son diferentes y el uso de un cuadro de diálogo de exploración no tiene sentido. En su lugar, es mejor mostrar al usuario una lista de las aplicaciones de la tienda Windows instaladas para que el usuario las seleccione.
 
-Puede utilizar la <xref:Windows.Management.Deployment.PackageManager> clase para generar esta lista. `PackageManager`es una clase Windows Runtime que está disponible para las aplicaciones de escritorio y, de hecho, *solo* está disponible para las aplicaciones de escritorio.
+Puede utilizar la <xref:Windows.Management.Deployment.PackageManager> clase para generar esta lista. `PackageManager` es una clase Windows Runtime que está disponible para las aplicaciones de escritorio y, de hecho, *solo* está disponible para las aplicaciones de escritorio.
 
 El siguiente ejemplo de código de una interfaz de usuario hipotética del generador de perfiles que se escribe como una aplicación de escritorio en C# utiliza `PackageManager` para generar una lista de aplicaciones de Windows:
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 Una nueva interfaz COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), le permite personalizar el comportamiento de ejecución de una aplicación de la tienda Windows para facilitar algunas formas de diagnóstico. Uno de sus métodos, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), le permite pasar un bloque de entorno a la aplicación de la tienda Windows cuando se inicia, junto con otros efectos útiles como la deshabilitación de la suspensión automática del proceso. El bloque de entorno es importante porque es donde debe especificar las variables de entorno ( `COR_PROFILER` , `COR_ENABLE_PROFILING` y) que `COR_PROFILER_PATH)` usa CLR para cargar el archivo DLL del generador de perfiles.
 
-Considere el fragmento de código siguiente:
+Tenga en cuenta el fragmento de código siguiente:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -147,9 +147,9 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
 
 Hay un par de elementos que debe tener derecho:
 
-- `packageFullName`se puede determinar al recorrer en iteración los paquetes y la captura `package.Id.FullName` .
+- `packageFullName` se puede determinar al recorrer en iteración los paquetes y la captura `package.Id.FullName` .
 
-- `debuggerCommandLine`es un poco más interesante. Para pasar el bloque de entorno personalizado a la aplicación de la tienda Windows, debe escribir su propio depurador ficticio simplista. Windows genera la aplicación de la tienda Windows suspendida y, a continuación, asocia el depurador iniciando el depurador con una línea de comandos como en este ejemplo:
+- `debuggerCommandLine` es un poco más interesante. Para pasar el bloque de entorno personalizado a la aplicación de la tienda Windows, debe escribir su propio depurador ficticio simplista. Windows genera la aplicación de la tienda Windows suspendida y, a continuación, asocia el depurador iniciando el depurador con una línea de comandos como en este ejemplo:
 
     ```console
     MyDummyDebugger.exe -p 1336 -tid 1424
@@ -271,7 +271,7 @@ Es posible que no pueda hacer esto sin una API determinada y no pueda encontrar 
 
 ### <a name="reduced-permissions"></a>Permisos reducidos
 
-Está fuera del ámbito de este tema para mostrar todas las formas en que los permisos de aplicación de la tienda Windows difieren de las aplicaciones de escritorio. Pero ciertamente, el comportamiento será diferente cada vez que el archivo DLL del generador de perfiles (cuando se carga en una aplicación de la tienda Windows en comparación con una aplicación de escritorio) intente tener acceso a los recursos. El sistema de archivos es el ejemplo más común. Hay algunos lugares en disco a los que puede tener acceso una aplicación determinada de la tienda Windows (vea [acceso a archivos y permisos (aplicaciones Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))) y el archivo DLL del generador de perfiles tendrá las mismas restricciones. Pruebe el código exhaustivamente.
+Está fuera del ámbito de este tema para mostrar todas las formas en que los permisos de aplicación de la tienda Windows difieren de las aplicaciones de escritorio. Pero ciertamente, el comportamiento será diferente cada vez que el archivo DLL del generador de perfiles (cuando se carga en una aplicación de la tienda Windows en comparación con una aplicación de escritorio) intente tener acceso a los recursos. El sistema de archivos es el ejemplo más común. Hay algunos lugares en disco a los que puede tener acceso una aplicación determinada de la tienda Windows (vea [acceso a archivos y permisos (aplicaciones Windows Runtime](/previous-versions/windows/apps/hh967755(v=win.10))) y el archivo DLL del generador de perfiles tendrá las mismas restricciones. Pruebe el código exhaustivamente.
 
 ### <a name="inter-process-communication"></a>Comunicación entre procesos
 
@@ -317,7 +317,7 @@ La interfaz de usuario del generador de perfiles debe encontrar ese evento con n
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>`es el SID del AppContainer de la aplicación de la tienda Windows. En una sección anterior de este tema se ha mostrado cómo recorrer en iteración los paquetes instalados para el usuario actual. En ese código de ejemplo, puede obtener el packageId. Y, desde el packageId, puede obtener el `<acSid>` con código similar al siguiente:
+`<acSid>` es el SID del AppContainer de la aplicación de la tienda Windows. En una sección anterior de este tema se ha mostrado cómo recorrer en iteración los paquetes instalados para el usuario actual. En ese código de ejemplo, puede obtener el packageId. Y, desde el packageId, puede obtener el `<acSid>` con código similar al siguiente:
 
 ```csharp
 IntPtr acPSID;
@@ -378,11 +378,11 @@ El recolector de elementos no utilizados y el montón administrado no son fundam
 
 Al realizar la generación de perfiles de memoria, la DLL del generador de perfiles crea normalmente un subproceso independiente a partir del cual se llama al método [forcegc (](icorprofilerinfo-forcegc-method.md) . No es nada nuevo. Pero lo que podría ser sorprendente es que el hecho de realizar una recolección de elementos no utilizados dentro de una aplicación de la tienda Windows puede transformar el subproceso en un subproceso administrado (por ejemplo, se creará un ThreadID de la API de generación de perfiles para ese subproceso).
 
-Para entender las consecuencias de esto, es importante comprender las diferencias entre las llamadas sincrónicas y asincrónicas, tal y como se define en la API de generación de perfiles de CLR. Tenga en cuenta que esto es muy diferente del concepto de llamadas asincrónicas en aplicaciones de la tienda Windows. Vea la entrada de blog [por qué tenemos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) para obtener más información.
+Para entender las consecuencias de esto, es importante comprender las diferencias entre las llamadas sincrónicas y asincrónicas, tal y como se define en la API de generación de perfiles de CLR. Tenga en cuenta que esto es muy diferente del concepto de llamadas asincrónicas en aplicaciones de la tienda Windows. Vea la entrada de blog [por qué tenemos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) para obtener más información.
 
 El punto relevante es que las llamadas realizadas en los subprocesos creados por el generador de perfiles siempre se consideran sincrónicas, incluso si esas llamadas se realizan desde fuera de una implementación de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) del archivo DLL del generador de perfiles. Como mínimo, que solía ser el caso. Ahora que CLR ha convertido el subproceso del generador de perfiles en un subproceso administrado debido a su llamada al [método forcegc (](icorprofilerinfo-forcegc-method.md), ese subproceso ya no se considera el subproceso del generador de perfiles. Como tal, el CLR exige una definición más rigurosa de lo que se refiere como sincrónico para ese subproceso, es decir, que una llamada se debe originar desde dentro de uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) de la dll del generador de perfiles para calificarse como sincrónica.
 
-¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas que normalmente se realizan en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), se le va a tener problemas. Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) ).
+¿Qué significa esto en la práctica? La mayoría de los métodos [ICorProfilerInfo](icorprofilerinfo-interface.md) solo se pueden llamar de forma sincrónica y, de lo contrario, se producirá un error inmediatamente. Por lo tanto, si el archivo DLL del generador de perfiles vuelve a usar el subproceso de [método forcegc (](icorprofilerinfo-forcegc-method.md) para otras llamadas que normalmente se realizan en subprocesos creados por el generador de perfiles (por ejemplo, en [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [requestrejit (](icorprofilerinfo4-requestrejit-method.md)o [requestrevert (](icorprofilerinfo4-requestrevert-method.md)), se le va a tener problemas. Incluso una función segura asincrónica como [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) tiene reglas especiales cuando se llama desde subprocesos administrados. (Vea la entrada de blog sobre el recorrido de la [pila del generador de perfiles: conceptos básicos y más allá](/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) ).
 
 Por lo tanto, se recomienda que todos los subprocesos que crea el archivo DLL del generador de perfiles para llamar al [método forcegc (](icorprofilerinfo-forcegc-method.md) se deben usar *únicamente* con el fin de desencadenar GC y después responder a las devoluciones de llamada GC. No debe llamar a la API de generación de perfiles para realizar otras tareas, como el muestreo o desasociación de la pila.
 
@@ -406,12 +406,12 @@ Es posible usar la API de generación de perfiles de CLR para analizar el códig
 
 **Interacción del CLR con el Windows Runtime**
 
-- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Aplicaciones de la tienda Windows**
 
-- [Acceso a archivos y permisos (aplicaciones de Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
+- [Acceso a archivos y permisos (aplicaciones de Windows Runtime](/previous-versions/windows/apps/hh967755(v=win.10))
 
-- [Obtener una licencia de desarrollador](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
+- [Obtener una licencia de desarrollador](/previous-versions/windows/apps/hh974578(v=win.10))
 
 - [Interfaz IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

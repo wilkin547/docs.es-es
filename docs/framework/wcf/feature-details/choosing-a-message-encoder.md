@@ -2,12 +2,12 @@
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: dbc5981013fe5e023f1d6d9eaf64b2e1fa18e2df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd5bc2270f2e4095ef6ad2b1d89af3560fb8d312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587344"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559376"
 ---
 # <a name="choose-a-message-encoder"></a>Elegir un codificador de mensajes
 
@@ -33,11 +33,11 @@ En este artículo se describen los criterios para elegir entre los codificadores
   
 |Factor|Descripción|Codificadores que admiten este factor|  
 |------------|-----------------|---------------------------------------|  
-|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> solo admiten las codificaciones UTF8 y UTF16 (*Big-Endian* y *Little-Endian*). Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para obtener un codificador personalizado de ejemplo, vea [codificador de mensaje personalizado](https://docs.microsoft.com/dotnet/framework/wcf/samples/custom-message-encoder-custom-text-encoder).|Texto|  
+|Juegos de caracteres compatibles|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> y <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> solo admiten las codificaciones UTF8 y UTF16 (*Big-Endian* y *Little-Endian*). Si se requieren otras codificaciones, como UTF7 o ASCII, se debe usar un codificador personalizado. Para obtener un codificador personalizado de ejemplo, vea [codificador de mensaje personalizado](../samples/custom-message-encoder-custom-text-encoder.md).|Texto|  
 |Inspección|La inspección es la capacidad para examinar mensajes durante la transmisión. Las codificaciones de texto, con o sin el uso de SOAP, permiten a muchas aplicaciones inspeccionar y analizar mensajes sin el uso de herramientas especializadas. El uso de la seguridad de transferencia, ya sea en el nivel de mensaje o de transporte, afecta a la capacidad de inspeccionar los mensajes. La confidencialidad evita que se examine un mensaje y la integridad evita que se modifique un mensaje.|Texto|  
 |Confiabilidad|La fiabilidad es la capacidad de recuperación de que dispone un codificador ante los errores de transmisión. La fiabilidad también se proporciona en el nivel de mensaje, transporte o aplicación. Todos los codificadores WCF estándar suponen que otra capa proporciona confiabilidad. El codificador tiene poca capacidad de recuperación ante los errores de transmisión.|None|  
 |Simplicidad|La simplicidad representa la facilidad con la que puede crear codificadores y decodificadores para una especificación de codificación. Las codificaciones de texto son particularmente ventajosas para proporcionar simplicidad y la codificación de texto de POX tiene la ventaja adicional de que no requiere compatibilidad para procesar SOAP.|Texto (POX)|  
-|Size|La codificación determina la cantidad de sobrecarga impuesta sobre el contenido. El tamaño de los mensajes codificados está directamente relacionado con el rendimiento máximo de las operaciones del servicio. Las codificaciones binarias generalmente son más compactas que las codificaciones de texto. Cuando el tamaño del mensaje es muy importante, considere también la posibilidad de comprimir el contenido del mensaje durante la codificación. Sin embargo, la compresión agrega costes de procesamiento para el remitente y receptor del mensaje.|Binary|  
+|Tamaño|La codificación determina la cantidad de sobrecarga impuesta sobre el contenido. El tamaño de los mensajes codificados está directamente relacionado con el rendimiento máximo de las operaciones del servicio. Las codificaciones binarias generalmente son más compactas que las codificaciones de texto. Cuando el tamaño del mensaje es muy importante, considere también la posibilidad de comprimir el contenido del mensaje durante la codificación. Sin embargo, la compresión agrega costes de procesamiento para el remitente y receptor del mensaje.|Binary|  
 |Streaming|La transmisión por secuencias permite a las aplicaciones comenzar a procesar un mensaje antes de que haya llegado el mensaje completo. El uso eficaz de la transmisión por secuencias requiere que los datos importantes de un mensaje estén disponibles al principio del mensaje para que la aplicación receptora no tenga que esperar a que llegue. Es más, las aplicaciones que utilizan la transferencia por secuencias deben organizar incrementalmente los datos en el mensaje para que el contenido no tenga dependencias hacia delante. En muchos casos, debe establecer un compromiso entre el contenido de transmisión por secuencias y tener el tamaño de transferencia más pequeño posible para ese contenido.|None|  
 |Compatibilidad con herramientas de terceros|Entre las áreas de compatibilidad de una codificación se incluyen el desarrollo y el diagnóstico. Los desarrolladores de terceros han realizado una gran inversión en bibliotecas y kits de herramientas para administrar mensajes codificados en formato POX.|Texto (POX)|  
 |Interoperabilidad|Este factor se refiere a la capacidad de un codificador WCF para interoperar con servicios que no son WCF.|Texto<br /><br /> MTOM (parcial)|  

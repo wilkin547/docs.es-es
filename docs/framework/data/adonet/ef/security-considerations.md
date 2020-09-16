@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 90422ebd0f313bfa64b446159d27bcf44024f247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452492"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552276"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen las consideraciones de seguridad específicas para el desarrollo, la implementación y la ejecución de aplicaciones Entity Framework. También debe seguir las recomendaciones para crear aplicaciones de .NET Framework seguras. Para más información, consulte [Introducción a la seguridad](../security-overview.md).  
@@ -27,7 +27,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  Durante la operación de inicio de sesión, la información que se basa en la contraseña del usuario se pasa al servidor a través de las bibliotecas de red del origen de datos subyacente. Un proveedor malintencionado puede robar las credenciales del usuario, generar consultas malintencionadas o alterar el conjunto de resultados.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Cifrar la conexión para proteger los datos confidenciales.  
- El Entity Framework no controla directamente el cifrado de datos. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para obtener una SQL Server origen de datos, vea [cifrar conexiones a SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
+ El Entity Framework no controla directamente el cifrado de datos. Si los usuarios tienen acceso a los datos a través de una red pública, la aplicación debería establecer una conexión cifrada al origen de datos para aumentar la seguridad. Para obtener más información, consulte la documentación relacionada con la seguridad correspondiente al origen de datos. Para obtener una SQL Server origen de datos, vea [cifrar conexiones a SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).  
   
 #### <a name="secure-the-connection-string"></a>Proteger la cadena de conexión.  
  La protección del acceso al origen de datos es uno de los objetivos más importantes a la hora de proteger una aplicación. Una cadena de conexión presenta una vulnerabilidad potencial si no se protege o si se construye incorrectamente. Al almacenar la información de conexión en texto sin formato o conservarla en la memoria, se pone en riesgo todo el sistema. A continuación se enumeran métodos recomendados para proteger las cadenas de conexión:  
@@ -38,7 +38,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
   
 - Cifre las secciones del archivo de configuración mediante una configuración protegida.  
   
-     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [cifrar la información de configuración mediante la configuración protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+     ASP.NET incluye una característica denominada configuración protegida, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también puede usarse para cifrar secciones de los archivos de configuración en aplicaciones Windows. Para obtener una descripción detallada de las nuevas capacidades de configuración protegida, vea [cifrar la información de configuración mediante la configuración protegida](/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
 - Almacene las cadenas de conexión en archivos de configuración protegidos.  
   
@@ -81,9 +81,9 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  El Entity Framework no aplica ningún permiso de seguridad e invocará cualquier código de objeto de datos proporcionado por el usuario en proceso, independientemente de si es de confianza o no. Asegúrese de que la autenticación y la autorización del cliente se llevan a cabo en el almacén de datos y en la aplicación.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Restrinja el acceso a todos los archivos de configuración.  
- Un administrador debe restringir el acceso de escritura a todos los archivos que especifican la configuración de una aplicación, incluidos enterprisesec. config, Security. config, Machine. conf y el archivo de configuración de la *aplicación \<>* . exe. config.  
+ Un administrador debe restringir el acceso de escritura a todos los archivos que especifican la configuración de una aplicación, incluidos enterprisesec.config, security.config, Machine. conf y el archivo de configuración de la aplicación \<*application*>.exe.config.  
   
- El nombre invariable del proveedor es modificable en el archivo app. config. La aplicación cliente debe asumir la responsabilidad de tener acceso al proveedor subyacente a través del modelo de generador de proveedores estándar mediante un nombre seguro.  
+ El nombre invariable del proveedor es modificable en el app.config. La aplicación cliente debe asumir la responsabilidad de tener acceso al proveedor subyacente a través del modelo de generador de proveedores estándar mediante un nombre seguro.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Restrinja los permisos a los archivos de asignación y de modelo.  
  Un administrador debe restringir el acceso de escritura a los archivos de asignación y de modelo (.edmx, .csdl, .ssdl y .msl) únicamente a los usuarios que modifican el modelo o las asignaciones. El Entity Framework solo requiere acceso de lectura a estos archivos en tiempo de ejecución. Además, un administrador debe restringir el acceso a los archivos de código fuente de la capa de objetos y la vista previamente compilada generados por las herramientas de Entity Data Model.  
@@ -98,11 +98,11 @@ En este tema se describen las consideraciones de seguridad específicas para el 
   
      Los ataques de inyección de SQL se pueden realizar en [!INCLUDE[esql](../../../../../includes/esql-md.md)] proporcionando entradas malintencionadas a los valores que se utilizan en un predicado de consulta y en los nombres de los parámetros. Para evitar el riesgo de inyección de SQL, nunca debería combinar los datos proporcionados por el usuario con el texto de comandos de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso de [métodos del generador de consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir Entity SQL de forma segura.  
+     Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso de [métodos del generador de consultas](/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir Entity SQL de forma segura.  
   
 - Ataques de inyección de LINQ to Entities:  
   
-     Aunque la composición de consultas es posible en LINQ to Entities, se realiza a través de la API del modelo de objetos. A diferencia de las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)], las consultas de LINQ to Entities no se componen mediante la manipulación o la concatenación de cadenas y no son susceptibles a ataques de inyección de SQL tradicionales.  
+     Aunque la composición de consultas es posible en LINQ to Entities, se realiza a través de la API del modelo de objetos. A diferencia de [!INCLUDE[esql](../../../../../includes/esql-md.md)] las consultas, las consultas de LINQ to Entities no se componen mediante la manipulación o la concatenación de cadenas y no son susceptibles de ataques de inyección de SQL tradicionales.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evite los conjuntos de resultados muy grandes.  
  Un conjunto de resultados muy grande podría hacer que el sistema cliente se cerrara si el cliente realizara operaciones que consumieran recursos en proporción al tamaño del conjunto de resultados. Los conjuntos de resultados inesperadamente grandes se pueden producir en las condiciones siguientes:  
@@ -113,7 +113,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
   
 - En consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
- Al aceptar datos proporcionados por el usuario, debe asegurarse de que no puedan provocar que los conjuntos de resultados se vuelvan mayores de lo que el sistema puede administrar. También puede utilizar el método <xref:System.Linq.Queryable.Take%2A> en LINQ to Entities o el operador [Limit](./language-reference/limit-entity-sql.md) en [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar el tamaño del conjunto de resultados.  
+ Al aceptar datos proporcionados por el usuario, debe asegurarse de que no puedan provocar que los conjuntos de resultados se vuelvan mayores de lo que el sistema puede administrar. También puede utilizar el <xref:System.Linq.Queryable.Take%2A> método en LINQ to Entities o el operador [Limit](./language-reference/limit-entity-sql.md) en [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar el tamaño del conjunto de resultados.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evitar devolver resultados de IQueryable al exponer métodos a autores de llamadas que pueden no ser de confianza.  
  Evite devolver tipos <xref:System.Linq.IQueryable%601> desde métodos expuestos a autores de llamadas que pueden no ser de confianza por las siguientes razones:  
@@ -132,7 +132,7 @@ En este tema se describen las consideraciones de seguridad específicas para el 
  Al generar y trabajar con tipos de entidad se aplican las consideraciones de seguridad siguientes.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>No comparta un ObjectContext a través de dominios de aplicación.  
- Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, vea [serializar objetos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+ Al compartir un <xref:System.Data.Objects.ObjectContext> con más de un dominio de aplicación, se puede exponer información en la cadena de conexión. En su lugar, debería transferir objetos serializados o gráficos de objetos al otro dominio de aplicación y, a continuación, asociar esos objetos a <xref:System.Data.Objects.ObjectContext> en ese dominio de aplicación. Para obtener más información, vea [serializar objetos](/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
 #### <a name="prevent-type-safety-violations"></a>Evite las infracciones de seguridad de los tipos.  
  Si se infringe la seguridad de tipos, el Entity Framework no puede garantizar la integridad de los datos de los objetos. Se podrían producir infracciones de seguridad de tipos si permite que las aplicaciones que no son de confianza se ejecuten con seguridad de acceso del código de plena confianza.  
@@ -145,13 +145,13 @@ En este tema se describen las consideraciones de seguridad específicas para el 
 Debe tener en cuenta lo siguiente al trabajar con rutas de acceso en aplicaciones de ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Compruebe si el host realiza comprobaciones de la ruta de acceso.  
- Cuando se usa la cadena de sustitución `|DataDirectory|` (entre barras verticales), ADO.NET comprueba que se admite la ruta de acceso resuelta. Por ejemplo, ".." no se admite detrás de `DataDirectory`. La misma comprobación para resolver el operador raíz de la aplicación web (`~`) se realiza mediante el proceso que hospeda ASP.NET. IIS realiza esta comprobación; sin embargo, los hosts que no sean IIS pueden no comprobar que la ruta de acceso resuelta se admite. Debe conocer el comportamiento del host en el que implementa una aplicación Entity Framework.  
+ Cuando `|DataDirectory|` se usa la cadena de sustitución (entre barras verticales), ADO.net comprueba que se admite la ruta de acceso resuelta. Por ejemplo, ".." no se admite detrás de `DataDirectory`. La misma comprobación para resolver el operador raíz de la aplicación web ( `~` ) se realiza mediante el proceso que hospeda ASP.net. IIS realiza esta comprobación; sin embargo, los hosts que no sean IIS pueden no comprobar que la ruta de acceso resuelta se admite. Debe conocer el comportamiento del host en el que implementa una aplicación Entity Framework.  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>No haga suposiciones sobre los nombres de ruta resueltos.  
- Aunque los valores a los que se resuelve el operador raíz (`~`) y la cadena de sustitución `DataDirectory` deben permanecer constantes durante el tiempo de ejecución de la aplicación, el Entity Framework no impide que el host modifique estos valores.  
+ Aunque los valores a los que se resuelve el operador raíz ( `~` ) y la `DataDirectory` cadena de sustitución deben permanecer constantes durante el tiempo de ejecución de la aplicación, el Entity Framework no impide que el host modifique estos valores.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Compruebe la longitud de la ruta de acceso antes de la implementación.  
- Antes de implementar una aplicación Entity Framework, debe asegurarse de que los valores del operador raíz (~) y `DataDirectory` cadena de sustitución no superen los límites de la longitud de la ruta de acceso en el sistema operativo. Los proveedores de datos ADO.NET no garantizan que la longitud de la ruta de acceso esté dentro de los límites válidos.  
+ Antes de implementar una aplicación Entity Framework, debe asegurarse de que los valores del operador raíz (~) y la `DataDirectory` cadena de sustitución no superen los límites de la longitud de la ruta de acceso en el sistema operativo. Los proveedores de datos ADO.NET no garantizan que la longitud de la ruta de acceso esté dentro de los límites válidos.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Consideraciones de seguridad de los metadatos de ADO.NET  
  Al generar y trabajar con los archivos de asignación y de modelo, se aplican las consideraciones de seguridad siguientes.  
@@ -162,8 +162,8 @@ Los componentes del servicio de metadatos de ADO.NET no registran información p
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>No acepte objetos MetadataWorkspace de orígenes que no sean de confianza.  
  Las aplicaciones no deberían aceptar instancias de la clase <xref:System.Data.Metadata.Edm.MetadataWorkspace> de orígenes que no sean de confianza. En su lugar, debería construir y rellenar explícitamente un área de trabajo de este tipo de origen.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Consideraciones de implementación](deployment-considerations.md)
-- [Consideraciones de migración](migration-considerations.md)
+- [Consideraciones sobre la migración](migration-considerations.md)
