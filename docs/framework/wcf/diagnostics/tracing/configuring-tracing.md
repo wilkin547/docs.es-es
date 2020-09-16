@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245354"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558906"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -143,7 +143,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Puede configurar una escucha de seguimiento personalizada para enviar las trazas en la conexión, por ejemplo, a una base de datos remota. Como un implementador de la aplicación, debería exigir un control de acceso apropiado en los registros de seguimiento en el equipo remoto.  
   
- También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, vea [Cómo: crear e inicializar agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) y [crear un TraceListener personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
+ También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, vea [Cómo: crear e inicializar agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) y [crear un TraceListener personalizado](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
   
 > [!CAUTION]
 > Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
@@ -154,7 +154,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 |Nivel de seguimiento|Naturaleza de los eventos seguidos|Contenido de los eventos seguidos|Eventos de los que se realiza un seguimiento|Destino del usuario|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Desactivado|N/D|N/D|No se emiten seguimientos.|N/D|  
-|Crítica|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.||Se registran las excepciones no controladas, incluidas las siguientes:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (el CLR invoca cualquier ThreadAbortExceptionHandler)<br />-StackOverflowException (no se puede detectar)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errores de inicio de la aplicación<br />-Eventos FailFast<br />-El sistema deja de responder<br />-Mensajes dudosos: seguimientos de mensajes que provocan un error en la aplicación.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
+|Crítico|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.||Se registran las excepciones no controladas, incluidas las siguientes:<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (el CLR invoca cualquier ThreadAbortExceptionHandler)<br />-StackOverflowException (no se puede detectar)<br />-ConfigurationErrorsException<br />-SEHException<br />-Errores de inicio de la aplicación<br />-Eventos FailFast<br />-El sistema deja de responder<br />-Mensajes dudosos: seguimientos de mensajes que provocan un error en la aplicación.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Error|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido un procesamiento inesperado. La aplicación no pudo realizar una tarea como se esperaba. Sin embargo, la aplicación todavía está en funcionamiento y ejecutándose.|Se registran todas las excepciones.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Advertencia|Eventos "negativos": eventos que indican un procesamiento inesperado o una condición de error.|Se ha producido o puede producirse un posible problema, pero la aplicación todavía funciona correctamente. Sin embargo, puede no continuar funcionando correctamente.|-La aplicación recibe más solicitudes de las que permite la configuración de limitación.<br />-La cola receptora está cerca de su capacidad máxima configurada.<br />-Se ha superado el tiempo de espera.<br />-Se rechazan las credenciales.|Administradores<br /><br /> Desarrolladores de aplicaciones|  
 |Información|Eventos "positivos": eventos que marcan hitos correctos|Hitos importantes y correctos de ejecución de la aplicación, independientemente de si la aplicación funciona correctamente o no.|En general, se generan mensajes útiles para supervisar y diagnosticar el estado del sistema, medir el rendimiento o el perfil. Puede usar esta información para la planeación de la capacidad y la administración del rendimiento:<br /><br /> -Se crean canales.<br />-Se crean agentes de escucha del extremo.<br />-El mensaje entra o sale del transporte.<br />-Se recupera el token de seguridad.<br />-Se lee la configuración.|Administradores<br /><br /> Desarrolladores de aplicaciones<br /><br /> Desarrolladores de productos.|  
@@ -186,4 +186,4 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 - [Seguimiento](index.md)
 - [Administración y diagnóstico](../index.md)
 - [Procedimiento para crear e inicializar agentes de escucha de seguimiento](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Crear un agente de escucha de seguimiento personalizado](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Crear un agente de escucha de seguimiento personalizado](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

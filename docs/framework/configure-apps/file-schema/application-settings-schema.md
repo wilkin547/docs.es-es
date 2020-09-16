@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552315"
 ---
 # <a name="application-settings-schema"></a>Esquema de configuración de la aplicación
 
 La configuración de la aplicación permite que una aplicación Windows Forms o ASP.NET almacene y recupere la configuración del ámbito de la aplicación y del ámbito del usuario. En este contexto, un *valor* es cualquier parte de la información que pueda ser específica de la aplicación o específica del usuario actual, desde una cadena de conexión de base de datos hasta el tamaño de ventana predeterminado preferido del usuario.
 
-De forma predeterminada, la configuración de la aplicación en una aplicación Windows Forms usa la <xref:System.Configuration.LocalFileSettingsProvider> clase, que utiliza el sistema de configuración de .net para almacenar la configuración en un archivo de configuración XML. Para obtener más información acerca de los archivos que usa la configuración de la aplicación, consulte [arquitectura de configuración](../../winforms/advanced/application-settings-architecture.md)de la aplicación.
+De forma predeterminada, la configuración de la aplicación en una aplicación Windows Forms usa la <xref:System.Configuration.LocalFileSettingsProvider> clase, que utiliza el sistema de configuración de .net para almacenar la configuración en un archivo de configuración XML. Para obtener más información acerca de los archivos que usa la configuración de la aplicación, consulte [arquitectura de configuración](/dotnet/desktop/winforms/advanced/application-settings-architecture)de la aplicación.
 
 La configuración de la aplicación define los elementos siguientes como parte de los archivos de configuración que usa.
 
@@ -44,7 +44,7 @@ Este elemento define un valor de configuración. Tiene los siguientes atributos.
 | Atributo        | Descripción |
 | ---------------- | ----------- |
 | **name**         | Necesario. IDENTIFICADOR único de la configuración. La configuración creada a través de Visual Studio se guarda con el nombre `ProjectName.Properties.Settings` . |
-| **serializeAs** | Necesario. Formato que se va a usar para serializar el valor en el texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena mediante <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa. |
+| **serializeAs** | Obligatorio. Formato que se va a usar para serializar el valor en el texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena mediante <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa. |
 
 ## <a name="value-element"></a>Elemento \<value>
 
@@ -88,7 +88,7 @@ En el ejemplo siguiente se muestra un archivo de configuración de la aplicació
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Introducción a la configuración de la aplicación](../../winforms/advanced/application-settings-overview.md)
-- [Arquitectura de configuración de la aplicación](../../winforms/advanced/application-settings-architecture.md)
+- [Introducción a la configuración de la aplicación](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [Arquitectura de configuración de la aplicación](/dotnet/desktop/winforms/advanced/application-settings-architecture)

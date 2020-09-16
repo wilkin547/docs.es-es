@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591441"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559010"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 El ejemplo de transporte UDP muestra cómo implementar unidifusión y multidifusión de UDP como transporte de Windows Communication Foundation personalizado (WCF). El ejemplo describe el procedimiento recomendado para crear un transporte personalizado en WCF mediante el marco del canal y los siguientes procedimientos recomendados de WCF. Los pasos para crear un transporte personalizado son los siguientes:  
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  También contiene los miembros para clonar `BindingElement` y devolver nuestro esquema (soap.udp).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Agregación de compatibilidad con metadatos para un elemento de enlace de transporte  
- Para integrar nuestro transporte en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto nos permite generar clientes de nuestro enlace a través de la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para integrar nuestro transporte en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto nos permite generar clientes de nuestro enlace a través de la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Agregación de la compatibilidad con WSDL  
  El elemento de enlace del transporte en un enlace es el responsable de la exportación e importación de la información de direccionamiento en metadatos. Al utilizar un enlace SOAP, el elemento de enlace del transporte también debería exportar un URI de transporte correcto en los metadatos.  
@@ -185,7 +185,7 @@ if (soapBinding != null)
   
  Al ejecutar Svcutil.exe, hay dos opciones para conseguir que Svcutil.exe cargue las extensiones de importación de WSDL:  
   
-1. Señale SvcUtil. exe a nuestro archivo de configuración mediante/SvcutilConfig: \<file> .  
+1. Apunte Svcutil.exe a nuestro archivo de configuración mediante/SvcutilConfig: \<file> .  
   
 2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
@@ -247,7 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  A continuación, implementamos `IPolicyImporterExtension` desde nuestra clase registrada (`UdpBindingElementImporter`). En `ImportPolicy()`, examinamos las aserciones en nuestro espacio de nombres y procesamos las que se encargan de la generación del transporte y de la comprobación de si es multidifusión. También debemos quitar las aserciones que administramos de la lista de aserciones de enlace. De nuevo, al ejecutar Svcutil.exe, hay dos opciones para la integración:  
   
-1. Señale SvcUtil. exe a nuestro archivo de configuración mediante/SvcutilConfig: \<file> .  
+1. Apunte Svcutil.exe a nuestro archivo de configuración mediante/SvcutilConfig: \<file> .  
   
 2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Servicio de pruebas y cliente UDP  
- El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos extremos. Un punto de conexión utiliza `SampleUdpProfileBinding` con [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) establecido en `true` . El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto es equivalente a usar `SampleUdpProfileBinding` con [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) establecido en `false` . Ambas pruebas crean un servicio, agregan un extremo para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
+ El código de prueba para usar este transporte de ejemplo está disponible en los directorios UdpTestService y UdpTestClient. El código de servicio está compuesto de dos pruebas: una configura los enlaces y puntos de conexión desde el código y la otra lo hace a través de la configuración. Ambas pruebas utilizan dos extremos. Un punto de conexión utiliza `SampleUdpProfileBinding` con [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) establecido en `true` . El otro extremo utiliza un enlace personalizado con `UdpTransportBindingElement`. Esto es equivalente a usar `SampleUdpProfileBinding` con [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) establecido en `false` . Ambas pruebas crean un servicio, agregan un extremo para cada enlace, abren el servicio y, a continuación, esperan a que el usuario presione ENTRAR antes de cerrar el servicio.  
   
  Al iniciar la aplicación de prueba del servicio, debería ver el resultado siguiente.  
   

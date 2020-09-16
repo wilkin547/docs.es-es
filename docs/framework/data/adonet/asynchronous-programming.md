@@ -3,12 +3,12 @@ title: Programación asincrónica
 description: Obtenga información sobre la programación asincrónica en el proveedor de datos de .NET Framework para SQL Server, incluidas las mejoras introducidas en .NET Framework 4,5.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287108"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558477"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
@@ -39,9 +39,9 @@ Para obtener más información acerca de la característica de programación asi
 
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 1)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 1)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 2)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 2)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 Cuando la interfaz de usuario no responde o el servidor no escala, es probable que necesite que el código sea más asincrónico. La escritura de código asincrónico ha implicado tradicionalmente la instalación de una devolución de llamada (también denominada continuación) para expresar la lógica que tiene lugar después de que la operación asincrónica finalice. Esto complica la estructura del código asincrónico con respecto al código sincrónico.
 
@@ -182,7 +182,7 @@ class A {
 
 Puede que tenga que crear una herramienta que pueda conectarse a bases de datos diferentes y ejecutar consultas. Puede usar el modelo de proveedor base y la nueva característica asincrónica.
 
-El Controlador de transacciones distribuidas de Microsoft (MSDTC) debe estar habilitado en el servidor para usar transacciones distribuidas. Para obtener información sobre cómo habilitar MSDTC, consulte [Cómo habilitar MSDTC en un servidor Web](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).
+El Controlador de transacciones distribuidas de Microsoft (MSDTC) debe estar habilitado en el servidor para usar transacciones distribuidas. Para obtener información sobre cómo habilitar MSDTC, consulte [Cómo habilitar MSDTC en un servidor Web](/previous-versions/commerce-server/dd327979(v=cs.90)).
 
 ```csharp
 using System;
@@ -827,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)

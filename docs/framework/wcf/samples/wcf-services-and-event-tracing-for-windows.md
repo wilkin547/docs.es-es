@@ -2,63 +2,63 @@
 title: Servicios de WCF y seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: b8a1f30f20aa2c541a574a070b3644569d633ca2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38e26c369d17f4aa9ccb39d2ae649facffe65418
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183211"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552971"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servicios de WCF y seguimiento de eventos para Windows
-En este ejemplo se muestra cómo usar el seguimiento analítico en Windows Communication Foundation (WCF) para emitir eventos en Seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son eventos emitidos en puntos clave de la pila de WCF que permiten la solución de problemas de servicios WCF en el entorno de producción.
+En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communication Foundation (WCF) para emitir eventos en seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son eventos emitidos en los puntos clave de la pila de WCF que permiten solucionar problemas de los servicios WCF en el entorno de producción.
 
- Seguimiento analítico en los servicios WCF es el seguimiento que se puede activar en un entorno de producción con un impacto mínimo en el rendimiento. Estos seguimientos se emiten como eventos para una sesión de ETW.
+ El seguimiento analítico en los servicios WCF es un seguimiento que se puede activar en un entorno de producción con un impacto mínimo en el rendimiento. Estos seguimientos se emiten como eventos para una sesión de ETW.
 
- Este ejemplo incluye un servicio WCF básico en el que los eventos se emiten desde el servicio al registro de eventos, que se puede ver mediante el Visor de eventos. También es posible iniciar una sesión ETW dedicada que escucha eventos del servicio WCF. En el ejemplo se incluye un script para crear una sesión de ETW dedicada que almacena los eventos en un archivo binario que se puede leer utilizando el Visor de eventos.
+ Este ejemplo incluye un servicio WCF básico en el que los eventos se emiten desde el servicio al registro de eventos, que se puede ver mediante Visor de eventos. También es posible iniciar una sesión de ETW dedicada que realiza escuchas de eventos del servicio WCF. En el ejemplo se incluye un script para crear una sesión de ETW dedicada que almacena los eventos en un archivo binario que se puede leer utilizando el Visor de eventos.
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2012, abra el archivo de solución EtwAnalyticTraceSample.sln.
+1. Con Visual Studio 2012, abra el archivo de solución EtwAnalyticTraceSample. sln.
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
 3. Para ejecutar la solución, presione CTRL+F5.
 
-     En el explorador web, haga clic en **Calculator.svc**. El URI del documento WSDL para el servicio debería aparecer en el explorador. Copie ese URI.
+     En el explorador Web, haga clic en **Calculator. SVC**. El URI del documento WSDL para el servicio debería aparecer en el explorador. Copie ese URI.
 
-     De forma predeterminada, el servicio comienza a escuchar `http://localhost:1378/Calculator.svc`las solicitudes en el puerto 1378.
+     De forma predeterminada, el servicio empieza a escuchar las solicitudes en el puerto 1378 `http://localhost:1378/Calculator.svc` .
 
-4. Ejecute el cliente de prueba WCF (WcfTestClient.exe).
+4. Ejecute el cliente de prueba de WCF (WcfTestClient.exe).
 
-     El cliente de prueba WCF (WcfTestClient.exe) se encuentra en `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  El dir de instalación predeterminado de `C:\Program Files\Microsoft Visual Studio 10.0`Visual Studio 2012 es .
+     El cliente de prueba de WCF (WcfTestClient.exe) se encuentra en `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe` .  El directorio de instalación predeterminado de Visual Studio 2012 es `C:\Program Files\Microsoft Visual Studio 10.0` .
 
-5. En el cliente de prueba WCF, agregue el servicio seleccionando **Archivo**y, a continuación, **Agregar servicio**.
+5. En el cliente de prueba de WCF, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.
 
-     Agregue la dirección del punto de conexión en el cuadro de entrada. El valor predeterminado es `http://localhost:1378/Calculator.svc`.
+     Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es `http://localhost:1378/Calculator.svc`.
 
 6. Abra la aplicación Visor de eventos.
 
-     Antes de invocar el servicio, inicie el Visor de eventos y asegúrese de que el registro de eventos está escuchando los eventos de seguimiento emitidos desde el servicio WCF.
+     Antes de invocar el servicio, inicie Visor de eventos y asegúrese de que el registro de eventos está escuchando los eventos de seguimiento emitidos por el servicio WCF.
 
-7. En el menú **Inicio** , seleccione **Herramientas administrativas**y, a continuación, Visor **de eventos**.  Habilite los registros **analíticos** y **de depuración.**
+7. En el menú **Inicio** , seleccione **herramientas administrativas**y, a continuación, **visor de eventos**.  Habilitar los registros **analíticos** y de **depuración** .
 
-8. En la vista de árbol del Visor de eventos, vaya a **Visor de**eventos , **Registros**de aplicaciones y servicios , **Microsoft**, **Windows**y, a continuación, Aplicaciones **del servidor**de aplicaciones . Haga clic con el botón secundario en **Application Server-Applications**, seleccione **View**y, a continuación, Mostrar registros **analíticos y de depuración**.
+8. En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón derecho en **servidor de aplicaciones-aplicaciones**, seleccione **Ver**y, a continuación, **muestre los registros analíticos y de depuración**.
 
-     Asegúrese de que la opción Mostrar registros **analíticos y de depuración** esté marcada.
+     Asegúrese de que la opción **Mostrar registros analíticos y de depuración** está activada.
 
-9. Habilite el registro **analítico.**
+9. Habilitación del registro **analítico** .
 
-     En la vista de árbol del Visor de eventos, vaya a **Visor de**eventos , **Registros**de aplicaciones y servicios , **Microsoft**, **Windows**y, a continuación, Aplicaciones **del servidor**de aplicaciones . Haga clic con el botón derecho en **Analítico** y seleccione **Habilitar registro**.
+     En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**.
 
 #### <a name="to-test-the-service"></a>Para probar el servicio
 
-1. Vuelva al cliente de prueba `Divide` WCF y haga doble clic y mantenga los valores predeterminados, que especifican un denominador de 0.
+1. Vuelva al cliente de prueba de WCF y haga doble clic `Divide` y mantenga los valores predeterminados, que especifican un denominador de 0.
 
      Si el denominador es 0, el servicio produce un error.
 
 2. Observe los eventos emitidos desde el servicio.
 
-     Vuelva al Visor de eventos y vaya a **Visor de**eventos , **Registros**de aplicaciones y servicios , **Microsoft**, **Windows**y, a continuación, Aplicaciones **del servidor**de aplicaciones . Haga clic con el botón derecho en **Analítico** y seleccione **Actualizar**.
+     Vuelva a Visor de eventos y navegue a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Actualizar**.
 
      Los eventos de seguimiento analítico de WCF se muestran en el visor de eventos. Observe que dado que el servicio inició un error, se muestra un evento de seguimiento del error en el visor de eventos.
 
@@ -72,9 +72,9 @@ En este ejemplo se muestra cómo usar el seguimiento analítico en Windows Commu
 
 1. Abra el Visor de eventos.
 
-2. Vaya a **Visor de**eventos , **Registros**de aplicaciones y servicios , **Microsoft**, **Windows**y, a continuación, **Aplicaciones de servidor de**aplicaciones . Haga clic con el botón derecho en **Analítico** y seleccione **Desactivar registro**.
+2. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **deshabilitar registro**.
 
-3. Vaya a **Visor de**eventos , **Registros**de aplicaciones y servicios , **Microsoft**, **Windows**y, a continuación, **Aplicaciones de servidor de**aplicaciones . Haga clic con el botón derecho en **Analítico** y seleccione **Borrar registro**.
+3. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Borrar registro**.
 
 4. Elija la opción **Borrar** para borrar los eventos.
 
@@ -83,10 +83,10 @@ En este ejemplo se muestra cómo usar el seguimiento analítico en Windows Commu
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Ejemplos de supervisión de AppFabric](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -3,12 +3,12 @@ title: Consultas en LINQ to Entities
 description: Obtenga información sobre cómo LINQ ofrece un modelo sencillo y coherente para trabajar con datos en varios tipos de orígenes de datos y formatos con objetos de programación.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 908a4a601c075e0845ba6d1eeeaa0f4dbaa3b53d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5a10aadd3f21086b2b04dc5e77e40f35655f905b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89129146"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554259"
 ---
 # <a name="queries-in-linq-to-entities"></a>Consultas en LINQ to Entities
 Una consulta es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consulta especializado, como SQL para bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que consultan. Language-Integrated Query (LINQ) ofrece un modelo coherente y más sencillo para trabajar con los datos de varios formatos y orígenes de datos. En una consulta de LINQ siempre se trabaja con objetos de programación.  
@@ -71,4 +71,4 @@ Una consulta es una expresión que recupera datos de un origen de datos. Las con
 - [LINQ to Entities](linq-to-entities.md)
 - [Introducción a LINQ en C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introducción a LINQ en Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Opciones de combinación de EF y consultas compiladas](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [Opciones de combinación de EF y consultas compiladas](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

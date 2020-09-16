@@ -7,18 +7,18 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a3305dc864e7852c2336009503732a51868410d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217343"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558516"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>Facilitar la depuración de una imagen en .NET
 
 Al compilar código no administrado, puede configurar una imagen ejecutable para depurarla si establece algunos modificadores IDE u opciones de línea de comandos. Por ejemplo, puede usar la opción de línea de comandos /**Zi** en Visual C++ para solicitarle que emita archivos de símbolo de depuración (con la extensión de archivo .pdb). De forma similar, la opción de línea de comandos /**Od** indica al compilador que deshabilite la optimización. El código resultante se ejecuta más lentamente, pero es más fácil de depurar, en caso de que sea necesario.
 
-Al compilar .NET Framework código administrado, compiladores como C++Visual, Visual Basic y C# compilar su programa de origen en lenguaje intermedio de Microsoft (MSIL). Después, MSIL se compila con JIT, justo antes de la ejecución, en código máquina nativo. Al igual que con el código no administrado, puede configurar una imagen ejecutable para depurarla si establece algunos modificadores IDE u opciones de línea de comandos. También puede configurar la compilación JIT para la depuración de la misma manera.
+Al compilar .NET Framework código administrado, los compiladores como Visual C++, Visual Basic y C# compilan su programa de origen en lenguaje intermedio de Microsoft (MSIL). Después, MSIL se compila con JIT, justo antes de la ejecución, en código máquina nativo. Al igual que con el código no administrado, puede configurar una imagen ejecutable para depurarla si establece algunos modificadores IDE u opciones de línea de comandos. También puede configurar la compilación JIT para la depuración de la misma manera.
 
 Esta configuración JIT tiene dos aspectos:
 
@@ -30,7 +30,7 @@ Normalmente, el compilador que genera el MSIL establece estas opciones del compi
 
 En algunos casos, puede cambiar el comportamiento del compilador JIT de forma que el código máquina que genera sea más fácil de depurar. Por ejemplo, cuando desee generar información de seguimiento JIT para una compilación comercial o la optimización de controles. Puede hacer esto con un archivo de inicialización (.ini).
 
-Por ejemplo, si el ensamblado que desea depurar se denomina *MyApp. exe*, puede crear un archivo de texto denominado *MyApp. ini*, en la misma carpeta que *MyApp. exe*, que contiene estas tres líneas:
+Por ejemplo, si el ensamblado que desea depurar se denomina *MyApp.exe*, puede crear un archivo de texto denominado *MyApp.ini*en la misma carpeta que *MyApp.exe*, que contiene estas tres líneas:
 
 ```ini
 [.NET Framework Debugging Control]
@@ -40,7 +40,7 @@ AllowOptimize=0
 
 Puede establecer el valor de cada opción en 0 o 1. Cualquier opción que no se encuentre presente tiene el valor predeterminado 0. Si se establece el valor de `GenerateTrackingInfo` en 1 y el valor de `AllowOptimize` en 0, se obtiene la depuración más fácil.
 
-A partir de la versión 2,0 de .NET Framework, el compilador JIT genera siempre información de seguimiento independientemente del valor de `GenerateTrackingInfo`; sin embargo, el valor de `AllowOptimize` todavía tiene un efecto. Al usar [Ngen.exe (generador de imágenes nativo)](../tools/ngen-exe-native-image-generator.md) para precompilar la imagen nativa sin la optimización, el archivo .ini debe estar presente en la carpeta de destino con `AllowOptimize=0` cuando se ejecuta Ngen.exe. Si ha precompilado un ensamblado sin la optimización, debe quitar el código precompilado mediante la opción **/Uninstall** de Ngen. exe antes de volver a ejecutar Ngen. exe para precompilar el código como optimizado. Si el archivo. ini no está presente en la carpeta, Ngen. exe precompila de forma predeterminada el código como optimizado.
+A partir de la .NET Framework versión 2,0, el compilador JIT genera siempre información de seguimiento independientemente del valor de `GenerateTrackingInfo` ; sin embargo, el `AllowOptimize` valor todavía tiene un efecto. Al usar [Ngen.exe (generador de imágenes nativo)](../tools/ngen-exe-native-image-generator.md) para precompilar la imagen nativa sin la optimización, el archivo .ini debe estar presente en la carpeta de destino con `AllowOptimize=0` cuando se ejecuta Ngen.exe. Si ha precompilado un ensamblado sin la optimización, debe quitar el código precompilado con NGen.exe opción **/Uninstall** antes de volver a ejecutar Ngen.exe para precompilar el código como optimizado. Si el archivo. ini no está presente en la carpeta, de forma predeterminada Ngen.exe precompila el código como optimizado.
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> controla los valores de un ensamblado. **DebuggableAttribute** incluye dos campos que controlan si el compilador JIT debe optimizar y/o generar información de seguimiento. A partir de la versión 2,0 de .NET Framework, el compilador JIT genera siempre información de seguimiento.
 
@@ -51,8 +51,8 @@ En una compilación comercial, los compiladores no establecen ningún **atributo
 > [!NOTE]
 > En el caso de la versión 1.0 de .NET Framework, el compilador de Microsoft Visual C++ agrega el atributo **DebuggableAttribute** cuando se especifican las opciones del compilador **/clr** y **/Zi**. En la versión 1,1 del .NET Framework, debe agregar el **atributo DebuggableAttribute** manualmente en el código o usar la opción **/AssemblyDebug** del vinculador.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Depurar, trazar y generar perfiles](index.md)
 - [Habilitar la depuración de adjuntos JIT](enabling-jit-attach-debugging.md)
-- [Habilitar la generación de perfiles](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s5ec0es1(v=vs.100))
+- [Habilitar la generación de perfiles](/previous-versions/dotnet/netframework-4.0/s5ec0es1(v=vs.100))

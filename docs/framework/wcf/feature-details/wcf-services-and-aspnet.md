@@ -3,12 +3,12 @@ title: Servicios WCF y ASP.NET
 description: Obtenga información acerca de cómo hospedar servicios WCF en paralelo con ASP.NET y hospedarlos en el modo de compatibilidad ASP.NET.
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 1d7401f6a326bc50923123acf803e26ce8238415
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 765a509f94a0a934cdbbf0212cfc1d4053d29f9c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246420"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553322"
 ---
 # <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
 
@@ -66,7 +66,7 @@ A diferencia de la configuración en paralelo predeterminada, en la que la infra
 
 - Autorización de URL configurable: ASP. Las reglas de autorización de dirección URL de la red se aplican a las solicitudes WCF cuando el servicio WCF se está ejecutando en el modo de compatibilidad de ASP.NET.
 
-- <xref:System.Web.HttpModuleCollection>extensibilidad: dado que los servicios WCF que se ejecutan en modo de compatibilidad de ASP.NET participan completamente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP puede funcionar en solicitudes WCF antes y después de la invocación del servicio.
+- <xref:System.Web.HttpModuleCollection> extensibilidad: dado que los servicios WCF que se ejecutan en modo de compatibilidad de ASP.NET participan completamente en el ciclo de vida de la solicitud HTTP de ASP.NET, cualquier módulo HTTP configurado en la canalización HTTP puede funcionar en solicitudes WCF antes y después de la invocación del servicio.
 
 - Suplantación de ASP.NET: los servicios WCF se ejecutan con la identidad actual del subproceso suplantado ASP.NET, que puede ser diferente de la identidad de proceso de IIS si se ha habilitado la suplantación ASP.NET para la aplicación. Si la suplantación de ASP.NET y la suplantación de WCF están habilitadas para una operación de servicio determinada, la implementación del servicio se ejecuta en última instancia con la identidad obtenida de WCF.
 
@@ -90,7 +90,7 @@ public class CalculatorService : ICalculatorSession
 
 La siguiente tabla muestra cómo el valor del modo de compatibilidad de toda la aplicación interactúa con el nivel expresado de compatibilidad del servicio individual:
 
-|Valor de modo de compatibilidad de la aplicación|[AspNetCompatibilityRequirementsMode]<br /><br /> Configuración|Resultado observado|
+|Valor de modo de compatibilidad de la aplicación|[AspNetCompatibilityRequirementsMode]<br /><br /> Setting|Resultado observado|
 |--------------------------------------------------|---------------------------------------------------------|---------------------|
 |aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|El servicio se activa correctamente.|
 |aspNetCompatibilityEnabled = " `true` "|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|El servicio se activa correctamente.|
@@ -104,7 +104,7 @@ La siguiente tabla muestra cómo el valor del modo de compatibilidad de toda la 
 
 Para obtener más información acerca de cómo habilitar el modo de compatibilidad de ASP.NET para los servicios WCF, vea <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> y el ejemplo de [compatibilidad ASP.net](../samples/aspnet-compatibility.md) .
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

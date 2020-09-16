@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921073"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558984"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
@@ -33,7 +33,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
 ## <a name="using-teredo"></a>Uso de Teredo  
 
- Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en WCF requiere la habilitación de la compatibilidad con IPv6 y Teredo en el sistema operativo. Los sistemas operativos Windows XP y versiones posteriores admiten Teredo. Los sistemas operativos Windows Vista y versiones posteriores admiten IPv6 de forma predeterminada y solo requieren que el usuario habilite Teredo. Windows XP SP2 y Windows Server 2003 requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, vea [información general sobre Teredo](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en WCF requiere la habilitación de la compatibilidad con IPv6 y Teredo en el sistema operativo. Los sistemas operativos Windows XP y versiones posteriores admiten Teredo. Los sistemas operativos Windows Vista y versiones posteriores admiten IPv6 de forma predeterminada y solo requieren que el usuario habilite Teredo. Windows XP SP2 y Windows Server 2003 requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, vea [información general sobre Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
  La selección de un transporte y MEP es un proceso de tres pasos:  

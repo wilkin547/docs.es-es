@@ -2,12 +2,12 @@
 title: Uso de contadores de rendimiento
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596505"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553049"
 ---
 # <a name="using-performance-counters"></a>Uso de contadores de rendimiento
 Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Windows Communication Foundation (WCF) y cómo crear contadores de rendimiento definidos por el usuario. Este ejemplo se basa en el [Introducción](getting-started-sample.md).  
@@ -27,7 +27,7 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
 </configuration>  
 ```  
   
- Esta tarea también se puede realizar mediante la [herramienta editor de configuración (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md).  
+ Esta tarea también puede realizarse mediante la [herramienta editor de configuración (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md).  
   
  Cuando se habilitan los contadores de rendimiento, se habilita el conjunto completo de contadores de rendimiento de WCF para el servicio. .NET Framework mantiene automáticamente los datos de rendimiento en tres niveles: `ServiceModelService`, `ServiceModelEndpoint` y `ServiceModelOperation`. Cada uno de estos niveles tiene contadores de rendimiento como "Llamadas", "Llamadas por segundo" y "Llamadas de seguridad no autorizadas".  
   
@@ -78,4 +78,4 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Ejemplos de supervisión de AppFabric](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795617"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559309"
 ---
 # <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
@@ -30,7 +30,7 @@ En esta sección se incluye información acerca de las API no administradas que 
  [Constantes](constants-unmanaged-api-reference.md)  
  Describe las constantes que se definen en CorSym.idl.  
   
- [Atributos de interfaz personalizados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
+ [Atributos de interfaz personalizados](/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Describe los atributos de interfaz personalizados del Modelo de objetos componentes (COM).  
   
  [Depuración](./debugging/index.md)  
@@ -61,4 +61,4 @@ En esta sección se incluye información acerca de las API no administradas que 
  Describe las dos funciones del asistente y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Guía de desarrollo](../development-guide.md)  
+ [Guía de desarrollo para .NET Framework](../development-guide.md)

@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 7718c8f2a82178bedc080eda0cd0fdf728213a27
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b519156faba68c769f4c1380a11706aebaab7e7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900637"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559062"
 ---
 # <a name="analytic-tracing-overview"></a>Información general sobre seguimiento analítico
 
 La traza analítica en [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] es una característica de traza de alto rendimiento y bajo nivel de detalle establecida en Seguimiento de eventos para Windows (ETW). ETW se ejecuta en el kernel para reducir en gran medida la sobrecarga de las operaciones de traza. Almacena en búfer eventos de usuario y en modo kernel, y permite una habilitación dinámica del registro sin requerir un reinicio del servicio. Los datos de la traza están disponibles en los registros de eventos una vez emitidos y recibidos.
 
-Para obtener más información sobre ETW, vea [mejorar la depuración y el ajuste del rendimiento con ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
+Para obtener más información sobre ETW, vea [mejorar la depuración y el ajuste del rendimiento con ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
 
- Además de usar los registros de eventos del sistema, de seguridad y de aplicación de Windows para analizar la aplicación, Windows Vista y Windows Server 2008 presentaron registros adicionales en el nodo de nivel superior registros de aplicaciones y servicios. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de WCF, los registros de mensajes de WCF y los registros de seguimiento de [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] en los registros de aplicaciones y servicios.
+ Además de usar los registros de eventos del sistema, de seguridad y de aplicación de Windows para analizar la aplicación, Windows Vista y Windows Server 2008 presentaron registros adicionales en el nodo de nivel superior registros de aplicaciones y servicios. El propósito de estos nuevos registros es almacenar eventos para una aplicación determinada o un componente concreto en lugar de los eventos globales que tienen un impacto en todo el sistema (como el tipo de eventos que el registro de eventos de seguridad podría grabar). [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] unifica y correlaciona el registro de eventos de seguimiento de WCF, los registros de mensajes de WCF y los [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] registros de seguimiento en los registros de servicios y aplicaciones.
 
 En las secciones siguientes se tratan los conceptos y las capacidades que se aplican a la traza analítica de WCF.
 
 ## <a name="enable-wcf-diagnostics-settings"></a>Habilitar la configuración de diagnósticos de WCF
 
-Los diagnósticos de WCF se habilitan en la sección configuración de `<system.serviceModel><diagnostics>`.
+Los diagnósticos de WCF se habilitan en la `<system.serviceModel><diagnostics>` sección de configuración.
 
 ```xml
 <system.serviceModel>
   <diagnostics>
 ```
 
-La configuración de diagnóstico de WCF para una aplicación virtual de IIS hospedada en Web se habilita en su archivo *Web. config* . Otra opción consiste en crear un archivo *Web. config* en un subdirectorio dentro de la aplicación. Esta opción aplica la configuración a todos los servicios dentro de un subdirectorio. Para asegurarse de que la configuración de diagnóstico se inicializa de forma coherente para todos los servicios de la aplicación, la configuración debe estar en el archivo *Web. config* en el directorio de la aplicación y no en uno de los subdirectorios individuales dentro de la aplicación.
+La configuración de diagnóstico de WCF para una aplicación virtual de IIS hospedada en Web se habilita en el archivo de *Web.config* . Otra opción consiste en crear un archivo de *Web.config* en un subdirectorio dentro de la aplicación. Esta opción aplica la configuración a todos los servicios dentro de un subdirectorio. Para asegurarse de que la configuración de diagnóstico se inicializa de forma coherente para todos los servicios dentro de la aplicación, la configuración debe estar en el archivo *Web.config* en el directorio de la aplicación y no en uno de los subdirectorios individuales dentro de la aplicación.
 
 ## <a name="channels"></a>Canales
 
@@ -42,7 +42,7 @@ ETW permite a los componentes de software dirigir eventos de traza a una audienc
 
  `ServiceModelReg.exe -i -c:etw`
 
-## <a name="dynamic-configuration"></a>configuración dinámica
+## <a name="dynamic-configuration"></a>Configuración dinámica
 
 La infraestructura de ETW permite habilitar la traza y configurarla de forma dinámica mediante herramientas Windows estándar. Para obtener más información, consulte [Habilitar dinámicamente la traza analítica](dynamically-enabling-analytic-tracing.md).
 

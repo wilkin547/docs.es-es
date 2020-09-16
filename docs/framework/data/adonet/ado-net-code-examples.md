@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d12c7c7dcbc3a24cf51ade5481f59715c4c4d88
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287173"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555112"
 ---
 # <a name="adonet-code-examples"></a>Ejemplos de código de ADO.NET
 
@@ -138,7 +138,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>ObjectQuery con establecimiento de tipos
-En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, vea [consultas de objeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
+En el código de este ejemplo se utiliza <xref:System.Data.Objects.ObjectQuery%601> para devolver los datos como objetos Categories. Para obtener más información, vea [consultas de objeto](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
 
 ```csharp
 using System;
@@ -269,8 +269,8 @@ Class EntityClientSample
 End Class
 ```
 
-## <a name="linq-to-sql"></a>LINQ a SQL
-El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Este ejemplo se basa en el contexto de datos Northwind. Para obtener más información, vea [Introducción](./sql/linq/getting-started.md).
+## <a name="linq-to-sql"></a>LINQ to SQL
+El código de este ejemplo usa una consulta LINQ para devolver los datos como objetos Categories, que se proyectan como un tipo anónimo que contiene solo las propiedades CategoryID y CategoryName. Este ejemplo se basa en el contexto de datos Northwind. Para más información, consulte [Introducción](./sql/linq/getting-started.md).
 
 ```csharp
 using System;
@@ -341,10 +341,10 @@ Class LinqSqlSample
 End Class
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](ado-net-overview.md)
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
-- [Crear aplicaciones de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [Consultar un Entity Data Model (tareas de Entity Framework)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [Cómo: Ejecutar una consulta que devuelve objetos de tipos anónimos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [Crear aplicaciones de datos](/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Consultar un Entity Data Model (tareas de Entity Framework)](/previous-versions/bb738455(v=vs.90))
+- [Cómo: Ejecutar una consulta que devuelve objetos de tipos anónimos](/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

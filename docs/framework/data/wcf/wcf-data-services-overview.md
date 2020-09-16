@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c75e26ea083f8144bfaf2f67872004ef33365377
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202147"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558763"
 ---
 # <a name="wcf-data-services-overview"></a>Información general sobre Data Services de WCF
 WCF Data Services permite la creación y el consumo de servicios de datos para web o una intranet mediante el Open Data Protocol (OData). OData permite exponer los datos como recursos direccionables mediante URI. Esto permite tener acceso a los datos y modificarlos usando la semántica de Representational State Transfer (REST), específicamente los verbos HTTP estándar GET, PUT, POST y DELETE. En este tema se proporciona información general sobre los patrones y prácticas definidos por OData y también los recursos proporcionados por WCF Data Services para aprovechar las ventajas de OData en aplicaciones basadas en .NET Framework.  
@@ -18,7 +18,7 @@ WCF Data Services permite la creación y el consumo de servicios de datos para w
 ## <a name="address-data-as-resources"></a>Direccionamiento de datos como recursos  
  OData expone los datos como recursos direccionables a través de identificadores uniformes de recursos (URI). Las rutas de acceso de recursos se construyen según las convenciones del modelo entidad-relación de Entity Data Model. En este modelo, las entidades representan unidades operacionales de datos en un dominio de aplicación, como clientes, pedidos, elementos y productos. Para obtener más información, vea [Entity Data Model](../adonet/entity-data-model.md).  
   
- En OData, los recursos de entidad se direccionan como un conjunto de entidades que contiene instancias de tipos de entidad. Por ejemplo, el URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` devuelve todos los pedidos del servicio de `Northwind` datos relacionados con el cliente con un `CustomerID` valor de`ALFKI.`  
+ En OData, los recursos de entidad se direccionan como un conjunto de entidades que contiene instancias de tipos de entidad. Por ejemplo, el URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` devuelve todos los pedidos del servicio de `Northwind` datos relacionados con el cliente con un `CustomerID` valor de `ALFKI.`  
   
  Las expresiones de consulta permiten realizar operaciones de consulta tradicionales en los recursos, como filtrarlos, ordenarlos y paginarlos. Por ejemplo, el URI `https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` filtra los recursos para devolver solo los pedidos cuyo costo de flete sea mayor que 50 dólares. Para obtener más información, consulte [acceso a los recursos del servicio de datos](accessing-data-service-resources-wcf-data-services.md).  
   
@@ -55,11 +55,11 @@ OData define un conjunto de extensiones para el protocolo de publicación Atom (
   
  ![Captura de pantalla que muestra un diagrama de arquitectura de WCF Data Services.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [WCF Data Services 4.5](index.md)
 - [Introducción](getting-started-with-wcf-data-services.md)
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)
-- [Acceder a recursos de servicios de datos (Servicios de datos de WCF)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [Acceder a recursos de servicios de datos (Servicios de datos de WCF)](/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Transferencia de estado representacional (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

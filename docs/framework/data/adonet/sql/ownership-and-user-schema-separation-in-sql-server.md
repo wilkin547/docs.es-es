@@ -3,12 +3,12 @@ title: Propiedad y separación de esquemas de usuario en SQL Server
 description: Obtenga información sobre cómo la separación de esquemas de usuario permite flexibilidad en la administración de SQL Server permisos de objetos de base de datos. Los esquemas agrupan los objetos en espacios de nombres independientes.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286267"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558841"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propiedad y separación de esquemas de usuario en SQL Server
 Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos. No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.  
@@ -54,11 +54,11 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información sobre la propiedad de objetos y los esquemas, vea los siguientes recursos.  
   
-|Resource|Descripción|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
-|[Separación de esquemas de usuario](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Describe los cambios que introduce la separación usuario-esquema. Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
+|[Separación de esquemas de usuario](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Describe los cambios que introduce la separación usuario-esquema. Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)

@@ -2,12 +2,12 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937729"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558438"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas características nuevas, incluidas varias mejoras en la experiencia del diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.
@@ -19,7 +19,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  La biblioteca integrada de actividades contiene nuevas actividades y características para las actividades existentes. Todas estas nuevas actividades se admiten en el diseñador rehospedado. Para obtener más información sobre estas nuevas actividades, vea la sección [actividades](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) de [novedades de Windows Workflow Foundation en .net 4,5](whats-new-in-wf-in-dotnet.md).
 
 ## <a name="c-expressions"></a>Expresiones de C#
- Antes de .NET Framework 4,5, todas las expresiones de los flujos de trabajo solo se podían escribir en Visual Basic. En .NET Framework 4,5, las expresiones de Visual Basic solo se usan para los proyectos creados con Visual Basic. Los proyectos de Visual C# ahora usan C# para expresiones. Al crear flujos de trabajo en Visual Studio 2012, se proporciona un C# editor de expresiones totalmente funcional con funciones como el resaltado de gramática e IntelliSense. Seguirán funcionando los proyectos de flujo de trabajo de C# creados en versiones anteriores que usan expresiones de Visual Basic.
+ Antes de .NET Framework 4,5, todas las expresiones de los flujos de trabajo solo se podían escribir en Visual Basic. En .NET Framework 4,5, las expresiones de Visual Basic solo se usan para los proyectos creados con Visual Basic. Los proyectos de Visual C# ahora usan C# para expresiones. Al crear flujos de trabajo en Visual Studio 2012, se proporciona un editor de expresiones de C# totalmente funcional con capacidades como resaltado de gramática e IntelliSense. Seguirán funcionando los proyectos de flujo de trabajo de C# creados en versiones anteriores que usan expresiones de Visual Basic.
 
 > [!WARNING]
 > Las expresiones de C# no se admiten en el diseñador rehospedado.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  ![Menú contextual del diseñador de variables y argumentos](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Rodear de forma automática con secuencia
- Debido a que un flujo de trabajo o determinadas actividades de contenedor (como <xref:System.Activities.Statements.NoPersistScope>) solo pueden contener una única actividad de cuerpo, para agregar una segunda actividad el desarrollador tenía que eliminar la primera actividad, agregar una actividad <xref:System.Activities.Statements.Sequence> y, a continuación, agregar ambas actividades a la actividad de secuencia. A partir de .NET Framework 4,5, al agregar una segunda actividad a la superficie del diseñador, se creará automáticamente una actividad `Sequence` para ajustar ambas actividades. Esta característica se admite en el diseñador rehospedado.
+ Debido a que un flujo de trabajo o determinadas actividades de contenedor (como <xref:System.Activities.Statements.NoPersistScope>) solo pueden contener una única actividad de cuerpo, para agregar una segunda actividad el desarrollador tenía que eliminar la primera actividad, agregar una actividad <xref:System.Activities.Statements.Sequence> y, a continuación, agregar ambas actividades a la actividad de secuencia. A partir de .NET Framework 4,5, al agregar una segunda actividad a la superficie del diseñador, se `Sequence` creará automáticamente una actividad para ajustar ambas actividades. Esta característica se admite en el diseñador rehospedado.
 
  La captura de pantalla siguiente muestra una actividad `WriteLine` en `Body` de `NoPersistScope`.
 
@@ -72,7 +72,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  ![Captura de pantalla de la vista de esquema con un flujo de trabajo secuencial en Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Más control de la visibilidad de los elementos de barra y de encabezado de shell
- En un diseñador rehospedado, algunos de los controles estándar de la interfaz de usuario pueden no tener significado para un flujo de trabajo determinado y se pueden desactivar. En .NET Framework 4, esta personalización solo es compatible con la barra de Shell en la parte inferior del diseñador. En .NET Framework 4,5, la visibilidad de los elementos de encabezado del shell en la parte superior del diseñador se puede ajustar estableciendo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con el valor <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> adecuado.
+ En un diseñador rehospedado, algunos de los controles estándar de la interfaz de usuario pueden no tener significado para un flujo de trabajo determinado y se pueden desactivar. En .NET Framework 4, esta personalización solo es compatible con la barra de Shell en la parte inferior del diseñador. En .NET Framework 4,5, la visibilidad de los elementos de encabezado del shell en la parte superior del diseñador se puede ajustar estableciendo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con el <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> valor adecuado.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexión e inserción automáticas en flujos de trabajo de diagrama de flujo y de máquina de estados
  En .NET Framework 4, las conexiones entre los nodos de un flujo de trabajo de diagrama de flujo tenían que agregarse manualmente. En .NET Framework 4,5, los nodos de diagrama de flujo y de máquina de Estados tienen puntos de conexión automática que se hacen visibles cuando se arrastra una actividad desde el cuadro de herramientas hasta la superficie del diseñador. Al colocar una actividad en uno de estos puntos se agrega automáticamente la actividad junto con la conexión necesaria.
@@ -95,7 +95,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  Las anotaciones de diseñador se admiten en el diseñador rehospedado.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir y usar objetos ActivityDelegate en el diseñador
- Las actividades de .NET Framework 4 usaban <xref:System.Activities.ActivityDelegate> objetos para exponer puntos de ejecución en los que otras partes del flujo de trabajo podrían interactuar con la ejecución de un flujo de trabajo, pero el uso de estos puntos de ejecución normalmente requerían una cantidad equitativa de código. En esta versión, los desarrolladores pueden definir y usar delegados de actividad mediante el diseñador de flujo de trabajo. Para obtener más información, vea [Cómo: definir y usar delegados de actividad en el diseñador de flujo de trabajo](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+ Las actividades de .NET Framework 4 usaban <xref:System.Activities.ActivityDelegate> objetos para exponer puntos de ejecución donde otras partes del flujo de trabajo podían interactuar con la ejecución de un flujo de trabajo, pero el uso de estos puntos de ejecución normalmente requerían una cantidad de código justa. En esta versión, los desarrolladores pueden definir y usar delegados de actividad mediante el diseñador de flujo de trabajo. Para obtener más información, vea [Cómo: definir y usar delegados de actividad en el diseñador de flujo de trabajo](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Los delegados de actividad se admiten en el diseñador rehospedado.
 
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4,5 presentó muchas caracter
  Además de los modelos de desarrollo de flujo de trabajo de diagrama de flujo y secuenciales, esta versión incluye flujos de trabajo de máquina de estados y servicios de flujo de trabajo de contrato primero.  
   
 ### <a name="state-machine-workflows"></a>Flujos de trabajo de máquina de estados  
- Los flujos de trabajo de máquina de Estados se introdujeron como parte del .NET Framework 4.0.1 en la [actualización 1 de la plataforma Microsoft .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para .NET Framework 4,5. Las actualizaciones incluyen:  
+ Los flujos de trabajo de máquina de Estados se introdujeron como parte del .NET Framework 4.0.1 en la [actualización 1 de la plataforma Microsoft .NET Framework 4](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se han actualizado para .NET Framework 4,5. Las actualizaciones incluyen:  
   
 1. Capacidad de establecer puntos de interrupción en estados  
   

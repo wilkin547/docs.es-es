@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
-  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+  ms.openlocfilehash: 1819d6c6cedcd9c2544c8ab6e5ff47d807d8c232
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/18/2020
-  ms.locfileid: "88559211"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90554754"
 landingContent:
 - title: Primeros pasos
   linkLists:
@@ -39,7 +39,7 @@ landingContent:
   - linkListType: whats-new
     links:
     - text: Novedades de Visual Basic
-      url: getting-started/whats-new.md
+      url: ./whats-new/index.md
   - linkListType: concept
     links:
     - text: Estructura de una aplicación de Visual Basic

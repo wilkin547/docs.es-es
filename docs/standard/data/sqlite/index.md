@@ -2,12 +2,12 @@
 title: Información general
 ms.date: 12/13/2019
 description: Introducción a Microsoft.Data.Sqlite
-ms.openlocfilehash: e84c68f0615f187e8dea7ab87ac917c0ad796a1c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c952848f7e7ea04f11fe9340f77a1f376a1be07
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77543604"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552445"
 ---
 # <a name="microsoftdatasqlite-overview"></a>Introducción a Microsoft.Data.Sqlite
 
@@ -40,5 +40,5 @@ Esta biblioteca implementa las abstracciones de ADO.NET comunes para conexiones,
 ## <a name="see-also"></a>Vea también
 
 * [Cadenas de conexión](connection-strings.md)
-* [Referencia de API](/dotnet/api/?view=msdata-sqlite-3.0)
+* [Referencia de API](../../../../api/index.md?view=msdata-sqlite-3.0)
 * [Sintaxis de SQL](https://www.sqlite.org/lang.html)

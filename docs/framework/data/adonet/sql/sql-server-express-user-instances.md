@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 2bd67a9315eda4161d4b76e1638f5c08f9598a52
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71f42cb2707c27be6c1a761d09d3a2dae1791680
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174490"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552679"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express generada por una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores de sus equipos locales adjuntar bases de datos de SQL Server Express y conectarse a ellas. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, en un modelo de una instancia por usuario.  
   
 ## <a name="user-instance-capabilities"></a>Funcionalidades de las instancias de usuario  
- Las instancias de usuario son útiles para los usuarios que ejecutan Windows con una cuenta de usuario con privilegios mínimos (LUA). Cada usuario tiene privilegios`sysadmin`de administrador del sistema de SQL Server ( ) sobre la instancia que se ejecuta en su equipo sin necesidad de ejecutarse como administrador de Windows también. El software que se ejecuta en una instancia de usuario con permisos limitados no puede realizar cambios en todo el sistema porque la instancia de SQL Server Express se está ejecutando bajo la cuenta de Windows del usuario que no es de administrador, no como servicio. Cada instancia de usuario está aislada de la instancia principal y de las demás instancias de usuario que se ejecutan en el mismo equipo. Las bases de datos que se ejecutan en una instancia de usuario se abren solo en modo de usuario único, y no es posible que varios usuarios se conecten a las bases de datos que se ejecutan en una instancia de usuario. La replicación y las consultas distribuidas también están deshabilitadas para las instancias de usuario.
+ Las instancias de usuario son útiles para los usuarios que ejecutan Windows con una cuenta de usuario con privilegios mínimos (LUA). Cada usuario tiene SQL Server privilegios de administrador del sistema ( `sysadmin` ) en la instancia que se ejecuta en su equipo sin necesidad de ejecutarse también como administrador de Windows. El software que se ejecuta en una instancia de usuario con permisos limitados no puede realizar cambios en todo el sistema porque la instancia de SQL Server Express se está ejecutando bajo la cuenta de Windows del usuario que no es de administrador, no como servicio. Cada instancia de usuario está aislada de la instancia principal y de las demás instancias de usuario que se ejecutan en el mismo equipo. Las bases de datos que se ejecutan en una instancia de usuario se abren solo en modo de usuario único, y no es posible que varios usuarios se conecten a las bases de datos que se ejecutan en una instancia de usuario. La replicación y las consultas distribuidas también están deshabilitadas para las instancias de usuario.
   
 > [!NOTE]
 > Las instancias de usuario no son necesarias para los usuarios que ya son administradores en sus propios equipos o para escenarios que implican a varios usuarios de base de datos.  
@@ -41,7 +41,7 @@ sp_configure 'user instances enabled','0'
   
 - La palabra clave `Data Source` hace referencia a la instancia primaria de SQL Server Express que genera la instancia de usuario. La instancia predeterminada es .\sqlexpress.  
   
-- `Integrated Security` se establece en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows. No se admiten los inicios de sesión de SQL Server.  
+- El valor de `Integrated Security` está establecido en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows. No se admiten los inicios de sesión de SQL Server.  
   
 - La propiedad `User Instance` se establece en `true`, lo cual invoca una instancia de usuario. (El valor predeterminado es `false`).  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 > También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para crear una cadena de conexión en tiempo de ejecución.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Uso de la cadena de sustitución de&#124; DataDirectory &#124;  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Usar la cadena de sustitución &#124;&#124; de DataDirectory  
  `AttachDbFileName` se amplió en ADO.NET 2.0 con la incorporación de la cadena de sustitución `|DataDirectory|` (entre barras verticales). `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión basadas en una ruta relativa al origen de datos en lugar de tener que especificar la ruta completa.  
   
  La ubicación física a la que apunta `DataDirectory` depende del tipo de aplicación. En este ejemplo, el archivo Northwind.mdf que se va a adjuntar se encuentra en la carpeta \app_data de la aplicación.  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
 - Cualquier aplicación de usuario único en la que no es necesario compartir datos.  
   
-- Implementación ClickOnce. Si .NET Framework 2.0 (o posterior) y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no son administradores pueden instalar y usar el paquete de instalación descargado como resultado de una acción ClickOnce puede ser instalado y utilizado por usuarios que no sean administradores. Tenga en cuenta que un administrador debe instalar SQL Server Express si forma parte de la configuración. Para obtener más información, consulte [Implementación de ClickOnce para formularios Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Implementación ClickOnce. Si .NET Framework 2,0 (o posterior) y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no son administradores pueden instalar y usar el paquete de instalación descargado como resultado de una acción ClickOnce. Tenga en cuenta que un administrador debe instalar SQL Server Express si forma parte de la configuración. Para obtener más información, consulte [Implementación de ClickOnce para formularios Windows Forms](/dotnet/desktop/winforms/clickonce-deployment-for-windows-forms).
   
 - Hospedaje de ASP.NET dedicado mediante la autenticación de Windows. Una única instancia de SQL Server Express se puede hospedar en una intranet. La aplicación se conecta mediante la cuenta de Windows ASPNET, no mediante la suplantación. Las instancias de usuario no deben usarse para escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartan la misma instancia de usuario y ya no permanezcan aisladas entre sí.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [SQL Server y ADO.NET](index.md)
 - [Cadenas de conexión](../connection-strings.md)

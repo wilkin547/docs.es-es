@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559342"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
 Aunque podría visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas están controlados por eventos, lo que significa que el flujo de ejecución viene determinado por repeticiones externas denominadas *eventos*.  
@@ -102,8 +102,8 @@ Aunque podría visualizar un proyecto de Visual Studio como una serie de procedi
 |[Tutorial: Declarar y generar eventos](walkthrough-declaring-and-raising-events.md)|Proporciona una descripción detallada de cómo declarar y generar eventos para una clase.|  
 |[Tutorial: Controlar eventos](walkthrough-handling-events.md)|Muestra cómo escribir un procedimiento de controlador de eventos.|  
 |[Procedimiento para declarar eventos personalizados para evitar bloqueos](how-to-declare-custom-events-to-avoid-blocking.md)|Muestra cómo definir un evento personalizado que permite invocar a sus controladores de eventos de forma asincrónica.|  
-|[Procedimiento para declarar eventos personalizados para conservar memoria](how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
+|[Cómo: Declarar eventos personalizados para conservar memoria](how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
 |[Solucionar problemas de controladores de eventos heredados en Visual Basic](troubleshooting-inherited-event-handlers.md)|Enumera los problemas habituales que se producen con los controladores de eventos en componentes heredados.|  
 |[Eventos](../../../../standard/events/index.md)|Proporciona una descripción general del modelo de eventos de .NET Framework.|  
-|[Crear controladores de eventos en Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  
+|[Crear controladores de eventos en Windows Forms](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  
 |[Delegados](../delegates/index.md)|Proporciona información general sobre delegados en Visual Basic.|

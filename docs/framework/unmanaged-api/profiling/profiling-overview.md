@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 3836b562d969726a6587d702d3edf45abb147d10
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: cf29260c36437aaf679498f648d0fcac5d65f321
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588503"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558334"
 ---
 # <a name="profiling-overview"></a>Información general sobre la generación de perfiles
 
@@ -46,9 +46,9 @@ La compilación JIT en tiempo de ejecución proporciona buenas oportunidades par
 
 ## <a name="the-profiling-api"></a>La API de generación de perfiles
 
-Normalmente, la API de generación de perfiles se usa para escribir un generador de perfiles de *código,* que es un programa que supervisa la ejecución de una aplicación administrada.
+Normalmente, la API de generación de perfiles se usa para escribir un *generador de perfiles de código*, que es un programa que supervisa la ejecución de una aplicación administrada.
 
-La API de generación de perfiles la utiliza una DLL de generación de perfiles, que se carga en el mismo proceso que la aplicación para la que se está generando el perfil. El archivo DLL del generador de perfiles implementa una interfaz de devolución de llamada[(ICorProfilerCallback](icorprofilercallback-interface.md) en la versión 1.0 y 1.1 de .NET Framework, [ICorProfilerCallback2](icorprofilercallback2-interface.md) en la versión 2.0 y posteriores). CLR llama a los métodos de esa interfaz para notificar al generador de perfiles eventos en el proceso perfilado. El generador de perfiles puede volver a llamar al tiempo de ejecución mediante los métodos de las interfaces [ICorProfilerInfo](icorprofilerinfo-interface.md) e [ICorProfilerInfo2](icorprofilerinfo2-interface.md) para obtener información sobre el estado de la aplicación con perfiles.
+La API de generación de perfiles la utiliza una DLL de generación de perfiles, que se carga en el mismo proceso que la aplicación para la que se está generando el perfil. La DLL del generador de perfiles implementa una interfaz de devolución de llamada ([ICorProfilerCallback](icorprofilercallback-interface.md) en la .NET Framework versión 1,0 y 1,1, [ICorProfilerCallback2](icorprofilercallback2-interface.md) en la versión 2,0 y posteriores). CLR llama a los métodos de esa interfaz para notificar al generador de perfiles eventos en el proceso perfilado. El generador de perfiles puede volver a llamar al motor en tiempo de ejecución mediante los métodos de las interfaces [ICorProfilerInfo](icorprofilerinfo-interface.md) e [ICorProfilerInfo2](icorprofilerinfo2-interface.md) para obtener información sobre el estado de la aplicación de la que se van a crear perfiles.
 
 > [!NOTE]
 > Sólo la parte de recolección de datos de la solución del generador de perfiles debe estar en ejecución en el mismo proceso que la aplicación para la que se genera el perfil. Toda la interfaz de usuario y el análisis de datos se deben ejecutar en un proceso independiente.
@@ -59,13 +59,13 @@ La ilustración siguiente muestra cómo interactúa la DLL del generador de perf
 
 ### <a name="the-notification-interfaces"></a>Las interfaces de notificación
 
-[ICorProfilerCallback](icorprofilercallback-interface.md) y [ICorProfilerCallback2](icorprofilercallback2-interface.md) se pueden considerar interfaces de notificación. Estas interfaces constan de métodos como [ClassLoadStarted](icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)y [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md). Cada vez que CLR carga o descarga una clase, compila una función, etc., llama al método correspondiente de la interfaz `ICorProfilerCallback` o `ICorProfilerCallback2` del generador de perfiles.
+[ICorProfilerCallback](icorprofilercallback-interface.md) y [ICorProfilerCallback2](icorprofilercallback2-interface.md) se pueden considerar interfaces de notificación. Estas interfaces se componen de métodos como [classloadstarted (](icorprofilercallback-classloadstarted-method.md), [classloadfinished (](icorprofilercallback-classloadfinished-method.md)y [JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md). Cada vez que CLR carga o descarga una clase, compila una función, etc., llama al método correspondiente de la interfaz `ICorProfilerCallback` o `ICorProfilerCallback2` del generador de perfiles.
 
 Por ejemplo, un generador de perfiles podría medir el rendimiento del código a través de dos funciones de notificación: [FunctionEnter2](functionenter2-function.md) y [FunctionLeave2](functionleave2-function.md). Simplemente marca el tiempo de cada notificación, acumula los resultados y genera una lista que indica qué funciones consumieron la mayoría del tiempo de CPU o de reloj durante la ejecución de la aplicación.
 
 ### <a name="the-information-retrieval-interfaces"></a>Las interfaces de recuperación de información
 
-Las otras interfaces principales implicadas en la generación de perfiles son [ICorProfilerInfo](icorprofilerinfo-interface.md) e [ICorProfilerInfo2](icorprofilerinfo2-interface.md). El generador de perfiles llama a estas interfaces según es necesario para obtener más información como ayuda para su análisis. Por ejemplo, cada vez que CLR llama a la [functionEnter2](functionenter2-function.md) función, proporciona un identificador de función. El generador de perfiles puede obtener más información acerca de esa función mediante una llamada a la [ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) método para detectar la clase primaria de la función, su nombre, etc.
+Las otras interfaces principales implicadas en la generación de perfiles son [ICorProfilerInfo](icorprofilerinfo-interface.md) e [ICorProfilerInfo2](icorprofilerinfo2-interface.md). El generador de perfiles llama a estas interfaces según es necesario para obtener más información como ayuda para su análisis. Por ejemplo, cada vez que CLR llama a la función [FunctionEnter2](functionenter2-function.md) , proporciona un identificador de función. El generador de perfiles puede obtener más información sobre esa función llamando al método [ICorProfilerInfo2:: getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) para detectar la clase primaria de la función, su nombre, etc.
 
 ## <a name="supported-features"></a>Características admitidas
 
@@ -105,7 +105,7 @@ Se puede llamar a la API de generación de perfiles desde cualquier lenguaje com
 
 La API es eficaz con respecto a CPU y al consumo de memoria. La generación de perfiles no implica cambios en la aplicación para la que se genera el perfil que sean lo bastante significativos como para producir resultados engañosos.
 
-La API de generación de perfiles es útil tanto para los generadores de perfiles de muestreo como no de muestreo. Un generador de *perfiles* de muestreo inspecciona el perfil con ticks de reloj regulares, por ejemplo, con 5 milisegundos de diferencia. Se informa a un generador de *perfiles que no* es de muestreo de un evento sincrónicamente con el subproceso que provoca el evento.
+La API de generación de perfiles es útil tanto para los generadores de perfiles de muestreo como no de muestreo. Un *generador de perfiles de muestreo* inspecciona el perfil en TICs de reloj normales, por ejemplo, a 5 milisegundos de distancia. Un *generador de perfiles de muestreo no* se informa de un evento sincrónicamente con el subproceso que provoca el evento.
 
 ### <a name="unsupported-functionality"></a>Funcionalidad incompatible
 
@@ -125,9 +125,9 @@ La API de generación de perfiles no admite la funcionalidad siguiente:
 
 ## <a name="notification-threads"></a>Subprocesos de notificación
 
-En la mayoría de los casos, el subproceso que genera un evento ejecuta también las notificaciones. Estas notificaciones (por ejemplo, [FunctionEnter](functionenter-function.md) y [FunctionLeave](functionleave-function.md)) `ThreadID`no necesitan proporcionar el archivo explícito . Además, el generador de perfiles puede decidir utilizar almacenamiento local de subproceso para almacenar y actualizar sus bloques de análisis, en lugar de indizar los bloques de análisis en almacenamiento global, en función del `ThreadID` del subproceso afectado.
+En la mayoría de los casos, el subproceso que genera un evento ejecuta también las notificaciones. Estas notificaciones (por ejemplo, [FunctionEnter (](functionenter-function.md) y [FunctionLeave (](functionleave-function.md)) no necesitan proporcionar explícitamente `ThreadID` . Además, el generador de perfiles puede decidir utilizar almacenamiento local de subproceso para almacenar y actualizar sus bloques de análisis, en lugar de indizar los bloques de análisis en almacenamiento global, en función del `ThreadID` del subproceso afectado.
 
-Tenga en cuenta que estas devoluciones de llamada no se serializan. Los usuarios deben proteger su código creando estructuras de datos seguras para subprocesos y bloqueando el código del generador de perfiles donde sea necesario para evitar el acceso paralelo desde varios subprocesos. Por consiguiente, en ciertos casos puede recibir una secuencia poco habitual de devoluciones de llamada. Por ejemplo, suponga que una aplicación administrada está generando dos subprocesos que está ejecutando código idéntico. En este caso, es posible recibir un evento [ICorProfilerCallback::JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) para `FunctionEnter` alguna función de un subproceso y una devolución de llamada del otro subproceso antes de recibir la devolución de llamada [ICorProfilerCallback::JITCompilationFinished.](icorprofilercallback-jitcompilationfinished-method.md) En este caso, el usuario recibirá una devolución de llamada `FunctionEnter` para una función que puede no haberse compilado totalmente Just-In-Time (JIT) todavía.
+Tenga en cuenta que estas devoluciones de llamada no se serializan. Los usuarios deben proteger su código creando estructuras de datos seguras para subprocesos y bloqueando el código del generador de perfiles donde sea necesario para evitar el acceso paralelo desde varios subprocesos. Por consiguiente, en ciertos casos puede recibir una secuencia poco habitual de devoluciones de llamada. Por ejemplo, suponga que una aplicación administrada está generando dos subprocesos que está ejecutando código idéntico. En este caso, es posible recibir un evento [ICorProfilerCallback:: JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md) para alguna función de un subproceso y una `FunctionEnter` devolución de llamada del otro subproceso antes de recibir la devolución de llamada [ICorProfilerCallback:: JITCompilationFinished (](icorprofilercallback-jitcompilationfinished-method.md) . En este caso, el usuario recibirá una devolución de llamada `FunctionEnter` para una función que puede no haberse compilado totalmente Just-In-Time (JIT) todavía.
 
 ## <a name="security"></a>Seguridad
 
@@ -143,9 +143,9 @@ Una revisión de la API de generación de perfiles de CLR puede crear la impresi
 
 Aunque esto es posible desde la perspectiva del diseño, la API de generación de perfiles no admite componentes administrados. Un generador de perfiles de CLR debe ser completamente no administrado. Los intentos de combinar código administrado y código no administrado en un generador de perfiles de CLR pueden provocar infracciones de acceso, errores de programa o interbloqueos. Los componentes administrados del generador de perfiles devolverán eventos a sus componentes no administrados, que llamarán de nuevo, como consecuencia, a los componentes administrados, produciendo referencias circulares.
 
-La única ubicación donde un generador de perfiles de CLR puede llamar sin ningún riesgo a código administrado es en el cuerpo de un método de lenguaje intermedio de Microsoft (MSIL). La práctica recomendada para modificar el cuerpo de MSIL es utilizar los métodos de recompilación JIT en la interfaz [ICorProfilerCallback4.](icorprofilercallback4-interface.md)
+La única ubicación donde un generador de perfiles de CLR puede llamar sin ningún riesgo a código administrado es en el cuerpo de un método de lenguaje intermedio de Microsoft (MSIL). La práctica recomendada para modificar el cuerpo de MSIL es usar los métodos de recompilación JIT en la interfaz [ICorProfilerCallback4](icorprofilercallback4-interface.md) .
 
-También es posible usar los métodos de instrumentación más antiguos para modificar MSIL. Antes de completar la compilación Just-In-Time (JIT) de una función, el generador de perfiles puede insertar llamadas administradas en el cuerpo MSIL de un método y, a continuación, compilarlo JIT (consulte el [método ICorProfilerInfo::GetILFunctionBody).](icorprofilerinfo-getilfunctionbody-method.md) Esta técnica se puede utilizar con éxito para el instrumental selectivo de código administrado o para recopilar estadísticas y datos de rendimiento sobre JIT.
+También es posible usar los métodos de instrumentación más antiguos para modificar MSIL. Antes de que se complete la compilación Just-in-Time (JIT) de una función, el generador de perfiles puede insertar llamadas administradas en el cuerpo de MSIL de un método y, a continuación, compilarla JIT (vea el método [ICorProfilerInfo:: getilfunctionbody (](icorprofilerinfo-getilfunctionbody-method.md) ). Esta técnica se puede utilizar con éxito para el instrumental selectivo de código administrado o para recopilar estadísticas y datos de rendimiento sobre JIT.
 
 Como alternativa, un generador de perfiles de código puede insertar enlaces nativos en el cuerpo de MSIL de cada función administrada que llame a código no administrado. Esta técnica se puede utilizar para instrumental y cobertura. Por ejemplo, un generador de perfiles de código puede insertar enlaces de instrumental después de cada bloque de MSIL para asegurarse de que se ha ejecutado el bloque. La modificación del cuerpo MSIL de un método es una operación muy delicada y hay muchos factores que se deben tener en cuenta.
 
@@ -159,11 +159,11 @@ La API de generación de perfiles de Common Language Runtime (CLR) proporciona l
 
 En las versiones 1.0 y 1.1 de .NET Framework, estos métodos están disponibles a través del subconjunto en proceso de la API de depuración de CLR. Se definen en el archivo CorDebug.idl.
 
-En .NET Framework 2.0 y versiones posteriores, puede usar el método [ICorProfilerInfo2::DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) para esta funcionalidad.
+En el .NET Framework 2,0 y versiones posteriores, puede usar el método [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) para esta funcionalidad.
 
 ## <a name="using-com"></a>Utilizar COM
 
-Aunque las interfaces de generación de perfiles se definen como interfaces COM, Common Language Runtime (CLR) no inicializa realmente COM para utilizar estas interfaces. La razón es evitar tener que establecer el modelo de subprocesos mediante la función [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) antes de que la aplicación administrada haya tenido la oportunidad de especificar su modelo de subprocesos deseado. De igual forma, el propio generador de perfiles no debe llamar a `CoInitialize`, porque puede elegir un modelo de subprocesos que sea incompatible con la aplicación para la que se está generando el perfil y puede hacer que la aplicación no funcione correctamente.
+Aunque las interfaces de generación de perfiles se definen como interfaces COM, Common Language Runtime (CLR) no inicializa realmente COM para utilizar estas interfaces. La razón es evitar tener que establecer el modelo de subprocesos usando la función [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) antes de que la aplicación administrada haya tenido la oportunidad de especificar su modelo de subprocesos deseado. De igual forma, el propio generador de perfiles no debe llamar a `CoInitialize`, porque puede elegir un modelo de subprocesos que sea incompatible con la aplicación para la que se está generando el perfil y puede hacer que la aplicación no funcione correctamente.
 
 ## <a name="call-stacks"></a>Pilas de llamadas
 
@@ -173,11 +173,11 @@ La API de generación de perfiles proporciona dos maneras de obtener pilas de ll
 
 Una instantánea de pila es un registro de la pila de un subproceso en un momento determinado. La API de generación de perfiles permite la traza de funciones administradas en la pila, pero deja la traza de las funciones no administradas al rastreador de pila propio del generador de perfiles.
 
-Para obtener más información acerca de cómo programar el generador de perfiles para recorrer pilas administradas, vea el método [ICorProfilerInfo2::DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) en este conjunto de documentación y [Profiler Stack Walking en .NET Framework 2.0: Basics and Beyond](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
+Para obtener más información sobre cómo programar el generador de perfiles para recorrer pilas administradas, vea el método [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md) en este conjunto de documentación y [el recorrido de la pila del generador de perfiles en el .NET Framework 2,0: Basics y versiones posteriores](/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Pila sombra
 
-Utilizar el método de instantánea con demasiada frecuencia puede crear rápidamente un problema de rendimiento. Si desea realizar seguimientos de pila con frecuencia, el generador de perfiles debe crear una pila de sombras mediante las devoluciones de llamada de excepción [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)e [ICorProfilerCallback2.](icorprofilercallback2-interface.md) La pila sombra es siempre actual y se copia rápidamente al almacenamiento cada vez que se necesita una instantánea de la pila.
+Utilizar el método de instantánea con demasiada frecuencia puede crear rápidamente un problema de rendimiento. Si desea tomar los seguimientos de la pila con frecuencia, el generador de perfiles debe crear en su lugar una pila de instantáneas usando las devoluciones de llamada de excepción [FunctionEnter2](functionenter2-function.md), [FunctionLeave2](functionleave2-function.md), [FunctionTailcall2](functiontailcall2-function.md)y [ICorProfilerCallback2](icorprofilercallback2-interface.md) . La pila sombra es siempre actual y se copia rápidamente al almacenamiento cada vez que se necesita una instantánea de la pila.
 
 Una pila sombra puede obtener argumentos de función, valores devueltos e información sobre las instancias genéricas. Esta información solamente está disponible a través de la pila sombra y puede obtenerse cuando se entrega el control a una función. Sin embargo, es posible que esta información no esté disponible más tarde, durante la ejecución de la función.
 
@@ -187,7 +187,7 @@ Las devoluciones de llamada del generador de perfiles se pueden emitir en circun
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Title|Descripción|
 |-----------|-----------------|
 |[Configurar un entorno de generación de perfiles](setting-up-a-profiling-environment.md)|Explica cómo inicializar un generador de perfiles, establecer notificaciones de eventos y generar perfiles para un servicio de Windows.|
 |[Interfaces para generación de perfiles](profiling-interfaces.md)|Describe las interfaces no administradas que utiliza la API de generación de perfiles.|

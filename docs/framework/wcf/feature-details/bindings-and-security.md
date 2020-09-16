@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 86b9a1d7b0c772a308b9f059bb31c1f489635300
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245340"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559407"
 ---
 # <a name="bindings-and-security"></a>Enlaces y seguridad
 
@@ -193,24 +193,24 @@ Si ninguno de los enlaces proporcionados por el sistema cumple sus requisitos, p
 
 La tabla siguiente resume las características proporcionadas en la configuración del modo de seguridad, es decir, hace una lista de las características disponibles cuando el modo de seguridad se establece en `Transport`, `Message`o `TransportWithMessageCredential`. Utilice esta tabla para encontrar las características de seguridad que requiere su aplicación.
 
-|Configuración|Características|
+|Setting|Características|
 |-------------|--------------|
-|Transporte|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de punto a punto<br /><br /> Interoperabilidad<br /><br /> Aceleración de hardware<br /><br /> Capacidad de proceso elevada<br /><br /> Firewall seguro<br /><br /> Aplicaciones de la latencia alta<br /><br /> Recifrado en múltiples saltos|
-|Message|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de un extremo a otro<br /><br /> Interoperabilidad<br /><br /> Demandas altas<br /><br /> Federación<br /><br /> Autenticación multifactor<br /><br /> Tokens personalizados<br /><br /> Servicio de notario/marca de tiempo<br /><br /> Aplicaciones de la latencia alta<br /><br /> Persistencia de firmas del mensaje|
-|TransportWithMessageCredential|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de punto a punto<br /><br /> Interoperabilidad<br /><br /> Aceleración de hardware<br /><br /> Capacidad de proceso elevada<br /><br /> Demandas altas de cliente<br /><br /> Federación<br /><br /> Autenticación multifactor<br /><br /> Tokens personalizados<br /><br /> Firewall seguro<br /><br /> Aplicaciones de la latencia alta<br /><br /> Recifrado en múltiples saltos|
+|Transporte|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de punto a punto<br /><br /> Interoperabilidad<br /><br /> Aceleración de hardware<br /><br /> Alto rendimiento<br /><br /> Firewall seguro<br /><br /> Aplicaciones de la latencia alta<br /><br /> Recifrado en múltiples saltos|
+|Mensaje|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de un extremo a otro<br /><br /> Interoperabilidad<br /><br /> Demandas altas<br /><br /> Federación<br /><br /> Autenticación multifactor<br /><br /> Tokens personalizados<br /><br /> Servicio de notario/marca de tiempo<br /><br /> Aplicaciones de la latencia alta<br /><br /> Persistencia de firmas del mensaje|
+|TransportWithMessageCredential|Autenticación de servidor<br /><br /> Autenticación de cliente<br /><br /> Seguridad de punto a punto<br /><br /> Interoperabilidad<br /><br /> Aceleración de hardware<br /><br /> Alto rendimiento<br /><br /> Demandas altas de cliente<br /><br /> Federación<br /><br /> Autenticación multifactor<br /><br /> Tokens personalizados<br /><br /> Firewall seguro<br /><br /> Aplicaciones de la latencia alta<br /><br /> Recifrado en múltiples saltos|
 
 La tabla siguiente hace una lista de los enlaces que admiten los diversos ajustes de modos. Seleccione un enlace en la tabla que va a utilizar para crear su punto de conexión de servicio.
 
 |Enlace|Compatibilidad del modo de transporte|Compatibilidad del modo de mensaje|Compatibilidad con TransportWithMessageCredential|
 |-------------|----------------------------|--------------------------|--------------------------------------------|
-|`BasicHttpBinding`|Yes|Yes|Yes|
-|`WSHttpBinding`|Yes|Yes|Sí|
+|`BasicHttpBinding`|Sí|Sí|Sí|
+|`WSHttpBinding`|Sí|Sí|Sí|
 |`WSDualHttpBinding`|No|Sí|No|
-|`NetTcpBinding`|Sí|Yes|Yes|
+|`NetTcpBinding`|Sí|Sí|Sí|
 |`NetNamedPipeBinding`|Sí|No|No|
 |`NetMsmqBinding`|Sí|Sí|No|
 |`MsmqIntegrationBinding`|Sí|No|No|
-|`wsFederationHttpBinding`|No|Sí|Yes|
+|`wsFederationHttpBinding`|No|Sí|Sí|
 
 ## <a name="transport-credentials-in-bindings"></a>Credenciales de transporte en los enlaces
 
@@ -219,7 +219,7 @@ La tabla siguiente enumera los tipos de credenciales de cliente disponibles al u
 |Tipo|Descripción|
 |----------|-----------------|
 |None|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|
-|Básica|Autenticación básica. Para obtener más información, vea RFC 2617: autenticación HTTP: autenticación básica e implícita, disponible en <https://go.microsoft.com/fwlink/?LinkId=84023> .|
+|Básico|Autenticación básica. Para obtener más información, vea RFC 2617: autenticación HTTP: autenticación básica e implícita, disponible en <https://go.microsoft.com/fwlink/?LinkId=84023> .|
 |Digest|Autenticación implícita. Para obtener más información, vea RFC 2617: autenticación HTTP: autenticación básica e implícita, disponible en <https://go.microsoft.com/fwlink/?LinkId=84023> .|
 |NTLM|Autenticación NT LAN Manager (NTLM).|
 |Windows|Autenticación de Windows.|
@@ -245,4 +245,4 @@ La tabla siguiente enumera los tipos de credenciales de cliente disponibles al u
 - [Selección de tipos de credenciales](selecting-a-credential-type.md)
 - [Capacidades de seguridad con enlaces personalizados](security-capabilities-with-custom-bindings.md)
 - [Comportamientos de seguridad](security-behaviors-in-wcf.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

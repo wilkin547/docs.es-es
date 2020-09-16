@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552289"
 ---
 # <a name="appcontextswitchoverrides-element"></a>Elemento \<AppContextSwitchOverrides>
 
@@ -39,7 +39,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 
 ### <a name="value-attribute"></a>Atributo de valor
 
-|Value|Descripción|
+|Valor|Descripción|
 |-----------|-----------------|
 |"nombre = valor"|Un nombre de conmutador predefinido junto con su valor ( `true` o `false` ). Varios pares de nombre/valor de modificador se separan mediante signos de punto y coma (";"). Para obtener una lista de nombres de conmutadores predefinidos admitidos por el .NET Framework, vea la sección Comentarios.|
 
@@ -53,7 +53,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
  A partir de .NET Framework 4,6, el `<AppContextSwitchOverrides>` elemento de un archivo de configuración permite a los llamadores de una API determinar si su aplicación puede aprovechar la nueva funcionalidad o mantener la compatibilidad con versiones anteriores de una biblioteca. Por ejemplo, si el comportamiento de una API ha cambiado entre dos versiones de una biblioteca, el `<AppContextSwitchOverrides>` elemento permite a los llamadores de esa API rechazar el nuevo comportamiento en las versiones de la biblioteca que admiten la nueva funcionalidad. En el caso de las aplicaciones que llaman a las API en el .NET Framework, el `<AppContextSwitchOverrides>` elemento también puede permitir que los autores de llamadas cuyas aplicaciones tengan como destino una versión anterior de la .NET Framework puedan optar a la nueva funcionalidad si su aplicación se ejecuta en una versión de la .NET Framework que incluye esa funcionalidad.
 
  El `value` atributo del `<AppContextSwitchOverrides>` elemento se compone de una sola cadena formada por uno o varios pares de nombre/valor delimitados por punto y coma.  Cada nombre identifica un modificador de compatibilidad y su valor correspondiente es un booleano ( `true` o `false` ) que indica si el modificador está establecido. De forma predeterminada, el modificador es `false` y las bibliotecas proporcionan la nueva funcionalidad. Solo proporcionan la funcionalidad anterior si el modificador está establecido (es decir, su valor es `true` ). Esto permite que las bibliotecas proporcionen un nuevo comportamiento para una API existente, a la vez que permiten a los autores de llamadas que dependen del comportamiento anterior dejar de participar en la nueva funcionalidad.
@@ -70,7 +70,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Controla si los seguimientos de la pila obtienen cuando el uso de archivos PDB portátiles puede incluir información de línea y de archivo de código fuente. `false` para incluir la información del archivo de código fuente y de la línea; en caso contrario, `true` .|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Controla si el <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> método produce una excepción cuando un <xref:System.Drawing.Icon> objeto tiene marcos PNG. Para más información, consulte [Mitigación: marcos PNG en objetos de icono](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|Determina si <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> los objetos se eliminan correctamente cuando se agregan a la colección mediante el <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> método. `true` para mantener el comportamiento heredado; `false` para eliminar todos los objetos de fuente privados. |.NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Controla si el rendimiento de <xref:System.Windows.Forms.PrintPreviewDialog> está optimizado para las impresoras de red. Para obtener más información, vea [PrintPreviewDialog (información general del control](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)).|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Controla si el rendimiento de <xref:System.Windows.Forms.PrintPreviewDialog> está optimizado para las impresoras de red. Para obtener más información, vea [PrintPreviewDialog (información general del control](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms)).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Controla si se aplican las comprobaciones de intervalo de año para las eras del calendario japonés. `true` para aplicar las comprobaciones de intervalo de año y `false` para deshabilitarlas (comportamiento predeterminado). Para obtener más información, vea [trabajar con calendarios](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Controla si solo "1" se reconoce como el primer año de una era de calendario japonés en las operaciones de análisis. `true` para reconocer solo "1"; `false` para reconocer "1" o gannen (comportamiento predeterminado). Para obtener más información, vea [trabajar con calendarios](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Controla si el primer año de una era de calendario japonés se representa como "1" o gannen en operaciones de formato. `true` para dar formato al primer año de la era como "1"; `false` para darle el formato gannen (comportamiento predeterminado). Para obtener más información, vea [trabajar con calendarios](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
@@ -176,7 +176,7 @@ En el ejemplo siguiente se usa el `<add>` elemento para agregar dos valores a la
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Mitigación de nuevos comportamientos en .NET Framework 4.6 y versiones posteriores](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>

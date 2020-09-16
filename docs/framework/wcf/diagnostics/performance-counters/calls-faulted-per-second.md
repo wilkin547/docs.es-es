@@ -2,12 +2,12 @@
 title: Errores de llamadas por segundo
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: 37fd47a3e4ca474338a4a6ae1117c2626acb546f
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a50d1881040f248d7c58e82ce2e477b51591c2f3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163155"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553589"
 ---
 # <a name="calls-faulted-per-second"></a>Errores de llamadas por segundo
 Nombre del contador: errores de llamadas por segundo  
@@ -15,7 +15,7 @@ Nombre del contador: errores de llamadas por segundo
 ## <a name="description"></a>Descripción  
  Número de llamadas que devolvieron errores a esta operación en un segundo.  
   
- Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), cuyo valor se calcula mediante la siguiente fórmula.  
+ Este contador es de tipo de contador de rendimiento [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), cuyo valor se calcula mediante la siguiente fórmula.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
@@ -23,4 +23,4 @@ Nombre del contador: errores de llamadas por segundo
   
 ## <a name="see-also"></a>Vea también
 
-- [Especificación y gestión de errores en contratos y servicios](../../specifying-and-handling-faults-in-contracts-and-services.md)
+- [Especificación y administración de errores en contratos y servicios](../../specifying-and-handling-faults-in-contracts-and-services.md)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: f1ff707c90e884dc66ab10563dc41ea7789f5cda
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 63c6e903fa811d5c61550d086b4f1ce84973f2bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202000"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553628"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Operaciones de servicio de llamada (WCF Data Services)
 El Open Data Protocol (OData) define las operaciones de servicio para un servicio de datos. WCF Data Services permite definir operaciones como métodos en el servicio de datos. Las operaciones de servicio se direccionan como los demás recursos del servicio de datos, mediante los URI. Una operación de servicio puede devolver colecciones de tipos de entidad, instancias de tipo de entidad único y tipos primitivos, como entero y cadena. Una operación de servicio también puede devolver `null` (`Nothing` en Visual Basic). La biblioteca de cliente de WCF Data Services se puede utilizar para tener acceso a las operaciones de servicio que admiten solicitudes HTTP GET. Estas clases de operaciones de servicio se definen como métodos a los que se ha aplicado <xref:System.ServiceModel.Web.WebGetAttribute>. Para obtener más información, consulte [operaciones de servicio](service-operations-wcf-data-services.md).  
   
- Las operaciones de servicio se exponen en los metadatos devueltos por un servicio de datos que implementa OData. En los metadatos, las operaciones de servicio se representan como elementos `FunctionImport`. Al generar el fuertemente tipado <xref:System.Data.Services.Client.DataServiceContext> , las herramientas Agregar referencia de servicio y herramienta datasvcutil. exe omiten este elemento. Por esto, no encontrará un método en el contexto que se pueda usar para llamar directamente a una operación de servicio. Sin embargo, todavía puede usar el cliente de WCF Data Services para llamar a las operaciones de servicio de una de estas dos maneras:  
+ Las operaciones de servicio se exponen en los metadatos devueltos por un servicio de datos que implementa OData. En los metadatos, las operaciones de servicio se representan como elementos `FunctionImport`. Al generar el fuertemente tipado <xref:System.Data.Services.Client.DataServiceContext> , las herramientas Agregar referencia de servicio y DataSvcUtil.exe omiten este elemento. Por esto, no encontrará un método en el contexto que se pueda usar para llamar directamente a una operación de servicio. Sin embargo, todavía puede usar el cliente de WCF Data Services para llamar a las operaciones de servicio de una de estas dos maneras:  
   
 - Llamando al método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> en <xref:System.Data.Services.Client.DataServiceContext>, proporcionando el URI de la operación de servicio, junto con cualquier parámetro. Este método se usa para llamar a cualquier operación de servicio GET.  
   
@@ -32,7 +32,7 @@ El Open Data Protocol (OData) define las operaciones de servicio para un servici
   
 - No puede usar <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para llamar a una operación de servicio GET que devuelve un único resultado, ya sea de tipo de entidad o de tipo primitivo, o que requiera más de un parámetro de entrada. Debe llamar en su lugar al método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
-- Considere la posibilidad de crear un método de extensión en la clase parcial fuertemente tipada <xref:System.Data.Services.Client.DataServiceContext> , generada por las herramientas de, que usa el <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> método o para llamar a una operación de servicio. Esto le permite llamar directamente a operaciones de servicio desde el contexto. Para obtener más información, consulte la entrada de blog [operaciones de servicio y el cliente de WCF Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
+- Considere la posibilidad de crear un método de extensión en la clase parcial fuertemente tipada <xref:System.Data.Services.Client.DataServiceContext> , generada por las herramientas de, que usa el <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> método o para llamar a una operación de servicio. Esto le permite llamar directamente a operaciones de servicio desde el contexto. Para obtener más información, consulte la entrada de blog [operaciones de servicio y el cliente de WCF Data Services](/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client).  
   
 - Cuando se usa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para llamar a una operación de servicio, la biblioteca de cliente convierte automáticamente en caracteres de escape los caracteres proporcionados al <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> mediante la codificación porcentual de caracteres reservados, como la y comercial (&), y el escape de comillas simples en cadenas. Sin embargo, al llamar a uno de los métodos *Execute* para llamar a una operación de servicio, debe recordar realizar este escape de cualquier valor de cadena proporcionado por el usuario. Las comillas simples de los URI se pasan como pares de comillas simples.  
   
@@ -124,6 +124,6 @@ El Open Data Protocol (OData) define las operaciones de servicio para un servici
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

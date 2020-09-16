@@ -2,12 +2,12 @@
 title: Procedimiento para proteger mensajes dentro de sesiones confiables
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: 306d0f96b5163fe5c24d270b4b9a7c1d3f499e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cec9356467886be022d05ead55d5cb6ccddcd838
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596960"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558685"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Procedimiento para proteger mensajes dentro de sesiones confiables
 
@@ -21,7 +21,7 @@ Este procedimiento está compuesto por tres tareas clave:
 
 1. Especifique el tipo de credencial de cliente que debe utilizar el cliente para autenticarse en el servicio.
 
-Es importante en la primera tarea que el elemento de configuración de punto de conexión contenga un `bindingConfiguration` atributo que haga referencia a una configuración de enlace denominada (en este ejemplo) `MessageSecurity` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)Después, el elemento de configuración hace referencia a este nombre para habilitar las sesiones confiables estableciendo el `enabled` atributo del [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) elemento en `true` . Puede requerir que las garantías de entrega ordenada estén disponibles dentro de una sesión confiable estableciendo el atributo `ordered` en `true`.
+Es importante en la primera tarea que el elemento de configuración de punto de conexión contenga un `bindingConfiguration` atributo que haga referencia a una configuración de enlace denominada (en este ejemplo) `MessageSecurity` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)Después, el elemento de configuración hace referencia a este nombre para habilitar las sesiones confiables estableciendo el `enabled` atributo del [**\<reliableSession>**](/previous-versions/ms731375(v=vs.90)) elemento en `true` . Puede requerir que las garantías de entrega ordenada estén disponibles dentro de una sesión confiable estableciendo el atributo `ordered` en `true`.
 
 Para obtener la copia de origen del ejemplo en el que se basa este procedimiento de configuración, vea la [sesión confiable de WS](../samples/ws-reliable-session.md).
 

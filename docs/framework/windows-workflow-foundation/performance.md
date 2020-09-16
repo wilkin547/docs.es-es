@@ -3,12 +3,12 @@ title: Rendimiento de Windows Workflow Foundation
 description: En este artículo se explican las características de rendimiento de la revisión principal de Windows Workflow Foundation, que forma parte de .NET Framework 4.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9b1b9e7c4fd7cdd122d425b2746859dde30ec209
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421571"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558347"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 
@@ -18,11 +18,11 @@ ms.locfileid: "83421571"
 
 ## <a name="terminology"></a>Terminología
 
- La versión de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introducida en .NET Framework 4 se denominará WF4 en el resto de este tema. [!INCLUDE[wf1](../../../includes/wf1-md.md)]se presentó en .NET Framework 3,0 y tenía algunas revisiones poco importantes a través de .NET Framework 3,5 SP1. La versión .NET Framework 3,5 de Workflow Foundation se denominará WF3 en el resto de este tema. WF3 se incluye en .NET Framework 4 en paralelo con WF4. Para obtener más información sobre cómo migrar artefactos de WF3 a WF4, vea la [Guía de migración de Windows Workflow Foundation 4](migration-guidance.md).
+ La versión de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introducida en .NET Framework 4 se denominará WF4 en el resto de este tema. [!INCLUDE[wf1](../../../includes/wf1-md.md)] se presentó en .NET Framework 3,0 y tenía algunas revisiones poco importantes a través de .NET Framework 3,5 SP1. La versión .NET Framework 3,5 de Workflow Foundation se denominará WF3 en el resto de este tema. WF3 se incluye en .NET Framework 4 en paralelo con WF4. Para obtener más información sobre cómo migrar artefactos de WF3 a WF4, vea la [Guía de migración de Windows Workflow Foundation 4](migration-guidance.md).
 
  Windows Communication Foundation (WCF) es el modelo de programación Unificado de Microsoft para la creación de aplicaciones orientadas a servicios. Se presentó por primera vez como parte de .NET 3,0 junto con WF3 y ahora es uno de los componentes clave de la .NET Framework.
 
- Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Objetivos
  El objetivo de este tema es mostrar las características de rendimiento de WF4 con datos medidos para diferentes escenarios. También se proporcionan en él comparaciones detalladas entre WF4 y WF3, y asimismo se muestran las grandes mejoras realizadas en esta nueva revisión. Los escenarios y los datos presentados en este artículo cuantifican el costo subyacente de distintos aspectos de WF4 y WF3. Estos datos son útiles para entender las características de rendimiento de WF4 y pueden ser útiles para planear migraciones de WF3 a WF4 o utilizar WF4 en el desarrollo de aplicaciones. Sin embargo, se debe ser cauto al considerar las conclusiones extraídas de los datos presentados en este artículo. El rendimiento de una aplicación de flujo de trabajo compuesta depende en gran medida de cómo se implementa el flujo de trabajo y cómo se integran los distintos componentes. Se debe medir cada aplicación para determinar las características de rendimiento de la misma.
@@ -56,7 +56,7 @@ ms.locfileid: "83421571"
  La canalización de procesamiento de mensajes unificada proporcionada en WCF en .NET 4 ayuda a WF4 Services a tener un rendimiento y una escalabilidad significativamente mejores que WF3. WF4 también proporciona una compatibilidad de programación de mensajería más avanzada que puede modelar patrones de intercambio de mensajes (MEP) complejos. Los desarrolladores pueden utilizar contratos de servicio con tipos para conseguir una programación fácil o contratos de servicio sin tipos para lograr un rendimiento mejor sin pagar costos de serialización. La compatibilidad de almacenamiento en caché de canales del lado cliente mediante la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> en WF4 ayuda a los desarrolladores a compilar aplicaciones rápidas con el mínimo esfuerzo. Para obtener más información, consulte [cambiar los niveles de uso compartido de caché para las actividades de envío](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Programación declarativa
- WF4 proporciona un marco de programación declarativa limpio y simple para modelar los procesos y servicios de negocios. El modelo de programación admite la composición totalmente declarativa de actividades, sin código lateral, simplificando enormemente la creación del flujo de trabajo. En .NET Framework 4, el marco de programación declarativa basado en XAML se ha unificado en el ensamblado único System. Xaml. dll para admitir WPF y WF.
+ WF4 proporciona un marco de programación declarativa limpio y simple para modelar los procesos y servicios de negocios. El modelo de programación admite la composición totalmente declarativa de actividades, sin código lateral, simplificando enormemente la creación del flujo de trabajo. En .NET Framework 4, el marco de programación declarativo basado en XAML se ha unificado en el System.Xaml.dll de ensamblado único para admitir WPF y WF.
 
  En WF4, XAML proporciona una experiencia realmente declarativa y permite que la definición completa del flujo de trabajo se defina en marcado XML, haciendo referencia a actividades y tipos generados mediante el uso de .NET. Esto resultaba difícil de hacer en WF3 con formato XOML sin la participación de lógica personalizada de código subyacente. La nueva pila XAML en .NET 4 tiene un rendimiento mucho mejor en la serialización/deserialización de artefactos de flujo de trabajo y hace que la programación declarativa sea más atractiva y sólida.
 

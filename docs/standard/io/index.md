@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2761d17846009ba06a2ffb1fc58b430f3ec9a949
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662724"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558945"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 
@@ -46,7 +46,7 @@ Siempre debe proporcionar un control de excepciones sólido al llamar a métodos
 
 Además de usar estas clases, los usuarios de Visual Basic pueden usar los métodos y propiedades proporcionados por la clase <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para la E/S de archivos.
 
-Vea [Cómo: Copiar directorios](how-to-copy-directories.md), [Cómo: Crear una lista de directorios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) y [Cómo: Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md).
+Vea [Cómo: Copiar directorios](how-to-copy-directories.md), [Cómo: Crear una lista de directorios](/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) y [Cómo: Enumerar directorios y archivos](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Secuencias
 
@@ -128,7 +128,7 @@ Vea [Cómo: Comprimir y extraer archivos](how-to-compress-and-extract-files.md).
 
 El almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. El almacenamiento proporciona un sistema de archivos virtual que está aislado para cada usuario, ensamblado y (opcionalmente) dominio. El almacenamiento aislado es especialmente útil cuando la aplicación no tiene permiso para obtener acceso a los archivos del usuario. Se pueden guardar los valores o los archivos de la aplicación de una forma controlada por la directiva de seguridad del equipo.
 
-El almacenamiento aislado no está disponible para aplicaciones de la Tienda Windows 8.x, sino que deben usarse las clases de datos de aplicaciones del espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType>. Para más información, vea [Datos de la aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+El almacenamiento aislado no está disponible para aplicaciones de la Tienda Windows 8.x, sino que deben usarse las clases de datos de aplicaciones del espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType>. Para más información, vea [Datos de la aplicación](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 Las clases siguientes se utilizan con frecuencia al implementar el almacenamiento aislado:
 
@@ -148,7 +148,7 @@ Estas son algunas diferencias importantes que se deben tener en cuenta al utiliz
 
 - Los tipos relacionados específicamente con las operaciones de archivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> y <xref:System.IO.DirectoryInfo>, no se incluyen en el conjunto de .NET para las aplicaciones de la Tienda Windows 8.x. En su lugar, use los tipos en el espacio de nombres <xref:Windows.Storage?displayProperty=nameWithType> de Windows Runtime, como <xref:Windows.Storage.StorageFile> y <xref:Windows.Storage.StorageFolder>.
 
-- El almacenamiento aislado no está disponible; use en su lugar [datos de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
+- El almacenamiento aislado no está disponible; use en su lugar [datos de aplicaciones](/previous-versions/windows/apps/hh464917(v=win.10)).
 
 - Use métodos asincrónicos, como <xref:System.IO.Stream.ReadAsync%2A> y <xref:System.IO.Stream.WriteAsync%2A>, para evitar bloquear el subproceso de interfaz de usuario.
 
@@ -156,13 +156,13 @@ Estas son algunas diferencias importantes que se deben tener en cuenta al utiliz
 
 Si es necesario, puede convertir entre las secuencias de .NET Framework y las secuencias de Windows Runtime. Para obtener más información, vea [Cómo: Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa](how-to-convert-between-dotnet-streams-and-winrt-streams.md) o <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Para obtener más información sobre las operaciones de E/S en una aplicación de la Tienda Windows 8.x, vea [Inicio rápido: lectura y escritura de un archivo](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Para obtener más información sobre las operaciones de E/S en una aplicación de la Tienda Windows 8.x, vea [Inicio rápido: lectura y escritura de un archivo](/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S y seguridad
 
 Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=nameWithType>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a cualquier requisito <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para obtener más información, vea [Cómo: Agregar o quitar entradas de la lista de control de acceso](how-to-add-or-remove-access-control-list-entries.md).
 
-Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. En su lugar, use el [almacenamiento aislado](isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o bien [datos de aplicaciones](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para las aplicaciones de la Tienda Windows 8.x.
+Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. En su lugar, use el [almacenamiento aislado](isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o bien [datos de aplicaciones](/previous-versions/windows/apps/hh464917(v=win.10)) para las aplicaciones de la Tienda Windows 8.x.
 
 Solo se realiza una comprobación de seguridad cuando se construye la secuencia. Por consiguiente, no abra una secuencia y se la pase al código o a los dominios de aplicación de menos confianza.
 

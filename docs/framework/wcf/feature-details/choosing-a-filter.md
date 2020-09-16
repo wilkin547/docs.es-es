@@ -2,12 +2,12 @@
 title: Elegir un filtro
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: e951c472543239df0c01dcba3e46f120ced9e192
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2f96e7001a41682ef595d003e87daa06d0244f3b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587500"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559394"
 ---
 # <a name="choosing-a-filter"></a>Elegir un filtro
 Al configurar el servicio de enrutamiento, es importante seleccionar filtros de mensajes adecuados y configurarlos para poder obtener coincidencias exactas con los mensajes que recibe. Si los filtros que selecciona son demasiado anchos en sus coincidencias o se configuran incorrectamente, los mensajes se enrutan de forma incorrecta. Si los filtros son demasiado restrictivos, puede que no tenga ninguna ruta válida disponible para algunos de sus mensajes.
@@ -66,7 +66,7 @@ PrefixEndpointAddressMessageFilter prefix1 = new PrefixEndpointAddressMessageFil
 
 Se debería utilizar este filtro al enrutar mensajes entrantes que comparten un prefijo de dirección común.
 
-### <a name="and"></a>AND
+### <a name="and"></a>y
 
 El filtro AND no filtra directamente un valor dentro del mensaje, sino que le permite combinar dos filtros para crear una condición `AND` donde ambos filtros deben coincidir con el mensaje para que el filtro AND lo evalúe como `true`. Esto le permite crear filtros complejos que solo coinciden si todos los sub-filtros coinciden. El siguiente ejemplo define un filtro de dirección y un filtro de acción y, a continuación, define un filtro AND que evalúa un mensaje con respecto a los filtros de acción y dirección. Si tanto el filtro de dirección como el de acción coinciden, entonces el filtro AND devuelve `true`.
 
@@ -84,7 +84,7 @@ StrictAndMessageFilter and1=new StrictAndMessageFilter(address1, action1);
 
 Se debería utilizar este filtro al tener que combinar la lógica de varios filtros para determinar cuándo se debería realizar una coincidencia. Por ejemplo, si tiene varios destinos que solo deben recibir ciertas combinaciones de acciones y mensajes en determinadas direcciones, puede utilizar un filtro AND para combinar los filtros de acción y dirección necesarios.
 
-### <a name="custom"></a>Personalizada
+### <a name="custom"></a>Personalizado
 
 Al seleccionar el tipo de filtro personalizado, debe proporcionar un valor de customType que contenga el tipo del ensamblado que contiene la implementación de **MessageFilter** que se va a usar para este filtro. Además, filterData debe contener cualquier valor que el filtro personalizado pueda requerir en su evaluación de mensajes. En el siguiente ejemplo, se define un `FilterElement` que utiliza la implementación `CustomAssembly.MyCustomMsgFilter` MessageFilter.
 
@@ -142,7 +142,7 @@ Este filtro es útil si sabe que los mensajes que recibe contienen un valor conc
 
 Dado que las consultas XPath suelen incluir espacios de nombres únicos, que son a menudo valores de cadena largos y complejos, el filtro XPath le permite usar la tabla de espacio de nombres para definir prefijos únicos para los espacios de nombres. Para obtener más información acerca de la tabla de espacio de nombres, vea [filtros de mensajes](message-filters.md).
 
-Para obtener más información sobre el diseño de consultas XPath, vea [Sintaxis de XPath](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
+Para obtener más información sobre el diseño de consultas XPath, vea [Sintaxis de XPath](/previous-versions/dotnet/netframework-4.0/ms256471(v=vs.100)).
 
 ## <a name="see-also"></a>Vea también
 
