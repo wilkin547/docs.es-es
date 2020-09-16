@@ -100,7 +100,7 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
         - name: Funciones anónimas estáticas
           href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
-        - name: Expresión condicional con tipos de destino
+        - name: Expresión condicional con tipo de destino
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: Tipos de valor devueltos de covariante
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
