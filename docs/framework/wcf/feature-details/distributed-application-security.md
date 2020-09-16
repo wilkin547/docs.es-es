@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557546"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas funcionales principales: transferencia de seguridad, control de acceso y auditoría. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  
@@ -42,7 +42,7 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 |----------|-----------------|  
 |None|No se proporciona ninguna seguridad en el nivel de transporte o en el nivel del mensaje. Ninguno de los enlaces predefinidos utiliza este modo de forma predeterminada, excepto el [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) elemento o, cuando se usa el código, la <xref:System.ServiceModel.BasicHttpBinding> clase.|  
 |Transporte|Utiliza un transporte seguro como HTTPS para la integridad, confidencialidad y autenticación mutua.|  
-|Message|Utiliza seguridad del mensaje SOAP para la integridad, confidencialidad y autenticación mutua. Los mensajes SOAP se protegen según los estándares de WS-Security.|  
+|Mensaje|Utiliza seguridad del mensaje SOAP para la integridad, confidencialidad y autenticación mutua. Los mensajes SOAP se protegen según los estándares de WS-Security.|  
 |Modo mixto|Utiliza la seguridad de transporte para la integridad, confidencialidad y autenticación de servidor. Utiliza la seguridad de mensajes (WS-Security y otros estándares) para la autenticación del cliente.<br /><br /> (Esta enumeración para este modo es `TransportWithMessageCredential`.)|  
 |Ambos|Lleva a cabo la protección y autenticación en ambos niveles. Este modo solo está disponible en el [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) elemento.|  
   
@@ -62,10 +62,10 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 ### <a name="transport-client-credential-types"></a>Tipos de credenciales de cliente de transporte  
  La siguiente tabla muestra los posibles valores utilizados al crear una aplicación que utiliza la seguridad de transferencia. Puede utilizar estos valores en código o ajustes de enlaces.  
   
-|Configuración|Descripción|  
+|Setting|Descripción|  
 |-------------|-----------------|  
 |None|Especifica que el cliente no necesita presentar ningún credencial. Realiza una conversión a un cliente anónimo.|  
-|Básica|Especifica la autenticación básica. Para obtener más información, vea RFC2617, "[autenticación http: autenticación básica e implícita](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
+|Básico|Especifica la autenticación básica. Para obtener más información, vea RFC2617, "[autenticación http: autenticación básica e implícita](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
 |Digest|Especifica la autenticación implícita. Para obtener más información, vea RFC2617, "[autenticación http: autenticación básica e implícita](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)".|  
 |Ntlm|Especifica autenticación de Windows mediante negociación SSPI en un dominio de Windows.<br /><br /> La negociación SSPI resulta en el uso del protocolo Kerberos o NT LanMan (NTLM).|  
 |Windows|Especifica autenticación de Windows utilizando SSPI en un dominio de Windows. SSPI escoge del protocolo Kerberos o NTLM como servicio de autenticación.<br /><br /> SSPI prueba primero el protocolo Kerberos; si eso falla, utiliza NTLM.|  
@@ -74,7 +74,7 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 ### <a name="message-client-credential-types"></a>Tipos de credencial de cliente de mensaje  
  La siguiente tabla muestra los posibles valores utilizados al crear una aplicación que utiliza la seguridad de mensajes. Puede utilizar estos valores en código o ajustes de enlaces.  
   
-|Configuración|Descripción|  
+|Setting|Descripción|  
 |-------------|-----------------|  
 |None|Permite al servicio interactuar con clientes anónimos.|  
 |Windows|Permite a los intercambios de mensajes SOAP ocurrir bajo el contexto autenticado de una credencial de Windows. Utiliza el mecanismo de negociación de SSPI para escoger entre el protocolo Kerberos o NTLM como servicio de autenticación.|  
@@ -99,4 +99,4 @@ La seguridad de Windows Communication Foundation (WCF) se divide en tres áreas 
 - [Información general acerca de la creación de puntos finales](../endpoint-creation-overview.md)
 - [Enlaces proporcionados por el sistema](../system-provided-bindings.md)
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

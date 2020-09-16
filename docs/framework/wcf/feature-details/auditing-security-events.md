@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5ab10bcc58166d5a38768f988fb18f23088256cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597662"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558295"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden registrar eventos de seguridad (correcto, error o ambos) con la característica de auditoría. Los eventos se escriben al registro de eventos del sistema de Windows y se pueden examinar utilizando el Visor de eventos.  
@@ -43,7 +43,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 ### <a name="auditing-classes"></a>Clases de auditorías  
  La tabla siguiente describe las clases y propiedades utilizadas para programar el comportamiento de la auditoría.  
   
-|Class|Descripción|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Habilita opciones de configuración para la auditoría como un comportamiento de servicio.|  
 |<xref:System.ServiceModel.AuditLogLocation>|Enumeración para especificar en qué registro escribir. Los valores posibles son Predeterminado, Aplicación y Seguridad. Si se selecciona Predeterminado, el sistema operativo determina la ubicación del registro real. Vea la sección "Elección de registro de eventos de seguridad o aplicación" más adelante en este tema.|  
@@ -107,4 +107,4 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 - [Procedimiento para auditar eventos de seguridad](how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

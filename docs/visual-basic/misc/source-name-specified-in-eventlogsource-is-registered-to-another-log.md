@@ -2,12 +2,12 @@
 title: El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName.
 ms.date: 07/20/2015
 ms.assetid: 7317e100-098b-408d-86e5-7c74cf8558c7
-ms.openlocfilehash: 226516e48a7f658d2ec95283e0b0d60fa3f856eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da9f1756909d1c37e28f2dde62a7f8a73bb19f37
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619231"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555645"
 ---
 # <a name="source-name-specified-in-eventlogsource-is-registered-to-a-log-other-than-that-specified-in-eventlogname"></a>El nombre de origen especificado en EventLogSource se registra en un registro distinto del especificado en EventLogName.
 El `EventLog` intenta hacer referencia a un origen que está registrado en un registro diferente. Si va a escribir entradas en un registro de eventos, debe especificar la propiedad <xref:System.Diagnostics.EventLog.Source%2A> . La propiedad <xref:System.Diagnostics.EventLog.Source%2A> registra el componente con el registro de eventos como un origen válido de entradas. Un origen único se puede asociar (y, por tanto, escribir entradas) con un único registro de eventos a la vez.  
@@ -20,7 +20,7 @@ El `EventLog` intenta hacer referencia a un origen que está registrado en un re
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración de registros de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
-- [Referencias del registro de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))
-- [Cómo: Agregar la aplicación como un origen de entradas de registro de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
-- [Cómo: Quitar un origen de eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))
+- [Administrar registros de eventos](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [Referencias del registro de eventos](/previous-versions/visualstudio/visual-studio-2008/k43k9z2a(v=vs.90))
+- [Cómo: agregar una aplicación como origen de las entradas del registro de eventos](/previous-versions/visualstudio/visual-studio-2008/xz73e171(v=vs.90))
+- [Cómo: quitar un origen de eventos](/previous-versions/visualstudio/visual-studio-2008/k57466fc(v=vs.90))

@@ -2,15 +2,15 @@
 title: Almacenes de instancias
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 69b50942c36406bd29147d243e0501b8048d56dc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 26e0c28fe3061306a00e75b0498ef0781b7013c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802562"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555801"
 ---
 # <a name="instance-stores"></a>Almacenes de instancias
-Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. Para obtener más información, consulte [proveedores de control, consulta y almacén de instancias de Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)).  
+Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. Para obtener más información, consulte [proveedores de control, consulta y almacén de instancias de Windows Server App fabric](/previous-versions/appfabric/ff383417(v=azure.10)).  
   
  La API de persistencia es la interfaz entre un host y un almacén de instancias que permite al host enviar las solicitudes de comando al almacén de instancias (por ejemplo, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> y <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>). La implementación concreta de esta API se denomina proveedor de persistencia. El proveedor de persistencia recibe solicitudes de un host y modifica el almacén de instancias.  
   
@@ -24,8 +24,8 @@ Un almacén de instancias es un contenedor lógico de instancias. Es el lugar do
   
 1. Obtener un **InstanceStore** de un proveedor de persistencia.  
 
-2. Obtenga el identificador de una instancia llamando al método <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> en **InstanceStore**.  
+2. Obtenga el identificador de una instancia llamando al <xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A> método en **InstanceStore**.  
   
-3. Invoque comandos en el identificador de instancia llamando al método <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> en **InstanceStore**.  
+3. Invocar comandos en el identificador de instancia llamando al <xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A> método en **InstanceStore**.  
   
-4. Examine el <xref:System.Runtime.DurableInstancing.InstanceView> devuelto por **InstanceStore. Execute** para determinar los resultados de los comandos.
+4. Examine el <xref:System.Runtime.DurableInstancing.InstanceView> devuelto por **InstanceStore.Exe** de la función de los resultados para determinar los resultados de los comandos.

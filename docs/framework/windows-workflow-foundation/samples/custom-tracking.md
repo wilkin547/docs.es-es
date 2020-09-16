@@ -2,12 +2,12 @@
 title: Seguimiento personalizado
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 2b100b877bbc8c6d830f09a4a59decffde511511
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87f72359e16b4268d77148ec16a626c2bac5751c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182841"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557037"
 ---
 # <a name="custom-tracking"></a>Seguimiento personalizado
 En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento. Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario. El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo crear un participante de seguimiento personaliz
 |Componente|Descripción|
 |---------------|-----------------|
 |Tiempo de ejecución de seguimiento|Proporciona la infraestructura para emitir registros de seguimiento.|
-|Participantes de seguimiento|Usa los registros de seguimiento. .NET Framework 4 se incluye con un participante de seguimiento que escribe registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW).|
+|Participantes de seguimiento|Usa los registros de seguimiento. .NET Framework 4 incluye un participante de seguimiento que escribe los registros de seguimiento como eventos de seguimiento de eventos para Windows (ETW).|
 |Perfil de seguimiento|Un mecanismo de filtrado que permite a un participante de seguimiento suscribirse a un subconjunto de los registros de seguimiento emitidos desde una instancia de flujo de trabajo.|
 
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- El participante de seguimiento completo se implementa en el archivo ConsoleTrackingParticipant.cs. El ejemplo de <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> código siguiente es el método para el participante de seguimiento personalizado.
+ El participante de seguimiento completo se implementa en el archivo ConsoleTrackingParticipant.cs. El siguiente ejemplo de código es el <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> método para el participante de seguimiento personalizado.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -112,7 +112,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 
 - Los objetos <xref:System.Activities.Tracking.CustomTrackingRecord> se crean y rellenan con datos definidos por el usuario que se desean emitir con el registro.
 
-- El <xref:System.Activities.Tracking.CustomTrackingRecord> se emite llamando al método <xref:System.Activities.ActivityContext>de pista de la .
+- <xref:System.Activities.Tracking.CustomTrackingRecord>Se emite llamando al método Track del <xref:System.Activities.ActivityContext> .
 
  En el siguiente ejemplo se muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad personalizada.
 
@@ -133,7 +133,7 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2010, abra el archivo de solución CustomTrackingSample.sln.
+1. Con Visual Studio 2010, abra el archivo de solución CustomTrackingSample. sln.
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
@@ -144,10 +144,10 @@ context.Track(customRecord);
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Ejemplos de supervisión de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [Ejemplos de supervisión de AppFabric](/previous-versions/appfabric/ff383407(v=azure.10))

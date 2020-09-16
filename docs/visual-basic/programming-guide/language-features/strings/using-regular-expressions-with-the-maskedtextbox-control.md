@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: efda70be0ccdbc1f4b59d548e50f743f6c493b19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363724"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555749"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
 En este ejemplo se muestra cómo convertir expresiones regulares simples para trabajar con el <xref:System.Windows.Forms.MaskedTextBox> control.  
@@ -29,7 +29,7 @@ En este ejemplo se muestra cómo convertir expresiones regulares simples para tr
 |?|Letra ASCII. Entry opcional.|[a-zA-Z]?|  
 |&|Carácter. Entrada necesaria.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|Carácter. Entry opcional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|Un|Alfabético. Entry opcional.|\W|  
+|A|Alfabético. Entry opcional.|\W|  
 |.|Marcador de posición decimal apropiado para la referencia cultural.|No disponible.|  
 |,|Marcador de posición de miles apropiado para la referencia cultural.|No disponible.|  
 |:|Separador de hora correspondiente a la referencia cultural.|No disponible.|  
@@ -55,9 +55,9 @@ En este ejemplo se muestra cómo convertir expresiones regulares simples para tr
 |`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Estados Unidos número de teléfono, código de área opcional. Si el usuario no desea escribir los caracteres opcionales, puede escribir espacios o colocar el puntero del mouse directamente en la posición de la máscara representada por el primer 0.|  
 |`$\d{6}.00`|`$999,999.00`|Un valor de moneda en el intervalo de 0 a 999999. Los caracteres Currency, milésima y decimal se reemplazarán en tiempo de ejecución por sus equivalentes específicos de la referencia cultural.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Validar cadenas en Visual Basic](validating-strings.md)
-- [Control MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [Control MaskedTextBox](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

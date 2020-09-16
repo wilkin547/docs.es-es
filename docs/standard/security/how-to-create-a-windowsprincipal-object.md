@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557039"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556211"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Procedimiento para crear un objeto WindowsPrincipal
 
@@ -81,7 +81,7 @@ Si el código debe realizar la validación basada en rol varias veces, el primer
   
 3. Una vez que se ha creado el objeto de entidad de seguridad, dispone de varios métodos para validarlo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Objetos Principal e Identity](principal-and-identity-objects.md)
-- [Seguridad de ASP.NET Core](https://docs.microsoft.com/aspnet/core/security/)
+- [Seguridad de ASP.NET Core](/aspnet/core/security/)

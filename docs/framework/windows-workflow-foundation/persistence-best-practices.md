@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de persistencia
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 8ffbb3ebfa8f85e2b0052a9df9ada30766accd8e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b0276bdfd6dcf2e12357224d9a92484a5da9eac3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802523"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558256"
 ---
 # <a name="persistence-best-practices"></a>Procedimientos recomendados de persistencia
 Este documento trata de los procedimientos recomendados el diseño de flujo de trabajo y de la configuración relacionada con la persistencia del flujo de trabajo.  
@@ -21,7 +21,7 @@ Este documento trata de los procedimientos recomendados el diseño de flujo de t
   
  Si su flujo de trabajo está ocupado durante mucho tiempo, le recomendamos conservar la instancia de flujo de trabajo con regularidad a lo largo de su período ocupación. Puede hacer esto agregando las actividades <xref:System.Activities.Statements.Persist> a lo largo de la secuencia de actividades que mantienen ocupada la instancia de flujo de trabajo. De esta manera, reciclando el dominio de la aplicación, los errores del host o del equipo no hacen que el sistema revierta hasta el inicio del período de ocupación. Sea consciente de que agregar las actividades <xref:System.Activities.Statements.Persist> a su flujo de trabajo podría provocar una degradación del rendimiento.  
   
- Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. Para obtener más información, consulte [persistencia de Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10)) .  
+ Windows Server App Fabric simplifica mucho la configuración y el uso de la persistencia. Para obtener más información, consulte [persistencia de Windows Server App fabric](/previous-versions/appfabric/ee677272(v=azure.10)) .  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuración de los parámetros de escalabilidad  
  Los requisitos de escalabilidad y rendimiento determinan la configuración de los siguientes parámetros:  

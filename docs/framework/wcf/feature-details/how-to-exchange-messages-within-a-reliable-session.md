@@ -2,18 +2,18 @@
 title: Procedimiento para intercambiar mensajes dentro de una sesión confiable
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052044"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550194"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Procedimiento para intercambiar mensajes dentro de una sesión confiable
 
 En este tema se describen los pasos necesarios para habilitar una sesión confiable utilizando uno de los enlaces proporcionados por el sistema que admiten este tipo de sesión, pero no de forma predeterminada. Habilita una sesión confiable de manera imperativa mediante código o mediante declaración en el archivo de configuración. Este procedimiento utiliza los archivos de configuración de servicio y cliente para habilitar la sesión confiable y estipular que los mensajes lleguen en el mismo orden en el que se enviaron.
 
-La parte clave de este procedimiento es que el elemento de configuración de extremo contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1` . El [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) elemento de configuración hace referencia a este nombre para habilitar las sesiones confiables estableciendo el `enabled` atributo del [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento en `true` . Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
+La parte clave de este procedimiento es que el elemento de configuración de extremo contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `Binding1` . El [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md) elemento de configuración hace referencia a este nombre para habilitar las sesiones confiables estableciendo el `enabled` atributo del [**\<reliableSession>**](/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) elemento en `true` . Especifica las garantías de entrega ordenada de la sesión confiable estableciendo el atributo `ordered` en `true`.
 
 Para la copia de origen de este ejemplo, consulte [WS Reliable Session](../samples/ws-reliable-session.md).
 
@@ -67,7 +67,7 @@ Para la copia de origen de este ejemplo, consulte [WS Reliable Session](../sampl
 
 ## <a name="example"></a>Ejemplo
 
-Algunos de los enlaces proporcionados por el sistema admiten de forma predeterminada las sesiones confiables. Entre ellas se incluyen las siguientes:
+Algunos de los enlaces proporcionados por el sistema admiten de forma predeterminada las sesiones confiables. Se incluyen los siguientes:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -77,6 +77,6 @@ Algunos de los enlaces proporcionados por el sistema admiten de forma predetermi
 
 Para obtener un ejemplo de cómo crear un enlace personalizado que admita sesiones confiables, consulte [Cómo: crear un enlace de sesión confiable personalizado con https](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Sesiones de confianza](reliable-sessions.md)

@@ -46,7 +46,7 @@
 - name: Referencia
   items:
     - name: Referencia de API
-      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+      href: ../../api/index.md?view=spark-dotnet
 - name: Recursos
   items:
     - name: Información general sobre recursos

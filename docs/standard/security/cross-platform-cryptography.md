@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7269b32e509039fdd767446bd6e10202b089c094
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557156"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550024"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>Criptografía multiplataforma en .NET Core y .NET 5
 
@@ -109,7 +109,7 @@ Las bibliotecas del sistema operativo se usan para el cifrado y el descifrado. N
 | Firma PKCS1 (SHA-2)               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | PSS                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows CryptoAPI (CAPI) es capaz de la firma PKCS1 con un algoritmo SHA-2. Pero el objeto RSA individual se puede cargar en un proveedor de servicios criptográficos (CSP) que no lo admite.
+\* Windows CryptoAPI (CAPI) es capaz de la firma PKCS1 con un algoritmo SHA-2. Pero el objeto RSA individual se puede cargar en un proveedor de servicios criptográficos (CSP) que no lo admite.
 
 #### <a name="rsa-on-windows"></a>RSA en Windows
 
@@ -151,7 +151,7 @@ Las bibliotecas de sistema operativo definen las curvas de clave ECDSA y están 
 
 <sup>1</sup> las distribuciones de Linux no admiten todas las mismas curvas con nombre.
 
-<sup>2</sup> se ha agregado compatibilidad con curvas con nombre a CNG de Windows en Windows 10. Para obtener más información, vea [CNG denominado curvas elípticas](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Las curvas con nombre no están disponibles en versiones anteriores de Windows, excepto para tres curvas en Windows 7.
+<sup>2</sup> se ha agregado compatibilidad con curvas con nombre a CNG de Windows en Windows 10. Para obtener más información, vea [CNG denominado curvas elípticas](/windows/win32/seccng/cng-named-elliptic-curves). Las curvas con nombre no están disponibles en versiones anteriores de Windows, excepto para tres curvas en Windows 7.
 
 <sup>3</sup> la exportación con parámetros de curva explícitos requiere compatibilidad con la biblioteca del sistema operativo, que no está disponible en MacOS o en versiones anteriores de Windows.
 
@@ -164,7 +164,7 @@ Las bibliotecas de sistema operativo definen las curvas de clave ECDSA y están 
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
 
-\*En macOS, <xref:System.Security.Cryptography.ECDsaOpenSsl> funciona si OpenSSL está instalado en el sistema y se puede encontrar un dylib libcrypto adecuado a través de la carga de biblioteca dinámica. Si no se encuentra una biblioteca adecuada, se producirán excepciones.
+\* En macOS, <xref:System.Security.Cryptography.ECDsaOpenSsl> funciona si OpenSSL está instalado en el sistema y se puede encontrar un dylib libcrypto adecuado a través de la carga de biblioteca dinámica. Si no se encuentra una biblioteca adecuada, se producirán excepciones.
 
 ### <a name="ecdh"></a>ECDH
 
@@ -194,7 +194,7 @@ Las bibliotecas de sistema operativo definen las curvas de clave ECDH y están s
 
 <sup>1</sup> las distribuciones de Linux no admiten todas las mismas curvas con nombre.
 
-<sup>2</sup> se ha agregado compatibilidad con curvas con nombre a CNG de Windows en Windows 10. Para obtener más información, vea [CNG denominado curvas elípticas](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Las curvas con nombre no están disponibles en versiones anteriores de Windows, excepto para tres curvas en Windows 7.
+<sup>2</sup> se ha agregado compatibilidad con curvas con nombre a CNG de Windows en Windows 10. Para obtener más información, vea [CNG denominado curvas elípticas](/windows/win32/seccng/cng-named-elliptic-curves). Las curvas con nombre no están disponibles en versiones anteriores de Windows, excepto para tres curvas en Windows 7.
 
 <sup>3</sup> la exportación con parámetros de curva explícitos requiere compatibilidad con la biblioteca del sistema operativo, que no está disponible en MacOS o en versiones anteriores de Windows.
 
@@ -207,7 +207,7 @@ Las bibliotecas de sistema operativo definen las curvas de clave ECDH y están s
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
 
-\*En macOS, <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> funciona si se instala OpenSSL y se puede encontrar un dylib de libcrypto adecuado a través de la carga de biblioteca dinámica. Si no se encuentra una biblioteca adecuada, se producirán excepciones.
+\* En macOS, <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> funciona si se instala OpenSSL y se puede encontrar un dylib de libcrypto adecuado a través de la carga de biblioteca dinámica. Si no se encuentra una biblioteca adecuada, se producirán excepciones.
 
 ### <a name="dsa"></a>DSA
 
@@ -222,7 +222,7 @@ La generación de claves DSA (algoritmo de firma digital) se realiza mediante la
 | FIPS 186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
 | FIPS 186-3 (firmas SHA-2) | ✔️         | ✔️    | ❌            | ❌            |
 
-\*macOS carga claves DSA mayores de 1024 bits, pero el comportamiento de esas claves es indefinido. No se comportan según FIPS 186-3.
+\* macOS carga claves DSA mayores de 1024 bits, pero el comportamiento de esas claves es indefinido. No se comportan según FIPS 186-3.
 
 #### <a name="dsa-on-windows"></a>DSA en Windows
 
@@ -254,20 +254,20 @@ La mayoría de la compatibilidad con certificados X. 509 en .NET procede de las 
 
 | Escenario                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| Empty                                        | ✔️     | ✔️    | ✔️   |
+| Vacío                                        | ✔️     | ✔️    | ✔️   |
 | Un certificado, sin clave privada              | ✔️     | ✔️    | ✔️   |
 | Un certificado, con clave privada            | ✔️     | ✔️    | ✔️   |
 | Varios certificados, sin claves privadas       | ✔️     | ✔️    | ✔️   |
 | Varios certificados, una clave privada       | ✔️     | ✔️    | ✔️   |
 | Varios certificados, varias claves privadas | ✔️     | ⚠️\*  | ✔️   |
 
-\*Disponible en las versiones de .NET 5 Preview.
+\* Disponible en las versiones de .NET 5 Preview.
 
 ### <a name="write-a-pkcs12pfx"></a>Escritura de PKCS12/PFX
 
 | Escenario                                     | Windows | Linux | macOS |
 |----------------------------------------------|---------|-------|-------|
-| Empty                                        | ✔️     | ✔️    | ⚠️\* |
+| Vacío                                        | ✔️     | ✔️    | ⚠️\* |
 | Un certificado, sin clave privada              | ✔️     | ✔️    | ⚠️\* |
 | Un certificado, con clave privada            | ✔️     | ✔️    | ✔️   |
 | Varios certificados, sin claves privadas       | ✔️     | ✔️    | ⚠️\* |
@@ -275,7 +275,7 @@ La mayoría de la compatibilidad con certificados X. 509 en .NET procede de las 
 | Varios certificados, varias claves privadas | ✔️     | ⚠️\*  | ✔️   |
 | Carga efímera                            | ✔️     | ✔️    | ⚠️\* |
 
-\*Disponible en las versiones de .NET 5 Preview.
+\* Disponible en las versiones de .NET 5 Preview.
 
 macOS no puede cargar claves privadas de certificado sin un objeto de cadena de claves, lo que requiere escribir en el disco. Las llaves se crean automáticamente para la carga de PFX y se eliminan cuando ya no se usan. Dado que la <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> opción significa que la clave privada no debe escribirse en el disco, la aserción de la marca en MacOS da como resultado un <xref:System.PlatformNotSupportedException> .
 

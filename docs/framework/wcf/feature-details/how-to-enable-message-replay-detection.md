@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: bf45b39f59e2fe38fec88d1fac23ab824c009546
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597090"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557884"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedimiento para habilitar la detección de repetición de mensajes
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
- Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](https://docs.microsoft.com/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
+ Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
   
  En el procedimiento siguiente se muestran varias propiedades que puede usar para controlar la detección de reproducción mediante Windows Communication Foundation (WCF).  
   
@@ -36,7 +36,7 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
   
     3. `ReplayWindow`. Valor `TimeSpan`. Esto rige cuánto tiempo un mensaje puede vivir en la red después de que el servidor lo envíe (a través de los intermediarios) antes de alcanzar el cliente. El cliente realiza el seguimiento de las firmas de los mensajes enviados dentro del `ReplayWindow` último para los propósitos de detección de reproducción.  
   
-    4. `ReplayCacheSize`. Valor entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
+    4. `ReplayCacheSize`. Valor de entero. El cliente almacena las firmas del mensaje en una memoria caché. Este valor especifica cuántas firmas que puede almacenar la memoria caché. Si el número de mensajes enviado dentro de la última ventana de reproducción alcanza el límite de la memoria caché, se rechazan los nuevos mensajes hasta que las firmas almacenadas en memoria caché más antiguas alcancen el límite horario. El valor predeterminado es 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Para controlar la detección de reproducción en el servicio utilizando código  
   

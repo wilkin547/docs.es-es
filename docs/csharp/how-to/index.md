@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537410"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -106,23 +106,23 @@ LINQ permite escribir código para consultar cualquier origen de datos que admit
 - [Use expresiones lambda en una consulta](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [Use `var` en expresiones de consulta](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Devuelva subconjuntos de propiedades de elementos de una consulta](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
-- [Escriba consultas con filtrado complejo](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).
-- [Ordene los elementos de un origen de datos](../programming-guide/concepts/linq/how-to-sort-elements.md).
-- [Ordene elementos en varias claves](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
-- [Controle el tipo de una proyección](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
+- [Escriba consultas con filtrado complejo](../../standard/linq/write-queries-complex-filtering.md).
+- [Ordene los elementos de un origen de datos](../../standard/linq/sort-elements.md).
+- [Ordene elementos en varias claves](../../standard/linq/sort-elements-multiple-keys.md).
+- [Controle el tipo de una proyección](../../standard/linq/control-type-projection.md).
 - [Cuente las repeticiones de un valor en una secuencia de origen](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
-- [Calcule valores intermedios](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
+- [Calcule valores intermedios](../../standard/linq/calculate-intermediate-values.md).
 - [Combine datos de varios orígenes](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [Encuentre la diferencia de conjuntos entre dos secuencias](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).
-- [Depure los resultados vacíos de una consulta](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md).
+- [Depure los resultados vacíos de una consulta](../../standard/linq/debug-empty-query-results-sets.md).
 - [Agregue métodos personalizados para las consultas de LINQ](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md).
 
 ## <a name="multiple-threads-and-async-processing"></a>Varios subprocesos y procesamiento asincrónico
 
 Los programas modernos suelen usar operaciones asincrónicas. Estos artículos le ayudarán a aprender a usar estas técnicas.
 
-- [Mejore el rendimiento asíncrono usando `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
-- [Realice varias solicitudes web en paralelo usando `async` y `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
+- [Mejore el rendimiento asíncrono usando `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/index.md).
+- [Realice varias solicitudes web en paralelo usando `async` y `await`](../programming-guide/concepts/async/index.md).
 - [Use un grupo de subprocesos](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Argumentos de línea de comandos para el programa

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559029"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551717"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -389,9 +389,9 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 La [inserción de dependencias (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) desacopla los objetos y sus dependencias para que ya no sea necesario cambiar el código de un objeto solo porque haya cambiado una dependencia. Al desarrollar aplicaciones de ASP.NET que tienen como destino .NET Framework 4.7.2, puede:
 
-- Usar la inserción basada en establecedores, interfaces y constructores en [controladores y módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de aplicación web ASP.NET.
+- Usar la inserción basada en establecedores, interfaces y constructores en [controladores y módulos](/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de aplicación web ASP.NET.
 
-- Usar la inserción basada en establecedores, e interfaces en [controladores y módulos](https://docs.microsoft.com/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](https://docs.microsoft.com/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de sitio web ASP.NET.
+- Usar la inserción basada en establecedores, e interfaces en [controladores y módulos](/previous-versions/aspnet/bb398986(v=vs.100)), [instancias de Page](xref:System.Web.UI.Page) y [controles de usuario](/previous-versions/aspnet/y6wb1a0e(v=vs.100)) de proyectos de sitio web ASP.NET.
 
 - Conectar otros marcos de inserción de dependencias.
 
@@ -517,9 +517,9 @@ El método devuelve un enumerable vacío a menos que se habilite  <xref:System.
 
 **Buscar los propietarios de ResourceDictionary**
 
-A partir de .NET Framework 4.7.2, un asistente de diagnóstico puede localizar los propietarios de un objeto <xref:Windows.UI.Xaml.ResourceDictionary> determinado. (La característica está pensada para que la usen los asistentes de diagnóstico, no las aplicaciones de producción). Siempre que se realice un cambio en un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF busca automáticamente todas las referencias [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) que es posible que se vean afectadas por el cambio.
+A partir de .NET Framework 4.7.2, un asistente de diagnóstico puede localizar los propietarios de un objeto <xref:Windows.UI.Xaml.ResourceDictionary> determinado. (La característica está pensada para que la usen los asistentes de diagnóstico, no las aplicaciones de producción). Siempre que se realice un cambio en un <xref:Windows.UI.Xaml.ResourceDictionary>, WPF busca automáticamente todas las referencias [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) que es posible que se vean afectadas por el cambio.
 
-Un asistente de diagnóstico como la opción "Editar y continuar" de Visual Studio puede ampliar esta opción para controlar las referencias [StaticResource](../wpf/advanced/staticresource-markup-extension.md). El primer paso de este proceso consiste en encontrar los propietarios del diccionario; es decir, buscar todos los objetos cuya propiedad `Resources` hace referencia al diccionario (ya sea directa o indirectamente a través de la propiedad <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Tres métodos estáticos nuevos implementadas en la clase <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno para cada uno de los tipos base que tengan una propiedad `Resources`, admiten este paso:
+Un asistente de diagnóstico como la opción "Editar y continuar" de Visual Studio puede ampliar esta opción para controlar las referencias [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension). El primer paso de este proceso consiste en encontrar los propietarios del diccionario; es decir, buscar todos los objetos cuya propiedad `Resources` hace referencia al diccionario (ya sea directa o indirectamente a través de la propiedad <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Tres métodos estáticos nuevos implementadas en la clase <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, uno para cada uno de los tipos base que tengan una propiedad `Resources`, admiten este paso:
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -531,7 +531,7 @@ Estos métodos devuelven un enumerable vacío a menos que se habilite  <xref:Sy
 
 **Buscar referencias StaticResource**
 
-Ahora un asistente de diagnóstico puede recibir una notificación cada vez que se resuelva una referencia [StaticResource](../wpf/advanced/staticresource-markup-extension.md). (La característica está pensada para que la usen los asistentes de diagnóstico, no las aplicaciones de producción). Es posible que un asistente de diagnóstico, como la opción "Editar y continuar" de Visual Studio, quiera actualizar todos los usos de un recurso cuando cambie su valor en un objeto <xref:Windows.UI.Xaml.ResourceDictionary>. WPF hace esto automáticamente para las referencias [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), pero no deliberadamente para las referencias [StaticResource](../wpf/advanced/staticresource-markup-extension.md). A partir de .NET Framework 4.7.2, el asistente de diagnóstico puede usar estas notificaciones para buscar esos usos del recurso estático.
+Ahora un asistente de diagnóstico puede recibir una notificación cada vez que se resuelva una referencia [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension). (La característica está pensada para que la usen los asistentes de diagnóstico, no las aplicaciones de producción). Es posible que un asistente de diagnóstico, como la opción "Editar y continuar" de Visual Studio, quiera actualizar todos los usos de un recurso cuando cambie su valor en un objeto <xref:Windows.UI.Xaml.ResourceDictionary>. WPF hace esto automáticamente para las referencias [DynamicResource](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension), pero no deliberadamente para las referencias [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension). A partir de .NET Framework 4.7.2, el asistente de diagnóstico puede usar estas notificaciones para buscar esos usos del recurso estático.
 
 La notificación se implementa mediante el nuevo evento <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Este evento se desencadena cuando el tiempo de ejecución resuelve una referencia [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Los argumentos de <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> describen la resolución e indican el objeto y la propiedad que hospedan la referencia [StaticResource](../wpf/advanced/staticresource-markup-extension.md) y el objeto  <xref:Windows.UI.Xaml.ResourceDictionary> y la clave que se usan para la resolución:
+Este evento se desencadena cuando el tiempo de ejecución resuelve una referencia [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension). Los argumentos de <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> describen la resolución e indican el objeto y la propiedad que hospedan la referencia [StaticResource](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) y el objeto  <xref:Windows.UI.Xaml.ResourceDictionary> y la clave que se usan para la resolución:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -758,7 +758,7 @@ En .NET Framework 4.7, Windows Forms mejora la compatibilidad con monitores co
 
 A partir de las aplicaciones que tienen .NET Framework 4.7 como destino, .NET Framework cuenta con compatibilidad con valores altos de PPP y PPP dinámicos en aplicaciones de Windows Forms. La compatibilidad con valores altos de PPP mejora el diseño y la apariencia de los formularios y controles en monitores con valores altos de PPP. PPP dinámicos cambia el diseño y la apariencia de los formularios y controles cuando el usuario cambia los PPP o el factor de escala de visualización de una aplicación en ejecución.
 
-Compatibilidad con valores altos de PPP es una característica opcional que se configura definiendo una sección [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) en el archivo de configuración de la aplicación. Para más información sobre cómo agregar compatibilidad con valores altos de PPP y PPP dinámicos a la aplicación de Windows Forms, consulte [Compatibilidad con valores altos de PPP en Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).
+Compatibilidad con valores altos de PPP es una característica opcional que se configura definiendo una sección [\<System.Windows.Forms.ConfigurationSection>](../configure-apps/file-schema/winforms/index.md) en el archivo de configuración de la aplicación. Para más información sobre cómo agregar compatibilidad con valores altos de PPP y PPP dinámicos a la aplicación de Windows Forms, consulte [Compatibilidad con valores altos de PPP en Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 <a name="WPF47"></a>
 
@@ -768,7 +768,7 @@ En .NET Framework 4.7, WPF incluye las siguientes mejoras:
 
 **Compatibilidad con una pila de entrada táctil o de lápiz basada en mensajes WM_POINTER de Windows**
 
-Ahora tiene la opción de usar una pila de entrada táctil o de lápiz basada en [mensajes WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) en lugar de Windows Ink Services Platform (WISP). Se trata de una característica opcional de .NET Framework. Para obtener más información, consulte la sección [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md).
+Ahora tiene la opción de usar una pila de entrada táctil o de lápiz basada en [mensajes WM_POINTER](/previous-versions/windows/desktop/InputMsg/messages) en lugar de Windows Ink Services Platform (WISP). Se trata de una característica opcional de .NET Framework. Para obtener más información, consulte la sección [Compatibilidad de aplicaciones](../migration-guide/application-compatibility.md).
 
 **Nueva implementación para API de impresión de WPF**
 
@@ -1196,7 +1196,7 @@ En .NET Framework 4.6.2, Windows Workflow Foundation se ha mejorado en las área
 
 **Compatibilidad con expresiones de C# e IntelliSense en el Diseñador de WF rehospedado**
 
-A partir de .NET Framework 4.5, WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
+A partir de .NET Framework 4.5, WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` En las versiones de .NET Framework anteriores a 4.6.2, IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. .NET Framework 4.6.2 soluciona esta incidencia y hace que IntelliSense esté disponible.
 
@@ -1886,7 +1886,7 @@ Las mejoras en Windows Forms son las siguientes:
 
 Algunas de las mejoras realizadas durante la depuración de las aplicaciones de .NET Framework en Visual Studio 2013 son:
 
-- Valores devueltos en el depurador de Visual Studio. Al depurar una aplicación administrada en Visual Studio 2013, en la ventana Automático se muestran los valores y tipos devueltos de los métodos. Esta información está disponible para el escritorio, la Tienda Windows y las aplicaciones Windows Phone. Para más información, vea [Examinar los valores devueltos de llamadas a métodos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
+- Valores devueltos en el depurador de Visual Studio. Al depurar una aplicación administrada en Visual Studio 2013, en la ventana Automático se muestran los valores y tipos devueltos de los métodos. Esta información está disponible para el escritorio, la Tienda Windows y las aplicaciones Windows Phone. Para más información, vea [Examinar los valores devueltos de llamadas a métodos](/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120)).
 
 - Editar y continuar en aplicaciones de 64 bits. Visual Studio 2013 admite la característica Editar y continuar en aplicaciones administradas de 64 bits para el escritorio, la Tienda Windows y Windows Phone. Las limitaciones existentes siguen en vigor para las aplicaciones de 32 bits y 64 bits (vea la última sección del artículo [Cambios admitidos en el código (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
 
@@ -1972,7 +1972,7 @@ La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el
 
 ASP.NET 4.5 y 4.5.1 incorporan el enlace de modelos de formularios Web Forms, compatibilidad con WebSocket, controladores asincrónicos, mejoras de rendimiento y muchas otras características. Para obtener más información, vea los siguientes recursos:
 
-- [ASP.NET 4.5 y Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 y Visual Studio 2012](/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [Notas de la versión de ASP.NET and Web Tools para Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -2066,7 +2066,7 @@ Para obtener más información, vea [Novedades de Windows Communication Foundati
 
 Se agregaron varias características nuevas a Windows Workflow Foundation (WF) en .NET Framework 4.5, incluidas las siguientes:
 
-- Flujos de trabajo de máquina de estados, que se incluyeron por primera vez como parte de .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se actualizaron para .NET Framework 4.5 con el objeto de incluir:
+- Flujos de trabajo de máquina de estados, que se incluyeron por primera vez como parte de .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se actualizaron para .NET Framework 4.5 con el objeto de incluir:
 
   - Capacidad de establecer puntos de interrupción en estados
 
@@ -2118,7 +2118,7 @@ Para obtener más información, vea [Novedades de Windows Workflow Foundation](.
 
 ### <a name="net-for-windows-8x-store-apps"></a>.NET para aplicaciones de la Tienda Windows 8.x
 
-Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina .NET para aplicaciones de la Tienda Windows 8.x y se explica en una [introducción](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
+Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de la Tienda Windows 8.x para Windows mediante C# o Visual Basic. Este subconjunto se denomina .NET para aplicaciones de la Tienda Windows 8.x y se explica en una [introducción](/previous-versions/windows/apps/br230302(v=vs.140)).
 
 ### <a name="portable-class-libraries"></a>Bibliotecas de clases portables <a name="portable"></a>
 

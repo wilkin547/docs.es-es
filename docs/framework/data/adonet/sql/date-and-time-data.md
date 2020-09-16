@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286499"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551496"
 ---
 # <a name="date-and-time-data"></a>Datos de fecha y hora
 SQL Server 2008 introduce nuevos tipos de datos para administrar la información de fecha y hora. Los nuevos tipos de datos incluyen tipos independientes para la fecha y la hora y tipos de datos expandidos con mayor control sobre el intervalo, la precisión y la zona horaria. A partir de .NET Framework versión 3.5 Service Pack (SP) 1, el proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>) proporciona compatibilidad total con todas las características nuevas del Motor de base de datos de SQL Server 2008. Debe instalar .NET Framework 3.5 SP1 (o posterior) para usar estas características nuevas con SqlClient.  
@@ -22,7 +22,7 @@ SQL Server 2008 introduce nuevos tipos de datos para administrar la informaci�
   
  **Documentación de SQL Server**  
   
-1. [Uso de datos de fecha y hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [Uso de datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Tipos de datos de fecha y hora introducidos en SQL Server 2008  
  En la tabla siguiente se describen los nuevos tipos de datos de fecha y hora.  
@@ -47,7 +47,7 @@ SQL Server 2008 introduce nuevos tipos de datos para administrar la informaci�
 > [!NOTE]
 > No se admite el formato de fecha ADM al convertir de un formato de cadena a `date`, `time`, `datetime2` o `datetimeoffset`.  
   
- Para obtener más información sobre cómo SQL Server interpreta los datos de fecha y hora, vea [usar datos de fecha y hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
+ Para obtener más información sobre cómo SQL Server interpreta los datos de fecha y hora, vea [usar datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tipos de datos de fecha y hora y parámetros  
  Se han agregado los siguientes valores de enumeración a <xref:System.Data.SqlDbType> para admitir los nuevos tipos de datos de fecha y hora.  
@@ -77,7 +77,7 @@ Puede especificar el tipo de datos de <xref:System.Data.SqlClient.SqlParameter> 
   
 |Tipos de datos de SQL Server|Tipo de .NET Framework|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System.DateTime|Date|Date|  
+|Fecha|System.DateTime|Date|Date|  
 |time|System.TimeSpan|Time|Time|  
 |datetime2|System.DateTime|DateTime2|DateTime2|  
 |datetimeoffset|System.DateTimeOffset|DateTimeOffset|DateTimeOffset|  
@@ -237,10 +237,10 @@ command.Parameters.AddWithValue( _
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Tipos de datos y funciones de fecha y hora (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Proporciona información general sobre todos los tipos de datos y funciones de fecha y hora de Transact-SQL.|  
-|[Uso de datos de fecha y hora](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Proporciona información sobre las funciones y los tipos de datos de fecha y hora, además de ejemplos de uso.|  
+|[Uso de datos de fecha y hora](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Proporciona información sobre las funciones y los tipos de datos de fecha y hora, además de ejemplos de uso.|  
 |[Tipos de datos (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|Describe los tipos de datos del sistema en SQL Server.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Asignaciones de tipos de datos de SQL Server](../sql-server-data-type-mappings.md)
 - [Configurar parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)

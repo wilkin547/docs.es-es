@@ -2,12 +2,12 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 598b341e8b09acd11ba215e6add3adf9e44b2b81
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4077aacab1c1c4594db76cc6663bfc0245d345d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400465"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555502"
 ---
 # \<custom>
 Especifica la configuración concreta para un servicio de resolución del mismo nivel personalizado.  
@@ -53,14 +53,14 @@ Especifica la configuración concreta para un servicio de resolución del mismo 
 |-------------|-----------------|  
 |[\<resolver>](resolver.md)|Una resolución del mismo nivel que se usa para resolver un Id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.|  
   
-## <a name="remarks"></a>Comentarios  
- Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de extremo del igual que hospeda el servicio y cualquier configuración obligatoria concreta. Para obtener más información sobre cómo crear un solucionador personalizado, vea [Agregar un solucionador personalizado a una aplicación de PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).  
+## <a name="remarks"></a>Observaciones  
+ Este elemento define la configuración básica para un servicio de la resolución del mismo nivel personalizado, incluso la dirección de extremo del igual que hospeda el servicio y cualquier configuración obligatoria concreta. Para obtener más información sobre cómo crear un solucionador personalizado, vea [Agregar un solucionador personalizado a una aplicación de PeerChannel](/previous-versions/ms730105(v=vs.90)).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
 - <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
 - [Resoluciones del mismo nivel](../../../wcf/feature-details/peer-resolvers.md)
-- [Adición de una resolución personalizada a una aplicación PeerChannel](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
+- [Adición de una resolución personalizada a una aplicación PeerChannel](/previous-versions/ms730105(v=vs.90))

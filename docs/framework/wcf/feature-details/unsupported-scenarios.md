@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557819"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 
@@ -20,26 +20,26 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP y cookie de token de contexto seguro habilitados
 
-WCF no admite la suplantación y se produce una <xref:System.InvalidOperationException> cuando existen las condiciones siguientes:
+WCF no admite la suplantación y <xref:System.InvalidOperationException> se produce una excepción cuando se cumplen las condiciones siguientes:
 
 - El sistema operativo es Windows XP.
 
 - El modo de autenticación resulta en una identidad de Windows.
 
-- La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de <xref:System.ServiceModel.OperationBehaviorAttribute> se establece en <xref:System.ServiceModel.ImpersonationOption.Required>.
+- La propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> de <xref:System.ServiceModel.OperationBehaviorAttribute> está establecida en <xref:System.ServiceModel.ImpersonationOption.Required>.
 
 - Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).
 
- El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](how-to-create-a-security-context-token-for-a-secure-session.md). En el código, el token se habilita mediante la creación de un elemento de enlace de seguridad (ya sea <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) mediante el <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.
+ El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](how-to-create-a-security-context-token-for-a-secure-session.md). En el código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> ) utilizando el <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> método o y estableciendo el `requireCancellation` parámetro en `false` . El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.
 
- Como alternativa, en la configuración, el token se habilita mediante la creación de una <`customBinding`>, la adición de un <`security`> elemento y el establecimiento del atributo `authenticationMode` en SecureConversation y el atributo `requireSecurityContextCancellation` en `true`.
+ Como alternativa, en la configuración, el token se habilita mediante la creación de un> de <`customBinding` , la adición de un elemento de> de <`security` y el establecimiento del `authenticationMode` atributo en SecureConversation y el `requireSecurityContextCancellation` atributo en `true` .
 
 > [!NOTE]
-> Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por lo tanto, puede utilizarla con la opción `Required` en Windows XP.
+> Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por lo tanto, puede usarlo con la `Required` opción en Windows XP.
 
 ### <a name="possible-aspnet-conflict"></a>Posible conflicto de ASP.NET
 
-WCF y ASP.NET pueden habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación WCF, puede existir un conflicto entre la configuración de WCF y de la configuración de ASP.NET. En caso de conflicto, la configuración de WCF tiene prioridad, a menos que la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> esté establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, en cuyo caso la configuración de suplantación ASP.NET tiene prioridad.
+WCF y ASP.NET pueden habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación WCF, puede existir un conflicto entre la configuración de WCF y de la configuración de ASP.NET. En caso de conflicto, la configuración de WCF tiene prioridad, a menos que la <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propiedad esté establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed> , en cuyo caso la configuración de suplantación de ASP.net tiene prioridad.
 
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Se pueden producir errores en las cargas de ensamblado en suplantación
 
@@ -80,15 +80,15 @@ El cifrado AES compatible con FIPS no funciona en las devoluciones de llamada d�
 
 - Ejecute `p/invoke` para `CertGetCertificateContextProperty` e inspeccione `dwProvType` en la `CertGetCertificateContextProperty` devuelta.
 
-- Use el comando `certutil` desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de certutil para solucionar problemas de certificados](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
+- Use el  `certutil` comando desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de certutil para solucionar problemas de certificados](/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
 
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se usa la suplantación ASP.NET y se requiere compatibilidad con ASP.NET
 
 WCF no admite la siguiente combinación de valores de configuración porque puede impedir que se produzca la autenticación del cliente:
 
-- La suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web. config estableciendo el atributo `impersonate` del elemento <`identity`> en `true`.
+- La suplantación de ASP.NET está habilitada. Esto se hace en el archivo de Web.config estableciendo el `impersonate` atributo del elemento de `identity`> <en `true` .
 
-- El modo de compatibilidad de ASP.NET se habilita estableciendo el atributo `aspNetCompatibilityEnabled` del [\<serviceHostingEnvironment](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) en `true`.
+- El modo de compatibilidad de ASP.NET se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) en `true` .
 
 - Se utiliza la seguridad de modo de mensaje.
 
@@ -110,7 +110,7 @@ WCF requiere exactamente un documento WSDL para cada nodo de la cadena de confia
 
 - `http://localhost/CalculatorService/issue_ticket` (STS)
 
-- `http://localhost/CalculatorService/mex` (el punto de conexión de metadatos)
+- `http://localhost/CalculatorService/mex` (el extremo de metadatos)
 
  Esto produce una excepción.
 
@@ -118,13 +118,13 @@ WCF requiere exactamente un documento WSDL para cada nodo de la cadena de confia
 
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Se pueden perder los atributos de importación de WSDL
 
-WCF pierde la pista de los atributos de un elemento `<wst:Claims>`RST de una plantilla`RST` al hacer una importación de WSDL. Esto ocurre durante una importación de WSDL si `<Claims>`WSFederationHttpBinding.Security.Message.TokenRequestParameters se especifica directamente en`WSFederationHttpBinding.Security.Message.TokenRequestParameters``IssuedSecurityTokenRequestParameters.AdditionalRequestParameters`IssuedSecurityTokenRequestParameters.AdditionalRequestParameters o en lugar de usar directamente las colecciones de tipos de notificación.  Puesto que la importación pierde los atributos, el enlace no efectúa correctamente el viaje de ida y vuelta (round trip) a través de WSDL y por lo tanto es incorrecto en el cliente.
+WCF pierde la pista de los atributos de un elemento `<wst:Claims>` al hacer una importación de WSDL. Esto ocurre durante una importación de WSDL si `<Claims>``WSFederationHttpBinding.Security.Message.TokenRequestParameters` en lugar de usar directamente las colecciones de tipos de notificación.  Puesto que la importación pierde los atributos, el enlace no efectúa correctamente el viaje de ida y vuelta (round trip) a través de WSDL y por lo tanto es incorrecto en el cliente.
 
  La solución es modificar el enlace directamente en el cliente después de realizar la importación.
 
 ## <a name="see-also"></a>Vea también
 
-- [Consideraciones de seguridad](security-considerations-in-wcf.md)
+- [Consideraciones sobre la seguridad](security-considerations-in-wcf.md)
 - [Divulgación de información](information-disclosure.md)
 - [Elevación de privilegios](elevation-of-privilege.md)
 - [Denegación de servicio](denial-of-service.md)
