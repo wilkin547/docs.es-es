@@ -3,12 +3,12 @@ title: Documentos y datos XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540139"
 ---
 # <a name="xml-documents-and-data"></a>Documentos y datos XML
 
@@ -24,7 +24,7 @@ ms.locfileid: "84287693"
 
 - <xref:System.Xml.Linq>
 
-Para obtener una lista completa, busque "System.Xml" en el [explorador de API de .NET](https://docs.microsoft.com/dotnet/api/?term=system.xml).
+Para obtener una lista completa, busque "System.Xml" en el [explorador de API de .NET](../../../../api/index.md?term=system.xml).
 
 Las clases de estos espacios de nombres admiten las recomendaciones del World Wide Web Consortium (W3C). Por ejemplo:
 
@@ -38,7 +38,7 @@ Las clases de estos espacios de nombres admiten las recomendaciones del World Wi
 
 Las clases XML de .NET Framework proporcionan estas ventajas:
 
-- **Productividad.** Gracias a [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.
+- **Productividad.** Gracias a [LINQ to XML (C#)](../../linq/linq-xml-overview.md) y [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md) resulta más sencillo programar con XML y proporciona una experiencia de consulta similar a SQL.
 
 - **Extensibilidad.** Las clases XML en .NET Framework se pueden extender mediante el uso de clases base abstractas y métodos virtuales. Por ejemplo, puede crear una clase derivada de la clase <xref:System.Xml.XmlUrlResolver> que almacene el flujo caché en el disco local.
 
@@ -60,7 +60,7 @@ Las clases XML de .NET Framework proporcionan estas ventajas:
 
 En [Opciones de procesamiento XML](xml-processing-options.md) se describen las opciones para procesar datos XML.
 
-En [Procesamiento de datos XML en memoria](processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
+En [Procesamiento de datos XML en memoria](processing-xml-data-in-memory.md) se describen los tres modelos para procesar datos XML en memoria: [LINQ to XML (C#)](../../linq/linq-xml-overview.md) y [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md), la clase <xref:System.Xml.XmlDocument> (basada en Document Object Model del W3C) y la clase <xref:System.Xml.XPath.XPathDocument> (basada en el modelo de datos XPath).
 
 [Transformaciones XSLT](xslt-transformations.md)\
 Describe cómo utilizar el procesador XSLT.

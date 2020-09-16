@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 7b2d6a81f5dc88688a469b96d56a098a2b45c59f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb04286e98cf78f0fb66dde92002ee09e2ea0f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556250"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Tutorial: Validar la complejidad de las contraseñas (Visual Basic)
 Este método comprueba algunas características de contraseña segura y actualiza un parámetro de cadena con información sobre las comprobaciones de errores en la contraseña.  
@@ -31,7 +31,7 @@ Este método comprueba algunas características de contraseña segura y actualiz
 - Acceso a los miembros del espacio de nombres <xref:System.Text.RegularExpressions>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Seguridad  
- Si va a mover la contraseña a través de una red, debe usar un método seguro para transferir los datos. Para obtener más información, vea [seguridad de aplicaciones Web de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ Si va a mover la contraseña a través de una red, debe usar un método seguro para transferir los datos. Para obtener más información, vea [seguridad de aplicaciones Web de ASP.net](/previous-versions/aspnet/330a99hc(v=vs.100)).
   
  Puede mejorar la precisión de la `ValidatePassword` función agregando comprobaciones de complejidad adicionales:  
   
@@ -43,7 +43,7 @@ Este método comprueba algunas características de contraseña segura y actualiz
   
 - No permita contraseñas en las que todos los símbolos se escriban desde la fila superior del teclado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [Seguridad de aplicaciones Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [Seguridad de aplicaciones Web ASP.NET](/previous-versions/aspnet/330a99hc(v=vs.100))

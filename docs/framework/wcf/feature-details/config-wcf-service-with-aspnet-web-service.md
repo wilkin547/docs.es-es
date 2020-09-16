@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 52f7857a2dc7108eb308fde942bf153d85d8e8ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593612"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556647"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedimiento para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 
@@ -18,7 +18,7 @@ Para configurar un punto de conexión de servicio de Windows Communication Found
   
  Puede habilitar opcionalmente el soporte para HTTPS y la autenticación del cliente del nivel de transporte en el enlace. Los clientes del servicio Web ASP.NET no admiten la codificación de mensajes MTOM, por lo que la <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> propiedad se debe dejar como su valor predeterminado, que es <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> . Los clientes del servicio Web ASP.NET no admiten WS-Security, por lo que <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> debe establecerse en <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> .  
   
- Para que los metadatos de un servicio WCF estén disponibles para las herramientas de generación de proxy del servicio Web de ASP.NET (es decir, la [herramienta lenguaje de descripción de servicios web (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), la [herramienta de detección de servicios web (disco. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))y la característica **Agregar referencia Web** en Visual Studio), debe exponer un extremo de metadatos HTTP/GET.  
+ Para que los metadatos de un servicio WCF estén disponibles para las herramientas de generación de proxy del servicio Web de ASP.NET (es decir, la [herramienta lenguaje de descripción de servicios web (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), la [herramienta de detección de servicios web (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))y la característica **Agregar referencia Web** en Visual Studio), debe exponer un extremo de metadatos HTTP/GET.  
   
 ## <a name="add-an-endpoint-in-code"></a>Agregar un punto de conexión en el código  
   

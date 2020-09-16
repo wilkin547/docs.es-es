@@ -3,12 +3,12 @@ title: Introducción a Azure Queue Storage mediante F#
 description: Las colas de Azure proporcionan mensajería asincrónica confiable entre componentes de aplicaciones. La mensajería en la nube permite que los componentes de las aplicaciones se escalen de forma independiente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 841068ac91aecc53811359e27d984907569a2c6d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935492"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548369"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue Storage mediante F\#
 
@@ -16,22 +16,22 @@ El almacenamiento en cola de Azure proporciona mensajería en la nube entre comp
 
 ### <a name="about-this-tutorial"></a>Acerca de este tutorial
 
-En este tutorial se muestra cómo F# escribir código para algunas tareas comunes mediante el almacenamiento de colas de Azure. Entre las tareas descritas se incluyen la creación y eliminación de colas y la adición, lectura y eliminación de mensajes de la cola.
+En este tutorial se muestra cómo escribir código de F # para algunas tareas comunes mediante el almacenamiento de colas de Azure. Entre las tareas descritas se incluyen la creación y eliminación de colas y la adición, lectura y eliminación de mensajes de la cola.
 
 Para obtener información general conceptual sobre Queue Storage, consulte [la guía de .net para Queue Storage](/azure/storage/storage-dotnet-how-to-use-queues).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/storage-create-storage-account).
 También necesitará la clave de acceso de almacenamiento para esta cuenta.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Creación de F# un script e F# Inicio interactivo
+## <a name="create-an-f-script-and-start-f-interactive"></a>Crear un script de F # e iniciar F# interactivo
 
-Los ejemplos de este artículo se pueden usar en una F# aplicación o en un F# script. Para crear un F# script, cree un archivo con la extensión `.fsx`, por ejemplo `queues.fsx`, en el F# entorno de desarrollo.
+Los ejemplos de este artículo se pueden usar en una aplicación de F # o en un script de F #. Para crear un script de F #, cree un archivo con la `.fsx` extensión, por ejemplo `queues.fsx` , en el entorno de desarrollo de f #.
 
-A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el paquete `WindowsAzure.Storage` y haga referencia `WindowsAzure.Storage.dll` en el script mediante una directiva `#r`.
+A continuación, use un [Administrador de paquetes](package-management.md) como [Paket](https://fsprojects.github.io/Paket/) o [NuGet](https://www.nuget.org/) para instalar el `WindowsAzure.Storage` paquete y la referencia `WindowsAzure.Storage.dll` en el script mediante una `#r` Directiva.
 
-### <a name="add-namespace-declarations"></a>Agregar declaraciones de espacios de nombres
+### <a name="add-namespace-declarations"></a>Incorporación de declaraciones de espacio de nombres
 
 Agregue las siguientes instrucciones `open` en la parte superior del archivo `queues.fsx`:
 
@@ -51,7 +51,7 @@ En el caso de las aplicaciones reales, la mejor manera de mantener la cadena de 
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-El uso del Administrador de configuración Azure es opcional. También puede usar una API, como el tipo de `ConfigurationManager` del .NET Framework.
+El uso del Administrador de configuración Azure es opcional. También puede usar una API, como el tipo de .NET Framework `ConfigurationManager` .
 
 ### <a name="parse-the-connection-string"></a>Análisis de la cadena de conexión
 
@@ -59,17 +59,17 @@ Para analizar la cadena de conexión, use:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L19-L20)]
 
-Esto devolverá un `CloudStorageAccount`.
+Esto devolverá un `CloudStorageAccount` .
 
 ### <a name="create-the-queue-service-client"></a>Creación del cliente del servicio Cola
 
-La clase `CloudQueueClient` permite recuperar las colas almacenadas en Queue Storage. Esta es una forma de crear el cliente de servicio:
+La `CloudQueueClient` clase permite recuperar las colas almacenadas en Queue Storage. Esta es una forma de crear el cliente de servicio:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
 Ahora ya puede escribir código que lee y escribe datos en el Almacenamiento en cola.
 
-## <a name="create-a-queue"></a>Crear una cola
+## <a name="create-a-queue"></a>Creación de una cola
 
 En este ejemplo se muestra cómo crear una cola si aún no existe:
 
@@ -77,23 +77,23 @@ En este ejemplo se muestra cómo crear una cola si aún no existe:
 
 ## <a name="insert-a-message-into-a-queue"></a>un mensaje en una cola
 
-Para insertar un mensaje en una cola existente, cree primero un nuevo `CloudQueueMessage`. A continuación, llame al método `AddMessage`. Un `CloudQueueMessage` se puede crear a partir de una cadena (en formato UTF-8) o de una matriz de `byte`, de la siguiente manera:
+Para insertar un mensaje en una cola existente, cree primero un nuevo `CloudQueueMessage` . A continuación, llame al `AddMessage` método. `CloudQueueMessage`Se puede crear una a partir de una cadena (en formato UTF-8) o de una `byte` matriz, de la siguiente manera:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
 ## <a name="peek-at-the-next-message"></a>siguiente mensaje
 
-Puede inspeccionar el mensaje situado en la parte delantera de una cola, sin quitarlo de la cola, llamando al método `PeekMessage`.
+Puede inspeccionar el mensaje situado en la parte delantera de una cola, sin quitarlo de la cola, llamando al `PeekMessage` método.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L50-L52)]
 
 ## <a name="get-the-next-message-for-processing"></a>Obtener el siguiente mensaje para el procesamiento
 
-Puede recuperar el mensaje al principio de una cola para su procesamiento llamando al método `GetMessage`.
+Puede recuperar el mensaje al principio de una cola para su procesamiento mediante una llamada al `GetMessage` método.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L58-L59)]
 
-Más adelante indicará el procesamiento correcto del mensaje mediante `DeleteMessage`.
+Más adelante indicará el procesamiento correcto del mensaje mediante `DeleteMessage` .
 
 ## <a name="change-the-contents-of-a-queued-message"></a>contenido de un mensaje en cola
 
@@ -103,7 +103,7 @@ Puede cambiar el contenido de un mensaje recuperado en la cola. Si el mensaje re
 
 ## <a name="de-queue-the-next-message"></a>siguiente mensaje de la cola
 
-El código quita un mensaje de una cola en dos pasos. Cuando se llama a `GetMessage`, se obtiene el siguiente mensaje en una cola. Un mensaje devuelto por `GetMessage` se hace invisible a cualquier otro código de lectura de mensajes de esta cola. De forma predeterminada, este mensaje permanece invisible durante 30 segundos. Para terminar de quitar el mensaje de la cola, también debe llamar a `DeleteMessage`. Este proceso de extracción de un mensaje que consta de dos pasos garantiza que si su código no puede procesar un mensaje a causa de un error de hardware o software, otra instancia de su código puede obtener el mismo mensaje e intentarlo de nuevo. El código siguiente llama a `DeleteMessage` justo después de haberse procesado el mensaje.
+El código quita un mensaje de una cola en dos pasos. Cuando llame a `GetMessage` , obtendrá el siguiente mensaje en una cola. Un mensaje devuelto por `GetMessage` se hace invisible a cualquier otro código de lectura de mensajes de esta cola. De forma predeterminada, este mensaje permanece invisible durante 30 segundos. Para terminar de quitar el mensaje de la cola, también debe llamar a `DeleteMessage` . Este proceso de extracción de un mensaje que consta de dos pasos garantiza que si su código no puede procesar un mensaje a causa de un error de hardware o software, otra instancia de su código puede obtener el mismo mensaje e intentarlo de nuevo. El código siguiente llama a `DeleteMessage` justo después de haberse procesado el mensaje.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -116,19 +116,19 @@ En este ejemplo se muestra cómo usar un flujo de trabajo asincrónico con API c
 ## <a name="additional-options-for-de-queuing-messages"></a>Opciones adicionales para quitar mensajes de la cola
 
 Hay dos formas de personalizar la recuperación de mensajes de una cola.
-En primer lugar, puede obtener un lote de mensajes (hasta 32). En segundo lugar, puede establecer un tiempo de espera de la invisibilidad más largo o más corto para que el código disponga de más o menos tiempo para procesar cada mensaje. En el ejemplo de código siguiente se usa `GetMessages` para obtener 20 mensajes en una llamada y, a continuación, procesa cada mensaje. También establece el tiempo de espera de la invisibilidad en cinco minutos para cada mensaje. Tenga en cuenta que los 5 minutos se inician para todos los mensajes al mismo tiempo, por lo que después de pasar 5 minutos desde la llamada a `GetMessages`, los mensajes que no se han eliminado volverán a estar visibles.
+En primer lugar, puede obtener un lote de mensajes (hasta 32). En segundo lugar, puede establecer un tiempo de espera de la invisibilidad más largo o más corto para que el código disponga de más o menos tiempo para procesar cada mensaje. En el ejemplo de código siguiente `GetMessages` se usa para obtener 20 mensajes en una llamada y, a continuación, se procesa cada mensaje. También establece el tiempo de espera de la invisibilidad en cinco minutos para cada mensaje. Tenga en cuenta que los 5 minutos empiezan a contar para todos los mensajes al mismo tiempo, por lo que después de pasar los 5 minutos desde la llamada a `GetMessages`, todos los mensajes que no se han eliminado volverán a estar visibles.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
 ## <a name="get-the-queue-length"></a>la longitud de la cola
 
-Puede obtener una estimación del número de mensajes existentes en una cola. El método `FetchAttributes` pide al Queue service que recupere los atributos de la cola, incluido el recuento de mensajes. La propiedad `ApproximateMessageCount` devuelve el último valor recuperado por el método `FetchAttributes`, sin llamar a la Queue service.
+Puede obtener una estimación del número de mensajes existentes en una cola. El `FetchAttributes` método pide al Queue Service que recupere los atributos de la cola, incluido el recuento de mensajes. La `ApproximateMessageCount` propiedad devuelve el último valor recuperado por el `FetchAttributes` método, sin llamar a la Queue Service.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L105-L106)]
 
-## <a name="delete-a-queue"></a>Eliminar una cola
+## <a name="delete-a-queue"></a>Eliminación de una cola
 
-Para eliminar una cola y todos los mensajes contenidos en ella, llame al método `Delete` en el objeto Queue.
+Para eliminar una cola y todos los mensajes contenidos en ella, llame al `Delete` método en el objeto Queue.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 
@@ -138,6 +138,6 @@ Ahora que está familiarizado con los aspectos básicos del almacenamiento de co
 
 - [API de Azure Storage para .NET](/dotnet/api/overview/azure/storage)
 - [Azure Storage proveedor de tipos](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Blog del equipo de Azure Storage](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
+- [Blog del equipo de Azure Storage](/archive/blogs/windowsazurestorage/)
 - [Configuración de las cadenas de conexión de Azure Storage](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage Services REST API Reference](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference) (Referencia de la API REST de los servicios de Azure Storage)

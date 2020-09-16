@@ -2,12 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 046b57787357623a19ff6d012eb71c179fcffe51
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556302"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -33,25 +33,25 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
   
 - Si usa Internet Information Services (IIS) como host de WCF, use la infraestructura de IIS para configurar un servicio SSL.  
   
-- Si va a crear una aplicación WCF autohospedada, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg. exe.  
+- Si va a crear una aplicación WCF autohospedada, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg.exe.  
   
 ### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte   
   
 #### <a name="iis-70"></a>IIS 7.0  
- Para configurar IIS 7,0 como un host seguro (mediante SSL), consulte [configuración de capa de sockets seguros en IIS 7,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
+ Para configurar IIS 7,0 como un host seguro (mediante SSL), consulte [configuración de capa de sockets seguros en IIS 7,0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
-Para configurar los certificados para su uso con IIS 7,0, vea [configurar certificados de servidor en iis 7,0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+Para configurar los certificados para su uso con IIS 7,0, vea [configurar certificados de servidor en iis 7,0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6,0  
- Para configurar IIS 6,0 como un host seguro (mediante SSL), consulte [configuración de capa de sockets seguros](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
+ Para configurar IIS 6,0 como un host seguro (mediante SSL), consulte [configuración de capa de sockets seguros](/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
   
- Para configurar los certificados para su uso con IIS 6,0, consulte [Certificates_IIS_SP1_Ops](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
+ Para configurar los certificados para su uso con IIS 6,0, consulte [Certificates_IIS_SP1_Ops](/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Utilizar HttpCfg para SSL  
 
- Si va a crear una aplicación WCF autohospedada, use la herramienta [HttpCfg. exe](/windows/win32/http/httpcfg-exe) .
+ Si va a crear una aplicación WCF autohospedada, use la herramienta [HttpCfg.exe](/windows/win32/http/httpcfg-exe) .
   
- Para obtener más información acerca del uso de la herramienta HttpCfg. exe para configurar un puerto con un certificado X. 509, consulte [Cómo: configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Para obtener más información acerca del uso de la herramienta HttpCfg.exe para configurar un puerto con un certificado X. 509, consulte [Cómo: configurar un puerto con un certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Vea también
 

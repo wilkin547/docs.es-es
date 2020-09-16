@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855769"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555723"
 ---
 # <a name="securing-method-access"></a>Proteger acceso a métodos
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855769"
   
 - Limitar el ámbito de accesibilidad a la clase, el ensamblado o las clases derivadas, si son de confianza. Esta es la manera más sencilla de limitar el acceso a un método. En general, las clases derivadas pueden ser menos confiables que la clase de la que derivan, aunque en algunos casos comparten la identidad de la clase primaria. En concreto, no infiere la confianza de la palabra clave `protected` , que no se utiliza necesariamente en el contexto de seguridad.  
   
-- Limite el acceso al método a los llamadores de una identidad especificada; en esencia, cualquier [evidencia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) determinada (nombre seguro, publicador, zona, etc.) que elija.  
+- Limite el acceso al método a los llamadores de una identidad especificada; en esencia, cualquier [evidencia](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) determinada (nombre seguro, publicador, zona, etc.) que elija.  
   
 - Limite el acceso a un método a los llamadores que tengan los permisos que seleccione.  
   
@@ -240,6 +240,6 @@ class Implemented : ICanCastToMe
   
  Incluso si un compilador de lenguaje impide estas invalidaciones con un error de compilación, es posible que el código escrito con otros compiladores invalide.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

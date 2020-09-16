@@ -2,12 +2,12 @@
 title: Hospedaje en una aplicación de servicios de Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597337"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555853"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedaje en una aplicación de servicios de Windows
 Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) proporcionan un modelo de procesamiento particularmente apropiado para las aplicaciones que deben vivir en una aplicación ejecutable de larga duración y que no deben mostrar ninguna forma de interfaz de usuario. La duración de un proceso de una aplicación de servicios de Windows es administrada mediante el Administrador de control de servicios (SCM) que le permite iniciar, detener y pausar aplicaciones de servicios de Windows. Puede configurar un proceso de servicio de Windows para que se inicie automáticamente cuando se inicie el equipo, convirtiéndolo en un entorno de hospedaje adecuado para aplicaciones "AlwaysOn". Para obtener más información acerca de las aplicaciones de servicios de Windows, vea [aplicaciones de servicios de Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -43,4 +43,4 @@ Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) 
 - [Procedimiento para hospedar un servicio WCF en un servicio administrado de Windows](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Host de servicio de Windows](../samples/windows-service-host.md)
 - [Arquitectura de programación de aplicaciones de servicio](https://go.microsoft.com/fwlink/?LinkId=94876)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

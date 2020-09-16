@@ -1,16 +1,16 @@
 ---
-title: Modificación de datos de gran valor (máx.)
+title: Modificación de datos de valores grandes (Max)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 00a4ae83270bb74e9703faebfc93e26b5c069478
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8a077c56f4de5a88e9c2a6f932c9a8b5ffc6b974
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174282"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556972"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modificar datos de valores grandes (max) en ADO.NET
 Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño máximo de fila de 8 kilobytes (KB). SQL Server proporciona un especificador `max` para los tipos de datos `varchar`, `nvarchar` y `varbinary` que permite el almacenamiento de valores tan grandes como 2^32 bytes. Las columnas de tabla y las variables de Transact-SQL pueden especificar tipos de datos `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. En ADO.NET, los tipos de datos `max` se pueden recuperar mediante `DataReader` y también se pueden especificar como valores de parámetros de entrada y salida sin ningún control especial. En el caso de los tipos de datos `varchar` grandes, los datos se pueden recuperar y actualizar incrementalmente.  
@@ -19,9 +19,9 @@ Los tipos de datos de objeto grande (LOB) son aquellos que superan el tamaño m�
   
  La tabla siguiente proporciona vínculos a la documentación de los Libros en pantalla de SQL Server.  
   
- **SQL Server, documentación**  
+ **Documentación de SQL Server**  
   
-1. [Usar tipos de datos de valores grandes](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
+1. [Usar tipos de datos de valores grandes](/previous-versions/sql/sql-server-2008/ms178158(v=sql.100))  
   
 ## <a name="large-value-type-restrictions"></a>Restricciones de los tipos de valor grande  
  Las restricciones siguientes se aplican a los tipos de datos `max`, que no existen para tipos de datos más pequeños:  
@@ -57,11 +57,11 @@ FROM OPENROWSET
   
  UPDATE  
   
- • objeto>de * \<objetos* ?  
+ { *\<object>* }  
   
  SET  
   
- • *column_name* . ESCRIBIR *expression* ( @Offset expresión @Length , , ) ?  
+ { *column_name* = {. WRITE ( *expresión* , @Offset , @Length )}  
   
  El método WRITE especifica que se va a modificar una sección del valor de *column_name*. La expresión es el valor que se va a copiar en *column_name*, mientras que `@Offset` es el punto inicial en el que se va a escribir la expresión y, por su parte, el argumento `@Length` es la longitud de la sección en la columna.  
   
@@ -249,9 +249,9 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [DATOS binarios y de gran valor de SQL Server](sql-server-binary-and-large-value-data.md)
+- [SQL Server datos binarios y de valores grandes](sql-server-binary-and-large-value-data.md)
 - [Asignaciones de tipos de datos de SQL Server](../sql-server-data-type-mappings.md)
-- [Operaciones de datos de SQL Server en ADO.NET](sql-server-data-operations.md)
+- [SQL Server operaciones de datos en ADO.NET](sql-server-data-operations.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

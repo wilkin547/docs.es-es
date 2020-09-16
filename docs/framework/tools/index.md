@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166846"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556686"
 ---
 # <a name="net-framework-tools"></a>Herramientas de .NET Framework
 
@@ -37,7 +37,7 @@ Genera un archivo que tiene un manifiesto del ensamblado de módulos o archivos 
 Convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.
 
 - [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](caspol-exe-code-access-security-policy-tool.md)  
-Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS) a menos que el elemento [\<legacyCasPolicy> ](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+Esta herramienta le permite ver y configurar la directiva de seguridad correspondiente a los niveles de directiva de equipo, de usuario y de empresa. En .NET Framework 4 y versiones posteriores, esta herramienta no afecta a la directiva de seguridad de acceso del código (CAS) a menos que el elemento [\<legacyCasPolicy> ](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Para más información, consulte [Cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes).
 
 - [Cert2spc.exe (Herramienta de prueba de certificados del publicador de software)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Crea un certificado de publicador de software (SPC) a partir de uno o varios certificados X.509. Esta herramienta sólo se utiliza para pruebas.
@@ -134,7 +134,7 @@ Le ayuda a traducir recursos de la interfaz de usuario (IU) (archivos *.resx* o 
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-- [Herramientas de WPF](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+- [Herramientas de WPF](/previous-versions/ms742404(v=vs.110))  
 Incluye herramientas como la herramienta isXPS Conformance (isXPS.exe) y las herramientas de generación de perfiles de rendimiento.
 
 - [Herramientas de Windows Communication Foundation](../wcf/tools.md)  

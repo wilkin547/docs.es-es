@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: d396ccdaca81eab74de5e20d7ba7a9a00acbf7a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c0e75d58fbcf61137ceae3fba9d8acfe3902171
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597480"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556595"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>Configuración de la compatibilidad con transacciones WS-Atomic
 
@@ -23,7 +23,7 @@ Puede tener acceso a la funcionalidad de esta herramienta utilizando un compleme
 
 Se puede tener acceso a la ventana de línea de comandos en la ubicación de instalación de Windows SDK "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation".
 
-Para obtener más información acerca de la herramienta de línea de comandos, consulte [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
+Para obtener más información acerca de la herramienta de línea de comandos, consulte [utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
 Si ejecuta Windows XP o Windows Server 2003, puede tener acceso al complemento MMC; para ello, vaya a panel de **control/herramientas administrativas/servicios de componentes**, haga clic con el botón derecho en **mi PC**y seleccione **propiedades**. Ésta es la misma ubicación donde puede configurar Microsoft DTC (Coordinador de transacciones distribuidas). Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** . Si está ejecutando Windows Vista o Windows Server 2008, puede encontrar el complemento MMC haciendo clic en el botón **Inicio** y escribiendo `dcomcnfg.exe` en el cuadro de **búsqueda** . Cuando se abra MMC, desplácese hasta el nodo **My Computer\Distributed Transaction COORDINATOR\LOCAL DTC** , haga clic con el botón derecho y seleccione **propiedades**. Las opciones disponibles para la configuración se agrupan en la pestaña **WS-at** .
 
@@ -59,7 +59,7 @@ En el ejemplo siguiente, se detallan los pasos para establecer la confianza entr
 
 Este procedimiento requiere el Complemento de Certificados MMC. Se puede tener acceso al complemento abriendo el menú Inicio/Ejecutar, escribiendo "mmc" en el cuadro de entrada y presionando Aceptar. A continuación, en la ventana **consola1** , navegue hasta **el complemento archivo/agregar-quitar** , haga clic en agregar y elija **certificados** en la lista **complementos independientes disponibles** . Por último, seleccione **cuenta de equipo** para administrar y haga clic en **Aceptar**. El nodo **certificados** aparece en la consola del complemento.
 
-En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de realizar los pasos siguientes, vea [Cómo: crear e instalar certificados de cliente temporales en WCF durante el desarrollo](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10)).
+En este momento, poseerá los certificados necesarios para establecer la confianza. Para obtener información sobre cómo crear e instalar nuevos certificados antes de realizar los pasos siguientes, vea [Cómo: crear e instalar certificados de cliente temporales en WCF durante el desarrollo](/previous-versions/msp-n-p/ff650751(v=pandp.10)).
 
 1. En el equipo A, usando el complemento de los certificados MMC, importe el certificado existente (certA) en el almacén LocalMachine\MY (Nodo Personal) y LocalMachine\ROOT (nodo de entidad de certificación raíz de confianza). Para importar un certificado a un nodo específico, haga clic con el botón secundario en el nodo y elija **todas las tareas/importar**.
 
@@ -100,9 +100,9 @@ Puesto que algunos de los valores relacionados con MSDTC y WS-AT están almacena
 
 Al implementar MSDTC, el administrador debe asegurarse de que los intercambios de datos de MSDTC son seguros. En una implementación del grupo de trabajo, aísle la infraestructura transaccional de usuarios malintencionados; en una implementación en clúster, proteja el registro del clúster.
 
-## <a name="tracing"></a>Traza
+## <a name="tracing"></a>Seguimiento
 
-El servicio de protocolo WS-AT admite seguimientos integrados y específicos de las transacciones que se pueden habilitar y administrar mediante el uso de la herramienta de [complemento MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md) . Los seguimientos pueden incluir datos que indican la hora en que se realiza una inscripción para una transacción específica, la hora en que una transacción llega a su estado terminal, el resultado que ha recibido cada inscripción de transacción. Todos los seguimientos se pueden ver mediante la herramienta [Service Trace Viewer Tool (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) .
+El servicio de protocolo WS-AT admite seguimientos integrados y específicos de las transacciones que se pueden habilitar y administrar mediante el uso de la herramienta de [complemento MMC de configuración de WS-AtomicTransaction](../ws-atomictransaction-configuration-mmc-snap-in.md) . Los seguimientos pueden incluir datos que indican la hora en que se realiza una inscripción para una transacción específica, la hora en que una transacción llega a su estado terminal, el resultado que ha recibido cada inscripción de transacción. Todos los seguimientos se pueden ver mediante la herramienta [Service Trace Viewer Tool (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) .
 
 El protocolo de servicio WS-AT también admite traza ServiceModel integrada a través de la sesión de traza de ETW. Esto proporciona seguimientos más detallados, específicos de la comunicación, además de los seguimientos de transacción existentes.  Para habilitar estos seguimientos adicionales, siga estos pasos:
 

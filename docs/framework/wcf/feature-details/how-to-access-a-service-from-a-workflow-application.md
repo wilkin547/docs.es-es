@@ -2,12 +2,12 @@
 title: Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 2ce79b726b623c2a25bf14065682e685455ca575
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597246"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556881"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
 En este tema, se describe cómo llamar a un servicio de flujo de trabajo desde una aplicación de consola de flujo de trabajo. Depende de la finalización del tema [Cómo: crear un servicio de flujo de trabajo con actividades de mensajería](how-to-create-a-workflow-service-with-messaging-activities.md) . Aunque en este tema se describe cómo llamar a un servicio de flujo de trabajo desde una aplicación de flujo de trabajo, se pueden usar los mismos métodos para llamar a cualquier servicio Windows Communication Foundation (WCF) desde una aplicación de flujo de trabajo.
@@ -66,4 +66,4 @@ En este tema, se describe cómo llamar a un servicio de flujo de trabajo desde u
 
 - [Servicios de flujo de trabajo](workflow-services.md)
 - [Procedimiento para crear un servicio de flujo de trabajo con actividades de mensajería](how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Usar un servicio WCF desde un flujo de trabajo en un proyecto web](https://docs.microsoft.com/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)
+- [Usar un servicio WCF desde un flujo de trabajo en un proyecto web](/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)

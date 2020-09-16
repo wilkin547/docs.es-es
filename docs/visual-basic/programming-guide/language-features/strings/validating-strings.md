@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 58ca052f4a03d99ab62e651f5c15e45c94b8d483
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363723"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555736"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Validar cadenas en Visual Basic
 En esta sección se describe cómo validar cadenas en Visual Basic.  
@@ -30,7 +30,7 @@ En esta sección se describe cómo validar cadenas en Visual Basic.
  [Tutorial: Validar la complejidad de las contraseñas](walkthrough-validating-that-passwords-are-complex.md)  
  Cómo determinar si una cadena tiene las características de una contraseña segura.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cadenas](index.md)
-- [Control MaskedTextBox](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [Control MaskedTextBox](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

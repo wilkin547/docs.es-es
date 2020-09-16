@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9447487012cae370d35880e5b780465f9434051b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602627"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550207"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
 En la ilustración siguiente se muestra un servicio y un cliente de Windows Communication Foundation (WCF) protegidos mediante la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
@@ -21,7 +21,7 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Message|  
+|Modo de seguridad|Mensaje|  
 |Interoperabilidad|Solo Windows Communication Foundation (WCF)|  
 |Autenticación (servidor)|La negociación inicial requiere autenticación de servidor|  
 |Autenticación (cliente)|Nombre de usuario/contraseña|  
@@ -30,8 +30,8 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 |Transporte|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -131,4 +131,4 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 - [Nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md)
 - [Identidad del servicio y autenticación](service-identity-and-authentication.md)
 - [\<identity>](../../configure-apps/file-schema/wcf/identity.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

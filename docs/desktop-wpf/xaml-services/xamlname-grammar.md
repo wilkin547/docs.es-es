@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 2fc74990b15caaa9b58e6eea5b0212ea22505674
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ceb027938b6d4313babbe02949e0b6dd5ee85589
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "81433053"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556699"
 ---
 # <a name="xamlname-grammar"></a>Gramática de XamlName
 
-XamlName Grammar es una gramática específica que se define en la especificación de lenguaje XAML [MS-XAML], que se reproduce aquí para mayor comodidad.
+La gramática de XamlName es una gramática específica que se define en la especificación del lenguaje XAML [MS-XAML], que se reproduce aquí por comodidad.
 
 ## <a name="from-the-xaml-specification"></a>De la especificación XAML
 
-La especificación [MS-XAML] define la gramática XamlName para identificar el conjunto de identificadores simbólicos legales utilizados para tipos y propiedades.
+La especificación [MS-XAML] define la gramática de XamlName para identificar el conjunto de identificadores simbólicos válidos que se usan para los tipos y las propiedades.
 
-Los valores de cadena que son de tipo XamlName deben ajustarse a la gramática siguiente:
+Los valores de cadena que son del tipo XamlName deben ajustarse a la gramática siguiente:
 
 ```xaml
 XamlName ::= NameStartChar ( NameChar )*
@@ -34,7 +34,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc
 ```
 
-Que supone los siguientes valores de categoría general tal como se definen en la base de datos de caracteres Unicode
+Que presupone los siguientes valores de categoría generales según se define en la base de datos de caracteres Unicode
 
 | Categoría Unicode   | Descripción                   |
 |--------------------|-------------------------------|
@@ -43,19 +43,19 @@ Que supone los siguientes valores de categoría general tal como se definen en l
 | Lt                 | Letra, inicial en mayúscula             |
 | Lm                 | Letra, modificador              |
 | Lo                 | Letra, otra                 |
-| Mn                 | Mark, sin espaciado             |
+| Mn                 | Marca, sin espaciado             |
 | Mc                 | Marca, con espacios y combinación       |
-| Nd                 | Número, Decimal               |
+| Nd                 | Número, decimal               |
 | Nl                 | Número, letra                |
 
-XAML define una segunda gramática, DottedXamlName, que se usa para las referencias calificadas de propiedad y eventos, y también para los miembros adjuntos. Para obtener más <xref:System.Windows.DependencyProperty> información, vea información [general sobre XAML (WPF).](../fundamentals/xaml.md)
+XAML define una segunda gramática, DottedXamlName, que se usa para las referencias calificadas de propiedades y eventos, y también para los miembros adjuntos. Para obtener más información, vea <xref:System.Windows.DependencyProperty> e [información general sobre XAML (WPF)](../fundamentals/xaml.md).
 
-Los valores de cadena de tipo DottedXamlName deben ajustarse a la gramática siguiente:
+Los valores de cadena que son de tipo DottedXamlName deben ajustarse a la gramática siguiente:
 
 ```xaml
 DottedXamlName ::= XamlName '.' XamlName
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Para obtener la especificación completa, vea [ \[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).
+Para obtener la especificación completa, consulte [ \[ MS- \] XAML](/previous-versions/msp-n-p/ff650760(v=pandp.10)).

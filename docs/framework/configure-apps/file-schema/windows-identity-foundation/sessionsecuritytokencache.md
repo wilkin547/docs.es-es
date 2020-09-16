@@ -3,12 +3,12 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: a0db10ceb75a470dbf799d717b2059355dd104bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81646063"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555892"
 ---
 # \<sessionSecurityTokenCache>
 Registra una memoria caché para los tokens de sesión con un servicio o una colección de controladores de tokens de seguridad.  
@@ -51,7 +51,7 @@ Registra una memoria caché para los tokens de sesión con un servicio o una col
 |[\<caches>](caches.md)|Registra las memorias caché utilizadas por un servicio o una colección de controladores de tokens de seguridad.|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra la configuración de una caché personalizada para contener los tokens de seguridad de la sesión ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). La configuración se toma del `ClaimsAwareWebFarm` ejemplo. Para obtener más información sobre este ejemplo, consulte [Índice de ejemplo de código WIF](https://docs.microsoft.com/previous-versions/dotnet/framework/security/wif-code-sample-index).  
+ El siguiente XML muestra la configuración de una caché personalizada para contener los tokens de seguridad de la sesión ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). La configuración se toma del `ClaimsAwareWebFarm` ejemplo. Para obtener más información sobre este ejemplo, consulte [Índice de ejemplo de código WIF](/previous-versions/dotnet/framework/security/wif-code-sample-index).  
   
 ```xml  
 <caches>  
@@ -62,6 +62,6 @@ Registra una memoria caché para los tokens de sesión con un servicio o una col
 </caches>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

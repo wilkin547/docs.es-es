@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 44d06762bf66950ea0cc06986c61ecd548ae2e0c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bbe99b133e7edda191d17e9fe8a1dea89d3f0eb7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576413"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556530"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
 En el siguiente escenario se muestra un servicio de Windows Communication Foundation (WCF) y un cliente protegido mediante el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
@@ -24,7 +24,7 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Message|  
+|Modo de seguridad|Mensaje|  
 |Interoperabilidad|Sí, clientes y servicios compatibles con WS-Security y el perfil de token de certificado X.509.|  
 |Authentication|Autenticación mutua del servidor y el cliente.|  
 |Integridad|Sí|  
@@ -32,8 +32,8 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 |Transporte|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -91,7 +91,7 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -161,5 +161,5 @@ En el siguiente escenario se muestra un servicio de Windows Communication Founda
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))
+- [Cómo: crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](/previous-versions/msp-n-p/ff648498(v=pandp.10))

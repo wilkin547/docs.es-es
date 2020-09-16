@@ -12,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865169"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535575"
 ---
 # <a name="resources-in-net-apps"></a>Recursos en aplicaciones .NET
 
@@ -25,7 +25,7 @@ Casi todas las aplicaciones de calidad de producción tienen que utilizar recurs
 
 .NET Framework y .NET Core proporcionan numerosas prestaciones para crear y localizar recursos. Además, .NET admite un modelo simple para empaquetar e implementar recursos localizados.
 
-Para obtener información sobre los recursos de ASP.NET, vea [Información general sobre los recursos de las páginas Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).
+Para obtener información sobre los recursos de ASP.NET, vea [Información general sobre los recursos de las páginas Web ASP.NET](/previous-versions/aspnet/ms227427(v=vs.100)).
 
 ## <a name="create-and-localize-resources"></a>Creación y localización de recursos
 
@@ -63,11 +63,11 @@ Puede recuperar los recursos para la referencia cultural de la interfaz de usuar
 
 - La clase <xref:System.Resources.ResXResourceSet>, que permite cargar en la memoria todos los elementos de un archivo de recursos XML.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
-- [Creación de archivos de recursos para aplicaciones .NET](creating-resource-files-for-desktop-apps.md)
-- [Empaquetado e implementación de recursos en aplicaciones .NET](packaging-and-deploying-resources-in-desktop-apps.md)
-- [Crear ensamblados satélite para aplicaciones de escritorio](creating-satellite-assemblies-for-desktop-apps.md)
+- [Crear archivos de recursos](creating-resource-files-for-desktop-apps.md)
+- [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Crear ensamblados satélite](creating-satellite-assemblies-for-desktop-apps.md)
 - [Recuperar recursos de aplicaciones de escritorio](retrieving-resources-in-desktop-apps.md)

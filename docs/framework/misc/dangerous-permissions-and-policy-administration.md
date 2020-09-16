@@ -9,12 +9,12 @@ helpviewer_keywords:
 - secure coding, dangerous permissions
 - permissions [.NET Framework], dangerous
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
-ms.openlocfilehash: 1d3fb53775a4d88f9372b582189a38e18376761a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: a2f4469590fea38924430b07eaf20d49f4dc46e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855821"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556946"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Permisos peligrosos y administración de directivas
 
@@ -23,7 +23,7 @@ ms.locfileid: "87855821"
 Varias de las operaciones protegidas para las que .NET Framework proporciona permisos pueden permitir potencialmente burlar el sistema de seguridad. Estos peligrosos permisos solo se deben conceder a código de confianza y únicamente cuando sea necesario. No suele haber ninguna defensa contra código malintencionado si se le conceden estos permisos.  
   
 > [!NOTE]
-> En el .NET Framework 4, ha habido cambios importantes en el modelo de seguridad .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> En el .NET Framework 4, ha habido cambios importantes en el modelo de seguridad .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes).  
   
  Estos permisos peligrosos se explican en la tabla siguiente.  
   
@@ -40,6 +40,6 @@ Varias de las operaciones protegidas para las que .NET Framework proporciona per
 |<xref:System.Security.Permissions.ReflectionPermission>||  
 |<xref:System.MemberAccessException>|Puede utilizar miembros privados para anular los mecanismos de accesibilidad.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

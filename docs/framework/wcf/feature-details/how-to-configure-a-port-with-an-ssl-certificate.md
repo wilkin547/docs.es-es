@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 619a893e0973f6691e32446d75f101201a0b6799
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247187"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556387"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Procedimiento para configurar un puerto con un certificado SSL
 
@@ -23,7 +23,7 @@ Al crear un servicio de Windows Communication Foundation (WCF) autohospedado con
   
  La herramienta que se usa para configurar un puerto depende del sistema operativo que se esté ejecutando en el equipo.  
   
- Si está ejecutando Windows Server 2003, use la herramienta HttpCfg.exe. En Windows Server 2003, esta herramienta está instalada. Para obtener más información, consulte [información general de Httpcfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). La [documentación](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) de las herramientas de soporte de Windows explica la sintaxis de la herramienta Httpcfg.exe.  
+ Si está ejecutando Windows Server 2003, use la herramienta HttpCfg.exe. En Windows Server 2003, esta herramienta está instalada. Para obtener más información, consulte [información general de Httpcfg](/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). La [documentación](/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) de las herramientas de soporte de Windows explica la sintaxis de la herramienta Httpcfg.exe.  
   
  Si está ejecutando Windows Vista, use la herramienta de Netsh.exe que ya está instalada.
   

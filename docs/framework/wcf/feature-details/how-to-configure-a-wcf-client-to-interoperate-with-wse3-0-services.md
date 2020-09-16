@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 7dd50fcc07c6c090042cf87acb4aa5d2b5321a68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579584"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556374"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Procedimiento para configurar un cliente WCF para interoperar con los servicios WSE 3.0
 Los clientes de Windows Communication Foundation (WCF) son compatibles en el nivel de conexión con las mejoras de servicios web 3,0 para los servicios de Microsoft .NET (WSE) cuando los clientes de WCF están configurados para usar la versión de agosto de 2004 de la especificación WS-Addressing.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Configuración de un cliente WCF para interoperar con un servicio web WSE 3.0  
   
-1. Ejecute la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un cliente WCF para el servicio Web WSE 3,0.  
+1. Ejecute la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un cliente WCF para el servicio Web WSE 3,0.  
   
      Para un servicio Web de WSE, se crea una clase de cliente de WCF.  
   
@@ -25,7 +25,7 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles en el niv
   
 2. Cree una clase que represente un enlace que puede comunicarse con los servicios Web WSE 3.0.  
   
-     La clase siguiente forma parte del ejemplo de [interoperabilidad con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) .  
+     La clase siguiente forma parte del ejemplo de [interoperabilidad con WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90)) .  
   
     1. Cree una clase que se derive de la clase <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -64,4 +64,4 @@ Los clientes de Windows Communication Foundation (WCF) son compatibles en el niv
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Interoperarabilidad con WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Interoperarabilidad con WSE](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

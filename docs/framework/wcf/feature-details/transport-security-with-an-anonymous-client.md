@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5e8bcab4cdd8f27e9ea27e66fe4c848ccd35e99c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245016"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556816"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Seguridad de transporte con un cliente anónimo
 
@@ -27,9 +27,9 @@ Para obtener más información sobre el uso de un certificado con un servicio, c
 |--------------------|-----------------|
 |Modo de seguridad|Transporte|
 |Interoperabilidad|Con servicios y clientes Web existentes|
-|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Yes<br /><br /> Nivel de aplicación (sin compatibilidad con WCF)|
-|Integridad|Yes|
-|Confidencialidad|Yes|
+|Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí<br /><br /> Nivel de aplicación (sin compatibilidad con WCF)|
+|Integridad|Sí|
+|Confidencialidad|Sí|
 |Transporte|HTTPS|
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|
 
@@ -127,4 +127,4 @@ Se puede usar la configuración siguiente en lugar del código para configurar e
 - [Información general sobre seguridad](security-overview.md)
 - [Seguridad de transporte WS](../samples/ws-transport-security.md)
 - [Información general de la seguridad del transporte](transport-security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

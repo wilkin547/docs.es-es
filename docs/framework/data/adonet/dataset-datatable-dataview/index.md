@@ -3,12 +3,12 @@ title: Objetos DataSet, DataTable y DataView
 description: Aprenda varias maneras de trabajar con un conjunto de datos de ADO.NET, una representación residente en memoria de los datos que proporciona un modelo de programación relacional coherente.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 4e1c0ea5f1de1715ad8e862e6a3ed7370b53c6ce
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374512"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555869"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Objetos DataSet, DataTable y DataView
 
@@ -22,7 +22,7 @@ Hay varias maneras de trabajar con un <xref:System.Data.DataSet>, que se pueden 
   
 - Cargar y hacer persistente el contenido de <xref:System.Data.DataSet> mediante XML. Para obtener más información, vea [Using XML in a DataSet](using-xml-in-a-dataset.md) (Usar XML en un conjunto de datos).  
   
-También se puede transportar un <xref:System.Data.DataSet> fuertemente tipado mediante un servicio Web XML. El diseño del <xref:System.Data.DataSet> lo convierte en idóneo para el transporte de datos mediante servicios Web XML. Para obtener información general sobre servicios Web XML, vea [Información general de servicios Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Para obtener un ejemplo sobre cómo usar un objeto <xref:System.Data.DataSet> desde un servicio Web XML, vea [Consuming a DataSet from an XML Web Service](consuming-a-dataset-from-an-xml-web-service.md) (Usar un conjunto de datos desde un servicio Web XML).  
+También se puede transportar un <xref:System.Data.DataSet> fuertemente tipado mediante un servicio Web XML. El diseño del <xref:System.Data.DataSet> lo convierte en idóneo para el transporte de datos mediante servicios Web XML. Para obtener información general sobre servicios Web XML, vea [Información general de servicios Web XML](/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). Para obtener un ejemplo sobre cómo usar un objeto <xref:System.Data.DataSet> desde un servicio Web XML, vea [Consuming a DataSet from an XML Web Service](consuming-a-dataset-from-an-xml-web-service.md) (Usar un conjunto de datos desde un servicio Web XML).  
   
 ## <a name="in-this-section"></a>En esta sección
 
@@ -85,7 +85,7 @@ También se puede transportar un <xref:System.Data.DataSet> fuertemente tipado m
  [Agregar restricciones existentes a un conjunto de datos](../adding-existing-constraints-to-a-dataset.md)  
  Describe cómo se rellena un objeto **DataSet** con información de clave principal de un origen de datos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET](../index.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

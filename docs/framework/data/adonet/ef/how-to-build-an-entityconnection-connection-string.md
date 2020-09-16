@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: f0918950921e620f724fedd8be027ffe0e2d3fa6
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 86ba3956797ff603dd944bfc8df1990df8f23001
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854672"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556439"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Procedimiento para compilar una cadena de conexión EntityConnection
 En este tema se muestra un ejemplo para generar una <xref:System.Data.EntityClient.EntityConnection>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
   
-1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, vea [Cómo: Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.  
+1. Agregue el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) al proyecto y configure el proyecto para usar el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):  
   
@@ -32,5 +32,5 @@ En este tema se muestra un ejemplo para generar una <xref:System.Data.EntityClie
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Usar EntityConnection con un contexto del objeto](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
+- [Cómo: Usar EntityConnection con un contexto del objeto](/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md)
