@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
-ms.openlocfilehash: 49e0a6b44af0729959fabf6278cc6d8ecf37a16b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ad6fd7bf6a23f4cd1591a17b25042fd76ff1d08d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251507"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545342"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>Procedimiento para ejecutar una consulta polimórfica
 
-En este tema se muestra cómo ejecutar una consulta [!INCLUDE[esql](../../../../../includes/esql-md.md)] polimórfica mediante el operador de [tipo](./language-reference/oftype-entity-sql.md) .
+En este tema se muestra cómo ejecutar una [!INCLUDE[esql](../../../../../includes/esql-md.md)] consulta polimórfica mediante el operador de [tipo](./language-reference/oftype-entity-sql.md) .
 
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo
 
-1. Agregue el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) al proyecto y configure el proyecto para que use el Entity Framework. Para obtener más información, consulte [Cómo Use el Asistente para](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))Entity Data Model.
+1. Agregue el [modelo School](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) al proyecto y configure el proyecto para que use el Entity Framework. Para obtener más información, consulte [Cómo: usar el Asistente para Entity Data Model](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
 
 2. En la página de código de la aplicación, agregue las instrucciones `using` siguientes (`Imports` en Visual Basic):
 
     [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
     [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]
 
-3. Modifique el modelo conceptual para que tenga una herencia de tabla por jerarquía siguiendo los pasos de [Tutorial: Asignación de herencia: tabla por jerarquía](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
+3. Modifique el modelo conceptual para que tenga una herencia de tabla por jerarquía siguiendo los pasos de [Tutorial: asignar la herencia-tabla por jerarquía](/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
 
 ## <a name="example"></a>Ejemplo
 

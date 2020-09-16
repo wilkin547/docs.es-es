@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0b901be2d90a70b4a44fdafb5005f9dc7fb9d556
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c468dc3992b61ce09485ed19da1f2edb3c761525
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594912"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547426"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema
 Windows Communication Foundation (WCF) se crea para interoperar con los servicios web que admiten un conjunto de especificaciones conocidas como especificaciones de servicios Web. Para simplificar la configuración del servicio para los procedimientos recomendados de interoperabilidad, WCF introduce tres enlaces interoperables proporcionados por el sistema: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> , <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> y <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> . Para la interoperabilidad con la organización para el avance de estándares de la información estructurada (OASIS), WCF incluye un enlace proporcionado por el sistema interoperable: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType> . En la publicación de metadatos, WCF incluye dos enlaces proporcionados por el sistema interoperables: [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md) y [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) . En este tema se enumeran las especificaciones que admiten los enlaces interoperables proporcionados por el sistema.  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) se crea para interoperar con los servicio
 |Seguridad|WS-Trust|[WS-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf)<br /><br /> Utilizado por WS-SecureConversation (vea arriba).|  
 |Mensajería de confianza|WS-ReliableMessaging|[WS-ReliableMessaging](http://specs.xmlsoap.org/ws/2005/02/rm/ws-reliablemessaging.pdf)<br /><br /> Utilícese cuando se configura el enlace para que use `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |Transacciones|Transacción WS-Atomic|[Transacción WS-Atomic](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)<br /><br /> Se usa para la comunicación entre administradores de transacciones. Los clientes y servicios de WCF siempre usan administradores de transacciones locales.|  
-|Transacciones|WS-Coordination|[WS-Coordination](https://docs.microsoft.com/previous-versions/ms951231(v=msdn.10))<br /><br /> Utilícese para hacer fluir el contexto de transacción cuando el atributo `flowTransactions` se establece en "Allowed" (Permitido) o "Required" (Obligatorio).<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Transacciones|WS-Coordination|[WS-Coordination](/previous-versions/ms951231(v=msdn.10))<br /><br /> Utilícese para hacer fluir el contexto de transacción cuando el atributo `flowTransactions` se establece en "Allowed" (Permitido) o "Required" (Obligatorio).<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding y ws2007FederationHttpBinding  
  Los [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) [\<ws2007FederationHttpBinding>](../../configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementos y se introducen para proporcionar compatibilidad con escenarios federados, donde un tercero emite un token que se usa para autenticar a un cliente. Además de los protocolos utilizados por `wsHttpBinding`, `wsFederationHttpBinding` utiliza:  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) se crea para interoperar con los servicio
 |Metadatos|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md)admite los siguientes protocolos. Para obtener más información sobre el uso de este enlace, vea [Publicar metadatos](publishing-metadata.md).  
+ [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) admite los siguientes protocolos. Para obtener más información sobre el uso de este enlace, vea [Publicar metadatos](publishing-metadata.md).  
   
 |Category|Protocolo|Especificación y uso|  
 |--------------|--------------|-----------------------------|  
@@ -108,7 +108,7 @@ Windows Communication Foundation (WCF) se crea para interoperar con los servicio
 |Mensajería|WS-Addressing 2005/08|[Direccionamiento de servicios Web 1.0 - Núcleo](https://www.w3.org/TR/ws-addr-core/)<br /><br /> [Web Services Addressing 1.0 - SOAP](https://www.w3.org/TR/ws-addr-soap/)|  
 |Metadatos|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF implementa WS-MetadataExchange para recuperar el esquema XML, WSDL y WS-Policy.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enlaces proporcionados por el sistema](../system-provided-bindings.md)
 - [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4c630f5f7e3dc66ce44f10cd69fcd108226b0250
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935652"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554337"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo (Función)
 Devuelve información sobre la biblioteca de tipos especificada examinando su estructura [TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
@@ -37,7 +37,7 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
  `szFile`  
  de Nombre de archivo de la biblioteca de tipos.  
   
@@ -56,21 +56,21 @@ HRESULT GetTypeLibInfo(
  `pTypeLibMinorVer`  
  enuncia Número de versión secundaria de la biblioteca de tipos. Por ejemplo, para la versión *x. y*, el número de versión secundaria es *y*.  
   
-## <a name="remarks"></a>Notas  
- La función `GetTypeLibInfo` se llama mediante el método [Tlbexp. exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md). Esta herramienta genera una biblioteca de tipos que describe los tipos de un ensamblado de Common Language Runtime (CLR).  
+## <a name="remarks"></a>Comentarios  
+ El `GetTypeLibInfo` [Tlbexp.exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md)llama a la función. Esta herramienta genera una biblioteca de tipos que describe los tipos de un ensamblado de Common Language Runtime (CLR).  
   
- Si un parámetro es null, la función devuelve un `HRESULT` de `E_POINTER`. De lo contrario, devuelve `S_OK`.  
+ Si un parámetro es null, la función devuelve un `HRESULT` de `E_POINTER` . En caso contrario, devuelve `S_OK`.  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** TlbRef. h  
   
  **Biblioteca:** TlbRef. lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
 - [Funciones del asistente Tlbexp](index.md)
-- [LoadTypeLibEx función)](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx función)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

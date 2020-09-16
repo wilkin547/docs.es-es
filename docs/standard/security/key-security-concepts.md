@@ -11,19 +11,19 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555272"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554402"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 
 > [!NOTE]
 > Este artículo se aplica a Windows.
 >
-> Para obtener información sobre ASP.NET Core, consulte [información general sobre la seguridad de ASP.net Core](https://docs.microsoft.com/aspnet/core/security/).
+> Para obtener información sobre ASP.NET Core, consulte [información general sobre la seguridad de ASP.net Core](/aspnet/core/security/).
 
 .NET ofrece seguridad basada en roles para ayudar a solucionar los problemas de seguridad relacionados con el código móvil y ofrecer soporte técnico que permita a los componentes determinar qué usuarios están autorizados a realizar.  
   
@@ -75,6 +75,6 @@ El ejemplo siguiente requiere que la entidad de seguridad activa sea un administ
 
 La autorización es el proceso de determinar si una entidad de seguridad puede realizar una acción solicitada. La autorización se produce después de la autenticación y usa información sobre la identidad y los roles de la entidad de seguridad para determinar a qué recursos puede tener acceso la entidad de seguridad. Puede usar la seguridad basada en roles de .NET para implementar la autorización.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguridad de ASP.NET Core](/aspnet/core/security/)

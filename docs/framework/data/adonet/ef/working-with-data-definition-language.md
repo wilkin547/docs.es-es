@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854224"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553875"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
 A partir de la versión 4 de .NET Framework, el Entity Framework admite el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
@@ -40,11 +40,11 @@ A partir de la versión 4 de .NET Framework, el Entity Framework admite el lengu
   
 2. Agregue un modelo existente a la aplicación.  
   
-    1. Agregue un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, vea el [procedimiento: Cree un nuevo tema del archivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) . edmx.  
+    1. Agregue un modelo vacío denominado `SchoolModel` . Para crear un modelo vacío, vea el tema [How to: Create a New. edmx File](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) .  
   
      El archivo SchoolModel.edmx se añade al proyecto.  
   
-    1. Copie el contenido conceptual, de almacenamiento y de asignación para el modelo School en el tema [School Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) .  
+    1. Copie el contenido conceptual, de almacenamiento y de asignación para el modelo School en el tema [School Model](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) .  
   
     2. Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
   

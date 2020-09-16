@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404776"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545524"
 ---
 # <a name="declare-statement"></a>Declare Statement
 
@@ -60,15 +60,15 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |`charsetmodifier`|Opcional. Especifica el juego de caracteres y la información de búsqueda de archivos. Puede ser uno de los siguientes:<br /><br /> -   [ANSI](../modifiers/ansi.md) (valor predeterminado)<br />-   [Unicode](../modifiers/unicode.md)<br />-   [Automático](../modifiers/auto.md)|
 |`Sub`|Opcional, pero `Sub` `Function` debe aparecer o. Indica que el procedimiento externo no devuelve un valor.|
 |`Function`|Opcional, pero `Sub` `Function` debe aparecer o. Indica que el procedimiento externo devuelve un valor.|
-|`name`|Necesario. Nombre de esta referencia externa. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
-|`Lib`|Necesario. Introduce una `Lib` cláusula, que identifica el archivo externo (dll o recurso de código) que contiene un procedimiento externo.|
-|`libname`|Necesario. Nombre del archivo que contiene el procedimiento declarado.|
+|`name`|Obligatorio. Nombre de esta referencia externa. Para obtener más información, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).|
+|`Lib`|Obligatorio. Introduce una `Lib` cláusula, que identifica el archivo externo (dll o recurso de código) que contiene un procedimiento externo.|
+|`libname`|Obligatorio. Nombre del archivo que contiene el procedimiento declarado.|
 |`Alias`|Opcional. Indica que no se puede identificar el procedimiento declarado en su archivo por el nombre especificado en `name` . Especifique su identificación en `aliasname` .|
-|`aliasname`|Obligatorio si se usa la `Alias` palabra clave. Cadena que identifica el procedimiento de una de estas dos maneras:<br /><br /> Nombre del punto de entrada del procedimiento dentro de su archivo, entre comillas ( `""` )<br /><br /> O bien<br /><br /> Un signo de número ( `#` ) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo.|
+|`aliasname`|Obligatorio si se usa la `Alias` palabra clave. Cadena que identifica el procedimiento de una de estas dos maneras:<br /><br /> Nombre del punto de entrada del procedimiento dentro de su archivo, entre comillas ( `""` )<br /><br /> o bien<br /><br /> Un signo de número ( `#` ) seguido de un entero que especifica el número ordinal del punto de entrada del procedimiento dentro de su archivo.|
 |`parameterlist`|Obligatorio si el procedimiento toma parámetros. Vea [lista de parámetros](parameter-list.md).|
 |`returntype`|Obligatorio si `Function` se especifica y `Option Strict` es `On` . Tipo de datos del valor devuelto por el procedimiento.|
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 A veces es necesario llamar a un procedimiento definido en un archivo (por ejemplo, un archivo DLL o un recurso de código) fuera del proyecto. Al hacerlo, el compilador Visual Basic no tiene acceso a la información que necesita para llamar al procedimiento correctamente, como dónde se encuentra el procedimiento, cómo se identifica, su secuencia de llamada y tipo de valor devuelto, y el juego de caracteres de cadena que usa. La `Declare` instrucción crea una referencia a un procedimiento externo y proporciona esta información necesaria.
 
@@ -120,7 +120,7 @@ Las referencias externas tienen como valor predeterminado el acceso [público](.
 
 - **Juegos de caracteres.** Puede especificar en `charsetmodifier` qué Visual Basic debe serializar las cadenas cuando llama al procedimiento externo. El `Ansi` modificador dirige Visual Basic para calcular las referencias de todas las cadenas a valores ANSI y el `Unicode` modificador le indica que calcule las referencias de todas las cadenas a valores Unicode. El `Auto` modificador dirige Visual Basic para calcular las referencias de cadenas según las reglas de .NET Framework basadas en la referencia externa `name` , o `aliasname` si se especifica. El valor predeterminado es `Ansi`.
 
-  `charsetmodifier`también especifica el modo en que Visual Basic debe buscar el procedimiento externo en su archivo externo. `Ansi`y `Unicode` ambas Visual Basic directas para buscarla sin modificar su nombre durante la búsqueda. `Auto`dirige Visual Basic para determinar el juego de caracteres base de la plataforma en tiempo de ejecución y posiblemente modificar el nombre del procedimiento externo, como se indica a continuación:
+  `charsetmodifier` también especifica el modo en que Visual Basic debe buscar el procedimiento externo en su archivo externo. `Ansi` y `Unicode` ambas Visual Basic directas para buscarla sin modificar su nombre durante la búsqueda. `Auto` dirige Visual Basic para determinar el juego de caracteres base de la plataforma en tiempo de ejecución y posiblemente modificar el nombre del procedimiento externo, como se indica a continuación:
 
   - En una plataforma ANSI, como Windows 95, Windows 98 o Windows Millennium Edition, primero debe buscar el procedimiento externo sin modificar el nombre. Si se produce un error, anexe "a" al final del nombre del procedimiento externo y búsquelo de nuevo.
 
@@ -129,7 +129,7 @@ Las referencias externas tienen como valor predeterminado el acceso [público](.
 - **Método.** Visual Basic utiliza el mecanismo de *invocación de plataforma* .NET Framework (PInvoke) para resolver y tener acceso a procedimientos externos. La `Declare` instrucción y la <xref:System.Runtime.InteropServices.DllImportAttribute> clase usan este mecanismo automáticamente y no se necesita ningún conocimiento de PInvoke. Para obtener más información, consulte [Tutorial: llamar a las API de Windows](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Si el procedimiento externo se ejecuta fuera del Common Language Runtime (CLR), se trata de *código no administrado*. Cuando llame a este procedimiento, por ejemplo, una función de la API de Windows o un método COM, podría exponer la aplicación a riesgos de seguridad. Para obtener más información, vea [instrucciones de codificación segura para código no administrado](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
+> Si el procedimiento externo se ejecuta fuera del Common Language Runtime (CLR), se trata de *código no administrado*. Cuando llame a este procedimiento, por ejemplo, una función de la API de Windows o un método COM, podría exponer la aplicación a riesgos de seguridad. Para obtener más información, vea [instrucciones de codificación segura para código no administrado](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
 
 ## <a name="example"></a>Ejemplo
 
@@ -145,11 +145,11 @@ En el ejemplo siguiente se declara una referencia externa a un `Function` proced
 
 [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](imports-statement-net-namespace-and-type.md)
-- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
 - [Instrucción Function](function-statement.md)
 - [Instrucción Sub](sub-statement.md)
 - [Lista de parámetros](parameter-list.md)

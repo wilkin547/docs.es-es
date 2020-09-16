@@ -2,12 +2,12 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554246"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
 
@@ -23,7 +23,7 @@ En resumen, este ejemplo muestra cómo:
 
 - El servidor se autentica utilizando el certificado X.509 del servidor.
 
-El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración app. config. El punto de conexión consta de una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que tiene como valor predeterminado el uso de `WSSecurity` y la autenticación de certificado de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para el `SubjectName` que `findValue` en el [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+El servicio expone un extremo único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión consta de una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que tiene como valor predeterminado el uso de `WSSecurity` y la autenticación de certificado de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para el `SubjectName` que `findValue` en el [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -311,16 +311,16 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute Setup.bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!IMPORTANT]
-    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.
+    > El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup.bat.
 
 2. Inicie Service.exe desde \service\bin.
 
 3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.
 
-4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
 
@@ -334,7 +334,7 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 5. En el servidor, ejecute `setup.bat service` en un símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. `setup.bat`Al ejecutar con el `service` argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.
 
-6. Edite Service. exe. config para reflejar el nuevo nombre del certificado (en el `findValue` atributo de [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), que es el mismo que el nombre de dominio completo del equipo. Cambie también el nombre del equipo en el \<service> / \<baseAddresses> elemento de localhost al nombre completo de su equipo de servicio.
+6. Edite Service.exe.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo de [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ), que es el mismo que el nombre de dominio completo del equipo. Cambie también el nombre del equipo en el \<service> / \<baseAddresses> elemento de localhost al nombre completo de su equipo de servicio.
 
 7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.
 
@@ -344,13 +344,13 @@ A continuación, se proporciona información general breve de las diferentes sec
 
 10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.
 
-11. En el cliente, ejecute ImportServiceCert. bat en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.
+11. En el cliente, ejecute ImportServiceCert.bat en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.
 
-12. En el servidor, ejecute ImportClientCert. bat en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.
+12. En el servidor, ejecute ImportClientCert.bat en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.
 
 13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.
 
-14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2baa2aaa32c4138eee0932e5c46c2b52482007cd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288854"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547563"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Usar la Biblioteca de clases portable con Model-View-View Model
 Puede usar el .NET Framework [biblioteca de clases portable](cross-platform-development-with-the-portable-class-library.md) para implementar el patrón Model-View-View Model (MVVM) y compartir ensamblados en varias plataformas.
@@ -25,7 +25,7 @@ Puede usar el .NET Framework [biblioteca de clases portable](cross-platform-deve
 
  ![Muestra la biblioteca de clases portable con ensamblados de uso compartido de MVVM entre plataformas.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- En este tema no se proporciona información general sobre el patrón MVVM. Solo proporciona información sobre cómo usar la biblioteca de clases portable para implementar MVVM. Para obtener más información sobre MVVM, consulte la guía de [Inicio rápido de MVVM con la biblioteca Prism 5,0 para WPF](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40)).
+ En este tema no se proporciona información general sobre el patrón MVVM. Solo proporciona información sobre cómo usar la biblioteca de clases portable para implementar MVVM. Para obtener más información sobre MVVM, consulte la guía de [Inicio rápido de MVVM con la biblioteca Prism 5,0 para WPF](/previous-versions/msp-n-p/gg430857(v=pandp.40)).
 
 ## <a name="classes-that-support-mvvm"></a>Clases que admiten MVVM
  Cuando el destino es .NET Framework 4,5, .NET para aplicaciones de la tienda Windows 8. x, Silverlight o Windows Phone 7,5 para el proyecto de biblioteca de clases portable, están disponibles las siguientes clases para implementar el patrón MVVM:
@@ -57,7 +57,7 @@ Puede usar el .NET Framework [biblioteca de clases portable](cross-platform-deve
 
  Después de compilar los proyectos de modelo y vista de modelo, se hace referencia a esos ensamblados en la aplicación que contiene la vista. Si la vista interactúa solo con el modelo de vista, solo tiene que hacer referencia al ensamblado que contiene el modelo de vista.
 
-### <a name="model"></a>Modelo
+### <a name="model"></a>Modelado
  En el ejemplo siguiente se muestra una clase de modelo simplificada que puede residir en un proyecto de biblioteca de clases portable.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -89,6 +89,6 @@ Puede usar el .NET Framework [biblioteca de clases portable](cross-platform-deve
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Biblioteca de clases portable](cross-platform-development-with-the-portable-class-library.md)

@@ -6,28 +6,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8c81e6e29678fe2e30af7c15d8d6e90f23dd0762
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286888"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545316"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Cargar un conjunto de datos desde XML
 Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a partir de una secuencia o de un documento XML. Además, con .NET Framework se dispone de una gran flexibilidad sobre qué información se carga desde XML y cómo se crea el esquema o la estructura relacional del <xref:System.Data.DataSet>.  
   
- Para rellenar <xref:System.Data.DataSet> con datos de XML, utilice el método **ReadXml** del <xref:System.Data.DataSet> objeto. El método **ReadXml** Lee de un archivo, una secuencia o un **XmlReader**y toma como argumentos el origen del XML más un argumento de **XmlReadMode** opcional. Para obtener más información acerca de **XmlReader**, vea [leer datos XML con XmlTextReader](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). El método **ReadXml** lee el contenido de la secuencia o el documento XML y carga <xref:System.Data.DataSet> con los datos. También creará el esquema relacional de <xref:System.Data.DataSet> dependiendo del **XmlReadMode** especificado y de si ya existe o no un esquema relacional.  
+ Para rellenar <xref:System.Data.DataSet> con datos de XML, utilice el método **ReadXml** del <xref:System.Data.DataSet> objeto. El método **ReadXml** Lee de un archivo, una secuencia o un **XmlReader**y toma como argumentos el origen del XML más un argumento de **XmlReadMode** opcional. Para obtener más información acerca de **XmlReader**, vea [leer datos XML con XmlTextReader](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). El método **ReadXml** lee el contenido de la secuencia o el documento XML y carga <xref:System.Data.DataSet> con los datos. También creará el esquema relacional de <xref:System.Data.DataSet> dependiendo del **XmlReadMode** especificado y de si ya existe o no un esquema relacional.  
   
  En la tabla siguiente se describen las opciones del argumento **XmlReadMode** .  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Auto**|Este es el valor predeterminado. Examina el código XML y elige la opción más apropiada, en el orden siguiente:<br /><br /> -Si el XML es un DiffGram, se utiliza **DiffGram** .<br />-Si <xref:System.Data.DataSet> contiene un esquema o el XML contiene un esquema insertado, se utiliza **ReadSchema** .<br />-Si no <xref:System.Data.DataSet> contiene un esquema y el XML no contiene un esquema insertado, se utiliza **InferSchema** .<br /><br /> Si conoce el formato del XML que se está leyendo, para obtener el mejor rendimiento se recomienda establecer un **XmlReadMode**explícito, en lugar de aceptar el valor predeterminado **auto** .|  
+|**Automático**|Este es el valor predeterminado. Examina el código XML y elige la opción más apropiada, en el orden siguiente:<br /><br /> -Si el XML es un DiffGram, se utiliza **DiffGram** .<br />-Si <xref:System.Data.DataSet> contiene un esquema o el XML contiene un esquema insertado, se utiliza **ReadSchema** .<br />-Si no <xref:System.Data.DataSet> contiene un esquema y el XML no contiene un esquema insertado, se utiliza **InferSchema** .<br /><br /> Si conoce el formato del XML que se está leyendo, para obtener el mejor rendimiento se recomienda establecer un **XmlReadMode**explícito, en lugar de aceptar el valor predeterminado **auto** .|  
 |**ReadSchema**|Lee cualquier esquema alineado y carga los datos y el esquema.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se agregan nuevas tablas del esquema alineado al esquema existente en el <xref:System.Data.DataSet>. Si ya existe alguna tabla del esquema alineado en el <xref:System.Data.DataSet>, se iniciará una excepción. No podrá modificar el esquema de una tabla existente con **XmlReadMode. ReadSchema**.<br /><br /> Si el <xref:System.Data.DataSet> no contiene un esquema y no hay ningún esquema alineado, no se leerá ningún dato.<br /><br /> Es posible definir el esquema alineado mediante el esquema del lenguaje de definición de esquemas XML (XSD). Para obtener más información sobre cómo escribir esquemas insertados como esquemas XML, vea [derivar una estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Pasa por alto cualquier esquema alineado y carga los datos en el esquema del <xref:System.Data.DataSet> existente. Se descartan todos los datos que no coincidan con el esquema existente. Si no existe ningún esquema en el <xref:System.Data.DataSet>, no se cargará ningún dato.<br /><br /> Si los datos son un DiffGram, **IgnoreSchema** tiene la misma funcionalidad que **DiffGram** *.*|  
 |**InferSchema**|Pasa por alto cualquier esquema alineado, deduce el esquema por la estructura de los datos XML y, a continuación, carga los datos.<br /><br /> Si el <xref:System.Data.DataSet> ya contiene un esquema, se extiende el esquema actual mediante la adición de columnas a las tablas existentes. Si no existen tablas, no se agregarán tablas adicionales. Se iniciará una excepción si ya existe una tabla inferida con un espacio de nombres diferente o si alguna columna inferida entra en conflicto con columnas existentes.<br /><br /> Para obtener más información sobre cómo **ReadXmlSchema** deduce un esquema a partir de un documento XML, vea [inferir la estructura relacional de DataSet desde XML](inferring-dataset-relational-structure-from-xml.md).|  
 |**DiffGram**|Lee un DiffGram y agrega los datos al esquema actual. **DiffGram** combina las nuevas filas con las filas existentes donde coinciden los valores de identificador único. Vea "Combinar datos desde XML" al final de este tema. Para obtener más información acerca de los DiffGrams, vea [DiffGrams](diffgrams.md).|  
-|**Fragment**|Sigue leyendo varios fragmentos de XML hasta llegar al final de la secuencia. Los fragmentos que coinciden con el esquema del <xref:System.Data.DataSet> se anexan a las tablas apropiadas. Los fragmentos que no coinciden con el esquema del <xref:System.Data.DataSet> se descartan.|  
+|**Fragmento**|Sigue leyendo varios fragmentos de XML hasta llegar al final de la secuencia. Los fragmentos que coinciden con el esquema del <xref:System.Data.DataSet> se anexan a las tablas apropiadas. Los fragmentos que no coinciden con el esquema del <xref:System.Data.DataSet> se descartan.|  
   
 > [!NOTE]
 > Si pasa un **XmlReader** a un **ReadXml** que se coloca parte del camino en un documento XML, **ReadXml** leerá al siguiente nodo de elemento y lo tratará como el elemento raíz, leyendo hasta el final del nodo de elementos. Esto no se aplica si especifica **XmlReadMode. Fragment**.  

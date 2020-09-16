@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: d4f4d5d34698fbb9a7986f4628b282d4425da3f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416214"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554702"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>Consumir un conjunto de información desde un servicio Web XML
 
@@ -263,7 +263,7 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET](../index.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
@@ -271,5 +271,5 @@ La arquitectura del <xref:System.Data.DataSet> tiene un diseño desconectado, en
 - [Rellenar un conjunto de datos desde un objeto DataAdapter](../populating-a-dataset-from-a-dataadapter.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](../updating-data-sources-with-dataadapters.md)
 - [Parámetros de DataAdapter](../dataadapter-parameters.md)
-- [Herramienta lenguaje de descripción de servicios web (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
+- [Herramienta lenguaje de descripción de servicios web (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [Información general de ADO.NET](../ado-net-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: b938e419a5a650fe0e24445c44a67aead13349fa
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a6a388f837d00d63a39212843c3fa88b28482b26
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348103"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545812"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generar la biblioteca cliente del servicio de datos (Data Services de WCF)
 Un servicio de datos que implementa el Open Data Protocol (OData) puede devolver un documento de metadatos de servicio que describe el modelo de datos expuesto por la fuente de OData. Para obtener más información, vea la sección sobre el documento de metadatos del servicio en el artículo [OData: Overview](https://www.odata.org/documentation/odata-version-2-0/overview/) . Puede usar el cuadro de diálogo **Agregar referencia de servicio** en Visual Studio para agregar una referencia a un servicio basado en OData. Cuando se usa esta herramienta para agregar una referencia a los metadatos devueltos por una fuente de OData en un proyecto de cliente, realiza las siguientes acciones:  
@@ -19,9 +19,9 @@ Un servicio de datos que implementa el Open Data Protocol (OData) puede devolver
 - Solicita el documento de metadatos del servicio al servicio de datos e interpreta los metadatos devueltos.  
   
     > [!NOTE]
-    > Los metadatos devueltos se almacenan en el proyecto de cliente como un archivo .edmx. Este archivo .edmx no se puede abrir utilizando el diseñador de Entity Data Model ya que no tiene el mismo formato que un archivo .edmx utilizado por Entity Framework. Puede ver este archivo de metadatos utilizando el editor XML o cualquier editor de texto. Para obtener más información, consulte [\[MC-EDMX\]: Entity Data Model para el formato de empaquetado de Data Services](https://docs.microsoft.com/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16).
+    > Los metadatos devueltos se almacenan en el proyecto de cliente como un archivo .edmx. Este archivo .edmx no se puede abrir utilizando el diseñador de Entity Data Model ya que no tiene el mismo formato que un archivo .edmx utilizado por Entity Framework. Puede ver este archivo de metadatos utilizando el editor XML o cualquier editor de texto. Para obtener más información, consulte [ \[ MC-EDMX \] : Entity Data Model para el formato de empaquetado de Data Services](/openspecs/windows_protocols/mc-edmx/5dff5e25-56a1-408b-9d44-bff6634c7d16).
   
-- Genera una representación del servicio como una clase de contenedor de entidades que hereda de <xref:System.Data.Services.Client.DataServiceContext>. Esta clase de contenedor de entidades generada es similar al contenedor de entidades generado por las herramientas de Entity Data Model. Para más información, vea [Información general de Servicios de objeto (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
+- Genera una representación del servicio como una clase de contenedor de entidades que hereda de <xref:System.Data.Services.Client.DataServiceContext>. Esta clase de contenedor de entidades generada es similar al contenedor de entidades generado por las herramientas de Entity Data Model. Para más información, vea [Información general de Servicios de objeto (Entity Framework)](/previous-versions/bb386871(v=vs.100)).  
   
 - Genera clases de datos para los tipos de modelo de entidad que detecta en los metadatos del servicio.  
   
@@ -29,10 +29,10 @@ Un servicio de datos que implementa el Open Data Protocol (OData) puede devolver
   
  Para obtener más información, vea [Cómo: agregar una referencia de servicio de datos](how-to-add-a-data-service-reference-wcf-data-services.md).  
   
- Las clases del servicio de datos del cliente también se pueden generar mediante la herramienta [herramienta datasvcutil. exe](wcf-data-service-client-utility-datasvcutil-exe.md) en el símbolo del sistema. Para obtener más información, vea [Cómo: generar manualmente clases del servicio de datos del cliente](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
+ Las clases del servicio de datos del cliente también se pueden generar mediante la herramienta [DataSvcUtil.exe](wcf-data-service-client-utility-datasvcutil-exe.md) en el símbolo del sistema. Para obtener más información, vea [Cómo: generar manualmente clases del servicio de datos del cliente](how-to-manually-generate-client-data-service-classes-wcf-data-services.md).  
   
 ## <a name="client-data-type-mapping"></a>Asignación de tipos de datos del cliente  
- Cuando se usa el cuadro de diálogo de **Agregar referencia de servicio** en Visual Studio o la herramienta de `DataSvcUtil.exe` para generar clases de datos de cliente que se basan en una fuente de oData, los tipos de datos de .NET Framework se asignan a los tipos primitivos del modelo de datos de la siguiente manera:  
+ Cuando se usa el cuadro de diálogo **Agregar referencia de servicio** en Visual Studio o la `DataSvcUtil.exe` herramienta para generar clases de datos de cliente que se basan en una fuente de oData, los tipos de datos de .NET Framework se asignan a los tipos primitivos del modelo de datos de la siguiente manera:  
   
 |Tipo del modelo de datos|Tipo de datos de .NET Framework|  
 |---------------------|------------------------------|  
@@ -54,5 +54,5 @@ Un servicio de datos que implementa el Open Data Protocol (OData) puede devolver
   
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
-- [Inicio rápido](quickstart-wcf-data-services.md)
+- [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
+- [Guía de inicio rápido](quickstart-wcf-data-services.md)

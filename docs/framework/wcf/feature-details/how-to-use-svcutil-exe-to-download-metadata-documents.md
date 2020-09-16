@@ -3,15 +3,15 @@ title: Procedimiento para usar Svcutil.exe para descargar documentos de metadato
 description: Aprenda a usar Svcutil.exe para descargar metadatos de servicios en ejecución y guardar los metadatos en archivos locales.
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 42df55fe7bbae6d8c977263e05053d8a8fa87aff
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6877d860a4465947268d6535b9edeb9856d4d689
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246771"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554311"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Procedimiento para usar Svcutil.exe para descargar documentos de metadatos
-Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecución y para guardar los metadatos en archivos locales. Para los esquemas de dirección URL HTTP y HTTPS, Svcutil.exe intenta recuperar metadatos mediante WS-MetadataExchange y la [detección de servicios Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100)). Para todos los otros esquemas de URL, Svcutil.exe utiliza sólo WS-MetadataExchange.  
+Puede utilizar Svcutil.exe para descargar metadatos de los servicios en ejecución y para guardar los metadatos en archivos locales. Para los esquemas de dirección URL HTTP y HTTPS, Svcutil.exe intenta recuperar metadatos mediante WS-MetadataExchange y la [detección de servicios Web XML](/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100)). Para todos los otros esquemas de URL, Svcutil.exe utiliza sólo WS-MetadataExchange.  
   
  De forma predeterminada, Svcutil.exe utiliza los enlaces definidos en la clase <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Para configurar el enlace utilizado para WS-MetadataExchange, debe definir un extremo de cliente en el archivo de configuración para Svcutil.exe (svcutil.exe.config) que utiliza el contrato `IMetadataExchange` y que tiene el mismo nombre que el esquema del Identificador uniforme de recursos (URI) de la dirección del extremo de metadatos.  
   

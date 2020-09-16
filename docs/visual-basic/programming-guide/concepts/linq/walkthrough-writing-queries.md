@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 25905d7ac3ca4bb66a22ad1df421b400eaa6b08f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413276"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554598"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 
@@ -26,13 +26,13 @@ Después de completar este tutorial, estará listo para pasar a los ejemplos y l
 
 1. Inicie Visual Studio.
 
-2. En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**.
+2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.
 
 3. En la lista **plantillas instaladas** , haga clic en **Visual Basic**.
 
 4. En la lista de tipos de proyecto, haga clic en **aplicación de consola**. En el cuadro **nombre** , escriba un nombre para el proyecto y, a continuación, haga clic en **Aceptar**.
 
-    Se crea un proyecto. De forma predeterminada, contiene una referencia a System. Core. dll. Además, la lista de **espacios de nombres importados** en la [Página referencias, el diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) incluye el <xref:System.Linq?displayProperty=nameWithType> espacio de nombres.
+    Se crea un proyecto. De forma predeterminada, contiene una referencia a System.Core.dll. Además, la lista de **espacios de nombres importados** en la [Página referencias, el diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) incluye el <xref:System.Linq?displayProperty=nameWithType> espacio de nombres.
 
 5. En la [Página compilar, diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), asegúrese de que la **opción Infer** está establecida en **on**.
 
@@ -123,7 +123,7 @@ Es más fácil analizar los resultados de la consulta si están en un orden espe
 
 ### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Para crear un tipo anónimo en la cláusula SELECT
 
-1. Agregue el código de esta sección para ver cómo se usan los tipos anónimos en las consultas. Se usan en consultas cuando se desea devolver varios campos del origen de datos en lugar de registros completos ( `currentStudent` registros en ejemplos anteriores) o campos individuales ( `First` en la sección anterior). En lugar de definir un nuevo tipo con nombre que contenga los campos que desea incluir en el resultado, especifique los campos en la `Select` cláusula y el compilador creará un tipo anónimo con esos campos como sus propiedades. Para obtener más información, vea [Tipos anónimos](../../language-features/objects-and-classes/anonymous-types.md).
+1. Agregue el código de esta sección para ver cómo se usan los tipos anónimos en las consultas. Se usan en consultas cuando se desea devolver varios campos del origen de datos en lugar de registros completos ( `currentStudent` registros en ejemplos anteriores) o campos individuales ( `First` en la sección anterior). En lugar de definir un nuevo tipo con nombre que contenga los campos que desea incluir en el resultado, especifique los campos en la `Select` cláusula y el compilador creará un tipo anónimo con esos campos como sus propiedades. Para obtener más información, consulte [Tipos anónimos](../../language-features/objects-and-classes/anonymous-types.md) (Guía de programación de C#).
 
     En el ejemplo siguiente se crea una consulta que devuelve el nombre y el rango de los directivos cuyo rango académico está entre 1 y 10, en el orden de los rangos académicos. En este ejemplo, el tipo de `studentQuery4` se debe inferir porque la `Select` cláusula devuelve una instancia de un tipo anónimo y un tipo anónimo no tiene ningún nombre utilizable.
 
@@ -145,11 +145,11 @@ Una vez que esté familiarizado con los conceptos básicos sobre cómo trabajar 
 
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 
-- [LINQ to XML](linq-to-xml.md)
+- [LINQ to XML](../../../../standard/linq/linq-xml-overview.md)
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
 - [Introducción a LINQ en Visual Basic](getting-started-with-linq.md)

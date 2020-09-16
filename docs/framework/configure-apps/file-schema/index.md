@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab6f12be01899f5b7e54a7ec2d9675d502d88bc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73039161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555138"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Esquema de los archivos de configuración de .NET Framework
 
@@ -92,14 +92,14 @@ Todos los elementos del esquema de configuración de Windows Identity Foundation
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Esquema de configuración de comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[Esquema de configuración de comunicación remota](/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 Describe los elementos que configuran las aplicaciones cliente y servidor que implementa la comunicación remota.
 
-[Esquema de configuración de ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
+[Esquema de configuración de ASP.NET](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 Describe los elementos que controlan el comportamiento de las aplicaciones web ASP.NET.
 
-[Esquema de configuración de servicios Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+[Esquema de configuración de servicios Web](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 Describe los elementos que controlan el comportamiento de servicios Web de ASP.NET y sus clientes.
 
-[Configuración de .NET Framework aplicaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+[Configuración de .NET Framework aplicaciones](/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
 Describe cómo configurar la seguridad, el enlace del ensamblado y la comunicación remota de .NET Framework.

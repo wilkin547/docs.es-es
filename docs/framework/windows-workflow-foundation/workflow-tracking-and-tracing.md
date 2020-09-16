@@ -5,19 +5,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: f88ff68a361bf3882d75bc2d5fb21903fd283a4d
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ce7fa6582bb280bd050dd5609e1041452338fedd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421298"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548584"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Seguimiento y traza del flujo de trabajo
 El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] diseñada para proporcionar visibilidad en la ejecución del flujo de trabajo. Proporciona una infraestructura de seguimiento para realizar el seguimiento de la ejecución de una instancia de flujo de trabajo. La infraestructura de seguimiento de WF sirve para que un flujo de trabajo emita registros de forma transparente que reflejen eventos clave durante la ejecución. Esta funcionalidad está disponible de forma predeterminada para cualquier flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. No es necesario hacer ningún cambio en un flujo de trabajo de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] para que se produzca el seguimiento. Simplemente se trata de decidir cuántos datos de seguimiento desea recibir. Cuando una instancia de flujo de trabajo se inicia o se completa, se emiten registros de seguimiento de procesamiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa en un sistema de procesamiento de pedidos, el id. de pedido se puede extraer junto con el objeto <xref:System.Activities.Tracking.TrackingRecord>. En general, al habilitar el seguimiento de WF se facilita el acceso a los datos de diagnóstico o analíticos empresariales desde la ejecución de un flujo de trabajo.  
   
  Estos componentes de seguimiento son equivalentes al servicio de seguimiento en WinFX. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], se ha mejorado el rendimiento y se ha simplificado el modelo de programación para la característica de seguimiento de WF. El tiempo de ejecución de seguimiento sirve para que una instancia de flujo de trabajo emita eventos relacionados con el ciclo de vida y las actividades del flujo de trabajo, y los eventos personalizados.  
   
- Windows Server App Fabric también proporciona la capacidad de supervisar la ejecución de WCF y los servicios de flujo de trabajo. Para obtener más información, consulte supervisión y supervisión de aplicaciones de [Windows Server App fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10)) [con Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))  
+ Windows Server App Fabric también proporciona la capacidad de supervisar la ejecución de WCF y los servicios de flujo de trabajo. Para obtener más información, consulte supervisión y supervisión de aplicaciones de [Windows Server App fabric](/previous-versions/appfabric/ee677251(v=azure.10)) [con Windows Server AppFabric](/previous-versions/appfabric/ee677276(v=azure.10))  
   
  Para solucionar problemas del tiempo de ejecución del flujo de trabajo, puede activar la traza de flujo de trabajo de diagnóstico. Para obtener más información, vea [seguimiento de flujo de trabajo](workflow-tracing.md).  
   
@@ -52,6 +52,6 @@ El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_cur
  [Traza del flujo de trabajo](workflow-tracing.md)  
  Describe las dos maneras de habilitar la traza de depuración para un flujo de trabajo.  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Seguimiento de SQL](./samples/sql-tracking.md)

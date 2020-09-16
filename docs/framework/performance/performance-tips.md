@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474272"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554650"
 ---
 # <a name="net-performance-tips"></a>Sugerencias para mejorar el rendimiento de .NET
 El término *rendimiento* suele hacer referencia a la velocidad de ejecución de un programa. A veces se puede aumentar la velocidad de ejecución si se siguen algunas reglas básicas en el código fuente. En algunos programas, es importante examinar el código detenidamente y usar generadores de perfiles para asegurarse de que se está ejecutando lo más rápidamente posible. En otros programas, no es necesario realizar esta optimización, ya que el código se ejecuta con una velocidad aceptable mientras se escribe. En este artículo se enumeran algunas áreas donde el rendimiento puede verse afectado y sugerencias para mejorar, así como vínculos a temas de rendimiento adicionales. Para más información sobre cómo planear y medir el rendimiento, vea [Rendimiento](index.md)  
@@ -31,19 +31,19 @@ El término *rendimiento* suele hacer referencia a la velocidad de ejecución de
   
 ## <a name="other-resources"></a>Otros recursos  
   
-- [Writing Faster Managed Code: Know What Things Cost](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10)) (Escribir código administrado con mayor rapidez: conocer el costo de las cosas)  
+- [Writing Faster Managed Code: Know What Things Cost](/previous-versions/dotnet/articles/ms973852(v=msdn.10)) (Escribir código administrado con mayor rapidez: conocer el costo de las cosas)  
   
-- [Writing High-Performance Managed Applications: A Primer](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10)) (Escribir aplicaciones administradas de alto rendimiento: introducción)  
+- [Writing High-Performance Managed Applications: A Primer](/previous-versions/dotnet/articles/ms973858(v=msdn.10)) (Escribir aplicaciones administradas de alto rendimiento: introducción)  
   
-- [Garbage Collector Basics and Performance Hints](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10)) (Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento)  
+- [Garbage Collector Basics and Performance Hints](/previous-versions/dotnet/articles/ms973837(v=msdn.10)) (Conceptos básicos del recolector de elementos no utilizados y sugerencias de rendimiento)  
   
-- [Performance Tips and Tricks in .NET Applications](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10)) (Sugerencias y trucos de rendimiento en aplicaciones .NET)  
+- [Performance Tips and Tricks in .NET Applications](/previous-versions/dotnet/articles/ms973839(v=msdn.10)) (Sugerencias y trucos de rendimiento en aplicaciones .NET)  
 
-- [Rico Mariani's Performance Tidbits](https://docs.microsoft.com/archive/blogs/ricom/) (Curiosidades sobre rendimiento de Rico Mariani)  
+- [Rico Mariani's Performance Tidbits](/archive/blogs/ricom/) (Curiosidades sobre rendimiento de Rico Mariani)  
 
-- [Blog de Saavedra Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Blog de Saavedra Morrison](/archive/blogs/vancem/)
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Rendimiento](index.md)
 - [Guía de programación en Visual Basic](../../visual-basic/programming-guide/index.md)

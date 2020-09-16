@@ -3,12 +3,12 @@ title: Novedades
 description: Obtenga información sobre las nuevas características de ADO.NET en el .NET Framework 4,5, incluidas las nuevas características para el proveedor de datos SqlClient y ADO.NET Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b34a27574b6aab75539f9ab30e2978e45b4ad9e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286176"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553862"
 ---
 # <a name="whats-new-in-adonet"></a>Novedades de ADO.NET
 
@@ -28,7 +28,7 @@ Las siguientes características son nuevas en el proveedor de datos de .NET Fram
 
 - SqlClient ahora tiene compatibilidad con la característica de recuperación ante desastres, AlwaysOn de SQL Server. Para obtener más información, vea [compatibilidad de SqlClient con la alta disponibilidad y la recuperación ante desastres](./sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
-- Una contraseña se puede pasar como <xref:System.Security.SecureString> cuando se usa la autenticación de SQL Server. Consulte <xref:System.Data.SqlClient.SqlCredential> para obtener más información.
+- Una contraseña se puede pasar como <xref:System.Security.SecureString> cuando se usa la autenticación de SQL Server. Vea <xref:System.Data.SqlClient.SqlCredential> para obtener más información.
 
 - Cuando `TrustServerCertificate` es false y `Encrypt` es true, el nombre del servidor (o la dirección IP) de un certificado SSL SQL Server debe coincidir exactamente con el nombre del servidor (o la dirección IP) especificado en la cadena de conexión. De lo contrario, se producirá un error en el intento de conexión. Para obtener más información, vea la descripción de la opción de conexión `Encrypt` en <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
@@ -46,17 +46,17 @@ Las siguientes características son nuevas en el proveedor de datos de .NET Fram
 
 - `Type System Version=SQL Server 2012;` es el nuevo valor para pasar a la propiedad de conexión `Type System Version`. El valor `Type System Version=Latest;` ahora está obsoleto y se ha hecho equivalente a `Type System Version=SQL Server 2008;`. Para obtener más información, vea <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient proporciona compatibilidad adicional para columnas dispersas, una característica que se agregó en SQL Server 2008. Si su aplicación ya tiene acceso a datos de una tabla que usa columnas dispersas, debería ver un aumento del rendimiento. La columna IsColumnSet de <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica si una columna es una columna dispersa que es miembro de un conjunto de columnas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica si una columna es una columna dispersa (vea [SQL Server colecciones de esquemas](sql-server-schema-collections.md) para obtener más información). Para obtener más información sobre las columnas dispersas, vea [usar columnas dispersas](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient proporciona compatibilidad adicional para columnas dispersas, una característica que se agregó en SQL Server 2008. Si su aplicación ya tiene acceso a datos de una tabla que usa columnas dispersas, debería ver un aumento del rendimiento. La columna IsColumnSet de <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica si una columna es una columna dispersa que es miembro de un conjunto de columnas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica si una columna es una columna dispersa (vea [SQL Server colecciones de esquemas](sql-server-schema-collections.md) para obtener más información). Para obtener más información sobre las columnas dispersas, vea [usar columnas dispersas](/sql/relational-databases/tables/use-sparse-columns).
 
-- El ensamblado Microsoft.SqlServer.Types.dll, que contiene los tipos de datos espaciales, se ha actualizado de la versión 10.0 a la versión 11.0. Las aplicaciones que hacen referencia a este ensamblado pueden producir errores. Para obtener más información, vea [cambios importantes en las características de motor de base de datos](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
+- El ensamblado Microsoft.SqlServer.Types.dll, que contiene los tipos de datos espaciales, se ha actualizado de la versión 10.0 a la versión 11.0. Las aplicaciones que hacen referencia a este ensamblado pueden producir errores. Para obtener más información, vea [cambios importantes en las características de motor de base de datos](/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-El .NET Framework 4,5 agrega API que permiten nuevos escenarios cuando se trabaja con el Entity Framework 5,0. Para obtener más información sobre las mejoras y características que se agregaron al Entity Framework 5,0, vea los temas siguientes: [novedades](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103)) y [Entity Framework versiones y control de versiones](/ef/ef6/what-is-new/past-releases).
+El .NET Framework 4,5 agrega API que permiten nuevos escenarios cuando se trabaja con el Entity Framework 5,0. Para obtener más información sobre las mejoras y características que se agregaron al Entity Framework 5,0, vea los temas siguientes: [novedades](/previous-versions/gg696190(v=vs.103)) y [Entity Framework versiones y control de versiones](/ef/ef6/what-is-new/past-releases).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET](index.md)
 - [Información general de ADO.NET](ado-net-overview.md)
 - [SQL Server y ADO.NET](./sql/index.md)
-- [Novedades de WCF Data Services 5,0](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+- [Novedades de WCF Data Services 5,0](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

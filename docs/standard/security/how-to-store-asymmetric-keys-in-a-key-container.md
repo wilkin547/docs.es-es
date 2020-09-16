@@ -16,16 +16,16 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854729"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554415"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Almacenar claves asimétricas en un contenedor de claves
 
-Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si necesita almacenar una clave privada, utilice un contenedor de claves. Para obtener más información acerca de los contenedores de claves, consulte Descripción de los [contenedores de claves RSA de nivel de equipo y de nivel de usuario](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
+Las claves privadas asimétricas nunca deben almacenarse literalmente o en texto sin formato en el equipo local. Si necesita almacenar una clave privada, utilice un contenedor de claves. Para obtener más información acerca de los contenedores de claves, consulte Descripción de los [contenedores de claves RSA de nivel de equipo y de nivel de usuario](/previous-versions/aspnet/f5cs0acs(v=vs.100)).
 
 > [!NOTE]
 > El código de este artículo se aplica a Windows y usa las características que no están disponibles en .NET Core 2,2 y versiones anteriores. Para obtener más información, consulte [dotnet/Runtime # 23391](https://github.com/dotnet/runtime/issues/23391).

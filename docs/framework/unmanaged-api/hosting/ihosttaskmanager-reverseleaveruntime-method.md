@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841872"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554806"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime (Método)
 Notifica al host que el control está saliendo del Common Language Runtime (CLR) y entra en una función no administrada a la que se llama a su vez desde código administrado.  
@@ -35,7 +35,7 @@ HRESULT ReverseLeaveRuntime ();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`se devolvió correctamente.|  
+|S_OK|`ReverseLeaveRuntime` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -43,7 +43,7 @@ HRESULT ReverseLeaveRuntime ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación de recursos solicitada.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  CLR llama `ReverseLeaveRuntime` a para informar al host de que la tarea que se está ejecutando actualmente devuelve el control a una función no administrada que, a su vez, se ha llamado desde código administrado a través de la invocación de plataforma. Cada llamada a `ReverseLeaveRuntime` coincide con una llamada correspondiente a [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
@@ -51,7 +51,7 @@ HRESULT ReverseLeaveRuntime ();
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask (Interfaz)](ihosttask-interface.md)
 - [IHostTaskManager (Interfaz)](ihosttaskmanager-interface.md)
 - [Método LeaveRuntime](ihosttaskmanager-leaveruntime-method.md)
-- [Una visión más detallada de la invocación de plataforma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [Aproximación a la invocación de plataforma](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

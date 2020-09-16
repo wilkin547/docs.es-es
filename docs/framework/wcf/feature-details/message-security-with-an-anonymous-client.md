@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595224"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553771"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Seguridad de mensajes con clientes anónimos
 
@@ -22,7 +22,7 @@ Para obtener una aplicación de ejemplo, vea [seguridad de mensajes anónima](..
 
 |Característica|Descripción|
 |--------------------|-----------------|
-|Modo de seguridad|Message|
+|Modo de seguridad|Mensaje|
 |Interoperabilidad|Solo WCF|
 |Autenticación (servidor)|La negociación inicial requiere la autenticación del servidor, pero no la autenticación del cliente|
 |Autenticación (cliente)|None|
@@ -30,9 +30,9 @@ Para obtener una aplicación de ejemplo, vea [seguridad de mensajes anónima](..
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|
 |Transporte|HTTP|
 
-## <a name="service"></a>web de Office
+## <a name="service"></a>Servicio
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un servicio independiente mediante el código sin configuración.
 
@@ -90,7 +90,7 @@ En lugar del código, se puede utilizar la siguiente configuración. El elemento
 
 ## <a name="client"></a>Cliente
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un cliente independiente mediante el código (y el código de cliente).
 
@@ -144,4 +144,4 @@ El siguiente código configura el cliente.
 - [Seguridad distribuida de aplicaciones](distributed-application-security.md)
 - [Seguridad de mensaje anónima](../samples/message-security-anonymous.md)
 - [Identidad del servicio y autenticación](service-identity-and-authentication.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

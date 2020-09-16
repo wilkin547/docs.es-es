@@ -2,12 +2,12 @@
 title: Resoluciones del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: a1f5bcfb721ccbc98856e81198a3f7e0b45abe93
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef72f44a7dd7f3e8f3108e4f77dcdbdf8ef1b1b7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600781"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554637"
 ---
 # <a name="peer-resolvers"></a>Resoluciones del mismo nivel
 Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP de otros nodos. Las direcciones IP se obtienen al establecer contacto con un servicio de resolución, que toma el identificador de la malla y devuelve una lista de direcciones que corresponden a los nodos registrados con ese identificador de malla concreto. La resolución mantiene una lista de direcciones registradas, que crea mediante el registro de cada nodo de la malla en el servicio.  
@@ -32,7 +32,7 @@ Para conectar a una malla, un nodo del mismo nivel necesita las direcciones IP d
 > [!NOTE]
 > Al utilizar redes locales e improvisadas con una resolución personalizada, se aconseja que las aplicaciones que usen o admitan redes locales e improvisadas incluyan una lógica que seleccione una dirección única de vínculo local que se use a la hora de la conexión. Esto evita cualquier confusión potencial producida por equipos con varias direcciones de vínculo local. De acuerdo con esto, el canal del mismo nivel solo admite el uso de una única dirección de vínculo local en un momento determinado. Puede especificar esta dirección con la propiedad `ListenIpAddress` en el <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Para obtener una demostración de cómo implementar un solucionador personalizado, vea [resolución del mismo nivel personalizada del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
+ Para obtener una demostración de cómo implementar un solucionador personalizado, vea [resolución del mismo nivel personalizada del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Dentro de CustomPeerResolverService: registros de cliente](inside-the-custompeerresolverservice-client-registrations.md)  

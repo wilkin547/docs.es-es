@@ -15,18 +15,18 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447113"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545708"
 ---
 # <a name="handling-and-raising-events"></a>Controlar y provocar eventos
 
 Los eventos de .NET se basan en el modelo de delegado. El modelo de delegado sigue el [patrón de diseño del observador](observer-design-pattern.md), que permite que un suscriptor se registre con un proveedor y reciba notificaciones de él. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
   
- Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Events
 

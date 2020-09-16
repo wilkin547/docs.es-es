@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309591"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553810"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlar el registro de .NET Framework
 
@@ -18,7 +18,7 @@ Se puede utilizar el seguimiento de eventos para Windows (ETW) para registrar lo
 
 - Las herramientas de línea de comandos [Logman](/windows-server/administration/windows-commands/logman) y [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1), que se incluyen con el sistema operativo Windows.
 
-- Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](https://docs.microsoft.com/archive/blogs/pigscanfly/).
+- Las herramientas [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) del [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/). Para obtener más información sobre Xperf, vea el [blog de rendimiento de Windows](/archive/blogs/pigscanfly/).
 
 Para capturar información de eventos de CLR, el proveedor de CLR debe estar instalado en el equipo. Para confirmar que el proveedor está instalado, escriba `logman query providers` en el símbolo del sistema. Se muestra una lista de proveedores. Esta lista debería contener una entrada para el proveedor de CLR, del modo siguiente.
 
@@ -110,7 +110,7 @@ Utilice los comandos enumerados a continuación para ver los eventos ETW de CLR.
 
      Este comando hace que XPerf vuelque los eventos en un archivo de valores separados por comas (CSV) que se puede consultar. Dado que los distintos eventos tienen campos distintos, este archivo CSV contiene más de una línea de encabezado antes de los datos. El primer campo de cada línea es el tipo de evento, que indica qué encabezado se debería utilizar para determinar el resto de los campos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Kit de herramientas de rendimiento de Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md)

@@ -2,12 +2,12 @@
 title: Convenciones de código de F#
 description: 'Aprenda instrucciones generales y expresiones al escribir código de F #.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053016"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554031"
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F#
 
@@ -703,7 +703,7 @@ Dado que no hay necesidad de una clase al interactuar con la API de Visual Studi
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>Considere las abreviaturas de tipo para acortar las firmas
 
-Las [abreviaturas de tipo](../language-reference/type-abbreviations.md) son una manera cómoda de asignar una etiqueta a otro tipo, como una firma de función o un tipo más complejo. Por ejemplo, el alias siguiente asigna una etiqueta a lo que se necesita para definir un cálculo con [CNTK](https://docs.microsoft.com/cognitive-toolkit/), una biblioteca de aprendizaje profundo:
+Las [abreviaturas de tipo](../language-reference/type-abbreviations.md) son una manera cómoda de asignar una etiqueta a otro tipo, como una firma de función o un tipo más complejo. Por ejemplo, el alias siguiente asigna una etiqueta a lo que se necesita para definir un cálculo con [CNTK](/cognitive-toolkit/), una biblioteca de aprendizaje profundo:
 
 ```fsharp
 open CNTK

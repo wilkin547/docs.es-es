@@ -2,12 +2,12 @@
 title: <certificate> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: e28e7d16073a56f3b6126439644bfff86c9af18b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400551"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554376"
 ---
 # <a name="certificate-element"></a>\<certificate> (Elemento)
 Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensajes para los clientes punto a punto.  
@@ -75,14 +75,14 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticación del mensaje del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticación personalizada de canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

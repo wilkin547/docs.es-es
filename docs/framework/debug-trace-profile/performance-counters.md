@@ -7,16 +7,16 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 3702e9d2e0a369f5391c16088202caf5d7ced7ea
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803708"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554454"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento en el .NET Framework
 
-En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
+En este tema se proporciona una lista de los contadores de rendimiento que se pueden encontrar en el [monitor de rendimiento de Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)).  
 
 ## <a name="exception-performance-counters"></a>Contadores de rendimiento de excepciones  
  La categoría de excepciones de .NET CLR de la consola de rendimiento incluye contadores que proporcionan información sobre las excepciones producidas por una aplicación. En la siguiente tabla se describen estos contadores de rendimiento.  
@@ -37,8 +37,8 @@ En este tema se proporciona una lista de los contadores de rendimiento que se pu
 |**Número de CCW**|Muestra el número actual de contenedores CCW. Un CCW es un proxy para un objeto administrado al que se hace referencia desde un cliente COM no administrado. Este contador indica el número de objetos administrados a los que hace referencia el código COM no administrado.|  
 |**Número de serialización**|Muestra el número total de veces que los argumentos y los valores devueltos se serializaron del código administrado al código no administrado y viceversa desde que se inició la aplicación. Este contador no se incrementa si los códigos auxiliares están entre líneas. (Los códigos auxiliares son responsables de serializar los argumentos y los valores devueltos). Los códigos auxiliares suelen estar entre líneas si la sobrecarga de serialización es pequeña.|  
 |**Número de códigos auxiliares**|Muestra el número actual de códigos auxiliares creados por Common Language Runtime. Los códigos auxiliares son responsables de serializar los argumentos y los valores devueltos del código administrado al código no administrado y viceversa durante una llamada de interoperabilidad COM o una llamada Invoke de la plataforma.|  
-|**Número de exportaciones TLB por segundo**|Reservado para uso futuro.|  
-|**Número de importaciones TLB por segundo**|Reservado para uso futuro.|  
+|**Número de exportaciones TLB por segundo**|Reservado para un uso futuro.|  
+|**Número de importaciones TLB por segundo**|Reservado para un uso futuro.|  
 
 ## <a name="jit-performance-counters"></a>contadores de rendimiento JIT  
  La categoría JIT de .NET CLR de la consola de rendimiento incluye contadores que proporcionan información sobre el código que se ha compilado mediante JIT. En la siguiente tabla se describen estos contadores de rendimiento.  
@@ -57,8 +57,8 @@ En este tema se proporciona una lista de los contadores de rendimiento que se pu
   
 |Contador de rendimiento|Descripción|  
 |-------------------------|-----------------|  
-|**% de tiempo de carga**|Reservado para uso futuro.|  
-|**Longitud de búsqueda de ensamblado**|Reservado para uso futuro.|  
+|**% de tiempo de carga**|Reservado para un uso futuro.|  
+|**Longitud de búsqueda de ensamblado**|Reservado para un uso futuro.|  
 |**Bytes del montón del cargador**|Muestra el tamaño actual, en bytes, de la memoria asignada por el cargador de clases en todos los dominios de aplicación. La memoria asignada es el espacio físico reservado en el archivo de paginación de disco.|  
 |**Dominios de aplicación actuales**|Muestra el número actual de dominios de aplicación cargados en esta aplicación.|  
 |**Ensamblados actuales**|Muestra el número actual de ensamblados cargados en todos los dominios de aplicación en la aplicación actualmente en ejecución. Si se carga el ensamblado con dominio neutro desde varios dominios de aplicación, este contador se incrementa solo una vez.|  
@@ -114,7 +114,7 @@ En este tema se proporciona una lista de los contadores de rendimiento que se pu
 |**Bytes por segundo promocionados de gen. 1**|Muestra los bytes por segundo que se promocionan de la generación 1 a la generación 2. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador.<br /><br /> La memoria se promueve cuando sobrevive a una recolección de elementos no utilizados. No se promueve nada desde la generación 2 porque es la generación más antigua. Este contador es un indicador de los objetos de una duración muy larga que se crean por segundo.<br /><br /> Este contador muestra la diferencia entre los valores observados en las dos últimas muestras divididos entre la duración del intervalo de obtención de muestras.|  
 |**Tamaño del montón de gen. 2**|Muestra el número actual de bytes en la generación 2. Los objetos no se asignan directamente en esta generación; se promocionan desde la generación 1 durante las recolecciones de elementos no utilizados de generación 1 anteriores. Este contador se actualiza al final de una recolección de elementos no utilizados, no durante cada asignación.|  
 |**Tamaño del montón del objeto grande**|Muestra el tamaño actual, en bytes, del montón de objetos grandes. Los objetos que superan aproximadamente 85.000 bytes se tratan como objetos grandes en el recolector de elementos no utilizados y se asignan directamente en un montón especial. No se promocionan a través de las generaciones. Este contador se actualiza al final de una recolección de elementos no utilizados, no durante cada asignación.|  
-|**Identificador del proceso**|Muestra el identificador de proceso de la instancia de proceso CLR que se está supervisando.|  
+|**Id. del proceso**|Muestra el identificador de proceso de la instancia de proceso CLR que se está supervisando.|  
 |**Memoria de finalización promocionada de gen. 0**|Muestra los bytes de memoria que se promocionan de la generación 0 a la generación 1 solo porque están a la espera de ser finalizados. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados.|  
 |**Memoria promocionada de gen. 0**|Muestra los bytes de memoria que sobreviven la recolección de elementos no utilizados y que se promocionan de la generación 0 a la generación 1. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados.|  
 |**Memoria promocionada de gen. 1**|Muestra los bytes de memoria que sobreviven la recolección de elementos no utilizados y que se promocionan de la generación 1 a la generación 2. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados. Este contador se restablece a 0 si la última recolección de elementos no utilizados era únicamente una colección de generación 0.|  
@@ -195,7 +195,7 @@ Los contadores de rendimiento de red para eventos incluyen lo siguiente:
   
  Es posible acceder a los contadores de rendimiento de red y administrarlos mediante el <xref:System.Diagnostics.PerformanceCounter> y clases relacionadas del espacio de nombres <xref:System.Diagnostics>. Los contadores de rendimiento de red también se pueden ver con la consola del Monitor de rendimiento de Windows.  
   
- Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información, vea [ \<performanceCounter> elemento (configuración de red)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Los contadores de rendimiento de red deben estar habilitados en el archivo de configuración que se usará. Todos los contadores de rendimiento red se habilitan o deshabilitan con un solo valor en el archivo de configuración. Los contadores de rendimiento de red individuales no pueden habilitarse ni deshabilitarse. Para obtener más información, vea [Elemento \<performanceCounter> (configuración de red)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  Si se habilitan los contadores de red, esto crearán y se actualizarán los contadores de rendimiento globales y por dominio de aplicación. Si deshabilita esta opción, la aplicación no proporcionará datos del contador de rendimiento de red.  
   
@@ -224,11 +224,11 @@ for (int i = 0; i < Array.Length; i++)
 |-------------------------|-----------------|  
 |**Número de comprobaciones del tiempo de vínculo**|Muestra el número total de comprobaciones de seguridad de acceso del código en tiempo de vínculo desde que se inició la aplicación. Las comprobaciones de seguridad de acceso del código en tiempo de vínculo se realizan cuando un llamador solicita un determinado permiso en tiempo de compilación Just-In-Time (JIT). Una comprobación en tiempo de vínculo se realiza una vez por cada llamador. Este recuento no indica problemas graves de rendimiento; simplemente indica la actividad del sistema de seguridad.|  
 |**% de tiempo de comprobaciones RT**|Muestra el porcentaje de tiempo invertido en realizar comprobaciones de seguridad de acceso del código en tiempo de ejecución desde la última muestra. Este contador se actualiza al final de una comprobación de seguridad de .NET Framework. No es un promedio; representa el último valor observado.|  
-|**% de tiempo autenticando firmas**|Reservado para uso futuro.|  
+|**% de tiempo autenticando firmas**|Reservado para un uso futuro.|  
 |**Profundidad del recorrido de la pila**|Muestra la profundidad de la pila durante esa última comprobación de seguridad de acceso del código en tiempo de ejecución. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan recorriendo la pila. Este contador no es un promedio; solo muestra el último valor observado.|  
 |**Número total de comprobaciones en tiempo de ejecución**|Muestra el número total de comprobaciones de seguridad de acceso del código en tiempo de ejecución realizadas desde que se inició la aplicación. Las comprobaciones de seguridad de acceso del código en tiempo de ejecución se realizan cuando un llamador solicita un determinado permiso. La comprobación en tiempo de ejecución se realiza en cada llamada del llamador y examina la pila del subproceso actual del llamador. Cuando se usa con el contador de **Profundidad del recorrido de la pila**, este contador indica la disminución del rendimiento que tiene lugar para las comprobaciones de seguridad.|  
   
 ## <a name="see-also"></a>Vea también
 
 - [Contadores de rendimiento](performance-counters.md)
-- [Generar perfiles en tiempo de ejecución](runtime-profiling.md)
+- [Generación de perfiles en tiempo de ejecución](runtime-profiling.md)

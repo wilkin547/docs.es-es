@@ -6,12 +6,12 @@ metadata:
   description: Obtenga información sobre el uso de Windows Presentation Foundation, una interfaz de usuario gráfica de código abierto para Windows, en .NET Core.
   ms.topic: landing-page
   ms.date: 03/25/2020
-  ms.openlocfilehash: 8d3be7a04153ee0a120919fbb634001cd3257eb2
-  ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+  ms.openlocfilehash: aeac2794b0e7e6367ce338439e4bcbb5bfb8a29b
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/02/2020
-  ms.locfileid: "85840335"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90545923"
 landingContent:
 - title: Más información sobre WPF
   linkLists:
@@ -32,7 +32,7 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Crear una aplicación WPF
-      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json
+      url: /visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json
 - title: Aspectos básicos de XAML
   linkLists:
   - linkListType: concept
