@@ -1,24 +1,24 @@
 ---
 title: Azure Monitor
 description: El uso de Azure Monitor para obtener visibilidad en el sistema se está ejecutando.
-ms.date: 05/13/2020
-ms.openlocfilehash: e3ff673c63ecbc380cb8b74ae54065a091882d7b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 07/05/2020
+ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540216"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
-Ningún otro proveedor en la nube tiene una solución de supervisión de aplicaciones en la nube que se encuentra en Azure. Azure Monitor es un nombre de paraguas para una colección de herramientas diseñadas para proporcionar visibilidad sobre el estado del sistema, información sobre los problemas y la optimización de la aplicación.
+Ningún otro proveedor de servicios en la nube ha sido maduro de una solución de supervisión de aplicaciones en la nube que la que se encuentra en Azure. Azure Monitor es un nombre de paraguas para una colección de herramientas diseñadas para proporcionar visibilidad sobre el estado del sistema. Le ayuda a comprender el rendimiento de los servicios nativos de la nube y a identificar proactivamente los problemas que afectan a ellos. En la figura 7-12 se muestra un alto nivel de vista de Azure Monitor.
 
-![Azure Monitor, una colección a herramientas para proporcionar una visión general del funcionamiento de una aplicación nativa en la nube. ](./media/azure-monitor.png)
- **Figura 7-12**. Azure Monitor, una colección a herramientas para proporcionar una visión general del funcionamiento de una aplicación nativa en la nube.
+![Vista de alto nivel de Azure Monitor. ](./media/azure-monitor.png)
+ **Figura 7-12**. Vista de alto nivel de Azure Monitor.
 
 ## <a name="gathering-logs-and-metrics"></a>Recopilación de registros y métricas
 
-El primer paso en cualquier solución de supervisión es recopilar tantos datos como sea posible. Cuanto mayor sea el número de datos que se pueden recopilar, más profunda será la información que se puede obtener. Tradicionalmente, los sistemas de instrumentación han sido difíciles. El Protocolo simple de administración de redes (SNMP) era el protocolo estándar Gold para recopilar información de nivel de máquina, pero requirió una gran cantidad de conocimientos y configuración. Afortunadamente, gran parte de este trabajo duro se ha eliminado, ya que Azure Monitor recopila automáticamente las métricas más comunes.
+El primer paso en cualquier solución de supervisión es recopilar tantos datos como sea posible. Cuanto más datos se recopilen, más profunda es la información. Tradicionalmente, los sistemas de instrumentación han sido difíciles. El Protocolo simple de administración de redes (SNMP) era el protocolo estándar Gold para recopilar información de nivel de máquina, pero requirió una gran cantidad de conocimientos y configuración. Afortunadamente, gran parte de este trabajo duro se ha eliminado, ya que Azure Monitor recopila automáticamente las métricas más comunes.
 
 No es posible instrumentar eventos y métricas de nivel de aplicación de forma automática porque son específicos de la aplicación que se está implementando. Con el fin de recopilar estas métricas, hay [SDK y API disponibles](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) para notificar directamente dicha información, como cuando un cliente se suscribe o completa un pedido. Las excepciones también se pueden capturar y volver a informar en Azure Monitor a través de Application Insights. Los SDK admiten la mayoría de los lenguajes que se encuentran en las aplicaciones nativas de la nube, como Go, Python, JavaScript y los lenguajes .NET.
 
@@ -30,7 +30,7 @@ Una vez que se recopilan los datos, se pueden manipular, resumir y trazar en los
 
 No se completará ninguna aplicación moderna sin algunas inteligencia artificial o aprendizaje automático. Para este fin, los datos [se pueden pasar](https://www.youtube.com/watch?v=Cuza-I1g9tw) a las diversas herramientas de aprendizaje automático de Azure para que pueda extraer tendencias e información que, de otro modo, se ocultaría.
 
-Application Insights proporciona un lenguaje de consulta eficaz denominado Kusto que puede usarse para buscar registros, resumirlos e incluso gráficos de trazados. Por ejemplo, esta consulta buscará todos los registros del mes de noviembre de 2007, los agrupará por estado y trazará los 10 principales como un gráfico circular.
+Application Insights proporciona un lenguaje de consulta eficaz (similar a SQL) denominado *Kusto* que puede consultar registros, resumirlos e incluso gráficos de trazados. Por ejemplo, la consulta siguiente buscará todos los registros del mes de noviembre de 2007, los agrupará por estado y trazará los 10 principales como un gráfico circular.
 
 ```kusto
 StormEvents
@@ -40,22 +40,25 @@ StormEvents
 | render piechart
 ```
 
-![El resultado de la consulta Application Insights ](./media/azure-monitor.png)
- **figura 7-13**. Resultado de la consulta de Application Insights.
+En la figura 7-13 se muestran los resultados de esta Application Insights consulta.
 
-Hay un área [de pruebas para experimentar con](https://dataexplorer.azure.com/clusters/help/databases/Samples) las consultas de Kusto, que es un lugar fantástico para pasar una hora o dos. Leer [consultas de ejemplo](https://docs.microsoft.com/azure/kusto/query/samples) también puede ser instructivo.
+![Application Insights la ](./media/application_insights_example.png)
+ **figura 7-13**de resultados de la consulta. Application Insights resultados de la consulta.
+
+Hay una [animación para experimentar con consultas Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) . Leer [consultas de ejemplo](https://docs.microsoft.com/azure/kusto/query/samples) también puede ser instructivo.
 
 ## <a name="dashboards"></a>Paneles
 
 Hay varias tecnologías de panel diferentes que se pueden usar para exponer la información de Azure Monitor. Quizás lo más sencillo es ejecutar consultas en Application Insights y [trazar los datos en un gráfico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
 
-![Un ejemplo de gráficos de Application Insights insertados en el panel principal de Azure ](./media/azure-monitor.png)
+![Un ejemplo de gráficos de Application Insights insertados en el panel principal de Azure ](./media/azure_dashboard.png)
  **figura 7-14**. Un ejemplo de gráficos de Application Insights insertados en el panel principal de Azure.
 
 Estos gráficos se pueden incrustar en el Azure Portal adecuado a través del uso de la característica del panel. Para los usuarios con más requisitos de peractuación, como la posibilidad de explorar en profundidad varios niveles de datos, Azure Monitor datos están disponibles para [Power BI](https://powerbi.microsoft.com/). Power BI es una herramienta de inteligencia empresarial líder del sector que puede agregar datos de muchos orígenes de datos diferentes.
 
-![Un ejemplo Power BI panel ](./media/azure-monitor.png)
- **figura 7-15**. Un ejemplo Power BI panel.
+![Un ejemplo de panel de Power BI](./media/powerbidashboard.png)
+
+**Figura 7-15**. Un ejemplo Power BI panel.
 
 ## <a name="alerts"></a>Alertas
 

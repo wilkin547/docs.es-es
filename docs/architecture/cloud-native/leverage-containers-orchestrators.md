@@ -2,12 +2,12 @@
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446872"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540548"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
@@ -183,7 +183,7 @@ Visual Studio admite el desarrollo de Docker para aplicaciones basadas en Web. A
 
 Cuando se selecciona esta opción, el proyecto se crea con un `Dockerfile` en su raíz, que se puede usar para compilar y hospedar la aplicación en un contenedor de Docker. En la ilustración 3 se muestra un Dockerfile de ejemplo -6. git
 
-```docker
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80

@@ -3,12 +3,12 @@ title: Comunicación entre servicios
 description: Obtenga información sobre cómo los microservicios de back-end nativos en la nube se comunican con otros microservicios de back-end.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613712"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539817"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
 
@@ -76,7 +76,7 @@ Otro enfoque para desacoplar mensajes HTTP sincrónicos es un [patrón de solici
 
 En este caso, el productor de mensajes crea un mensaje basado en consulta que contiene un identificador de correlación único y lo coloca en una cola de solicitudes. El servicio consumidor quita los mensajes de la cola, los procesa y coloca la respuesta en la cola de respuesta con el mismo identificador de correlación. El servicio productor quita el mensaje de la cola, lo hace coincidir con el identificador de correlación y continúa el procesamiento. En la sección siguiente se describen los detalles de las colas.
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 
 Otro tipo de interacción de comunicación es un *comando*. Un microservicio puede necesitar otro microservicio para realizar una acción. El microservicio de pedidos puede necesitar el microservicio de envío para crear un envío para un pedido aprobado. En la figura 4-12, un microservicio, denominado productor, envía un mensaje a otro microservicio, el consumidor, y le hace algo.
 
@@ -118,7 +118,7 @@ Para los desarrolladores, Microsoft proporciona varias bibliotecas de cliente y 
 
 Azure Storage las colas son una opción económica para implementar la mensajería de comandos en las aplicaciones nativas de la nube. Especialmente cuando el tamaño de una cola supera los 80 GB, o un conjunto de características simple es aceptable. Solo paga por el almacenamiento de los mensajes; no hay cargos por hora fijos.
 
-### <a name="azure-service-bus-queues"></a>Azure Service Bus Queues
+### <a name="azure-service-bus-queues"></a>Colas de Azure Service Bus
 
 Para requisitos de mensajería más complejos, considere la posibilidad de Azure Service Bus las colas.
 
@@ -164,7 +164,7 @@ Con los eventos, pasamos de la tecnología de puesta en cola a los *temas*. Un [
 
 **Figura 4-16**. Arquitectura de temas
 
-En la ilustración anterior, los publicadores envían mensajes al tema. Al final, los suscriptores reciben mensajes de las suscripciones. En el centro, el tema reenvía los mensajes a las suscripciones en función de un conjunto de *reglas*, que se muestra en los cuadros azul oscuro. Las reglas actúan como un filtro que reenvía mensajes específicos a una suscripción. En este caso, se enviará un evento "CreateOrder" a la suscripción \# 1 y a la suscripción \# 3, pero no a la suscripción \# 2. Un evento "OrderCompleted" se enviaría a la suscripción \# 2 y a la suscripción \# 3.
+En la ilustración anterior, los publicadores envían mensajes al tema. Al final, los suscriptores reciben mensajes de las suscripciones. En el centro, el tema reenvía los mensajes a las suscripciones en función de un conjunto de reglas, que se muestra en los cuadros azul oscuro. Las reglas actúan como un filtro que reenvía mensajes específicos a una suscripción. En este caso, se enviará un evento "GetPrice" al precio y a las suscripciones de registro, ya que la suscripción de registro ha elegido recibir todos los mensajes.  Un evento "GetInformation" se enviaría a la información y a las suscripciones de registro.
 
 La nube de Azure admite dos servicios de temas distintos: Azure Service Bus temas y Azure EventGrid.
 
@@ -218,7 +218,7 @@ Event hubs admite la baja latencia y la retención de tiempo configurable. A dif
 
 Event hubs admite protocolos de publicación de eventos comunes, como HTTPS y AMQP. También es compatible con Kafka 1,0. [Las aplicaciones de Kafka existentes pueden comunicarse con el centro de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) mediante el protocolo Kafka, lo que proporciona una alternativa a la administración de clústeres de Kafka de gran tamaño. Muchos sistemas nativos de la nube de código abierto adoptan Kafka.
 
-Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan los eventos más recientes, se agregan al final de esta secuencia.En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
+Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan eventos más recientes, se agregan al final de esta secuencia.En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
 
 ![Creación de particiones del centro de eventos](./media/event-hub-partitioning.png)
 

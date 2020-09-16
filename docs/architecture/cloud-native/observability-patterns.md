@@ -1,13 +1,13 @@
 ---
 title: Patrones de observación
 description: Patrones de observación para aplicaciones nativas de la nube
-ms.date: 05/13/2020
-ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 08/10/2020
+ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613816"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539858"
 ---
 # <a name="observability-patterns"></a>Patrones de observación
 
@@ -15,7 +15,7 @@ Al igual que los patrones se han desarrollado para ayudar en el diseño del cód
 
 ## <a name="when-to-use-logging"></a>Cuándo usar el registro
 
-Sea cual sea el cuidado que tengamos, las aplicaciones casi siempre se comportan de maneras inesperadas en producción. Cuando los usuarios informan de problemas con una aplicación, resulta muy útil poder ver lo que estaba ocurriendo con la aplicación cuando se produjo el problema. Una de las formas más probadas y verdaderas de capturar información sobre lo que hace una aplicación mientras se está ejecutando es hacer que la aplicación anote lo que está haciendo. Este proceso se conoce como registro. Siempre que se produzcan errores o problemas en la producción, el objetivo debe ser reproducir las condiciones en las que se produjeron los errores, en un entorno que no sea de producción. Tener un buen registro en su lugar proporciona una guía básica para que los desarrolladores puedan seguir con el fin de duplicar problemas en un entorno que se pueda probar y experimentar con.
+Sea cual sea el cuidado que tengamos, las aplicaciones casi siempre se comportan de maneras inesperadas en producción. Cuando los usuarios informan de problemas con una aplicación, resulta útil poder ver lo que estaba ocurriendo con la aplicación cuando se produjo el problema. Una de las formas más probadas y verdaderas de capturar información sobre lo que hace una aplicación mientras se está ejecutando es hacer que la aplicación anote lo que está haciendo. Este proceso se conoce como registro. En cualquier momento en que se produzcan errores o problemas en la producción, el objetivo debe ser reproducir las condiciones en las que se produjeron los errores, en un entorno que no sea de producción. Tener un buen registro en su lugar proporciona una guía básica para que los desarrolladores puedan seguir con el fin de duplicar problemas en un entorno que se pueda probar y experimentar con.
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Desafíos al registrar con aplicaciones nativas de la nube
 
@@ -41,7 +41,7 @@ Por último, el número de usuarios en algunas aplicaciones nativas de la nube e
 Cada lenguaje de programación tiene herramientas que permiten escribir registros y, por lo general, la sobrecarga de escribir estos registros es baja. Muchas de las bibliotecas de registro de proporcionan el registro de diferentes tipos de críticas, que se pueden optimizar en tiempo de ejecución. Por ejemplo, la [biblioteca Serilog](https://serilog.net/) es una conocida biblioteca de registro estructurado para .net que proporciona los siguientes niveles de registro:
 
 * Verbose
-* Depuración
+* Depurar
 * Information
 * Advertencia
 * Error

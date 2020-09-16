@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 99b6893854c358720259095bf3c0270cb3676483
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e3d5a09730cb8e477bd506749017a403acff1696
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452180"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540573"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10:: RequestReJITWithInliners (método)
 
@@ -39,30 +39,30 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 - `cFunctions`
 
-  \[en] el número de funciones que se van a volver a compilar.
+  \[en] número de funciones que se van a volver a compilar.
 
 - `moduleIds`
 
-  \[en] especifica la parte `moduleId` de los pares (`module`, `methodDef`) que identifican las funciones que se van a volver a compilar.
+  \[en] especifica la `moduleId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
 
 - `methodIds`
 
-  \[en] especifica la parte `methodId` de los pares (`module`, `methodDef`) que identifican las funciones que se van a volver a compilar.
+  \[en] especifica la `methodId` parte de los `module` pares (, `methodDef` ) que identifican las funciones que se van a volver a compilar.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-[Requestrejit (](icorprofilerinfo4-requestrejit-method.md) no realiza ningún seguimiento de los métodos insertados. Se esperaba que el generador de perfiles bloqueara la inserción o realice un seguimiento de la inserción y llama a `RequestReJIT` de todos los inlineers para asegurarse de que se ReJITted cada instancia de un método insertado. Esto supone un problema con ReJIT en attach, ya que el generador de perfiles no está presente para supervisar la inserción. Se puede llamar a este método para garantizar que el conjunto completo de inlineers también se ReJITted.
+[Requestrejit (](icorprofilerinfo4-requestrejit-method.md) no realiza ningún seguimiento de los métodos insertados. Se espera que el generador de perfiles bloquee la inserción o realice un seguimiento de la inserción y llame a `RequestReJIT` para todos los inlineers para asegurarse de que se ReJITted cada instancia de un método insertado. Esto supone un problema con ReJIT en attach, ya que el generador de perfiles no está presente para supervisar la inserción. Se puede llamar a este método para garantizar que el conjunto completo de inlineers también se ReJITted.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/dependencies.md?pivots=os-windows).
+**Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).
 
 **Encabezado:** CorProf.idl, CorProf.h
 
 **Biblioteca:** CorGuids.lib
 
-**Versiones de .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorProfilerInfo10](icorprofilerinfo10-interface.md)

@@ -2,16 +2,16 @@
 title: Control de errores
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: f6c0d676a37648678b2b726a46a6238ccc1b3331
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9c7d6814a6bf1189fd85de5eb440ec4a6840447e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004888"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539988"
 ---
 # <a name="error-handling-in-windows-communication-foundation-wcf"></a>Control de errores en Windows Communication Foundation (WCF)
 
-Cuando un servicio detecta una excepción o error inesperados, hay varias maneras de diseñar una solución desde el control de excepciones. Aunque no hay una única solución de control de errores "correcta" o "procedimiento recomendado", hay varias rutas de acceso válidas que se deben tener en cuenta. Normalmente se recomienda implementar una solución híbrida que combine varios enfoques de la lista siguiente, en función de la complejidad de la implementación de WCF, el tipo y la frecuencia de las excepciones, la naturaleza controlada frente a la naturaleza no controlada del excepciones y requisitos de seguimiento, registro o Directiva asociados.
+Cuando un servicio detecta una excepción o error inesperados, hay varias maneras de diseñar una solución desde el control de excepciones. Aunque no hay una única solución de control de errores "correcta" o "procedimiento recomendado", hay varias rutas de acceso válidas que se deben tener en cuenta. Normalmente se recomienda implementar una solución híbrida que combine varios enfoques de la lista siguiente, en función de la complejidad de la implementación de WCF, el tipo y la frecuencia de las excepciones, la naturaleza administrada frente a no controlada de las excepciones y cualquier seguimiento, registro o requisito de directiva asociado.
 
 Estas soluciones se explican en más profundidad en el resto de esta sección.
 
@@ -21,13 +21,13 @@ El bloque de la aplicación de control de excepciones de la biblioteca de empres
 
 Esta biblioteca incluye un controlador de excepciones de contrato de error predefinido. Este controlador de excepciones está diseñado para su uso en los límites del servicio WCF y genera un nuevo contrato de error a partir de la excepción.
 
-Los bloques de aplicación tienen por objeto escribir prácticas recomendadas y proporcionar un enfoque común para el control de excepciones en la aplicación. Además, los controladores de errores personalizados y los contratos de error desarrollados por uno mismo pueden resultar muy útiles. Por ejemplo, los controladores de errores personalizados proporcionan una excelente oportunidad para promocionar automáticamente todas las excepciones a FaultExceptions y también para agregar capacidades de registro a la aplicación.
+Los bloques de aplicación tienen por objeto escribir prácticas recomendadas y proporcionar un enfoque común para el control de excepciones en la aplicación. Además, los controladores de errores personalizados y los contratos de error desarrollados por uno mismo pueden resultar muy útiles. Por ejemplo, controladores de errores personalizados proporcionan una oportunidad excelente de promover automáticamente todas las excepciones a FaultExceptions y también para agregar capacidades de inicio de sesión a la aplicación.
 
-Para obtener más información, consulte [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).
+Para obtener más información, consulte [Microsoft Enterprise Library](/previous-versions/msp-n-p/ff632023(v=pandp.10)).
 
 ## <a name="dealing-with-expected-exceptions"></a>Tratar las excepciones esperadas
 
-El curso de acción adecuado es detectar las excepciones esperadas en cada operación o punto de extensibilidad relevante, decidir si se pueden recuperar de y devolver el error personalizado adecuado en un FaultException\<T >.
+El curso de acción adecuado es detectar las excepciones esperadas en cada operación o punto de extensibilidad relevante, decidir si se pueden recuperar y devolver el error personalizado adecuado en un FaultException \<T> .
   
 ## <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Tratar las excepciones inesperadas mediante un IErrorHandler
 
@@ -35,7 +35,7 @@ Para tratar las excepciones inesperadas, el curso de acción recomendado es "enl
 
 Una "excepción inesperada" no suele ser una excepción irrecuperable ni una excepción de procesamiento; en su lugar, se trata de una excepción de usuario inesperada. Una excepción irrecuperable (como una excepción de memoria insuficiente), que normalmente la controla el controlador de [excepciones del modelo de servicio](xref:System.ServiceModel.Dispatcher.ExceptionHandler) , no se puede controlar de forma automática y la única razón para controlar este tipo de excepción puede ser el registro adicional o devolver una excepción estándar al cliente. Aparece una excepción de procesamiento en el procesamiento de mensajes, (por ejemplo, en la serialización, el codificador o el nivel formateador, normalmente no se pueden controlar en un IErrorHandler, pues suele ser demasiado antiguo o demasiado atrasado para que intervenga el controlador de errores en el momento en que estas excepciones aparecen. De forma similar, las excepciones de transporte no se pueden controlar en un IErrorHandler.
 
-Con un IErrorHandler, puede controlar explícitamente el comportamiento de la aplicación cuando se produce una excepción. Puede:  
+Con un IErrorHandler, puede controlar explícitamente el comportamiento de la aplicación cuando se produce una excepción. Puede hacer lo siguiente:  
 
 1. Decida si desea enviar o no un error al cliente.
 

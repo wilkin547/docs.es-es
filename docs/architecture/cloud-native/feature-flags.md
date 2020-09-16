@@ -3,16 +3,16 @@ title: Marcas de característica
 description: Implementar marcas de características en aplicaciones nativas en la nube que aprovechan App de Azure configuración
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614076"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540470"
 ---
 # <a name="feature-flags"></a>Marcas de característica
 
-En el capítulo 1, afirmamos que la nube nativa es mucho más rápida y ágil. Los usuarios esperan una capacidad de respuesta rápida, características innovadoras y sin tiempo de inactividad. `Feature flags`son una técnica de implementación moderna que ayuda a aumentar la agilidad de las aplicaciones nativas en la nube. Permiten implementar nuevas características en un entorno de producción, pero restringen su disponibilidad. Con el gesto de un conmutador, puede activar una nueva característica para usuarios específicos sin necesidad de reiniciar la aplicación ni implementar código nuevo. Separan la versión de las nuevas características de la implementación del código.
+En el capítulo 1, afirmamos que la nube nativa es mucho más rápida y ágil. Los usuarios esperan una capacidad de respuesta rápida, características innovadoras y sin tiempo de inactividad. `Feature flags` son una técnica de implementación moderna que ayuda a aumentar la agilidad de las aplicaciones nativas en la nube. Permiten implementar nuevas características en un entorno de producción, pero restringen su disponibilidad. Con el gesto de un conmutador, puede activar una nueva característica para usuarios específicos sin necesidad de reiniciar la aplicación ni implementar código nuevo. Separan la versión de las nuevas características de la implementación del código.
 
 Las marcas de características se basan en la lógica condicional que controla la visibilidad de la funcionalidad de los usuarios en tiempo de ejecución. En los sistemas modernos nativos en la nube, es habitual implementar nuevas características en producción pronto, pero probarlas con un público limitado. A medida que aumenta la confianza, la característica se puede implementar incrementalmente en audiencias más amplias.
 
@@ -29,7 +29,7 @@ Las marcas de características también fomentan el `trunk-based` desarrollo. Es
 
 En esencia, una marca de características es una referencia a un simple `decision object` . Devuelve un estado booleano de `on` o `off` . Normalmente, la marca contiene un bloque de código que encapsula una funcionalidad de característica. El estado de la marca determina si ese bloque de código se ejecuta para un usuario determinado. En la figura 10-11 se muestra la implementación de.
 
-```c#
+```csharp
 if (featureFlag) {
     // Run this code block if the featureFlag value is true
 } else {
@@ -49,7 +49,7 @@ Las marcas de características se pueden implementar fácilmente en un [servicio
 
 Una vez configurada en la clase startup, puede Agregar funcionalidad de marca de características en el nivel de controlador, acción o middleware. En la figura 10-12 se muestra la implementación de la acción y el controlador:
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public class ProductController : Controller
 {
@@ -57,7 +57,7 @@ public class ProductController : Controller
 }
 ```
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public IActionResult UpdateProductStatus()
 {
@@ -71,7 +71,7 @@ Si una marca de características está deshabilitada, el usuario recibirá un c�
 
 Las marcas de características también se pueden insertar directamente en clases de C#. En la figura 10-13 se muestra la inyección de marcas de características:
 
-```c#
+```csharp
 public class ProductController : Controller
 {
     private readonly IFeatureManager _featureManager;
