@@ -1,15 +1,15 @@
 ---
-title: Introducción sobre la seguridad
+title: Introducción a la seguridad
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545022"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550695"
 ---
-# <a name="security-overview"></a>Introducción sobre la seguridad
+# <a name="security-overview"></a>Introducción a la seguridad
 
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.
 
@@ -42,7 +42,7 @@ Para obtener más información sobre cómo proteger las aplicaciones, consulte l
 
 |Recurso|Descripción|
 |--------------|-----------------|
-|[Proteger aplicaciones](/visualstudio/ide/securing-applications)|Contiene vínculos a temas generales de la seguridad. Asimismo, incluye vínculos a temas sobre la protección de las aplicaciones distribuidas, aplicaciones web, aplicaciones móviles y de escritorio.|
+|[Protección de aplicaciones](/visualstudio/ide/securing-applications)|Contiene vínculos a temas generales de la seguridad. Asimismo, incluye vínculos a temas sobre la protección de las aplicaciones distribuidas, aplicaciones web, aplicaciones móviles y de escritorio.|
 
 ## <a name="code-access-security-cas"></a>Seguridad de acceso del código (CAS)
 
@@ -71,7 +71,7 @@ Para obtener más información, vea los siguientes recursos:
 |[Seguridad de acceso del código y ADO.NET](code-access-security.md)|Describe las interacciones entre la seguridad de acceso del código, la seguridad basada en funciones y los entornos de confianza parcial desde la perspectiva de una aplicación ADO.NET.|
 |[Seguridad de acceso del código](../../misc/code-access-security.md)|Contiene vínculos a temas adicionales que describen CAS en .NET Framework.|
 
-## <a name="database-security"></a>Seguridad de base de datos
+## <a name="database-security"></a>Seguridad de la base de datos
 
 El principio de privilegios mínimos también se aplica al origen de los datos. A continuación se citan algunas instrucciones generales para la seguridad de base de datos:
 
@@ -92,7 +92,7 @@ Para obtener más información, vea los siguientes recursos:
 |Recurso|Descripción|
 |--------------|-----------------|
 |[Seguridad de SQL Server](./sql/sql-server-security.md)|Proporciona una introducción general a la seguridad de SQL Server con escenarios de aplicación que orientan en la creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.|
-|[Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|
+|[Recomendaciones para las estrategias de acceso a datos](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|
 
 ## <a name="security-policy-and-administration"></a>Directiva de seguridad y administración
 
@@ -102,12 +102,12 @@ Para obtener más información, vea los siguientes recursos:
 
 |Recurso|Descripción|
 |--------------|-----------------|
-|[Administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|
-|[Prácticas recomendadas de la Directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|
+|[Administración de directivas de seguridad](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|
+|[Prácticas recomendadas de la Directiva de seguridad](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|
 
 ## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad en .NET](../../../standard/security/index.md)
 - [Seguridad de SQL Server](./sql/sql-server-security.md)
-- [Información general sobre ADO.NET](ado-net-overview.md)
+- [Información general de ADO.NET](ado-net-overview.md)

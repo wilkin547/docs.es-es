@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: d67d64dcf0003de28775ac947f8b5f72d7c2ba2a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597636"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556263"
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
 La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. En los temas de esta sección se muestra cómo realizar esta tarea básica en Windows Communication Foundation (WCF) de varias maneras.  
@@ -49,4 +49,4 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](security-overview.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

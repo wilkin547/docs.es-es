@@ -2,12 +2,12 @@
 title: Activación MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602549"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555242"
 ---
 # <a name="msmq-activation"></a>Activación MSMQ
 
@@ -349,4 +349,4 @@ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguri
 
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de hospedaje y persistencia de AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [Ejemplos de hospedaje y persistencia de AppFabric](/previous-versions/appfabric/ff383418(v=azure.10))

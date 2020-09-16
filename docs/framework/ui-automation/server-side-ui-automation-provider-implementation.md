@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ea1b5e668e29d854233d4dde4c0e6152d591da97
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: ee9fe5b3180abcc9ecbc4515e0af1e1c4b2e8b87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555437"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 
@@ -35,7 +35,7 @@ De forma específica, no use los campos de las clases de UIAutomationClient.dll,
 
 ## <a name="provider-implementation-by-windows-presentation-foundation-elements"></a>Implementación del proveedor con los elementos de Windows Presentation Foundation
 
-Para obtener más información sobre este tema, consulte [Automatización de la interfaz de usuario de un control personalizado de WPF](../wpf/controls/ui-automation-of-a-wpf-custom-control.md).
+Para obtener más información sobre este tema, consulte [Automatización de la interfaz de usuario de un control personalizado de WPF](/dotnet/desktop/wpf/controls/ui-automation-of-a-wpf-custom-control).
 
 <a name="Provider_Implementation_by_non_WPF_Elements"></a>
 
@@ -190,7 +190,7 @@ Un buen ejemplo de esto lo constituye un control rebar. Un rebar contiene bandas
 
 Para ello, el proveedor de raíz de fragmento del rebar expone un conjunto de elementos secundarios que representan a las bandas. Cada banda tiene un proveedor único que puede exponer propiedades y patrones. En su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, el proveedor de banda devuelve el proveedor de ventana predeterminado para el HWND de control. Para obtenerlo, llama a <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>y pasa el identificador de ventana del control. Por último, el proveedor de raíz de fragmento del rebar implementa la interfaz de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> y, en su implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> , devuelve el proveedor de banda adecuado para el control que contiene el HWND especificado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general sobre proveedores de UI Automation](ui-automation-providers-overview.md)
 - [Exponer un proveedor de UI Automation en el servidor](expose-a-server-side-ui-automation-provider.md)

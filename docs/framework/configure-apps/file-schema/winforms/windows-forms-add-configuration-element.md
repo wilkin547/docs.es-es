@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: 26b806f84c3e1bc44e0437a8f8806316b14897b8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73109659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557637"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -35,7 +35,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 | `key`     | Atributo necesario. Un nombre de clave predefinido que corresponde a un determinado Windows Forms característica personalizable. |
 | `value`   | Atributo necesario. Valor que se va a asignar a `key`. |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`nombres de atributos y valores asociados
+### <a name="key-attribute-names-and-associated-values"></a>`key` nombres de atributos y valores asociados
 
 | Nombre `key` | Valores | Descripción |
 | ---------- | ------ | ----------- |
@@ -65,17 +65,17 @@ A partir de .NET Framework 4.7, el elemento `<System.Windows.Forms.ApplicationCo
 
 El `<System.Windows.Forms.ApplicationConfigurationSection>` elemento permite agregar uno o varios `<add>` elementos secundarios, cada uno de los cuales define un valor de configuración específico.
 
-Para obtener información general sobre la compatibilidad con Windows Forms alta resolución de PPP, consulte [compatibilidad con alta resolución de PPP en Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md).
+Para obtener información general sobre la compatibilidad con Windows Forms alta resolución de PPP, consulte [compatibilidad con alta resolución de PPP en Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
-Windows Forms las aplicaciones que se ejecutan en versiones de Windows a partir de Windows 10 Creators Edition y versiones de destino de la .NET Framework a partir de la .NET Framework 4,7 se pueden configurar para aprovechar las mejoras de PPP altas introducidas en el .NET Framework 4,7. Entre ellas se incluyen las siguientes:
+Windows Forms las aplicaciones que se ejecutan en versiones de Windows a partir de Windows 10 Creators Edition y versiones de destino de la .NET Framework a partir de la .NET Framework 4,7 se pueden configurar para aprovechar las mejoras de PPP altas introducidas en el .NET Framework 4,7. Se incluyen los siguientes:
 
 - Compatibilidad con escenarios de PPP dinámicos en los que el usuario cambia los PPP o el factor de escala una vez que se ha iniciado una aplicación Windows Forms.
 
 - Mejoras en el ajuste de escala y diseño de varios controles Windows Forms, como el <xref:System.Windows.Forms.MonthCalendar> control y el <xref:System.Windows.Forms.CheckedListBox> control.
 
-Un reconocimiento de PPP alto es una característica opcional. de forma predeterminada, el valor de `DpiAwareness` es `false` . Puede optar por Windows Forms ' compatibilidad con reconocimiento de PPP estableciendo el valor de esta clave `PerMonitorV2` en en el archivo de configuración de la aplicación. Si está habilitado el reconocimiento de PPP, también se habilitan todas las características de PPP individuales. Entre ellas se incluyen las siguientes:
+Un reconocimiento de PPP alto es una característica opcional. de forma predeterminada, el valor de `DpiAwareness` es `false` . Puede optar por Windows Forms ' compatibilidad con reconocimiento de PPP estableciendo el valor de esta clave `PerMonitorV2` en en el archivo de configuración de la aplicación. Si está habilitado el reconocimiento de PPP, también se habilitan todas las características de PPP individuales. Se incluyen los siguientes:
 
 - Los mensajes cambiados por PPP, controlados por la `DisableDpiChangedMessageHandling` clave.
 
@@ -97,7 +97,7 @@ La configuración de participación predeterminada única que se proporciona al 
 
 Normalmente, se deja de participar en una característica determinada porque se ha elegido administrarla mediante programación.
 
-Para obtener más información sobre cómo aprovechar las ventajas de la compatibilidad con alta PPP en Windows Forms aplicaciones, consulte [compatibilidad con alta PPP en Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md).
+Para obtener más información sobre cómo aprovechar las ventajas de la compatibilidad con alta PPP en Windows Forms aplicaciones, consulte [compatibilidad con alta PPP en Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
@@ -107,7 +107,7 @@ A partir de la .NET Framework 4,7, Windows Forms controles elevan varios eventos
 
 El escalado de una o varias pases influye en la capacidad de respuesta percibida de la interfaz de usuario y en la apariencia visual de los elementos de la interfaz de usuario a medida que se escalan. A partir de la .NET Framework 4,7, Windows Forms utiliza el escalado de un solo paso. En versiones anteriores del .NET Framework, el escalado se realizaba a través de varias fases, lo que hacía que algunos controles se escalaran más de lo necesario. El ajuste de escala de un solo paso solo debe deshabilitarse si la aplicación depende del comportamiento anterior.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Sección de configuración de Windows Forms](index.md)
-- [Compatibilidad con PPP alta en Windows Forms](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Sección de configuración Windows Forms](index.md)
+- [Compatibilidad con PPP alta en Windows Forms](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)

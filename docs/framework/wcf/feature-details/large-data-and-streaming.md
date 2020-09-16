@@ -3,12 +3,12 @@ title: Datos de gran tamaño y secuencias
 description: Obtenga información sobre las consideraciones para la comunicación basada en XML de WCF, codificadores y datos de streaming, incluida la transferencia de datos binarios.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 58ef2ea1fd4f9aa800a91edbaabeb80f989b38f4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246589"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555034"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
   
  Para los datos que no tienen estas restricciones, normalmente es mejor enviar secuencias de mensajes dentro del ámbito de una sesión que un mensaje de gran tamaño. Para obtener más información, vea la sección "datos de streaming" más adelante en este tema.  
   
- Cuando envíe grandes cantidades de datos, tendrá que establecer la `maxAllowedContentLength` configuración de IIS (para obtener más información, consulte Configuración de los [límites de solicitudes de IIS](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) y la `maxReceivedMessageSize` configuración de enlace (por ejemplo, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). La `maxAllowedContentLength` propiedad tiene como valor predeterminado 28,6 MB y el `maxReceivedMessageSize` valor predeterminado de la propiedad es 64 KB.  
+ Cuando envíe grandes cantidades de datos, tendrá que establecer la `maxAllowedContentLength` configuración de IIS (para obtener más información, consulte Configuración de los [límites de solicitudes de IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) y la `maxReceivedMessageSize` configuración de enlace (por ejemplo, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). La `maxAllowedContentLength` propiedad tiene como valor predeterminado 28,6 MB y el `maxReceivedMessageSize` valor predeterminado de la propiedad es 64 KB.  
   
 ## <a name="encodings"></a>Codificaciones  
  Una *codificación* define un conjunto de reglas sobre cómo presentar los mensajes en la conexión. Un *codificador* implementa este tipo de codificación y es responsable, en el lado del remitente, de convertir una en memoria en <xref:System.ServiceModel.Channels.Message> una secuencia de bytes o en un búfer de bytes que se puede enviar a través de la red. En el lado del receptor, el codificador convierte una secuencia de bytes en un mensaje en memoria.  

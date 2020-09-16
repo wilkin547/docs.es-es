@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602640"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551150"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Seguridad de mensajes con un cliente de certificado
 El siguiente escenario muestra un cliente y un servicio de Windows Communication Foundation (WCF) protegidos mediante el modo de seguridad de mensajes. Tanto el cliente como el servicio se autentican con certificados. Para obtener más información, vea [seguridad de aplicaciones distribuidas](distributed-application-security.md).
@@ -21,7 +21,7 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
 
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Message|  
+|Modo de seguridad|Mensaje|  
 |Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)|Con el certificado del servicio|  
 |Autenticación (cliente)|Con el certificado del cliente|  
@@ -30,8 +30,8 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
 |Transporte|HTTP|  
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>web de Office  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+## <a name="service"></a>Servicio  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
@@ -85,7 +85,7 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -148,4 +148,4 @@ El siguiente escenario muestra un cliente y un servicio de Windows Communication
 - [Información general sobre seguridad](security-overview.md)
 - [Identidad del servicio y autenticación](service-identity-and-authentication.md)
 - [Trabajar con certificados](working-with-certificates.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

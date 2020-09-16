@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 97602b7341636219382b6a405c678bc458ef146a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556751"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y eficaces cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se va a procesar o trabajar con una sintaxis de consulta diferente para cada tipo de datos que se está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
@@ -41,7 +41,7 @@ Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y
 |Proveedor|Descripción|  
 |---|---|  
 |LINQ to Objects|El proveedor LINQ to Objects le permite consultar las matrices y colecciones en memoria. Si un objeto es compatible con las interfaces <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, el proveedor LINQ to Objects le permite consultarlo.<br /><br /> Puede habilitar el proveedor de LINQ to Objects importando el <xref:System.Linq> espacio de nombres, que se importa de forma predeterminada para todos los proyectos de Visual Basic.<br /><br /> Para obtener más información sobre el proveedor de LINQ to Objects, vea [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ a SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ to SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|El proveedor LINQ to XML le permite consultar y modificar XML. Puede modificar XML en memoria o puede cargar XML desde un archivo y guardarlo en él.<br /><br /> Además, el proveedor de LINQ to XML habilita literales XML y propiedades de eje XML que le permiten escribir XML directamente en el código de Visual Basic. Para obtener más información, vea [XML](../xml/index.md).|  
 |LINQ to DataSet|El proveedor de LINQ to DataSet permite consultar y actualizar datos en un conjunto de datos de ADO.NET. Puede agregar la eficacia de LINQ a las aplicaciones que utilicen conjuntos de datos con el fin de simplificar y ampliar las funcionalidades de consulta, agregado y actualización de los datos del conjunto de datos.<br /><br /> Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
@@ -180,7 +180,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  Para obtener ejemplos con instrucciones paso a paso, consulte [Cómo: consultar una base de datos](how-to-query-a-database-by-using-linq.md) y [Cómo: llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic características compatibles con LINQ  
- Visual Basic incluye otras características destacables que facilitan el uso de LINQ y reducen la cantidad de código que debe escribir para realizar consultas LINQ. Entre ellas se incluyen las siguientes:  
+ Visual Basic incluye otras características destacables que facilitan el uso de LINQ y reducen la cantidad de código que debe escribir para realizar consultas LINQ. Entre ellas, se incluyen las siguientes:  
   
 - **Tipos anónimos**, que permiten crear un nuevo tipo basado en el resultado de una consulta.  
   
@@ -221,7 +221,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Incluye información general, guía de programación y ejemplos de LINQ to SQL.|  
 |[LINQ to Objects](../../concepts/linq/linq-to-objects.md)|Incluye información general, guía de programación y ejemplos de LINQ to Objects.|  
 |[LINQ to ADO.NET (Página de portal)](../../concepts/linq/linq-to-adonet-portal-page.md)|Incluye vínculos a información general, guía de programación y ejemplos de LINQ to ADO.NET.|  
-|[LINQ to XML](../../concepts/linq/linq-to-xml.md)|Incluye información general, guía de programación y ejemplos de LINQ to XML.|  
+|[LINQ to XML](../../../../standard/linq/linq-xml-overview.md)|Incluye información general, guía de programación y ejemplos de LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Temas de procedimientos y tutoriales
  [Cómo: Consultar una base de datos](how-to-query-a-database-by-using-linq.md)  
@@ -243,13 +243,13 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
- [Capítulo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) en [programación Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [Capítulo 17: LINQ](/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) en [programación Visual Basic 2008](/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
 - [Información general sobre LINQ to XML en Visual Basic](../xml/overview-of-linq-to-xml.md)
 - [Información general de LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Herramientas LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [DataContext (métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

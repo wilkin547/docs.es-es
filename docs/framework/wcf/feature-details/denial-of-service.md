@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599274"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557585"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -44,7 +44,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 ## <a name="auditing-event-log-can-be-filled"></a>Se puede rellenar el registro de eventos de auditoría  
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y así hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla.  
   
- Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información sobre el uso de la Visor de eventos para ver y administrar registros de eventos, vea [visor de eventos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Para obtener más información, consulte [Auditoría](auditing-security-events.md).  
+ Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría. Para obtener más información sobre el uso de la Visor de eventos para ver y administrar registros de eventos, vea [visor de eventos](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Para obtener más información, consulte [Auditoría](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Las implementaciones no válidas de IAuthorizationPolicy pueden hacer que el servicio deje de responder  
  La llamada al <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método en una implementación defectuosa de la <xref:System.IdentityModel.Policy.IAuthorizationPolicy> interfaz puede hacer que el servicio deje de responder.  
@@ -61,7 +61,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
   
  Para mitigar esto, haga referencia al certificado exacto que se va a usar con un criterio de búsqueda más preciso en el [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Por ejemplo, utilice la opción <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> y especifique el certificado por su huella digital única (hash).  
   
- Para obtener más información acerca de la característica de inscripción automática, consulte [inscripción automática de certificados en Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
+ Para obtener más información acerca de la característica de inscripción automática, consulte [inscripción automática de certificados en Windows Server 2003](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Último de varios nombres de asunto alternativos que se usan en la autorización  
  En el poco probable caso de que un certificado X.509 contenga varios nombres de asunto alternativos, y que usted autorice el uso del nombre de asunto alternativo, puede que se produzca un error en la autorización.  
@@ -86,5 +86,5 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
 - [Elevación de privilegios](elevation-of-privilege.md)
 - [Denegación de servicio](denial-of-service.md)
 - [Ataques por repetición](replay-attacks.md)
-- [Alteración de datos](tampering.md)
+- [Manipulación](tampering.md)
 - [Escenarios no admitidos](unsupported-scenarios.md)

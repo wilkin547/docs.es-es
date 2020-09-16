@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 7845bc45d0baecb07e4c03531f21d900c4e23bf7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595250"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551098"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Seguridad de los mensajes con un cliente de Windows sin negociación de credenciales
 
@@ -25,7 +25,7 @@ Tanto el servicio como el cliente están en el mismo dominio, o dominios, de con
 
 |Característica|Descripción|
 |--------------------|-----------------|
-|Modo de seguridad|Message|
+|Modo de seguridad|Mensaje|
 |Interoperabilidad|Sí, WS-Security con clientes Kerberos compatibles con el perfil del token|
 |Autenticación (servidor)|Autenticación mutua del servidor y el cliente|
 |Autenticación (cliente)|Autenticación mutua del servidor y el cliente|
@@ -34,9 +34,9 @@ Tanto el servicio como el cliente están en el mismo dominio, o dominios, de con
 |Transporte|HTTP|
 |Enlace|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>web de Office
+## <a name="service"></a>Servicio
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un servicio independiente mediante el código sin configuración.
 
@@ -53,7 +53,7 @@ El código siguiente crea un extremo de servicio que utiliza el modo de segurida
 
 2. Utilice una cuenta de dominio arbitraria de Active Directory para ejecutar el servicio. En este caso, es necesario establecer un SPN para esa cuenta de dominio. Una manera de hacerlo es utilizar la herramienta de la utilidad Setspn.exe. Una vez creado el SPN para la cuenta del servicio, configure WCF para publicar ese SPN en los clientes del servicio a través de sus metadatos (WSDL). Esto se consigue estableciendo la identidad del punto de conexión expuesto, mediante un archivo de configuración de la aplicación o el código. El siguiente ejemplo publica la identidad mediante programación.
 
-Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea el [suplemento técnico de Kerberos para Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Para obtener más información sobre las identidades del extremo, vea [modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md).
+Para obtener más información acerca de los SPN, el protocolo Kerberos y Active Directory, vea el [suplemento técnico de Kerberos para Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)). Para obtener más información sobre las identidades del extremo, vea [modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md).
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
@@ -98,7 +98,7 @@ En lugar del código, se puede utilizar la siguiente configuración.
 
 ## <a name="client"></a>Cliente
 
-El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:
+El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:
 
 - Cree un cliente independiente mediante el código (y el código de cliente).
 
@@ -112,9 +112,9 @@ El código y la configuración siguientes están diseñados para ejecutarse de f
 El siguiente código configura el cliente. El modo de seguridad se establece en mensaje, y el tipo de credencial de cliente se establece en Windows. Tenga en cuenta que las propiedades <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> y <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> se establecen en `false`.
 
 > [!NOTE]
-> Para utilizar el tipo de credencial de Windows sin negociación, el cliente debe configurarse con el SPN de la cuenta del servicio, antes de iniciar la comunicación con el servicio. El cliente utiliza el SPN para obtener el token de Kerberos para autenticar y proteger la comunicación con el servicio. El ejemplo siguiente muestra cómo configurar el cliente con el SPN del servicio. Si usa la herramienta de [utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el cliente, el SPN del servicio se propagará automáticamente al cliente desde los metadatos del servicio (WSDL), si los metadatos del servicio contienen esa información. Para obtener más información sobre cómo configurar el servicio para incluir su SPN en los metadatos del servicio, vea la sección "servicio" más adelante en este tema.
+> Para utilizar el tipo de credencial de Windows sin negociación, el cliente debe configurarse con el SPN de la cuenta del servicio, antes de iniciar la comunicación con el servicio. El cliente utiliza el SPN para obtener el token de Kerberos para autenticar y proteger la comunicación con el servicio. El ejemplo siguiente muestra cómo configurar el cliente con el SPN del servicio. Si usa la herramienta de [utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para generar el cliente, el SPN del servicio se propagará automáticamente al cliente desde los metadatos del servicio (WSDL), si los metadatos del servicio contienen esa información. Para obtener más información sobre cómo configurar el servicio para incluir su SPN en los metadatos del servicio, vea la sección "servicio" más adelante en este tema.
 >
-> Para obtener más información acerca de los SPN, Kerberos y Active Directory, vea el [suplemento técnico de Kerberos para Windows](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Para obtener más información sobre las identidades del extremo, vea el tema [modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md) .
+> Para obtener más información acerca de los SPN, Kerberos y Active Directory, vea el [suplemento técnico de Kerberos para Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10)). Para obtener más información sobre las identidades del extremo, vea el tema [modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md) .
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
@@ -157,4 +157,4 @@ El siguiente código configura el cliente. Tenga en cuenta que el [\<servicePrin
 
 - [Información general sobre seguridad](security-overview.md)
 - [Identidad del servicio y autenticación](service-identity-and-authentication.md)
-- [Modelo de seguridad para Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de seguridad para Windows Server App Fabric](/previous-versions/appfabric/ee677202(v=azure.10))

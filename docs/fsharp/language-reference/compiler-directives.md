@@ -4,12 +4,12 @@ description: 'Obtenga información sobre las directivas de preprocesador de leng
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: aee307eb7bccc8d91b5162f3f43db3b806b761d0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855379"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557325"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -40,7 +40,7 @@ El código que está desactivado por una de estas directivas aparece atenuado en
 > [!NOTE]
 > El comportamiento de las directivas de compilación condicional no es el mismo que en otros idiomas. Así, no se pueden usar expresiones booleanas con símbolos, mientras que `true` y `false` no tienen ningún significado especial. Los símbolos que se usan en la directiva `if` se tienen que definir con la línea de comandos o en la configuración del proyecto; no hay ninguna directiva de preprocesador `define`.
 
-El siguiente código muestra el uso de las directivas `#if`, `#else` y `#endif`. En este ejemplo, el código contiene dos versiones de la definición de `function1`. Cuando `VERSION1` se define mediante la [opción-define del compilador](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), se activa el código entre la `#if` Directiva y la `#else` Directiva. De lo contrario, se activará el código entre `#else` y `#endif`.
+El siguiente código muestra el uso de las directivas `#if`, `#else` y `#endif`. En este ejemplo, el código contiene dos versiones de la definición de `function1`. Cuando `VERSION1` se define mediante la [opción-define del compilador](./compiler-options.md), se activa el código entre la `#if` Directiva y la `#else` Directiva. De lo contrario, se activará el código entre `#else` y `#endif`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -76,7 +76,7 @@ En la siguiente tabla se recoge una lista de las directivas de compilador dispon
 
 |Directiva|Descripción|
 |---------|-----------|
-|`#light`["ON" &#124; "OFF"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, vea [Sintaxis detallada](verbose-syntax.md).|
+|`#light` ["ON" &#124; "OFF"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, vea [Sintaxis detallada](verbose-syntax.md).|
 
 Para las directivas de intérprete (fsi.exe), vea [programación interactiva con F #](../tutorials/fsharp-interactive/index.md).
 

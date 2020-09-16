@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 9d1f2e35c79ca32595711316885991717c4c1696
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 9f6049913a2e8cf3e3f220b0148598a236b60bef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281755"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557076"
 ---
 # <a name="code-access-security-basics"></a>Conceptos básicos sobre la seguridad de acceso del código
 
@@ -54,7 +54,7 @@ Seguridad de acceso del código no elimina la posibilidad de que se produzcan er
 La sintaxis de seguridad declarativa utiliza [atributos](../../standard/attributes/index.md) para colocar información de seguridad en los [metadatos](../../standard/metadata-and-self-describing-components.md) del código. Los atributos se pueden colocar en el nivel de ensamblado, clase o miembro para indicar el tipo de solicitud, petición o invalidación que desea usar. Las solicitudes se usan en aplicaciones destinadas a Common Language Runtime para informar al sistema de seguridad de runtime sobre los permisos que la aplicación necesita o no desea. Las peticiones e invalidaciones se usan en las bibliotecas para ayudar a proteger los recursos de los llamadores o para invalidar el comportamiento de seguridad predeterminado.
 
 > [!NOTE]
-> En el .NET Framework 4, ha habido cambios importantes en el modelo de seguridad .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+> En el .NET Framework 4, ha habido cambios importantes en el modelo de seguridad .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes).
 
 Para usar llamadas de seguridad declarativas, debe inicializar los datos de estado del objeto de permiso para que represente la forma concreta del permiso necesario. Cada permiso integrado tiene un atributo al que se pasa una enumeración <xref:System.Security.Permissions.SecurityAction> para describir el tipo de operación de seguridad que se desea realizar. Sin embargo, los permisos también aceptan parámetros propios exclusivos.
 
@@ -157,7 +157,7 @@ Además, el código que tiene permiso de acceso a código no administrado probab
 
 Si desea que la aplicación realice una operación que requiere el acceso a código no administrado, deberá hacerlo a través de una clase administrada de confianza que encapsule la funcionalidad necesaria (si esta clase existe). No cree una clase contenedora usted mismo si ya existe una en la biblioteca de clases seguras. La clase contenedora, que debe tener un alto grado de confianza que le permita realizar la llamada a código no administrado, es responsable de exigir que sus llamadores tengan los permisos adecuados. Si usa la clase contenedora, el código solo necesita solicitar y recibir los permisos que requiere la clase contenedora.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.PermissionSet>
 - <xref:System.Security.Permissions.FileIOPermission>

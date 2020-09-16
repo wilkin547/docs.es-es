@@ -2,12 +2,12 @@
 title: Activación basada en la configuración en IIS y WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f947a64acdf602d12fcd2319a1b994912ecb331e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593586"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556634"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Activación basada en la configuración en IIS y WAS
 
@@ -46,4 +46,4 @@ La activación basada en la configuración toma los metadatos que se solían enc
 - [Servicios de hospedaje](../hosting-services.md)
 - [Hospedar información general de servicios de flujo de trabajo](hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

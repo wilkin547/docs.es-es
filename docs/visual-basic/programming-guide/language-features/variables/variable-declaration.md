@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410301"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557481"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y sus características. La instrucción de declaración para variables es la [instrucción Dim](../../../language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -42,15 +42,15 @@ Declare una variable para especificar su nombre y sus características. La instr
 ## <a name="declaring-data-type"></a>Declarar el tipo de datos  
  La cláusula [as](../../../language-reference/statements/as-clause.md) de la instrucción de declaración permite definir el tipo de datos o el tipo de objeto de la variable que se está declarando. Puede especificar cualquiera de los siguientes tipos para una variable:  
   
-- Un tipo de datos elemental, como `Boolean` , `Long` o`Decimal`  
+- Un tipo de datos elemental, como `Boolean` , `Long` o `Decimal`  
   
 - Un tipo de datos compuesto, como una matriz o una estructura  
   
 - Un tipo de objeto, o clase, definido en la aplicación o en otra aplicación  
   
-- Una clase .NET Framework, como <xref:System.Windows.Forms.Label> o.<xref:System.Windows.Forms.TextBox>  
+- Una clase .NET Framework, como <xref:System.Windows.Forms.Label> o. <xref:System.Windows.Forms.TextBox>  
   
-- Un tipo de interfaz, como <xref:System.IComparable> o.<xref:System.IDisposable>  
+- Un tipo de interfaz, como <xref:System.IComparable> o. <xref:System.IDisposable>  
   
  Puede declarar varias variables en una instrucción sin tener que repetir el tipo de datos. En las siguientes instrucciones, las variables `i` , `j` y `k` se declaran como de tipo `Integer` , `l` y `m` como `Long` , y `x` y `y` como `Single` :  
   
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Para obtener más información sobre los tipos de datos, vea [tipos de datos](../data-types/index.md). Para obtener más información sobre los objetos, vea [objetos y clases](../objects-and-classes/index.md) y [programación con componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Para obtener más información sobre los tipos de datos, vea [tipos de datos](../data-types/index.md). Para obtener más información sobre los objetos, vea [objetos y clases](../objects-and-classes/index.md) y [programación con componentes](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Inferencia de tipo de variable local  
  La *inferencia de tipos* se usa para determinar los tipos de datos de las variables locales declaradas sin una `As` cláusula. El compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización. Esto le permite declarar variables sin indicar explícitamente un tipo. En el ejemplo siguiente, `num1` y `num2` están fuertemente tipados como enteros.  
@@ -77,13 +77,13 @@ Dim l, m As Long, x, y As Single
   
  El nivel de *acceso* de una variable es la extensión del código que tiene permiso de acceso. Esto viene determinado por el modificador de acceso (por ejemplo, [público](../../../language-reference/modifiers/public.md) o [privado](../../../language-reference/modifiers/private.md)) que se usa en la `Dim` instrucción. Para obtener más información, consulte [niveles de acceso en Visual Basic](../declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para crear una variable](how-to-create-a-new-variable.md)
 - [Procedimiento para introducir y extraer los datos de una variable](how-to-move-data-into-and-out-of-a-variable.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
 - [Contra](../../../language-reference/modifiers/protected.md)
-- [Respecto](../../../language-reference/modifiers/friend.md)
+- [Friend](../../../language-reference/modifiers/friend.md)
 - [Estática](../../../language-reference/modifiers/static.md)
 - [Características de los elementos declarados](../declared-elements/declared-element-characteristics.md)
 - [Inferencia de tipo de variable local](local-type-inference.md)

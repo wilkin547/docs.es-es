@@ -2,12 +2,12 @@
 title: Conceder permisos de nivel de fila en SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782356"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554858"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
 
@@ -23,7 +23,7 @@ En el siguiente ejemplo se describe cómo configurar el filtrado por filas basá
 
 - Habilite el filtrado por filas:
 
-  - Si usa SQL Server 2016 o posterior, o la [Base de datos SQL de Azure](https://docs.microsoft.com/azure/sql-database/), cree una directiva de seguridad que agregue un predicado en la tabla restringiendo las filas devueltas a aquellas que coinciden con el usuario de base de datos actual (mediante la función integrada CURRENT_USER()) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME()):
+  - Si usa SQL Server 2016 o posterior, o la [Base de datos SQL de Azure](/azure/sql-database/), cree una directiva de seguridad que agregue un predicado en la tabla restringiendo las filas devueltas a aquellas que coinciden con el usuario de base de datos actual (mediante la función integrada CURRENT_USER()) o el nombre de inicio de sesión actual (mediante la función integrada de SUSER_SNAME()):
 
       ```sql
       CREATE SCHEMA Security
@@ -67,6 +67,6 @@ En el siguiente ejemplo se describe cómo configurar el filtrado por filas basá
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
-- [Administración de permisos con procedimientos almacenados en SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
-- [Escritura de código SQL dinámico y seguro en SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Administrar permisos con procedimientos almacenados en SQL Server](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [Escribir SQL dinámico seguro en SQL Server](writing-secure-dynamic-sql-in-sql-server.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

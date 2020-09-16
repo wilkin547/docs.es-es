@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: b50e76b8f832c3a214ca54f97bab8b0b6789ac25
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403322"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550994"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
 Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo indica al compilador de Visual Basic que omita el texto que le sigue o el *Comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
@@ -41,10 +41,10 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
 |---|---|  
 |Tipo de comentario|Descripción del comentario|  
 |Propósito|Describe qué hace el procedimiento (no cómo lo hace).|  
-|Suposiciones|Enumera cada variable externa, control, archivo abierto u otro elemento al cual el procedimiento tenga acceso.|  
+|Supuestos|Enumera cada variable externa, control, archivo abierto u otro elemento al cual el procedimiento tenga acceso.|  
 |Efectos|Enumera cada variable externa, control o archivo que esté afectado, y el efecto que tienen (únicamente si no es evidente).|  
 |Entradas|Especifica el propósito del argumento.|  
-|Devuelve|Explica los valores que devuelve el procedimiento|  
+|Devoluciones|Explica los valores que devuelve el procedimiento|  
   
  Recuerde los siguientes puntos:  
   
@@ -59,9 +59,9 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
 > [!NOTE]
 > También puede agregar comentarios al código poniendo la palabra clave `REM` antes del texto. Sin embargo, los `'` botones de símbolo y de **Comentario** / **Uncomment** son más fáciles de usar y requieren menos espacio y memoria.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Instinto básico: documentar el código con comentarios XML](https://docs.microsoft.com/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
+- [Instinto básico: documentar el código con comentarios XML](/archive/msdn-magazine/2009/may/documenting-your-code-with-xml-comments)
 - [Procedimiento para crear documentación XML](how-to-create-xml-documentation.md)
 - [Etiquetas de comentario XML](../../language-reference/xmldoc/index.md)
 - [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)

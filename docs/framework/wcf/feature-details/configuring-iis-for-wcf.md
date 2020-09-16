@@ -2,12 +2,12 @@
 title: Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597571"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556660"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Configuración de Internet Information Services 7.0 para Windows Communication Foundation
 
@@ -71,4 +71,4 @@ Internet Information Services (IIS) 7.0 tiene un diseño modular que le permite 
 - [Arquitectura de activación de WAS](was-activation-architecture.md)
 - [Configuración de WAS para su uso con WCF](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Procedimiento para instalar y configurar los componentes de activación de WFC](how-to-install-and-configure-wcf-activation-components.md)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

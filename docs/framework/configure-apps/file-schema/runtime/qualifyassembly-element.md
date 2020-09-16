@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0479b966abd0cfa3c570355e62e4b42264a3114f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153924"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554559"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> (Elemento)
 Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cuando se utiliza un nombre parcial.  
@@ -73,8 +73,8 @@ Especifica el nombre completo del ensamblado que debe cargarse dinámicamente cu
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de configuración en tiempo de ejecución](index.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Referencias parciales a ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Referencias parciales a ensamblados](/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

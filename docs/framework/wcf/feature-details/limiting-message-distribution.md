@@ -2,12 +2,12 @@
 title: Limitación de la distribución de mensajes
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586317"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555021"
 ---
 # <a name="limiting-message-distribution"></a>Limitación de la distribución de mensajes
 
@@ -19,7 +19,7 @@ El concepto de `PeerHopCount` es similar al de período de vida (TTL) que se usa
 
 El número de saltos se puede agregar a un mensaje agregando `PeerHopCount` como un atributo a la propiedad aplicable o campo en la implementación de la clase de mensaje. Puede establecer esto en un valor concreto antes de enviar el mensaje a la malla. De esta manera, el número de saltos puede servir para limitar la distribución de mensajes a lo largo de la malla cuando sea necesario, evitando así la posible duplicación innecesaria de los mensajes. Esto es útil cuando la malla contiene una gran cantidad de datos redundantes o para enviar un mensaje a los vecinos inmediatos o a los vecinos a pocos saltos de distancia.
 
-- Para obtener fragmentos de código e información relacionada, vea el blog [PeerHopCount: control](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) de la publicación de distribución de mensajes en el blog del canal del mismo nivel.
+- Para obtener fragmentos de código e información relacionada, vea el blog [PeerHopCount: control](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) de la publicación de distribución de mensajes en el blog del canal del mismo nivel.
 
 ## <a name="message-propagation-filter"></a>Filtro de propagación de mensajes
 
@@ -27,7 +27,7 @@ El número de saltos se puede agregar a un mensaje agregando `PeerHopCount` como
 
 <xref:System.ServiceModel.PeerMessagePropagationFilter> es una clase base abstracta con una función única, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. El primer argumento de la llamada al método pasa una copia completa del mensaje. Cualquier cambio realizado en el mensaje no afecta al mensaje real. El último argumento de la llamada al método identifica el origen del mensaje (`PeerMessageOrigination.Local` o `PeerMessageOrigination.Remote`). Las implementaciones concretas de este método deben devolver una constante de la enumeración <xref:System.ServiceModel.PeerMessagePropagation> que indique si el mensaje se debe reenviar a la aplicación local (`Local`), a clientes remotos (`Remote`), a ambos (`LocalAndRemote`) o a ninguno (`None`). Para aplicar este filtro, puede tener acceso al objeto `PeerNode` correspondiente y especificar una instancia de la clase de filtro de propagación derivada en la propiedad `PeerNode.MessagePropagationFilter`. Asegúrese de que el filtro de propagación está adjunto antes de abrir el canal del mismo nivel.
 
-- Para obtener fragmentos de código e información relacionada, vea la entrada de [canal del mismo nivel y MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) en el blog del canal del mismo nivel.
+- Para obtener fragmentos de código e información relacionada, vea la entrada de [canal del mismo nivel y MessagePropagationFilter](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) en el blog del canal del mismo nivel.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>Contacto con un nodo Individual de la malla
 

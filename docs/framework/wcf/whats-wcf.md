@@ -7,12 +7,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245614"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556068"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 Windows Communication Foundation (WCF) es un marco para la creación de aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un punto de conexión de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:
@@ -104,4 +104,4 @@ Las características de hospedaje del servidor de aplicaciones AppFabric de Wind
 - [Tutorial de Introducción](getting-started-tutorial.md)
 - [Guía de la documentación](guide-to-the-documentation.md)
 - [Programación básica de WCF](basic-wcf-programming.md)
-- [Ejemplos de Windows Communication Foundation](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)
+- [Ejemplos de Windows Communication Foundation](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

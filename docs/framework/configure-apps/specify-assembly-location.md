@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: e14bdc12598d0aa6cdd2789b09a04ab8ed134169
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141709"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555125"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificar la ubicación de un ensamblado
 Hay dos maneras de especificar la ubicación de un ensamblado:  
@@ -21,7 +21,7 @@ Hay dos maneras de especificar la ubicación de un ensamblado:
   
 - Usar el [\<probing>](./file-schema/runtime/probing-element.md) elemento.  
   
- También puede usar la [herramienta de configuración de .NET Framework (Mscorcfg. msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblados o especificar ubicaciones para la Common Language Runtime para sondear ensamblados.  
+ También puede usar la [herramienta de configuración de .NET Framework (Mscorcfg. msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblados o especificar ubicaciones para la Common Language Runtime para sondear ensamblados.  
   
 ## <a name="using-the-codebase-element"></a>Usar el \<codeBase> elemento  
  Puede usar el **\<codeBase>** elemento solo en los archivos de configuración del equipo o de directiva de edición que también redirigen la versión del ensamblado. Cuando el tiempo de ejecución determina la versión de ensamblado que se va a usar, aplica la configuración de base de código del archivo que determina la versión. Si no se indica ninguna base de código, el tiempo de ejecución sondea el ensamblado de la manera normal. Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  

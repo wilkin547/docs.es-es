@@ -1,13 +1,13 @@
 ---
-title: Colecciones
+title: Recopilaciones
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551072"
 ---
 # <a name="collections-visual-basic"></a>Colecciones (Visual Basic)
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-El ejemplo siguiente quita elementos de una lista genérica. En lugar de una `For Each` instrucción, una instrucción [for... ](../../language-reference/statements/for-next-statement.md)Se usa la siguiente instrucción que recorre en iteración en orden descendente. Esto es porque el método <xref:System.Collections.Generic.List%601.RemoveAt%2A> hace que los elementos después de un elemento quitado tengan un valor de índice inferior.
+El ejemplo siguiente quita elementos de una lista genérica. En lugar de una `For Each` instrucción, una instrucción [for... ](../../language-reference/statements/for-next-statement.md) Se usa la siguiente instrucción que recorre en iteración en orden descendente. Esto es porque el método <xref:System.Collections.Generic.List%601.RemoveAt%2A> hace que los elementos después de un elemento quitado tengan un valor de índice inferior.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ Puede crear una colección genérica mediante una de las clases del espacio de n
 
 En la tabla siguiente se enumeran algunas de las clases usadas con frecuencia del espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>:
 
-|Class|Descripción|
+|Clase|Descripción|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Representa una colección de pares de clave y valor que se organizan según la clave.|
 |<xref:System.Collections.Generic.List%601>|Representa una lista de objetos a los que puede tener acceso el índice. Proporciona métodos para buscar, ordenar y modificar listas.|
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Definición de una colección personalizada
 
-Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, vea [enumerar una colección](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Puede definir una colección implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.IEnumerable>. Para obtener más información, vea [enumerar una colección](/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Aunque puede definir una colección personalizada, es mejor usar las colecciones incluidas en .NET Framework. Estas colecciones se describen en la sección [Tipos de colecciones](#kinds-of-collections) de este tema.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bbff7b53bacd50746de56c8dba85cdc9e4b1ad9b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309214"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556413"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 
@@ -178,7 +178,7 @@ Puede omitir la comprobación para ensamblados transparentes de plena confianza 
 
 La propiedad <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> es `false` de forma predeterminada, por lo que la propiedad debe establecerse en `true` para omitir la comprobación. Esto debe hacerse únicamente con fines de optimización. Debe asegurarse de que el código transparente del ensamblado se puede comprobar mediante la `transparent` opción de la [herramienta peverify](../tools/peverify-exe-peverify-tool.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
-- [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
+- [Cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes)

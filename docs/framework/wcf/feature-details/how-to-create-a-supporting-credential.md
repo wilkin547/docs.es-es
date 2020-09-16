@@ -2,18 +2,18 @@
 title: Procedimiento para crear una credencial de apoyo
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597155"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557403"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedimiento para crear una credencial de apoyo
 Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es una *credencial de apoyo*. En este tema se explica cómo implementar estas credenciales en un cliente de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, vea [Especificaciones de seguridad de servicios web](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
+> La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, vea [Especificaciones de seguridad de servicios web](/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Tokens auxiliares  
  En Resumen, cuando se usa la seguridad de mensajes, siempre se usa una *credencial principal* para proteger el mensaje (por ejemplo, un certificado X. 509 o un vale de Kerberos).  
@@ -80,6 +80,6 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 ### <a name="code"></a>Código  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Procedimiento para crear un enlace personalizado mediante SecurityBindingElement](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

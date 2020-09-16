@@ -2,12 +2,12 @@
 title: <certificate> de <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 2044dc6fb4ae688a0a3c7e29b3b7696df0d0d218
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ed24e9061f57798197ad41c1f556ce612a357e9e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398198"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555320"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> de \<peer>
 Especifica un certificado usado por un igual.  
@@ -56,7 +56,7 @@ Especifica un certificado usado por un igual.
   
  Para obtener más información sobre la programación punto a punto, vea [redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
@@ -64,8 +64,8 @@ Especifica un certificado usado por un igual.
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Autenticación del mensaje del canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Autenticación personalizada de canal del mismo nivel](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
