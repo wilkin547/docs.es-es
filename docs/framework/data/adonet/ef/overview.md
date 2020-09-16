@@ -3,12 +3,12 @@ title: Información general sobre Entity Framework
 description: La Entity Framework en ADO.NET admite el desarrollo de aplicaciones orientadas a datos que funcionan en un nivel más alto de abstracción que las aplicaciones tradicionales.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286810"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557988"
 ---
 # <a name="entity-framework-overview"></a>Información general de Entity Framework
 
@@ -48,7 +48,7 @@ Como algo más que otra solución de asignación objeto-relacional, Entity Frame
 
 - LINQ to Entities. Proporciona compatibilidad con Language-Integrated Query (LINQ) para consultar los tipos de entidad que se definen en un modelo conceptual. Para obtener más información, vea [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialecto de SQL independiente del almacenamiento que trabaja directamente con entidades del modelo conceptual y que admite conceptos de Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)]se utiliza tanto con consultas de objeto como con consultas que se ejecutan con el proveedor de EntityClient. Para obtener más información, vea [información general sobre Entity SQL](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialecto de SQL independiente del almacenamiento que trabaja directamente con entidades del modelo conceptual y que admite conceptos de Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] se utiliza tanto con consultas de objeto como con consultas que se ejecutan con el proveedor de EntityClient. Para obtener más información, vea [información general sobre Entity SQL](./language-reference/entity-sql-overview.md).
 
 El Entity Framework incluye el proveedor de datos de EntityClient. Este proveedor administra las conexiones, traduce las consultas de entidad en consultas específicas del origen de datos y devuelve un lector de datos que el Entity Framework utiliza para materializar los datos de la entidad en los objetos. Cuando no se requiere la materialización de los objetos, el proveedor de EntityClient también se puede utilizar como un proveedor de datos ADO.NET estándar habilitando las aplicaciones para ejecutar las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] y usar el lector de datos de solo lectura devuelto. Para obtener más información, consulte [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -72,12 +72,12 @@ Junto con el tiempo de ejecución de Entity Framework, Visual Studio incluye las
 
 Para obtener más información sobre el Entity Framework, consulte:
 
-[Introducción](getting-started.md) : proporciona información sobre cómo ponerse en marcha rápidamente con la guía de [Inicio rápido](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), que muestra cómo crear una sencilla aplicación de Entity Framework.
+[Introducción](getting-started.md) : proporciona información sobre cómo ponerse en marcha rápidamente con la guía de [Inicio rápido](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), que muestra cómo crear una sencilla aplicación de Entity Framework.
 
 [Entity Framework terminología](terminology.md) : define muchos de los términos introducidos por el Entity Data Model y el Entity Framework y que se usan en la documentación de Entity Framework.
 
 [Recursos de Entity Framework](resources.md) : proporciona vínculos a temas conceptuales y vínculos a temas externos y recursos para crear aplicaciones de Entity Framework.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET Entity Framework](index.md)

@@ -2,12 +2,12 @@
 title: Correlación del mensaje
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c6c68ec36ecee294aa217f77f462dcea31f1e211
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591649"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557975"
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
 
@@ -316,4 +316,4 @@ static void DisplayOrderStatus()
 ## <a name="see-also"></a>Vea también
 
 - [Las colas en WCF](../feature-details/queuing-in-wcf.md)
-- [Message Queue Server](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [Message Queue Server](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

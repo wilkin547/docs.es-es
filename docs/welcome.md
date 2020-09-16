@@ -3,12 +3,12 @@ title: Bienvenido a .NET
 description: Introducción a la familia de tecnologías .NET.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 707f83e912b6bd6999423949412cffba852093a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495152"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558079"
 ---
 # <a name="welcome-to-net"></a>Bienvenido a .NET
 
@@ -35,7 +35,7 @@ Para obtener más información sobre las últimas características agregadas en 
 
 - [Novedades de .NET Core 3.1](core/whats-new/dotnet-core-3-1.md)
 - [Novedades de .NET Framework](framework/whats-new/index.md)
-- [Novedades de C#](csharp/whats-new/index.md)
+- [Novedades de C#](./csharp/whats-new/csharp-9.md)
 - [Novedades de Visual Basic](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>Documentación
@@ -51,7 +51,7 @@ Esta documentación trata la amplitud de .NET en plataformas y lenguajes. Puede 
 - [.NET para Apache Spark](spark/index.yml)
 - [Arquitectura de aplicación de .NET](architecture/index.yml)
 
-Además, puede examinar la [Referencia de la API de .NET](/dotnet/api).
+Además, puede examinar la [Referencia de la API de .NET](../api/index.md).
 
 ## <a name="videos"></a>Vídeos
 

@@ -2,15 +2,15 @@
 title: Operadores de consulta estándar en consultas de LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 76d32db5c81d88db28194da19e722b1a80c1a870
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a61296d924ab1ff32b5bee523d6f0a06dda95db3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249149"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557780"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta estándar en consultas de LINQ to Entities
-En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o la <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que tienen cláusulas de expresión de consulta equivalentes, vea [información general sobre operadores de consulta estándar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
+En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o la <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que tienen cláusulas de expresión de consulta equivalentes, vea [información general sobre operadores de consulta estándar](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  No todos los operadores de consulta estándar se admiten en consultas de LINQ to Entities. Para obtener más información, vea [métodos LINQ admitidos y no admitidos (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que son específicos de LINQ to Entities. Para obtener más información acerca de los problemas conocidos de las consultas de LINQ to Entities, consulte [problemas conocidos y consideraciones en LINQ to Entities](known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -29,7 +29,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
 ## <a name="set-methods"></a>Métodos Set  
  Las operaciones Set de LINQ son operaciones de consulta que basan sus conjuntos de resultados en la presencia o ausencia de elementos equivalentes dentro de la misma o de otra colección (o conjunto). Los métodos Set son `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` y `Union`.  
   
- La mayoría de las sobrecargas de los métodos set se admiten en LINQ to Entities, aunque hay algunas diferencias en el comportamiento en comparación con LINQ to Objects. Sin embargo, los métodos set que <xref:System.Collections.Generic.IEqualityComparer%601> usan no se admiten porque el comparador no se puede convertir en el origen de datos.  
+ La mayoría de las sobrecargas de los métodos set se admiten en LINQ to Entities, aunque hay algunas diferencias en el comportamiento en comparación con LINQ to Objects. Sin embargo, los métodos set que usan <xref:System.Collections.Generic.IEqualityComparer%601> no se admiten porque el comparador no se puede convertir en el origen de datos.  
   
 ## <a name="ordering-methods"></a>Métodos de ordenación  
  La ordenación hace referencia a la forma de ordenar los elementos de un conjunto de resultados según uno o varios atributos. Si se especifica más de un criterio de ordenación, se pueden romper los enlaces dentro de un grupo.  
@@ -58,7 +58,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
   
  El comportamiento predeterminado de los métodos de agregación para valores NULL y NO NULL se muestra en la tabla siguiente:  
   
-|Método|Ningún dato|Todos los valores NULL|Algunos valores NULL|Valores NO NULL|  
+|Método|Sin datos|Todos los valores NULL|Algunos valores NULL|Valores NO NULL|  
 |------------|-------------|---------------------|----------------------|--------------------|  
 |`Average`|Devuelve NULL.|Devuelve NULL.|Devuelve el promedio de todos los valores NO NULL de una secuencia.|Calcula el promedio de una secuencia de valores numéricos.|  
 |`Count`|Devuelve 0.|Devuelve el número de valores NULL de la secuencia.|Devuelve el número de valores NULL y NO NULL de la secuencia.|Devuelve el número de elementos de la secuencia.|  
@@ -72,11 +72,11 @@ En una consulta, se especifica la información que se desea recuperar del origen
  `OfType` se admite para los tipos de entidad. `Convert` se admite para los tipos primitivos de modelo conceptual.  Los métodos de C# `is` y `as` también se admiten.  
   
 ## <a name="paging-methods"></a>Métodos de paginación  
- Las operaciones de paginación devuelven un único elemento o varios elementos de una secuencia. Los métodos de paginación `First`admitidos `Single`son `SingleOrDefault`, `Skip` `FirstOrDefault`,, `Take`, y.  
+ Las operaciones de paginación devuelven un único elemento o varios elementos de una secuencia. Los métodos de paginación admitidos son `First` ,, `FirstOrDefault` `Single` , `SingleOrDefault` , `Skip` y `Take` .  
   
  No se admiten varios métodos de paginación, debido a la incapacidad de asignar funciones al origen de datos o a la falta de ordenación implícita de los conjuntos en el origen de datos. Los métodos que devuelven un valor predeterminado están restringidos a los tipos primitivos de modelo conceptual y los tipos de referencia con valores predeterminados NULL. Los métodos de paginación que se ejecuten en una secuencia vacía devolverán NULL.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Métodos de LINQ compatibles y no compatibles (LINQ to Entities)](supported-and-unsupported-linq-methods-linq-to-entities.md)
-- [Información general sobre operadores de consulta estándar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))
+- [Información general sobre operadores de consulta estándar](/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

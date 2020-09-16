@@ -6,12 +6,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247044"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557416"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Procedimiento para crear certificados temporales que puedan usarse durante las operaciones de desarrollo
 
@@ -22,7 +22,7 @@ Al desarrollar un servicio o cliente seguro mediante Windows Communication Found
 >
 > De forma predeterminada, el cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) crea certificados que son autofirmados y que estos certificados no son seguros. La colocación de los certificados autofirmados en el almacén de entidades de certificación raíz de confianza le permite crear un entorno de desarrollo que simula de forma más precisa el entorno de implementación.
 
- Para obtener más información sobre la creación y el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, consulte [protección de servicios y clientes](securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
+ Para obtener más información sobre la creación y el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md). Para obtener más información sobre el uso de un certificado como credencial, consulte [protección de servicios y clientes](securing-services-and-clients.md). Para obtener un tutorial sobre el uso de la tecnología Microsoft Authenticode, consulte [Authenticode Overviews and Tutorials (Información general y tutoriales de Authenticode)](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para crear un certificado de la entidad de certificación raíz firmado automáticamente y exportar la clave privada
 

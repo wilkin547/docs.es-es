@@ -4,12 +4,12 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656962"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557195"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
@@ -107,7 +107,7 @@ Muchos temas muestran el código fuente y los ejemplos que están disponibles pa
 
 1. Descargue el repositorio que contiene el código de ejemplo mediante la ejecución de uno de los procedimientos siguientes:
    * Descargue un archivo ZIP del repositorio en el sistema local. Descomprima el archivo comprimido.
-   * [Bifurque](https://help.github.com/articles/fork-a-repo/) el repositorio y [clone](https://help.github.com/articles/cloning-a-repository/) la bifurcación en el sistema local. La bifurcación y clonación permiten realizar contribuciones a la documentación mediante la confirmación de los cambios realizados en la bifurcación, para después crear una solicitud de incorporación de cambios en el repositorio oficial de documentos. Para más información, consulte la [Guía de contribución a la documentación de .NET](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) y la [Guía de contribución a documentos de ASP.NET Core](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
+   * [Bifurque](https://help.github.com/articles/fork-a-repo/) el repositorio y [clone](https://help.github.com/articles/cloning-a-repository/) la bifurcación en el sistema local. La bifurcación y clonación permiten realizar contribuciones a la documentación mediante la confirmación de los cambios realizados en la bifurcación, para después crear una solicitud de incorporación de cambios en el repositorio oficial de documentos. Para más información, consulte la [Guía de contribución a la documentación de .NET](/contribute/dotnet/dotnet-contribute) y la [Guía de contribución a documentos de ASP.NET Core](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md).
    * Clone el repositorio en modo local. Si se clona un repositorio de documentos directamente en el sistema local, no se podrán realizar confirmaciones directamente en el repositorio oficial, por lo que no será posible realizar contribuciones a la documentación más adelante. Use el procedimiento de bifurcación y clonación descrito anteriormente si desea seguir teniendo la oportunidad de contribuir a la documentación más adelante.
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:

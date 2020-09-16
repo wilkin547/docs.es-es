@@ -3,12 +3,12 @@ title: Descripción de Windows Presentation Foundation
 description: En este artículo se explica en qué consiste Windows Presentation Foundation (WPF), su relación con .NET Core y las características que proporciona.
 ms.date: 07/18/2019
 ms.topic: overview
-ms.openlocfilehash: 63b2e431b5ab5fd3875887b8b574a77aa12018a6
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 37443b692ba840da847b2a21c3220f2c36025c12
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "85840331"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551867"
 ---
 # <a name="what-is-windows-presentation-foundation"></a>Descripción de Windows Presentation Foundation
 
@@ -22,7 +22,7 @@ Hay dos implementaciones de WPF:
 
 01. La implementación de .NET Framework compatible con Visual Studio 2019 y Visual Studio 2017.
 
-Esta Guía de escritorio está escrita para .NET Core 3.0 y WPF. Para obtener más información sobre la documentación existente para WPF con .NET Framework, vea [Windows Presentation Foundation con .NET Framework](../../framework/wpf/index.md).
+Esta Guía de escritorio está escrita para .NET Core 3.0 y WPF. Para obtener más información sobre la documentación existente para WPF con .NET Framework, vea [Windows Presentation Foundation con .NET Framework](/dotnet/desktop/wpf/).
 
 ## <a name="xaml"></a>XAML
 
@@ -52,7 +52,7 @@ Por ejemplo, el código XAML anterior definía un botón con el contenido visibl
 
 WPF proporciona diferentes extensiones de marcado para XAML, como `{Binding}` para enlace de datos.
 
-Para más información, vea [Extensiones de marcado y XAML de WPF](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Para más información, vea [Extensiones de marcado y XAML de WPF](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
 ## <a name="property-system"></a>Sistema de propiedades
 
@@ -144,6 +144,6 @@ Cada elemento de nivel de marco (<xref:System.Windows.FrameworkElement> o <xref:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Cree una aplicación WPF.](https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json)
+- [Cree una aplicación WPF.](/visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json)
 - [Examine las diferencias con .NET Framework.](../migration/differences-from-net-framework.md)
 - [Obtenga más información sobre XAML.](../fundamentals/xaml.md)

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 0aea4c21b5ea34cb0e8d944d37c879e918d6b27e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 1e559488a3260fafe6c211ff47226a258fc1289a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800590"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557702"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Cómo: Crear un servicio de datos utilizando un origen de datos de ADO.NET Entity Framework (Data Services de WCF)
 
 WCF Data Services expone los datos de entidad como un servicio de datos. El marco de trabajo ADO. NETEntity proporciona estos datos de entidad cuando el origen de datos es una base de datos relacional. En este tema se muestra cómo crear un modelo de datos basado en Entity Framework en una aplicación web de Visual Studio que está basada en una base de datos existente y cómo usar este modelo de datos para crear un nuevo servicio de datos.
 
-Entity Framework también proporciona una herramienta de línea de comandos que puede generar un modelo de Entity Framework fuera de un proyecto de Visual Studio. Para obtener más información, vea [Cómo: usar EdmGen. exe para generar los archivos de asignación y de modelo](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+Entity Framework también proporciona una herramienta de línea de comandos que puede generar un modelo de Entity Framework fuera de un proyecto de Visual Studio. Para obtener más información, vea [Cómo: usar EdmGen.exe para generar los archivos de asignación y de modelo](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
 
 ## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Para agregar un modelo de Entity Framework que está basado en una base de datos existente a una aplicación web existente
 
-1. En el menú **proyecto** , haga clic en **Agregar** > **nuevo elemento**.
+1. En el menú **proyecto** , haga clic en **Agregar**  >  **nuevo elemento**.
 
 2. En el panel **plantillas** , haga clic en la categoría de **datos** y, a continuación, seleccione **ADO.NET Entity Data Model**.
 
@@ -28,7 +28,7 @@ Entity Framework también proporciona una herramienta de línea de comandos que 
 
      Se muestra la primera página del Asistente para Entity Data Model.
 
-4. En el cuadro de diálogo **elegir contenido del modelo** , seleccione **generar desde la base de datos**. Después, haga clic en **Siguiente**.
+4. En el cuadro de diálogo **elegir contenido del modelo** , seleccione **generar desde la base de datos**. A continuación, haga clic en **Siguiente**.
 
 5. Haga clic en el botón **nueva conexión** .
 
@@ -36,7 +36,7 @@ Entity Framework también proporciona una herramienta de línea de comandos que 
 
      El cuadro de diálogo **elegir la conexión de datos** se actualiza con la configuración de la conexión de la base de datos.
 
-7. Asegúrese de que la casilla **Guardar configuración de conexión de entidad en App. config como:** está activada. Después, haga clic en **Siguiente**.
+7. Asegúrese de que la casilla **Guardar configuración de conexión de entidad en App.Config como:** está activada. A continuación, haga clic en **Siguiente**.
 
 8. En el cuadro de diálogo **Elija los objetos de base** de datos, seleccione todos los objetos de base de datos que va a exponer en el servicio de datos.
 
@@ -45,7 +45,7 @@ Entity Framework también proporciona una herramienta de línea de comandos que 
 
 9. Haga clic en **Finalizar** para completar el asistente.
 
-     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. Entity Framework permite personalizar el modelo de datos. Para obtener más información, vea [Entity Data Model herramientas tareas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Con esto se crea un modelo de datos predeterminado basado en una base de datos específica. Entity Framework permite personalizar el modelo de datos. Para obtener más información, vea [Entity Data Model herramientas tareas](/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Para crear el servicio de datos usando el nuevo modelo de datos
 
@@ -53,7 +53,7 @@ Entity Framework también proporciona una herramienta de línea de comandos que 
 
 2. En el **Explorador de modelos**, haga clic con el botón derecho en el modelo, haga clic en **propiedades**y, a continuación, anote el nombre del contenedor de entidades.
 
-3. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar** > **nuevo elemento**.
+3. En **Explorador de soluciones**, haga clic con el botón secundario en el nombre del proyecto ASP.net y, a continuación, haga clic en **Agregar**  >  **nuevo elemento**.
 
 4. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione la plantilla **servicio de datos de WCF** en la categoría **Web** .
 
@@ -76,5 +76,5 @@ Entity Framework también proporciona una herramienta de línea de comandos que 
 
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)
 - [Proveedores de Data Services](data-services-providers-wcf-data-services.md)
-- [Creación de un servicio de datos utilizando el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
-- [Creación de un servicio de datos utilizando un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md)
+- [Procedimiento para crear un servicio de datos mediante el proveedor de reflexión](create-a-data-service-using-rp-wcf-data-services.md)
+- [Procedimiento para crear un servicio de datos mediante un origen de datos de LINQ to SQL](create-a-data-service-using-linq-to-sql-wcf.md)

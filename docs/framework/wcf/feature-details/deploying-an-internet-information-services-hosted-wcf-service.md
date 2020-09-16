@@ -3,12 +3,12 @@ title: Implementación de un servicio WFC hospedado en Internet Information Serv
 description: Obtenga información sobre las tareas necesarias para desarrollar e implementar un servicio WCF hospedado en IIS, empezando por comprobar la instalación de componentes.
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245099"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557572"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 
@@ -38,13 +38,13 @@ El proceso de instalación de .NET Framework registra automáticamente WCF con I
 
 - Windows 7 y Windows Server 2003: Use la herramienta de [registro de ServiceModel (ServiceModelReg.exe)](../servicemodelreg-exe.md) para registrar WCF con IIS. Para usar esta herramienta, escriba **ServiceModelReg.exe/i/x** en el [símbolo del sistema para desarrolladores de Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
-- Windows 7: por último, debe comprobar que ASP.NET está configurado para usar la versión 4 de .NET Framework o posterior. Para ello, ejecute la herramienta ASPNET_Regiis con la `–i` opción. Para obtener más información, consulte [ASP.net IIS registration Tool](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
+- Windows 7: por último, debe comprobar que ASP.NET está configurado para usar la versión 4 de .NET Framework o posterior. Para ello, ejecute la herramienta ASPNET_Regiis con la `–i` opción. Para obtener más información, consulte [ASP.net IIS registration Tool](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Crear una nueva aplicación de IIS o reutilizar una aplicación de ASP.NET existente
 
 Los servicios WCF hospedados en IIS deben residir dentro de una aplicación IIS. Puede crear una nueva aplicación de IIS para hospedar servicios WCF exclusivamente. Como alternativa, puede implementar un servicio WCF en una aplicación existente que ya hospeda contenido de ASP.NET 2,0 (como páginas. aspx y servicios Web de ASP.NET [ASMX]). Para obtener más información acerca de estas opciones, consulte las secciones "hospedaje de WCF en paralelo con ASP.NET" y "hospedaje de servicios WCF en modo de compatibilidad de ASP.NET" en [servicios WCF y ASP.net](wcf-services-and-aspnet.md).
 
-Tenga en cuenta que IIS 6,0 y versiones posteriores reinician periódicamente una aplicación de programación orientada a objetos aislada. El valor predeterminado es de 1740 minutos. El valor máximo admitido son 71.582 minutos. Este reinicio se puede deshabilitar. Para obtener más información sobre esta propiedad, vea [PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
+Tenga en cuenta que IIS 6,0 y versiones posteriores reinician periódicamente una aplicación de programación orientada a objetos aislada. El valor predeterminado es de 1740 minutos. El valor máximo admitido son 71.582 minutos. Este reinicio se puede deshabilitar. Para obtener más información sobre esta propiedad, vea [PeriodicRestartTime](/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Cree un archivo .svc para el servicio de WCF.
 
@@ -72,7 +72,7 @@ Los servicios WCF hospedados en IIS usan el mismo modelo de compilación dinámi
 
 - Como código sin compilar colocado directamente en el archivo. SVC. El código de implementación también se puede ubicar en línea en el archivo. SVC del servicio, después de la \@ Directiva de ServiceHost. Los cambios realizados en el código integrado hacen que la aplicación se recicle y vuelva a compilarse cuando se recibe la siguiente solicitud.
 
-Para obtener más información sobre el modelo de compilación de ASP.NET 2,0, consulte [información general sobre la compilación de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100)).
+Para obtener más información sobre el modelo de compilación de ASP.NET 2,0, consulte [información general sobre la compilación de ASP.net](/previous-versions/aspnet/ms178466(v=vs.100)).
 
 ## <a name="configure-the-wcf-service"></a>Configuración del servicio WCF
 
@@ -114,4 +114,4 @@ Por ejemplo, un punto de conexión de WCF configurado para usar la autenticació
 
 - [Hospedaje en Internet Information Services](hosting-in-internet-information-services.md)
 - [Procedimientos recomendados de hospedaje de Internet Information Services](internet-information-services-hosting-best-practices.md)
-- [Características de hospedaje de Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Características de hospedaje de Windows Server AppFabric](/previous-versions/appfabric/ee677189(v=azure.10))

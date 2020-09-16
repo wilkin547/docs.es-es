@@ -2,12 +2,12 @@
 title: Compatibilidad de característica de confianza parcial
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579168"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551977"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilidad de característica de confianza parcial
 Windows Communication Foundation (WCF) admite un subconjunto limitado de funcionalidad cuando se ejecuta en un entorno de confianza parcial. Las características admitidas en confianza parcial están diseñadas alrededor de un conjunto concreto de escenarios, tal y como se describe en el tema [Supported Deployment Scenarios](supported-deployment-scenarios.md) .  
@@ -90,12 +90,12 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 - Marcar el comportamiento habitual con el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> de modo que pueda ejecutarse cuando se implementa como una aplicación de confianza parcial. Tenga en cuenta que puede establecerse una entrada de registro en el equipo para evitar que se ejecuten los ensamblados marcados con APTCA. .  
   
-- Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el comportamiento no se ejecutaría y no se iniciaría ninguna excepción. Para asegurarse de esto, vea la opción **LevelFinal** mediante [Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../tools/caspol-exe-code-access-security-policy-tool.md).  
+- Asegurarse de implementar la aplicación como una aplicación de confianza total en la que los usuarios no pueden modificar los valores de la seguridad de acceso del código para ejecutar la aplicación en un entorno de confianza parcial. De poder hacerlo, el comportamiento no se ejecutaría y no se iniciaría ninguna excepción. Para asegurarse de esto, vea la opción **LevelFinal** mediante [Caspol.exe (herramienta de la Directiva de seguridad de acceso del código)](../../tools/caspol-exe-code-access-security-policy-tool.md).  
   
  Para obtener un ejemplo de un comportamiento común, consulte [Cómo: bloquear puntos de conexión en la empresa](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Configuración  
- Con una excepción, el código de confianza parcial solo puede cargar secciones de configuración de WCF en el `app.config` archivo local. Para cargar las secciones de configuración de WCF que hacen referencia a las secciones de WCF en Machine. config o en un archivo raíz Web. config, se requiere ConfigurationPermission (Unrestricted). Sin este permiso, las referencias a las secciones de configuración de WCF (comportamientos, enlaces) fuera del archivo de configuración local producen una excepción cuando se carga la configuración.  
+ Con una excepción, el código de confianza parcial solo puede cargar secciones de configuración de WCF en el `app.config` archivo local. Para cargar las secciones de configuración de WCF que hacen referencia a las secciones de WCF en machine.config o en un archivo de web.config raíz, se requiere ConfigurationPermission (Unrestricted). Sin este permiso, las referencias a las secciones de configuración de WCF (comportamientos, enlaces) fuera del archivo de configuración local producen una excepción cuando se carga la configuración.  
   
  La única excepción es la configuración de tipos conocidos para la serialización, tal y como se describe en la sección relativa a la serialización de este tema.  
   
@@ -110,7 +110,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
 ### <a name="message-logging"></a>Registro de mensajes  
  El registro de mensajes no funciona cuando se ejecuta WCF en un entorno de confianza parcial. Si está habilitado bajo confianza parcial, no produce un error en la activación del servicio, pero no se registra ningún mensaje.  
   
-### <a name="tracing"></a>Traza  
+### <a name="tracing"></a>Seguimiento  
  La funcionalidad de seguimiento restringido está disponible al ejecutarse en un entorno de confianza parcial. En el `listeners` elemento <> del archivo de configuración, los únicos tipos que puede Agregar son <xref:System.Diagnostics.TextWriterTraceListener> y el nuevo <xref:System.Diagnostics.EventSchemaTraceListener> . El uso del <xref:System.Diagnostics.XmlWriterTraceListener> estándar puede producir registros incompletos o incorrectos.  
   
  Los orígenes de seguimiento admitidos son:  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 - <xref:System.Runtime.Serialization>  
   
-- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>y <xref:System.IdentityModel.Tokens>.  
+- <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors> y <xref:System.IdentityModel.Tokens>.  
   
  No se admiten los siguientes orígenes de seguimiento:  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 - <xref:System.IO.Log>  
 
-- [System. ServiceModel. Internal. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System. ServiceModel. Internal. TransactionBridge](/previous-versions/aa346556(v=vs.110))]
   
  No se deben especificar los siguientes miembros de la enumeración <xref:System.Diagnostics.TraceOptions> :  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) admite un subconjunto limitado de funcion
   
 ## <a name="other-limitations"></a>Otras limitaciones  
 
-  WCF generalmente se limita a las consideraciones de seguridad impuestas por la aplicación de hospedaje. Por ejemplo, si WCF se hospeda en una aplicación de explorador XAML (XBAP), está sujeto a las limitaciones de XBAP, como se describe en [Windows Presentation Foundation la seguridad de confianza parcial](../../wpf/wpf-partial-trust-security.md).  
+  WCF generalmente se limita a las consideraciones de seguridad impuestas por la aplicación de hospedaje. Por ejemplo, si WCF se hospeda en una aplicación de explorador XAML (XBAP), está sujeto a las limitaciones de XBAP, como se describe en [Windows Presentation Foundation la seguridad de confianza parcial](/dotnet/desktop/wpf/wpf-partial-trust-security).  
   
  Las características adicionales siguientes no están habilitadas al ejecutar indigo2 en un entorno de confianza parcial:  
   
