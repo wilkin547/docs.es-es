@@ -2,17 +2,17 @@
 title: Protocolos de seguridad versión 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: aa6e99365bf318f5f1aea6fe1f45eb1911fc901a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463805"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720262"
 ---
 # <a name="security-protocols-version-10"></a>Protocolos de seguridad versión 1.0
-Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describen los detalles de Windows Communication <xref:System.ServiceModel.Channels.SecurityBindingElement>Foundation (WCF) versión 1.0 (implementados en el ) para los siguientes protocolos de seguridad de servicios web.  
+Los protocolos de seguridad de servicios Web proporcionan mecanismos de seguridad de servicios Web que cubren todos los requisitos de seguridad de mensajería para empresas existentes. En esta sección se describen los detalles de la versión 1,0 de Windows Communication Foundation (WCF) (implementada en <xref:System.ServiceModel.Channels.SecurityBindingElement> ) para los siguientes protocolos de seguridad de servicios Web.  
   
-|Especificación/documento|Vínculo|  
+|Especificación/documento|Link|  
 |-|-|  
 |WSS: Message Security 1,0 de SOAP|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
 |WSS: Token Profile 1.0 de Username|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
@@ -23,14 +23,14 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |WSS: Token Profile 1,1 de X.509|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
 |WSS: Token Profile 1.1 de Kerberos|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
 |WSS: Token Profile 1.1 de SAML 1.1|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
-|WS-Secure Conversation|<https://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
-|WS-Trust|<https://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
+|WS-Secure Conversation|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
 |Nota de la aplicación:<br /><br /> Uso de WS-Trust para protocolo de enlace TLS|Para su publicación|  
 |Nota de la aplicación:<br /><br /> Uso de WS-Trust para SPNEGO|Para su publicación|  
 |Nota de la aplicación:<br /><br /> Referencias e identidad de extremos de direccionamiento de servicios Web|Para su publicación|  
-|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<https://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> enmendada por [las erratas](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) presentadas al Comité Técnico de OASIS WS-SX |  
+|WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> tal como se ha modificado por [erratas](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) enviadas al Comité técnico de OASIS WS-SX |  
   
- WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
+ WCF, versión 1, proporciona 17 modos de autenticación que se pueden usar como base para la configuración de seguridad de servicios Web. Cada modo se optimiza para un conjunto común de requisitos de implementación, como:  
   
 - Credenciales utilizadas para autenticar cliente y servicio.  
   
@@ -45,24 +45,24 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |KerberosOverTransport|Windows|X509|Transporte|  
 |IssuedTokenOverTransport|Federado|X509|Transporte|  
 |SspiNegotiatedOverTransport|Windows SSPI negociado|Windows SSPI negociado|Transporte|  
-|AnonymousForCertificate|None|X509|Message|  
-|UserNameForCertificate|Nombre de usuario/contraseña|X509|Message|  
-|MutualCertificate|X509|X509|Message|  
-|MutualCertificateDuplex|X509|X509|Message|  
-|IssuedTokenForCertificate|Federado|X509|Message|  
-|Kerberos|Windows|Windows|Message|  
-|IssuedToken|Federado|Federado|Message|  
-|SspiNegotiated|Windows SSPI negociado|Windows SSPI negociado|Message|  
-|AnonymousForSslNegotiated|None|X509, TLS-Nego|Message|  
-|UserNameForSslNegotiated|Nombre de usuario/contraseña|X509, TLS-Nego|Message|  
-|MutualSslNegotiated|X509|X509, TLS-Nego|Message|  
-|IssuedTokenForSslNegotiated|Federado|X509, TLS-Nego|Message|  
+|AnonymousForCertificate|Ninguno|X509|Mensaje|  
+|UserNameForCertificate|Nombre de usuario/contraseña|X509|Mensaje|  
+|MutualCertificate|X509|X509|Mensaje|  
+|MutualCertificateDuplex|X509|X509|Mensaje|  
+|IssuedTokenForCertificate|Federado|X509|Mensaje|  
+|Kerberos|Windows|Windows|Mensaje|  
+|IssuedToken|Federado|Federado|Mensaje|  
+|SspiNegotiated|Windows SSPI negociado|Windows SSPI negociado|Mensaje|  
+|AnonymousForSslNegotiated|Ninguno|X509, TLS-Nego|Mensaje|  
+|UserNameForSslNegotiated|Nombre de usuario/contraseña|X509, TLS-Nego|Mensaje|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|Mensaje|  
+|IssuedTokenForSslNegotiated|Federado|X509, TLS-Nego|Mensaje|  
   
  Los extremos que usan tales modos de autenticación pueden expresar sus requisitos de seguridad mediante WS-SecurityPolicy (WS-SP). Este documento describe la estructura de mensajes de infraestructura y encabezado de seguridad para cada modo de autenticación y proporciona ejemplos de directivas y mensajes.  
   
- WCF aprovecha WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de varios mensajes entre aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
+ WCF aprovecha WS-SecureConversation para proporcionar compatibilidad con sesiones seguras para proteger los intercambios de varios mensajes entre las aplicaciones.  Vea "Sesiones seguras" más abajo para obtener detalles de implementación.  
   
- Además de los modos de autenticación, WCF proporciona la configuración para controlar los mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basados en seguridad de mensajes, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves y confirmación de firma.  
+ Además de los modos de autenticación, WCF proporciona opciones de configuración para controlar mecanismos de protección comunes que se aplican a la mayoría de los modos de autenticación basados en seguridad de mensajes, por ejemplo: orden de firma frente a operaciones de cifrado, conjuntos de algoritmos, derivación de claves y confirmación de firma.  
   
  Los siguientes prefijos y espacios de nombres se utilizan en este documento.  
   
@@ -81,7 +81,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |wsp|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
 |mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
-## <a name="1-token-profiles"></a>1. Perfiles de token  
+## <a name="1-token-profiles"></a>1. perfiles de token  
  Las especificaciones Seguridad de Servicios web representan la credencial como tokens de seguridad. WCF admite los siguientes tipos de token:  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
@@ -89,9 +89,9 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  El atributo R1101 PasswordType en el elemento UsernameToken\Password no se debe omitir ni debe tener el valor #PasswordText (valor predeterminado).  
   
- Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación WCF, las amenazas de ataque de reproducción se mitigan mediante firmas de mensaje.  
+ Uno puede implementar el #PasswordDigest mediante extensibilidad. Se ha observado que #PasswordDigest se confunde a menudo como un mecanismo de protección de contraseña suficientemente seguro. Pero #PasswordDigest no puede actuar como un sustituto del cifrado del UsernameToken. El objetivo principal de #PasswordDigest es la protección frente a ataques mediante repetición. En los modos de autenticación WCF, las amenazas de ataque de reproducción se mitigan mediante el uso de firmas de mensaje.  
   
- B1102 WCF nunca emite Nonce y Created subelementos de la UsernameToken.  
+ B1102 WCF nunca emite los subelementos nonce y creados de UsernameToken.  
   
  Estos subelementos están diseñados para ayudar a detectar las repeticiones. WCF usa firmas de mensaje en su lugar.  
   
@@ -102,7 +102,7 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
  Razón: las contraseñas generalmente están consideradas demasiado débiles como para ser utilizadas para operaciones criptográficas.  
   
 ### <a name="12-x509-token"></a>1.2 Token X509  
- WCF admite certificados X509v3 como tipo de credencial y sigue X509TokenProfile1.0 y X509TokenProfile1.1 con las siguientes restricciones:  
+ WCF admite certificados X509v3 como un tipo de credencial y sigue X509TokenProfile 1.0 y X509TokenProfile 1.1 con las siguientes restricciones:  
   
  R1201 El atributo ValueType en el elemento BinarySecurityToken debe tener el valor #X509v3 cuando contiene un certificado X509v3.  
   
@@ -116,37 +116,37 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
   
  R1204 Si se está utilizando X509TokenProfile1.1, una referencia externa al token de seguridad X509 DEBERÍA utilizar la huella digital introducida por WS-Security 1.1.  
   
- WCF admite X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si uno reordena los componentes del nombre de sujeto y envía a un servicio WCF una referencia a un certificado, es posible que no se encuentre.  
+ WCF es compatible con X509IssuerSerial. Sin embargo, hay problemas de interoperabilidad con X509IssuerSerial: WCF usa una cadena para comparar dos valores de X509IssuerSerial. Por lo tanto, si una reordena los componentes del nombre de sujeto y envía a un servicio WCF una referencia a un certificado, es posible que no se encuentre.  
   
 ### <a name="13-kerberos-token"></a>1.3 Token de Kerberos.  
- WCF admite KerberosTokenProfile1.1 para el propósito de la autenticación de Windows con las siguientes restricciones:  
+ WCF admite KerberosTokenProfile 1.1 con el fin de la autenticación de Windows con las siguientes restricciones:  
   
  R1301 Un Token de Kerberos debe llevar el valor de un AP_REQ de Kerberos v4 ajustado a GSS, tal y como se define en GSS_API y en la especificación de Kerberos, y debe tener el atributo ValueType con el valor #GSS_Kerberosv5_AP_REQ.  
   
- WCF usa GSS envuelto Kerberos AP-REQ, no un AP-REQ desnudo. Éste es un procedimiento de seguridad recomendado.  
+ WCF usa la solicitud de AP-REQ Kerberos ajustada de GSS, no una solicitud de AP-REQ. Éste es un procedimiento de seguridad recomendado.  
   
 ### <a name="14-saml-v11-token"></a>1.4 Token SAML v1.1  
- WCF admite los perfiles de token SAML de WSS 1.0 y 1.1 para los tokens SAML v1.1. Es posible implementar otras versiones de formatos de token SAML.  
+ WCF admite los perfiles de token SAML de WSS 1,0 y 1,1 para los tokens SAML v 1.1. Es posible implementar otras versiones de formatos de token SAML.  
   
 ### <a name="15-security-context-token"></a>1.5 Token de contexto de seguridad  
- WCF admite el token de contexto de seguridad (SCT) introducido en WS-SecureConversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
+ WCF admite el token de contexto de seguridad (SCT) incluido en WS-SecureConversation. SCT se utiliza para representar un contexto de seguridad establecido en SecureConversation así como los protocolos de negociación binarios TLS y SSPI, descritos a continuación.  
   
-## <a name="2-common-message-security-parameters"></a>2. Parámetros comunes de seguridad de mensajes  
+## <a name="2-common-message-security-parameters"></a>2. parámetros de seguridad de mensajes comunes  
   
 ### <a name="21-timestamp"></a>2.1 Marca de tiempo  
- La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF siempre serializa wsse:TimeStamp con wsse:Created y wsse:Expires campos. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
+ La presencia de la marca de tiempo se controla mediante la propiedad <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la clase <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF siempre serializa wsse: TimeStamp con los campos wsse: Created y wsse: Expires. El wsse:TimeStamp siempre se firma cuando se utilizan las firmas.  
   
 ### <a name="22-protection-order"></a>2.2 Orden de protección  
- WCF admite el orden de protección de mensajes "Sign Before Encrypt" y "Encrypt Before Sign" (directiva de seguridad 1.1). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
+ WCF admite el orden de protección de mensajes "firmar antes de cifrar" y "cifrar antes de firmar" (Directiva de seguridad 1,1). "Sign Before Encrypt" se recomienda por diferentes motivos, entre los que se incluyen los siguientes: los mensajes protegidos mediante Encrypt Before Sign están expuestos a ataques de sustitución de firmas a menos que se use el mecanismo SignatureConfirmation de WS-Security 1.1, y una firma sobre el contenido cifrado dificulta la auditoría.  
   
 ### <a name="23-signature-protection"></a>2.3 Protección de firmas  
  Cuando se usa Cifrar antes de firmar, se recomienda proteger la firma para evitar los ataques por fuerza bruta para adivinar el contenido cifrado o la clave de la firma (sobre todo cuando un token personalizado se utiliza con material de clave débil).  
   
 ### <a name="24-algorithm-suite"></a>2.4 Conjunto de algoritmos  
- WCF admite todos los conjuntos de algoritmos enumerados en la directiva de seguridad 1.1.  
+ WCF es compatible con todos los conjuntos de algoritmos enumerados en la Directiva de seguridad 1,1.  
   
 ### <a name="25-key-derivation"></a>2.5 Derivación de clave  
- WCF usa "Derivación de claves para claves simétricas" como se describe en WS-SecureConversation.  
+ WCF usa "derivación de claves para claves simétricas", como se describe en WS-SecureConversation.  
   
 ### <a name="26-signature-confirmation"></a>2.6 Confirmación de firma  
  La confirmación de firma puede ser como protección frente a ataques de intermediarios para proteger el conjunto de firmas.  
@@ -161,13 +161,13 @@ Los protocolos de seguridad de servicios Web proporcionan mecanismos de segurida
 |LaxTimestampFirst|Igual que Lax, solo que el primer elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
 |LaxTimestampLast|Igual que lax, solo que el último elemento en el encabezado de seguridad debe ser wsse:Timestamp|  
   
- WCF admite los cuatro modos para el diseño de encabezado de seguridad. La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" (estricto).  
+ WCF admite los cuatro modos de diseño del encabezado de seguridad. La estructura de encabezado de Seguridad y los ejemplos de mensajes para los modos de autenticación siguen el modo "Strict" (estricto).  
   
-## <a name="2-common-message-security-parameters"></a>2. Parámetros comunes de seguridad de mensajes  
+## <a name="2-common-message-security-parameters"></a>2. parámetros de seguridad de mensajes comunes  
  En esta sección se proporcionan ejemplos de directivas para cada modo de autenticación junto con ejemplos que muestran la estructura de encabezado de seguridad en mensajes intercambiados por cliente y servicio.  
   
 ### <a name="61-transport-protection"></a>6.1 Protección de transporte  
- WCF proporciona cinco modos de autenticación que usan transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.  
+ WCF proporciona cinco modos de autenticación que utilizan el transporte seguro para proteger los mensajes; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport y SspiNegotiatedOverTransport.  
   
  Estos modos de autenticación se construyen utilizando el enlace de transportes descrito en SecurityPolicy. Para el modo de autenticación de UserNameOverTransport, UsernameToken es un token auxiliar firmado. Para los otros modos de autenticación el token aparece como un token de endoso firmado. Los apéndices C.1.2 y C.1.3 de SecurityPolicy describen en detalle el diseño del encabezado de seguridad. Los siguientes encabezados de seguridad del ejemplo muestran el diseño estricto para un modo de autenticación determinado.  
   

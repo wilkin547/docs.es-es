@@ -2,12 +2,12 @@
 title: Expresiones de consulta
 description: 'Obtenga información sobre la compatibilidad de expresiones de consulta para LINQ en el lenguaje de programación F #.'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559068"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720483"
 ---
 # <a name="query-expressions"></a>Expresiones de consulta
 
@@ -19,7 +19,7 @@ Las expresiones de consulta permiten consultar un origen de datos y colocar los 
 query { expression }
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Las expresiones de consulta son un tipo de expresión de cálculo similar a las expresiones de secuencia. Del mismo modo que se especifica una secuencia proporcionando código en una expresión de secuencia, se especifica un conjunto de datos proporcionando código en una expresión de consulta. En una expresión de secuencia, la `yield` palabra clave identifica los datos que se van a devolver como parte de la secuencia resultante. En las expresiones de consulta, la `select` palabra clave realiza la misma función. Además de la `select` palabra clave, F # también admite un número de operadores de consulta que son muy similares a las partes de una instrucción SELECT de SQL. Este es un ejemplo de una expresión de consulta simple, junto con el código que se conecta al origen de OData de Northwind.
 
@@ -45,7 +45,7 @@ query1
 
 En el ejemplo de código anterior, la expresión de consulta está entre llaves. El significado del código en la expresión es, devuelva todos los clientes de la tabla Customers de la base de datos en los resultados de la consulta. Las expresiones de consulta devuelven un tipo que implementa <xref:System.Linq.IQueryable%601> y <xref:System.Collections.Generic.IEnumerable%601> , y, por tanto, se pueden iterar mediante el [módulo SEQ](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) como se muestra en el ejemplo.
 
-Cada tipo de expresión de cálculo se genera a partir de una clase de generador. La clase de generador para la expresión de cálculo de consulta es `QueryBuilder` . Para obtener más información, vea [expresiones de cálculo](computation-expressions.md) y [clase QueryBuilder](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
+Cada tipo de expresión de cálculo se genera a partir de una clase de generador. La clase de generador para la expresión de cálculo de consulta es `QueryBuilder` . Para obtener más información, vea [expresiones de cálculo](computation-expressions.md) y [clase QueryBuilder](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
 
 ## <a name="query-operators"></a>Operadores de consulta
 
@@ -80,7 +80,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 <table style="width:100%">
   <tr>
-    <th>Operator</th>
+    <th>Operador</th>
     <th>Descripción</th>
   </tr>
   <tr>
@@ -564,7 +564,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>Agrupación<br/>
+<td>Agrupar<br/>
 
 <pre><code class="lang-sql">SELECT Student.Age, COUNT( * ) FROM Student
 GROUP BY Student.Age

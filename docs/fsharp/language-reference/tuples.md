@@ -2,12 +2,12 @@
 title: Tuplas
 description: 'Obtenga información sobre la tupla de F #, una agrupación de valores sin nombre pero ordenados, posiblemente de tipos diferentes.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6f4adf7e10e22d8b7a8cf697baee15962adf3630
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173294"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720366"
 ---
 # <a name="tuples"></a>Tuplas
 
@@ -20,7 +20,7 @@ Una *tupla* es una agrupación de valores sin nombre pero ordenados, posiblement
 struct(element, ... ,element )
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Cada *elemento* de la sintaxis anterior puede ser cualquier expresión de F # válida.
 
@@ -36,7 +36,7 @@ Puede usar la coincidencia de patrones para obtener acceso y asignar nombres par
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-También puede deconstruir una tupla a través de la coincidencia de patrones fuera de una `match` expresión a través del `let` enlace:
+También puede deconstruir una tupla a través de la coincidencia de patrones fuera de una `match` expresión a través del  `let` enlace:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -126,7 +126,7 @@ Debe crear patrones de coincidencia en una tupla y construir la otra con las par
 
 En esta sección se explica la forma de las tuplas cuando se compilan.  Esta información no es necesaria para leer a menos que tenga como destino .NET Framework 3,5 o inferior.
 
-Las tuplas se compilan en objetos de uno de varios tipos genéricos, todos los nombres `System.Tuple` , que están sobrecargados en la aridad o el número de parámetros de tipo. Los tipos de tupla aparecen en este formulario cuando se ven desde otro lenguaje, como C# o Visual Basic, o cuando se usa una herramienta que no es consciente de las construcciones de F #. Los `Tuple` tipos se introdujeron en .NET Framework 4. Si el destino es una versión anterior del .NET Framework, el compilador usa versiones de [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) de la versión 2,0 de la biblioteca básica de F #. Los tipos de esta biblioteca solo se usan para las aplicaciones destinadas a las versiones 2,0, 3,0 y 3,5 del .NET Framework. El reenvío de tipos se usa para garantizar la compatibilidad binaria entre .NET Framework 2,0 y .NET Framework 4 componentes de F #.
+Las tuplas se compilan en objetos de uno de varios tipos genéricos, todos los nombres `System.Tuple` , que están sobrecargados en la aridad o el número de parámetros de tipo. Los tipos de tupla aparecen en este formulario cuando se ven desde otro lenguaje, como C# o Visual Basic, o cuando se usa una herramienta que no es consciente de las construcciones de F #. Los `Tuple` tipos se introdujeron en .NET Framework 4. Si el destino es una versión anterior de .NET Framework, el compilador usa versiones de de `System.Tuple` la versión 2,0 de la biblioteca básica de F #. Los tipos de esta biblioteca solo se usan para las aplicaciones destinadas a las versiones 2,0, 3,0 y 3,5 de .NET Framework. El reenvío de tipos se usa para garantizar la compatibilidad binaria entre .NET Framework 2,0 y .NET Framework 4 componentes de F #.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forma compilada de tuplas de struct
 

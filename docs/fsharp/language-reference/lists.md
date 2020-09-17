@@ -2,12 +2,12 @@
 title: Listas
 description: 'Obtenga información sobre las listas de F #, una serie ordenada e inmutable de elementos del mismo tipo.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 16d7195039d25cf63630f5cc3be6563b1bf45c44
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 567731eb57b77d60d3dd847630d5676e8d047d09
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559172"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720353"
 ---
 # <a name="lists"></a>Listas
 
@@ -233,13 +233,13 @@ En el código siguiente se muestra cómo usar `List.sum`, `List.sumBy` y `List.a
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
-El resultado es `1.000000`
+La salida es `1.000000`.
 
 En el código siguiente se muestra el uso de `List.averageBy`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
-El resultado es `5.5`
+La salida es `5.5`.
 
 ### <a name="lists-and-tuples"></a>Listas y tuplas
 
@@ -265,7 +265,7 @@ La salida es como sigue:
 
 Las versiones de unzip correspondientes, [List. unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip) y [List. unzip3 (](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3), toman listas de tuplas y devuelven listas en una tupla, donde la primera lista contiene todos los elementos que estaban en primer lugar en cada tupla, y la segunda lista contiene el segundo elemento de cada tupla, y así sucesivamente.
 
-En el ejemplo de código siguiente se muestra el uso de [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
+En el ejemplo de código siguiente se muestra el uso de [List. unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip).
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
@@ -276,7 +276,7 @@ La salida es como sigue:
 [1; 3] [2; 4]
 ```
 
-En el ejemplo de código siguiente se muestra el uso de [List. unzip3 (](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4).
+En el ejemplo de código siguiente se muestra el uso de [List. unzip3 (](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3).
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 

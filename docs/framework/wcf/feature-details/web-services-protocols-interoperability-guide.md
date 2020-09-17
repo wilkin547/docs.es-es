@@ -2,16 +2,16 @@
 title: Guía de interoperabilidad de los protocolos de servicios Web
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 4169a796311c402a97358de5d52c52562b6ed357
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553179"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720119"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Guía de interoperabilidad de los protocolos de servicios Web
 
-Windows Communication Foundation (WCF) implementa varios protocolos de servicios Web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. En este tema se proporciona una lista de los protocolos de servicios web que implementa WCF. Otros temas incluidos en esta sección proporcionan información detallada acerca de la implementación de cada protocolo admitido.
+Windows Communication Foundation (WCF) implementa varios protocolos de servicios Web. Muchos de estos protocolos incluyen distintas opciones y puntos de extensibilidad que son decisión del responsable de la implementación. En este artículo se proporciona una lista de los protocolos de servicios web que implementa WCF. En otros artículos de esta sección se proporcionan detalles de implementación para cada protocolo admitido.
 
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Protocolos de servicios web implementados por WCF
 
@@ -64,9 +64,9 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 |WSS: Token Profile 1.1 de X509|[Web Services Security X.509 Certificate Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)|
 |WSS: Token Profile 1.1 de Kerberos|[Web Services Security Kerberos Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)|
 |WSS: Token Profile 1.1 de SAML 1.1|[Web Services Security SAML Token Profile 1.1](https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf)|
-|WS-Secure Conversation|[Web Services Secure Conversation Language](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
+|WS-Secure Conversation|[Web Services Secure Conversation Language](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
 |WS-Trust 1.4|[Web Services Trust Language](https://docs.oasis-open.org/ws-sx/ws-trust/200802)|
-|WS-SecurityPolicy 2005/07|[Web Services Secure Conversation Language](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Según la corrección de las erratas enviadas al comité técnico de OASIS WS-SX.<br /><br /> [ws-sx message](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
+|WS-SecurityPolicy 2005/07|[Web Services Secure Conversation Language](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Según la corrección de las erratas enviadas al comité técnico de OASIS WS-SX.<br /><br /> [ws-sx message](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
 |WS-ReliableMessaging 1.1|[Protocolo de mensajería de confianza versión 1,1](reliable-messaging-protocol-version-1-1.md)|
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> admite las especificaciones de la tabla siguiente.
@@ -74,7 +74,7 @@ La interoperabilidad de los protocolos de infraestructura la proporcionan las es
 |Especificación/documento|Link|
 |-----------------------------|----------|
 |WS-Coordination|[Web Services Coordination](/previous-versions/ms951231(v=msdn.10))|
-|Transacción WS-Atomic|[Web Services Atomic Transaction](https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
+|Transacción WS-Atomic|[Web Services Atomic Transaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 Las clases <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> y <xref:System.ServiceModel.Description.MetadataResolver> proporcionan compatibilidad con las siguientes especificaciones de metadatos:
 
@@ -90,7 +90,7 @@ Las clases <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System
 
 - [WS-PolicyAttachment 1.2](https://www.w3.org/Submission/2006/SUBM-WS-PolicyAttachment-20060425/)
 
-- [WS-MetadataExchange 1.1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
+- [WS-MetadataExchange 1.1](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
 
 - [WS-Transfer Get para la recuperación de metadatos](https://www.w3.org/Submission/2006/SUBM-WS-Transfer-20060315/)
 
