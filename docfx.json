@@ -500,7 +500,6 @@
 
         "_csharplang/proposals/csharp-7.2/readonly-ref.md": "Readonly references",
         "_csharplang/proposals/csharp-7.2/span-safety.md": "Compile time safety for ref-like types",
-        "_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md": "Non-trailing named arguments",
         "_csharplang/proposals/csharp-7.2/private-protected.md": "Private protected",
         "_csharplang/proposals/csharp-7.2/conditional-ref.md": "Conditional ref",
         "_csharplang/proposals/csharp-7.2/leading-separator.md": "Leading digit separator",
@@ -539,7 +538,7 @@
         "_csharplang/proposals/csharp-9.0/records.md" : "Records",
         "_csharplang/proposals/csharp-9.0/skip-localsinit.md" : "Surpress emitting localsinit flag",
         "_csharplang/proposals/csharp-9.0/static-anonymous-functions.md" : "Static anonymous functions",
-        "_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md" : "Target-types conditional expression",
+        "_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md" : "Target-typed conditional expression",
         "_csharplang/proposals/csharp-9.0/target-typed-new.md" : "Target-typed new expressions",
         "_csharplang/proposals/csharp-9.0/top-level-statements.md" : "Top-level statements",
 
