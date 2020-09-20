@@ -1,13 +1,13 @@
 ---
 title: Versiones personalizadas de SQLite
-ms.date: 05/14/2020
+ms.date: 09/04/2020
 description: Información sobre cómo usar una versión personalizada de la biblioteca SQLite nativa.
-ms.openlocfilehash: 15db10db26bc7c5017313ca020a0e1e528ba207a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fbf4b4cd33e6e890ce0c0cfe0b7688487b94b4a3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440842"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516143"
 ---
 # <a name="custom-sqlite-versions"></a>Versiones personalizadas de SQLite
 
@@ -22,6 +22,7 @@ ms.locfileid: "83440842"
 | [SQLitePCLRaw.bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | Proporciona la misma versión de SQLite en todas las plataformas. Incluye las extensiones FTS4, FTS5, JSON1 y R*Tree. Este es el valor predeterminado. |
 | [SQLitePCLRaw.bundle_e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlcipher) | Proporciona una compilación de código abierto no oficial de `SQLCipher`. |
 | [SQLitePCLRaw.bundle_green](https://www.nuget.org/packages/SQLitePCLRaw.bundle_green) | Igual que `bundle_e_sqlite3`, salvo en iOS, donde usa la biblioteca SQLite del sistema. |
+| [SQLitePCLRaw.bundle_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_sqlite3) | Usa la biblioteca SQLite del sistema. |
 | [SQLitePCLRaw.bundle_winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_winsqlite3) | Usa `winsqlite3.dll`, la biblioteca SQLite del sistema en Windows 10. |
 | [SQLitePCLRaw.bundle_zetetic](https://www.nuget.org/packages/SQLitePCLRaw.bundle_zetetic) | Usa las compilaciones de `SQLCipher` oficiales de Zetetic (no se incluye). |
 

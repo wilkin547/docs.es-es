@@ -1,19 +1,19 @@
 ---
 title: Limitaciones de Async
-ms.date: 12/13/2019
+ms.date: 09/04/2020
 description: Se explican las limitaciones de las API asincrónicas y algunas alternativas que puede usar en su lugar.
-ms.openlocfilehash: 350237dc5c03023f60e9680e8b9c94aabb62606f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8b14fcfeb12d331d8d43ca6d77332007a12ae5dc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450337"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516000"
 ---
 # <a name="async-limitations"></a>Limitaciones de Async
 
 SQLite no es compatible con la E/S asincrónica. Los métodos asincrónicos de ADO.NET se ejecutarán de forma sincrónica en Microsoft.Data.SQLite. Evite llamarlos.
 
-En su lugar, use el [registro de escritura anticipada](https://www.sqlite.org/wal.html) para mejorar el rendimiento y la simultaneidad.
+En su lugar, use una [caché compartida](connection-strings.md#cache) y el [registro de escritura anticipada](https://www.sqlite.org/wal.html) para mejorar el rendimiento y la simultaneidad.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/AsyncSample/Program.cs?name=snippet_WAL)]
 

@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810530"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656267"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
 
@@ -26,7 +26,7 @@ Esta página es una referencia de las propiedades y los elementos de MSBuild que
 
 ### <a name="targetframework"></a>TargetFramework
 
-La propiedad `TargetFramework` especifica la versión de la plataforma de destino de la aplicación. Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+La propiedad `TargetFramework` especifica la versión de la plataforma de destino de la aplicación. Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ Para obtener más información, vea [Plataformas de destino en proyectos de esti
 
 ### <a name="targetframeworks"></a>TargetFrameworks
 
-Use la propiedad `TargetFrameworks` cuando quiera que la aplicación tenga varias plataformas como destino. Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-framework-versions).
+Use la propiedad `TargetFrameworks` cuando quiera que la aplicación tenga varias plataformas como destino. Para obtener una lista de los monikers de plataforma de destino válidos, vea [Plataformas de destino en proyectos de estilo SDK](../../standard/frameworks.md#supported-target-frameworks).
 
 > [!NOTE]
 > Esta propiedad se omite si se especifica `TargetFramework` (singular).
@@ -188,9 +188,27 @@ En la siguiente tabla se muestran las opciones disponibles.
 | `5.0` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
 | `5` | Se usa el conjunto de reglas que se habilitó para .NET 5,0, incluso si hay reglas más recientes disponibles. |
 
+### <a name="analysismode"></a>AnalysisMode
+
+A partir de .NET 5.0 RC2, el SDK de .NET incluye todas las [reglas "CA" de calidad del código](/visualstudio/code-quality/code-analysis-for-managed-code-warnings). De forma predeterminada, solo [algunas reglas están habilitadas](../../fundamentals/productivity/code-analysis.md#enabled-rules) como advertencias de compilación. La propiedad `AnalysisMode` le permite personalizar el conjunto de reglas que están habilitadas de forma predeterminada. Puede cambiar a un modo de análisis más agresivo (exclusión) o a uno más conservador (inclusión). Por ejemplo, si quiere habilitar todas las reglas de forma predeterminada como advertencias de compilación, establezca el valor en `AllEnabledByDefault`.
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+En la siguiente tabla se muestran las opciones disponibles.
+
+| Value | Significado |
+|-|-|
+| `Default` | Modo predeterminado, en el que ciertas reglas están habilitadas como advertencias de compilación, otras están habilitadas como sugerencias del IDE de Visual Studio y el resto están deshabilitadas. |
+| `AllEnabledByDefault` | Modo agresivo o de exclusión, en el que todas las reglas están habilitadas de forma predeterminada como advertencias de compilación. Puede [excluir](../../fundamentals/productivity/configure-code-analysis-rules.md) de forma selectiva reglas individuales para deshabilitarlas. |
+| `AllDisabledByDefault` | Modo conservador o de inclusión, en el que todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](../../fundamentals/productivity/configure-code-analysis-rules.md) de forma selectiva reglas individuales para habilitarlas. |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de código se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de código de .NET](../../fundamentals/productivity/code-analysis.md) también se tratan como errores. Si solo quiere que las advertencias del compilador se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
+La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de calidad del código (CAxxxx) se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de calidad del código de .NET](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) también se tratan como errores. Si no quiere que las advertencias de análisis de calidad del código se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las ad
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-De forma predeterminada, el [análisis de código de .NET](../../fundamentals/productivity/code-analysis.md) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en "true". Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
+De forma predeterminada, el [análisis de calidad del código de .NET](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en `true`. Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ De forma predeterminada, el [análisis de código de .NET](../../fundamentals/pr
 
 > [!TIP]
 > Otra forma de habilitar el análisis de código de .NET en proyectos que tienen como destino versiones de .NET anteriores a .NET 5.0 es establecer la propiedad [AnalysisLevel](#analysislevel) en `latest`.
+
+### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
+
+El [análisis del estilo del código de .NET](../../fundamentals/productivity/code-analysis.md#code-style-analysis) está deshabilitado de forma predeterminada en la compilación para todos los proyectos de .NET. Puede habilitar el análisis del estilo del código para los proyectos de .NET estableciendo la propiedad `EnforceCodeStyleInBuild` en `true`.
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+Todas las reglas de estilo del código [configuradas](../../fundamentals/productivity/code-analysis.md#code-style-analysis) como advertencias o errores se ejecutarán en la compilación y notificarán infracciones.
 
 ## <a name="run-time-configuration-properties"></a>Propiedades de configuración del tiempo de ejecución
 
@@ -327,7 +357,7 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 
 La propiedad `AssetTargetFallback` permite especificar versiones de la plataforma compatibles adicionales para las referencias de proyectos y los paquetes NuGet. Por ejemplo, si se especifica una dependencia de paquete mediante `PackageReference` pero ese paquete no contiene recursos compatibles con el valor `TargetFramework` del proyecto, entra en juego la propiedad `AssetTargetFallback`. La compatibilidad del paquete al que se hace referencia se vuelve a comprobar con cada plataforma de destino que se especifica en `AssetTargetFallback`.
 
-Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones de plataforma de destino](../../standard/frameworks.md#supported-target-framework-versions).
+Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones de plataforma de destino](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>

@@ -307,32 +307,6 @@ items:
                   - name: Ejemplos de Windows Workflow (WF)
                     tocHref: /dotnet/framework/windows-workflow-foundation/samples/
                     topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
-              - name: Windows Forms
-                tocHref: /dotnet/framework/winforms/
-                topicHref: /dotnet/framework/winforms/index
-                items:
-                  - name: Mejora de las aplicaciones de Windows Forms
-                    tocHref: /dotnet/framework/winforms/advanced/
-                    topicHref: /dotnet/framework/winforms/advanced/index
-                  - name: Controles de Windows Forms
-                    tocHref: /dotnet/framework/winforms/controls/
-                    topicHref: /dotnet/framework/winforms/controls/index
-              - name: Servicios XAML
-                tocHref: /dotnet/framework/xaml-services/
-                topicHref: /dotnet/framework/xaml-services/index
-          - name: 'Guía de escritorio: WPF'
-            tocHref: /dotnet/desktop-wpf/
-            topicHref: /dotnet/desktop-wpf/index
-            items:
-              - name: Primeros pasos
-                tocHref: /visualstudio/get-started/csharp/tutorial-wpf
-                topicHref: /dotnet/desktop-wpf/getting-started/index
-              - name: Migración
-                tocHref: /dotnet/desktop-wpf/migration
-                topicHref: /dotnet/desktop-wpf/migration/index
-              - name: Enlace de datos
-                tocHref: /dotnet/desktop-wpf/data
-                topicHref: /dotnet/desktop-wpf/data/index
           - name: Guía de C#
             tocHref: /dotnet/csharp/
             topicHref: /dotnet/csharp/index

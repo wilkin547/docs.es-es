@@ -2,12 +2,12 @@
 title: Cambios importantes de criptografía
 description: Se enumeran los cambios importantes relacionados con la criptografía en .NET Core.
 ms.date: 04/22/2020
-ms.openlocfilehash: f7d580938fb7620728b8ff7f67412c9f5bbbb6c3
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 621a3dad28b67ee33056dce3df0379efaeb90776
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558013"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065114"
 ---
 # <a name="cryptography-breaking-changes"></a>Cambios importantes de criptografía
 
@@ -20,6 +20,7 @@ En esta página se documentan los siguientes cambios importantes:
 | [EnvelopedCms usa de forma predeterminada el cifrado AES-256](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
 | [Ha aumentado el tamaño mínimo de la generación de claves RSAOpenSsl](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
 | [.NET Core 3.0 prefiere OpenSSL 1.1.x a OpenSSL 1.0.x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [Transformación del bloque final solo durante el proceso de escritura mediante CryptoStream.Dispose](#cryptostreamdispose-transforms-final-block-only-when-writing) | 3.0 |
 | [Se respeta el parámetro booleano de SignedCms.ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5.0
@@ -43,6 +44,10 @@ En esta página se documentan los siguientes cambios importantes:
 ***
 
 [!INCLUDE[.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x](~/includes/core-changes/cryptography/3.0/net-core-3-0-prefers-openssl-1-1-x.md)]
+
+***
+
+[!INCLUDE [CryptoStream.Dispose transforms final block only when writing](~/includes/core-changes/cryptography/3.0/cryptography-cryptostream-dispose-final-block-write.md)]
 
 ***
 

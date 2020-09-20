@@ -13,11 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803512"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656150"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Procedimientos recomendados para cargar ensamblados
 En este artículo se abordan formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros. En él se ofrecen las siguientes recomendaciones:  
@@ -62,7 +63,7 @@ En este artículo se abordan formas de evitar problemas de identidad de tipos qu
   
  La carga de ensamblados mediante el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, o alguno de los demás métodos que cargan por ruta de acceso, tiene las siguientes desventajas:  
   
-- Si hay un ensamblado con la misma identidad ya cargado, <xref:System.Reflection.Assembly.LoadFrom%2A> devuelve el ensamblado cargado aunque se haya especificado otra ruta de acceso.  
+- Si hay un ensamblado con la misma identidad ya cargado en el contexto de origen de carga, <xref:System.Reflection.Assembly.LoadFrom%2A> devuelve el ensamblado cargado aunque se haya especificado otra ruta de acceso.  
   
 - Si se carga un ensamblado con <xref:System.Reflection.Assembly.LoadFrom%2A> y después un ensamblado del contexto de carga predeterminado intenta cargar el mismo ensamblado por nombre para mostrar, se produce un error en el intento de carga. Esto puede ocurrir cuando se deserializa un ensamblado.  
   

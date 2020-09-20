@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495780"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065037"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -24,6 +24,7 @@ C# 9.0 agrega las siguientes características y mejoras al lenguaje C#:
 - Funciones anónimas estáticas
 - Expresiones condicionales con tipo de destino
 - Tipos de valor devueltos de covariante
+- Compatibilidad con extensiones `GetEnumerator` para bucles `foreach`
 - Parámetros de descarte lambda
 - Atributos en funciones locales
 - Inicializadores de módulo
@@ -107,7 +108,7 @@ La línea anterior crea un registro `Person` en el que la propiedad `LastName` e
 
 ## <a name="init-only-setters"></a>Establecedores de solo inicialización
 
-Los ***establecedores de solo inicialización*** proporcionan una sintaxis coherente para inicializar los miembros de un objeto. Los inicializadores de propiedades permiten indicar con calidad qué valor establece cada propiedad. El inconveniente es que esas propiedades se deben establecer. A partir de C# 9.0, puede crear descriptores de acceso `init` en lugar de descriptores de acceso `set` para propiedades e indizadores. Los autores de la llamada pueden usar la sintaxis de inicializador de propiedad para establecer estos valores en expresiones de creación, pero esas propiedades son de solo lectura una vez que se ha completado la construcción. Los establecedores de solo inicialización proporcionan una ventana para cambiar el estado, que se cierra cuando finaliza la fase de construcción. La fase de construcción finaliza de forma eficaz después de que se complete toda la inicialización, incluidos los inicializadores de propiedades y las expresiones with.
+Los ***establecedores de solo inicialización*** proporcionan una sintaxis coherente para inicializar los miembros de un objeto. Los inicializadores de propiedades indican con claridad qué valor establece cada propiedad. El inconveniente es que esas propiedades se deben establecer. A partir de C# 9.0, puede crear descriptores de acceso `init` en lugar de descriptores de acceso `set` para propiedades e indizadores. Los autores de la llamada pueden usar la sintaxis de inicializador de propiedad para establecer estos valores en expresiones de creación, pero esas propiedades son de solo lectura una vez que se ha completado la construcción. Los establecedores de solo inicialización proporcionan una ventana para cambiar el estado, que se cierra cuando finaliza la fase de construcción. La fase de construcción finaliza de forma eficaz después de que se complete toda la inicialización, incluidos los inicializadores de propiedades y las expresiones with.
 
 En el ejemplo anterior de los registros posicionales se muestra el uso de un establecedor de solo inicialización para establecer una propiedad mediante una expresión with. Puede declarar los establecedores de solo inicialización en cualquier tipo que escriba. Por ejemplo, en la estructura siguiente se define una estructura de observación meteorológica:
 
@@ -121,7 +122,7 @@ Pero el cambio de una observación después de la inicialización es un error me
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 Los establecedores de solo inicialización pueden ser útiles para establecer las propiedades de clase base de las clases derivadas. También pueden establecer propiedades derivadas mediante asistentes en una clase base. Los registros posicionales declaran propiedades mediante establecedores de solo inicialización. Esos establecedores se usan en expresiones with. Puede declarar establecedores de solo inicialización para cualquier objeto `class` o `struct` que defina.
@@ -217,7 +218,7 @@ Podría llamarlo de esta forma:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-Otra aplicación muy útil de esta característica es para combinarla con propiedades de solo inicialización para inicializar un objeto nuevo. Los paréntesis en `new` son opcionales:
+Otra aplicación muy útil de esta característica es para combinarla con propiedades de solo inicialización para inicializar un objeto nuevo:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ Una característica similar mejora la resolución de tipos de destino de las exp
 A partir de C# 9.0, puede agregar el modificador `static` a expresiones lambda o métodos anónimos. Las expresiones lambda estáticas son análogas a las funciones `static` locales: una expresión lambda o una función anónima estática no puede capturar variables locales ni el estado de la instancia. El modificador `static` impide la captura accidental de otras variables.
 
 Los tipos de valor devueltos de covariante proporcionan flexibilidad a los tipos de valor devueltos de las funciones reemplazadas. Una función virtual reemplazada puede devolver un tipo derivado del tipo de valor devuelto declarado en el método de clase base. Esto puede ser útil para los registros y para otros tipos que admiten métodos de generador o clonación virtuales.
+
+Además, el bucle `foreach` reconocerá y usará un método de extensión `GetEnumerator` que, de otro modo, satisface el patrón `foreach`. Este cambio significa que `foreach` es coherente con otras construcciones basadas en patrones, como el patrón asincrónico y la desconstrucción basada en patrones. En la práctica, esto quiere decir que puede agregar compatibilidad con `foreach` a cualquier tipo. Debe limitar su uso a cuando la enumeración de un objeto tiene sentido en el diseño.
 
 Después, puede usar descartes como parámetros para las expresiones lambda. De esta forma no tiene que asignar un nombre al argumento y el compilador puede evitar usarlo. Use `_` para cualquier argumento.
 

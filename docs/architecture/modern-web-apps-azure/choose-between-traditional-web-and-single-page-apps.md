@@ -6,13 +6,13 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 07/27/2020
+ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174372"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515824"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -33,7 +33,7 @@ Use una SPA en los casos siguientes:
 
 - La aplicación tenga que exponer una interfaz de usuario enriquecida con muchas características.
 
-- El equipo está familiarizado con el desarrollo de JavaScript o TypeScript.
+- Su equipo está familiarizado con el desarrollo en JavaScript, TypeScript o Blazor WebAssembly.
 
 - La aplicación ya tiene que exponer una API para otros clientes (internos o públicos).
 
@@ -43,17 +43,17 @@ Las mejoras en la experiencia del usuario que posibilita el enfoque de SPA deben
 
 ## Blazor
 
-ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor de Blazor permite a los desarrolladores crear una interfaz de usuario con C# y Razor en el servidor, así como la conexión interactiva de la interfaz de usuario al explorador en tiempo real mediante una conexión de SignalR persistente.
+ASP.NET Core incluye un modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, el cual se denomina Blazor. El lado servidor de Blazor permite a los desarrolladores crear una interfaz de usuario con C# y Razor en el servidor, así como la conexión interactiva de la interfaz de usuario al explorador en tiempo real mediante una conexión de SignalR persistente. Blazor WebAssembly presenta otra opción para las aplicaciones Blazor, que les permite ejecutarse en el explorador mediante WebAssembly. Dado que se trata de la ejecución real de .NET en WebAssembly, puede volver a usar el código y las bibliotecas de las partes del lado servidor de la aplicación.
 
-Blazor WebAssembly presenta otra opción para las aplicaciones Blazor, que les permite ejecutarse en el explorador mediante WebAssembly. Dado que se trata de la ejecución real de .NET en WebAssembly, puede volver a usar el código y las bibliotecas de las partes del lado servidor de la aplicación.
-
-Blazor es una tercera opción nueva que se debe tener en cuenta a la hora de evaluar si se debe compilar una aplicación web puramente representada por el servidor o una SPA. Puede compilar comportamientos de cliente enriquecidos similares a los de SPA mediante Blazor, sin necesidad de un desarrollo significativo en JavaScript. Las aplicaciones de Blazor pueden llamar a las API para solicitar datos o realizar operaciones del lado servidor.
+Blazor es una tercera opción nueva que se debe tener en cuenta a la hora de evaluar si se debe compilar una aplicación web puramente representada por el servidor o una SPA. Puede compilar comportamientos de cliente enriquecidos similares a los de SPA mediante Blazor, sin necesidad de un desarrollo significativo en JavaScript. Las aplicaciones de Blazor pueden llamar a las API para solicitar datos o realizar operaciones del lado servidor. Pueden interoperar con JavaScript en caso necesario para aprovechar las ventajas de las bibliotecas y los marcos de trabajo de JavaScript.
 
 Considere la posibilidad de compilar la aplicación web con Blazor en los casos siguientes:
 
 - La aplicación tiene que exponer una interfaz de usuario enriquecida.
 
 - Su equipo está más familiarizado con el desarrollo de .NET que con el desarrollo de JavaScript o TypeScript.
+
+Si tiene una aplicación de Web Forms que está pensando migrar a .NET Core, puede que quiera revisar el libro electrónico gratuito "[Blazor para desarrolladores de Web Forms](../blazor-for-web-forms-developers/index.md)" para ver si tiene sentido migrarla a Blazor.
 
 Para obtener más información sobre Blazor, consulte [Introducción a Blazor](https://blazor.net/docs/get-started.html).
 
@@ -100,7 +100,7 @@ Para escribir SPA es necesario estar familiarizado con JavaScript o TypeScript y
 
 Si ya admite una API web para su uso por otros clientes, crear una implementación de SPA que aproveche estas API puede requerir menos trabajo que reproducir la lógica en el lado de servidor. Las SPA realizan un amplio uso de las API web para consultar y actualizar datos cuando los usuarios interactúan con la aplicación.
 
-## <a name="when-to-choose-blazor"></a>Casos en los que elegir Blazor
+## <a name="when-to-choose-no-locblazor"></a>Casos en los que elegir Blazor
 
 A continuación, le ofrecemos una explicación más detallada sobre por qué elegir Blazor para su aplicación web.
 

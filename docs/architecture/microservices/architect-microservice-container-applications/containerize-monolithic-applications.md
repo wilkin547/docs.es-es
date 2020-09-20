@@ -2,12 +2,12 @@
 title: Incluir en un contenedor aplicaciones monolíticas
 description: Incluir en un contenedor aplicaciones monolíticas, aunque no obtenga todos los beneficios de la arquitectura de microservicios, tiene ventajas importantes de implementación que se pueden entregar inmediatamente.
 ms.date: 01/30/2020
-ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b26a9b79ec00ba06404a12d62343ea31d67151cb
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503281"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022888"
 ---
 # <a name="containerizing-monolithic-applications"></a>Incluir en un contenedor aplicaciones monolíticas
 
@@ -21,7 +21,7 @@ Para administrar este modelo, debe implementar un único contenedor para represe
 
 Puede incluir varios componentes, bibliotecas o capas internas en cada contenedor, como se muestra en la figura 4-1. Una aplicación en contenedor monolítica tiene la mayor parte de su funcionalidad en un solo contenedor, con capas internas o bibliotecas, y escala horizontalmente mediante la clonación del contenedor en varios servidores o máquinas virtuales. Con todo, este patrón monolítico puede entrar en conflicto con el principio de contenedor "un contenedor realiza una acción y lo hace en un proceso", pero podría ser correcto en algunos casos.
 
-El inconveniente de este enfoque se vuelve evidente si la aplicación aumenta y debe escalarse. Si puede escalar toda la aplicación, no es realmente un problema. Sin embargo, en la mayoría de los casos, solo unos pocos elementos de la aplicación son los puntos de obstrucción que deben escalarse, mientras que otros componentes se usan menos.
+El inconveniente de este enfoque se vuelve evidente si la aplicación aumenta y debe escalarse. Si puede escalar toda la aplicación, no es realmente un problema. Pero, en la mayoría de los casos, solo unos pocos elementos de la aplicación son los puntos de obstrucción que deben escalarse, mientras que otros componentes se usan menos.
 
 Por ejemplo, en una aplicación típica de comercio electrónico, es probable que deba escalar el subsistema de información del producto, dado que muchos más clientes examinan los productos en lugar de comprarlos. Más clientes usan la cesta en lugar de usar la canalización de pago. Menos clientes publican comentarios o consultan su historial de compras. Y es posible que solo un grupo reducido de empleados deba administrar el contenido y las campañas de marketing. Si escala el diseño monolítico, todo el código para estas distintas tareas se implementa varias veces y se escala al mismo nivel.
 

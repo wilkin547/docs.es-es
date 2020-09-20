@@ -1,18 +1,18 @@
 ---
 title: Cambios importantes de .NET Framework a .NET Core
 titleSuffix: ''
-description: Enumera los cambios importantes de .NET Framework a .NET Core.
+description: Enumera los cambios importantes de .NET Framework a las versiones de 1.0 a 3.1 de .NET Core.
 ms.date: 05/05/2020
-ms.openlocfilehash: e9fa37dba89bbd6c4829614c27cb66206069fa9b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 5904a359813b6d07bd2a27d882ade4395efe3256
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414465"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656371"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>Cambios importantes para la migración desde .NET Framework a .NET Core
 
-Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios más importantes que se enumeran en este artículo pueden afectar a los usuarios. Los cambios importantes se agrupan por categoría y, dentro de esas categorías, por la versión de .NET Core en la que se realizaron.
+Si va a migrar una aplicación desde .NET Framework a las versiones de 1.0 a 3.1 de .NET Core, los cambios más importantes que se enumeran en este artículo pueden afectarle. Los cambios importantes se agrupan por categoría y, dentro de esas categorías, por la versión de .NET Core en la que se realizaron.
 
 > [!NOTE]
 > Este artículo no es una lista completa de los cambios importantes entre .NET Framework y .NET Core. Aquí se agregan los principales cambios importantes a medida que se conocen.
@@ -72,17 +72,10 @@ Si va a migrar una aplicación desde .NET Framework a .NET Core, los cambios má
 ## <a name="networking"></a>Redes
 
 - [WebClient.CancelAsync no siempre se cancela inmediatamente](#webclientcancelasync-doesnt-always-cancel-immediately)
-- [La administración de rutas de acceso de cookies ahora se ajusta a RFC 6265](#cookie-path-handling-now-conforms-to-rfc-6265)
 
 ### <a name="net-core-20"></a>.NET Core 2.0
 
 [!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
-
-***
-
-### <a name="net-50"></a>.NET 5.0
-
-[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

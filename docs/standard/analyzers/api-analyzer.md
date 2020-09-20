@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo el analizador de API de .NET puede
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156139"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598100"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -54,32 +54,32 @@ El analizador de API usa códigos de error específicos de API que empiezan por 
 
 Cuando una API en desuso, como <xref:System.Net.WebClient>, se utiliza en un código, el analizador de API la destaca con una línea ondulada de color verde. Si mantiene el puntero sobre la llamada API, se muestra una bombilla con información sobre la degradación de la API, como en el ejemplo siguiente:
 
-!["Captura de pantalla de WebClient API con una línea ondulada de color verde y una bombilla a la izquierda"](media/api-analyzer/green-squiggle.jpg)
+![Captura de pantalla de WebClient API con una línea ondulada de color verde y una bombilla a la izquierda.](media/api-analyzer/green-squiggle.jpg)
 
 La ventana **Lista de errores** contiene advertencias con un identificador exclusivo por cada API en desuso, como se muestra en el ejemplo siguiente (`DE004`):
 
-!["Captura de pantalla de la ventana Lista de errores en la que se muestra el identificador de la advertencia y su descripción"](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana Lista de errores con advertencias.")
+![Captura de pantalla de la ventana Lista de errores en la que se muestra el identificador de la advertencia y su descripción.](media/api-analyzer/warnings-id-and-descriptions.jpg "Ventana Lista de errores con advertencias.")
 
 Al hacer clic en el identificador, se le remite a una página web que contiene información detallada sobre la API en desuso y sugerencias sobre las API alternativas que pueden usarse.
 
-Las advertencias pueden suprimirse si se hace clic con el botón derecho del ratón en el miembro resaltado y se selecciona **Suprimir \<Id. de diagnóstico>** . Hay dos maneras de suprimir las advertencias:
+Las advertencias pueden suprimirse si se hace clic con el botón derecho del ratón en el miembro resaltado y se selecciona **Suprimir \<diagnostic ID>** . Hay dos maneras de suprimir las advertencias:
 
 - [localmente (en el origen)](#suppress-warnings-locally)
 - [globalmente (en un archivo de supresión)](#suppress-warnings-globally); se trata de la opción recomendada
 
 ### <a name="suppress-warnings-locally"></a>Supresión de advertencias localmente
 
-Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: !["Captura de pantalla encuadrada con la advertencia #pragma deshabilitada"](media/api-analyzer/suppress-in-source.jpg).
+Para suprimir advertencias localmente, haga clic con el botón derecho en el miembro del que quiere suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<diagnostic ID>**  > **en origen**. La directiva del preprocesador de advertencias [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) se agrega al código fuente en el ámbito definido: ![Captura de pantalla encuadrada con la advertencia #pragma deshabilitada.](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>Supresión de advertencias globalmente
 
-Para suprimir advertencias globalmente, haga clic con el botón derecho en el miembro del que desea suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<Id. de diagnóstico>**  > **en archivo de supresión**.
+Para suprimir advertencias globalmente, haga clic con el botón derecho en el miembro del que quiere suprimir las advertencias y luego seleccione **Acciones rápidas y refactorizaciones** > **Suprimir *Id. de diagnóstico*\<diagnostic ID>**  > **en archivo de supresión**.
 
-!["Captura de pantalla de WebClient API con una línea ondulada de color verde y una bombilla a la izquierda"](media/api-analyzer/suppress-in-sup-file.jpg)
+![Captura de pantalla del menú contextual en la que se muestran opciones para suprimir una advertencia en Visual Studio.](media/api-analyzer/suppress-in-sup-file.jpg)
 
 Se agrega un archivo *GlobalSuppressions.cs* al proyecto después de su primera supresión. Las nuevas supresiones globales se anexan a este archivo.
 
-!["Captura de pantalla de WebClient API con una línea ondulada de color verde y una bombilla a la izquierda"](media/api-analyzer/suppression-file.jpg)
+![Captura de pantalla del archivo GlobalSuppressions.cs en Explorador de soluciones.](media/api-analyzer/suppression-file.jpg)
 
 La supresión global es el método recomendado para garantizar la coherencia del uso de API en los proyectos.
 
@@ -103,7 +103,7 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 }
 ```
 
-También puede compilar de forma condicional pro sistema operativo/marco de destino, pero actualmente necesita hacerlo [manualmente](../frameworks.md#how-to-specify-target-frameworks).
+También puede compilar de forma condicional pro sistema operativo/marco de destino, pero actualmente necesita hacerlo [manualmente](../frameworks.md#how-to-specify-a-target-framework).
 
 ## <a name="supported-diagnostics"></a>Diagnóstico admitido
 
@@ -123,7 +123,7 @@ Todos estos diagnósticos están disponibles no solo en el IDE, sino también en
 
 El usuario decide cómo se deben tratar los diagnósticos: como advertencias, errores, sugerencias o estar desactivados. Por ejemplo, como un arquitecto, puede decidir que los problemas de compatibilidad deben tratarse como errores y que las llamadas a algunas API en desuso generen advertencias, mientras que otras solo generan sugerencias. Puede configurar esto por separado por identificador de diagnóstico y por proyecto. Para ello, en el **Explorador de soluciones**, vaya al nodo **Dependencias** del proyecto. Expanda los nodos **Dependencias** > **Analizadores** > **Microsoft.DotNet.Analyzers.Compatibility**. Haga clic con el botón derecho en el identificador de diagnóstico, seleccione **Configurar gravedad del conjunto de reglas** y elija la opción deseada.
 
-!["Captura de pantalla del Explorador de soluciones donde se muestran los diagnósticos y el cuadro de diálogo emergente con el menú Configurar gravedad del conjunto de reglas"](media/api-analyzer/disable-notifications.jpg)
+![Captura de pantalla del Explorador de soluciones donde se muestran los diagnósticos y el cuadro de diálogo emergente con la gravedad del conjunto de reglas.](media/api-analyzer/disable-notifications.jpg)
 
 ## <a name="see-also"></a>Vea también
 

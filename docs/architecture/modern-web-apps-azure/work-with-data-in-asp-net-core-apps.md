@@ -3,13 +3,16 @@ title: Trabajar con datos en aplicaciones ASP.NET Core
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Trabajar con datos en aplicaciones ASP.NET Core
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: b706332b28aec669a841f510046aa7b185be1373
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987847"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515881"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabajar con datos en aplicaciones ASP.NET Core
 
@@ -55,7 +58,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-El DbContext debe tener un constructor que acepte DbContextOptions y pase este argumento al constructor DbContext base. Si solo tiene un DbContext en la aplicación, puede pasar una instancia de DbContextOptions. Sin embargo, si tiene más, tendrá que usar el tipo DbContextOptions\<T> genérico y pasar el tipo de DbContext como el parámetro genérico.
+El DbContext debe tener un constructor que acepte DbContextOptions y pase este argumento al constructor DbContext base. Si solo tiene un DbContext en la aplicación, puede pasar una instancia de DbContextOptions, pero, si tiene más, tendrá que usar el tipo DbContextOptions\<T> genérico y pasar el tipo de DbContext como el parámetro genérico.
 
 ### <a name="configuring-ef-core"></a>Configuración de EF Core
 
@@ -93,7 +96,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-En el ejemplo anterior es importante agregar la llamada a ToListAsync para ejecutar la consulta inmediatamente. En caso contrario, la instrucción asignará un tipo IQueryable\<SelectListItem> a brandItems, que no se ejecutará hasta que se enumere. Devolver resultados de IQueryable de los métodos tiene sus ventajas y desventajas. Permite modificar más la consulta que EF Core va a construir, pero también se pueden generan errores que solo se producen en tiempo de ejecución, si se agregan a la consulta operaciones que EF Core no puede traducir. En general es más seguro pasar los filtros al método que realiza el acceso a datos y devolver una colección en memoria (por ejemplo, List\<T>) como resultado.
+En el ejemplo anterior es importante agregar la llamada a ToListAsync para ejecutar la consulta inmediatamente. En caso contrario, la instrucción asignará un tipo IQueryable\<SelectListItem> a brandItems, que no se ejecutará hasta que se enumere. Devolver resultados de IQueryable de los métodos tiene sus ventajas y desventajas. Permite modificar más la consulta que EF Core va a construir, pero también se pueden generan errores que solo se producen en tiempo de ejecución, si se agregan a la consulta operaciones que EF Core no puede traducir. Generalmente es más seguro pasar los filtros al método que realiza el acceso a datos, y devolver una colección en memoria (por ejemplo, List\<T>) como resultado.
 
 EF Core realiza el seguimiento de los cambios en las entidades que recupera de la persistencia. Para guardar los cambios en una entidad de la que se realiza el seguimiento, simplemente llame al método SaveChanges en DbContext, asegurándose de que sea la misma instancia de DbContext que se usó para recuperar la entidad. La adición y eliminación de entidades se realiza directamente en la propiedad DbSet adecuada, de nuevo con una llamada a SaveChanges para ejecutar los comandos de base de datos. En el ejemplo siguiente se muestra cómo agregar, actualizar y quitar entidades de la persistencia.
 
@@ -507,6 +510,52 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 El almacenamiento en caché puede mejorar considerablemente el rendimiento de las páginas web que solicitan repetidamente los mismos valores de la base de datos. Asegúrese de medir el acceso de datos y el rendimiento de la página antes de aplicar el almacenamiento en caché y aplíquelo solo donde vea una necesidad de mejora. El almacenamiento en caché consume recursos de memoria de servidor web y aumenta la complejidad de la aplicación, por lo que es importante que no optimice de forma prematura con esta técnica.
+
+## <a name="getting-data-to-no-locblazor-no-locwebassembly-apps"></a>Obtención de datos para aplicaciones de Blazor WebAssembly
+
+Si va a compilar aplicaciones que usan Blazor Server, puede usar Entity Framework y otras tecnologías de acceso directo a datos como se han analizado hasta ahora en este capítulo. Pero al compilar aplicaciones de Blazor WebAssembly, como otros marcos de SPA, necesitará una estrategia diferente para acceder a los datos. Normalmente, estas aplicaciones acceden a los datos e interactúan con el servidor a través de puntos de conexión de API web.
+
+Si los datos o las operaciones que se realizan son confidenciales, asegúrese de revisar la sección sobre seguridad del [capítulo anterior](develop-asp-net-core-mvc-apps.md) y de proteger las API frente al acceso no autorizado.
+
+Encontrará un ejemplo de una aplicación de Blazor WebAssembly en la [aplicación de referencia eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) en el proyecto BlazorAdmin. Este proyecto se hospeda dentro del proyecto web eShopOnWeb y permite a los usuarios del grupo de administradores administrar los elementos del almacén. Puede ver una captura de pantalla de la aplicación en la figura 8-3.
+
+![Captura de pantalla del administrador del catálogo de eShopOnWeb](./media/image8-3.jpg)
+
+**Figura 8-3.** Captura de pantalla de administrador del catálogo de eShopOnWeb.
+
+A la hora de obtener datos de las API web dentro de una aplicación de Blazor WebAssembly, simplemente use una instancia de `HttpClient` como haría en cualquier aplicación .NET. Los pasos básicos a seguir son crear la solicitud de envío (si es necesario, normalmente para las solicitudes POST o PUT), esperar a que se realice la solicitud, comprobar el código de estado y deserializar la respuesta. Si va a hacer muchas solicitudes a un determinado conjunto de API, es aconsejable encapsular las API y configurar la dirección base de `HttpClient` de forma centralizada. De este modo, si necesita ajustar cualquiera de estas configuraciones en varios entornos, puede realizar los cambios en un solo lugar. Debe agregar compatibilidad con este servicio en `Program.Main`:
+
+```csharp
+builder.Services.AddScoped(sp =>
+    new HttpClient
+    {
+        BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
+    });
+```
+
+Si necesita acceder a los servicios de forma segura, acceda a un token seguro y configurar `HttpClient` para pasar este token como un encabezado de autenticación con cada solicitud:
+
+```csharp
+_httpClient.DefaultRequestHeaders.Authorization =
+    new AuthenticationHeaderValue("Bearer", token);
+```
+
+Esto se puede hacer desde cualquier componente que tenga `HttpClient` insertado, siempre que `HttpClient` no se haya agregado a los servicios de la aplicación con una duración `Transient`. Todas las referencias a `HttpClient` en la aplicación hacen referencia a la misma instancia, por lo que los cambios en un componente se aplican en toda la aplicación. Un buen lugar para realizar esta comprobación de autenticación (y después, la especificación del token) es en un componente compartido, como la navegación principal del sitio. Obtenga más información sobre este enfoque en el proyecto `BlazorAdmin` en la [aplicación de referencia eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
+
+Uno de los beneficios de Blazor WebAssembly frente a las SPA tradicionales de JavaScript es que no es necesario conservar sincronizadas las copias de los objetos de transferencia de datos (DTO). Sus proyectos de Blazor WebAssembly y de API web pueden compartir el mismo objeto de transferencia de datos en un proyecto común compartido. Esto elimina parte de la fricción que conlleva el desarrollo de aplicaciones de página única.
+
+Para obtener datos rápidamente de un punto de conexión de API, puede usar el método auxiliar integrado `GetFromJsonAsync`. Hay métodos similares para POST, PUT, etc. A continuación se muestra cómo obtener una clase CatalogItem desde un punto de conexión de API mediante un elemento `HttpClient` configurado en una aplicación de Blazor WebAssembly:
+
+```csharp
+var item = await _httpClient.GetFromJsonAsync<CatalogItem>($"catalog-items/{id}");
+```
+
+Una vez que tenga los datos que necesita, normalmente hará un seguimiento de los cambios de forma local. Para realizar actualizaciones en el almacén de datos de back-end, llamará a API web adicionales.
+
+**Referencias: datos de Blazor**
+
+- Llamada a una API web desde Blazor de ASP.NET Core
+  <https://docs.microsoft.com/aspnet/core/blazor/call-web-api>
 
 >[!div class="step-by-step"]
 >[Anterior](develop-asp-net-core-mvc-apps.md)

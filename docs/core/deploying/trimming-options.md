@@ -4,16 +4,16 @@ description: Obtenga información sobre cómo controlar el recorte de aplicacion
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465421"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515837"
 ---
 # <a name="trimming-options"></a>Opciones de recorte
 
-Los siguientes elementos y propiedades de MSBuild influyen en el comportamiento de [implementaciones autocontenidas recortadas](trim-self-contained.md). Algunas de las opciones mencionan `ILLink`, que es el nombre de la herramienta subyacente que implementa el recorte. Puede encontrar más información sobre la herramienta de línea de comandos `ILLink` en [página sobre las opciones de illink](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+Los siguientes elementos y propiedades de MSBuild influyen en el comportamiento de [implementaciones autocontenidas recortadas](trim-self-contained.md). Algunas de las opciones mencionan `ILLink`, que es el nombre de la herramienta subyacente que implementa el recorte. Puede encontrar más información sobre la herramienta subyacente en la [documentación del enlazador](https://github.com/mono/linker/tree/master/docs).
 
 ## <a name="enable-trimming"></a>Habilitación del recorte
 
@@ -129,3 +129,37 @@ Normalmente, los símbolos se recortan para que coincidan con los ensamblados re
     Quite los símbolos de la aplicación recortada, incluidos los archivos PDB incrustados y los archivos PDB independientes. Esto se aplica tanto al código de la aplicación como a las dependencias de los símbolos.
 
 El SDK también permite deshabilitar la compatibilidad del depurador con la propiedad `DebuggerSupport`. Cuando la compatibilidad con el depurador está deshabilitada, el recorte quitará los símbolos automáticamente (el valor predeterminado de `TrimmerRemoveSymbols` se establece en "true").
+
+## <a name="trimming-framework-library-features"></a>Características de recorte de las bibliotecas de marco
+
+Varias áreas de características de las bibliotecas de marco incluyen directivas de enlazador que permiten eliminar el código de las características deshabilitadas.
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    Elimina código que permite mejores experiencias de depuración. También [elimina los símbolos](#removing-symbols).
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    Elimina la compatibilidad con la serialización BinaryFormatter. Para obtener más información, consulte la sección [Métodos de serialización BinaryFormatter obsoletos](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps).
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    Elimina el código de codificación UTF-7 poco seguro. Para obtener más información, vea la sección [Rutas de acceso al código UTF-7 obsoletas](../compatibility/corefx.md#utf-7-code-paths-are-obsolete).
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    Elimina el código o la lógica relacionados con EventSource.
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    Elimina el código relacionado con la compatibilidad de diagnóstico para System.Net.Http.
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    Elimina el código y los datos específicos de la globalización. Para obtener más información, consulte [Modo invariable](../run-time-config/globalization.md#invariant-mode).
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    Elimina los mensajes de excepción para los ensamblados de `System.*`. Cuando un ensamblado de `System.*` produzca una excepción, el mensaje será un identificador de recurso simplificado en lugar del mensaje completo.
+
+ Estas propiedades harán que el código relacionado se recorte y también deshabilitarán las características a través del archivo [runtimeconfig](../run-time-config/index.md). Para obtener más información sobre estas propiedades, incluidas las opciones de runtimeconfig correspondientes, vea la página sobre [modificadores de características](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md). Algunos SDK pueden tener valores predeterminados para estas propiedades.

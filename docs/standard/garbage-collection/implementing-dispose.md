@@ -1,7 +1,7 @@
 ---
 title: Implementación de un método Dispose
 description: En este artículo, aprenderá a implementar el método Dispose, que libera los recursos no administrados que usa su código en .NET.
-ms.date: 05/27/2020
+ms.date: 09/08/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 863f78daf13ae9d795c37c1c6f428d387b9a026b
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455738"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022927"
 ---
 # <a name="implement-a-dispose-method"></a>Implementación de un método Dispose
 
@@ -77,7 +77,7 @@ El cuerpo del método consta de dos bloques de código:
 
   - **Objetos administrados que implementan <xref:System.IDisposable>.** El bloque condicional se puede utilizar para llamar a la implementación <xref:System.IDisposable.Dispose%2A> (eliminación en cascada). Si ha utilizado una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> para ajustar el recurso no administrado, debe llamar aquí a la implementación <xref:System.Runtime.InteropServices.SafeHandle.Dispose?displayProperty=nameWithType>.
 
-  - **Objetos administrados que consumen gran cantidad de memoria o recursos insuficientes.** Asigne referencias de objetos administrados grandes a `null` para aumentar la probabilidad de que no se pueda acceder a ellos. De este modo, se liberan más rápido que si se recuperaran de forma no determinista.
+  - **Objetos administrados que consumen gran cantidad de memoria o recursos insuficientes.** Asigne referencias de objetos administrados grandes a `null` para aumentar la probabilidad de que no se pueda acceder a ellos. Esto los libera más rápido que si se recuperaran de forma no determinista y se suele hacer fuera del bloque condicional.
 
 Si la llamada al método procede de un finalizador, solo se debe ejecutar el código que libera los recursos no administrados. El implementador es responsable de garantizar que la ruta de acceso falsa no interactúe con los objetos administrados que se pueden haber reclamado. Esto es importante porque el orden en el que el recolector de elementos no utilizados destruye los objetos administrados durante la finalización no es determinista.
 

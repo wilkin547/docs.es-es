@@ -1,22 +1,24 @@
 ---
 title: Cambios importantes en Windows Forms
-description: Enumera los cambios importantes en Windows Forms para .NET Core.
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+description: Enumera los cambios importantes en Windows Forms para .NET Core y .NET 5.
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556253"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656354"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Cambios importantes en Windows Forms
 
-Se ha agregado compatibilidad con Windows Forms a .NET Core, versión 3.0. En este artículo se enumeran los cambios importantes de Windows Forms por versión de .NET Core en la que se han incorporado. Si está actualizando una aplicación de Windows Forms desde .NET Framework o una versión anterior de .NET Core (3.0 o posterior), este artículo se aplica a su caso.
+Se ha agregado compatibilidad con Windows Forms a .NET Core, versión 3.0. En este artículo se enumeran los cambios importantes de Windows Forms por versión de .NET en la que se han incorporado. Si está actualizando una aplicación de Windows Forms desde .NET Framework o una versión anterior de .NET Core (3.0 o posterior), este artículo se aplica a su caso.
 
 En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Excepción InvalidOperationException por parte de las API relacionadas con DataGridView](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
+| [Uso de Microsoft.NET.Sdk por parte de las aplicaciones de WinForms y WPF](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [Controles de la barra de estado quitados](#removed-status-bar-controls) | 5.0 |
 | [Los métodos de WinForms inician ahora la excepción ArgumentException](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [Los métodos de WinForms inician ahora la excepción ArgumentNullException](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
@@ -36,6 +38,14 @@ En esta página se documentan los siguientes cambios importantes:
 | [No se admite el modificador de compatibilidad UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 

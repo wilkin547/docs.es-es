@@ -2,12 +2,12 @@
 title: 'dotnet-dump: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140937"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598115"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado de memoria (dotnet-dump)
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Especifica el número de id. de proceso del que se va a recopilar un volcado de memoria.
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  Especifica el tipo de volcado, que determina los tipos de información que se recopilan del proceso. Hay dos tipos:
+  Especifica el tipo de volcado, que determina los tipos de información que se recopilan del proceso. Existen tres tipos:
 
+  - `Full`: el volcado más grande que contiene toda la memoria, incluidas las imágenes de los módulos.
   - `Heap`: un volcado grande y relativamente completo que contiene listas de módulos, listas de subprocesos, todas las pilas, información de excepción, información de control y toda la memoria excepto las imágenes asignadas.
   - `Mini`: un volcado pequeño que contiene listas de módulos, listas de subprocesos, información de excepción y todas las pilas.
 
-  Si no se especifica, el valor predeterminado es `Heap`.
+  Si no se especifica, el valor predeterminado es `Full`.
 
 - **`-o|--output <output_dump_path>`**
 

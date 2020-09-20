@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241148"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516026"
 ---
 # <a name="tour-of-net"></a>Paseo por .NET
 
@@ -115,7 +115,7 @@ Para obtener más información sobre la programación asincrónica en .NET, comi
 
 LINQ es un conjunto eficaz de características para C# y Visual Basic que permiten escribir código simple y declarativo para operar en los datos. Los datos pueden estar en muchos formatos (como objetos en memoria, una base de datos SQL o un documento XML), pero el código LINQ que escriba normalmente no es diferente según el origen de datos.
 
-Para obtener más información y ver algunos ejemplos, consulte el tema [LINQ (Language Integrated Query)](using-linq.md).
+Para obtener más información y ver algunos ejemplos, consulte el artículo [Información general de LINQ (Language Integrated Query)](./linq/index.md).
 
 ## <a name="native-interoperability"></a>Interoperabilidad nativa
 
