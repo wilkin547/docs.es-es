@@ -38,19 +38,19 @@
                   href: xml-literals.md
                 - name: XML de análisis
                   items:
-                    - name: Procedimiento para analizar una cadena
+                    - name: Análisis de una cadena
                       href: parse-string.md
-                    - name: Procedimiento para cargar un documento XML desde un archivo
+                    - name: Carga de un XML desde un archivo
                       href: load-xml-file.md
                     - name: Conservación de un espacio en blanco al cargar o analizar XML
                       href: preserve-white-space-loading-parsing-xml.md
                     - name: 'Procedimiento para: Detectar errores de análisis'
                       href: catch-parsing-errors.md
-                    - name: 'Procedimiento para: Crear un árbol a partir de un objeto XmlReader'
+                    - name: Creación de un árbol a partir de un objeto XmlReader
                       href: create-tree-xmlreader.md
-                    - name: Procedimiento para hacer streaming de fragmentos XML desde un objeto XmlReader
+                    - name: Streaming de fragmentos XML desde un objeto XmlReader
                       href: stream-xml-fragments-xmlreader.md
-                - name: Procedimiento para rellenar un árbol XML con un objeto XmlWriter
+                - name: Rellenar un árbol XML con un objeto XmlWriter
                   href: populate-xml-tree-xmlwriter.md
                 - name: Procedimiento para validar mediante XSD
                   href: validate-xsd.md
@@ -60,9 +60,9 @@
               items:
                 - name: Información general sobre los espacios de nombres
                   href: namespaces-overview.md
-                - name: Procedimiento para crear un documento con espacios de nombres en C#
+                - name: Creación de un documento con espacios de nombres en C#
                   href: create-document-namespaces-csharp.md
-                - name: "Procedimiento para crear un documento con espacios de nombres en Visual\_Basic"
+                - name: Creación de un documento con espacios de nombres en Visual Basic
                   href: create-document-namespaces-visual-basic.md
                 - name: Procedimiento para controlar prefijos de espacio de nombres
                   href: control-namespace-prefixes.md
@@ -70,7 +70,7 @@
                   href: scope-default-namespaces.md
                 - name: "Uso de espacios de nombres globales en Visual\_Basic"
                   href: work-global-namespaces.md
-                - name: Procedimiento para escribir consultas de XML en espacios de nombres
+                - name: Escritura de consultas de XML en espacios de nombres
                   href: write-queries-xml-namespaces.md
             - name: Serialización de árboles XML
               items:
@@ -86,23 +86,23 @@
               items:
                 - name: Información general de los ejes de LINQ to XML
                   href: linq-xml-axes-overview.md
-                - name: Procedimiento para recuperar una colección de elementos
+                - name: Recuperación de una colección de elementos
                   href: retrieve-collection-elements.md
-                - name: Procedimiento para recuperar el valor de un elemento
+                - name: Recuperación del valor de un elemento
                   href: retrieve-value-element.md
-                - name: Procedimiento para filtrar por nombres de elemento
+                - name: Filtrado de nombres de elemento
                   href: filter-element-names.md
-                - name: Procedimiento para encadenar llamadas de métodos de eje
+                - name: Encadenamiento de llamadas de métodos de eje
                   href: chain-axis-method-calls.md
-                - name: Procedimiento para recuperar un único elemento secundario
+                - name: Recuperación de un único elemento secundario
                   href: retrieve-single-child-element.md
-                - name: Procedimiento para recuperar una colección de atributos
+                - name: Recuperación de una colección de atributos
                   href: retrieve-collection-attributes.md
-                - name: Procedimiento para recuperar un único atributo
+                - name: Recuperación de un único atributo
                   href: retrieve-single-attribute.md
-                - name: Procedimiento para recuperar el valor de un atributo
+                - name: Recuperación del valor de un atributo
                   href: retrieve-value-attribute.md
-                - name: Procedimiento para recuperar el valor superficial de un elemento
+                - name: Recuperación del valor superficial de un elemento
                   href: retrieve-shallow-value-element.md
                 - name: "Ejes integrados en el lenguaje de Visual\_Basic"
                   href: language-integrated-axes.md
@@ -112,113 +112,116 @@
                   href: query-xml-trees-overview.md
                 - name: Consultas básicas
                   items:
-                    - name: 'Procedimiento para: Buscar un elemento con un atributo específico'
+                    - name: Indización en ejemplos
+                      displayName: queries
+                      href: basic-queries-linq-to-xml.md
+                    - name: Búsqueda de un elemento con un atributo específico
                       href: find-element-specific-attribute.md
-                    - name: 'Procedimiento para: Buscar un elemento con un elemento secundario específico'
+                    - name: Búsqueda de un elemento con un elemento secundario específico
                       href: find-element-specific-child-element.md
                     - name: Diferencias entre consultar un elemento XDocument y consultar un elemento XElement
                       href: query-xdocument-vs-query-xelement.md
-                    - name: Procedimiento para buscar descendientes con un nombre de elemento específico
+                    - name: Búsqueda de descendientes con un nombre de elemento específico
                       href: find-descendants-specific-element-name.md
-                    - name: Procedimiento para buscar un único descendiente con el método Descendants
+                    - name: Búsqueda de un único descendiente con el método Descendants
                       href: find-single-descendant-descendants-method.md
-                    - name: Procedimiento para escribir consultas con filtrado complejo
+                    - name: Escritura de consultas con filtrado complejo
                       href: write-queries-complex-filtering.md
-                    - name: 'Procedimiento para: Filtrar por un elemento opcional'
+                    - name: Filtrado de un elemento opcional
                       href: filter-optional-element.md
-                    - name: 'Procedimiento para: Buscar todos los nodos de un espacio de nombres'
+                    - name: Búsqueda de todos los nodos de un espacio de nombres
                       href: find-all-nodes-namespace.md
-                    - name: Procedimiento para ordenar elementos
+                    - name: Ordenación de elementos
                       href: sort-elements.md
-                    - name: Procedimiento para ordenar elementos por varias claves
+                    - name: Ordenación de elementos en varias claves
                       href: sort-elements-multiple-keys.md
-                    - name: 'Procedimiento para: Calcular valores intermedios'
+                    - name: Cálculo de valores intermedios
                       href: calculate-intermediate-values.md
-                    - name: Procedimiento para escribir una consulta que busca elementos en función del contexto
+                    - name: Búsqueda de elementos en función del contexto
                       href: write-query-finds-elements-based-context.md
-                    - name: 'Procedimiento para: Depurar conjuntos de resultados de consulta vacíos'
+                    - name: Depuración de conjuntos de resultados de consulta vacíos
                       href: debug-empty-query-results-sets.md
                 - name: Proyecciones y transformaciones
                   items:
-                    - name: Procedimiento para trabajar con diccionarios mediante LINQ to XML
+                    - name: Trabajar con diccionarios mediante LINQ to XML
                       href: work-dictionaries-linq-xml.md
-                    - name: Procedimiento para transformar la forma de un árbol XML
+                    - name: Transformación de la forma de un árbol XML
                       href: transform-shape-xml-tree.md
-                    - name: 'Procedimiento para: Controlar el tipo de una proyección'
+                    - name: Control del tipo de una proyección
                       href: control-type-projection.md
-                    - name: Procedimiento para proyectar un nuevo tipo
+                    - name: Proyección de un nuevo tipo
                       href: project-new-type.md
-                    - name: Procedimiento para proyectar un gráfico de objetos
+                    - name: Proyección de un gráfico de objetos
                       href: project-object-graph.md
-                    - name: Procedimiento para proyectar un tipo anónimo
+                    - name: Proyección de un tipo anónimo
                       href: project-anonymous-type.md
-                    - name: Procedimiento para generar archivos de texto a partir de XML
+                    - name: Generación de archivos de texto a partir de XML
                       href: generate-text-files-xml.md
-                    - name: Procedimiento para generar XML a partir de archivos CSV
+                    - name: Generación de XML a partir de archivos CSV
                       href: generate-xml-csv-files.md
                 - name: Técnicas de consulta avanzadas
                   items:
-                    - name: Procedimiento para combinar dos colecciones
+                    - name: Unión de dos colecciones
                       href: join-two-collections.md
-                    - name: 'Procedimiento para: Crear una jerarquía utilizando la agrupación'
+                    - name: Creación de una jerarquía mediante la agrupación
                       href: create-hierarchy-grouping.md
-                    - name: Procedimiento para consultar LINQ to XML mediante XPath
+                    - name: Realización de consultas LINQ to XML mediante XPath
                       href: query-linq-xml-xpath.md
-                    - name: Procedimiento para escribir un método de eje de LINQ to XML
+                    - name: Escritura de un método de eje de LINQ to XML
                       href: write-linq-xml-axis-method.md
-                    - name: Procedimiento para efectuar transformaciones en streaming de texto a XML en C#
+                    - name: Realización de transformaciones de streaming de texto en XML (C#)
                       href: perform-streaming-transformations-text-xml.md
-                    - name: Procedimiento para mostrar todos los nodos de un árbol
+                    - name: Mostrar todos los nodos de un árbol
                       href: list-all-nodes-tree.md
-                    - name: Procedimiento para recuperar párrafos de un documento de Office Open XML
+                    - name: Recuperación de párrafos de un documento de Office Open XML
                       href: retrieve-paragraphs-office-open-xml-document.md
-                    - name: Procedimiento para modificar un documento de Office Open XML
+                    - name: Modificación de un documento de Office Open XML
                       href: modify-office-open-xml-document.md
-                    - name: Procedimiento para rellenar un árbol XML desde el sistema de archivos
+                    - name: Rellenar un árbol XML desde el sistema de archivos
                       href: populate-xml-tree-file-system.md
                 - name: LINQ to XML para usuarios de XPath
                   items:
                     - name: Comparación de XPath y LINQ to XML
                       href: comparison-xpath-linq-xml.md
-                    - name: Procedimiento para buscar un elemento secundario
+                    - name: Búsqueda de un elemento secundario
                       href: find-child-element.md
-                    - name: Procedimiento para buscar una lista de elementos secundarios
+                    - name: Búsqueda de una lista de elementos secundarios
                       href: find-list-child-elements.md
-                    - name: Procedimiento para buscar el elemento raíz
+                    - name: Búsqueda del elemento raíz
                       href: find-root-element.md
-                    - name: Procedimiento para buscar elementos descendientes
+                    - name: Búsqueda de elementos descendientes
                       href: find-descendant-elements.md
-                    - name: Procedimiento para filtrar por un atributo
+                    - name: Búsqueda de un atributo
                       href: filter-attribute.md
-                    - name: Procedimiento para buscar elementos relacionados
+                    - name: Búsqueda de elementos relacionados
                       href: find-related-elements.md
-                    - name: Procedimiento para buscar elementos en un espacio de nombres
+                    - name: Búsqueda de elementos en un espacio de nombres
                       href: find-elements-namespace.md
-                    - name: Procedimiento para buscar nodos anteriores del mismo nivel
+                    - name: Búsqueda de nodos anteriores del mismo nivel
                       href: find-preceding-siblings.md
-                    - name: Procedimiento para buscar descendientes de un elemento secundario
+                    - name: Búsqueda de descendientes de un elemento secundario
                       href: find-descendants-child-element.md
-                    - name: Procedimiento para buscar la unión de dos rutas de acceso a ubicaciones
+                    - name: Búsqueda de la unión de dos rutas de acceso a ubicaciones
                       href: find-union-two-location-paths.md
-                    - name: Procedimiento para buscar nodos del mismo nivel
+                    - name: Búsqueda de nodos del mismo nivel
                       href: find-sibling-nodes.md
-                    - name: Procedimiento para buscar un atributo del elemento principal
+                    - name: Búsqueda de un atributo del elemento principal
                       href: find-attribute-parent.md
-                    - name: Procedimiento para buscar atributos de nodos del mismo nivel con un nombre específico
+                    - name: Búsqueda de atributos de nodos del mismo nivel con un nombre específico
                       href: find-attributes-siblings-specific-name.md
-                    - name: Procedimiento para buscar elementos con un atributo específico
+                    - name: Búsqueda de elementos con un atributo específico
                       href: find-elements-specific-attribute.md
-                    - name: Procedimiento para buscar elementos secundarios en función de la posición
+                    - name: Búsqueda de elementos secundarios en función de la posición
                       href: find-child-elements-based-position.md
-                    - name: Procedimiento para buscar el nodo del mismo nivel inmediatamente anterior
+                    - name: Búsqueda del nodo del mismo nivel inmediatamente anterior
                       href: find-immediate-preceding-sibling.md
                 - name: Transformaciones funcionales puras de XML
                   items:
-                    - name: Introducción a las transformaciones funcionales puras
+                    - name: Introducción
                       href: introduction-pure-functional-transformations.md
-                    - name: Conceptos y terminología (transformación funcional)
+                    - name: Conceptos y terminología
                       href: concepts-terminology-functional-transformation.md
-                    - name: Diferencias entre programación funcional y programación imperativa
+                    - name: Diferencias entre la programación funcional y la imperativa
                       href: functional-vs-imperative-programming.md
                     - name: Refactorización en funciones puras
                       href: refactor-pure-functions.md
@@ -232,11 +235,11 @@
                       href: deferred-execution-example.md
                     - name: 'Tutorial: Encadenamiento de cadenas juntas (C#)'
                       items:
-                        - name: Ejemplo de encadenamiento de cadenas (C#)
+                        - name: Ejemplo de encadenamiento de cadenas
                           href: chain-queries-example.md
-                        - name: Materialización intermedia (C#)
+                        - name: Materialización intermedia
                           href: intermediate-materialization.md
-                        - name: Encadenamiento de operadores de consulta estándar juntos (C#)
+                        - name: Operadores de consulta estándar de cadenas
                           href: chain-standard-query-operators-together.md
                     - name: 'Tutorial: Manipulación de contenido en un documento WordprocessingML'
                       items:
@@ -264,21 +267,21 @@
                               href: wordprocessingml-document-styles.md
                             - name: Componente de estilo de un documento de WordprocessingML
                               href: style-part-wordprocessingml-document.md
-                            - name: "Ejemplo que da como resultado elementos de un documento de Office\_Open XML"
+                            - name: Ejemplo en el que se generan las partes de un documento
                               href: example-outputs-office-open-xml-document-parts.md
             - name: Modificación de árboles XML
               items:
                 - name: Diferencias entre la modificación del árbol XML en memoria y la construcción funcional
                   href: in-memory-xml-tree-modification-vs-functional-construction.md
-                - name: 'Adición de elementos, atributos y nodos a un árbol XML'
+                - name: 'Adición de elementos, atributos y nodos'
                   href: add-elements-attributes-nodes-xml-tree.md
-                - name: 'Modificación de elementos, atributos y nodos a un árbol XML'
+                - name: 'Modificación de elementos, atributos y nodos'
                   href: modify-elements-attributes-nodes-xml-tree.md
-                - name: 'Eliminación de elementos, atributos y nodos de un árbol XML'
+                - name: 'Eliminación de elementos, atributos y nodos'
                   href: remove-elements-attributes-nodes-xml-tree.md
                 - name: Conservación de pares nombre-valor
                   href: maintain-name-value-pairs.md
-                - name: 'Procedimiento para: Cambiar el espacio de nombres de todo un árbol XML'
+                - name: Cambio del espacio de nombres de todo un árbol XML
                   href: change-namespace-entire-xml-tree.md
             - name: Rendimiento
               items:
@@ -300,21 +303,21 @@
                   href: program-nodes.md
                 - name: Errores de código declarativos e imperativos mixtos
                   href: mixed-declarative-imperative-code-bugs.md
-                - name: Procedimiento para hacer streaming de fragmentos XML con acceso a la información del encabezado
+                - name: Streaming de fragmentos XML con acceso a la información del encabezado
                   href: stream-xml-fragments-access-header-information.md
-                - name: Procedimiento para realizar una transformación de streaming de documentos XML grandes
+                - name: Realización de una transformación de streaming de documentos XML grandes
                   href: perform-streaming-transform-large-xml-documents.md
-                - name: Procedimiento para leer y escribir un documento codificado
+                - name: Lectura y escritura de un documento codificado
                   href: read-write-encoded-document.md
                 - name: Uso de XSLT para transformar un árbol XML
                   href: use-xslt-transform-xml-tree.md
-                - name: Procedimiento para usar anotaciones para transformar árboles LINQ to XML en un estilo XSLT
+                - name: Uso de anotaciones para transformar árboles LINQ to XML en un estilo XSLT
                   href: use-annotations-transform-linq-xml-trees-xslt-style.md
                 - name: Serialización de gráficos de objeto que contienen objetos XElement
                   items:
-                    - name: Procedimiento para serializar con XmlSerializer
+                    - name: Serialización con XmlSerializer
                       href: serialize-xmlserializer.md
-                    - name: Procedimiento para serializar con DataContractSerializer
+                    - name: Serialización con DataContractSerializer
                       href: serialize-datacontractserializer.md
             - name: Seguridad de LINQ to XML
               href: linq-xml-security.md
