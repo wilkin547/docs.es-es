@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: eff414411c47ec83177ae6a09de4a96f47af6313
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063008"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558594"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 
@@ -205,7 +205,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
 - [Expresiones lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Expresiones lambda (C#)](../../language-reference/operators/lambda-expressions.md)
 - [Procedimiento para usar propiedades indizadas en la programación de interoperabilidad COM](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [Tutorial: Inserción de información de tipos de los ensamblados de Microsoft Office en Visual Studio](/previous-versions/visualstudio/visual-studio-2013/ee317478(v=vs.120))
 - [Tutorial: Inserción de tipos de ensamblados administrados](../../../standard/assembly/embed-types-visual-studio.md)
 - [Tutorial: Creación del primer complemento VSTO para Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [Interoperabilidad COM](../../../visual-basic/programming-guide/com-interop/index.md)

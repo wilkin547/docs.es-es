@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558470"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543716"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -138,7 +138,7 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 - Debe tener credenciales administrativas para instalar .NET Framework 4.5 o versiones posteriores.
 
-- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible de la [página de descarga de .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible de la [página de descarga de .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft (2749655)](/security-updates/SecurityAdvisories/2012/2749655) y el [Artículo 2770445 de Knowledge Base](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Para instalar paquetes de idioma
 

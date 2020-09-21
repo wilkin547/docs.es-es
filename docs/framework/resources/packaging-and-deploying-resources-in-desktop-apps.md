@@ -27,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 056569f86afcbdf124f9e617e4ad07b09a194681
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166188"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554005"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -51,7 +51,7 @@ Este modelo cuenta con varias ventajas:
 
 ## <a name="resource-naming-conventions"></a>Convenciones de nomenclatura de recursos
 
-Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Consulte la columna **Etiqueta de idioma** en la [lista de nombres de los idiomas y las regiones compatibles con Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Los nombres de las referencias culturales siguen el estándar definido por [BCP 47](https://tools.ietf.org/html/bcp47).
+Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Consulte la columna **Etiqueta de idioma** en la [lista de nombres de los idiomas y las regiones compatibles con Windows](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Los nombres de las referencias culturales siguen el estándar definido por [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
 > Existen algunas excepciones relativas a los nombres de referencia cultural de dos letras, como `zh-Hans` en el caso del chino (simplificado).

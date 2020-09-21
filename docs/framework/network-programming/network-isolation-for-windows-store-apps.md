@@ -2,12 +2,12 @@
 title: Aislamiento de red para aplicaciones de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f9288b53b969838cac64c24d3c9861a0f841aca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558464"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Aislamiento de red para aplicaciones de la Tienda Windows
 
@@ -25,13 +25,13 @@ Use esta lista de comprobación para asegurarse de que el aislamiento de red est
   
 4. Implemente y ejecute la aplicación para probarla mediante las herramientas de aislamiento de red proporcionadas para la solución de problemas.  
   
-Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) en la documentación para desarrolladores de la Tienda Windows 8.x.
+Para obtener más información sobre cómo configurar las funcionalidades de red y las herramientas de aislamiento que se usan para la solución de problemas de aislamiento de red, vea [Cómo configurar las funcionalidades de aislamiento de red](/previous-versions/windows/apps/hh770532(v=win.10)) en la documentación para desarrolladores de la Tienda Windows 8.x.
   
 ## <a name="see-also"></a>Vea también
 
-- [Conectar con un servicio web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
-- [Directrices y lista de comprobación para el aislamiento de red](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-- [Inicio rápido: conectarse mediante HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
-- [Cómo usar controladores HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
-- [Cómo proteger conexiones HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [Conectar con un servicio web](/previous-versions/windows/apps/hh761504(v=win.10))
+- [Directrices y lista de comprobación para el aislamiento de red](/previous-versions/windows/apps/hh770532(v=win.10))
+- [Inicio rápido: conectarse mediante HttpClient](/previous-versions/windows/apps/hh781239(v=win.10))
+- [Cómo usar controladores HttpClient](/previous-versions/windows/apps/hh781241(v=win.10))
+- [Cómo proteger conexiones HttpClient](/previous-versions/windows/apps/hh781240(v=win.10))
 - [Ejemplo de HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

@@ -3,12 +3,12 @@ title: Procesamiento de tareas asincrónicas a medida que se completan
 description: En este ejemplo se muestra cómo usar Task.WhenAny en C# para iniciar varias tareas y procesar los resultados a medida que finalizan, en lugar de procesarlos en el orden en que se inician.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812034"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557312"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-Debido a la [ejecución diferida](../linq/deferred-execution-example.md) con LINQ, se llama a <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> para iniciar cada tarea.
+Debido a la [ejecución diferida](../../../../standard/linq/deferred-execution-example.md) con LINQ, se llama a <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> para iniciar cada tarea.
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

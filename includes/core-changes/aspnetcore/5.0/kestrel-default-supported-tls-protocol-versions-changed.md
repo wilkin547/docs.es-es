@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3244a36808fb687663241e704d08775ea5c96720
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 97870553d4ec66a569ba63cd945639b03bbbd6df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803249"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539500"
 ---
 ### <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: versiones del protocolo TLS admitidas de forma predeterminada cambiadas
 
@@ -39,7 +39,7 @@ A menos que la aplicación tenga un motivo concreto para no hacerlo, debe usar l
 
 Para deshabilitar protocolos más antiguos, realice una de las siguientes acciones:
 
-* Deshabilite los protocolos anteriores, como TLS 1.0, en todo el sistema con las [instrucciones de Windows](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry). Actualmente está habilitado de forma predeterminada en todas las versiones de Windows.
+* Deshabilite los protocolos anteriores, como TLS 1.0, en todo el sistema con las [instrucciones de Windows](../../../../docs/framework/network-programming/tls.md#configuring-schannel-protocols-in-the-windows-registry). Actualmente está habilitado de forma predeterminada en todas las versiones de Windows.
 * Seleccione manualmente los protocolos que quiere admitir en el código como se indica a continuación:
 
     ```csharp

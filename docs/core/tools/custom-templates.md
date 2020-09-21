@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324511"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538100"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -96,7 +96,7 @@ La carpeta *mytemplate* es un paquete de plantilla instalable. Una vez instalado
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Empaquetar una plantilla en un paquete NuGet (archivo nupkg)
 
-Una plantilla personalizada se empaqueta con el comando la [dotnet pack](dotnet-pack.md) y un archivo *.csproj*. Como alternativa, se puede usar [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) con el comando [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) junto con un archivo *.nuspec*. Pero NuGet necesita .NET Framework en Windows y [Mono](https://www.mono-project.com/) en Linux y macOS.
+Una plantilla personalizada se empaqueta con el comando la [dotnet pack](dotnet-pack.md) y un archivo *.csproj*. Como alternativa, se puede usar [NuGet](/nuget/tools/nuget-exe-cli-reference) con el comando [nuget pack](/nuget/tools/cli-ref-pack) junto con un archivo *.nuspec*. Pero NuGet necesita .NET Framework en Windows y [Mono](https://www.mono-project.com/) en Linux y macOS.
 
 El archivo *.csproj* es ligeramente diferente al archivo *.csproj* de un proyecto de código tradicional. Tenga en cuenta la siguiente configuración:
 

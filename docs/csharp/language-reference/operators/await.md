@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 6531e696a6193bf1b1909c9f1be3f5beb4d7dd69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 8dc85bfeaab12d17af4a3e045559e268b228f736
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134372"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536475"
 ---
 # <a name="await-operator-c-reference"></a>Operador await (referencia de C#)
 
@@ -60,5 +60,5 @@ Para obtener más información, vea la sección [Expresiones await](~/_csharplan
 - [Modelo de programación asincrónica de tareas](../../programming-guide/concepts/async/task-asynchronous-programming-model.md)
 - [Programación asincrónica](../../async.md)
 - [Async en profundidad](../../../standard/async-in-depth.md)
-- [Tutorial: Acceso a la web con async y await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Tutorial: Acceso a la web con async y await](../../programming-guide/concepts/async/index.md)
 - [Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0](../../tutorials/generate-consume-asynchronous-stream.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: ef3d79c5b40d08cb76e58eba1c8831c468fd1fc0
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: f2aae14deac967a833fb3510acdb32e0971485b5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537488"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Procedimiento para concatenar varias cadenas (Guía de C#)
 
@@ -41,7 +41,7 @@ En otros casos, puede combinar cadenas en un bucle, donde no sabe cuántas caden
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/Concatenate.cs" id="Snippet4":::
 
-Puede obtener más información sobre las [razones para elegir la concatenación de cadenas o sobre la clase `StringBuilder`](https://docs.microsoft.com/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types).
+Puede obtener más información sobre las [razones para elegir la concatenación de cadenas o sobre la clase `StringBuilder`](/dotnet/api/system.text.stringbuilder#the-string-and-stringbuilder-types).
 
 Otra opción para combinar cadenas a partir de una colección consiste en usar el método <xref:System.String.Concat%2A?displayProperty=nameWithType>. Use el método <xref:System.String.Join%2A?displayProperty=nameWithType> si las cadenas de origen se deben separar con un delimitador. El código siguiente combina una matriz de palabras usando ambos métodos:
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reading text from files [Visual Basic]
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-ms.openlocfilehash: 6d05dac9b612659a74e25c0ce87c7524316d31a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ec161f5146d5bea7f34d4a5b6c154f6c45b1cf4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411608"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546502"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>Cómo: Leer texto de archivos con StreamReader (Visual Basic)
 
@@ -34,7 +34,7 @@ El objeto `My.Computer.FileSystem` proporciona métodos para abrir un <xref:Syst
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
 
- Para leer un archivo, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.FileIOPermission>. Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código). El usuario también necesita acceso al archivo. Para obtener más información, vea [Información general sobre la tecnología ACL](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
+ Para leer un archivo, el ensamblado requiere un nivel de privilegios concedido por la clase <xref:System.Security.Permissions.FileIOPermission>. Si realiza una ejecución en un contexto de confianza parcial, el código podría desencadenar una excepción por falta de privilegios. Para obtener más información, vea [Code Access Security Basics](../../../../framework/misc/code-access-security-basics.md) (Aspectos básicos de seguridad de acceso del código). El usuario también necesita acceso al archivo. Para obtener más información, vea [Información general sobre la tecnología ACL](/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -42,5 +42,5 @@ El objeto `My.Computer.FileSystem` proporciona métodos para abrir un <xref:Syst
 - <xref:System.Windows.Forms.OpenFileDialog>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>
-- [SaveFileDialog (componente)](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog (componente)](/dotnet/desktop/winforms/controls/savefiledialog-component-windows-forms)
 - [Leer archivos](reading-from-files.md)

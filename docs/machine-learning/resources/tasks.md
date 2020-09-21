@@ -2,12 +2,12 @@
 title: Tareas de aprendizaje automático
 description: Explore las diferentes tareas de aprendizaje automático y las tareas asociadas que se admiten en ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 56cdb5f3162614d0bf2fb1e5bd9e774b5548b238
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144453"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679487"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tareas de aprendizaje automático en ML.NET
 
@@ -229,4 +229,4 @@ La tarea de previsión usa datos de serie temporal pasados para realizar predicc
 
 Puede entrenar un modelo de previsión con el algoritmo siguiente:
 
-<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A>

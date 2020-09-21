@@ -2,12 +2,12 @@
 title: Comando dotnet nuget remove source
 description: El comando dotnet nuget remove source quita un origen existente de los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: b259873e1885644b272136fa31414410bdfd9f27
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b5575c31c0008d6e3e5a2e52906a076614217dd0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463488"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537901"
 ---
 # <a name="dotnet-nuget-remove-source"></a>dotnet nuget remove source
 
@@ -39,7 +39,7 @@ El comando `dotnet nuget remove source` quita un origen existente de los archivo
 
 - **`--configfile`**
 
-  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).
 
 ## <a name="examples"></a>Ejemplos
 

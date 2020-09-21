@@ -19,16 +19,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: db1156106690f8321b7fd5a2890c2aa44cfe17e3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cefdfef32928783b23ac0d51be596e48c27bde9a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166199"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535513"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 
-Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la Tienda Windows 8.x, vea [Creación y recuperación de recursos en aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la Tienda Windows 8.x, vea [Creación y recuperación de recursos en aplicaciones de la Tienda Windows](/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperar recursos de ensamblados  
@@ -159,7 +159,7 @@ GetObject.exe
  Una vez creados los recursos y colocados en el directorio correspondiente, debe crear un objeto <xref:System.Resources.ResourceManager> para usar los recursos llamando al método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . El primer parámetro especifica el nombre de la raíz del archivo .resources predeterminado de la aplicación (en el ejemplo de la sección anterior sería "strings"). El segundo parámetro especifica la ubicación de los recursos (en el ejemplo anterior, "Resources"). El tercer parámetro especifica la implementación <xref:System.Resources.ResourceSet> que se va a usar. Si el tercer parámetro es `null`, se usará la clase <xref:System.Resources.ResourceSet> en tiempo de ejecución predeterminada.  
   
 > [!NOTE]
-> No implemente ninguna aplicación ASP.NET con archivos .resources independientes, ya que se pueden producir problemas de bloqueo y se puede interrumpir la implementación de XCOPY. Se recomienda implementar los recursos ASP.NET en ensamblados satélite. Para obtener más información, consulta [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
+> No implemente ninguna aplicación ASP.NET con archivos .resources independientes, ya que se pueden producir problemas de bloqueo y se puede interrumpir la implementación de XCOPY. Se recomienda implementar los recursos ASP.NET en ensamblados satélite. Para obtener más información, consulta [ASP.NET Web Page Resources Overview](/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Después de crear una instancia del objeto <xref:System.Resources.ResourceManager> , debe usar los métodos <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>y <xref:System.Resources.ResourceManager.GetStream%2A> como se ha descrito anteriormente para recuperar los recursos. A pesar de ello, la recuperación de recursos directamente desde los archivos .resources difiere de la recuperación de recursos insertados desde ensamblados. Al recuperar recursos desde archivos .resources, los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> siempre recuperan los recursos de la referencia cultural predeterminada, independientemente de la referencia cultural actual. Para recuperar los recursos de la referencia cultural actual de la aplicación o de una referencia cultural en concreto, debe llamar al método <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>o <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> y especificar la referencia cultural cuyos recursos se van a recuperar. Para recuperar los recursos de la referencia cultural actual, especifique el valor de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> como argumento `culture` . Si el Administrador de recursos no puede recuperar los recursos de `culture`, aplicará las reglas de reserva de recursos estándar para recuperar los recursos adecuados.  
   
@@ -207,4 +207,4 @@ csc Example.cs
 - [Recursos de aplicaciones de escritorio](index.md)
 - [Empaquetar e implementar recursos](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md)
-- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))
+- [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](/previous-versions/windows/apps/hh694557(v=vs.140))

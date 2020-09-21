@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555541"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Prácticas recomendadas para desarrollar aplicaciones de uso internacional
 
@@ -91,7 +91,7 @@ En esta sección se describen las procedimientos recomendados que hay que seguir
 
 4. Especifique los valores de los atributos requestEncoding, responseEncoding, fileEncoding, culture y uiCulture en las tres ubicaciones siguientes de una aplicación ASP.NET:
 
-    - En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, consulte [Elemento \<globalization>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - En la sección de globalización de un archivo Web.config. Este archivo es externo a la aplicación de ASP.NET. Para obtener más información, consulte [Elemento \<globalization>](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
     - En una directiva de página. Tenga en cuenta que, cuando una aplicación está en una página, el archivo ya se ha leído. Por lo tanto, es demasiado tarde para especificar fileEncoding y requestEncoding. Sólo uiCulture, Culture y responseEncoding se pueden especificar en una directiva de página.
 

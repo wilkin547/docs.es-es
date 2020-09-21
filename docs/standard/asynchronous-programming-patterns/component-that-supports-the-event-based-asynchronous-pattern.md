@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: d635135e58c2fd86897b06b20a6aa0c251335e70
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379127"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536046"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](event-based-asynchronous-pattern-overview.md).  
@@ -253,6 +253,6 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejecutar una operación en segundo plano](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Ejecutar una operación en segundo plano](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
 - [Event-based Asynchronous Pattern Overview](event-based-asynchronous-pattern-overview.md) (Información general sobre el modelo asincrónico basado en eventos)
 - [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md)

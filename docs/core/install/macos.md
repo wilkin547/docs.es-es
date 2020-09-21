@@ -4,12 +4,12 @@ description: Descubra qué versiones de macOS puede instalar en .NET Core.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f946759a57bf2eedd296ecbd55fd3a5a7560638d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132760"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538371"
 ---
 # <a name="install-net-core-on-macos"></a>Instalación de .NET Core en macOS
 
@@ -177,7 +177,7 @@ Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core 
 
 Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización y las instalaciones que no son de administrador del entorno de ejecución. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
 
-El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Puede elegir una versión concreta especificando el modificador `current`. Incluya el modificador `runtime` para instalar un entorno de ejecución. De lo contrario, el script instala el [SDK](sdk.md).
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Puede elegir una versión concreta especificando el modificador `current`. Incluya el modificador `runtime` para instalar un entorno de ejecución. De lo contrario, el script instala el [SDK](./windows.md).
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore

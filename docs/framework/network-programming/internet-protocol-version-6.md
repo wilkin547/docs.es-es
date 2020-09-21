@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: dd8b0b26e449fba7479d2678aff25ed49e721a90
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502397"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551470"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo de Internet versión 6
 El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos estándar para la capa de red de Internet. IPv6 está diseñado para resolver muchos de los problemas que se producen en la versión actual del conjunto de protocolo de Internet (conocido como IPv4) en relación con el agotamiento de direcciones, la seguridad, la configuración automática, la extensibilidad, etc. IPv6 amplía las funciones de Internet para habilitar nuevos tipos de aplicaciones, incluidas las aplicaciones móviles y de punto a punto. A continuación se indican los principales problemas del protocolo IPv4 actual:  
@@ -56,10 +56,10 @@ El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos es
   
 - RFC 2374, An IPv6 Aggregatable Global Unicast Address Format (Formato de dirección de unidifusión global agregable de IPv6).  
   
- También encontrará información relacionada con IPv6 en [IP versión 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
+ También encontrará información relacionada con IPv6 en [IP versión 6 (IPv6)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498(v=ws.10)).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplo de sockets IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
+- [Ejemplo de sockets IPv6](/previous-versions/dotnet/netframework-3.0/ms180981(v=vs.85))
 - [Network Programming Samples (Ejemplos de programación de red)](network-programming-samples.md)
 - [Sockets](sockets.md)

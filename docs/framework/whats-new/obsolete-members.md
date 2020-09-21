@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558938"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558529"
 ---
 # <a name="obsolete-members-in-net-framework"></a>Miembros obsoletos en .NET Framework
 
@@ -421,8 +421,8 @@ En este artículo no se muestran los miembros de los tipos obsoletos. Para obten
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|Los llamadores no deben usar la interfaz <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType>, sino que deben usar directamente los métodos de la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> en su lugar. Los que hereden de <xref:System.CodeDom.Compiler.CodeDomProvider> deben seguir implementando esta interfaz, y deben excluir esta advertencia o dejar de usar este método.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|Los llamadores no deben usar la interfaz <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType>, sino que deben usar directamente los métodos de la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> en su lugar. Los que hereden de <xref:System.CodeDom.Compiler.CodeDomProvider> deben seguir implementando esta interfaz, y deben excluir esta advertencia o dejar de usar este método.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|Los llamadores no deben usar la interfaz <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType>, sino que deben usar directamente los métodos de la clase <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> en su lugar. Los que hereden de <xref:System.CodeDom.Compiler.CodeDomProvider> deben seguir implementando esta interfaz, y deben excluir esta advertencia o dejar de usar este método.|
-> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|La directiva CAS está obsoleta y se quitará en futuras versiones de .NET Framework. Para más información, vea [Cambios de seguridad en .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29).|
-> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|La directiva CAS está obsoleta y se quitará en futuras versiones de .NET Framework. Para más información, vea [Cambios de seguridad en .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29).|
+> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|La directiva CAS está obsoleta y se quitará en futuras versiones de .NET Framework. Para más información, vea [Cambios de seguridad en .NET Framework 4](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100)).|
+> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|La directiva CAS está obsoleta y se quitará en futuras versiones de .NET Framework. Para más información, vea [Cambios de seguridad en .NET Framework 4](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100)).|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Utilice <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29> en su lugar.|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Utilice <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29> en su lugar.|
 > |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Utilice <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29> en su lugar.|

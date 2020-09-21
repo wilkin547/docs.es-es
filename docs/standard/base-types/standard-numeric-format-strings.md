@@ -17,12 +17,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447126"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557377"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -48,7 +48,7 @@ Las cadenas con formato numérico estándar son compatibles con:
 - [Cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
@@ -389,5 +389,5 @@ En el ejemplo siguiente se da formato a un valor numérico integral y de punto f
 - [Aplicación de formato a tipos](formatting-types.md)
 - [Cómo: Rellenar un número con ceros a la izquierda](how-to-pad-a-number-with-leading-zeros.md)
 - [Formatos compuestos](composite-formatting.md)
-- [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

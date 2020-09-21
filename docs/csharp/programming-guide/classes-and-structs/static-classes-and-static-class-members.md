@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863882"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541882"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Como sucede con todos los tipos de clase, el entorno de ejecución de .NET carga la información de tipo para una clase estática cuando se carga el programa que hace referencia a la clase. El programa no puede especificar exactamente cuándo se carga la clase, pero existe la garantía de que se cargará, de que sus campos se inicializarán y de que se llamará a su constructor estático antes de que se haga referencia a la clase por primera vez en el programa. Solo se llama una vez a un constructor estático, y una clase estática permanece en memoria durante la vigencia del dominio de aplicación en el que reside el programa.  
   
 > [!NOTE]
-> Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29) (Implementar un singleton en C#).  
+> Para crear una clase no estática que solo permita la creación de una instancia de sí misma, vea [Implementing Singleton in C#](/previous-versions/msp-n-p/ff650316(v=pandp.10)) (Implementar un singleton en C#).  
   
  La siguiente lista contiene las características principales de una clase estática:  
   

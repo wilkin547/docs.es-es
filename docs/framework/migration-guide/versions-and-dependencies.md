@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: fe652e4cc3a996586d01cdfc4c5749decb51e9db
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557352"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557676"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versiones y dependencias de .NET Framework
 
@@ -175,7 +175,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-4"></a>.NET Framework 4
 
-[Características nuevas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
+[Características nuevas](/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
 
 |||
 |-|-|
@@ -187,7 +187,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-35"></a>.NET Framework 3,5
 
-[Características nuevas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
+[Características nuevas](/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
 
 - LINQ
 - Árboles de expresión
@@ -208,7 +208,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-30"></a>.NET Framework 3.0
 
-[Características nuevas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb822048(v=vs.90)):
+[Características nuevas](/previous-versions/visualstudio/visual-studio-2008/bb822048(v=vs.90)):
 
 - Windows Presentation Foundation
 - Windows Communication Foundation
@@ -224,7 +224,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-20"></a>.NET Framework 2.0
 
-[Características nuevas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t357fb32%28v%3dvs.90%29):
+[Características nuevas](/previous-versions/visualstudio/visual-studio-2008/t357fb32(v=vs.90)):
 
 - Genéricos
 - Depurador: Editar y continuar
@@ -243,7 +243,7 @@ En las tablas siguientes se resume el historial de versiones de .NET Framework y
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
 
-[Características nuevas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/h88tthh0%28v%3dvs.90%29):
+[Características nuevas](/previous-versions/visualstudio/visual-studio-2008/h88tthh0(v=vs.90)):
 
 - Controles móviles de ASP.NET
 - Ejecución simultánea

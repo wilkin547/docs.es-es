@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291973"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555938"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
@@ -43,7 +43,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Para obtener la evidencia desde el ensamblado, utilice `this.GetType().Assembly.Evidence`. Para obtener evidencia de un identificador de recurso uniforme (URI), utilice `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+ Si utiliza métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que toman <xref:System.Xml.XmlResolver> pero no `Evidence`, la zona de seguridad del ensamblado toma como valor predeterminado Plena confianza. Para más información, vea <xref:System.Security.SecurityZone> y [Conjuntos de permisos con nombre](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   

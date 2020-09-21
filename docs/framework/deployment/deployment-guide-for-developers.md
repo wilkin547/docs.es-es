@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558834"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558750"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 En este tema se proporciona información a los desarrolladores que quieren instalar cualquier versión de .NET Framework a partir de .NET Framework 4.5 en [!INCLUDE[net_current](../../../includes/net-current-version.md)] con sus aplicaciones.
@@ -43,9 +43,9 @@ Puede descargar los paquetes de idioma y los paquetes redistribuibles para .NET�
 
 - A partir de .NET Framework 4.5, los usuarios pueden ver una lista de aplicaciones de .NET Framework en ejecución durante la instalación y cerrarlas fácilmente. Esto puede ayudar a evitar el reinicio del sistema causado por las instalaciones de .NET Framework. Vea [Reducir los reinicios del sistema](reducing-system-restarts.md).
 
-- La desinstalación de .NET Framework 4.5 o versiones posteriores también quita los archivos de .NET Framework 4 ya existentes. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
+- La desinstalación de .NET Framework 4.5 o versiones posteriores también quita los archivos de .NET Framework 4 ya existentes. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
-- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible de la [página de descarga de .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- .NET Framework 4.5 redistribuible se actualizó el 9 de octubre de 2012 para corregir un problema relacionado con una marca de tiempo incorrecta en un certificado digital, que produjo que la firma digital en los archivos mostrados y firmados por Microsoft expirase prematuramente. Si anteriormente instaló el paquete redistribuible de .NET Framework 4.5 con fecha del 16 de agosto de 2012, es recomendable que actualice su copia con el último redistribuible de la [página de descarga de .NET Framework](https://dotnet.microsoft.com/download/dotnet-framework/net45). Para obtener más información sobre este problema, vea el [Documento informativo sobre seguridad de Microsoft 2749655](/security-updates/SecurityAdvisories/2012/2749655).
 
 Para obtener información sobre cómo un administrador del sistema puede implementar .NET Framework y sus dependencias del sistema en una red, vea [Deployment Guide for Administrators](guide-for-administrators.md) (Guía de implementación para administradores).
 
@@ -345,11 +345,11 @@ En la tabla siguiente se muestran las opciones que se pueden incluir cuando se e
 |Opción|Descripción|
 |------------|-----------------|
 |**/CEIPConsent**|Sobrescribe el comportamiento predeterminado y envía comentarios anónimos a Microsoft para mejorar las experiencias de implementación futuras. Se puede utilizar esta opción solamente si el programa de instalación solicita el consentimiento y si el usuario concede el permiso para enviar comentarios anónimos a Microsoft.|
-|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"** . Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/chainingpackage** `packageName`|Especifica el nombre del archivo ejecutable que realiza el encadenamiento. Esta información se envía a Microsoft como comentarios anónimos para ayudar a mejorar las experiencias de implementación futuras.<br /><br /> Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Lucerne Publishing"** . Para obtener un ejemplo de un paquete de encadenamiento, vea [Información de progreso de un paquete de instalación](/previous-versions/cc825975(v=vs.100)).|
 |**/LCID**  `LCID`<br /><br /> donde `LCID` especifica un identificador de configuración regional (vea [Idiomas compatibles](#supported-languages))|Instala el paquete de idioma especificado por `LCID` y obliga a mostrar la interfaz de usuario indicada en ese idioma, a no ser que se establezca el modo silencio.<br /><br /> En el instalador web, esta opción instala de forma encadenada el paquete de idioma desde Internet. **Nota:**  Use esta opción solo con el instalador web.|
 |**/log** `file` &#124; `folder`|Especifica la ubicación del archivo de registro. El valor predeterminado es la carpeta temporal para el proceso y el nombre de archivo predeterminado se basa en el paquete. Si la extensión de archivo es .txt, se genera un registro de texto. Si especifica cualquier otra extensión o no especifica ninguna, se crea un registro HTML.|
 |**/msioptions**|Especifica opciones que se pasarán para los elementos .msi y .msp; por ejemplo: `/msioptions "PROPERTY1='Value'"`.|
-|**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio (vea [Información de progreso de un paquete de instalación](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, la aplicación de encadenamiento tiene que capturar el código de retorno y controlar el reinicio (vea [Información de progreso de un paquete de instalación](/previous-versions/cc825975(v=vs.100))).|
 |**/passive**|Establece el modo pasivo. Muestra la barra de progreso para indicar que la instalación está en curso, pero no muestra ningún indicador ni mensajes de error al usuario. En este modo, cuando se encadena mediante un programa de instalación, el paquete de encadenamiento debe controlar los [códigos de retorno](#return-codes).|
 |**/pipe**|Crea un canal de comunicación para permitir que un paquete encadenado obtenga el progreso.|
 |**/promptrestart**|Solo en modo pasivo, si el programa de instalación necesita un reinicio, se lo pide al usuario. Esta opción requiere interacción con el usuario si se requiere un reinicio.|

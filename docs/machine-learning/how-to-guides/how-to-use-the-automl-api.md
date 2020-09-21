@@ -3,12 +3,12 @@ title: Cómo usar la API de ML automatizada de ML.NET
 description: La API de ML automatizada de ML.NET automatiza el proceso de compilación de modelos y genera un modelo listo para la implementación. Descubra las opciones que puede usar para configurar tareas de aprendizaje automático.
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b1ef526301e01e1e75e71e0646f4d11e68215d69
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75636567"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540737"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Cómo usar la API de aprendizaje automático automatizada de ML.NET
 
@@ -70,7 +70,7 @@ Cree una configuración de experimento para el tipo de tarea de ML determinada:
 
 ## <a name="configure-experiment-settings"></a>Establecer la configuración de experimento
 
-Los experimentos son altamente configurables. Consulte los [documentos de la API de AutoML](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) para obtener una lista completa de las opciones de configuración.
+Los experimentos son altamente configurables. Consulte los [documentos de la API de AutoML](/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview) para obtener una lista completa de las opciones de configuración.
 
 Estos son algunos ejemplos:
 

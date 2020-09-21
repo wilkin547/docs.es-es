@@ -15,18 +15,19 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 744307d4175d151d07acbedd5815e538307c8973
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 190b10ede4bc0037836d44332408d7752108346c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617488"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555073"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
 Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y Windows SDK proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, tal como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
   
 - Mediante tipos de interoperabilidad insertados: A partir de .NET Framework 4, se puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
   
-- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar a un ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar a un ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Si usa tipos de interoperabilidad insertados, la implementación es sencilla y directa. No es necesario hacer nada especial. En el resto de este artículo se describen los escenarios para implementar ensamblados de interoperabilidad con la aplicación.  
   
@@ -41,11 +42,11 @@ Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .
  Todos los componentes COM asociados a la aplicación deben instalarse en el Registro de Windows. Si Client1.exe y Client2.exe en la ilustración se instalan en equipos diferentes, debe registrar los componentes COM en ambos equipos.  
   
 ### <a name="shared-assemblies"></a>Ensamblados compartidos  
- Los ensamblados que se comparten entre varias aplicaciones deben instalarse en un repositorio centralizado, denominado caché global de ensamblados. Los clientes de .NET pueden tener acceso a la misma copia del ensamblado de interoperabilidad, que se firma y se instala en la caché global de ensamblados. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+ Los ensamblados que se comparten entre varias aplicaciones deben instalarse en un repositorio centralizado, denominado caché global de ensamblados. Los clientes de .NET pueden tener acceso a la misma copia del ensamblado de interoperabilidad, que se firma y se instala en la caché global de ensamblados. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)
-- [Uso de tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Uso de tipos COM en código administrado](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilar un proyecto de interoperabilidad](compiling-an-interop-project.md)

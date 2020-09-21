@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: d543a05eb00a59c5c08ada28fc8392875385aa8a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867638"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537540"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio
 
@@ -21,7 +21,7 @@ En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de
 
 - [Visual Studio 2019, versión 16.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo **Desarrollo multiplataforma de .NET Core** instalada. El SDK de .NET Core 3.1 se instala automáticamente al seleccionar esta carga de trabajo.
 
-  Para más información, consulte [Instalación del SDK de .NET Core con Visual Studio](../install/sdk.md?pivots=os-windows#install-with-visual-studio).
+  Para más información, consulte [Instalación del SDK de .NET Core con Visual Studio](../install/windows.md#install-with-visual-studio).
 
 ## <a name="create-the-app"></a>Creación de la aplicación
 

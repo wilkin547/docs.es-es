@@ -4,12 +4,12 @@ description: Descubra cómo usar ML.NET en un escenario de clasificación multic
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282078"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679500"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
@@ -302,7 +302,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-Agregue el código siguiente al método `SaveModelAsFile`. Este código usa el método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) para serializar y almacenar el modelo entrenado como archivo ZIP.
+Agregue el código siguiente al método `SaveModelAsFile`. Este código usa el método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) para serializar y almacenar el modelo entrenado como archivo ZIP.
 
 [!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 

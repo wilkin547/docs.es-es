@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c8e1c91f4fee8aa896b6617c815fe2a4b6d22f2a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fa24c664e9f7cf6da78d0703c7ebb52c8ebbec20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614886"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606628"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Mejoras de accesibilidad en controles de Windows Forms
 
@@ -40,7 +40,7 @@ Windows Forms mejora su funcionamiento con las tecnologías de accesibilidad par
 </configuration>
 ```
 
-En las aplicaciones destinadas a .NET Framework 4.7.1 o una versión posterior, y en las que se quiere conservar el comportamiento de accesibilidad heredado, se puede participar en el uso de las características de accesibilidad heredadas si se establece explícitamente este modificador de AppContext en `true`.<p/>Para obtener información general de la automatización de la interfaz de usuario, vea la [información general sobre la Automatización de la interfaz de usuario](~/docs/framework/ui-automation/ui-automation-overview.md).<p/>**Compatibilidad agregada para propiedades y patrones de Automatización de la interfaz de usuario**<br/>Los clientes de accesibilidad pueden aprovechar las ventajas de las nuevas funciones de accesibilidad de WinForms mediante modelos de invocación comunes, que se describen de manera pública. Estos patrones no son específicos de WinForms. Por ejemplo, los clientes de accesibilidad pueden llamar el método QueryInterface en la interfaz IAccessible (MAAS) para obtener una interfaz IServiceProvider. Si esta interfaz está disponible, los clientes pueden usar su método QueryService para solicitar una interfaz IAccessibleEx. Para obtener más información, vea [Using IAccessibleEx from a Client](https://docs.microsoft.com/windows/desktop/WinAuto/using-iaccessibleex-from-a-client) (Uso de IAccessibleEx desde un cliente). A partir de .NET Framework 4.7.1, IServiceProvider e [IAccessibleEx](https://docs.microsoft.com/windows/desktop/WinAuto/iaccessibleex) (cuando corresponda) están disponibles para los objetos de accesibilidad de WinForms.<p/>.NET Framework 4.7.1 agrega compatibilidad para los siguientes patrones y propiedades de automatización de la interfaz de usuario:
+En las aplicaciones destinadas a .NET Framework 4.7.1 o una versión posterior, y en las que se quiere conservar el comportamiento de accesibilidad heredado, se puede participar en el uso de las características de accesibilidad heredadas si se establece explícitamente este modificador de AppContext en `true`.<p/>Para obtener información general de la automatización de la interfaz de usuario, vea la [información general sobre la Automatización de la interfaz de usuario](~/docs/framework/ui-automation/ui-automation-overview.md).<p/>**Compatibilidad agregada para propiedades y patrones de Automatización de la interfaz de usuario**<br/>Los clientes de accesibilidad pueden aprovechar las ventajas de las nuevas funciones de accesibilidad de WinForms mediante modelos de invocación comunes, que se describen de manera pública. Estos patrones no son específicos de WinForms. Por ejemplo, los clientes de accesibilidad pueden llamar el método QueryInterface en la interfaz IAccessible (MAAS) para obtener una interfaz IServiceProvider. Si esta interfaz está disponible, los clientes pueden usar su método QueryService para solicitar una interfaz IAccessibleEx. Para obtener más información, vea [Using IAccessibleEx from a Client](/windows/desktop/WinAuto/using-iaccessibleex-from-a-client) (Uso de IAccessibleEx desde un cliente). A partir de .NET Framework 4.7.1, IServiceProvider e [IAccessibleEx](/windows/desktop/WinAuto/iaccessibleex) (cuando corresponda) están disponibles para los objetos de accesibilidad de WinForms.<p/>.NET Framework 4.7.1 agrega compatibilidad para los siguientes patrones y propiedades de automatización de la interfaz de usuario:
 
 - Los controles <xref:System.Windows.Forms.ToolStripSplitButton> y <xref:System.Windows.Forms.ComboBox> admiten ahora el [patrón de expansión o contracción](~/docs/framework/ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 - El control <xref:System.Windows.Forms.ToolStripMenuItem> tiene un valor de la propiedad [ControlType](~/docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md) de <xref:System.Windows.Automation.ControlType.MenuItem?displayProperty=nameWithType>.

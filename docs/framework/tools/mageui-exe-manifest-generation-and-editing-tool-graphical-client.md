@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 1ff7c10a478f0f0f53d7b00f34b228b9070f798d
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 59f2d3dbf09beacb62042b8195bba23f345fba02
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516728"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557442"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 
@@ -67,7 +67,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 |**Nuevo**|Genera un nuevo .pfx que no se puede comprobar a través de una entidad de certificación (CA). Para obtener más información sobre los tipos de certificados usados para firmar implementaciones de ClickOnce, consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Contraseña**|Proporciona un área para escribir la contraseña usada para firmar con este certificado. Si no procede, puede dejarse en blanco.|  
 |**Firmar con certificado almacenado**|Muestra una lista seleccionable de certificados digitales guardados en el almacén de certificados del equipo.|  
-|**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**No firmar**|Le permite guardar el manifiesto sin agregar una firma de un certificado digital.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descripciones de pestañas y paneles  
@@ -129,7 +129,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 |Elemento de la interfaz de usuario|Descripción|  
 |----------------|-----------------|  
-|**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y ver qué permisos se exigen, vea [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
+|**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y ver qué permisos se exigen, vea [Conjuntos de permisos con nombre](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalles**|Es el XML creado para el manifiesto de aplicación para representar el conjunto de permisos. A menos que tenga amplios conocimientos del formato XML del manifiesto de aplicación, no debe modificar manualmente este XML. Para más información, consulte [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Pestaña Manifiesto de implementación  

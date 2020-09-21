@@ -3,12 +3,12 @@ title: Consideraciones sobre versiones y actualizaciones para desarrolladores de
 description: La incorporación de nuevas características de lenguajes en la biblioteca puede afectar al código que la utiliza.
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268132"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552432"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>Consideraciones sobre versiones y actualizaciones para desarrolladores de C#
 
@@ -63,4 +63,4 @@ Nuevo código:
 public double CalculateSquare(in double value) => value * value;
 ```
 
-En el artículo de [novedades](index.md), observe si la presentación de una característica que afecta a las declaraciones públicas es compatible con el origen o con los elementos binarios.
+En el artículo de [novedades](./csharp-9.md), observe si la presentación de una característica que afecta a las declaraciones públicas es compatible con el origen o con los elementos binarios.

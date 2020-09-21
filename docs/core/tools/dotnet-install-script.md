@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538047"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -131,7 +131,7 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 
 - **`-NoCdn|--no-cdn`**
 
-  Deshabilita la descarga desde [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) y usa la fuente no almacenada en caché directamente.
+  Deshabilita la descarga desde [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) y usa la fuente no almacenada en caché directamente.
 
 - **`-NoPath|--no-path`**
 

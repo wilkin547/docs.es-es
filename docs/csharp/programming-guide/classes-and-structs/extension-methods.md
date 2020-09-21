@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 88d6cfd1b5262d4a4fae96cf53271467b5042319
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063710"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541947"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensión (Guía de programación de C#)
 
@@ -123,7 +123,7 @@ Para una biblioteca de clases ya implementada, no deben usarse métodos de exten
 - [Ejemplos de programación en paralelo (incluyen numerosos métodos de extensión de ejemplo)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [Expresiones lambda](../../language-reference/operators/lambda-expressions.md)
 - [Información general sobre operadores de consulta estándar](../concepts/linq/standard-query-operators-overview.md)
-- [Conversion rules for Instance parameters and their impact](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact) (Reglas de conversión para los parámetros de instancia y su impacto)
-- [Extension methods Interoperability between languages](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages) (Interoperabilidad de los métodos de extensión entre lenguajes)
-- [Extension methods and Curried Delegates](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates) (Métodos de extensión y delegados currificados)
-- [Extension method Binding and Error reporting](https://docs.microsoft.com/archive/blogs/sreekarc/extension-method-binding-and-error-reporting) (Enlazar métodos de extensión y notificación de errores)
+- [Conversion rules for Instance parameters and their impact](/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact) (Reglas de conversión para los parámetros de instancia y su impacto)
+- [Extension methods Interoperability between languages](/archive/blogs/sreekarc/extension-methods-interoperability-between-languages) (Interoperabilidad de los métodos de extensión entre lenguajes)
+- [Extension methods and Curried Delegates](/archive/blogs/sreekarc/extension-methods-and-curried-delegates) (Métodos de extensión y delegados currificados)
+- [Extension method Binding and Error reporting](/archive/blogs/sreekarc/extension-method-binding-and-error-reporting) (Enlazar métodos de extensión y notificación de errores)

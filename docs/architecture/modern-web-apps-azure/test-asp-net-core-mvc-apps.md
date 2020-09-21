@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465642"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539248"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -257,7 +257,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
 
 Las pruebas pueden hacer uso de esta clase WebApplicationFactory personalizada para crear a un cliente y, después, realizar solicitudes a la aplicación mediante esta instancia de cliente. La aplicación tendrá datos propagados que se pueden usar como parte de las aserciones de la prueba. La prueba que encontrará a continuación comprueba que la página principal de la aplicación eShopOnWeb se carga correctamente y que incluye una lista de productos que se ha agregado a la aplicación como parte de los datos de inicialización.
 
-```cs
+```csharp
 using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;

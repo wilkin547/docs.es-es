@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: 8aadb491c5a8c339b4d8df73202ee717900ef775
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a9a18d5709a1e157d4454362758d4a622880ea72
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447165"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553654"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Más información (Programación paralela)
 
@@ -18,7 +18,7 @@ Los siguientes recursos contienen información adicional sobre programación par
 
 - En el documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones de programación paralela: descripción y aplicación de patrones paralelos con .NET Framework 4) se describen patrones paralelos comunes y procedimientos recomendados para desarrollar componentes paralelos con el uso de esos patrones.
 
-- En el libro [Design Patterns for Decomposition and Coordination on Multicore Architectures](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) (Diseño de patrones para descomposición y coordinación en arquitecturas multinúcleo) se describen los patrones de programación paralela que usan la compatibilidad con la programación paralela introducida en .NET Framework 4.
+- En el libro [Design Patterns for Decomposition and Coordination on Multicore Architectures](/previous-versions/msp-n-p/ff963553(v=pandp.10)) (Diseño de patrones para descomposición y coordinación en arquitecturas multinúcleo) se describen los patrones de programación paralela que usan la compatibilidad con la programación paralela introducida en .NET Framework 4.
 
 - El blog sobre [programación paralela con .NET](https://devblogs.microsoft.com/pfxteam/) contiene muchos artículos detallados sobre la programación paralela en .NET.
 
@@ -26,5 +26,5 @@ Los siguientes recursos contienen información adicional sobre programación par
 
 ## <a name="see-also"></a>Vea también
 
-- [Centro para desarrolladores de informática en paralelo](https://docs.microsoft.com/previous-versions/bb964701(v=msdn.10))
+- [Centro para desarrolladores de informática en paralelo](/previous-versions/bb964701(v=msdn.10))
 - [Programación en paralelo en Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)

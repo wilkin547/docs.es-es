@@ -17,12 +17,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: bd96766c7483a3de1a3c70d1efbe1aa91ea45fbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447243"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541584"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -31,7 +31,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
 Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . La [característica de formato compuesto](composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admite también cadenas de formato numérico personalizado. La característica [interpolación de cadenas](../../csharp/language-reference/tokens/interpolated.md) admite también cadenas de formato numérico personalizado.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
@@ -292,5 +292,5 @@ En el siguiente ejemplo se muestran dos cadenas de formato numérico personaliza
 - [Aplicación de formato a tipos](formatting-types.md)
 - [Cadenas con formato numérico estándar](standard-numeric-format-strings.md)
 - [Cómo: Rellenar un número con ceros a la izquierda](how-to-pad-a-number-with-leading-zeros.md)
-- [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Ejemplo: Utilidad de formato WinForms de .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Ejemplo: Utilidad de formato WinForms de .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

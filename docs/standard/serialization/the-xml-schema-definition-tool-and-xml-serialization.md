@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML Schema Definition tool
 - serialization, XML Schema Definition tool
 ms.assetid: 3c03f855-f931-47ff-bbc6-50c0367a16e4
-ms.openlocfilehash: c88770403d4c2abfb5ce99f44ea1bec1f8337545
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6451f3b5f6e8ec2c1454e5cf7ffb95a96b620214
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84279781"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554988"
 ---
 # <a name="the-xml-schema-definition-tool-and-xml-serialization"></a>Herramienta de definición de esquema XML y serialización XML
 
@@ -34,4 +34,4 @@ Para más información sobre cómo usar la herramienta, vea [Herramienta de defi
 - [Cómo: Serialización de un objeto](how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)
 - [Cómo: Usar la herramienta de definición de esquema XML para generar clases y documentos de esquema XML](xml-schema-def-tool-gen.md)
-- [Compatibilidad con enlaces del esquema XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))
+- [Compatibilidad con enlaces del esquema XML](/previous-versions/dotnet/netframework-4.0/sh1e66zd(v=vs.100))

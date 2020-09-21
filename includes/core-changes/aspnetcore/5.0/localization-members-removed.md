@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6deeb7debce9b731f3871b7de0ad8df8a8cdafea
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 41e80a9dbcfa2a857e0b52674ef0724a542458a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728295"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539525"
 ---
 ### <a name="localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed"></a>Localización: se han eliminado la clase ResourceManagerWithCultureStringLocalizer y el miembro de interfaz WithCulture
 
@@ -18,7 +18,7 @@ Para obtener el contexto, consulte [aspnet/Announcements#346](https://github.com
 
 #### <a name="old-behavior"></a>Comportamiento anterior
 
-La clase `ResourceManagerWithCultureStringLocalizer` y el método `ResourceManagerStringLocalizer.WithCulture` están [obsoletos en .NET Core 3.0 (versión preliminar 3 y posteriores)](/dotnet/core/compatibility/2.2-3.0#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete).
+La clase `ResourceManagerWithCultureStringLocalizer` y el método `ResourceManagerStringLocalizer.WithCulture` están [obsoletos en .NET Core 3.0 (versión preliminar 3 y posteriores)](../../../../docs/core/compatibility/2.2-3.0.md#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete).
 
 #### <a name="new-behavior"></a>Comportamiento nuevo
 

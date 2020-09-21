@@ -4,16 +4,16 @@ description: .NET Core es una implementación modular y de alto rendimiento de .
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226587"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538281"
 ---
 # <a name="introduction-to-net-core"></a>Introducción a .NET Core
 
-[.NET Core](about.md) es una plataforma de desarrollo [de código abierto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) para uso general. Puede crear aplicaciones de .NET Core para Windows, macOS y Linux para procesadores x64, x86, ARM32 y ARM64 mediante varios lenguajes de programación. Se proporcionan marcos y API para la [nube](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), la [Interfaz de usuario de cliente](../desktop-wpf/overview/index.md) y el [aprendizaje automático](/dotnet/machine-learning/).
+[.NET Core](about.md) es una plataforma de desarrollo [de código abierto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) para uso general. Puede crear aplicaciones de .NET Core para Windows, macOS y Linux para procesadores x64, x86, ARM32 y ARM64 mediante varios lenguajes de programación. Se proporcionan marcos y API para la [nube](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), la [Interfaz de usuario de cliente](../desktop-wpf/overview/index.md) y el [aprendizaje automático](../machine-learning/index.yml).
 
 [Descargue el SDK de .NET Core](https://dotnet.microsoft.com/download) para probar .NET Core en el equipo. La última versión es [.NET Core 3.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/).
 
@@ -22,7 +22,7 @@ ms.locfileid: "86226587"
 Puede obtener .NET Core de las siguientes maneras:
 
 * [Instaladores para Windows y macOS](https://dotnet.microsoft.com/download)
-* [Paquetes de Linux](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Paquetes de Linux](./install/linux.md)
 * [Contenedores de Docker](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [Archivos ZIP y tar](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [Scripts de instalación](https://dotnet.microsoft.com/download/dotnet-core/scripts)

@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para la CLI de .NET Core) y su uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378838"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537670"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -300,7 +300,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  Establece el idioma de la interfaz de usuario de la CLI mediante un valor de configuración regional como `en-us`. Los valores admitidos son los mismos que en Visual Studio. Para obtener más información, vea la sección sobre cómo cambiar el idioma del instalador en la [documentación de instalación de Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019). Se aplican las reglas del administrador de recursos de .NET, por lo que no hay que elegir una coincidencia exacta&mdash;(también se pueden elegir descendientes en el árbol `CultureInfo`). Por ejemplo, si se establece en `fr-CA`, la CLI buscará y usará las traducciones de `fr`. Si se establece en un idioma que no se admite, la CLI revertirá al inglés.
+  Establece el idioma de la interfaz de usuario de la CLI mediante un valor de configuración regional como `en-us`. Los valores admitidos son los mismos que en Visual Studio. Para obtener más información, vea la sección sobre cómo cambiar el idioma del instalador en la [documentación de instalación de Visual Studio](/visualstudio/install/install-visual-studio?view=vs-2019). Se aplican las reglas del administrador de recursos de .NET, por lo que no hay que elegir una coincidencia exacta&mdash;(también se pueden elegir descendientes en el árbol `CultureInfo`). Por ejemplo, si se establece en `fr-CA`, la CLI buscará y usará las traducciones de `fr`. Si se establece en un idioma que no se admite, la CLI revertirá al inglés.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 

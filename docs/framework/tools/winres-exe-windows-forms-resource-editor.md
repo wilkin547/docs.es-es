@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516910"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543230"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
@@ -52,7 +52,7 @@ El estado de los elementos de la interfaz de usuario de un formulario de un proy
 
 - Un archivo de recursos de referencia cultural se puede guardar como otro archivo de recursos de referencia cultural. Por ejemplo, se puede guardar un archivo de recursos de inglés (EE. UU.) como un archivo de recursos de polaco. Normalmente, el nuevo archivo se editaría más adelante para admitir la nueva referencia cultural.
 
-Vea también [Organización jerárquica de recursos para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) u [Organización jerárquica de recursos para la localización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
+Vea también [Organización jerárquica de recursos para la localización](/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) u [Organización jerárquica de recursos para la localización](/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 Winres.exe no puede convertir un archivo .resx en el archivo .resources correspondiente; en su lugar, utilice la herramienta Resgen.exe. Para obtener más información sobre Resgen.exe, vea [Resgen.exe (Generador de archivos de recursos)](resgen-exe-resource-file-generator.md).
 

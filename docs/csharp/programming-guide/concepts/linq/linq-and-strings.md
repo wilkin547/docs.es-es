@@ -3,18 +3,18 @@ title: LINQ y cadenas (C#)
 description: LINQ puede consultar y transformar cadenas y colecciones de cadenas. Las consultas LINQ se pueden combinar con funciones de cadena de C# y expresiones regulares.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0500d821335659fa29dd4809513f38dac0a8b193
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165619"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556725"
 ---
 # <a name="linq-and-strings-c"></a>LINQ y cadenas (C#)
 
 Se puede usar LINQ para consultar y transformar cadenas y colecciones de cadenas. Puede resultar especialmente útil con datos semiestructurados de archivos de texto. Las consultas LINQ se pueden combinar con funciones de cadena tradicionales y expresiones regulares. Por ejemplo, puede usar el método <xref:System.String.Split%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> para crear una matriz de cadenas que después puede consultar o modificar mediante LINQ. Puede usar el método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> en la cláusula `where` de una consulta LINQ. Y puede usar LINQ para consultar o modificar los resultados <xref:System.Text.RegularExpressions.MatchCollection> que se han devuelto mediante una expresión regular.
 
-También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para más información, consulte [Procedimiento para generar XML a partir de archivos CSV (C#)](how-to-generate-xml-from-csv-files.md).
+También puede usar las técnicas descritas en esta sección para transformar datos de texto semiestructurados en XML. Para más información, consulte [Procedimiento para generar XML a partir de archivos CSV (C#)](../../../../standard/linq/generate-xml-csv-files.md).
 
 Los ejemplos de esta sección se dividen en dos categorías:
 
@@ -76,4 +76,4 @@ Muchos tipos diferentes de archivos de texto se componen de una serie de líneas
 ## <a name="see-also"></a>Vea también
 
 - [Language Integrated Query (LINQ) (C#)](index.md)
-- [Procedimiento para generar XML a partir de archivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Procedimiento para generar XML a partir de archivos CSV](../../../../standard/linq/generate-xml-csv-files.md)

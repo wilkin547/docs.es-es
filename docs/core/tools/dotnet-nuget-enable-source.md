@@ -2,12 +2,12 @@
 title: Comando dotnet nuget enable source
 description: El comando dotnet nuget enable source habilita un origen existente en los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 38fb5917361bd7952fef9c31ed897fb81f005155
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b727844dd7d7cc82476e94a3f0ec4ecc6559d5ed
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463557"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537939"
 ---
 # <a name="dotnet-nuget-enable-source"></a>dotnet nuget enable source
 
@@ -39,7 +39,7 @@ El comando `dotnet nuget enable source` habilita un origen existente en los arch
 
 - **`--configfile <FILE>`**
 
-  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).
 
 ## <a name="examples"></a>Ejemplos
 

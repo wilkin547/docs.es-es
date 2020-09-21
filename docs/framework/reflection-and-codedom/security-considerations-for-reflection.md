@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865260"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556341"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 
@@ -60,7 +60,7 @@ Estas reglas son las mismas independientemente de si el código compilado accede
 
 El código de aplicación que se ejecuta desde la línea de comandos se ejecuta con plena confianza. Siempre y cuando no esté marcado como transparente, puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Cuando se ejecuta el mismo código con confianza parcial (por ejemplo, en un dominio de aplicación en el espacio aislado), el nivel de confianza del ensamblado determina si puede acceder a código crítico para la seguridad: si el ensamblado tiene un nombre seguro y se instala en la caché global de ensamblados, es un ensamblado de confianza y puede llamar a miembros críticos para la seguridad. Si no es de confianza, se vuelve transparente aunque no esté marcado como tal y no tiene acceso a los miembros críticos para la seguridad.
 
-Para obtener más información sobre el modelo de seguridad en .NET Framework 4, consulte [Cambios en la seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+Para obtener más información sobre el modelo de seguridad en .NET Framework 4, consulte [Cambios en la seguridad](/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Reflexión y transparencia
 
@@ -116,7 +116,7 @@ Evite escribir miembros públicos que toman parámetros <xref:System.Reflection.
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Cambios de seguridad](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Cambios de seguridad](/previous-versions/dotnet/framework/security/security-changes)
 - [Seguridad de acceso del código](../misc/code-access-security.md)
 - [Problemas de seguridad en la emisión de la reflexión](security-issues-in-reflection-emit.md)
 - [Ver información tipos](viewing-type-information.md)

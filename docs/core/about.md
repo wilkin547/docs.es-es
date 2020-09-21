@@ -2,12 +2,12 @@
 title: Información general sobre .NET Core
 description: Obtenga información sobre las características y la composición de .NET Core y compárela con otras implementaciones de .NET.
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100735"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539013"
 ---
 # <a name="net-core-overview"></a>Información general sobre .NET Core
 
@@ -39,7 +39,7 @@ La integración del editor la proporcionan, en parte, los colaboradores de los p
 
 * Aplicaciones en la nube con [ASP.NET Core](/aspnet/core/)
 * Aplicaciones móviles con [Xamarin](/xamarin)
-* Aplicaciones de IoT con [System.Device.GPIO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
+* Aplicaciones de IoT con [System.Device.GPIO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0)
 * Aplicaciones cliente de Windows con [WPF](../desktop-wpf/overview/index.md) y Windows Forms
 * Aprendizaje automático [ML.NET](../machine-learning/index.yml)
 
@@ -64,7 +64,7 @@ Se incluyen muchas API que satisfacen necesidades comunes, como las siguientes:
 
 ### <a name="open-source"></a>Código Abierto
 
-[.NET Core](about.md) es una plataforma de desarrollo [de código abierto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) para uso general. Se pueden crear aplicaciones de .NET Core para Windows, macOS y Linux con procesadores x64, x86, ARM32 y ARM64. Se proporcionan marcos y API para la [nube](/aspnet/core/), [IoT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), la [Interfaz de usuario de cliente](../desktop-wpf/overview/index.md) y el [aprendizaje automático](../machine-learning/index.yml).
+[.NET Core](about.md) es una plataforma de desarrollo [de código abierto](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) para uso general. Se pueden crear aplicaciones de .NET Core para Windows, macOS y Linux con procesadores x64, x86, ARM32 y ARM64. Se proporcionan marcos y API para la [nube](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), la [Interfaz de usuario de cliente](../desktop-wpf/overview/index.md) y el [aprendizaje automático](../machine-learning/index.yml).
 
 ## <a name="support"></a>Soporte técnico
 

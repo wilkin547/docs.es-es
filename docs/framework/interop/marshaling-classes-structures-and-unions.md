@@ -19,11 +19,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: 5e616b5bb513939cadd8fe5c72675ba0b6e070a3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 25de633faabb1424bcf5e618cc5ca129e61c5fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621527"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547875"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Calcular las referencias de clases, estructuras y uniones
 
@@ -35,7 +36,7 @@ En la tabla siguiente se enumeran las opciones de serialización para clases, es
 |----------|-----------------|------------|
 |Clase por valor.|Pasa una clase con miembros de tipo entero como un parámetro In/Out, al igual que el caso administrado.|[Ejemplo SysTime](#systime-sample)|
 |Estructura por valor.|Pasa las estructuras como parámetros In.|[Ejemplo Structs](#structures-sample)|
-|Estructura por referencia.|Pasa estructuras como parámetros In/Out.|[Ejemplo OSInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
+|Estructura por referencia.|Pasa estructuras como parámetros In/Out.|[Ejemplo OSInfo](/previous-versions/dotnet/netframework-4.0/795sy883(v=vs.100))|
 |Estructura con estructuras anidadas (simplificada).|Pasa una clase que representa una estructura con estructuras anidadas en la función no administrada. La estructura se simplifica en una gran estructura en el prototipo administrado.|[Ejemplo FindFile](#findfile-sample)|
 |Estructura con un puntero a otra estructura.|Pasa una estructura que contiene un puntero a una segunda estructura como miembro.|[Ejemplo Structs](#structures-sample)|
 |Matriz de estructuras con enteros por valor.|Pasa una matriz de estructuras que solo contienen enteros como un parámetro In/Out. Los miembros de la matriz se pueden cambiar.|[Ejemplo Arrays](marshaling-different-types-of-arrays.md)|
@@ -43,7 +44,7 @@ En la tabla siguiente se enumeran las opciones de serialización para clases, es
 |Uniones con tipos de valor.|Pasa uniones con tipos de valor (entero y doble).|[Ejemplo Unions](#unions-sample)|
 |Uniones con tipos mixtos.|Pasa uniones con tipos mixtos (entero y cadena).|[Ejemplo Unions](#unions-sample)|
 |Struct con diseño específico de la plataforma.|Pasa un tipo con definiciones de empaquetado nativo.|[Ejemplo de plataforma](#platform-sample)|
-|Valores NULL en la estructura.|Pasa una referencia nula (**Nothing** en Visual Basic) en lugar de una referencia a un tipo de valor.|[Ejemplo HandleRef](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
+|Valores NULL en la estructura.|Pasa una referencia nula (**Nothing** en Visual Basic) en lugar de una referencia a un tipo de valor.|[Ejemplo HandleRef](/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>Ejemplo Structs
 
@@ -133,7 +134,7 @@ Las estructuras como argumentos para los métodos se pasan por valor a menos que
 
 ## <a name="findfile-sample"></a>FindFile (ejemplo)
 
-En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada. También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura. En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria. Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).
+En este ejemplo se muestra cómo pasar una estructura que contiene una segunda estructura insertada a una función no administrada. También se muestra cómo usar el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> para declarar una matriz de longitud fija dentro de la estructura. En este ejemplo, los elementos de la estructura insertada se agregan a la estructura primaria. Para obtener un ejemplo de una estructura insertada que no esté simplificada, vea [Ejemplo Structs](/previous-versions/dotnet/netframework-4.0/eadtsekz(v=vs.100)).
 
 En el ejemplo FindFile se usa la siguiente función no administrada, que se muestra con su declaración de función original:
 
@@ -290,7 +291,7 @@ De forma predeterminada, los ensamblados de .NET se pueden ejecutar tanto en las
 
 El fragmento de código siguiente es un ejemplo de cómo elegir entre las definiciones de 32 bits y 64 bits en tiempo de ejecución.
 
-```CSharp
+```csharp
 if (IntPtr.Size == 8)
 {
     // Use the STRRET_64 definition
@@ -331,7 +332,7 @@ typedef struct _SYSTEMTIME {
 
 En este ejemplo, la clase `SystemTime` contiene los elementos de la estructura original representados como miembros de clase. El atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute> se establece para garantizar que los miembros se organizan secuencialmente en la memoria, en el orden en que aparecen.
 
-La clase `NativeMethods` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.
+La clase `NativeMethods` contiene un prototipo administrado del método `GetSystemTime`, que pasa la clase `SystemTime` como un parámetro In/Out de forma predeterminada. El parámetro se debe declarar con los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> porque las clases, que son tipos de referencia, se pasan como parámetros In de forma predeterminada. Para que el autor de la llamada reciba los resultados, deben aplicarse explícitamente estos [atributos direccionales](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100)). La clase `App` crea una nueva instancia de la clase `SystemTime` y tiene acceso a sus campos de datos.
 
 ### <a name="code-samples"></a>Ejemplos de código
 

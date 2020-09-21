@@ -4,12 +4,12 @@ description: Aprenda a enviar un trabajo de .NET para Apache Spark a Databricks 
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617774"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557182"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Envío de un trabajo de .NET para Apache Spark a Databricks
 
@@ -36,7 +36,7 @@ Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submit
 
 ## <a name="deploy-using-set-jar"></a>Implementación mediante Set Jar
 
-Como alternativa, puede usar [Set Jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) en el área de trabajo de Databricks para enviar trabajos de .NET para Apache Spark a Databricks. *Set Jar* permite el envío de trabajos a clústeres activos.
+Como alternativa, puede usar [Set Jar](/azure/databricks/jobs#--create-a-job) en el área de trabajo de Databricks para enviar trabajos de .NET para Apache Spark a Databricks. *Set Jar* permite el envío de trabajos a clústeres activos.
 
 ### <a name="one-time-setup"></a>Instalación única
 
@@ -57,7 +57,7 @@ Como alternativa, puede usar [Set Jar](https://docs.microsoft.com/azure/databric
 
 1. Asegúrese de que ha publicado la aplicación y de que el código de aplicación no usa `SparkSession.Stop()`.
 
-2. Use la [CLI de Databricks](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) para cargar la aplicación en el clúster de Databricks. Por ejemplo, use el siguiente comando para cargar la aplicación publicada en el clúster:
+2. Use la [CLI de Databricks](/azure/databricks/dev-tools/databricks-cli) para cargar la aplicación en el clúster de Databricks. Por ejemplo, use el siguiente comando para cargar la aplicación publicada en el clúster:
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ Como alternativa, puede usar [Set Jar](https://docs.microsoft.com/azure/databric
 
 * [Introducción a .NET para Apache Spark](../tutorials/get-started.md)
 * [Implementación de una aplicación de .NET para Apache Spark en Databricks](../tutorials/databricks-deployment.md)
-* [Documentación de Azure Databricks](https://docs.microsoft.com/azure/azure-databricks/)
+* [Documentación de Azure Databricks](/azure/azure-databricks/)

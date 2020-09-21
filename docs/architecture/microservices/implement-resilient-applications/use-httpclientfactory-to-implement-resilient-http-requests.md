@@ -2,12 +2,12 @@
 title: Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar IHttpClientFactory, disponible a partir de .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271833"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678821"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 
@@ -65,9 +65,9 @@ En el diagrama siguiente se muestra cómo se usan los clientes con tipo con `IHt
 
 **Figura 8-4**. Uso de `IHttpClientFactory` con clases de cliente con tipo.
 
-En la imagen anterior, un servicio `ClientService` (usado por un controlador o código de cliente) utiliza un cliente `HttpClient` creado por la fábrica `IHttpClientFactory` registrada. Este generador asigna a `HttpClient` un elemento `HttpMessageHandler` desde un grupo. El cliente `HttpClient` se puede configurar con las directivas de Polly al registrar la fábrica `IHttpClientFactory` en el contenedor de DI con el método de extensión <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*>.
+En la imagen anterior, un servicio `ClientService` (usado por un controlador o código de cliente) utiliza un cliente `HttpClient` creado por la fábrica `IHttpClientFactory` registrada. Este generador asigna a `HttpClient` un elemento `HttpMessageHandler` desde un grupo. El cliente `HttpClient` se puede configurar con las directivas de Polly al registrar la fábrica `IHttpClientFactory` en el contenedor de DI con el método de extensión <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A>.
 
-Para configurar la estructura anterior, agregue <xref:System.Net.Http.IHttpClientFactory> a la aplicación mediante la instalación del paquete de NuGet `Microsoft.Extensions.Http`, que incluye el método de extensión <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> para <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>. Este método de extensión registra la clase interna `DefaultHttpClientFactory` que se va a usar como singleton en la interfaz `IHttpClientFactory`. Define una configuración transitoria para <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>. Este controlador de mensajes (el objeto <xref:System.Net.Http.HttpMessageHandler>), tomado de un grupo, lo usa el `HttpClient` devuelto desde la fábrica.
+Para configurar la estructura anterior, agregue <xref:System.Net.Http.IHttpClientFactory> a la aplicación mediante la instalación del paquete de NuGet `Microsoft.Extensions.Http`, que incluye el método de extensión <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> para <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection>. Este método de extensión registra la clase interna `DefaultHttpClientFactory` que se va a usar como singleton en la interfaz `IHttpClientFactory`. Define una configuración transitoria para <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder>. Este controlador de mensajes (el objeto <xref:System.Net.Http.HttpMessageHandler>), tomado de un grupo, lo usa el `HttpClient` devuelto desde la fábrica.
 
 En el código siguiente, puede ver cómo se puede `AddHttpClient()` utilizar para registrar clientes con tipo (agentes de servicio) que necesitan usar `HttpClient`.
 

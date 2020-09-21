@@ -5,11 +5,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: eedfb60a75e2fe5fafdaa786dbb54adddf28400e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 94149e0c444cad7e32f959eaedd55bf14acb1ecb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621514"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547849"
 ---
 # <a name="marshaling-data-with-com-interop"></a>serialización de datos con la interoperabilidad COM
 La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde código administrado y para exponer objetos administrados en COM. La compatibilidad con el cálculo de referencias de datos desde y hacia COM es exhaustiva y el comportamiento de serialización casi siempre es correcto.  
@@ -29,23 +30,23 @@ La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde 
  Describe cómo migrar código DCOM administrado a WCF para obtener la solución más segura.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tipos de datos COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
+ [Tipos de datos COM](/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  Proporciona los tipos de datos administrados y no administrados correspondientes.  
   
- [Personalización de contenedores CCW](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
+ [Personalización de contenedores CCW](/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
  Describe cómo serializar tipos de datos explícitamente mediante el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> en tiempo de diseño.  
   
- [Personalización de contenedores RCW](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
+ [Personalización de contenedores RCW](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  Describe cómo ajustar el comportamiento de cálculo de referencias de tipos en un ensamblado de interoperabilidad y cómo definir tipos COM manualmente.  
   
- [Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
+ [Interoperabilidad COM avanzada](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  Proporciona vínculos a más información sobre la incorporación de componentes COM en una aplicación de .NET Framework.  
   
- [Resumen de la conversión de ensamblados en bibliotecas de tipos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
+ [Resumen de la conversión de ensamblados en bibliotecas de tipos](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  Describe el proceso de conversión de la exportación de ensamblado a biblioteca de tipos.  
   
- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
+ [Resumen de la conversión de bibliotecas de tipos en ensamblados](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  Describe el proceso de conversión de la importación de biblioteca de tipos a ensamblado.  
   
- [Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
+ [Interoperar mediante tipos genéricos](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  Describe qué acciones se admiten al usar tipos genéricos para la interoperabilidad COM.

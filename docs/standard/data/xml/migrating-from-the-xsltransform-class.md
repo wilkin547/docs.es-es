@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282394"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550168"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migración desde la clase XslTransform
 
@@ -26,7 +26,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> incluye muchas mejoras del r
 La clase <xref:System.Xml.Xsl.XslCompiledTransform> también incluye otras optimizaciones que hacen que sea mucho más rápida que la clase <xref:System.Xml.Xsl.XslTransform>.
 
 > [!NOTE]
-> Aunque el rendimiento total de la clase <xref:System.Xml.Xsl.XslCompiledTransform> es mejor que la clase <xref:System.Xml.Xsl.XslTransform>, el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslCompiledTransform> podría ser más lento que el método <xref:System.Xml.Xsl.XslTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslTransform> cuando se le llama por primera vez para una transformación. Esto se debe a que el archivo XSLT debe compilarse antes de cargarse. Para más información, vea la entrada de blog siguiente: [XslCompiledTransform Slower than XslTransform?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (¿Es más lento XslCompiledTransform que XslTransform?)
+> Aunque el rendimiento total de la clase <xref:System.Xml.Xsl.XslCompiledTransform> es mejor que la clase <xref:System.Xml.Xsl.XslTransform>, el método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslCompiledTransform> podría ser más lento que el método <xref:System.Xml.Xsl.XslTransform.Load%2A> de la clase <xref:System.Xml.Xsl.XslTransform> cuando se le llama por primera vez para una transformación. Esto se debe a que el archivo XSLT debe compilarse antes de cargarse. Para más información, vea la entrada de blog siguiente: [XslCompiledTransform Slower than XslTransform?](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (¿Es más lento XslCompiledTransform que XslTransform?)
 
 ## <a name="security"></a>Seguridad
 
@@ -117,11 +117,11 @@ En <xref:System.Xml.Xsl.XslCompiledTransform> se produce un enlace (búsqueda de
 
 Se ha agregado a la clase <xref:System.Xml.Xsl.XslCompiledTransform> compatibilidad con funciones MSXML adicionales. En la siguiente lista se describe toda la funcionalidad nueva o mejorada:
 
-- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> requiere que el argumento de la función [node-set Function](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) sea un fragmento del árbol resultante. La clase <xref:System.Xml.Xsl.XslCompiledTransform> no tiene este requisito.
+- msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> requiere que el argumento de la función [node-set Function](/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) sea un fragmento del árbol resultante. La clase <xref:System.Xml.Xsl.XslCompiledTransform> no tiene este requisito.
 
 - msxsl:version: está función se admite en <xref:System.Xml.Xsl.XslCompiledTransform>.
 
-- Funciones de extensión de XPath: las funciones [ms:string-compare](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) y [ms:format-time](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) ya son compatibles.
+- Funciones de extensión de XPath: las funciones [ms:string-compare](/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc](/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri](/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name](/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number](/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date](/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) y [ms:format-time](/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) ya son compatibles.
 
 - Funciones de extensión de XPath relacionadas con esquemas: estas funciones no se admiten de forma nativa en <xref:System.Xml.Xsl.XslCompiledTransform>. No obstante, es posible implementarlas como funciones de extensión.
 

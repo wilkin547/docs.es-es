@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326031"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554441"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Análisis de opiniones mediante la CLI de ML.NET
 
@@ -199,7 +199,7 @@ En el segundo objeto, el objeto `PredictionEngine`, no es tan fácil porque el o
 
 Sin embargo, las cosas ahora son mucho más fáciles de lo que se explica en esa entrada de blog. Hemos trabajado en un enfoque más sencillo para usted y hemos creado un buen **"paquete de integración de .NET Core"** que puede usar fácilmente en sus servicios y aplicaciones de ASP.NET Core registrándolos en los servicios de DI de la aplicación (servicios de inserción de dependencias) y usándolos directamente desde el código. Consulte el siguiente tutorial y ejemplo para hacerlo:
 
-- [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](../how-to-guides/serve-model-web-api-ml-net.md)
 - [Ejemplo: Modelo de ML.NET escalable en ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>Explorar el código de C# generado que se usó para entrenar el modelo de "mejor calidad"
@@ -226,7 +226,7 @@ En este tutorial ha aprendido a:
 ## <a name="see-also"></a>Vea también
 
 - [Automatizar el entrenamiento del modelo con la CLI de ML.NET](../automate-training-with-cli.md)
-- [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Tutorial: Ejecución de modelos de ML.NET en aplicaciones web escalables de ASP.NET Core y WebAPI](../how-to-guides/serve-model-web-api-ml-net.md)
 - [Ejemplo: Modelo de ML.NET escalable en ASP.NET Core WebAPI](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 - [Guía de referencia de comandos de entrenamiento automático de la CLI de ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetría en la CLI de ML.NET](../resources/ml-net-cli-telemetry.md)

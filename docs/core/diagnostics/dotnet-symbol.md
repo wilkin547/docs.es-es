@@ -2,12 +2,12 @@
 title: 'dotnet-symbol: .NET Core'
 description: Instalación y uso de la herramienta de línea de comandos dotnet-symbol.
 ms.date: 08/26/2020
-ms.openlocfilehash: feaa64ad756878f85b829ab0cecf6ea2736014ba
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 5a96306fc96525b00e57eda089a45b730a7e3e8c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598317"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679193"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Aplicación de descarga de símbolos (dotnet-symbol)
 
@@ -97,4 +97,4 @@ dotnet-symbol --host-only --debugging <dump file path>
 
 - Error "404 No encontrado" al descargar símbolos.
 
-   La descarga de símbolos solo se admite para las versiones oficiales del entorno de ejecución de .NET Core adquiridas a través de canales oficiales como el [sitio web oficial](https://dotnet.microsoft.com/download/dotnet-core) y los [orígenes predeterminados en los scripts de instalación de dotnet](https://docs.microsoft.com/dotnet/core/tools/dotnet-install-scripts). Un error 404 al descargar archivos de depuración puede indicar que el volcado de memoria se ha creado con un entorno de ejecución de .NET Core desde otro origen, como uno compilado localmente desde el origen o para una distribución concreta de Linux, o bien desde sitios de la comunidad como archlinux. En estos casos, el archivo necesario para la depuración (dotnet, libcoreclr.so y libmscordaccore.so) se debe copiar desde esos orígenes o desde el entorno en el que se creó el archivo de volcado de memoria.
+   La descarga de símbolos solo se admite para las versiones oficiales del entorno de ejecución de .NET Core adquiridas a través de canales oficiales como el [sitio web oficial](https://dotnet.microsoft.com/download/dotnet-core) y los [orígenes predeterminados en los scripts de instalación de dotnet](../tools/dotnet-install-script.md). Un error 404 al descargar archivos de depuración puede indicar que el volcado de memoria se ha creado con un entorno de ejecución de .NET Core desde otro origen, como uno compilado localmente desde el origen o para una distribución concreta de Linux, o bien desde sitios de la comunidad como archlinux. En estos casos, el archivo necesario para la depuración (dotnet, libcoreclr.so y libmscordaccore.so) se debe copiar desde esos orígenes o desde el entorno en el que se creó el archivo de volcado de memoria.

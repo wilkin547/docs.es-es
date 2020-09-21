@@ -3,12 +3,12 @@ title: Conceptos de serialización
 description: La serialización se puede utilizar para capturar el estado de un objeto para que se pueda crear una copia, o para enviar un objeto por valor de un dominio de aplicación a otro.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a185855f4b6913c8e1d57bf36fc5c37411123e68
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84291323"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541205"
 ---
 # <a name="serialization-concepts"></a>Conceptos de serialización
 ¿Por qué desearía utilizar la serialización? Las dos razones más importantes son conservar así el estado de un objeto a los medios de almacenamiento, de manera que una copia exacta se puede recrear en una copia intermedia posterior y para enviar por valor el objeto de un dominio de aplicación a otro. Por ejemplo, la serialización se utiliza para guardar el estado de sesión en ASP.NET y copiar los objetos en el Portapapeles en Windows Forms. La comunicación remota se utiliza también para pasar por valor los objetos de un dominio de aplicación a otro.
@@ -31,7 +31,7 @@ Cuando un objeto deriva de `MarshalByRefObject`, se pasa una referencia al objet
  [Serialización binaria](binary-serialization.md)  
  Describe el mecanismo de la serialización binaria que está incluido con Common Language Runtime.  
   
- [Comunicación remota de .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [Comunicación remota de .NET](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Describe los diversos métodos de comunicaciones disponibles en .NET Framework para las comunicaciones remotas.  
   
  [Serialización SOAP y XML](xml-and-soap-serialization.md)  

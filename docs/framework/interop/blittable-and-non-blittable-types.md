@@ -6,11 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621540"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556276"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos que pueden o que no pueden transferirse en bloque de bits
 La mayoría de los tipos de datos tienen una representación común en la memoria administrada y no administrada, y no requieren un tratamiento especial por parte del serializador de interoperabilidad. Estos tipos se denominan *tipos que pueden transferirse en bloque de bits* porque no requieren conversión cuando se pasan entre código administrado y código no administrado.  
@@ -60,13 +61,13 @@ La mayoría de los tipos de datos tienen una representación común en la memori
 |Tipo que no puede transferirse en bloque de bits|Descripción|  
 |-------------------------|-----------------|  
 |[System.Array](default-marshaling-for-arrays.md)|Se convierte a una matriz de estilo de C o a una `SAFEARRAY`.|  
-|[System.Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Se convierte a un valor de uno, dos o cuatro bytes con `true` como 1 o -1.|  
-|[System.Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Se convierte a un carácter ANSI o Unicode.|  
-|[System.Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Se convierte a una interfaz de clase.|  
+|[System.Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|Se convierte a un valor de uno, dos o cuatro bytes con `true` como 1 o -1.|  
+|[System.Char](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Se convierte a un carácter ANSI o Unicode.|  
+|[System.Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Se convierte a una interfaz de clase.|  
 |[System.Object](default-marshaling-for-objects.md)|Se convierte a una variante o una interfaz.|  
 |[System.Mdarray](default-marshaling-for-arrays.md)|Se convierte a una matriz de estilo de C o a una `SAFEARRAY`.|  
 |[System.String](default-marshaling-for-strings.md)|Se convierte a una cadena que termina en una referencia nula o a un tipo BSTR.|  
-|[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Se convierte a una estructura con un diseño de memoria fijo.|  
+|[System.Valuetype](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Se convierte a una estructura con un diseño de memoria fijo.|  
 |[System.Szarray](default-marshaling-for-arrays.md)|Se convierte a una matriz de estilo de C o a una `SAFEARRAY`.|  
   
  Solo se admiten los tipos de clase y objeto con la interoperabilidad COM. Para obtener los tipos correspondientes en Visual Basic, C# y C++, vea el artículo de [introducción a la biblioteca de clases](../../standard/class-library-overview.md).  

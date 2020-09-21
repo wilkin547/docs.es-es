@@ -17,11 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5fde7f7f00aadf4d941d4ffe522453970b67e9e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620838"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554135"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Empaquetar un ensamblado de .NET Framework para COM
 
@@ -59,7 +60,7 @@ Los programadores de COM pueden beneficiarse de la siguiente información sobre 
 
   Independientemente del mecanismo que elija, en la biblioteca de tipos generada solo se incluyen los tipos públicos definidos en el ensamblado que se proporciona.
 
-Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Para obtener instrucciones, vea [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones basadas en .NET](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -97,4 +98,4 @@ La [Herramienta de instalación de servicios de .NET (Regsvcs.exe)](../tools/reg
 - [Consideraciones de seguridad sobre ensamblados](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (Exportador de la biblioteca de tipos)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrar ensamblados con COM](registering-assemblies-with-com.md)
-- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Cómo: Insertar bibliotecas de tipos como recursos de Win32 en aplicaciones](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

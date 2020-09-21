@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7312de7d812aa714447a60f5aa04cb48890e40e8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553732"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
 
@@ -57,9 +57,9 @@ Sin embargo, en algunos casos, tal vez necesite modificar el código fuente y vo
 
 Para valorar el impacto que los posibles cambios importantes podrían tener en su aplicación, debe revisar las siguientes listas de cambios:
 
-- En[Cambios importantes en .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) se muestran los cambios de .NET Framework 2.0 SP1 que pueden afectar a una aplicación destinada a .NET Framework 1.1.
+- En[Cambios importantes en .NET Framework 2.0](/previous-versions/aa570326(v=msdn.10)) se muestran los cambios de .NET Framework 2.0 SP1 que pueden afectar a una aplicación destinada a .NET Framework 1.1.
 
-- En [Cambios en .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) se indican los cambios entre .NET Framework 3.5 y .NET Framework 3.5 SP1.
+- En [Cambios en .NET Framework 3.5 SP1](/previous-versions/dotnet/articles/dd310284(v=msdn.10)) se indican los cambios entre .NET Framework 3.5 y .NET Framework 3.5 SP1.
 
 - En [Incidencias de migración de .NET Framework 4](net-framework-4-migration-issues.md) se indican los cambios entre .NET Framework 3.5 SP1 y .NET Framework 4.
 

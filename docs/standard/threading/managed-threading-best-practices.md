@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662828"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546372"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
@@ -78,7 +78,7 @@ else {
 
 ## <a name="number-of-processors"></a>Número de procesadores
 
-Si hay varios procesadores o uno solo disponibles en un sistema puede influir en la arquitectura de multiproceso. Para obtener más información, vea [Número de procesadores](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+Si hay varios procesadores o uno solo disponibles en un sistema puede influir en la arquitectura de multiproceso. Para obtener más información, vea [Número de procesadores](/previous-versions/dotnet/netframework-1.1/1c9txz50(v=vs.71)#number-of-processors).
 
 Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWithType> para determinar el número de procesadores disponibles en tiempo de ejecución.
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: db63c15357b0670c55b1174b91b02e2f49a0c4c1
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661984"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555951"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
-Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de .NET Framework 4, se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
+Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de .NET Framework 4, se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](/previous-versions/ms810613(v=msdn.10)).  
   
  Hay dos tipos de archivos asignados a memoria:  
   

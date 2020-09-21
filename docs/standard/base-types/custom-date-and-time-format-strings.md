@@ -16,19 +16,19 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 48e1b40ddd4bc7fae7d65660adf216756d7c83f7
-ms.sourcegitcommit: 2987e241e2f76c9248d2146bf2761a33e2c7a882
+ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228749"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541674"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
 Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 Las cadenas con formato de fecha y hora personalizado se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.
 
@@ -728,5 +728,5 @@ La cadena de resultado generada por muchos de los especificadores de formato de 
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Aplicar formato a tipos](formatting-types.md)
 - [Cadenas con formato de fecha y hora estándar](standard-date-and-time-format-strings.md)
-- [Ejemplo: utilidad de formato WinForms de .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Ejemplo: utilidad de formato WinForms de .NET Core (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Ejemplo: utilidad de formato WinForms de .NET Core (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Ejemplo: utilidad de formato WinForms de .NET Core (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

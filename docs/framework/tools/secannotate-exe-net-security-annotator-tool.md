@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 440ad39f1afb54ad517bc73f05d1e60748b7b520
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 408a3064b67cae2d75c80881f918c774e05866e6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517222"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558386"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Herramienta Anotador de seguridad de .NET)
 La herramienta Anotador de seguridad de .NET (SecAnnotate.exe) es una aplicación de línea de comandos que identifica los elementos `SecurityCritical` y `SecuritySafeCritical` de uno o más ensamblados.  
@@ -51,6 +51,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Comentarios  
  Los parámetros y ensamblados también se pueden proporcionar en un archivo de respuesta que se especifica en la línea de comandos y lleva el prefijo de una arroba (@). Cada línea del archivo de respuesta debe contener un nombre de ensamblado o parámetro único.  
   
- Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) en el blog de seguridad de .NET.  
+ Para obtener más información sobre el Anotador de seguridad de .NET, vea la entrada sobre [cómo usar SecAnnotate para analizar los ensamblados y detectar infracciones de transparencia](/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example) en el blog de seguridad de .NET.  
   
 ## <a name="examples"></a>Ejemplos

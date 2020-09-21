@@ -16,11 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bc1b921fea5aff086e21c046369f1d461f553bc7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622723"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554689"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 
@@ -30,7 +31,7 @@ Hay dos maneras de hacer que esta información de tipos esté disponible para la
 
 - Mediante ensamblados de interoperabilidad solo de tiempo de diseño: A partir de .NET Framework 4, se puede indicar al compilador que inserte información de tipos del ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.
 
-- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
+- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).
 
 Al usar ensamblados de interoperabilidad solo de tiempo de diseño, se puede insertar información de tipos del ensamblado de interoperabilidad primario publicado por el autor del componente COM. En cambio, no es necesario implementar el ensamblado de interoperabilidad primario con la aplicación.
 
@@ -66,18 +67,18 @@ Después de encontrar la biblioteca de tipos que contiene la implementación del
 
   - Conocimiento de las reglas de conversión de bibliotecas de tipos a ensamblados.
 
-  Escribir un contenedor personalizado es una técnica avanzada. Para obtener información adicional sobre cómo generar un contenedor personalizado, vea [Personalizar contenedores estándar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).
+  Escribir un contenedor personalizado es una técnica avanzada. Para obtener información adicional sobre cómo generar un contenedor personalizado, vea [Personalizar contenedores estándar](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).
 
- Para más información sobre el proceso de importación de interoperabilidad COM, vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
+ Para más información sobre el proceso de importación de interoperabilidad COM, vea [Resumen de la conversión de bibliotecas de tipos en ensamblados](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
-- [Resumen de la conversión de bibliotecas de tipos en ensamblados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Resumen de la conversión de bibliotecas de tipos en ensamblados](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../tools/tlbimp-exe-type-library-importer.md)
-- [Personalización de contenedores estándar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Uso de tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [Personalización de contenedores estándar](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Uso de tipos COM en código administrado](/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Compilar un proyecto de interoperabilidad](compiling-an-interop-project.md)
 - [Implementar una aplicación interoperativa](deploying-an-interop-application.md)
 - [Cómo: Agregar referencias a bibliotecas de tipos](how-to-add-references-to-type-libraries.md)

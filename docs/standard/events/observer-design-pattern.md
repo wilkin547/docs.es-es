@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662737"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559166"
 ---
 # <a name="observer-design-pattern"></a>Modelo de diseño de observador
 
@@ -47,7 +47,7 @@ Para implementar el modelo, es necesario proporcionar lo siguiente:
 - Un objeto que contiene los datos que el proveedor envía a sus observadores. El tipo de este objeto se corresponde con el parámetro de tipo genérico de las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Aunque este objeto puede ser el mismo que la implementación de <xref:System.IObservable%601>, normalmente es un tipo diferente.
 
 > [!NOTE]
-> Además de implementar el modelo de diseño de observador, es posible que le interese explorar las bibliotecas que se compilan con las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Por ejemplo, las [extensiones reactivas para .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) constan de un conjunto de métodos de extensión y los operadores de secuencia estándar de LINQ para admitir la programación asincrónica.
+> Además de implementar el modelo de diseño de observador, es posible que le interese explorar las bibliotecas que se compilan con las interfaces <xref:System.IObservable%601> y <xref:System.IObserver%601>. Por ejemplo, las [extensiones reactivas para .NET (Rx)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) constan de un conjunto de métodos de extensión y los operadores de secuencia estándar de LINQ para admitir la programación asincrónica.
 
 ## <a name="implementing-the-pattern"></a>Implementación del modelo
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767837"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555164"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 
@@ -306,6 +306,6 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
 ## <a name="see-also"></a>Vea también
 
-- [Explorador de API de .NET](/dotnet/api)
+- [Explorador de API de .NET](../../../api/index.md)
 - [Common Language Runtime](../clr.md)
 - [Conversión de tipos en .NET](type-conversion.md)

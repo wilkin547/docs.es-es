@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662932"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554767"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -107,7 +107,7 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  Además de los tipos de datos base, el espacio de nombres <xref:System> contiene más de 100 clases, que comprenden desde las clases que controlan excepciones hasta las clases que tratan conceptos básicos en tiempo de ejecución, como los dominios de aplicación y el recolector de elementos no utilizados. El espacio de nombres <xref:System> también contiene muchos espacios de nombres de segundo nivel.  
   
- Para más información sobre los espacios de nombres, use el [explorador de API de .NET](https://docs.microsoft.com/dotnet/api) para examinar la biblioteca de clases .NET. La documentación de referencia de API proporciona información sobre cada espacio de nombres, sus tipos y cada uno de sus miembros.  
+ Para más información sobre los espacios de nombres, use el [explorador de API de .NET](../../api/index.md) para examinar la biblioteca de clases .NET. La documentación de referencia de API proporciona información sobre cada espacio de nombres, sus tipos y cada uno de sus miembros.  
   
 ## <a name="see-also"></a>Vea también
 

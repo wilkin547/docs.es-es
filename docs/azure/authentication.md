@@ -3,12 +3,12 @@ title: Descripción de la autenticación en las bibliotecas de Azure para .NET
 description: Explica las distintas formas de autenticarse con el SDK de Azure para .NET.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811384"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539182"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>Autenticación con SDK de Azure para .NET
 
@@ -25,7 +25,7 @@ Para autenticar con bibliotecas que no son compatibles con Azure.Identity, consu
 
 ## <a name="access-azure-resources"></a>Acceso a recursos de Azure
 
-Para interactuar con los recursos de Azure, como recuperar un secreto de Key Vault o almacenar un blob en Storage, muchas bibliotecas de servicios de Azure requieren una cadena de conexión o claves para la autenticación. Por ejemplo, SQL Database usa una [cadena de conexión SQL estándar](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core). Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) y [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
+Para interactuar con los recursos de Azure, como recuperar un secreto de Key Vault o almacenar un blob en Storage, muchas bibliotecas de servicios de Azure requieren una cadena de conexión o claves para la autenticación. Por ejemplo, SQL Database usa una [cadena de conexión SQL estándar](/azure/azure-sql/database/connect-query-dotnet-core). Las cadenas de conexión de servicio se usan en otros servicios de Azure como [CosmosDB](/azure/cosmos-db/), [Azure Cache for Redis](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache) y [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues). Puede obtener esas cadenas mediante Azure Portal, la CLI o PowerShell. También puede usar las bibliotecas de administración de Azure para .NET para consultar recursos para generar cadenas de conexión en el código.
 
 Los métodos para usar una cadena de conexión varían según el producto. [Consulte la documentación de su producto Azure](/azure/?product=featured).
 

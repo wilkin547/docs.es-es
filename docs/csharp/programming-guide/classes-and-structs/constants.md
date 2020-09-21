@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 1252e214be03f8a180fadb7667ee59f36a862040
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e4d7c96cdcfd7751e80703fe4c5a56e66f4c18c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558431"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555359"
 ---
 # <a name="constants-c-programming-guide"></a>Constantes (Guía de programación de C#)
 Las constantes son valores inmutables que se conocen en tiempo de compilación y que no cambian durante la vida del programa. Las constantes se declaran con el modificador [const](../../language-reference/keywords/const.md). Solo los [tipos integrados](../../language-reference/builtin-types/built-in-types.md) de C# (excluido <xref:System.Object?displayProperty=nameWithType>) pueden declararse como `const`. Los tipos definidos por el usuario, incluidas las clases, las estructuras y las matrices, no pueden ser `const`. Use el modificador [readonly](../../language-reference/keywords/readonly.md) para crear una clase, una estructura o una matriz que se inicialice una vez en tiempo de ejecución (por ejemplo, en un constructor) y que posteriormente no se pueda cambiar.  
@@ -53,4 +53,4 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
 - [Propiedades](./properties.md)
 - [Tipos](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Inmutabilidad en la primera parte de C#: tipos de inmutabilidad](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [Inmutabilidad en la primera parte de C#: tipos de inmutabilidad](/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

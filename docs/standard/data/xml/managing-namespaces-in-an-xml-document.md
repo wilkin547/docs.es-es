@@ -4,12 +4,12 @@ description: Aprenda a administrar espacios de nombres en un documento XML. Los 
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 3a3abd2e932b1afecab85e285b0e2c42eb1eb20f
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 500c477eaa98b2858573e1012c62db4bc6c68137
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769267"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548096"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
@@ -65,7 +65,7 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
  El administrador de espacios de nombres no realiza ninguna validación en los espacios de nombres, pero asume que ya se han comprobado los prefijos y los espacios de nombres y son compatibles con la especificación de [espacios de nombres de W3C](https://www.w3.org/TR/REC-xml-names/).  
   
 > [!NOTE]
-> LINQ to XML en [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) y [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) no utilizan <xref:System.Xml.XmlNamespaceManager> para administrar espacios de nombres. Vea [Working with XML Namespaces (C#)](../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) (Trabajo con espacios de nombres XML [C#]) y [Working with XML Namespaces (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajo con espacios de nombres XML [Visual Basic]) en la documentación de LINQ para obtener información sobre cómo administrar los espacios de nombres al usar LINQ to XML.  
+> LINQ to XML en [C#](../../linq/linq-xml-overview.md) y [Visual Basic](../../linq/linq-xml-overview.md) no utilizan <xref:System.Xml.XmlNamespaceManager> para administrar espacios de nombres. Vea [Working with XML Namespaces (C#)](../../linq/namespaces-overview.md) (Trabajo con espacios de nombres XML [C#]) y [Working with XML Namespaces (Visual Basic)](../../linq/namespaces-overview.md) (Trabajo con espacios de nombres XML [Visual Basic]) en la documentación de LINQ para obtener información sobre cómo administrar los espacios de nombres al usar LINQ to XML.  
   
  A continuación se detallan algunas de las tareas de administración y búsqueda que puede realizar con la clase <xref:System.Xml.XmlNamespaceManager>. Para obtener más información y ejemplos, siga los vínculos a la página de referencia para cada método o propiedad.  
   
