@@ -7,8 +7,8 @@ items:
     href: fundamentals/
   - name: Guía de .NET Framework
     href: framework/
-  - name: 'Guía de escritorio de .NET: WPF'
-    href: desktop-wpf/
+  - name: Guía de escritorio de .NET
+    href: /dotnet/desktop/
   - name: Guía de C#
     href: csharp/index.yml
   - name: Guía de F#
