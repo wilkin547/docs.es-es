@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84277965"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535415"
 ---
 # <a name="xml-serialization"></a>serialización XML
 
@@ -39,7 +39,7 @@ La serialización es el proceso de convertir un objeto a un formulario que pueda
 
  La clase **XmlSerializer** puede serializar adicionalmente un objeto y generar una secuencia XML SOAP codificada. El XML generado cumple las normas de la sección 5 del documento de World Wide Web Consortium con título "Protocolo simple de acceso a objetos (SOAP) 1.1" (SOAP). Para más información sobre este proceso, vea [Procedimiento para serializar un objeto como secuencia XML con codificación SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Para consultar una tabla de los atributos que controlan el XML generado, vea [Attributes That Control Encoded SOAP Serialization](attributes-that-control-encoded-soap-serialization.md) (Atributos que controlan la serialización SOAP codificada).
 
- La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para más información sobre SOAP y servicios Web XML, vea [Personalizar el formato de mensajes SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
+ La clase **XmlSerializer** genera los mensajes SOAP creados por servicios Web XML y pasados a estos. Para controlar los mensajes SOAP, puede aplicar los atributos a las clases, los valores devueltos, parámetros y campos situados en un archivo de servicio Web XML (.asmx). Puede utilizar ambos, los atributos mostrados en "atributos que controlan la serialización XML" y los “atributos que controlan la serialización de SOAP codificada” porque un servicio Web XML puede utilizar o el estilo SOAP literal o codificado. Para obtener más información sobre cómo usar atributos para controlar el XML generado por un servicio Web XML, vea [XML Serialization with XML Web Services](xml-serialization-with-xml-web-services.md) (Serialización XML con servicios Web XML). Para más información sobre SOAP y servicios Web XML, vea [Personalizar el formato de mensajes SOAP](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Consideraciones de seguridad para aplicaciones XmlSerializer
 

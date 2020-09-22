@@ -4,12 +4,12 @@ description: Procedimiento para administrar los problemas de certificación con 
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656532"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538307"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>Certificación de macOS Catalina y el impacto en las descargas y proyectos de .NET Core
 
@@ -17,7 +17,7 @@ A partir de macOS Catalina (versión 10.15), se debe conceder la certificación
 
 ## <a name="installing-net-core"></a>Instalación de .NET Core
 
-Desde el 18 de febrero de 2020, se ha concedido la certificación a los instaladores de las versiones 3.1, 3.0 y 2.1 de .NET Core (tanto el runtime como el SDK). A las versiones publicadas anteriores no se les ha concedido la certificación. Puede instalar manualmente una versión de .NET Core sin certificación si descarga primero el instalador y, después, usa el comando `sudo installer`. Para obtener más información, vea [Descarga e instalación manual de macOS](sdk.md?pivots=os-macos#download-and-manually-install).
+Desde el 18 de febrero de 2020, se ha concedido la certificación a los instaladores de las versiones 3.1, 3.0 y 2.1 de .NET Core (tanto el runtime como el SDK). A las versiones publicadas anteriores no se les ha concedido la certificación. Puede instalar manualmente una versión de .NET Core sin certificación si descarga primero el instalador y, después, usa el comando `sudo installer`. Para obtener más información, vea [Descarga e instalación manual de macOS](./macos.md#download-and-manually-install).
 
 A partir de las versiones siguientes, los instaladores de .NET Core están certificados:
 

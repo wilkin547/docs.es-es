@@ -5,12 +5,12 @@ ms.date: 11/15/2017
 f1_keywords:
 - privateprotected_CSharpKeyword
 author: sputier
-ms.openlocfilehash: d83fd2a570b735a029bd2a79ad24e30d235dc5fb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e7ef6d691b43abd3d07321adfc0c166629ce9098
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89117966"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537306"
 ---
 # <a name="private-protected-c-reference"></a>private protected (Referencia de C#)
 
@@ -83,4 +83,4 @@ Los miembros de struct no pueden ser `private protected`, porque los structs no 
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [Security concerns for internal virtual keywords](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)
+- [Security concerns for internal virtual keywords](/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100)) (Problemas de seguridad de palabras clave virtuales internas)

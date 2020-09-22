@@ -2,12 +2,12 @@
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 ms.date: 02/14/2020
-ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840902"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538073"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -87,7 +87,7 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Directorio donde quiere restaurar los paquetes. La ubicación predeterminada de restauración de paquetes es `%userprofile%\.nuget\packages` en Windows y `~/.nuget/packages` en macOS y Linux. Para obtener más información, vea [Administración de las carpetas de paquetes globales, de caché y temporales in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Directorio donde quiere restaurar los paquetes. La ubicación predeterminada de restauración de paquetes es `%userprofile%\.nuget\packages` en Windows y `~/.nuget/packages` en macOS y Linux. Para obtener más información, vea [Administración de las carpetas de paquetes globales, de caché y temporales in NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 - **`-s|--source <SOURCE>`**
 
@@ -95,7 +95,7 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
 
 - **`-v|--version <VERSION>`**
 
-  Versión del paquete. Consulte [NuGet package versioning](https://docs.microsoft.com/nuget/reference/package-versioning) (Control de versiones de paquetes NuGet).
+  Versión del paquete. Consulte [NuGet package versioning](/nuget/reference/package-versioning) (Control de versiones de paquetes NuGet).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -119,5 +119,5 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
 
 ## <a name="see-also"></a>Vea también
 
-- [Administración de las carpetas de paquetes globales, de caché y temporales en NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [Control de versiones de paquetes NuGet](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [Administración de las carpetas de paquetes globales, de caché y temporales en NuGet](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [Control de versiones de paquetes NuGet](/nuget/reference/package-versioning)

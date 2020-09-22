@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 681a35956a8959e2f1cbb5a7023e0ef29b67097e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977009"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679539"
 ---
 # <a name="save-and-load-trained-models"></a>Guardar y cargar modelos entrenados
 
@@ -69,7 +69,7 @@ Al guardar un modelo, se necesitan dos cosas:
 1. El [`ITransformer`](xref:Microsoft.ML.ITransformer) del modelo.
 2. El [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) de la entrada esperada del [`ITransformer`](xref:Microsoft.ML.ITransformer).
 
-Después de entrenar el modelo, use el método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) para guardar el modelo entrenado en un archivo denominado `model.zip` con el `DataViewSchema` de los datos de entrada.
+Después de entrenar el modelo, use el método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) para guardar el modelo entrenado en un archivo denominado `model.zip` con el `DataViewSchema` de los datos de entrada.
 
 ```csharp
 // Save Trained Model
@@ -80,7 +80,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 Los modelos almacenados localmente se pueden usar en otros procesos o aplicaciones, como `ASP.NET Core` y `Serverless Web Applications`. Consulte los artículos de procedimientos [Uso de ML.NET en la API Web](./serve-model-web-api-ml-net.md) e [Implementación de la aplicación web sin servidor de ML.NET](./serve-model-serverless-azure-functions-ml-net.md) para obtener más información.
 
-En una aplicación o proceso independiente, use el método [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) junto con la ruta de acceso al archivo para obtener el modelo entrenado en la aplicación.
+En una aplicación o proceso independiente, use el método [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A) junto con la ruta de acceso al archivo para obtener el modelo entrenado en la aplicación.
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>Cargar un modelo almacenado remotamente
 
-Para cargar canalizaciones de preparación de datos y modelos almacenados en una ubicación remota de la aplicación, use [`Stream`](xref:System.IO.Stream) en lugar de una ruta de acceso al archivo en el método [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*).
+Para cargar canalizaciones de preparación de datos y modelos almacenados en una ubicación remota de la aplicación, use [`Stream`](xref:System.IO.Stream) en lugar de una ruta de acceso al archivo en el método [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load%2A).
 
 ```csharp
 // Create MLContext

@@ -4,12 +4,12 @@ description: En este tutorial se enseña cómo generar secuencias con LINQ, escr
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 59e86d6412e16728fb03d05f7f4e221a26ec1bb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88657001"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536241"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Uso de Language-Integrated Query (LINQ)
 
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Vuelva a ejecutar el programa y verá que, para que la baraja se reordene, se necesitan 52 iteraciones. También empezará a observar algunas degradaciones graves de rendimiento a medida que el programa continúa en ejecución.
 
-Esto se debe a varias razones. Puede que se trate de una de las principales causas de este descenso de rendimiento: un uso ineficaz de la [*evaluación diferida*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Esto se debe a varias razones. Puede que se trate de una de las principales causas de este descenso de rendimiento: un uso ineficaz de la [*evaluación diferida*](../../standard/linq/deferred-execution-lazy-evaluation.md).
 
 En pocas palabras, la evaluación diferida indica que no se realiza la evaluación de una instrucción hasta que su valor es necesario. Las consultas LINQ son instrucciones se evalúan de forma diferida. Las secuencias se generan solo a medida que se solicitan los elementos. Normalmente, es una ventaja importante de LINQ. Sin embargo, en un uso como el que hace este programa, se produce un aumento exponencial del tiempo de ejecución.
 

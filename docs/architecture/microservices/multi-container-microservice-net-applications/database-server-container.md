@@ -2,12 +2,12 @@
 title: Uso de un servidor de bases de datos que se ejecuta como contenedor
 description: Sirve para comprender la importancia de usar un servidor de base de datos que se ejecuta como contenedor solamente para el desarrollo. Nunca se debe usar para la producción.
 ms.date: 01/30/2020
-ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77628532"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539404"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Uso de un servidor de bases de datos que se ejecuta como contenedor
 
@@ -101,7 +101,7 @@ public static int Main(string[] args)
 
 Existe una salvedad importante a la hora de aplicar migraciones e inicializar una base de datos durante el inicio de un contenedor. Dado que es posible que la base de datos no esté disponible por algún motivo, debe controlar los reintentos mientras espera a que el servidor esté disponible. El método de extensión `MigrateDbContext()` controla esta lógica de reintentos, como se muestra en el código siguiente:
 
-```cs
+```csharp
 public static IWebHost MigrateDbContext<TContext>(
     this IWebHost host,
     Action<TContext,

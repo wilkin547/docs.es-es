@@ -2,12 +2,12 @@
 title: Cadenas de conexión
 ms.date: 12/13/2019
 description: Las palabras clave y los valores admitidos de las cadenas de conexión.
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401200"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555398"
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
 
@@ -92,7 +92,7 @@ Puede usar <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> como una m
 
 Una cadena de conexión básica con una memoria caché compartida para mejorar la simultaneidad.
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 Una base de datos cifrada.
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 Una base de datos de solo lectura que la aplicación no puede modificar.
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 Una base de datos en memoria privada.
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,7 +124,7 @@ Data Source=:memory:
 
 Una base de datos en memoria que se puede compartir y que se identifica mediante el nombre *Compartible*.
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 

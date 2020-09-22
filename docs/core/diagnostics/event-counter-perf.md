@@ -3,12 +3,12 @@ title: Medición del rendimiento mediante EventCounters en .NET Core
 description: En este tutorial se aprende a medir el rendimiento mediante EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024986"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538571"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Medición del rendimiento mediante EventCounters en .NET Core
 
@@ -29,11 +29,11 @@ En el tutorial se usa:
 
 - [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
 - [dotnet-counters](dotnet-counters.md) para supervisar contadores de eventos.
-- Una aplicación de [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) que se va a diagnosticar.
+- Una aplicación de [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios) que se va a diagnosticar.
 
 ## <a name="get-the-source"></a>Obtención del origen
 
-Se va a usar la aplicación de ejemplo como base para la supervisión. El [repositorio de ASP.NET Core de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) está disponible en el explorador de ejemplos. Descargue el archivo zip, extráigalo una vez descargado y ábralo en el IDE que prefiera. Compile y ejecute la aplicación para asegurarse de que funciona correctamente y luego deténgala.
+Se va a usar la aplicación de ejemplo como base para la supervisión. El [repositorio de ASP.NET Core de ejemplo](/samples/dotnet/samples/diagnostic-scenarios) está disponible en el explorador de ejemplos. Descargue el archivo zip, extráigalo una vez descargado y ábralo en el IDE que prefiera. Compile y ejecute la aplicación para asegurarse de que funciona correctamente y luego deténgala.
 
 ## <a name="implement-an-eventsource"></a>Implementación de un EventSource
 

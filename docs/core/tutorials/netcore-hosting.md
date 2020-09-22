@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656181"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537553"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -144,7 +144,7 @@ En este ejemplo, el host ya puede llamar a `managedDelegate` para ejecutar el m�
 
 También se puede usar la función `coreclr_execute_assembly` para iniciar un archivo ejecutable administrado. Esta API toma una ruta de acceso de ensamblado y una matriz de argumentos como parámetros de entrada. Carga el ensamblado en esa ruta de acceso e invoca a su método principal.
 
-```C++
+```c++
 int hr = executeAssembly(
         hostHandle,
         domainId,
@@ -197,7 +197,7 @@ Con `ICLRRuntimeHost4` disponible, ahora podemos especificar marcas de inicio en
 
 El runtime se inicia con una llamada a la función `Start`.
 
-```C++
+```c++
 hr = runtimeHost->Start();
 ```
 
@@ -234,7 +234,7 @@ Con un AppDomain en funcionamiento, ahora el host puede comenzar a ejecutar el c
 
 Otra opción, si `ExecuteAssembly` no satisface las necesidades del host, es usar `CreateDelegate` para crear un puntero de función a un método administrado estático. Esto requiere que el host conozca la firma del método al que está llamando (para crear el tipo de puntero de función), pero permite a los hosts tener flexibilidad para invocar código que no sea el punto de entrada del ensamblado. El nombre del ensamblado proporcionado en el segundo parámetro es el [nombre del ensamblado administrado completo](../../standard/assembly/names.md) de la biblioteca que se va a cargar.
 
-```C++
+```c++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
     domainId,

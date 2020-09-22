@@ -3,12 +3,12 @@ title: Tutorial Depuración de una fuga de memoria
 description: Obtenga información sobre cómo depurar una fuga de memoria en .NET Core.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924895"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538597"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>Depuración de una fuga de memoria en .NET Core
 
@@ -34,7 +34,7 @@ En el tutorial se usa:
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos.
 - [dotnet-counters](dotnet-counters.md) para comprobar el uso de memoria administrada.
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria.
-- Una aplicación de [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) que se va a diagnosticar.
+- Una aplicación de [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/) que se va a diagnosticar.
 
 En el tutorial se da por supuesto que el ejemplo y las herramientas están instalados y listos para usarse.
 
@@ -42,7 +42,7 @@ En el tutorial se da por supuesto que el ejemplo y las herramientas están insta
 
 Antes de empezar a recopilar datos de diagnóstico que nos ayuden a establecer la causa principal de este escenario, debe asegurarse de que realmente está viendo una fuga de memoria (crecimiento de memoria). Puede usar la herramienta [dotnet-counters](dotnet-counters.md) para confirmar eso.
 
-Abra una ventana de consola y vaya al directorio donde descargó y descomprimió el [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/). Ejecute el destino:
+Abra una ventana de consola y vaya al directorio donde descargó y descomprimió el [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/). Ejecute el destino:
 
 ```dotnetcli
 dotnet run
@@ -116,7 +116,7 @@ Al observar el uso de memoria, puede indicar con seguridad el aumento o la fuga 
 
 Al analizar posibles fugas de memoria, debe tener acceso al montón de memoria de la aplicación. A continuación, puede analizar el contenido de la memoria. Al observarse las relaciones entre los objetos, se crean teorías de por qué no se libera la memoria. Un origen de datos de diagnóstico habitual es un volcado de memoria en Windows o el volcado de memoria principal equivalente en Linux. Para generar un volcado de memoria de una aplicación .NET Core, puede usar la herramienta [dotnet-dump)](dotnet-dump.md).
 
-Con el [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) iniciado anteriormente, ejecute el siguiente comando para generar un volcado de memoria principal de Linux:
+Con el [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/) iniciado anteriormente, ejecute el siguiente comando para generar un volcado de memoria principal de Linux:
 
 ```dotnetcli
 dotnet-dump collect -p 4807
@@ -133,7 +133,7 @@ Complete
 
 Una vez recopilado el volcado de memoria, debe tener suficiente información para diagnosticar el proceso con errores. Si el proceso con errores se ejecuta en un servidor de producción, ahora es el momento ideal para la corrección a corto plazo reiniciando el proceso.
 
-En este tutorial, ya ha terminado con el [destino de depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) y puede cerrarlo. Vaya al terminal que inició el servidor y presione <kbd>CTRL+C</kbd>.
+En este tutorial, ya ha terminado con el [destino de depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios/) y puede cerrarlo. Vaya al terminal que inició el servidor y presione <kbd>CTRL+C</kbd>.
 
 ### <a name="analyze-the-core-dump"></a>Análisis del volcado de memoria principal
 
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 Donde `core_20190430_185145` es el nombre del volcado de memoria principal que desea analizar.
 
 > [!NOTE]
-> Si ve un error que indica que no se encuentra *libdl.so*, es posible que tenga que instalar el paquete *libc6-dev*. Para más información, consulte [Requisitos previos para .NET Core en Linux](../install/dependencies.md?pivots=os-linux).
+> Si ve un error que indica que no se encuentra *libdl.so*, es posible que tenga que instalar el paquete *libc6-dev*. Para más información, consulte [Requisitos previos para .NET Core en Linux](../install/linux.md).
 
 Se le mostrará un mensaje en el que puede escribir comandos SOS. Normalmente, lo primero que desea ver es el estado general del montón administrado:
 

@@ -4,12 +4,12 @@ description: Sepa cómo depurar una aplicación de .NET para Apache Spark en Win
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 9209d5bdec6dd85f6d21a502fb07204effef1934
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557156"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Depuración de una aplicación de .NET para Apache Spark
 
@@ -61,7 +61,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punto de interrupción](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints?view=vs-2019). El punto de interrupción indicará `The breakpoint will not currently be hit`, porque el trabajo todavía no ha cargado el ensamblado que contiene la UDF.
+Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punto de interrupción](/visualstudio/debugger/using-breakpoints?view=vs-2019). El punto de interrupción indicará `The breakpoint will not currently be hit`, porque el trabajo todavía no ha cargado el ensamblado que contiene la UDF.
 
 Presione `F5` para continuar la aplicación y, a la larga, se alcanzará el punto de interrupción.
 

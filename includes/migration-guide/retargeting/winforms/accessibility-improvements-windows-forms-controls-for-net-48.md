@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616306"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606624"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>Mejoras de accesibilidad en controles de Windows Forms para .NET 4.8
 
@@ -21,7 +21,7 @@ El marco de trabajo de Windows Forms continúa mejorando su funcionamiento con l
 **Cómo participar o no en estos cambios** Para que la aplicación se beneficie de estos cambios, se debe ejecutar en .NET Framework 4.8. La aplicación puede optar por recibir estos cambios de cualquiera de las maneras siguientes:
 
 - Se recompila para tener .NET Framework 4.8 como destino. Estos cambios de accesibilidad están habilitados de forma predeterminada para las aplicaciones de Windows Forms destinadas a .NET Framework 4.8.
-- Tiene como destino .NET Framework 4.7.2 o una versión anterior, y no participa en los comportamientos de accesibilidad heredados mediante la adición del [modificador de AppContext](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) siguiente a la sección `<runtime>` del archivo app.config y estableciéndolo en `false`, como se muestra en el ejemplo siguiente.
+- Tiene como destino .NET Framework 4.7.2 o una versión anterior, y no participa en los comportamientos de accesibilidad heredados mediante la adición del [modificador de AppContext](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) siguiente a la sección `<runtime>` del archivo app.config y estableciéndolo en `false`, como se muestra en el ejemplo siguiente.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ Tenga en cuenta que habilitar esta característica requiere participar en las ca
 **Compatibilidad de accesibilidad mejorada con ProgressBar**
 
 - Compatibilidad de la automatización de la interfaz de usuario habilitada para el control <xref:System.Windows.Forms.ProgressBar> con la capacidad para usar notificaciones de automatización de la interfaz de usuario y otras características de automatización de la interfaz de usuario. Los desarrolladores ahora pueden usar las notificaciones de automatización de la interfaz de usuario que Narrador puede anunciar para indicar el progreso.
-Para obtener información general sobre eventos de la automatización de la interfaz de usuario, incluidos los eventos de notificación de automatización de la interfaz de usuario, consulte [Información general sobre eventos de automatización de la interfaz de usuario](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview).
+Para obtener información general sobre eventos de la automatización de la interfaz de usuario, incluidos los eventos de notificación de automatización de la interfaz de usuario, consulte [Información general sobre eventos de automatización de la interfaz de usuario](/windows/desktop/WinAuto/uiauto-eventsoverview).
 
 **Compatibilidad de accesibilidad mejorada con PropertyGrid**
 
@@ -89,7 +89,7 @@ Para obtener información general sobre eventos de la automatización de la inte
 **Indicaciones visuales mejoradas**
 
 - Un control <xref:System.Windows.Forms.CheckedListBox> vacío ahora muestra un indicador de enfoque cuando recibe el enfoque.
-Nota: La compatibilidad de automatización de la interfaz de usuario está habilitada para los controles en tiempo de ejecución pero no se utiliza en tiempo de diseño. Para obtener información general de la automatización de la interfaz de usuario, vea la [información general sobre la Automatización de la interfaz de usuario](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).
+Nota: La compatibilidad de automatización de la interfaz de usuario está habilitada para los controles en tiempo de ejecución pero no se utiliza en tiempo de diseño. Para obtener información general de la automatización de la interfaz de usuario, vea la [información general sobre la Automatización de la interfaz de usuario](../../../../docs/framework/ui-automation/ui-automation-overview.md).
 
 **Información sobre herramientas de invocación de controles con un teclado**
 

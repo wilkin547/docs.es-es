@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-ms.openlocfilehash: 7413c3fae7d7189ec8dca43b0c77f6b56158f416
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 037ae0dff80c96d08d8778146b5683454b1f80b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159473"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543691"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Procedimiento Convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa (solo Windows)
 
-.NET Framework para aplicaciones para UWP es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones para UWP, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para obtener más información, consulte [Información general de .NET para aplicaciones para UWP](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estos flujos, puede convertir entre un tipo de flujo de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y un flujo de Windows Runtime como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
+.NET Framework para aplicaciones para UWP es un subconjunto de la plataforma .NET Framework completa. Debido a los requisitos de seguridad y de otro tipo de las aplicaciones para UWP, no se puede usar el conjunto completo de API de .NET Framework para abrir y leer archivos. Para obtener más información, consulte [Información general de .NET para aplicaciones para UWP](/previous-versions/windows/apps/br230302(v=vs.140)). Sin embargo, puede que desee usar las API de .NET Framework para otras operaciones de manipulación de secuencias. Para manipular estos flujos, puede convertir entre un tipo de flujo de .NET Framework como <xref:System.IO.MemoryStream> o <xref:System.IO.FileStream>, y un flujo de Windows Runtime como <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> o <xref:Windows.Storage.Streams.IRandomAccessStream>.
 
 La clase <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType> contiene métodos que facilitan estas conversiones. Sin embargo, las diferencias subyacentes entre los flujos de .NET Framework y de Windows Runtime afectan a los resultados del uso de estos métodos, tal como se describe en las secciones siguientes:
 
@@ -69,6 +69,6 @@ Para ejecutar este ejemplo, cree una aplicación XAML para UWP destinada a .NET 
 
 ## <a name="see-also"></a>Vea también
 
-- [Inicio rápido: Leer y escribir un archivo (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
-- [Información general de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
-- [API de .NET para aplicaciones de la Tienda Windows](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  
+- [Inicio rápido: Leer y escribir un archivo (Windows)](/previous-versions/windows/apps/hh464978(v=win.10))  
+- [Información general de .NET para aplicaciones de la Tienda Windows](/previous-versions/windows/apps/br230302(v=vs.140))  
+- [API de .NET para aplicaciones de la Tienda Windows](/previous-versions/br230232(v=vs.120))

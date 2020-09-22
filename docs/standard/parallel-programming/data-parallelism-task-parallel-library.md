@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 513c5dde1526a8a21f68171f304b245d0a34f563
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 617757581f6d2491098e1172072bdf0387c6852b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594470"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558919"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
@@ -44,7 +44,7 @@ El *paralelismo de datos* hace referencia a los escenarios en los que la misma o
 |-----------|-----------------|  
 |[Cómo: Escribir un bucle Parallel.For sencillo](how-to-write-a-simple-parallel-for-loop.md)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.For%2A> en cualquier matriz o colección de origen <xref:System.Collections.Generic.IEnumerable%601> indexable.|  
 |[Cómo: Escribir un bucle Parallel.ForEach sencillo](how-to-write-a-simple-parallel-foreach-loop.md)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> en cualquier colección de origen <xref:System.Collections.Generic.IEnumerable%601>.|  
-|[Cómo: Detener o interrumpir un bucle Parallel.For](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Describe cómo detenerse o salir de un bucle paralelo de forma que todos los subprocesos se informen de la acción.|  
+|[Cómo: Detener o interrumpir un bucle Parallel.For](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))|Describe cómo detenerse o salir de un bucle paralelo de forma que todos los subprocesos se informen de la acción.|  
 |[Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.For%2A> en el que cada subproceso mantiene una variable privada que no está visible para cualquier otro subproceso y cómo sincronizar los resultados de todos los subprocesos cuando el bucle se completa.|  
 |[Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|Describe cómo escribir un bucle <xref:System.Threading.Tasks.Parallel.ForEach%2A> en el que cada subproceso mantiene una variable privada que no está visible para cualquier otro subproceso y cómo sincronizar los resultados de todos los subprocesos cuando el bucle se completa.|  
 |[Cómo: Cancelar un bucle Parallel.For o ForEach](how-to-cancel-a-parallel-for-or-foreach-loop.md)|Describe cómo cancelar un bucle paralelo utilizando un <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  

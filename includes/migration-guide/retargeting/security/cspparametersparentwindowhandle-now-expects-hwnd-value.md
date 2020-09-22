@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614764"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606485"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle espera ahora el valor HWND
 
@@ -16,7 +16,7 @@ El valor <xref:System.Security.Cryptography.CspParameters.ParentWindowHandle>, i
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-En versiones anteriores de .NET Framework, se esperaba que el valor fuera un <xref:System.IntPtr?displayProperty=fullName> que representara una ubicación en memoria donde se encontraba el valor [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND). Establecer la propiedad en form.Handle no tenía ningún efecto en Windows 7 y versiones anteriores, pero en Windows 8 y versiones posteriores, da como resultado &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: El parámetro no es correcto&quot;.
+En versiones anteriores de .NET Framework, se esperaba que el valor fuera un <xref:System.IntPtr?displayProperty=fullName> que representara una ubicación en memoria donde se encontraba el valor [HWND](/windows/desktop/WinProg/windows-data-types#HWND). Establecer la propiedad en form.Handle no tenía ningún efecto en Windows 7 y versiones anteriores, pero en Windows 8 y versiones posteriores, da como resultado &quot;<xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>: El parámetro no es correcto&quot;.
 
 #### <a name="suggestion"></a>Sugerencia
 

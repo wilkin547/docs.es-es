@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802934"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554585"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -64,7 +64,7 @@ Para resolver este problema, puede hacer lo siguiente:
 El núcleo del modelo de objetos de expresiones regulares de .NET es la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, que representa el motor de expresiones regulares. A menudo, el mayor factor único que afecta al rendimiento de las expresiones regulares es la manera en que se emplea el motor de <xref:System.Text.RegularExpressions.Regex>. La definición de una expresión regular implica acoplar estrechamente el motor de expresiones regulares con un patrón de expresión regular. Ese proceso de acoplamiento, tanto si consiste en crear una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> pasando a su constructor una expresión regular como en llamar a un método estático pasándole el patrón de expresión regular junto con la cadena que se va a analizar, es necesariamente costoso.
 
 > [!NOTE]
-> Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
+> Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
 
 Puede acoplar el motor de expresiones regulares con un determinado patrón de expresión regular y, a continuación, usar el motor para buscar coincidencias con texto de varias maneras:
 
@@ -163,7 +163,7 @@ Cuando el ejemplo se compila en un ejecutable y se ejecuta, crea un ensamblado d
 Normalmente, el motor de expresiones regulares usa la progresión lineal para desplazarse a través de una cadena de entrada y compararla con un patrón de expresión regular. Sin embargo, cuando en un patrón de expresión regular se usan cuantificadores indeterminados como `*`, `+` y`?`, el motor de expresiones regulares puede abandonar una parte de las coincidencias parciales correctas y volver a un estado guardado previamente para buscar una coincidencia correcta de todo el patron. Este proceso se denomina retroceso.
 
 > [!NOTE]
-> Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](details-of-regular-expression-behavior.md) y [Retroceso](backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
+> Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](details-of-regular-expression-behavior.md) y [Retroceso](backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)) en el blog del equipo de BCL.
 
 La compatibilidad con el retroceso aporta a las expresiones regulares eficacia y flexibilidad. También deja la responsabilidad de controlar el funcionamiento del motor de expresiones regulares en manos de los desarrolladores de expresiones regulares. Puesto que los desarrolladores no suelen ser conscientes de esta responsabilidad, su uso incorrecto del retroceso o su dependencia de un retroceso excesivo suele desempeñar el rol más significativo en la degradación del rendimiento de las expresiones regulares. En un escenario de caso peor, el tiempo de ejecución puede duplicarse por cada carácter adicional de la cadena de entrada. De hecho, usando excesivamente el retroceso, es fácil crear el equivalente en programación de un bucle infinito si la entrada coincide casi con el patrón de expresiones regulares; el motor de expresiones regulares puede tardar horas o incluso días en procesar una cadena de entrada relativamente corta.
 

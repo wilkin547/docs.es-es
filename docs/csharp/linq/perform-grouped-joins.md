@@ -3,12 +3,12 @@ title: Realizar combinaciones agrupadas (LINQ en C#)
 description: Obtenga información sobre cómo realizar combinaciones agrupadas con LINQ en C#.
 ms.date: 04/22/2020
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: 740a861da7dfb9653a874d5baf67eeb2030555b4
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 6411479c5fe6cb0ee79a0cd3df6de2f4d42c26a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135755"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542814"
 ---
 # <a name="perform-grouped-joins"></a>Realizar combinaciones agrupadas
 
@@ -20,7 +20,7 @@ Por ejemplo, una clase o una tabla de base de datos relacional denominada `Stude
 > Cada elemento de la primera colección aparece en el conjunto de resultados de una combinación agrupada, independientemente de si se encuentran elementos correlacionados en la segunda colección. En el caso de que no se encuentren elementos correlacionados, la secuencia de elementos correlacionados para ese elemento estaría vacía. Por consiguiente, el selector de resultados tiene acceso a cada uno de los elementos de la primera colección. Esto difiere del selector de resultados en una combinación no agrupada, que no puede acceder a los elementos de la primera colección que no tienen ninguna coincidencia en la segunda colección.
 
 > [!WARNING]
-> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> no tiene ningún equivalente directo en términos de base de datos relacional tradicional. Sin embargo, este método implementa un superconjunto de combinaciones internas y combinaciones externas izquierdas. Ambas operaciones se pueden escribir en términos de una combinación agrupada. Para obtener más información, consulte [Operaciones de combinación](../programming-guide/concepts/linq/join-operations.md) y [Entity Framework Core, GroupJoin](https://docs.microsoft.com/ef/core/querying/complex-query-operators#groupjoin).
+> <xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType> no tiene ningún equivalente directo en términos de base de datos relacional tradicional. Sin embargo, este método implementa un superconjunto de combinaciones internas y combinaciones externas izquierdas. Ambas operaciones se pueden escribir en términos de una combinación agrupada. Para obtener más información, consulte [Operaciones de combinación](../programming-guide/concepts/linq/join-operations.md) y [Entity Framework Core, GroupJoin](/ef/core/querying/complex-query-operators#groupjoin).
 
 En el primer ejemplo de este artículo se muestra cómo realizar una combinación agrupada. En el segundo ejemplo se muestra cómo usar una combinación agrupada para crear elementos XML.
 

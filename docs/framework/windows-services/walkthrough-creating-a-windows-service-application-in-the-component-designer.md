@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 04f27729b5713c325a73cbdeb1c6c673fe749c00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925636"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544211"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Creación de una aplicación de servicio de Windows
 
@@ -471,7 +471,7 @@ Cada servicio de Windows tiene una entrada del Registro en la subclave **HKEY_LO
 
 Ahora que ha compilado el servicio de Windows, puede instalarlo. Para instalar un servicio de Windows, debe tener credenciales de administrador en el equipo en el que lo va a instalar.
 
-1. Abra un [Símbolo del sistema para desarrolladores para Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) con credenciales administrativas. En el menú **Inicio** de Windows, seleccione **Símbolo del sistema para desarrolladores de VS2017** en la carpeta de Visual Studio y haga clic en **Más** > **Ejecutar como Administrador** en el menú contextual.
+1. Abra un [Símbolo del sistema para desarrolladores para Visual Studio](../tools/developer-command-prompt-for-vs.md) con credenciales administrativas. En el menú **Inicio** de Windows, seleccione **Símbolo del sistema para desarrolladores de VS2017** en la carpeta de Visual Studio y haga clic en **Más** > **Ejecutar como Administrador** en el menú contextual.
 
 2. En la ventana **Developer Command Prompt for Visual Studio** (Símbolo del sistema para desarrolladores de Visual Studio), desplácese hasta la carpeta que contiene la salida del proyecto (de forma predeterminada, es el subdirectorio *\bin\Debug* del proyecto).
 

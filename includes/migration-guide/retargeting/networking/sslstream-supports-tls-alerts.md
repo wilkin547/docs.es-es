@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 0024b2a53444319788b8cdd312d537f994070b5e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5b566dd89801caff7a253abc2fb62c5fd79591f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606960"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream es compatible con las alertas de TLS
 
 #### <a name="details"></a>Detalles
 
-Después de un error en el protocolo de enlace TLS, la primera operación de lectura y escritura de E/S iniciará una excepción <xref:System.IO.IOException?displayProperty=fullName> con una excepción <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> interna. El código <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> de <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> puede asignarse a la alerta de TLS de la parte remota con los [códigos de error de Schannel para las alertas de TLS y SSL](https://docs.microsoft.com/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts).Para obtener más información, vea [RFC 2246: alertas de error, sección 7.2.2](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>El comportamiento de .NET Framework 4.6.2 y versiones anteriores es que el canal de transporte (normalmente la conexión TCP) agotará el tiempo de espera durante la operación de escritura o lectura después de un error en el protocolo de enlace en la otra parte e inmediatamente después de rechazar la conexión.
+Después de un error en el protocolo de enlace TLS, la primera operación de lectura y escritura de E/S iniciará una excepción <xref:System.IO.IOException?displayProperty=fullName> con una excepción <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> interna. El código <xref:System.ComponentModel.Win32Exception.NativeErrorCode?displayProperty=fullName> de <xref:System.ComponentModel.Win32Exception?displayProperty=fullName> puede asignarse a la alerta de TLS de la parte remota con los [códigos de error de Schannel para las alertas de TLS y SSL](/windows/desktop/SecAuthN/schannel-error-codes-for-tls-and-ssl-alerts).Para obtener más información, vea [RFC 2246: alertas de error, sección 7.2.2](https://tools.ietf.org/html/rfc2246#section-7.2.2). <br/>El comportamiento de .NET Framework 4.6.2 y versiones anteriores es que el canal de transporte (normalmente la conexión TCP) agotará el tiempo de espera durante la operación de escritura o lectura después de un error en el protocolo de enlace en la otra parte e inmediatamente después de rechazar la conexión.
 
 #### <a name="suggestion"></a>Sugerencia
 

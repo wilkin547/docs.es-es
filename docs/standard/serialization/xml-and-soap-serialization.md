@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 6b7d6f59694a28207758fa7772781eed073917e4
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: f7ad7732f929ac3599942c5440b173ea226cca87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379540"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544991"
 ---
 # <a name="xml-and-soap-serialization"></a>Serialización de SOAP y XML
 
@@ -30,4 +30,4 @@ Para serializar o deserializar objetos utilice la clase <xref:System.Xml.Seriali
 ## <a name="see-also"></a>Vea también
 
 - [Serialización binaria](binary-serialization.md)
-- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))
+- [Servicios Web XML creados con ASP.NET y clientes de servicio Web XML](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

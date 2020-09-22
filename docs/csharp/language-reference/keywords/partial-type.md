@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 8ae98805eea7231e3a15cb74e636313e796796a2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 0445ac33473c7e2d1916705893b22ba21bb981ff
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89117992"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536851"
 ---
 # <a name="partial-type-c-reference"></a>Tipo parcial (Referencia de C#)
 
@@ -29,7 +29,7 @@ La declaración en *File2.cs*:
 
 ## <a name="remarks"></a>Observaciones
 
-Dividir un tipo de clase, estructura o interfaz en varios archivos puede resultar útil cuando trabaja con proyectos de gran tamaño o con código generado automáticamente, como el proporcionado por el [Diseñador de Windows Forms](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Un tipo parcial puede contener un [método parcial](partial-method.md). Para más información, vea [Clases y métodos parciales](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
+Dividir un tipo de clase, estructura o interfaz en varios archivos puede resultar útil cuando trabaja con proyectos de gran tamaño o con código generado automáticamente, como el proporcionado por el [Diseñador de Windows Forms](/dotnet/desktop/winforms/controls/developing-windows-forms-controls-at-design-time). Un tipo parcial puede contener un [método parcial](partial-method.md). Para más información, vea [Clases y métodos parciales](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

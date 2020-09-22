@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7c4b9faf25853c1c7a546f06c329f6f153eef904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614689"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606733"
 ---
 ### <a name="changes-in-path-normalization"></a>Cambios en la normalización de la ruta de acceso
 
@@ -17,7 +17,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, ha ca
 - La evaluación del directorio relativo (.) o el directorio principal (..) en una ruta de acceso.
 - El recorte de caracteres especificados.
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.2, los cambios siguientes en la normalización de la ruta de acceso están habilitados de forma predeterminada:
-  - El tiempo de ejecución se aplaza para la función [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) del sistema operativo con el objetivo de normalizar las rutas de acceso.
+  - El tiempo de ejecución se aplaza para la función [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) del sistema operativo con el objetivo de normalizar las rutas de acceso.
 - La normalización ya no implica el recorte del final de los segmentos de directorio (como el espacio al final de un nombre de directorio).
 - Compatibilidad de la sintaxis de la ruta de acceso del dispositivo con plena confianza ( incluido `\\.\`) y, para las API de E/S del archivo en mscorlib.dll, `\\?\`.
 - El tiempo de ejecución o valida las rutas de acceso de la sintaxis del dispositivo.

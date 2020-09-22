@@ -5,12 +5,12 @@ ms.date: 09/18/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e8263db289bed50e7437b695134458b8c07e0e5
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73977045"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679578"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>Realizar predicciones con un modelo entrenado
 
@@ -72,7 +72,7 @@ Para realizar una sola predicción, cree un [`PredictionEngine`](xref:Microsoft.
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-A continuación, utilice el método [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) y pase los datos de entrada como un parámetro. Tenga en cuenta que el uso del método [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) no requiere que la entrada sea un [`IDataView`](xref:Microsoft.ML.IDataView)). Esto se debe a que interioriza cómodamente la manipulación del tipo de datos de entrada para que pueda pasar un objeto del tipo de datos de entrada. Además, dado que `CurrentPrice` es el destino o la etiqueta que intenta predecir mediante datos nuevos, se asume que en este momento no hay ningún valor para este.
+A continuación, utilice el método [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) y pase los datos de entrada como un parámetro. Tenga en cuenta que el uso del método [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict%2A) no requiere que la entrada sea un [`IDataView`](xref:Microsoft.ML.IDataView)). Esto se debe a que interioriza cómodamente la manipulación del tipo de datos de entrada para que pueda pasar un objeto del tipo de datos de entrada. Además, dado que `CurrentPrice` es el destino o la etiqueta que intenta predecir mediante datos nuevos, se asume que en este momento no hay ningún valor para este.
 
 ```csharp
 // Input Data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-A continuación, utilice el método [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) para aplicar las transformaciones de datos y generar predicciones.
+A continuación, utilice el método [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) para aplicar las transformaciones de datos y generar predicciones.
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-Inspeccione los valores de predicción mediante el método [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*).
+Inspeccione los valores de predicción mediante el método [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn%2A).
 
 ```csharp
 // Get Predictions

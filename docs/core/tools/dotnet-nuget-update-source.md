@@ -2,12 +2,12 @@
 title: Comando dotnet nuget update source
 description: El comando dotnet nuget update source actualiza un origen existente en los archivos de configuración de NuGet.
 ms.date: 03/20/2020
-ms.openlocfilehash: 42b1aec95cdd57e53f966400f6692a3d0150c16c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a8658c78c095ad4b9272d97200e1d6466cbe658b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463476"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537859"
 ---
 # <a name="dotnet-nuget-update-source"></a>dotnet nuget update source
 
@@ -41,7 +41,7 @@ El comando `dotnet nuget update source` actualiza un origen existente en los arc
 
 - **`--configfile <FILE>`**
 
-  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior).
+  Archivo de configuración de NuGet. Si se especifica, solo se usará la configuración de este archivo. Si no se especifica, se utilizará la jerarquía de archivos de configuración del directorio actual. Para más información, consulte [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior).
 
 - **`-p|--password <PASSWORD>`**
 

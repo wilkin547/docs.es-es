@@ -3,18 +3,18 @@ title: 'Depuración de un interbloqueo: .NET Core'
 description: Tutorial del proceso de depuración de un problema de bloqueo en .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538701"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>Depuración de un interbloqueo en .NET Core
 
 **Este artículo se aplica a: ✔️** SDK de .NET Core 3.1 y versiones posteriores
 
-En este tutorial se explica cómo depurar un escenario de interbloqueo. Con el repositorio de código fuente de ejemplo proporcionado, [Aplicación web de ASP.NET Core](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios), puede provocar un interbloqueo de forma intencionada. El punto de conexión experimentará un bloqueo y una acumulación de subprocesos. Así, aprenderá a usar diversas herramientas para analizar el problema, como los volcados de núcleo, el análisis de volcados de núcleo y el seguimiento de procesos.
+En este tutorial se explica cómo depurar un escenario de interbloqueo. Con el repositorio de código fuente de ejemplo proporcionado, [Aplicación web de ASP.NET Core](/samples/dotnet/samples/diagnostic-scenarios), puede provocar un interbloqueo de forma intencionada. El punto de conexión experimentará un bloqueo y una acumulación de subprocesos. Así, aprenderá a usar diversas herramientas para analizar el problema, como los volcados de núcleo, el análisis de volcados de núcleo y el seguimiento de procesos.
 
 En este tutorial va a:
 
@@ -31,13 +31,13 @@ En este tutorial va a:
 En el tutorial se usa:
 
 - [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core) o una versión posterior
-- [Destino de depuración de ejemplo: aplicación web](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) para desencadenar el escenario
+- [Destino de depuración de ejemplo: aplicación web](/samples/dotnet/samples/diagnostic-scenarios) para desencadenar el escenario
 - [dotnet-trace](dotnet-trace.md) para mostrar procesos
 - [dotnet-dump](dotnet-dump.md) para recopilar y analizar un archivo de volcado de memoria
 
 ## <a name="core-dump-generation"></a>Generación de volcado de núcleo
 
-A la hora de investigar la falta de respuesta de una aplicación, un volcado de núcleo o memoria permite inspeccionar el estado de sus subprocesos y cualquier posible bloqueo que pueda tener problemas de contención. Ejecute la aplicación de [depuración de ejemplo](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) mediante el siguiente comando desde el directorio raíz de ejemplo:
+A la hora de investigar la falta de respuesta de una aplicación, un volcado de núcleo o memoria permite inspeccionar el estado de sus subprocesos y cualquier posible bloqueo que pueda tener problemas de contención. Ejecute la aplicación de [depuración de ejemplo](/samples/dotnet/samples/diagnostic-scenarios) mediante el siguiente comando desde el directorio raíz de ejemplo:
 
 ```dotnetcli
 dotnet run

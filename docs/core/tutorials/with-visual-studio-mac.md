@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867664"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537605"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 
@@ -24,7 +24,7 @@ En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de
 * [Visual Studio para Mac, versión 8.6 o posterior](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Seleccione la opción para instalar .NET Core. La instalación de Xamarin es opcional para el desarrollo de .NET Core. Para obtener más información, vea los siguientes recursos:
 
   * [Tutorial: Instalación de Visual Studio para Mac](/visualstudio/mac/installation).
-  * [Versiones de macOS compatibles](../install/dependencies.md?pivots=os-macos).
+  * [Versiones de macOS compatibles](../install/windows.md).
   * [Versiones de .NET Core compatibles con Visual Studio para Mac](/visualstudio/mac/net-core-support).
 
 ## <a name="create-the-app"></a>Creación de la aplicación

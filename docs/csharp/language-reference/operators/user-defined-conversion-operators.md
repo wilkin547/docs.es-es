@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ab977408ed891bd7c996ce3644b22ea984425664
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916629"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536384"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Operadores de conversión definidos por el usuario (referencia de C#)
 
@@ -52,4 +52,4 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - [Operadores de conversión y prueba de tipos](type-testing-and-cast.md)
 - [Conversiones de tipos](../../programming-guide/types/casting-and-type-conversions.md)
 - [Directrices de diseño: operadores de conversión](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
-- [Chained user-defined explicit conversions in C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c) (Conversiones explícitas encadenadas definidas por el usuario en C#)
+- [Chained user-defined explicit conversions in C#](/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c) (Conversiones explícitas encadenadas definidas por el usuario en C#)

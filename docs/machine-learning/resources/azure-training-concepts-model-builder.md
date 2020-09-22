@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1321967cacdd373acc19923f992d30c5453ea869
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924583"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556224"
 ---
 # <a name="model-builder-azure-training-resources"></a>Recursos de entrenamiento de Azure sobre el generador de modelos
 
@@ -48,7 +48,7 @@ Para crear un área de trabajo de Azure Machine Learning, es necesario lo siguie
     | Standard_NC12   | 12 | 112 | 680  | 2 | 24 | 48 | 2 |
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
-    Consulte la [documentación de máquinas virtuales Linux de la serie NC](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) para obtener más detalles sobre los tipos de proceso optimizados para GPU.
+    Consulte la [documentación de máquinas virtuales Linux de la serie NC](/azure/virtual-machines/nc-series?bc=%252fazure%252fvirtual-machines%252flinux%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fvirtual-machines%252flinux%252ftoc.json) para obtener más detalles sobre los tipos de proceso optimizados para GPU.
 - Prioridad de proceso
 
   - Prioridad baja: adecuada para tareas con un tiempo de ejecución menor. Puede verse afectada por interrupciones y falta de disponibilidad. Normalmente cuesta menos, ya que aprovecha el excedente de capacidad de Azure.

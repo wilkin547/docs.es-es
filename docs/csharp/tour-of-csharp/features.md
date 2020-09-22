@@ -2,12 +2,12 @@
 title: 'Recorrido por C#: áreas principales del lenguaje'
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414908"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558180"
 ---
 # <a name="major-language-areas"></a>Áreas principales del lenguaje
 
@@ -86,7 +86,7 @@ Un delegado no conoce la clase del método al que hace referencia; de hecho, tam
 
 ## <a name="async--await"></a>async y await
 
-C# admite programas asincrónicos con dos palabras clave: `async` y `await`. Puede agregar el modificador `async` a una declaración de método para declarar que dicho método es asincrónico. El operador `await` indica al compilador que espere de forma asincrónica a que finalice un resultado. El control se devuelve al autor de la llamada, y el método devuelve una estructura que administra el estado del trabajo asincrónico. Normalmente, la estructura es un elemento <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, pero puede ser cualquier tipo que admita el patrón awaiter. Estas características permiten escribir código que se lee como su homólogo sincrónico, pero que se ejecuta de forma asincrónica. Por ejemplo, el código siguiente descarga la página principal de [Microsoft Docs](https://docs.microsoft.com):
+C# admite programas asincrónicos con dos palabras clave: `async` y `await`. Puede agregar el modificador `async` a una declaración de método para declarar que dicho método es asincrónico. El operador `await` indica al compilador que espere de forma asincrónica a que finalice un resultado. El control se devuelve al autor de la llamada, y el método devuelve una estructura que administra el estado del trabajo asincrónico. Normalmente, la estructura es un elemento <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, pero puede ser cualquier tipo que admita el patrón awaiter. Estas características permiten escribir código que se lee como su homólogo sincrónico, pero que se ejecuta de forma asincrónica. Por ejemplo, el código siguiente descarga la página principal de [Microsoft Docs](/):
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

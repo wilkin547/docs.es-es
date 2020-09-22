@@ -4,12 +4,12 @@ description: Descubra qué versiones de Windows puede instalar en .NET Core.
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308954"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538294"
 ---
 # <a name="install-net-core-on-windows"></a>Instalación de .NET Core en Windows
 
@@ -51,7 +51,7 @@ Las fechas de fin de servicio de Windows 10 están segmentadas por edición. En
 
 ## <a name="unsupported-releases"></a>Versiones no admitidas
 
-Las siguientes versiones de .NET Core ya no se admiten ❌. Las descargas de estas siguen estando publicadas:
+Las siguientes versiones de .NET Core ya no se admiten ❌. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -96,7 +96,7 @@ Las versiones siguientes de Windows son compatibles con .NET Core 3.1:
 
 | SO                            | Versión                        | Arquitecturas   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Cliente Windows                | 8.1                            | x64, x86        |
+| Cliente Windows                | 7 SP1 y posteriores, y 8.1                    | x64, x86        |
 | Cliente de Windows 10             | Versión 1609+                  | x64, x86        |
 | Windows Server                | 2012 R2 y posteriores                       | x64, x86        |
 | Nano Server                   | Versión 1803 y posteriores                  | x64, ARM32      |
@@ -190,7 +190,7 @@ Los requisitos anteriores también son necesarios si se encuentra con uno de los
 
 Los [scripts de dotnet-install](../tools/dotnet-install-script.md) se usan para la automatización de CI y las instalaciones que no son de administrador del entorno de ejecución. Se puede descargar el script desde la [página de referencia del script dotnet-install](../tools/dotnet-install-script.md).
 
-El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Puede elegir una versión concreta especificando el modificador `Channel`. Incluya el modificador `Runtime` para instalar un entorno de ejecución. De lo contrario, el script instala el [SDK](sdk.md).
+El valor predeterminado del script es instalar la versión más reciente de [soporte técnico a largo plazo (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core), que actualmente es .NET Core 3.1. Puede elegir una versión concreta especificando el modificador `Channel`. Incluya el modificador `Runtime` para instalar un entorno de ejecución. De lo contrario, el script instala el SDK.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore

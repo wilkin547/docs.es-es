@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768487"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550930"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
@@ -117,7 +117,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Puede sobrecargar el constructor para adaptarse a distintas combinaciones de valores. Si también define una [propiedad](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) para la clase de atributo personalizado, puede utilizar una combinación de parámetros con nombre y de posición al inicializar el atributo. Normalmente, se definen todos los parámetros necesarios como de posición y todos parámetros opcionales como con nombre. En este caso, el atributo no se puede inicializar sin el parámetro obligatorio. Todos los demás parámetros son opcionales. Tenga en cuenta que en Visual Basic, los constructores de una clase de atributo no deben utilizar un argumento ParamArray.  
+ Puede sobrecargar el constructor para adaptarse a distintas combinaciones de valores. Si también define una [propiedad](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) para la clase de atributo personalizado, puede utilizar una combinación de parámetros con nombre y de posición al inicializar el atributo. Normalmente, se definen todos los parámetros necesarios como de posición y todos parámetros opcionales como con nombre. En este caso, el atributo no se puede inicializar sin el parámetro obligatorio. Todos los demás parámetros son opcionales. Tenga en cuenta que en Visual Basic, los constructores de una clase de atributo no deben utilizar un argumento ParamArray.  
   
  En el ejemplo de código siguiente, se muestra cómo se puede aplicar un atributo que utiliza el constructor anterior mediante parámetros obligatorios y opcionales. Se supone que el atributo tiene un valor booleano obligatorio y una propiedad de cadena opcional.  
   
@@ -126,7 +126,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>Declarar propiedades  
- Si quiere definir un parámetro con nombre o proporcionar un método sencillo para devolver los valores almacenados por el atributo, declare una [propiedad](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Las propiedades de atributo deben declararse como entidades públicas con una descripción del tipo de datos que se devolverá. Defina la variable que contendrá el valor de la propiedad y asóciela con los métodos **get** y **set** . En el ejemplo de código siguiente se muestra cómo implementar una propiedad simple en el atributo.  
+ Si quiere definir un parámetro con nombre o proporcionar un método sencillo para devolver los valores almacenados por el atributo, declare una [propiedad](/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Las propiedades de atributo deben declararse como entidades públicas con una descripción del tipo de datos que se devolverá. Defina la variable que contendrá el valor de la propiedad y asóciela con los métodos **get** y **set** . En el ejemplo de código siguiente se muestra cómo implementar una propiedad simple en el atributo.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

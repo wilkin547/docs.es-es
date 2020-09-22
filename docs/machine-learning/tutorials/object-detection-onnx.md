@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803409"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679421"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Detección de objetos con ONNX en ML.NET
 
@@ -492,22 +492,22 @@ Al igual que con el procesamiento posterior, hay algunos pasos en el procedimien
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    Es necesario que las canalizaciones ML.NET conozcan el esquema de datos en el que van a funcionar cuando se llame al método [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*). En este caso, se usará un proceso similar al de entrenamiento. Sin embargo, dado que no se está produciendo ningún entrenamiento real, es aceptable usar un [`IDataView`](xref:Microsoft.ML.IDataView) vacío. Cree un nuevo [`IDataView`](xref:Microsoft.ML.IDataView) para la canalización a partir de una lista vacía.
+    Es necesario que las canalizaciones ML.NET conozcan el esquema de datos en el que van a funcionar cuando se llame al método [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A). En este caso, se usará un proceso similar al de entrenamiento. Sin embargo, dado que no se está produciendo ningún entrenamiento real, es aceptable usar un [`IDataView`](xref:Microsoft.ML.IDataView) vacío. Cree un nuevo [`IDataView`](xref:Microsoft.ML.IDataView) para la canalización a partir de una lista vacía.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     Luego de eso, defina la canalización. La canalización constará de cuatro transformaciones.
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) carga la imagen como mapa de bits.
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*) cambia la escala de la imagen al tamaño especificado (en este caso, `416 x 416`).
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*) cambia la representación en píxeles de la imagen de un mapa de bits a un vector numérico.
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*) carga el modelo de ONNX y lo usa para puntuar los datos proporcionados.
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A) carga la imagen como mapa de bits.
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A) cambia la escala de la imagen al tamaño especificado (en este caso, `416 x 416`).
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A) cambia la representación en píxeles de la imagen de un mapa de bits a un vector numérico.
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A) carga el modelo de ONNX y lo usa para puntuar los datos proporcionados.
 
     Defina la canalización en el método `LoadModel` debajo de la variable `data`.
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    Ahora es el momento de crear una instancia del modelo para la puntuación. Llame al método [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) en la canalización y devuélvalo para seguir procesándolo.
+    Ahora es el momento de crear una instancia del modelo para la puntuación. Llame al método [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) en la canalización y devuélvalo para seguir procesándolo.
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
@@ -524,7 +524,7 @@ Dentro de `PredictDataUsingModel`, agregue el código siguiente para el registro
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-A continuación, use el método [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) para puntuar los datos.
+A continuación, use el método [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) para puntuar los datos.
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -626,11 +626,11 @@ Luego de eso, establezca las opciones de fuente y color para el texto y el rect�
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-Cree y rellene un rectángulo sobre el rectángulo delimitador para que contenga el texto mediante el método [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*). Esto le ayudará a contrastar el texto y mejorar la legibilidad.
+Cree y rellene un rectángulo sobre el rectángulo delimitador para que contenga el texto mediante el método [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle%2A). Esto le ayudará a contrastar el texto y mejorar la legibilidad.
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-A continuación, dibuje el texto y el rectángulo delimitador en la imagen con los métodos [`DrawString`](xref:System.Drawing.Graphics.DrawString*) y [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*).
+A continuación, dibuje el texto y el rectángulo delimitador en la imagen con los métodos [`DrawString`](xref:System.Drawing.Graphics.DrawString%2A) y [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle%2A).
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271794"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679604"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -43,7 +43,7 @@ Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no s
 > [!IMPORTANT]
 > Observe la diferencia entre las dos últimas rutas de acceso. En ambas figura el especificador de volumen opcional (`C:` en ambos casos), pero la primera comienza por la raíz del volumen especificado, mientras que la segunda no. Como resultado, la primera es una ruta de acceso absoluta desde el directorio raíz de la unidad `C:`, mientras que la segunda es una ruta de acceso relativa desde el directorio actual de la unidad `C:`. El uso de la segunda forma cuando está previsto el de la primera suele ser motivo de errores que implican rutas de acceso de archivo de Windows.
 
-Puede determinar si una ruta de acceso de archivo es un nombre completo (es decir, si la ruta de acceso es independiente del directorio actual y no cambia cuando cambia el directorio actual) mediante una llamada al método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Tenga en cuenta que una ruta de acceso de este tipo puede incluir segmentos de directorio relativos (`.` y `..`) y seguir siendo completa si la ruta de acceso resuelta siempre apunta a la misma ubicación.
+Puede determinar si una ruta de acceso de archivo es un nombre completo (es decir, si la ruta de acceso es independiente del directorio actual y no cambia cuando cambia el directorio actual) mediante una llamada al método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType>. Tenga en cuenta que una ruta de acceso de este tipo puede incluir segmentos de directorio relativos (`.` y `..`) y seguir siendo completa si la ruta de acceso resuelta siempre apunta a la misma ubicación.
 
 En el ejemplo siguiente se muestra la diferencia entre las rutas de acceso absolutas y relativas. Se supone que existe el directorio `D:\FY2018\` y que aún no ha establecido ningún directorio actual para `D:\` desde el símbolo del sistema antes de ejecutar el ejemplo.
 

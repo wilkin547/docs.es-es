@@ -12,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865247"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558802"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 .NET Framework proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -35,7 +35,7 @@ ms.locfileid: "86865247"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Ensamblados dinámicos  
- Los ensamblados dinámicos se crean mediante sobrecargas del método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La mayoría de las sobrecargas de este método quedaron obsoletas en .NET Framework 4 debido a la eliminación de la directiva de seguridad de toda la máquina. (Vea [Security Changes](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes) (Cambios de seguridad)). Las sobrecargas restantes se pueden ejecutar con cualquier código, independientemente del nivel de confianza. Estas sobrecargas se dividen en dos grupos: las que especifican una lista de atributos que se aplican al ensamblado dinámico cuando este se crea y las que no lo hacen. Si no se especifica el modelo de transparencia para el ensamblado durante su creación, mediante la aplicación del atributo <xref:System.Security.SecurityRulesAttribute>, el modelo de transparencia se hereda del ensamblado emisor.  
+ Los ensamblados dinámicos se crean mediante sobrecargas del método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La mayoría de las sobrecargas de este método quedaron obsoletas en .NET Framework 4 debido a la eliminación de la directiva de seguridad de toda la máquina. (Vea [Security Changes](/previous-versions/dotnet/framework/security/security-changes) (Cambios de seguridad)). Las sobrecargas restantes se pueden ejecutar con cualquier código, independientemente del nivel de confianza. Estas sobrecargas se dividen en dos grupos: las que especifican una lista de atributos que se aplican al ensamblado dinámico cuando este se crea y las que no lo hacen. Si no se especifica el modelo de transparencia para el ensamblado durante su creación, mediante la aplicación del atributo <xref:System.Security.SecurityRulesAttribute>, el modelo de transparencia se hereda del ensamblado emisor.  
   
 > [!NOTE]
 > Los atributos que se aplican al ensamblado dinámico después de crearlo —mediante el método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>— no serán efectivos hasta que el ensamblado se guarde en el disco y se vuelva a cargar en la memoria.  
@@ -138,7 +138,7 @@ ms.locfileid: "86865247"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Información de versión  
- A partir de .NET Framework 4, se elimina la directiva de seguridad de todo el equipo y la transparencia en seguridad se convierte en el mecanismo de cumplimiento predeterminado. Vea [Security Changes](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes) (Cambios de seguridad).  
+ A partir de .NET Framework 4, se elimina la directiva de seguridad de todo el equipo y la transparencia en seguridad se convierte en el mecanismo de cumplimiento predeterminado. Vea [Security Changes](/previous-versions/dotnet/framework/security/security-changes) (Cambios de seguridad).  
   
  A partir de .NET Framework 2.0 Service Pack 1, ya no es obligatorio usar <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> al emitir ensamblados y métodos dinámicos. Esta marca es necesaria en todas las versiones anteriores de .NET Framework.  
   

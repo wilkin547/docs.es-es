@@ -4,12 +4,12 @@ description: ML.NET ofrece la posibilidad de agregar aprendizaje automático en 
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: d9a218e57756ad8b95248193325e902c1798cc37
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607776"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679669"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
@@ -262,7 +262,7 @@ Todos los algoritmos también crean nuevas columnas una vez que han realizado un
 
 Si desea obtener más información acerca de las columnas de salida de diferentes tareas de aprendizaje automático, vea la guía [Tareas de Machine Learning](resources/tasks.md).
 
-Una propiedad importante de los objetos DataView es que se evalúan **de forma diferida**. Las vistas de datos solo se cargan y utilizan en las operaciones durante el entrenamiento del modelo, la evaluación y la predicción de datos. Mientras escribe y prueba la aplicación de ML.NET, puede utilizar el depurador de Visual Studio para echar un vistazo a cualquier objeto de vista de datos llamando al método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*).
+Una propiedad importante de los objetos DataView es que se evalúan **de forma diferida**. Las vistas de datos solo se cargan y utilizan en las operaciones durante el entrenamiento del modelo, la evaluación y la predicción de datos. Mientras escribe y prueba la aplicación de ML.NET, puede utilizar el depurador de Visual Studio para echar un vistazo a cualquier objeto de vista de datos llamando al método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview%2A).
 
 ```csharp
     var debug = testPriceDataView.Preview();
@@ -284,4 +284,4 @@ En las aplicaciones de la vida real, el código de entrenamiento y evaluación d
 
 * Obtenga información más detallada sobre temas específicos en las [guías de instrucciones](./how-to-guides/index.md).
 
-* Si está muy interesado, puede sumergirse directamente en la [documentación de referencia de la API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Si está muy interesado, puede sumergirse directamente en la [documentación de referencia de la API](../../api/index.md?view=ml-dotnet).

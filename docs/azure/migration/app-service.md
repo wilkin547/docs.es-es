@@ -3,12 +3,12 @@ title: Migración de una aplicación web o un servicio de .NET a Azure App Servi
 description: Aprenda aspectos relacionados con la migración de un servicio o una aplicación web .NET de un entorno local a Azure App Service.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174314"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539091"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migración de una aplicación web o un servicio de .NET a Azure App Service
 
@@ -37,9 +37,9 @@ En el caso de WCF, se admite los siguientes enlaces:
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | La [compatibilidad con socket web](https://docs.microsoft.com/azure/app-service/web-sites-configure) debe habilitarse. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse. |
-| `NetHttpBinding` | La [compatibilidad con socket web](https://docs.microsoft.com/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. |
-| `NetHttpsBinding` | La [compatibilidad con socket web](https://docs.microsoft.com/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. |
+| `WSDualHttpBinding` | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse. |
+| `NetHttpBinding` | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. |
+| `NetHttpsBinding` | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. | La [compatibilidad con socket web](/azure/app-service/web-sites-configure) debe habilitarse en los contratos dúplex. |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
@@ -62,7 +62,7 @@ El modo de compatibilidad con IIS5 no se admite. En Azure App Service, cada apli
 
 #### <a name="iis7-schema-compliance"></a>Cumplimiento del esquema de IIS7 +
 
-Algunos elementos y atributos no se definen en el esquema de IIS de Azure App Service. Si tiene problemas, considere la posibilidad de usar [transformaciones XDT](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/).
+Algunos elementos y atributos no se definen en el esquema de IIS de Azure App Service. Si tiene problemas, considere la posibilidad de usar [transformaciones XDT](/azure/app-service/configure-common).
 
 #### <a name="single-application-pool-per-site"></a>Un único grupo de aplicaciones por sitio
 

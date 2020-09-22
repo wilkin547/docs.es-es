@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 70b71fc55f76514dd17e5b9ba0e76151a966eebb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702325"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539483"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo y TextElementEnumerator ahora son compatibles con UAX29
 
@@ -30,7 +30,7 @@ A partir de .NET 5, las clases <xref:System.Globalization.StringInfo> y <xref:S
 
 Observe el código C# siguiente:
 
-```cs
+```csharp
 using System.Globalization;
 
 static void Main(string[] args)

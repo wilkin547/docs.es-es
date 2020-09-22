@@ -3,12 +3,12 @@ title: Cómo elegir un algoritmo de ML.NET
 description: Aprenda a elegir un algoritmo de ML.NET para su modelo de Machine Learning
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75739995"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679643"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Cómo elegir un algoritmo de ML.NET
 
@@ -34,7 +34,7 @@ Antes del entrenamiento con un algoritmo lineal, se deben normalizar las caracte
 
 En general, los algoritmos lineales son escalables, rápidos y baratos de entrenar y predecir. Se escalan por el número de características y aproximadamente por el tamaño del conjunto de datos de entrenamiento.
 
-Los algoritmos lineales realizan varios recorridos por los datos de entrenamiento. Si el conjunto de datos cabe en la memoria, la adición de un [punto de control de memoria caché](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) a la canalización de ML.NET antes de anexar el instructor hará que el entrenamiento se ejecute más rápidamente.
+Los algoritmos lineales realizan varios recorridos por los datos de entrenamiento. Si el conjunto de datos cabe en la memoria, la adición de un [punto de control de memoria caché](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) a la canalización de ML.NET antes de anexar el instructor hará que el entrenamiento se ejecute más rápidamente.
 
 **Instructores lineales**
 
