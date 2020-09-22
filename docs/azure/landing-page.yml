@@ -10,12 +10,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
-  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.openlocfilehash: 8d1fb12e3edeb75db7e11316db1063c0bcd63a8e
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86174882"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90539104"
 landingContent:
 - title: Introducción a .NET en Azure
   linkLists:
@@ -214,10 +214,10 @@ landingContent:
   - linkListType: architecture
     links:
     - text: 'Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedores'
-      url: /dotnet/architecture/microservices/
+      url: ../architecture/microservices/index.md
     - text: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
-      url: /dotnet/architecture/modern-web-apps-azure/
+      url: ../architecture/modern-web-apps-azure/index.md
     - text: Ciclo de vida de aplicaciones Docker en contenedores con la plataforma y las herramientas de Microsoft
-      url: /dotnet/architecture/containerized-lifecycle/
+      url: ../architecture/containerized-lifecycle/index.md
     - text: Modernización de aplicaciones .NET existentes con Azure Cloud y contenedores de Windows
       url: /dotnet/architecture/modernize-with-azure-containers/

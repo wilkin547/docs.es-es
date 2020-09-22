@@ -4,28 +4,28 @@ description: Aprenda a enviar un trabajo de .NET para Apache Spark a Azure HDIns
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 50611b1f62934a446e5b80a8c53698efe23cd1fc
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 560822783b57b2419595cb15efa097591db8d600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617696"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557169"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a><span data-ttu-id="b9f5d-103">Envío de un trabajo de .NET para Apache Spark a Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="b9f5d-103">Submit a .NET for Apache Spark job to Azure HDInsight</span></span>
+# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a><span data-ttu-id="58485-103">Envío de un trabajo de .NET para Apache Spark a Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="58485-103">Submit a .NET for Apache Spark job to Azure HDInsight</span></span>
 
-<span data-ttu-id="b9f5d-104">Hay dos maneras de implementar el trabajo de .NET para Apache Spark en HDInsight: `spark-submit` y Apache Livy.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-104">There are two ways to deploy your .NET for Apache Spark job to HDInsight: `spark-submit` and Apache Livy.</span></span>
+<span data-ttu-id="58485-104">Hay dos maneras de implementar el trabajo de .NET para Apache Spark en HDInsight: `spark-submit` y Apache Livy.</span><span class="sxs-lookup"><span data-stu-id="58485-104">There are two ways to deploy your .NET for Apache Spark job to HDInsight: `spark-submit` and Apache Livy.</span></span>
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="deploy-using-spark-submit"></a><span data-ttu-id="b9f5d-105">Implementación mediante spark-submit</span><span class="sxs-lookup"><span data-stu-id="b9f5d-105">Deploy using spark-submit</span></span>
+## <a name="deploy-using-spark-submit"></a><span data-ttu-id="58485-105">Implementación mediante spark-submit</span><span class="sxs-lookup"><span data-stu-id="58485-105">Deploy using spark-submit</span></span>
 
-<span data-ttu-id="b9f5d-106">Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabajos de .NET para Apache Spark a Azure HDInsight.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-106">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
+<span data-ttu-id="58485-106">Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabajos de .NET para Apache Spark a Azure HDInsight.</span><span class="sxs-lookup"><span data-stu-id="58485-106">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Azure HDInsight.</span></span>
 
-1. <span data-ttu-id="b9f5d-107">Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **SSH e inicio de sesión del clúster**.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-107">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
+1. <span data-ttu-id="58485-107">Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **SSH e inicio de sesión del clúster**.</span><span class="sxs-lookup"><span data-stu-id="58485-107">Navigate to your HDInsight Spark cluster in Azure portal, and then select **SSH + Cluster login**.</span></span>
 
-2. <span data-ttu-id="b9f5d-108">Copie la información de inicio de sesión de SSH y pegue el inicio de sesión en un terminal.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-108">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="b9f5d-109">Inicie sesión en el clúster con la contraseña que se ha establecido durante la creación del clúster.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-109">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="b9f5d-110">Debería ver mensajes de bienvenida a Ubuntu y Spark.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-110">You should see messages welcoming you to Ubuntu and Spark.</span></span>
+2. <span data-ttu-id="58485-108">Copie la información de inicio de sesión de SSH y pegue el inicio de sesión en un terminal.</span><span class="sxs-lookup"><span data-stu-id="58485-108">Copy the ssh login information and paste the login into a terminal.</span></span> <span data-ttu-id="58485-109">Inicie sesión en el clúster con la contraseña que se ha establecido durante la creación del clúster.</span><span class="sxs-lookup"><span data-stu-id="58485-109">Sign in to your cluster using the password you set during cluster creation.</span></span> <span data-ttu-id="58485-110">Debería ver mensajes de bienvenida a Ubuntu y Spark.</span><span class="sxs-lookup"><span data-stu-id="58485-110">You should see messages welcoming you to Ubuntu and Spark.</span></span>
 
-3. <span data-ttu-id="b9f5d-111">Use el comando **spark-submit** para ejecutar la aplicación en el clúster de HDInsight.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-111">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="b9f5d-112">Recuerde reemplazar **mycontainer** y **mystorageaccount** en el script de ejemplo con los nombres reales del contenedor de blobs y la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-112">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span> <span data-ttu-id="b9f5d-113">Además, asegúrese de reemplazar `microsoft-spark-2.3.x-0.6.0.jar` por el archivo .jar adecuado que esté usando para la implementación.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-113">Also, be sure to replace `microsoft-spark-2.3.x-0.6.0.jar` with the appropriate jar file you're using for deployment.</span></span> <span data-ttu-id="b9f5d-114">`2.3.x` representa la versión de Apache Spark, y `0.6.0`, la del [trabajo de .NET para Apache Spark](https://github.com/dotnet/spark/releases).</span><span class="sxs-lookup"><span data-stu-id="b9f5d-114">`2.3.x` represents the version of Apache Spark, and `0.6.0` represents the version of the [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases).</span></span>
+3. <span data-ttu-id="58485-111">Use el comando **spark-submit** para ejecutar la aplicación en el clúster de HDInsight.</span><span class="sxs-lookup"><span data-stu-id="58485-111">Use the **spark-submit** command to run your app on your HDInsight cluster.</span></span> <span data-ttu-id="58485-112">Recuerde reemplazar **mycontainer** y **mystorageaccount** en el script de ejemplo con los nombres reales del contenedor de blobs y la cuenta de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="58485-112">Remember to replace **mycontainer** and **mystorageaccount** in the example script with the actual names of your blob container and storage account.</span></span> <span data-ttu-id="58485-113">Además, asegúrese de reemplazar `microsoft-spark-2.3.x-0.6.0.jar` por el archivo .jar adecuado que esté usando para la implementación.</span><span class="sxs-lookup"><span data-stu-id="58485-113">Also, be sure to replace `microsoft-spark-2.3.x-0.6.0.jar` with the appropriate jar file you're using for deployment.</span></span> <span data-ttu-id="58485-114">`2.3.x` representa la versión de Apache Spark, y `0.6.0`, la del [trabajo de .NET para Apache Spark](https://github.com/dotnet/spark/releases).</span><span class="sxs-lookup"><span data-stu-id="58485-114">`2.3.x` represents the version of Apache Spark, and `0.6.0` represents the version of the [.NET for Apache Spark worker](https://github.com/dotnet/spark/releases).</span></span>
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -35,11 +35,11 @@ ms.locfileid: "85617696"
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-## <a name="deploy-using-apache-livy"></a><span data-ttu-id="b9f5d-115">Implementación mediante Apache Livy</span><span class="sxs-lookup"><span data-stu-id="b9f5d-115">Deploy using Apache Livy</span></span>
+## <a name="deploy-using-apache-livy"></a><span data-ttu-id="58485-115">Implementación mediante Apache Livy</span><span class="sxs-lookup"><span data-stu-id="58485-115">Deploy using Apache Livy</span></span>
 
-<span data-ttu-id="b9f5d-116">Puede usar [Apache Livy](https://livy.incubator.apache.org/), la API de REST de Apache Spark, para enviar .NET para trabajos de Apache Spark a un clúster Azure HDInsight Spark.</span><span class="sxs-lookup"><span data-stu-id="b9f5d-116">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="b9f5d-117">Para más información, vea [Trabajos remotos con Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span><span class="sxs-lookup"><span data-stu-id="b9f5d-117">For more information, see [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
+<span data-ttu-id="58485-116">Puede usar [Apache Livy](https://livy.incubator.apache.org/), la API de REST de Apache Spark, para enviar .NET para trabajos de Apache Spark a un clúster Azure HDInsight Spark.</span><span class="sxs-lookup"><span data-stu-id="58485-116">You can use [Apache Livy](https://livy.incubator.apache.org/), the Apache Spark REST API, to submit .NET for Apache Spark jobs to an Azure HDInsight Spark cluster.</span></span> <span data-ttu-id="58485-117">Para más información, vea [Trabajos remotos con Apache Livy](/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span><span class="sxs-lookup"><span data-stu-id="58485-117">For more information, see [Remote jobs with Apache Livy](/azure/hdinsight/spark/apache-spark-livy-rest-interface).</span></span>
 
-<span data-ttu-id="b9f5d-118">Puede ejecutar el siguiente comando en Linux usando `curl`:</span><span class="sxs-lookup"><span data-stu-id="b9f5d-118">You can run the following command on Linux using `curl`:</span></span>
+<span data-ttu-id="58485-118">Puede ejecutar el siguiente comando en Linux usando `curl`:</span><span class="sxs-lookup"><span data-stu-id="58485-118">You can run the following command on Linux using `curl`:</span></span>
 
 ```bash
 curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches" \
@@ -56,8 +56,8 @@ curl -k -v -X POST "https://<your spark cluster>.azurehdinsight.net/livy/batches
 EOF
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="b9f5d-119">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="b9f5d-119">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="58485-119">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="58485-119">Next steps</span></span>
 
-* [<span data-ttu-id="b9f5d-120">Introducción a .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="b9f5d-120">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
-* [<span data-ttu-id="b9f5d-121">Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="b9f5d-121">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
-* [<span data-ttu-id="b9f5d-122">Documentación de HDInsight</span><span class="sxs-lookup"><span data-stu-id="b9f5d-122">HDInsight Documentation</span></span>](https://docs.microsoft.com/azure/hdinsight/)
+* [<span data-ttu-id="58485-120">Introducción a .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="58485-120">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
+* [<span data-ttu-id="58485-121">Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="58485-121">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
+* [<span data-ttu-id="58485-122">Documentación de HDInsight</span><span class="sxs-lookup"><span data-stu-id="58485-122">HDInsight Documentation</span></span>](/azure/hdinsight/)
