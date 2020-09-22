@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12155062f04b7619cae581540abfc4ce1a8ae34f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400310"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875132"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>El tipo de miembro '\<membername>' no es compatible con CLS
+
 El tipo de datos especificado para este miembro no forma parte de la [independencia del lenguaje y de los componentes independientes del lenguaje](../../../standard/language-independence-and-language-independent-components.md) (CLS). Esto no es un error en el componente, porque el .NET Framework y Visual Basic admiten este tipo de datos. Sin embargo, es posible que otro componente escrito en código estrictamente conforme a CLS no admita este tipo de datos. Tal componente podría no ser capaz de interactuar correctamente con el componente.  
   
  Los siguientes tipos de datos de Visual Basic no son conformes a CLS:  

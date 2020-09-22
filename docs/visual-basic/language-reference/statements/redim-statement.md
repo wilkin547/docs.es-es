@@ -26,14 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404283"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872031"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
+
 Reasigna espacio de almacenamiento a una variable de matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,10 +48,11 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Término|Definición|  
 |----------|----------------|  
 |`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Necesario. Nombre de la variable de matriz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Necesario. Lista de límites de cada dimensión de la matriz redefinida.|  
+|`name`|Obligatorio. Nombre de la variable de matriz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
   
  La instrucción `ReDim` está destinada solo a las matrices. No es válida en escalares (variables que contienen un único valor), colecciones ni estructuras. Tenga en cuenta que, si declara una variable de tipo `Array`, la instrucción `ReDim` no tiene suficiente información de tipo para crear la nueva matriz.  
@@ -79,13 +81,14 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Comportamiento  
   
-- **Reemplazo de matriz.** `ReDim`libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
+- **Reemplazo de matriz.** `ReDim` libera la matriz existente y crea una nueva matriz con el mismo rango. La nueva matriz reemplaza la matriz liberada en la variable de matriz.  
   
 - **Inicialización sin Preserve.** Si no especifica `Preserve` , `ReDim` inicializa los elementos de la nueva matriz utilizando el valor predeterminado para su tipo de datos.  
   
 - **Inicialización con Preserve.** Si especifica `Preserve` , Visual Basic copia los elementos de la matriz existente en la nueva matriz.  
   
 ## <a name="example"></a>Ejemplo  
+
  El ejemplo siguiente aumenta el tamaño de la última dimensión de una matriz dinámica sin perder los datos existentes en la matriz y, a continuación, reduce el tamaño con pérdida de datos parcial. Por último, reduce el tamaño a su valor original y reinicializa todos los elementos de la matriz.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
@@ -106,5 +109,5 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 - [Instrucción Const](const-statement.md)
 - [Instrucción Dim](dim-statement.md)
 - [Instrucción Erase](erase-statement.md)
-- [Relación](../nothing.md)
+- [Nothing](../nothing.md)
 - [Matrices](../../programming-guide/language-features/arrays/index.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
-ms.openlocfilehash: 6c263abe7710157338a795639cca8fd73103d47d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: caa0934ba4ab7e80ae9598b4772e5e49c1ec7f41
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406500"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875025"
 ---
 # <a name="xml-axis-properties-do-not-support-late-binding"></a>Las propiedades del eje XML no admiten enlace en tiempo de ejecución
+
 Se ha hecho referencia a una propiedad de eje XML para un objeto sin tipo.  
   
  **Identificador de error:** BC31168  

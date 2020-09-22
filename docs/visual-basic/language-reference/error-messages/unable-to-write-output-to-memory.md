@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 0312281b11def32cc795cfb9d2b9306ae5f751ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198170"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873497"
 ---
 # <a name="unable-to-write-output-to-memory"></a>No se puede escribir el resultado en memoria
+
 Se ha producido un problema al escribir una salida en la memoria.  
   
  **Identificador de error:** BC31020  
@@ -29,6 +30,6 @@ Se ha producido un problema al escribir una salida en la memoria.
   
 4. Si el error persiste después de la reinstalación, informe al respecto a los Servicios de soporte técnico de Microsoft.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

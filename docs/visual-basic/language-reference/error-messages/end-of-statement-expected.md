@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 169f01b02df377ba6cc21ffad53c36f5d4537140
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9141400afc651629df381e0a655e2d7b9da2e45d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409652"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874419"
 ---
 # <a name="end-of-statement-expected"></a>Se esperaba el fin de instrucción
+
 La instrucción se completa sintácticamente, pero un elemento de programación adicional sigue el elemento que completa la instrucción. Se requiere un terminador de línea al final de cada instrucción.
   
  Un terminador de línea divide los caracteres de un archivo de origen de Visual Basic en líneas. Los ejemplos de terminadores de línea son el carácter de retorno de carro Unicode (&HD), el carácter de avance de línea Unicode (&HA) y el carácter de retorno de carro Unicode seguido del carácter de avance de línea Unicode. Para obtener más información sobre los terminadores de línea, vea la [especificación del lenguaje Visual Basic](~/_vblang/spec/lexical-grammar.md#line-terminators).

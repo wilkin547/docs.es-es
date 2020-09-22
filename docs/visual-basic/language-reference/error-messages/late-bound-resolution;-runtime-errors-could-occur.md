@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c7b352c7bd61216ecce9901585945e740428ee3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397355"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873863"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Resolución enlazada tempranamente; pueden producirse errores en tiempo de ejecución
+
 Un objeto se asigna a una variable declarada como del [tipo de datos del objeto](../data-types/object-data-type.md).  
   
  Cuando se declara una variable como `Object` , el compilador debe realizar el *enlace*en tiempo de ejecución, lo que produce operaciones adicionales en tiempo de ejecución. También expone la aplicación a posibles errores en tiempo de ejecución. Por ejemplo, si asigna un <xref:System.Windows.Forms.Form> a la `Object` variable e intenta tener acceso a la <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> propiedad, el tiempo de ejecución produce una excepción <xref:System.MemberAccessException> porque la <xref:System.Windows.Forms.Form> clase no expone una `NameTable` propiedad.  
@@ -31,5 +32,5 @@ Un objeto se asigna a una variable declarada como del [tipo de datos del objeto]
   
 ## <a name="see-also"></a>Consulte también
 
-- [Enlace anticipado y en tiempo de ejecución](../../programming-guide/language-features/early-late-binding/index.md)
+- [Enlace en tiempo de compilación y en tiempo de ejecución](../../programming-guide/language-features/early-late-binding/index.md)
 - [Declaración de variables de objeto](../../programming-guide/language-features/variables/object-variable-declaration.md)

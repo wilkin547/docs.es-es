@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 67cb8ac602437474f35c89c9aecf66fbf40c91c9
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406565"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875040"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Un valor de tipo '\<typename1>' no se puede convertir a '\<typename2>'
+
 El valor de tipo ' \<typename1> ' no se puede convertir en ' \<typename2> '. La falta de coincidencia de tipos podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> '. Intente reemplazar la referencia de archivo a ' \<filepath> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.  
   
  En una situación en la que un proyecto realiza una referencia de proyecto y una referencia de archivo, el compilador no puede garantizar que un tipo se pueda convertir en otro.  
@@ -49,7 +50,7 @@ El valor de tipo ' \<typename1> ' no se puede convertir en ' \<typename2> '. La 
   
  Project `P1` realiza una referencia de proyecto indirecta a través de Project `P2` a Project `P3` y también una referencia de archivo directo a `P3` . La declaración de `commonObject` utiliza la referencia de archivo a `P3` , mientras que la llamada a `P2.getCommonClass` usa la referencia de proyecto a `P3` .  
   
- El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y un nombre de archivo para el archivo de salida de `P3` (normalmente P3. dll), mientras que las referencias del proyecto identifican el proyecto de origen ( `P3` ) por nombre de proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` proceda del mismo código fuente a través de las dos referencias diferentes.  
+ El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y un nombre de archivo para el archivo de salida de `P3` (normalmente p3.dll), mientras que las referencias del proyecto identifican el proyecto de origen ( `P3` ) por nombre de proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` proceda del mismo código fuente a través de las dos referencias diferentes.  
   
  Esta situación suele producirse cuando se mezclan las referencias de proyecto y las referencias de archivo. En la ilustración anterior, el problema no se produce si se `P1` realiza una referencia de proyecto directa a en `P3` lugar de una referencia de archivo.  
   

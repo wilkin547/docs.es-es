@@ -14,17 +14,19 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b5649cd2a58fd8d300df58c563aebeed8976c4f5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401451"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874781"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Prioridad de operador en Visual Basic
+
 Cuando se producen varias operaciones en una expresión, cada parte se evalúa y se resuelve en un orden predeterminado denominado *precedencia de operadores*.
 
 ## <a name="precedence-rules"></a>Reglas de precedencia
+
  Cuando las expresiones contienen operadores de más de una categoría, se evalúan según las reglas siguientes:
 
 - Los operadores aritméticos y de concatenación tienen el orden de prioridad que se describe en la sección siguiente y todos tienen mayor prioridad que los operadores de comparación, lógicos y bit a bit.
@@ -36,12 +38,15 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
 - Los operadores con la misma prioridad se evalúan de izquierda a derecha en el orden en que aparecen en la expresión.
 
 ## <a name="precedence-order"></a>Orden de prioridad
+
  Los operadores se evalúan en el orden de prioridad siguiente:
 
 ### <a name="await-operator"></a>Await (Operador)
+
  Operador
 
 ### <a name="arithmetic-and-concatenation-operators"></a>Operadores aritméticos y de concatenación
+
  Exponenciación ( `^` )
 
  Identidad unaria y negación ( `+` , `–` )
@@ -59,9 +64,11 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
  Desplazamiento de bits aritmético ( `<<` , `>>` )
 
 ### <a name="comparison-operators"></a>Operadores de comparación
+
  Todos los operadores de comparación ( `=` , `<>` , `<` , `<=` , `>` , `>=` , `Is` , `IsNot` , `Like` , `TypeOf` ... `Is` )
 
 ### <a name="logical-and-bitwise-operators"></a>Operadores lógicos y bit a bit
+
  Negación ( `Not` )
 
  Conjunción ( `And` , `AndAlso` )
@@ -71,6 +78,7 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
  Disyunción exclusiva ( `Xor` )
 
 ### <a name="comments"></a>Comentarios
+
  El `=` operador es solo el operador de comparación de igualdad, no el operador de asignación.
 
  El operador de concatenación de cadenas ( `&` ) no es un operador aritmético, pero en su precedencia está agrupado con los operadores aritméticos.
@@ -78,7 +86,8 @@ Cuando se producen varias operaciones en una expresión, cada parte se evalúa y
  Los `Is` `IsNot` operadores y son operadores de comparación de referencia de objeto. No comparan los valores de dos objetos; solo comprueban si dos variables de objeto hacen referencia a la misma instancia de objeto.
 
 ## <a name="associativity"></a>asociatividad
- Cuando los operadores de igual precedencia aparecen juntos en una expresión, por ejemplo multiplicación y división, el compilador evalúa cada operación a medida que la encuentra de izquierda a derecha. Esto se ilustra en el siguiente ejemplo.
+
+ Cuando los operadores de igual precedencia aparecen juntos en una expresión, por ejemplo multiplicación y división, el compilador evalúa cada operación a medida que la encuentra de izquierda a derecha. Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 Dim n1 As Integer = 96 / 8 / 4
@@ -91,7 +100,8 @@ Dim n3 As Integer = 96 / (8 / 4)
  Debido a este comportamiento, se dice que los operadores son *asociativos* a la izquierda en Visual Basic.
 
 ## <a name="overriding-precedence-and-associativity"></a>Reemplazar precedencia y asociatividad
- Puede usar paréntesis para forzar que se evalúen algunas partes de una expresión antes que otras. Esto puede invalidar el orden de prioridad y la asociatividad izquierda. Visual Basic siempre realiza las operaciones que se incluyen entre paréntesis antes de las externas. Sin embargo, entre paréntesis, mantiene la prioridad y la asociatividad ordinarias, a menos que use paréntesis dentro de los paréntesis. Esto se ilustra en el siguiente ejemplo.
+
+ Puede usar paréntesis para forzar que se evalúen algunas partes de una expresión antes que otras. Esto puede invalidar el orden de prioridad y la asociatividad izquierda. Visual Basic siempre realiza las operaciones que se incluyen entre paréntesis antes de las externas. Sin embargo, entre paréntesis, mantiene la prioridad y la asociatividad ordinarias, a menos que use paréntesis dentro de los paréntesis. Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 Dim a, b, c, d, e, f, g As Double
@@ -114,10 +124,10 @@ g = (a - (b + c)) / (d * e)
 ## <a name="see-also"></a>Consulte también
 
 - [= (Operador)](assignment-operator.md)
-- [Operador is](is-operator.md)
+- [Operador Is](is-operator.md)
 - [Operador IsNot](isnot-operator.md)
-- [Like (operador)](like-operator.md)
-- [Typeof (operador)](typeof-operator.md)
+- [Like (Operador)](like-operator.md)
+- [Operador TypeOf](typeof-operator.md)
 - [Await (operador)](await-operator.md)
 - [Lista de operadores según funcionalidad](operators-listed-by-functionality.md)
 - [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 0ee235252d69e6f77ce53b048f45e73d0969e864
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e0be18509d0d4b1b4f5eadfadce7a0785e9309f0
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409457"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871507"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>El espacio de nombres o tipo especificado en las importaciones del proyecto '\<qualifiedelementname>' no tiene miembros públicos o no se encuentra
+
 El espacio de nombres o tipo especificado en las importaciones de nivel de proyecto ' \<qualifiedelementname> ' no contiene ningún miembro público o no se encuentra. Asegúrese de que el espacio de nombres o el tipo estén definidos y que contenga al menos un miembro público. Asegúrese de que el nombre de alias no contenga otros alias.  
   
  Una propiedad Import de un proyecto especifica un elemento contenedor que no se puede encontrar o no define ningún `Public` miembro.  
@@ -41,6 +42,6 @@ El espacio de nombres o tipo especificado en las importaciones de nivel de proye
 
 - [Página Referencias, Diseñador de proyectos (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
-- [Público](../modifiers/public.md)
+- [Pública](../modifiers/public.md)
 - [Espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md)
 - [References to Declared Elements](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

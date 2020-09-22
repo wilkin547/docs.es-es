@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: 4a86460104b6c4d9d6791e60f6f377cec0030425
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 05fb8e2ef788920fd200d79a75eec3d7c252b123
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363038"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873589"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz es fija o está bloqueada temporalmente (Visual Basic)
+
 Este error tiene las siguientes causas posibles:  
   
 - Usar `ReDim` para cambiar el número de elementos de una matriz de tamaño fijo.  
@@ -28,6 +29,6 @@ Este error tiene las siguientes causas posibles:
   
 3. Determine qué está bloqueando `Variant` y soluciónelo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Matrices](../../programming-guide/language-features/arrays/index.md)

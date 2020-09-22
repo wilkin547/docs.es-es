@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4cc0a1221dcf65aa2a16fd7d82568c8544f27fdb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84382177"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875081"
 ---
 # <a name="typename-is-a-delegate-type"></a>'\<typename>' es un tipo delegado
+
 ' \<typename> ' es un tipo de delegado. La construcción de delegado solo permite una expresión AddressOf como una lista de argumentos. A menudo se puede usar una expresión AddressOf en lugar de una construcción de delegado.  
   
  Una `New` cláusula que crea una instancia de una clase delegada proporciona una lista de argumentos no válidos al constructor delegado.  
@@ -32,6 +33,6 @@ ms.locfileid: "84382177"
 ## <a name="see-also"></a>Consulte también
 
 - [New (operador)](../operators/new-operator.md)
-- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
 - [Delegados](../../programming-guide/language-features/delegates/index.md)
 - [Procedimiento para invocar un método delegado](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 077533a5b1fe241b61ded9516ad8f450d7dbbf5e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a18a851d4db0ab17cd9b8ffaed4317a9fcf5292b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400349"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870781"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>El descriptor de acceso 'Set' de la propiedad '\<propertyname>' no está accesible
+
 Una instrucción intenta almacenar el valor de una propiedad cuando no tiene acceso al procedimiento de la propiedad `Set` .  
   
  Si la [instrucción set](../statements/set-statement.md) está marcada con un nivel de acceso más restrictivo que su [instrucción Property](../statements/property-statement.md), se podría producir un error al intentar establecer el valor de la propiedad en los casos siguientes:  

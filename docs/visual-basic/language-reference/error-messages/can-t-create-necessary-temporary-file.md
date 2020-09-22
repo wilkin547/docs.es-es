@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID322
 ms.assetid: 53617b5b-eb06-4188-b4c2-8607cb9fbc79
-ms.openlocfilehash: 1a1464e0ac0d87bf9763efe63f2e09927a157a24
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c6d8e471796a0fb745289df8b3d1b156265949ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415432"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874668"
 ---
 # <a name="cant-create-necessary-temporary-file"></a>No se puede crear el archivo temporal necesario
+
 La unidad está llena que contiene el directorio especificado por la variable de entorno TEMP o la variable de entorno TEMP especifica un directorio o una unidad de solo lectura o no válidos.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
@@ -26,4 +27,4 @@ La unidad está llena que contiene el directorio especificado por la variable de
   
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../programming-guide/language-features/error-types.md)
+- [Tipos de errores](../../programming-guide/language-features/error-types.md)

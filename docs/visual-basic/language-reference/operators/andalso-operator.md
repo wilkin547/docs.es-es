@@ -11,14 +11,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-ms.openlocfilehash: 8b67897956a21d06d465cf206856354d2e3f9d68
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aff4621b8f415b9441ad1edf537b9b0736892bb8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371939"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874850"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso (Operador, Visual Basic)
+
 Realiza una conjunción lógica de cortocircuito en dos expresiones.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,10 +33,11 @@ result = expression1 AndAlso expression2
 |Término|Definición|  
 |---|---|  
 |`result`|Obligatorio. Cualquier expresión `Boolean` . El resultado es el `Boolean` resultado de la comparación de las dos expresiones.|  
-|`expression1`|Necesario. Cualquier expresión `Boolean` .|  
-|`expression2`|Necesario. Cualquier expresión `Boolean` .|  
+|`expression1`|Obligatorio. Cualquier expresión `Boolean` .|  
+|`expression2`|Obligatorio. Cualquier expresión `Boolean` .|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Se dice que una operación lógica es *cortocircuitada* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no es necesario evaluar la segunda expresión, porque no puede cambiar el resultado final. El cortocircuito puede mejorar el rendimiento si la expresión omitida es compleja o si implica llamadas a procedimientos.  
   
  Si ambas expresiones se evalúan como `True` , `result` es `True` . En la tabla siguiente se muestra cómo `result` se determina.  
@@ -47,13 +49,16 @@ result = expression1 AndAlso expression2
 |`False`|(no evaluado)|`False`|  
   
 ## <a name="data-types"></a>Tipo de datos  
+
  El `AndAlso` operador solo se define para el [tipo de datos Boolean](../data-types/boolean-data-type.md). Visual Basic convierte cada operando según sea necesario en `Boolean` antes de evaluar la expresión. Si asigna el resultado a un tipo numérico, Visual Basic lo convierte de `Boolean` a ese tipo tal que `False` se convierte en `0` y `True` se convierte en `-1` .
 Para obtener más información, vea [conversiones de tipo booleano](../data-types/boolean-data-type.md#type-conversions).
   
 ## <a name="overloading"></a>Sobrecarga  
+
  El [operador and](and-operator.md) y el [operador IsFalse](isfalse-operator.md) se pueden *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. La sobrecarga de los `And` `IsFalse` operadores y afecta al comportamiento del `AndAlso` operador. Si el código utiliza `AndAlso` en una clase o estructura que sobrecarga `And` y `IsFalse` , asegúrese de que entiende su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa el `AndAlso` operador para realizar una conjunción lógica entre dos expresiones. El resultado es un `Boolean` valor que indica si toda la expresión conunida es true. Si la primera expresión es `False` , el segundo no se evalúa.  
   
  [!code-vb[VbVbalrOperators#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#24)]  
@@ -61,6 +66,7 @@ Para obtener más información, vea [conversiones de tipo booleano](../data-type
  En el ejemplo anterior se generan los resultados de `True` , `False` y `False` , respectivamente. En el cálculo de `secondCheck` , la segunda expresión no se evalúa porque la primera ya está `False` . Sin embargo, la segunda expresión se evalúa en el cálculo de `thirdCheck` .  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra un `Function` procedimiento que busca un valor determinado entre los elementos de una matriz. Si la matriz está vacía, o si se ha superado la longitud de la matriz, la `While` instrucción no probará el elemento de la matriz con el valor de búsqueda.  
   
  [!code-vb[VbVbalrOperators#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#25)]  

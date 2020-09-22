@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 27be97ba2930791bcb9012c824bc418a0089b037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6ad06262806088347c94b3040b743618a3b3695
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409717"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874498"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>La clase delegada '\<classname>' no tiene ningún método Invoke y, por tanto, una expresión de este tipo no puede ser el destino de una llamada a método
+
 No se pudo realizar una llamada a `Invoke` a través de un delegado porque `Invoke` no está implementado en la clase de delegado.  
   
  **Identificador de error:** BC30220  
@@ -29,5 +30,5 @@ No se pudo realizar una llamada a `Invoke` a través de un delegado porque `Invo
 
 - [Delegados](../../programming-guide/language-features/delegates/index.md)
 - [Delegate (Instrucción)](../statements/delegate-statement.md)
-- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
 - [Instrucción Dim](../statements/dim-statement.md)

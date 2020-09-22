@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: f2400334182d373ea49c130fd17bc4f9943248d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408450"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874734"
 ---
 # <a name="attribute-list-visual-basic"></a>Lista de atributos (Visual Basic)
+
 Especifica los atributos que se van a aplicar a un elemento de programación declarado. Los diversos atributos se separan con comas. A continuación se encuentra la sintaxis de un atributo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -22,14 +23,16 @@ Especifica los atributos que se van a aplicar a un elemento de programación dec
 ```  
   
 ## <a name="parts"></a>Partes  
+
 |||
 |---|---|
 |`attributemodifier`|Se requiere para los atributos aplicados al principio de un archivo de código fuente. Puede ser un [ensamblado](../modifiers/assembly.md) o un [módulo](../modifiers/module-keyword.md).|
-|`attributename`| Necesario. Nombre del atributo.|
+|`attributename`| Obligatorio. Nombre del atributo.|
 |`attributearguments`|Opcional. Lista de argumentos posicionales para este atributo. Los argumentos múltiples se separan mediante comas.|
 |`attributeinitializer`|Opcional. Lista de inicializadores de variable o propiedad para este atributo. Los inicializadores múltiples se separan mediante comas.|
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Puede aplicar uno o varios atributos a casi cualquier elemento de programación (tipos, procedimientos, propiedades, etc.). Los atributos aparecen en los metadatos del ensamblado y pueden ayudarle a anotar el código o especificar cómo usar un elemento de programación determinado. Puede aplicar atributos definidos por Visual Basic y el .NET Framework, y puede definir sus propios atributos.  
 
  Para obtener más información sobre Cuándo usar atributos, vea [información general sobre los atributos](../../programming-guide/concepts/attributes/index.md). Para obtener información sobre los nombres de atributo, vea [nombres de elementos declarados](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -47,15 +50,16 @@ Especifica los atributos que se van a aplicar a un elemento de programación dec
 - **Argumentos.** Todos los argumentos posicionales de un atributo deben preceder a cualquier inicializador de variable o propiedad.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se aplica el <xref:System.Runtime.InteropServices.DllImportAttribute> atributo a una definición de esquema de un `Function` procedimiento.  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>indica que el procedimiento con atributos representa un punto de entrada de una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre del archivo DLL como argumento posicional y la otra información como inicializadores de variables.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> indica que el procedimiento con atributos representa un punto de entrada de una biblioteca de vínculos dinámicos (DLL) no administrada. El atributo proporciona el nombre del archivo DLL como argumento posicional y la otra información como inicializadores de variables.  
   
 ## <a name="see-also"></a>Consulte también
 
 - [Ensamblado](../modifiers/assembly.md)
-- [Destina\<keyword>](../modifiers/module-keyword.md)
+- [Destina \<keyword>](../modifiers/module-keyword.md)
 - [Información general de atributos](../../programming-guide/concepts/attributes/index.md)
 - [Procedimiento Interrupción y combinación de instrucciones en código](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

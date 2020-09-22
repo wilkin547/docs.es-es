@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: bf95a7a0c6cb80bc02434eab7a86d07cb6855ee2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ac585a86a783f36642545e368b1c2e694b89f62
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387145"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871174"
 ---
 # <a name="permission-denied-visual-basic"></a>Permiso denegado (Visual Basic)
+
 Se intentó escribir en un disco protegido contra escritura o para tener acceso a un archivo bloqueado.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
@@ -24,4 +25,4 @@ Se intentó escribir en un disco protegido contra escritura o para tener acceso 
   
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../programming-guide/language-features/error-types.md)
+- [Tipos de errores](../../programming-guide/language-features/error-types.md)
