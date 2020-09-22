@@ -12,14 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 0cce36073b53442bce63f966f3bd94bd5d70d2a8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0a01b49cf1e0bf9ad7b2ce541cee39cba83025ca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406332"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875308"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf (Operador, Visual Basic)
+
 Comprueba si el tipo en tiempo de ejecución del resultado de una expresión es compatible con el tipo especificado.
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,21 +34,23 @@ result = TypeOf objectexpression IsNot typename
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `result`  
  Devuelto. Valor `Boolean`.  
   
  `objectexpression`  
- Necesario. Cualquier expresión que se evalúa como un tipo de referencia.  
+ Obligatorio. Cualquier expresión que se evalúa como un tipo de referencia.  
   
  `typename`  
- Necesario. Cualquier nombre de tipo de datos.  
+ Obligatorio. Cualquier nombre de tipo de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El operador `TypeOf` determina si el tipo en tiempo de ejecución de `objectexpression` es compatible con `typename`. La compatibilidad depende de la categoría del tipo de `typename`. En la tabla siguiente se muestra cómo se determina la compatibilidad.  
   
 |Categoría de tipo de `typename`|Criterio de compatibilidad|  
 |---------------------------------|-----------------------------|  
-|Class|`objectexpression` es de tipo `typename` o hereda de `typename`|  
+|Clase|`objectexpression` es de tipo `typename` o hereda de `typename`|  
 |Estructura|`objectexpression` es de tipo `typename`|  
 |Interfaz|`objectexpression` implementa `typename` o hereda de una clase que implementa `typename`|  
   
@@ -56,6 +59,7 @@ result = TypeOf objectexpression IsNot typename
  `TypeOf` siempre se usa con la palabra clave `Is` para construir una expresión `TypeOf`...`Is`, o con la palabra clave `IsNot` para construir una expresión `TypeOf`...`IsNot`.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usan expresiones `TypeOf`...`Is` para probar la compatibilidad de tipo de dos variables de referencia de objeto con diversos tipos de datos.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
@@ -64,7 +68,7 @@ result = TypeOf objectexpression IsNot typename
   
 ## <a name="see-also"></a>Consulte también
 
-- [Operador is](is-operator.md)
+- [Operador Is](is-operator.md)
 - [Operador IsNot](isnot-operator.md)
 - [Comparison Operators in Visual Basic](../../programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Prioridad de operador en Visual Basic](operator-precedence.md)

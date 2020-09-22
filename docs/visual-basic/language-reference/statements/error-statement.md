@@ -10,14 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404750"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873282"
 ---
 # <a name="error-statement"></a>Error (Instrucción)
+
 Simula la aparición de un error.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -27,10 +28,12 @@ Error errornumber
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `errornumber`  
- Necesario. Puede ser cualquier número de error válido.  
+ Obligatorio. Puede ser cualquier número de error válido.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La `Error` instrucción se admite por compatibilidad con versiones anteriores. En el nuevo código, especialmente al crear objetos, utilice el `Err` método del objeto `Raise` para generar errores en tiempo de ejecución.  
   
  Si `errornumber` se define, la `Error` instrucción llama al controlador de errores después de que `Err` se asignen los siguientes valores predeterminados a las propiedades del objeto:  
@@ -50,6 +53,7 @@ Error errornumber
 > Algunas aplicaciones host de Visual Basic no pueden crear objetos. Consulte la documentación de la aplicación host para determinar si puede crear clases y objetos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se utiliza la `Error` instrucción para generar el número de error 11.  
   
 ```vb  
@@ -58,9 +62,10 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Espacio de nombres:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
- **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte también
 

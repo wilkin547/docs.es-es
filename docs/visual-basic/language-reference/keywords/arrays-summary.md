@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic]
 ms.assetid: 167f77d4-7cb2-4a31-9dc9-0fd0b26fda7e
-ms.openlocfilehash: 003233463b208fa0f8604ab1a5c52b9c219c711c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6dfb0565803bce298fc1b9467e82d2e09ffb4239
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362442"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875676"
 ---
 # <a name="arrays-summary-visual-basic"></a>Resumen de matrices (Visual Basic)
+
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
 |Acción|Elemento del lenguaje|  

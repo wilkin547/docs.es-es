@@ -2,22 +2,24 @@
 title: Modificadores
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372899"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875449"
 ---
 # <a name="modifiers-visual-basic"></a>Modificadores de Visual Basic
+
 Los temas de esta sección documentan los modificadores en tiempo de ejecución de Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ansi](ansi.md)  
+
+ [ANSI](ansi.md)  
   
  [Ensamblado](assembly.md)  
   
- [Asincrónica](async.md)  
+ [Asincrónico](async.md)  
   
  [Auto](auto.md)  
   
@@ -27,15 +29,15 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
   
  [Valor predeterminado](default.md)  
   
- [Respecto](friend.md)  
+ [Friend](friend.md)  
   
- [De](in-generic-modifier.md)  
+ [In](in-generic-modifier.md)  
   
  [Iterator](iterator.md)  
   
  [Clave](key.md)  
   
- [Destina\<keyword>](module-keyword.md)  
+ [Destina \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -69,7 +71,7 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
 
  [Protected Friend](protected-friend.md)  
   
- [Público](public.md)  
+ [Pública](public.md)  
   
  [ReadOnly](readonly.md)  
   
@@ -88,4 +90,5 @@ Los temas de esta sección documentan los modificadores en tiempo de ejecución 
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Referencia del lenguaje Visual Basic](../index.md)  

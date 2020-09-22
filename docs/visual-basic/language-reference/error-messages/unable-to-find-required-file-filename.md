@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: 1abb420c997afbc69a652502801d91043eb48757
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e05d298570b45415b567a6db41764fc0163eee77
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197257"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875702"
 ---
-# <a name="unable-to-find-required-file-filename"></a>No se puede encontrar el archivo necesario '\<nombreDeArchivo > '
+# <a name="unable-to-find-required-file-filename"></a>No se encuentra el archivo '\<filename>' necesario
+
 Falta un archivo requerido por Visual Studio o está dañado.  
   
  **Identificador de error:** BC30655  
@@ -23,6 +24,6 @@ Falta un archivo requerido por Visual Studio o está dañado.
   
 - Vuelva a instalar Visual Studio.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

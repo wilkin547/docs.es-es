@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: 90d2b6d70390bfb732af4a5868c935de61d18f94
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8bf8872277ec901e066a8b950aaf3e61babfcc48
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408507"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872111"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1>"\<typename>" debe implementar "\<methodname>" para la interfaz "\<interfacename>"
+
 Una clase o estructura notifica a que implemente una interfaz pero no implementa un procedimiento definido por la interfaz. Se deben implementar todos los miembros de la interfaz.  
   
  **Identificador de error:** BC30149  

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 02d258084aaaa53dcc559cfaa0dec27556351037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404491"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873226"
 ---
 # <a name="interface-statement-visual-basic"></a>Instrucción Interface (Visual Basic)
+
 Declara el nombre de una interfaz e introduce las definiciones de los miembros que la interfaz contiene.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,7 +41,7 @@ End Interface
 |`attributelist`|Opcional. Vea [lista de atributos](attribute-list.md).|  
 |`accessmodifier`|Opcional. Puede ser uno de los siguientes:<br /><br /> -   [Pública](../modifiers/public.md)<br />-   [Contra](../modifiers/protected.md)<br />-   [Respecto](../modifiers/friend.md)<br />-   [Privada](../modifiers/private.md)<br />-  [Friend protegido](../modifiers/protected-friend.md)<br/>- [Privado protegido](../modifiers/private-protected.md)<br /><br /> Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Opcional. Vea [Shadows](../modifiers/shadows.md).|  
-|`name`|Necesario. Nombre de esta interfaz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Obligatorio. Nombre de esta interfaz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una interfaz genérica.|  
 |`typelist`|Obligatorio si se usa la palabra clave [of](of-clause.md) . Lista de parámetros de tipo para esta interfaz. Opcionalmente, cada parámetro de tipo se puede declarar como variante mediante el uso `In` de los `Out` Modificadores genéricos y. Consulte [lista de tipos](type-list.md).|  
 |`Inherits`|Opcional. Indica que esta interfaz hereda los atributos y los miembros de otra interfaz o interfaces. Vea [Inherits (instrucción](inherits-statement.md)).|  
@@ -56,7 +57,8 @@ End Interface
 |`membername`|Se requiere para cada propiedad, procedimiento, evento, interfaz, clase o estructura definidos como miembro de la interfaz. Nombre del miembro.|  
 |`End Interface`|Termina la definición de `Interface`.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Una *interfaz* define un conjunto de miembros, como propiedades y procedimientos, que las clases y estructuras pueden implementar. La interfaz solo define las firmas de los miembros y no sus trabajos internos.  
   
  Una clase o estructura implementa la interfaz proporcionando código para cada miembro definido por la interfaz. Por último, cuando la aplicación crea una instancia a partir de esa clase o estructura, existe un objeto y se ejecuta en la memoria. Para obtener más información, vea [objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md) e [interfaces](../../programming-guide/language-features/interfaces/index.md).  
@@ -93,7 +95,7 @@ End Interface
   
 - **Nivel de acceso.** Todos los miembros de interfaz tienen acceso [público](../modifiers/public.md) de forma implícita. No se puede usar ningún modificador de acceso al definir un miembro. Sin embargo, una clase que implementa la interfaz puede declarar un nivel de acceso para cada miembro implementado.  
   
-     Si asigna una instancia de clase a una variable, el nivel de acceso de sus miembros puede depender de si el tipo de datos de la variable es la interfaz subyacente o la clase de implementación. Esto se ilustra en el siguiente ejemplo.  
+     Si asigna una instancia de clase a una variable, el nivel de acceso de sus miembros puede depender de si el tipo de datos de la variable es la interfaz subyacente o la clase de implementación. Esto se ilustra en el siguiente ejemplo:  
   
      [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
@@ -106,6 +108,7 @@ End Interface
 - **Validez.** Una interfaz no tiene una duración, ni sus miembros. Cuando una clase implementa una interfaz y un objeto se crea como una instancia de esa clase, el objeto tiene una duración dentro de la aplicación en la que se está ejecutando. Para obtener más información, vea "Lifetime" en la [instrucción Class](class-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa la `Interface` instrucción para definir una interfaz denominada `thisInterface` , que debe implementarse con una `Property` instrucción y una `Function` instrucción.  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
@@ -123,5 +126,5 @@ End Interface
 - [Instrucción Sub](sub-statement.md)
 - [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Varianza en interfaces genéricas](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [De](../modifiers/in-generic-modifier.md)
+- [In](../modifiers/in-generic-modifier.md)
 - [Enuncia](../modifiers/out-generic-modifier.md)

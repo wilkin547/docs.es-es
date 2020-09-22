@@ -6,14 +6,15 @@ helpviewer_keywords:
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 44321d75ce88beead2c631318392e5d630bae74b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f88d68910c3c094b54896e4aa88c8c2be44cba98
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373478"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875603"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Resumen de entrada y salida (Visual Basic)
+
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
 |Acción|Elemento del lenguaje|  

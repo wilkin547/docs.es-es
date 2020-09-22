@@ -10,14 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 120ba6da11bffc3a0e81873d1fd606633724723d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396186"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875255"
 ---
 # <a name="from-clause-visual-basic"></a>From (Cláusula, Visual Basic)
+
 Especifica una o varias variables de rango y una colección que se va a consultar.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,9 +34,10 @@ From element [ As type ] In collection [ _ ]
 |---|---|  
 |`element`|Obligatorio. Una *variable de rango* que se usa para recorrer en iteración los elementos de la colección. Una variable de rango se utiliza para hacer referencia a cada miembro de `collection` , ya que la consulta recorre en iteración la `collection` . Debe ser un tipo Enumerable.|  
 |`type`|Opcional. Tipo de `element`. Si no `type` se especifica, el tipo de `element` se deduce de `collection` .|  
-|`collection`|Necesario. Hace referencia a la colección que se va a consultar. Debe ser un tipo Enumerable.|  
+|`collection`|Obligatorio. Hace referencia a la colección que se va a consultar. Debe ser un tipo Enumerable.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La `From` cláusula se utiliza para identificar los datos de origen de una consulta y las variables que se usan para hacer referencia a un elemento de la colección de origen. Estas variables se denominan *variables de rango*. La `From` cláusula es necesaria para una consulta, excepto cuando `Aggregate` se usa la cláusula para identificar una consulta que devuelve solo resultados agregados. Para obtener más información, vea [cláusula Aggregate](aggregate-clause.md).  
   
  Puede especificar varias `From` cláusulas en una consulta para identificar varias colecciones que se van a combinar. Cuando se especifican varias colecciones, se recorren en iteración de forma independiente o puede combinarlas si están relacionadas. Puede combinar las colecciones implícitamente mediante la `Select` cláusula o explícitamente mediante las `Join` `Group Join` cláusulas o. Como alternativa, puede especificar varias colecciones y variables de rango en una sola `From` cláusula, con cada variable de rango relacionada y colección separadas de las otras mediante una coma. En el ejemplo de código siguiente se muestran ambas opciones de sintaxis para la `From` cláusula.  
@@ -65,6 +67,7 @@ From element [ As type ] In collection [ _ ]
 - Identifique las partes del resultado que se van a devolver mediante las `Skip` `Take` `Skip While` cláusulas,, y `Take While` .  
   
 ## <a name="example"></a>Ejemplo  
+
  La siguiente expresión de consulta utiliza una `From` cláusula para declarar una variable `cust` de rango para cada `Customer` objeto de la `customers` colección. La `Where` cláusula usa la variable de rango para restringir la salida a los clientes de la región especificada. El `For Each` bucle muestra el nombre de la compañía para cada cliente en el resultado de la consulta.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
@@ -81,7 +84,7 @@ From element [ As type ] In collection [ _ ]
 - [Cláusula Distinct](distinct-clause.md)
 - [Join (cláusula)](join-clause.md)
 - [Cláusula Group Join](group-join-clause.md)
-- [Cláusula Order By](order-by-clause.md)
+- [Cláusula order by](order-by-clause.md)
 - [Let (cláusula)](let-clause.md)
 - [Cláusula Skip](skip-clause.md)
 - [Cláusula Take](take-clause.md)

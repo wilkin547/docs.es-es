@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: 0c2808795d6fcbad7892369fd7f460ebf0406093
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bc213c3b5564d1833136df8f5b8dab1c6b012296
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372977"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875482"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
+
 Identifica una propiedad como la propiedad predeterminada de su clase, estructura o interfaz.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Una clase, estructura o interfaz puede designar como máximo una de sus propiedades como la *propiedad predeterminada*, siempre que esa propiedad tome al menos un parámetro. Si el código hace referencia a una clase o estructura sin especificar un miembro, Visual Basic resuelve esa referencia a la propiedad predeterminada.  
   
  Las propiedades predeterminadas pueden dar lugar a una pequeña reducción en los caracteres de código fuente, pero pueden hacer que el código sea más difícil de leer. Si el código de llamada no está familiarizado con su clase o estructura, cuando hace referencia al nombre de la clase o de la estructura no puede estar seguro de si esa referencia tiene acceso a la clase o estructura, o a una propiedad predeterminada. Esto puede provocar errores del compilador o errores de lógica sutiles en tiempo de ejecución.  

@@ -1,19 +1,20 @@
 ---
-title: Resumen de la manipulación de cadenas
+title: Resumen de manipulación de cadenas
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: 1006dd889d8cdf51070a67236378dc6223e220b2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9916fb00b4073e6b0b6ebfc4bb420975b320747
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373218"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875544"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Resumen de manipulaciones de cadenas (Visual Basic)
+
 Las palabras clave del lenguaje Visual Basic y los miembros de las bibliotecas en tiempo de ejecución están organizados por uso y propósito.  
   
 |Acción|Elemento del lenguaje|  

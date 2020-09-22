@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3c22e6a5199bd52cb9fae66a15a66ac9ce095e81
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386937"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872203"
 ---
 # <a name="type-typename-is-not-defined"></a>No está definido el tipo '\<typename>'
+
 La instrucción ha hecho referencia a un tipo que no se ha definido. Puede definir un tipo en una instrucción de declaración como `Enum` , `Structure` , `Class` o `Interface` .  
   
  **Identificador de error:** BC30002  
@@ -29,7 +30,7 @@ La instrucción ha hecho referencia a un tipo que no se ha definido. Puede defin
   
 - Si se define el tipo, pero la biblioteca de objetos o la biblioteca de tipos en la que se define no está registrada en Visual Basic, haga clic en **Agregar referencia** en el menú **proyecto** y, a continuación, seleccione la biblioteca de objetos o la biblioteca de tipos adecuada.  
   
-- Asegúrese de que el tipo está en un ensamblado que forma parte del perfil de .NET Framework de destino. Para obtener más información, consulte [solución de problemas de errores de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
+- Asegúrese de que el tipo está en un ensamblado que forma parte del perfil de .NET Framework de destino. Para obtener más información, consulte [Solucionar problemas de versión de .NET Framework de destino](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Consulte también
 

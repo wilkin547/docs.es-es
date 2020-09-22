@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-ms.openlocfilehash: 6a093a771933b278a3c43a60cf7640a3a4ee3cd6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2f3b97396a6da199b07aee51d146ccb7ddf0abcb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373257"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875548"
 ---
 # <a name="registry-summary-visual-basic"></a>Resumen del Registro (Visual Basic)
+
 Las palabras clave del lenguaje de Visual Studio y los miembros de la biblioteca en tiempo de ejecución se organizan por propósito y uso.  
   
  Si utiliza la característica `My`, consigue una mayor productividad y rendimiento en las operaciones del Registro que con estos elementos. Para obtener más información, vea <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
-|**Acción**|**Elemento del lenguaje**|  
+|**Acción**|**Elemento Language**|  
 |----------------|--------------------------|  
 |Eliminar la configuración del programa.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
 |Leer la configuración del programa.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
