@@ -4,31 +4,32 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID59
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
-ms.openlocfilehash: 7ec0a8c27f425ec717bca5d45d5dfd2b601c11d5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6967015572b2567f52697f7ddcb1ff594013a2c4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665734"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869254"
 ---
 # <a name="bad-record-length"></a>Longitud de registro incorrecta
+
 Entre las causas posibles de este error se incluyen:  
   
-- La longitud de una variable de registro especificada en un `FileGet`, `FileGetObject`, `FilePut` o `FilePutObject` instrucción difiere de la longitud especificada en la correspondiente `FileOpen` instrucción.  
+- La longitud de una variable de registro especificada en `FileGet` una `FileGetObject` `FilePut` instrucción, o `FilePutObject` difiere de la longitud especificada en la `FileOpen` instrucción correspondiente.  
   
-- La variable en un `FilePut` o `FilePutObject` instrucción es o incluye una cadena de longitud variable.  
+- La variable de una `FilePut` `FilePutObject` instrucción o es o incluye una cadena de longitud variable.  
   
-- La variable en un `FilePut` o `FilePutObject` es o incluye un `Variant` tipo.  
+- La variable en `FilePut` o `FilePutObject` es o incluye un `Variant` tipo.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-1. Asegúrese de que la suma de los tamaños de las variables de longitud fija en el tipo definido por el usuario define el tipo de la variable de registro es el mismo que el valor se indica en la `FileOpen` la instrucción `Len` cláusula.  
+1. Asegúrese de que la suma de los tamaños de las variables de longitud fija en el tipo definido por el usuario que define el tipo de la variable de registro es igual que el valor indicado en la `FileOpen` cláusula de la instrucción `Len` .  
   
-2. Si la variable en un `FilePut` o `FilePutObject` instrucción es o incluye una cadena de longitud variable, asegúrese de que la cadena de longitud variable tiene al menos 2 caracteres menor que la longitud de registro especificada en el `Len` cláusula de la `FileOpen` instrucción.  
+2. Si la variable de una `FilePut` `FilePutObject` instrucción o es o incluye una cadena de longitud variable, asegúrese de que la cadena de longitud variable tiene al menos 2 caracteres más cortos que la longitud de registro especificada en la `Len` cláusula de la `FileOpen` instrucción.  
   
-3. Si la variable en un `FilePut` o `FilePutObject` es o incluye un `Variant` Asegúrese de que la cadena de longitud variable es menor que la longitud del registro especificada en al menos 4 bytes el `Len` cláusula de la `FileOpen` instrucción.  
+3. Si la variable en `FilePut` o `FilePutObject` es o incluye un, `Variant` Asegúrese de que la cadena de longitud variable tiene al menos 4 bytes más cortos que la longitud de registro especificada en la `Len` cláusula de la `FileOpen` instrucción.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>
 - <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>

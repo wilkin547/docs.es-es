@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: f29e92c8245e33c0418d9a387070b03f645c331e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 51b0bbf2e346acdd84a1bc2283db4a71adc9f7dc
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362753"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870435"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>No se pudieron inferir los argumentos de tipo a partir del delegado
+
 Una instrucción de asignación usa `AddressOf` para asignar la dirección de un procedimiento genérico a un delegado, pero no proporciona ningún argumento de tipo al procedimiento genérico.  
   
  Normalmente, cuando se invoca un tipo genérico, se facilita un argumento de tipo para cada parámetro de tipo que define el tipo genérico. Si no se facilita ningún argumento de tipo, el compilador intenta inferir los tipos que se deben pasar a los parámetros de tipo. Si el contexto no proporciona suficiente información para que el compilador infiera los tipos, se genera un error.  
@@ -28,7 +29,7 @@ Una instrucción de asignación usa `AddressOf` para asignar la dirección de un
 ## <a name="see-also"></a>Consulte también
 
 - [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
-- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
 - [Generic Procedures in Visual Basic](../../programming-guide/language-features/data-types/generic-procedures.md)
 - [Type List](../statements/type-list.md)
 - [Métodos de extensión](../../programming-guide/language-features/procedures/extension-methods.md)

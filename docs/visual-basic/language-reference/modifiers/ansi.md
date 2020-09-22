@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ANSI, Visual Basic
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
-ms.openlocfilehash: 67792e52c21555bef46548e9ab0a6ebd32061071
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8dfd830e4c7ed97c8813da4ad310ee59b26f44f8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373205"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868803"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
+
 Especifica que Visual Basic debe serializar todas las cadenas en valores de American National Standards Institute (ANSI), independientemente del nombre del procedimiento externo que se está declarando.  
   
  Cuando se llama a un procedimiento definido fuera del proyecto, el compilador Visual Basic no tiene acceso a la información que necesita para llamar al procedimiento correctamente. Esta información incluye dónde se encuentra el procedimiento, cómo se identifica, su secuencia de llamada y tipo de valor devuelto, y el juego de caracteres de cadena que usa. La [instrucción Declare](../statements/declare-statement.md) crea una referencia a un procedimiento externo y proporciona esta información necesaria.  
@@ -24,12 +25,14 @@ Especifica que Visual Basic debe serializar todas las cadenas en valores de Amer
   
  Si no se especifica ningún modificador de juego de caracteres, `Ansi` es el valor predeterminado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `Ansi` modificador se puede usar en este contexto:  
   
  [Declare Statement](../statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Notas para desarrolladores de Smart Device  
+
  Esta palabra clave no es compatible.  
   
 ## <a name="see-also"></a>Consulte también

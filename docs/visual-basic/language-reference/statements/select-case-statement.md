@@ -21,14 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 3dedd43f920b493a0aca9ce48460b00815e1af5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404244"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871779"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrucción Select...Case (Visual Basic)
+
 Ejecuta uno de varios grupos de instrucciones, dependiendo del valor de una expresión.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,7 +53,8 @@ End Select
 |`elsestatements`|Opcional. Una o varias instrucciones que siguen a `Case Else` que se ejecutan si no `testexpression` coinciden con ninguna cláusula en `expressionlist` de cualquiera de las `Case` instrucciones.|  
 |`End Select`|Finaliza la definición de la `Select` construcción... `Case` .|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si `testexpression` coincide con cualquier `Case` `expressionlist` cláusula, las instrucciones que siguen `Case` a esa instrucción se ejecutan hasta la siguiente `Case` `Case Else` instrucción, o `End Select` . A continuación, el control pasa a la instrucción que sigue a `End Select` . Si `testexpression` coincide con una `expressionlist` cláusula en más de una `Case` cláusula, solo se ejecutan las instrucciones que siguen a la primera coincidencia.  
   
  La `Case Else` instrucción se utiliza para introducir `elsestatements` para que se ejecute si no se encuentra ninguna coincidencia entre las `testexpression` `expressionlist` cláusulas y en cualquiera de las demás `Case` instrucciones. Aunque no es necesario, es una buena idea tener una `Case Else` instrucción en la `Select Case` construcción para administrar los valores imprevistos `testexpression` . Si ninguna `Case` `expressionlist` cláusula coincide `testexpression` y no hay ninguna `Case Else` instrucción, el control pasa a la instrucción que sigue a `End Select` .  
@@ -75,9 +77,10 @@ End Select
   
  Si el código dentro de `Case` un `Case Else` bloque de instrucciones o no necesita ejecutar más instrucciones en el bloque, puede salir del bloque mediante la `Exit Select` instrucción. Esto transfiere el control inmediatamente a la instrucción que sigue a `End Select` .  
   
- `Select Case`las construcciones se pueden anidar. Cada construcción anidada `Select Case` debe tener una `End Select` instrucción coincidente y debe estar contenida completamente dentro de un único `Case` `Case Else` bloque de instrucciones o de la `Select Case` construcción externa en la que está anidada.  
+ `Select Case` las construcciones se pueden anidar. Cada construcción anidada `Select Case` debe tener una `End Select` instrucción coincidente y debe estar contenida completamente dentro de un único `Case` `Case Else` bloque de instrucciones o de la `Select Case` construcción externa en la que está anidada.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa una `Select Case` construcción para escribir una línea que se corresponde con el valor de la variable `number` . La segunda `Case` instrucción contiene el valor que coincide con el valor actual de `number` , por lo que se ejecuta la instrucción que escribe "between 6 and 8, inclusive".  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
@@ -85,7 +88,7 @@ End Select
 ## <a name="see-also"></a>Consulte también
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
-- [End (instrucción)](end-statement.md)
+- [End (Instrucción)](end-statement.md)
 - [Instrucción If...Then...Else](if-then-else-statement.md)
 - [Option Compare (instrucción)](option-compare-statement.md)
 - [Instrucción Exit](exit-statement.md)
