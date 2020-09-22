@@ -7,14 +7,15 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c2d9974f41efdd321af800e6270586d9b18ba6f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c3ae80df58e00076692d91881534704d8278ff1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402854"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873976"
 ---
 # <a name="error-messages-visual-basic"></a>Mensajes de error (Visual Basic)
+
 Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden producirse los siguientes tipos de errores:  
   
 1. Errores en tiempo de diseño, que se producen al escribir una aplicación en Visual Studio.  
@@ -26,11 +27,13 @@ Al escribir, compilar o ejecutar una aplicación de Visual Basic, pueden produci
  Para obtener información sobre cómo solucionar un error específico, vea [Recursos adicionales para programadores de Visual Basic](../../getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Errores en tiempo de ejecución  
+
  Si una aplicación Visual Basic intenta realizar una acción que el sistema no puede ejecutar, se produce un error en tiempo de ejecución y Visual Basic inicia un `Exception` objeto. Visual Basic puede generar errores personalizados de cualquier tipo de datos, incluidos `Exception` los objetos, mediante la `Throw` instrucción. Una aplicación puede identificar el error y mostrar el número de error y el mensaje de una excepción detectada. Si no se detecta ningún error, la aplicación finaliza.  
   
  El código puede capturar y examinar los errores en tiempo de ejecución. Si se incluye el código que produce el error en un bloque `Try`, puede capturar cualquier error producido dentro de un bloque `Catch` coincidente. Para obtener información sobre cómo capturar errores en tiempo de ejecución y responder a ellos en el código, vea [Instrucción Try...Catch...Finally](../statements/try-catch-finally-statement.md).  
   
 ## <a name="compile-time-errors"></a>Errores en tiempo de compilación  
+
  Si el compilador de Visual Basic encuentra un problema en el código, se produce un error en tiempo de compilación. En el Editor de código, puede identificar fácilmente qué línea de código provocó el error porque aparece una línea ondulada debajo de la línea de código. Aparece el mensaje de error si selecciona la línea ondulada o abre la **lista de errores**, en la que también se muestran otros mensajes.  
   
  Si un identificador tiene un subrayado ondulado y aparece un subrayado corto debajo del carácter situado más a la derecha, puede generar un código auxiliar para la clase, el constructor, el método, la propiedad, el campo o la enumeración. Para más información, vea [Generar a partir del uso](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).

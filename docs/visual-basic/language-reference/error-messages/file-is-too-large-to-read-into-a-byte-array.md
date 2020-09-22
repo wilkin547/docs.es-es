@@ -2,14 +2,15 @@
 title: Archivo demasiado grande para su lectura en una matriz de bytes
 ms.date: 07/20/2015
 ms.assetid: 686630a6-a439-46c7-8d7b-34613ae4c5d8
-ms.openlocfilehash: b81fc9332d5f1347404fcdd73bce72b6b09778b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 89459aaf766a70f69008f847dda7ac6e2a1e41d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363129"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874174"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a>Archivo demasiado grande para su lectura en una matriz de bytes
+
 El tamaño del archivo que está intentando leer en una matriz de bytes supera los 4 GB. El `My.Computer.FileSystem.ReadAllBytes` método no puede leer un archivo que supere este tamaño.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  

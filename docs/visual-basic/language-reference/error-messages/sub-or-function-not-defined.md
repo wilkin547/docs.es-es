@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 9eb13d943f9f1cffc984847f7339111e06f5aa6b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 24e290ce1193cd6bc6a0ec8985902576332423f2
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373932"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870521"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub o Function no definida (Visual Basic)
+
 Se `Sub` `Function` debe definir o para que se llame a. Las causas posibles de este error son:  
   
 - Error al escribir el nombre del procedimiento.  
@@ -32,7 +33,7 @@ Se `Sub` `Function` debe definir o para que se llame a. Las causas posibles de e
   
 ## <a name="see-also"></a>Consulte también
 
-- [Tipos de error](../../programming-guide/language-features/error-types.md)
+- [Tipos de errores](../../programming-guide/language-features/error-types.md)
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)
 - [Instrucción Sub](../statements/sub-statement.md)
 - [Instrucción Function](../statements/function-statement.md)

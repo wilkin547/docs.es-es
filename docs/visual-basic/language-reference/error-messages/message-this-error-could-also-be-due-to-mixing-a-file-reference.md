@@ -7,15 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: 263e30f992ef58b0053acb2fd749d0d9186ef6b8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cd2c00bda5b63abbd6bf7069ef28d0a812b22044
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397264"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873781"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<message> Este error también puede ser debido a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado "\<assemblyname>"
-\<message>Este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> . En este caso, intente reemplazar la referencia de archivo a ' \<assemblyfilename> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.  
+
+\<message> Este error también podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> . En este caso, intente reemplazar la referencia de archivo a ' \<assemblyfilename> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.  
   
  El código del proyecto accede a un miembro de otro proyecto, pero la configuración de la solución no permite que el compilador de Visual Basic resuelva la referencia.  
   

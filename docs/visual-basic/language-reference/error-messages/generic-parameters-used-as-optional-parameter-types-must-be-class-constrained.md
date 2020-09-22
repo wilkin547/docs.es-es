@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 273ea592e73be5d76a4ffef077e691014a108347
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f50d08fdf78b5ca9bf9e3399b00ed0328320f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402932"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874030"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Los parámetros genéricos utilizados como tipos de parámetros opcionales deben tener restricción de clase
+
 Se declara un procedimiento con un parámetro opcional que usa un parámetro de tipo que no está restringido para ser un tipo de referencia.  
   
  Siempre debe proporcionar un valor predeterminado para cada parámetro opcional. Si el parámetro es de un tipo de referencia, el valor opcional debe ser `Nothing` , que es un valor válido para cualquier tipo de referencia. Sin embargo, si el parámetro es de un tipo de valor, ese tipo debe ser un tipo de datos elemental predefinido por Visual Basic. Esto se debe a que un tipo de valor compuesto, como una estructura definida por el usuario, no tiene ningún valor predeterminado válido.  
@@ -34,4 +35,4 @@ Se declara un procedimiento con un parámetro opcional que usa un parámetro de 
 - [Instrucción Class](../statements/class-statement.md)
 - [Parámetros opcionales](../../programming-guide/language-features/procedures/optional-parameters.md)
 - [Estructuras](../../programming-guide/language-features/data-types/structures.md)
-- [Relación](../nothing.md)
+- [Nothing](../nothing.md)

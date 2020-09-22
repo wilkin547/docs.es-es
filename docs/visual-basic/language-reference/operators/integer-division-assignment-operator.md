@@ -11,14 +11,15 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: a546d8b0c9b3852386970f80d3da96794da2351c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6e749e13c0427354db9e361538d4bef10b6c6b04
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84370952"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873407"
 ---
 # <a name="-operator"></a>\\= (Operador)
+
 Divide el valor de una variable o propiedad por el valor de una expresión y asigna el resultado entero a la variable o propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,13 +29,15 @@ variableorproperty \= expression
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `variableorproperty`  
- Necesario. Cualquier variable o propiedad numérica.  
+ Obligatorio. Cualquier variable o propiedad numérica.  
   
  `expression`  
- Necesario. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El elemento del lado izquierdo del `\=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../modifiers/readonly.md).  
   
  El `\=` operador divide el valor de una variable o propiedad a su izquierda por el valor de su derecha, y asigna el resultado entero a la variable o propiedad de su izquierda.  
@@ -42,9 +45,11 @@ variableorproperty \= expression
  Para obtener más información sobre la división de enteros, vea [\ (operador Visual Basic)](integer-division-operator.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
+
  El `\` operador se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. La sobrecarga del `\` operador afecta al comportamiento del `\=` operador. Si el código utiliza `\=` en una clase o estructura que sobrecarga `\` , asegúrese de que entiende su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa el `\=` operador para dividir una `Integer` variable por un segundo y asignar el resultado entero a la primera variable.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  

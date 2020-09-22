@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: e61b4dac109f714b5cf25226d1029237ca77032d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78b47601bf0a013d079f638f6dac27511e01aec4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409483"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874213"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>No se puede consultar una expresión de tipo \<type>
+
 La expresión de tipo \<type> no es consultable. Asegúrese de que no falta una referencia de ensamblado o una importación de espacio de nombres para el proveedor LINQ.  
   
  Los tipos consultables se definen en <xref:System.Linq> los <xref:System.Data.Linq> espacios de <xref:System.Xml.Linq> nombres, y. Debe importar uno o varios de estos espacios de nombres para realizar consultas LINQ.  

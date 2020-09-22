@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c05a7d9b021192d53a30e49f52abc08d9b153156
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409535"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874250"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>La expresión llama de forma recursiva a la propiedad contenedora '\<propertyname>'
+
 Una instrucción en el `Set` procedimiento de una definición de propiedad almacena un valor en el nombre de la propiedad.  
   
  El enfoque recomendado para contener el valor de una propiedad es definir una `Private` variable en el contenedor de la propiedad y utilizarla en los `Get` procedimientos y `Set` . `Set`Después, el procedimiento debe almacenar el valor de entrada en esta `Private` variable.  

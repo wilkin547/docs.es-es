@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 729a9f385d94412469d318cb804d216827eeb0fd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 31d44c93d62163df4d81cb8503b633f0eb317372
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397290"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873813"
 ---
 # <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>' no puede exponer el tipo '\<typename>' fuera del proyecto mediante \<containertype> '\<containertypename>'
+
 Una variable, un parámetro de procedimiento o un valor devuelto de función se expone fuera de su contenedor, pero se declara como un tipo que no se debe exponer fuera del contenedor.  
   
  El código esqueleto siguiente muestra una situación que genera este error.  

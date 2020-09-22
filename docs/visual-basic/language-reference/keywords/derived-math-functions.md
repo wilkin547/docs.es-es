@@ -21,14 +21,15 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f84b1ef18ef2a924bb2e47da85ecbb51f982873a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373902"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869021"
 ---
 # <a name="derived-math-functions-visual-basic"></a>Funciones matemáticas derivadas (Visual Basic)
+
 En la tabla siguiente se muestran las funciones matemáticas no intrínsecas que se pueden derivar de las funciones matemáticas intrínsecas del <xref:System.Math?displayProperty=nameWithType> objeto. Puede tener acceso a las funciones matemáticas intrínsecas agregando `Imports System.Math` al archivo o proyecto.  
   
 |Función|Equivalentes derivados|  

@@ -5,17 +5,19 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 8fb245309170d4b9adf7458bb3bcfde3e28c0538
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 006a4b67094b258d440c2046fe3ae02274e1c337
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359841"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869896"
 ---
 # <a name="queries-visual-basic"></a>Consultas de Visual Basic
+
 Visual Basic le permite crear expresiones LINQ (Language-Integrated Query) en el código.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Aggregate Clause](aggregate-clause.md)  
  Describe la `Aggregate` cláusula, que aplica una o varias funciones de agregado a una colección.  
   
@@ -25,7 +27,7 @@ Visual Basic le permite crear expresiones LINQ (Language-Integrated Query) en el
  [Cláusula FROM](from-clause.md)  
  Describe la `From` cláusula, que especifica una colección y una variable de rango para una consulta.  
   
- [Group by (cláusula)](group-by-clause.md)  
+ [Cláusula Group By](group-by-clause.md)  
  Describe la `Group By` cláusula, que agrupa los elementos del resultado de una consulta y se puede usar para aplicar funciones de agregado a cada grupo.  
   
  [Cláusula Group Join](group-join-clause.md)  
@@ -37,7 +39,7 @@ Visual Basic le permite crear expresiones LINQ (Language-Integrated Query) en el
  [Let (cláusula)](let-clause.md)  
  Describe la `Let` cláusula, que calcula un valor y lo asigna a una nueva variable en la consulta.  
   
- [Cláusula Order By](order-by-clause.md)  
+ [Cláusula order by](order-by-clause.md)  
  Describe la `Order By` cláusula, que especifica el criterio de ordenación de las columnas de una consulta.  
   
  [Select (cláusula)](select-clause.md)  
