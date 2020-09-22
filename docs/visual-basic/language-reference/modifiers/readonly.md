@@ -10,17 +10,18 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 405297a25d4b948a6920bd989c7826e8b6f66bb4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3ca322da4e5f0edcbe12bf29bded863daabffe3d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398212"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867704"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
+
 Especifica que una variable o una propiedad se puede leer pero no escribir.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 ## <a name="rules"></a>Reglas
 
@@ -37,7 +38,7 @@ Especifica que una variable o una propiedad se puede leer pero no escribir.
 Hay situaciones en las que no se puede usar una [instrucción const](../statements/const-statement.md) para declarar y asignar un valor constante. Por ejemplo, `Const` es posible que la instrucción no acepte el tipo de datos que desea asignar o que no pueda calcular el valor en tiempo de compilación con una expresión constante. Es posible que ni siquiera conozca el valor en tiempo de compilación. En estos casos, puede usar una `ReadOnly` variable para contener un valor constante.
 
 > [!IMPORTANT]
-> Si el tipo de datos de la variable es un tipo de referencia, como una matriz o una instancia de clase, se pueden cambiar sus miembros aunque la propia variable sea `ReadOnly` . Esto se ilustra en el siguiente ejemplo.
+> Si el tipo de datos de la variable es un tipo de referencia, como una matriz o una instancia de clase, se pueden cambiar sus miembros aunque la propia variable sea `ReadOnly` . Esto se ilustra en el siguiente ejemplo:
 
 ```vb
 ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}

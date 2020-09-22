@@ -16,14 +16,15 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: e9400b50a84522f87a9a2ea4cd05b479d7a4538e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 765a80d45908e0ecf17e4c21b748dbf6b2a4c0f5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371173"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867038"
 ---
 # <a name="-operator-visual-basic"></a>/ (Operador, Visual Basic)
+
 Divide dos números y devuelve un resultado de coma flotante.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,21 +34,25 @@ expression1 / expression2
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `expression1`  
- Necesario. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
  `expression2`  
- Necesario. Cualquier expresión numérica.  
+ Obligatorio. Cualquier expresión numérica.  
   
 ## <a name="supported-types"></a>Tipos admitidos  
+
  Todos los tipos numéricos, incluidos los tipos de punto flotante y sin signo y `Decimal` .  
   
 ## <a name="result"></a>Resultado  
+
  El resultado es el cociente completo de `expression1` dividido entre `expression2` , incluido cualquier resto.  
   
  El [operador \ (Visual Basic)](integer-division-operator.md) devuelve el cociente entero, que quita el resto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El tipo de datos del resultado depende de los tipos de los operandos. En la tabla siguiente se muestra cómo se determina el tipo de datos del resultado.  
   
 |Tipos de datos de operando|Tipo de datos de resultados|  
@@ -62,18 +67,20 @@ expression1 / expression2
  Si `expression1` o `expression2` se evalúa como [Nothing](../nothing.md), se trata como cero.  
   
 ## <a name="attempted-division-by-zero"></a>División intentada por cero  
+
  Si `expression2` se evalúa como cero, el `/` operador se comporta de forma diferente para los distintos tipos de datos de operando. En la tabla siguiente se muestran los posibles comportamientos.  
   
 |Tipos de datos de operando|Comportamiento si `expression2` es cero|  
 |------------------------|---------------------------------------|  
 |Punto flotante ( `Single` o `Double` )|Devuelve Infinity ( <xref:System.Double.PositiveInfinity> o <xref:System.Double.NegativeInfinity> ) o <xref:System.Double.NaN> (no un número) si `expression1` también es cero.|  
-|`Decimal`|Produce<xref:System.DivideByZeroException>|  
-|Entero (con signo o sin signo)|Se produce un intento de conversión de nuevo a un tipo entero <xref:System.OverflowException> , ya que los tipos enteros no pueden aceptar <xref:System.Double.PositiveInfinity> , <xref:System.Double.NegativeInfinity> o<xref:System.Double.NaN>|  
+|`Decimal`|Produce <xref:System.DivideByZeroException>|  
+|Entero (con signo o sin signo)|Se produce un intento de conversión de nuevo a un tipo entero <xref:System.OverflowException> , ya que los tipos enteros no pueden aceptar <xref:System.Double.PositiveInfinity> , <xref:System.Double.NegativeInfinity> o <xref:System.Double.NaN>|  
   
 > [!NOTE]
 > El `/` operador se puede *sobrecargar*, lo que significa que una clase o estructura puede volver a definir su comportamiento cuando un operando tiene el tipo de esa clase o estructura. Si el código usa este operador en una clase o estructura de este tipo, asegúrese de entender su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se usa el `/` operador para realizar una división de punto flotante. El resultado es el cociente de los dos operandos.  
   
  [!code-vb[VbVbalrOperators#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#16)]  

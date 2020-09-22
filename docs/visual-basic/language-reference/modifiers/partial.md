@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 650ead2f0deb9813b26241a6a4676907de3f263d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362247"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867776"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
+
 Indica que una declaración de tipo es una definición parcial del tipo.  
   
  Puede dividir la definición de un tipo en varias declaraciones con la palabra clave `Partial`. Puede usar todas las declaraciones parciales que quiera en todos los archivos de código fuente que desee, pero todas las declaraciones deben estar en el mismo ensamblado y en el mismo espacio de nombres.  
@@ -50,7 +51,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`Shadows`|Opcional. Vea [Shadows](shadows.md).|  
 |`MustInherit`|Opcional. Vea [MustInherit](mustinherit.md).|  
 |`NotInheritable`|Opcional. Vea [NotInheritable](notinheritable.md).|  
-|`name`|Necesario. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
+|`name`|Obligatorio. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
 |`Of`|Opcional. Especifica que se trata de un tipo genérico. Vea [tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md).|  
 |`typelist`|Obligatorio si se usa [de](../statements/of-clause.md). Consulte [lista de tipos](../statements/type-list.md).|  
 |`Inherits`|Opcional. Vea [Inherits (instrucción](../statements/inherits-statement.md)).|  
@@ -61,7 +62,8 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`proceduredeclarations`|Opcional. Instrucciones que declaran y definen procedimientos adicionales para el tipo.|  
 |`End Class` o `End Structure`|Finaliza esta definición `Class` o `Structure` parcial.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Visual Basic usa definiciones de clase parcial para separar el código generado del código creado por el usuario en archivos de código fuente independientes. Por ejemplo, el **Diseñador de Windows Forms<xref:System.Windows.Forms.Form> define clases parciales para controles como **. No debe modificar el código generado en estos controles.  
   
  Todas las reglas para crear clases, estructuras, interfaces y módulos, como las reglas de uso y herencia de modificadores, se aplican al crear un tipo parcial.  
@@ -87,6 +89,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  [Structure (Instrucción)](../statements/structure-statement.md)  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se divide la definición de la clase `sampleClass` en dos declaraciones, cada una de las cuales define otro procedimiento `Sub`.  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  

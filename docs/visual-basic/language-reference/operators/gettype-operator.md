@@ -7,14 +7,15 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 37644a9c37ffde084120c5f1e1ee8c87a04ffc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371160"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867006"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType (Operador, Visual Basic)
+
 Devuelve un <xref:System.Type> objeto para el tipo especificado. El <xref:System.Type> objeto proporciona información sobre el tipo, como sus propiedades, métodos y eventos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,8 +30,9 @@ GetType(typename)
 |---|---|  
 |`typename`|Nombre del tipo del que se desea obtener información.|  
   
-## <a name="remarks"></a>Observaciones  
- El `GetType` operador devuelve el <xref:System.Type> objeto para el especificado `typename` . Puede pasar el nombre de cualquier tipo definido en `typename` . Incluye lo siguiente:  
+## <a name="remarks"></a>Comentarios  
+
+ El `GetType` operador devuelve el <xref:System.Type> objeto para el especificado `typename` . Puede pasar el nombre de cualquier tipo definido en `typename` . Entre estas estructuras se incluyen las siguientes:  
   
 - Cualquier tipo de datos Visual Basic, como `Boolean` o `Date` .  
   
@@ -53,6 +55,7 @@ GetType(typename)
 - Desea comparar dos referencias de objeto para ver si hacen referencia a instancias del mismo tipo. Si lo hacen, `GetType` devuelve referencias al mismo <xref:System.Type> objeto.  
   
 ## <a name="example"></a>Ejemplo  
+
  En los siguientes ejemplos se muestra el `GetType` operador en uso.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  

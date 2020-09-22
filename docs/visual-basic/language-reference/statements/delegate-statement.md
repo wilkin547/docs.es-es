@@ -7,14 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 8dec28620b0409f05007b2c0b1c1fd4494c2d7c8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404763"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866659"
 ---
 # <a name="delegate-statement"></a>Delegate (Instrucción)
+
 Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace referencia a un `Shared` método de un tipo o a un método de instancia de un objeto. Cualquier procedimiento con parámetros coincidentes y tipos de valor devueltos se puede utilizar para crear una instancia de esta clase de delegado. Posteriormente, el procedimiento se puede invocar mediante la instancia del delegado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,12 +34,13 @@ Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace 
 |`Shadows`|Opcional. Indica que este delegado vuelve a declarar y oculta un elemento de programación con el mismo nombre, o un conjunto de elementos sobrecargados, en una clase base. Puede reemplazar cualquier tipo de elemento declarado con cualquier otro tipo.<br /><br /> Un elemento reemplazado no está disponible desde la clase derivada que lo reemplaza, excepto desde donde el elemento reemplazado es inaccesible. Por ejemplo, si un `Private` elemento sombrea un elemento de clase base, el código que no tiene permiso para obtener acceso al elemento de `Private` la clase base en su lugar.|  
 |`Sub`|Opcional, pero `Sub` `Function` debe aparecer o. Declara este procedimiento como un procedimiento delegado `Sub` que no devuelve un valor.|  
 |`Function`|Opcional, pero `Sub` `Function` debe aparecer o. Declara este procedimiento como un procedimiento delegado `Function` que devuelve un valor.|  
-|`name`|Necesario. Nombre del tipo de delegado; sigue las convenciones de nomenclatura de variables estándar.|  
+|`name`|Obligatorio. Nombre del tipo de delegado; sigue las convenciones de nomenclatura de variables estándar.|  
 |`typeparamlist`|Opcional. Lista de parámetros de tipo para este delegado. Varios parámetros de tipo se separan mediante comas. Opcionalmente, cada parámetro de tipo se puede declarar como variante mediante el uso `In` de los `Out` Modificadores genéricos y. Debe incluir la [lista de tipos](type-list.md) entre paréntesis y presentarla con la `Of` palabra clave.|  
 |`parameterlist`|Opcional. Lista de parámetros que se pasan al procedimiento cuando se llama. Debe incluir la [lista de parámetros](parameter-list.md) entre paréntesis.|  
 |`type`|Obligatorio si se especifica un `Function` procedimiento. Tipo de datos del valor devuelto.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La `Delegate` instrucción define el parámetro y los tipos devueltos de una clase de delegado. Cualquier procedimiento con parámetros coincidentes y tipos de valor devueltos se puede utilizar para crear una instancia de esta clase de delegado. Posteriormente, el procedimiento se puede invocar mediante la instancia de delegado, llamando al método del delegado `Invoke` .  
   
  Los delegados se pueden declarar en el nivel de espacio de nombres, módulo, clase o estructura, pero no dentro de un procedimiento.  
@@ -60,17 +62,18 @@ Se usa para declarar un delegado. Un delegado es un tipo de referencia que hace 
  Para obtener más información sobre los delegados, consulte [Delegados](../../programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa la `Delegate` instrucción para declarar un delegado que opere con dos números y devolver un número. El `DelegateTest` método toma una instancia de un delegado de este tipo y lo usa para operar en pares de números.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [AddressOf (operador)](../operators/addressof-operator.md)
+- [Operador AddressOf](../operators/addressof-operator.md)
 - [De](of-clause.md)
 - [Delegados](../../programming-guide/language-features/delegates/index.md)
 - [Procedimiento Uso de clases genéricas](../../programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Tipos genéricos en Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
 - [Covarianza y contravarianza](../../programming-guide/concepts/covariance-contravariance/index.md)
-- [De](../modifiers/in-generic-modifier.md)
+- [In](../modifiers/in-generic-modifier.md)
 - [Enuncia](../modifiers/out-generic-modifier.md)

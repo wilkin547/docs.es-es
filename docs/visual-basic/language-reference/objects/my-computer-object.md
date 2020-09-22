@@ -4,25 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: 25fd9d2fc52b27f34164b7ed95ed1ebce9919a33
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4e9019773c74aa570f52eb573677f687f2600419
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372666"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867407"
 ---
 # <a name="mycomputer-object"></a>My.Computer (Objeto)
+
 Proporciona propiedades para manipular componentes del equipo, como el audio, el reloj, el teclado, el sistema de archivos, etc.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Computer` , vea <xref:Microsoft.VisualBasic.Devices.Computer>. La clase base <xref:Microsoft.VisualBasic.Devices.ServerComputer> proporciona los miembros que están disponibles en todos los proyectos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Espacio de nombres:** <xref:Microsoft.VisualBasic.Devices>  
   
  **Clase:** <xref:Microsoft.VisualBasic.Devices.Computer> (la clase base <xref:Microsoft.VisualBasic.Devices.ServerComputer> proporciona los miembros que están disponibles en todos los proyectos).  
   
- **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft. VisualBasic. dll)  
+ **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte también
 

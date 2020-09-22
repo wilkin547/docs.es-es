@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 35332e50227cdef6386362df17c10b5b2cdaa689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415354"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867681"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
+
 Especifica que uno o varios elementos de programación declarados no tienen restricciones de acceso.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si va a publicar un componente o un conjunto de componentes, como una biblioteca de clases, normalmente desea que los elementos de programación sean accesibles por cualquier código que interopere con el ensamblado. Para atribuir este acceso ilimitado en un elemento, puede declararlo con `Public` .  
   
  El acceso público es el nivel normal para un elemento de programación cuando no es necesario limitar el acceso a él. Tenga en cuenta que el nivel de acceso de un elemento declarado dentro de una interfaz, módulo, clase o estructura tiene como valor predeterminado `Public` si no lo declara de otro modo.  
@@ -68,7 +70,7 @@ Especifica que uno o varios elementos de programación declarados no tienen rest
 ## <a name="see-also"></a>Consulte también
 
 - [Contra](protected.md)
-- [Respecto](friend.md)
+- [Friend](friend.md)
 - [Privado](private.md)
 - [Privado protegido](private-protected.md)
 - [Protected Friend](protected-friend.md)

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: bdb73772dfe0e6d49d89a4ef006b1bceac14c8ee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397160"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866032"
 ---
 # <a name="class-statement-visual-basic"></a>Instrucción Class (Visual Basic)
+
 Declara el nombre de una clase e introduce la definición de las variables, propiedades, eventos y procedimientos que la clase incluye.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +45,7 @@ End Class
 |`MustInherit`|Opcional. Vea [MustInherit](../modifiers/mustinherit.md).|  
 |`NotInheritable`|Opcional. Vea [NotInheritable](../modifiers/notinheritable.md).|  
 |`Partial`|Opcional. Indica una definición parcial de la clase. Vea [partial](../modifiers/partial.md).|  
-|`name`|Necesario. Nombre de esta clase. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Obligatorio. Nombre de esta clase. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Opcional. Especifica que se trata de una clase genérica.|  
 |`typelist`|Obligatorio si se usa la palabra clave [of](of-clause.md) . Lista de parámetros de tipo de esta clase. Consulte [lista de tipos](type-list.md).|  
 |`Inherits`|Opcional. Indica que esta clase hereda los miembros de otra clase. Vea [Inherits (instrucción](inherits-statement.md)).|  
@@ -52,9 +53,10 @@ End Class
 |`Implements`|Opcional. Indica que esta clase implementa los miembros de una o más interfaces. Vea [Implements (instrucción](implements-statement.md)).|  
 |`interfacenames`|Es obligatorio si se utiliza la instrucción `Implements`. Los nombres de las interfaces que implementa esta clase.|  
 |`statements`|Opcional. Instrucciones que definen los miembros de esta clase.|  
-|`End Class`|Necesario. Termina la definición de `Class`.|  
+|`End Class`|Obligatorio. Termina la definición de `Class`.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Una `Class` instrucción define un nuevo tipo de datos. Una *clase* es un bloque de creación fundamental de la programación orientada a objetos (OOP). Para obtener más información, vea [objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md).  
   
  `Class` solo se puede utilizar en un espacio de nombres o un nivel de módulo. Esto significa que el contexto de la *declaración* de una clase debe ser un archivo de código fuente, un espacio de nombres, una clase, una estructura, un módulo o una interfaz y no puede ser un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).  
@@ -94,6 +96,7 @@ End Class
      Si el código incluido en una clase anidada hace una referencia no calificada a un elemento de programación, Visual Basic busca el elemento en primer lugar en la clase anidada, luego en la clase contenedora y así sucesivamente hasta el elemento contenedor más externo.  
   
 ## <a name="classes-and-modules"></a>Clases y módulos  
+
  Estos elementos tienen muchas similitudes, pero también hay algunas diferencias importantes.  
   
 - **Terminología.** Las versiones anteriores de Visual Basic reconocen dos tipos de módulos: *módulos de clase* (archivos. CLS) y *módulos estándar* (archivos. Bas). La versión actual llama a estas *clases* y *módulos*, respectivamente.  
@@ -103,6 +106,7 @@ End Class
 - **Orientación de objeto.** Las clases están orientadas a objetos, pero los módulos no lo son. Puede crear una o varias instancias de una clase. Para obtener más información, vea [objetos y clases](../../programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa una `Class` instrucción para definir una clase y varios miembros.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  

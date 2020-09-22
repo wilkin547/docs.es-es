@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 69040bf48b44a54f7a231738b88db1cbc716ebb3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 14e0b026f4fc3b0bf202ea643a28d6f1a7df2b7c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359908"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867640"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
+
 Indica que un operador de conversión ( `CType` ) convierte una clase o estructura en un tipo que puede contener todos los valores posibles de la clase o estructura original.  
   
 ## <a name="converting-with-the-widening-keyword"></a>Convertir con la palabra clave Widening  
+
  El procedimiento de conversión debe especificar además `Public Shared` de `Widening` .  
   
  Las conversiones de ampliación siempre se realizan correctamente en tiempo de ejecución y nunca provocan pérdida de datos. Por ejemplo `Single` , para, `Double` `Char` `String` y un tipo derivado a su tipo base. Esta última conversión es ampliable porque el tipo derivado contiene todos los miembros del tipo base y, por tanto, es una instancia del tipo base.  

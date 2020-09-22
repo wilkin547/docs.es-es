@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: b9cc830d27625f192d8f5e059bd3783d05d8ba3b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4447ad6cf0fb251b0d2d1387c109b06d32f69cb8
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400233"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866103"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literal de CDATA XML (Visual Basic)
+
 Literal que representa un <xref:System.Xml.Linq.XCData> objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -25,19 +26,22 @@ Literal que representa un <xref:System.Xml.Linq.XCData> objeto.
 ```  
   
 ## <a name="parts"></a>Partes  
+
  `<![CDATA[`  
- Necesario. Denota el inicio de la sección XML CDATA.  
+ Obligatorio. Denota el inicio de la sección XML CDATA.  
   
  `content`  
- Necesario. Contenido de texto para que aparezca en la sección XML CDATA.  
+ Obligatorio. Contenido de texto para que aparezca en la sección XML CDATA.  
   
  `]]>`  
- Necesario. Denota el final de la sección.  
+ Obligatorio. Denota el final de la sección.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto <xref:System.Xml.Linq.XCData>.  
+
+ Un objeto <xref:System.Xml.Linq.XCData>.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Las secciones CDATA XML contienen texto sin formato que se debe incluir, pero no analizar, con el XML que lo contiene. Una sección CDATA XML puede contener cualquier texto. Esto incluye los caracteres XML reservados. La sección CDATA XML finaliza con la secuencia "]] >". Esto implica los puntos siguientes:  
   
 - No se puede usar una expresión insertada en un literal CDATA XML porque los delimitadores de expresión incrustados son contenido XML CDATA válido.  
@@ -52,6 +56,7 @@ Literal que representa un <xref:System.Xml.Linq.XCData> objeto.
  El compilador Visual Basic convierte el literal CDATA XML en una llamada al <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se crea una sección CDATA que contiene el texto "puede contener etiquetas literales \<XML> ".  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  

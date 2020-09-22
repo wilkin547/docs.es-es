@@ -9,14 +9,15 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: c91061d49e22e648b7bf75a812071b352793abcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401347"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866112"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Propiedad de indizador de extensión (Visual Basic)
+
 Proporciona acceso a los elementos individuales de una recopilación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -30,14 +31,16 @@ object(index)
 |Término|Definición|  
 |---|---|  
 |`object`|Obligatorio. Colección consultable. Es decir, una colección que implementa <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Linq.IQueryable%601> .|  
-|(|Necesario. Denota el inicio de la propiedad de indizador.|  
-|`index`|Necesario. Expresión de tipo entero que especifica la posición de base cero de un elemento de la colección.|  
-|)|Necesario. Denota el final de la propiedad de indizador.|  
+|(|Obligatorio. Denota el inicio de la propiedad de indizador.|  
+|`index`|Obligatorio. Expresión de tipo entero que especifica la posición de base cero de un elemento de la colección.|  
+|)|Obligatorio. Denota el final de la propiedad de indizador.|  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Objeto de la ubicación especificada en la colección o `Nothing` si el índice está fuera del intervalo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Puede usar la propiedad de indizador de extensión para tener acceso a los elementos individuales de una colección. Esta propiedad de indizador se utiliza normalmente en la salida de las propiedades del eje XML. Las propiedades XML secundario y del eje descendiente XML devuelven colecciones de <xref:System.Xml.Linq.XElement> objetos o un valor de atributo.  
   
  El compilador Visual Basic convierte las propiedades de indizador de extensión en llamadas al `ElementAtOrDefault` método. A diferencia de un indizador de matriz, el `ElementAtOrDefault` método devuelve `Nothing` si el índice está fuera del intervalo. Este comportamiento es útil cuando no se puede determinar fácilmente el número de elementos de una colección.  
@@ -47,6 +50,7 @@ object(index)
  Para tener acceso al valor del primer elemento de una colección de <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> objetos o, puede usar la propiedad XML `Value` . Para obtener más información, vea [propiedad valor XML](xml-value-property.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el indizador de extensión para tener acceso al segundo nodo secundario de una colección de <xref:System.Xml.Linq.XElement> objetos. Se tiene acceso a la colección mediante la propiedad del eje secundario, que obtiene todos los elementos secundarios denominados `phone` en el `contact` objeto.  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  

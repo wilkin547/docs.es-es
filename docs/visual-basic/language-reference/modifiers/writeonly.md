@@ -11,24 +11,27 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: a9fa0a3a23561215d6ff122bc8e609b68ca6fc30
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a1030a423359a3e4122eea98e223a1a02f680c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386639"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867619"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
+
 Especifica que una propiedad se puede escribir pero no leer.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="rules"></a>Reglas  
+
  **Contexto de declaración.** Solo se puede usar `WriteOnly` en un nivel de módulo. Esto significa que el contexto de la declaración de una `WriteOnly` propiedad debe ser una clase, una estructura o un módulo, y no puede ser un archivo de código fuente, un espacio de nombres o un procedimiento.  
   
  Puede declarar una propiedad como `WriteOnly` , pero no una variable.  
   
 ## <a name="when-to-use-writeonly"></a>Cuándo usar WriteOnly  
+
  A veces, desea que el código de consumo pueda establecer un valor, pero no detectar lo que es. Por ejemplo, los datos confidenciales, como un número de registro social o una contraseña, deben protegerse contra el acceso de cualquier componente que no lo haya configurado. En estos casos, puede usar una `WriteOnly` propiedad para establecer el valor.  
   
 > [!IMPORTANT]

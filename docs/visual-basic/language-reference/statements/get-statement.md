@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404607"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866200"
 ---
 # <a name="get-statement"></a>Get (Instrucción)
+
 Declara un `Get` procedimiento de propiedad que se usa para recuperar el valor de una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,9 +37,10 @@ End Get
 |`attributelist`|Opcional. Vea [lista de atributos](attribute-list.md).|  
 |`accessmodifier`|Opcional en, como máximo, una de las `Get` `Set` instrucciones y de esta propiedad. Puede ser uno de los siguientes:<br /><br /> -   [Contra](../modifiers/protected.md)<br />-   [Respecto](../modifiers/friend.md)<br />-   [Privada](../modifiers/private.md)<br />-   `Protected Friend`<br /><br /> Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).|  
 |`statements`|Opcional. Una o varias instrucciones que se ejecutan cuando `Get` se llama al procedimiento de propiedad.|  
-|`End Get`|Necesario. Finaliza la definición del procedimiento de `Get` propiedad.|  
+|`End Get`|Obligatorio. Finaliza la definición del procedimiento de `Get` propiedad.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Cada propiedad debe tener un `Get` procedimiento de propiedad a menos que se marque la propiedad `WriteOnly` . El `Get` procedimiento se utiliza para devolver el valor actual de la propiedad.  
   
  Visual Basic llama automáticamente al procedimiento de una propiedad `Get` cuando una expresión solicita el valor de la propiedad.  
@@ -61,7 +63,7 @@ End Get
   
 - **Devolver de un procedimiento.** Cuando el `Get` procedimiento vuelve al código de llamada, la ejecución continúa dentro de la instrucción que solicitó el valor de propiedad.  
   
-     `Get`los procedimientos de propiedad pueden devolver un valor mediante la [instrucción return](return-statement.md) o asignando el valor devuelto al nombre de la propiedad. Para obtener más información, vea el tema sobre el valor devuelto en la [instrucción function](function-statement.md).  
+     `Get` los procedimientos de propiedad pueden devolver un valor mediante la [instrucción return](return-statement.md) o asignando el valor devuelto al nombre de la propiedad. Para obtener más información, vea el tema sobre el valor devuelto en la [instrucción function](function-statement.md).  
   
      Las `Exit Property` `Return` instrucciones y producen una salida inmediata de un procedimiento de propiedad. Cualquier número de `Exit Property` `Return` instrucciones y puede aparecer en cualquier parte del procedimiento y se pueden mezclar `Exit Property` e `Return` instrucciones.  
   
@@ -78,6 +80,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa la `Get` instrucción para devolver el valor de una propiedad.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  
