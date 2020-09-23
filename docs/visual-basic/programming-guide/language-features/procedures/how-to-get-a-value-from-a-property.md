@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387899"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071565"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Cómo: Obtener un valor de una propiedad (Visual Basic)
+
 Para recuperar el valor de una propiedad, incluya el nombre de la propiedad en una expresión.  
   
  El procedimiento de la propiedad `Get` recupera el valor, pero no lo llama explícitamente por su nombre. La propiedad se usa de la misma manera que se usaría una variable. Visual Basic realiza las llamadas a los procedimientos de la propiedad.  
@@ -24,7 +25,7 @@ Para recuperar el valor de una propiedad, incluya el nombre de la propiedad en u
   
 1. Use el nombre de la propiedad en una expresión de la misma manera que usaría un nombre de variable. Puede usar una propiedad en cualquier lugar en el que pueda usar una variable o una constante.  
   
-     O bien  
+     o bien  
   
      Use el nombre de la propiedad que sigue al signo igual ( `=` ) en una instrucción de asignación.  
   
@@ -38,7 +39,7 @@ Para recuperar el valor de una propiedad, incluya el nombre de la propiedad en u
   
  El valor de la propiedad participa en la expresión como una variable o una constante, o se almacena en la variable o la propiedad en el lado izquierdo de la instrucción de asignación.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Procedimientos de propiedad](./property-procedures.md)

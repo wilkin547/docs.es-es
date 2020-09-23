@@ -6,14 +6,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 917e52b711645fbf94a132216a3fa90b0dfc15b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414329"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071383"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Cómo: Devolver un valor de un procedimiento (Visual Basic)
+
 Un `Function` procedimiento devuelve un valor al código de llamada mediante la ejecución de una `Return` instrucción o al encontrar una `Exit Function` `End Function` instrucción o.  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Para devolver un valor mediante la instrucción return  
@@ -44,7 +45,7 @@ Un `Function` procedimiento devuelve un valor al código de llamada mediante la 
   
      Para obtener más información y un ejemplo, vea el tema sobre el valor devuelto en la [instrucción function](../../../language-reference/statements/function-statement.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Procedimientos Sub](./sub-procedures.md)
@@ -52,6 +53,6 @@ Un `Function` procedimiento devuelve un valor al código de llamada mediante la 
 - [Procedimientos de operador](./operator-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Instrucción Function](../../../language-reference/statements/function-statement.md)
-- [Instrucción return](../../../language-reference/statements/return-statement.md)
+- [Instrucción Return](../../../language-reference/statements/return-statement.md)
 - [Procedimiento para crear un procedimiento que devuelve un valor](./how-to-create-a-procedure-that-returns-a-value.md)
 - [Procedimiento para llamar a un procedimiento que devuelve un valor](./how-to-call-a-procedure-that-returns-a-value.md)

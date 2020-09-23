@@ -11,19 +11,21 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 61a1398ba7de8dab005fa1e9efa13dc2ba18cc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364128"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071266"
 ---
 # <a name="partial-methods-visual-basic"></a>Métodos parciales (Visual Basic)
+
 Los métodos parciales permiten a los desarrolladores insertar lógica personalizada en el código. Normalmente, el código forma parte de una clase generada por el diseñador. Los métodos parciales se definen en una clase parcial que se crea mediante un generador de código y se suelen usar para proporcionar una notificación de que se ha cambiado algo. Permiten al desarrollador especificar el comportamiento personalizado en respuesta al cambio.  
   
  El diseñador del generador de código solo define la firma del método y una o varias llamadas al método. Después, los desarrolladores pueden proporcionar implementaciones para el método si quieren personalizar el comportamiento del código generado. Cuando no se proporciona ninguna implementación, el compilador quita las llamadas al método, lo que da lugar a una sobrecarga de rendimiento adicional.  
   
 ## <a name="declaration"></a>Declaración  
+
  El código generado marca la definición de un método parcial colocando la palabra clave `Partial` al principio de la línea de firma.  
   
 ```vb  
@@ -40,6 +42,7 @@ End Sub
 - El modificador de acceso debe ser `Private` .  
   
 ## <a name="implementation"></a>Implementación  
+
  La implementación consiste principalmente en rellenar el cuerpo del método parcial. La implementación está normalmente en una clase parcial independiente de la definición y está escrita por un desarrollador que desea extender el código generado.  
   
 ```vb  
@@ -51,9 +54,11 @@ End Sub
  En el ejemplo anterior se duplica exactamente la firma en la declaración, pero son posibles las variaciones. En concreto, se pueden agregar otros modificadores, como `Overloads` o `Overrides` . Solo `Overrides` se permite un modificador. Para obtener más información sobre los modificadores de método, vea [Sub Statement](../../../language-reference/statements/sub-statement.md).  
   
 ## <a name="use"></a>Uso  
+
  Se llama a un método parcial como se llamaría a cualquier otro `Sub` procedimiento. Si se ha implementado el método, se evalúan los argumentos y se ejecuta el cuerpo del método. Sin embargo, recuerde que la implementación de un método parcial es opcional. Si no se implementa el método, no se evalúa ninguna llamada a él y no se evalúan las expresiones que se pasan como argumentos al método.  
   
 ## <a name="example"></a>Ejemplo  
+
  En un archivo denominado product. Designer. VB, defina una `Product` clase que tenga una `Quantity` propiedad.  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  
@@ -70,7 +75,7 @@ End Sub
   
  `Quantity was changed to 100`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Sub](../../../language-reference/statements/sub-statement.md)
 - [Procedimientos Sub](./sub-procedures.md)

@@ -10,17 +10,18 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364375"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071370"
 ---
 # <a name="overload-resolution-visual-basic"></a>Resolución de sobrecarga (Visual Basic)
+
 Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento que está definido en varias versiones sobrecargadas, el compilador debe decidir cuál de las sobrecargas llamar. Para ello, realiza los pasos siguientes:  
   
-1. **Consejos.** Elimina cualquier sobrecarga con un nivel de acceso que impida que el código de llamada lo llame.  
+1. **Accesibilidad.** Elimina cualquier sobrecarga con un nivel de acceso que impida que el código de llamada lo llame.  
   
 2. **Número de parámetros.** Elimina cualquier sobrecarga que defina un número diferente de parámetros de los proporcionados en la llamada.  
   
@@ -49,6 +50,7 @@ Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento qu
  En la segunda llamada, el compilador no puede eliminar ninguna de las sobrecargas en función de la restricción. Elimina la tercera sobrecarga por la misma razón que en la primera llamada, porque puede llamar a la segunda sobrecarga con menos ampliación de los tipos de argumento. Sin embargo, el compilador no puede resolver entre la primera y la segunda sobrecarga. Cada tiene un tipo de parámetro definido que se amplía al tipo correspondiente en el otro ( `Byte` a `Short` , pero `Single` a `Double` ). Por tanto, el compilador genera un error de resolución de sobrecarga.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>Argumentos opcionales y ParamArray sobrecargados  
+
  Si dos sobrecargas de un procedimiento tienen firmas idénticas, salvo que el último parámetro se declara [opcional](../../../language-reference/modifiers/optional.md) en One y [ParamArray](../../../language-reference/modifiers/paramarray.md) en el otro, el compilador resuelve una llamada a ese procedimiento de la manera siguiente:  
   
 |Si la llamada proporciona el último argumento como|El compilador resuelve la llamada a la sobrecarga que declara el último argumento como|  
@@ -58,7 +60,7 @@ Cuando el compilador de Visual Basic encuentra una llamada a un procedimiento qu
 |Dos o más valores en una lista separada por comas|`ParamArray`|  
 |Una matriz de cualquier longitud (incluida una matriz vacía)|`ParamArray`|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Parámetros opcionales](./optional-parameters.md)
 - [Matrices de parámetros](./parameter-arrays.md)

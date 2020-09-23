@@ -11,14 +11,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 903e05facccd1f2afdf4bb51b200531feb64aa79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387782"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071513"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Cómo: Pasar argumentos a un procedimiento (Visual Basic)
+
 Cuando se llama a un procedimiento, se sigue el nombre del procedimiento con una lista de argumentos entre paréntesis. Proporcione un argumento correspondiente a cada parámetro necesario que el procedimiento define y, opcionalmente, puede proporcionar argumentos a los `Optional` parámetros. Si no proporciona un `Optional` parámetro en la llamada, debe incluir una coma para marcar su lugar en la lista de argumentos si está proporcionando los argumentos subsiguientes.  
   
  Si piensa pasar un argumento de un tipo de datos distinto del parámetro correspondiente, como `Byte` a `String` , puede establecer el modificador de comprobación de tipo ([Option Strict Statement](../../../language-reference/statements/option-strict-statement.md)) en `Off` . Si `Option Strict` es `On` , se deben usar conversiones de ampliación o palabras clave de conversión explícita. Para obtener más información, vea [conversiones de ampliación y de restricción](../data-types/widening-and-narrowing-conversions.md) y [funciones de conversión de tipos](../../../language-reference/functions/type-conversion-functions.md).  
@@ -45,7 +46,7 @@ Cuando se llama a un procedimiento, se sigue el nombre del procedimiento con una
   
      La segunda coma de la lista de argumentos marca el lugar del segundo argumento omitido, y la última cadena se pasa al tercer parámetro opcional de `MsgBox` , que es el texto que se va a mostrar en la barra de título.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos Sub](./sub-procedures.md)
 - [Procedimientos de función](./function-procedures.md)

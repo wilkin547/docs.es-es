@@ -11,19 +11,21 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: fe15e976e6a5469f2a9d1b3521a70a3e1860fdd3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 083916a420bf4ad182536363ea46448f6b4c1da5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414355"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071357"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Cómo: Utilizar una clase que define operadores (Visual Basic)
+
 Si usa una clase o estructura que define sus propios operadores, puede tener acceso a esos operadores desde Visual Basic.  
   
  La definición de un operador en una clase o estructura también se denomina *sobrecargar* el operador.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se tiene acceso a la estructura SQL <xref:System.Data.SqlTypes.SqlString> , que define los operadores de conversión ([función ctype](../../../language-reference/functions/ctype-function.md)) en ambas direcciones entre una cadena SQL y una cadena de Visual Basic. Use `CType(` la *expresión de cadena de SQL*para `String)` convertir una cadena de SQL en una cadena de Visual Basic y `CType(` *Visual Basic expresión de cadena*, <xref:System.Data.SqlTypes.SqlString> `)` para convertirla en la otra dirección.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
@@ -33,13 +35,14 @@ Si usa una clase o estructura que define sus propios operadores, puede tener acc
  La <xref:System.Data.SqlTypes.SqlString> estructura define un operador de conversión ([función ctype](../../../language-reference/functions/ctype-function.md)) de `String` a <xref:System.Data.SqlTypes.SqlString> y otro de <xref:System.Data.SqlTypes.SqlString> a `String` . La instrucción que asigna `title` a `jobTitle` hace uso del primer operador y la <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> llamada de función utiliza el segundo.  
   
 ## <a name="compile-the-code"></a>Compilar el código  
+
  Asegúrese de que la clase o estructura que está usando define el operador que desea utilizar. No suponga que la clase o la estructura ha definido todos los operadores disponibles para la sobrecarga. Para obtener una lista de operadores disponibles, vea [Operator (instrucción](../../../language-reference/statements/operator-statement.md)).  
   
  Incluya la `Imports` instrucción adecuada para la cadena SQL al principio del archivo de código fuente (en este caso <xref:System.Data.SqlTypes> ).  
   
- El proyecto debe tener referencias a System. Data y System. XML.  
+ El proyecto debe tener referencias a System. Data y System.XML.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos de operador](./operator-procedures.md)
 - [Procedimiento para definir un operador](./how-to-define-an-operator.md)

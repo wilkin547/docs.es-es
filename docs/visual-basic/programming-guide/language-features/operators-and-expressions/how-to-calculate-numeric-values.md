@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403464"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071721"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Cómo: Calcular valores numéricos (Visual Basic)
+
 Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una *expresión numérica* es una expresión que contiene literales, constantes y variables que representan valores numéricos y operadores que actúan sobre esos valores.  
   
 ## <a name="calculating-numeric-values"></a>Calcular valores numéricos  
@@ -50,6 +51,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una
      Para más información, vea [Statements](../../../language-reference/statements/index.md) (Instrucciones).  
   
 ## <a name="multiple-operators"></a>Varios operadores  
+
  Si la expresión numérica contiene más de un operador, el orden en el que se evalúan viene determinado por las reglas de prioridad de los operadores. Para invalidar las reglas de prioridad de los operadores, incluya expresiones entre paréntesis, como en el ejemplo anterior. primero se evalúan las expresiones delimitadas.  
   
 #### <a name="to-override-normal-operator-precedence"></a>Para invalidar la prioridad de operador normal  
@@ -62,7 +64,7 @@ Puede calcular valores numéricos mediante el uso de expresiones numéricas. Una
   
      Para obtener más información, vea [precedencia de operadores en Visual Basic](../../../language-reference/operators/operator-precedence.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores y expresiones](index.md)
 - [Comparaciones de valores](value-comparisons.md)

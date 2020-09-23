@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388392"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071929"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Cómo: Crear una expresión lambda (Visual Basic)
+
 Una *expresión lambda* es una función o subrutina que no tiene un nombre. Se puede usar una expresión lambda siempre que un tipo de delegado sea válido.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Para crear una función de expresión lambda de una sola línea  
@@ -96,6 +97,7 @@ Una *expresión lambda* es una función o subrutina que no tiene un nombre. Se p
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Ejemplo  
+
  Un uso común de las expresiones lambda es definir una función que se puede pasar como argumento para un parámetro cuyo tipo es `Delegate` . En el ejemplo siguiente, el <xref:System.Diagnostics.Process.GetProcesses%2A> método devuelve una matriz de los procesos que se ejecutan en el equipo local. El <xref:System.Linq.Enumerable.Where%2A> método de la <xref:System.Linq.Enumerable> clase requiere un `Boolean` delegado como argumento. La expresión lambda en el ejemplo se usa para ese propósito. Devuelve `True` para cada proceso que solo tiene un subproceso y que están seleccionados en `filteredList` .  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 733f92cc2cdaa6e923c57649774ceb64de172c18
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403348"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071967"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Diferencias entre argumentos modificables y no modificables (Visual Basic)
+
 Cuando se llama a un procedimiento, normalmente se pasan uno o más argumentos. Cada argumento corresponde a un elemento de programación subyacente. Tanto los elementos subyacentes como los argumentos pueden ser modificables o no modificables.  
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>Elementos modificables y no modificables  
+
  Un elemento de programación puede ser un *elemento modificable*, cuyo valor se puede cambiar o un elemento no *modificable*, que tiene un valor fijo una vez que se ha creado.  
   
  En la tabla siguiente se enumeran los elementos de programación modificables y no modificables.  
@@ -31,13 +33,14 @@ Cuando se llama a un procedimiento, normalmente se pasan uno o más argumentos. 
 |Elementos de matriz|Expresiones (incluso si sus elementos son modificables)|  
   
 ## <a name="modifiable-and-nonmodifiable-arguments"></a>Argumentos modificables y no modificables  
+
  Un *argumento modificable* es uno con un elemento subyacente modificable. El código de llamada puede almacenar un nuevo valor en cualquier momento y, si se pasa el argumento [ByRef](../../../language-reference/modifiers/byref.md), el código del procedimiento también puede modificar el elemento subyacente en el código de llamada.  
   
  Un *argumento no modificable* tiene un elemento subyacente no modificable o se pasa [ByVal](../../../language-reference/modifiers/byval.md). El procedimiento no puede modificar el elemento subyacente en el código de llamada, aunque sea un elemento modificable. Si es un elemento no modificable, el propio código de llamada no puede modificarlo.  
   
  El procedimiento llamado podría modificar su copia local de un argumento no modificable, pero esa modificación no afecta al elemento subyacente en el código de llamada.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
@@ -47,5 +50,5 @@ Cuando se llama a un procedimiento, normalmente se pasan uno o más argumentos. 
 - [Procedimiento para cambiar el valor de un argumento de procedimiento](./how-to-change-the-value-of-a-procedure-argument.md)
 - [Procedimiento para proteger un argumento de procedimiento para que no se realicen cambios de valor](./how-to-protect-a-procedure-argument-against-value-changes.md)
 - [Procedimiento para forzar un argumento para que pase como un valor](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Pasar argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
+- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
 - [Tipos de valor y tipos de referencia](../data-types/value-types-and-reference-types.md)

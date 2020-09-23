@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 9ae6818b1e03ccd00ed554e98690e02ffa45de99
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78ca6b2b95dfd5a7f208e5251f08dfccc5514946
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387847"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071526"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Cómo: Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
+
 Si un procedimiento tiene uno o varios parámetros [opcionales](../../../language-reference/modifiers/optional.md) , no se puede definir una versión sobrecargada que coincida con cualquiera de sus sobrecargas implícitas. Para obtener más información, vea "sobrecargas implícitas para los parámetros opcionales" en [consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
   
 ## <a name="one-optional-parameter"></a>Un parámetro opcional  
@@ -45,6 +46,7 @@ Si un procedimiento tiene uno o varios parámetros [opcionales](../../../languag
      [!code-vb[VbVbcnProcedures#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#61)]  
   
 ## <a name="multiple-optional-parameters"></a>Varios parámetros opcionales  
+
  Para un procedimiento con más de un parámetro opcional, normalmente se necesitan más de dos versiones sobrecargadas. Por ejemplo, si hay dos parámetros opcionales y el código de llamada puede proporcionar u omitir cada uno de ellos de forma independiente, se necesitan cuatro versiones sobrecargadas, una para cada combinación posible de argumentos proporcionados.  
   
  A medida que aumenta el número de parámetros opcionales, aumenta la complejidad de la sobrecarga. A menos que algunas combinaciones de los argumentos proporcionados no sean aceptables, para N parámetros opcionales necesita 2 ^ N versiones sobrecargadas. En función de la naturaleza del procedimiento, podría encontrar que la claridad de la lógica justifica el esfuerzo adicional de definir todas las versiones sobrecargadas.  
@@ -61,7 +63,7 @@ Si un procedimiento tiene uno o varios parámetros [opcionales](../../../languag
   
 5. Finalice cada procedimiento con la `End Sub` `End Function` instrucción o según corresponda.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
@@ -72,4 +74,4 @@ Si un procedimiento tiene uno o varios parámetros [opcionales](../../../languag
 - [Procedimiento para definir varias versiones de un procedimiento](./how-to-define-multiple-versions-of-a-procedure.md)
 - [Procedimiento para llamar a un procedimiento sobrecargado](./how-to-call-an-overloaded-procedure.md)
 - [Procedimiento para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [Resolución de sobrecarga](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)

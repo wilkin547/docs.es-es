@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388704"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071959"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento de propiedad (Visual Basic)
+
 Para llamar a un procedimiento de propiedad, se almacena un valor en la propiedad o se recupera su valor. Puede tener acceso a una propiedad de la misma manera que tiene acceso a una variable.  
   
  El procedimiento de la propiedad `Set` almacena un valor y su `Get` procedimiento recupera el valor. Sin embargo, no se llama a estos procedimientos explícitamente por nombre. La propiedad se usa en una instrucción de asignación o una expresión, tal como se almacenaría o recuperaría el valor de una variable. Visual Basic realiza las llamadas a los procedimientos de la propiedad.  
@@ -24,7 +25,7 @@ Para llamar a un procedimiento de propiedad, se almacena un valor en la propieda
   
 1. Use el nombre de la propiedad en una expresión de la misma manera que usaría un nombre de variable. Puede usar una propiedad en cualquier lugar en el que pueda usar una variable o una constante.  
   
-     O bien  
+     o bien  
   
      Use el nombre de la propiedad que sigue al signo igual ( `=` ) en una instrucción de asignación.  
   
@@ -52,7 +53,7 @@ Para llamar a un procedimiento de propiedad, se almacena un valor en la propieda
   
  El valor generado en el lado derecho de la instrucción de asignación se almacena en la propiedad.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos de propiedad](./property-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

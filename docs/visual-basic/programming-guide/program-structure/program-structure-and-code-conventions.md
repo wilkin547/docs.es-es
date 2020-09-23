@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: c8d851afc33e7e898ab16abc941d8680f74145e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398310"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072124"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Convenciones de código y estructura de programas (Visual Basic)
+
 En esta sección se presenta la estructura de programas de Visual Basic típica, se proporciona un sencillo programa de Visual Basic, "Hello, World", y se explican las convenciones de código Visual Basic. Las convenciones de código son sugerencias que no se centran en la lógica de un programa, sino en su estructura y apariencia física. Después, hace que el código sea más fácil de leer, comprender y mantener. Las convenciones de código pueden incluir, entre otras:  
   
 - Formatos normalizados para etiquetar y comentar código.  
@@ -32,6 +33,7 @@ En esta sección se presenta la estructura de programas de Visual Basic típica,
  En los siguientes temas se presenta un conjunto de directrices de programación para Visual Basic programas, junto con ejemplos de uso correcto.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Estructura de un programa de Visual Basic](structure-of-a-visual-basic-program.md)  
  Proporciona información general sobre los elementos que componen un programa Visual Basic.  
   
@@ -78,8 +80,9 @@ En esta sección se presenta la estructura de programas de Visual Basic típica,
  Describe la eliminación de los límites de código conocidos en Visual Basic.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Convenciones tipográficas y de código](../../language-reference/typographic-and-code-conventions.md)  
  Proporciona convenciones de codificación estándar para Visual Basic.  
   
- [Escritura de código](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
+ [Escribir código](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
  Describe las características que facilitan la escritura y administración del código.
