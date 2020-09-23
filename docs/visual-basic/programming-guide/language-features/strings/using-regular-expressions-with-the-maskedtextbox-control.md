@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555749"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072436"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Utilizar expresiones regulares con el control MaskedTextBox en Visual Basic
+
 En este ejemplo se muestra cómo convertir expresiones regulares simples para trabajar con el <xref:System.Windows.Forms.MaskedTextBox> control.  
   
 ## <a name="description-of-the-masking-language"></a>Descripción del lenguaje de enmascaramiento  
+
  El <xref:System.Windows.Forms.MaskedTextBox> lenguaje de enmascaramiento estándar se basa en el que usa el `Masked Edit` control en Visual Basic 6,0 y debe estar familiarizado con los usuarios que migran desde esa plataforma.  
   
  La <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad del <xref:System.Windows.Forms.MaskedTextBox> control especifica la máscara de entrada que se va a usar. La máscara debe ser una cadena formada por uno o varios de los elementos de enmascaramiento de la tabla siguiente.  
@@ -30,20 +32,21 @@ En este ejemplo se muestra cómo convertir expresiones regulares simples para tr
 |&|Carácter. Entrada necesaria.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|Carácter. Entry opcional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
 |A|Alfabético. Entry opcional.|\W|  
-|.|Marcador de posición decimal apropiado para la referencia cultural.|No disponible.|  
-|,|Marcador de posición de miles apropiado para la referencia cultural.|No disponible.|  
-|:|Separador de hora correspondiente a la referencia cultural.|No disponible.|  
-|/|El separador de fecha correspondiente a la referencia cultural.|No disponible.|  
-|$|Símbolo de moneda apropiado para la referencia cultural.|No disponible.|  
-|\<|Convierte todos los caracteres que siguen a minúsculas.|No disponible.|  
-|>|Convierte todos los caracteres que siguen a mayúsculas.|No disponible.|  
-|&#124;|Deshace el desplazamiento anterior o el desplazamiento hacia abajo.|No disponible.|  
+|.|Marcador de posición decimal apropiado para la referencia cultural.|No está disponible.|  
+|,|Marcador de posición de miles apropiado para la referencia cultural.|No está disponible.|  
+|:|Separador de hora correspondiente a la referencia cultural.|No está disponible.|  
+|/|El separador de fecha correspondiente a la referencia cultural.|No está disponible.|  
+|$|Símbolo de moneda apropiado para la referencia cultural.|No está disponible.|  
+|\<|Convierte todos los caracteres que siguen a minúsculas.|No está disponible.|  
+|>|Convierte todos los caracteres que siguen a mayúsculas.|No está disponible.|  
+|&#124;|Deshace el desplazamiento anterior o el desplazamiento hacia abajo.|No está disponible.|  
 |&#92;|Escapa un carácter de máscara, convirtiéndolo en un literal. " \\ \\ " es la secuencia de escape para una barra diagonal inversa.|&#92;|  
 |Todos los demás caracteres.|Literales. Todos los elementos que no son de máscara aparecerán como ellos mismos en <xref:System.Windows.Forms.MaskedTextBox> .|Todos los demás caracteres.|  
   
  Los símbolos decimales (.), milésimas (,), Time (:), Date (/) y Currency ($) tienen como valor predeterminado los símbolos definidos por la referencia cultural de la aplicación. Puede obligarles a mostrar símbolos para otra referencia cultural utilizando la <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> propiedad.  
   
 ## <a name="regular-expressions-and-masks"></a>Expresiones regulares y máscaras  
+
  Aunque puede usar expresiones regulares y máscaras para validar la entrada del usuario, no son totalmente equivalentes. Las expresiones regulares pueden expresar patrones más complejos que las máscaras, pero las máscaras pueden expresar la misma información de forma más concisa y en un formato culturalmente relevante.  
   
  En la tabla siguiente se comparan cuatro expresiones regulares y la máscara equivalente para cada una de ellas.  

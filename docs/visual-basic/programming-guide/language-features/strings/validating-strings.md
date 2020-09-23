@@ -7,17 +7,19 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 026f5bd833d857ee1db1b0f10abaabee9360b37e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555736"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072423"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Validar cadenas en Visual Basic
+
 En esta sección se describe cómo validar cadenas en Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Cómo: Validar rutas de acceso y nombres de archivo en Visual Basic](how-to-validate-file-names-and-paths.md)  
  Cómo determinar si una cadena representa un nombre de archivo o una ruta de acceso.  
   

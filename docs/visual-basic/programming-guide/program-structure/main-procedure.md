@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: cf6003206566dfe8f70a7f75cd4d7ec7565794a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403179"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072215"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimiento Main en Visual Basic
+
 Cada Visual Basic aplicación debe contener un procedimiento denominado `Main` . Este procedimiento sirve como punto de partida y control general de la aplicación. El .NET Framework llama `Main` al procedimiento cuando ha cargado la aplicación y está listo para pasarle el control. A menos que cree una aplicación Windows Forms, debe escribir el `Main` procedimiento para las aplicaciones que se ejecutan por sí mismas.
 
- `Main`contiene el código que se ejecuta en primer lugar. En `Main` , puede determinar qué formulario se va a cargar primero cuando se inicie el programa, averiguar si ya se está ejecutando una copia de la aplicación en el sistema, establecer un conjunto de variables para la aplicación o abrir una base de datos que la aplicación requiera.
+ `Main` contiene el código que se ejecuta en primer lugar. En `Main` , puede determinar qué formulario se va a cargar primero cuando se inicie el programa, averiguar si ya se está ejecutando una copia de la aplicación en el sistema, establecer un conjunto de variables para la aplicación o abrir una base de datos que la aplicación requiera.
 
 ## <a name="requirements-for-the-main-procedure"></a>Requisitos para el procedimiento Main
+
  Un archivo que se ejecuta por su cuenta (normalmente con la extensión. exe) debe contener un `Main` procedimiento. Una biblioteca (por ejemplo, con extensión. dll) no se ejecuta por sí misma y no requiere un `Main` procedimiento. Los requisitos para los diferentes tipos de proyectos que puede crear son los siguientes:
 
 - Las aplicaciones de consola se ejecutan por sí mismas y debe proporcionar al menos un `Main` procedimiento.
@@ -30,6 +32,7 @@ Cada Visual Basic aplicación debe contener un procedimiento denominado `Main` .
 - Las bibliotecas de clases no requieren un `Main` procedimiento. Entre ellas se incluyen bibliotecas de controles de Windows y bibliotecas de controles Web. Las aplicaciones web se implementan como bibliotecas de clases.
 
 ## <a name="declaring-the-main-procedure"></a>Declarar el procedimiento Main
+
  Hay cuatro maneras de declarar el `Main` procedimiento. Puede tomar argumentos o no, y puede devolver un valor.
 
 > [!NOTE]
@@ -47,7 +50,7 @@ Cada Visual Basic aplicación debe contener un procedimiento denominado `Main` .
     End Module
     ```
 
-- `Main`también puede devolver un `Integer` valor, que el sistema operativo usa como código de salida para el programa. Otros programas pueden probar este código examinando el valor de ERRORLEVEL de Windows. Para devolver un código de salida, debe declarar `Main` como un `Function` procedimiento en lugar de un `Sub` procedimiento.
+- `Main` también puede devolver un `Integer` valor, que el sistema operativo usa como código de salida para el programa. Otros programas pueden probar este código examinando el valor de ERRORLEVEL de Windows. Para devolver un código de salida, debe declarar `Main` como un `Function` procedimiento en lugar de un `Sub` procedimiento.
 
     ```vb
     Module mainModule
@@ -64,7 +67,7 @@ Cada Visual Basic aplicación debe contener un procedimiento denominado `Main` .
     End Module
     ```
 
-- `Main`también puede tomar una `String` matriz como argumento. Cada cadena de la matriz contiene uno de los argumentos de línea de comandos utilizados para invocar el programa. Puede realizar diferentes acciones en función de sus valores.
+- `Main` también puede tomar una `String` matriz como argumento. Cada cadena de la matriz contiene uno de los argumentos de línea de comandos utilizados para invocar el programa. Puede realizar diferentes acciones en función de sus valores.
 
     ```vb
     Module mainModule
@@ -108,7 +111,7 @@ Cada Visual Basic aplicación debe contener un procedimiento denominado `Main` .
     End Module
     ```
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>

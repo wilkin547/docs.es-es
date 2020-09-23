@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b33815d58b0ef40f7f75a6a41bb4b1eeef591859
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410469"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072228"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Cómo: Determinar si dos objetos están relacionados (Visual Basic)
 
@@ -25,9 +25,10 @@ Puede comparar dos objetos para determinar la relación, si existe, entre las cl
 
 3. En la lista de argumentos de <xref:System.Type.IsInstanceOfType%2A> , especifique el objeto que piensa que podría ser del tipo derivado.
 
-    <xref:System.Type.IsInstanceOfType%2A>Devuelve `True` si su tipo de argumento hereda del <xref:System.Type?displayProperty=nameWithType> tipo de objeto.
+    <xref:System.Type.IsInstanceOfType%2A> Devuelve `True` si su tipo de argumento hereda del <xref:System.Type?displayProperty=nameWithType> tipo de objeto.
 
 ## <a name="example"></a>Ejemplo
+
  En el ejemplo siguiente se determina si un objeto representa una clase derivada de la clase de otro objeto.
 
 ```vb
@@ -48,7 +49,7 @@ End Class
 
 Tenga en cuenta la colocación inesperada de las dos variables de objeto en la llamada a <xref:System.Type.IsInstanceOfType%2A> . El tipo base supuesto se usa para generar la <xref:System.Type?displayProperty=nameWithType> clase y el tipo derivado supuesto se pasa como argumento al <xref:System.Type.IsInstanceOfType%2A> método.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>

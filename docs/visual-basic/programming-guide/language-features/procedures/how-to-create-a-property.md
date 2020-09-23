@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: fa220998d12206e620c242b9b39df3dc1b639d29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd138177d5f4b7ee1eb63833360d227baa54f66d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388263"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072748"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Cómo: Crear una propiedad (Visual Basic)
+
 Puede incluir una definición de propiedad entre una `Property` instrucción y una `End Property` instrucción. Dentro de esta definición se define un `Get` procedimiento, un `Set` procedimiento o ambos. Todo el código de la propiedad se encuentra dentro de estos procedimientos.  
   
  El `Get` procedimiento recupera el valor de la propiedad y el `Set` procedimiento almacena un valor. Si desea que la propiedad tenga acceso de lectura y escritura, debe definir ambos procedimientos. En el caso de una propiedad de solo lectura, solo se definen `Get` y, para una propiedad de solo escritura, solo se define `Set` .  
@@ -52,6 +53,7 @@ Puede incluir una definición de propiedad entre una `Property` instrucción y u
  Debe escribir un `Set` procedimiento para una propiedad de lectura y escritura y para una propiedad de solo escritura. No debe definir un `Set` procedimiento para una propiedad de solo lectura.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se crea una propiedad de lectura y escritura que almacena un nombre completo como dos nombres constituyentes, el nombre y el apellido. Cuando el código de llamada Lee `fullName` , el `Get` procedimiento combina los dos nombres constituyentes y devuelve el nombre completo. Cuando el código de llamada asigna un nuevo nombre completo, el `Set` procedimiento intenta dividirlo en dos nombres constituyentes. Si no encuentra un espacio, lo almacena como el nombre.  
   
  [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
@@ -60,7 +62,7 @@ Puede incluir una definición de propiedad entre una `Property` instrucción y u
   
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Procedimientos de propiedad](./property-procedures.md)

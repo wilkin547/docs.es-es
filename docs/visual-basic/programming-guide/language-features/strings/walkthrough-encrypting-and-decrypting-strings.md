@@ -7,15 +7,16 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 36e405c7362993471d3e6da8e319bccb854e1026
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0e3fc332bf9430b1fa56dbb7630f849d3a29c2e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343582"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072410"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Tutorial: Cifrar y descifrar cadenas en Visual Basic
-En este tutorial se muestra cómo usar la clase <xref:System.Security.Cryptography.DESCryptoServiceProvider> para cifrar y descifrar cadenas mediante la versión del proveedor de servicios criptográficos (CSP) del algoritmo Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>). El primer paso consiste en crear una clase contenedora simple que encapsule el algoritmo 3DES y almacene los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se usa para almacenar de forma segura los datos de usuario privados en un archivo de texto accesible públicamente.  
+
+En este tutorial se muestra cómo usar la <xref:System.Security.Cryptography.DESCryptoServiceProvider> clase para cifrar y descifrar cadenas mediante la versión del proveedor de servicios criptográficos (CSP) del algoritmo Triple Data Encryption Standard ( <xref:System.Security.Cryptography.TripleDES> ). El primer paso consiste en crear una clase contenedora simple que encapsule el algoritmo 3DES y almacene los datos cifrados como una cadena codificada en base 64. A continuación, ese contenedor se usa para almacenar de forma segura los datos de usuario privados en un archivo de texto accesible públicamente.  
   
  Puede usar el cifrado para proteger los secretos del usuario (por ejemplo, contraseñas) y para que los usuarios no autorizados no puedan leer las credenciales. Esto puede impedir que la identidad de un usuario autorizado se robe, lo que protege los recursos del usuario y proporciona sin repudio. El cifrado también puede impedir que usuarios no autorizados tengan acceso a los datos de un usuario.  
   
@@ -26,15 +27,15 @@ En este tutorial se muestra cómo usar la clase <xref:System.Security.Cryptograp
   
 ### <a name="to-create-the-encryption-wrapper"></a>Para crear el contenedor de cifrado  
   
-1. Cree la clase `Simple3Des` para encapsular los métodos de cifrado y descifrado.  
+1. Cree la `Simple3Des` clase para encapsular los métodos de cifrado y descifrado.  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. Agregue una importación del espacio de nombres Cryptography al inicio del archivo que contiene la clase `Simple3Des`.  
+2. Agregue una importación del espacio de nombres Cryptography al inicio del archivo que contiene la `Simple3Des` clase.  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. En la clase `Simple3Des`, agregue un campo privado para almacenar el proveedor de servicios de cifrado 3DES.  
+3. En la `Simple3Des` clase, agregue un campo privado para almacenar el proveedor de servicios criptográficos de 3DES.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
@@ -44,7 +45,7 @@ En este tutorial se muestra cómo usar la clase <xref:System.Security.Cryptograp
   
 5. Agregue un constructor para inicializar el proveedor de servicios criptográficos de 3DES.  
   
-     El parámetro `key` controla los métodos `EncryptData` y `DecryptData`.  
+     El `key` parámetro controla los `EncryptData` `DecryptData` métodos y.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
@@ -60,15 +61,15 @@ En este tutorial se muestra cómo usar la clase <xref:System.Security.Cryptograp
   
 ### <a name="to-test-the-encryption-wrapper"></a>Para probar el contenedor de cifrado  
   
-1. En una clase independiente, agregue un método que use el método `EncryptData` del contenedor para cifrar una cadena y escribirla en la carpeta Mis documentos del usuario.  
+1. En una clase independiente, agregue un método que use el método del contenedor `EncryptData` para cifrar una cadena y escribirla en la carpeta Mis documentos del usuario.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. Agregue un método que lea la cadena cifrada de la carpeta Mis documentos del usuario y descifre la cadena con el método `DecryptData` del contenedor.  
+2. Agregue un método que lea la cadena cifrada de la carpeta Mis documentos del usuario y descifre la cadena con el método del contenedor `DecryptData` .  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. Agregue el código de la interfaz de usuario para llamar a los métodos `TestEncoding` y `TestDecoding`.  
+3. Agregue el código de la interfaz de usuario para llamar a los `TestEncoding` `TestDecoding` métodos y.  
   
 4. Ejecute la aplicación.  
   
@@ -81,4 +82,4 @@ En este tutorial se muestra cómo usar la clase <xref:System.Security.Cryptograp
 - <xref:System.Security.Cryptography.DES>
 - <xref:System.Security.Cryptography.TripleDES>
 - <xref:System.Security.Cryptography.Rijndael>
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [servicios criptográficos](../../../../standard/security/cryptographic-services.md)
