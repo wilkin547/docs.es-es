@@ -17,19 +17,21 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 4b09284b8282c481e406050d37cbdb2f3c8686bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6e067d72e557b97f8626b148e173e3d1583f92b8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414510"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086275"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Enumeraciones y calificación de nombres (Visual Basic)
+
 Normalmente, cuando se hace referencia a un miembro de una enumeración, se debe calificar el nombre del miembro con el nombre de la enumeración. Por ejemplo, para hacer referencia al `Sunday` miembro de la `Days` enumeración, usaría la siguiente sintaxis:  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
 ## <a name="using-the-imports-statement"></a>Usar la instrucción Imports  
+
  Puede evitar el uso de nombres completos agregando una `Imports` instrucción a la sección de declaraciones de espacio de nombres del código, como en el ejemplo siguiente:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  
@@ -48,7 +50,7 @@ Normalmente, cuando se hace referencia a un miembro de una enumeración, se debe
   
  [!code-vb[VbEnumsTask#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#32)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Constantes y enumeraciones](../../../language-reference/constants-and-enumerations.md)
 - [Cómo: Declarar una enumeración](how-to-declare-enumerations.md)
@@ -59,4 +61,4 @@ Normalmente, cuando se hace referencia a un miembro de una enumeración, se debe
 - [Tipos de datos constantes y literales](constant-and-literal-data-types.md)
 - [Instrucción Enum](../../../language-reference/statements/enum-statement.md)
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)

@@ -4,17 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: 3e76434b66f15ad29f18b981acf4e48e6f17f431
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 25e118f7c2e08420326783b788df480373ba4270
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404931"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085768"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ en Visual Basic
+
 Esta sección contiene información general, ejemplos e información general que le ayudará a entender y usar Visual Basic y Language-Integrated Query (LINQ).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Introducción a LINQ en Visual Basic](introduction-to-linq.md)  
  Proporciona una introducción a los proveedores, operadores, estructuras de consulta y características de lenguaje de LINQ.  
   
@@ -45,7 +47,7 @@ Esta sección contiene información general, ejemplos e información general que
  [Procedimiento para devolver el resultado de una consulta con LINQ como tipo específico](how-to-return-a-linq-query-result-as-a-specific-type.md)  
  Proporciona un ejemplo de cómo devolver los resultados de una consulta LINQ como un tipo específico en lugar de como un tipo anónimo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ (Language Integrated Query)](../../concepts/linq/index.md)
 - [Información general sobre LINQ to XML en Visual Basic](../xml/overview-of-linq-to-xml.md)

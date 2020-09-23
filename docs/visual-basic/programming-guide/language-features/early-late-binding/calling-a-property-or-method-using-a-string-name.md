@@ -12,17 +12,19 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410662"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086093"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
+
 En la mayoría de los casos, puede detectar las propiedades y los métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos es posible que no conozca las propiedades y los métodos de un objeto de antemano, o que solo desee la flexibilidad de permitir que un usuario final especifique las propiedades o ejecute métodos en tiempo de ejecución.  
   
 ## <a name="callbyname-function"></a>Función CallByName  
+
  Considere, por ejemplo, una aplicación cliente que evalúa las expresiones especificadas por el usuario pasando un operador a un componente COM. Supongamos que va a agregar constantemente nuevas funciones al componente que requiere nuevos operadores. Cuando use técnicas de acceso a objetos estándar, debe volver a compilar y distribuir la aplicación cliente antes de poder utilizar los nuevos operadores. Para evitar esto, puede usar la `CallByName` función para pasar los operadores nuevos como cadenas, sin cambiar la aplicación.  
   
  La `CallByName` función permite usar una cadena para especificar una propiedad o un método en tiempo de ejecución. La firma de la `CallByName` función tiene el siguiente aspecto:  
@@ -46,7 +48,7 @@ En la mayoría de los casos, puede detectar las propiedades y los métodos de un
 > [!NOTE]
 > Aunque la `CallByName` función puede ser útil en algunos casos, debe sopesar su utilidad en cuanto a las implicaciones de rendimiento `CallByName` . el uso de para invocar un procedimiento es ligeramente más lento que una llamada enlazada en tiempo de ejecución. Si invoca una función a la que se llama repetidamente, como dentro de un bucle, `CallByName` puede tener un efecto grave en el rendimiento.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
 - [Determinación del tipo de objeto](determining-object-type.md)

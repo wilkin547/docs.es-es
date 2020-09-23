@@ -9,17 +9,19 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae338bc9bad9646abc045a652d4ef33a8863354b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410649"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086067"
 ---
 # <a name="determining-object-type-visual-basic"></a>Determinar tipos de objeto (Visual Basic)
+
 Las variables de objeto genérico (es decir, las variables que se declaran como `Object` ) pueden contener objetos de cualquier clase. Al usar variables de tipo `Object` , es posible que necesite realizar diferentes acciones en función de la clase del objeto; por ejemplo, algunos objetos podrían no admitir una propiedad o un método determinados. Visual Basic proporciona dos formas de determinar qué tipo de objeto se almacena en una variable de objeto: la `TypeName` función y el `TypeOf...Is` operador.  
   
 ## <a name="typename-and-typeofis"></a>TypeName y typeof... Encuentra  
+
  La `TypeName` función devuelve una cadena y es la mejor opción cuando necesita almacenar o mostrar el nombre de clase de un objeto, tal y como se muestra en el siguiente fragmento de código:  
   
  [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
@@ -44,7 +46,7 @@ Las variables de objeto genérico (es decir, las variables que se declaran como 
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Llamar a una propiedad o método mediante un nombre de cadena](calling-a-property-or-method-using-a-string-name.md)

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 03d693653cd166bbf1096031f1a864b492e2e896
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414536"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086301"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Tipos de datos constantes y literales (Visual Basic)
+
 Un literal es un valor que se expresa como en sí mismo en lugar de como el valor de una variable o el resultado de una expresión, como el número 3 o la cadena "Hello". Una constante es un nombre significativo que ocupa el lugar de un literal y mantiene este mismo valor en todo el programa, en lugar de una variable, cuyo valor puede cambiar.  
   
  Cuando [Option Infer](../../../language-reference/statements/option-infer-statement.md) es `Off` y [Option Strict](../../../language-reference/statements/option-strict-statement.md) es `On` , debe declarar todas las constantes explícitamente con un tipo de datos. En el ejemplo siguiente, el tipo de datos de `MyByte` se declara explícitamente como un tipo de datos `Byte` :  
@@ -26,6 +27,7 @@ Un literal es un valor que se expresa como en sí mismo en lugar de como el valo
  Cuando `Option Infer` es `On` o `Option Strict` es `Off` , puede declarar una constante sin especificar un tipo de datos con una `As` cláusula. El compilador determina el tipo de la constante a partir del tipo de la expresión. Un literal numérico entero se convierte de forma predeterminada en el `Integer` tipo de datos. El tipo de datos predeterminado para los números de punto flotante es `Double` , y las palabras clave `True` y `False` especifica una `Boolean` constante.  
   
 ## <a name="literals-and-type-coercion"></a>Literales y coerción de tipos  
+
  En algunos casos, puede que desee forzar un literal a un tipo de datos determinado. por ejemplo, al asignar un valor literal entero especialmente grande a una variable de tipo `Decimal` . En el ejemplo siguiente se genera un error:  
   
 ```vb  
@@ -61,7 +63,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`Single`|(ninguno)|F o!|  
 |`String`|"|(ninguno)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Constantes definidas por el usuario](user-defined-constants.md)
 - [Procedimiento para declarar una constante](how-to-declare-a-constant.md)
@@ -71,5 +73,5 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 - [Información general sobre las enumeraciones](enumerations-overview.md)
 - [Cómo: Declarar una enumeración](how-to-declare-enumerations.md)
 - [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
 - [Constantes y enumeraciones](../../../language-reference/constants-and-enumerations.md)

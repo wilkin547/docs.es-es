@@ -11,14 +11,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 0bfa7fa2bdac4746827884c1dad62734c549a48e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357392"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086119"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Cómo: Controlar la disponibilidad de una variable (Visual Basic)
+
 Puede controlar la disponibilidad de una variable especificando su *nivel de acceso*. El nivel de acceso determina qué código tiene permiso para leer o escribir en la variable.  
   
 - *Las variables de miembro* (definidas en el nivel de módulo y fuera de cualquier procedimiento) tienen como valor predeterminado el acceso público, lo que significa que cualquier código que pueda verlas puede tener acceso a ellas. Puede cambiar esto especificando un modificador de acceso.  
@@ -45,7 +46,7 @@ Puede controlar la disponibilidad de una variable especificando su *nivel de acc
   
      Puede leer o escribir en la variable desde cualquier código que interopere con el ensamblado.  
   
- O bien  
+ o bien  
   
 1. En el caso de una variable local, coloque la `Dim` instrucción para la variable dentro de un procedimiento.  
   
@@ -54,6 +55,7 @@ Puede controlar la disponibilidad de una variable especificando su *nivel de acc
      Puede leer o escribir en la variable desde cualquier lugar dentro del procedimiento, pero no desde fuera de ella.  
   
 ## <a name="protected-and-friend-access"></a>Acceso protegido y de confianza  
+
  Puede limitar el nivel de acceso de una variable a su clase y las clases derivadas, o a su ensamblado. También puede especificar la Unión de estas limitaciones, lo que permite el acceso desde el código de cualquier clase derivada o en cualquier otro lugar del mismo ensamblado. Esta Unión se especifica combinando las `Protected` `Friend` palabras clave y en la misma declaración.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Para hacer que una variable sea accesible solo desde dentro de su clase y las clases derivadas  
@@ -73,6 +75,7 @@ Puede controlar la disponibilidad de una variable especificando su *nivel de acc
      Puede leer o escribir en la variable desde cualquier lugar dentro del módulo, clase o estructura, así como desde cualquier código del mismo ensamblado, pero no desde fuera del ensamblado.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestran las declaraciones de variables con `Public` `Protected` `Friend` los niveles de acceso,,, `Protected Friend` y `Private` . Tenga en cuenta que cuando la `Dim` instrucción especifica un nivel de acceso, no es necesario incluir la `Dim` palabra clave.  
   
 ```vb  
@@ -84,13 +87,14 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Cuanto más restrictiva sea el nivel de acceso de una variable, menor será la probabilidad de que el código malintencionado pueda usarse de forma inadecuada.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Niveles de acceso en Visual Basic](access-levels.md)
 - [Instrucción Dim](../../../language-reference/statements/dim-statement.md)
-- [Público](../../../language-reference/modifiers/public.md)
+- [Pública](../../../language-reference/modifiers/public.md)
 - [Contra](../../../language-reference/modifiers/protected.md)
-- [Respecto](../../../language-reference/modifiers/friend.md)
+- [Friend](../../../language-reference/modifiers/friend.md)
 - [Privado](../../../language-reference/modifiers/private.md)

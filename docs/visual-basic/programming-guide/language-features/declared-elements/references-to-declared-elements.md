@@ -6,14 +6,15 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405188"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085885"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
+
 Cuando el código hace referencia a un elemento declarado, el compilador Visual Basic coincide con el nombre de la referencia a la declaración adecuada de ese nombre. Si se declara más de un elemento con el mismo nombre, puede controlar a qué elementos se va a hacer referencia *calificando* su nombre.  
   
  El compilador intenta buscar una referencia de nombre a una declaración de nombre con el *ámbito más restringido*. Esto significa que comienza con el código que hace la referencia y funciona de forma saliente a través de los niveles sucesivos de elementos contenedores.  
@@ -42,6 +43,7 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>Calificar un nombre de elemento  
+
  Si desea invalidar este proceso de búsqueda y especificar un nombre declarado en un ámbito más amplio, debe *calificar* el nombre con el elemento contenedor del ámbito más amplio. En algunos casos, es posible que también tenga que calificar el elemento contenedor.  
   
  Calificar un nombre significa que lo antepone en la instrucción de origen con información que identifica dónde se define el elemento de destino. Esta información se denomina *cadena de calificación*. Puede incluir uno o varios espacios de nombres y un módulo, clase o estructura.  
@@ -105,6 +107,7 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Miembros de otros elementos contenedores  
+
  Cuando se usa un miembro no compartido de otra clase o estructura, primero se debe calificar el nombre del miembro con una variable o expresión que apunte a una instancia de la clase o estructura. En el ejemplo siguiente, `demoClass` es una instancia de una clase denominada `class1` .  
   
 ```vb  
@@ -150,6 +153,7 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Referencias a proyectos  
+
  Para usar elementos [públicos](../../../language-reference/modifiers/public.md) definidos en otro proyecto, primero debe establecer una *referencia* al ensamblado o la biblioteca de tipos del proyecto. Para establecer una referencia, haga clic en **Agregar referencia** en el menú **proyecto** o use la opción del compilador [de línea de comandos-Reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) .  
   
  Por ejemplo, puede utilizar el modelo de objetos XML del .NET Framework. Si establece una referencia al espacio de <xref:System.Xml> nombres, puede declarar y usar cualquiera de sus clases, como <xref:System.Xml.XmlDocument> . En el ejemplo siguiente se utiliza <xref:System.Xml.XmlDocument>.  
@@ -161,6 +165,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Importar elementos contenedores  
+
  Puede usar la [instrucción Imports (espacio de nombres y tipo de .net)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) para *importar* los espacios de nombres que contienen los módulos o las clases que desea usar. Esto le permite hacer referencia a los elementos definidos en un espacio de nombres importado sin calificar totalmente sus nombres. En el ejemplo siguiente se vuelve a escribir el ejemplo anterior para importar el <xref:System.Xml> espacio de nombres.  
   
 ```vb  
@@ -186,14 +191,16 @@ Dim xDoc As xD.XmlDocument
  También puede usar la `Imports` instrucción para importar módulos, clases, estructuras y enumeraciones. Después, puede usar los miembros de estos elementos importados sin calificación. Sin embargo, siempre debe calificar miembros no compartidos de clases y estructuras con una variable o una expresión que se evalúe como una instancia de la clase o estructura.  
   
 ## <a name="naming-guidelines"></a>Instrucciones de nomenclatura  
+
  Cuando se definen dos o más elementos de programación con el mismo nombre, puede producirse una *ambigüedad de nombres* cuando el compilador intenta resolver una referencia a ese nombre. Si hay más de una definición en el ámbito, o si no hay ninguna definición en el ámbito, la referencia es irresoluble. Para obtener un ejemplo, vea "ejemplo de referencia completa" en esta página de ayuda.  
   
  Puede evitar la ambigüedad de nombres proporcionando a todos los elementos nombres únicos. Después, puede hacer referencia a cualquier elemento sin tener que calificar su nombre con un espacio de nombres, un módulo o una clase. También reduce las posibilidades de hacer referencia accidental al elemento equivocado.  
   
 ## <a name="shadowing"></a>Sombreado  
+
  Cuando dos elementos de programación comparten el mismo nombre, uno de ellos puede ocultar, o *sombrear*, el otro. Un elemento sombreado no está disponible como referencia; en su lugar, cuando el código usa el nombre del elemento con sombra, el compilador Visual Basic lo resuelve en el elemento de sombreado. Para obtener una explicación más detallada de los ejemplos, vea [sombrear en Visual Basic](shadowing.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Declared Element Names](declared-element-names.md)
 - [Características de los elementos declarados](declared-element-characteristics.md)
@@ -201,4 +208,4 @@ Dim xDoc As xD.XmlDocument
 - [Variables](../variables/index.md)
 - [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [New (operador)](../../../language-reference/operators/new-operator.md)
-- [Público](../../../language-reference/modifiers/public.md)
+- [Pública](../../../language-reference/modifiers/public.md)

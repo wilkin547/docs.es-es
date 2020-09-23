@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: fca6c05b4baae4689e9d5e5698cee75f0c5470ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374751"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085697"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipular XML en Visual Basic
+
 Puede usar *literales XML* para cargar XML desde un origen externo, como una cadena, un archivo o una secuencia. A continuación, puede utilizar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para manipular el XML y usar Language-Integrated Query (LINQ) para consultar el XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Procedimiento para cargar XML desde un archivo, cadena o secuencia](how-to-load-xml-from-a-file-string-or-stream.md)  
  Muestra cómo cargar XML en un <xref:System.Xml.Linq.XDocument> objeto o <xref:System.Xml.Linq.XElement> desde un archivo de texto, una cadena o una secuencia.  
   
@@ -27,6 +29,7 @@ Puede usar *literales XML* para cargar XML desde un origen externo, como una cad
  Muestra cómo modificar los elementos, atributos y valores de un literal XML.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Propiedades de eje XML](../../../language-reference/xml-axis/index.md)  
  Proporciona vínculos a secciones que describen las distintas propiedades de acceso XML.  
   
@@ -42,7 +45,7 @@ Puede usar *literales XML* para cargar XML desde un origen externo, como una cad
  [XML](index.md)  
  Proporciona vínculos a secciones que describen cómo usar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] en Visual Basic.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [XML](index.md)
 - [LINQ](../linq/index.md)

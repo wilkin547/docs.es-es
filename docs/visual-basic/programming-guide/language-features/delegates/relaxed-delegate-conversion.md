@@ -6,17 +6,19 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b914d0479f160199744a8f9923c0bebc87321329
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410675"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086080"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Conversión de delegado no estricta (Visual Basic)
+
 La conversión de delegado relajado le permite asignar las funciones Subs y a los delegados o controladores incluso cuando sus firmas no son idénticas. Por consiguiente, el enlace a los delegados es coherente con el enlace ya permitido para las invocaciones de método.  
   
 ## <a name="parameters-and-return-type"></a>Parámetros y tipo de valor devuelto  
+
  En lugar de la coincidencia exacta de la firma, la conversión relajada requiere que se cumplan las siguientes condiciones cuando `Option Strict` se establece en `On` :  
   
 - Debe existir una conversión de ampliación desde el tipo de datos de cada parámetro de delegado al tipo de datos del parámetro correspondiente de la función asignada o `Sub` . En el ejemplo siguiente, el delegado `Del1` tiene un parámetro, `Integer` . `m`Los parámetros de las expresiones lambda asignadas deben tener un tipo de datos para el que haya una conversión de ampliación `Integer` , como `Long` o `Double` .  
@@ -38,6 +40,7 @@ La conversión de delegado relajado le permite asignar las funciones Subs y a lo
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>Omitir especificaciones de parámetros  
+
  Los delegados relajados también permiten omitir completamente las especificaciones de los parámetros en el método asignado:  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
@@ -61,6 +64,7 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>Ejemplos de AddressOf  
+
  Las expresiones lambda se usan en los ejemplos anteriores para que las relaciones de tipos resulten fáciles de ver. Sin embargo, se permiten las mismas relajaciones para las asignaciones de delegado que usan `AddressOf` , `Handles` o `AddHandler` .  
   
  En el ejemplo siguiente, las funciones `f1` , `f2` , `f3` y `f4` se pueden asignar a `Del1` .  
@@ -76,6 +80,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Quitar la función devuelve  
+
  La conversión de delegado relajado le permite asignar una función a un `Sub` delegado, omitiendo de forma eficaz el valor devuelto de la función. Sin embargo, no se puede asignar `Sub` a un delegado de función. En el ejemplo siguiente, la dirección de la función `doubler` se asigna al `Sub` delegado `Del3` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  
