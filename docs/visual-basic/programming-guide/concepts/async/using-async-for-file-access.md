@@ -2,14 +2,15 @@
 title: Usar Async en acceso a archivos
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400776"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077363"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Usar Async en acceso a archivos (Visual Basic)
+
 Puede usar la característica Async para tener acceso a los archivos. Mediante la característica Async, se puede llamar a métodos asincrónicos sin definir continuaciones ni dividir el código en varios métodos o expresiones lambda. Para convertir código sincrónico en asincrónico, basta con llamar a un método asincrónico y no a un método sincrónico y agregar algunas palabras clave al código.  
   
  Podrían considerarse los siguientes motivos para agregar asincronía a las llamadas de acceso a archivos:  
@@ -25,6 +26,7 @@ Puede usar la característica Async para tener acceso a los archivos. Mediante l
 - Las tareas asincrónicas se pueden ejecutar fácilmente en paralelo.  
   
 ## <a name="running-the-examples"></a>Ejecutar los ejemplos  
+
  Para ejecutar los ejemplos de este tema, puede crear una **aplicación WPF** o una **aplicación de Windows Forms** y luego agregar un **botón**. En el evento `Click` del botón, agregue una llamada al primer método de cada ejemplo.  
   
  En los ejemplos siguientes, se incluyen las instrucciones `Imports` siguientes.  
@@ -39,11 +41,13 @@ Imports System.Threading.Tasks
 ```  
   
 ## <a name="use-of-the-filestream-class"></a>Uso de la clase FileStream  
+
  En los ejemplos de este tema se usa la clase <xref:System.IO.FileStream>, que tiene una opción que hace que la E/S asincrónica se produzca en el nivel del sistema operativo. Si usa esta opción, puede evitar bloquear un subproceso ThreadPool en muchos casos. Para habilitar esta opción, especifique el argumento `useAsync=true` o `options=FileOptions.Asynchronous` en la llamada al constructor.  
   
  No puede usar esta opción con <xref:System.IO.StreamReader> y <xref:System.IO.StreamWriter> si los abre directamente al especificar una ruta de acceso de archivo. En cambio, puede usar esta opción si les proporciona un <xref:System.IO.Stream> que ha abierto la clase <xref:System.IO.FileStream>. Tenga en cuenta que las llamadas asincrónicas son más rápidas en aplicaciones de interfaz de usuario aunque un subproceso ThreadPool se bloquee, porque el subproceso de interfaz de usuario no se bloquea durante la espera.  
   
 ## <a name="writing-text"></a>Escribir texto  
+
  En el ejemplo siguiente se escribe texto en un archivo. En cada instrucción await, el método finaliza inmediatamente. Cuando se complete la E/S de archivo, el método se reanuda en la instrucción que sigue a la instrucción await. Tenga en cuenta que el modificador async se encuentra en la definición de métodos que usan la instrucción await.  
   
 ```vb  
@@ -73,10 +77,11 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- La primera instrucción devuelve una tarea e inicia el procesamiento de archivos. La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea. Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await. Para obtener más información, vea [flujo de control en programas Async (Visual Basic)](control-flow-in-async-programs.md).  
+ La primera instrucción devuelve una tarea e inicia el procesamiento de archivos. La segunda instrucción con await finaliza el método inmediatamente y devuelve otra tarea. Después, cuando se complete el procesamiento de archivos, la ejecución vuelve a la instrucción que sigue a la instrucción await. Para obtener más información, vea  [flujo de control en programas Async (Visual Basic)](control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Leer texto  
- En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve un <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de la espera genera un valor `Int32` (`numRead`) después de que se complete la operación. Para obtener más información, vea [tipos de valor devueltos Async (Visual Basic)](async-return-types.md).  
+
+ En el ejemplo siguiente se lee texto de un archivo. El texto se almacena en búfer y, en este caso, se coloca en un <xref:System.Text.StringBuilder>. A diferencia del ejemplo anterior, la evaluación de la instrucción await genera un valor. El método <xref:System.IO.Stream.ReadAsync%2A> devuelve <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>, por lo que la evaluación de await genera un valor `Int32` (`numRead`) una vez completada la operación. Para obtener más información, vea [tipos de valor devueltos Async (Visual Basic)](async-return-types.md).  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -118,6 +123,7 @@ End Function
 ```  
   
 ## <a name="parallel-asynchronous-io"></a>E/S asincrónica en paralelo  
+
  En el ejemplo siguiente se muestra el procesamiento paralelo escribiendo 10 archivos de texto. Para cada archivo, el método <xref:System.IO.Stream.WriteAsync%2A> devuelve una tarea que luego se agrega a una lista de tareas. La instrucción `Await Task.WhenAll(tasks)` finaliza el método y se reanuda en el método cuando el procesamiento de archivos se completa para todas las tareas.  
   
  Tras completar las tareas, el ejemplo cierra todas las instancias de <xref:System.IO.FileStream> de un bloque `Finally`. Si en lugar de ello, cada `FileStream` se ha creado en una instrucción `Imports`, la `FileStream` se podría desechar antes de completarse la tarea.  

@@ -12,14 +12,15 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 97602b7341636219382b6a405c678bc458ef146a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00022fc7790548dbc0ed8018f202e136bdbcc033
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556751"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075257"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
+
 Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y proporciona funcionalidades sencillas y eficaces cuando se trabaja con todos los tipos de datos. En lugar de enviar una consulta a una base de datos que se va a procesar o trabajar con una sintaxis de consulta diferente para cada tipo de datos que se está buscando, LINQ presenta las consultas como parte del lenguaje Visual Basic. Utiliza una sintaxis unificada independientemente del tipo de datos.  
   
  LINQ permite consultar datos de una base de datos SQL Server, XML, matrices y colecciones en memoria, conjuntos de datos ADO.NET o cualquier otro origen de datos remoto o local que admita LINQ. Puede hacer todo esto con los elementos de lenguaje de Visual Basic comunes. Dado que las consultas se escriben en el lenguaje Visual Basic, los resultados de la consulta se devuelven como objetos fuertemente tipados. Estos objetos son compatibles con IntelliSense, lo que le permite escribir código más rápidamente y detectar errores en las consultas en tiempo de compilación en lugar de en tiempo de ejecución. Las consultas LINQ se pueden utilizar como el origen de consultas adicionales para refinar los resultados. También se pueden enlazar a controles para que los usuarios puedan ver y modificar fácilmente los resultados de la consulta.  
@@ -29,11 +30,13 @@ Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y
  [!code-vb[VbVbalrIntroToLINQ#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#1)]  
   
 ## <a name="running-the-examples"></a>Ejecución de los ejemplos  
+
  Para ejecutar los ejemplos de la introducción y en la [estructura de una consulta LINQ](#structure-of-a-linq-query) , incluya el siguiente código, que devuelve listas de clientes y pedidos.  
   
  [!code-vb[VbVbalrIntroToLINQ#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#31)]  
   
 ## <a name="linq-providers"></a>Proveedores LINQ  
+
  Un *proveedor LINQ* asigna las consultas LINQ Visual Basic al origen de datos que se consulta. Cuando usted escribe una consulta LINQ, el proveedor toma esa consulta y la traduce en comandos que podrá ejecutar el origen de datos. El proveedor también convierte los datos del origen en los objetos que forman el resultado de su consulta. Por último, convierte los objetos en datos cuando envía actualizaciones al origen de datos.  
   
  Visual Basic incluye los siguientes proveedores LINQ.  
@@ -41,11 +44,12 @@ Language-Integrated Query (LINQ) agrega capacidades de consulta a Visual Basic y
 |Proveedor|Descripción|  
 |---|---|  
 |LINQ to Objects|El proveedor LINQ to Objects le permite consultar las matrices y colecciones en memoria. Si un objeto es compatible con las interfaces <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601>, el proveedor LINQ to Objects le permite consultarlo.<br /><br /> Puede habilitar el proveedor de LINQ to Objects importando el <xref:System.Linq> espacio de nombres, que se importa de forma predeterminada para todos los proyectos de Visual Basic.<br /><br /> Para obtener más información sobre el proveedor de LINQ to Objects, vea [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
-|LINQ to SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ a SQL|El proveedor LINQ to SQL le permite consultar y modificar datos en una base de datos de SQL Server. Esto hace que sea fácil asignar el modelo de objetos de una aplicación a las tablas y los objetos de una base de datos.<br /><br /> Visual Basic facilita el trabajo con LINQ to SQL incluyendo el Object Relational Designer (Object Relational Designer). Este diseñador se usa para crear un modelo de objetos en una aplicación que se asigna a los objetos de una base de datos. Object Relational Designer también proporciona funcionalidad para asignar procedimientos almacenados y funciones al <xref:System.Data.Linq.DataContext> objeto, que administra la comunicación con la base de datos y almacena el estado de las comprobaciones de simultaneidad optimista.<br /><br /> Para obtener más información sobre el proveedor de LINQ to SQL, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obtener más información sobre el Object Relational Designer, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|El proveedor LINQ to XML le permite consultar y modificar XML. Puede modificar XML en memoria o puede cargar XML desde un archivo y guardarlo en él.<br /><br /> Además, el proveedor de LINQ to XML habilita literales XML y propiedades de eje XML que le permiten escribir XML directamente en el código de Visual Basic. Para obtener más información, vea [XML](../xml/index.md).|  
 |LINQ to DataSet|El proveedor de LINQ to DataSet permite consultar y actualizar datos en un conjunto de datos de ADO.NET. Puede agregar la eficacia de LINQ a las aplicaciones que utilicen conjuntos de datos con el fin de simplificar y ampliar las funcionalidades de consulta, agregado y actualización de los datos del conjunto de datos.<br /><br /> Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Estructura de una consulta LINQ  
+
  Una consulta LINQ, a la que se suele hacer referencia como una *expresión de consulta*, consta de una combinación de cláusulas de consulta que identifican los orígenes de datos y las variables de iteración de la consulta. Una expresión de consulta también incluye instrucciones para ordenar, filtrar, agrupar y combinar, o cálculos para aplicar al origen de datos. La sintaxis de las expresiones de consulta se parece a la sintaxis de SQL; por lo tanto, le puede resultar familiar gran parte de la sintaxis.  
   
  Una expresión de consulta comienza con una cláusula `From`. Esta cláusula identifica los datos de origen de una consulta y las variables que se usan para referirse individualmente a cada elemento de los datos de origen. Estas variables se denominan *variables de rango* o *variables de iteración*. La cláusula `From` se requiere para una consulta, excepto para consultas `Aggregate`, donde la cláusula `From` es opcional. Una vez que se hayan identificado el ámbito y el origen de la consulta en las cláusulas `From` o `Aggregate`, puede incluir cualquier combinación de cláusulas de consulta para refinar la consulta. Para obtener más información sobre las cláusulas de consulta, vea Visual Basic operadores de consulta LINQ más adelante en este tema. Por ejemplo, la siguiente consulta identifica una colección de origen de datos de cliente como la variable `customers` y una variable de iteración denominada `cust`.  
@@ -173,6 +177,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  Para obtener más información acerca de las funcionalidades adicionales de LINQ, consulte [información general sobre operadores de consulta estándar](../../concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="connect-to-a-database-by-using-linq-to-sql"></a>Conectarse a una base de datos mediante LINQ to SQL  
+
  En Visual Basic, se identifican los objetos de base de datos de SQL Server, como tablas, vistas y procedimientos almacenados, a los que se desea obtener acceso mediante un archivo de LINQ to SQL. Un archivo LINQ to SQL tiene una extensión .dbml.  
   
  Si tiene una conexión válida a una base de datos de SQL Server, puede Agregar una plantilla de elementos de **LINQ to SQL clases** al proyecto. De este modo se mostrará el Object Relational Designer (O/R Designer). El Object Relational Designer le permite arrastrar los elementos a los que desea obtener acceso en el código desde el **Explorador de servidores** / **Explorador de bases de datos** en la superficie del diseñador. El archivo LINQ to SQL agrega un objeto <xref:System.Data.Linq.DataContext> al proyecto. Este objeto incluye propiedades y colecciones para las tablas y vistas a las que desea acceder y métodos para los procedimientos almacenados a los que desea llamar. Después de haber guardado los cambios en el archivo LINQ to SQL (.dbml), puede acceder a estos objetos en el código haciendo referencia al objeto <xref:System.Data.Linq.DataContext> definido por el O/R Designer. El nombre del objeto <xref:System.Data.Linq.DataContext> del proyecto se determina en función del nombre del archivo LINQ to SQL. Por ejemplo, un archivo LINQ to SQL denominado Northwind.dbml creará un objeto <xref:System.Data.Linq.DataContext> denominado `NorthwindDataContext`.  
@@ -180,6 +185,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  Para obtener ejemplos con instrucciones paso a paso, consulte [Cómo: consultar una base de datos](how-to-query-a-database-by-using-linq.md) y [Cómo: llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic características compatibles con LINQ  
+
  Visual Basic incluye otras características destacables que facilitan el uso de LINQ y reducen la cantidad de código que debe escribir para realizar consultas LINQ. Entre ellas, se incluyen las siguientes:  
   
 - **Tipos anónimos**, que permiten crear un nuevo tipo basado en el resultado de una consulta.  
@@ -203,6 +209,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  Para obtener más información sobre la ejecución de consultas, vea [escribir su primera consulta LINQ](../../concepts/linq/writing-your-first-linq-query.md).  
   
 ## <a name="xml-in-visual-basic"></a>XML en Visual Basic  
+
  Las características XML de Visual Basic incluyen literales XML y propiedades de eje XML, lo que le permite crear fácilmente, tener acceso, consultar y modificar XML en el código. Los literales XML le permiten escribir XML directamente en el código. El compilador de Visual Basic trata el XML como un objeto de datos de primera clase.  
   
  En el siguiente ejemplo de código se muestra cómo crear un elemento XML, acceder a sus subelementos y atributos y consultar el contenido del elemento mediante LINQ.  
@@ -224,6 +231,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
 |[LINQ to XML](../../../../standard/linq/linq-xml-overview.md)|Incluye información general, guía de programación y ejemplos de LINQ to XML.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Temas de procedimientos y tutoriales
+
  [Cómo: Consultar una base de datos](how-to-query-a-database-by-using-linq.md)  
   
  [Cómo: Llamar a un procedimiento almacenado](how-to-call-a-stored-procedure-by-using-linq.md)  
@@ -243,6 +251,7 @@ Puede usar características de consulta LINQ adicionales llamando a los miembros
  [Cómo: Asignar procedimientos almacenados para realizar actualizaciones, inserciones y eliminaciones (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Capítulos destacados del libro  
+
  [Capítulo 17: LINQ](/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) en [programación Visual Basic 2008](/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Vea también

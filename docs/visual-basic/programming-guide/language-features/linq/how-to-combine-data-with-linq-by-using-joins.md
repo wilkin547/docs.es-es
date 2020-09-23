@@ -9,14 +9,15 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: de8c4ec3ab8a0f2335c034231c661380420fd31b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ebda8d3b7fa2e712c337ed2c1fadc580bed7fe61
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405009"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075075"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Cómo: Combinar datos con LINQ usando cláusulas Join (Visual Basic)
+
 Visual Basic proporciona las `Join` `Group Join` cláusulas de consulta y para que pueda combinar el contenido de varias colecciones en función de los valores comunes entre las colecciones. Estos valores se conocen como valores de *clave* . Los desarrolladores familiarizados con los conceptos de bases de datos relacionales reconocerán la `Join` cláusula como una combinación interna y la `Group Join` cláusula como, efectivamente, una combinación externa izquierda.  
   
  En los ejemplos de este tema se muestran algunas maneras de combinar datos con las `Join` `Group Join` cláusulas de consulta y.  
@@ -33,6 +34,7 @@ Visual Basic proporciona las `Join` `Group Join` cláusulas de consulta y para q
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Realizar una combinación interna mediante la cláusula join  
+
  Una combinación interna combina datos de dos colecciones. Se incluyen los elementos para los que coinciden los valores de clave especificados. Se excluyen todos los elementos de cualquier colección que no tengan un elemento coincidente en la otra colección.  
   
  En Visual Basic, LINQ proporciona dos opciones para realizar una combinación interna: una combinación implícita y una combinación explícita.  
@@ -48,6 +50,7 @@ Visual Basic proporciona las `Join` `Group Join` cláusulas de consulta y para q
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Realizar una combinación externa izquierda mediante la cláusula Group join  
+
  Una combinación externa izquierda incluye todos los elementos de la colección del lado izquierdo de la combinación y solo los valores coincidentes de la colección del lado derecho de la combinación. Los elementos de la colección del lado derecho de la combinación que no tienen un elemento coincidente en la colección del lado izquierdo se excluyen del resultado de la consulta.  
   
  La `Group Join` cláusula realiza una combinación externa izquierda, en efecto. La diferencia entre lo que se conoce normalmente como una combinación externa izquierda y lo que `Group Join` devuelve la cláusula es que la `Group Join` cláusula agrupa los resultados de la colección del lado derecho de la combinación de cada elemento de la colección del lado izquierdo. En una base de datos relacional, una combinación externa izquierda devuelve un resultado no agrupado en el que cada elemento del resultado de la consulta contiene elementos coincidentes de ambas colecciones en la combinación. En este caso, los elementos de la colección del lado izquierdo de la combinación se repiten para cada elemento coincidente de la colección del lado derecho. Verá el aspecto que tendrá cuando complete el procedimiento siguiente.  
@@ -61,6 +64,7 @@ Visual Basic proporciona las `Join` `Group Join` cláusulas de consulta y para q
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Realizar una combinación mediante una clave compuesta  
+
  Puede usar la `And` palabra clave en una `Join` `Group Join` cláusula o para identificar varios campos clave que se usarán al buscar valores coincidentes de las colecciones que se van a combinar. La `And` palabra clave especifica que todos los campos de clave especificados deben coincidir con los elementos que se van a combinar.  
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Para realizar una combinación mediante una clave compuesta  
@@ -79,7 +83,7 @@ Visual Basic proporciona las `Join` `Group Join` cláusulas de consulta y para q
   
 2. Presione F5 para ejecutar los ejemplos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ](index.md)
 - [Introducción a LINQ en Visual Basic](introduction-to-linq.md)

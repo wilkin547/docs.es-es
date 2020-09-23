@@ -1,17 +1,18 @@
 ---
-title: El ID. de configuración regional '<name>' no se admite en este sistema
+title: Este sistema no admite el id. de configuración regional '<name>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
 ms.assetid: 62701434-0ac2-45b8-8b40-a9adc09ae6df
-ms.openlocfilehash: 4fac5648633dd751cd47a942ae98e443a222c48d
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 29226ba4e666bab16e8e4747b5ac7fcdeaf7e502
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197062"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076193"
 ---
-# <a name="locale-id-name-is-not-supported-on-this-system"></a>No se admite el ID. de configuración regional '\<nombre > ' en este sistema
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>Este sistema no admite el id. de configuración regional '\<name>'
+
 Está intentando usar `VbStrConv`, pero el sistema no admite la configuración regional especificada.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
@@ -21,4 +22,4 @@ Está intentando usar `VbStrConv`, pero el sistema no admite la configuración r
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Globalization>
-- [Introducción a aplicaciones internacionales basadas en .NET Framework](/visualstudio/ide/globalizing-and-localizing-applications)
+- [Introducción a las aplicaciones internacionales basadas en el .NET Framework](/visualstudio/ide/globalizing-and-localizing-applications)

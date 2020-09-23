@@ -2,14 +2,15 @@
 title: La codificación no se puede establecer en Nothing
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 41565d1aa3b69f6ad92d4bbf2b2f2170014aef87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0356098ca3fb41804ea396b0ff792cf2990b3340
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394484"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077545"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>La codificación no se puede establecer en Nothing
+
 Error en un intento de leer un archivo o escribir en él porque el parámetro `encoding` se ha establecido en `Nothing` pero requiere un valor válido.  
   
  <xref:System.Text.Encoding> se usa para determinar qué codificación se debe usar al escribir en un archivo. El valor predeterminado es UTF-8.  
@@ -18,7 +19,7 @@ Error en un intento de leer un archivo o escribir en él porque el parámetro `e
   
 - Proporcione un valor válido para el parámetro `encoding` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Codificaciones de archivos](../developing-apps/programming/drives-directories-files/file-encodings.md)
 - [Lectura de archivos](../developing-apps/programming/drives-directories-files/reading-from-files.md)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84939a622ab78fd797d27480a3ed612be06d3451
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394601"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076232"
 ---
 # <a name="drive-drivename-not-found"></a>Unidad '\<drivename>' no encontrada
+
 No se encuentra la unidad especificada. Se perdió la conexión de red o la unidad a la que está intentando acceder está sin conexión o no existe.  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
@@ -24,6 +25,6 @@ No se encuentra la unidad especificada. Se perdió la conexión de red o la unid
   
 4. Vuelva a conectarla a la red e inténtelo de nuevo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de error](../programming-guide/language-features/error-types.md)
+- [Tipos de errores](../programming-guide/language-features/error-types.md)

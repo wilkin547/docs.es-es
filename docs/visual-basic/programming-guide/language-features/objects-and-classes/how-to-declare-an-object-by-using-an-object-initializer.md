@@ -7,14 +7,15 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: cf4954059a4b0bf015bed82a74357ecfd5f5987e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404880"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075231"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Cómo: Declarar un objeto usando un inicializador de objeto (Visual Basic)
+
 Los inicializadores de objeto permiten declarar y crear instancias de una instancia de una clase en una única instrucción. Además, puede inicializar uno o más miembros de la instancia al mismo tiempo, sin invocar un constructor con parámetros.  
   
  Cuando se usa un inicializador de objeto para crear una instancia de un tipo con nombre, se llama al constructor sin parámetros para la clase, seguido de la inicialización de los miembros designados en el orden que se especifique.  
@@ -59,7 +60,7 @@ Los inicializadores de objeto permiten declarar y crear instancias de una instan
   
      Para obtener más información, vea [inferencia de tipo local](../variables/local-type-inference.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Procedimiento para crear una lista de elementos](../../concepts/linq/how-to-create-a-list-of-items.md)

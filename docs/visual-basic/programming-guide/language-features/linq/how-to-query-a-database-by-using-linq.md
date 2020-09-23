@@ -9,14 +9,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: ad4744e1734fd968f610ec02b60814eadd3ebe9a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dbe3b4e164e266202cac4abaea009869d08cc4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404970"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075270"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Cómo: Consultar una base de datos usando LINQ (Visual Basic)
+
 Language-Integrated Query (LINQ) facilita el acceso a la información de base de datos y la ejecución de consultas.  
   
  En el ejemplo siguiente se muestra cómo crear una nueva aplicación que realiza consultas en una base de datos de SQL Server.  
@@ -35,7 +36,7 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de base de
   
 ## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Para agregar un proyecto que contiene un archivo LINQ to SQL  
   
-1. En Visual Studio, en el menú **archivo** , seleccione **nuevo** y haga clic en **proyecto**. Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.  
+1. En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**. Seleccione Visual Basic **aplicación de Windows Forms** como el tipo de proyecto.  
   
 2. En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Seleccione la plantilla de elementos **LINQ to SQL clases** .  
   
@@ -76,9 +77,9 @@ Language-Integrated Query (LINQ) facilita el acceso a la información de base de
      [!code-vb[VbLINQToSQLHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#4)]  
     [!code-vb[VbLINQToSQLHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form2.vb#5)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ](index.md)
 - [Consultas](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [DataContext (métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [DataContext (Métodos) (Object Relational Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

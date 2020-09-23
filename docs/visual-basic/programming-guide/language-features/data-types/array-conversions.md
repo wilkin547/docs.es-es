@@ -12,14 +12,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 1d20b01200d3f967e3355dc6e9651291003d140e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 375c75c954f3be535272d674d9b786cad46b1a01
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402010"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077194"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversión de matrices (Visual Basic)
+
 Puede convertir un tipo de matriz en un tipo de matriz diferente siempre que se cumplan las siguientes condiciones:  
   
 - **Rango igual.** Los rangos de las dos matrices deben ser iguales, es decir, deben tener el mismo número de dimensiones. Sin embargo, no es necesario que las longitudes de las dimensiones respectivas sean las mismas.  
@@ -31,6 +32,7 @@ Puede convertir un tipo de matriz en un tipo de matriz diferente siempre que se 
  Una conversión de un tipo de matriz a otro es la ampliación o la restricción, dependiendo de si la conversión de los elementos respectivos es de ampliación o reducción. Para obtener más información, consulta [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Conversión a una matriz de objetos  
+
  Cuando se declara una `Object` matriz sin inicializarla, su tipo de elemento es `Object` siempre que permanezca sin inicializar. Cuando se establece en una matriz de una clase específica, toma el tipo de esa clase. Sin embargo, su tipo subyacente sigue siendo `Object` y puede establecerlo posteriormente en otra matriz de una clase no relacionada. Dado que todas las clases derivan de `Object` , puede cambiar el tipo de elemento de la matriz de cualquier clase a cualquier otra clase.  
   
  En el ejemplo siguiente, no existe ninguna conversión entre tipos `student` y `String` , pero ambos derivan de `Object` , por lo que todas las asignaciones son válidas.  
@@ -47,6 +49,7 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>Tipo subyacente de una matriz  
+
  Si declara originalmente una matriz con una clase concreta, su tipo de elemento subyacente es esa clase. Si posteriormente lo establece en una matriz de otra clase, debe haber una conversión entre las dos clases.  
   
  En el ejemplo siguiente, `students` es una `student` matriz. Dado que no existe ninguna conversión entre `String` y `student` , se produce un error en la última instrucción.  
@@ -59,13 +62,13 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Conversiones de tipos en Visual Basic](type-conversions.md)
 - [Conversiones implícitas y explícitas](implicit-and-explicit-conversions.md)
 - [Conversiones entre cadenas y otros tipos](conversions-between-strings-and-other-types.md)
 - [Cómo: Convertir un objeto en otro tipo en Visual Basic](how-to-convert-an-object-to-another-type.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
 - [Type Conversion Functions](../../../language-reference/functions/type-conversion-functions.md)
 - [Matrices](../arrays/index.md)

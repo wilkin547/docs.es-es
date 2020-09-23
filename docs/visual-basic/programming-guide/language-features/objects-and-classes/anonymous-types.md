@@ -8,14 +8,15 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: bbe84ce8a62705027c00bc26db74a3c21fa34fd9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5ab3cf8c3c02ff35890f71ad6c7f314b51b87133
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411809"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075244"
 ---
 # <a name="anonymous-types-visual-basic"></a>Tipos anónimos (Visual Basic)
+
 Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una definición de clase para el tipo de datos. En su lugar, el compilador genera una clase. La clase no tiene ningún nombre utilizable, hereda directamente de <xref:System.Object> y contiene las propiedades que se especifican para declarar el objeto. Dado que no se especifica el nombre del tipo de datos, se hace referencia a él como un *tipo anónimo*.  
   
  En el ejemplo siguiente se declara y `product` se crea una variable como una instancia de un tipo anónimo que tiene dos propiedades, `Name` y `Price` .  
@@ -38,6 +39,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
 > El nombre del tipo anónimo es generado por el compilador y puede variar de la compilación a la compilación. El código no debe utilizar o confiar en el nombre de un tipo anónimo porque el nombre puede cambiar cuando se vuelve a compilar un proyecto.  
   
 ## <a name="declaring-an-anonymous-type"></a>Declarar un tipo anónimo  
+
  La declaración de una instancia de un tipo anónimo usa una lista de inicializadores para especificar las propiedades del tipo. Solo se pueden especificar propiedades cuando se declara un tipo anónimo, no otros elementos de clase, como métodos o eventos. En el ejemplo siguiente, `product1` es una instancia de un tipo anónimo que tiene dos propiedades: `Name` y `Price` .  
   
  [!code-vb[VbVbalrAnonymousTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#4)]  
@@ -51,6 +53,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
  Para obtener más información sobre otras formas de especificar propiedades de tipo anónimo, vea [Cómo: inferir nombres y tipos de propiedades en declaraciones de tipos anónimos](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="key-properties"></a>Propiedades clave  
+
  Las propiedades clave difieren de las propiedades que no son de clave de varias maneras fundamentales:  
   
 - Solo se comparan los valores de las propiedades de clave para determinar si dos instancias son iguales.  
@@ -60,6 +63,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
 - Solo los valores de propiedad clave se incluyen en el algoritmo de código hash generado por el compilador para un tipo anónimo.  
   
 ### <a name="equality"></a>Igualdad  
+
  Las instancias de tipos anónimos solo pueden ser iguales si son instancias del mismo tipo anónimo. El compilador trata dos instancias como instancias del mismo tipo si cumplen las condiciones siguientes:  
   
 - Se declaran en el mismo ensamblado.  
@@ -79,18 +83,20 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
  [!code-vb[VbVbalrAnonymousTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#7)]  
   
 ### <a name="read-only-values"></a>Valores de solo lectura  
+
  No se pueden cambiar los valores de las propiedades de clave. Por ejemplo, en `prod8` el ejemplo anterior, los `Name` campos y `Price` son `read-only` , pero se `OnHand` pueden cambiar.  
   
  [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Tipos anónimos de expresiones de consulta  
+
  Las expresiones de consulta no siempre requieren la creación de tipos anónimos. Siempre que sea posible, usan un tipo existente para contener los datos de la columna. Esto sucede cuando la consulta devuelve registros completos del origen de datos o solo un campo de cada registro. En los siguientes ejemplos de código, `customers` es una colección de objetos de una `Customer` clase. La clase tiene muchas propiedades, y puede incluir una o más en el resultado de la consulta, en cualquier orden. En los dos primeros ejemplos, no se requieren tipos anónimos porque las consultas seleccionan elementos de tipos con nombre:  
   
-- `custs1`contiene una colección de cadenas, porque `cust.Name` es una cadena.  
+- `custs1` contiene una colección de cadenas, porque `cust.Name` es una cadena.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
-- `custs2`contiene una colección de `Customer` objetos, porque cada elemento de `customers` es un `Customer` objeto y la consulta selecciona todo el elemento.  
+- `custs2` contiene una colección de `Customer` objetos, porque cada elemento de `customers` es un `Customer` objeto y la consulta selecciona todo el elemento.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   
@@ -107,6 +113,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
  Para más información, vea [Introducción a LINQ en Visual Basic](../linq/introduction-to-linq.md).  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>Decidir si usar tipos anónimos  
+
  Antes de crear un objeto como una instancia de una clase anónima, tenga en cuenta si es la mejor opción. Por ejemplo, si desea crear un objeto temporal que contenga datos relacionados y no necesita otros campos y métodos que pueda contener una clase completa, un tipo anónimo es una buena solución. Los tipos anónimos también son útiles si desea una selección diferente de las propiedades de cada declaración, o si desea cambiar el orden de las propiedades. Sin embargo, si el proyecto incluye varios objetos que tienen las mismas propiedades, en un orden fijo, puede declararlos más fácilmente utilizando un tipo con nombre con un constructor de clase. Por ejemplo, con un constructor adecuado, es más fácil declarar varias instancias de una `Product` clase que declarar varias instancias de un tipo anónimo.  
   
  [!code-vb[VbVbalrAnonymousTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#9)]  
@@ -118,6 +125,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
  Lo que es más importante, existen limitaciones en el uso de tipos anónimos que no se aplican a las instancias de tipos con nombre. `firstProd2`, `secondProd2` y `thirdProd2` son instancias del mismo tipo anónimo. Sin embargo, el nombre del tipo anónimo compartido no está disponible y no puede aparecer donde se espera un nombre de tipo en el código. Por ejemplo, un tipo anónimo no se puede usar para definir una firma de método, para declarar otra variable o campo, o en cualquier declaración de tipo. Como resultado, los tipos anónimos no son adecuados cuando es necesario compartir información entre métodos.  
   
 ## <a name="an-anonymous-type-definition"></a>Una definición de tipo anónimo  
+
  En respuesta a la declaración de una instancia de un tipo anónimo, el compilador crea una nueva definición de clase que contiene las propiedades especificadas.  
   
  Si el tipo anónimo contiene al menos una propiedad de clave, la definición invalida tres miembros heredados de <xref:System.Object> : <xref:System.Object.Equals%2A> , <xref:System.Object.GetHashCode%2A> y <xref:System.Object.ToString%2A> . El código generado para probar la igualdad y determinar el valor del código hash solo tiene en cuenta las propiedades clave. Si el tipo anónimo no contiene propiedades de clave, solo <xref:System.Object.ToString%2A> se invalida. Las propiedades con nombre explícito de un tipo anónimo no pueden entrar en conflicto con estos métodos generados. Es decir, no puede utilizar `.Equals` , `.GetHashCode` o `.ToString` para asignar un nombre a una propiedad.  
@@ -126,7 +134,7 @@ Visual Basic admite tipos anónimos, que permiten crear objetos sin escribir una
   
  Para obtener más información sobre el código creado por el compilador y la funcionalidad de los métodos invalidados, vea [definición de tipo anónimo](anonymous-type-definition.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inicializadores de objeto: tipos con nombre y anónimos](object-initializers-named-and-anonymous-types.md)
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)

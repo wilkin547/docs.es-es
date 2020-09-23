@@ -21,14 +21,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 01f1f7ef5963feeb3fe2b5390244e4e516773bad
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 87ba5132afe9f5a7cd6fb33d716c670f4812c7e2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393849"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077116"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Cómo: Usar clases genéricas (Visual Basic)
+
 Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si usa una clase genérica, puede generar una *clase construida* a partir de ella proporcionando un *argumento de tipo* para cada uno de estos parámetros. Después, puede declarar una variable del tipo de clase construida, crear una instancia de la clase construida y asignarla a esa variable.  
   
  Además de clases, también puede definir y usar estructuras genéricas, interfaces, procedimientos y delegados.  
@@ -45,9 +46,9 @@ Las clases que toman *parámetros de tipo* se denominan *clases genéricas*. Si 
   
      [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipos genéricos en Visual Basic](generic-types.md)
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../../../standard/language-independence-and-language-independent-components.md)
 - [De](../../../language-reference/statements/of-clause.md)

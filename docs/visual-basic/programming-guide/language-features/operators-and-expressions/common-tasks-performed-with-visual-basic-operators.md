@@ -13,56 +13,61 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: 62ced7f2048ae41c7ea4c9d62c0ff0a903c37856
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8a8d7898e52077fef47b91172e34ad50d7f54e7
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388925"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075218"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Tareas comunes realizadas con los operadores de Visual Basic
+
 Los operadores realizan muchas tareas comunes que implican una o varias expresiones llamadas *operandos*.  
   
 ## <a name="arithmetic-and-bit-shift-tasks"></a>Tareas aritméticas y de desplazamiento de bits  
+
  En la tabla siguiente se resumen las operaciones aritméticas y de desplazamiento de bits disponibles.  
   
 |En|Vea|  
 |---|---|  
 |Agregar un valor numérico a otro|[+ (Operador)](../../../language-reference/operators/addition-operator.md)|  
-|Resta de un valor numérico de otro|[Operador-(Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
-|Invertir el signo de un valor numérico|[Operador-(Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Resta de un valor numérico de otro|[- (Operador, Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
+|Invertir el signo de un valor numérico|[- (Operador, Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
 |Multiplicar un valor numérico por otro|[* (Operador)](../../../language-reference/operators/multiplication-operator.md)|  
 |Dividir un valor numérico en otro|[Operador/(Visual Basic)](../../../language-reference/operators/floating-point-division-operator.md)|  
 |Buscar el cociente de un valor numérico dividido por otro (sin el resto)|[Operador (Visual Basic)](../../../language-reference/operators/integer-division-operator.md)|  
 |Buscar el resto de un valor numérico dividido entre otro (sin el cociente)|[Mod (Operador)](../../../language-reference/operators/mod-operator.md)|  
 |Eleva un valor numérico a la potencia de otro|[^ (Operador)](../../../language-reference/operators/exponentiation-operator.md)|  
-|Desplazar el patrón de bits de un valor numérico a la izquierda|[<\<Operator](../../../language-reference/operators/left-shift-operator.md)|  
+|Desplazar el patrón de bits de un valor numérico a la izquierda|[<\< Operator](../../../language-reference/operators/left-shift-operator.md)|  
 |Desplazar el patrón de bits de un valor numérico a la derecha|[>> (operador)](../../../language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Tareas de comparación  
+
  En la tabla siguiente se resumen las operaciones de comparación disponibles.  
   
 |En|Vea|  
 |---|---|  
-|Determinar si dos valores son iguales|`=`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si dos valores no son iguales|`<>`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si un valor es menor que otro|`<`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si un valor es mayor que otro|`>`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si un valor es menor o igual que otro|`<=`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si un valor es mayor o igual que otro|`>=`Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
-|Determinar si dos variables de objeto hacen referencia a la misma instancia de objeto|[Operador is](../../../language-reference/operators/is-operator.md)|  
+|Determinar si dos valores son iguales|`=` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si dos valores no son iguales|`<>` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si un valor es menor que otro|`<` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si un valor es mayor que otro|`>` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si un valor es menor o igual que otro|`<=` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si un valor es mayor o igual que otro|`>=` Operador ([operadores de comparación en Visual Basic](comparison-operators.md))|  
+|Determinar si dos variables de objeto hacen referencia a la misma instancia de objeto|[Operador Is](../../../language-reference/operators/is-operator.md)|  
 |Determinar si dos variables de objeto hacen referencia a distintas instancias de objeto|[Operador IsNot](../../../language-reference/operators/isnot-operator.md)|  
-|Determinar si un objeto es de un tipo específico|[Typeof (operador)](../../../language-reference/operators/typeof-operator.md)|  
+|Determinar si un objeto es de un tipo específico|[Operador TypeOf](../../../language-reference/operators/typeof-operator.md)|  
   
 ## <a name="concatenation-tasks"></a>Tareas de concatenación  
+
  En la tabla siguiente se resumen las operaciones de concatenación disponibles.  
   
 |En|Vea|  
 |---|---|  
-|Combinar varias cadenas en una sola cadena|`&`Operador ([operadores de concatenación en Visual Basic](concatenation-operators.md))|  
-|Combinar valores numéricos con valores de cadena|`+`Operador ([operadores de concatenación en Visual Basic](concatenation-operators.md))|  
+|Combinar varias cadenas en una sola cadena|`&` Operador ([operadores de concatenación en Visual Basic](concatenation-operators.md))|  
+|Combinar valores numéricos con valores de cadena|`+` Operador ([operadores de concatenación en Visual Basic](concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>Tareas lógicas y bit a bit  
+
  En la tabla siguiente se resumen las operaciones lógicas y bit a bit disponibles.  
   
 |En|Vea|  
@@ -78,7 +83,7 @@ Los operadores realizan muchas tareas comunes que implican una o varias expresio
 |Realizar disyunción lógica exclusiva bit a bit en dos valores enteros|[Operador Xor](../../../language-reference/operators/xor-operator.md)|  
 |Realizar una negación lógica de bits a bit en un valor entero|[Operador Not](../../../language-reference/operators/not-operator.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operadores y expresiones](index.md)
 - [Lista de operadores según funcionalidad](../../../language-reference/operators/operators-listed-by-functionality.md)

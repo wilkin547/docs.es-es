@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: de101309fa1edaaddc3defc5759d9293fbef684c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 68b8a9898cba846b63ed8ce9d8329516f12e90cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388548"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075179"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Cómo: Llamar a un procedimiento sobrecargado (Visual Basic)
+
 La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. El código de llamada puede obtener la información que necesita para pasar al procedimiento y, a continuación, llamar a un nombre de procedimiento único, independientemente de los argumentos que pase.  
   
 ### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Para llamar a un procedimiento que tiene más de una versión definida  
@@ -32,7 +33,7 @@ La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. El 
   
      [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
@@ -42,5 +43,5 @@ La ventaja de sobrecargar un procedimiento es la flexibilidad de la llamada. El 
 - [Procedimiento para sobrecargar un procedimiento que toma parámetros opcionales](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Procedimiento para sobrecargar un procedimiento que toma un número indefinido de parámetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Consideraciones sobre la sobrecarga de procedimientos](./considerations-in-overloading-procedures.md)
-- [Resolución de sobrecarga](./overload-resolution.md)
+- [Overload Resolution](./overload-resolution.md)
 - [Sobrecargas](../../../language-reference/modifiers/overloads.md)
