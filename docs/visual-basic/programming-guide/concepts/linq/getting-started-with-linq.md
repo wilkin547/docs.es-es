@@ -8,17 +8,19 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554389"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090318"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Introducción a LINQ en Visual Basic
+
 Esta sección contiene información general, ejemplos e información general que le ayudará a entender y usar Visual Basic y Language-Integrated Query (LINQ).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Escritura de la primera consulta con LINQ](writing-your-first-linq-query.md)  
  Describe las tres fases para escribir una consulta LINQ básica: obtener el origen de datos, escribir la consulta y ejecutar la consulta.  
   
@@ -35,6 +37,7 @@ Esta sección contiene información general, ejemplos e información general que
  Instrucciones paso a paso para crear un proyecto de Visual Basic LINQ, agregar un origen de datos simple y realizar algunas operaciones básicas de consulta.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Introducción a LINQ en Visual Basic](../../language-features/linq/introduction-to-linq.md)  
  Incluye información general sobre las consultas en LINQ y ofrece vínculos a recursos adicionales.  
   

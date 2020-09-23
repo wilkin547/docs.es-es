@@ -10,17 +10,19 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: be388998da5e88f99c62128e6ad63d5a476153ba
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee8700ea757cee9c20e2598de029f54ae33a7114
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393057"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090162"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Conversiones de tipos en Visual Basic
+
 El proceso de cambiar un valor de un tipo de datos a otro se denomina *conversión*. Las conversiones son de *ampliación* o de *restricción*, en función de las capacidades de datos de los tipos implicados. También son *implícitas* o *explícitas*, dependiendo de la sintaxis del código fuente.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Widening and Narrowing Conversions](widening-and-narrowing-conversions.md)  
  Explica las conversiones clasificadas por si el tipo de destino puede contener los datos.  
   
@@ -37,10 +39,11 @@ El proceso de cambiar un valor de un tipo de datos a otro se denomina *conversi�
  Le guía por el proceso de conversión entre matrices de tipos de datos diferentes.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Tipos de datos](index.md)  
+
+ [Tipo de datos](index.md)  
  Presenta los tipos de datos Visual Basic y describe cómo usarlos.  
   
- [Tipos de datos](../../../language-reference/data-types/index.md)  
+ [Tipo de datos](../../../language-reference/data-types/index.md)  
  Enumera los tipos de datos básicos proporcionados por Visual Basic.  
   
  [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)  

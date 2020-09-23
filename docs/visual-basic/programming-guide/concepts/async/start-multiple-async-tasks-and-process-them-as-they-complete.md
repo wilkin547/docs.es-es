@@ -2,14 +2,15 @@
 title: Iniciar varias tareas asincrónicas y procesarlas a medida que se completan
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: e227029928676e21d3ed14450140e92b386bf216
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52e4d786667a70730f311ca20a30acd7108107e3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400802"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090374"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Start Multiple Async Tasks and Process Them As They Complete (Visual Basic) (Inicio de varias tareas asincrónicas y cómo procesarlas a medida que se completan [Visual Basic])
+
 Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.  
   
  En el siguiente ejemplo se usa una consulta para crear una colección de tareas. Cada tarea descarga el contenido de un sitio web especificado. En cada iteración de un bucle while, una llamada awaited a `WhenAny` devuelve la tarea en la colección de tareas que termine primero su descarga. Esa tarea se quita de la colección y se procesa. El bucle se repite hasta que la colección no contiene más tareas.  
@@ -18,7 +19,8 @@ Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
 > Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior instalados en el equipo.  
   
 ## <a name="downloading-the-example"></a>Descargar el ejemplo  
- Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.  
+
+ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.  
   
 1. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.  
   
@@ -37,6 +39,7 @@ Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType
  Si no desea descargar el proyecto, puede revisar el archivo MainWindow.xaml.vb al final de este tema.  
   
 ## <a name="building-the-example"></a>Compilación del ejemplo  
+
  En este ejemplo se agrega al código que [se ha desarrollado en cancelar las tareas asincrónicas restantes una vez que se ha completado una (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) y se usa la misma interfaz de usuario.  
   
  Para generar el ejemplo personalmente, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAfterOneTask** como el **Proyecto de inicio**. Agregue los cambios de este tema al método `AccessTheWebAsync` de ese proyecto. Los cambios se marcan con asteriscos.  
@@ -83,11 +86,12 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
 > Puede usar `WhenAny` en un bucle, como se describe en el ejemplo, para solucionar problemas que implican un número reducido de tareas. Sin embargo, otros enfoques son más eficaces si hay que procesar un gran número de tareas. Para obtener más información y ejemplos, consulte [procesamiento de tareas a medida que se completan](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).  
   
 ## <a name="complete-example"></a>Ejemplo completo  
- El código siguiente es el texto completo del archivo MainWindow.xaml.vb para el ejemplo. Los asteriscos marcan los elementos que se han agregado a este ejemplo.  
+
+ El código siguiente es el texto completo del archivo MainWindow.xaml.vb para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.  
   
  Observe que debe agregar una referencia para <xref:System.Net.Http>.  
   
- Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).  
+ Puede descargar el proyecto desde [Async Sample: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -210,4 +214,4 @@ End Class
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])
 - [Programación asincrónica con Async y Await (Visual Basic)](index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación)
+- [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
