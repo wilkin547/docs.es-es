@@ -13,14 +13,15 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 49b9c8d1a6db56a56b50c16b4a6bb5b928df6c7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5acbd0439ddbb956b80d56e23d11cd5e152f37ff
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388042"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087406"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Cómo: Definir un operador (Visual Basic)
+
 Si ha definido una clase o estructura, puede definir el comportamiento de un operador estándar (como `*` , `<>` o `And` ) cuando uno o los dos operandos son del tipo de la clase o estructura.  
   
  Defina el operador estándar como procedimiento de operador dentro de la clase o estructura. Todos los procedimientos de operador deben ser `Public` `Shared` .  
@@ -28,6 +29,7 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
  La definición de un operador en una clase o estructura también se denomina *sobrecargar* el operador.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se define el `+` operador para una estructura denominada `height` . La estructura utiliza altos medidos en pies y pulgadas. Una *pulgada* es 2,54 centímetros y un *pie* es 12 pulgadas. Para garantizar valores normalizados (pulgadas < 12,0), el constructor realiza la aritmética de *módulo* 12. El `+` operador usa el constructor para generar valores normalizados.  
   
  [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
@@ -36,7 +38,7 @@ Si ha definido una clase o estructura, puede definir el comportamiento de un ope
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos de operador](./operator-procedures.md)
 - [Procedimiento para definir un operador de conversión](./how-to-define-a-conversion-operator.md)

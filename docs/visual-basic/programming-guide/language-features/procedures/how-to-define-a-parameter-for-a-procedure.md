@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: e703346113348556b8a3ea41a7934a55a8008522
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 73b53dcf7cd732af1a4f1d23cd0d3b9ef5b5529b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388081"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087445"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Cómo: Definir parámetros para un procedimiento (Visual Basic)
+
 Un *parámetro* permite al código de llamada pasar un valor al procedimiento cuando lo llama. Declare cada parámetro de un procedimiento de la misma manera que declara una variable, especificando su nombre y tipo de datos. También se especifica el mecanismo de paso y si el parámetro es opcional.  
   
  Para obtener más información, vea [argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md).  
@@ -52,7 +53,7 @@ Un *parámetro* permite al código de llamada pasar un valor al procedimiento cu
   
     - Esto da como resultado una ejecución más rápida del código. Una razón para esto es que, si no se especifica un tipo de datos para un elemento de programación, el compilador Visual Basic le asigna el `Object` tipo. Es posible que el código compilado tenga que realizar la conversión entre `Object` y otros tipos de datos, lo que reduce el rendimiento.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](./index.md)
 - [Procedimientos Sub](./sub-procedures.md)

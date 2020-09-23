@@ -10,17 +10,19 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 5561812a53e2fe45c3ad4d12d0e18a8a1e948559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411771"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087484"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos con nombre y anónimos (Visual Basic)
+
 Los inicializadores de objeto permiten especificar propiedades para un objeto complejo mediante el uso de una sola expresión. Se pueden usar para crear instancias de tipos con nombre y de tipos anónimos.  
   
 ## <a name="declarations"></a>Declaraciones  
+
  Las declaraciones de instancias de tipos con nombre y anónimos pueden ser prácticamente idénticas, pero sus efectos no son los mismos. Cada categoría tiene capacidades y restricciones propias. En el ejemplo siguiente se muestra una manera cómoda de declarar e inicializar una instancia de una clase con nombre, `Customer` , mediante una lista de inicializadores de objeto. Observe que el nombre de la clase se especifica después de la palabra clave `New` .  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -32,6 +34,7 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
  Los requisitos y los resultados de las dos declaraciones no son los mismos. Para `namedCust` , una `Customer` clase que tiene una `Name` propiedad ya debe existir y la declaración crea una instancia de esa clase. Para `anonymousCust` , el compilador define una nueva clase que tiene una propiedad, una cadena denominada `Name` y crea una nueva instancia de esa clase.  
   
 ## <a name="named-types"></a>Tipos con nombre  
+
  Los inicializadores de objeto proporcionan una manera sencilla de llamar al constructor de un tipo y, a continuación, establecer los valores de algunas o todas las propiedades en una única instrucción. El compilador invoca el constructor adecuado para la instrucción: el constructor sin parámetros si no se presentan argumentos, o un constructor con parámetros si se envían uno o más argumentos. Después, las propiedades especificadas se inicializan en el orden en que se presentan en la lista de inicializadores.  
   
  Cada inicialización en la lista de inicializadores consta de la asignación de un valor inicial a un miembro de la clase. Los nombres y los tipos de datos de los miembros se determinan cuando se define la clase. En los ejemplos siguientes, la `Customer` clase debe existir y debe tener miembros denominados `Name` y `City` que puedan aceptar valores de cadena.  
@@ -57,6 +60,7 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
  Sin embargo, la lista de inicialización no puede estar vacía. Las propiedades sin inicializar conservan sus valores predeterminados.  
   
 ### <a name="type-inference-with-named-types"></a>Inferencia de tipos con tipos con nombre  
+
  Puede acortar el código para la declaración de `cust1` combinando los inicializadores de objeto y la inferencia de tipo local. Esto le permite omitir la `As` cláusula en la declaración de variable. El tipo de datos de la variable se deduce del tipo del objeto creado por la asignación. En el ejemplo siguiente, el tipo de `cust6` es `Customer` .  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
@@ -94,6 +98,7 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Tipos anónimos  
+
  Los tipos anónimos usan inicializadores de objeto para crear instancias de nuevos tipos que no se definen explícitamente ni se denominan. En su lugar, el compilador genera un tipo de acuerdo con las propiedades que se designan en la lista de inicializadores de objeto. Dado que no se especifica el nombre del tipo, se hace referencia a él como un *tipo anónimo*. Por ejemplo, compare la siguiente declaración con la anterior para `cust6` .  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
@@ -127,7 +132,7 @@ Los inicializadores de objeto permiten especificar propiedades para un objeto co
   
      Para obtener más información sobre las opciones para definir propiedades en tipos anónimos, vea [Cómo: inferir nombres y tipos de propiedades en declaraciones de tipos anónimos](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inferencia de tipo de variable local](../variables/local-type-inference.md)
 - [Tipos anónimos](anonymous-types.md)

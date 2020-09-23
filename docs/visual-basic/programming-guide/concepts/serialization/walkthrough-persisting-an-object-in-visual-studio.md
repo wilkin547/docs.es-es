@@ -2,14 +2,15 @@
 title: Conservar un objeto en Visual Studio
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b2fff171164a29e6066839371fc95ad41b452f1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558607"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086470"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Tutorial: Conservar un objeto en Visual Studio (Visual Basic)
+
 Aunque puede establecer las propiedades de un objeto en los valores predeterminados en el tiempo de diseño, cualquier valor que se establezca en tiempo de ejecución se pierde cuando se destruye el objeto. Puede usar la serialización para conservar los datos de un objeto entre instancias, lo que le permite almacenar valores y recuperarlos la próxima vez que se cree una instancia del objeto.  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
 > Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Crear el objeto Loan  
+
  El primer paso consiste en crear una clase `Loan` y una aplicación de prueba que use la clase.  
   
 ### <a name="to-create-the-loan-class"></a>Para crear la clase Loan  
@@ -123,6 +125,7 @@ Aunque puede establecer las propiedades de un objeto en los valores predetermina
  En el mundo real, las tasas de interés cambian periódicamente, pero no necesariamente cada vez que se ejecuta la aplicación. En lugar de hacer que el usuario actualice la tasa de interés cada vez que se ejecuta la aplicación, es mejor conservar la tasa de interés más reciente entre instancias de la aplicación. En el paso siguiente, hará esto agregando la serialización a la clase Loan.  
   
 ## <a name="using-serialization-to-persist-the-object"></a>Usar la serialización para conservar el objeto  
+
  Para conservar los valores de la clase Loan, primero debe marcar la clase con el atributo `Serializable`.  
   
 ### <a name="to-mark-a-class-as-serializable"></a>Para marcar una clase como serializable  
