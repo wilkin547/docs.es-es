@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: fa5920cfd25f61f6e6c7d5438ef7c0e38a48fa1e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4ea37c4393a8ece5513327b22c6c0ba4b027c781
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401958"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059189"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Cómo: Obtener acceso a caracteres de cadenas en Visual Basic
+
 En este ejemplo se muestra cómo utilizar la <xref:System.String.Chars%2A> propiedad para tener acceso al carácter que se encuentra en la ubicación especificada de una cadena.  
   
 ## <a name="example"></a>Ejemplo  
+
  A veces resulta útil tener datos sobre los caracteres de la cadena y las posiciones de esos caracteres dentro de la cadena. Puede pensar en una cadena como una matriz de caracteres ( `Char` instancias); puede recuperar un carácter determinado haciendo referencia al índice de ese carácter a través de la <xref:System.String.Chars%2A> propiedad.  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
@@ -23,11 +25,12 @@ En este ejemplo se muestra cómo utilizar la <xref:System.String.Chars%2A> propi
  El `index` parámetro de la <xref:System.String.Chars%2A> propiedad es de base cero.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  La <xref:System.String.Chars%2A> propiedad devuelve el carácter que se encuentra en la posición especificada. Sin embargo, algunos caracteres Unicode pueden estar representados por más de un carácter. Para obtener más información sobre cómo trabajar con caracteres Unicode, vea [Cómo: convertir una cadena en una matriz de caracteres](how-to-convert-a-string-to-an-array-of-characters.md).  
   
  La <xref:System.String.Chars%2A> propiedad produce una <xref:System.IndexOutOfRangeException> excepción si el `index` parámetro es mayor o igual que la longitud de la cadena, o si es menor que cero.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.String.Chars%2A>
 - [Procedimiento para convertir una cadena en una matriz de caracteres](how-to-convert-a-string-to-an-array-of-characters.md)

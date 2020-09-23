@@ -7,14 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a6b70d0973e92db90e35e61b7fed2279c5b0bac3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393979"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058552"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Cómo: Declarar una estructura (Visual Basic)
+
 Comienza una declaración de estructura con la [instrucción Structure](../../../language-reference/statements/structure-statement.md)y la finaliza con la `End Structure` instrucción. Entre estas dos instrucciones debe declarar al menos un *elemento*. Los elementos pueden ser de cualquier tipo de datos, pero al menos uno debe ser una variable no compartida o un evento no personalizado no compartido.  
   
  No se puede inicializar ninguno de los elementos de la estructura en la declaración de la estructura. Cuando se declara una variable para que sea de un tipo de estructura, se asignan valores a los elementos accediendo a ellas a través de la variable.  
@@ -55,9 +56,9 @@ Comienza una declaración de estructura con la [instrucción Structure](../../..
   
      Además de las variables, `Sub` procedimientos y eventos, también puede definir constantes, `Function` procedimientos y propiedades en una estructura. Puede designar como máximo una propiedad como la *propiedad predeterminada*, siempre que tome al menos un argumento. Puede controlar un evento con un procedimiento [compartido](../../../language-reference/modifiers/shared.md) `Sub` . Para obtener más información, vea [Cómo: declarar y llamar a una propiedad predeterminada en Visual Basic](../procedures/how-to-declare-and-call-a-default-property.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)
 - [Tipos de datos compuestos](composite-data-types.md)
 - [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)

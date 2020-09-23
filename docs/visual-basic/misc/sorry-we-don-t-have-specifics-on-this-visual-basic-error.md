@@ -3044,14 +3044,15 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357809"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059644"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Lo sentimos, no tenemos detalles sobre este error de Visual Basic
+
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. Si lo prefiere, puede preguntar a otros desarrolladores a través de uno de estos foros:  
   
  [Visual Basic (lenguaje)](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
@@ -3069,10 +3070,10 @@ Lo sentimos, pero no tenemos información específica sobre este error. Puede bu
  [Stackoverflow](https://stackoverflow.com/questions/tagged/vb.net)  
  Proporciona un foro para preguntas y problemas con Visual Basic.  
   
- Consulte también:  
+ Vea también:  
  [Recursos adicionales para programadores de Visual Basic](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación en Visual Basic](../programming-guide/index.md)
 - [Referencia de Visual Basic](../reference/index.md)

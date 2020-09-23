@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 90f8e5d4eb7bb6b367ee5ffd4a4323097c6bde9c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5db62fec3548bfd4a99477958f4f29463267c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405047"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057837"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
+
 Las *interfaces* definen las propiedades, los métodos y los eventos que pueden implementar las clases. Las interfaces permiten definir características como grupos pequeños de propiedades, métodos y eventos estrechamente relacionados; esto reduce los problemas de compatibilidad porque se pueden desarrollar implementaciones mejoradas para las interfaces sin comprometer el código existente. En cualquier momento se pueden agregar nuevas características mediante el desarrollo de implementaciones e interfaces adicionales.  
   
  Hay otras razones por las que se podrían usar las interfaces en vez de la herencia de clases:  
@@ -28,6 +29,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
 - Las interfaces son útiles cuando no se puede usar la herencia de clases. Por ejemplo, las estructuras no pueden heredar de clases, pero pueden implementar interfaces.  
   
 ## <a name="declaring-interfaces"></a>Declarar interfaces  
+
  Las definiciones de interfaz se encuentran dentro de las instrucciones `Interface` y `End Interface`. Después de la instrucción `Interface`, puede agregar una instrucción `Inherits` opcional que muestra una o varias interfaces heredadas. Las instrucciones `Inherits` deben preceder a todas las demás instrucciones de la declaración a excepción de los comentarios. El resto de instrucciones de la definición de interfaz deben ser instrucciones `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` y `Enum`. Las interfaces no pueden contener código de implementación ni instrucciones asociadas al código de implementación, como `End Sub` o `End Property`.  
   
  En un espacio de nombres, las instrucciones de interfaz son `Friend` de forma predeterminada, pero también se pueden declarar explícitamente como `Public` o `Friend`. Las interfaces definidas dentro de clases, módulos, interfaces y estructuras son `Public` de forma predeterminada, pero también se pueden declarar explícitamente como `Public`, `Friend`, `Protected` o `Private`.  
@@ -40,12 +42,15 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementar interfaces  
+
  La palabra reservada Visual Basic `Implements` se usa de dos maneras. La instrucción `Implements` significa que una clase o estructura implementa una interfaz. La palabra clave `Implements` significa que un miembro de clase o de estructura implementa un miembro de interfaz específico.  
   
 ### <a name="implements-statement"></a>Implements (Instrucción)  
+
  Si una clase o estructura implementa una o más interfaces, debe incluir la instrucción `Implements` inmediatamente después de la instrucción `Class` o `Structure`. La instrucción `Implements` requiere una lista separada por comas de las interfaces que implementará una clase. La clase o estructura debe implementar todos los miembros de interfaz mediante la palabra clave `Implements`.  
   
 ### <a name="implements-keyword"></a>Implements (palabra clave)  
+
  La palabra clave `Implements` requiere una lista separada por comas de los miembros de interfaz que se implementarán. Por lo general solo se especifica un miembro de interfaz, pero pueden especificarse varios. La especificación de un miembro de interfaz consta del nombre de la interfaz —que debe especificarse en una instrucción implements dentro de la clase—, un punto y el nombre de la función miembro, propiedad o evento que se va a implementar. El nombre de un miembro que implementa un miembro de interfaz puede usar cualquier identificador legal y no se limita a la `InterfaceName_MethodName` Convención utilizada en versiones anteriores de Visual Basic.  
   
  Por ejemplo, el código siguiente muestra cómo declarar una subrutina denominada `Sub1` que implementa un método de una interfaz:  
@@ -63,6 +68,7 @@ Las *interfaces* definen las propiedades, los métodos y los eventos que pueden 
  Se puede usar un miembro privado para implementar un miembro de interfaz. Cuando un miembro privado implementa un miembro de una interfaz, ese miembro pasa a estar disponible por medio de la interfaz incluso si no está disponible directamente en las variables de objeto de la clase.  
   
 ### <a name="interface-implementation-examples"></a>Ejemplos de implementación de interfaces  
+
  Las clases que implementan una interfaz deben implementar todas sus propiedades, métodos y eventos.  
   
  En el ejemplo siguiente se definen dos interfaces. La segunda interfaz, `Interface2`, hereda `Interface1` y define un método y una propiedad adicionales.  

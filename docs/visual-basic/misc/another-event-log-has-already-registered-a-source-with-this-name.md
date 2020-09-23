@@ -2,14 +2,15 @@
 title: Otro registro de eventos ya ha registrado un origen con este nombre.
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 333c28036e2d1b7514c7370b98ff70a6d195a9dd
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940621"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058396"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Otro registro de eventos ya ha registrado un origen con este nombre.
+
 Se ha intentado escribir una entrada en un registro de eventos donde el origen especificado está registrado con otro registro de eventos.  
   
  Debe establecer la propiedad <xref:System.Diagnostics.EventLog.Source%2A> de la instancia de componente <xref:System.Diagnostics.EventLog> antes de que el componente escriba una entrada en un registro. Cuando ocurre esto, el sistema comprueba que el origen especificado está registrado con el registro de eventos en el que el componente está escribiendo y llama a <xref:System.Diagnostics.EventLog.CreateEventSource%2A> , si es necesario.  
@@ -22,4 +23,4 @@ Se ha intentado escribir una entrada en un registro de eventos donde el origen e
   
 ## <a name="see-also"></a>Vea también
 
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My. Application. log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

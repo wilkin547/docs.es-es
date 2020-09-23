@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414458"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058903"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Cómo: Declarar enumeraciones (Visual Basic)
+
 Cree una enumeración con la `Enum` instrucción en la sección de declaraciones de una clase o módulo. No se puede declarar una enumeración dentro de un método. Para especificar el nivel de acceso adecuado, use `Private` , `Protected` , `Friend` o `Public` .  
   
  Un `Enum` tipo tiene un nombre, un tipo subyacente y un conjunto de campos, cada uno de los cuales representa una constante. El nombre debe ser un calificador de .NET Visual Basic válido. El tipo subyacente debe ser uno de los tipos enteros ( `Byte` , `Short` o) `Long` `Integer` . `Integer` es el valor predeterminado. Las enumeraciones siempre tienen un tipo seguro y no son intercambiables con tipos de números enteros.  
@@ -42,7 +43,7 @@ Cree una enumeración con la `Enum` instrucción en la sección de declaraciones
   
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones y calificación de nombres](enumerations-and-name-qualification.md)
 - [Procedimiento para hacer referencia al miembro de una enumeración](how-to-refer-to-an-enumeration-member.md)

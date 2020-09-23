@@ -7,14 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 7feaf71fa1c59c24aa751f2b9e28328d47ba357c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1add054a6cb6468f4581f92ca3a258c5b0cdc77d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413071"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058864"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Cómo: Inicializar una variable de matriz en Visual Basic
+
 Para inicializar una variable de matriz, incluya un literal de matriz en una `New` cláusula y especifique los valores iniciales de la matriz. Puede especificar el tipo o permitir que se infiera de los valores del literal de matriz. Para obtener más información sobre cómo se deduce el tipo, vea "rellenar una matriz con valores iniciales" en [matrices](index.md).  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Para inicializar una variable de matriz mediante un literal de matriz  
@@ -33,7 +34,7 @@ Para inicializar una variable de matriz, incluya un literal de matriz en una `Ne
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- Puede especificar explícitamente los límites de la matriz o dejarlos fuera y hacer que el compilador deduzca los límites de la matriz basándose en los valores del literal de matriz. Si proporciona los límites superiores y los valores, debe incluir un valor para cada elemento desde el índice 0 hasta el límite superior de cada dimensión. En el ejemplo siguiente se muestran varias maneras de declarar, crear e inicializar una variable para que contenga una matriz bidimensional que tiene elementos de tipo`Short`  
+- Puede especificar explícitamente los límites de la matriz o dejarlos fuera y hacer que el compilador deduzca los límites de la matriz basándose en los valores del literal de matriz. Si proporciona los límites superiores y los valores, debe incluir un valor para cada elemento desde el índice 0 hasta el límite superior de cada dimensión. En el ejemplo siguiente se muestran varias maneras de declarar, crear e inicializar una variable para que contenga una matriz bidimensional que tiene elementos de tipo `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   
@@ -53,7 +54,7 @@ Para inicializar una variable de matriz, incluya un literal de matriz en una `Ne
   
      [!code-vb[VbVbalrArrays#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#32)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Matrices](index.md)
 - [Solución de problemas de matrices](troubleshooting-arrays.md)

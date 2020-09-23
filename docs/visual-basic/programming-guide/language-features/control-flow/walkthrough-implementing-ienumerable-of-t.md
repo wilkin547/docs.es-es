@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402036"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058643"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Tutorial: Implementar IEnumerable(Of T) en Visual Basic
+
 La <xref:System.Collections.Generic.IEnumerable%601> interfaz la implementan las clases que pueden devolver una secuencia de valores de un elemento cada vez. La ventaja de devolver datos de un elemento a la vez es que no es necesario cargar el conjunto de datos completo en la memoria para trabajar con él. Solo tiene que usar la memoria suficiente para cargar un solo elemento de los datos. Las clases que implementan la `IEnumerable(T)` interfaz se pueden utilizar con `For Each` bucles o consultas LINQ.  
   
  Por ejemplo, considere una aplicación que debe leer un archivo de texto grande y devolver cada línea del archivo que coincida con criterios de búsqueda determinados. La aplicación usa una consulta LINQ para devolver las líneas del archivo que coinciden con los criterios especificados. Para consultar el contenido del archivo mediante una consulta LINQ, la aplicación podría cargar el contenido del archivo en una matriz o una colección. Sin embargo, cargar el archivo completo en una matriz o colección consumiría mucha más memoria de la necesaria. En su lugar, la consulta LINQ podría consultar el contenido del archivo mediante una clase Enumerable, devolviendo solo los valores que coinciden con los criterios de búsqueda. Las consultas que devuelven solo unos pocos valores coincidentes consumirán mucha menos memoria.  
@@ -93,7 +94,7 @@ La <xref:System.Collections.Generic.IEnumerable%601> interfaz la implementan las
   
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../linq/introduction-to-linq.md)
 - [Flujo de control](index.md)

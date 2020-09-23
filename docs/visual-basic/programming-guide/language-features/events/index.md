@@ -5,27 +5,31 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 15ab02c20c1baf0fbc9087bfe2e75ec97acd0734
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559342"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057941"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
+
 Aunque podría visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas están controlados por eventos, lo que significa que el flujo de ejecución viene determinado por repeticiones externas denominadas *eventos*.  
   
  Un evento es una señal que comunica a una aplicación que ha sucedido algo importante. Por ejemplo, cuando un usuario hace clic en un control en un formulario, el formulario puede provocar un evento `Click` y llamar a un procedimiento que controla el evento. Los eventos también permiten que las tareas independientes se comuniquen. Por ejemplo, supongamos que la aplicación realiza una tarea de ordenación de manera independiente a la aplicación principal. Si un usuario cancela la ordenación, la aplicación puede enviar un evento de cancelación que indica al proceso de ordenación que se detenga.  
   
 ## <a name="event-terms-and-concepts"></a>Conceptos y términos de eventos  
+
  En esta sección se describen los términos y conceptos que se usan con los eventos de Visual Basic.  
   
 ### <a name="declaring-events"></a>Declarar eventos  
+
  Puede declarar eventos dentro de clases, estructuras, módulos e interfaces con la palabra clave `Event`, como en el ejemplo siguiente:  
   
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Provocar eventos  
+
  Un evento es como un mensaje que anuncia que ha sucedido algo importante. La acción de difundir el mensaje se denomina *generar* el evento. En Visual Basic, se generan eventos con la `RaiseEvent` instrucción, como en el ejemplo siguiente:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
@@ -33,9 +37,11 @@ Aunque podría visualizar un proyecto de Visual Studio como una serie de procedi
  Los eventos deben generarse dentro del ámbito de la clase, del módulo o de la estructura donde se declaran. Por ejemplo, una clase derivada no puede generar eventos heredados de una clase base.  
   
 ### <a name="event-senders"></a>Remitentes de eventos  
+
  Cualquier objeto capaz de generar un evento es un *remitente del evento*, lo que también se conoce como *origen del evento*. Los formularios, controles y objetos definidos por el usuario son ejemplos de remitentes de eventos.  
   
 ### <a name="event-handlers"></a>Controladores de eventos  
+
  Los *controladores de eventos* son procedimientos que se invocan cuando se produce un evento correspondiente. Puede utilizar cualquier subrutina válida con una firma coincidente como un controlador de eventos. Sin embargo, no se puede utilizar una función como un controlador de eventos, porque no devolverá un valor al origen del evento.  
   
  Visual Basic usa una Convención de nomenclatura estándar para los controladores de eventos que combina el nombre del remitente del evento, un carácter de subrayado y el nombre del evento. Por ejemplo, el evento `Click` de un botón con nombre `button1` se denominaría `Sub button1_Click`.  
@@ -44,9 +50,11 @@ Aunque podría visualizar un proyecto de Visual Studio como una serie de procedi
 > Se recomienda utilizar esta convención de nomenclatura al definir controladores de eventos para sus propios eventos, pero no es necesario; puede utilizar cualquier nombre de subrutina válido.  
   
 ## <a name="associating-events-with-event-handlers"></a>Asociación de eventos con controladores de eventos  
+
  Antes de poder utilizar un controlador de eventos, primero debe asociarlo con un evento mediante la utilización de la instrucción `Handles` o `AddHandler`.  
   
 ### <a name="withevents-and-the-handles-clause"></a>WithEvents y la cláusula Handles  
+
  La instrucción `WithEvents` y la cláusula `Handles` proporcionan una forma declarativa de especificar controladores de eventos. Un evento generado por un objeto declarado con la palabra clave `WithEvents` puede controlarse mediante cualquier procedimiento con una instrucción `Handles` para ese evento, tal como se muestra en el ejemplo siguiente:  
   
  [!code-vb[VbVbalrEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#1)]  
@@ -68,6 +76,7 @@ Aunque podría visualizar un proyecto de Visual Studio como una serie de procedi
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
 ### <a name="addhandler-and-removehandler"></a>AddHandler y RemoveHandler  
+
  La instrucción `AddHandler` es similar a la cláusula `Handles` por el hecho de que ambas permiten especificar un controlador de eventos. Sin embargo, `AddHandler`, que se utiliza con `RemoveHandler`, aporta más flexibilidad que la cláusula `Handles`, ya que permite agregar, eliminar y cambiar de forma dinámica el controlador de eventos asociado con un evento. Si desea controlar eventos compartidos o eventos de una estructura, debe utilizar `AddHandler`.  
   
  `AddHandler` adopta dos argumentos: el nombre de un evento de un remitente de eventos como un control y una expresión que evalúa a un delegado. No es necesario especificar explícitamente la clase delegada al utilizar `AddHandler`, puesto que la instrucción `AddressOf` siempre devuelve una referencia al delegado. En el ejemplo siguiente se asocia un controlador de eventos a un evento generado por un objeto:  
@@ -87,6 +96,7 @@ Aunque podría visualizar un proyecto de Visual Studio como una serie de procedi
  [!code-vb[VbVbalrEvents#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class2.vb#38)]  
   
 ## <a name="handling-events-inherited-from-a-base-class"></a>Control de eventos heredados de una clase base  
+
  *Clases derivadas*: clases que heredan características de una clase base, que pueden controlar eventos generados por su clase base con la instrucción `Handles MyBase`.  
   
 ### <a name="to-handle-events-from-a-base-class"></a>Para controlar eventos de una clase base  

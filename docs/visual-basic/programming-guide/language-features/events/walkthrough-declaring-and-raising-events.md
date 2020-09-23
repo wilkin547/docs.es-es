@@ -9,17 +9,19 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 3da60014d7ac95189c5d56c3e339ff1b054a40dc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 07ef611b50cfa13f77fa168d58dd3b43e97eeec6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405098"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057993"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Tutorial: Declarar y provocar eventos (Visual Basic)
+
 En este tutorial se muestra cómo declarar y generar eventos para una clase denominada `Widget` . Después de completar los pasos, es posible que desee leer el tema complementario [: control de eventos](walkthrough-handling-events.md), que muestra cómo utilizar los eventos de los `Widget` objetos para proporcionar información de estado en una aplicación.  
   
 ## <a name="the-widget-class"></a>La clase widget  
+
  Supongamos por el momento que tiene una `Widget` clase. La `Widget` clase tiene un método que puede tardar mucho tiempo en ejecutarse y desea que la aplicación pueda incluir algún tipo de indicador de finalización.  
   
  Por supuesto, puede hacer que el `Widget` objeto muestre un cuadro de diálogo porcentaje de finalización, pero a continuación se bloqueará este cuadro de diálogo en todos los proyectos en los que se haya utilizado la `Widget` clase. Un buen principio de diseño de objetos es permitir que la aplicación que usa un objeto controle la interfaz de usuario, a menos que el propósito completo del objeto sea administrar un formulario o un cuadro de diálogo.  
@@ -34,7 +36,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
   
 3. Asigne nombre a los objetos tal y como se muestra en la tabla siguiente.  
   
-    |Object|Propiedad.|Parámetro|  
+    |Object|Propiedad|Parámetro|  
     |------------|--------------|-------------|  
     |`Button1`|`Text`|Tarea de inicio|  
     |`Button2`|`Text`|Cancelar|  
@@ -53,7 +55,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
 > [!NOTE]
 > Puede declarar argumentos de evento del mismo modo que los argumentos de procedimientos, con las siguientes excepciones: los eventos no pueden tener `Optional` `ParamArray` argumentos o, y los eventos no tienen valores devueltos.  
   
- El `PercentDone` evento es desencadenado por el `LongTask` método de la `Widget` clase. `LongTask`toma dos argumentos: la cantidad de tiempo que el método está realizando el trabajo y el intervalo de tiempo mínimo antes `LongTask` de que se ponga en pausa para generar el `PercentDone` evento.  
+ El `PercentDone` evento es desencadenado por el `LongTask` método de la `Widget` clase. `LongTask` toma dos argumentos: la cantidad de tiempo que el método está realizando el trabajo y el intervalo de tiempo mínimo antes `LongTask` de que se ponga en pausa para generar el `PercentDone` evento.  
   
 #### <a name="to-raise-the-percentdone-event"></a>Para generar el evento PercentDone  
   
@@ -61,7 +63,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2. Agregue el siguiente código a la clase `Widget`:  
+2. Agregue el código siguiente a la clase `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
@@ -73,7 +75,7 @@ En este tutorial se muestra cómo declarar y generar eventos para una clase deno
   
  Ahora que la `Widget` clase puede generar eventos, puede pasar al siguiente tutorial. [Tutorial: controlar eventos](walkthrough-handling-events.md) muestra cómo utilizar `WithEvents` para asociar un controlador de eventos al `PercentDone` evento.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>

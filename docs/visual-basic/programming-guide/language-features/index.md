@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 2a2e8d0a08fda5783fa20e7403ea215133d0514e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405059"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057863"
 ---
 # <a name="visual-basic-language-features"></a>Características del lenguaje Visual Basic
+
 En los temas siguientes se presentan y describen los componentes esenciales de Visual Basic, un lenguaje de programación orientado a objetos. Después de crear la interfaz de usuario para su aplicación con formularios y controles, debe escribir el código que define el comportamiento de la aplicación. Como con cualquier lenguaje de programación moderno, Visual Basic admite una serie de elementos de lenguaje y construcciones de programación comunes.  
   
  Si ha programado en otros lenguajes, gran parte del material tratado en esta sección le resultará familiar. Aunque la mayoría de las construcciones son similares a las de otros lenguajes, la naturaleza orientada a eventos de Visual Basic presenta algunas diferencias sutiles.  
@@ -20,6 +21,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
  Si está familiarizado con la programación, el material de esta sección sirve como introducción a los bloques de creación básicos para escribir código. Una vez que comprenda los conceptos básicos, puede crear aplicaciones eficaces mediante Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Matrices](arrays/index.md)  
  Explica cómo hacer el código más compacto y eficaz mediante la declaración y utilización de matrices, que contienen varios valores relacionados.  
   
@@ -32,7 +34,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
  [Flujo de control](control-flow/index.md)  
  Muestra cómo regular el flujo de la ejecución del programa.  
   
- [Tipos de datos](data-types/index.md)  
+ [Tipo de datos](data-types/index.md)  
  Describe qué tipos de datos puede contener un elemento de programación y cómo almacenarlos.  
   
  [Elementos declarados](declared-elements/index.md)  
@@ -41,10 +43,10 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
  [Delegados](delegates/index.md)  
  Se proporciona una introducción a los delegados y se explica cómo se usan en Visual Basic.  
   
- [Enlace anticipado y en tiempo de ejecución](early-late-binding/index.md)  
+ [Enlace en tiempo de compilación y en tiempo de ejecución](early-late-binding/index.md)  
  Describe los enlaces, que realiza el compilador cuando se asigna un objeto a una variable de objeto, y las diferencias entre los objetos con enlace anticipado y con enlace en tiempo de ejecución.  
   
- [Tipos de error](error-types.md)  
+ [Tipos de errores](error-types.md)  
  Proporciona información general sobre los errores de sintaxis, errores en tiempo de ejecución y errores lógicos.  
   
  [Eventos](events/index.md)  
@@ -79,7 +81,7 @@ En los temas siguientes se presentan y describen los componentes esenciales de V
   
 ## <a name="related-sections"></a>Secciones relacionadas
 
- [Colecciones](../concepts/collections.md)  
+ [Recopilaciones](../concepts/collections.md)  
  Describe algunos de los tipos de colecciones proporcionadas por .NET Framework. Muestra cómo usar colecciones sencillas y colecciones de pares clave-valor.  
   
  [Referencia del lenguaje Visual Basic](../../language-reference/index.md)  

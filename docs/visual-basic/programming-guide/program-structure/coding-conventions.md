@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551046"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059163"
 ---
 # <a name="visual-basic-coding-conventions"></a>Convenciones de código de Visual Basic
+
 Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de este tema. Si sigue las mismas convenciones de codificación, puede obtener las siguientes ventajas:  
   
 - El código tendrá un aspecto coherente, de modo que los lectores puedan centrarse mejor en el contenido, no en el diseño.  
@@ -86,6 +87,7 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>Delegados relajados en controladores de eventos  
+
  No califique explícitamente los argumentos (Object y EventArgs) con los controladores de eventos. Si no está usando los argumentos de evento que se pasan a un evento (por ejemplo, Sender como Object, e como EventArgs), use delegados relajados y omita los argumentos de evento en el código:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>Usar la palabra clave with  
+
  Cuando realice una serie de llamadas a un objeto, considere la posibilidad de usar la `With` palabra clave:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>Use la instrucción try... Instrucciones Catch y Using cuando se usa el control de excepciones  
+
  No use `On Error Goto`.  
   
 ### <a name="use-the-isnot-keyword"></a>Usar la palabra clave IsNot  
+
  Use la `IsNot` palabra clave en lugar de `Not...Is Nothing` .  
   
 ### <a name="new-keyword"></a>New (palabra clave)  
@@ -162,9 +167,11 @@ Microsoft desarrolla ejemplos y documentación que siguen las instrucciones de e
 - No Compruebe si un evento es `Nothing` (NULL) antes de llamar al `RaiseEvent` método. `RaiseEvent` comprueba `Nothing` antes de que genere el evento.  
   
 ### <a name="using-shared-members"></a>Usar miembros compartidos  
+
  Llame a `Shared` los miembros mediante el nombre de clase, no desde una variable de instancia.  
   
 ### <a name="use-xml-literals"></a>Usar literales XML  
+
  Los literales XML simplifican las tareas más comunes que se producen al trabajar con XML (por ejemplo, cargar, consultar y transformar). Al desarrollar con XML, siga estas instrucciones:  
   
 - Utilice literales XML para crear documentos y fragmentos XML en lugar de llamar directamente a las API XML.  

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 61b138c0851c747ed30eedc10cb882cc3b03c4d4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7ad8d684dde31550b6e1b74c098d152b227f6c1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392615"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058227"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Cómo: Crear literales XML (Visual Basic)
+
 Puede crear un documento, fragmento o elemento XML directamente en el código mediante un literal XML. En los ejemplos de este tema se muestra cómo crear un elemento XML que tiene tres elementos secundarios y cómo crear un documento XML.  
   
  También puede usar las [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API para crear [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos. Para obtener más información, vea <xref:System.Xml.Linq.XElement>.  
@@ -52,7 +53,7 @@ Puede crear un documento, fragmento o elemento XML directamente en el código me
   
      `</books>`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [XML](index.md)
 - [Crear XML en Visual Basic](creating-xml.md)

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 29d878afbe3669fc88e62b1fec98b306918c303d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405085"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057915"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Tutorial: Controlar eventos (Visual Basic)
+
 Este es el segundo de los dos temas que muestran cómo trabajar con eventos. En el primer tema, [Tutorial: declarar y provocar eventos](walkthrough-declaring-and-raising-events.md), se muestra cómo declarar y generar eventos. En esta sección se usa el formulario y la clase de ese tutorial para mostrar cómo controlar los eventos cuando tienen lugar.  
   
  `Widget`En el ejemplo de clase se usan las instrucciones de control de eventos tradicionales. Visual Basic proporciona otras técnicas para trabajar con eventos. Como ejercicio, puede modificar este ejemplo para usar las `AddHandler` `Handles` instrucciones y.  
@@ -34,6 +35,7 @@ Este es el segundo de los dos temas que muestran cómo trabajar con eventos. En 
      La variable `mblnCancel` se utiliza para cancelar el `LongTask` método.  
   
 ## <a name="writing-code-to-handle-an-event"></a>Escribir código para controlar un evento  
+
  En cuanto declare una variable mediante `WithEvents` , el nombre de la variable aparecerá en la lista desplegable de la izquierda del **Editor de código**de la clase. Al seleccionar `mWidget` , los `Widget` eventos de la clase aparecen en la lista desplegable derecha. Al seleccionar un evento se muestra el procedimiento de evento correspondiente, con el prefijo `mWidget` y un carácter de subrayado. Todos los procedimientos de eventos asociados a una `WithEvents` variable reciben el nombre de la variable como prefijo.  
   
 #### <a name="to-handle-an-event"></a>Para controlar un evento  
@@ -58,7 +60,8 @@ Este es el segundo de los dos temas que muestran cómo trabajar con eventos. En 
  Si el usuario hace clic en el botón **Cancelar** mientras `LongTask` se está ejecutando, el `Button2_Click` evento se ejecuta tan pronto como la `DoEvents` instrucción permite que se produzca el procesamiento de eventos. La variable de nivel de clase `mblnCancel` se establece en `True` , y el `mWidget_PercentDone` evento lo prueba y establece el `ByRef Cancel` argumento en `True` .  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Conectar una variable WithEvents a un objeto  
- `Form1`ahora está configurado para controlar `Widget` los eventos de un objeto. Todo lo que queda es encontrar un en `Widget` algún lugar.  
+
+ `Form1` ahora está configurado para controlar `Widget` los eventos de un objeto. Todo lo que queda es encontrar un en `Widget` algún lugar.  
   
  Cuando se declara una variable `WithEvents` en tiempo de diseño, no hay ningún objeto asociado. Una `WithEvents` variable es igual que cualquier otra variable de objeto. Tendrá que crear un objeto y asignarle una referencia con la `WithEvents` variable.  
   
@@ -82,7 +85,7 @@ Este es el segundo de los dos temas que muestran cómo trabajar con eventos. En 
   
  Antes de `LongTask` llamar al método, se debe inicializar la etiqueta que muestra el porcentaje completado y la marca de nivel `Boolean` de clase para cancelar el método debe establecerse en `False` .  
   
- `LongTask`se llama a con una duración de tarea de 12,2 segundos. El `PercentDone` evento se genera una vez cada tercio de segundo. Cada vez que se genera el evento, `mWidget_PercentDone` se ejecuta el procedimiento de evento.  
+ `LongTask` se llama a con una duración de tarea de 12,2 segundos. El `PercentDone` evento se genera una vez cada tercio de segundo. Cada vez que se genera el evento, `mWidget_PercentDone` se ejecuta el procedimiento de evento.  
   
  Cuando `LongTask` se hace, `mblnCancel` se prueba para ver si `LongTask` finalizó normalmente, o si se detuvo porque `mblnCancel` se estableció en `True` . El porcentaje completado solo se actualiza en el caso anterior.  
   
@@ -116,7 +119,7 @@ Este es el segundo de los dos temas que muestran cómo trabajar con eventos. En 
 > [!NOTE]
 > Puede declarar tantas `WithEvents` variables como sea necesario, pero `WithEvents` no se admiten matrices de variables.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tutorial: Declarar y generar eventos](walkthrough-declaring-and-raising-events.md)
 - [Eventos](index.md)
