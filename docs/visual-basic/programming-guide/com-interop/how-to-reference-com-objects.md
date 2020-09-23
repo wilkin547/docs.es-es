@@ -8,14 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 2e2cbac6fad5e1686b7383c44619b8c6f5326483
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396809"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083298"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Cómo: Hacer referencia a objetos COM desde Visual Basic
+
 En Visual Basic, la adición de referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad para la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas del objeto COM se enrutan al ensamblado de interoperabilidad y se reenvían a la aplicación .NET Framework.  
   
  Puede hacer referencia a un objeto COM sin utilizar un ensamblado de interoperabilidad incrustando la información de tipo para el objeto COM en un ensamblado .NET. Para insertar información de tipo, establezca la `Embed Interop Types` propiedad en `True` para la referencia al objeto com. Si va a compilar mediante el compilador de línea de comandos, use la `/link` opción para hacer referencia a la biblioteca com. Para obtener más información, vea [-Link (Visual Basic)](../../reference/command-line-compiler/link.md).  
@@ -52,7 +53,7 @@ En Visual Basic, la adición de referencias a objetos COM que tienen bibliotecas
   
      Puede usar TlbImp para crear ensamblados de interoperabilidad para bibliotecas de tipos, incluso para objetos COM no registrados. Sin embargo, los objetos COM a los que hacen referencia los ensamblados de interoperabilidad deben estar registrados correctamente en el equipo en el que se van a utilizar. Puede registrar un objeto COM mediante la utilidad regsvr32 incluida en el sistema operativo Windows.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interoperabilidad COM](index.md)
 - [TlbImp.exe (Importador de la biblioteca de tipos)](../../../framework/tools/tlbimp-exe-type-library-importer.md)

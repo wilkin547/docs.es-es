@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 2b70a7fa72b09401e0e78f693e4efc9bf0871771
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396796"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083233"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidad COM (Visual Basic)
+
 El Modelo de objetos componentes (COM) permite que un objeto exponga su funcionalidad a otros componentes y aplicaciones host. La mayoría del software actual incluye objetos COM. Aunque los ensamblados .NET son la mejor opción para las aplicaciones nuevas, en ocasiones deberá usar objetos COM. En esta sección se tratan algunos de los problemas asociados con la creación y el uso de objetos COM con Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Introducción a la interoperabilidad COM](introduction-to-com-interop.md)  
  Proporciona información general sobre la interoperabilidad COM.  
   
@@ -47,6 +49,7 @@ El Modelo de objetos componentes (COM) permite que un objeto exponga su funciona
  Describe cómo usar objetos COM existentes como base para nuevos objetos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Interoperar con código no administrado](../../../framework/interop/index.md)  
  Describe los servicios de interoperabilidad proporcionados por Common Language Runtime.  
   
