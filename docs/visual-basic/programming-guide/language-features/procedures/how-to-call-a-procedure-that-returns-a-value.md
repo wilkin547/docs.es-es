@@ -7,14 +7,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53589f84c6675d1e7ae2a593341e5dac747132a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388769"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083982"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Cómo: Llamar a un procedimiento que devuelve un valor (Visual Basic)
+
 Un `Function` procedimiento devuelve un valor al código de llamada. Para llamarlo, incluya su nombre y sus argumentos en el lado derecho de una instrucción de asignación o en una expresión.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>Para llamar a un procedimiento de función dentro de una expresión  
@@ -40,11 +41,12 @@ Un `Function` procedimiento devuelve un valor al código de llamada. Para llamar
 4. El valor devuelto del procedimiento se almacena en la variable o la propiedad en el lado izquierdo de la instrucción de asignación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se llama al Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> para recuperar el valor de una variable de entorno del sistema operativo. La primera línea llama a `Environ` dentro de una expresión y la segunda línea la llama en una instrucción de asignación. `Environ`toma el nombre de la variable como su único argumento. Devuelve el valor de la variable al código de llamada.  
+
+ En el ejemplo siguiente se llama al Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> para recuperar el valor de una variable de entorno del sistema operativo. La primera línea llama a `Environ` dentro de una expresión y la segunda línea la llama en una instrucción de asignación. `Environ` toma el nombre de la variable como su único argumento. Devuelve el valor de la variable al código de llamada.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos de función](./function-procedures.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)

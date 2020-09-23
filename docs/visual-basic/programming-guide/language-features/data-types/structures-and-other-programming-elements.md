@@ -8,21 +8,23 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: dbd24065a954e5611663963371d5a9f4bbbaea68
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393499"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084091"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estructuras y otros elementos de programación (Visual Basic)
+
 Puede usar estructuras junto con matrices, objetos y procedimientos, así como entre sí. Las interacciones utilizan la misma sintaxis que estos elementos usan individualmente.  
   
 > [!NOTE]
 > No se puede inicializar ninguno de los elementos de la estructura en la declaración de la estructura. Solo puede asignar valores a los elementos de una variable que se ha declarado como un tipo de estructura.  
   
 ## <a name="structures-and-arrays"></a>Estructuras y matrices  
- Una estructura puede contener una matriz como uno o varios de sus elementos. Esto se ilustra en el siguiente ejemplo.  
+
+ Una estructura puede contener una matriz como uno o varios de sus elementos. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +35,7 @@ Public Structure systemInfo
 End Structure
 ```  
   
- Puede tener acceso a los valores de una matriz dentro de una estructura de la misma manera que tiene acceso a una propiedad en un objeto. Esto se ilustra en el siguiente ejemplo.  
+ Puede tener acceso a los valores de una matriz dentro de una estructura de la misma manera que tiene acceso a una propiedad en un objeto. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +43,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- También puede declarar una matriz de estructuras. Esto se ilustra en el siguiente ejemplo.  
+ También puede declarar una matriz de estructuras. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Siga las mismas reglas para tener acceso a los componentes de esta arquitectura de datos. Esto se ilustra en el siguiente ejemplo.  
+ Siga las mismas reglas para tener acceso a los componentes de esta arquitectura de datos. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +58,8 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Estructuras y objetos  
- Una estructura puede contener un objeto como uno o varios de sus elementos. Esto se ilustra en el siguiente ejemplo.  
+
+ Una estructura puede contener un objeto como uno o varios de sus elementos. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Protected Structure userInput  
@@ -69,7 +72,8 @@ End Structure
  Debe utilizar una clase de objeto específica en una declaración de este tipo, en lugar de `Object` .  
   
 ## <a name="structures-and-procedures"></a>Estructuras y procedimientos  
- Puede pasar una estructura como un argumento de procedimiento. Esto se ilustra en el siguiente ejemplo.  
+
+ Puede pasar una estructura como un argumento de procedimiento. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -83,7 +87,7 @@ End Sub
   
  En el ejemplo anterior se pasa la estructura *por referencia*, lo que permite al procedimiento modificar sus elementos para que los cambios surtan efecto en el código de llamada. Si desea proteger una estructura contra dicha modificación, pásela por valor.  
   
- También puede devolver una estructura a partir de un `Function` procedimiento. Esto se ilustra en el siguiente ejemplo.  
+ También puede devolver una estructura a partir de un `Function` procedimiento. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -97,7 +101,8 @@ End Function
 ```  
   
 ## <a name="structures-within-structures"></a>Estructuras dentro de estructuras  
- Las estructuras pueden contener otras estructuras. Esto se ilustra en el siguiente ejemplo.  
+
+ Las estructuras pueden contener otras estructuras. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Public Structure driveInfo  
@@ -122,9 +127,9 @@ allSystems(1).diskDrives(0).type = "Floppy"
   
  Las estructuras pueden contener otras estructuras para una profundidad arbitraria.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Tipos de datos](index.md)
+- [Tipo de datos](index.md)
 - [Tipos de datos básicos](elementary-data-types.md)
 - [Tipos de datos compuestos](composite-data-types.md)
 - [Tipos de valor y tipos de referencia](value-types-and-reference-types.md)
