@@ -14,14 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 9f9174896181e427c73936a1bb91fa13235e70be
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b0077bdae3bad1d67c3d26e503d05f318982eb80
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550994"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91099026"
 ---
 # <a name="comments-in-code-visual-basic"></a>Comentarios en el código (Visual Basic)
+
 Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Este símbolo indica al compilador de Visual Basic que omita el texto que le sigue o el *Comentario*. Los comentarios son notas cortas explicativas que se agregan al código para aportar mayor información a las personas que lo lean.  
   
  Una buena práctica de programación consiste en comenzar todos los procedimientos con un comentario breve que describe las características funcionales del procedimiento (lo que hace). Esto ayuda al desarrollador y a los que puedan examinar el código. Debería separar los detalles de implementación (cómo lo hace el procedimiento) de los comentarios que describen las características funcionales. Al incluir detalles de implementación en la descripción, recuerde actualizarlos en el momento de actualizar la función.  
@@ -35,6 +36,7 @@ Cuando lea ejemplos de código, encontrará el símbolo de comentario (`'`). Est
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Instrucciones sobre los comentarios  
+
  La tabla siguiente proporciona directrices generales sobre los tipos de comentarios que pueden preceder una sección de código. Estas son sugerencias; Visual Basic no aplica reglas para agregar comentarios. Escriba lo que considere más conveniente, para uso propio o para cualquier otra persona que lea el código.  
   
 |||  

@@ -1,14 +1,15 @@
 ---
-title: Uso de Administración de paquetes F# con para Azure
-description: Uso de Paket o Nuget para F# administrar las dependencias de Azure
+title: 'Uso de Administración de paquetes con F # para Azure'
+description: 'Uso de Paket o Nuget para administrar las dependencias de Azure de F #'
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 4aa32ace91f30d0e43b9c40067f5f0f456cc4069
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214224"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100118"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Administración de paquetes para las dependencias de Azure de F #
 
@@ -92,7 +93,7 @@ O para el desarrollo en mono:
 
 ## <a name="referencing-assemblies"></a>Referencia a ensamblados
 
-Para poder usar los paquetes en el F# script, debe hacer referencia a los ensamblados incluidos en los paquetes mediante una `#r` Directiva. Por ejemplo:
+Para usar los paquetes en el script de F #, debe hacer referencia a los ensamblados incluidos en los paquetes mediante una `#r` Directiva. Por ejemplo:
 
 ```fsharp
 > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"

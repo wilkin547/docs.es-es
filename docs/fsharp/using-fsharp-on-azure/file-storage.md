@@ -3,12 +3,13 @@ title: Introducción a Azure File Storage mediante F#
 description: Almacene datos de archivo en la nube con el Almacenamiento de archivos de Azure y monte un recurso compartido de archivos de nube desde una máquina virtual (VM) de Azure o desde una aplicación local con Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 04bee82fd9d3c652cd99b9c951880f6ba89610ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548467"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100131"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Introducción a Azure File Storage mediante F\#
 
@@ -16,7 +17,7 @@ Almacenamiento de archivos de Azure es un servicio que ofrece recursos compartid
 
 Para obtener información general conceptual sobre el almacenamiento de archivos, consulte [la guía de .net para el almacenamiento de archivos](/azure/storage/storage-dotnet-how-to-use-files).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/storage-create-storage-account).
 También necesitará la clave de acceso de almacenamiento para esta cuenta.

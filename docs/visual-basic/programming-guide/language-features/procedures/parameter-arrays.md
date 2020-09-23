@@ -10,17 +10,19 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: dac0575d73ffd4159e89bff344915a33b9d0e5d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c8c60015d834ffa3f8618dd98616350e13f0e5c
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364284"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100664"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrices de parámetros (Visual Basic)
+
 Normalmente, no se puede llamar a un procedimiento con más argumentos de los especificados en la declaración de procedimiento. Si necesita un número indefinido de argumentos, puede declarar una *matriz de parámetros*, que permite que un procedimiento acepte una matriz de valores para un parámetro. No es necesario conocer el número de elementos de la matriz de parámetros al definir el procedimiento. Cada llamada al procedimiento determina el tamaño de la matriz de forma individual.  
   
 ## <a name="declaring-a-paramarray"></a>Declaración de ParamArray  
+
  La palabra clave [ParamArray](../../../language-reference/modifiers/paramarray.md) se utiliza para denotar una matriz de parámetros en la lista de parámetros. Se aplican las reglas siguientes:  
   
 - Un procedimiento solo puede definir una matriz de parámetros y debe ser el último parámetro de la definición de procedimiento.  
@@ -32,6 +34,7 @@ Normalmente, no se puede llamar a un procedimiento con más argumentos de los es
 - Deben ser necesarios todos los parámetros que preceden a la matriz de parámetros. La matriz de parámetros debe ser el único parámetro opcional.  
   
 ## <a name="calling-a-paramarray"></a>Llamar a ParamArray  
+
  Cuando se llama a un procedimiento que define una matriz de parámetros, se puede proporcionar el argumento de cualquiera de las maneras siguientes:  
   
 - Nothing, es decir, puede omitir el argumento [ParamArray](../../../language-reference/modifiers/paramarray.md) . En este caso, se pasa una matriz vacía al procedimiento. Si se pasa explícitamente la palabra clave [Nothing](../../../language-reference/nothing.md) , se pasa una matriz null al procedimiento y se puede producir una excepción NullReferenceException si el procedimiento llamado no comprueba esta condición.
@@ -46,6 +49,7 @@ Normalmente, no se puede llamar a un procedimiento con más argumentos de los es
 > Siempre que se trata de una matriz que puede ser indefinidamente grande, existe el riesgo de que se produzca una gran cantidad de capacidad interna de la aplicación. Si acepta una matriz de parámetros, debe probar el tamaño de la matriz que le ha pasado el código de llamada. Siga los pasos adecuados si es demasiado grande para la aplicación. Para más información, consulte [Matrices](../arrays/index.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se define y se llama a la función `calcSum` . El `ParamArray` modificador del parámetro `args` permite que la función acepte un número variable de argumentos.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
@@ -56,13 +60,13 @@ Normalmente, no se puede llamar a un procedimiento con más argumentos de los es
   
  [!code-vb[VbVbcnProcedures#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#49)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [Procedimientos](./index.md)
 - [Argumentos y parámetros de procedimiento](./procedure-parameters-and-arguments.md)
 - [Pasar argumentos por valor y por referencia](./passing-arguments-by-value-and-by-reference.md)
-- [Pasar argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
+- [Paso de argumentos por posición o por nombre](./passing-arguments-by-position-and-by-name.md)
 - [Parámetros opcionales](./optional-parameters.md)
 - [Sobrecarga de procedimientos](./procedure-overloading.md)
 - [Matrices](../arrays/index.md)

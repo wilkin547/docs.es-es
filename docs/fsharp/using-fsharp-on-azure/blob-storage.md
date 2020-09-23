@@ -3,12 +3,13 @@ title: Introducción a Azure Blob Storage mediante F#
 description: Almacene datos no estructurados en la nube con Azure BLOB Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 0dda2e04f0052823e9ea35051855d677cd19ea92
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.custom: devx-track-fsharp
+ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548480"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100157"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure BLOB Storage mediante F\#
 
@@ -18,7 +19,7 @@ En este artículo se muestra cómo realizar tareas comunes con el almacenamiento
 
 Para obtener información general conceptual sobre el almacenamiento de blobs, consulte [la guía de .net para BLOB Storage](/azure/storage/blobs/storage-quickstart-blobs-dotnet).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar esta guía, primero debe [crear una cuenta de almacenamiento de Azure](/azure/storage/common/storage-account-create). También necesitará la clave de acceso de almacenamiento para esta cuenta.
 
