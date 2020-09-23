@@ -7,14 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403231"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065754"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palabras clave como nombres de elementos en código (Visual Basic)
+
 Cualquier elemento de programa, como una variable, una clase o un miembro, puede tener el mismo nombre que una palabra clave restringida. Por ejemplo, puede crear una variable denominada `Loop` . Sin embargo, para hacer referencia a su versión del mismo, que tiene el mismo nombre que la palabra clave Restricted, `Loop` debe precederlo con una cadena de calificación completa o encerrarlo entre corchetes ( `[ ]` ), como se muestra en el ejemplo siguiente.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
@@ -30,7 +31,7 @@ Cualquier elemento de programa, como una variable, una clase o un miembro, puede
 > [!NOTE]
 > El programa también podría incluir nombres de elementos proporcionados por otros ensamblados a los que se hace referencia. Si estos nombres entran en conflicto con palabras clave restringidas, la colocación de los corchetes hace que Visual Basic los interprete como elementos definidos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Convenciones de nomenclatura de Visual Basic](naming-conventions.md)
 - [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
