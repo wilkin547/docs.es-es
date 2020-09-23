@@ -1,15 +1,15 @@
 ---
 title: Explorar los intervalos de datos con índices y rangos
-description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
-ms.date: 03/11/2020
+description: En este tutorial avanzado se explica cómo explorar datos mediante índices e intervalos para examinar un intervalo continuo de un conjunto de datos secuencial.
+ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156499"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738871"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -60,7 +60,7 @@ El siguiente código crea un subrango con las palabras "quick", "brown" y "fox".
 
 [!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-El siguiente código crea un subrango con "lazy" y "dog". Incluye `words[^2]` y `words[^1]`. El índice del final `words[^0]` no se incluye. Agregue el código siguiente también:
+El código siguiente devuelve el rango con "lazy" y "dog". Incluye `words[^2]` y `words[^1]`. El índice del final `words[^0]` no se incluye. Agregue el código siguiente también:
 
 [!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -78,9 +78,16 @@ El ejemplo siguiente muestra muchos de los motivos para esas opciones. Modifique
 
 ## <a name="type-support-for-indices-and-ranges"></a>Compatibilidad con tipos para los índices y los rangos
 
-Los índices y los intervalos proporcionan una sintaxis clara y concisa para acceder a un único elemento o a un subconjunto de elementos de una secuencia. Normalmente, una expresión de índice devuelve el tipo de los elementos de una secuencia. Una expresión de rango suele devolver el mismo tipo de secuencia que la secuencia de origen.
+Los índices y los intervalos proporcionan una sintaxis clara y concisa para acceder a un único elemento o a un rango de elementos de una secuencia. Normalmente, una expresión de índice devuelve el tipo de los elementos de una secuencia. Una expresión de rango suele devolver el mismo tipo de secuencia que la secuencia de origen.
 
 Cualquier tipo que proporcione un [indexador](../programming-guide/indexers/index.md) con un parámetro <xref:System.Index> o <xref:System.Range> admite de manera explícita índices o rangos, respectivamente. Un indexador que toma un único parámetro <xref:System.Range> puede devolver un tipo de secuencia diferente, como <xref:System.Span%601?displayProperty=nameWithType>.
+
+> [!IMPORTANT]
+> El rendimiento del código que usa el operador de rango depende del tipo del operando de la secuencia.
+>
+> La complejidad temporal del operador de rango depende del tipo de secuencia. Por ejemplo, si la secuencia es un valor `string` o una matriz, el resultado es una copia de la sección especificada de la entrada, por lo que la complejidad temporal es *O(N)* (donde N es la longitud del rango). Por otro lado, si se trata de <xref:System.Span%601?displayProperty=nameWithType> o <xref:System.Memory%601?displayProperty=nameWithType>, el resultado hace referencia a la misma memoria auxiliar, lo que significa que no hay ninguna copia y que la operación es *O(1)* .
+>
+> Además de la complejidad temporal, esto provoca asignaciones y copias adicionales, lo que afecta al rendimiento. En el código sensible al rendimiento, considere la posibilidad de usar `Span<T>` o `Memory<T>` como el tipo de secuencia, ya que el operador de rango no realiza la asignación.
 
 Un tipo es **contable** si tiene una propiedad denominada `Length` o `Count` con un captador accesible y un tipo de valor devuelto de `int`. Un tipo contable que no admite índices ni rangos de manera explícita podría admitirlos implícitamente. Para más información, consulte las secciones [Compatibilidad implícita de índices](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) y [Compatibilidad implícita de rangos](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) de la [nota de propuesta de características](~/_csharplang/proposals/csharp-8.0/ranges.md). Los rangos que usan la compatibilidad implícita del rango devuelven el mismo tipo de secuencia que la secuencia de origen.
 
@@ -90,8 +97,10 @@ Por ejemplo, los tipos de .NET siguientes admiten tanto índices como rangos: <x
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
+En todos los casos, el operador de rango para <xref:System.Array> asigna una matriz para almacenar los elementos devueltos.
+
 ## <a name="scenarios-for-indices-and-ranges"></a>Escenarios para los índices y los rangos
 
-A menudo usaremos rangos e índices cuando queramos analizar un subrango de una secuencia más grande. La nueva sintaxis es más clara al leer exactamente lo que implica el subrango. La función local `MovingAverage` toma un <xref:System.Range> como su argumento. El método enumera solo ese rango al calcular el mínimo, el máximo y la media. Pruebe con el código siguiente en su proyecto:
+A menudo usará rangos e índices cuando quiera analizar una parte de una secuencia más grande. La nueva sintaxis es más clara al leer exactamente qué parte de la secuencia está implicada. La función local `MovingAverage` toma un <xref:System.Range> como su argumento. El método enumera solo ese rango al calcular el mínimo, el máximo y la media. Pruebe con el código siguiente en su proyecto:
 
 [!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

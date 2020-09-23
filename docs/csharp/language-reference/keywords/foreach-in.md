@@ -1,7 +1,7 @@
 ---
 description: foreach, in (Referencia de C#)
 title: Instrucción foreach de C#
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142081"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828895"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
@@ -25,8 +25,8 @@ La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones 
 
 La instrucción `foreach` no está limitada a esos tipos. Puede usarla con una instancia de cualquier tipo que cumpla las condiciones siguientes:
 
-- un tipo tiene el método público sin parámetros `GetEnumerator` cuyo tipo de valor devuelto es clase, estructura o tipo de interfaz;
-- el tipo de valor devuelto del método `GetEnumerator` tiene la propiedad pública `Current` y el método público sin parámetros `MoveNext` cuyo tipo de valor devuelto es <xref:System.Boolean>.
+- Un tipo tiene el método público `GetEnumerator` sin parámetros cuyo tipo de valor devuelto es una clase, una estructura o un tipo de interfaz. A partir de C# 9.0, el método `GetEnumerator` puede ser el [método de extensión](../../programming-guide/classes-and-structs/extension-methods.md) de un tipo.
+- El tipo de valor devuelto del método `GetEnumerator` tiene la propiedad pública `Current` y el método público `MoveNext` sin parámetros, cuyo tipo de valor devuelto es <xref:System.Boolean>.
 
 En el siguiente ejemplo se usa la instrucción `foreach` con una instancia del tipo <xref:System.Span%601?displayProperty=nameWithType>, que no implementa ninguna interfaz:
 
@@ -66,6 +66,11 @@ En el formulario anterior, el tipo `T` de un elemento de colección se debe pode
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea la sección sobre la [instrucción foreach](~/_csharplang/spec/statements.md#the-foreach-statement) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+
+Para obtener más información sobre de las características agregadas en C# 8.0 y versiones posteriores, vea las siguientes notas de propuesta de características:
+
+- [Flujos asincrónicos (C# 8.0)](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [Compatibilidad con extensiones `GetEnumerator` para bucles `foreach` (C# 9.0)](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
 
 ## <a name="see-also"></a>Vea también
 

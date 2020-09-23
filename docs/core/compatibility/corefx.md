@@ -2,12 +2,12 @@
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: c73909514bc738387a21f5ea68defe49c6a2c839
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: c3207ac7630d794f77c793cc6d1d52e158c0c084
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598177"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738831"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -17,6 +17,8 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Nombres de parámetros modificados en RC1](#parameter-names-changed-in-rc1) | 5.0 |
+| [Atributos de OSPlatform que se han cambiado de nombre o se han quitado](#osplatform-attributes-renamed-or-removed) | 5.0 |
 | [Thread.Abort obsoleto](#threadabort-is-obsolete) | 5.0 |
 | [Propiedades obsoletas en ConsoleLoggerOptions](#obsolete-properties-on-consoleloggeroptions) | 5.0 |
 | [Las comprobaciones intrínsecas de IsSupported de hardware pueden diferir en los tipos anidados](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
@@ -53,6 +55,14 @@ En esta página se documentan los siguientes cambios importantes:
 | [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
+
+***
+
+[!INCLUDE [os-platform-attributes-renamed](../../../includes/core-changes/corefx/5.0/os-platform-attributes-renamed.md)]
+
+***
 
 [!INCLUDE [thread-abort-obsolete](../../../includes/core-changes/corefx/5.0/thread-abort-obsolete.md)]
 

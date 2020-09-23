@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271781"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738780"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -132,7 +132,7 @@ La siguiente pregunta es cómo generar un evento de dominio para que llegue a su
 
 Originalmente, Udi Dahan propuso el uso de una clase estática para administrar y generar los eventos (por ejemplo, en algunas publicaciones relacionadas, como [Domain Events – Take 2](https://udidahan.com/2008/08/25/domain-events-take-2/) [Eventos de dominio: Toma 2]). Esto podría incluir una clase estática denominada DomainEvents que generaría los eventos de dominio inmediatamente cuando se llama, con una sintaxis similar a `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard escribió una entrada de blog [[Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/) (Reforzar el dominio: eventos de dominio)] que recomienda un enfoque similar.
 
-Pero cuando la clase de eventos de dominio es estática, también lo envía a los controladores inmediatamente. Esto dificulta las pruebas y la depuración, dado que los controladores de eventos con la lógica de efectos secundarios se ejecutan inmediatamente después de que se genera el evento. Durante las pruebas y la depuración, le interesa centrarse únicamente en lo que sucede en las clases agregadas actuales; no le interesa que repentinamente se le redirija a otros controladores de eventos para los efectos secundarios relacionados con otros agregados o la lógica de la aplicación. Es el motivo de que otros métodos hayan evolucionado, como se explica en la sección siguiente.
+Pero cuando la clase de eventos de dominio es estática, también lo envía a los controladores inmediatamente. Esto dificulta las pruebas y la depuración, dado que los controladores de eventos con la lógica de efectos secundarios se ejecutan inmediatamente después de que se genera el evento. Durante las pruebas y la depuración, únicamente le interesa centrarse en lo que sucede en las clases agregadas actuales; no quiere que de repente se le redirija a otros controladores de eventos para los efectos secundarios relacionados con otros agregados o la lógica de la aplicación. Es el motivo de que otros métodos hayan evolucionado, como se explica en la sección siguiente.
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>El enfoque diferido para generar y enviar eventos
 

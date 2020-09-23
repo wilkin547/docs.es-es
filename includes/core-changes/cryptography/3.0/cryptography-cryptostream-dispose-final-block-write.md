@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7766a59131fffe2b436c15a5ff58e67001be7941
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 6ffd4147a99a59d0a2e50d3f88279608e286aed1
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065113"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90680019"
 ---
 ### <a name="cryptostreamdispose-transforms-final-block-only-when-writing"></a>Transformación del bloque final solo durante el proceso de escritura mediante CryptoStream.Dispose
 
@@ -18,7 +18,7 @@ En .NET Core 3.0 y versiones posteriores, <xref:System.Security.Cryptography.Cr
 
 #### <a name="reason-for-change"></a>Motivo del cambio
 
-Este cambio permite las lecturas incompletas de la secuencia de cifrado cuando se cancela una operación de red sin necesidad de detectar una excepción.
+Este cambio permite las lecturas incompletas de la secuencia de cifrado cuando se cancela una operación de red, sin necesidad de capturar una excepción.
 
 #### <a name="version-introduced"></a>Versión introducida
 

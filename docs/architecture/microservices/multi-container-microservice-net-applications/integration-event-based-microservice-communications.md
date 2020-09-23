@@ -2,18 +2,18 @@
 title: Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los eventos de integración para implementar la comunicación basada en eventos entre microservicios.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8a1d4950247d63e5684c85c029efccf8269e7435
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988328"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539351"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
 Como se describió anteriormente, si utiliza una comunicación basada en eventos, un microservicio publica un evento cuando sucede algo importante, como cuando actualiza una entidad de negocio. Otros microservicios se suscriben a esos eventos. Cuando un microservicio recibe un evento, puede actualizar sus propias entidades de negocio, lo que puede comportar que se publiquen más eventos. Esta es la esencia del concepto de la coherencia final. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos puede diseñarse como una interfaz con la API necesaria para suscribirse a eventos, cancelar las suscripciones y publicar eventos. También puede tener una o más implementaciones basadas en cualquier comunicación de mensajería o entre procesos, como una cola de mensajes o un bus de servicio que admita la comunicación asincrónica y un modelo de publicación/suscripción.
 
-Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción. En la figura 6-18 siguiente, se muestra un evento PriceUpdated publicado mediante un bus de eventos para que la actualización de los precios se propague a la cesta y a otros microservicios.
+Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción. En la figura 6-18 siguiente se muestra un evento PriceUpdated publicado mediante un bus de eventos, para que la actualización de los precios se propague a la cesta y a otros microservicios.
 
 ![Diagrama de comunicación asincrónica controlada por eventos con un bus de eventos.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 

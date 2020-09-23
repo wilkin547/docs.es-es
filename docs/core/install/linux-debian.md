@@ -4,12 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: d4a54a8a5354a1430141d2c06d4aa90dbafc3edf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134944"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538558"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Debian
 
@@ -98,6 +98,10 @@ sudo apt-get upgrade
 ## <a name="apt-troubleshooting"></a>Solución de problemas de APT
 
 En esta sección se proporciona información sobre los errores comunes que puede recibir al usar ATP para instalar .NET Core.
+
+### <a name="unable-to-find-package"></a>No se puede encontrar el paquete
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>No se puede encontrar el paquete \\ No se han podido instalar algunos paquetes
 

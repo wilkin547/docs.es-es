@@ -3,12 +3,12 @@ title: Usar Azure Key Vault para proteger secretos en tiempo de producción
 description: 'Seguridad en microservicios de .NET y aplicaciones web: Azure Key Vault es una forma excelente de gestionar secretos de aplicación controlados en su totalidad por administradores. Los administradores incluso pueden asignar y revocar valores de desarrollo sin necesidad de que los desarrolladores tengan que gestionarlos.'
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2683b215633df719dc1ecf4d1710665865c9df2
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501756"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679115"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Usar Azure Key Vault para proteger secretos en tiempo de producción
 
@@ -48,8 +48,8 @@ El paquete **Microsoft.Extensions.Configuration.AzureKeyVault** permite que una 
 - **Administración y duración de las claves de protección de datos en ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
-- Repositorio de GitHub **Microsoft.Extensions.Configuration.KeyPerFile**. \
-  <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
+- Repositorio de GitHub **Microsoft.Extensions.Configuration**. \
+  <https://github.com/dotnet/extensions/tree/master/src/Configuration>
 
 >[!div class="step-by-step"]
 >[Anterior](developer-app-secrets-storage.md)

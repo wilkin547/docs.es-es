@@ -2,12 +2,12 @@
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888233"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539312"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -420,7 +420,7 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-Docker-compose espera que cada línea de los archivos .env tenga el formato \<variable\>=\<valor\>.
+Docker-compose espera que cada línea de un archivo .env tenga el formato \<variable\>=\<value\>.
 
 Los valores establecidos en el entorno en tiempo de ejecución siempre invalidan los valores definidos en el archivo .env. De forma similar, los valores que se pasan a través de argumentos de la línea de comandos también invalidan los valores predeterminados establecidos en el archivo .env.
 
@@ -436,7 +436,7 @@ Los valores establecidos en el entorno en tiempo de ejecución siempre invalidan
 
 Si está explorando Docker y .NET Core en orígenes de Internet, encontrará Dockerfiles que muestran lo fácil que es compilar una imagen de Docker copiando el origen en un contenedor. Estos ejemplos sugieren que, si usa una configuración simple, puede tener una imagen de Docker con el entorno empaquetado con la aplicación. En el ejemplo siguiente se muestra un Dockerfile sencillo en esta misma línea.
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80

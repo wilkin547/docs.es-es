@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065215"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721279"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: Compatibilidad de plataformas
 
-La regla CA1416 del analizador de código de .NET está habilitada de forma predeterminada a partir de .NET 5.0. Genera una advertencia de compilación para las llamadas a API específicas de la plataforma desde sitios de llamada que no comprueban el sistema operativo.
+La regla [CA1416](/visualstudio/code-quality/ca1416) del analizador de código de .NET está habilitada de forma predeterminada a partir de .NET 5.0. Genera una advertencia de compilación para las llamadas a API específicas de la plataforma desde sitios de llamada que no comprueban el sistema operativo.
 
 #### <a name="change-description"></a>Descripción del cambio
 
-A partir de .NET 5.0, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../docs/fundamentals/productivity/code-analysis.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla CA1416. Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación. La regla CA1416 le notifica cuando está usando API específicas de la plataforma desde lugares donde no se comprueba el contexto de la plataforma.
+A partir de .NET 5.0, el SDK de .NET incluye [analizadores de código fuente de .NET](../../../../docs/fundamentals/productivity/code-analysis.md). Varias de estas reglas están habilitadas de forma predeterminada, incluida la regla [CA1416](/visualstudio/code-quality/ca1416). Si el proyecto contiene código que infringe esta regla y está configurado para tratar las advertencias como errores, este cambio podría interrumpir la compilación. La regla CA1416 le notifica cuando está usando API específicas de la plataforma desde lugares donde no se comprueba el contexto de la plataforma.
 
-La regla CA1416, el analizador de compatibilidad de la plataforma, funciona conjuntamente con otras características que son nuevas en .NET 5.0. .NET 5.0 presenta los atributos `SupportedOSPlatformAttribute` y `UnsupportedOSPlatformAttribute` (denominados <xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> y <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute> en una versión preliminar anterior), que permiten especificar las plataformas que *admiten* o *no admiten* una API. En ausencia de estos atributos, se supone que se admite una API en todas las plataformas. Estos atributos se han aplicado a muchas API específicas de la plataforma en las bibliotecas principales de .NET.
+La regla [CA1416](/visualstudio/code-quality/ca1416), el analizador de compatibilidad de la plataforma, funciona conjuntamente con otras características que son nuevas en .NET 5.0. .NET 5.0 presenta <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> y <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute>, que permiten especificar las plataformas en las que una API *se admite* o *no se admite*. En ausencia de estos atributos, se supone que se admite una API en todas las plataformas. Estos atributos se han aplicado a muchas API específicas de la plataforma en las bibliotecas principales de .NET.
 
-En los proyectos que tienen como destino las plataformas para las que no están disponibles las API que usan, la regla CA1416 marca cualquier llamada API específica de la plataforma en la que no se comprueba el contexto de la plataforma. La mayoría de las API que ahora están representadas con los atributos `SupportedOSPlatformAttribute` y `UnsupportedOSPlatformAttribute` producen excepciones <xref:System.PlatformNotSupportedException> cuando se invocan en un sistema operativo no compatible. Ahora que estas API están marcadas como específicas de la plataforma, la regla CA1416 ayuda a evitar excepciones <xref:System.PlatformNotSupportedException> en tiempo de ejecución agregando comprobaciones del sistema operativo a los sitios de llamada.
+En los proyectos que tienen como destino las plataformas para las que no están disponibles las API que usan, la regla [CA1416](/visualstudio/code-quality/ca1416) marca cualquier llamada API específica de la plataforma en la que no se comprueba el contexto de la plataforma. La mayoría de las API que ahora están representadas con los atributos <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> y <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> producen excepciones <xref:System.PlatformNotSupportedException> cuando se invocan en un sistema operativo no compatible. Ahora que estas API están marcadas como específicas de la plataforma, la regla [CA1416](/visualstudio/code-quality/ca1416) ayuda a evitar excepciones <xref:System.PlatformNotSupportedException> en tiempo de ejecución mediante la adición de comprobaciones del sistema operativo a los sitios de llamada.
 
 #### <a name="examples"></a>Ejemplos
 
@@ -44,7 +44,7 @@ En los proyectos que tienen como destino las plataformas para las que no están 
 
 #### <a name="recommended-action"></a>Acción recomendada
 
-Asegúrese de que solo se llama a las API específicas de la plataforma cuando el código se ejecuta en la plataforma adecuada. Puede comprobar el sistema operativo actual mediante uno de los métodos `Is<Platform>` de la clase <xref:System.OperatingSystem?displayProperty=nameWithType> (por ejemplo, `System.OperatingSystem.IsWindows()`) antes de llamar a una API específica de la plataforma.
+Asegúrese de que solo se llama a las API específicas de la plataforma cuando el código se ejecuta en la plataforma adecuada. Puede comprobar el sistema operativo actual mediante uno de los métodos `Is<Platform>` de la clase <xref:System.OperatingSystem?displayProperty=nameWithType> (por ejemplo, <xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType>) antes de llamar a una API específica de la plataforma.
 
 Puede usar uno de los métodos `Is<Platform>` en la condición de una instrucción `if`:
 
@@ -122,4 +122,5 @@ Para la plataforma de WebAssembly de Blazor:
 
 #### <a name="see-also"></a>Consulte también
 
+- [CA1416: Validación de la compatibilidad con las plataformas](/visualstudio/code-quality/ca1416)
 - [Analizador de API en .NET](../../../../docs/standard/analyzers/api-analyzer.md)

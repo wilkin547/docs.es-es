@@ -4,12 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: c90c08eefa074fa139642a268f879af79d7280da
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 89a55ad2e9fd66d277d0c3eb6a07bd402574bd0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619486"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538519"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-fedora"></a>Instalación del SDK o de .NET Core Runtime en Fedora
 
@@ -118,6 +118,10 @@ sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com
 ## <a name="troubleshoot-the-package-manager"></a>Solución de problemas del administrador de paquetes
 
 En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET Core.
+
+### <a name="unable-to-find-package"></a>No se puede encontrar el paquete
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
 

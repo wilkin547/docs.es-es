@@ -1,13 +1,13 @@
 ---
 title: Transacciones
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: Obtenga información sobre cómo usar las transacciones.
-ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 50c4cd1023eac892cafc3ae4395e9168bd8e9f36
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450385"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678867"
 ---
 # <a name="transactions"></a>Transacciones
 
@@ -36,3 +36,12 @@ Microsoft.Data.Sqlite trata el nivel IsolationLevel pasado a <xref:Microsoft.Dat
 En el siguiente código se simula una lectura de datos sucios. Fíjese en que la cadena de conexión debe incluir `Cache=Shared`.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]
+
+## <a name="deferred-transactions"></a>Transacciones diferidas
+
+A partir de la versión 5.0 de Microsoft.Data.Sqlite, las transacciones se pueden diferir. Esto aplaza la creación de la transacción real en la base de datos hasta que se ejecute el primer comando. También hace que la transacción se actualice de manera gradual de una transacción de lectura a una de escritura, según las necesidades de sus comandos. Esto puede ser útil para habilitar el acceso simultáneo a la base de datos durante la transacción.
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DeferredTransactionSample/Program.cs?name=snippet_DeferredTransaction)]
+
+> [!WARNING]
+> Los comandos dentro de una transacción diferida pueden producir un error si hacen que la transacción se actualice de una transacción de lectura a una de escritura mientras la base de datos está bloqueada. Cuando esto ocurre, la aplicación tendrá que reintentar la transacción completa.

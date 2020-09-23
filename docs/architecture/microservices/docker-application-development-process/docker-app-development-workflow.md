@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: 98dc931e10d5e1a3265ebd6f4e1919a6416e9b27
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: d32134a10fb9b56e874bbc6218ca2c4d822adb90
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022940"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678854"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -103,7 +103,7 @@ El uso de un repositorio de imágenes de .NET oficial de Docker Hub con un núme
 
 En el ejemplo siguiente se muestra un Dockerfile de ejemplo para un contenedor de ASP.NET Core.
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ARG source
 WORKDIR /app
@@ -173,7 +173,7 @@ Probablemente la mejor manera de comprender las fases es analizar un archivo Doc
 
 El Dockerfile inicial podría ser algo parecido a esto:
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -244,7 +244,7 @@ Puede aprovechar la característica de caché de capas de Docker, que es bastant
 
 Así, vamos a centrarnos en la fase **build**, las líneas 5 y 6 son prácticamente iguales, pero las líneas 7-17 son diferentes para cada servicio de eShopOnContainers, así que se tienen que ejecutar cada vez, pero si ha cambiado las líneas 7-16 a:
 
-```Dockerfile
+```dockerfile
 COPY . .
 ```
 
@@ -256,7 +256,7 @@ Luego, sería igual para cada servicio, se copiaría la solución completa y se 
 
 La siguiente optimización importante implica al comando `restore` ejecutado en la línea 17, que también es diferente para cada servicio de eShopOnContainers. Si cambia esa línea a:
 
-```Dockerfile
+```dockerfile
 RUN dotnet restore
 ```
 
@@ -276,7 +276,7 @@ Para la optimización final, resulta que la línea 20 es redundante, ya que la l
 
 El archivo resultante es entonces:
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -496,7 +496,7 @@ Lo importante aquí es que, como se muestra en la figura 5-12, en Visual Studio
 ### <a name="additional-resources"></a>Recursos adicionales
 
 - **Implementación de un contenedor de ASP.NET en un host remoto de Docker** \
-  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+  <https://docs.microsoft.com/visualstudio/containers/hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>Nota sobre las pruebas y la implementación con orquestadores
 
@@ -559,7 +559,7 @@ Además, debe realizar el paso 2 (agregar compatibilidad con Docker a los proyec
 
 Los [contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index) permiten convertir las aplicaciones de Windows existentes en imágenes de Docker e implementarlas con las mismas herramientas que el resto del ecosistema de Docker. Para usar contenedores de Windows, ejecute comandos de PowerShell en el Dockerfile, como se muestra en el ejemplo siguiente:
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/windows/servercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -568,7 +568,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 En este caso se usa una imagen base de Windows Server Core (el valor FROM) y se instala IIS con un comando de PowerShell (el valor RUN). Del mismo modo, también se pueden usar comandos de PowerShell para configurar otros componentes como ASP.NET 4.x, .NET 4.6 o cualquier otro software de Windows. Por ejemplo, el siguiente comando en un Dockerfile configura ASP.NET 4.5:
 
-```Dockerfile
+```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

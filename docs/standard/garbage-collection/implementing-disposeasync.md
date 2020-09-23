@@ -3,25 +3,25 @@ title: Implementación de un método DisposeAsync
 description: Obtenga información sobre cómo implementar los métodos DisposeAsync y DisposeAsyncCore para realizar una limpieza de recursos asincrónica.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022914"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720288"
 ---
 # <a name="implement-a-disposeasync-method"></a>Implementación de un método DisposeAsync
 
 La interfaz <xref:System.IAsyncDisposable?displayProperty=nameWithType> se presentó como parte de C# 8.0. El método <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> se implementa cuando se necesita realizar una limpieza de recursos, tal como se haría a la hora de [implementar un método Dispose](implementing-dispose.md). Sin embargo, una de las principales diferencias es que esta implementación permite operaciones de limpieza asincrónicas. El elemento <xref:System.IAsyncDisposable.DisposeAsync> devuelve un elemento <xref:System.Threading.Tasks.ValueTask> que representa la operación de eliminación asincrónica.
 
-Es habitual que, al implementar la interfaz <xref:System.IAsyncDisposable>, las clases también implementen la interfaz <xref:System.IDisposable>. Debe prepararse un buen patrón de implementación de la interfaz <xref:System.IAsyncDisposable> para la eliminación sincrónica o asincrónica. Todas las instrucciones para implementar el patrón de eliminación se aplican también a la implementación asincrónica. En este artículo se supone que ya se ha familiarizado con el modo de [implementar un método Dispose](implementing-dispose.md).
+Es habitual que, al implementar la interfaz <xref:System.IAsyncDisposable>, las clases también implementen la interfaz <xref:System.IDisposable>. Se debe preparar un patrón de implementación correcto de la interfaz <xref:System.IAsyncDisposable> para la eliminación sincrónica o asincrónica. Todas las instrucciones para implementar el patrón de eliminación se aplican también a la implementación asincrónica. En este artículo se supone que ya se ha familiarizado con el modo de [implementar un método Dispose](implementing-dispose.md).
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync() y DisposeAsyncCore()
 
@@ -54,7 +54,7 @@ public async ValueTask DisposeAsync()
 ```
 
 > [!NOTE]
-> Una diferencia principal en el patrón de eliminación asincrónica en comparación con el patrón de eliminación es que la llamada desde <xref:System.IAsyncDisposable.DisposeAsync> al método de sobrecarga `Dispose(bool)` recibe el valor `false` como argumento. Sin embargo, al implementar el método <xref:System.IDisposable.Dispose?displayProperty=nameWithType>, se pasa el valor `true`. Esto ayuda a garantizar la equivalencia funcional con el patrón de eliminación sincrónico y garantiza aún más que se invoquen las rutas de acceso al código finalizador. En otras palabras, el método `DisposeAsyncCore()` eliminará los recursos administrados de forma asincrónica, por lo que no querrá eliminarlos también de forma sincrónica. Por tanto, llame a `Dispose(false)` en lugar de a `Dispose(true)`.
+> Una diferencia principal en el patrón de eliminación asincrónica en comparación con el patrón de eliminación es que la llamada desde <xref:System.IAsyncDisposable.DisposeAsync> al método de sobrecarga `Dispose(bool)` recibe el valor `false` como argumento. Pero al implementar el método <xref:System.IDisposable.Dispose?displayProperty=nameWithType>, en su lugar se pasa el valor `true`. Esto ayuda a garantizar la equivalencia funcional con el patrón de eliminación sincrónico y garantiza aún más que se invoquen las rutas de acceso al código finalizador. En otras palabras, el método `DisposeAsyncCore()` eliminará los recursos administrados de forma asincrónica, por lo que no querrá eliminarlos también de forma sincrónica. Por tanto, llame a `Dispose(false)` en lugar de a `Dispose(true)`.
 
 ### <a name="the-disposeasynccore-method"></a>Método DisposeAsyncCore()
 
@@ -77,9 +77,9 @@ Es posible que tenga que implementar las interfaces <xref:System.IDisposable> y 
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-Las implementaciones de <xref:System.IDisposable.Dispose?displayProperty=nameWithType> y <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> se llevan a cabo mediante código reutilizable sencillo. Los métodos `Dispose(bool)` y `DisposeAsyncCore()` empiezan comprobando si `_disposed` es `true`, y solo se ejecutan cuando es `false`.
+Las implementaciones de <xref:System.IDisposable.Dispose?displayProperty=nameWithType> y <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> se llevan a cabo mediante código reutilizable sencillo.
 
-En el método de sobrecarga `Dispose(bool)`, la instancia de <xref:System.IDisposable> se elimina condicionalmente si no es `null`. La instancia de <xref:System.IAsyncDisposable> se convierte en <xref:System.IDisposable> y, si tampoco es `null`, también se elimina. Después, se asignan ambas instancias a `null`.
+En el método de sobrecarga `Dispose(bool)`, la instancia de <xref:System.IDisposable> se elimina condicionalmente si no es `null`. La instancia de <xref:System.IAsyncDisposable> se convierte a <xref:System.IDisposable> y, si tampoco es `null`, también se elimina. Después, se asignan ambas instancias a `null`.
 
 Con el método `DisposeAsyncCore()`, se sigue el mismo enfoque lógico. Si la instancia de <xref:System.IAsyncDisposable> no es `null`, se espera a la llamada a `DisposeAsync().ConfigureAwait(false)`. Si la instancia de <xref:System.IDisposable> también es una implementación de <xref:System.IAsyncDisposable>, entonces, también se elimina de forma asincrónica. Después, se asignan ambas instancias a `null`.
 

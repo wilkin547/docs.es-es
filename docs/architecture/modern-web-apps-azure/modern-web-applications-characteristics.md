@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174801"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539273"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Características de las aplicaciones web modernas
 
@@ -38,11 +38,11 @@ En esta guía se incluye una aplicación de referencia, _eShopOnWeb_, en la que 
 
 ## <a name="cloud-hosted-and-scalable"></a>Hospedada en la nube y escalable
 
-ASP.NET Core se ha optimizado para la nube (pública, privada, cualquier nube) debido a su memoria baja y rendimiento alto. La superficie más pequeña de las aplicaciones ASP.NET Core significa que se pueden hospedar más en el mismo hardware, y se paga por menos recursos cuando se usan servicios de hospedaje en la nube de pago por uso. El rendimiento mayor significa que se puede servir a más clientes desde una aplicación dado el mismo hardware, reduciendo así la necesidad de invertir en infraestructura y servidores de hospedaje.
+ASP.NET Core se ha optimizado para la nube (pública, privada, cualquier nube) debido a su memoria baja y rendimiento alto. La superficie más pequeña de las aplicaciones ASP.NET Core significa que se puede hospedar un mayor número de ellas en el mismo hardware, y que se paga por menos recursos cuando se usan servicios de hospedaje en la nube de pago por uso. El rendimiento mayor significa que se puede servir a más clientes desde una aplicación dado el mismo hardware, reduciendo así la necesidad de invertir en infraestructura y servidores de hospedaje.
 
 ## <a name="cross-platform"></a>Multiplataforma
 
-ASP.NET Core es multiplataforma y se puede ejecutar en Linux, macOS y Windows. Esto abre muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Los contenedores de Docker, tanto en Linux como en Windows, pueden hospedar aplicaciones ASP.NET Core, lo que les permite aprovechar las ventajas que ofrecen los [contenedores y microservicios](../microservices/index.md).
+ASP.NET Core es multiplataforma y se puede ejecutar en Linux, macOS y Windows. Esto abre muchas opciones nuevas para el desarrollo y la implementación de aplicaciones compiladas con ASP.NET Core. Los contenedores de Docker, tanto en Linux como en Windows, pueden hospedar aplicaciones ASP.NET Core, lo que les permite aprovechar las ventajas que ofrecen los [contenedores y microservicios](../microservices/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Modular y de acoplamiento flexible
 
@@ -76,7 +76,7 @@ Blazor se incluye con ASP.NET Core 3.0 y versiones posteriores. Proporciona un 
 
 Blazor lado servidor se lanzó en 2019 con ASP.NET Core 3.0. Como su nombre implica, se ejecuta en el servidor, lo que hace que los cambios en el documento cliente se representen en el explorador a través de la red. Blazor lado servidor proporciona una experiencia de cliente enriquecida sin requerir JavaScript del lado cliente y sin la necesidad de cargas de páginas independientes para cada interacción de la página del cliente. El servidor solicita y procesa los cambios en la página cargada y, después, estos se devuelven al cliente mediante SignalR.
 
-Blazor lado cliente se publicará en 2020 y eliminará la necesidad de representar los cambios en el servidor. En su lugar, aprovechará WebAssembly para ejecutar código de .NET en el cliente. El cliente todavía puede realizar llamadas API al servidor si es necesario para solicitar datos, pero todo el comportamiento del lado cliente se ejecuta en el cliente a través de WebAssembly, que ya es compatible con todos los exploradores principales y es solo una biblioteca de JavaScript.
+Blazor del lado cliente se ha publicado en mayo de 2020 y elimina la necesidad de representar los cambios en el servidor. En su lugar, aprovecha WebAssembly para ejecutar código de .NET en el cliente. El cliente todavía puede realizar llamadas API al servidor si es necesario para solicitar datos, pero todo el comportamiento del lado cliente se ejecuta en el cliente a través de WebAssembly, que ya es compatible con todos los exploradores principales y es solo una biblioteca de JavaScript.
 
 > ### <a name="references--modern-web-applications"></a>Referencias: aplicaciones web modernas
 >

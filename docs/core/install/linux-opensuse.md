@@ -4,11 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619473"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539235"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en openSUSE
 
@@ -57,6 +58,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ## <a name="troubleshoot-the-package-manager"></a>Solución de problemas del administrador de paquetes
 
 En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET Core.
+
+### <a name="unable-to-find-package"></a>No se puede encontrar el paquete
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
 

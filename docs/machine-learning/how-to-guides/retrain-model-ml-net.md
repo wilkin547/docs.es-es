@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 50f35e3511acc344339b1e150b47d7ce6de94254
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976962"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679565"
 ---
 # <a name="re-train-a-model"></a>Nuevo entrenamiento de un modelo
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Extracción de parámetros del modelo previamente entrenado
 
-Una vez que se ha cargado el modelo, extraiga los parámetros del modelo entrenado accediendo a la propiedad [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) del modelo previamente entrenado. El modelo previamente entrenado se entrenó con el modelo de regresión lineal [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer), que crea un [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) que genera [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Estos parámetros del modelo de regresión lineal contienen el sesgo aprendido y pesos o coeficientes del modelo. Estos valores se usarán como punto inicial para el nuevo modelo entrenado.
+Una vez que se ha cargado el modelo, extraiga los parámetros del modelo entrenado accediendo a la propiedad [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase%601.Model%2A) del modelo previamente entrenado. El modelo previamente entrenado se ha entrenado con el modelo de regresión lineal [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer), que crea un objeto [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) que genera [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters). Estos parámetros del modelo de regresión lineal contienen el sesgo aprendido y pesos o coeficientes del modelo. Estos valores se usarán como punto inicial para el nuevo modelo entrenado.
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>Volver a entrenar el modelo
 
-El proceso para volver a entrenar un modelo es similar al de entrenamiento de un modelo. La única diferencia es que el método [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*), además de los datos, también toma como entrada los parámetros del modelo entrenado original y los usa como punto inicial en el proceso de nuevo entrenamiento.
+El proceso para volver a entrenar un modelo es similar al de entrenamiento de un modelo. La única diferencia es que el método [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer%602.Fit%2A), además de los datos, también toma como entrada los parámetros del modelo entrenado original y los usa como punto inicial en el proceso de nuevo entrenamiento.
 
 ```csharp
 // New Data

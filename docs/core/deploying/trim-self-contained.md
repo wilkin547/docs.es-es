@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo recortar aplicaciones autocontenid
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465486"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770460"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Recorte de implementaciones autocontenidas y ejecutables
 
@@ -24,7 +24,7 @@ El motor de análisis en tiempo de compilación proporciona advertencias al desa
 El modo de recorte de las aplicaciones se configura con `TrimMode`. El valor predeterminado es `copyused` y agrupa los ensamblados a los que se hace referencia con la aplicación. El valor `link` se usa con las aplicaciones WebAssembly de Blazor y recorta el código no usado dentro de los ensamblados. Las advertencias de análisis de recorte proporcionan información sobre patrones de código en los que no es posible realizar análisis de dependencias completas. Estas advertencias se suprimen de forma predeterminada y se pueden activar estableciendo la marca `SuppressTrimAnalysisWarnings` en `false`. Para obtener más información acerca de las opciones de recorte disponibles, vea [Opciones de recorte](trimming-options.md).
 
 > [!NOTE]
-> El recorte es una característica experimental en .NET Core 3.1, 5.0 y _solo_ está disponible para las aplicaciones que se publican independientes.
+> El recorte es una característica experimental en .NET Core 3.1 y .NET 5.0. _Solo_ está disponible para las aplicaciones que se publican como independientes.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Impedir que los ensamblados se recorten
 

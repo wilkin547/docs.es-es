@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065037"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738728"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -224,7 +224,7 @@ Otra aplicación muy útil de esta característica es para combinarla con propie
 
 Puede devolver una instancia creada por el constructor predeterminado mediante una expresión `return new();`.
 
-Una característica similar mejora la resolución de tipos de destino de las expresiones condicionales. Con este cambio, las dos expresiones no necesitan tener una conversión implícita de una a otra, pero pueden tener conversiones implícitas a un tipo común. Lo más probable es que no note este cambio. Lo que observará es que ahora funcionan algunas expresiones condicionales para las que anteriormente se necesitan conversiones o que no se compilaban.
+Una característica similar mejora la resolución de tipos de destino de las expresiones condicionales. Con este cambio, las dos expresiones no necesitan tener una conversión implícita de una a otra, pero pueden tener conversiones implícitas a un tipo de destino. Lo más probable es que no note este cambio. Lo que observará es que ahora funcionan algunas expresiones condicionales para las que anteriormente se necesitan conversiones o que no se compilaban.
 
 A partir de C# 9.0, puede agregar el modificador `static` a expresiones lambda o métodos anónimos. Las expresiones lambda estáticas son análogas a las funciones `static` locales: una expresión lambda o una función anónima estática no puede capturar variables locales ni el estado de la instancia. El modificador `static` impide la captura accidental de otras variables.
 
