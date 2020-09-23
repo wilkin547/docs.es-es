@@ -1,26 +1,29 @@
 ---
-title: variables
+title: Variables
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: ff617774d7e93ab4238ebc06617cc03fb6bc675a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd6417033a6c2626d17ad003de6c637dd1e8adaa
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410391"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080223"
 ---
 # <a name="variables-in-visual-basic"></a>Variables en Visual Basic
+
 A menudo tiene que almacenar valores al realizar cálculos con Visual Basic. Por ejemplo, tal vez le interese calcular varios valores, compararlos y realizar diversas operaciones con ellos, según el resultado de la comparación. Para poder compararlos, debe conservar los valores.  
   
 ## <a name="usage"></a>Uso  
+
  Visual Basic, al igual que la mayoría de los lenguajes de programación, utiliza variables para almacenar valores. Las *variables* tienen un nombre (la palabra que se usa para hacer referencia al valor contenido por la variable). Las variables también tienen un tipo de datos (que determina el tipo de datos que puede almacenar la variable). Las variables pueden representar una matriz si tienen que almacenar un conjunto indexado de elementos de datos estrechamente relacionados.  
   
  La inferencia de tipo de variable local permite declarar variables sin especificar explícitamente un tipo de datos. En su lugar, el compilador deduce el tipo de la variable a partir del tipo de la expresión de inicialización. Para obtener más información, vea [Local Type Inference](local-type-inference.md) (Inferencia de tipo de variable local) y [Option Infer Statement](../../../language-reference/statements/option-infer-statement.md) (Instrucción Option Infer).  
   
 ## <a name="assigning-values"></a>Asignar valores  
+
  Para realizar cálculos y asignar el resultado a una variable debe usar instrucciones de asignación, como se muestra en el ejemplo siguiente.  
   
  [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
@@ -31,9 +34,10 @@ A menudo tiene que almacenar valores al realizar cálculos con Visual Basic. Por
  Para obtener más información, vea [How to: Move Data Into and Out of a Variable](how-to-move-data-into-and-out-of-a-variable.md) (Cómo: Introducir y extraer los datos de una variable).  
   
 ## <a name="variables-and-properties"></a>Variables y propiedades  
+
  Al igual que una variable, una *propiedad* representa un valor al que se puede tener acceso, pero es más compleja que una variable. Una propiedad usa bloques de código que controlan cómo establecer y recuperar su valor. Para obtener más información, vea [Differences Between Properties and Variables in Visual Basic](../procedures/differences-between-properties-and-variables.md) (Diferencias entre propiedades y variables en Visual Basic).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Declaración de variable](variable-declaration.md)
 - [Variables de objeto](object-variables.md)

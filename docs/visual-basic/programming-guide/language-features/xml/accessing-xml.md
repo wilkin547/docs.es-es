@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 282b7d91ec7cfe2f587c67bc9a982f0da22ad925
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ffe6d5ed368aee6d6984ec6ab28c8832921a3f8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410314"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080184"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Obtener acceso a XML en Visual Basic
+
 Visual Basic proporciona propiedades de eje XML para tener acceso a las estructuras y navegar por ellas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Estas propiedades usan una sintaxis especial para permitir el acceso a elementos y atributos mediante la especificación de los nombres XML.  
   
  En la tabla siguiente se enumeran las características del lenguaje que permiten tener acceso a los elementos y atributos XML en Visual Basic.  
@@ -31,6 +32,7 @@ Visual Basic proporciona propiedades de eje XML para tener acceso a las estructu
 |*value*|`contacts...<name>.Value`|Obtiene la representación en forma de cadena del primer objeto de la secuencia o `Nothing` si la secuencia está vacía.|  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Procedimiento para obtener acceso a elementos descendientes XML](how-to-access-xml-descendant-elements.md)  
  Muestra cómo usar una propiedad de eje descendiente para tener acceso a todos los elementos XML que tienen un nombre especificado y que están incluidos en un elemento XML especificado.  
   
@@ -44,6 +46,7 @@ Visual Basic proporciona propiedades de eje XML para tener acceso a las estructu
  Muestra cómo declarar un prefijo de espacio de nombres XML y usarlo para crear y obtener acceso a los elementos XML.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Propiedades de eje XML](../../../language-reference/xml-axis/index.md)  
  Proporciona vínculos a secciones en las que se describen las distintas propiedades de acceso XML.  
   
