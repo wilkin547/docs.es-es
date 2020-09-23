@@ -8,14 +8,15 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 46294b68bda8a5d2d21c0e4efea6a78e6a265ffe
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: abe4acd5850aa6065bf4f6fd41bc610ede7ad13f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403192"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097961"
 ---
 # <a name="visual-basic-limitations"></a>Limitaciones de Visual Basic
+
 Las versiones anteriores de Visual Basic los límites aplicados en el código, como la longitud de los nombres de variable, el número de variables permitidas en los módulos y el tamaño del módulo. En Visual Basic .NET, estas restricciones se han reducido, lo que le aporta mayor libertad para escribir y organizar el código.  
   
  Los límites físicos dependen más en la memoria en tiempo de ejecución que en las consideraciones en tiempo de compilación. Si usa prácticas de programación prudentes y divide aplicaciones grandes en varias clases y módulos, hay muy pocas probabilidades de encontrar una limitación de Visual Basic interna.  
@@ -32,7 +33,7 @@ Las versiones anteriores de Visual Basic los límites aplicados en el código, c
   
 - **Longitud de la cadena de entorno.** Hay un máximo de 32768 caracteres para cualquier cadena de entorno utilizada como argumento de la línea de comandos. Se trata de una limitación en todas las plataformas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Convenciones de código y estructura de programas](program-structure-and-code-conventions.md)
 - [Convenciones de nomenclatura de Visual Basic](naming-conventions.md)

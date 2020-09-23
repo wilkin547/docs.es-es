@@ -2,17 +2,19 @@
 title: Language-Integrated Query (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c34145a0b7ff5cf97f5efd6ff7b49381af80bd93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549947"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098260"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Language-Integrated Query (LINQ) (Visual Basic)
+
 LINQ es un conjunto de características que agrega capacidades de consulta eficaces a la sintaxis del lenguaje Visual Basic. LINQ incorpora patrones estándar y de fácil aprendizaje para consultar y actualizar datos, y la tecnología se puede ampliar para proporcionar compatibilidad prácticamente con cualquier tipo de almacén de datos.  .NET Framework incluye ensamblados de proveedor LINQ que habilitan el uso de LINQ con colecciones de .NET Framework, bases de datos de SQL Server, conjuntos de datos ADO.NET y documentos XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Introducción a LINQ (Visual Basic)](introduction-to-linq.md)  
  Proporciona una introducción general a los tipos de aplicaciones que puede escribir y los tipos de problemas que puede solucionar con las consultas LINQ.  
   

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 928d7fb6a40873641ae3e91e057c272b946a0091
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393719"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095595"
 ---
 # <a name="data-types-in-visual-basic"></a>Tipos de datos en Visual Basic
+
 El *tipo de datos* de un elemento de programación hace referencia al tipo de datos que puede contener y cómo almacena los datos. Los tipos de datos se aplican a todos los valores que se pueden almacenar en la memoria del equipo o participar en la evaluación de una expresión. Cada variable, literal, constante, enumeración, propiedad, parámetro de procedimiento, argumento de procedimiento y valor devuelto de un procedimiento tiene un tipo de datos.  
   
 ## <a name="declared-data-types"></a>Tipos de datos declarados  
+
  Define un elemento de programación con una instrucción de declaración y especifica su tipo de datos con la cláusula `As`. En la tabla siguiente se muestran las instrucciones que usa para declarar diversos elementos.  
   
 |Elemento de programación|Declaración de tipos de datos|  
@@ -34,7 +36,7 @@ El *tipo de datos* de un elemento de programación hace referencia al tipo de da
   
  Para ver una lista de los tipos de datos de Visual Basic, consulte [Tipos de datos](../../../language-reference/data-types/index.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Caracteres de tipo](type-characters.md)
 - [Tipos de datos básicos](elementary-data-types.md)
@@ -45,5 +47,5 @@ El *tipo de datos* de un elemento de programación hace referencia al tipo de da
 - [Estructuras](structures.md)
 - [Tuplas](tuples.md)
 - [Solución de problemas de los tipos de datos](troubleshooting-data-types.md)
-- [Tipos de datos](../../../language-reference/data-types/index.md)
-- [Uso eficiente de los tipos de datos](efficient-use-of-data-types.md)
+- [Tipo de datos](../../../language-reference/data-types/index.md)
+- [Uso eficiente de tipos de datos](efficient-use-of-data-types.md)
