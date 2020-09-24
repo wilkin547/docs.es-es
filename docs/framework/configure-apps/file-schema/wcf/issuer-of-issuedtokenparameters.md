@@ -2,14 +2,15 @@
 title: <issuer> de <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: bdd5ad45984fae7b39defe82c4af75845dfda1b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bfe8163d2d6baba1d6e8053f7f6579673d8b4b21
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397946"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157283"
 ---
 # <a name="issuer-of-issuedtokenparameters"></a>\<issuer> de \<issuedTokenParameters>
+
 Especifica el servicio de token de seguridad (STS) que emite los tokens de seguridad.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica el servicio de token de seguridad (STS) que emite los tokens de segur
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,7 +51,7 @@ Especifica el servicio de token de seguridad (STS) que emite los tokens de segur
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Especifica el token emitido actual.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.AdditionalRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement.AdditionalRequestParameters%2A>

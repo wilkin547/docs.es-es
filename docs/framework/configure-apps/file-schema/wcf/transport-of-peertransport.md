@@ -2,14 +2,15 @@
 title: <transport> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3b2c7716727f58abb81bf4d58b13189ac170cf7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7328d67c4649010dce3e1c866238d1e0067e4990
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399287"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157075"
 ---
 # <a name="transport-of-peertransport"></a>\<transport> de \<peerTransport>
+
 Especifica el tipo de transporte para mensajes seguros enviados por pares configurados con este enlace.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,12 +42,13 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
   
 ## <a name="credentialtype-attribute"></a>Atributo credentialType  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Certificado|La autenticación del transporte de canal del mismo nivel requiere un certificado X509.|  
 |Contraseña|La autenticación del transporte de canal del mismo nivel requiere una contraseña correcta.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -55,9 +58,10 @@ Especifica el tipo de transporte para mensajes seguros enviados por pares config
 |[\<security>](security-of-peertransport.md)|Define la configuración de seguridad de un transporte del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este elemento se establece solo si el atributo de modo de [\<security>](security-of-peertransport.md) se establece en `Transport` o `TransportWithMessageCredential` .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>

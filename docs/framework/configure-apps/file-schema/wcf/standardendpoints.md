@@ -2,14 +2,15 @@
 title: <standardEndpoints>
 ms.date: 03/30/2017
 ms.assetid: d62153d7-a6e6-462a-a784-cca61e9c2ba1
-ms.openlocfilehash: 76a5303650c4e2b2887d29f511d3088c78b58fe2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d0607b5c541fc5ae402a50a0f8c464355b6b246
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157205"
 ---
 # \<standardEndpoints>
+
 Esta sección de configuración le permite definir una colección de puntos de conexión estándar, que son los puntos de conexión preconfigurados reutilizables. Un punto de conexión estándar tendrá uno o más atributos de la dirección, el enlace y el contrato establecidos en un valor fijo. Por ejemplo, en el punto de conexión de la detección el contrato es fijo. También puede usar los puntos de conexión estándar para extender el punto de conexión de servicio con nuevas propiedades similares a la definición de enlaces personalizados.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,9 +27,11 @@ Esta sección de configuración le permite definir una colección de puntos de c
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -51,6 +54,6 @@ Esta sección de configuración le permite definir una colección de puntos de c
 |-------------|-----------------|  
 |\<system.ServiceModel>|Elemento raíz de todos los elementos de configuración de WCF.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Extremos estándar](../../../wcf/feature-details/standard-endpoints.md)

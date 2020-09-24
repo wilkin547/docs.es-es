@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 399bf44ef5536a9adebf1cad590439741df998f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0a6853ef5d0b67e5efb95731adb5a106e8701e0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793317"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155840"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Procedimiento para recuperar información con formato de solo lectura
+
 Cuando no se tiene pensado cambiar los datos, puede aumentar el rendimiento de las consultas buscando resultados de solo lectura.  
   
  El procesamiento de solo lectura se implementa estableciendo <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> en `false`.  
@@ -21,6 +22,7 @@ Cuando no se tiene pensado cambiar los datos, puede aumentar el rendimiento de l
 > Cuando <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> se establece en `false`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> se establece implícitamente en `false`.  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente recupera una colección de solo lectura de fechas de contratación de empleados.  
   
  [!code-csharp[DLinqQuerying#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#2)]
@@ -29,5 +31,5 @@ Cuando no se tiene pensado cambiar los datos, puede aumentar el rendimiento de l
 ## <a name="see-also"></a>Vea también
 
 - [Conceptos sobre consultas](query-concepts.md)
-- [Consulta de la base de datos](querying-the-database.md)
+- [Consultar la base de datos](querying-the-database.md)
 - [Carga inmediata y carga diferida](deferred-versus-immediate-loading.md)

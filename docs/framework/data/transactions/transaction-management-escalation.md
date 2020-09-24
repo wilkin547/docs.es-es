@@ -3,23 +3,25 @@ title: Extensión de administración de transacción
 description: Obtenga información sobre la escalación de la administración de transacciones en .NET, que es el proceso de migración de una transacción de los componentes de un administrador de transacciones a otro.
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: a0b70f4be0f041be95b02537e06f9ec19a9b6183
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 83abca2e2c9acf53ce3f72d6bc55a82964b99cb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141662"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155447"
 ---
 # <a name="transaction-management-escalation"></a>Extensión de administración de transacción
+
 Windows hospeda un conjunto de servicios y módulos que juntos constituyen un administrador de transacciones. La subida de administración de transacciones describe el proceso de migración de una transacción desde uno de los componentes del administrador de transacciones a otro.  
   
- <xref:System.Transactions>incluye un componente del administrador de transacciones que coordina una transacción que implica como máximo un recurso duradero único o varios recursos volátiles. Dado que el administrador de transacciones solo utiliza las llamadas de dominio de intraaplicación, produce el máximo rendimiento. Los programadores no necesitan interactuar directamente con el administrador de transacciones. En su lugar, una infraestructura común que define las interfaces, un comportamiento común, y las clases del asistente <xref:System.Transactions> es proporcionada por el espacio de nombres.  
+ <xref:System.Transactions> incluye un componente del administrador de transacciones que coordina una transacción que implica como máximo un recurso duradero único o varios recursos volátiles. Dado que el administrador de transacciones solo utiliza las llamadas de dominio de intraaplicación, produce el máximo rendimiento. Los programadores no necesitan interactuar directamente con el administrador de transacciones. En su lugar, una infraestructura común que define las interfaces, un comportamiento común, y las clases del asistente <xref:System.Transactions> es proporcionada por el espacio de nombres.  
   
  Cuando desea proporcionar la transacción a un objeto de otro dominio de aplicación (incluidos los límites del proceso y del equipo) en el mismo equipo, la <xref:System.Transactions> infraestructura de escala automáticamente la transacción para que la administre Microsoft Coordinador de transacciones distribuidas (MSDTC). La subida también se produce si da de alta a otro administrador de recursos duradero. Cuando se realiza una escalada, la transacción sigue siendo administrada en su estado elevado hasta su realización.  
   
  Entre la transacción <xref:System.Transactions> y la transacción de MSDTC, hay un tipo intermediario de transacción disponible a través de la inscripción de fase única promocional (PSPE). PSPE es otro mecanismo importante en <xref:System.Transactions> para la optimización de rendimiento. Permite un recurso duradero remoto, situado en un dominio de aplicación diferente, proceso o equipo, para participar en una transacción <xref:System.Transactions> sin producir que se realice una escalada a una transacción de MSDTC. Para obtener más información sobre PSPE, vea [dar de alta recursos como participantes en una transacción](enlisting-resources-as-participants-in-a-transaction.md).  
   
 ## <a name="how-escalation-is-initiated"></a>Cómo se Inicia la subida  
+
  La subida de la transacción reduce el rendimiento porque MSDTC reside en un proceso independiente, y realizar una escalada de una transacción a MSDTC produce el envío de mensajes durante el proceso. Para mejorar el rendimiento, debería retrasar o evitar la subida a MSDTC; así, necesita conocer cómo y cuando se inicia la subida.  
   
  Con tal de que la infraestructura <xref:System.Transactions> administre los recursos volátiles y a lo sumo un recurso duradero que admita notificaciones de la fase única, la transacción permanece en la propiedad de la infraestructura <xref:System.Transactions>. El administrador de transacciones solo es útil a esos recursos que viven en el mismo dominio de aplicación y para los que no se requiere estar registrado (escribir el resultado de la transacción en el disco). Una subida que provoca que la infraestructura <xref:System.Transactions> transfiera la propiedad de la transacción a MSDTC sucede cuando:  

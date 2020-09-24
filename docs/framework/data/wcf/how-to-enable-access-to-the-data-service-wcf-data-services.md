@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
-ms.openlocfilehash: 377b031c48ed831cfa5e270426283ed03a55f886
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62622a5788a735497a6869c114c572e947067449
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542312"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155424"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Cómo: Habilitar el acceso al servicio de datos (WCF Data Services)
+
 En WCF Data Services, debe conceder explícitamente acceso a los recursos expuestos por un servicio de datos. Esto significa que después de crear un nuevo servicio de datos, debe proporcionar explícitamente acceso a los recursos individuales como conjuntos de entidades. En este tema se muestra cómo habilitar el acceso de lectura y escritura a cinco de los conjuntos de entidades del servicio de datos de Northwind que se crea al completar la guía de [Inicio rápido](quickstart-wcf-data-services.md). Dado que la enumeración <xref:System.Data.Services.EntitySetRights> se define utilizando <xref:System.FlagsAttribute>, puede utilizar un operador OR lógico para especificar varios permisos para un único conjunto de entidades.  
   
 > [!NOTE]

@@ -3,14 +3,15 @@ title: <samlSecurityTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
-ms.openlocfilehash: b27f337189a7d0b66ffd38e032b5eb864e5094a1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f93ec0007b537e306a570b166eaa4cd2fe7f81e2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152637"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157036"
 ---
 # \<samlSecurityTokenRequirement>
+
 Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> clase, la <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> clase o una clase derivada de cualquiera de estas clases. Se representa mediante la <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> clase.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -43,6 +44,7 @@ Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SamlSecu
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -69,6 +71,7 @@ Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SamlSecu
 |[\<add>](add.md)|Agrega el controlador de tokens de seguridad especificado a la colección de controladores de tokens.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La `<samlSecurityTokenRequirement>` clase representa el elemento <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> en el modelo de objetos y se usa para configurar la `SamlSecurityTokenRequirement` propiedad en <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> .  
   
 ## <a name="example"></a>Ejemplo  

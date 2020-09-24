@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2ffff8b69839d5c1e70e81f9fc6f3a97f57ac6c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155983"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Buscar el valor mínimo de una secuencia numérica
+
 Utilice al operador <xref:System.Linq.Enumerable.Min%2A> para devolver el valor mínimo de una secuencia de valores numéricos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se busca el precio unitario más bajo de cualquier producto.  
   
  Si ejecuta esta consulta en la base de datos de ejemplo Northwind, el resultado es: `2.5000`.  
@@ -24,6 +26,7 @@ Utilice al operador <xref:System.Linq.Enumerable.Min%2A> para devolver el valor 
  [!code-vb[DLinqQueryExamples#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#9)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se busca el importe con flete más bajo de cualquier pedido.  
   
  Si ejecuta esta consulta en la base de datos de ejemplo Northwind, el resultado es: `0.0200`.  
@@ -32,6 +35,7 @@ Utilice al operador <xref:System.Linq.Enumerable.Min%2A> para devolver el valor 
  [!code-vb[DLinqQueryExamples#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#10)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se utiliza Min para encontrar los `Products` que tienen el precio unitario más bajo en cada categoría. El resultado se organiza por categoría.  
   
  [!code-csharp[DLinqQueryExamples#11](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#11)]

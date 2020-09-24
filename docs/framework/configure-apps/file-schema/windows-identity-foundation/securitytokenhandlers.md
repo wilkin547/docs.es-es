@@ -3,14 +3,15 @@ title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d892fbd802ed366ca7af9b85fbf5c23d4d27e0f1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251872"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157010"
 ---
 # \<securityTokenHandlers>
+
 Especifica una colección de controladores de tokens de seguridad que se registran con el punto de conexión.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Especifica una colección de controladores de tokens de seguridad que se registr
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -54,6 +56,7 @@ Especifica una colección de controladores de tokens de seguridad que se registr
 |[\<identityConfiguration>](identityconfiguration.md)|Especifica la configuración de identidad de nivel de servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Puede especificar una o varias colecciones con nombre de controladores de token de seguridad en una configuración de servicio. Puede especificar un nombre para una colección mediante el `name` atributo. Los únicos nombres que controla el marco de trabajo son "ActAs" y "Onbehalfof". Si existen controladores en estas colecciones, un servicio de token de seguridad (STS) los usa en lugar de los controladores predeterminados al procesar `ActAs` los `OnBehalfOf` tokens y.  
   
  De forma predeterminada, la colección se rellena con los siguientes tipos de controlador: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler> , <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> y <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler> . Puede modificar la colección mediante los `<add>` `<remove>` elementos, y `<clear>` . Debe asegurarse de que solo existe en la colección un único controlador de un tipo determinado. Por ejemplo, si se deriva un controlador de la <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> clase, el controlador o <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> se puede configurar en una colección única, pero no en ambos.  

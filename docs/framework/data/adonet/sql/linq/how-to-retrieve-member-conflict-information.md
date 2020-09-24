@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dd6829e-79a5-4480-9023-9e588cb0bf2e
-ms.openlocfilehash: 40caa07488cb40ca8e9e3eb3a570c325b92de491
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4848ef69914f0520d2365538faea7fa064c1a15c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793309"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155814"
 ---
 # <a name="how-to-retrieve-member-conflict-information"></a>Procedimiento para recuperar información de conflictos de miembros
-Puede utilizar la clase <xref:System.Data.Linq.MemberChangeConflict> para recuperar información sobre cada uno de los miembros en conflicto. En este mismo contexto, puede proporcionar el control personalizado del conflicto para cualquier miembro. Para obtener más información, [consulte simultaneidad optimista: Información](optimistic-concurrency-overview.md)general.  
+
+Puede utilizar la clase <xref:System.Data.Linq.MemberChangeConflict> para recuperar información sobre cada uno de los miembros en conflicto. En este mismo contexto, puede proporcionar el control personalizado del conflicto para cualquier miembro. Para obtener más información, vea [simultaneidad optimista: información general](optimistic-concurrency-overview.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente procesa una iteración en los objetos <xref:System.Data.Linq.ObjectChangeConflict>. Para cada objeto, procesa una iteración en los objetos <xref:System.Data.Linq.MemberChangeConflict>.  
   
 > [!NOTE]
@@ -26,4 +28,4 @@ Puede utilizar la clase <xref:System.Data.Linq.MemberChangeConflict> para recupe
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Administrar conflictos de cambios](how-to-manage-change-conflicts.md)
+- [Procedimiento para administrar conflictos de cambios](how-to-manage-change-conflicts.md)

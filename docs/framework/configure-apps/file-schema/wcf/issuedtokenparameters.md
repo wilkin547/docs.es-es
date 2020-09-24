@@ -2,14 +2,15 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 8432463ff62e4b5e54a491b574cc6a5285efe220
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c90024a0629f39d160967ca00434e48f682d8933
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70397954"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157322"
 ---
 # \<issuedTokenParameters>
+
 Especifica los parámetros para un token de seguridad emitido en un escenario de seguridad aliado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<security>**](security-of-custombinding.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuedTokenParameters>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
@@ -40,9 +41,11 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,7 +55,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 |defaultMessageSecurityVersion|Especifica las versiones de las especificaciones de seguridad, (WS-Security, WS-Trust, WS-Secure Conversation y WS-Security Policy) que debe admitir el enlace. Este valor es del tipo <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |inclusionMode|Especifica los requisitos de inclusión del token. Este atributo es del tipo <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>.|  
 |keySize|Un entero que especifica el tamaño de la clave del token. El valor predeterminado es 256.|  
-|keyType|Una valor válido de <xref:System.IdentityModel.Tokens.SecurityKeyType> que especifica el tipo de clave. De manera predeterminada, es `SymmetricKey`.|  
+|keyType|Una valor válido de <xref:System.IdentityModel.Tokens.SecurityKeyType> que especifica el tipo de clave. El valor predeterminado es `SymmetricKey`.|  
 |tokenType|Una cadena que representa el tipo de token. El valor predeterminado es "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAML".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -71,7 +74,7 @@ Especifica los parámetros para un token de seguridad emitido en un escenario de
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
 |[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>

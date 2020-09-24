@@ -2,14 +2,15 @@
 title: Información general
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: fc7c68fe2dba266e056feb459038a060a055e175
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 56ba323aee3b559fbb8afd506be4c23595df6d2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542116"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156100"
 ---
 # <a name="background-information"></a>Información general
+
 En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que van más allá del simple uso.  
   
  Siga estos pasos para obtener ejemplos adicionales de aplicaciones y código [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]:  
@@ -21,6 +22,7 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
 - Estudie las notas del producto que detallan la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [ADO.NET y LINQ to SQL](ado-net-and-linq-to-sql.md)  
  Describe la relación de ADO.NET y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
@@ -82,5 +84,6 @@ En los temas de esta sección se analizan conceptos y procedimientos de [!INCLUD
  Describe cómo asignar funciones definidas por el usuario en tiempo de diseño y cómo llamarlas desde una aplicación.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Guía de programación](programming-guide.md)  
  Incluye vínculos a secciones que explican varios aspectos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

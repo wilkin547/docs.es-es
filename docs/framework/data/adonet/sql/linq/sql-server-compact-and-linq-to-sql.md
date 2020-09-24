@@ -2,19 +2,21 @@
 title: SQL Server Compact y LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
-ms.openlocfilehash: bdd1237a8eac1c278e7704f3fbf0ae8b1deeff42
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7963db9e05eca7a7a148228c6d2fbca0221ca870
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541368"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155684"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact y LINQ to SQL
+
 SQL Server Compact es la base de datos predeterminada instalada con Visual Studio. Para obtener más información, vea [uso de SQL Server Compact (Visual Studio)](/previous-versions/visualstudio/visual-studio-2012/aa983321(v=vs.110)).  
   
  En este tema se describen las principales diferencias en el uso, la configuración, los conjuntos de características y el ámbito de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] soporte técnico.  
   
 ## <a name="characteristics-of-sql-server-compact-in-relation-to-linq-to-sql"></a>Características de SQL Server Compact en relación con LINQ to SQL  
+
  De forma predeterminada, SQL Server Compact se instala para todas las ediciones de Visual Studio y, por tanto, está disponible en el equipo de desarrollo para su uso con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] . Pero la implementación de una aplicación que usa SQL Server Compact y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] difiere de la de una aplicación SQL Server. SQL Server Compact no forma parte de .NET Framework y, por lo tanto, se debe incluir con la aplicación o descargar específicamente desde el sitio de Microsoft.  
   
  Observe las siguientes características:  
@@ -30,6 +32,7 @@ SQL Server Compact es la base de datos predeterminada instalada con Visual Studi
 - El Object Relational Designer no admite SQL Server Compact.  
   
 ## <a name="feature-set"></a>Conjunto de características  
+
  El conjunto de características SQL Server Compact es mucho más sencillo que el conjunto de características de SQL Server de las siguientes maneras que pueden afectar a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] las aplicaciones:  
   
 - SQL Server Compact no admite las vistas ni los procedimientos almacenados.  

@@ -2,20 +2,22 @@
 title: System.String (Métodos)
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 583c0d58562c1605f24b61489d481e19248ebed4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 44d32ed1000ca49d9fc29ffcde4506b44fc975b6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155671"
 ---
 # <a name="systemstring-methods"></a>System.String (Métodos)
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite los métodos <xref:System.String> siguientes.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Métodos System.String no admitidos en general  
+
  Métodos <xref:System.String> no admitidos en general:  
   
-- Sobrecargas que tienen en cuenta las referencias culturales ( `CultureInfo`métodos que toman  /   /  `StringComparison` `IFormatProvider`).  
+- Sobrecargas que tienen en cuenta las referencias culturales (métodos que toman `CultureInfo`  /  `StringComparison`  /  `IFormatProvider` ).  
   
 - Métodos que utilizan o generan una matriz `char`.  
   

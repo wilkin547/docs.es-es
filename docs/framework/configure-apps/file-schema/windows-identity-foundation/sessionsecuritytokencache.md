@@ -3,14 +3,15 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 4169fe307e9ef7c391500a2292fcc247f435caa9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 347d1a1cba95bbd4992de95d6617e8828f4fc374
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555892"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156906"
 ---
 # \<sessionSecurityTokenCache>
+
 Registra una memoria caché para los tokens de sesión con un servicio o una colección de controladores de tokens de seguridad.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Registra una memoria caché para los tokens de sesión con un servicio o una col
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,7 +44,8 @@ Registra una memoria caché para los tokens de sesión con un servicio o una col
 |type|Tipo que se deriva de la <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> clase.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno  
+
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -51,6 +54,7 @@ Registra una memoria caché para los tokens de sesión con un servicio o una col
 |[\<caches>](caches.md)|Registra las memorias caché utilizadas por un servicio o una colección de controladores de tokens de seguridad.|  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente XML muestra la configuración de una caché personalizada para contener los tokens de seguridad de la sesión ( <xref:System.IdentityModel.Tokens.SessionSecurityToken> ). La configuración se toma del `ClaimsAwareWebFarm` ejemplo. Para obtener más información sobre este ejemplo, consulte [Índice de ejemplo de código WIF](/previous-versions/dotnet/framework/security/wif-code-sample-index).  
   
 ```xml  

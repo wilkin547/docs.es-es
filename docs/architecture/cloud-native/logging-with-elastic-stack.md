@@ -2,12 +2,12 @@
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
 ms.date: 05/13/2020
-ms.openlocfilehash: 32d9d0dae175d8d45d48b56d17f133b4cc432363
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811176"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155346"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
 
@@ -105,7 +105,7 @@ El componente final de la pila es Kibana. Esta herramienta se usa para proporcio
 
 ## <a name="installing-elastic-stack-on-azure"></a>Instalación de la pila elástica en Azure
 
-La pila elástica se puede instalar en Azure de varias maneras. Como siempre, es posible [aprovisionar máquinas virtuales e instalar la pila elástica en ellas directamente](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Algunos usuarios experimentados prefieren esta opción, ya que ofrece el mayor grado de personalización. La implementación en la infraestructura como servicio presenta una sobrecarga importante en la administración que obliga a quienes toman esa ruta de acceso a tomar posesión de todas las tareas asociadas a la infraestructura como servicio, como la protección de las máquinas y la actualización de las revisiones.
+La pila elástica se puede instalar en Azure de varias maneras. Como siempre, es posible [aprovisionar máquinas virtuales e instalar la pila elástica en ellas directamente](/azure/virtual-machines/linux/tutorial-elasticsearch). Algunos usuarios experimentados prefieren esta opción, ya que ofrece el mayor grado de personalización. La implementación en la infraestructura como servicio presenta una sobrecarga importante en la administración que obliga a quienes toman esa ruta de acceso a tomar posesión de todas las tareas asociadas a la infraestructura como servicio, como la protección de las máquinas y la actualización de las revisiones.
 
 Una opción con menos sobrecarga es usar uno de los muchos contenedores de Docker en los que ya se ha configurado la pila elástica. Estos contenedores pueden colocarse en un clúster de Kubernetes existente y ejecutarse junto al código de la aplicación. El contenedor [sebp/Elk](https://elk-docker.readthedocs.io/) es un contenedor de pila elástica bien documentado y probado.
 
@@ -113,7 +113,7 @@ Otra opción es una [oferta de Elk como servicio anunciada recientemente](https:
 
 ## <a name="references"></a>Referencias
 
-- [Instalación de la pila elástica en Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch)
+- [Instalación de la pila elástica en Azure](/azure/virtual-machines/linux/tutorial-elasticsearch)
 
 >[!div class="step-by-step"]
 >[Anterior](observability-patterns.md)

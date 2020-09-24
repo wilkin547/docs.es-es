@@ -3,14 +3,15 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4560c55cee5caf975e83ce9d4dc0b379ab905f8d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152546"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91156854"
 ---
 # \<sessionTokenRequirement>
+
 Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> clase o las clases derivadas.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SessionS
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -45,6 +47,7 @@ Proporciona la configuración para la <xref:System.IdentityModel.Tokens.SessionS
 |lifetime|Especifica la duración de los tokens de sesión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  

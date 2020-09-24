@@ -2,14 +2,15 @@
 title: <identity>
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 15c9e38a141fc294c47863b1a932711444ac079a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bb9468b6005361a2a480f7c0ebfb2cbb9e9199c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855155"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91157387"
 ---
 # \<identity>
+
 El elemento de identidad permite a un programador del cliente especificar en tiempo de diseño la identidad esperada del servicio. En el proceso de protocolo de enlace entre el cliente y el servicio, la infraestructura de Windows Communication Foundation (WCF) asegurará que la identidad del servicio esperado coincide con los valores de este elemento y, por tanto, se puede autenticar. Para obtener más información, consulte [identidad de servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,9 +37,11 @@ El elemento de identidad permite a un programador del cliente especificar en tie
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -58,13 +61,13 @@ El elemento de identidad permite a un programador del cliente especificar en tie
 |-------------|-----------------|  
 |[\<custom>](custom.md)|Especifica la resolución del mismo nivel personalizado de un netPeerTcpBinding.|  
 |[\<endpoint>](endpoint-element.md)|Configura puntos de conexión de servicio.|  
-|[\<endpoint>de\<client>](endpoint-of-client.md)|Configura los extremos del canal.|  
+|[\<endpoint> de \<client>](endpoint-of-client.md)|Configura los extremos del canal.|  
 |[\<issuer>](issuer.md)|Especifica el servicio de token de seguridad (STS) para el servicio aliado.|  
 |[\<issuerMetadata>](issuermetadata.md)|Especifica el punto de conexión de metadatos para el servicio de token de seguridad (STS) de un servicio aliado.|  
 |[\<issuedTokenParameters>](issuedtokenparameters.md)|Define los parámetros para un token emitido en un enlace personalizado.|  
 |[\<localIssuer>](localissuer.md)|Especifica un servicio de token de seguridad (STS) local.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>

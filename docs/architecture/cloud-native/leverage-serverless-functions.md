@@ -2,12 +2,12 @@
 title: Aprovechamiento de funciones sin servidor
 description: Aprovechamiento de Azure Functions sin servidor en aplicaciones nativas de la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8e5c60d29cd8d635f79f42c232b33f060949e2b5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155372"
 ---
 # <a name="leveraging-serverless-functions"></a>Aprovechamiento de funciones sin servidor
 
@@ -40,7 +40,7 @@ Los microservicios se crean normalmente para responder a las solicitudes, a menu
 
 Sin servidor expone funciones individuales de ejecución breve que se invocan en respuesta a un desencadenador. Esto hace que sean ideales para el procesamiento de tareas en segundo plano.
 
-Es posible que una aplicación necesite enviar un correo electrónico como un paso de un flujo de trabajo. En lugar de enviar la notificación como parte de una solicitud de microservicio, coloque los detalles del mensaje en una cola. Una función de Azure puede quitar el mensaje de la cola y enviar el correo electrónico de forma asincrónica. Esto podría mejorar el rendimiento y la escalabilidad del microservicio. La [nivelación de la carga basada en cola](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling) se puede implementar para evitar cuellos de botella relacionados con el envío de los mensajes de correo electrónico. Además, este servicio independiente podría reutilizarse como una utilidad en muchas aplicaciones diferentes.
+Es posible que una aplicación necesite enviar un correo electrónico como un paso de un flujo de trabajo. En lugar de enviar la notificación como parte de una solicitud de microservicio, coloque los detalles del mensaje en una cola. Una función de Azure puede quitar el mensaje de la cola y enviar el correo electrónico de forma asincrónica. Esto podría mejorar el rendimiento y la escalabilidad del microservicio. La [nivelación de la carga basada en cola](/azure/architecture/patterns/queue-based-load-leveling) se puede implementar para evitar cuellos de botella relacionados con el envío de los mensajes de correo electrónico. Además, este servicio independiente podría reutilizarse como una utilidad en muchas aplicaciones diferentes.
 
 La mensajería asincrónica de las colas y los temas es un patrón común para desencadenar funciones sin servidor. Sin embargo, otros eventos pueden desencadenar Azure Functions, como los cambios realizados en Azure Blob Storage. Un servicio que admite cargas de imágenes puede tener una función de Azure responsable de optimizar el tamaño de la imagen. La función se puede activar directamente mediante inserciones en Azure Blob Storage, lo que mantiene la complejidad de las operaciones de microservicios.
 
@@ -55,9 +55,9 @@ En la figura 3-10 se muestra un patrón de inicio en frío. Tenga en cuenta los 
 ![En frío frente a Inicio en caliente, ](./media/cold-start-warm-start.png)
  **figura 3-10**. Inicio en frío frente a Inicio en caliente.
 
-Para evitar que el frío se inicie por completo, puede cambiar de un [plan de consumo a un plan dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). También puede configurar una o varias [instancias previamente preparadas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) con la actualización del plan Premium. En estos casos, cuando necesite agregar otra instancia, ya está activa y lista para ir. Estas opciones pueden ayudar a mitigar el problema de inicio en frío asociado a la informática sin servidor.
+Para evitar que el frío se inicie por completo, puede cambiar de un [plan de consumo a un plan dedicado](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). También puede configurar una o varias [instancias previamente preparadas](/azure/azure-functions/functions-premium-plan#pre-warmed-instances) con la actualización del plan Premium. En estos casos, cuando necesite agregar otra instancia, ya está activa y lista para ir. Estas opciones pueden ayudar a mitigar el problema de inicio en frío asociado a la informática sin servidor.
 
-Los proveedores de nube facturan sin servidor según el tiempo de ejecución de proceso y la memoria consumida. Las operaciones de ejecución prolongada o las cargas de trabajo de consumo de memoria alta no son siempre las mejores candidatas para sin servidor. Las funciones sin servidor favorecen pequeños fragmentos de trabajo que pueden completarse rápidamente. La mayoría de las plataformas sin servidor requieren funciones individuales para completarse en unos minutos. Azure Functions tiene como valor predeterminado una duración de tiempo de espera de 5 minutos, que puede configurarse hasta 10 minutos. El plan de Azure Functions Premium también puede mitigar este problema y establecer de forma predeterminada los tiempos de espera en 30 minutos con un límite superior ilimitado que se pueda configurar. El tiempo de proceso no es la hora del calendario. Las funciones más avanzadas que usan [Azure durable Functions Framework](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) pueden pausar la ejecución en un curso de varios días. La facturación se basa en el tiempo de ejecución real: cuando la función se activa y reanuda el procesamiento.
+Los proveedores de nube facturan sin servidor según el tiempo de ejecución de proceso y la memoria consumida. Las operaciones de ejecución prolongada o las cargas de trabajo de consumo de memoria alta no son siempre las mejores candidatas para sin servidor. Las funciones sin servidor favorecen pequeños fragmentos de trabajo que pueden completarse rápidamente. La mayoría de las plataformas sin servidor requieren funciones individuales para completarse en unos minutos. Azure Functions tiene como valor predeterminado una duración de tiempo de espera de 5 minutos, que puede configurarse hasta 10 minutos. El plan de Azure Functions Premium también puede mitigar este problema y establecer de forma predeterminada los tiempos de espera en 30 minutos con un límite superior ilimitado que se pueda configurar. El tiempo de proceso no es la hora del calendario. Las funciones más avanzadas que usan [Azure durable Functions Framework](/azure/azure-functions/durable/durable-functions-overview?tabs=csharp) pueden pausar la ejecución en un curso de varios días. La facturación se basa en el tiempo de ejecución real: cuando la función se activa y reanuda el procesamiento.
 
 Por último, el uso de Azure Functions para las tareas de la aplicación agrega complejidad. Es aconsejable diseñar primero la aplicación con un diseño modular y de acoplamiento flexible. A continuación, identifique si hay beneficios que el servidor no pueda ofrecer y justifique la complejidad adicional.
 
