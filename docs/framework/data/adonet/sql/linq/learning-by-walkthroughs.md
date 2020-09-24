@@ -2,42 +2,45 @@
 title: Aprender con tutoriales
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f3d313fd50108420b631cff783708191f97a8b04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781315"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158245"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
+
 La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación de proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
 > En los tutoriales de esta sección introductoria, conocerá el código básico que admite la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En la práctica real, normalmente usará los proyectos Object Relational Designer y Windows Forms para implementar sus [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplicaciones. La documentación de Object Relational Designer proporciona ejemplos y tutoriales para este fin.  
   
 ## <a name="getting-started-walkthroughs"></a>Tutoriales introductorios  
+
  En esta sección hay varios tutoriales disponibles. En estos tutoriales se utiliza la base de datos de ejemplo Northwind y en ellos se presentan las características de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] paso a paso, con el mínimo grado de dificultad.  
   
  Normalmente, se avanza de la siguiente manera:  
   
 |Objetivo|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Crear una clase de entidad y ejecutar una consulta simple.|[Tutorial: Modelo de objetos simple y consulta (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Tutorial: Modelo de objetos simple y consultaC#()](walkthrough-simple-object-model-and-query-csharp.md)|  
-|Agregar una segunda clase y ejecutar una consulta más compleja.<br /><br /> (Requiere haber completado el tutorial anterior).|[Tutorial: Realizar consultas en varias relaciones (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Tutorial: Realizar consultas en varias relacionesC#()](walkthrough-querying-across-relationships-csharp.md)|  
+|Crear una clase de entidad y ejecutar una consulta simple.|[Tutorial: Modelo de objetos simple y consultas (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[Tutorial: Modelo de objetos simple y consultas (C#)](walkthrough-simple-object-model-and-query-csharp.md)|  
+|Agregar una segunda clase y ejecutar una consulta más compleja.<br /><br /> (Requiere haber completado el tutorial anterior).|[Tutorial: Realizar consultas en varias relaciones (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[Tutorial: Realizar consultas en varias relaciones (C#)](walkthrough-querying-across-relationships-csharp.md)|  
 |Agregar, cambiar y eliminar elementos en la base de datos.|[Tutorial: Manipular datos (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[Tutorial: Manipular datos (C#)](walkthrough-manipulating-data-csharp.md)|  
 |Utilizar procedimientos almacenados.|[Tutorial: Usar solo procedimientos almacenados (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[Tutorial: Usar solo procedimientos almacenados (C#)](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>General  
+
  La información siguiente corresponde a estos tutoriales en general:  
   
-- Entorno: En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] cada tutorial se usa Visual Studio como entorno de desarrollo integrado (IDE).  
+- Entorno: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en cada tutorial se usa Visual Studio como entorno de desarrollo integrado (IDE).  
   
-- Motores SQL: Estos tutoriales se escriben para implementarse mediante SQL Server Express. Si no tiene SQL Server Express, puede descargarlo gratuitamente. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
+- Motores de SQL: estos tutoriales se han escrito para ser implementados con SQL Server Express. Si no tiene SQL Server Express, puede descargarlo gratuitamente. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
   
     > [!NOTE]
     > Los tutoriales de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilizan un nombre de archivo como cadena de conexión. La simple especificación de un nombre de archivo es una ventaja que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ofrece para los usuarios de SQL Server Express. Siempre preste atención a los problemas de seguridad. Para obtener más información, consulte [seguridad en LINQ to SQL](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]los tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] los tutoriales normalmente requieren la base de datos de ejemplo Northwind. Para obtener más información, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md).  
   
 - Los cuadros de diálogo y los comandos de menú que se ven en los tutoriales pueden diferir de los descritos en la ayuda, en función de la configuración activa o la edición de Visual Studio. Para cambiar la configuración, haga clic en **Importar y exportar configuraciones** en el menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -46,9 +49,11 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
 - El nombre de la clase que normalmente representa la tabla Orders en la base de datos de ejemplo Northwind es `[Order]`. El escape es necesario porque `Order` es una palabra clave en Visual Basic.  
   
 ## <a name="troubleshooting"></a>Solución de problemas  
+
  Pueden producirse errores en tiempo de ejecución, ya que no dispone de los permisos suficientes para tener acceso a las bases de datos utilizadas en estos tutoriales. Los pasos siguientes pueden ayudarle a resolver los problemas más comunes.  
   
 ### <a name="log-on-issues"></a>Problemas de inicio de sesión  
+
  Su aplicación podría estar intentando tener acceso a la base de datos con un inicio de sesión de base de datos no admitido.  
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Para comprobar o cambiar el inicio de sesión de base de datos  
@@ -66,7 +71,8 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
      Si realiza un cambio, haga clic en **reiniciar** para reiniciar el servicio.  
   
 ### <a name="protocols"></a>Protocolos  
- A veces, los protocolos podrían no estar establecidos correctamente para el acceso de la aplicación a la base de datos. Por ejemplo, el protocolo de **canalizaciones con nombre** , que es necesario para [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]los tutoriales de, no está habilitado de forma predeterminada.  
+
+ A veces, los protocolos podrían no estar establecidos correctamente para el acceso de la aplicación a la base de datos. Por ejemplo, el protocolo de **canalizaciones con nombre** , que es necesario para los tutoriales de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , no está habilitado de forma predeterminada.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Para habilitar el protocolo Canalizaciones con nombre  
   
@@ -77,6 +83,7 @@ La [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
      Tendrá que detener y reiniciar el servicio. Siga los pasos de la sección siguiente.  
   
 ### <a name="stopping-and-restarting-the-service"></a>Detener y reiniciar el servicio  
+
  Para que los cambios surtan efecto, es necesario detener y reiniciar los servicios.  
   
 ##### <a name="to-stop-and-restart-the-service"></a>Para detener y reiniciar el servicio  

@@ -3,14 +3,15 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: 6aad95033b99f1472284f838f3ede2e74ea8324c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a321c10e04eca2c1a5204929966a1725e918cbdf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252109"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158531"
 ---
 # \<chunkedCookieHandler>
+
 Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler> . Este elemento solo puede estar presente si el `mode` atributo del `<cookieHandler>` elemento es "default" o "fragmentado".  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,15 +34,17 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler> . Este el
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|chunkSize|Tamaño máximo, en caracteres, de los datos de cookies HTTP para cualquier cookie HTTP. Debe tener cuidado al ajustar el tamaño del fragmento. Los exploradores Web tienen límites diferentes en cuanto al tamaño de las cookies y el número permitido por dominio. Por ejemplo, la especificación de Netscape original estipulaba estos límites: 300 cookies total, 4096 bytes por encabezado de cookie (incluidos los metadatos, no solo el valor de cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Necesario.|  
+|chunkSize|Tamaño máximo, en caracteres, de los datos de cookies HTTP para cualquier cookie HTTP. Debe tener cuidado al ajustar el tamaño del fragmento. Los exploradores Web tienen límites diferentes en cuanto al tamaño de las cookies y el número permitido por dominio. Por ejemplo, la especificación de Netscape original estipulaba estos límites: 300 cookies total, 4096 bytes por encabezado de cookie (incluidos los metadatos, no solo el valor de cookie) y 20 cookies por dominio. El valor predeterminado es 2000. Obligatorio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,11 +54,13 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler> . Este el
 |[\<cookieHandler>](cookiehandler.md)|Configura el <xref:System.IdentityModel.Services.CookieHandler> que <xref:System.IdentityModel.Services.SessionAuthenticationModule> usa (SAM) para leer y escribir cookies.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando se especifica un estableciendo <xref:System.IdentityModel.Services.ChunkedCookieHandler> el `mode` atributo del `<cookieHandler>` elemento en "default" o "fragmentado", se puede especificar el tamaño del fragmento que el controlador de cookies utiliza para leer y escribir cookies incluyendo un `<chunkedCookieHandler>` elemento secundario y estableciendo su `chunkSize` atributo. Si el `<chunkedCookieHandler>` elemento no está presente, se utiliza el tamaño de fragmento predeterminado de 2000 bytes. No se puede especificar este elemento cuando el `mode` atributo se establece en "Custom".  
   
  El `<chunkedCookieHandler>` elemento se representa mediante la <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> clase.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se configura un controlador de cookies fragmentado que escribe cookies en fragmentos de 3000 bytes.  
   
 ```xml  
@@ -64,6 +69,6 @@ Configura el <xref:System.IdentityModel.Services.ChunkedCookieHandler> . Este el
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Services.ChunkedCookieHandler>

@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: a8be0bd542c76e732d47c19f1d3b578884e2b5ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d703f7a13f21947fb5d2b5adcac8ae4df6a1547
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558932"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158375"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implementar la lógica de negocios (LINQ to SQL)
+
 El término "lógica empresarial" de este tema se refiere a cualquier regla personalizada o prueba de validación que se aplica a los datos antes de insertarlos, actualizarlos o eliminarlos de la base de datos. La lógica empresarial también se conoce a veces como "reglas de empresa" o "lógica del dominio". En aplicaciones de n niveles, se diseña generalmente como una capa lógica para que se pueda modificar independientemente de la capa de presentación o de la capa de acceso a datos. La capa de acceso a datos puede invocar la lógica empresarial antes o después de cualquier actualización, inserción o eliminación de datos en la base de datos.  
   
  La lógica empresarial puede ser tan simple como una validación del esquema para asegurarse de que el tipo del campo es compatible con el tipo de la columna de la tabla. Por el contrario, también puede estar compuesta por un conjunto de objetos que interactúan con diversos grados de complejidad. Las reglas se pueden implementar como procedimientos almacenados en la base de datos o como objetos en memoria. Sin embargo, se implementa la lógica [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de negocios, que permite usar clases parciales y métodos parciales para separar la lógica de negocios del código de acceso a datos.  
   
 ## <a name="how-linq-to-sql-invokes-your-business-logic"></a>Invocación de la lógica empresarial desde LINQ to SQL  
+
  Cuando se genera una clase de entidad en tiempo de diseño, ya sea manualmente o mediante el Object Relational Designer o SQLMetal, se define como una clase parcial. Esto significa que puede definir, en un archivo de código independiente, otra parte de la clase de entidad que contiene su lógica empresarial personalizada. En tiempo de compilación, las dos partes se combinan en una única clase. Pero si tiene que volver a generar las clases de entidad mediante el Object Relational Designer o SQLMetal, puede hacerlo y su parte de la clase no se modificará.  
   
  Las clases parciales que definen las entidades y el <xref:System.Data.Linq.DataContext> contienen métodos parciales. Éstos son los puntos de extensibilidad que puede utilizar para aplicar su lógica empresarial antes y después de cualquier actualización, inserción o eliminación para una entidad o propiedad de entidad. Los métodos parciales se pueden ver como eventos de tiempo de compilación. El generador de código define una firma de método y llama a los métodos de los descriptores de acceso get y set de la propiedad, al constructor `DataContext` y, en algunos casos, en segundo plano, se llama a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Sin embargo, si no implementa un método parcial particular, entonces su definición y todas las referencias a él se eliminan en tiempo de compilación.  
@@ -25,6 +27,7 @@ El término "lógica empresarial" de este tema se refiere a cualquier regla pers
  En la definición de la implementación que escriba en su archivo de código independiente, puede ejecutar cualquier lógica personalizada que requiera. Puede utilizar su clase parcial por sí misma como la capa de dominio, o puede llamar desde la definición de implementación del método parcial a un objeto o varios objetos independientes. De cualquier modo, su lógica empresarial se separa limpiamente de su código de acceso a datos y de su código de la capa de presentación.  
   
 ## <a name="a-closer-look-at-the-extensibility-points"></a>Examen más detallado de los puntos de extensibilidad  
+
  En el ejemplo siguiente se muestra parte del código generado por el Object Relational Designer para la `DataContext` clase que tiene dos tablas: `Customers` y `Orders` . Observe que se definen métodos Insert, Update y Delete para cada tabla de la clase.  
   
 ```vb  

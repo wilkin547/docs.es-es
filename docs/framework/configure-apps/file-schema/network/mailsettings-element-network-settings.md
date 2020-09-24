@@ -9,14 +9,15 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a146874acc21f52507b37b1751c648792e23c8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504568"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158856"
 ---
 # <a name="mailsettings-element-network-settings"></a>Elemento \<mailSettings> (configuración de red)
+
 Configura opciones de envío de correo.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,24 +33,27 @@ Configura opciones de envío de correo.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|[\<smtp>(Elemento, configuración de red)](smtp-element-network-settings.md)|Configura opciones de Protocolo simple de transporte de correo.|  
+|[Elemento \<smtp> (configuración de red)](smtp-element-network-settings.md)|Configura opciones de Protocolo simple de transporte de correo.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[\<system.Net>(Elemento, configuración de red)](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
+|[Elemento \<system.Net> (configuración de red)](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico con las credenciales de red predeterminadas.  
   
 ```xml  
@@ -68,7 +72,7 @@ Configura opciones de envío de correo.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Mail.SmtpClient>
 - [Esquema de la configuración de red](index.md)

@@ -3,12 +3,12 @@ title: Marcas de característica
 description: Implementar marcas de características en aplicaciones nativas en la nube que aprovechan App de Azure configuración
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee45c9f187b056887ea6dd3a08da508afca51987
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540470"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158102"
 ---
 # <a name="feature-flags"></a>Marcas de característica
 
@@ -43,9 +43,9 @@ Observe cómo este enfoque separa la lógica de decisión del código de la cara
 
 En el capítulo 1, analizamos el `Twelve-Factor App` . La guía recomienda mantener los valores de configuración externos del código ejecutable de la aplicación. Cuando sea necesario, la configuración se puede leer desde el origen externo. Los valores de configuración de marcas de características también deben ser independientes de su código base. Al externalizar la configuración de marca en un repositorio independiente, puede cambiar el estado de la marca sin modificar y volver a implementar la aplicación.
 
-[App de Azure configuración](https://docs.microsoft.com/azure/azure-app-configuration/overview) proporciona un repositorio centralizado para las marcas de características. Con él, puede definir diferentes tipos de marcas de características y manipular sus Estados de forma rápida y confiable. Agregue las bibliotecas de cliente de configuración de aplicaciones a la aplicación para habilitar la funcionalidad de marca de características. Se admiten varias plataformas de lenguaje de programación.
+[App de Azure configuración](/azure/azure-app-configuration/overview) proporciona un repositorio centralizado para las marcas de características. Con él, puede definir diferentes tipos de marcas de características y manipular sus Estados de forma rápida y confiable. Agregue las bibliotecas de cliente de configuración de aplicaciones a la aplicación para habilitar la funcionalidad de marca de características. Se admiten varias plataformas de lenguaje de programación.
 
-Las marcas de características se pueden implementar fácilmente en un [servicio de ASP.net Core](https://docs.microsoft.com/azure/azure-app-configuration/use-feature-flags-dotnet-core). La instalación de las bibliotecas de administración de características de .NET y el proveedor de configuración de aplicaciones permiten agregar mediante declaración marcas de características al código. Habilitan `FeatureGate` atributos para que no tenga que escribir instrucciones if manualmente en el código base.
+Las marcas de características se pueden implementar fácilmente en un [servicio de ASP.net Core](/azure/azure-app-configuration/use-feature-flags-dotnet-core). La instalación de las bibliotecas de administración de características de .NET y el proveedor de configuración de aplicaciones permiten agregar mediante declaración marcas de características al código. Habilitan `FeatureGate` atributos para que no tenga que escribir instrucciones if manualmente en el código base.
 
 Una vez configurada en la clase startup, puede Agregar funcionalidad de marca de características en el nivel de controlador, acción o middleware. En la figura 10-12 se muestra la implementación de la acción y el controlador:
 

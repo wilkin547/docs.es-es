@@ -2,14 +2,15 @@
 title: Procedimiento para generar el modelo de objetos en Visual Basic o C#
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: e2491cf18be556cb26f084a178b7bf09448c6904
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 03525b6f39dcccfb9c68da6bab8b524efa3613ef
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546619"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158414"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Cómo: generar el modelo de objetos en Visual Basic o C\#
+
 En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], un modelo de objetos en un lenguaje de programación se asigna a una base de datos relacional. Hay dos herramientas disponibles para generar automáticamente un Visual Basic o un modelo de C# a partir de los metadatos de una base de datos existente.  
   
 - Si usa Visual Studio, puede usar la Object Relational Designer para generar un modelo de objetos. Object Relational Designer proporciona una interfaz de usuario enriquecida para ayudarle a generar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelo de objetos. Para obtener más información, vea [herramientas de LINQ to SQL en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).
@@ -22,6 +23,7 @@ En [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], un model
  En la documentación de O/R Designer se proporcionan ejemplos de cómo generar un modelo de objetos de Visual Basic o C# con Object Relational Designer. En la información siguiente se proporcionan ejemplos del uso de la herramienta de línea de comandos de SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  La línea de comandos de SQLMetal mostrada en el ejemplo siguiente genera código Visual Basic como el modelo de objetos basado en atributos de la base de datos de ejemplo Northwind. Se presentan también los procedimientos almacenados y las funciones.  
   
 ```console  
@@ -29,6 +31,7 @@ sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  La línea de comandos de SQLMetal mostrada en el ejemplo siguiente genera código de C# como el modelo de objetos basado en atributos de la base de datos de ejemplo Northwind. Se presentan también los procedimientos almacenados y las funciones, y los nombres de tabla se pluralizan automáticamente.  
   
 ```console  

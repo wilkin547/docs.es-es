@@ -3,12 +3,12 @@ title: Comunicación de cliente front-end
 description: Obtenga información sobre cómo los clientes front-end se comunican con sistemas nativos de la nube
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614063"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158115"
 ---
 # <a name="front-end-client-communication"></a>Comunicación de cliente front-end
 
@@ -41,7 +41,7 @@ En la ilustración anterior, observe cómo el servicio de puerta de enlace de AP
 
 La puerta de enlace aísla al cliente de la creación de particiones y refactorización del servicio interno. Si cambia un servicio back-end, lo acomoda en la puerta de enlace sin interrumpir el cliente. También es la primera línea de defensa para cuestiones transversales, como la identidad, el almacenamiento en caché, la resistencia, la medición y la limitación. Muchas de estas cuestiones transversales se pueden descargar de los servicios principales de back-end a la puerta de enlace, lo que simplifica los servicios back-end.
 
-Se debe tener cuidado para mantener la puerta de enlace de API sencilla y rápida. Normalmente, la lógica de negocios se mantiene fuera de la puerta de enlace. Una puerta de enlace compleja arriesga a convertirse en un cuello de botella y, finalmente, a un monolítico. Los sistemas más grandes a menudo exponen varias puertas de enlace de API segmentadas por tipo de cliente (móvil, Web, escritorio) o funcionalidad de back-end. El [back-end para el patrón de Front-](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends) ends proporciona la dirección para implementar varias puertas de enlace. El patrón se muestra en la figura 4-4.
+Se debe tener cuidado para mantener la puerta de enlace de API sencilla y rápida. Normalmente, la lógica de negocios se mantiene fuera de la puerta de enlace. Una puerta de enlace compleja arriesga a convertirse en un cuello de botella y, finalmente, a un monolítico. Los sistemas más grandes a menudo exponen varias puertas de enlace de API segmentadas por tipo de cliente (móvil, Web, escritorio) o funcionalidad de back-end. El [back-end para el patrón de Front-](/azure/architecture/patterns/backends-for-frontends) ends proporciona la dirección para implementar varias puertas de enlace. El patrón se muestra en la figura 4-4.
 
 ![Patrón de puerta de enlace de API](./media/backend-for-frontend-pattern.png)
 
@@ -75,7 +75,7 @@ Considere la posibilidad de Ocelot para aplicaciones nativas en la nube simples 
 
 ## <a name="azure-application-gateway"></a>Azure Application Gateway
 
-En cuanto a los requisitos de puerta de enlace simples, puede considerar [aplicación de Azure puerta de enlace](https://docs.microsoft.com/azure/application-gateway/overview). Disponible como [servicio PaaS](https://azure.microsoft.com/overview/what-is-paas/)de Azure, incluye características básicas de puerta de enlace, como el enrutamiento de direcciones URL, la terminación SSL y un firewall de aplicaciones Web. El servicio admite capacidades [de equilibrio de carga de nivel 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Con el nivel 7, puede enrutar las solicitudes en función del contenido real de un mensaje HTTP, no solo de los paquetes de red TCP de bajo nivel.
+En cuanto a los requisitos de puerta de enlace simples, puede considerar [aplicación de Azure puerta de enlace](/azure/application-gateway/overview). Disponible como [servicio PaaS](https://azure.microsoft.com/overview/what-is-paas/)de Azure, incluye características básicas de puerta de enlace, como el enrutamiento de direcciones URL, la terminación SSL y un firewall de aplicaciones Web. El servicio admite capacidades [de equilibrio de carga de nivel 7](https://www.nginx.com/resources/glossary/layer-7-load-balancing/) . Con el nivel 7, puede enrutar las solicitudes en función del contenido real de un mensaje HTTP, no solo de los paquetes de red TCP de bajo nivel.
 
 A lo largo de este libro, se proponen los sistemas nativos en la nube de hospedaje en [Kubernetes](https://www.infoworld.com/article/3268073/what-is-kubernetes-your-next-application-platform.html). Un orquestador de contenedores, Kubernetes automatiza la implementación, el escalado y los aspectos operativos de las cargas de trabajo en contenedores. Aplicación de Azure puerta de enlace se puede configurar como una puerta de enlace de API para el clúster de [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) .
 
@@ -99,7 +99,7 @@ Para empezar, API Management expone un servidor de puerta de enlace que permite 
 
 Para los desarrolladores, API Management ofrece un portal para desarrolladores que proporciona acceso a los servicios, la documentación y el código de ejemplo para invocarlos. Los desarrolladores pueden usar Swagger/Open API para inspeccionar los puntos de conexión de servicio y analizar su uso. El servicio funciona en las principales plataformas de desarrollo: .NET, Java, Golang, etc.
 
-El portal para editores expone un panel de administración en el que los administradores exponen las API y administran su comportamiento. Se puede conceder acceso al servicio, supervisar el estado del servicio y la telemetría de servicio recopilada. Los administradores aplican *directivas* a cada punto de conexión para que afecten al comportamiento. [Las directivas](https://docs.microsoft.com/azure/api-management/api-management-howto-policies) son instrucciones pregeneradas que se ejecutan secuencialmente para cada llamada de servicio.  Las directivas se configuran para una llamada entrante, una llamada saliente o se invocan después de un error. Las directivas se pueden aplicar en ámbitos de servicio diferentes para habilitar la ordenación determinista al combinar directivas. El producto se distribuye con un gran número de [directivas](https://docs.microsoft.com/azure/api-management/api-management-policies)creadas previamente.
+El portal para editores expone un panel de administración en el que los administradores exponen las API y administran su comportamiento. Se puede conceder acceso al servicio, supervisar el estado del servicio y la telemetría de servicio recopilada. Los administradores aplican *directivas* a cada punto de conexión para que afecten al comportamiento. [Las directivas](/azure/api-management/api-management-howto-policies) son instrucciones pregeneradas que se ejecutan secuencialmente para cada llamada de servicio.  Las directivas se configuran para una llamada entrante, una llamada saliente o se invocan después de un error. Las directivas se pueden aplicar en ámbitos de servicio diferentes para habilitar la ordenación determinista al combinar directivas. El producto se distribuye con un gran número de [directivas](/azure/api-management/api-management-policies)creadas previamente.
 
 Estos son algunos ejemplos de cómo las directivas pueden afectar al comportamiento de los servicios nativos de la nube:  
 
@@ -116,23 +116,23 @@ Azure API Management puede exponer servicios back-end que se hospedan en cualqui
 Azure API Management está disponible en [cuatro niveles distintos](https://azure.microsoft.com/pricing/details/api-management/):
 
 - Desarrollador
-- Básica
+- Básico
 - Estándar
 - Premium
 
-El nivel de desarrollador está diseñado para cargas de trabajo y evaluación que no son de producción. Los otros niveles ofrecen más potencia, características y acuerdos de nivel de servicio (SLA) superiores. El nivel Premium proporciona soporte técnico de [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) y [de varias regiones](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region). Todos los niveles tienen un precio fijo por hora.
+El nivel de desarrollador está diseñado para cargas de trabajo y evaluación que no son de producción. Los otros niveles ofrecen más potencia, características y acuerdos de nivel de servicio (SLA) superiores. El nivel Premium proporciona soporte técnico de [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) y [de varias regiones](/azure/api-management/api-management-howto-deploy-multi-region). Todos los niveles tienen un precio fijo por hora.
 
 La nube de Azure también ofrece un [nivel sin servidor](https://azure.microsoft.com/blog/announcing-azure-api-management-for-serverless-architectures/) para Azure API Management. Conocido como el *plan de tarifa de consumo*, el servicio es una variante de API Management diseñado en torno al modelo de informática sin servidor. A diferencia de los planes de tarifa "preasignados" previamente mostrados, el nivel de consumo proporciona el aprovisionamiento instantáneo y los precios de pago por acción.
 
 Habilita las características de puerta de enlace de API para los siguientes casos de uso:
 
-- Los microservicios implementados mediante tecnologías sin servidor como [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview) y [Azure Logic apps](https://azure.microsoft.com/services/logic-apps/).
+- Los microservicios implementados mediante tecnologías sin servidor como [Azure Functions](/azure/azure-functions/functions-overview) y [Azure Logic apps](https://azure.microsoft.com/services/logic-apps/).
 - Recursos del servicio de respaldo de Azure, como Service Bus colas y temas, Azure Storage y otros.
 - Los microservicios en los que el tráfico tiene picos ocasionales grandes, pero permanece bajo la mayoría del tiempo.
 
 El nivel de consumo utiliza el mismo servicio subyacente API Management componentes, pero emplea una arquitectura totalmente diferente basada en recursos asignados dinámicamente. Se alinea perfectamente con el modelo de informática sin servidor:
 
-- No hay infraestructura que administrar.
+- No hay que administrar ninguna infraestructura.
 - No hay capacidad inactiva.
 - Alta disponibilidad.
 - Escalado automático.

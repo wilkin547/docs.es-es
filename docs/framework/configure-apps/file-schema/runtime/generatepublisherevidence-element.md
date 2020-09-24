@@ -5,14 +5,15 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 506e7873fab8e41fce121587c22d85600a8b1760
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541789"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158778"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> (Elemento)
+
 Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publisher> evidencia para la seguridad de acceso del código (CAS).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,12 +39,13 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`false`|No crea ninguna <xref:System.Security.Policy.Publisher> evidencia.|  
 |`true`|Crea una <xref:System.Security.Policy.Publisher> evidencia. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -63,9 +66,11 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 > Se recomienda que los servicios utilicen el `<generatePublisherEvidence>` elemento para mejorar el rendimiento de inicio.  El uso de este elemento también puede ayudar a evitar retrasos que pueden provocar un tiempo de espera y la cancelación del inicio del servicio.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
+
  Este elemento solo se puede usar en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el `<generatePublisherEvidence>` elemento para deshabilitar la comprobación de la Directiva de publicador CAS para una aplicación.  
   
 ```xml  
@@ -76,7 +81,7 @@ Especifica si el tiempo de ejecución crea <xref:System.Security.Policy.Publishe
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Esquema de configuración en tiempo de ejecución](index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

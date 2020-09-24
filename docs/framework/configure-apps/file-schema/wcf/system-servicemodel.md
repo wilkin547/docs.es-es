@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 44966ed9ee3abb3d1babdf09dd44f087376ada55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158687"
 ---
 # \<system.serviceModel>
+
 Esta sección de configuración contiene todos los elementos de configuración de ServiceModel Windows Communication Foundation (WCF).  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -56,9 +57,11 @@ Esta sección de configuración contiene todos los elementos de configuración d
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -85,7 +88,8 @@ Esta sección de configuración contiene todos los elementos de configuración d
 |-------------|-----------------|  
 |\<configuration>|El elemento raíz para todos los elementos de configuración en un archivo de configuración .NET.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  WCF no agrega elementos a las secciones de configuración de otros productos.  
   
  Los servicios WCF se definen en la `services` sección del archivo de configuración. Un ensamblado puede contener cualquier número de servicios. Cada servicio tiene su propia sección de configuración de `service`. La sección y su contenido definen el contrato de servicios, comportamiento y puntos de conexión del servicio determinado.  
@@ -99,6 +103,7 @@ Esta sección de configuración contiene todos los elementos de configuración d
  Los enlaces se vinculan a los puntos de conexión a través de la combinación de los atributos `name` y `bindingConfiguration`. El atributo de `binding` define la sección en que está definido el enlace. El atributo `bindingConfiguration` define el enlace configurado que se usa en la sección de enlaces. Una sección de enlaces puede definir varios enlaces configurados.  
   
 ## <a name="example"></a>Ejemplo  
+
  Esto es un ejemplo de un archivo de configuración de WCF.  
   
 ```xml  
@@ -131,6 +136,6 @@ Esta sección de configuración contiene todos los elementos de configuración d
 </configuration>
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>
