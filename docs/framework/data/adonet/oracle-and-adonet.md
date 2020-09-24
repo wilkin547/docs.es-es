@@ -7,14 +7,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 8757352a7444fad802ea88ba58e0fe643c86cbb8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 736b8dc5179a15ec219c1dae06b9ee6b5d6c3ef3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286694"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166630"
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
+
 > [!NOTE]
 > Los tipos de <xref:System.Data.OracleClient> están en desuso. Los tipos seguirán estando admitidos en la versión actual de .NET Framework, pero se quitarán en una versión posterior. Microsoft recomienda usar un proveedor de Oracle de otro fabricante.  
   
@@ -39,6 +40,7 @@ csc /r:System.Data.OracleClient.dll
 ```  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Requisitos del sistema](system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  Describe los requisitos para usar el proveedor de datos de .NET Framework para Oracle y describe una serie de problemas que se deben tener en cuenta al utilizarlos.  
   
@@ -64,6 +66,7 @@ csc /r:System.Data.OracleClient.dll
  Describe cómo se inscribe automáticamente el objeto <xref:System.Data.OracleClient.OracleConnection> en una transacción distribuida si se determina que hay una transacción activa.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)  
  Describe algunas recomendaciones de codificación segura para utilizar ADO.NET.  
   

@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
-ms.openlocfilehash: 159b23eb4ef5ca38ebce6e488080d315ec3be081
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 94b033d58061e3d2e48a352d782eec7c4202fa43
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151187"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166838"
 ---
 # <a name="defining-primary-keys"></a>Definir claves principales
+
 Generalmente, una tabla de base de datos tiene una columna o grupo de columnas que identifican de manera exclusiva cada fila de la tabla. Esta columna o grupo de columnas de identificación se denomina clave principal.  
   
- Cuando se identifica <xref:System.Data.DataColumn> una <xref:System.Data.DataTable.PrimaryKey%2A> sola <xref:System.Data.DataTable>como for a <xref:System.Data.DataColumn.AllowDBNull%2A> , la tabla establece <xref:System.Data.DataColumn.Unique%2A> automáticamente la propiedad de la columna en **false** y la propiedad en **true**. Para las claves principales de varias columnas, solo la propiedad **AllowDBNull** se establece automáticamente en **false**.  
+ Al identificar un único <xref:System.Data.DataColumn> como <xref:System.Data.DataTable.PrimaryKey%2A> para <xref:System.Data.DataTable> , la tabla establece automáticamente la <xref:System.Data.DataColumn.AllowDBNull%2A> propiedad de la columna en **false** y la <xref:System.Data.DataColumn.Unique%2A> propiedad en **true**. En el caso de las claves principales de varias columnas, solo la propiedad **AllowDBNull** se establece automáticamente en **false**.  
   
- El **PrimaryKey** propiedad <xref:System.Data.DataTable> de un recibe como su valor una matriz de uno o varios **DataColumn** objetos, como se muestra en los ejemplos siguientes. En el primer ejemplo se define una sola columna como clave principal.  
+ La propiedad **PrimaryKey** de una <xref:System.Data.DataTable> recibe como valor una matriz de uno o más objetos **DataColumn** , como se muestra en los ejemplos siguientes. En el primer ejemplo se define una sola columna como clave principal.  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  

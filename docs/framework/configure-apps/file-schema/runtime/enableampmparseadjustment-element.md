@@ -2,14 +2,15 @@
 title: <EnableAmPmParseAdjustment> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-ms.openlocfilehash: 8920e51fcaaca5cb78b80a99ea321163c9b5240f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f935f213e1bca8dac7a5401970bc6183575e2301
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117367"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167234"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment> (Elemento)
+
 Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen un día, un mes, una hora y un designador AM/PM.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -23,6 +24,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
 |1|Los métodos de análisis de fecha y hora usan reglas ajustadas para analizar las cadenas de fecha que contienen solo un día, un mes, una hora y el designador AM/PM.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -48,7 +51,8 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El `<EnableAmPmParseAdjustment>` elemento controla el modo en que los siguientes métodos analizan una cadena de fecha que contiene un día y un mes numéricos seguidos de una hora y un designador AM/PM (por ejemplo, "4/10 6 AM"):  
   
 - <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
@@ -63,7 +67,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
  No se ven afectados otros patrones.  
   
- El `<EnableAmPmParseAdjustment>` elemento no tiene ningún efecto en <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> los <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> métodos,, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> y <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
+ El `<EnableAmPmParseAdjustment>` elemento no tiene ningún efecto en  <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> los  <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> métodos,, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> y <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> .  
   
 > [!IMPORTANT]
 > En .NET Core y .NET Native, las reglas de análisis de AM/PM ajustadas están habilitadas de forma predeterminada.  
@@ -76,10 +80,10 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
 |Nombre de referencia cultural|habilitado = "0"|habilitado = "1"|  
 |------------------|------------------|------------------|  
-|es-ES|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
+|en-US|1/5/2017 4:00:00 AM|4/10/2017 6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [\<runtime>Element](runtime-element.md)
-- [\<configuration>Element](../configuration-element.md)
+- [Elemento \<runtime>](runtime-element.md)
+- [Elemento \<configuration>](../configuration-element.md)

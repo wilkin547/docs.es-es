@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0920acac2c82677cfce37703b7027dedce91a535
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545316"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166812"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Cargar un conjunto de datos desde XML
+
 Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a partir de una secuencia o de un documento XML. Además, con .NET Framework se dispone de una gran flexibilidad sobre qué información se carga desde XML y cómo se crea el esquema o la estructura relacional del <xref:System.Data.DataSet>.  
   
  Para rellenar <xref:System.Data.DataSet> con datos de XML, utilice el método **ReadXml** del <xref:System.Data.DataSet> objeto. El método **ReadXml** Lee de un archivo, una secuencia o un **XmlReader**y toma como argumentos el origen del XML más un argumento de **XmlReadMode** opcional. Para obtener más información acerca de **XmlReader**, vea [leer datos XML con XmlTextReader](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). El método **ReadXml** lee el contenido de la secuencia o el documento XML y carga <xref:System.Data.DataSet> con los datos. También creará el esquema relacional de <xref:System.Data.DataSet> dependiendo del **XmlReadMode** especificado y de si ya existe o no un esquema relacional.  
@@ -33,6 +34,7 @@ Es posible crear el contenido de un <xref:System.Data.DataSet> de ADO.NET a part
 > Si pasa un **XmlReader** a un **ReadXml** que se coloca parte del camino en un documento XML, **ReadXml** leerá al siguiente nodo de elemento y lo tratará como el elemento raíz, leyendo hasta el final del nodo de elementos. Esto no se aplica si especifica **XmlReadMode. Fragment**.  
   
 ## <a name="dtd-entities"></a>Entidades DTD  
+
  Si el código XML contiene entidades definidas en un esquema de definición de tipo de documento (DTD), se iniciará una excepción si intenta cargar una <xref:System.Data.DataSet> pasando un nombre de archivo, una secuencia o un **XmlReader** de no validación a **ReadXml**. En su lugar, debe crear un **XmlValidatingReader**, con **EntityHandling** establecido en **EntityHandling. ExpandEntities**, y pasar el **XmlValidatingReader** a **ReadXml**. **XmlValidatingReader** expandirá las entidades antes de que las lea <xref:System.Data.DataSet> .  
   
  En los siguientes ejemplos de código se muestra cómo cargar un <xref:System.Data.DataSet> desde una secuencia XML. En el primer ejemplo se muestra un nombre de archivo que se pasa al método **ReadXml** . En el segundo ejemplo se muestra una cadena que contiene el código XML que se carga mediante un <xref:System.IO.StringReader>.  
@@ -114,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>Combinar datos a partir de XML  
+
  Si el <xref:System.Data.DataSet> ya contiene datos, los nuevos datos procedentes del código XML se agregarán a los ya presentes en el <xref:System.Data.DataSet>. **ReadXml** no combina el XML con la información de <xref:System.Data.DataSet> ninguna fila con claves principales coincidentes. Para sobrescribir la información de fila existente con la nueva información de XML, utilice **ReadXml** para crear una nueva <xref:System.Data.DataSet> y, a continuación, <xref:System.Data.DataSet.Merge%2A> la nueva <xref:System.Data.DataSet> en la existente <xref:System.Data.DataSet> . Tenga en cuenta que al cargar un DiffGram mediante **ReadXml** con un **XmlReadMode** de **DiffGram** , se combinarán las filas que tengan el mismo identificador único.  
   
 ## <a name="see-also"></a>Vea también

@@ -3,14 +3,15 @@ title: <clear>
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-ms.openlocfilehash: e96349c72fc4a952e3dc7efeea5f69ebaa1fd0ad
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0f043442fb8edd9bf95a839a26cc42e8122d9100
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252044"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91167072"
 ---
 # \<clear>
+
 Borra todos los controladores de token de seguridad de la colección de controladores de tokens actual.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,12 +34,15 @@ Borra todos los controladores de token de seguridad de la colección de controla
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  

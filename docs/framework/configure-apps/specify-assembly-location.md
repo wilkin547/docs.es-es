@@ -7,14 +7,15 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 3b24ff99eee9027d507ef89ca855162f221f826a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6f9e41584ca36fcead06b73a485cb879c45705fa
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555125"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166890"
 ---
 # <a name="specifying-an-assemblys-location"></a>Especificar la ubicación de un ensamblado
+
 Hay dos maneras de especificar la ubicación de un ensamblado:  
   
 - Usar el [\<codeBase>](./file-schema/runtime/codebase-element.md) elemento.  
@@ -24,6 +25,7 @@ Hay dos maneras de especificar la ubicación de un ensamblado:
  También puede usar la [herramienta de configuración de .NET Framework (Mscorcfg. msc)](/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) para especificar ubicaciones de ensamblados o especificar ubicaciones para la Common Language Runtime para sondear ensamblados.  
   
 ## <a name="using-the-codebase-element"></a>Usar el \<codeBase> elemento  
+
  Puede usar el **\<codeBase>** elemento solo en los archivos de configuración del equipo o de directiva de edición que también redirigen la versión del ensamblado. Cuando el tiempo de ejecución determina la versión de ensamblado que se va a usar, aplica la configuración de base de código del archivo que determina la versión. Si no se indica ninguna base de código, el tiempo de ejecución sondea el ensamblado de la manera normal. Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
  En el ejemplo siguiente se muestra cómo especificar la ubicación de un ensamblado.  
@@ -50,6 +52,7 @@ Hay dos maneras de especificar la ubicación de un ensamblado:
 > Si va a proporcionar una sugerencia base de código para un ensamblado que no tiene un nombre seguro, la sugerencia debe apuntar a la base de la aplicación o a un subdirectorio del directorio base de la aplicación.  
   
 ## <a name="using-the-probing-element"></a>Usar el \<probing> elemento  
+
  El motor en tiempo de ejecución ubica los ensamblados que no tienen una base de código mediante sondeo. Para obtener más información sobre el sondeo, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
  Puede usar el [\<probing>](./file-schema/runtime/probing-element.md) elemento en el archivo de configuración de la aplicación para especificar subdirectorios en los que el tiempo de ejecución debe buscar al localizar un ensamblado. En el ejemplo siguiente se muestra cómo especificar los directorios en los que debe buscar el tiempo de ejecución.  
