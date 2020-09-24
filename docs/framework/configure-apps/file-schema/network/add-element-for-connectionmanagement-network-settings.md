@@ -10,14 +10,15 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 05e4a1bc42dc39c7d2b56e30c98bdeefd31e4416
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155016"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149483"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>Elemento \<add> para connectionManagement (configuración de red)
+
 Agrega una dirección IP o nombre DNS a la lista de administración de conexión.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,16 +36,18 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`address`|Cadena que describe una dirección IP o nombre DNS.|  
 |`maxconnection`|Número máximo de conexiones permitido en un servidor. Si no se proporciona, el valor predeterminado es 2.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -54,14 +57,17 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
 |[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El valor de la `address` atributo debe ser un asterisco para indicar todas las conexiones, o bien una cadena del formulario `<schema>://<idn_hostname>[:<port>]`.  
   
  Si el URI pasado a cualquier API de HTTP contiene Unicode, el nombre se convertirá internamente mediante <xref:System.Uri.DnsSafeHost%2A>, que puede devolver una cadena de punicode (comportamiento dependiente de la configuración actual de IDN).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se configura una aplicación para que use cuatro conexiones al servidor `www.contoso.com` y dos conexiones a todos los demás servidores.  
   
 ```xml  
@@ -75,7 +81,7 @@ Agrega una dirección IP o nombre DNS a la lista de administración de conexión
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>

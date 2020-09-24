@@ -2,28 +2,30 @@
 title: Objetos LOB de Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 072e3e3514c2dd32ddff0bac941da30788feae16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149432"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147845"
 ---
 # <a name="oracle-lobs"></a>Objetos LOB de Oracle
-El proveedor de datos de <xref:System.Data.OracleClient.OracleLob> .NET Framework para Oracle incluye la clase, que se utiliza para trabajar con tipos de datos **LOB** de Oracle.  
+
+El proveedor de datos de .NET Framework para Oracle incluye la <xref:System.Data.OracleClient.OracleLob> clase, que se utiliza para trabajar con tipos de datos **LOB** de Oracle.  
   
- Un **OracleLob** puede ser <xref:System.Data.OracleClient.OracleType> uno de estos tipos de datos:  
+ Un **OracleLob** puede ser uno de estos <xref:System.Data.OracleClient.OracleType> tipos de datos:  
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|**Blob**|Un tipo de datos **BLOB** de Oracle que contiene datos binarios con un tamaño máximo de 4 gigabytes. Esto se asigna a una **matriz** de tipo **Byte**.|  
-|**Clob**|Un tipo de datos **CLOB** de Oracle que contiene datos de caracteres, basados en el juego de caracteres predeterminado en el servidor, con un tamaño máximo de 4 gigabytes. Esto se asigna a **String**.|  
-|**NClob**|Un tipo de datos **NCLOB** de Oracle que contiene datos de caracteres, basado según el juego de caracteres nacional en el servidor con un tamaño máximo de 4 gigabytes. Esto se asigna a **String**.|  
+|**Blob**|Un tipo de datos **BLOB** de Oracle que contiene datos binarios con un tamaño máximo de 4 gigabytes. Esto se asigna a una **matriz** de tipo **byte**.|  
+|**CLOB**|Un tipo de datos **CLOB** de Oracle que contiene datos de caracteres, basados en el juego de caracteres predeterminado del servidor, con un tamaño máximo de 4 gigabytes. Se asigna a la **cadena**.|  
+|**NClob**|Un tipo de datos **NCLOB** de Oracle que contiene datos de caracteres, basados en el juego de caracteres nacional del servidor con un tamaño máximo de 4 gigabytes. Se asigna a la **cadena**.|  
   
- Un **OracleLob** difiere <xref:System.Data.OracleClient.OracleBFile> de un en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  
+ Un **OracleLob** difiere de un <xref:System.Data.OracleClient.OracleBFile> en que los datos se almacenan en el servidor en lugar de en un archivo físico en el sistema operativo. También puede ser un objeto de lectura y escritura, a diferencia de un **OracleBFile**, que siempre es de solo lectura.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Creación y recuperación de LOB y forma de escribir en él  
- En el siguiente ejemplo de C-C se muestra cómo crear LOB en una tabla de Oracle y, a continuación, recuperar y escribir en ellos en forma de **OracleLob** objetos. En el ejemplo <xref:System.Data.OracleClient.OracleDataReader> se muestra cómo utilizar el objeto y los métodos **OracleLob** **Read** and **Write.** En el ejemplo se utilizan los tipos de datos **BLOB**, **CLOB**y **NCLOB** de Oracle.  
+
+ En el siguiente ejemplo de C# se muestra cómo puede crear LOB en una tabla de Oracle y, después, recuperarlos y escribir en ellos en forma de objetos **OracleLob** . En el ejemplo se muestra el uso del <xref:System.Data.OracleClient.OracleDataReader> objeto y de los métodos de **lectura** y **escritura** de **OracleLob** . En el ejemplo se usan los tipos de datos **BLOB**, **CLOB**y **NCLOB** de Oracle.  
   
 ```csharp  
 using System;  
@@ -216,6 +218,7 @@ public class LobExample
 ```  
   
 ## <a name="creating-a-temporary-lob"></a>Creación de un LOB temporal  
+
  En el siguiente ejemplo con C# se muestra cómo crear un LOB temporal.  
   
 ```csharp  
@@ -247,7 +250,7 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Oracle y ADO.NET](oracle-and-adonet.md)
 - [Información general de ADO.NET](ado-net-overview.md)

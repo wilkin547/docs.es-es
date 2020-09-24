@@ -6,21 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 2148aa984f8289b82b8efcee2404f08cab25c797
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2bea3d962998b2778d22e232e7f7062cfda3143
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556556"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148416"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Cadenas de conexión y archivos de configuración
 
 La incrustación de cadenas de conexión en el código de la aplicación puede producir vulnerabilidades en la seguridad y problemas de mantenimiento. Las cadenas de conexión sin cifrar compiladas en el código fuente de una aplicación se pueden ver con la herramienta [Ildasm.exe (Desensamblador de IL)](../../tools/ildasm-exe-il-disassembler.md). Además, si la cadena de conexión cambia en algún momento, será necesario compilar de nuevo la aplicación. Por estas razones, se recomienda almacenar las cadenas de conexión en un archivo de configuración de la aplicación.  
   
 ## <a name="working-with-application-configuration-files"></a>Trabajar con archivos de configuración de la aplicación  
+
  Los archivos de configuración de la aplicación contienen valores específicos de una aplicación determinada. Por ejemplo, una aplicación ASP.NET puede tener uno o varios archivos **web.config** y una aplicación Windows puede tener un archivo **app.config** opcional. Los archivos de configuración comparten elementos comunes, aunque su nombre y ubicación varían en función del host de la aplicación.  
   
 ### <a name="the-connectionstrings-section"></a>Sección connectionStrings  
+
  Las cadenas de conexión se pueden almacenar como pares clave-valor en la sección **connectionStrings** del elemento **configuration** en el archivo de configuración de una aplicación. Los elementos secundarios incluyen **add**, **clear** y **remove**.  
   
  El siguiente fragmento del archivo de configuración muestra el esquema y la sintaxis para almacenar una cadena de conexión. El atributo **name** es un nombre que se proporciona para identificar de forma única una cadena de conexión, de forma que se pueda recuperar en tiempo de ejecución. **providerName** es el nombre invariable del proveedor de datos de .NET Framework registrado en el archivo machine.config.  
@@ -41,6 +43,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 > Puede guardar parte de la cadena de conexión en un archivo de configuración y usar la clase <xref:System.Data.Common.DbConnectionStringBuilder> para completarla en tiempo de ejecución. Esto resulta útil en escenarios en los que no se conocen los elementos de la cadena de conexión por anticipado o cuando no desea guardar información confidencial en un archivo de configuración. Para obtener más información, vea [Generadores de cadenas de conexión](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Uso de archivos de configuración externos  
+
  Los archivos de configuración externos son archivos independientes que contienen un fragmento de un archivo de configuración compuesto de una sola sección. El archivo de configuración principal hace referencia al archivo de configuración externo. El almacenamiento de la sección **connectionStrings** en un archivo físicamente independiente resulta útil en situaciones en las que es posible que se editen las cadenas de conexión después de implementar la aplicación. Por ejemplo, si se modifican los archivos de configuración, ASP.NET reinicia de forma predeterminada el dominio de la aplicación, lo que provoca la pérdida de la información de estado. Sin embargo, la modificación de un archivo de configuración externo no provoca el reinicio de la aplicación. Los archivos de configuración externos no se limitan a ASP.NET; también se pueden utilizar en aplicaciones Windows. Además, la seguridad y permisos de acceso a los archivos se pueden usar para restringir el acceso a los archivos de configuración externos. El trabajo con archivos de configuración externos en tiempo de ejecución es transparente y no requiere código especial.  
   
  Para almacenar las cadenas de conexión en un archivo de configuración externo, cree un archivo independiente que contenga únicamente la sección **connectionStrings**. No incluya elementos, secciones ni atributos adicionales. En este ejemplo se muestra la sintaxis de un archivo de configuración externo.  
@@ -63,12 +66,14 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 ```  
   
 ## <a name="retrieving-connection-strings-at-run-time"></a>Recuperar cadenas de conexión en tiempo de ejecución  
+
  .NET Framework 2.0 incorpora nuevas clases en el espacio de nombres <xref:System.Configuration> para simplificar la recuperación de las cadenas de conexión de los archivos de configuración en tiempo de ejecución. La cadena de conexión se puede recuperar mediante programación con el nombre de la cadena o el nombre de proveedor.  
   
 > [!NOTE]
 > El archivo **machine.config** también contiene una sección **connectionStrings**, donde se encuentran las cadenas de conexión que usa Visual Studio. Al recuperar cadenas de conexión por nombre de proveedor desde el archivo **app.config** en una aplicación de Windows, las cadenas de conexión de **machine.config** se cargan primero y, a continuación, las entradas de **app.config**. Agregar **Clear** inmediatamente después del elemento **connectionStrings** quita todas las referencias heredadas de la estructura de datos en memoria, de modo que solo se tienen en cuenta las cadenas de conexión definidas en el archivo de **app.config** local.  
   
 ### <a name="working-with-the-configuration-classes"></a>Trabajar con clases de configuración  
+
  A partir de .NET Framework 2.0, se usa el elemento <xref:System.Configuration.ConfigurationManager> al trabajar con archivos de configuración en el equipo local, reemplazando al elemento en desuso <xref:System.Configuration.ConfigurationSettings>. <xref:System.Web.Configuration.WebConfigurationManager> se usa para trabajar con archivos de configuración de ASP.NET. Esta característica se ha diseñado para trabajar con archivos de configuración en un servidor web y permite el acceso mediante programación a secciones del archivo de configuración como **system.web**.  
   
 > [!NOTE]
@@ -83,6 +88,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|La cadena de conexión. Se asigna al atributo **connectionString**.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Ejemplo: mostrar todas las cadenas de conexión  
+
  En este ejemplo se recorre <xref:System.Configuration.ConnectionStringSettingsCollection> en iteración y se muestran las <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType> <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType> propiedades, y <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> en la ventana de la consola.  
   
 > [!NOTE]
@@ -92,18 +98,21 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-name"></a>Ejemplo: recuperar una cadena de conexión por su nombre  
+
  El siguiente ejemplo muestra cómo recuperar una cadena de conexión de un archivo de configuración mediante la especificación del nombre. El código crea un objeto <xref:System.Configuration.ConnectionStringSettings>, de forma que el parámetro de entrada proporcionado coincida con el nombre de <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>. Si no se encuentra una coincidencia de nombre, la función devuelve `null` (`Nothing` en Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
 ### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Ejemplo: recuperar una cadena de conexión por el nombre de proveedor  
+
  En este ejemplo se muestra cómo recuperar una cadena de conexión mediante la especificación del nombre invariable de proveedor con el formato *Sistema.Datos.NombreDelProveedor*. El código recorre en iteración <xref:System.Configuration.ConnectionStringSettingsCollection> y devuelve la cadena de conexión del primer valor de <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> encontrado. Si no se encuentra el nombre del proveedor, la función devuelve `null` (`Nothing` en Visual Basic).  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/VB/source.vb#1)]  
   
 ## <a name="encrypting-configuration-file-sections-using-protected-configuration"></a>Cifrar secciones del archivo de configuración mediante una configuración protegida  
+
  En ASP.NET 2.0 se incorporó una característica nueva denominada *configuración protegida*, que permite cifrar la información confidencial en un archivo de configuración. Si bien se ha diseñado principalmente para ASP.NET, la configuración protegida también se puede usar para cifrar secciones del archivo de configuración en aplicaciones Windows. Para obtener una descripción detallada de las funciones de configuración protegida, vea [Cifrar información de configuración mediante una configuración protegida](/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
  En el fragmento de archivo de configuración siguiente se muestra la sección **connectionStrings** después de haberse cifrado. En la sección **configProtectionProvider** se especifica el proveedor de configuración protegida que se usa para cifrar y descifrar las cadenas de conexión. En la sección **EncryptedData** se incluye el texto cifrado.  
@@ -121,6 +130,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  Cuando se recupera la cadena de conexión cifrada en tiempo de ejecución, .NET Framework usa el proveedor especificado para descifrar **CipherValue** y que así esté disponible para la aplicación. No es necesario escribir ningún código adicional para administrar el proceso de descifrado.  
   
 ### <a name="protected-configuration-providers"></a>Proveedores de configuración protegida  
+
  Los proveedores de configuración protegida se registran en la sección **configProtectedData** del archivo **machine.config** en el equipo local, como se muestra en el fragmento siguiente, donde se pueden ver los dos proveedores de configuración protegida que proporciona .NET Framework. Los valores que se muestran se han truncado para facilitar la lectura.  
   
 ```xml  
@@ -144,12 +154,14 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  Ambos proveedores proporcionan cifrado de datos de alta seguridad. No obstante, si prevé usar el mismo archivo de configuración de cifrado en varios servidores como, por ejemplo, una granja de servidores web, solo <xref:System.Configuration.RsaProtectedConfigurationProvider> permite exportar las claves de cifrado usadas para cifrar los datos e importarlas a otro servidor. Para obtener más información, vea [Importar y exportar contenedores de claves RSA con configuración protegida](/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Uso de clases de configuración  
+
  El espacio de nombres <xref:System.Configuration> proporciona clases para trabajar con valores de configuración mediante programación. La clase <xref:System.Configuration.ConfigurationManager> proporciona acceso a los archivos de configuración de equipo, aplicación y usuario. Si va a crear una aplicación de ASP.NET, puede usar la <xref:System.Web.Configuration.WebConfigurationManager> clase, que proporciona la misma funcionalidad, a la vez que también le permite tener acceso a configuraciones que son únicas de las aplicaciones de ASP.net, como las que se encuentran en **\<system.web>** .  
   
 > [!NOTE]
 > El espacio de nombres <xref:System.Security.Cryptography> contiene clases que proporcionan opciones adicionales para cifrar y descifrar datos. Use estas clases si requiere servicios criptográficos que no están disponibles cuando se usa la configuración protegida. Algunas de estas clases son contenedores de Microsoft CryptoAPI no administrado, mientras que otras son simplemente implementaciones administradas. Para más información, vea [Servicios criptográficos](/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>Ejemplo de App.config  
+
  En este ejemplo se muestra cómo alternar el cifrado de la sección **connectionStrings** de un archivo **app.config** para una aplicación Windows. En este ejemplo, el procedimiento recibe el nombre de la aplicación como argumento, por ejemplo, "MyApplication.exe". Después, el archivo **app.config** se cifra y se copia en la carpeta que contiene el ejecutable con el nombre "MyApplication.exe.config".  
   
 > [!NOTE]
@@ -164,6 +176,7 @@ La incrustación de cadenas de conexión en el código de la aplicación puede p
  [!code-vb[DataWorks ConnectionStrings.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStrings.Encrypt/VB/source.vb#1)]  
   
 ### <a name="webconfig-example"></a>Ejemplo de Web.config  
+
  Este ejemplo usa el método <xref:System.Web.Configuration.WebConfigurationManager.OpenWebConfiguration%2A> de `WebConfigurationManager`. Observe que en este caso puede indicar la ruta de acceso relativa al archivo **Web.config** mediante una tilde. El código requiere una referencia a la clase `System.Web.Configuration`.  
   
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]

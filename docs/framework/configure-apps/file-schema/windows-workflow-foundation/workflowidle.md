@@ -3,14 +3,15 @@ title: <workflowIdle>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: b2ef703c-3e01-4213-9d2e-c14c7dba94d2
-ms.openlocfilehash: d9eb182ef9c35d2e4c6f5d434e6b200ae2e7ca26
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 790e852eb515e19afc324f6e1c25db81ed22999c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148677"
 ---
 # \<workflowIdle>
+
 Un comportamiento del servicio que controla cuando las instancias de flujo de trabajo inactivas se descargan y conservan.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Un comportamiento del servicio que controla cuando las instancias de flujo de tr
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,15 +46,16 @@ Un comportamiento del servicio que controla cuando las instancias de flujo de tr
 |timeToUnload|Un valor Timespan que especifica el tiempo que transcurre entre el momento en que el flujo de trabajo se vuelve inactivo y descarga. El valor predeterminado es 1 minuto.<br /><br /> Descargar un flujo de trabajo implica que también se conserva. Si este atributo se pone a cero, la instancia de flujo de trabajo se conserva y se descarga de inmediato en cuanto el flujo de trabajo se vuelve inactivo. Al establecer este atributo en TimeSpan.MaxValue, se deshabilita de forma eficaz la operación de descarga. Las instancias de flujo de trabajo inactivas nunca se descargan.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<behavior>de\<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
+|[\<behavior> de \<serviceBehaviors>](behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowIdleElement>

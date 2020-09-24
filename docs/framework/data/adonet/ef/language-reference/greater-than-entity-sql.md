@@ -1,15 +1,16 @@
 ---
-title: '> (Mayor que) (Entity SQL)'
+title: '>  (Mayor que) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 4cea865c-677c-4b06-99a1-010f2ae2394a
-ms.openlocfilehash: f2d3a0ed81cf75b7e567dbd07e119629ea47ac69
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 52a9f9f645aa51402ceb8cb0a40d2040d1c0802c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833769"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147949"
 ---
-# <a name="-greater-than-entity-sql"></a>> (Mayor que) (Entity SQL)
+# <a name="-greater-than-entity-sql"></a>> (mayor que) (Entity SQL)
+
 Compara dos expresiones para determinar si la expresión de la izquierda tiene un valor mayor que el de la expresión de la derecha.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -19,16 +20,19 @@ expression > expression
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
- Cualquier expresión válida. Ambas expresiones deben tener tipos de datos convertibles implícitamente.  
+ Cualquier expresión válida. Ambas expresiones deben tener tipos de datos que se puedan convertir implícitamente.  
   
 ## <a name="result-types"></a>Tipos de resultado  
+
  `true` si la expresión izquierda tiene un valor mayor que el de la expresión derecha; de lo contrario, `false`.  
   
 ## <a name="example"></a>Ejemplo  
+
  La consulta de Entity SQL siguiente utiliza el operador de comparación > para comparar dos expresiones con el fin de determinar si la expresión izquierda tiene un valor mayor que el de la expresión derecha. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   

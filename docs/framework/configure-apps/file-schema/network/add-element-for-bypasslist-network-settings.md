@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 652b8738a201aaa98fa2c5c435fee1a6da91673b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 927a43f352fd776d9e6ba52ebea6ba2a1ccd4d48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155082"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149496"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>Elemento \<add> para bypasslist (configuración de red)
+
 Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -35,15 +36,17 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |**address**|Expresión regular que describe una dirección IP o un nombre DNS.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -53,6 +56,7 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 |[bypasslist](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `add` elemento inserta expresiones regulares que describen las direcciones IP o los nombres de servidor DNS en la lista de direcciones que omiten un servidor proxy.  
   
  El valor del `address` atributo debe ser una expresión regular que describa un conjunto de direcciones IP o nombres de host.  
@@ -62,9 +66,11 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
  Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se agregan dos direcciones a la lista de omisiones. El primero omite el proxy para todos los servidores del dominio contoso.com; la segunda omite el proxy para todos los servidores cuya dirección IP comienza con 192,168.  
   
 ```xml  
@@ -80,7 +86,7 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Esquema de la configuración de red](index.md)

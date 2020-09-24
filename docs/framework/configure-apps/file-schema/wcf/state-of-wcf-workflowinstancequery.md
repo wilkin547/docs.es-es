@@ -1,15 +1,16 @@
 ---
-title: <state>de WCF,<workflowInstanceQuery>
+title: <state> de WCF, <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-ms.openlocfilehash: 80f7532f3c51680a2e34713b526dc43822db61b9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c323f7dba265e7fbcb09482115694088e761af0e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854952"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148898"
 ---
-# <a name="state-of-wcf-workflowinstancequery"></a>\<state>de WCF,\<workflowInstanceQuery>
+# <a name="state-of-wcf-workflowinstancequery"></a>\<state> de WCF, \<workflowInstanceQuery>
+
 Representa una colección de estados suscritos de la instancia de flujo de trabajo de la que se ha realizado el seguimiento cuando se crean los registros del seguimiento.  
   
  Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -76,10 +77,10 @@ Los valores de estado posibles se describen en la tabla siguiente:
 |Anulado|Se ha anulado la instancia de flujo de trabajo.|  
 |Completado|Se ha completado la instancia de flujo de trabajo.|  
 |Deleted|Se ha eliminado la instancia de flujo de trabajo.|  
-|Inactivo|La instancia del flujo de trabajo está inactiva.|  
+|Inactivo|La instancia de flujo de trabajo está inactiva.|  
 |Guardado|Se ha guardado la instancia de flujo de trabajo.|  
 |Reanudado|Se ha reanudado la instancia de flujo de trabajo.|  
-|Comenzado|Se ha iniciado la instancia de flujo de trabajo.|  
+|Iniciado|Se ha iniciado la instancia de flujo de trabajo.|  
 |UnhandledException|La instancia de flujo de trabajo ha detectado una excepción no controlada.|  
 |Descargado|Se ha descargado la instancia de flujo de trabajo.|  
 |Canceled|Se ha cancelado la instancia de flujo de trabajo.|  
@@ -101,7 +102,7 @@ La siguiente configuración se suscribe a los registros de seguimiento de nivel 
 </workflowInstanceQueries>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>

@@ -2,14 +2,15 @@
 title: <add> de <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 8328b6d08c1b57ad7a899c8cb489e07037e5af09
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 11be233d846f9025f041a26174e5b3bd2abdab55
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558166"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149197"
 ---
 # <a name="add-of-commonparameters"></a>\<add> de \<commonParameters>
+
 Especifica un par de nombre y valor de parámetros que se utilizan globalmente en varios servicios. Normalmente este parámetro incluye la cadena de conexión a la base de datos que podría ser compartida por servicios duraderos.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,9 +41,10 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |name|El nombre del parámetro especificado para un servicio.|  
-|valor|El valor del parámetro especificado para un servicio.|  
+|value|El valor del parámetro especificado para un servicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,6 +54,7 @@ Especifica un par de nombre y valor de parámetros que se utilizan globalmente e
 |[\<commonParameters>](commonparameters.md)|Una colección de parámetros comunes usada por los servicios. Esta colección incluirá, normalmente, la cadena de conexión de la base de datos que podrían compartir los servicios duraderos.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El elemento `<commonParameters>` define cualquier parámetro que se usa globalmente en varios servicios, por ejemplo `ConnectionString` al usar <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
  Puede habilitar los servicios que confirman los lotes de trabajo en los almacenes de persistencia, como <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> y <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, para reintentar su transacción utilizando el parámetro `EnableRetries` como se muestra en el ejemplo siguiente:  

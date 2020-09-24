@@ -11,14 +11,15 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 1a6d0f79f076a69cec33ac14f0e0f33f7c3c6577
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f679a43ed1851e9681a2a57ca1639f8aa75aa8b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504646"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149509"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>Elemento \<add> para authenticationModules (configuración de red)
+
 Agrega un módulo de autenticación a la aplicación.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,15 +36,17 @@ Agrega un módulo de autenticación a la aplicación.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`type`|El nombre de tipo completo (indicado por la <xref:System.Type.FullName%2A> propiedad) y el nombre de ensamblado (indicado por la <xref:System.Reflection.Assembly.FullName%2A> propiedad), separados por una coma.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -53,14 +56,17 @@ Agrega un módulo de autenticación a la aplicación.
 |[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica los módulos que se usan para autenticar las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `add` elemento agrega un módulo de autenticación al final de la lista de módulos de autenticación registrados. Los módulos de autenticación se llaman en el orden en que se agregaron a la lista.  
   
  El valor del `type` atributo debe ser un nombre de tipo válido y el nombre de ensamblado correspondiente, separados por una coma.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se habilitan los módulos de autenticación predeterminados. Debe reemplazar los valores de version y PublicKeyToken por los valores correctos para el módulo especificado.  
   
 ```xml  
@@ -82,7 +88,7 @@ Agrega un módulo de autenticación a la aplicación.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>

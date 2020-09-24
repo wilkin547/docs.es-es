@@ -5,14 +5,15 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 7aa3755be97a839cb576d53852b75cfe50e39276
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b3234bfa60cd1e3c88778951fc27301c615c84ba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "72773948"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148963"
 ---
 # \<client>
+
 El elemento `client` define una lista de extremos a los que un cliente puede conectarse.
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,9 +34,11 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 ```
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
 
 ### <a name="attributes"></a>Atributos
+
  None
 
 ### <a name="child-elements"></a>Elementos secundarios
@@ -52,6 +55,7 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 |[\<system.serviceModel>](system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de la Windows Communication Foundation (WCF).|
 
 ## <a name="remarks"></a>Comentarios
+
  La sección `client` define una lista de puntos de conexión a los que un cliente puede conectarse. Cada extremo enumerado en la sección de cliente define su propio enlace, comportamiento y contrato. La combinación de los atributos `name` y `contract` identifica singularmente. El código de cliente especifica el `name` para conectar el servicio que el cliente implementa a un extremo. Si se omite el atributo de `name`, el extremo actúa como el extremo predeterminado para el contrato que implementa.
 
  Además, esta sección también especifica los valores para procesar los metadatos.
@@ -73,7 +77,7 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 </client>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>

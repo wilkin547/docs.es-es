@@ -3,14 +3,15 @@ title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: 09cbc43ae4db82dc80e6985131f8d6cc0c24b2ac
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 207931f68303883c29161cc28a5fc1974d01b6b8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152416"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148742"
 ---
 # \<activityScheduledQuery>
+
 Representa una colección de consultas que se utilizan para realizar el seguimiento de una actividad programada para su ejecución por parte de una actividad primaria. La consulta es necesaria para que un participante de seguimiento se suscriba a los registros programados de la actividad.  
   
  Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -39,6 +40,7 @@ Representa una colección de consultas que se utilizan para realizar el seguimie
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,6 +51,7 @@ Representa una colección de consultas que se utilizan para realizar el seguimie
 |childActivityName|Una cadena que especifica el nombre de la actividad secundaria para la que se solicitó la cancelación.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -57,7 +60,7 @@ Representa una colección de consultas que se utilizan para realizar el seguimie
 |-------------|-----------------|  
 |[\<activityScheduledQuery>](activityscheduledquery.md)|Una consulta que se usa para realizar el seguimiento de una actividad programada para ser ejecutada por una actividad primaria.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>

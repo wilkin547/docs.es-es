@@ -5,23 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 71f42cb2707c27be6c1a761d09d3a2dae1791680
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 401b62f56918e8ac406a5ee2dda2252d328592bc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552679"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147585"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
+
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express generada por una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores de sus equipos locales adjuntar bases de datos de SQL Server Express y conectarse a ellas. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, en un modelo de una instancia por usuario.  
   
 ## <a name="user-instance-capabilities"></a>Funcionalidades de las instancias de usuario  
+
  Las instancias de usuario son útiles para los usuarios que ejecutan Windows con una cuenta de usuario con privilegios mínimos (LUA). Cada usuario tiene SQL Server privilegios de administrador del sistema ( `sysadmin` ) en la instancia que se ejecuta en su equipo sin necesidad de ejecutarse también como administrador de Windows. El software que se ejecuta en una instancia de usuario con permisos limitados no puede realizar cambios en todo el sistema porque la instancia de SQL Server Express se está ejecutando bajo la cuenta de Windows del usuario que no es de administrador, no como servicio. Cada instancia de usuario está aislada de la instancia principal y de las demás instancias de usuario que se ejecutan en el mismo equipo. Las bases de datos que se ejecutan en una instancia de usuario se abren solo en modo de usuario único, y no es posible que varios usuarios se conecten a las bases de datos que se ejecutan en una instancia de usuario. La replicación y las consultas distribuidas también están deshabilitadas para las instancias de usuario.
   
 > [!NOTE]
 > Las instancias de usuario no son necesarias para los usuarios que ya son administradores en sus propios equipos o para escenarios que implican a varios usuarios de base de datos.  
   
 ## <a name="enabling-user-instances"></a>Habilitar instancias de usuario  
+
  Para generar instancias de usuario, debe estar ejecutándose una instancia primaria de SQL Server Express. Las instancias de usuario se habilitan de forma predeterminada cuando se instala SQL Server Express y un administrador del sistema pueden habilitarlas o deshabilitarlas de forma explícita si ejecuta el procedimiento almacenado del sistema **sp_configure** en la instancia principal.  
   
 ```sql  
@@ -35,13 +38,14 @@ sp_configure 'user instances enabled','0'
  El protocolo de red para las instancias de usuario debe ser el de canalizaciones con nombre locales. No se puede iniciar una instancia de usuario en una instancia remota de SQL Server, y no se permiten inicios de sesión de SQL Server.  
   
 ## <a name="connecting-to-a-user-instance"></a>Conectarse a una instancia de usuario  
+
  Las palabras clave `User Instance` y `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> permiten a <xref:System.Data.SqlClient.SqlConnection> conectarse a una instancia de usuario. Las instancias de usuario también se admiten en las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` y `AttachDBFilename`.  
   
  Tenga en cuenta lo siguiente sobre la cadena de conexión de ejemplo que se muestra a continuación:  
   
 - La palabra clave `Data Source` hace referencia a la instancia primaria de SQL Server Express que genera la instancia de usuario. La instancia predeterminada es .\sqlexpress.  
   
-- El valor de `Integrated Security` está establecido en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows. No se admiten los inicios de sesión de SQL Server.  
+- `Integrated Security` se establece en `true`. Para conectarse a una instancia de usuario, se requiere la autenticación de Windows. No se admiten los inicios de sesión de SQL Server.  
   
 - La propiedad `User Instance` se establece en `true`, lo cual invoca una instancia de usuario. (El valor predeterminado es `false`).  
   
@@ -59,6 +63,7 @@ Initial Catalog=InstanceDB;
 > También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para crear una cadena de conexión en tiempo de ejecución.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Usar la cadena de sustitución &#124;&#124; de DataDirectory  
+
  `AttachDbFileName` se amplió en ADO.NET 2.0 con la incorporación de la cadena de sustitución `|DataDirectory|` (entre barras verticales). `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión basadas en una ruta relativa al origen de datos en lugar de tener que especificar la ruta completa.  
   
  La ubicación física a la que apunta `DataDirectory` depende del tipo de aplicación. En este ejemplo, el archivo Northwind.mdf que se va a adjuntar se encuentra en la carpeta \app_data de la aplicación.  
@@ -117,12 +122,14 @@ private static void OpenSqlConnection()
 > Las instancias de usuario no se admiten en el código de Common Language Runtime (CLR) que se ejecuta dentro de SQL Server. Se produce <xref:System.InvalidOperationException> si se llama a `Open` en una propiedad <xref:System.Data.SqlClient.SqlConnection> que tiene `User Instance=true` en la cadena de conexión.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Duración de la conexión a una instancia de usuario  
+
  A diferencia de las versiones de SQL Server que se ejecutan como un servicio, no es necesario iniciar y detener manualmente las instancias de SQL Server Express. Cada vez que un usuario inicia sesión y se conecta a una instancia de usuario, la instancia de usuario se inicia si aún no se está ejecutando. Las bases de datos de instancia de usuario tienen la opción `AutoClose` establecida de modo que la base de datos se cierre automáticamente después de un período de inactividad. El proceso Sqlservr.exe que se inicia se mantiene en ejecución durante un período de tiempo de espera limitado después de cerrarse la última conexión a la instancia, por lo que no es necesario reiniciarlo si se abre otra conexión antes de que expire el tiempo de espera. La instancia de usuario se cierra automáticamente si no se abre ninguna conexión nueva antes de que haya expirado el período de tiempo de espera. Un administrador del sistema en la instancia principal puede establecer la duración del período de espera de una instancia de usuario mediante **sp_configure** para cambiar la opción **user instance timeout**. El valor predeterminado es 60 minutos.  
   
 > [!NOTE]
 > Si se usa `Min Pool Size` en la cadena de conexión con un valor mayor que cero, el agrupador de conexiones mantendrá siempre algunas conexiones abiertas y la instancia de usuario no se cerrará automáticamente.  
   
 ## <a name="how-user-instances-work"></a>Cómo funcionan las instancias de usuario  
+
  La primera vez que se genera una instancia de usuario para cada usuario, las bases de datos del sistema **master** y **msdb** se copian desde la carpeta Template Data en una ruta de acceso en el directorio del repositorio de datos de aplicación local del usuario para que las use exclusivamente la instancia de usuario. La ruta de acceso es normalmente `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Cuando se inicia una instancia de usuario, también se escriben en este directorio el registro **tempdb** y los archivos de seguimiento. Se genera un nombre para la instancia, que se garantiza que sea único para cada usuario.  
   
  De forma predeterminada, a todos los miembros del grupo Windows Builtin\Users se les conceden permisos para conectarse en la instancia local, así como permisos de lectura y ejecución en los archivos binarios de SQL Server. Una vez comprobadas las credenciales del usuario que realiza la llamada y hospeda la instancia de usuario, ese usuario se convierte en `sysadmin` en esa instancia. Solo la memoria compartida está habilitada para las instancias de usuario, lo que significa que solo se pueden realizar operaciones en el equipo local.  
@@ -135,6 +142,7 @@ private static void OpenSqlConnection()
  Para evitar daños en los datos, se abre una base de datos en la instancia de usuario con acceso exclusivo. Si dos instancias de usuario diferentes comparten la misma base de datos en el mismo equipo, el usuario de la primera instancia debe cerrar la base de datos para que se pueda abrir en una segunda instancia.  
   
 ## <a name="user-instance-scenarios"></a>Escenarios de instancias de usuario  
+
  Las instancias de usuario proporcionan a los desarrolladores de aplicaciones de base de datos un almacén de datos de SQL Server que no depende de que los desarrolladores tengan cuentas administrativas en sus equipos de desarrollo. Las instancias de usuario se basan en el modelo Access/Jet, donde la aplicación de base de datos simplemente se conecta a un archivo y el usuario tiene permisos totales en todos los objetos de la base de datos sin necesidad de la intervención de un administrador del sistema para conceder permisos. Está pensado para funcionar en situaciones en las que el usuario se ejecuta con una cuenta de usuario con privilegios mínimos (LUA) y no tiene privilegios administrativos en el servidor o en el equipo local, pero tiene que crear objetos y aplicaciones de base de datos. Las instancias de usuario permiten a los usuarios crear instancias en el entorno de ejecución que se ejecutan en el propio contexto de seguridad del usuario y no en el contexto de seguridad de un servicio de sistema con más privilegios.  
   
 > [!IMPORTANT]

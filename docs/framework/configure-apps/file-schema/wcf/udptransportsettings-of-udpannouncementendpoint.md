@@ -2,14 +2,15 @@
 title: <udpTransportSettings> de <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9b2efe706777550f300f5b88710874342c51c5cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148860"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> de \<udpAnnouncementEndpoint>
+
 Este elemento de configuración expone la configuración de transporte de UDP para [\<udpAnnouncementEndpoint>](udpannouncementendpoint.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Este elemento de configuración expone la configuración de transporte de UDP pa
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,6 +60,7 @@ Este elemento de configuración expone la configuración de transporte de UDP pa
 |timeToLive|Entero que especifica el número de saltos de segmentos de red que puede atravesar un paquete de multidifusión.  Este atributo expone la funcionalidad asociada a las opciones de socket `IP_MULTICAST_TTL` e `IP_TTL`.<br /><br /> El valor predeterminado es 1.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -66,6 +69,6 @@ Este elemento de configuración expone la configuración de transporte de UDP pa
 |-------------|-----------------|  
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Punto de conexión estándar que tiene un contrato de anuncio fijo y un enlace de transporte UDP.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

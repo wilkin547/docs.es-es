@@ -1,15 +1,16 @@
 ---
-title: <add>del <claimTypeRequirements> elemento
+title: <add> del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: f6948052c62684faa734b592f5bdfc2e7827a07a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 920d2b3fa4b51ee56e30863d521214ff66e7fcf2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153105"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149249"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<add>del \<claimTypeRequirements> elemento
+# <a name="add-of-claimtyperequirements-element"></a>\<add> del \<claimTypeRequirements> elemento
+
 Especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada. Por ejemplo, los servicios indican los requisitos en las credenciales de entrada, que deben poseer un cierto conjunto de tipos de notificaciones.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 |isOptional|Valor de tipo booleano que especifica si se trata de una notificación opcional. Establezca este atributo en `false` si se trata de una notificación necesaria.<br /><br /> Puede usar este atributo cuando el servicio pregunte para obtener alguna información, pero no lo requiere. Por ejemplo, si necesita que el usuario escriba su nombre, Apellido y dirección, pero decide que el número de teléfono es opcional.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,9 +54,11 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 |[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Este requisito se manifiesta en una directiva de seguridad. Cuando un cliente solicita las credenciales de un servicio aliado (por ejemplo, CardSpace), coloca los requisitos en una solicitud del token (RequestSecurityToken) para que el servicio aliado pueda emitir las credenciales que satisfacen según los requisitos.  
   
 ## <a name="example"></a>Ejemplo  
+
  La siguiente configuración agrega dos requisitos de tipo de notificación a un enlace de seguridad.  
   
 ```xml  
@@ -74,7 +79,7 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
 </bindings>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>

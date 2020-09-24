@@ -2,14 +2,15 @@
 title: <add> de <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: f5de2aa897a3bc37d08932451a2c7b94bc603b9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2c6b5de51e6508965daf6022a47d12d8d73f2a4d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400648"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149132"
 ---
 # <a name="add-of-defaultports"></a>\<add> de \<defaultPorts>
+
 Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.
 |scheme|Cadena que especifica el grupo de configuración del protocolo asociado a un puerto de comunicaciones.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,6 +54,6 @@ Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.
 |-------------|-----------------|  
 |[\<defaultPorts>](defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.DefaultPortElement>

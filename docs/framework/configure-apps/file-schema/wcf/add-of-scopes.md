@@ -2,14 +2,15 @@
 title: <add> de <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: bcde6b18c34dccf1716c809dddeb45b1b4da90f0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1f5b5ea621614880286181c7584863ea024b3d04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398306"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149015"
 ---
 # <a name="add-of-scopes"></a>\<add> de \<scopes>
+
 Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los extremos de servicio durante la consulta.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los ex
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +49,7 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los ex
 |scope|URI que contiene información sobre el ámbito del punto de conexión que se puede usar en los criterios de coincidencia para buscar los servicios.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -55,6 +58,6 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los ex
 |-------------|-----------------|  
 |[\<scopes>](scopes.md)|Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

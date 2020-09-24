@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 571904d36293caa6d4330b2ffda2cff5aca8e6b2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de925afd071a5c92dfa3f6a5e35e62a8ba734cd8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174464"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91147624"
 ---
 # <a name="windows-applications-using-callbacks"></a>Aplicaciones Windows que usan devoluciones de llamada
+
 En la mayoría de los escenarios de procesamiento asincrónico, querrá iniciar una operación de base de datos y seguir ejecutando otros procesos sin esperar a que se complete la operación de base de datos. Sin embargo, muchos escenarios obligan a realizar alguna acción una vez que la operación de base de datos ha finalizado. En una aplicación Windows, por ejemplo, puede que quiera delegar la operación de larga duración a un subproceso en segundo plano, al mismo tiempo que permite que el subproceso de la interfaz de usuario siga respondiendo. Sin embargo, cuando se completa la operación de base de datos, desea utilizar los resultados para rellenar el formulario. Este tipo de escenario se implementa mejor con una devolución de llamada.  
   
  Una devolución de llamada se define especificando un delegado <xref:System.AsyncCallback> en el método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Se llama al delegado cuando se completa la operación. Puede pasar a delegado una referencia a <xref:System.Data.SqlClient.SqlCommand>, lo que facilita el acceso al objeto <xref:System.Data.SqlClient.SqlCommand> y llama al método `End` adecuado sin tener que usar una variable global.  
   
 ## <a name="example"></a>Ejemplo  
+
  La siguiente aplicación Windows muestra el uso del método <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, que ejecuta una instrucción Transact-SQL que incluye un retraso de unos pocos segundos (emulando un comando de ejecución prolongada).  
   
  En este ejemplo se muestran varias técnicas importantes, como llamar a un método que interactúa con el formulario desde un subproceso independiente. Además, en este ejemplo se muestra cómo debe impedir que los usuarios ejecuten simultáneamente un comando varias veces y cómo debe asegurarse de que el formulario no se cierra antes de que se llame al procedimiento de devolución de llamada.  
@@ -375,7 +377,7 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Operaciones asincrónicas](asynchronous-operations.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

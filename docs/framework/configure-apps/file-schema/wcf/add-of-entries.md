@@ -2,14 +2,15 @@
 title: <add> de <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 23b0a825ea593f85ade870d5b93367571eaa3ec0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 156d8b8d9d0eb05efbf306434ab4555a98bc317e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850512"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149054"
 ---
 # <a name="add-of-entries"></a>\<add> de \<entries>
+
 Representa una entrada de enrutamiento que asigna un filtro a un extremo de cliente que se definió previamente. Los mensajes que coincidan con este filtro se enviarán a este destino.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ Representa una entrada de enrutamiento que asigna un filtro a un extremo de clie
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -50,6 +52,7 @@ Representa una entrada de enrutamiento que asigna un filtro a un extremo de clie
 |priority|Entero que especifica la prioridad de esta entrada.<br /><br /> Las entradas en la tabla de enrutamiento se evaluarán según la prioridad, siendo 0 la prioridad más baja. Todas las entradas para una prioridad concreta se evalúan simultáneamente; si no se encuentra ninguna entrada coincidente para la prioridad actual, se evaluará el nivel de prioridad siguiente.<br /><br /> Este valor es opcional.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -58,7 +61,7 @@ Representa una entrada de enrutamiento que asigna un filtro a un extremo de clie
 |-------------|-----------------|  
 |[\<routing>](routing.md)|Sección de configuración que contiene entradas de asignación de enrutamiento.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>
