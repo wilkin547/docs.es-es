@@ -670,7 +670,7 @@ items:
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
                   - name: Cambio de formatos de fecha
                     href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: Extracción de un protocolo y un número de puerto de una URL
+                  - name: Extracción de un protocolo y un número de puerto de una dirección URL
                     href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
                   - name: Eliminación de caracteres no válidos de una cadena
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
@@ -715,7 +715,7 @@ items:
       - name: Inserción de dependencias
         href: /aspnet/core/fundamentals/dependency-injection
       - name: Host genérico
-        href: /aspnet/core/fundamentals/host/generic-host
+        href: ../core/extensions/generic-host.md
       - name: Registro
         href: /aspnet/core/fundamentals/logging
       - name: Patrón de opciones
