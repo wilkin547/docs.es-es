@@ -5,17 +5,19 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 7209b6856eb7302dfa2e5e8938509d9238ceff4d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7f4b375c350dca58aa1002402806113ec0f91b55
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "85840359"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098766"
 ---
 # <a name="reference-visual-basic"></a>Referencia (Visual Basic)
+
 En esta sección se proporcionan vínculos a información de referencia sobre diversos aspectos de la programación de Visual Basic.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Referencia del lenguaje Visual Basic](../language-reference/index.md)  
  Proporciona información de referencia sobre diversos aspectos del lenguaje Visual Basic.  
   
@@ -29,6 +31,7 @@ En esta sección se proporcionan vínculos a información de referencia sobre di
  Proporciona vínculos a la especificación completa del lenguaje Visual Basic, que contiene información detallada sobre todos los aspectos del lenguaje.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Elementos generales de la interfaz de usuario (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Contiene temas sobre los cuadros de diálogo y las ventanas que se usan en Visual Studio.  
   
