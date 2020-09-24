@@ -9,21 +9,22 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: ce7b8564e4ee5ea73d42259612c077420d36645b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a146874acc21f52507b37b1751c648792e23c8bb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504568"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91158856"
 ---
-# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="00de8-103">Elemento \<mailSettings> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="00de8-103">\<mailSettings> Element (Network Settings)</span></span>
-<span data-ttu-id="00de8-104">Configura opciones de envío de correo.</span><span class="sxs-lookup"><span data-stu-id="00de8-104">Configures mail sending options.</span></span>  
+# <a name="mailsettings-element-network-settings"></a><span data-ttu-id="d98ea-103">Elemento \<mailSettings> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d98ea-103">\<mailSettings> Element (Network Settings)</span></span>
+
+<span data-ttu-id="d98ea-104">Configura opciones de envío de correo.</span><span class="sxs-lookup"><span data-stu-id="d98ea-104">Configures mail sending options.</span></span>  
 
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<mailSettings>**
 
-## <a name="syntax"></a><span data-ttu-id="00de8-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="00de8-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d98ea-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d98ea-105">Syntax</span></span>  
   
 ```xml  
 <mailSettings>
@@ -31,26 +32,29 @@ ms.locfileid: "84504568"
 </mailSettings>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="00de8-106">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="00de8-106">Attributes and Elements</span></span>  
- <span data-ttu-id="00de8-107">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="00de8-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d98ea-106">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="d98ea-106">Attributes and Elements</span></span>  
+
+ <span data-ttu-id="d98ea-107">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="d98ea-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="00de8-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="00de8-108">Attributes</span></span>  
- <span data-ttu-id="00de8-109">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="00de8-109">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d98ea-108">Atributos</span><span class="sxs-lookup"><span data-stu-id="d98ea-108">Attributes</span></span>  
+
+ <span data-ttu-id="d98ea-109">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="d98ea-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="00de8-110">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="00de8-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d98ea-110">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="d98ea-110">Child Elements</span></span>  
   
-|<span data-ttu-id="00de8-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="00de8-111">Attribute</span></span>|<span data-ttu-id="00de8-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="00de8-112">Description</span></span>|  
+|<span data-ttu-id="d98ea-111">Atributo</span><span class="sxs-lookup"><span data-stu-id="d98ea-111">Attribute</span></span>|<span data-ttu-id="d98ea-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="d98ea-112">Description</span></span>|  
 |---------------|-----------------|  
-|[<span data-ttu-id="00de8-113">\<smtp>(Elemento, configuración de red)</span><span class="sxs-lookup"><span data-stu-id="00de8-113">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="00de8-114">Configura opciones de Protocolo simple de transporte de correo.</span><span class="sxs-lookup"><span data-stu-id="00de8-114">Configures Simple Mail Transport Protocol options.</span></span>|  
+|[<span data-ttu-id="d98ea-113">Elemento \<smtp> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d98ea-113">\<smtp> Element (Network Settings)</span></span>](smtp-element-network-settings.md)|<span data-ttu-id="d98ea-114">Configura opciones de Protocolo simple de transporte de correo.</span><span class="sxs-lookup"><span data-stu-id="d98ea-114">Configures Simple Mail Transport Protocol options.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="00de8-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="00de8-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d98ea-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="d98ea-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="00de8-116">**Element**</span><span class="sxs-lookup"><span data-stu-id="00de8-116">**Element**</span></span>|<span data-ttu-id="00de8-117">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="00de8-117">**Description**</span></span>|  
+|<span data-ttu-id="d98ea-116">**Element**</span><span class="sxs-lookup"><span data-stu-id="d98ea-116">**Element**</span></span>|<span data-ttu-id="d98ea-117">**Descripción**</span><span class="sxs-lookup"><span data-stu-id="d98ea-117">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="00de8-118">\<system.Net>(Elemento, configuración de red)</span><span class="sxs-lookup"><span data-stu-id="00de8-118">\<system.Net> Element (Network Settings)</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="00de8-119">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="00de8-119">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="d98ea-118">Elemento \<system.Net> (configuración de red)</span><span class="sxs-lookup"><span data-stu-id="d98ea-118">\<system.Net> Element (Network Settings)</span></span>](system-net-element-network-settings.md)|<span data-ttu-id="d98ea-119">Contiene valores que especifican cómo se conecta .NET Framework a la red.</span><span class="sxs-lookup"><span data-stu-id="d98ea-119">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="00de8-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="00de8-120">Example</span></span>  
- <span data-ttu-id="00de8-121">En el ejemplo siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico con las credenciales de red predeterminadas.</span><span class="sxs-lookup"><span data-stu-id="00de8-121">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="d98ea-120">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d98ea-120">Example</span></span>  
+
+ <span data-ttu-id="d98ea-121">En el ejemplo siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico con las credenciales de red predeterminadas.</span><span class="sxs-lookup"><span data-stu-id="d98ea-121">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -68,7 +72,7 @@ ms.locfileid: "84504568"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="00de8-122">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="00de8-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d98ea-122">Consulte también</span><span class="sxs-lookup"><span data-stu-id="d98ea-122">See also</span></span>
 
 - <xref:System.Net.Mail.SmtpClient>
-- [<span data-ttu-id="00de8-123">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="00de8-123">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="d98ea-123">Esquema de la configuración de red</span><span class="sxs-lookup"><span data-stu-id="d98ea-123">Network Settings Schema</span></span>](index.md)
