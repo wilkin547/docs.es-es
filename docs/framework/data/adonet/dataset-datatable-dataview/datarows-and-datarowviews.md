@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151304"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153292"
 ---
 # <a name="datarows-and-datarowviews"></a>Objetos DataRow y DataRowView
-Un <xref:System.Data.DataView> expone una colección enumerable de objetos <xref:System.Data.DataRowView>. El **DataRowView** objetos exponen valores como matrices de objetos que se indizan por el nombre o la referencia ordinal de la columna en la tabla subyacente. Puede tener <xref:System.Data.DataRow> acceso a la que expone El <xref:System.Data.DataRowView.Row%2A> **DataRowView** mediante la propiedad de la **DataRowView**.  
+
+Un <xref:System.Data.DataView> expone una colección enumerable de objetos <xref:System.Data.DataRowView>. Los objetos **DataRowView** exponen valores como matrices de objetos que se indizan mediante el nombre o la referencia ordinal de la columna en la tabla subyacente. Puede tener acceso al <xref:System.Data.DataRow> que expone la **DataRowView** mediante la <xref:System.Data.DataRowView.Row%2A> propiedad de la **DataRowView**.  
   
- Cuando se ven valores mediante un <xref:System.Data.DataView.RowStateFilter%2A> **DataRowView**, la propiedad de la **DataView** determina qué versión de fila de la **subyacente DataRow** se expone. Para obtener información sobre cómo obtener acceso a diferentes versiones de fila mediante **DataRow**, vea Estados de fila [y versiones](row-states-and-row-versions.md)de fila .  
+ Cuando se ven valores mediante una **DataRowView**, la <xref:System.Data.DataView.RowStateFilter%2A> propiedad de **DataView** determina la versión de fila de la **DataRow** subyacente que se expone. Para obtener información sobre cómo obtener acceso a diferentes versiones de fila mediante **DataRow**, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).  
   
  El siguiente ejemplo de código muestra todos los valores actuales y originales de una tabla.  
   
@@ -59,7 +60,7 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>

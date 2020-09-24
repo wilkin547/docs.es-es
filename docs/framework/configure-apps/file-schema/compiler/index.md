@@ -11,14 +11,15 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: 5b1f9684ad26d4a03769af287fc8b0c0c7c4cc1a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 457e90c92530e04070575e42e3fc282ce45b3d03
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088683"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153955"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Esquema de configuración de compilador y proveedor de lenguaje
+
 La configuración de compilador y proveedor de lenguaje especifica los elementos de configuración del compilador para los proveedores de lenguaje disponibles. Cada elemento de configuración de compilador especifica el nombre del tipo de proveedor de código, los parámetros del compilador, los nombres de lenguaje admitidos y las extensiones de archivo admitidas.  
   
 .NET Framework define la configuración inicial del compilador en el archivo de configuración del equipo (Machine.config). Los desarrolladores y los proveedores de compiladores pueden agregar valores de configuración para una nueva implementación de <xref:System.CodeDom.Compiler.CodeDomProvider>. Use el método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar mediante programación los valores de configuración del compilador y del proveedor de lenguaje en un equipo.  
@@ -35,6 +36,7 @@ La configuración de compilador y proveedor de lenguaje especifica los elementos
 |[\<compiler>](compiler-element.md)|Especifica los atributos de configuración del compilador para un proveedor de lenguaje.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra un elemento típico de configuración del compilador.  
   
 ```xml  
@@ -58,4 +60,4 @@ La configuración de compilador y proveedor de lenguaje especifica los elementos
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Esquema de los archivos de configuración](../index.md)
-- [\<compiler>Element](compiler-element.md)
+- [Elemento \<compiler>](compiler-element.md)

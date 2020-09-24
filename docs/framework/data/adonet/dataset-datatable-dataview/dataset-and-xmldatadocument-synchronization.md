@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 2790f0a9edd5bfde96683e00725dd04555379adf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785431"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153305"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Sincronización de DataSet y XmlDataDocument
-El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacional de datos. Para el acceso a datos jerárquicos puede utilizar las clases XML disponibles en .NET Framework. Históricamente, estas dos representaciones de datos se han utilizado independientemente. Sin embargo, el .NET Framework habilita el acceso sincrónico en tiempo real a las representaciones relacionales y jerárquicas de los datos a través del objeto DataSet <xref:System.Xml.XmlDataDocument> y del objeto, respectivamente.  
+
+El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacional de datos. Para el acceso a datos jerárquicos puede utilizar las clases XML disponibles en .NET Framework. Históricamente, estas dos representaciones de datos se han utilizado independientemente. Sin embargo, el .NET Framework habilita el acceso sincrónico en tiempo real a las representaciones relacionales y jerárquicas de los datos a través del objeto **DataSet** y del <xref:System.Xml.XmlDataDocument> objeto, respectivamente.  
   
- Cuando un **conjunto** de datos se sincroniza con un **XmlDataDocument**, ambos objetos trabajan con un solo conjunto de datos. Esto significa que si se realiza un cambio en el **conjunto de DataSet**, el cambio se reflejará en el **XmlDataDocument**y viceversa. La relación entre el **conjunto** de datos y el **XmlDataDocument** crea una gran flexibilidad, ya que permite que una sola aplicación, mediante un único conjunto de datos, tenga acceso a todo el conjunto de servicios creados en torno al **conjunto** de datos (como formularios Web Forms y Windows Forms controles y diseñadores de Visual Studio .NET), así como el conjunto de servicios XML, incluidos el lenguaje de hojas de estilo extensible (XSL), las transformaciones XSL (XSLT) y el lenguaje de rutas XML (XPath). No tiene que elegir el conjunto de servicios a los que desea dirigir la aplicación, ya que ambos están disponibles.  
+ Cuando un **conjunto** de datos se sincroniza con un **XmlDataDocument**, ambos objetos trabajan con un solo conjunto de datos. Esto significa que si se realiza un cambio en el **conjunto de DataSet**, el cambio se reflejará en el **XmlDataDocument**y viceversa. La relación entre el **conjunto de DataSet** y el **XmlDataDocument** crea una gran flexibilidad al permitir una sola aplicación, usar un único conjunto de datos para tener acceso al conjunto completo de servicios creados en torno al **conjunto** de datos (como los formularios web forms y los controles de Windows Forms, y diseñadores de Visual Studio .net), así como el conjunto de servicios XML, incluidos el lenguaje de hojas de estilo extensible (XSL), las transformaciones XSL (XSLT) y XML Path Language (XPath). No tiene que elegir el conjunto de servicios a los que desea dirigir la aplicación, ya que ambos están disponibles.  
   
  Hay varias maneras de sincronizar un **DataSet** con un **XmlDataDocument**. Puede:  
   
@@ -85,25 +86,27 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- Otra ventaja de sincronizar un **XmlDataDocument** con un **DataSet** es que se conserva la fidelidad de un documento XML. Si el **conjunto** de datos se rellena a partir de un documento XML mediante **ReadXml**, cuando se vuelvan a escribir los datos como un documento XML mediante **WriteXml** puede diferir drásticamente del documento XML original. Esto se debe a que el **conjunto** de datos no mantiene el formato, como un espacio en blanco, o información jerárquica, como el orden de los elementos, del documento XML. El **DataSet** tampoco contiene elementos del documento XML que se omitieron porque no coincidían con el esquema del **conjunto de DataSet**. Sincronizar un **XmlDataDocument** con un **conjunto** de datos permite que el formato y la estructura jerárquica de los elementos del documento XML original se mantengan en el **XmlDataDocument**, mientras que el **conjunto** de datos solo contiene datos y información de esquema adecuada para el **conjunto**de datos.  
+ Otra ventaja de sincronizar un **XmlDataDocument** con un **DataSet** es que se conserva la fidelidad de un documento XML. Si el **conjunto** de datos se rellena a partir de un documento XML mediante **ReadXml**, cuando se vuelvan a escribir los datos como un documento XML mediante **WriteXml** puede diferir drásticamente del documento XML original. Esto se debe a que el **conjunto** de datos no mantiene el formato, como un espacio en blanco, o información jerárquica, como el orden de los elementos, del documento XML. El **DataSet** tampoco contiene elementos del documento XML que se omitieron porque no coincidían con el esquema del **conjunto de DataSet**. Sincronizar un **XmlDataDocument** con un **conjunto** de datos permite que el formato y la estructura jerárquica de los elementos del documento XML original se mantengan en el **XmlDataDocument**, mientras que el **conjunto** de datos solo contiene información sobre los datos y el esquema correspondientes al **conjunto**de datos.  
   
  Al sincronizar un **DataSet** con un **XmlDataDocument**, los resultados pueden diferir dependiendo de si los <xref:System.Data.DataRelation> objetos están anidados o no. Para obtener más información, consulte anidamiento de objetos [DataRelation](nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Sincronización de un objeto DataSet con un objeto XmlDataDocument](synchronizing-a-dataset-with-an-xmldatadocument.md)  
+
+ [Sincronizar un objeto DataSet con un objeto XmlDataDocument](synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Muestra cómo sincronizar un **DataSet**fuertemente tipado, con un esquema mínimo, con un **XmlDataDocument**.  
   
- [Realización de una consulta XPath en un objeto DataSet](performing-an-xpath-query-on-a-dataset.md)  
+ [Realizar una consulta XPath en un objeto DataSet](performing-an-xpath-query-on-a-dataset.md)  
  Muestra cómo realizar una consulta XPath en el contenido de un **conjunto de DataSet**.  
   
- [Aplicación de una transformación XSL a un DataSet](applying-an-xslt-transform-to-a-dataset.md)  
+ [Aplicar una transformación XSL a un DataSet](applying-an-xslt-transform-to-a-dataset.md)  
  Muestra cómo aplicar una transformación XSLT al contenido de un **conjunto de DataSet**.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)  
  Describe cómo interactúa el **DataSet** con XML como origen de datos, incluida la carga y persistencia del contenido de un **DATASET** como datos XML.  
   
- [Anidado de objetos DataRelation](nesting-datarelations.md)  
+ [Anidar objetos DataRelation](nesting-datarelations.md)  
  Describe la importancia de los objetos **DataRelation** anidados al representar el contenido de un **DATASET** como datos XML y describe cómo crear estas relaciones.  
   
  [Objetos DataSet, DataTable y DataView](index.md)  
@@ -114,4 +117,4 @@ El <xref:System.Data.DataSet> de ADO.NET proporciona una representación relacio
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

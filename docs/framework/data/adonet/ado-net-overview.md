@@ -3,14 +3,15 @@ title: Información general
 description: Lea una introducción a ADO.NET en .NET Framework y obtenga información sobre los recursos para obtener explicaciones y ejemplos más detallados.
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2ff3b7ad197bfe1e1c12e382f3a59bd470c57a75
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 459e4a548a4d1358b196dc41ec495921833728d4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287160"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153500"
 ---
 # <a name="adonet-overview"></a>Información general sobre ADO.NET
+
 ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML, así como a orígenes de datos expuestos mediante OLE DB y ODBC. Las aplicaciones de consumidor que comparten datos pueden utilizar ADO.NET para conectar a estos orígenes de datos y recuperar, controlar y actualizar los datos contenidos.  
   
  ADO.NET separa el acceso a datos de la manipulación de datos y crea componentes discretos que se pueden utilizar por separado o conjuntamente. ADO.NET incluye proveedores de datos .NET Framework para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Los resultados se procesan directamente o se colocan en un objeto <xref:System.Data.DataSet> de ADO.NET con el fin de exponerlos al usuario para un propósito específico, combinados con datos de varios orígenes, o de pasarlos entre niveles. El objeto `DataSet` de ADO.NET también puede utilizarse independientemente de un proveedor de datos .NET Framework para administrar datos que son locales de la aplicación o que proceden de un origen XML.  
@@ -21,9 +22,10 @@ ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML,
   
  ADO.NET proporciona el método más directo de acceso a datos de .NET Framework. Para obtener una abstracción de nivel superior que permita que las aplicaciones funcionen con un modelo conceptual en lugar del modelo de almacenamiento subyacente, vea el [Entity Framework ADO.net](./ef/index.md).  
   
- **Declaración de privacidad**: los ensamblados System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SqlXml. dll, System. Data. Linq. dll, System. Data. SqlServerCe. dll y System. Data. DataSetExtensions. dll no distinguen entre los datos privados de un usuario y los datos no privados.  Estos ensamblados no recopilan, almacenan o transportan datos privados del usuario. No obstante, las aplicaciones de terceros podrían recopilar, almacenar o transportar datos privados de usuario valiéndose de dichos ensamblados.  
+ **Declaración de privacidad**: los ensamblados System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll y System.Data.DataSetExtensions.dll no distinguen entre los datos privados de un usuario y los datos no privados.  Estos ensamblados no recopilan, almacenan o transportan datos privados del usuario. No obstante, las aplicaciones de terceros podrían recopilar, almacenar o transportar datos privados de usuario valiéndose de dichos ensamblados.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Arquitectura de ADO.NET](ado-net-architecture.md)  
  Proporciona información general sobre la arquitectura y los componentes de ADO.NET.  
   
@@ -46,6 +48,7 @@ ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML,
  Proporciona ejemplos de código que recuperan datos mediante proveedores de datos de ADO.NET.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Novedades de ADO.NET](whats-new.md)  
  Presenta características nuevas en ADO.NET.  
   
@@ -58,7 +61,7 @@ ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML,
  [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)  
  Describe cómo conectarse a un origen de datos, y cómo recuperar y modificar datos. Incluye `DataReaders` y `DataAdapters`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET](index.md)
-- [Obtener acceso a datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Obtener acceso a los datos en Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

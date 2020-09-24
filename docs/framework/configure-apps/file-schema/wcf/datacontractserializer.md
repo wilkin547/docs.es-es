@@ -2,14 +2,15 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: e6524c18780c062c3b5b7dfc2509449cb208e270
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0e4cbc50c25d4fa1f67f283f2b52d4b174428cd3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400433"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153929"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
+
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,6 +39,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 |maxItemsInObjectGraph|Un entero que especifica el número máximo de elementos para serializar o deserializar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -46,12 +49,13 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Para obtener más información sobre los tipos conocidos, vea la documentación <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 > [!CAUTION]
 > El elemento de comportamiento `<dataContractSerializer>` (si está presente) debe aparecer siempre antes del elemento de comportamiento `<enableWebScript>` del archivo de configuración. En caso contrario, el comportamiento resultante no está definido.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
