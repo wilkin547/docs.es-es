@@ -8,29 +8,32 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: 00c23dcf-9bb8-459a-a012-6c4d9bcad7e9
-ms.openlocfilehash: d3e2d587978a4c82784c8cfc8a7acc17cf601c3a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: fb22e87569a8e243813b3186232b6989abeb2a5e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569146"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161313"
 ---
-# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a><span data-ttu-id="67324-102">Cómo: Personalizar fuentes con el proveedor de reflexión (Servicios de datos de WCF)</span><span class="sxs-lookup"><span data-stu-id="67324-102">How to: Customize Feeds with the Reflection Provider (WCF Data Services)</span></span>
-<span data-ttu-id="67324-103">WCF Data Services permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a elementos no usados que se definen en el protocolo AtomPub.</span><span class="sxs-lookup"><span data-stu-id="67324-103">WCF Data Services enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="67324-104">En este tema se muestra cómo definir los atributos de asignación para los tipos de entidad de un modelo de datos que se define usando el proveedor de reflexión.</span><span class="sxs-lookup"><span data-stu-id="67324-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined by using the reflection provider.</span></span> <span data-ttu-id="67324-105">Para obtener más información, vea [Personalización de fuentes](feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="67324-105">For more information, see [Feed Customization](feed-customization-wcf-data-services.md).</span></span>  
+# <a name="how-to-customize-feeds-with-the-reflection-provider-wcf-data-services"></a><span data-ttu-id="e704b-102">Cómo: Personalizar fuentes con el proveedor de reflexión (Servicios de datos de WCF)</span><span class="sxs-lookup"><span data-stu-id="e704b-102">How to: Customize Feeds with the Reflection Provider (WCF Data Services)</span></span>
+
+<span data-ttu-id="e704b-103">WCF Data Services permite personalizar la serialización Atom en una respuesta del servicio de datos para que las propiedades de una entidad se puedan asignar a elementos no usados que se definen en el protocolo AtomPub.</span><span class="sxs-lookup"><span data-stu-id="e704b-103">WCF Data Services enables you to customize the Atom serialization in a data service response so that properties of an entity may be mapped to unused elements that are defined in the AtomPub protocol.</span></span> <span data-ttu-id="e704b-104">En este tema se muestra cómo definir los atributos de asignación para los tipos de entidad de un modelo de datos que se define usando el proveedor de reflexión.</span><span class="sxs-lookup"><span data-stu-id="e704b-104">This topic shows how to define mapping attributes for the entity types in a data model that is defined by using the reflection provider.</span></span> <span data-ttu-id="e704b-105">Para obtener más información, vea [Personalización de fuentes](feed-customization-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="e704b-105">For more information, see [Feed Customization](feed-customization-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="67324-106">El modelo de datos para este ejemplo se define en el tema [Cómo: crear un servicio de datos mediante el proveedor de reflexión.](create-a-data-service-using-rp-wcf-data-services.md)</span><span class="sxs-lookup"><span data-stu-id="67324-106">The data model for this example is defined in the topic [How to: Create a Data Service Using the Reflection Provider](create-a-data-service-using-rp-wcf-data-services.md)</span></span>  
+ <span data-ttu-id="e704b-106">El modelo de datos para este ejemplo se define en el tema [Cómo: crear un servicio de datos mediante el proveedor de reflexión.](create-a-data-service-using-rp-wcf-data-services.md)</span><span class="sxs-lookup"><span data-stu-id="e704b-106">The data model for this example is defined in the topic [How to: Create a Data Service Using the Reflection Provider](create-a-data-service-using-rp-wcf-data-services.md)</span></span>  
   
-## <a name="example"></a><span data-ttu-id="67324-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="67324-107">Example</span></span>  
- <span data-ttu-id="67324-108">En el ejemplo siguiente, las dos propiedades del tipo `Order` se asignan a elementos Atom existentes.</span><span class="sxs-lookup"><span data-stu-id="67324-108">In the following example, both properties of the `Order` type are mapped to existing Atom elements.</span></span> <span data-ttu-id="67324-109">La propiedad `Product` del tipo `Item` se asigna a un atributo de fuente personalizado en un espacio de nombres independiente.</span><span class="sxs-lookup"><span data-stu-id="67324-109">The `Product` property of the `Item` type is mapped to a custom feed attribute in a separate namespace.</span></span>  
+## <a name="example"></a><span data-ttu-id="e704b-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e704b-107">Example</span></span>  
+
+ <span data-ttu-id="e704b-108">En el ejemplo siguiente, las dos propiedades del tipo `Order` se asignan a elementos Atom existentes.</span><span class="sxs-lookup"><span data-stu-id="e704b-108">In the following example, both properties of the `Order` type are mapped to existing Atom elements.</span></span> <span data-ttu-id="e704b-109">La propiedad `Product` del tipo `Item` se asigna a un atributo de fuente personalizado en un espacio de nombres independiente.</span><span class="sxs-lookup"><span data-stu-id="e704b-109">The `Product` property of the `Item` type is mapped to a custom feed attribute in a separate namespace.</span></span>  
   
  [!code-csharp[Astoria Custom Feeds#CustomIQueryableFeeds](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customiqueryablefeeds)]
  [!code-vb[Astoria Custom Feeds#CustomIQueryableFeeds](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customiqueryablefeeds)]  
   
-## <a name="example"></a><span data-ttu-id="67324-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="67324-110">Example</span></span>  
- <span data-ttu-id="67324-111">En el ejemplo anterior se devuelve el resultado siguiente para el identificador URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items`.</span><span class="sxs-lookup"><span data-stu-id="67324-111">The previous example returns the following result for the URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items`.</span></span>  
+## <a name="example"></a><span data-ttu-id="e704b-110">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e704b-110">Example</span></span>  
+
+ <span data-ttu-id="e704b-111">En el ejemplo anterior se devuelve el resultado siguiente para el identificador URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items`.</span><span class="sxs-lookup"><span data-stu-id="e704b-111">The previous example returns the following result for the URI `http://myservice/OrderItems.svc/Orders(0)?$expand=Items`.</span></span>  
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResultInline](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresultinline.xml#iqueryablefeedresultinline)]  
   
-## <a name="see-also"></a><span data-ttu-id="67324-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="67324-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e704b-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e704b-112">See also</span></span>
 
-- [<span data-ttu-id="67324-113">Proveedor de reflexión</span><span class="sxs-lookup"><span data-stu-id="67324-113">Reflection Provider</span></span>](reflection-provider-wcf-data-services.md)
+- [<span data-ttu-id="e704b-113">Proveedor de reflexión</span><span class="sxs-lookup"><span data-stu-id="e704b-113">Reflection Provider</span></span>](reflection-provider-wcf-data-services.md)
