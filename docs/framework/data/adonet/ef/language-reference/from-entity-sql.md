@@ -2,14 +2,15 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 2334a30009d6bef9544d2ca1e0ab923a7441d6f2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8affac82fb1813aa0282540b5dc2f47d42234a1b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833820"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148065"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
+
 Especifica la colección utilizada en las instrucciones [Select](select-entity-sql.md) .
 
 ## <a name="syntax"></a>Sintaxis
@@ -51,7 +52,7 @@ Si no se especifica un alias, [!INCLUDE[esql](../../../../../../includes/esql-md
 
 ### <a name="join-from-clause-item"></a>Elemento de la cláusula JOIN FROM
 
-Un elemento de la cláusula `JOIN FROM` representa una unión entre dos elementos de la cláusula `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite combinaciones cruzadas, combinaciones internas, combinaciones externas izquierda y derecha y combinaciones externas completas. Todas estas combinaciones se admiten de forma similar a como se admiten en Transact-SQL. Como en Transact-SQL, los dos elementos de la cláusula `FROM` implicados en el `JOIN` deben ser independientes. Es decir, no pueden estar correlacionados. En estos casos se puede usar un elemento `CROSS APPLY` u `OUTER APPLY`.
+Un elemento de la cláusula `JOIN FROM` representa una unión entre dos elementos de la cláusula `FROM`. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] admite combinaciones cruzadas, combinaciones internas, combinaciones externas izquierda y derecha y combinaciones externas completas. Todas estas combinaciones se admiten de forma similar a como se admiten en Transact-SQL. Como en Transact-SQL, los dos `FROM` elementos de la cláusula implicados en `JOIN` deben ser independientes. Es decir, no pueden estar correlacionados. En estos casos se puede usar un elemento `CROSS APPLY` u `OUTER APPLY`.
 
 #### <a name="cross-joins"></a>Combinaciones cruzadas
 
@@ -103,10 +104,10 @@ Una expresión `OUTER APPLY` se parece a `CROSS APPLY`, excepto en que se sigue 
 `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`
 
 > [!NOTE]
-> A diferencia de Transact-SQL, no es necesario un paso explícito UNNEST en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].
+> A diferencia de Transact-SQL, no es necesario un paso explícito UNNEST en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .
 
 > [!NOTE]
-> los operadores `CROSS` y `OUTER APPLY` se introdujeron en SQL Server 2005. En algunos casos, la canalización de la consulta podría generar código de Transact-SQL que contiene los operadores `CROSS APPLY` y `OUTER APPLY`. Dado que algunos proveedores de back-end, incluidas las versiones de SQL Server anteriores a SQL Server 2005, no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores de back-end.
+> `CROSS` los `OUTER APPLY` operadores y se introdujeron en SQL Server 2005. En algunos casos, la canalización de la consulta podría generar código de Transact-SQL que contiene los operadores `CROSS APPLY` y `OUTER APPLY`. Dado que algunos proveedores de back-end, incluidas las versiones de SQL Server anteriores a SQL Server 2005, no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores de back-end.
 >
 > Algunos escenarios típicos que podrían conducir  a la presencia de los operadores `CROSS APPLY``OUTER APPLY` en la consulta de salida son las siguientes: una subconsulta correlacionada con la paginación; AnyElement sobre una subconsulta correlacionada o sobre una colección generada mediante navegación; consultas LINQ que utilizan métodos de agrupación que aceptan un selector de elemento; una consulta en la que se especifica explícitamente `CROSS APPLY` u `OUTER APPLY`; una consulta que tiene una construcción `DEREF` sobre una construcción `REF`.
 
@@ -114,7 +115,7 @@ Una expresión `OUTER APPLY` se parece a `CROSS APPLY`, excepto en que se sigue 
 
 La cláusula `FROM` puede contener más de una colección separada por comas. En estos casos, se supone que las colecciones están combinadas. Considérelas como una operación CROSS JOIN de n direcciones.
 
-En el ejemplo siguiente, `C` y `D` son colecciones independientes, pero `c.Names` depende de `C`.
+En el ejemplo siguiente, `C` y `D` son colecciones independientes, pero `c.Names` depende de `C` .
 
 ```sql
 FROM C AS c, D AS d, c.Names AS e
@@ -125,6 +126,7 @@ El ejemplo anterior es lógicamente equivalente al ejemplo siguiente:
 `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`
 
 ## <a name="left-correlation"></a>Correlación izquierda
+
  Los elementos de la cláusula `FROM` pueden hacer referencia a los elementos especificados en las cláusulas anteriores. En el ejemplo siguiente, `C` y `D` son colecciones independientes, pero `c.Names` depende de `C`:
 
 ```sql
@@ -149,7 +151,7 @@ La cláusula `FROM` genera lógicamente un multiconjunto de filas de tipo Row(c,
 from (C as c join D as d) cross apply c.Names as e
 ```
 
-En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (a diferencia de Transact-SQL), la cláusula `FROM` solo introduce los alias en el ámbito. Cualquier referencia a las columnas (propiedades) de estas colecciones se debe certificar con el alias.
+En [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (a diferencia de Transact-SQL), la `FROM` cláusula solo introduce los alias en el ámbito. Cualquier referencia a las columnas (propiedades) de estas colecciones se debe certificar con el alias.
 
 ## <a name="pulling-up-keys-from-nested-queries"></a>Extraer claves de las consultas anidadas
 

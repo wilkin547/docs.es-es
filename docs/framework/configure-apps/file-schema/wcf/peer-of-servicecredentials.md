@@ -2,14 +2,15 @@
 title: <peer> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: 50db8eb381249c3b880c4b1dd96ec3813d51ce67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7f6669d3f53a6ee0d189786fa9ca3625fdedd127
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556120"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162483"
 ---
 # <a name="peer-of-servicecredentials"></a>\<peer> de \<serviceCredentials>
+
 Especifica las credenciales actuales de un nodo del mismo nivel.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Especifica las credenciales actuales de un nodo del mismo nivel.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -50,7 +53,7 @@ Especifica las credenciales actuales de un nodo del mismo nivel.
 |-------------|-----------------|  
 |[\<serviceCredentials>](servicecredentials.md)|Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>

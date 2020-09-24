@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0a7c8f005b90484ef2f9c7e48218bda40533696a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 064688f173e375481373e9a33d66c64666e1583f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91148366"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Crear un objeto DataTable a partir de una consulta (LINQ to DataSet)
+
 El enlace de datos es una utilización muy frecuente del objeto <xref:System.Data.DataTable>. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> toma los resultados de una consulta y copia los datos en un objeto <xref:System.Data.DataTable> que puede utilizarse después para el enlace de datos. Cuando las operaciones de datos se han realizado, el <xref:System.Data.DataTable> nuevo se vuelve a combinar en el <xref:System.Data.DataTable> de origen.  
   
  El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> utiliza el siguiente proceso para crear un <xref:System.Data.DataTable> a partir de una consulta:  
@@ -38,6 +39,7 @@ Al llamar al <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> método, 
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
 ## <a name="creating-a-custom-copytodatatablet-method"></a>Crear un método CopyToDataTable personalizado \<T>  
+
  Los métodos <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> existentes solo funcionan en un origen <xref:System.Collections.Generic.IEnumerable%601> en el que el parámetro genérico `T` es de tipo <xref:System.Data.DataRow>. Aunque esto es útil, no permite la creación de tablas a partir de una secuencia de tipos escalares, a partir de consultas que devuelven tipos anónimos, o a partir de consultas que realizan combinaciones de tablas. Para obtener un ejemplo de cómo implementar dos `CopyToDataTable` métodos personalizados que cargan una tabla a partir de una secuencia de tipos escalares o anónimos, vea [Cómo: implementar CopyToDataTable \<T> donde el tipo genérico T no sea una DataRow](implement-copytodatatable-where-type-not-a-datarow.md).  
   
  Los ejemplos de esta sección utilizan los tipos personalizados siguientes:  
@@ -46,36 +48,41 @@ Al llamar al <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> método, 
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En este ejemplo se realiza una combinación en las tablas `SalesOrderHeader` y `SalesOrderDetail` para obtener pedidos en línea del mes de agosto y se crea una tabla a partir de la consulta.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se consulta una colección de elementos cuyo precio es superior a $ 9,99 y se crea una tabla a partir de los resultados de la consulta.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se consulta una colección de elementos cuyo precio es superior a $ 9,99 y se proyectan los resultados. La secuencia de tipos anónimos devuelta se carga en una tabla existente.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se consulta una colección de elementos cuyo precio es superior a $ 9,99 y se proyectan los resultados. La secuencia de tipos anónimos devuelta se carga en una tabla existente. El esquema de la tabla se amplía automáticamente porque los tipos `Book` y `Movies` se derivan del tipo `Item`.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se consulta una colección de elementos cuyo precio es superior a $ 9,99 y se devuelve una secuencia de <xref:System.Double>, que se carga en una tabla nueva.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Guía de programación](programming-guide-linq-to-dataset.md)
 - [Métodos genéricos Field y SetField](generic-field-and-setfield-methods-linq-to-dataset.md)

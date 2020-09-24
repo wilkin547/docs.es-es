@@ -2,14 +2,15 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: bb2ec84caa79f33e1e469592d0eca63d8f461dac
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ed59a139ac21e7cfb4400d17f1fc6a0fa3096641
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854862"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183681"
 ---
 # \<udpTransportSettings>
+
 Este elemento de configuración expone la configuración de transporte de UDP para [\<udpDiscoveryEndpoint>](udpdiscoveryendpoint.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Este elemento de configuración expone la configuración de transporte de UDP pa
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,6 +60,7 @@ Este elemento de configuración expone la configuración de transporte de UDP pa
 |timeToLive|Entero que especifica el número de saltos de segmentos de red que puede atravesar un paquete de multidifusión.  Este atributo expone la funcionalidad asociada a las opciones de socket `IP_MULTICAST_TTL` e `IP_TTL`.<br /><br /> El valor predeterminado es 1.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

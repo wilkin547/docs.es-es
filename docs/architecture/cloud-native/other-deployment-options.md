@@ -2,12 +2,12 @@
 title: Otras opciones de implementación de contenedores
 description: Otras opciones de implementación de contenedores con Azure
 ms.date: 05/13/2020
-ms.openlocfilehash: acb022e3d4fd4862c592fa571894e1b8ce17f465
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 2eac822b74af636e0ab0ed24b58eb7139526f4a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613764"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163627"
 ---
 # <a name="other-container-deployment-options"></a>Otras opciones de implementación de contenedores
 
@@ -27,13 +27,13 @@ Para implementar en [Azure App Service para contenedores](https://azure.microsof
 
 ## <a name="how-to-deploy-an-app-to-azure-container-instances"></a>Cómo implementar una aplicación en Azure Container Instances
 
-Para implementar en [Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/), necesita una Azure Container Registry (ACR) y credenciales para tener acceso a ella. Una vez que inserte la imagen de contenedor en el repositorio, estará disponible para la extracción en ACI. Puede trabajar con ACI mediante el Azure Portal o la interfaz de la línea de comandos. ACR proporciona una estrecha integración con ACI. En la figura 3-14 se muestra cómo introducir una imagen de contenedor individual en ACR.
+Para implementar en [Azure Container Instances (ACI)](/azure/container-instances/), necesita una Azure Container Registry (ACR) y credenciales para tener acceso a ella. Una vez que inserte la imagen de contenedor en el repositorio, estará disponible para la extracción en ACI. Puede trabajar con ACI mediante el Azure Portal o la interfaz de la línea de comandos. ACR proporciona una estrecha integración con ACI. En la figura 3-14 se muestra cómo introducir una imagen de contenedor individual en ACR.
 
 ![Azure Container Registry ejecutar instancia](./media/acr-runinstance-contextmenu.png)
 
 **Figura 3-14**. Azure Container Registry ejecutar instancia
 
-La creación de una instancia en ACI puede realizarse rápidamente. Especifique el registro de la imagen, la información del grupo de recursos de Azure, la cantidad de memoria que se va a asignar y el puerto en el que se va a realizar la escucha. En esta guía de [Inicio rápido se muestra cómo implementar una instancia de contenedor en ACI mediante el Azure portal](https://docs.microsoft.com/azure/container-instances/container-instances-quickstart-portal).
+La creación de una instancia en ACI puede realizarse rápidamente. Especifique el registro de la imagen, la información del grupo de recursos de Azure, la cantidad de memoria que se va a asignar y el puerto en el que se va a realizar la escucha. En esta guía de [Inicio rápido se muestra cómo implementar una instancia de contenedor en ACI mediante el Azure portal](/azure/container-instances/container-instances-quickstart-portal).
 
 Una vez finalizada la implementación, busque la dirección IP del contenedor recién implementado y comuníquese con ella a través del puerto especificado.
 
@@ -44,22 +44,22 @@ Azure Container Instances ofrece la manera más rápida de ejecutar cargas de tr
 - [¿Qué es Kubernetes?](https://blog.newrelic.com/engineering/what-is-kubernetes/)
 - [Instalación de Kubernetes con Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
 - [MiniKube frente a Docker Desktop](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
-- [Visual Studio Tools para Docker](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
+- [Visual Studio Tools para Docker](/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
 - [Descripción del inicio en frío sin servidor](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
-- [Instancias de Azure Functions precalentadas](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)
-- [Creación de una función en Linux con una imagen personalizada](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)
+- [Instancias de Azure Functions precalentadas](/azure/azure-functions/functions-premium-plan#pre-warmed-instances)
+- [Creación de una función en Linux con una imagen personalizada](/azure/azure-functions/functions-create-function-linux-custom-image)
 - [Ejecución de Azure Functions en un contenedor de Docker](https://markheath.net/post/azure-functions-docker)
-- [Creación de una función en Linux con una imagen personalizada](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)
-- [Azure Functions con el escalado automático basado en eventos de Kubernetes](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)
+- [Creación de una función en Linux con una imagen personalizada](/azure/azure-functions/functions-create-function-linux-custom-image)
+- [Azure Functions con el escalado automático basado en eventos de Kubernetes](/azure/azure-functions/functions-kubernetes-keda)
 - [Versión Canarias](https://martinfowler.com/bliki/CanaryRelease.html)
-- [Azure Dev Spaces con VS Code](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore)
-- [Azure Dev Spaces con Visual Studio](https://docs.microsoft.com/azure/dev-spaces/quickstart-netcore-visualstudio)
-- [Grupos de varios nodos de AKS](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
-- [Escalador automático de clústeres de AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Tutorial: escalado de aplicaciones en AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
-- [Escalado y hospedaje de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-scale)
-- [Azure Container Instances docs](https://docs.microsoft.com/azure/container-instances/)
-- [Implementación de la instancia de contenedor desde ACR](https://docs.microsoft.com/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
+- [Azure Dev Spaces con VS Code](/azure/dev-spaces/quickstart-netcore)
+- [Azure Dev Spaces con Visual Studio](/azure/dev-spaces/quickstart-netcore-visualstudio)
+- [Grupos de varios nodos de AKS](/azure/aks/use-multiple-node-pools)
+- [Escalador automático de clústeres de AKS](/azure/aks/cluster-autoscaler)
+- [Tutorial: escalado de aplicaciones en AKS](/azure/aks/tutorial-kubernetes-scale)
+- [Escalado y hospedaje de Azure Functions](/azure/azure-functions/functions-scale)
+- [Azure Container Instances docs](/azure/container-instances/)
+- [Implementación de la instancia de contenedor desde ACR](/azure/container-instances/container-instances-using-azure-container-registry#deploy-with-azure-portal)
 
 >[!div class="step-by-step"]
 >[Anterior](scale-containers-serverless.md)
