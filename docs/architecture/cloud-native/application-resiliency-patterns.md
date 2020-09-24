@@ -3,12 +3,12 @@ title: Patrones de resistencia de las aplicaciones
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de resistencia de aplicaciones
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: bb72e47704c833a2ce86f103a66b0414ce3a37ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614334"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161157"
 ---
 # <a name="application-resiliency-patterns"></a>Patrones de resistencia de las aplicaciones
 
@@ -16,7 +16,7 @@ La primera línea de defensa es la resistencia de las aplicaciones.
 
 Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. [Polly](http://www.thepollyproject.org/) es una biblioteca completa de control de errores y resistencia de .net que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly apunta a las aplicaciones compiladas con el .NET Framework o .NET Core. En la tabla siguiente se describen las características de resistencia, llamadas `policies` , disponibles en la biblioteca Polly. Se pueden aplicar individualmente o agruparse.
 
-| Directiva de | Experiencia |
+| Directiva | Experiencia |
 | :-------- | :-------- |
 | Volver a intentar | Configura las operaciones de reintento en las operaciones designadas. |
 | Disyuntor | Bloquea las operaciones solicitadas para un período predefinido cuando los errores superan un umbral configurado |
@@ -46,7 +46,7 @@ A continuación, vamos a expandir los patrones de reintento y de disyuntor.
 
 En un entorno de nube nativo distribuido, las llamadas a los servicios y a los recursos en la nube pueden producir errores debido a errores transitorios (de corta duración), que normalmente se corrigen después de un breve período de tiempo. La implementación de una estrategia de reintento ayuda a un servicio nativo de la nube a mitigar estos escenarios.
 
-El [patrón Retry](https://docs.microsoft.com/azure/architecture/patterns/retry) permite a un servicio volver a intentar una operación de solicitud con error un número (configurable) de veces con un tiempo de espera que aumenta exponencialmente. En la figura 6-2 se muestra una acción de reintento.
+El [patrón Retry](/azure/architecture/patterns/retry) permite a un servicio volver a intentar una operación de solicitud con error un número (configurable) de veces con un tiempo de espera que aumenta exponencialmente. En la figura 6-2 se muestra una acción de reintento.
 
 ![Patrón de reintento en acción](./media/retry-pattern.png)
 
@@ -64,13 +64,13 @@ Es importante aumentar el período de interrupción antes de reintentar la llama
 
 ## <a name="circuit-breaker-pattern"></a>Patrón de disyuntor
 
-Aunque el patrón de reintento puede ayudar a salvar una solicitud en un error parcial, existen situaciones en las que los errores pueden deberse a eventos imprevistos que requerirán períodos más largos de tiempo para resolverse. La gravedad de estos errores puede ir desde una pérdida parcial de conectividad hasta el fallo total del servicio. En estas situaciones, es poco puntual que una aplicación vuelva a intentar continuamente una operación que es improbable que se realice correctamente.
+Aunque el patrón de reintento puede ayudar a salvar una solicitud en un error parcial, existen situaciones en las que los errores pueden deberse a eventos imprevistos que requerirán períodos más largos de tiempo para resolverse. La gravedad de estos errores puede abarcar desde una pérdida parcial de la conectividad hasta la total detención de un servicio. En estas situaciones, es poco puntual que una aplicación vuelva a intentar continuamente una operación que es improbable que se realice correctamente.
 
 Para empeorar todo, la ejecución de operaciones de reintento continuo en un servicio que no responde puede pasar a un escenario de denegación de servicio autoimpuesta en el que se inunda el servicio con llamadas continuas que agotan los recursos como la memoria, los subprocesos y las conexiones de base de datos, lo que provoca errores en partes no relacionadas del sistema que usan los mismos recursos.
 
 En estas situaciones, sería preferible que la operación produjera un error inmediatamente y solo intentara invocar el servicio si es probable que se realizara correctamente.
 
-El [patrón](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) de disyuntor puede impedir que una aplicación intente ejecutar repetidamente una operación que es probable que produzca un error. Después de un número predefinido de llamadas erróneas, bloquea todo el tráfico al servicio. De forma periódica, permitirá una llamada de prueba para determinar si el error se ha resuelto. En la figura 6-3 se muestra el patrón de disyuntor en acción.
+El [patrón](/azure/architecture/patterns/circuit-breaker) de disyuntor puede impedir que una aplicación intente ejecutar repetidamente una operación que es probable que produzca un error. Después de un número predefinido de llamadas erróneas, bloquea todo el tráfico al servicio. De forma periódica, permitirá una llamada de prueba para determinar si el error se ha resuelto. En la figura 6-3 se muestra el patrón de disyuntor en acción.
 
 ![Patrón de disyuntor en acción](./media/circuit-breaker-pattern.png)
 

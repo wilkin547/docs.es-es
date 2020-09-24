@@ -2,14 +2,15 @@
 title: <rsa>
 ms.date: 03/30/2017
 ms.assetid: ae1f2267-e40d-42ff-8abf-06ab7067bdb9
-ms.openlocfilehash: 0e1651f563bdb2b2b24eacacf7bfe387e33a82c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1698ce421b4dcefc6ab94206443d2d7bca47aca8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855046"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162288"
 ---
 # \<rsa>
+
 Un cliente WCF seguro que se conecta a un punto de conexión con esta identidad comprueba que las notificaciones presentadas por el servidor contienen una notificación que incluye la clave pública RSA utilizada para construir esta identidad.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Un cliente WCF seguro que se conecta a un punto de conexión con esta identidad 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,6 +37,7 @@ Un cliente WCF seguro que se conecta a un punto de conexión con esta identidad 
 |value|Cadena opcional. El valor de clave pública de RSA con la que se va a comparar en el cliente.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -43,12 +46,14 @@ Un cliente WCF seguro que se conecta a un punto de conexión con esta identidad 
 |-------------|-----------------|  
 |[\<identity>](identity.md)|Especifica la identidad del servicio que va a autenticar el cliente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Una comprobación de RSA le permite restringir específicamente la autenticación a un certificado único basado en su clave RSA o que generó su propio valor de clave de RSA. Esto habilita una autenticación más estricta de una clave RSA específica en el gasto del servicio que ya no trabaja con clientes existentes si se cambia el valor de clave de RSA.  
   
  Para obtener más información sobre cómo usar la identidad para validar un servicio para un cliente, consulte [identidad de servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código de configuración siguiente especifica el valor de clave pública de un certificado X.509 que se usa para autenticar un servidor.  
   
 ```xml  

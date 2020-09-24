@@ -3,14 +3,15 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: 8985da7e1223ac117cf1b68227140634f9c85d3a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8bf7798443e2022adef2738aad3e4e1b9846af53
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79151894"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162002"
 ---
 # \<trackingProfile>
+
 Representa una sección de configuración para crear una suscripción a los registros de seguimiento del flujo de trabajo en un participante del seguimiento. Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Las consultas definidas dentro de la sección de perfil de seguimiento definen los tipos de eventos que devuelve la suscripción.  
   
  Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, consulte [seguimiento y](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) seguimiento de flujos de trabajo y [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -79,6 +80,7 @@ Representa una sección de configuración para crear una suscripción a los regi
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -100,6 +102,7 @@ Representa una sección de configuración para crear una suscripción a los regi
 |[\<tracking>](tracking.md)|Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un participante de seguimiento suscribirse a los eventos del flujo de trabajo que se emiten cuando el estado de una instancia de flujo de trabajo cambia en el tiempo de ejecución. Dependiendo de sus requisitos de supervisión, puede escribir un perfil muy general que se suscribe a un conjunto pequeño de cambios de estado de alto nivel en un flujo de trabajo. A la inversa, puede crear un perfil específico cuyos eventos resultantes estén lo suficientemente enriquecidos para reconstruir un flujo de ejecución detallado posteriormente.  
   
  Los perfiles de seguimiento se estructuran como suscripciones declarativas para los registros de seguimiento que le permiten consultar el tiempo de ejecución de flujo de trabajo para registros de seguimiento específicos. Hay una serie de tipos de consultas que le permiten suscribirse a distintas clases de <xref:System.Activities.Tracking.TrackingRecord> objetos. Para obtener una lista completa de consultas, vea [\<participants>](participants.md) y [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).  
@@ -126,7 +129,7 @@ Representa una sección de configuración para crear una suscripción a los regi
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>

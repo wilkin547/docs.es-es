@@ -2,14 +2,15 @@
 title: <security> de <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 4969c041678bbf3490975bc0ec53507b6cf762bb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7398cd538bb240e78413575f7c28abe7f797d05c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738610"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162210"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> de \<wsDualHttpBinding>
+
 Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,10 +42,10 @@ Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |None|La seguridad está deshabilitada.|  
-|Message|La seguridad se proporciona mediante la seguridad del mensaje SOAP.|  
+|Mensaje|La seguridad se proporciona mediante la seguridad del mensaje SOAP.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -58,9 +60,10 @@ Define las capacidades de seguridad de [\<wsDualHttpBinding>](wsdualhttpbinding.
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un enlace dual expone la dirección IP del cliente al servicio. El cliente debería utilizar la seguridad para asegurarse de que sólo se conecta a servicios de confianza.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>

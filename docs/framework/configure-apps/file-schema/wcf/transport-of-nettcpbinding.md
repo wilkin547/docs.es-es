@@ -2,14 +2,15 @@
 title: <transport> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 4ef08ad73a03dea21d27217364a7bacb46a3848e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8f752373c51992c51b747f5f4dc4a63910a387c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735932"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162197"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> de \<netTcpBinding>
+
 Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo configurado con [\<netTcpBinding>](nettcpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -54,7 +56,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |None|El cliente es anónimo. Esto requiere un certificado para el servicio.|  
 |Windows|Especifica la autenticación de Windows del cliente utilizando Negotiation de SP (negociación de Kerberos).|  
@@ -62,13 +64,14 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
   
 ## <a name="protectionlevel-attribute"></a>Atributo protectionLevel  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |None|Ninguna protección|  
-|Signo|Se firman los mensajes.|  
+|Firma|Se firman los mensajes.|  
 |EncryptAndSign|-Los mensajes se cifran y firman.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -78,9 +81,10 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 |[\<security>](security-of-nettcpbinding.md)|Especifica las capacidades de seguridad de [\<netTcpBinding>](nettcpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Utilice la seguridad de transporte para la integridad y confidencialidad del mensaje SOAP y para la autenticación mutua. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura utilizando un transporte seguro y los mensajes SOAP se protegen utilizando la seguridad de transporte, como Windows (Negotiate) o SSL sobre TCP.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>

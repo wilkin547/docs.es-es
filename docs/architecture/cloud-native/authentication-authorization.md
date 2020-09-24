@@ -2,12 +2,12 @@
 title: Autenticación y autorización en aplicaciones nativas de la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Autenticación y autorización en aplicaciones nativas en la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: e5254560ac82662e5e3ea6a25997516cd2b478b0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbd2df110dd7a7dc7363e9c07d87f1fa12f4e464
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614310"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161144"
 ---
 # <a name="authentication-and-authorization-in-cloud-native-apps"></a>Autenticación y autorización en aplicaciones nativas en la nube
 
@@ -21,8 +21,8 @@ Muchas organizaciones todavía dependen de servicios de autenticación locales c
 
 ## <a name="references"></a>Referencias
 
-- [Conceptos básicos sobre autenticación](https://docs.microsoft.com/azure/active-directory/develop/authentication-scenarios)
-- [Tokens de acceso y notificaciones](https://docs.microsoft.com/azure/active-directory/develop/access-tokens)
+- [Conceptos básicos sobre autenticación](/azure/active-directory/develop/authentication-scenarios)
+- [Tokens de acceso y notificaciones](/azure/active-directory/develop/access-tokens)
 - [Puede ser hora de deshacerse de los servicios de autenticación locales](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]

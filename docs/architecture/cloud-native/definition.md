@@ -3,12 +3,12 @@ title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427039"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160910"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -95,7 +95,7 @@ En el libro, [más allá de la aplicación de doce factores](https://content.pi
 | :-------- | :-------- | :-------- |
 | 13 | Primera API | Haga todo un servicio. Suponga que el código lo utilizará un cliente front-end, una puerta de enlace u otro servicio. |
 | 14 | Telemetría | En una estación de trabajo, tiene una visibilidad profunda de la aplicación y su comportamiento. En la nube, no. Asegúrese de que el diseño incluye la recopilación de datos de supervisión, específicos del dominio y del estado o del sistema. |
-| 15 | Autenticación/autorización  | Implemente la identidad desde el principio. Tenga en cuenta las características de [RBAC (control de acceso basado en roles)](https://docs.microsoft.com/azure/role-based-access-control/overview) disponibles en nubes públicas.  |
+| 15 | Autenticación/autorización  | Implemente la identidad desde el principio. Tenga en cuenta las características de [RBAC (control de acceso basado en roles)](/azure/role-based-access-control/overview) disponibles en nubes públicas.  |
 
 Haremos referencia a muchos de los 12 factores de este capítulo y a lo largo del libro.
 
@@ -227,7 +227,7 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
 | Supervisión del estado | Detectar y corregir errores automáticamente.|
 | Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
-| Ampliación | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
+| Escalado | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|
 | Detección de servicios | Permite que los contenedores se localicen entre sí.|
 | Actualizaciones sucesivas | Coordine actualizaciones incrementales con una implementación sin tiempo de inactividad. Revertir cambios problemáticos automáticamente.|
@@ -276,21 +276,21 @@ Los proveedores de nube proporcionan las API para que pueda comunicarse con sus 
 
 Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube*y el capítulo 4, *patrones de comunicación nativa en la nube*.
 
-## <a name="automation"></a>Automatización
+## <a name="automation"></a>Automation
 
 Como ha visto, los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas? ¿Cómo se implementan rápidamente características y actualizaciones de aplicaciones? ¿Cómo se redondea la imagen completa?
 
-Escriba la práctica ampliamente aceptada de [infraestructura como código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)o IaC.
+Escriba la práctica ampliamente aceptada de [infraestructura como código](/azure/devops/learn/what-is-infrastructure-as-code)o IaC.
 
 Con IaC, puede automatizar el aprovisionamiento de plataforma y la implementación de aplicaciones. Esencialmente, aplica prácticas de ingeniería de software, como pruebas y control de versiones a las prácticas de DevOps. La infraestructura y las implementaciones son automatizadas, coherentes y repetibles.
 
 ### <a name="automating-infrastructure"></a>Automatización de la infraestructura
 
-Herramientas como [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), terraform y el [CLI de Azure](https://docs.microsoft.com/cli/azure/)le permiten crear un script de la infraestructura de la nube que necesita mediante declaración. Los nombres de los recursos, las ubicaciones, las capacidades y los secretos son parametrizados y dinámicos. El script tiene versiones y se protege en el control de código fuente como un artefacto del proyecto. El script se invoca para aprovisionar una infraestructura coherente y repetible entre entornos del sistema, como el QA, el ensayo y la producción.
+Herramientas como [Azure Resource Manager](/azure/azure-resource-manager/management/overview), terraform y el [CLI de Azure](/cli/azure/)le permiten crear un script de la infraestructura de la nube que necesita mediante declaración. Los nombres de los recursos, las ubicaciones, las capacidades y los secretos son parametrizados y dinámicos. El script tiene versiones y se protege en el control de código fuente como un artefacto del proyecto. El script se invoca para aprovisionar una infraestructura coherente y repetible entre entornos del sistema, como el QA, el ensayo y la producción.
 
 En el capó, IaC es idempotente, lo que significa que puede ejecutar el mismo script una y otra vez sin efectos secundarios. Si el equipo necesita efectuar un cambio, edite y vuelva a ejecutar el script. Solo se ven afectados los recursos actualizados.
 
-En el artículo [¿Qué es la infraestructura como código](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)? Author Sam Guckenheimer describe cómo "los equipos que implementan IaC pueden ofrecer entornos estables rápidamente y a escala. Los equipos evitan la configuración manual de los entornos y aplican la coherencia al representar el estado deseado de sus entornos a través del código. Las implementaciones de infraestructura con IaC se pueden repetir y evitan problemas en tiempo de ejecución causados por el desfase de la configuración o las dependencias que faltan. Los equipos de DevOps pueden trabajar junto con un conjunto unificado de prácticas y herramientas para ofrecer aplicaciones y su infraestructura de soporte de forma rápida, confiable y a escala ".
+En el artículo [¿Qué es la infraestructura como código](/azure/devops/learn/what-is-infrastructure-as-code)? Author Sam Guckenheimer describe cómo "los equipos que implementan IaC pueden ofrecer entornos estables rápidamente y a escala. Los equipos evitan la configuración manual de los entornos y aplican la coherencia al representar el estado deseado de sus entornos a través del código. Las implementaciones de infraestructura con IaC se pueden repetir y evitan problemas en tiempo de ejecución causados por el desfase de la configuración o las dependencias que faltan. Los equipos de DevOps pueden trabajar junto con un conjunto unificado de prácticas y herramientas para ofrecer aplicaciones y su infraestructura de soporte de forma rápida, confiable y a escala ".
 
 ### <a name="automating-deployments"></a>Automatizar implementaciones
 

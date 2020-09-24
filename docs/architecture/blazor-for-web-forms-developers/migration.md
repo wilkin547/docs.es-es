@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 853358fbf534ee7501412259c61efe054b4757a7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557547"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161209"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>Migre desde formularios Web Forms de ASP.NET a Blazor
 
@@ -39,7 +39,7 @@ Como se describe en el capítulo [modelos de hospedaje](hosting-models.md) , una
 
 En el momento de escribir este documento, el modelo del lado servidor se parece más al de los formularios Web Forms. La mayor parte de este capítulo se centra en el modelo de hospedaje del lado servidor, ya que está listo para la producción.
 
-## <a name="create-a-new-project"></a>Creación de un nuevo proyecto
+## <a name="create-a-new-project"></a>Crear un proyecto nuevo
 
 Este paso de migración inicial consiste en crear un nuevo proyecto. Este tipo de proyecto se basa en los proyectos de estilo SDK de .NET Core y simplifica gran parte del texto reutilizable que se usó en los formatos de proyecto anteriores. Para obtener más información, consulte el capítulo sobre la [estructura del proyecto](project-structure.md).
 
@@ -636,7 +636,7 @@ Dado que Blazor se basa en .net Core, existen consideraciones para garantizar la
 - Seguridad de acceso del código (CAS)
 - Transparencia de seguridad
 
-Para obtener más información sobre las técnicas para identificar los cambios necesarios para admitir la ejecución en .NET Core, vea [portar el código de .NET Framework a .net Core](/dotnet/core/porting).
+Para obtener más información sobre las técnicas para identificar los cambios necesarios para admitir la ejecución en .NET Core, vea [portar el código de .NET Framework a .net Core](../../core/porting/index.md).
 
 ASP.NET Core es una versión Reimaginada de ASP.NET y tiene algunos cambios que es posible que no parezcan inicialmente obvios. Los principales cambios son:
 

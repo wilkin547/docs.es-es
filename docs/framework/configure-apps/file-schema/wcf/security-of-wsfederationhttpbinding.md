@@ -2,14 +2,15 @@
 title: <security> de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 650483099c7d70450cfc56a9a28efac076d64675
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736331"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162246"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<security> de \<wsFederationHttpBinding>
+
 Define la configuración de seguridad de [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -80,6 +81,7 @@ Define la configuración de seguridad de [\<wsFederationHttpBinding>](wsfederati
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -90,10 +92,10 @@ Define la configuración de seguridad de [\<wsFederationHttpBinding>](wsfederati
   
 ## <a name="mode-attribute"></a>Atributo mode  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |None|El mensaje SOAP no es seguro durante la transferencia.|  
-|Message|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio necesita ser configurado con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio de token de seguridad.|  
+|Mensaje|La integridad, confidencialidad, autenticación de servidor y autenticación del cliente se proporciona mediante la seguridad del mensaje SOAP. De forma predeterminada, el cuerpo se cifra y firma. El servicio necesita ser configurado con un certificado. La autenticación del cliente está basada en el token emitido al cliente por un servicio de token de seguridad.|  
 |TransportWithMessageCredential|HTTPS proporciona integridad, confidencialidad y autenticación del servidor. El servicio necesita ser configurado con un certificado. La autenticación del cliente se proporciona por medio de la seguridad del mensaje SOAP y está basada en el token emitido al cliente por un servicio de token de seguridad.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -108,7 +110,7 @@ Define la configuración de seguridad de [\<wsFederationHttpBinding>](wsfederati
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<wsDualHttpBinding>](wsdualhttpbinding.md) .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>

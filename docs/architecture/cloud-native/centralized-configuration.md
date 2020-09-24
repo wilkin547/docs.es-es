@@ -2,12 +2,12 @@
 title: Configuración centralizada
 description: Centralizar la configuración de aplicaciones nativas en la nube con la configuración de App de Azure y el almacén de AzureKey.
 ms.date: 05/13/2020
-ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614232"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160884"
 ---
 # <a name="centralized-configuration"></a>Configuración centralizada
 
@@ -19,7 +19,7 @@ La nube de Azure presenta varias opciones excelentes.
 
 ## <a name="azure-app-configuration"></a>Azure App Configuration
 
-[App de Azure configuración](https://docs.microsoft.com/azure/azure-app-configuration/overview) es un servicio de Azure totalmente administrado que almacena la configuración no secreta en una ubicación segura y centralizada. Los valores almacenados se pueden compartir entre varios servicios y aplicaciones.
+[App de Azure configuración](/azure/azure-app-configuration/overview) es un servicio de Azure totalmente administrado que almacena la configuración no secreta en una ubicación segura y centralizada. Los valores almacenados se pueden compartir entre varios servicios y aplicaciones.
 
 El servicio es fácil de usar y proporciona varias ventajas:
 
@@ -35,7 +35,7 @@ La configuración de la aplicación almacena automáticamente en caché cada con
 
 La configuración de la aplicación cifra todos los valores de configuración en tránsito y en reposo. Los nombres de clave y las etiquetas se usan como índices para recuperar los datos de configuración y no se cifran.
 
-Aunque la configuración de la aplicación proporciona seguridad protegida, Azure Key Vault sigue siendo el mejor lugar para almacenar los secretos de la aplicación. Key Vault proporciona cifrado de nivel de hardware, directivas de acceso granular y operaciones de administración, como la rotación de certificados. Puede crear valores de configuración de aplicaciones que hagan referencia a secretos almacenados en un Key Vault.
+Aunque la configuración de la aplicación proporciona seguridad protegida, Azure Key Vault sigue siendo el mejor lugar para almacenar los secretos de la aplicación. Key Vault proporciona cifrado de nivel de hardware, directivas de acceso pormenorizadas y operaciones de administración como la rotación de certificados. Puede crear valores de configuración de aplicaciones que hagan referencia a secretos almacenados en un Key Vault.
 
 ## <a name="azure-key-vault"></a>Azure Key Vault
 
@@ -54,16 +54,16 @@ La aplicación eShopOnContainers incluye los archivos de configuración de la ap
 ## <a name="references"></a>Referencias
 
 - [Arquitectura de eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Información general de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
+- [Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad](../microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
+- [Azure API Management](/azure/api-management/api-management-key-concepts)
+- [Información general de Azure SQL Database](/azure/sql-database/sql-database-technical-overview)
 - [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
-- [API de Azure Cosmos DB para MongoDB](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Introducción a Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [API de Azure Cosmos DB para MongoDB](/azure/cosmos-db/mongodb-introduction)
+- [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Introducción a Azure Monitor](/azure/azure-monitor/overview)
 - [eShopOnContainers: creación de un clúster de Kubernetes en AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
 - [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
-- [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
+- [Azure Dev Spaces](/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]
 >[Anterior](deploy-eshoponcontainers-azure.md)

@@ -2,14 +2,15 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 57e9e19025db5e1fa588f073fdf30de09837a25d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 63f46753da13469147b378f373de9888a007bf52
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399930"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162223"
 ---
 # \<scopes>
+
 Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,9 +38,11 @@ Contiene una colección de elementos de configuración que especifican URI del �
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  

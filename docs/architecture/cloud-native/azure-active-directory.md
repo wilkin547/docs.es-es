@@ -2,12 +2,12 @@
 title: Azure Active Directory
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Azure Active Directory
 ms.date: 06/30/2019
-ms.openlocfilehash: 03f5ea8e84bc3c4a2a88a63d4b109aabf0c64f36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 55787f3565fc15bb25cf1a101aa5c1e3ddefe5e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614284"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161118"
 ---
 # <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -19,7 +19,7 @@ Azure AD admite pantallas de inicio de sesión con personalización de marca de 
 
 ## <a name="references"></a>Referencias
 
-- [Plataforma de identidad de Microsoft](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Plataforma de identidad de Microsoft](/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Anterior](authentication-authorization.md)

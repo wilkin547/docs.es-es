@@ -10,14 +10,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 8ae807e46b11d2adb06d6af0c86e1c7297caa0c0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105379"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91161989"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Procedimiento para buscar ensamblados mediante DEVPATH
+
 Los desarrolladores pueden querer asegurarse de que un ensamblado compartido que se está compilando funciona correctamente con varias aplicaciones. En lugar de colocar continuamente el ensamblado en la caché global de ensamblados durante el ciclo de desarrollo, el desarrollador puede crear una variable de entorno DEVPATH que apunte al directorio de resultados de la compilación para el ensamblado.  
   
  Por ejemplo, suponga que está creando un ensamblado compartido denominado MySharedAssembly y que el directorio de salida es C:\MySharedAssembly\Debug. Puede colocar C:\MySharedAssembly\Debug en la variable DEVPATH. A continuación, debe especificar el [\<developmentMode>](./file-schema/runtime/developmentmode-element.md) elemento en el archivo de configuración del equipo. Este elemento indica al Common Language Runtime que utilice DEVPATH para buscar ensamblados.  
@@ -44,6 +45,6 @@ Los desarrolladores pueden querer asegurarse de que un ensamblado compartido que
 > [!NOTE]
 > Use esta configuración solo en tiempo de desarrollo. El motor en tiempo de ejecución no comprueba las versiones de los ensamblados con nombre seguro que se encuentran en la DEVPATH. Simplemente usa el primer ensamblado que encuentra.  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Configurar aplicaciones con archivos de configuración](index.md)

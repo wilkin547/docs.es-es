@@ -2,14 +2,15 @@
 title: <scopedCertificates> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: 3c06159709df0afe2a475de1e186b0114af32bc2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bee627fe186ed8dd85c118a37f59f575eb4650e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399954"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91162262"
 ---
 # <a name="scopedcertificates-element"></a>\<scopedCertificates> (Elemento)
+
 Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación. Esta colección se utiliza normalmente para especificar los certificados de servicio para los servicios de token de seguridad en un escenario asociado externo.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,9 +35,11 @@ Representa una colección de certificados X.509 proporcionada por servicios conc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -51,7 +54,8 @@ Representa una colección de certificados X.509 proporcionada por servicios conc
 |-------------|-----------------|  
 |[\<serviceCertificate>](servicecertificate-of-servicecredentials.md)|Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Esta colección le permite al cliente configurar los certificados de servicio que se van a utilizar basándose en la dirección URL del servicio con el que se comunica. Esto es especialmente útil en escenarios del token emitidos donde un cliente puede estar comunicándose con varios servicios (el servicio final, así como los servicios del token de seguridad intermediarios). Para los enlaces que utilizan la seguridad del mensaje basada en certificados, este certificado se utiliza para cifrar los mensajes del servicio y se espera que sea utilizado por el servicio para firmar las respuestas para el cliente.  
   
  Si un enlace requiere un certificado para el servicio y no se encuentra ningún certificado concreto para la dirección URL del servicio en ScopedCertificates, se utilizará el certificado predeterminado.  
@@ -59,6 +63,7 @@ Representa una colección de certificados X.509 proporcionada por servicios conc
  Para obtener más información, consulte la sección "certificados con ámbito" de [Cómo: crear un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se especifica un certificado de servicio para que el cliente lo utilice al comunicarse con extremos cuyo nombre de dominio está `http://www.contoso.com` sobre el protocolo http.  
   
 ```xml  

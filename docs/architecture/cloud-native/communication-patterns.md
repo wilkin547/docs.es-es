@@ -3,12 +3,12 @@ title: Patrones de comunicación nativa en la nube
 description: Más información sobre las principales preocupaciones sobre la comunicación de servicios en aplicaciones nativas en la nube
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 3d678df44b5fef68427846e59f446b7408795625
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5ce789924e828865f7bdf717b081b9112203293a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614219"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160923"
 ---
 # <a name="cloud-native-communication-patterns"></a>Patrones de comunicación nativa en la nube
 
@@ -20,7 +20,7 @@ En una aplicación monolítica, la comunicación es sencilla. Los módulos de c�
 
 Los sistemas nativos en la nube implementan una arquitectura basada en microservicios con muchos microservicios pequeños e independientes. Cada microservicio se ejecuta en un proceso independiente y normalmente se ejecuta dentro de un contenedor que se implementa en un *clúster*.
 
-Un clúster agrupa un grupo de máquinas virtuales para formar un entorno de alta disponibilidad. Se administran con una herramienta de orquestación, que es responsable de implementar y administrar los microservicios en contenedores. En la figura 4-1 se muestra un clúster de [Kubernetes](https://kubernetes.io) implementado en la nube de Azure con [Azure Kubernetes Services](https://docs.microsoft.com/azure/aks/intro-kubernetes)totalmente administrado.
+Un clúster agrupa un grupo de máquinas virtuales para formar un entorno de alta disponibilidad. Se administran con una herramienta de orquestación, que es responsable de implementar y administrar los microservicios en contenedores. En la figura 4-1 se muestra un clúster de [Kubernetes](https://kubernetes.io) implementado en la nube de Azure con [Azure Kubernetes Services](/azure/aks/intro-kubernetes)totalmente administrado.
 
 ![Un clúster de Kubernetes en Azure](./media/kubernetes-cluster-in-azure.png)
 

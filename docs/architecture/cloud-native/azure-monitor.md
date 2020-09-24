@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: El uso de Azure Monitor para obtener visibilidad en el sistema se está ejecutando.
 ms.date: 07/05/2020
-ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540216"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160975"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -20,9 +20,9 @@ Ningún otro proveedor de servicios en la nube ha sido maduro de una solución d
 
 El primer paso en cualquier solución de supervisión es recopilar tantos datos como sea posible. Cuanto más datos se recopilen, más profunda es la información. Tradicionalmente, los sistemas de instrumentación han sido difíciles. El Protocolo simple de administración de redes (SNMP) era el protocolo estándar Gold para recopilar información de nivel de máquina, pero requirió una gran cantidad de conocimientos y configuración. Afortunadamente, gran parte de este trabajo duro se ha eliminado, ya que Azure Monitor recopila automáticamente las métricas más comunes.
 
-No es posible instrumentar eventos y métricas de nivel de aplicación de forma automática porque son específicos de la aplicación que se está implementando. Con el fin de recopilar estas métricas, hay [SDK y API disponibles](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) para notificar directamente dicha información, como cuando un cliente se suscribe o completa un pedido. Las excepciones también se pueden capturar y volver a informar en Azure Monitor a través de Application Insights. Los SDK admiten la mayoría de los lenguajes que se encuentran en las aplicaciones nativas de la nube, como Go, Python, JavaScript y los lenguajes .NET.
+No es posible instrumentar eventos y métricas de nivel de aplicación de forma automática porque son específicos de la aplicación que se está implementando. Con el fin de recopilar estas métricas, hay [SDK y API disponibles](/azure/azure-monitor/app/api-custom-events-metrics) para notificar directamente dicha información, como cuando un cliente se suscribe o completa un pedido. Las excepciones también se pueden capturar y volver a informar en Azure Monitor a través de Application Insights. Los SDK admiten la mayoría de los lenguajes que se encuentran en las aplicaciones nativas de la nube, como Go, Python, JavaScript y los lenguajes .NET.
 
-El objetivo final de recopilar información sobre el estado de la aplicación es asegurarse de que los usuarios finales tengan una buena experiencia. ¿Cuál es la mejor manera de saber si los usuarios experimentan problemas que realizar [pruebas Web externas](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)? Estas pruebas pueden ser tan sencillas como hacer ping en el sitio web desde ubicaciones de todo el mundo o como implicar que los agentes inicien sesión en el sitio y simulen las acciones del usuario.
+El objetivo final de recopilar información sobre el estado de la aplicación es asegurarse de que los usuarios finales tengan una buena experiencia. ¿Cuál es la mejor manera de saber si los usuarios experimentan problemas que realizar [pruebas Web externas](/azure/azure-monitor/app/monitor-web-app-availability)? Estas pruebas pueden ser tan sencillas como hacer ping en el sitio web desde ubicaciones de todo el mundo o como implicar que los agentes inicien sesión en el sitio y simulen las acciones del usuario.
 
 ## <a name="reporting-data"></a>Datos de informes
 
@@ -45,11 +45,11 @@ En la figura 7-13 se muestran los resultados de esta Application Insights consul
 ![Application Insights la ](./media/application_insights_example.png)
  **figura 7-13**de resultados de la consulta. Application Insights resultados de la consulta.
 
-Hay una [animación para experimentar con consultas Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) . Leer [consultas de ejemplo](https://docs.microsoft.com/azure/kusto/query/samples) también puede ser instructivo.
+Hay una [animación para experimentar con consultas Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) . Leer [consultas de ejemplo](/azure/kusto/query/samples) también puede ser instructivo.
 
 ## <a name="dashboards"></a>Paneles
 
-Hay varias tecnologías de panel diferentes que se pueden usar para exponer la información de Azure Monitor. Quizás lo más sencillo es ejecutar consultas en Application Insights y [trazar los datos en un gráfico](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
+Hay varias tecnologías de panel diferentes que se pueden usar para exponer la información de Azure Monitor. Quizás lo más sencillo es ejecutar consultas en Application Insights y [trazar los datos en un gráfico](/azure/azure-monitor/learn/tutorial-app-dashboards).
 
 ![Un ejemplo de gráficos de Application Insights insertados en el panel principal de Azure ](./media/azure_dashboard.png)
  **figura 7-14**. Un ejemplo de gráficos de Application Insights insertados en el panel principal de Azure.
@@ -62,7 +62,7 @@ Estos gráficos se pueden incrustar en el Azure Portal adecuado a través del us
 
 ## <a name="alerts"></a>Alertas
 
-A veces, tener paneles de datos no es suficiente. Si nadie está activo para ver los paneles, puede seguir siendo de muchas horas antes de que se solucione un problema, o incluso cuando se detecte. Con este fin, Azure Monitor también proporciona una solución de [alerta](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)de muesca. Las alertas se pueden desencadenar en una amplia variedad de condiciones, entre las que se incluyen:
+A veces, tener paneles de datos no es suficiente. Si nadie está activo para ver los paneles, puede seguir siendo de muchas horas antes de que se solucione un problema, o incluso cuando se detecte. Con este fin, Azure Monitor también proporciona una solución de [alerta](/azure/azure-monitor/platform/alerts-overview)de muesca. Las alertas se pueden desencadenar en una amplia variedad de condiciones, entre las que se incluyen:
 
 - Valores de métrica
 - Consultas de búsqueda de registros
@@ -74,11 +74,11 @@ Cuando se desencadena, las alertas pueden realizar una amplia variedad de tareas
 
 A medida que se identifican las causas comunes de las alertas, las alertas se pueden mejorar con detalles sobre las causas comunes de las alertas y los pasos que deben seguirse para resolverlos. Las implementaciones de aplicaciones nativas en la nube de gran madurez pueden optar por iniciar tareas de recuperación automática, que realizan acciones como la eliminación de nodos con errores de un conjunto de escalado o la activación de una actividad de escalado automático. Finalmente, es posible que ya no sea necesario reactivar al personal de la llamada en 2AM para resolver un problema en el sitio activo, ya que el sistema podrá ajustarse a sí mismo para compensar o al menos Limp, hasta que alguien llegue al trabajo la mañana siguiente.
 
-Azure Monitor aprovecha automáticamente el aprendizaje automático para comprender los parámetros operativos normales de las aplicaciones implementadas. Esto le permite detectar los servicios que funcionan fuera de sus parámetros normales. Por ejemplo, el tráfico de día de la semana típico en el sitio podría ser 10.000 solicitudes por minuto. Y después, en una semana determinada, el número de solicitudes alcanza una cantidad muy inusual de 20.000 solicitudes por minuto. La [detección inteligente](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) observará esta desviación de la norma y desencadenará una alerta. Al mismo tiempo, el análisis de tendencias es lo suficientemente inteligente como para evitar la activación de falsos positivos cuando se espera la carga del tráfico.
+Azure Monitor aprovecha automáticamente el aprendizaje automático para comprender los parámetros operativos normales de las aplicaciones implementadas. Esto le permite detectar los servicios que funcionan fuera de sus parámetros normales. Por ejemplo, el tráfico de día de la semana típico en el sitio podría ser 10.000 solicitudes por minuto. Y después, en una semana determinada, el número de solicitudes alcanza una cantidad muy inusual de 20.000 solicitudes por minuto. La [detección inteligente](/azure/azure-monitor/app/proactive-diagnostics) observará esta desviación de la norma y desencadenará una alerta. Al mismo tiempo, el análisis de tendencias es lo suficientemente inteligente como para evitar la activación de falsos positivos cuando se espera la carga del tráfico.
 
 ## <a name="references"></a>Referencias
 
-- [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
+- [Azure Monitor](/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[Anterior](monitoring-azure-kubernetes.md)
