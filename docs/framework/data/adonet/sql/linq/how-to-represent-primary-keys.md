@@ -2,14 +2,15 @@
 title: Procedimiento para representar claves principales
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: 5df82292f000d7f5e61cab699237b86de30bda70
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 02570176c8aef5cfdc7ba09fd6976f430900e8df
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793431"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166240"
 ---
 # <a name="how-to-represent-primary-keys"></a>Procedimiento para representar claves principales
+
 Utilice la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> propiedad en el <xref:System.Data.Linq.Mapping.ColumnAttribute> atributo para designar una propiedad o un campo que represente la clave principal de una columna de base de datos.  
   
  Para obtener ejemplos de código, vea <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
@@ -23,7 +24,7 @@ Utilice la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <
   
 2. Especifique el valor como `true`.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
-- [Procedimientos: Personalización de clases de entidad mediante el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Procedimiento para personalizar clases de entidades con el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)
