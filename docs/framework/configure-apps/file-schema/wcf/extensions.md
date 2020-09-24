@@ -2,15 +2,16 @@
 title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c811162c17417144432f97fd9a47b2e02ecafbe2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "61700779"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151186"
 ---
 # \<extensions>
-<span data-ttu-id="042bd-101">Este elemento de configuración contiene una colección de elementos XML que contienen metadatos personalizados que se van a publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, Scope y ListenURI).</span><span class="sxs-lookup"><span data-stu-id="042bd-101">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="042bd-102">A continuación, se muestra un ejemplo del uso de este elemento de configuración.</span><span class="sxs-lookup"><span data-stu-id="042bd-102">The following is an example of using this configuration element.</span></span>  
+
+<span data-ttu-id="7e74b-101">Este elemento de configuración contiene una colección de elementos XML que contienen metadatos personalizados que se van a publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, Scope y ListenURI).</span><span class="sxs-lookup"><span data-stu-id="7e74b-101">This configuration element contains a collection of XML elements that contain custom metadata to be published along with the standard discoverable metadata (EPR, ContractTypeName, BindingName, Scope and ListenURI).</span></span> <span data-ttu-id="7e74b-102">A continuación, se muestra un ejemplo del uso de este elemento de configuración.</span><span class="sxs-lookup"><span data-stu-id="7e74b-102">The following is an example of using this configuration element.</span></span>  
   
 ```xml  
 <services>
@@ -45,6 +46,6 @@ ms.locfileid: "61700779"
 </behaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="042bd-103">Consulte también</span><span class="sxs-lookup"><span data-stu-id="042bd-103">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e74b-103">Vea también</span><span class="sxs-lookup"><span data-stu-id="7e74b-103">See also</span></span>
 
 - <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
