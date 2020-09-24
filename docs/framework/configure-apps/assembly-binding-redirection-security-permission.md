@@ -6,14 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: ea2b735b2c98b588903c4393f21c6b743910854a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2de2c50f5adb9e9fa36ea015ef498e9953c83005
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552380"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165226"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Permiso de seguridad para la redirección de enlaces de ensamblados
+
 Para realizar una redirección de enlaces de ensamblado de forma explícita en un archivo de configuración, se precisa permiso de seguridad. Esto se aplica a la redirección de los ensamblados de .NET Framework y de los ensamblados de otros proveedores. El permiso se concede estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en <xref:System.Security.Permissions.SecurityPermission> . De forma predeterminada, los ensamblados administrados no tienen permisos.  
   
  El permiso de seguridad se concede a las aplicaciones que se ejecutan en la zona de confianza (equipo local) y en la zona de intranet. Las aplicaciones que se ejecutan en la zona de Internet están estrictamente prohibidas para realizar la redirección de enlace de ensamblados.  
@@ -31,7 +32,7 @@ Para realizar una redirección de enlaces de ensamblado de forma explícita en u
   
  Un administrador puede cambiar esta configuración de seguridad para admitir o restringir escenarios específicos en un equipo determinado. No hay ninguna herramienta para cambiar la configuración de la marca **BindingRedirects** del valor predeterminado; un administrador debe editar manualmente el archivo de Security.config en el equipo de un usuario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Archivos de directivas de edición y ejecución en paralelo](/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
 - [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](how-to-enable-and-disable-automatic-binding-redirection.md)

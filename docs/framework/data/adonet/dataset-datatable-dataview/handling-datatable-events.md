@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3edafa6c6a1bc3da2abc0598f329caf0e2f21e8b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c00e5e42508160a210d16f058c46afbf62ae0ee0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786253"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164732"
 ---
 # <a name="handling-datatable-events"></a>Controlar eventos de DataTable
+
 El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una aplicación puede procesar. En la siguiente tabla se describen los eventos de `DataTable`.  
   
-|Evento|DESCRIPCIÓN|  
+|Evento|Descripción|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Se produce después de haber llamado al método <xref:System.Data.DataTable.EndInit%2A> de un objeto `DataTable`. Este evento está concebido principalmente para admitir escenarios en tiempo de diseño.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Se produce después de cambiar correctamente un valor en un objeto <xref:System.Data.DataColumn>.|  
@@ -36,6 +37,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 > Es posible que los datos resulten dañados si se modifican en un `DataSet` desde el que se genera el evento `RowChanged`. No se producirá ninguna excepción si se produce este tipo de daño en los datos.  
   
 ## <a name="additional-related-events"></a>Eventos relacionados adicionales  
+
  La propiedad <xref:System.Data.DataTable.Constraints%2A> contiene una instancia de <xref:System.Data.ConstraintCollection>. La clase <xref:System.Data.ConstraintCollection> expone un evento <xref:System.Data.ConstraintCollection.CollectionChanged>. Este evento se activa cuando se agrega, modifica o quita una restricción de `ConstraintCollection`.  
   
  La propiedad <xref:System.Data.DataTable.Columns%2A> contiene una instancia de <xref:System.Data.DataColumnCollection>. La clase `DataColumnCollection` expone un evento <xref:System.Data.DataColumnCollection.CollectionChanged>. Este evento se activa cuando se agrega, modifica o quita un objeto `DataColumn` de `DataColumnCollection`. Entre las modificaciones que generan el inicio del evento se encuentran los cambios en el nombre, el tipo, la expresión o la posición ordinal de una columna.  
@@ -45,6 +47,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
  Los cambios en `DataRows` también pueden activar eventos de un objeto <xref:System.Data.DataView> asociado. La clase `DataView` expone un evento <xref:System.Data.DataView.ListChanged> que se activa cuando cambia un valor de `DataColumn` o cuando cambian la composición o el criterio de ordenación de la vista. La clase <xref:System.Data.DataRowView> expone un evento <xref:System.Data.DataRowView.PropertyChanged> que se activa cuando cambia un valor de `DataColumn` asociado.  
   
 ## <a name="sequence-of-operations"></a>Secuencia de operaciones  
+
  A continuación se indica la secuencia de las operaciones que tienen lugar cuando se agrega, modifica o elimina un objeto `DataRow`.  
   
 1. Se crea el registro propuesto y se aplican los cambios.  
@@ -74,14 +77,15 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 > No inicie una excepción <xref:System.NullReferenceException> dentro del controlador de eventos `RowChanged`. Si se inicia una excepción <xref:System.NullReferenceException> dentro del evento `RowChanged` de un objeto `DataTable`, el objeto `DataTable` resultará dañado.  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo crear controladores de eventos para los eventos `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared` y `TableClearing`. Cada controlador de eventos muestra resultado en la ventana de la consola cuando se activa.  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
-- [Control de eventos de DataAdapter](../handling-dataadapter-events.md)
+- [Manipular datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
+- [Controlar eventos de DataAdapter](../handling-dataadapter-events.md)
 - [Controlar eventos de DataSet](handling-dataset-events.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

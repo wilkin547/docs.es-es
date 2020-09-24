@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: 2045cab19e7400f94888297571a172de1578094d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4e2cb7c90eb703985cbb1b8673522a9e253564d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794131"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164303"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Carga inmediata y carga diferida
-Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado. Los objetos *relacionados* no se capturan automáticamente al mismo tiempo. (Para obtener más información, consulte [realizar consultas en varias relaciones](querying-across-relationships.md)). No hay forma de saber si los objetos relacionados están ya cargados, porque, si se intenta tener acceso a ellos, se genera una solicitud que los recupera.  
+
+Al consultar un objeto, en realidad se recupera únicamente el objeto solicitado. Los objetos *relacionados* no se capturan automáticamente al mismo tiempo. (Para obtener más información, consulte [realizar consultas en varias relaciones](querying-across-relationships.md)). No se puede ver el hecho de que no se han cargado los objetos relacionados, ya que un intento de obtener acceso a ellos genera una solicitud que los recupera.  
   
  Por ejemplo, puede que desee consultar un conjunto determinado de pedidos y, a continuación, solo enviar ocasionalmente una notificación por correo electrónico a determinados clientes. Inicialmente, no está obligado a recuperar todos los datos de clientes con todos los pedidos. Puede utilizar la carga aplazada para aplazar la recuperación de información adicional hasta que ésta no sea realmente necesaria. Considere el ejemplo siguiente:  
   

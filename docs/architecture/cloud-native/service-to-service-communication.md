@@ -3,12 +3,12 @@ title: Comunicación entre servicios
 description: Obtenga información sobre cómo los microservicios de back-end nativos en la nube se comunican con otros microservicios de back-end.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539817"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166084"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
 
@@ -54,7 +54,7 @@ El gran grado de acoplamiento en la imagen anterior sugiere que los servicios no
 
 ### <a name="materialized-view-pattern"></a>Patrón Materialized View
 
-Una opción popular para quitar el acoplamiento de microservicios es el [patrón de vista materializada](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). Con este patrón, un microservicio almacena su propia copia local y desnormalizada de los datos que pertenecen a otros servicios. En lugar del microservicio de cesta de la compra que consulta el catálogo de productos y los microservicios de precios, mantiene su propia copia local de los datos. Este patrón elimina el acoplamiento innecesario y mejora la confiabilidad y el tiempo de respuesta. Toda la operación se ejecuta dentro de un único proceso. Exploramos este patrón y otros aspectos relacionados con los datos en el capítulo 5.
+Una opción popular para quitar el acoplamiento de microservicios es el [patrón de vista materializada](/azure/architecture/patterns/materialized-view). Con este patrón, un microservicio almacena su propia copia local y desnormalizada de los datos que pertenecen a otros servicios. En lugar del microservicio de cesta de la compra que consulta el catálogo de productos y los microservicios de precios, mantiene su propia copia local de los datos. Este patrón elimina el acoplamiento innecesario y mejora la confiabilidad y el tiempo de respuesta. Toda la operación se ejecuta dentro de un único proceso. Exploramos este patrón y otros aspectos relacionados con los datos en el capítulo 5.
 
 ### <a name="service-aggregator-pattern"></a>Patrón Service Aggregator
 
@@ -94,7 +94,7 @@ En el capítulo 1, hablamos sobre los *servicios de respaldo*. Los servicios de 
 
 Las colas de Azure Storage ofrecen una infraestructura de puesta en cola sencilla, rápida, asequible y respaldada por cuentas de Azure Storage.
 
-[Azure Storage colas](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction) incluyen un mecanismo de puesta en cola basado en REST con mensajería confiable y persistente. Proporcionan un conjunto de características mínimas, pero son económicas y almacenan millones de mensajes. Su capacidad oscila hasta 500 TB. Un solo mensaje puede tener un tamaño de hasta 64 KB.
+[Azure Storage colas](/azure/storage/queues/storage-queues-introduction) incluyen un mecanismo de puesta en cola basado en REST con mensajería confiable y persistente. Proporcionan un conjunto de características mínimas, pero son económicas y almacenan millones de mensajes. Su capacidad oscila hasta 500 TB. Un solo mensaje puede tener un tamaño de hasta 64 KB.
 
 Puede tener acceso a los mensajes desde cualquier lugar del mundo a través de llamadas autenticadas con HTTP o HTTPS. Las colas de almacenamiento se pueden escalar horizontalmente a un gran número de clientes simultáneos para controlar los picos de tráfico.
 
@@ -122,13 +122,13 @@ Azure Storage las colas son una opción económica para implementar la mensajer�
 
 Para requisitos de mensajería más complejos, considere la posibilidad de Azure Service Bus las colas.
 
-Sentado sobre una infraestructura de mensajes sólida, [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) admite un *modelo de mensajería*asíncrona. Los mensajes se almacenan de forma confiable en un agente (la cola) hasta que los recibe el consumidor. La cola garantiza la entrega de mensajes de primero en salir/primero en salir (FIFO), respetando el orden en que se agregaron los mensajes a la cola.
+Sentado sobre una infraestructura de mensajes sólida, [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) admite un *modelo de mensajería*asíncrona. Los mensajes se almacenan de forma confiable en un agente (la cola) hasta que los recibe el consumidor. La cola garantiza la entrega de mensajes de primero en salir/primero en salir (FIFO), respetando el orden en que se agregaron los mensajes a la cola.
 
-El tamaño de un mensaje puede ser mucho mayor, hasta 256 KB. Los mensajes se conservan en la cola durante un período de tiempo ilimitado. Service Bus admite no solo llamadas basadas en HTTP, sino que también proporciona compatibilidad total con el [Protocolo AMQP](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-amqp-overview). AMQP es un estándar abierto entre proveedores que admite un protocolo binario y mayores grados de confiabilidad.
+El tamaño de un mensaje puede ser mucho mayor, hasta 256 KB. Los mensajes se conservan en la cola durante un período de tiempo ilimitado. Service Bus admite no solo llamadas basadas en HTTP, sino que también proporciona compatibilidad total con el [Protocolo AMQP](/azure/service-bus-messaging/service-bus-amqp-overview). AMQP es un estándar abierto entre proveedores que admite un protocolo binario y mayores grados de confiabilidad.
 
-Service Bus proporciona un amplio conjunto de características, incluida la [compatibilidad con transacciones](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions) y una [característica de detección de duplicados](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection). La cola garantiza "como máximo una entrega" por mensaje. Descarta automáticamente un mensaje que ya se ha enviado. Si un productor tiene dudas, puede volver a enviar el mismo mensaje y Service Bus garantiza que solo se procesará una copia. La detección de duplicados le libera de tener que crear una infraestructura de infraestructura adicional.
+Service Bus proporciona un amplio conjunto de características, incluida la [compatibilidad con transacciones](/azure/service-bus-messaging/service-bus-transactions) y una [característica de detección de duplicados](/azure/service-bus-messaging/duplicate-detection). La cola garantiza "como máximo una entrega" por mensaje. Descarta automáticamente un mensaje que ya se ha enviado. Si un productor tiene dudas, puede volver a enviar el mismo mensaje y Service Bus garantiza que solo se procesará una copia. La detección de duplicados le libera de tener que crear una infraestructura de infraestructura adicional.
 
-Dos características más empresariales son las particiones y las sesiones. Un solo agente de mensajes controla una cola de Service Bus convencional y se almacena en un único almacén de mensajes. No obstante, la creación de [particiones Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) propaga la cola entre varios agentes de mensajes y almacenes de mensajes. El rendimiento general ya no está limitado por el rendimiento de un solo agente de mensajes o almacén de mensajería. Una interrupción temporal de un almacén de mensajería no representa una cola con particiones disponible.
+Dos características más empresariales son las particiones y las sesiones. Un solo agente de mensajes controla una cola de Service Bus convencional y se almacena en un único almacén de mensajes. No obstante, la creación de [particiones Service Bus](/azure/service-bus-messaging/service-bus-partitioning) propaga la cola entre varios agentes de mensajes y almacenes de mensajes. El rendimiento general ya no está limitado por el rendimiento de un solo agente de mensajes o almacén de mensajería. Una interrupción temporal de un almacén de mensajería no representa una cola con particiones disponible.
 
 Las [sesiones de Service Bus](https://codingcanvas.com/azure-service-bus-sessions/) proporcionan una manera de agrupar mensajes relacionados. Imagine un escenario de flujo de trabajo en el que los mensajes se deben procesar juntos y la operación se completa al final. Para aprovechar las ventajas, las sesiones se deben habilitar explícitamente para la cola y cada mensaje relacionado debe contener el mismo identificador de sesión.
 
@@ -142,13 +142,13 @@ En la figura 4-14 se describe la arquitectura de alto nivel de una cola de Servi
 
 En la ilustración anterior, observe la relación punto a punto. Dos instancias del mismo proveedor están poniendo en cola los mensajes en una sola cola de Service Bus. Cada mensaje se consume solo en una de las tres instancias de consumidor de la derecha. A continuación, se describe cómo implementar la mensajería en la que es posible que todos los consumidores puedan estar interesados en el mismo mensaje.
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 Message Queue Server es una manera eficaz de implementar la comunicación en la que un productor puede enviar un mensaje de forma asincrónica a un consumidor. Sin embargo, ¿qué ocurre cuando *muchos consumidores diferentes* están interesados en el mismo mensaje? Una cola de mensajes dedicada para cada consumidor no se podría escalar bien y resultaría difícil de administrar.
 
 Para abordar este escenario, pasamos al tercer tipo de interacción de mensajes, el *evento*. Un microservicio anuncia que se ha producido una acción. Otros microservicios, si está interesado, reaccionan ante la acción o el evento.
 
-Los eventos son un proceso de dos pasos. Para un cambio de estado determinado, un microservicio publica un evento en un agente de mensajes, lo que lo pone a disposición de cualquier otro microservicio interesado. El microservicio interesado se notifica mediante la suscripción al evento en el agente de mensajes. El patrón de [publicación/suscripción](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) se usa para implementar la [comunicación basada en eventos](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
+Los eventos son un proceso de dos pasos. Para un cambio de estado determinado, un microservicio publica un evento en un agente de mensajes, lo que lo pone a disposición de cualquier otro microservicio interesado. El microservicio interesado se notifica mediante la suscripción al evento en el agente de mensajes. El patrón de [publicación/suscripción](/azure/architecture/patterns/publisher-subscriber) se usa para implementar la [comunicación basada en eventos](/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
 
 En la figura 4-15 se muestra un microservicio de cesta de la compra que publica un evento con otros dos microservicios que se suscriben a él.
 
@@ -158,7 +158,7 @@ En la figura 4-15 se muestra un microservicio de cesta de la compra que publica 
 
 Tenga en cuenta el componente de *bus de eventos* que se encuentra en medio del canal de comunicación. Es una clase personalizada que encapsula el agente de mensajes y lo desacopla de la aplicación subyacente. Los microservicios de ordenación y de inventario operan de forma independiente el evento sin ningún conocimiento de los demás ni del microservicio de cesta de la compra. Cuando el evento registrado se publica en el bus de eventos, actúan sobre él.
 
-Con los eventos, pasamos de la tecnología de puesta en cola a los *temas*. Un [tema](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) es similar a una cola, pero admite un patrón de mensajería de uno a varios. Un microservicio publica un mensaje. Varios microservicios de suscripción pueden optar por recibir el mensaje y actuar sobre él. En la figura 4-16 se muestra una arquitectura de tema.
+Con los eventos, pasamos de la tecnología de puesta en cola a los *temas*. Un [tema](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions) es similar a una cola, pero admite un patrón de mensajería de uno a varios. Un microservicio publica un mensaje. Varios microservicios de suscripción pueden optar por recibir el mensaje y actuar sobre él. En la figura 4-16 se muestra una arquitectura de tema.
 
 ![Arquitectura de temas](./media/topic-architecture.png)
 
@@ -170,17 +170,17 @@ La nube de Azure admite dos servicios de temas distintos: Azure Service Bus tema
 
 ### <a name="azure-service-bus-topics"></a>Azure Service Bus Topics
 
-En la parte superior del mismo modelo de mensaje asincrónico de Azure Service Bus colas se [Azure Service Bus temas](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Un tema puede recibir mensajes de varios publicadores independientes y enviar mensajes a hasta 2.000 suscriptores. Las suscripciones se pueden agregar o quitar dinámicamente en tiempo de ejecución sin detener el sistema ni volver a crear el tema.
+En la parte superior del mismo modelo de mensaje asincrónico de Azure Service Bus colas se [Azure Service Bus temas](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Un tema puede recibir mensajes de varios publicadores independientes y enviar mensajes a hasta 2.000 suscriptores. Las suscripciones se pueden agregar o quitar dinámicamente en tiempo de ejecución sin detener el sistema ni volver a crear el tema.
 
-Muchas características avanzadas de Azure Service Bus colas también están disponibles para los temas, como la [detección de duplicados](https://docs.microsoft.com/azure/service-bus-messaging/duplicate-detection) y la [compatibilidad con transacciones](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions). De forma predeterminada, los temas de Service Bus se controlan mediante un único agente de mensajes y se almacenan en un único almacén de mensajes. No obstante, la creación de [particiones de Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) escala un tema mediante la propagación entre varios agentes de mensajes y almacenes de mensajes.
+Muchas características avanzadas de Azure Service Bus colas también están disponibles para los temas, como la [detección de duplicados](/azure/service-bus-messaging/duplicate-detection) y la [compatibilidad con transacciones](/azure/service-bus-messaging/service-bus-transactions). De forma predeterminada, los temas de Service Bus se controlan mediante un único agente de mensajes y se almacenan en un único almacén de mensajes. No obstante, la creación de [particiones de Service Bus](/azure/service-bus-messaging/service-bus-partitioning) escala un tema mediante la propagación entre varios agentes de mensajes y almacenes de mensajes.
 
-La [entrega de mensajes programada](https://docs.microsoft.com/azure/service-bus-messaging/message-sequencing) etiqueta un mensaje con una hora específica para su procesamiento. El mensaje no aparecerá en el tema antes de esa hora. El [aplazamiento de mensajes](https://docs.microsoft.com/azure/service-bus-messaging/message-deferral) le permite aplazar una recuperación de un mensaje en otro momento. Ambos se usan normalmente en escenarios de procesamiento de flujo de trabajo donde las operaciones se procesan en un orden determinado. Puede posponer el procesamiento de los mensajes recibidos hasta que se complete el trabajo anterior.
+La [entrega de mensajes programada](/azure/service-bus-messaging/message-sequencing) etiqueta un mensaje con una hora específica para su procesamiento. El mensaje no aparecerá en el tema antes de esa hora. El [aplazamiento de mensajes](/azure/service-bus-messaging/message-deferral) le permite aplazar una recuperación de un mensaje en otro momento. Ambos se usan normalmente en escenarios de procesamiento de flujo de trabajo donde las operaciones se procesan en un orden determinado. Puede posponer el procesamiento de los mensajes recibidos hasta que se complete el trabajo anterior.
 
 Service Bus temas son una tecnología sólida y probada para habilitar la comunicación de publicación/suscripción en los sistemas nativos de la nube.
 
 ### <a name="azure-event-grid"></a>Azure Event Grid
 
-Aunque Azure Service Bus es un agente de mensajería probado en la batalla con un conjunto completo de características empresariales, [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview) es el nuevo niño en el bloque.
+Aunque Azure Service Bus es un agente de mensajería probado en la batalla con un conjunto completo de características empresariales, [Azure Event Grid](/azure/event-grid/overview) es el nuevo niño en el bloque.
 
 A primera vista, Event Grid puede parecer simplemente otro sistema de mensajería basado en temas. Sin embargo, es diferente de muchas maneras. Centrado en las cargas de trabajo orientadas a eventos, permite el procesamiento de eventos en tiempo real, la integración profunda de Azure y una plataforma abierta, todo ello en una infraestructura sin servidor. Está diseñado para aplicaciones contemporáneos nativas en la nube y sin servidor
 
@@ -206,9 +206,9 @@ Event Grid es un servicio en la nube sin servidor totalmente administrado. Se es
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Transmisión de mensajes en la nube de Azure
 
-Azure Service Bus y Event Grid proporcionan una gran compatibilidad para las aplicaciones que exponen eventos únicos y discretos, como un nuevo documento, que se ha insertado en un Cosmos DB. Pero, ¿qué ocurre si el sistema nativo de la nube necesita procesar un *flujo de eventos relacionados*? Los [flujos de eventos](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) son más complejos. Normalmente, se ordenan por tiempo, se interrelacionan y se deben procesar como un grupo.
+Azure Service Bus y Event Grid proporcionan una gran compatibilidad para las aplicaciones que exponen eventos únicos y discretos, como un nuevo documento, que se ha insertado en un Cosmos DB. Pero, ¿qué ocurre si el sistema nativo de la nube necesita procesar un *flujo de eventos relacionados*? Los [flujos de eventos](/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) son más complejos. Normalmente, se ordenan por tiempo, se interrelacionan y se deben procesar como un grupo.
 
-[Azure Event hubs](https://azure.microsoft.com/services/event-hubs/) es una plataforma de streaming de datos y un servicio de ingesta de eventos que recopila, transforma y almacena eventos. Se ajusta para capturar datos de streaming, como las notificaciones de eventos continuos que se emiten desde un contexto de telemetría. El servicio es muy escalable y puede almacenar y [procesar millones de eventos por segundo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Como se muestra en la figura 4-18, a menudo es una puerta delantera para una canalización de eventos, desacoplando el flujo de ingesta del consumo de eventos.
+[Azure Event hubs](https://azure.microsoft.com/services/event-hubs/) es una plataforma de streaming de datos y un servicio de ingesta de eventos que recopila, transforma y almacena eventos. Se ajusta para capturar datos de streaming, como las notificaciones de eventos continuos que se emiten desde un contexto de telemetría. El servicio es muy escalable y puede almacenar y [procesar millones de eventos por segundo](/azure/event-hubs/event-hubs-about). Como se muestra en la figura 4-18, a menudo es una puerta delantera para una canalización de eventos, desacoplando el flujo de ingesta del consumo de eventos.
 
 ![Centro de eventos de Azure](./media/azure-event-hub.png)
 
@@ -216,9 +216,9 @@ Azure Service Bus y Event Grid proporcionan una gran compatibilidad para las apl
 
 Event hubs admite la baja latencia y la retención de tiempo configurable. A diferencia de las colas y los temas, Event Hubs conservar los datos de eventos después de que los lea un consumidor. Esta característica permite a otros servicios de análisis de datos, tanto internos como externos, reproducir los datos para su posterior análisis. Los eventos almacenados en el centro de eventos solo se eliminan tras la expiración del período de retención, que es un día de forma predeterminada, pero configurable.
 
-Event hubs admite protocolos de publicación de eventos comunes, como HTTPS y AMQP. También es compatible con Kafka 1,0. [Las aplicaciones de Kafka existentes pueden comunicarse con el centro de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) mediante el protocolo Kafka, lo que proporciona una alternativa a la administración de clústeres de Kafka de gran tamaño. Muchos sistemas nativos de la nube de código abierto adoptan Kafka.
+Event hubs admite protocolos de publicación de eventos comunes, como HTTPS y AMQP. También es compatible con Kafka 1,0. [Las aplicaciones de Kafka existentes pueden comunicarse con el centro de eventos](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) mediante el protocolo Kafka, lo que proporciona una alternativa a la administración de clústeres de Kafka de gran tamaño. Muchos sistemas nativos de la nube de código abierto adoptan Kafka.
 
-Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan eventos más recientes, se agregan al final de esta secuencia.En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
+Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan eventos más recientes, se agregan al final de esta secuencia.En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
 
 ![Creación de particiones del centro de eventos](./media/event-hub-partitioning.png)
 

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aac2d90cc57a4af823c42f8c7eb2adcd43c63caf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286939"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164823"
 ---
 # <a name="adding-data-to-a-datatable"></a>Agregar datos a un objeto DataTable
+
 Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos. Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>. Cuando se llama al método, se devuelve un nuevo objeto **DataRow** <xref:System.Data.DataTable.NewRow%2A> . A continuación, **DataTable** crea el objeto **DataRow** basándose en la estructura de la tabla, tal y como se define en <xref:System.Data.DataColumnCollection> .  
   
  En el ejemplo siguiente se muestra cómo crear una nueva fila llamando al método **NewRow** .  

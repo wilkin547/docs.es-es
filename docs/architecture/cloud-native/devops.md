@@ -2,12 +2,12 @@
 title: DevOps
 description: Consideraciones de DevOps para las aplicaciones nativas de la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614127"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164004"
 ---
 # <a name="devops"></a>DevOps
 
@@ -154,7 +154,7 @@ Las fases de los paneles no son la única herramienta de la organización. En fu
 
 El campo de Descripción admite los estilos normales que cabría esperar (negrita, carácter de subrayado en cursiva y tachado) y la capacidad de insertar imágenes. Esto lo convierte en una herramienta eficaz que se utiliza al especificar el trabajo o los errores.
 
-Las tareas se pueden acumular en características, que definen una unidad de trabajo mayor. A su vez, las características se pueden [acumular en epopeyas](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops). La clasificación de tareas en esta jerarquía hace que sea mucho más fácil comprender cómo se va a implementar una característica grande.
+Las tareas se pueden acumular en características, que definen una unidad de trabajo mayor. A su vez, las características se pueden [acumular en epopeyas](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops). La clasificación de tareas en esta jerarquía hace que sea mucho más fácil comprender cómo se va a implementar una característica grande.
 
 ![Figura 10-6 tipos de elemento de trabajo configurados de forma predeterminada en la plantilla de proceso básica](./media/board-issue-types.png)
 

@@ -3,12 +3,12 @@ title: Comunicación resistente
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Comunicación resistente
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613751"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166045"
 ---
 # <a name="resilient-communications"></a>Comunicaciones resistentes
 
@@ -30,7 +30,7 @@ Puede resolver estos problemas con diferentes bibliotecas y marcos de trabajo, p
 
 ## <a name="service-mesh"></a>Malla de servicio
 
-Un enfoque mejor es una tecnología en evolución titulada *malla de servicio*. Una [malla de servicio](https://www.nginx.com/blog/what-is-a-service-mesh/) es un nivel de infraestructura configurable con capacidades integradas para controlar la comunicación del servicio y los otros desafíos mencionados anteriormente. Desacopla estos problemas moviéndolos a un proxy de servicio. El proxy se implementa en un proceso independiente (denominado [sidecar](https://docs.microsoft.com/azure/architecture/patterns/sidecar)) para proporcionar aislamiento del código empresarial. Sin embargo, el sidecar está vinculado al servicio: se crea con él y comparte su ciclo de vida. En la figura 6-7 se muestra este escenario.
+Un enfoque mejor es una tecnología en evolución titulada *malla de servicio*. Una [malla de servicio](https://www.nginx.com/blog/what-is-a-service-mesh/) es un nivel de infraestructura configurable con capacidades integradas para controlar la comunicación del servicio y los otros desafíos mencionados anteriormente. Desacopla estos problemas moviéndolos a un proxy de servicio. El proxy se implementa en un proceso independiente (denominado [sidecar](/azure/architecture/patterns/sidecar)) para proporcionar aislamiento del código empresarial. Sin embargo, el sidecar está vinculado al servicio: se crea con él y comparte su ciclo de vida. En la figura 6-7 se muestra este escenario.
 
 ![Malla de servicio con un coche lateral](./media/service-mesh-with-side-car.png)
 
@@ -74,28 +74,28 @@ Como se explicó anteriormente, el envío se implementa como sidecar en cada mic
 
 La nube de Azure adopta istio y proporciona soporte técnico directo para ella en Azure Kubernetes Services. Los vínculos siguientes pueden ayudarle a empezar a trabajar:
 
-- [Instalación de istio en AKS](https://docs.microsoft.com/azure/aks/istio-install)
-- [Usar AKS y istio](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [Instalación de istio en AKS](/azure/aks/istio-install)
+- [Usar AKS y istio](/azure/aks/istio-scenario-routing)
 
 ### <a name="references"></a>Referencias
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [Patrón Retry](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [Patrón de reintento](/azure/architecture/patterns/retry)
 
-- [Circuit Breaker pattern (Patrón de interruptor)](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker) 
+- [Circuit Breaker pattern](/azure/architecture/patterns/circuit-breaker) (Patrón Circuit Breaker)
 
 - [Notas del producto resistencia en Azure](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [latencia de red](https://www.techopedia.com/definition/8553/network-latency)
 
-- [Redundancia](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [Redundancia](/azure/architecture/guide/design-principles/redundancy)
 
-- [replicación geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [replicación geográfica](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 
-- [Instrucciones de escalado automático](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [Guía de escalado automático](/azure/architecture/best-practices/auto-scaling)
 
 - [Istio](https://istio.io/docs/concepts/what-is-istio/)
 

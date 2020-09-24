@@ -3,14 +3,15 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 7581f581c4b97a07eb4bdeb49eb5ae5ce72c2aa7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c4ba7b6f2a9b9092c5f24d424c6de2b0f510ac88
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535721"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165005"
 ---
 # \<remove>
+
 Quita el controlador de tokens de seguridad especificado de la colección de controladores de tokens.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Quita el controlador de tokens de seguridad especificado de la colección de con
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Quita el controlador de tokens de seguridad especificado de la colección de con
 |type|Nombre del tipo de CLR del controlador de token que se va a quitar. Para obtener más información sobre cómo especificar el `type` atributo, vea [referencias de tipo personalizado](/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Obligatorio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,6 +54,7 @@ Quita el controlador de tokens de seguridad especificado de la colección de con
 |[\<securityTokenHandlers>](securitytokenhandlers.md)|Especifica una colección de controladores de tokens de seguridad que se registran con el punto de conexión.|  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente XML muestra el uso de los `<add>` `<remove>` elementos y para reemplazar el controlador de token de sesión predeterminado por un controlador de token de sesión personalizado. El XML se toma del `ClaimsAwareWebFarm` ejemplo.  
   
 ```xml  
