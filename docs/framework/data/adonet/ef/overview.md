@@ -3,12 +3,12 @@ title: Información general sobre Entity Framework
 description: La Entity Framework en ADO.NET admite el desarrollo de aplicaciones orientadas a datos que funcionan en un nivel más alto de abstracción que las aplicaciones tradicionales.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e38670678a6f9985bc36de5586760450a880cb0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557988"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177506"
 ---
 # <a name="entity-framework-overview"></a>Información general de Entity Framework
 
@@ -17,6 +17,7 @@ La Entity Framework es un conjunto de tecnologías de ADO.NET que admiten el des
 El Entity Framework permite a los desarrolladores trabajar con datos en forma de objetos y propiedades específicos del dominio, como clientes y direcciones de clientes, sin tener que preocuparse de las tablas y columnas de bases de datos subyacentes en las que se almacenan estos datos. Con Entity Framework, los desarrolladores pueden trabajar en un nivel más alto de abstracción cuando tratan con datos, y pueden crear y mantener aplicaciones orientadas a datos con menos código que en las aplicaciones tradicionales. Dado que el Entity Framework es un componente del .NET Framework, Entity Framework aplicaciones pueden ejecutarse en cualquier equipo en el que se haya instalado el .NET Framework a partir de la versión 3,5 SP1.
 
 ## <a name="give-life-to-models"></a>Dar vida a los modelos
+
  Un enfoque de diseño habitual para crear una aplicación o un servicio consiste en dividir la aplicación o el servicio en tres partes: un modelo de dominio, un modelo lógico y un modelo físico. El modelo de dominio define las entidades y relaciones del sistema que se está modelando. El modelo lógico de una base de datos relacional normaliza las entidades y relaciones en tablas con restricciones de claves externas. El modelo físico abarca las capacidades de un motor de datos determinado especificando los detalles del almacenamiento en forma de particiones e índices.
 
  Los administradores de bases de datos refinan el modelo físico para mejorar el rendimiento, pero los programadores que escriben el código de la aplicación principalmente se limitan a trabajar con el modelo lógico escribiendo consultas SQL y llamando a procedimientos almacenados. Los modelos de dominio se suelen usar como una herramienta para capturar y comunicar los requisitos de una aplicación, con frecuencia como diagramas inertes que se ven y se explican en las primeras etapas de un proyecto, y a continuación se abandonan. Muchos equipos de desarrolladores omiten la creación de un modelo conceptual y comienzan especificando las tablas, columnas y claves en una base de datos relacional.
@@ -38,6 +39,7 @@ El modelo de almacenamiento y las asignaciones pueden cambiar según sea necesar
 El Entity Framework utiliza estos archivos de asignación y modelo para crear, leer, actualizar y eliminar operaciones en las entidades y relaciones del modelo conceptual en las operaciones equivalentes en el origen de datos. La Entity Framework incluso admite la asignación de entidades en el modelo conceptual a procedimientos almacenados en el origen de datos. Para obtener más información, vea las [Especificaciones de CSDL, SSDL y MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Asignar objetos a datos
+
  La programación orientada a objetos supone un desafío al interactuar con sistemas de almacenamiento de datos. Aunque la organización de clases suele reflejar la organización de las tablas de bases de datos relacionales, el ajuste no es perfecto. Varias tablas normalizadas suelen corresponder a una sola clase y las relaciones entre las clases se representan a menudo de forma diferente a las relaciones entre tablas. Por ejemplo, para representar el cliente de un pedido de ventas, una clase `Order` podría utilizar una propiedad que contiene una referencia a una instancia de una clase `Customer`, mientras que una fila de la tabla `Order` en una base de datos contiene una columna de clave externa con un valor que corresponde a un valor de clave principal en la tabla `Customer` (o conjunto de columnas). Una clase `Customer` podría tener una propiedad denominada `Orders` que contuviera una colección de instancias de la clase `Order`, mientras que la tabla `Customer` en una base de datos no tiene ninguna columna comparable. El Entity Framework proporciona a los desarrolladores la flexibilidad necesaria para representar relaciones de esta manera, o para modelar más estrechamente las relaciones que se representan en la base de datos.
 
  Las soluciones existentes han intentado cubrir este hueco, que se suele denominar "desigualdad de impedancia", asignando únicamente clases y propiedades orientadas a objetos a las tablas y columnas relacionales. En lugar de tomar este enfoque tradicional, el Entity Framework asigna las tablas relacionales, las columnas y las restricciones Foreign Key de los modelos lógicos a las entidades y relaciones en los modelos conceptuales. Esto permite una mayor flexibilidad al definir los objetos y optimizar el modelo lógico. Las herramientas de Entity Data Model generan clases de datos extensibles basadas en el modelo conceptual. Se trata de clases parciales que se pueden extender con miembros adicionales que el programador agrega. De forma predeterminada, las clases que se generan para un modelo conceptual determinado derivan de las clases base que proporcionan servicios para materializar las entidades como objetos y para realizar un seguimiento de los cambios y guardarlos. Los desarrolladores pueden utilizar estas clases para trabajar con las entidades y relaciones como objetos relacionados mediante asociaciones. Los desarrolladores también pueden personalizar las clases que se generan para un modelo conceptual. Para obtener más información, vea [trabajar con objetos](working-with-objects.md).
@@ -78,6 +80,6 @@ Para obtener más información sobre el Entity Framework, consulte:
 
 [Recursos de Entity Framework](resources.md) : proporciona vínculos a temas conceptuales y vínculos a temas externos y recursos para crear aplicaciones de Entity Framework.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ADO.NET Entity Framework](index.md)

@@ -2,14 +2,15 @@
 title: <transport> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: 1cb165fed9266307335482166116c4c1d62efe7e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 03e6236d1e89f16a460860f5dffff19b7bed8a0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152962"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169835"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> de \<msmqIntegrationBinding>
+
 Define la configuración de seguridad para el transporte de integración de Message Queuing.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Define la configuración de seguridad para el transporte de integración de Mess
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,6 +46,7 @@ Define la configuración de seguridad para el transporte de integración de Mess
 |`msmqSecureHashAlgorithm`|: Especifica el algoritmo que se va a utilizar para calcular el resumen como parte de las firmas. Los valores válidos incluyen los siguientes:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> El valor predeterminado es SHA1. Este atributo es del tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Debido a problemas de colisión con MD5 y SHA1, Microsoft recomienda SHA256 o superior.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,7 +55,8 @@ Define la configuración de seguridad para el transporte de integración de Mess
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|Define la configuración de seguridad de un enlace MSMQ.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento encapsula la configuración de seguridad para el transporte de integración de Message Queuing. La configuración es la misma para la integración de Message Queuing y los transportes en cola. Le permite establecer el Modo de autenticación, Algoritmo de cifrado, Algoritmo hash seguro y Nivel de protección.  
   
 ## <a name="see-also"></a>Consulte también

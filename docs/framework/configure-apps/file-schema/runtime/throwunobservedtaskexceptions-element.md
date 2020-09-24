@@ -8,14 +8,15 @@ helpviewer_keywords:
 - ThrowUnobservedTaskExceptions element
 - <ThrowUnobservedTaskExceptions> element
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
-ms.openlocfilehash: de5a686bcbd88fc52173b488103f033575623d62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 012c2e70e66015bc317606a7eea07812b5df26e7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153820"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183928"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> (Elemento)
+
 Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,6 +48,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 |`true`|Finaliza el proceso de ejecución de una excepción de tarea no controlada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -56,7 +59,8 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
 |||  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Si no se ha observado una excepción asociada a un <xref:System.Threading.Tasks.Task> , no hay ninguna <xref:System.Threading.Tasks.Task.Wait%2A> operación, no se adjunta el elemento primario y no se <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> leyó la propiedad, se considera que la excepción de la tarea no se ha observado.  
   
  En el .NET Framework 4, de forma predeterminada, si un <xref:System.Threading.Tasks.Task> que tiene una excepción no observada se recolecta como elemento no utilizado, el finalizador inicia una excepción y finaliza el proceso. La terminación del proceso viene determinada por el tiempo de recolección y finalización de elementos no utilizados.  
@@ -72,6 +76,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 - Estableciendo el valor DWORD del registro ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft \\ . Clave NETFramework.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo habilitar el inicio de excepciones en tareas mediante el uso de un archivo de configuración de la aplicación.  
   
 ```xml  
@@ -83,6 +88,7 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo se produce una excepción no observada desde una tarea. El código debe ejecutarse como un programa lanzado para que funcione correctamente.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]

@@ -2,14 +2,15 @@
 title: <security> de <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 2268bf48a2b86c3b3b25db006e6f8f55ea33af73
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: be2f48f7d9c3be4ea0a5fe95436930b3f23c7551
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738683"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170069"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<security> de \<msmqIntegrationBinding>
+
 Define la configuración de seguridad de transporte para el canal de integración de Message Queuing (MSMQ).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ Define la configuración de seguridad de transporte para el canal de integració
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  

@@ -3,12 +3,12 @@ title: Resistencia de la plataforma Azure
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Resistencia de la infraestructura de la nube con Azure
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 752f1320d9dfa18e52b078763d221a787da15e8e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88634bc60df15cc93b1769a85879795ae383757a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613985"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163770"
 ---
 # <a name="azure-platform-resiliency"></a>Resistencia de la plataforma Azure
 
@@ -37,9 +37,9 @@ Nuestra resistencia permite que la aplicación reaccione ante errores y siga sie
 
 ## <a name="design-with-redundancy"></a>Diseño con redundancia
 
-Los errores varían en el ámbito del impacto. Un error de hardware, como un disco con errores, puede afectar a un solo nodo de un clúster. Un conmutador de red con error puede afectar a todo el bastidor del servidor. Los errores menos comunes, como la pérdida de energía, pueden interrumpir todo un centro de recursos. Rara vez, toda una región deja de estar disponible.
+Los errores varían en el ámbito del impacto. Un error de hardware, como un disco con errores, puede afectar a un solo nodo de un clúster. Un error de conmutador de red podría afectar a toda una estantería de servidor. Los errores menos comunes, como la pérdida de energía, pueden interrumpir todo un centro de recursos. Es aún más improbable que una región deje de estar disponible.
 
-La [redundancia](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) es una manera de proporcionar resistencia de la aplicación. El nivel exacto de redundancia necesaria depende de los requisitos de su empresa y afectará tanto al costo como a la complejidad del sistema. Por ejemplo, una implementación de varias regiones es más costosa y más compleja de administrar que una implementación de una sola región. Necesitará procedimientos operativos para administrar la conmutación por error y la conmutación por recuperación. El costo y la complejidad adicionales pueden estar justificados en algunos escenarios empresariales, pero no en otros.
+La [redundancia](/azure/architecture/guide/design-principles/redundancy) es una manera de proporcionar resistencia de la aplicación. El nivel exacto de redundancia necesaria depende de los requisitos de su empresa y afectará tanto al costo como a la complejidad del sistema. Por ejemplo, una implementación de varias regiones es más costosa y más compleja de administrar que una implementación de una sola región. Necesitará procedimientos operativos para administrar la conmutación por error y la conmutación por recuperación. El costo y la complejidad adicionales pueden estar justificados en algunos escenarios empresariales, pero no en otros.
 
 Para diseñar la redundancia, debe identificar las rutas críticas en la aplicación y, a continuación, determinar si hay redundancia en cada punto de la ruta de acceso. Si se produce un error en un subsistema, ¿la aplicación conmutará por error a otra cosa? Por último, necesita comprender claramente las características integradas en la plataforma en la nube de Azure que puede aprovechar para satisfacer sus requisitos de redundancia. Estas son algunas recomendaciones para la arquitectura de la redundancia:
 
@@ -49,13 +49,13 @@ Para diseñar la redundancia, debe identificar las rutas críticas en la aplicac
 
 - *Plan para la implementación en la región.* Si implementa la aplicación en una sola región y dicha región deja de estar disponible, la aplicación también dejará de estar disponible. Esto puede ser inaceptable en los términos de los contratos de nivel de servicio de la aplicación. En su lugar, considere la posibilidad de implementar la aplicación y sus servicios en varias regiones. Por ejemplo, un clúster de Azure Kubernetes Service (AKS) se implementa en una sola región. Para proteger el sistema de un error regional, puede implementar la aplicación en varios clústeres de AKS en diferentes regiones y usar la característica de [regiones emparejadas](https://buildazure.com/2017/01/06/azure-region-pairs-explained/) para coordinar las actualizaciones de plataforma y priorizar los esfuerzos de recuperación.
 
-- *Habilite [la replicación geográfica](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication).* La replicación geográfica para servicios como Azure SQL Database y Cosmos DB creará réplicas secundarias de los datos en varias regiones. Aunque ambos servicios replicarán automáticamente los datos dentro de la misma región, la replicación geográfica le protege contra una interrupción regional al permitir la conmutación por error a una región secundaria. Otro procedimiento recomendado para los centros de replicación geográfica alrededor del almacenamiento de imágenes de contenedor. Para implementar un servicio en AKS, debe almacenar y extraer la imagen de un repositorio. Azure Container Registry se integra con AKS y puede almacenar imágenes de contenedor de forma segura. Para mejorar el rendimiento y la disponibilidad, considere la posibilidad de replicar geográficamente las imágenes en un registro en cada región donde tenga un clúster de AKS. Cada clúster de AKS extrae las imágenes de contenedor del registro de contenedor local en su región, tal como se muestra en la figura 6-4:
+- *Habilite [la replicación geográfica](/azure/sql-database/sql-database-active-geo-replication).* La replicación geográfica para servicios como Azure SQL Database y Cosmos DB creará réplicas secundarias de los datos en varias regiones. Aunque ambos servicios replicarán automáticamente los datos dentro de la misma región, la replicación geográfica le protege contra una interrupción regional al permitir la conmutación por error a una región secundaria. Otro procedimiento recomendado para los centros de replicación geográfica alrededor del almacenamiento de imágenes de contenedor. Para implementar un servicio en AKS, debe almacenar y extraer la imagen de un repositorio. Azure Container Registry se integra con AKS y puede almacenar imágenes de contenedor de forma segura. Para mejorar el rendimiento y la disponibilidad, considere la posibilidad de replicar geográficamente las imágenes en un registro en cada región donde tenga un clúster de AKS. Cada clúster de AKS extrae las imágenes de contenedor del registro de contenedor local en su región, tal como se muestra en la figura 6-4:
 
 ![Recursos replicados entre regiones](./media/replicated-resources.png)
 
 **Figura 6-4**. Recursos replicados entre regiones
 
-- *Implemente un equilibrador de carga de tráfico DNS.* [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview) proporciona alta disponibilidad para las aplicaciones críticas mediante el equilibrio de carga en el nivel de DNS. Puede enrutar el tráfico a diferentes regiones según la geografía, el tiempo de respuesta del clúster e incluso el estado del punto de conexión de la aplicación. Por ejemplo, Azure Traffic Manager puede dirigir a los clientes al clúster de AKS más cercano y a la instancia de la aplicación. Si tiene varios clústeres de AKS en distintas regiones, use Traffic Manager para controlar cómo fluye el tráfico a las aplicaciones que se ejecutan en cada clúster. En la figura 6-5 se muestra este escenario.
+- *Implemente un equilibrador de carga de tráfico DNS.* [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) proporciona alta disponibilidad para las aplicaciones críticas mediante el equilibrio de carga en el nivel de DNS. Puede enrutar el tráfico a diferentes regiones según la geografía, el tiempo de respuesta del clúster e incluso el estado del punto de conexión de la aplicación. Por ejemplo, Azure Traffic Manager puede dirigir a los clientes al clúster de AKS más cercano y a la instancia de la aplicación. Si tiene varios clústeres de AKS en distintas regiones, use Traffic Manager para controlar cómo fluye el tráfico a las aplicaciones que se ejecutan en cada clúster. En la figura 6-5 se muestra este escenario.
 
 ![AKS y Azure Traffic Manager](./media/aks-traffic-manager.png)
 
@@ -65,7 +65,7 @@ Para diseñar la redundancia, debe identificar las rutas críticas en la aplicac
 
 La nube prospera en el escalado. La capacidad de aumentar o disminuir los recursos del sistema para solucionar el aumento o la disminución de la carga del sistema es un principio clave de la nube de Azure. Sin embargo, para escalar eficazmente una aplicación, necesita comprender las características de escalado de cada servicio de Azure que se incluye en la aplicación.  Estas son algunas recomendaciones para implementar eficazmente el escalado en el sistema.
 
-- *Diseño para el escalado.* Una aplicación debe diseñarse para el escalado. Para empezar, los servicios no deben tener estado, por lo que las solicitudes se pueden enrutar a cualquier instancia. Tener servicios sin estado también significa que la adición o eliminación de una instancia no afecta negativamente a los usuarios actuales.
+- *Diseñe para el escalado.* Una aplicación debe diseñarse para el escalado. Para empezar, los servicios no deben tener estado, por lo que las solicitudes se pueden enrutar a cualquier instancia. Tener servicios sin estado también significa que la adición o eliminación de una instancia no afecta negativamente a los usuarios actuales.
 
 - *Cargas de trabajo de partición*. La descomposición de dominios en microservicios independientes y autónomos permite que cada servicio Escale de forma independiente a los demás. Normalmente, los servicios tendrán diferentes requisitos y necesidades de escalabilidad. La creación de particiones permite escalar solo lo que se debe escalar sin el costo innecesario de escalar una aplicación completa.
 
@@ -79,7 +79,7 @@ La nube prospera en el escalado. La capacidad de aumentar o disminuir los recurs
 
 - *Evite la afinidad.* Un procedimiento recomendado es asegurarse de que un nodo no requiera afinidad local, lo que a menudo se conoce como una *sesión permanente*. Una solicitud debe ser capaz de enrutar a cualquier instancia de. Si necesita conservar el estado, debe guardarse en una caché distribuida, como [Azure Redis cache](https://azure.microsoft.com/services/cache/).
 
-- *Aproveche las características de escalado automático de la plataforma.* Use las características de escalado automático integradas siempre que sea posible, en lugar de mecanismos personalizados o de terceros. Siempre que sea posible, use reglas de escalado programadas para asegurarse de que los recursos estén disponibles sin un retraso de inicio, pero agregue el escalado automático reactivo a las reglas según corresponda, para hacer frente a los cambios inesperados en la demanda. Para obtener más información, consulte [Guía de escalado automático](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling).
+- *Aproveche las características de escalado automático de la plataforma.* Use las características de escalado automático integradas siempre que sea posible, en lugar de mecanismos personalizados o de terceros. Siempre que sea posible, use reglas de escalado programadas para asegurarse de que los recursos estén disponibles sin un retraso de inicio, pero agregue el escalado automático reactivo a las reglas según corresponda, para hacer frente a los cambios inesperados en la demanda. Para más información, consulte [Guía de escalado automático](/azure/architecture/best-practices/auto-scaling).
 
 - *Escale horizontalmente de forma agresiva.* Una práctica final sería escalar horizontalmente de forma agresiva para que pueda satisfacer rápidamente picos inmediatos de tráfico sin perder su negocio. Y, a continuación, escale horizontalmente (es decir, quite las instancias innecesarias) para mantener el sistema estable. Una manera sencilla de implementar esto es establecer el período de enfriamiento, que es el tiempo de espera entre las operaciones de escalado, hasta cinco minutos para agregar recursos y hasta 15 minutos para quitar instancias.
 
@@ -93,7 +93,7 @@ Se recomienda el procedimiento recomendado para implementar operaciones de reint
 
 - *Azure Service Bus.* El cliente Service Bus expone una [clase RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que se puede configurar con un intervalo de interrupción, un recuento de reintentos y <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A> , que especifica el tiempo máximo que puede tardar una operación. La directiva predeterminada es nueve reintentos máximos con un período de interrupción de 30 segundos entre los intentos.
 
-- *Azure SQL Database.* Se proporciona compatibilidad con el reintento cuando se usa la biblioteca de [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) .
+- *Azure SQL Database.* Se proporciona compatibilidad con el reintento cuando se usa la biblioteca de [Entity Framework Core](/ef/core/miscellaneous/connection-resiliency) .
 
 - *Azure Storage.* La biblioteca de cliente de almacenamiento admite operaciones de reintento. Las estrategias varían en las tablas, los blobs y las colas de Azure Storage. Además, los reintentos alternativos cambian entre las ubicaciones de servicios de almacenamiento principales y secundarios cuando la característica de redundancia geográfica está habilitada.
 

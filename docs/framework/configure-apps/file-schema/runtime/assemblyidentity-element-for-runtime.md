@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-ms.openlocfilehash: b026dafbde796bbd8726de56b532ed6710ba2290
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f3e74b05ac0fd7c57963f2aad047ba3f2d63a10a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154314"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170186"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>Elemento \<assemblyIdentity> para \<runtime>
+
 Contiene información de identificación sobre el ensamblado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -56,6 +58,7 @@ culture="assembly culture"/>
 |`x86`|Un procesador x86 de 32 bits, ya sea nativo o en el entorno de Windows en Windows (WOW) en una plataforma de 64 bits.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -67,7 +70,8 @@ culture="assembly culture"/>
 |`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `<dependentAssembly>` elemento para cada ensamblado.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Cada **\<dependentAssembly>** elemento debe tener un **\<assemblyIdentity>** elemento secundario.  
   
  Si el `processorArchitecture` atributo está presente, el `<assemblyIdentity>` elemento solo se aplica al ensamblado con la arquitectura de procesador correspondiente. Si el `processorArchitecture` atributo no está presente, el `<assemblyIdentity>` elemento se puede aplicar a un ensamblado con cualquier arquitectura de procesador.  
@@ -102,6 +106,7 @@ culture="assembly culture"/>
  Si un archivo de configuración contiene un `<assemblyIdentity>` elemento sin `processorArchitecture` atributo y no contiene un elemento que coincida con la plataforma, se usa el elemento sin el `processorArchitecture` atributo.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo proporcionar información sobre un ensamblado.  
   
 ```xml  

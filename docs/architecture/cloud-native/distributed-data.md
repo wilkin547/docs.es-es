@@ -3,12 +3,12 @@ title: Datos distribuidos
 description: Compare el almacenamiento de datos en aplicaciones monolíticas y nativas en la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 28513f8691c06cf58ed14d57bf7830bb35d94852
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144401"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163939"
 ---
 # <a name="distributed-data"></a>Datos distribuidos
 
@@ -22,7 +22,7 @@ En la figura 5-1 se contrastan las diferencias.
 
 Los desarrolladores experimentados reconocerán fácilmente la arquitectura en el lado izquierdo de la figura 5-1. En esta *aplicación monolítica*, los componentes de servicio empresarial colocar juntos en un nivel de servicios compartidos, compartiendo datos de una única base de datos relacional.
 
-En muchos sentidos, una sola base de datos mantiene la administración de datos simple. La consulta de datos en varias tablas es sencilla. Cambios en la actualización de datos juntos o en todas las reversiones. [Las transacciones ACID](https://docs.microsoft.com/windows/desktop/cossdk/acid-properties) garantizan una coherencia fuerte y inmediata.
+En muchos sentidos, una sola base de datos mantiene la administración de datos simple. La consulta de datos en varias tablas es sencilla. Cambios en la actualización de datos juntos o en todas las reversiones. [Las transacciones ACID](/windows/desktop/cossdk/acid-properties) garantizan una coherencia fuerte y inmediata.
 
 Al diseñar para la nube nativa, adoptamos un enfoque diferente. En el lado derecho de la figura 5-1, observe cómo la funcionalidad empresarial se segrega en microservicios pequeños e independientes. Cada microservicio encapsula una funcionalidad empresarial específica y sus propios datos. La base de datos monolítica se descompone en un modelo de datos distribuido con muchas bases de datos más pequeñas, cada una de las cuales se alinea con un microservicio. Cuando el humo se borra, surge un diseño que expone una *base de datos por microservicio*.
 
@@ -68,11 +68,11 @@ Una opción que se describe en el capítulo 4 es una [llamada http directa](serv
 También se puede implementar un patrón de solicitud-respuesta con colas de entrada y salida independientes para cada servicio. Sin embargo, este patrón es complicado y requiere la fontanería para correlacionar los mensajes de solicitud y respuesta.
 Aunque Desacople las llamadas de microservicios de back-end, el servicio de llamada debe esperar de forma sincrónica a que se complete la llamada. La congestión de la red, los errores transitorios o un microservicio sobrecargado y pueden dar lugar a operaciones de ejecución prolongada e incluso con errores.
 
-En su lugar, un patrón ampliamente aceptado para quitar las dependencias entre servicios es el [patrón de vista materializada](https://docs.microsoft.com/azure/architecture/patterns/materialized-view), que se muestra en la figura 5-4.
+En su lugar, un patrón ampliamente aceptado para quitar las dependencias entre servicios es el [patrón de vista materializada](/azure/architecture/patterns/materialized-view), que se muestra en la figura 5-4.
 
 ![Patrón de vista materializada](./media/materialized-view-pattern.png)
 
-**Figura 5-4**. Materialized View Pattern
+**Figura 5-4**. Patrón de vista materializada
 
 Con este patrón, se coloca una tabla de datos local (conocida como *modelo de lectura*) en el servicio de cesta de la compra. Esta tabla contiene una copia desnormalizada de los datos necesarios de los microservicios de productos y precios. Copiar los datos directamente en el microservicio de la cesta de la compra elimina la necesidad de costosas llamadas entre servicios. Con los datos locales del servicio, mejora el tiempo de respuesta y la confiabilidad del servicio. Además, tener su propia copia de los datos hace que el servicio de la cesta de la compra sea más resistente. Si el servicio de catálogo debe dejar de estar disponible, no afectará directamente al servicio de cesta de la compra. La cesta de la compra puede seguir operando con los datos de su propio almacén.
 
@@ -92,7 +92,7 @@ En la ilustración anterior, cinco microservicios independientes participan en u
 
 En su lugar, debe construir esta transacción distribuida *mediante programación*.
 
-Un patrón popular para agregar compatibilidad transaccional distribuida es el patrón saga. Se implementa agrupando las transacciones locales mediante programación y invocando secuencialmente cada una de ellas. Si se produce un error en cualquiera de las transacciones locales, el saga anula la operación e invoca un conjunto de [transacciones de compensación](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction). Las transacciones de compensación deshacen los cambios realizados por las transacciones locales anteriores y restauran la coherencia de los datos. En la figura 5-6 se muestra una transacción con error con el patrón saga.
+Un patrón popular para agregar compatibilidad transaccional distribuida es el patrón saga. Se implementa agrupando las transacciones locales mediante programación y invocando secuencialmente cada una de ellas. Si se produce un error en cualquiera de las transacciones locales, el saga anula la operación e invoca un conjunto de [transacciones de compensación](/azure/architecture/patterns/compensating-transaction). Las transacciones de compensación deshacen los cambios realizados por las transacciones locales anteriores y restauran la coherencia de los datos. En la figura 5-6 se muestra una transacción con error con el patrón saga.
 
 ![Reversión en el patrón saga](./media/saga-rollback-operation.png)
 
@@ -108,7 +108,7 @@ Las aplicaciones nativas en la nube de gran tamaño suelen admitir los requisito
 
 ### <a name="cqrs"></a>CQRS
 
-[CQRS](https://docs.microsoft.com/azure/architecture/patterns/cqrs)es un patrón arquitectónico que puede ayudar a maximizar el rendimiento, la escalabilidad y la seguridad. El patrón separa las operaciones que leen datos de las operaciones que escriben datos.
+[CQRS](/azure/architecture/patterns/cqrs)es un patrón arquitectónico que puede ayudar a maximizar el rendimiento, la escalabilidad y la seguridad. El patrón separa las operaciones que leen datos de las operaciones que escriben datos.
 
 En los escenarios normales, se usan el mismo modelo de entidad y el mismo objeto de repositorio de datos para las operaciones *de lectura y* escritura.
 
@@ -124,11 +124,11 @@ En la ilustración anterior, se implementan los modelos de comando y consulta in
 
 Esta separación permite que las lecturas y escrituras se escalen de forma independiente. Las operaciones de lectura utilizan un esquema optimizado para las consultas, mientras que las escrituras usan un esquema optimizado para las actualizaciones. Las consultas de lectura incluyen datos desnormalizados, mientras que la lógica de negocios compleja se puede aplicar al modelo de escritura. También puede imponer una seguridad más estricta en las operaciones de escritura que las que exponen lecturas.
 
-La implementación de CQRS puede mejorar el rendimiento de las aplicaciones para los servicios nativos de la nube. Sin embargo, da como resultado un diseño más complejo. Aplique este principio con cuidado y de forma estratégica a las secciones de la aplicación nativa en la nube que se beneficiarán de ella. Para obtener más información sobre CQRS, vea el libro [de Microsoft microservicios de .net: arquitectura para aplicaciones .net en contenedor](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns).
+La implementación de CQRS puede mejorar el rendimiento de las aplicaciones para los servicios nativos de la nube. Sin embargo, da como resultado un diseño más complejo. Aplique este principio con cuidado y de forma estratégica a las secciones de la aplicación nativa en la nube que se beneficiarán de ella. Para obtener más información sobre CQRS, vea el libro [de Microsoft microservicios de .net: arquitectura para aplicaciones .net en contenedor](../microservices/microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md).
 
 ### <a name="event-sourcing"></a>Aprovisionamiento de eventos
 
-Otro enfoque para optimizar los escenarios de datos de gran volumen implica el [suministro de eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
+Otro enfoque para optimizar los escenarios de datos de gran volumen implica el [suministro de eventos](/azure/architecture/patterns/event-sourcing).
 
 Un sistema normalmente almacena el estado actual de una entidad de datos. Si un usuario cambia el número de teléfono, por ejemplo, el registro del cliente se actualiza con el nuevo número. Siempre sabemos el estado actual de una entidad de datos, pero cada actualización sobrescribe el estado anterior.
 

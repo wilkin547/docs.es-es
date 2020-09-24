@@ -6,14 +6,15 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: d1f45979dba5c3ab0dccc8d0a61a7abaa9913e11
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: cf3a81914d78e8f08c06602600ce5dcef4f4d35b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191650"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operaciones asincrónicas (Data Services de WCF)
+
 Las aplicaciones web deben tolerar una latencia superior entre cliente y servidor que las aplicaciones que se ejecutan en redes internas. Para optimizar el rendimiento y la experiencia del usuario de la aplicación, se recomienda usar los métodos asincrónicos de las <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> clases y al obtener acceso a los servidores de WCF Data Services a través de la Web.  
   
  Aunque los servidores de WCF Data Services procesan las solicitudes HTTP de forma asincrónica, algunos métodos de las bibliotecas de cliente de WCF Data Services son sincrónicos y esperan hasta que se complete el intercambio de solicitud-respuesta completo antes de continuar con la ejecución. Los métodos asincrónicos de las bibliotecas de cliente de WCF Data Services no esperan a que este intercambio finalice y puede permitir que la aplicación mantenga una interfaz de usuario con capacidad de respuesta mientras tanto.  
@@ -34,8 +35,9 @@ Las aplicaciones web deben tolerar una latencia superior entre cliente y servido
 |Guardar los cambios efectuados en los objetos en la instancia de <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Consideraciones sobre los subprocesos para las operaciones asincrónicas  
+
  En una aplicación multiproceso, el delegado que se registra como devolución de llamada para la operación asincrónica no se invoca necesariamente en el mismo subproceso que se usó para llamar al método *Begin* , que crea la solicitud inicial. En una aplicación donde se debe invocar la devolución de llamada en un subproceso concreto, debe serializar explícitamente la ejecución del método *End* , que controla la respuesta, en el subproceso deseado. Por ejemplo, en las aplicaciones basadas en Windows Presentation Foundation (WPF) y en las aplicaciones basadas en Silverlight, se deben calcular las referencias a la respuesta para el subproceso de interfaz de usuario mediante el método <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> en el objeto <xref:System.Windows.Threading.Dispatcher>. Para obtener más información, vea [consultar el servicio de datos (WCF Data Services/Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

@@ -3,12 +3,12 @@ title: Elasticsearch en aplicaciones nativas de la nube
 description: Obtenga información sobre cómo agregar funcionalidades de búsqueda elástica a aplicaciones nativas de la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: fa46f3387eecb3fccd63fdea10c11e92923ae862
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271807"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91155385"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Elasticsearch en una aplicación nativa en la nube
 
@@ -38,23 +38,23 @@ En este capítulo se describe detalladamente los datos de los sistemas nativos e
 
 ### <a name="references"></a>Referencias
 
-- [Patrón Command and Query Responsibility Segregation (CQRS).](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+- [Patrón Command and Query Responsibility Segregation (CQRS).](/azure/architecture/patterns/cqrs)
 
-- [Patrón Event Sourcing](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Patrón Event Sourcing](/azure/architecture/patterns/event-sourcing)
 
 - [¿Por qué no es tolerante a las particiones de RDBMS en CAP teorema y por qué está disponible?](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [Materialized View](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [Materialized View](/azure/architecture/patterns/materialized-view)
 
 - [Todo lo que realmente necesita saber sobre las bases de datos de código abierto](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
-- [Patrón de transacción de compensación](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Patrón de transacción de compensación](/azure/architecture/patterns/compensating-transaction)
 
 - [Patrón saga](https://microservices.io/patterns/data/saga.html)
 
 - [Patrones de saga | Cómo implementar transacciones comerciales con microservicios](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [Patrón de transacción de compensación](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+- [Patrón de transacción de compensación](/azure/architecture/patterns/compensating-transaction)
 
 - [Una vez que se encuentra en la sección 9: Cosmos DB niveles de coherencia explicados](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
 

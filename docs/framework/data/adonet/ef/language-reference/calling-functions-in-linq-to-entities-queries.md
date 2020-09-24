@@ -3,14 +3,15 @@ title: Llamar a funciones en consultas de LINQ to Entities
 description: Use estos artículos para ver cómo las clases EntityFunctions y SqlFunctions proporcionan acceso a las funciones canónicas y de base de datos como parte de la Entity Framework.
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: eb206e9b331da1ae442c1f310e78fec5c6b57e82
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8c771c93e0c3ed82f3ad550613dd855fd06b6f48
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546053"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177493"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Llamar a funciones en consultas de LINQ to Entities
+
 Los temas de esta sección describen cómo realizar llamadas a funciones en consultas de LINQ to Entities.  
   
  Las clases <xref:System.Data.Objects.EntityFunctions> y <xref:System.Data.Objects.SqlClient.SqlFunctions> proporcionan acceso a funciones canónicas y de base de datos como parte de Entity Framework. Para obtener más información, vea [Cómo: llamar a funciones canónicas](how-to-call-canonical-functions.md) y [Cómo: llamar a funciones de base de datos](how-to-call-database-functions.md).  
@@ -26,6 +27,7 @@ Los temas de esta sección describen cómo realizar llamadas a funciones en cons
  Para obtener más información, vea los temas de esta sección.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Procedimiento para llamar a funciones canónicas](how-to-call-canonical-functions.md)  
   
  [Procedimiento para llamar a funciones de base de datos](how-to-call-database-functions.md)  
@@ -36,7 +38,7 @@ Los temas de esta sección describen cómo realizar llamadas a funciones en cons
   
  [Procedimiento para llamar a funciones definidas por el modelo como métodos de objeto](how-to-call-model-defined-functions-as-object-methods.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)
 - [Funciones canónicas](canonical-functions.md)

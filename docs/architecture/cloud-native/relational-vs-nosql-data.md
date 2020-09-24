@@ -3,12 +3,12 @@ title: Soluciones relacionales y datos NoSQL
 description: Más información sobre los datos relacionales y NoSQL en aplicaciones nativas de la nube
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: cc47faa4fcd4468de9ddc468e488297db4289ff5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613790"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163640"
 ---
 # <a name="relational-vs-nosql-data"></a>Soluciones relacionales y datos NoSQL
 
@@ -53,7 +53,7 @@ Las bases de datos relacionales proporcionan normalmente coherencia y disponibil
 
 Muchos sistemas de bases de datos relacionales admiten características de replicación integradas en las que se pueden realizar copias de la base de datos principal en otras instancias de servidor secundario. Las operaciones de escritura se realizan en la instancia principal y se replican en cada una de las secundarias. Tras un error, la instancia principal puede conmutar por error a una secundaria para proporcionar alta disponibilidad. Las secundarias también se pueden usar para distribuir operaciones de lectura. Aunque las operaciones de escritura siempre pasan a la réplica principal, las operaciones de lectura se pueden enrutar a cualquiera de las secundarias para reducir la carga del sistema.
 
-Los datos también se pueden particionar horizontalmente en varios nodos, como con el [particionamiento](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction). Sin embargo, el particionamiento aumenta drásticamente la sobrecarga operativa al spittingr los datos en muchas partes que no se pueden comunicar fácilmente. La administración puede resultar costosa y lenta. Puede acabar afectando al rendimiento, las combinaciones de tablas y la integridad referencial.
+Los datos también se pueden particionar horizontalmente en varios nodos, como con el [particionamiento](/azure/sql-database/sql-database-elastic-scale-introduction). Sin embargo, el particionamiento aumenta drásticamente la sobrecarga operativa al spittingr los datos en muchas partes que no se pueden comunicar fácilmente. La administración puede resultar costosa y lenta. Puede acabar afectando al rendimiento, las combinaciones de tablas y la integridad referencial.
 
 Si las réplicas de datos han perdido la conectividad de red en un clúster de base de datos relacional "muy coherente", no podrá escribir en la base de datos. El sistema rechazaría la operación de escritura porque no puede replicar ese cambio en la otra réplica de datos. Cada réplica de datos tiene que actualizarse antes de que se pueda completar la transacción.
 
@@ -109,15 +109,15 @@ Puede aprovisionar una base de datos de Azure en minutos seleccionando la cantid
 
 ## <a name="azure-sql-database"></a>Azure SQL Database
 
-Los equipos de desarrollo con experiencia en Microsoft SQL Server deben considerar [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Es una base de datos relacional como servicio (DBaaS) totalmente administrada basada en el Motor de base de datos de Microsoft SQL Server. El servicio comparte muchas características que se encuentran en la versión local de SQL Server y ejecuta la versión estable más reciente del Motor de base de datos de SQL Server.
+Los equipos de desarrollo con experiencia en Microsoft SQL Server deben considerar [Azure SQL Database](/azure/sql-database/). Es una base de datos relacional como servicio (DBaaS) totalmente administrada basada en el Motor de base de datos de Microsoft SQL Server. El servicio comparte muchas características que se encuentran en la versión local de SQL Server y ejecuta la versión estable más reciente del Motor de base de datos de SQL Server.
 
 Para su uso con un microservicio nativo en la nube, Azure SQL Database está disponible con tres opciones de implementación:
 
-- Una Base de datos única representa una SQL Database totalmente administrada que se ejecuta en un [servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers) en la nube de Azure. La base de datos se considera [*incluida*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) ya que no tiene dependencias de configuración en el servidor de base de datos subyacente.
+- Una Base de datos única representa una SQL Database totalmente administrada que se ejecuta en un [servidor de Azure SQL Database](/azure/sql-database/sql-database-servers) en la nube de Azure. La base de datos se considera [*incluida*](/sql/relational-databases/databases/contained-databases) ya que no tiene dependencias de configuración en el servidor de base de datos subyacente.
   
-- Un [instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) es una instancia totalmente administrada de la Microsoft SQL Server motor de base de datos que proporciona compatibilidad de% casi 100 con un SQL Server local. Esta opción admite bases de datos mayores, hasta 35 TB y se coloca en una [Virtual Network de Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) para un mejor aislamiento.
+- Un [instancia administrada](/azure/sql-database/sql-database-managed-instance) es una instancia totalmente administrada de la Microsoft SQL Server motor de base de datos que proporciona compatibilidad de% casi 100 con un SQL Server local. Esta opción admite bases de datos mayores, hasta 35 TB y se coloca en una [Virtual Network de Azure](/azure/virtual-network/virtual-networks-overview) para un mejor aislamiento.
 
-- [Azure SQL Database sin servidor](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) es un nivel de proceso para una base de datos única que se escala automáticamente en función de la demanda de la carga de trabajo. Solo se factura por la cantidad de proceso utilizado por segundo. El servicio es adecuado para cargas de trabajo con patrones de uso intermitentes e imprevisibles, intercalados con períodos de inactividad. El nivel de proceso sin servidor también pone en pausa automáticamente las bases de datos durante períodos inactivos, de modo que solo se facturan los cargos de almacenamiento. Se reanuda automáticamente cuando se devuelve la actividad.
+- [Azure SQL Database sin servidor](/azure/sql-database/sql-database-serverless) es un nivel de proceso para una base de datos única que se escala automáticamente en función de la demanda de la carga de trabajo. Solo se factura por la cantidad de proceso utilizado por segundo. El servicio es adecuado para cargas de trabajo con patrones de uso intermitentes e imprevisibles, intercalados con períodos de inactividad. El nivel de proceso sin servidor también pone en pausa automáticamente las bases de datos durante períodos inactivos, de modo que solo se facturan los cargos de almacenamiento. Se reanuda automáticamente cuando se devuelve la actividad.
 
 Además de la pila de Microsoft SQL Server tradicional, Azure también incluye versiones administradas de tres bases de datos de código abierto conocidas.
 
@@ -151,7 +151,7 @@ MariaDB tiene una comunidad sólida y la usan muchas grandes empresas. Aunque Or
 
 Azure Database for PostgreSQL está disponible con dos opciones de implementación:
 
-- La opción de implementación de [servidor único](https://docs.microsoft.com/azure/postgresql/concepts-servers) es un punto administrativo central para varias bases de datos en las que se pueden implementar muchas bases de datos. Los precios se estructuran por servidor en función de los núcleos y el almacenamiento.
+- La opción de implementación de [servidor único](/azure/postgresql/concepts-servers) es un punto administrativo central para varias bases de datos en las que se pueden implementar muchas bases de datos. Los precios se estructuran por servidor en función de los núcleos y el almacenamiento.
 
 - La [opción de hiperescala (citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) está basada en la tecnología de datos citus. Permite un alto rendimiento al *escalar horizontalmente* una base de datos única en cientos de nodos para ofrecer un rendimiento y escalado rápidos. Esta opción permite al motor ajustar más datos en memoria, paralelizar las consultas en cientos de nodos y indexar los datos más rápidamente.
 
@@ -175,7 +175,7 @@ Puede distribuir las bases de datos de Cosmos entre regiones o en todo el mundo,
 
 Cosmos DB admite la agrupación en clústeres [activo/activo](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/) en el nivel global, lo que permite configurar cualquiera de las regiones de la base de datos para admitir *escrituras y lecturas*.
 
-El protocolo de [varios maestros](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits) es una característica importante de Cosmos dB que habilita la siguiente funcionalidad:
+El protocolo de [varios maestros](/azure/cosmos-db/multi-master-benefits) es una característica importante de Cosmos dB que habilita la siguiente funcionalidad:
 
 - Escalabilidad de escritura y lectura elásticas ilimitada.
 
@@ -183,7 +183,7 @@ El protocolo de [varios maestros](https://docs.microsoft.com/azure/cosmos-db/mul
 
 - Garantía de lecturas y escrituras atendidas en menos de 10 milisegundos en el percentil 99.
 
-Con el Cosmos DB [API](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)de hospedaje múltiple, el microservicio es consciente automáticamente de la región de Azure más cercana y envía solicitudes a él. La región más cercana se identifica mediante Cosmos DB sin ningún cambio de configuración. En caso de que una región deje de estar disponible, la característica de alojamiento múltiple enrutará automáticamente las solicitudes a la siguiente región disponible más cercana.
+Con el Cosmos DB [API](/azure/cosmos-db/distribute-data-globally)de hospedaje múltiple, el microservicio es consciente automáticamente de la región de Azure más cercana y envía solicitudes a él. La región más cercana se identifica mediante Cosmos DB sin ningún cambio de configuración. En caso de que una región deje de estar disponible, la característica de alojamiento múltiple enrutará automáticamente las solicitudes a la siguiente región disponible más cercana.
 
 ### <a name="multi-model-support"></a>Compatibilidad con varios modelos
 
@@ -196,17 +196,17 @@ Al volver a platformar aplicaciones monolíticas en una arquitectura nativa en l
 | API de Gremlin | Admite Gremlin API con nodos basados en gráficos y representaciones de datos perimetrales |
 | Cassandra API | Admite la API de Casandra para representaciones de datos de columnas anchas |  
 | Table API  | Admite Azure Table Storage con mejoras Premium |  
-| API de etcd | Habilita Cosmos DB como una memoria auxiliar para los clústeres de Azure Kubernetes Service |
+| etcd API | Habilita Cosmos DB como una memoria auxiliar para los clústeres de Azure Kubernetes Service |
 
 Los equipos de desarrollo pueden migrar las bases de datos existentes de Mongo, Gremlin o Cassandra a Cosmos DB con cambios mínimos en los datos o en el código. En el caso de las nuevas aplicaciones, los equipos de desarrollo pueden elegir entre las opciones de código abierto o el modelo integrado de la API de SQL.
 
 > Internamente, Cosmos almacena los datos en un formato de estructura simple formado por tipos de datos primitivos. Para cada solicitud, el motor de base de datos traduce los datos primitivos en la representación del modelo que ha seleccionado.
 
-En la tabla anterior, tenga en cuenta la opción [TABLE API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) . Esta API es una evolución de Azure Table Storage. Ambos comparten el mismo modelo de tabla subyacente, pero el Cosmos DB Table API agrega mejoras Premium que no están disponibles en la API de Azure Storage. En la tabla siguiente se contrastan las características.
+En la tabla anterior, tenga en cuenta la opción [TABLE API](/azure/cosmos-db/table-introduction) . Esta API es una evolución de Azure Table Storage. Ambos comparten el mismo modelo de tabla subyacente, pero el Cosmos DB Table API agrega mejoras Premium que no están disponibles en la API de Azure Storage. En la tabla siguiente se contrastan las características.
 
 |  | Azure Table Storage  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
-| Latencia | Rápido | Latencia de milisegundos de un solo dígito para lecturas y escrituras en cualquier parte del mundo |
+| Latencia | Fast (rápido) | Latencia de milisegundos de un solo dígito para lecturas y escrituras en cualquier parte del mundo |
 | Throughput | Límite de 20.000 operaciones por tabla | 10 millones operaciones por tabla |
 | Distribución global | Una sola región con una región de lectura secundaria única opcional | Distribuciones llave en mano a todas las regiones con conmutación automática por error |
 | Indización | Solo disponible para las propiedades de clave de fila y partición | Indexación automática de todas las propiedades |
@@ -214,13 +214,13 @@ En la tabla anterior, tenga en cuenta la opción [TABLE API](https://docs.micros
 
 Los microservicios que usan Azure Table Storage pueden migrar fácilmente a la Table API de Cosmos DB. No se requiere ningún cambio de código.
 
-### <a name="tunable-consistency"></a>Coherencia ajustable
+### <a name="tunable-consistency"></a>Coherencia optimizable
 
 Anteriormente en la sección *relacional frente a NoSQL* , analizamos el asunto de la coherencia de los *datos*. La coherencia de los datos hace referencia a la *integridad* de los datos. Los servicios nativos de la nube con datos distribuidos se basan en la replicación y deben hacer un equilibrio fundamental entre la coherencia de lectura, la disponibilidad y la latencia.
 
 La mayoría de las bases de datos distribuidas permiten a los desarrolladores elegir entre dos modelos de coherencia: coherencia fuerte y coherencia final. La *coherencia fuerte* es el estándar Gold de programación de datos. Garantiza que una consulta siempre devolverá los datos más actuales, incluso si el sistema debe incurrir en latencia de espera para que una actualización se replique en todas las copias de la base de datos. Aunque una base de datos configurada para la *coherencia final* devolverá los datos inmediatamente, incluso si no son la copia más reciente. La última opción permite una mayor disponibilidad, mayor escala y mayor rendimiento.
 
-Azure Cosmos DB ofrece cinco [modelos de coherencia](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) bien definidos que se muestran en la figura 5-13.
+Azure Cosmos DB ofrece cinco [modelos de coherencia](/azure/cosmos-db/consistency-levels) bien definidos que se muestran en la figura 5-13.
 
 ![Gráfico de coherencia Cosmos DB](./media/cosmos-consistency-level-graph.png)
 
@@ -233,14 +233,14 @@ Azure Cosmos DB ofrece cinco [modelos de coherencia](https://docs.microsoft.com/
 | Ocasional | No hay garantía de ordenación para las lecturas. Finalmente, las réplicas convergerán. |
 | Prefijo constante | Las lecturas siguen siendo eventuales, pero los datos se devuelven en el orden en que se escriben. |
 | Sesión | Garantiza que se pueden leer los datos escritos durante la sesión actual. Es el nivel de coherencia predeterminado. |
-| De obsolescencia entrelazada | Lee las escrituras finales por el intervalo que especifique. |  
+| De obsolescencia limitada | Lee las escrituras finales por el intervalo que especifique. |  
 | Alta  | Se garantiza que las lecturas devuelven la última versión confirmada de un elemento. Un cliente nunca ve una lectura parcial o no confirmada. |  
 
 En el artículo que se [encuentra detrás de la bola: Cosmos dB se han explicado los niveles de coherencia](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), el administrador de programas de Microsoft Jeremy Likness proporciona una excelente explicación de los cinco modelos.
 
 ### <a name="partitioning"></a>Creación de particiones
 
-Azure Cosmos DB adopta la creación automática de [particiones](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) para escalar una base de datos con el fin de satisfacer las necesidades de rendimiento de los servicios nativos de la nube.
+Azure Cosmos DB adopta la creación automática de [particiones](/azure/cosmos-db/partitioning-overview) para escalar una base de datos con el fin de satisfacer las necesidades de rendimiento de los servicios nativos de la nube.
 
 Los datos de Cosmos DB se administran mediante la creación de bases de datos, contenedores y elementos.
 
@@ -254,9 +254,9 @@ Para particionar el contenedor, los elementos se dividen en subconjuntos distint
 
 Observe en la ilustración anterior cómo cada elemento incluye una clave de partición de ' City ' o ' aeropuerto '. La clave determina la partición lógica del elemento. Los elementos con un código de ciudad se asignan al contenedor de la izquierda, y los elementos con un código de aeropuerto, al contenedor de la derecha. Al combinar el valor de la clave de partición con el valor de ID se crea el índice de un elemento, que identifica de forma única el elemento.
 
-Internamente, Cosmos DB administra automáticamente la ubicación de las [particiones lógicas](https://docs.microsoft.com/azure/cosmos-db/partition-data) en las particiones físicas para satisfacer las necesidades de escalabilidad y rendimiento del contenedor. A medida que aumentan el rendimiento de la aplicación y los requisitos de almacenamiento, Azure Cosmos DB redistribuye las particiones lógicas en un número mayor de servidores. Las operaciones de redistribución se administran mediante Cosmos DB y se invocan sin interrupción ni tiempo de inactividad.
+Internamente, Cosmos DB administra automáticamente la ubicación de las [particiones lógicas](/azure/cosmos-db/partition-data) en las particiones físicas para satisfacer las necesidades de escalabilidad y rendimiento del contenedor. A medida que aumentan el rendimiento de la aplicación y los requisitos de almacenamiento, Azure Cosmos DB redistribuye las particiones lógicas en un número mayor de servidores. Las operaciones de redistribución se administran mediante Cosmos DB y se invocan sin interrupción ni tiempo de inactividad.
 
-## <a name="newsql-databases"></a>Bases de datos de NewSQL
+## <a name="newsql-databases"></a>Bases de datos NewSQL
 
 *NewSQL*   es una tecnología de base de datos emergente que combina la escalabilidad distribuida de NoSQL con las garantías ACID de una base de datos relacional. Las bases de datos de NewSQL son importantes para los sistemas empresariales que deben procesar grandes volúmenes de datos, en entornos distribuidos, con compatibilidad total transaccional y cumplimiento de ACID. Aunque una base de datos NoSQL puede proporcionar una escalabilidad masiva, no garantiza la coherencia de los datos. Los problemas intermitentes de los datos incoherentes pueden suponer una carga en el equipo de desarrollo. Los desarrolladores deben crear medidas de seguridad en su código de microservicio para administrar los problemas causados por datos incoherentes.
 

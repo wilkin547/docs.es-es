@@ -2,14 +2,15 @@
 title: <endpoint> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: fb9d3bf9b5f1a742abcc70d78af026c179ec4c4d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: befebc090900576b1e0f7ca679e1f5f5cd15af9a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855381"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183811"
 ---
 # <a name="endpoint-element"></a>Elemento \<endpoint>
+
 Especifica enlace, contrato y propiedades de dirección para un extremo de servicio, que se utiliza para exponer los servicios.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,7 +54,7 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 |contrato|Una cadena que indica qué contrato está exponiendo este punto de conexión. El ensamblado debe implementar el tipo de contrato. Si una implementación de servicio implementa un tipo de contrato único, entonces se puede omitir esta propiedad. El valor predeterminado es una cadena vacía.|  
 |endpointConfiguration|Cadena que especifica el nombre del punto de conexión estándar establecido por el atributo `kind`, que hace referencia a la información de configuración adicional de este punto de conexión estándar. El mismo nombre se debe definir en la sección `<standardEndpoints>`.|  
 |isSystemEndpoint|Valor booleano que especifica si un punto de conexión es un punto de conexión de la infraestructura.|  
-|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la `<extensions>` sección o en Machine. config. Si no se especifica nada, se crea un punto de conexión de servicio común.|  
+|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un punto de conexión de servicio común.|  
 |listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explicit<br />-Único<br /><br /> El valor predeterminado es Explicito.|  
 |listenUri|Una cadena que especifica el URI en el que el extremo de servicio realiza escuchas. El valor predeterminado es una cadena vacía.|  
 |name|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
@@ -71,6 +73,7 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 |[\<service>](service.md)|Una sección de configuración que define una lista de puntos de conexión a los que un cliente puede conectarse.|  
   
 ## <a name="example"></a>Ejemplo  
+
  Éste es un ejemplo de una configuración del punto de conexión de servicio.  
   
 ```xml  
