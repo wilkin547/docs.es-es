@@ -2,14 +2,15 @@
 title: <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
-ms.openlocfilehash: 23fe19258e09e9e8a5e05a94ccef0e40ee1cb5fd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7ddb292b8f0ffe38133c7f142be751a87d2be11c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400335"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150913"
 ---
 # \<knownCertificates>
+
 Representa una colección de certificados X.509 que se proporcionan para autenticar las credenciales de seguridad emitidas desde un Servicio de token de seguridad (STS).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,9 +34,11 @@ Representa una colección de certificados X.509 que se proporcionan para autenti
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -51,6 +54,7 @@ Representa una colección de certificados X.509 que se proporcionan para autenti
 |[\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md)|Especifica un token emitido como una credencial del servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El escenario del token emitido tiene tres etapas. En la primera fase, un cliente que intenta tener acceso a un servicio se conoce como *servicio de token seguro*. El servicio de token seguro autentica, a continuación, al cliente y como consecuencia el cliente emite un token, normalmente un token del lenguaje de marcado de aserción de seguridad (SAML). El cliente vuelve a continuación al servicio con el token. El servicio examina el token para los datos que permite al servicio autenticar el token y, por consiguiente, al cliente. Para autenticar el token, el servicio debe conocer el certificado que usa el servicio de token seguro.  
   
  El [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) elemento es el repositorio para cualquier certificado de servicio de token seguro. Para agregar certificados, utilice el [ \<knownCertificates> elemento](knowncertificates.md). Inserte un [\<add>](add-of-knowncertificates.md) para cada certificado, tal como se muestra en el ejemplo siguiente.  
@@ -72,7 +76,7 @@ Representa una colección de certificados X.509 que se proporcionan para autenti
   
  Para obtener un ejemplo en el que se muestra cómo rellenar la colección en la configuración, vea [\<add>](add-of-knowncertificates.md) .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>

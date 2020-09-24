@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 84eb88695580598d41615653723c137d3f766a47
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569065"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150614"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Cómo: Ejecutar consultas asincrónicas de Data Services (Data Services de WCF)
+
 Mediante el uso de la biblioteca de cliente de WCF Data Services, puede realizar de forma asincrónica operaciones cliente-servidor, como ejecutar consultas y guardar cambios. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ Mediante el uso de la biblioteca de cliente de WCF Data Services, puede realizar
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra cómo ejecutar una consulta asincrónica llamando al método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> para iniciar la consulta. El delegado alineado llama al método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para mostrar los resultados de la consulta.  
   
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
@@ -31,4 +33,4 @@ Mediante el uso de la biblioteca de cliente de WCF Data Services, puede realizar
   
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+- [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)

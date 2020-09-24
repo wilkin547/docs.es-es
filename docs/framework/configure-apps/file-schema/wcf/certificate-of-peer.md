@@ -2,14 +2,15 @@
 title: <certificate> de <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: ed24e9061f57798197ad41c1f556ce612a357e9e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8ec839df02af4a01d31192eebc96e4c5e58313e9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151121"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> de \<peer>
+
 Especifica un certificado usado por un igual.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica un certificado usado por un igual.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica un certificado usado por un igual.
 |`X509FindType`|Define el tipo de búsqueda de X.509 que se va a ejecutar. Los valores válidos incluyen los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del `X509FindType` especificado.<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,6 +55,7 @@ Especifica un certificado usado por un igual.
 |[\<peer>](peer-of-servicecredentials.md)|Especifica las credenciales actuales de un nodo del mismo nivel.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este elemento de configuración contiene una instancia de `X509Certificate2` que se usa al autenticar a los vecinos en la malla del mismo nivel.  
   
  Para obtener más información sobre la programación punto a punto, vea [redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md).  

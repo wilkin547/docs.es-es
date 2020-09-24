@@ -5,12 +5,12 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 45052d99bb297ac39d058fa405fe57a7c991f738
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117638"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151355"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> (elemento)
 
@@ -34,16 +34,17 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|**activó**|Especifica si está deshabilitada la espera de girar para las secciones críticas cuando están configuradas.|  
+|**enabled**|Especifica si está deshabilitada la espera de girar para las secciones críticas cuando están configuradas.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Deshabilitar el giro en espera cuando no se puede adquirir una sección crítica.|  
 |0|No deshabilite la espera de giro cuando no se pueda adquirir una sección crítica. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -65,7 +66,7 @@ En el ejemplo siguiente se deshabilita la espera de giro en las secciones críti
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

@@ -2,14 +2,15 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: c6f5db96ded422493b819d4d75dda6abc9a1676e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6b1fd8e916aef2425377c45a0c85e37773f3ca28
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558867"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150900"
 ---
 # \<resolver>
+
 Especifica una resolución del mismo nivel que se utiliza para resolver un id. de malla del mismo nivel como un conjunto de direcciones del nodo del mismo nivel que representa varios nodos que participan en la malla.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -50,6 +52,7 @@ Especifica una resolución del mismo nivel que se utiliza para resolver un id. d
 |[\<binding>](bindings.md)|Define todas las funciones de enlace de [\<netPeerTcpBinding>](netpeertcpbinding.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Una resolución de nombres del mismo nivel es un servicio de descubrimiento utilizado por los canales del mismo nivel para buscar nodos del mismo nivel que participen en una malla del mismo nivel. También se utiliza para "registrar" un nodo con una malla del mismo nivel, el mecanismo por el que se conoce el nodo del mismo nivel y está disponible en la malla del mismo nivel. Para obtener más información sobre las resoluciones del mismo nivel, consulte [solucionadores del mismo nivel](../../../wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Vea también

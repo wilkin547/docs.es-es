@@ -2,14 +2,15 @@
 title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9bef44ed39ee892080342058206f779b38fb460d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850310"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151160"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> de \<transportConfigurationType>
+
 Este elemento es una par clave-valor, que identifica el tipo de un transporte determinado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Este elemento es una par clave-valor, que identifica el tipo de un transporte de
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Este elemento es una par clave-valor, que identifica el tipo de un transporte de
 |transportConfigurationType|Una cadena que contiene el tipo que implementa el transporte concreto.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -59,7 +62,7 @@ Este elemento es una par clave-valor, que identifica el tipo de un transporte de
 </serviceHostingEnvironment>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>

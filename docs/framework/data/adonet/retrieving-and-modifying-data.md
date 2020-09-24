@@ -3,17 +3,19 @@ title: Recuperar y modificar datos
 description: En el .NET Framework, los proveedores de datos de ADO.NET sirven como puente entre una aplicación y un origen de datos para leer y actualizar datos.
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: f916324dc829526a5e6b0078021b09786755f666
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7620843e77b25606b2dec2bf6eae3a4f40d1b9fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286616"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150679"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Recuperar y modificar datos en ADO.NET
+
 La principal función de cualquier aplicación de base de datos es conectarse a un origen de datos y recuperar los datos que contiene. Los .NET Framework proveedores de datos de ADO.NET sirven como puente entre una aplicación y un origen de datos, lo que le permite ejecutar comandos, así como recuperar datos mediante un **DataReader** o un **DataAdapter**. Una función clave de cualquier aplicación de base de datos es la capacidad de actualizar los datos almacenados en la misma. En ADO.NET, la actualización de datos implica el uso de los objetos de comandos **DataAdapter** y <xref:System.Data.DataSet> , y, y también puede implicar el uso de transacciones. **Command**  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Conectarse a un origen de datos](connecting-to-a-data-source.md)  
  Describe cómo se establece una conexión con un origen de datos y cómo trabajar con eventos de conexión.  
   
@@ -59,7 +61,7 @@ La principal función de cualquier aplicación de base de datos es conectarse a 
  [Compatibilidad de transmisión de datos de SqlClient](sqlclient-streaming-support.md)  
  Describe cómo escribir aplicaciones que transmiten datos de SQL Server sin que se carguen por completo en la memoria.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Asignaciones de tipos de datos en ADO.NET](data-type-mappings-in-ado-net.md)
 - [Objetos DataSet, DataTable y DataView](./dataset-datatable-dataview/index.md)

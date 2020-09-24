@@ -1,15 +1,16 @@
 ---
-title: <cancelRequestedQueries>de WCF
+title: <cancelRequestedQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 63cfc835ac7ce88bde56fd9243a2cf6652cbce6e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 205399330c1aa69b332c2149ee32d9b6098ccdbe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850098"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151173"
 ---
-# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries>de WCF
+# <a name="cancelrequestedqueries-of-wcf"></a>\<cancelRequestedQueries> de WCF
+
 Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria. La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.  
   
 Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -59,7 +60,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId>.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery>
 - [Seguimiento y traza del flujo de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)

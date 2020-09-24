@@ -1,15 +1,16 @@
 ---
-title: <certificate>del <clientCertificate> elemento
+title: <certificate> del <clientCertificate> elemento
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: d0c4ef9d3657d2dfa787feb3576beda09d1997a3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35ea3814e208921abaf44e6ef431c4e1b44cde60
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151146"
 ---
-# <a name="certificate-of-clientcertificate-element"></a>\<certificate>del \<clientCertificate> elemento
+# <a name="certificate-of-clientcertificate-element"></a>\<certificate> del \<clientCertificate> elemento
+
 Especifica un certificado X.509 usado para firmar y cifrar mensajes.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica un certificado X.509 usado para firmar y cifrar mensajes.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica un certificado X.509 usado para firmar y cifrar mensajes.
 |`X509FindType`|Define el tipo de búsqueda de X.509 que se va a ejecutar. Los valores válidos incluyen los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del X509FindType especificado.<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,9 +55,11 @@ Especifica un certificado X.509 usado para firmar y cifrar mensajes.
 |[\<clientCertificate>](clientcertificate-of-servicecredentials.md)||  
   
 ## <a name="remarks"></a>Observaciones  
+
  El elemento `<certificate>` se usa cuando el servicio debe tener el certificado del cliente por anticipado para comunicarse de manera segura con el cliente. Esto se produce al utilizar el patrón de comunicación dúplex. En el patrón de solicitud/respuesta más típico, el cliente incluye su certificado en la solicitud, que utiliza el servicio para cifrar i firmar su respuesta de vuelta hasta el cliente. Sin embargo, en el patrón de comunicación dúplex, el servicio no tiene una solicitud del cliente y por consiguiente necesita que el certificado del cliente proteja de antemano el mensaje al cliente. Por tanto, debe obtener el certificado del cliente en una negociación fuera de banda y especificar el certificado usando este elemento. Para obtener más información sobre los servicios dúplex, consulte [Cómo: crear un contrato dúplex](../../../wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente especifica cómo buscar un certificado X.509 adecuado y un tipo de validación personalizado en el elemento `<authentication>`.  
   
 ```xml  
@@ -75,7 +80,7 @@ Especifica un certificado X.509 usado para firmar y cifrar mensajes.
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>

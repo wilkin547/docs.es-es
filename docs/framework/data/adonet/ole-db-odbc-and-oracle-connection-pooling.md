@@ -2,12 +2,12 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: c19f341d869ee983531fa5c90c0d7c94978dadb1
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ff3cbd89482645ff8d52e3144f1a82fd05d8013
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535376"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150692"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 
@@ -26,19 +26,23 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Para obtener más información sobre OLE DB la agrupación de sesiones o de recursos, y cómo deshabilitar la agrupación invalidando los valores predeterminados del servicio de proveedor de OLE DB, consulte la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
 ## <a name="odbc"></a>ODBC
+
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.
 
  Para habilitar o deshabilitar la agrupación de conexiones, abra el **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del panel de control. La pestaña **agrupación de conexiones** permite especificar parámetros de agrupación de conexiones para cada controlador ODBC instalado. Los cambios en la agrupación de conexiones para un controlador ODBC específico afectan a todas las aplicaciones que utilizan ese controlador ODBC.
 
 ## <a name="oracleclient"></a>OracleClient
+
  El proveedor de datos .NET Framework para Oracle ofrece agrupación automática de conexiones para la aplicación cliente de ADO.NET. También puede suministrar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones (vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión", más adelante en este tema).
 
 ### <a name="create-and-assign-pools"></a>Crear y asignar grupos
+
  Cuando se abre una conexión, se crea un grupo de conexión basado en un algoritmo de coincidencia exacta que asocia el grupo con la cadena de conexión de la conexión. Cada grupo de conexión se asocia con una cadena de conexión distinta. Si se abre una nueva conexión y la cadena de conexión no coincide exactamente con un grupo existente, se crea un nuevo grupo.
 
  Una vez creados, los grupos de conexión no se destruyen hasta que finaliza el proceso activo. Mantener grupos inactivos o vacíos consume muy pocos recursos del sistema.
 
 ### <a name="connection-addition"></a>Adición de conexiones
+
  Para cada cadena de conexión única se crea un grupo de conexión. Cuando se crea un grupo, se crean y agregan al grupo varios objetos de conexión y se satisface así el requisito de tamaño mínimo del grupo. Las conexiones se agregan al grupo cuando es necesario, hasta el tamaño máximo del grupo.
 
  Cuando se solicita un objeto <xref:System.Data.OracleClient.OracleConnection>, se obtiene del grupo si se encuentra disponible una conexión que se pueda utilizar. Una conexión de este tipo debe estar sin utilizar en ese momento, tener un contexto de transacción coincidente o no estar asociada con ningún contexto de transacción, y tener un vínculo válido al servidor.
@@ -46,6 +50,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  Si se ha alcanzado el tamaño máximo del grupo y no hay disponible ninguna conexión que se pueda utilizar, la solicitud se pone en la cola. El concentrador de conexión satisface estas solicitudes al reasignar las conexiones conforme se liberan de nuevo en el grupo, lo cual ocurre y se liberan de nuevo en el grupo cuando se cierran o eliminan.
 
 ### <a name="connection-removal"></a>Eliminación de conexiones
+
  El agrupador de conexiones quita una conexión del grupo después de que haya estado inactiva durante un período de tiempo prolongado o si el concentrador detecta que se ha roto la conexión con el servidor. Esto solo se puede detectar después de intentar comunicarse con el servidor. Si se encuentra que una conexión ya no está conectada al servidor, se marca como no válida. El concentrador de conexión analiza periódicamente los grupos en busca de objetos que se han liberado en el grupo y marcado como no válidos. Luego, estas conexiones se quitan de forma permanente.
 
  Si existe una conexión a un servidor que ha desaparecido, se puede extraer del grupo si el concentrador de conexión no ha detectado la conexión rota y la ha marcado como no válida. Cuando esto se produce, se genera una excepción. No obstante, aun así deberá cerrar la conexión para liberarla de nuevo en el grupo.
@@ -53,11 +58,13 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).
 
 ### <a name="transaction-support"></a>Compatibilidad con transacciones
+
  Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. Es necesario que el subproceso solicitante y la conexión asignada coincidan. Por lo tanto, cada grupo de conexiones se subdivide en conexiones sin contexto de transacción asociado y en *N* subdivisiones, cada una de las cuales contiene conexiones con un contexto de transacción determinado.
 
  Cuando se cierra una conexión, se libera de nuevo en el grupo y en la subdivisión adecuada en función de su contexto de transacción. Por lo tanto, puede cerrar la conexión sin generar un error, incluso aunque aún haya pendiente una transacción distribuida. Esto le permite confirmar o anular la transacción distribuida más adelante.
 
 ### <a name="control-connection-pooling-with-connection-string-keywords"></a>Controlar la agrupación de conexiones con palabras clave de cadena de conexión
+
  La propiedad <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> del objeto <xref:System.Data.OracleClient.OracleConnection> admite pares clave-valor de cadena de conexión que se pueden utilizar para ajustar el comportamiento de la lógica de agrupación de conexiones.
 
  En la siguiente tabla se describen los valores <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> que puede utilizar para ajustar el comportamiento de agrupación de conexiones.

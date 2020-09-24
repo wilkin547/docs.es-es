@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: a6f268f72f8b8a09ae48ba3cad6254323cb95a20
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9ce29bc1321814bd60cfaacd222fc55a3fbf12ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286707"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150731"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Obtener un valor único de una base de datos
+
 En ocasiones se debe devolver información de bases de datos consistente en un único valor, en lugar de una tabla o un flujo de datos. Por ejemplo, puede que desee devolver el resultado de una función de agregado como COUNT ( \* ), SUM (Price) o AVG (quantity). El objeto **Command** proporciona la capacidad de devolver valores únicos mediante el método **ExecuteScalar** . El método **ExecuteScalar** devuelve, como un valor escalar, el valor de la primera columna de la primera fila del conjunto de resultados.  
   
  El ejemplo de código siguiente inserta un valor nuevo en la base de datos utilizando <xref:System.Data.SqlClient.SqlCommand>. El método <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A> se utiliza para devolver el valor de columna de identidad para el registro insertado.  
@@ -21,7 +22,7 @@ En ocasiones se debe devolver información de bases de datos consistente en un �
  [!code-csharp[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/CS/source.cs#1)]
  [!code-vb[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Comandos y parámetros](commands-and-parameters.md)
 - [Ejecutar un comando](executing-a-command.md)

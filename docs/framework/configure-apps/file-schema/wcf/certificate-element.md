@@ -2,14 +2,15 @@
 title: <certificate> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8cc0404a5896dd23cffce6f1f77b91a2f01f23d2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554376"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151095"
 ---
 # <a name="certificate-element"></a>\<certificate> (Elemento)
+
 Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensajes para los clientes punto a punto.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 |`X509FindType`|Define el tipo de búsqueda de X.509 que se va a ejecutar. Los valores válidos incluyen los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> El tipo contenido en el atributo `findValue` debe satisfacer los requisitos del `X509FindType` especificado.<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,11 +55,13 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 |[\<peer>](peer-of-clientcredentials-element.md)|Especifica las credenciales usadas al autenticar clientes punto a punto.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este elemento de configuración contiene una instancia de X509Certificate2 que se usa al autenticar a los vecinos en la malla del mismo nivel.  
   
  Para obtener más información sobre la programación punto a punto, vea [redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente especifica cómo buscar el certificado usado en un escenario punto a punto.  
   
 ```xml  
