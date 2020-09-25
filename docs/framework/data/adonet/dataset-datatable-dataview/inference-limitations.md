@@ -2,14 +2,15 @@
 title: Limitaciones de inferencia
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: 10347abc5b01edb4ec6fbf97221d44f4bfb88f54
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d8191be137661200e1a6b84d68328c1202880ca
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784582"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172780"
 ---
 # <a name="inference-limitations"></a>Limitaciones de inferencia
+
 El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de XML puede dar como resultado esquemas diferentes, dependiendo de los elementos XML contenidos en cada documento. Por ejemplo, considere los siguientes documentos XML.  
   
  Document1:  
@@ -31,9 +32,9 @@ El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de
   
  Para "Documento1", el proceso de inferencia produce un **DataSet** denominado "DocumentElement" y una tabla denominada "Element1", ya que "Element1" es un elemento que se repite.  
   
- **Authors1** DocumentElement  
+ **Conjunto** de los: DocumentElement  
   
- **Tabla:** Element1  
+ **Tabla:** Elemento1  
   
 |Element1_Text|  
 |--------------------|  
@@ -42,7 +43,7 @@ El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de
   
  Sin embargo, para "Document2", el proceso de inferencia produce un **DataSet** denominado "NewDataSet" y una tabla denominada "DocumentElement". "Element1" se deduce como una columna porque no tiene atributos ni elementos secundarios.  
   
- **Authors1** NewDataSet  
+ **Conjunto** de los: NewDataSet  
   
  **Tabla:** DocumentElement  
   
@@ -54,11 +55,11 @@ El proceso de inferencia de un esquema de <xref:System.Data.DataSet> a partir de
   
  Para evitar las discrepancias que pueden producirse al generar el esquema a partir de un documento XML, se recomienda especificar explícitamente un esquema mediante el lenguaje de definición de esquemas XML (XSD) o el reducido de datos XML (XDR) al cargar un **DataSet** desde XML. Para obtener más información sobre cómo especificar explícitamente un esquema de **conjunto** de datos con un esquema XML, vea [derivar una estructura relacional de conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
-- [Carga de un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
-- [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
+- [Inferir una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
+- [Cargar un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
+- [Cargar información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

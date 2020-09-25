@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: c3320a598cb8407ab584530c615c2e5ef0de53c8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ebd45b92abf3bf300fa5fa06dbb4e92354fac3c9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286409"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173502"
 ---
 # <a name="how-to-connect-to-a-database"></a>Procedimiento para conectar a una base de datos
+
 <xref:System.Data.Linq.DataContext> es la canalización principal mediante la cual se conecta a una base de datos, recupera los objetos de ella y le vuelve a enviar los cambios. Puede usar el <xref:System.Data.Linq.DataContext> mismo modo que usaría un ADO.net <xref:System.Data.SqlClient.SqlConnection> . De hecho, <xref:System.Data.Linq.DataContext> se inicializa con la conexión o cadena de conexión que proporcione. Para obtener más información, vea [métodos DataContext (Object](/visualstudio/data-tools/datacontext-methods-o-r-designer)Relational Designer).  
   
  El propósito de <xref:System.Data.Linq.DataContext> es convertir sus solicitudes de objetos en consultas SQL que se van a ejecutar en la base de datos y, a continuación, ensamblar los objetos a partir de los resultados. <xref:System.Data.Linq.DataContext>Habilita la consulta Language-Integrated Query (LINQ) implementando el mismo patrón de operador que los operadores de consulta estándar, como `Where` y `Select` .  
@@ -22,6 +23,7 @@ ms.locfileid: "84286409"
 > Es fundamental mantener una conexión segura. Para obtener más información, consulte [seguridad en LINQ to SQL](security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente, se utiliza <xref:System.Data.Linq.DataContext> para establecer una conexión con la base de datos de ejemplo Northwind y recuperar las filas de clientes cuya ciudad es Londres (London).  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#1)]
@@ -30,6 +32,7 @@ ms.locfileid: "84286409"
  Cada tabla de base de datos se representa como una colección `Table` disponible a través del método <xref:System.Data.Linq.DataContext.GetTable%2A>, utilizando la clase de entidad para su identificación.  
   
 ## <a name="example"></a>Ejemplo  
+
  El procedimiento recomendado es declarar un <xref:System.Data.Linq.DataContext> fuertemente tipado en lugar de confiar en la clase <xref:System.Data.Linq.DataContext> básica y el método <xref:System.Data.Linq.DataContext.GetTable%2A>. Un <xref:System.Data.Linq.DataContext> fuertemente tipado declara todas las colecciones `Table` como miembros del contexto, como en el ejemplo siguiente.  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#2)]

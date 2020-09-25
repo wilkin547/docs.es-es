@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5dfa1d9f02f660b55ecf6598ef5012174a1ba853
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975240"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172598"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedar el servicio de datos (Data Services de WCF)
-Mediante el uso de WCF Data Services, puede crear un servicio que exponga los datos como una fuente de Open Data Protocol (OData). Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, un servicio de datos no puede enlazar y escuchar en un socket de red las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
+
+Mediante el uso de WCF Data Services, puede crear un servicio que exponga los datos como una fuente de Open Data Protocol (OData). Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, un servicio de datos no puede enlazar solicitudes HTTP de entrada ni escucharlas en un socket de red. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
 
  El host del servicio de datos realiza las siguientes tareas en nombre del servicio de datos:
 
@@ -58,11 +59,13 @@ Cuando se usa el cuadro de diálogo **Agregar nuevo elemento** de Visual Studio 
  Dado que un servicio de datos se comporta como un servicio WCF, el servicio de datos se integra con ASP.NET y sigue el modelo de programación web de WCF. Para obtener más información, vea [servicios WCF y ASP.net](../../wcf/feature-details/wcf-services-and-aspnet.md) y [modelo de programación web http de WCF](../../wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Servicios WCF autohospedados
+
  Dado que incorpora una implementación de WCF, WCF Data Services admite el hospedaje automático de un servicio de datos como un servicio WCF. Un servicio se puede autohospedar en cualquier .NET Framework aplicación, como una aplicación de consola. La clase <xref:System.Data.Services.DataServiceHost>, que hereda de <xref:System.ServiceModel.Web.WebServiceHost>, se utiliza para crear instancias del servicio de datos en una dirección concreta.
 
  El autohospedaje se puede utilizar para el desarrollo y las pruebas porque facilita el despliegue y la solución de problemas del servicio. Sin embargo, este tipo de hospedaje no ofrece las características de administración y hospedaje avanzadas proporcionadas por ASP.NET o por Internet Information Services (IIS). Para obtener más información, consulte [hospedaje en una aplicación administrada](../../wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Definir un host de servicio de datos personalizado
+
  Para los casos en los que la implementación de un host de WCF sea demasiado restrictiva, se puede definir también un host personalizado para un servicio de datos. Cualquier clase que implemente la interfaz <xref:System.Data.Services.IDataServiceHost> se puede utilizar como el host de red de un servicio de datos. Un host personalizado debe implementar la interfaz <xref:System.Data.Services.IDataServiceHost> y ser capaz de controlar las siguientes responsabilidades básicas del host del servicio de datos:
 
 - Proporcionar la ruta de acceso raíz del servicio al servicio de datos.
@@ -73,7 +76,7 @@ Cuando se usa el cuadro de diálogo **Agregar nuevo elemento** de Visual Studio 
 
 - Validar parámetros en la cadena de consulta.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)
 - [Exposición de los datos como servicio](exposing-your-data-as-a-service-wcf-data-services.md)

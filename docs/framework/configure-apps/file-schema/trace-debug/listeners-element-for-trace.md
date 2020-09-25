@@ -7,14 +7,15 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: fd12be1b775d7611ef3f16d23147470313bf9866
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 59d078f8dc573a1ce949d225f497dd4500fe808f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153378"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173866"
 ---
 # <a name="listeners-element-for-trace"></a>Elemento \<listeners> para \<trace>
+
 Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,9 +34,11 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -54,14 +57,17 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
 |`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Las <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> clases y comparten la misma colección **Listeners** . Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase utiliza el mismo agente de escucha. Las clases de agente de escucha incluidas con el .NET Framework derivan de la <xref:System.Diagnostics.TraceListener> clase.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el **\<listeners>** elemento para agregar los agentes de escucha `MyListener` y `MyEventListener` a la colección **Listeners** . `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener`crea una entrada en el registro de eventos.  
+
+ En el ejemplo siguiente se muestra cómo usar el **\<listeners>** elemento para agregar los agentes de escucha `MyListener` y `MyEventListener` a la colección **Listeners** . `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
   
 ```xml  
 <configuration>  

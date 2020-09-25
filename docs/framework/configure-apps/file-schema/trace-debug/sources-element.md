@@ -9,14 +9,15 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 670fb359f892d83feac56c849361c4b980d9a922
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153274"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173814"
 ---
 # <a name="sources-element"></a>\<sources> (Elemento)
+
 Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -50,10 +53,12 @@ Especifica los orígenes de seguimiento que inician los mensajes de seguimiento.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+## <a name="remarks"></a>Observaciones  
+
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo utilizar el `<sources>` elemento para agregar el origen de seguimiento `mySource` y establecer el nivel para el modificador de origen denominado `sourceSwitch` . Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  

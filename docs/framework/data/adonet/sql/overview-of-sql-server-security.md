@@ -3,14 +3,15 @@ title: Información general sobre la seguridad de SQL Server
 description: Obtenga información acerca de la arquitectura de seguridad de SQL Server para saber qué características y funcionalidad contrarrestan las amenazas conocidas y para anticiparse a las amenazas futuras.
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: c423a408e607c51c048ad08b91122a1fe06e31b2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba396774e760a550246d0f0507984d3f7212204b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286280"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172663"
 ---
 # <a name="overview-of-sql-server-security"></a>Información general sobre la seguridad de SQL Server
+
 Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es la mejor manera de enfrentarse a las amenazas a la seguridad. SQL Server proporciona una arquitectura de seguridad diseñada para permitir a los administradores de bases de datos y desarrolladores crear aplicaciones de base de datos seguras y contrarrestar las amenazas. En cada versión de SQL Server se han introducido mejoras a las versiones anteriores con nuevas características y funcionalidades. No obstante, la seguridad no es una característica integrada más. Cada aplicación tiene requisitos de seguridad propios. Los desarrolladores tienen que saber cuál es la combinación de características y funcionalidades más apropiada para contrarrestar las amenazas conocidas, así como anticiparse a las que puedan ir apareciendo en el futuro.  
   
  Una instancia de SQL Server contiene un conjunto jerárquico de entidades, empezando por el servidor. Cada servidor contiene varias bases de datos y, a su vez, cada base de datos contiene un conjunto de objetos susceptibles de ser protegidos. Cada SQL Server protegible tiene *permisos* asociados que se pueden conceder a una *entidad*de seguridad, que es una persona, grupo o proceso al que se concede acceso a SQL Server. El marco de seguridad de SQL Server administra el acceso a las entidades protegibles a través de la *autenticación* y la *autorización*.  
@@ -22,6 +23,7 @@ Una estrategia de defensa exhaustiva, con niveles superpuestos de seguridad, es 
  Los temas de esta sección abordan los conceptos básicos de seguridad de SQL Server y proporcionan vínculos a la documentación completa de la versión de los Libros en pantalla de SQL Server que corresponda.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Autenticación en SQL Server](authentication-in-sql-server.md)  
  Describe los inicios de sesión y la autenticación en SQL Server y proporciona vínculos a recursos adicionales.  
   

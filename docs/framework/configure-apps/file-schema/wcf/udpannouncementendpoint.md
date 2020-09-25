@@ -2,14 +2,15 @@
 title: <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 8dabf8845126705d082d080b643688ed62883f39
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 67503b1bc3c6282ff5018adc20acbb89de49ba50
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854918"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173762"
 ---
 # \<udpAnnouncementEndpoint>
+
 Este elemento de configuración define un extremo estándar usado por los servicios para enviar los mensajes del anuncio a través de un enlace de UDP. Tiene un contrato fijo y admite dos versiones de la detección. Además, tiene un enlace de UDP fijo y un valor de dirección predeterminado según se indica en las especificaciones de WS-Discovery (WS-Discovery April 2005 o WS-Discovery versión 1.1). Puede especificar la dirección de multidifusión que se va a usar para enviar y recibir los mensajes del anuncio.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Este elemento de configuración define un extremo estándar usado por los servic
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -57,6 +59,7 @@ Este elemento de configuración define un extremo estándar usado por los servic
 |[\<standardEndpoints>](standardendpoints.md)|Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra un cliente que escucha un anuncio a través de un transporte de multidifusión UDP con una dirección de multidifusión predeterminada y transporte de multidifusión UDP con una dirección de multidifusión especificada.  
   
 ```xml  

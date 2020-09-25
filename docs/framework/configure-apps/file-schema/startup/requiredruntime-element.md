@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: fe96673b95f48cb75d36662a680bf56a59363f9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 19fa1561ca3acd845918d952379c5227121465b4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71697497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174074"
 ---
 # <a name="requiredruntime-element"></a>Elemento \<requiredRuntime>
 
@@ -61,7 +61,8 @@ Ninguno.
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`startup`|Contiene el `<requiredRuntime>` elemento.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
+
  Las aplicaciones compiladas para admitir solo la versión 1,0 del Runtime deben usar el `<requiredRuntime>` elemento. Las aplicaciones compiladas con la versión 1,1 o posterior del Runtime deben usar el `<supportedRuntime>` elemento.
 
 > [!NOTE]
@@ -86,6 +87,6 @@ En el ejemplo siguiente se muestra cómo especificar la versión en tiempo de ej
 
 ## <a name="see-also"></a>Consulte también
 
-- [Esquema de la configuración de inicio](index.md)
+- [Esquema de configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Configurar una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Cómo: Configuración de una aplicación para que admita .NET Framework 4 o versiones posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

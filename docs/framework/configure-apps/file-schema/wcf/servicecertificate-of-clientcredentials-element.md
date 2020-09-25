@@ -1,15 +1,16 @@
 ---
-title: <serviceCertificate>del <clientCredentials> elemento
+title: <serviceCertificate> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: e50c0ac5-f0df-4c90-b54b-fc602c1f84ea
-ms.openlocfilehash: 4c7489a171bdd5cb4b747ca99f1b7ff6dd65517b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 502452c664f2dcb0856f72e25ff8b1517f432919
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399682"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172897"
 ---
-# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate>del \<clientCredentials> elemento
+# <a name="servicecertificate-of-clientcredentials-element"></a>\<serviceCertificate> del \<clientCredentials> elemento
+
 Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,9 +28,11 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -46,7 +49,8 @@ Especifica el certificado que se va a utilizar al autenticar un servicio al clie
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales utilizadas por el cliente para autenticarse a un servicio.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento de configuración especifica la configuración utilizada por el cliente para validar el certificado presentado por el servicio utilizando la autenticación SSL. También contiene cualquier certificado para el servicio que se configura explícitamente en el cliente y que se utiliza para cifrar los mensajes para el servicio, utilizando la seguridad de mensaje.  
   
  Los atributos del `serviceCertificate` elemento son idénticos a los atributos de [\<clientCertificate>](clientcertificate-of-clientcredentials-element.md) .  

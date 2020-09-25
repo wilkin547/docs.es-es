@@ -1,5 +1,5 @@
 ---
-title: <add>(Elemento <listeners> ) para<trace>
+title: <add> (Elemento <listeners> ) para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: c64673908dc9afe67d97c08f93e5b9d9533bd34d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: da5c0ccae08a32c324a1633b5a7ff7592efa6e2d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153677"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174048"
 ---
-# <a name="add-element-for-listeners-for-trace"></a>\<add>(Elemento \<listeners> ) para\<trace>
+# <a name="add-element-for-listeners-for-trace"></a>\<add> (Elemento \<listeners> ) para \<trace>
+
 Agrega un agente de escucha a la colección **Listeners** .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Agrega un agente de escucha a la colección **Listeners** .
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,7 +60,8 @@ Agrega un agente de escucha a la colección **Listeners** .
 |`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Las <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.Trace> clases y comparten la misma colección **Listeners** . Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase utiliza el mismo agente de escucha. Las clases de agente de escucha derivan de <xref:System.Diagnostics.TraceListener> .  
   
  Si no se especifica el `name` atributo del agente de escucha de seguimiento, el <xref:System.Diagnostics.TraceListener.Name%2A> del agente de escucha de seguimiento tiene como valor predeterminado una cadena vacía (""). Si la aplicación tiene solo un agente de escucha, puede agregarlo sin especificar un nombre y quitarlo especificando una cadena vacía para el nombre. Sin embargo, si la aplicación tiene más de un agente de escucha, debe especificar nombres únicos para cada agente de escucha de seguimiento, lo que le permite identificar y administrar agentes de escucha de seguimiento individuales dentro de las <xref:System.Diagnostics.Debug.Listeners%2A> <xref:System.Diagnostics.Trace.Listeners%2A> colecciones y.  
@@ -83,7 +86,8 @@ Agrega un agente de escucha a la colección **Listeners** .
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Nombre del archivo en el que <xref:System.Diagnostics.XmlWriterTraceListener> escribe.|  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar **\<add>** los elementos para agregar los agentes de escucha `MyListener` y `MyEventListener` la colección **Listeners** . `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener`crea una entrada en el registro de eventos.  
+
+ En el ejemplo siguiente se muestra cómo usar **\<add>** los elementos para agregar los agentes de escucha `MyListener` y `MyEventListener` la colección **Listeners** . `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
   
 ```xml  
 <configuration>  

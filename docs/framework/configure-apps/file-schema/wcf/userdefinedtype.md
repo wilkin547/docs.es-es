@@ -2,14 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 7a76e5a90fe3218bc0302501b71daa9de0b098bc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a4bbd677aba27d93389f8d2f99aadd801c86b65f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854836"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172845"
 ---
 # \<userDefinedType>
+
 Representa un tipo definido por el usuario (UDT) que se va a incluir en el contrato del servicio.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -48,6 +50,7 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
 |`TypeLibVersion`|Una cadena que identifica la versión de biblioteca de tipos que define el tipo.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -56,7 +59,8 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
 |-------------|-----------------|  
 |`userDefinedTypes`|Una colección de elementos de `userDefinedType`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El tiempo de ejecución de integración de COM+ crea los servicios mediante la inspección de la biblioteca de tipos. Cuando un componente de COM+ contiene métodos que pasan una VARIANTE, el sistema no puede determinar los tipos reales que se van a pasar antes del tiempo de ejecución. Por consiguiente, al intentar pasar un tipo definido por el usuario dentro de una VARIANTE , se produce un error porque no es un tipo conocido para la serialización.  
   
  Para prevenir este problema, puede agregar los UDT al archivo de configuración para que puedan estar incluidos como tipos conocidos en el contrato del servicio adecuado. Para ello, tiene que identificar de manera unívoca el UDT y los contratos, es decir, las interfaces COM originales que lo utilizan.  

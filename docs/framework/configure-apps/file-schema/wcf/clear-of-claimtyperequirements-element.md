@@ -1,15 +1,16 @@
 ---
-title: <clear>del <claimTypeRequirements> elemento
+title: <clear> del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: 01f101f7d0dd5da6a834a4ffb2c7e09df0e23cd8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa94a012da11bcec6fb5fe270ad9f3574f88e6d7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400529"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172910"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a>\<clear>del \<claimTypeRequirements> elemento
+# <a name="clear-of-claimtyperequirements-element"></a>\<clear> del \<claimTypeRequirements> elemento
+
 Especifica que se quiten todos los tipos de notificaciones en la credencial aliada. Esto asegura que la colección se inicia vacía.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,12 +32,15 @@ Especifica que se quiten todos los tipos de notificaciones en la credencial alia
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

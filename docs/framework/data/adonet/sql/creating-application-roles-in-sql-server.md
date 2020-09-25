@@ -2,20 +2,22 @@
 title: Crear roles de aplicación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 764ae61cba4bf01681d658cc4aacc2aeaecedd3f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794276"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173554"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Crear roles de aplicación en SQL Server
+
 Los roles de aplicación proporcionan un método para asignar permisos a una aplicación sin necesidad de utilizar un rol o o un usuario de base de datos. Los usuarios se pueden conectar a la base de datos, activar el rol de aplicación y asumir los permisos concedidos a la aplicación. Los permisos concedidos al rol de aplicación se mantienen mientras dura la conexión.  
   
 > [!IMPORTANT]
 > Los roles de aplicación se activan cuando una aplicación cliente proporciona un nombre de rol de aplicación y una contraseña en la cadena de conexión. Presentan una vulnerabilidad de seguridad en las aplicaciones de dos niveles, ya que la contraseña se debe almacenar en el equipo cliente. En una aplicación de tres niveles, puede almacenar la contraseña de forma que los usuarios de la aplicación no tengan acceso a ella.  
   
 ## <a name="application-role-features"></a>Características de los roles de aplicación  
+
  Los roles de aplicación tienen las siguientes características:  
   
 - A diferencia de los roles de base de datos, los roles de aplicación no contienen miembros.  
@@ -37,12 +39,15 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
 - Las funciones integradas que devuelven nombres de inicio de sesión, como SYSTEM_USER, devuelven el nombre del inicio de sesión que invocó el rol de aplicación. Las funciones integradas que devuelven nombres de usuario de base de datos devuelven el nombre del rol de aplicación.  
   
 ### <a name="the-principle-of-least-privilege"></a>Principio de los privilegios mínimos  
+
  Los roles de aplicación sólo deben recibir los permisos necesarios si la contraseña se ve comprometida. Se deben revocar los permisos al rol `public` en las bases de datos que usen roles de aplicación. Deshabilite la cuenta `guest` en cualquier base de datos a la que no desea que tengan acceso los autores de llamadas al rol de aplicación.  
   
 ### <a name="application-role-enhancements"></a>Mejoras de los roles de aplicación  
+
  El contexto de ejecución se puede volver a cambiar al autor de llamada original tras activar un rol de aplicación, lo que evita la necesidad de deshabilitar la agrupación de conexiones. El procedimiento `sp_setapprole` incluye una nueva opción que crea una cookie, que contiene información de contexto acerca del autor de la llamada. Puede revertir la sesión mediante una llamada al procedimiento `sp_unsetapprole`, al que le pasa la cookie.  
   
 ## <a name="application-role-alternatives"></a>Alternativas a los roles de aplicación  
+
  Los roles de aplicación dependen de la seguridad de una contraseña, lo que supone una posible vulnerabilidad de seguridad. Las contraseñas se pueden exponer mediante su incrustación en código de aplicación o su almacenamiento en disco.  
   
  Puede tener en cuenta las alternativas siguientes.  
@@ -52,15 +57,16 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
 - Firmar procedimientos almacenados con certificados y conceder únicamente permiso para ejecutar los procedimientos. Para obtener más información, vea [firmar procedimientos almacenados en SQL Server](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Para obtener más información, vea los siguientes recursos.  
+
+ Para obtener más información, vea los recursos siguientes.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Roles de aplicación](/sql/relational-databases/security/authentication-access/application-roles)|Describe cómo crear y usar roles de aplicación en SQL Server 2008.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Información general sobre la seguridad de SQL Server](overview-of-sql-server-security.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

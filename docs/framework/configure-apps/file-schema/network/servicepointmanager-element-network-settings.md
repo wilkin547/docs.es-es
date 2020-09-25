@@ -9,14 +9,15 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: eb27716ec7c2936f32a7e4d4c983d1e175c4d044
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a6678a8fe7c6f962529f9d946b103b6224d58602
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504529"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174113"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>Elemento \<servicePointManager> (configuración de red)
+
 Configura las conexiones a los recursos de red.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -39,11 +40,12 @@ Configura las conexiones a los recursos de red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`checkCertificateName`|Especifica si el sistema debe comprobar que el nombre del certificado coincide con el nombre de host del servidor antes de usar el certificado. El valor predeterminado es `true`.|  
 |`checkCertificateRevocationList`|Especifica si el sistema debe comprobar si el certificado se ha revocado antes de utilizar el certificado. El valor predeterminado es `false`.|  
@@ -54,6 +56,7 @@ Configura las conexiones a los recursos de red.
 |`useNagleAlgorithm`|Especifica si las conexiones controladas por el administrador de puntos de servicio usan el algoritmo de Nagle. El valor predeterminado es `true`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -62,12 +65,13 @@ Configura las conexiones a los recursos de red.
 |-----------------|---------------------|  
 |[Configuración](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>

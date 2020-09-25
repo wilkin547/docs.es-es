@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cb7bd7e793f73fc34057150ee5217dba6653237e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346097"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172650"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Proveedor de Entity Framework (Data Services de WCF)
+
 Como WCF Data Services, el Entity Framework ADO.NET se basa en el Entity Data Model, que es un tipo de modelo entidad-relación. El Entity Framework traduce las operaciones en su implementación de la Entity Data Model, que se denomina *modelo conceptual*, en operaciones equivalentes en un origen de datos. Esto hace que el Entity Framework un proveedor ideal para los servicios de datos basados en datos relacionales, y cualquier base de datos que tenga un proveedor de datos que admita el Entity Framework se puede usar con WCF Data Services. Para obtener una lista de los orígenes de datos que admiten actualmente el Entity Framework, vea [proveedores de Entity Framework](/ef/ef6/fundamentals/providers/).
   
  En un modelo conceptual, el contenedor de entidades es la raíz del servicio. Debe definir un modelo conceptual en Entity Framework antes de que un servicio de datos pueda exponer los datos. Para obtener más información, consulte [Cómo: crear un servicio de datos mediante un origen de datos de ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
@@ -20,7 +21,7 @@ Como WCF Data Services, el Entity Framework ADO.NET se basa en el Entity Data Mo
   
  Para obtener más información sobre el Entity Framework, consulte [información general sobre Entity Framework](../adonet/ef/overview.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proveedores de Data Services](data-services-providers-wcf-data-services.md)
 - [Proveedor de reflexión](reflection-provider-wcf-data-services.md)

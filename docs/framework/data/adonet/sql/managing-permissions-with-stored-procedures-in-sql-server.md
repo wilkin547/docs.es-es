@@ -3,17 +3,19 @@ title: Administrar permisos con procedimientos almacenados en SQL Server
 description: Obtenga información sobre cómo restringir el acceso a los datos y objetos de base de datos mediante la implementación del acceso mediante procedimientos almacenados o funciones definidas por el usuario.
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 890c1c6dd7003f3abd684d6c827b6a77a3a019c1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 44f6a0c3ca6b913c8998c4e5ddb60eab2b64e71b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286293"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172728"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Administrar permisos con procedimientos almacenados en SQL Server
+
 Un modo de establecer varias líneas de defensa en torno a su base de datos consiste en implementar el acceso a todos los datos usando procedimientos almacenados o roles definidos por el usuario. Debe revocar o denegar todos los permisos a los objetos subyacentes, como tablas, y conceder permisos a los procedimientos almacenados. Esto crea un perímetro de seguridad en torno a sus datos y objetos de base de datos.  
   
 ## <a name="stored-procedure-benefits"></a>Ventajas de los procedimientos almacenados  
+
  Los procedimientos almacenados ofrecen las siguientes ventajas:  
   
 - La lógica de datos y las reglas de negocios se pueden encapsular de forma que los usuarios sólo puedan tener acceso a los datos y objetos tal y como dispongan los desarrolladores y los administradores de las bases de datos.  
@@ -31,9 +33,11 @@ Un modo de establecer varias líneas de defensa en torno a su base de datos cons
 - Los procedimientos almacenados pueden reducir el tráfico en la red combinando varias operaciones en una llamada a procedimiento.  
   
 ## <a name="stored-procedure-execution"></a>Ejecución de procedimiento almacenado  
+
  Los procedimientos almacenados aprovechan el encadenamiento de propiedad para proporcionar acceso a los datos de forma que los usuarios no necesiten tener permiso explícito para obtener acceso a los objetos de basase de datos. Hay una cadena de conexión cuando los objetos que tienen acceso los unos a los otros secuencialmente son propiedad del mismo usuario. Por ejemplo, un procedimiento almacenado puede llamar a otros procedimientos almacenados o un procedimiento almacenado puede tener acceso a varias tablas. Si todos los objetos de la cadena de ejecución tienen el mismo propietario, SQL Server sólo comprueba el permiso EXECUTE para el autor de la llamada, no los permisos del autor de la llamada sobre los demás objetos. Por eso, sólo necesita conceder permisos EXECUTE para los procedimientos almacenados; puede revocar o denegar todos los permisos para las tablas subyacentes.  
   
 ## <a name="best-practices"></a>Prácticas recomendadas  
+
  No basta con escribir procedimientos almacenados para proteger correctamente una aplicación. También se deberían tener en cuenta las siguientes vulnerabilidades de seguridad potenciales.  
   
 - Conceda permisos EXECUTE para los procedimientos almacenados a los roles de base de datos que quiere que puedan tener acceso a los datos.  
@@ -51,9 +55,10 @@ Un modo de establecer varias líneas de defensa en torno a su base de datos cons
 - Evite el SQL dinámico a menos que sea absolutamente necesario. Utilice la función Transact-SQL QUOTENAME() para delimitar un valor de cadena y evite usar el delimitador en la cadena de entrada.  
   
 ## <a name="external-resources"></a>Recursos externos  
+
  Para obtener más información, vea los recursos siguientes.  
   
-|Resource|Descripción|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Procedimientos almacenados](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) e [inyección de SQL](/sql/relational-databases/security/sql-injection)|En los artículos se describe cómo crear procedimientos almacenados y cómo funciona la inyección de SQL.|  
   

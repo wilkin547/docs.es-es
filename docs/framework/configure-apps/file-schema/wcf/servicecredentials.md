@@ -2,14 +2,15 @@
 title: <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: 90a34a4a52b4c7a2e67d733fecba132818cac4fc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 63368355027856118546bc70183b41864eddb0e6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399642"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172884"
 ---
 # \<serviceCredentials>
+
 Especifica la credencial que se va a utilizar para autenticar el servicio y los valores relacionados con la validación de la credencial del cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ Especifica la credencial que se va a utilizar para autenticar el servicio y los 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  

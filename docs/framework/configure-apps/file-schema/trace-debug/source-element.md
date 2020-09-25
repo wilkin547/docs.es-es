@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e9c6a06ca9e481ecc2277e1d1ea76a0b99edb158
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153300"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173827"
 ---
 # <a name="source-element"></a>\<source> (Elemento)
+
 Contiene un origen de seguimiento que inicia mensajes de seguimiento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -56,10 +58,12 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+## <a name="remarks"></a>Observaciones  
+
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo utilizar el `<source>` elemento para agregar el origen de seguimiento `mySource` y establecer el nivel para el modificador de origen denominado `sourceSwitch` . Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  

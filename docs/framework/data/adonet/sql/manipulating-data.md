@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 70ee6041b14feb298d93ab452e16ee23607b3fcc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5f649f0247c150ebc2f0e7e54c3fc8c0b607c5c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174295"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172715"
 ---
 # <a name="manipulating-data"></a>Manipular datos
+
 Antes de la introducción de conjuntos de resultados activos múltiples (MARS), los desarrolladores tenían que usar varias conexiones o cursores del lado servidor para resolver determinados escenarios. Además, al usar varias conexiones en una situación transaccional, se necesitaban conexiones enlazadas (con **sp_getbindtoken** y **sp_bindsession**). En los siguientes escenarios se muestra cómo usar una conexión habilitada para MARS en lugar de varias conexiones.  
   
 ## <a name="using-multiple-commands-with-mars"></a>Uso de varias comandos con MARS  
+
  La siguiente aplicación de consola muestra cómo usar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con dos objetos <xref:System.Data.SqlClient.SqlCommand> y un único objeto <xref:System.Data.SqlClient.SqlConnection> con MARS habilitado.  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo se abre una única conexión a la base de datos **AdventureWorks**. Con un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea <xref:System.Data.SqlClient.SqlDataReader>. Cuando se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, utilizando los datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada de la cláusula WHERE para el segundo lector.  
   
 > [!NOTE]
@@ -164,9 +167,11 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>Lectura y actualización de datos con MARS  
- MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada. Además, MARS puede reemplazar el uso de cursores del lado del servidor, que generalmente consumen más recursos. Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.  
+
+ MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente. Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada. Además, MARS puede reemplazar el uso de cursores del lado servidor, que normalmente consumen más recursos. Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.  
   
 ### <a name="example"></a>Ejemplo  
+
  La siguiente aplicación de consola muestra cómo usar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un único objeto <xref:System.Data.SqlClient.SqlConnection> con MARS habilitado. El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5. El segundo objeto de comando utiliza el identificador de proveedor proporcionado a partir de <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular. El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro del producto. Para determinar cuál debe ser la nueva **OnOrderQty**, se realiza un cálculo. Luego, se usa el tercer objeto de comando para actualizar la tabla **ProductVendor** con el nuevo valor. Este proceso completo tiene lugar dentro de una única transacción, que se revierte al final.  
   
 > [!NOTE]

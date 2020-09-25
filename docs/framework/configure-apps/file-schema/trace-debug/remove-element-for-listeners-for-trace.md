@@ -1,5 +1,5 @@
 ---
-title: <remove>(Elemento <listeners> ) para<trace>
+title: <remove> (Elemento <listeners> ) para <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: f06973ec30d5061e4a200d6bf7e68adcf6302018
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 01b797e1fb62d32e9f0d44c54b803dd969615361
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088846"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173840"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<remove>(Elemento \<listeners> ) para\<trace>
+# <a name="remove-element-for-listeners-for-trace"></a>\<remove> (Elemento \<listeners> ) para \<trace>
+
 Quita un agente de escucha de la colección **Listeners** .  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Quita un agente de escucha de la colección **Listeners** .
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Quita un agente de escucha de la colección **Listeners** .
 |**name**|Atributo necesario.<br /><br /> Nombre del agente de escucha que se va a quitar de la colección **Listeners** .|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -50,12 +53,13 @@ Quita un agente de escucha de la colección **Listeners** .
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`trace`|Configura el servicio de traza de ASP.NET.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Al quitar <xref:System.Diagnostics.DefaultTraceListener> de la `Listeners` colección se modifica el comportamiento de los <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> métodos,, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> . La llamada a un `Assert` `Fail` método o suele tener como resultado la presentación de un cuadro de mensaje; sin embargo, el cuadro de mensaje no se muestra si <xref:System.Diagnostics.DefaultTraceListener> no está en la `Listeners` colección.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo quitar el agente de escucha de seguimiento predeterminado de la colección de **agentes de escucha** de seguimiento.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e1c418a7f2bd40a42b259fb3784794b13098d7f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150074"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173684"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
+
 Especifica el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `order_by_expression`  
  Cualquier expresión de consulta válida que especifique una propiedad por la que se va a ordenar. Se pueden especificar varias expresiones de ordenación. La secuencia de las expresiones de ordenación de la cláusula ORDER BY define la organización del conjunto de resultados ordenado.  
   
@@ -45,6 +47,7 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
  Omite los `n` primeros elementos.  
   
 ## <a name="remarks"></a>Observaciones  
+
  La cláusula ORDER BY se aplica lógicamente al resultado de la cláusula SELECT. La cláusula ORDER BY puede hacer referencia a los elementos de la lista de selección utilizando sus alias. La cláusula ORDER BY también puede hacer referencia a otras variables que estén actualmente en el ámbito. Sin embargo, si la cláusula SELECT se ha especificado con un modificador DISTINCT, la cláusula ORDER BY solo puede hacer referencia a los alias de la cláusula SELECT.  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +56,7 @@ Especifica el criterio de ordenación utilizado en los objetos devueltos en una 
   
  Si el código recorre en iteración un conjunto ordenado, que no sea para una proyección de nivel superior, no se garantiza que los resultados mantengan su orden.  
 
-En el ejemplo siguiente, se garantiza que se conserva el orden:
+En el ejemplo siguiente, se garantiza que el orden se conserva:
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +64,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-En la siguiente consulta, se omite el orden de la consulta anidada:  
+En la consulta siguiente, se omite el orden de la consulta anidada:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -79,6 +82,7 @@ ORDER BY ...
 ```  
   
 ## <a name="restricted-keywords"></a>Palabras clave restringidas  
+
  Las palabras clave siguientes debe ir entre comillas cuando se utilizan en una cláusula `ORDER BY` :  
   
 - CROSS  
@@ -100,9 +104,10 @@ ORDER BY ...
 - VALOR  
   
 ## <a name="ordering-nested-queries"></a>Ordenar las consultas anidadas  
+
  En Entity Framework, una expresión anidada se puede colocar en cualquier parte de la consulta; el orden de una consulta anidada no se conserva.  
 
-La siguiente consulta ordenará los resultados por el apellido:  
+La siguiente consulta ordenará los resultados por apellidos:  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +115,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-En la siguiente consulta, se omite el orden de la consulta anidada:  
+En la consulta siguiente, se omite el orden de la consulta anidada:  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -120,6 +125,7 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador ORDER BY para especificar el criterio de ordenación utilizado en los objetos devueltos en una instrucción SELECT. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
 1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
@@ -132,6 +138,6 @@ SELECT C2.FirstName, C2.LastName
 
 - [Expresiones de consulta](query-expressions-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
-- [Saltar](skip-entity-sql.md)
-- [Límite](limit-entity-sql.md)
-- [Arriba](top-entity-sql.md)
+- [IRÁ](skip-entity-sql.md)
+- [ILIMITADO](limit-entity-sql.md)
+- [TOP](top-entity-sql.md)

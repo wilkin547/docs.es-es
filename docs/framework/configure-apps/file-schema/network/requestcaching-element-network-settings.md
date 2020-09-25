@@ -8,14 +8,15 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3eb32b7ae643efdb19892410b669c1e7ff80e0ad
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74802126"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174165"
 ---
 # <a name="requestcaching-element-network-settings"></a>Elemento \<requestCaching> (configuración de red)
+
 Controla el mecanismo de almacenamiento en caché para las solicitudes de red.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -36,6 +37,7 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,7 +67,7 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de HTTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
-|[\<defaultFtpCachePolicy>(Elemento, configuración de red)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de FTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
+|[Elemento \<defaultFtpCachePolicy> (configuración de red)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Describe si el almacenamiento en caché de FTP está activo y describe la Directiva de almacenamiento en caché predeterminada.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -74,6 +76,7 @@ Controla el mecanismo de almacenamiento en caché para las solicitudes de red.
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo deshabilitar todo el almacenamiento en caché.  
   
 ```xml  

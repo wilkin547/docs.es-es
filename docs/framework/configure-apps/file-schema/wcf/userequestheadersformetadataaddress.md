@@ -2,14 +2,15 @@
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: e0b46953924a3825420b719085e1210981da643a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a323e6da0eb173e303d70cc3b7309b898a805573
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399203"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172819"
 ---
 # \<useRequestHeadersForMetadataAddress>
+
 Habilita la recuperación de información de direcciones de metadatos de los encabezados de mensajes de solicitud.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Habilita la recuperación de información de direcciones de metadatos de los enc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
