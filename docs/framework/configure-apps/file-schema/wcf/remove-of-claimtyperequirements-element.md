@@ -1,15 +1,16 @@
 ---
-title: <remove>del <claimTypeRequirements> elemento
+title: <remove> del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 8ef05bc4-1950-4ee4-95c5-1c6a394eff7e
-ms.openlocfilehash: 84f4208d3f4581cf7e8c4455bf3f5d78f7e13b9f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 773f37156969f64f02711e6a60764aeb7e50a840
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399999"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181328"
 ---
-# <a name="remove-of-claimtyperequirements-element"></a>\<remove>del \<claimTypeRequirements> elemento
+# <a name="remove-of-claimtyperequirements-element"></a>\<remove> del \<claimTypeRequirements> elemento
+
 Especifica los tipos de notificaciones que se van a quitar en la credencial aliada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica los tipos de notificaciones que se van a quitar en la credencial alia
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Especifica los tipos de notificaciones que se van a quitar en la credencial alia
 |claimType|URI que define el tipo de una notificación que se va a eliminar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

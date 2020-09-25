@@ -2,14 +2,15 @@
 title: conjunto de entidades
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 5a2465801c270813dd7bca2144d05fa202571153
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6286d3707a8506e7a389359a5aa361c152e75212
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738423"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194798"
 ---
 # <a name="entity-set"></a>conjunto de entidades
+
 Un *conjunto de entidades* es un contenedor lógico para las instancias de un [tipo de entidad](entity-type.md) y las instancias de cualquier tipo derivado de ese tipo de entidad. (Para obtener información sobre los tipos derivados, vea [Entity Data Model: herencia](entity-data-model-inheritance.md)). La relación entre un tipo de entidad y un conjunto de entidades es análoga a la relación entre una fila y una tabla en una base de datos relacional: como una fila, un tipo de entidad describe la estructura de datos y, como una tabla, un conjunto de entidades contiene instancias de una estructura determinada. Un conjunto de entidades no es una construcción de modelado de datos, ya que no describe la estructura de los datos. En su lugar, un conjunto de entidades proporciona una construcción para que un entorno de hospedaje o de almacenamiento (como Common Language Runtime o una base de datos de SQL Server) agrupe las instancias del tipo de entidad y se puedan asignar a un almacén de datos.  
   
  Un conjunto de entidades se define dentro de un [contenedor de entidades](entity-container.md), que es una agrupación lógica de conjuntos de entidades y [conjuntos de asociaciones](association-set.md).  
@@ -28,11 +29,12 @@ Un *conjunto de entidades* es un contenedor lógico para las instancias de un [t
  No es necesario definir un conjunto de entidades para cada tipo de entidad de un modelo conceptual.  
   
 ## <a name="example"></a>Ejemplo  
+
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.  
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/entity-set/example-model-three-entity-types.gif)  
   
- El diagrama siguiente muestra dos conjuntos de entidades (`Books` y `Publishers`) y un conjunto de asociaciones (`PublishedBy`) basados en el modelo conceptual mostrado anteriormente. BI en el conjunto de entidades `Books` representa una instancia del tipo de entidad `Book` en tiempo de ejecución. De forma similar, PJ representa una instancia de `Publisher` en el conjunto de entidades `Publishers`. BiPj representa una instancia de la Asociación `PublishedBy` en el conjunto de asociaciones `PublishedBy`.  
+ El diagrama siguiente muestra dos conjuntos de entidades (`Books` y `Publishers`) y un conjunto de asociaciones (`PublishedBy`) basados en el modelo conceptual mostrado anteriormente. BI en el `Books` conjunto de entidades representa una instancia del `Book` tipo de entidad en tiempo de ejecución. Del mismo modo, PJ representa una `Publisher` instancia en el `Publishers` conjunto de entidades. BiPj representa una instancia de la `PublishedBy` asociación en el `PublishedBy` conjunto de asociaciones.  
   
  ![Captura de pantalla que muestra un ejemplo de conjuntos.](./media/entity-set/sets-example-association.gif)  
   
@@ -44,7 +46,7 @@ Un *conjunto de entidades* es un contenedor lógico para las instancias de un [t
   
  [!code-xml[EDM_Example_Model#MESTExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#mestexample)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

@@ -2,14 +2,15 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 7c4d9ae29ca1e543217d444e05a661b48e2cbb62
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dbf0ba565d4e3e2d65b4a81eb5d345fa90fb43c7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400075"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181432"
 ---
 # \<persistenceProvider>
+
 Especifica el tipo de la implementación de proveedor de persistencia que se va a usar, así como el tiempo de espera que se va a utilizar en las operaciones de persistencia.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Especifica el tipo de la implementación de proveedor de persistencia que se va 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -34,9 +36,10 @@ Especifica el tipo de la implementación de proveedor de persistencia que se va 
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |persistenceOperationTimeout|Un valor <xref:System.TimeSpan> que especifica el tiempo de espera usado en las operaciones de persistencia. El valor predeterminado es "00:00:30".|  
-|tipo|Una cadena que especifica el tipo del generador del proveedor de persistencia que se va a usar.|  
+|type|Una cadena que especifica el tipo del generador del proveedor de persistencia que se va a usar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -45,7 +48,8 @@ Especifica el tipo de la implementación de proveedor de persistencia que se va 
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento especifica el proveedor de persistencia que se va a utilizar para serializar el estado de un servicio WCF. Se debería utilizar junto con `wsHttpContextBinding` que pasa la información de estado en encabezados HTTP.  
   
 ## <a name="see-also"></a>Consulte también

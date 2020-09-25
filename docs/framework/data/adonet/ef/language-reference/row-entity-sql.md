@@ -2,14 +2,15 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 4fb16fe0072066580bff36ac0879ff38217f1e34
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2ab91d0c6d3c3ed3f88a7f0ddbf3a6c2f36d8b04
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319374"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202270"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
+
 Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -19,6 +20,7 @@ ROW ( expression [ AS alias ] [,...] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Cualquier expresión de consulta válida que devuelve un valor que se va a crear en un tipo de fila.  
   
@@ -26,9 +28,11 @@ ROW ( expression [ AS alias ] [,...] )
  Especifica un alias para el valor especificado en un tipo de fila. Si no se proporciona un alias, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] intenta generar uno basándose en las reglas de generación de alias de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Un tipo de fila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Debe utilizar constructores ROW en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] para crear registros anónimos escritos estructuralmente de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`.  
   
 ```sql  
@@ -46,6 +50,7 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
  Para obtener más información sobre los constructores de consultas, vea [construir tipos](constructing-types-entity-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
 1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
@@ -54,8 +59,8 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tipos de constructores](constructing-types-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)
-- [Definiciones de tipo](type-definitions-entity-sql.md)
+- [Definiciones de tipos](type-definitions-entity-sql.md)

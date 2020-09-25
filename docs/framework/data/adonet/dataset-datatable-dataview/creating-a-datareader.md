@@ -5,18 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 696eb4dfc334390e1968dd317d441f3c987a1f77
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3af6ae3a8f4ecc3ec34c186ce55c1c77c27514a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202337"
 ---
 # <a name="creating-a-datareader"></a>Crear un objeto DataReader
+
 Las clases <xref:System.Data.DataTable> y <xref:System.Data.DataSet> tienen un método <xref:System.Data.DataTable.CreateDataReader%2A> que devuelve el contenido de la <xref:System.Data.DataTable> o el contenido de la colección <xref:System.Data.DataSet> del objeto <xref:System.Data.DataSet.Tables%2A> como uno o más conjuntos de resultados de solo lectura y solo avance.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente aplicación de consola crea una instancia de <xref:System.Data.DataTable>. A continuación, en el ejemplo se pasa el <xref:System.Data.DataTable> rellenado a un procedimiento que llama al método <xref:System.Data.DataTable.CreateDataReader%2A>, que recorre en iteración los resultados incluidos en el <xref:System.Data.DataTableReader>.  
+
+ La siguiente aplicación de consola crea una instancia de <xref:System.Data.DataTable>. A continuación, en el ejemplo se pasa el rellenado <xref:System.Data.DataTable> a un procedimiento que llama al <xref:System.Data.DataTable.CreateDataReader%2A> método, que recorre en iteración los resultados contenidos dentro de <xref:System.Data.DataTableReader> .  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
@@ -30,9 +32,9 @@ Las clases <xref:System.Data.DataTable> y <xref:System.Data.DataSet> tienen un m
 4 Russ  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [Objetos DataTableReader](datatablereaders.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)
