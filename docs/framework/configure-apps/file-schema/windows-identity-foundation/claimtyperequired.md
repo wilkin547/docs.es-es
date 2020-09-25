@@ -3,14 +3,15 @@ title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: 1c40c5e4b4a24a3c1bbd6e096f12b7b044331c88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a86265ba3963ebc8bea880befbcf80345529116d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252058"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203857"
 ---
 # \<claimTypeRequired>
+
 Especifica el conjunto de notificaciones necesarias para los tokens de seguridad de entrada.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,9 +31,11 @@ Especifica el conjunto de notificaciones necesarias para los tokens de seguridad
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  None  
   
 ### <a name="child-elements"></a>Elementos secundarios  

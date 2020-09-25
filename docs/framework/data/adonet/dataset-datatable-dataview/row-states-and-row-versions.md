@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1b80ae78fad22989f99fb1e992d4978a192e0c66
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784332"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204533"
 ---
 # <a name="row-states-and-row-versions"></a>Estados y versiones de filas
+
 ADO.NET administra las filas de las tablas mediante estados de fila y versiones de fila. Un estado de fila indica el estado de una fila; las versiones de fila mantienen los valores almacenados en una fila en cuanto se modifica, incluyendo los valores actuales, originales y predeterminados. Por ejemplo, después de realizar una modificación en una columna de una fila, ésta adquiere el estado de fila `Modified` y dos versiones de fila:`Current`, que contiene los valores actuales de fila, y `Original`, que contiene los valores de fila antes de la modificación de la columna.  
   
  Cada objeto <xref:System.Data.DataRow> cuenta con la propiedad <xref:System.Data.DataRow.RowState%2A> que puede examinar para determinar el estado actual de la fila. En la siguiente tabla se ofrece una breve descripción de los valores de enumeración de `RowState`.  
   
-|Valor de RowState|DESCRIPCIÓN|  
+|Valor de RowState|Descripción|  
 |--------------------|-----------------|  
 |<xref:System.Data.DataRowState.Unchanged>|No se han hecho cambios desde la última llamada a `AcceptChanges` o desde que `DataAdapter.Fill` creó la fila.|  
 |<xref:System.Data.DataRowState.Added>|Se ha agregado la fila a la tabla, pero no se ha llamado a `AcceptChanges`.|  
@@ -41,7 +42,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  En la siguiente tabla se ofrece una breve descripción de los valores de enumeración de `DataRowVersion`.  
   
-|Valor de DataRowVersion|DESCRIPCIÓN|  
+|Valor de DataRowVersion|Descripción|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Valores actuales de la fila. Esta versión de fila no está disponible para filas con un valor `RowState` en `Deleted`.|  
 |<xref:System.Data.DataRowVersion.Default>|Ésta es la versión de fila predeterminada para una fila determinada. La versión de fila predeterminada para una fila `Added`, `Modified` o `Deleted` es `Current`. La versión de fila predeterminada para una fila `Detached` es `Proposed`.|  
@@ -94,9 +95,9 @@ foreach (DataRow delRow in delRows)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
+- [Manipular datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
 - [Objetos DataAdapter y DataReader](../dataadapters-and-datareaders.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

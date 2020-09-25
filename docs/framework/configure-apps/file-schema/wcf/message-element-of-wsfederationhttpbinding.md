@@ -1,15 +1,16 @@
 ---
-title: <message>elemento de<wsFederationHttpBinding>
+title: <message> elemento de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 8e0903dd1313e68e2de65730e129079199ebe2f2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ea320b1d97e742d4f90ec55502f3bd429803283d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204897"
 ---
-# <a name="message-element-of-wsfederationhttpbinding"></a>\<message>elemento de\<wsFederationHttpBinding>
+# <a name="message-element-of-wsfederationhttpbinding"></a>\<message> elemento de \<wsFederationHttpBinding>
+
 Define la configuración para la seguridad de nivel de mensaje para [\<wsFederationHttpBinding>](wsfederationhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -81,6 +82,7 @@ Define la configuración para la seguridad de nivel de mensaje para [\<wsFederat
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -88,8 +90,8 @@ Define la configuración para la seguridad de nivel de mensaje para [\<wsFederat
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Vea la tabla de "atributo algorithmSuite" para ver los valores válidos de este atributo. El valor predeterminado es `Basic256`.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).|  
-|issuedKeyType|Especifica el tipo de clave que se va a emitir. Los valores válidos incluyen los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> De manera predeterminada, es `SymmetricKey`. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|issuedTokenType|Una cadena que contiene un URI que especifica el tipo de token que se va a emitir. De manera predeterminada, es `null`.|  
+|issuedKeyType|Especifica el tipo de clave que se va a emitir. Los valores válidos incluyen los siguientes:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> El valor predeterminado es `SymmetricKey`. Este atributo es del tipo <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedTokenType|Una cadena que contiene un URI que especifica el tipo de token que se va a emitir. El valor predeterminado es `null`.|  
 |negotiateServiceCredential|Un valor booleano que especifica si la credencial del servicio se debería intercambiar como parte de negociación o estar disponible fuera de la banda. El valor predeterminado es `true`, que significa que se negocia la credencial del servicio.|  
   
 ## <a name="algorithmsuite-attribute"></a>atributo algorithmSuite  

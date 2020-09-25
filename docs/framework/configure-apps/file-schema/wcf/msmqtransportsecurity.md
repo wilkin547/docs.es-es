@@ -2,14 +2,15 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: 5899c609b3cf52c4a275ba6fb10c5826fcf37f1e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9d28f3f08e9c3984c055567df03f2839709a1522
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153014"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204650"
 ---
 # \<msmqTransportSecurity>
+
 Especifica la configuración de seguridad de transporte MSMQ para un enlace personalizado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -43,6 +45,7 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
 |`msmqSecureHashAlgorithm`|Especifica el algoritmo que se va a utilizar para calcular el resumen como parte de las firmas. Los valores válidos incluyen los siguientes:<br /><br /> -MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> El valor predeterminado es SHA1. Este atributo es del tipo <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Debido a problemas de colisión con MD5 y SHA1, Microsoft recomienda SHA256 o superior.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,7 +55,8 @@ Especifica la configuración de seguridad de transporte MSMQ para un enlace pers
 |[\<msmqIntegration>](msmqintegration.md)|Especifica valores requeridos para la interacción con un remitente o receptor de Message Queuing (MSMQ).|  
 |[\<msmqTransport>](msmqtransport.md)|Especifica las propiedades de comunicación de uso de colas de un servicio Windows Communication Foundation (WCF) que usa el protocolo MSMQ nativo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Para obtener más información sobre la seguridad de transporte, vea [seguridad de transporte](../../../wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Consulte también

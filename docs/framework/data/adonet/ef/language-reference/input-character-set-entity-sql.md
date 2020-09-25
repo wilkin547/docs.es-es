@@ -2,14 +2,15 @@
 title: Juego de caracteres de entrada (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: b1c6475704ec384800af0b678edd943246bf8044
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 94615a8f4aec51347f451d6f6a53b9d5b459a336
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250639"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203662"
 ---
 # <a name="input-character-set-entity-sql"></a>Juego de caracteres de entrada (Entity SQL)
+
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] acepta caracteres UNICODE codificados en UTF-16.  
   
  Los literales de cadena pueden contener cualquier carácter UTF-16 entre comillas simples. Por ejemplo, N'文字列リテラル'. Cuando se comparan literales de cadena, se usan los valores UTF-16 originales. Por ejemplo, N'ABC' es diferente en las páginas de códigos japonesa y latina.  
@@ -24,10 +25,10 @@ ms.locfileid: "70250639"
   
  Las palabras clave, las expresiones y los signos de puntuación pueden ser cualquier carácter UTF-16 que se normalice a caracteres latinos. Por ejemplo, SELECT en una página de códigos japonesa es una palabra clave válida.  
   
- Las palabras clave, las expresiones y los signos de puntuación solo pueden ser caracteres latinos. `SELECT` en una página de códigos japonesa no es una palabra clave. +,-, \*,/, =, (,), ', [,] y cualquier otra construcción de lenguaje que no se haya entrecomillado aquí solo puede ser caracteres latinos.  
+ Las palabras clave, las expresiones y los signos de puntuación solo pueden ser caracteres latinos. `SELECT` en una página de códigos japonesa no es una palabra clave. +,-, \* ,/, =, (,), ', [,] y cualquier otra construcción de lenguaje que no se haya entrecomillado aquí solo puede ser caracteres latinos.  
   
  Los identificadores simples solo pueden ser caracteres latinos. Esto evita la ambigüedad durante la comparación, ya que se comparan valores originales. Por ejemplo, ABC sería diferente en las páginas de códigos japonesa y Latina.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)

@@ -2,14 +2,15 @@
 title: <message> de <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 62b1793d18ddc8edc1f55b02137c4e0a9f7327d2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b37d6b1bd8f5372c230acbc2ada299415b2e40b3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738962"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204858"
 ---
 # <a name="message-of-nethttpbinding"></a>\<message> de \<netHttpBinding>
+
 Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBinding>](nethttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,7 +37,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Este atributo es de tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica los algoritmos y los tamaños clave. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).<br /><br /> El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. De manera predeterminada, es `UserName`.|  
+|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. El valor predeterminado es `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
@@ -45,6 +47,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 |Certificado|Exige la autenticación del cliente en el servidor mediante un certificado. La credencial del cliente en este caso debe especificarse mediante <`clientCredentials`> y el `clientCertificate`> <. Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio. En este caso, la credencial de servicio debe especificarse mediante <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` el elemento Class o Behavior y especificando el certificado de servicio mediante el \<serviceCertificate> elemento de serviceCredentials.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -54,6 +57,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<netHttpBind
 |<`security`> elemento de <`netHttpBinding`>|Define las funciones de seguridad para el `netHttpBinding` elemento> de <.|  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo muestra cómo implementar una aplicación que utiliza basicHttpBinding y modo de seguridad. En el ejemplo de configuración de un servicio siguiente, la definición de extremo especifica basicHttpBinding y hace referencia a una configuración de enlace denominada `Binding1`. El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección `behaviors` del archivo de configuración bajo el elemento `serviceCredentials`. El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección `behaviors` bajo el elemento `clientCertificate`.  
   
  El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.  

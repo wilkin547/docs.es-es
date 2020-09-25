@@ -2,14 +2,15 @@
 title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
-ms.openlocfilehash: 19df566c254a3f3202eb3554ab43ee0d7c944181
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 11abebeac682fed9e3a007986bb2f5c7bdb80f16
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833760"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204481"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
+
 Devuelve una colección de valores de argumento que se proyecta a partir de la partición de grupo actual con la que está relacionado el agregado. El agregado `GroupPartition` es un agregado basado en un grupo y no tiene ningún formulario basado en una colección.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -19,10 +20,12 @@ GROUPPARTITION( [ALL|DISTINCT] expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Cualquier expresión [!INCLUDE[esql](../../../../../../includes/esql-md.md)] .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  La consulta siguiente genera una lista de productos y una colección de cantidades de la línea de pedidos por cada producto:  
   
 ```sql  
@@ -47,7 +50,7 @@ SELET p, Sum(ol.Quantity) FROM LOB.OrderLines AS ol
 SELECT p, GroupPartition(ol.Quantity) FROM LOB.OrderLines AS ol GROUP BY ol.Product AS p
 ```  
   
- Con un `GROUP BY`normal, se ocultan los resultados de la agrupación. Los resultados solo pueden utilizarse en una función de agregado. Para ver los resultados de la agrupación, tiene que poner en correlación los resultados de la agrupación y el conjunto de entrada mediante una subconsulta. Las dos consultas siguientes son equivalentes:  
+ Con un normal `GROUP BY` , se ocultan los resultados de la agrupación. Los resultados solo pueden utilizarse en una función de agregado. Para ver los resultados de la agrupación, tiene que poner en correlación los resultados de la agrupación y el conjunto de entrada mediante una subconsulta. Las dos consultas siguientes son equivalentes:  
   
 ```sql  
 SELET p, (SELECT q FROM GroupPartition(ol.Quantity) AS q) FROM LOB.OrderLines AS ol GROUP BY ol.Product AS p
@@ -70,6 +73,7 @@ SELECT groupkey, GroupPartition(b > a) FROM {1,2,3} AS a INNER JOIN {4,5,6} AS b
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo utilizar la cláusula GROUPPARTITION con la cláusula GROUP BY. La cláusula GROUP BY agrupa las entidades `SalesOrderHeader` por `Contact`. A continuación, la cláusula GROUPPARTITION proyecta la propiedad `TotalDue` para cada grupo, produciendo una colección de decimales.  
   
  [!code-sql[DP EntityServices Concepts#Collection_GroupPartition](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#collection_grouppartition)]

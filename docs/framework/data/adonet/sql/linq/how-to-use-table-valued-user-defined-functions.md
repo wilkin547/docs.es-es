@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 44866367393e321d7dd2db965e2fad8a2e6b63e9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 68a2b54c8fd541595d36bf9c864257b1be1f7856
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286331"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203584"
 ---
 # <a name="how-to-use-table-valued-user-defined-functions"></a>Procedimiento para usar funciones definidas por el usuario con valores de tabla
+
 Una función con valores de tabla devuelve un conjunto de filas único (a diferencia de los procedimientos almacenados, que pueden devolver varias formas de resultados). Dado que el tipo devuelto de una función con valores de tabla es `Table`, una función con valores de tabla se puede usar en cualquier lugar de SQL donde se pueda usar una tabla. La función con valores de tabla se puede tratar como se trataría una tabla.  
   
 ## <a name="example"></a>Ejemplo  
+
  La función de SQL siguiente declara explícitamente que devuelve `TABLE`. Por lo tanto, la estructura de conjunto de filas devuelta se define implícitamente.  
   
 ```sql
@@ -35,6 +37,7 @@ RETURN
  [!code-vb[DLinqUDFS#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/northwind-tfunc.vb#1)]  
   
 ## <a name="example"></a>Ejemplo  
+
  El código de SQL siguiente muestra cómo se puede unir a la tabla devuelta por la función y, si no, tratarla como lo haría con cualquier otra tabla:  
   
 ```sql

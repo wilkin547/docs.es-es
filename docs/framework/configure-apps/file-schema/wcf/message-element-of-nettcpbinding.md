@@ -1,15 +1,16 @@
 ---
-title: <message>elemento de<netTcpBinding>
+title: <message> elemento de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab767a5a1179de81bf9a8adc61799ede2d915ac1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739012"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204910"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<message>elemento de\<netTcpBinding>
+# <a name="message-element-of-nettcpbinding"></a>\<message> elemento de \<netTcpBinding>
+
 Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo configurado con [\<netTcpBinding>](nettcpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -69,6 +71,7 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 |IssuedToken|Especifica un token personalizado, normalmente emitido por un servicio de token de seguridad (STS).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -77,7 +80,8 @@ Define el tipo de requisitos de seguridad del nivel de mensaje para un extremo c
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Define las funciones de seguridad para <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Seguridad de nivel del mensaje para la integridad y confidencialidad del mensaje SOAP, así como para la autenticación mutua de los sistemas de comunicación del mismo nivel. Si este modo de seguridad está seleccionado en un enlace, la pila del canal se configura con elementos de enlace de seguridad de mensaje. Los mensajes SOAP se protegen conforme a los estándares de WS-Security*.  
   
 ## <a name="see-also"></a>Consulte también

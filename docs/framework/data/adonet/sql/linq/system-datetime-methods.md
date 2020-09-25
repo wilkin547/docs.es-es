@@ -2,17 +2,19 @@
 title: System.DateTime (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e3bffb1f47c19ccf7ea59151cd3545a15d59f1f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792422"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203493"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime (Métodos)
+
 Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, están disponibles para su uso en las consultas de LINQ to SQL. Si no se admite un método, operador ni propiedad, LINQ to SQL no puede convertir el miembro para la ejecución en SQL Server. Puede usar estos miembros en el código, sin embargo, deben evaluarse antes de convertir la consulta a Transact-SQL o después de recuperar los resultados de la base de datos.  
   
 ## <a name="supported-systemdatetime-members"></a>Miembros System.DateTime admitidos  
+
  Una vez asignado en el modelo de objetos o en el archivo de asignación externo, LINQ to SQL permite llamar a los siguientes miembros de <xref:System.DateTime?displayProperty=nameWithType> en las consultas de LINQ to SQL.  
   
 |Métodos <xref:System.DateTime> compatibles|Operadores <xref:System.DateTime> compatibles|Propiedades <xref:System.DateTime> admitidas|  
@@ -32,6 +34,7 @@ Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, est�
 |||<xref:System.DateTime.Year%2A>|  
   
 ## <a name="members-not-supported-by-linq-to-sql"></a>Miembros no admitidos por LINQ to SQL  
+
  Los siguientes miembros no se admiten en consultas de LINQ to SQL.  
   
 |||  
@@ -47,6 +50,7 @@ Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, est�
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
 ## <a name="method-translation-example"></a>Ejemplo de conversión de método  
+
  Todos los métodos admitidos por LINQ to SQL se convierten a Transact-SQL antes de enviarse a SQL Server. Por ejemplo, considere el siguiente patrón:  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
@@ -56,6 +60,7 @@ Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, est�
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>Métodos Date y Time de SQLMethods  
+
  Además de los métodos proporcionados por la estructura <xref:System.DateTime>, LINQ to SQL proporciona los métodos citados en la siguiente tabla desde la clase <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> para trabajar con fechas y horas.  
   
 ||||  
@@ -64,9 +69,9 @@ Los métodos, operadores y propiedades siguientes admitidos en LINQ to SQL, est�
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos sobre consultas](query-concepts.md)
-- [Creación del modelo de objetos](creating-the-object-model.md)
+- [Crear el modelo de objetos](creating-the-object-model.md)
 - [Asignación de tipos entre CLR y SQL](sql-clr-type-mapping.md)
 - [Tipos de datos y funciones](data-types-and-functions.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
 - <disableFusionUpdatesFromADManager> element
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
-ms.openlocfilehash: 4e7375fddaa98b45766b29d911d555f773edcafa
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c3971379b358ae16fc463df2b8d6288cf8881391
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117445"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205040"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> (Elemento)
+
 Especifica si el comportamiento predeterminado, que consiste en permitir el host en tiempo de ejecución para invalidar los valores de configuración de un dominio de aplicación, está deshabilitado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -26,6 +27,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
 |1|Deshabilitar la capacidad de invalidar la configuración de fusión. Esto revierte el comportamiento de las versiones anteriores del .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,7 +54,8 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  A partir de la .NET Framework 4, el comportamiento predeterminado es permitir que el <xref:System.AppDomainManager> objeto invalide los valores de configuración mediante la <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad o el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método del <xref:System.AppDomainSetup> objeto que se pasa a la implementación del <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método, en la subclase de <xref:System.AppDomainManager> . En el caso del dominio de aplicación predeterminado, la configuración que cambie invalida la configuración especificada por el archivo de configuración de la aplicación. En otros dominios de aplicación, invalidan las opciones de configuración que se pasaron al <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método o.  
   
  Puede pasar información de configuración nueva o pasar un valor null ( `Nothing` en Visual Basic) para eliminar la información de configuración que se ha pasado.  
@@ -63,6 +67,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
  Como alternativa al uso del `<disableFusionUpdatesFromADManager>` elemento, puede deshabilitar el comportamiento predeterminado mediante la creación de una configuración del registro o mediante el establecimiento de una variable de entorno. En el registro, cree un valor DWORD denominado `COMPLUS_disableFusionUpdatesFromADManager` en `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework` y establezca el valor en 1. En la línea de comandos, establezca la variable de entorno `COMPLUS_disableFusionUpdatesFromADManager` en 1.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo deshabilitar la capacidad de invalidar la configuración de fusión mediante el `<disableFusionUpdatesFromADManager>` elemento.  
   
 ```xml  

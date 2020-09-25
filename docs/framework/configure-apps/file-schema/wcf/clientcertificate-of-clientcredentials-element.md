@@ -1,15 +1,16 @@
 ---
-title: <clientCertificate>del <clientCredentials> elemento
+title: <clientCertificate> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 74209c43dcafb1e27bb1d7943ee7832eaea0ef57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400511"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204949"
 ---
-# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate>del \<clientCredentials> elemento
+# <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate> del \<clientCredentials> elemento
+
 Define un certificado X.509 que se usa para autenticar un cliente en un servicio.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 |X509FindType|Define el tipo de búsqueda de X.509 que se va a ejecutar. El tipo contenido en el atributo `findValue` debe satisfacer los requisitos de este atributo. Los valores válidos incluyen los siguientes:<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />- FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />- FindByTimeValid<br />- FindByTimeNotYetValid<br />- FindByTemplateName<br />- FindByApplicationPolicy<br />- FindByCertificatePolicy<br />- FindByExtension<br />- FindByKeyUsage<br />- FindBySubjectKeyIdentifier<br /><br /> El valor predeterminado es FindBySubjectDistinguishedName. Este atributo es del tipo <xref:System.Security.Cryptography.X509Certificates.X509FindType>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -50,7 +53,8 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar el cliente en un servicio.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: especificar valores de credencial de cliente](../../../wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Consulte también

@@ -2,26 +2,28 @@
 title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: d02524cd5901adeca7bc36d6fd13c7abdc46c69b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894404"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203428"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
-A partir de SQL Server nombre de código Denali, estará disponible una versión ligera de SQL Server, denominada LocalDB. Este tema explica cómo conectarse a una base de datos de LocalDB.  
+
+A partir del nombre de código de SQL Server Denali, estará disponible una versión ligera de SQL Server, denominada LocalDB. En este tema se describe cómo conectarse a una base de datos de LocalDB.  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de LocalDB, incluido cómo instalar LocalDB y configurar la instancia de LocalDB, vea Libros en pantalla de SQL Server.  
+## <a name="remarks"></a>Observaciones  
+
+ Para obtener más información sobre LocalDB, incluido cómo instalar y configurar la instancia de LocalDB, vea los Libros en pantalla de SQL Server.  
   
  Para resumir lo que puede hacer con LocalDB:  
   
-- Cree e inicie instancias de LocalDB con sqllocaldb.exe o el archivo app.config.  
+- Crear e iniciar instancias de LocalDB con sqllocaldb. exe o el archivo app.config.  
   
-- Use sqlcmd.exe para agregar y modificar bases de datos en una instancia de LocalDB. Por ejemplo: `sqlcmd -S (localdb)\myinst`.  
+- Use sqlcmd.exe para agregar y modificar bases de datos en una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\myinst`.  
   
-- Use la palabra clave de cadena de conexión `AttachDBFilename` para agregar una base de datos a la instancia de LocalDB. Al usar `AttachDBFilename`, si no se especifica el nombre de la base de datos con la palabra clave de cadena de conexión `Database` , se quitará la base de datos de la instancia de LocalDB cuando se cierre la aplicación.  
+- Utilice la palabra clave de cadena de conexión `AttachDBFilename` para agregar una base de datos a la instancia de LocalDB. Al usar `AttachDBFilename`, si no especifica el nombre de la base de datos con la palabra clave de la cadena de conexión `Database`, la base de datos se quita de la instancia de LocalDB cuando se cierra la aplicación.  
   
 - Especifique una instancia de LocalDB en la cadena de conexión. Por ejemplo, el nombre de instancia es `myInstance`, la cadena de conexión incluiría:  
   
@@ -29,12 +31,13 @@ A partir de SQL Server nombre de código Denali, estará disponible una versión
   
  `User Instance=True` no se permite al conectarse a una base de datos de LocalDB.  
   
- Puede descargar LocalDB de [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si va a utilizar sqlcmd. exe para modificar los datos de la instancia de LocalDB, necesitará SQLCMD de SQL Server 2012, que también puede obtener del Feature Pack de SQL Server 2012.  
+ Puede descargar LocalDB desde [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si va a usar sqlcmd.exe para modificar datos en la instancia de LocalDB, necesita sqlcmd de SQL Server 2012, que también puede obtener de SQL Server 2012 Feature Pack.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Crear mediante programación una instancia con nombre  
- Una aplicación puede crear una instancia con nombre y especificar una base de datos como sigue:  
+
+ Una aplicación puede crear una instancia con nombre y especificar una base de datos de la siguiente manera:  
   
-- Especifique las instancias de LocalDB para crear en el archivo app.config, como sigue.  El número de versión de la instancia debe ser igual que el número de versión de la instalación de LocalDB.  
+- Especifique las instancias de LocalDB que se van a crear en el archivo app.config, como se indica a continuación.  El número de versión de la instancia debe ser el mismo que el número de versión de la instalación de LocalDB.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -52,11 +55,11 @@ A partir de SQL Server nombre de código Denali, estará disponible una versión
     </configuration>  
     ```  
   
-- Especifique el nombre de instancia mediante la palabra clave de cadena de conexión `server` .  El nombre de instancia especificado en la palabra clave de cadena de conexión `server` debe coincidir con el nombre especificado en el archivo app.config.  
+- Especifique el nombre de la instancia utilizando la palabra clave de cadena de conexión `server`.  El nombre de instancia especificado en la palabra clave de la cadena de conexión `server` debe coincidir con el nombre especificado en el archivo app.config.  
   
 - Use la palabra clave de cadena de conexión `AttachDBFilename` para especificar el archivo .MDF.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Características de SQL Server y ADO.NET](sql-server-features-and-adonet.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

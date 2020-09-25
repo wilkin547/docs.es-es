@@ -2,19 +2,21 @@
 title: Guía de programación
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 0746d14d7be0b67bc9966ae0c5a4af0a3226c1e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50c4370e23faf8400eb23f1e8c0cc74cd4dce80e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546567"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203571"
 ---
 # <a name="programming-guide"></a>Guía de programación
+
 Esta sección contiene información sobre cómo crear y utilizar un modelo de objetos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Si usa Visual Studio, también puede usar la Object Relational Designer para realizar muchas de estas mismas tareas.  
   
  También puede buscar en Microsoft Docs para ver si hay problemas específicos y puede participar en el [Foro de LINQ](https://social.msdn.microsoft.com/forums/home?forum=linqtosql), donde puede discutir con mayor detalle temas más complejos con expertos. Por último, el [LINQ to SQL: Language-Integrated Query para datos relacionales tecnología de detalles de](/previous-versions/dotnet/articles/bb425822(v=msdn.10)) las notas del producto [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , completos con Visual Basic y ejemplos de código de C#.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Crear el modelo de objetos](creating-the-object-model.md)  
  Describe cómo generar un modelo de objetos.  
   
@@ -34,6 +36,7 @@ Esta sección contiene información sobre cómo crear y utilizar un modelo de ob
  Incluye elementos adicionales, como la resolución de conflictos de simultaneidad, la creación de bases de datos, etc., para usuarios más avanzados.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [LINQ to SQL](index.md)  
  Proporciona vínculos a temas donde se explica la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y se muestran sus características.  
   

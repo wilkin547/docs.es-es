@@ -2,14 +2,15 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4582066098feaf50b33b083de56bcb8c3e04df0f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736591"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204624"
 ---
 # \<namedPipeTransport>
+
 Define un transporte que hace que un canal transfiera mensajes mediante las canalizaciones con nombre cuando está incluido en un enlace personalizado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -40,9 +41,11 @@ Define un transporte que hace que un canal transfiera mensajes mediante las cana
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
 En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
 Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -60,7 +63,7 @@ Ninguno.
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
 |maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje, en bytes, que se puede recibir.|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
-|[\<connectionPoolSettings>de\<namedPipeTransport>](connectionpoolsettings.md)|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
+|[\<connectionPoolSettings> de \<namedPipeTransport>](connectionpoolsettings.md)|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -68,7 +71,8 @@ Ninguno.
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
 Este transporte utiliza los URI del formulario "net.pipe://hostname/path." Otros componentes URI son opcionales.  
   
 El elemento `namedPipeTransport` es el punto inicial para crear un enlace personalizado que implementa el protocolo de transporte de canalizaciones con nombre. Este transporte se utiliza para la comunicación entre WCF y Windows Communication Foundation (WCF) en el equipo.  

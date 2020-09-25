@@ -2,14 +2,15 @@
 title: <message> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 748a734af8cf6767ce47cfffce9aec3ef627cb44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8b1e889efc53d0132368111037399ea8872008b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73736739"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204871"
 ---
 # <a name="message-of-basichttpbinding"></a>\<message> de \<basicHttpBinding>
+
 Define la configuración para la seguridad de nivel de mensaje de [\<basicHttpBinding>](basichttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<basicHttpBi
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,7 +37,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<basicHttpBi
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |algorithmSuite|Establece el cifrado de mensajes y los algoritmos de encapsulado de claves. Este atributo es de tipo <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>, que especifica los algoritmos y los tamaños clave. Estos algoritmos se asignan a los que se indican en la especificación Security Policy Language (WS-SecurityPolicy).<br /><br /> El valor predeterminado es `Basic256`.|  
-|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. De manera predeterminada, es `UserName`.|  
+|clientCredentialType|Especifica el tipo de credenciales que se van a usar al realizar la autenticación del cliente mediante seguridad basada en mensaje. El valor predeterminado es `UserName`.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
@@ -45,6 +47,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<basicHttpBi
 |Certificado|Exige la autenticación del cliente en el servidor mediante un certificado. En este caso, la credencial del cliente debe especificarse mediante [\<clientCredentials>](clientcredentials.md) y [\<clientCertificate>](clientcertificate-of-servicecredentials.md) . Además, cuando se utiliza el modo de seguridad de mensajes, se debe proporcionar el cliente con el certificado del servicio. En este caso, la credencial de servicio debe especificarse mediante <xref:System.ServiceModel.Description.ClientCredentials> `ClientCredentials` el elemento de comportamiento o clase y especificar el certificado de servicio mediante [\<serviceCertificate>](servicecertificate-of-servicecredentials.md) .|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -54,6 +57,7 @@ Define la configuración para la seguridad de nivel de mensaje de [\<basicHttpBi
 |[\<security>](security-of-basichttpbinding.md)|Define las funciones de seguridad para [\<basicHttpBinding>](basichttpbinding.md) .|  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo muestra cómo implementar una aplicación que utiliza basicHttpBinding y modo de seguridad. En el ejemplo de configuración de un servicio siguiente, la definición de extremo especifica basicHttpBinding y hace referencia a una configuración de enlace denominada `Binding1`. El certificado que el servicio utiliza para autenticarse al cliente se establece en la sección `behaviors` del archivo de configuración bajo el elemento `serviceCredentials`. El modo de la validación que se aplica al certificado que el cliente utiliza para autenticarse al servicio también se establece en la sección `behaviors` bajo el elemento `clientCertificate`.  
   
  El mismo enlace y detalles de seguridad se especifican en el archivo de configuración del cliente.  

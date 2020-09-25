@@ -2,14 +2,15 @@
 title: <localServiceSettings> (elemento)
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 3043c07afd316d90cc5525a67bef144f33d9b136
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400301"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91204936"
 ---
 # <a name="localservicesettings-element"></a>Elemento \<localServiceSettings>
+
 Especifica la configuración de seguridad de un servicio local para este enlace.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,13 +43,14 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. De manera predeterminada, es `false`.|  
+|`detectReplays`|Un valor booleano que especifica si se detectan ataques de reproducción en el canal y si se abordan automáticamente. El valor predeterminado es `false`.|  
 |`inactivityTimeout`|Un positivo <xref:System.TimeSpan> que especifica la duración de inactividad que el canal espera antes de que se agote el tiempo de espera. El valor predeterminado es "01:00:00".|  
 |`issuedCookieLifeTime`|<xref:System.TimeSpan> que especifica la duración emitida a todas las nuevas cookies de seguridad. Las cookies que superan su duración se reciclan y se negocian de nuevo. El valor predeterminado es "10:00:00".|  
 |`maxCachedCookies`|Un entero positivo que especifica el número máximo de cookies que pueden estar almacenadas en memoria caché. El valor predeterminado es 1000.|  
@@ -64,6 +66,7 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
 |`timestampValidityDuration`|Un <xref:System.TimeSpan> positivo que especifica la duración en la que una marca de tiempo es válida. El valor predeterminado es "00:15:00".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -73,7 +76,8 @@ Especifica la configuración de seguridad de un servicio local para este enlace.
 |[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad de un enlace personalizado.|  
 |[\<secureConversationBootstrap>](secureconversationbootstrap.md)|Especifica los valores predeterminados usados para iniciar un servicio de conversación seguro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  La configuración es local porque no se publica como parte de la directiva de seguridad del servicio y no afecta al enlace del cliente.  
   
  Los siguientes atributos del elemento `localServiceSecuritySettings` pueden ayudar a mitigar un ataque de seguridad de denegación de servicio (DOS):  

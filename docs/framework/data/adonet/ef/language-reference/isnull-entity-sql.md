@@ -2,14 +2,15 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150205"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203623"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
+
 Determina si una expresión de consulta es nula.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -19,6 +20,7 @@ expression IS [ NOT ] NULL
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Cualquier expresión de consulta válida. No puede ser una colección, tener miembros de una colección, o un tipo de registro con propiedades de tipo de colección.  
   
@@ -26,9 +28,11 @@ expression IS [ NOT ] NULL
  Niega el resultado EDM.Boolean de IS NULL.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  `true` si `expression` devuelve null; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Observaciones  
+
  Utilice `IS NULL` para determinar si el elemento de una combinación externa es nulo:  
   
 ```sql  
@@ -46,7 +50,7 @@ select c from LOB.Customer as c where c.DOB is not null
   
  En la tabla siguiente se muestra el comportamiento de `IS NULL` en algunos patrones. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   
-|Patrón|Comportamiento|  
+|Modelo|Comportamiento|  
 |-------------|--------------|  
 |null IS NULL|Devuelve `true`.|  
 |TREAT (null AS EntityType) IS NULL|Devuelve `true`.|  
@@ -57,7 +61,8 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Produce un error.|  
   
 ## <a name="example"></a>Ejemplo  
- La [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente consulta utiliza el operador IS NOT NULL para determinar si una expresión de consulta no es null. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+
+ La siguiente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta utiliza el operador is not null para determinar si una expresión de consulta no es NULL. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
 1. Siga el procedimiento de [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
