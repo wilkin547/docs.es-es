@@ -3,14 +3,15 @@ title: Objetos DataAdapter y DataReader
 description: Obtenga información sobre ADO.NET DataReader, que recupera datos de una base de datos, y DataAdapter, que recupera datos de un origen de datos y rellena un DataSet.
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 17463d65266baa53521bed9603c8abd96923277b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2584f8b382dd90f2f8b4554663dc545b9ccceb62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286978"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177610"
 ---
 # <a name="dataadapters-and-datareaders"></a>Objetos DataAdapter y DataReader
+
 Puede usar ADO.NET **DataReader** para recuperar una secuencia de datos de solo lectura y de solo avance desde una base de datos. Los resultados se devuelven cuando se ejecuta la consulta y se almacenan en el búfer de red en el cliente hasta que se solicitan mediante el método **Read** del **DataReader**. El uso de **DataReader** puede aumentar el rendimiento de la aplicación al recuperar los datos tan pronto como estén disponibles y, de forma predeterminada, almacenar solo una fila a la vez en la memoria, lo que reduce la sobrecarga del sistema.  
   
  Un <xref:System.Data.Common.DataAdapter> se utiliza para recuperar datos de un origen de datos y llenar tablas con un <xref:System.Data.DataSet>. `DataAdapter` también resuelve los cambios realizados en `DataSet` de vuelta al origen de datos. Mediante el objeto `DataAdapter` del proveedor de datos .NET Framework, `Connection` se conecta a un origen de datos y utiliza objetos `Command` para recuperar datos del origen de datos y resolver los cambios a dicho origen.  
@@ -18,6 +19,7 @@ Puede usar ADO.NET **DataReader** para recuperar una secuencia de datos de solo 
  Cada proveedor de datos .NET Framework incluido con .NET Framework tiene un objeto <xref:System.Data.Common.DbDataReader> y un objeto <xref:System.Data.Common.DbDataAdapter>, el proveedor de datos .NET Framework para OLE DB incluye un objeto <xref:System.Data.OleDb.OleDbDataReader> y un objeto <xref:System.Data.OleDb.OleDbDataAdapter>, el proveedor de datos .NET Framework para SQL Server incluye un objeto <xref:System.Data.SqlClient.SqlDataReader> y un objeto <xref:System.Data.SqlClient.SqlDataAdapter>, el proveedor de datos .NET Framework para ODBC incluye un objeto <xref:System.Data.Odbc.OdbcDataReader> y un objeto <xref:System.Data.Odbc.OdbcDataAdapter>, y el proveedor de datos .NET Framework para Oracle incluyes un objeto <xref:System.Data.OracleClient.OracleDataReader> y un objeto <xref:System.Data.OracleClient.OracleDataAdapter>.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Recuperar datos utilizando un objeto DataReader](retrieving-data-using-a-datareader.md)  
  Describe el objeto **datareader** ADO.net y cómo usarlo para devolver una secuencia de resultados de un origen de datos.  
   

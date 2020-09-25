@@ -2,14 +2,15 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: b4bc33cf8ff4e703973efe7df49e9f1d2189302e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e3ca9c4a43432d7f5da6d8816b6a2b984851050
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70854812"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177848"
 ---
 # \<webScriptEndpoint>
+
 Este elemento de configuración define un extremo estándar con un [\<webHttpBinding>](webhttpbinding.md) enlace fijo que agrega automáticamente el [\<enableWebScript>](enablewebscript.md) comportamiento. Use este extremo cuando esté escribiendo un servicio al que se llama desde una aplicación AJAX de ASP.NET.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,6 +31,7 @@ Este elemento de configuración define un extremo estándar con un [\<webHttpBin
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -39,6 +41,7 @@ Este elemento de configuración define un extremo estándar con un [\<webHttpBin
 |webEndpointType|Cadena que especifica el tipo de punto de conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

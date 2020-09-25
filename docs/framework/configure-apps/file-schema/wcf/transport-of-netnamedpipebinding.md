@@ -2,14 +2,15 @@
 title: <transport> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: d40178e59b89c2912123e1927e9e960f6d880871
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 81c52405478d4c1ab5c65aab73f7feff61b879d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73735964"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178026"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<transport> de \<netNamedPipeBinding>
+
 Define los valores de seguridad de transporte para una canalización con nombre.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Define los valores de seguridad de transporte para una canalización con nombre.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +44,7 @@ Define los valores de seguridad de transporte para una canalización con nombre.
 |protectionLevel|Define el nivel de protección de la canalización con nombre. Si se firman los mensajes, se reduce el riesgo de que manipulen el mensaje terceros mientras éste se transfiere. El cifrado proporciona privacidad de nivel de datos durante el transporte. Los valores válidos incluyen los siguientes:<br /><br /> -None: sin protección.<br />-Sign: los mensajes se firman.<br />-EncryptAndSign: los mensajes se cifran y firman.<br /><br /> El valor predeterminado es EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  

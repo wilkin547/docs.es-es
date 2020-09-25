@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b61fede9144e554ee68f0b41adac36209adb7288
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554741"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177809"
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
+
 Un proveedor de datos de .NET Framework se utiliza para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. .NET Framework proveedores de datos son ligeros, creando una capa mínima entre el origen de datos y el código, lo que aumenta el rendimiento sin sacrificar la funcionalidad.  
   
  En la tabla siguiente se enumeran los proveedores de datos que se incluyen en el .NET Framework.  
@@ -28,6 +29,7 @@ Un proveedor de datos de .NET Framework se utiliza para conectarse a una base de
 |.NET Framework proveedor de datos para SQL Server Compact 4,0.|Proporciona acceso a datos para Microsoft SQL Server Compact 4,0. Usa el espacio de nombres [System.Data.SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Objetos principales de los proveedores de datos .NET Framework  
+
  En la tabla siguiente se describen los cuatro objetos principales que componen un .NET Framework proveedor de datos.  
   
 |Object|Descripción|  
@@ -50,6 +52,7 @@ Un proveedor de datos de .NET Framework se utiliza para conectarse a una base de
 |`ClientPermission`|Se proporciona para los atributos de seguridad de acceso del código del proveedor de datos .NET Framework. La clase base para todos los objetos `ClientPermission` es <xref:System.Data.Common.DBDataPermission> .|  
   
 ## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>Proveedor de datos .NET Framework para SQL Server (SqlClient)  
+
  El proveedor de datos de .NET Framework para SQL Server (SqlClient) usa su propio protocolo para comunicarse con SQL Server. Es ligero y funciona bien porque está optimizado para tener acceso a una SQL Server directamente sin agregar una capa de conectividad de base de datos (ODBC) OLE DB o abierta. En la siguiente ilustración se compara el proveedor de datos de .NET Framework para SQL Server con el proveedor de datos de .NET Framework para OLE DB. El proveedor de datos de .NET Framework para OLE DB se comunica con un origen de datos de OLE DB a través del componente de servicio OLE DB, que proporciona agrupación de conexiones y servicios de transacción, y el proveedor de OLE DB para el origen de datos.  
   
 > [!NOTE]
@@ -73,6 +76,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>Proveedor de datos .NET Framework para OLE DB  
+
  El proveedor de datos de .NET Framework para OLE DB (OleDb) utiliza OLE DB nativa a través de la interoperabilidad COM para habilitar el acceso a los datos. El proveedor de datos de .NET Framework para OLE DB admite transacciones locales y distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para OLE DB, de forma predeterminada, se da de alta automáticamente en una transacción y obtiene los detalles de la transacción de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  En la tabla siguiente se muestran los proveedores probados con ADO.NET.  
@@ -101,6 +105,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>Proveedor de datos .NET Framework para ODBC  
+
  El proveedor de datos de .NET Framework para ODBC (ODBC) utiliza el administrador de controladores ODBC (DM) nativo para habilitar el acceso a los datos. El proveedor de datos de ODBC admite tanto transacciones locales como transacciones distribuidas. En el caso de las transacciones distribuidas, el proveedor de datos OBDC se inscribe de forma predeterminada y automática en una transacción y obtiene los detalles a través de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  En la tabla siguiente se muestran los controladores ODBC probados con ADO.NET.  
@@ -127,6 +132,7 @@ using System.Data.Odbc;
 > El proveedor de datos de .NET Framework para ODBC requiere MDAC 2,6 o una versión posterior, y se recomienda MDAC 2,8 SP1. Puede descargar MDAC 2,8 SP1 desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=5793).
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Proveedor de datos .NET Framework para Oracle  
+
  El proveedor de datos de .NET Framework para Oracle (OracleClient) permite el acceso a los datos de los orígenes de datos de Oracle a través del software de conectividad de cliente de Oracle. El proveedor de datos es compatible con la versión 8.1.7 o posterior del software de cliente de Oracle. El proveedor de datos admite tanto transacciones locales como transacciones distribuidas. Para obtener más información, consulte [transacciones y simultaneidad](transactions-and-concurrency.md).  
   
  El proveedor de datos de .NET Framework para Oracle requiere el software de cliente de Oracle (versión 8.1.7 o una versión posterior) en el sistema para poder conectarse a un origen de datos de Oracle.  
@@ -146,6 +152,7 @@ using System.Data.OracleClient;
 ```  
   
 ## <a name="choosing-a-net-framework-data-provider"></a>Elegir un proveedor de datos .NET Framework  
+
  En función del diseño y del origen de datos de la aplicación, la elección de .NET Framework proveedor de datos puede mejorar el rendimiento, la capacidad y la integridad de la aplicación. En la tabla siguiente se describen las ventajas y las limitaciones de cada proveedor de datos de .NET Framework.  
   
 |Proveedor|Notas|  
@@ -156,9 +163,10 @@ using System.Data.OracleClient;
 |Proveedor de datos .NET Framework para Oracle|Recomendado para aplicaciones de un único nivel y de nivel medio que utilizan orígenes de datos de Oracle.|  
   
 ## <a name="entityclient-provider"></a>Proveedor para EntityClient  
+
  El proveedor EntityClient se usa para obtener acceso a datos basándose en un Entity Data Model (EDM). A diferencia de otros proveedores de datos .NET Framework, no interactúa directamente con ningún origen de datos. En su lugar, usa Entity SQL para comunicarse con el proveedor de datos subyacente. Para obtener más información, consulte [Proveedor de EntityClient para Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general de ADO.NET](ado-net-overview.md)
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)

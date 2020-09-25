@@ -1,15 +1,16 @@
 ---
-title: <windows>del <clientCredentials> elemento
+title: <windows> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 115e1822659c04ee37a7364f7b25616b52dc5efe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177831"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<windows>del \<clientCredentials> elemento
+# <a name="windows-of-clientcredentials-element"></a>\<windows> del \<clientCredentials> elemento
+
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -38,6 +40,7 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
 |`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Establecer esta propiedad en `false` hace que Windows Communication Foundation (WCF) realice un mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

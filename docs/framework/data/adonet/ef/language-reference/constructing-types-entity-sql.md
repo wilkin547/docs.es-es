@@ -2,18 +2,20 @@
 title: Tipos de constructores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 7113aaf1c2caa982a8ab4751928856c1271570cb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 82c8e3f2bac0d13da4870e90878e0de6fc9ec063
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251117"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91177532"
 ---
 # <a name="constructing-types-entity-sql"></a>Tipos de constructores (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]proporciona tres tipos de constructores: constructores Row, constructores de tipos con nombre y constructores de colección.  
+
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona tres tipos de constructores: constructores Row, constructores de tipos con nombre y constructores de colección.  
   
 ## <a name="row-constructors"></a>Constructores ROW  
- Los constructores ROW de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear registros anónimos con tipo estructural de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`:  
+
+ Los constructores ROW de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear registros anónimos con tipo estructural de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)` :  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
@@ -28,6 +30,7 @@ ms.locfileid: "70251117"
  Para obtener más información sobre los constructores de filas, vea [Row](row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Constructores de colecciones  
+
  Los constructores de colecciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear una instancia de un elemento multiset a partir de una lista de valores. Todos los valores del constructor deben ser del tipo `T` mutuamente compatible y el constructor genera una colección de tipo `Multiset<T>`. Por ejemplo, la expresión siguiente crea una colección de enteros:  
   
  `Multiset(1, 2, 3)`  
@@ -41,6 +44,7 @@ ms.locfileid: "70251117"
  Para obtener más información, vea [MultiSet](multiset-entity-sql.md).  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>Constructores de tipos con nombre (inicializadores NamedType)  
+
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite a los constructores de tipos (inicializadores) crear instancias de tipos complejos con nombre y de tipos de entidad. Por ejemplo, la expresión siguiente crea una instancia de un tipo `Person`.  
   
  `Person("abc", 12)`  
@@ -63,7 +67,7 @@ ms.locfileid: "70251117"
   
  Para obtener más información, vea [constructor de tipo con nombre](named-type-constructor-entity-sql.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Información general sobre Entity SQL](entity-sql-overview.md)
