@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aff324ac9952c95c78d7ca15572651dba23b79b7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153212"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195173"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics> (Elemento)
+
 Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -29,9 +30,11 @@ Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enru
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -52,6 +55,7 @@ Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enru
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo insertar un modificador de seguimiento y un agente de escucha de seguimiento dentro del **\<system.diagnostics>** elemento. El `General` modificador de seguimiento se establece en el <xref:System.Diagnostics.TraceLevel> nivel. El agente de escucha de seguimiento `myListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo.  
   
 > [!NOTE]
