@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21bf7662094d5bc8948a1ce6378c454713cacc62
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174516"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183122"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estadísticas de proveedor de SQL Server
+
 Desde .NET Framework versión 2.0, el proveedor de datos .NET Framework para servidor SQL Server admite estadísticas en tiempo de ejecución. Debe habilitar las estadísticas estableciendo la propiedad <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> en `True` después de haber creado un objeto de conexión válido. Una vez habilitadas las estadísticas, puede revisarlas como una "instantánea en el tiempo" recuperando una referencia <xref:System.Collections.IDictionary> a través del método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection>. Se enumeran a través de la lista como un conjunto de entradas de diccionario de pares nombre-valor. Estos pares nombre-valor están desordenados. En cualquier momento, puede llamar al método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> para restablecer los contadores. Si no se ha habilitado la recopilación de estadísticas, no se genera una excepción. Además, si se llama a <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> sin haber llamado a <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> primero, los valores recuperados son los valores iniciales de cada entrada. Si habilita las estadísticas, ejecuta la aplicación durante un tiempo y, a continuación, deshabilita las estadísticas, los valores recuperados reflejarán los valores recopilados hasta el momento en que se deshabilitaron las estadísticas. Todos los valores estadísticos se recopilan por conexión.  
   
 ## <a name="statistical-values-available"></a>Valores estadísticos disponibles  
+
  Actualmente hay 18 elementos diferentes disponibles en el proveedor de Microsoft SQL Server. Se puede acceder al número de elementos disponibles mediante la propiedad **Count** de la referencia de la interfaz <xref:System.Collections.IDictionary> devuelta por <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Todos los contadores de las estadísticas de proveedor usan el tipo <xref:System.Int64> de Common Language Runtime (**long** en C# y Visual Basic), que tiene un ancho de 64 bits. El valor máximo del tipo de datos **int64**, como se define en el campo **int64.MaxValue**, es ((2^63)-1)). Cuando los valores de los contadores alcanzan este valor máximo, ya no se deben considerar precisos. Esto significa que **int64.MaxValue**-1((2^63)-2) es realmente el valor válido más alto de cualquier estadística.  
   
 > [!NOTE]
@@ -45,6 +47,7 @@ Desde .NET Framework versión 2.0, el proveedor de datos .NET Framework para ser
 |`UnpreparedExecs`|Devuelve el número de instrucciones no preparadas que se ejecutan a través de la conexión una vez que la aplicación se ha iniciado con el proveedor y ha habilitado las estadísticas.|  
   
 ### <a name="retrieving-a-value"></a>Recuperación de un valor  
+
  La siguiente aplicación de consola muestra cómo habilitar las estadísticas en una conexión, recuperar cuatro valores de estadística individuales y escribirlos en la ventana de la consola.  
   
 > [!NOTE]
@@ -201,6 +204,7 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>Recuperación de todos los valores  
+
  La siguiente aplicación de consola muestra cómo habilitar las estadísticas en una conexión, recuperar todos los valores de estadística disponibles mediante el enumerador y escribirlos en la ventana de la consola.  
   
 > [!NOTE]

@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 5f49e123e6e980501d330eeecf2719023cdff8e7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 288920567db75dc1d4c7273f698467063af52ed6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70781966"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180782"
 ---
 # <a name="how-to-display-a-changeset"></a>Procedimiento para mostrar un conjunto de cambios
+
 Puede ver los cambios de los que <xref:System.Data.Linq.DataContext> ha realizado un seguimiento mediante <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se recuperan los clientes cuya ciudad es Londres, se cambia la ciudad a París y se envían los cambios a la base de datos.  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
@@ -51,6 +53,6 @@ CustomerID: SPECD
 Total changes: {Added: 0, Removed: 0, Modified: 8}
 ```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Capacidad de depuración](debugging-support.md)

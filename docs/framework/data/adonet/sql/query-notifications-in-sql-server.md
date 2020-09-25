@@ -3,14 +3,15 @@ title: Notificaciones de consulta en SQL Server
 description: Obtenga información acerca de cómo usar notificaciones de consulta para notificar a las aplicaciones Cuándo han cambiado los datos en una base de datos SQL Server, por ejemplo, para actualizar las pantallas de la aplicación.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8001f75d7e278a965b6e8e00e4b9af7b770a8bb5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543990"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183096"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notificaciones de consulta en SQL Server
+
 Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker, permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.  
   
  Hay tres maneras de implementar notificaciones de consulta mediante ADO.NET:  
@@ -40,6 +41,7 @@ Las notificaciones de consulta, creadas a partir de la infraestructura de Servic
 - [Guía del desarrollador (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Habilitación de notificaciones de consulta](enabling-query-notifications.md)  
  Describe cómo usar las notificaciones de consulta, incluidos los requisitos para habilitarlas y usarlas.  
   
@@ -53,6 +55,7 @@ Las notificaciones de consulta, creadas a partir de la infraestructura de Servic
  Muestra cómo configurar un objeto <xref:System.Data.SqlClient.SqlCommand> para que funcione con una notificación de consulta.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Data.Sql.SqlNotificationRequest>  
  Describe la clase <xref:System.Data.Sql.SqlNotificationRequest> y todos sus miembros.  
   
@@ -62,7 +65,7 @@ Las notificaciones de consulta, creadas a partir de la infraestructura de Servic
  <xref:System.Web.Caching.SqlCacheDependency>  
  Describe la clase <xref:System.Web.Caching.SqlCacheDependency> y todos sus miembros.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [SQL Server y ADO.NET](index.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

@@ -3,14 +3,15 @@ title: <certificateValidation>
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-ms.openlocfilehash: c2d1a5d36cb5616ef06eedc093dd70a68a164a81
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 583fef7eb364c39890b3f9304770b383c1ea6d2a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252131"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183512"
 ---
 # \<certificateValidation>
+
 Controla la configuración que usan los controladores de token para validar certificados. Esta configuración se invalida si un controlador concreto se configura con su propio validador.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Controla la configuración que usan los controladores de token para validar cert
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -56,7 +58,8 @@ Controla la configuración que usan los controladores de token para validar cert
 |[\<identityConfiguration>](identityconfiguration.md)|Especifica la configuración de identidad de nivel de servicio.|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Un `<certificateValidation>` elemento se puede especificar en el nivel de servicio bajo el `<identityConfiguration>` elemento o en el nivel de colección de controladores de tokens de seguridad bajo el `<securityTokenHandlerConfiguration>` elemento. La configuración de una colección de controladores de tokens invalida las especificadas en el servicio. Algunos controladores de token permiten especificar la configuración de validación de certificados en la configuración. La configuración de los controladores de token individuales invalida los especificados tanto en el nivel de servicio como en la colección de controladores de tokens de seguridad.  
   
 ## <a name="example"></a>Ejemplo  

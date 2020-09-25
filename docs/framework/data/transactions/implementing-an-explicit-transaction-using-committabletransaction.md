@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 40001422e665a7dda3fb938c8d57860909525404
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 7e1d78b581fcb3c4b2265f1d04cf2aba83faa28a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141996"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182888"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementar una transacción explícita mediante una transacción confirmable
+
 La clase <xref:System.Transactions.CommittableTransaction> proporciona a las aplicaciones una manera explícita de utilizar una transacción, a diferencia de utilizar implícitamente la clase <xref:System.Transactions.TransactionScope>. Es útil para las aplicaciones que desean utilizar la misma transacción por varias llamadas de función o llamadas de subproceso múltiples. A diferencia de la clase <xref:System.Transactions.TransactionScope>, el sistema de escritura de la aplicación ha de llamar específicamente a los métodos <xref:System.Transactions.CommittableTransaction.Commit%2A> y <xref:System.Transactions.Transaction.Rollback%2A> para confirmar o anular la transacción.  
   
 ## <a name="overview-of-the-committabletransaction-class"></a>Información general sobre la clase CommittableTransaction.  
+
  La clase <xref:System.Transactions.CommittableTransaction> deriva de la clase <xref:System.Transactions.Transaction>, proporcionando, por consiguiente, toda la funcionalidad del último. Específicamente útil es el método <xref:System.Transactions.Transaction.Rollback%2A> en la clase <xref:System.Transactions.Transaction> que también se puede utilizar para revertir un objeto <xref:System.Transactions.CommittableTransaction>.  
   
  La clase <xref:System.Transactions.Transaction> es similar a la clase <xref:System.Transactions.CommittableTransaction> pero no proporciona un método `Commit`. Esto le permite pasar el objeto de transacción (o clones de él) a otros métodos (potencialmente en otros subprocesos) mientras todavía se controla cuando se confirma la transacción. El código llamado puede dar de alta y votar en la transacción, pero solo el creador del objeto <xref:System.Transactions.CommittableTransaction> tiene la capacidad de confirmar la transacción.  
@@ -28,6 +30,7 @@ La clase <xref:System.Transactions.CommittableTransaction> proporciona a las apl
 - No se puede reutilizar un objeto <xref:System.Transactions.CommittableTransaction>. Una vez confirmado o revertido un objeto <xref:System.Transactions.CommittableTransaction>, no se puede utilizar de nuevo en una transacción. Es decir, no se puede establecer como el contexto de la transacción ambiente actual.  
   
 ## <a name="creating-a-committabletransaction"></a>Crear un CommittableTransaction  
+
  En el ejemplo siguiente se crea una nueva instancia de <xref:System.Transactions.CommittableTransaction> y se confirma.  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
@@ -40,6 +43,7 @@ La clase <xref:System.Transactions.CommittableTransaction> proporciona a las apl
  Un objeto <xref:System.Transactions.CommittableTransaction> se puede utilizar por las llamadas de función y subprocesos. Sin embargo, es tarea del desarrollador de aplicaciones administrar las excepciones y específicamente llamar al método <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> en caso de error.  
   
 ## <a name="asynchronous-commit"></a>Confirmación asincrónica  
+
  La clase <xref:System.Transactions.CommittableTransaction> también proporciona un mecanismo para confirmar de forma asincrónica una transacción. Una confirmación de la transacción puede tardar un tiempo sustancial, al igual que podría implicar varios accesos a bases de datos y una posible latencia de red. Al desear evitar los interbloqueos en aplicaciones de alto rendimiento, puede utilizar la confirmación asincrónica para finalizar lo antes posible el trabajo transaccional y ejecutar la operación de la confirmación como una tarea en segundo plano. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> y los métodos <xref:System.Transactions.CommittableTransaction.EndCommit%2A> de la clase <xref:System.Transactions.CommittableTransaction> le permiten esto.  
   
  Puede llamar <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> para enviar el retraso de la confirmación a un subproceso del grupo de subprocesos. También puede llamar <xref:System.Transactions.CommittableTransaction.EndCommit%2A> para determinar si se ha confirmado la transacción realmente. Si la transacción no se confirma por cualquier razón, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> se producirá una excepción de transacción. Si no se confirma la transacción todavía cuando se llama <xref:System.Transactions.CommittableTransaction.EndCommit%2A>, se bloquea el llamador hasta que la transacción se confirme o anule.  
@@ -86,7 +90,7 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Implementar una transacción implícita mediante el ámbito de la transacción](implementing-an-implicit-transaction-using-transaction-scope.md)
 - [Procesar transacciones](index.md)

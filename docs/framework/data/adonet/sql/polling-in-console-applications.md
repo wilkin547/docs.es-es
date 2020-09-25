@@ -5,19 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-ms.openlocfilehash: 0cefca33bde94855a2bb20a6404dfd4e75a954c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 35275206e0486c35f262116fa1deb06b9f285723
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174529"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91183135"
 ---
 # <a name="polling-in-console-applications"></a>Sondear aplicaciones de consola
+
 Las operaciones asincrónicas en ADO.NET permiten iniciar operaciones de base de datos que consumen mucho tiempo en un subproceso mientras se realizan otras tareas en otro subproceso. Sin embargo, en la mayoría de los escenarios llegará a un punto en el que la aplicación no debería continuar hasta que se complete la operación de base de datos. En estos casos, resulta útil sondear la operación asincrónica para determinar si la operación se ha completado o no.  
   
  Puede usar la propiedad <xref:System.IAsyncResult.IsCompleted%2A> para averiguar si se ha completado o no la operación.  
   
 ## <a name="example"></a>Ejemplo  
+
  La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks** y lo hace de forma asincrónica. Para emular un proceso de ejecución prolongada, en este ejemplo se inserta una instrucción WAITFOR en el texto del comando. Normalmente, no intentaría que los comandos se ejecutaran más lentamente, pero en este caso facilita la demostración del comportamiento asincrónico.  
   
 ```vb  

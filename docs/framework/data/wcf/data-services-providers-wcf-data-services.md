@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: eb7d92b1605c6ced8319e0372c8471cd4e388cb8
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dcca6023349148ac7f65f97028d876514ef31163
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569238"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91182840"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Proveedores de Data Services (Data Services de WCF)
+
 WCF Data Services admite varios modelos de proveedor para exponer los datos como una fuente de Open Data Protocol (OData). En este tema se proporciona información para permitirle seleccionar el mejor WCF Data Services proveedor para el origen de datos.  
   
 ## <a name="data-source-providers"></a>Proveedores de orígenes de datos  
+
  WCF Data Services admite los siguientes proveedores para definir el modelo de datos de un servicio de datos.  
   
 |Proveedor|Descripción|  
@@ -24,13 +26,14 @@ WCF Data Services admite varios modelos de proveedor para exponer los datos como
 |Proveedores de servicios de datos personalizados|WCF Data Services incluye un conjunto de proveedores que permiten definir dinámicamente un modelo de datos basado en tipos de datos enlazados en tiempo de ejecución. Debería implementar estas interfaces cuando no se conozcan los datos que se están exponiendo, cuando se esté diseñando la aplicación o cuando los proveedores de Entity Framework o de reflexión no sean suficientes. Para obtener más información, vea [proveedores de servicios de datos personalizados](custom-data-service-providers-wcf-data-services.md).|  
   
 ## <a name="other-data-service-providers"></a>Otros proveedores de servicios de datos  
+
  WCF Data Services tiene el siguiente proveedor de servicios de datos adicional que mejora el rendimiento de un origen de datos definido mediante el uso de uno de los otros proveedores.  
   
 |Proveedor|Descripción|  
 |--------------|-----------------|  
 |Proveedor de transmisiones por secuencias|Este proveedor permite exponer tipos de datos de objetos binarios grandes mediante el uso de WCF Data Services. Si implementa la interfaz <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, se crea un proveedor de transmisiones por secuencias. Este proveedor se puede implementar junto con cualquier proveedor de orígenes de datos. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md).|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)
 - [Configuración del servicio de datos](configuring-the-data-service-wcf-data-services.md)

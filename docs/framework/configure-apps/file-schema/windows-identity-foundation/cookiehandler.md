@@ -3,14 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 853dc9817d080e59ac7a792576eda862bd0b1f1d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5f5b432830a61adab324b2b6cd2ebe6eeccca7f0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252024"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189843"
 ---
 # \<cookieHandler>
+
 Configura el <xref:System.IdentityModel.Services.CookieHandler> que <xref:System.IdentityModel.Services.SessionAuthenticationModule> usa (SAM) para leer y escribir cookies.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,6 +39,7 @@ Configura el <xref:System.IdentityModel.Services.CookieHandler> que <xref:System
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -65,7 +67,8 @@ Configura el <xref:System.IdentityModel.Services.CookieHandler> que <xref:System
 |-------------|-----------------|  
 |[\<federationConfiguration>](federationconfiguration.md)|Contiene la configuración que configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y el <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El <xref:System.IdentityModel.Services.CookieHandler> es responsable de leer y escribir las cookies sin formato en el nivel de protocolo http. Puede configurar un <xref:System.IdentityModel.Services.ChunkedCookieHandler> o un controlador de cookies personalizado derivado de la <xref:System.IdentityModel.Services.CookieHandler> clase.  
   
  Para configurar un controlador de cookies fragmentado, establezca el atributo de modo en "fragmentado" o "predeterminado". El tamaño de fragmento predeterminado es de 2000 bytes, pero opcionalmente puede especificar un tamaño de fragmento diferente si incluye un `<chunkedCookieHandler>` elemento secundario.  
@@ -75,6 +78,7 @@ Configura el <xref:System.IdentityModel.Services.CookieHandler> que <xref:System
  El `<cookieHandler>` elemento se representa mediante la <xref:System.IdentityModel.Services.CookieHandlerElement> clase. El controlador de cookies que se especificó en la configuración está disponible en la <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> propiedad del <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> conjunto de objetos de la <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propiedad.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente código XML muestra un `<cookieHandler>` elemento. En este ejemplo, dado que `mode` no se especifica el atributo, el SAM usará el controlador de cookies predeterminado. Se trata de una instancia de la <xref:System.IdentityModel.Services.ChunkedCookieHandler> clase. Dado que `<chunkedCookieHandler>` no se especifica el elemento secundario, se usará el tamaño de fragmento predeterminado. HTTPS no será necesario porque el `requireSsl` atributo está establecido `false` .  
   
 > [!WARNING]

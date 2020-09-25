@@ -3,14 +3,15 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: bd04e4ebdf5c58adaeea0ff0ca5993d7d9ce38f1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c9787d8e0d8d66494bbf2dbd0e24ff39178a4cde
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70252167"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189908"
 ---
 # \<audienceUris>
+
 Especifica el conjunto de URI que son identificadores aceptables del usuario de confianza (RP). Los tokens no se aceptarán a menos que se definan sus ámbitos para uno de los URI de público permitido.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,6 +40,7 @@ Especifica el conjunto de URI que son identificadores aceptables del usuario de 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -61,8 +63,9 @@ Especifica el conjunto de URI que son identificadores aceptables del usuario de 
 |-------------|-----------------|  
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
-## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la colección está vacía; Use `<add>` `<clear>` `<remove>` los elementos, y para modificar la colección. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>los <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objetos y usan los valores de la colección de URI de audiencia para configurar las restricciones de URI de audiencia permitidas en los <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objetos.  
+## <a name="remarks"></a>Observaciones  
+
+ De forma predeterminada, la colección está vacía; Use `<add>` `<clear>` `<remove>` los elementos, y para modificar la colección. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> los <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objetos y usan los valores de la colección de URI de audiencia para configurar las restricciones de URI de audiencia permitidas en los <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objetos.  
   
  El `<audienceUris>` elemento se representa mediante la <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> clase. Una dirección URI individual agregada a la colección se representa mediante la <xref:System.IdentityModel.Configuration.AudienceUriElement> clase.  
   
@@ -70,6 +73,7 @@ Especifica el conjunto de URI que son identificadores aceptables del usuario de 
 > El uso del `<audienceUris>` elemento como elemento secundario del elemento está en [\<identityConfiguration>](identityconfiguration.md) desuso, pero todavía se admite por compatibilidad con versiones anteriores. La configuración del `<securityTokenHandlerConfiguration>` elemento invalida la del `<identityConfiguration>` elemento.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente XML muestra cómo configurar los URI de audiencia aceptables para una aplicación. En este ejemplo se configura un URI único. Se aceptarán los tokens con ámbito para este URI; se rechazarán todos los demás.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: Resolución de la sobrecarga de funciones (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
-ms.openlocfilehash: 1aeebc501487a6fc443df00c24beb2bc6aa5fc49
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: d37cd9342d1fb3b60d5a2c05d373fb7e71f54b1f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250921"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189401"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Resolución de la sobrecarga de funciones (Entity SQL)
+
 En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  Se puede definir más de una función con el mismo nombre, siempre que las funciones tengan firmas únicas.  
@@ -30,7 +31,7 @@ En este tema se describe cómo se resuelven las funciones de [!INCLUDE[esql](../
   
  Para las funciones definidas por el usuario, la definición de una función inline de consulta tiene prioridad incluso cuando existe una función definida por el modelo con una firma que es una coincidencia mejor para la función definida por el usuario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Información general sobre Entity SQL](entity-sql-overview.md)

@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e5961330eab5f25508319f276df1e9b4572f49ee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286797"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189310"
 ---
 # <a name="query-execution"></a>Ejecución de la consulta
+
 Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de comandos. Un árbol de comandos es una representación de una consulta que es compatible con Entity Framework. Posteriormente, el árbol de comandos se ejecuta en el origen de datos. En el momento de la ejecución de la consulta, se evalúan todas las expresiones de consulta (es decir, todos los componentes de la consulta), incluidas las expresiones que se utilizan en la materialización del resultado.  
   
  El momento en que se ejecutan las expresiones de consulta puede variar. Las consultas LINQ siempre se ejecutan cuando se recorre en iteración la variable de consulta, no cuando se crea la citada variable de consulta. Esto se denomina *ejecución aplazada*. También se puede obligar a que la consulta se ejecute inmediatamente, lo que es útil para almacenar en caché los resultados de la consulta. Esto se describe más adelante en este tema.  
@@ -24,6 +25,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
 > Para obtener un breve resumen de los operadores de consulta en formato de tabla, lo que permite identificar rápidamente el comportamiento de ejecución de un operador, vea [clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
 ## <a name="deferred-query-execution"></a>Ejecución de consultas en diferido  
+
  En una consulta que devuelve una secuencia de valores, la variable de consulta por sí misma nunca conserva los resultados de la consulta y solo almacena los comandos de la misma. La ejecución de la consulta se aplaza hasta que la variable de consulta se recorre en iteración en un bucle `foreach` o `For Each`. Esto se conoce como *ejecución aplazada*; es decir, la ejecución de la consulta se produce una vez después de la construcción de la consulta. Esto significa que se puede ejecutar una consulta con la frecuencia que se desee. Esto es útil cuando, por ejemplo, se tiene una base de datos que otras aplicaciones están actualizando. En su aplicación puede crear una consulta para recuperar la información más reciente y ejecutar de forma repetida la consulta, devolviendo cada vez la información actualizada.  
   
  La ejecución aplazada permite combinar varias consultas o ampliar una consulta. Cuando se amplía una consulta, se modifica para incluir las nuevas operaciones. La ejecución eventual reflejará los cambios. En el siguiente ejemplo, la primera consulta devuelve todos los productos. La segunda consulta amplía la primera usando `Where` para devolver todos los productos del tamaño "L":  
@@ -34,6 +36,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  Una vez ejecutada una consulta, todas las consultas sucesivas utilizarán los operadores de LINQ en memoria. Si se recorre en iteración la variable de la consulta utilizando una instrucción `foreach` o `For Each` o llamando a uno de los operadores de conversión de LINQ, se producirá la ejecución inmediata. Entre estos operadores de conversión se incluyen los siguientes: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> y <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
 ## <a name="immediate-query-execution"></a>Ejecución de consultas inmediata  
+
  A diferencia de la ejecución aplazada de consultas que producen una secuencia de valores, las consultas que devuelven un valor singleton se ejecutan inmediatamente. Algunos ejemplos de consultas singleton son <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A> y <xref:System.Linq.Enumerable.Max%2A>. Se ejecutan inmediatamente porque la consulta debe producir una secuencia para calcular el resultado singleton. También se puede forzar la ejecución inmediata. Esto es útil cuando se desea almacenar en memoria caché los resultados de una consulta. Para forzar la ejecución inmediata de una consulta que no produce un valor singleton, se puede llamar a los métodos <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> o <xref:System.Linq.Enumerable.ToArray%2A> en una consulta o una variable de consulta. En el ejemplo siguiente se utiliza el método <xref:System.Linq.Enumerable.ToArray%2A> para evaluar de forma inmediata una secuencia en una matriz.  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
@@ -42,6 +45,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  También se puede forzar la ejecución colocando el bucle `foreach` o `For Each` inmediatamente después de la expresión de consulta, pero si se llama a los métodos <xref:System.Linq.Enumerable.ToList%2A> o <xref:System.Linq.Enumerable.ToArray%2A>, se almacenarán en caché todos los datos de un solo objeto de la colección.  
   
 ## <a name="store-execution"></a>Ejecución en el almacén  
+
  En general, las expresiones de LINQ to Entities se evalúan en el servidor, y no es de esperar que el comportamiento de la expresión siga la semántica de Common Language Runtime (CLR), sino la del origen. Sin embargo, hay excepciones, como cuando la expresión se ejecuta en el cliente. Esto puede producir resultados inesperados, por ejemplo cuando el servidor y el cliente están en zonas horarias diferentes.  
   
  Algunas expresiones de la consulta se pueden ejecutar en el cliente. En general, se espera que la mayor parte de la ejecución de la consulta se produzca en el servidor. Además de los métodos ejecutados en elementos de consulta asignados al origen de datos, suele haber expresiones de la consulta que se pueden ejecutar localmente. La ejecución local de una expresión de consulta produce un valor que se puede utilizar en la ejecución de la consulta o en la generación del resultado.  
@@ -51,6 +55,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  En esta sección se describen los escenarios en que el código se ejecuta localmente en el cliente. Para obtener más información sobre los tipos de expresiones que se ejecutan localmente, vea [expresiones en consultas de LINQ to Entities](expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literales y parámetros  
+
  Las variables locales, como la variable `orderID` del ejemplo siguiente, se evalúan en el cliente.  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
@@ -62,6 +67,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
 ### <a name="casting-literals-on-the-client"></a>Convertir literales en el cliente  
+
  La conversión de `null` a un tipo CLR se ejecuta en el cliente:  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
@@ -73,6 +79,7 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
 ### <a name="constructors-for-literals"></a>Constructores para literales  
+
  Los nuevos tipos CLR que se pueden asignar a tipos del modelo conceptual se ejecutan en el cliente:  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
@@ -81,9 +88,11 @@ Una vez creada por un usuario una consulta LINQ, se convierte en un árbol de co
  Las nuevas matrices también se ejecutan en el cliente.  
   
 ## <a name="store-exceptions"></a>Excepciones en el almacén  
+
  Los errores en el almacén que tienen lugar durante la ejecución de la consulta se pasan al cliente y no se asignan ni controlan.  
   
 ## <a name="store-configuration"></a>Configuración del almacén  
+
  Cuando la consulta se ejecuta en el almacén, la configuración del almacén invalida todos los comportamientos del cliente, y la semántica del almacén se expresa para todas las operaciones y expresiones. El resultado puede ser una diferencia de comportamiento entre la ejecución en el CLR y la ejecución en el almacén en áreas como las comparaciones de NULL, la ordenación de GUID, la precisión y la exactitud de las operaciones que afectan a tipos de datos no precisos (como los tipos de punto flotante o <xref:System.DateTime>) y las operaciones de cadena. Es importante tener esto en cuenta al examinar los resultados de la consulta.  
   
  Por ejemplo, a continuación se indican algunas diferencias de comportamiento entre CLR y SQL Server:  
