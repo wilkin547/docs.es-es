@@ -5,17 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: c279d4ed32aed4788ee5866a24572663a1e2f580
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5952cce5469d7a7e13e8b896f91ea1279fd62d8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793109"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197045"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Procedimiento para enviar los cambios a la base de datos
+
 Con independencia de los cambios que se efectúen en los objetos, éstos sólo se realizan en las réplicas en memoria. Los cambios no se aplican a los datos reales de la base de datos. Los cambios no se transmiten al servidor hasta que se llama a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> explícitamente en <xref:System.Data.Linq.DataContext>.  
   
- Al realizar esta llamada, <xref:System.Data.Linq.DataContext> intenta convertir los cambios a comandos SQL equivalentes. Puede usar su propia lógica personalizada para invalidar estas acciones, pero el orden de envío lo orquesta un servicio del <xref:System.Data.Linq.DataContext> conocido como procesador de *cambios*. Todo ocurre en este orden:  
+ Al realizar esta llamada, <xref:System.Data.Linq.DataContext> intenta convertir los cambios a comandos SQL equivalentes. Puede usar su propia lógica personalizada para invalidar estas acciones, pero el orden de envío lo orquesta un servicio del <xref:System.Data.Linq.DataContext> conocido como *procesador de cambios*. Todo ocurre en este orden:  
   
 1. Al llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] examina el conjunto de objetos conocidos para determinar si se les han adjuntado nuevas instancias. En caso afirmativo, estas nuevas instancias se agregan al conjunto de objetos con seguimiento.  
   
@@ -28,14 +29,15 @@ Con independencia de los cambios que se efectúen en los objetos, éstos sólo s
  En este punto, cualquier error detectado por la base de datos hace que se detenga el proceso de envío, y se inicia una excepción. Todos los cambios de la base de datos se revierten, como si no se hubiese enviado nada. <xref:System.Data.Linq.DataContext> mantiene un registro completo de todos los cambios. Por lo tanto, se puede intentar corregir el problema y llamar de nuevo a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, como en el ejemplo de código siguiente.  
   
 ## <a name="example"></a>Ejemplo  
+
  Cuando la transacción relacionada con el envío se completa correctamente, <xref:System.Data.Linq.DataContext> recibe los cambios de los objetos sin tener en cuenta la información de seguimiento de cambios.  
   
  [!code-csharp[DLinqSubmittingChanges#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#1)]
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Procedimientos: Detectar y resolver envíos en conflicto](how-to-detect-and-resolve-conflicting-submissions.md)
-- [Procedimientos: Administrar conflictos de cambios](how-to-manage-change-conflicts.md)
+- [Procedimiento para detectar y resolver envíos con conflictos](how-to-detect-and-resolve-conflicting-submissions.md)
+- [Procedimiento para administrar conflictos de cambios](how-to-manage-change-conflicts.md)
 - [Descargar bases de datos de ejemplo](downloading-sample-databases.md)
-- [Realización y envío de cambios de datos](making-and-submitting-data-changes.md)
+- [Realizar y enviar cambios de datos](making-and-submitting-data-changes.md)

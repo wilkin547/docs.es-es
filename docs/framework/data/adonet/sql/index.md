@@ -4,14 +4,15 @@ description: Obtenga información sobre las características y los comportamient
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: eeb0ab69a68dfc2fc0faa1b4e833f80b307fffe5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a517bccd9b60d00f6c6c636c9164d63fb5966de3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197396"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server y ADO.NET
+
 En esta sección se describen características y comportamientos específicos del proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient>).  
   
  <xref:System.Data.SqlClient> proporciona acceso a versiones de SQL Server, que encapsula los protocolos específicos de base de datos. La funcionalidad del proveedor de datos se ha diseñado para que sea similar a la de los proveedores de datos .NET Framework para OLE DB, ODBC y Oracle. <xref:System.Data.SqlClient> incluye un analizador de flujos de datos tabulares (TDS) para comunicarse directamente con SQL Server.  
@@ -20,6 +21,7 @@ En esta sección se describen características y comportamientos específicos de
 > Para utilizar el proveedor de datos .NET Framework para SQL Server, la aplicación debe hacer referencia al espacio de nombres <xref:System.Data.SqlClient>.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Seguridad de SQL Server](sql-server-security.md)  
  Proporciona una introducción general a las características de seguridad de SQL Server y casos de creación de aplicaciones ADO.NET seguras dirigidas a SQL Server.  
   

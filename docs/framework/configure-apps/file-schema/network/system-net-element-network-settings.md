@@ -9,14 +9,15 @@ helpviewer_keywords:
 - system.Net element
 - <system.Net> element
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
-ms.openlocfilehash: 9f18c7a3586948c03391d609f437e216a91bc27f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 80d54df40c6798e146013b4f2d867386ae35169c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504490"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201725"
 ---
 # <a name="systemnet-element-network-settings"></a>Elemento \<system.Net> (configuración de red)
+
 Contiene valores que especifican cómo se conecta .NET Framework a la red.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -30,9 +31,11 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -53,10 +56,12 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 |-----------------|---------------------|  
 |[configuration](../configuration-element.md)|Contiene la configuración de todos los espacios de nombres.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El [\<system.net>](system-net-element-network-settings.md) elemento contiene la configuración para las clases en <xref:System.Net> y los espacios de nombres secundarios relacionados. La configuración configura los módulos de autenticación, la administración de conexiones, la configuración de correo, el servidor proxy y los módulos de solicitud de Internet para recibir información de los hosts de Internet.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra una configuración típica utilizada por <xref:System.Net> las clases.  
   
 ```xml  
@@ -93,6 +98,6 @@ Contiene valores que especifican cómo se conecta .NET Framework a la red.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de la configuración de red](index.md)

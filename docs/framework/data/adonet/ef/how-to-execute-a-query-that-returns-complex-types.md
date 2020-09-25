@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
-ms.openlocfilehash: 01958637cedcd6d502d51e9f0821ff3a9faae840
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e5358e3a1295b180356ed6c127111313b44de277
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545329"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198488"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>Procedimiento para ejecutar una consulta que devuelve tipos complejos
+
 En este tema se muestra cómo ejecutar una consulta [!INCLUDE[esql](../../../../../includes/esql-md.md)] que devuelve objetos de tipo entidad que contienen una propiedad de un tipo complejo.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -31,6 +32,7 @@ En este tema se muestra cómo ejecutar una consulta [!INCLUDE[esql](../../../../
      Para obtener información sobre cómo crear y modificar tipos complejos mediante el Asistente para Entity Data Model, vea [Cómo: refactorizar propiedades existentes en una propiedad de tipo complejo](/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100)) y [Cómo: crear y modificar tipos complejos](/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100)).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se ejecuta una consulta que devuelve una colección de `Contact` objetos y muestra dos propiedades de los `Contact` objetos: `ContactID` y los valores del `EmailPhoneComplexType` tipo complejo.  
   
  [!code-csharp[DP EntityServices Concepts#ComplexTypeWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#complextypewithentitycommand)]

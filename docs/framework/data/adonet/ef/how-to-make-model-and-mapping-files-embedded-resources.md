@@ -2,14 +2,15 @@
 title: Procedimiento para hacer que los archivos de asignación y de modelo sean recursos incrustados
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: aaab2ccc96497cb718b868f7ac63995ad4ba35c8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8496dcad5422d1a45af52e58325efd360768da34
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546684"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198293"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Procedimiento para hacer que los archivos de asignación y de modelo sean recursos incrustados
+
 El Entity Framework permite implementar archivos de asignación y de modelo como recursos incrustados de una aplicación. El ensamblado con los archivos de asignación y de modelo incrustados se debe cargar en el mismo dominio de aplicación que la conexión de entidad. Para obtener más información, consulte [cadenas de conexión](connection-strings.md). De forma predeterminada, las herramientas de Entity Data Model insertan los archivos de asignación y de modelo. Al definir manualmente los archivos de asignación y de modelo, use este procedimiento para asegurarse de que los archivos se implementan como recursos incrustados junto con una aplicación Entity Framework.  
   
 > [!NOTE]
@@ -34,9 +35,10 @@ El Entity Framework permite implementar archivos de asignación y de modelo como
      Para obtener más información, consulte [cadenas de conexión](connection-strings.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  La siguiente cadena de conexión hace referencia a los archivos de asignación y de modelo incrustados para el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Esta cadena de conexión está almacenada en el archivo App.config del proyecto.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Modelado y asignación](modeling-and-mapping.md)
 - [Procedimiento para defina la cadena de conexión](how-to-define-the-connection-string.md)

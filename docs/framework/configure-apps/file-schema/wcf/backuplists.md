@@ -2,14 +2,15 @@
 title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
-ms.openlocfilehash: 5f2bb030d13389e15cb44f1ddff3b8168b4f2140
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 940bf28958251e7257b2cc19a9c5ff0059411bcd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850257"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201556"
 ---
 # \<backupLists>
+
 Representa una sección de configuración para definir un conjunto de servicios auxiliares usado en el control de errores. Cada elemento secundario es una lista auxiliar que enumera un conjunto de extremos que le gustaría que usara el servicio de enrutamiento en caso de que no se pudiera alcanzar el extremo primario. Si el primer extremo en la lista está desconectado, el servicio de enrutamiento realizará automáticamente una conmutación por error al siguiente de la lista.  De este modo, dispone de una forma rápida de agregar confiabilidad a la aplicación sin tener que enseñar a la aplicación cliente cómo controlar modelos complejos o dónde implementar todos sus servicios.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -30,9 +31,11 @@ Representa una sección de configuración para definir un conjunto de servicios 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  

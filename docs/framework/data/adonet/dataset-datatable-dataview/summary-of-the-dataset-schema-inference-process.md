@@ -2,14 +2,15 @@
 title: Resumen del proceso de inferencia del esquema de DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 35e9b67d2d0a47aa69eabdb4b7e94f95b0b9589f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8d517487b96aa7f204ea9f25d326500db7df413a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833979"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91198514"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Resumen del proceso de inferencia del esquema de DataSet
+
 El proceso de inferencia determina en primer lugar, a partir del documento XML, qué elementos se inferirán como tablas. A partir del XML restante, el proceso de inferencia determina las columnas para dichas tablas. En el caso de las tablas anidadas, el proceso de inferencia genera objetos <xref:System.Data.DataRelation> y <xref:System.Data.ForeignKeyConstraint> anidados.  
   
  A continuación se encuentra un breve resumen de las reglas de inferencia:  
@@ -26,15 +27,15 @@ El proceso de inferencia determina en primer lugar, a partir del documento XML, 
   
 - Los elementos que no tienen atributos o elementos secundarios, y que no se repiten, se deducen como columnas.  
   
-- En el caso de los elementos que se deducen como tablas anidadas dentro de otros elementos que también se deducen como tablas, se crea una **DataRelation** anidada entre las dos tablas. Se agrega una nueva columna de clave principal denominada **TableName_Id** a ambas tablas y se usa en **DataRelation**. Se crea una **ForeignKeyConstraint** entre las dos tablas mediante la columna **TableName_Id** .  
+- En el caso de los elementos que se deducen como tablas anidadas dentro de otros elementos que también se deducen como tablas, se crea una **DataRelation** anidada entre las dos tablas. Se agrega una nueva columna de clave principal denominada **TableName_Id** a ambas tablas y utilizada por la **DataRelation**. Se crea una **ForeignKeyConstraint** entre las dos tablas mediante el **TableName_Id** columna.  
   
 - En el caso de los elementos que se deducen como tablas y que contienen texto pero que no tienen elementos secundarios, se crea una nueva columna denominada **TableName_Text** para el texto de cada uno de los elementos. Si un elemento se deduce como una tabla y tiene texto, pero también tiene elementos secundarios, se pasa por alto el texto.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
-- [Carga de un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
-- [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
+- [Inferir una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
+- [Cargar un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
+- [Cargar información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

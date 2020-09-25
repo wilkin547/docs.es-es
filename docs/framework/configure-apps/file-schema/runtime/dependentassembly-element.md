@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a924b1998651c923c64429029a118dd1e9ede69
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154210"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91199008"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly> (Elemento)
+
 Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dependentAssembly` elemento para cada ensamblado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,9 +33,11 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dep
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -55,6 +58,7 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dep
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo encapsular la información de ensamblado para dos ensamblados.  
   
 ```xml  
