@@ -2,14 +2,15 @@
 title: Aplicaciones de n niveles y remotas con LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 295be0157c260c05a2e4a7dbbfcd7e5cecbc85de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70f6a6ee91761196b62b34f6dde73d11dbe6b39d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548005"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200607"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>Aplicaciones de n niveles y remotas con LINQ to SQL
+
 Puede crear aplicaciones multinivel o de n niveles que utilicen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] contexto de datos, las clases de entidad y la lógica de construcción de consultas se encuentran en el nivel intermedio como capa de acceso a datos (dal). La lógica empresarial y los datos no persistentes se pueden implementar completamente en clases parciales y métodos de entidades y en el contexto de los datos, o se pueden implementar en clases independientes.
 
  La capa de presentación o de cliente llama a los métodos en la interfaz remota de nivel intermedio, y la capa de acceso a datos (DAL) en ese nivel ejecutará consultas o procedimientos almacenados asignados a métodos <xref:System.Data.Linq.DataContext>. El nivel intermedio devuelve los datos a los clientes generalmente como representaciones XML de entidades u objetos proxy.
@@ -19,6 +20,7 @@ Puede crear aplicaciones multinivel o de n niveles que utilicen [!INCLUDE[vbtecd
  En aplicaciones ASP.NET, <xref:System.Web.UI.WebControls.LinqDataSource> administra la mayor parte de esta complejidad. Para obtener más información, vea [información general sobre el control de servidor Web LinqDataSource](/previous-versions/aspnet/bb547113(v=vs.100)).
 
 ## <a name="additional-resources"></a>Recursos adicionales
+
  Para obtener más información sobre cómo implementar aplicaciones de n niveles que utilizan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], consulte los temas siguientes:
 
 - [N niveles de LINQ to SQL con ASP.NET](linq-to-sql-n-tier-with-aspnet.md)
@@ -31,6 +33,6 @@ Puede crear aplicaciones multinivel o de n niveles que utilicen [!INCLUDE[vbtecd
 
  Para obtener más información sobre las aplicaciones de n niveles que utilizan conjuntos de datos de ADO.NET, vea [trabajar con conjuntos de datos en aplicaciones de n niveles](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general](background-information.md)

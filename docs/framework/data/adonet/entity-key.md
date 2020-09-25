@@ -2,14 +2,15 @@
 title: clave de entidad
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 39a7500f088aa85baf0244005d6a804b3bf0b521
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b2692faf2f8bea27c8a5d6cdc52689ca186d3194
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737795"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200789"
 ---
 # <a name="entity-key"></a>clave de entidad
+
 Una *clave de entidad* es una [propiedad](property.md) o un conjunto de propiedades de un [tipo de entidad](entity-type.md) que se usan para determinar la identidad. Las propiedades que constituyen una entidad se eligen en tiempo de diseño. Los valores de las propiedades de clave de entidad deben identificar de forma única una instancia de tipo de entidad dentro de un [conjunto de entidades](entity-set.md) en tiempo de ejecución. Las propiedades que constituyen una clave de entidad se deben elegir de tal forma que garanticen la unicidad de las instancias de un conjunto de entidades.  
   
  Los requisitos para que un conjunto de propiedades sea una clave de entidad son los siguientes:  
@@ -23,6 +24,7 @@ Una *clave de entidad* es una [propiedad](property.md) o un conjunto de propieda
 - Cuando una entidad está implicada en una jerarquía de herencia, la entidad raíz debe contener todas las propiedades que constituyen la clave de entidad, y esta se debe definir en el tipo de entidad raíz. Para obtener más información, vea [Entity Data Model: herencia](entity-data-model-inheritance.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Las propiedades de cada tipo de entidad que constituyen su clave de entidad se denotan con "(Key)". Tenga en cuenta que el tipo de entidad `Author` tiene una clave de entidad que consta de dos propiedades, `Name` y `Address`.  
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/entity-key/example-model-three-entity-types.gif)  
@@ -39,7 +41,7 @@ Una *clave de entidad* es una [propiedad](property.md) o un conjunto de propieda
   
  El uso de `Name` y `Address` para la clave de entidad es una opción razonable, ya que no es probable que dos autores con el mismo nombre vivan en la misma dirección. Sin embargo, esta opción no garantiza por completo la existencia de claves de entidad únicas en un conjunto de entidades. En este caso, se recomienda la adición de una propiedad, como `AuthorId`, que se podría usar para identificar un autor de forma inequívoca.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

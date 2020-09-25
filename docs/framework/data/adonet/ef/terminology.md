@@ -2,14 +2,15 @@
 title: Terminología de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: ea889cfbc04e06e3308e31c6e282d8f2359ddeb9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dbe03de44b8ae2a857b923cd9dc74c42ea18f4e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556543"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200945"
 ---
 # <a name="entity-framework-terminology"></a>Terminología de Entity Framework
+
 En este tema se definen los términos a los que se hace referencia con frecuencia en Entity Framework documentación. Se proporcionan vínculos a temas importantes donde hay información adicional.  
   
 |Término|Definición|  
@@ -75,7 +76,7 @@ En este tema se definen los términos a los que se hace referencia con frecuenci
 |tabla por jerarquía|Método de modelado de una jerarquía de tipos de una base de datos que incluye los atributos de todos los tipos de la jerarquía en una tabla.|  
 |tabla por tipo|Método de modelado de una jerarquía de tipos de una base de datos que usa varias tablas con relaciones uno a uno para modelar los distintos tipos.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ADO.NET Entity Framework](index.md)
 - [Información general sobre Entity Framework](overview.md)

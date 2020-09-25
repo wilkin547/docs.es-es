@@ -2,14 +2,15 @@
 title: contenedor de entidades
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 0c194d86e6276c948a545f830e569cbc68f86a14
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 95fb59c86f951e75f0988f45219fd07cbb003c01
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737874"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200828"
 ---
 # <a name="entity-container"></a>contenedor de entidades
+
 Un *contenedor de entidades* es una agrupación lógica [de conjuntos de entidades](entity-set.md), conjuntos de [asociaciones](association-set.md)e [importaciones de funciones](model-declared-function.md).  
   
  Un contenedor de entidades definido en un modelo conceptual debe cumplir las condiciones siguientes:  
@@ -21,6 +22,7 @@ Un *contenedor de entidades* es una agrupación lógica [de conjuntos de entidad
  Un contenedor de entidades puede definir conjuntos de entidades o de asociaciones que usan tipos de entidad o asociaciones definidos en uno o varios espacios de nombres. Para obtener más información, vea [Entity Data Model: espacios de nombres](entity-data-model-namespaces.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`.  Para obtener más información, vea el ejemplo siguiente.  
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/entity-container/example-model-three-entity-types.gif)  
@@ -29,7 +31,7 @@ Un *contenedor de entidades* es una agrupación lógica [de conjuntos de entidad
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)
