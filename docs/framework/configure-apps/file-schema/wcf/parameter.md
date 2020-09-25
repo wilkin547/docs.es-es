@@ -2,14 +2,15 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 07fa410109a7bd2fa315132c4737301698bb3a93
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2ef674dc8601bc9afaf6b547265988bb8a99f943
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400112"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170173"
 ---
 # \<parameter>
+
 Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,7 +37,7 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |índice|Cuando el tipo declarado es un tipo genérico, especifica el parámetro genérico que devolverá el tipo conocido.|  
-|tipo|Una cadena que describe el tipo conocido usado para la serialización y deserialización.|  
+|type|Una cadena que describe el tipo conocido usado para la serialización y deserialización.|  
   
 ## <a name="index-attribute"></a>Atributo index  
   
@@ -45,6 +47,7 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
 |"1"|El segundo parámetro en un tipo genérico. Por ejemplo, un <xref:System.Collections.Generic.Dictionary%602> tiene dos parámetros. Si el segundo parámetro devuelve el tipo conocido, establezca el atributo de índice en "1".|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -53,7 +56,8 @@ Especifica el parámetro genérico cuando el tipo declarado es un tipo genérico
 |-------------|-----------------|  
 |[\<knownType>](knowntype.md)|Especifica un tipo conocido que un campo o propiedad de un tipo declarado puede devolver.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Para obtener más información sobre los tipos conocidos, vea [tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md) y <xref:System.Runtime.Serialization.DataContractSerializer> .  
   
  Vea [\<dataContractSerializer>](datacontractserializer-element.md) para obtener un ejemplo de uso de este elemento.  

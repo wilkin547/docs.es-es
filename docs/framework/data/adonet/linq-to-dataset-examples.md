@@ -2,17 +2,19 @@
 title: Ejemplos de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 68d4ed74713858a643c6db40b6982ba2775dbfa5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48511dc7ae249e35b9bd76e0d6d3d9f1ef39dde0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783757"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169523"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
-En esta sección se proporciona LINQ to DataSet ejemplos de programación que utilizan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena con el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](loading-data-into-a-dataset.md). Para obtener más información, vea información general [sobre operadoresC#de consulta estándar ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+
+En esta sección se proporciona LINQ to DataSet ejemplos de programación que utilizan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena con el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](loading-data-into-a-dataset.md). Para obtener más información, vea información general sobre [operadores de consulta estándar (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Ejemplos de expresiones de consultas](query-expression-examples-linq-to-dataset.md)  
  Contiene los siguientes ejemplos:  
   
@@ -20,7 +22,7 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación que ut
   
 - [Restricción](query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
-- [Creación de particiones](query-expression-syntax-examples-partitioning.md)  
+- [Partitioning](query-expression-syntax-examples-partitioning.md)  
   
 - [Ordenación](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
@@ -35,11 +37,11 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación que ut
   
 - [Proyección](method-based-query-syntax-examples-projection.md)  
   
-- [Particionamiento](method-based-query-syntax-examples-partitioning-linq.md)  
+- [Partitioning](method-based-query-syntax-examples-partitioning-linq.md)  
   
 - [Ordenación](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [Operadores Set](method-based-query-syntax-examples-set-operators.md)  
+- [Operadores de conjuntos](method-based-query-syntax-examples-set-operators.md)  
   
 - [Operadores de conversión](method-based-query-syntax-examples-conversion-operators.md)  
   
@@ -52,7 +54,7 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación que ut
  [Ejemplos de operadores específicos de conjuntos de datos](dataset-specific-operator-examples-linq-to-dataset.md)  
  Contiene ejemplos que demuestran cómo usar el método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> y la clase <xref:System.Data.DataRowComparer>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Guía de programación](programming-guide-linq-to-dataset.md)
-- [Carga de datos en un conjunto de datos](loading-data-into-a-dataset.md)
+- [Cargar datos en un conjunto de datos](loading-data-into-a-dataset.md)

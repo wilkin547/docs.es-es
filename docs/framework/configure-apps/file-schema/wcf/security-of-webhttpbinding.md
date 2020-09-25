@@ -2,14 +2,15 @@
 title: <security> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 77009dc950a608da9e0db3a7d09be67e1ed46137
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 60b863a0a2a846a60dde2e4b323a305b5096b1cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738639"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169900"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> de \<webHttpBinding>
+
 Especifica los requisitos de seguridad para un extremo configurado con [\<webHttpBinding>](webhttpbinding.md) .  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -38,13 +39,14 @@ Especifica los requisitos de seguridad para un extremo configurado con [\<webHtt
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|mode|Especifica si un punto de conexión usa la seguridad a nivel de transporte o no usa ninguna. De manera predeterminada, es `None`. Este atributo es del tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
+|mode|Especifica si un punto de conexión usa la seguridad a nivel de transporte o no usa ninguna. El valor predeterminado es `None`. Este atributo es del tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo mode  
   

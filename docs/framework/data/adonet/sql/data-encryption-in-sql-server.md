@@ -2,19 +2,21 @@
 title: Cifrado de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 1d185dd121336b62bd66a11bf0cc4253b45ae47e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0bda11f1a2933d096aa91d2be79d3af35172284
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794248"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169536"
 ---
 # <a name="data-encryption-in-sql-server"></a>Cifrado de datos en SQL Server
+
 SQL Server proporciona funciones para cifrar y descifrar datos con un certificado, una clave asimétrica o una clave simétrica. El programa administra estas opciones en un almacén de certificados interno. El almacén usa una jerarquía de cifrado que protege los certificados y las claves en un nivel, con la capa por encima de él en la jerarquía. Esta área de características de SQL Server se denomina almacenamiento secreto.  
   
  El modo más rápido de cifrado que admiten las funciones de cifrado es el cifrado de clave simétrica. Este modo resulta adecuado para controlar grandes volúmenes de datos. Las claves simétricas se pueden cifrar mediante certificados, contraseñas u otras claves simétricas.  
   
 ## <a name="keys-and-algorithms"></a>Claves y algoritmos  
+
  SQL Server admite varios algoritmos de cifrado de clave simétrica, incluidos DES, Triple DES, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits. Los algoritmos se implementan con la API Windows Crypto.  
   
  En el ámbito de una conexión de base de datos, SQL Server puede mantener varias claves simétricas abiertas. Las claves abiertas se recuperan del almacén y están disponibles para descifrar datos. Cuando se descifra un elemento de datos, no es necesario especificar la clave simétrica que se debe usar. Cada valor cifrado contiene el identificador de clave (GUID de clave) de la clave usada para cifrarlo. Si se descifra la clave correcta y está abierta, el motor crea una correspondencia entre la secuencia de bytes cifrada y la clave simétrica abierta. Esta clave se utiliza para realizar el descifrado y devolver los datos. Si no está abierta la clave correcta, se devuelve NULL.  
@@ -22,14 +24,15 @@ SQL Server proporciona funciones para cifrar y descifrar datos con un certificad
  Para obtener un ejemplo en el que se muestra cómo trabajar con datos cifrados en una base de datos, vea [cifrar una columna de datos](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
   
 ## <a name="external-resources"></a>Recursos externos  
+
  Para obtener más información sobre el cifrado de datos, vea los siguientes recursos.  
   
-|Recurso|DESCRIPCIÓN|  
+|Recurso|Descripción|  
 |-|-|  
 |[Cifrado de SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Ofrece información general del cifrado en SQL Server. En este tema se incluyen vínculos a artículos adicionales.|  
 |[Jerarquía de cifrado](/sql/relational-databases/security/encryption/encryption-hierarchy)|Ofrece información general del cifrado en SQL Server. En este tema se proporcionan vínculos a artículos adicionales.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)
@@ -37,4 +40,4 @@ SQL Server proporciona funciones para cifrar y descifrar datos con un certificad
 - [Roles de servidor y base de datos en SQL Server](server-and-database-roles-in-sql-server.md)
 - [Propiedad y separación de esquemas de usuario en SQL Server](ownership-and-user-schema-separation-in-sql-server.md)
 - [Autorización y permisos en SQL Server](authorization-and-permissions-in-sql-server.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)
