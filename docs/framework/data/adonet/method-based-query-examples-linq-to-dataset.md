@@ -2,27 +2,29 @@
 title: Ejemplos de consultas basadas en métodos (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 3cda55457df4157f1b0d2cdef1f857cfe6540c66
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1c1ef8f1b6c05415ac6f5ee59d9a415bfab2c410
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783737"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91175387"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Ejemplos de consultas basadas en métodos (LINQ to DataSet)
-En esta sección se proporciona LINQ to DataSet ejemplos de programación de la sintaxis de consulta basada en métodos que usan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena con el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](loading-data-into-a-dataset.md). Para obtener más información, vea información general [sobre operadoresC#de consulta estándar ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+
+En esta sección se proporciona LINQ to DataSet ejemplos de programación de la sintaxis de consulta basada en métodos que usan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena con el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](loading-data-into-a-dataset.md). Para obtener más información, vea información general sobre [operadores de consulta estándar (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Proyección](method-based-query-syntax-examples-projection.md)  
  Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Select%2A> y <xref:System.Linq.Enumerable.SelectMany%2A> para consultar un <xref:System.Data.DataSet>.  
   
- [Creación de particiones](method-based-query-syntax-examples-partitioning-linq.md)  
+ [Partitioning](method-based-query-syntax-examples-partitioning-linq.md)  
  Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A> para consultar un <xref:System.Data.DataSet> y particionar los resultados.  
   
  [Ordenación](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
  Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> y <xref:System.Linq.Enumerable.ThenByDescending%2A> para consultar un <xref:System.Data.DataSet> y ordenar los resultados.  
   
- [Operadores Set](method-based-query-syntax-examples-set-operators.md)  
+ [Operadores de conjuntos](method-based-query-syntax-examples-set-operators.md)  
  Los ejemplos de este tema muestran cómo usar los operadores <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A> y <xref:System.Linq.Enumerable.Union%2A> para operaciones de comparación basadas en valores en conjuntos de filas de datos.  
   
  [Operadores de conversión](method-based-query-syntax-examples-conversion-operators.md)  
@@ -37,7 +39,7 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación de la 
  [Join](method-based-query-syntax-examples-join-linq-to-dataset.md)  
  Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.GroupJoin%2A> y <xref:System.Linq.Enumerable.Join%2A> para consultar un <xref:System.Data.DataSet>.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Ejemplos de expresiones de consultas](query-expression-examples-linq-to-dataset.md)
 - [Ejemplos de operadores específicos de conjuntos de datos](dataset-specific-operator-examples-linq-to-dataset.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: ca474cdcaeaac7b1c32efa5c58f4b5bb5b7f7895
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 963b25e57ae8c2cc59dcc3e50ae2a52cc04f54a8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557247"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185644"
 ---
 # <a name="applicationpool-element-web-settings"></a>Elemento \<applicationPool> (configuración web)
+
 Especifica los valores de configuración que usa ASP.NET para administrar el comportamiento de todo el proceso cuando una aplicación ASP.NET se ejecuta en modo integrado en IIS 7,0 o una versión posterior.  
   
 > [!IMPORTANT]
@@ -44,6 +45,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |`requestQueueLimit`|Especifica el número máximo de solicitudes que se pueden poner en cola para ASP.NET en un único proceso. Cuando dos o más aplicaciones ASP.NET se ejecutan en un único grupo de aplicaciones, el conjunto acumulativo de solicitudes que se realizan a cualquier aplicación en el grupo de aplicaciones está sujeto a esta configuración.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -52,7 +54,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 |-------------|-----------------|  
 |[\<system.web>](system-web-element-web-settings.md)|Contiene información sobre cómo interactúa ASP.NET con una aplicación host.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 Al ejecutar IIS 7,0 o una versión posterior en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y pone en cola las solicitudes cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 6 o ejecuta IIS 7,0 en modo clásico o en modo ISAPI, se omite esta configuración.  
   
@@ -97,6 +99,6 @@ Los valores del ejemplo son los valores predeterminados.
 |Archivo de validación||  
 |Puede estar vacío||  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [\<system.web> (Elemento, configuración Web)](system-web-element-web-settings.md)
