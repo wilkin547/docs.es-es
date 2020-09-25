@@ -4,12 +4,12 @@ description: Guía sobre la arquitectura sin servidor. Obtenga información sobr
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/22/2020
-ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 867765d29a7c50694a5de7b1de56346d86600a83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135701"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171824"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplicaciones sin servidor: Arquitectura, patrones e implementación de Azure
 
@@ -74,7 +74,7 @@ La informática [sin servidor](https://azure.microsoft.com/solutions/serverless/
 
 Esta guía se centra en el desarrollo nativo en la nube de las aplicaciones en las que se usa la informática sin servidor. En el libro se destacan las ventajas que ofrece esta característica y se exponen los posibles inconvenientes de desarrollar aplicaciones sin servidor. Además, se proporciona una encuesta sobre arquitecturas sin servidor. También se muestran muchos ejemplos del uso que se puede dar a la informática sin servidor, junto con varios modelos de diseño sin servidor.
 
-En esta guía se describen los componentes de la plataforma sin servidor de Azure y se pone especial énfasis en la implementación de la informática sin servidor mediante [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview). Se le proporcionará información sobre desencadenadores y enlaces y sobre cómo implementar aplicaciones sin servidor que se basan en el estado mediante funciones duraderas. Por último, se muestran ejemplos y casos prácticos empresariales que le permitirán ponerse en contexto y obtener un marco de referencia para determinar si la informática sin servidor es una opción adecuada para sus proyectos.
+En esta guía se describen los componentes de la plataforma sin servidor de Azure y se pone especial énfasis en la implementación de la informática sin servidor mediante [Azure Functions](/azure/azure-functions/functions-overview). Se le proporcionará información sobre desencadenadores y enlaces y sobre cómo implementar aplicaciones sin servidor que se basan en el estado mediante funciones duraderas. Por último, se muestran ejemplos y casos prácticos empresariales que le permitirán ponerse en contexto y obtener un marco de referencia para determinar si la informática sin servidor es una opción adecuada para sus proyectos.
 
 ## <a name="evolution-of-cloud-platforms"></a>Evolución de las plataformas en la nube
 
@@ -116,12 +116,12 @@ La microfacturación es otra de las características de la informática sin serv
 
 ## <a name="what-this-guide-doesnt-cover"></a>Aspectos no tratados en esta guía
 
-En esta guía se pone un especial énfasis en los distintos enfoques de arquitectura y modelos de diseño y no se ofrece una explicación detallada sobre los detalles de implementación de Azure Functions, [Logic Apps](https://docs.microsoft.com/azure/logic-apps/logic-apps-what-are-logic-apps) u otras plataformas sin servidor. Por ejemplo, entre los aspectos que no se tratan se incluyen los flujos de trabajo avanzados de Logic Apps y las características de Azure Functions, como la configuración del uso compartido de recursos entre orígenes (CORS), la aplicación de dominios personalizados o la carga de certificados SSL. Estos detalles están disponibles en la [documentación de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-reference) en línea.
+En esta guía se pone un especial énfasis en los distintos enfoques de arquitectura y modelos de diseño y no se ofrece una explicación detallada sobre los detalles de implementación de Azure Functions, [Logic Apps](/azure/logic-apps/logic-apps-what-are-logic-apps) u otras plataformas sin servidor. Por ejemplo, entre los aspectos que no se tratan se incluyen los flujos de trabajo avanzados de Logic Apps y las características de Azure Functions, como la configuración del uso compartido de recursos entre orígenes (CORS), la aplicación de dominios personalizados o la carga de certificados SSL. Estos detalles están disponibles en la [documentación de Azure Functions](/azure/azure-functions/functions-reference) en línea.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- [Centro de arquitectura de Azure](https://docs.microsoft.com/azure/architecture/)
-- [Procedimientos recomendados para aplicaciones en la nube](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
+- [Centro de arquitectura de Azure](/azure/architecture/)
+- [Procedimientos recomendados para aplicaciones en la nube](/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>Destinatarios de esta guía
 

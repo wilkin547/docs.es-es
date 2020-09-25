@@ -6,20 +6,23 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 8e833bdeefcce2f12c839738b43778df8e54fa5b
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ba2bd6c90fa28624d52e7ef2e341b43da7ea19a2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381611"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176219"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
+
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>cadena frente System.String  
+
  En C#, la palabra clave `string` es un alias de <xref:System.String>. Por lo tanto, `String` y `string` son equivalentes y se puede utilizar la convención de nomenclatura que prefiera. La clase `String` proporciona muchos métodos para crear, manipular y comparar cadenas de forma segura. Además, el lenguaje C# sobrecarga algunos operadores para simplificar las operaciones de cadena comunes. Para más información sobre la palabra clave, consulte [string](../../language-reference/builtin-types/reference-types.md). Para obtener más información sobre el tipo y sus métodos, vea <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Declaración e inicialización de cadenas  
+
  Puede declarar e inicializar cadenas de varias maneras, tal como se muestra en el ejemplo siguiente:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
@@ -29,6 +32,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
  Inicialice una cadena con el valor constante <xref:System.String.Empty> para crear un objeto <xref:System.String> cuya cadena tenga longitud cero. La representación literal de la cadena de una cadena de longitud cero es "". Mediante la inicialización de las cadenas con el valor <xref:System.String.Empty> en lugar de [null](../../language-reference/keywords/null.md), puede reducir las posibilidades de que se produzca una excepción <xref:System.NullReferenceException>. Use el método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para comprobar el valor de una cadena antes de intentar obtener acceso a ella.  
   
 ## <a name="immutability-of-string-objects"></a>Inmutabilidad de los objetos de cadena  
+
  Los objetos de cadena son *inmutables*: no se pueden cambiar después de haberse creado. Todos los métodos <xref:System.String> y operadores de C# que parecen modificar una cadena en realidad devuelven los resultados en un nuevo objeto de cadena. En el siguiente ejemplo, cuando el contenido de `s1` y `s2` se concatena para formar una sola cadena, las dos cadenas originales no se modifican. El operador `+=` crea una nueva cadena que contiene el contenido combinado. Este nuevo objeto se asigna a la variable `s1` y el objeto original que se asignó a `s1` se libera para la recolección de elementos no utilizados porque ninguna otra variable contiene una referencia a él.  
   
  [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
@@ -40,6 +44,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
  Para más información acerca de cómo crear cadenas nuevas basadas en modificaciones como las operaciones de buscar y reemplazar en la cadena original, consulte [Modificación del contenido de cadenas](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Literales de cadena regulares y textuales  
+
  Utilice literales de cadena regulares cuando tenga que insertar caracteres de escape proporcionados por C#, tal como se muestra en el ejemplo siguiente:  
   
  [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
@@ -74,9 +79,11 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
 > En tiempo de compilación, las cadenas textuales se convierten en cadenas normales con las mismas secuencias de escape. Por lo tanto, si se muestra una cadena textual en la ventana Inspección del depurador, verá los caracteres de escape agregados por el compilador, no la versión textual del código fuente. Por ejemplo, la cadena textual `@"C:\files.txt"` aparecerá en la ventana Inspección, como "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Cadenas de formato  
+
  Una cadena de formato es una cadena cuyo contenido se determina de manera dinámica en tiempo de ejecución. Las cadenas de formato se crean mediante la inserción de *expresiones interpoladas* o marcadores de posición entre llaves dentro de una cadena. Todo lo incluido entre llaves (`{...}`) se resolverá en un valor y se generará como una cadena con formato en tiempo de ejecución. Existen dos métodos para crear cadenas de formato: interpolación de cadenas y formato compuesto.
 
 ### <a name="string-interpolation"></a>Interpolación de cadenas
+
 Disponible en C# 6.0 y versiones posteriores, las [*cadenas interpoladas*](../../language-reference/tokens/interpolated.md) se identifican por el carácter especial `$` e incluyen expresiones interpoladas entre llaves. Si no está familiarizado con la interpolación de cadenas, consulte el tutorial interactivo [Interpolación de cadenas en C#](../../tutorials/exploration/interpolated-strings.yml) para obtener información general rápidamente.
 
 Use la interpolación de cadenas para mejorar la legibilidad y el mantenimiento del código. Con la interpolación de cadenas se obtienen los mismos resultados que con el método `String.Format`, pero mejora la facilidad de uso y la claridad en línea.
@@ -84,6 +91,7 @@ Use la interpolación de cadenas para mejorar la legibilidad y el mantenimiento 
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
 
 ### <a name="composite-formatting"></a>Formatos compuestos
+
 <xref:System.String.Format%2A?displayProperty=nameWithType> emplea marcadores de posición entre llaves para crear una cadena de formato. Los resultados de este ejemplo son similares a la salida del método de interpolación de cadenas usado anteriormente.
   
 [!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
@@ -91,11 +99,13 @@ Use la interpolación de cadenas para mejorar la legibilidad y el mantenimiento 
 Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplicar formato a tipos en .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Subcadenas  
+
  Una subcadena es cualquier secuencia de caracteres que se encuentra en una cadena. Use el método <xref:System.String.Substring%2A> para crear una nueva cadena de una parte de la cadena original. Puede buscar una o más apariciones de una subcadena con el método <xref:System.String.IndexOf%2A>. Use el método <xref:System.String.Replace%2A> para reemplazar todas las apariciones de una subcadena especificada por una nueva cadena. Al igual que el método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> devuelve una cadena nueva y no modifica la cadena original. Para más información, consulte [Cómo: Buscar cadenas](../../how-to/search-strings.md) y [Procedimiento para modificar el contenido de cadenas](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#7)]  
   
 ## <a name="accessing-individual-characters"></a>Acceso a caracteres individuales  
+
  Puede utilizar la notación de matriz con un valor de índice para adquirir acceso de solo lectura a caracteres individuales, como en el ejemplo siguiente:  
   
  [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
@@ -105,6 +115,7 @@ Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplic
  [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>Cadenas nulas y cadenas vacías  
+
  Una cadena vacía es una instancia de un objeto <xref:System.String?displayProperty=nameWithType> que contiene cero caracteres. Las cadenas vacías se utilizan a menudo en distintos escenarios de programación para representar un campo de texto en blanco. Puede llamar a métodos en cadenas vacías porque son objetos <xref:System.String?displayProperty=nameWithType> válidos. Las cadenas vacías se inicializan como sigue:  
   
 ```csharp  
@@ -116,6 +127,7 @@ string s = String.Empty;
  [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Uso de StringBuilder para la creación rápida de cadenas  
+
  Las operaciones de cadena en .NET están muy optimizadas y en la mayoría de los casos no afectan significativamente al rendimiento. Sin embargo, en algunos escenarios, como los bucles de pequeñas dimensiones que se ejecutan cientos o miles de veces, las operaciones de cadena pueden afectar al rendimiento. La clase <xref:System.Text.StringBuilder> crea un búfer de cadena que proporciona un mejor rendimiento si el programa realiza muchas manipulaciones de cadenas. La cadena <xref:System.Text.StringBuilder> también permite reasignar caracteres individuales, algo que el tipo de datos de cadena integrado no admite. Por ejemplo, este código cambia el contenido de una cadena sin crear una nueva:  
   
  [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
@@ -125,6 +137,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadenas, métodos de extensión y LINQ  
+
  Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede usar expresiones de consulta LINQ en cadenas. Para más información, consulte [LINQ y cadenas](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Temas relacionados  

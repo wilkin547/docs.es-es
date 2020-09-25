@@ -3,14 +3,15 @@ title: Covarianza y contravarianza (C#)
 description: Obtenga información sobre la covarianza y la contravarianza, y sobre cómo afectan a la compatibilidad de las asignaciones. Consulte un ejemplo de código en el que se muestran las diferencias que existen entre ellas.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d0309ec1bb3161412433e1b44e8e35410911b38d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465668"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176336"
 ---
 # <a name="covariance-and-contravariance-c"></a>Covarianza y contravarianza (C#)
+
 En C#, la covarianza y la contravarianza habilitan la conversión de referencias implícita de tipos de matriz, tipos de delegado y argumentos de tipo genérico. La covarianza conserva la compatibilidad de asignaciones y la contravarianza la invierte.  
   
  El siguiente código muestra la diferencia entre la compatibilidad de asignaciones, la covarianza y la contravarianza.  

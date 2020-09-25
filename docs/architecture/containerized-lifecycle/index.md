@@ -2,12 +2,12 @@
 title: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 description: Obtenga información general de alto nivel del proceso de desarrollo e implementación para desarrollar e implementar aplicaciones en contenedores con la plataforma y las herramientas de Microsoft y Docker.
 ms.date: 07/30/2020
-ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915171"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160702"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 
@@ -17,7 +17,7 @@ ms.locfileid: "87915171"
 
 En esta guía se incluye información general para desarrollar e implementar aplicaciones ASP.NET Core en contenedores con Docker, mediante la plataforma y las herramientas de Microsoft. En ella también se incluye una presentación de alto nivel de Azure DevOps, a fin de implementar canalizaciones de CI/CD, así como Azure Container Registry (ACR) y Azure Kubernetes Services (AKS) para la implementación.
 
-Para obtener detalles de bajo nivel relacionados con el desarrollo, puede ver la guía [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://docs.microsoft.com/dotnet/architecture/microservices/) y su aplicación de referencia relacionada, [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
+Para obtener detalles de bajo nivel relacionados con el desarrollo, puede ver la guía [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](../microservices/index.md) y su aplicación de referencia relacionada, [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).
 
 ## <a name="send-us-your-feedback"></a>Envíenos sus comentarios.
 
