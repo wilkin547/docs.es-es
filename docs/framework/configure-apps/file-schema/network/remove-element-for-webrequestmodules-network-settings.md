@@ -10,14 +10,15 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 65e8b1f2088015b86d4f981f07875d236a11a617
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154730"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176193"
 ---
 # <a name="remove-element-for-webrequestmodules-network-settings"></a>Elemento \<remove> para webRequestModules (configuración de red)
+
 Quita un módulo de solicitud web personalizado de la aplicación.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,15 +35,17 @@ Quita un módulo de solicitud web personalizado de la aplicación.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`prefix`|El prefijo URI para las solicitudes controladas por este módulo de solicitud Web.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -51,12 +54,14 @@ Quita un módulo de solicitud web personalizado de la aplicación.
 |-----------------|---------------------|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica los módulos que se van a usar para solicitar información de los hosts de red.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El `remove` elemento quita el módulo de solicitud Web registrado para el prefijo de URI especificado.  
   
  El valor del `prefix` atributo debe ser el carácter inicial de un URI válido (por ejemplo, " `http` " o " `http://www.contoso.com` ").  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  

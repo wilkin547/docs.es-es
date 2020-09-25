@@ -8,14 +8,15 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: b502cc4a0958f074018d4b0ce6b3fb118b811c2f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 154a73a5fe3fa9e2b6b1c9e5c462b76bdc1ba640
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154977"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201751"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>Elemento \<authenticationModules> (configuración de red)
+
 Especifica los módulos que se usan para autenticar las solicitudes de red.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -30,9 +31,11 @@ Especifica los módulos que se usan para autenticar las solicitudes de red.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -49,13 +52,16 @@ Especifica los módulos que se usan para autenticar las solicitudes de red.
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El `authenticationModule` elemento especifica los módulos de autenticación que llevan a cabo el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se habilita un módulo de autenticación. Debe reemplazar los valores de version y PublicKeyToken por los valores correctos para el módulo especificado.  
   
 ```xml  

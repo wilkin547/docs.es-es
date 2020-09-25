@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: a46c42e917bdab0d32ee594bbcd604ee9e3d26bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b886518d4cff687a18f363c3e3ba43b40631a22f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286422"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194380"
 ---
 # <a name="getting-started"></a>Introducción
+
 Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , puede usar la tecnología LINQ para tener acceso a las bases de datos SQL de la misma forma que tendría acceso a una colección en memoria.  
   
  Por ejemplo, en el código siguiente, se crea el objeto `nw` para representar la base de datos `Northwind`, el destino es la tabla `Customers`, las filas se filtran para `Customers` de `London` y se selecciona para la recuperación una cadena de `CompanyName`.  
@@ -24,6 +25,7 @@ Mediante el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-m
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
   
 ## <a name="next-steps"></a>Pasos siguientes  
+
  Para ver algunos ejemplos adicionales, como la inserción y la actualización, consulte [lo que puede hacer con LINQ to SQL](what-you-can-do-with-linq-to-sql.md).  
   
  Luego, intente realizar algunos tutoriales para obtener experiencia práctica en el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Vea [aprendizaje de los tutoriales](learning-by-walkthroughs.md).  

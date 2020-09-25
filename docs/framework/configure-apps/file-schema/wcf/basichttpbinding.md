@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 55f774ac02c9ea76b116d1ace55ca59a806cb648
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87628f0966afe83d933dc5b629b5352c609386dc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557728"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201530"
 ---
 # \<basicHttpBinding>
+
 Representa un enlace que un servicio Windows Communication Foundation (WCF) puede usar para configurar y exponer puntos de conexión que puedan comunicarse con servicios web basados en ASMX y clientes y otros servicios que cumplan con WS-I Basic Profile 1.1.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -57,6 +58,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -64,7 +66,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`allowCookies`|Valor de tipo booleano que indica si el cliente acepta las cookies y las propaga en solicitudes futuras. De manera predeterminada, es `false`.<br /><br /> Puede utilizar esta propiedad al interactuar con los servicios Web ASMX que utilizan cookies. De esta manera, puede estar seguro de que las cookies devueltas del servidor se copian automáticamente en todas las solicitudes de cliente futuras para ese servicio.|  
-|`bypassProxyOnLocal`|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. De manera predeterminada, es `false`.<br /><br /> Un recurso de Internet es local si tiene una dirección local. Una dirección local es aquella que se encuentra en el mismo equipo, en la LAN local o en la intranet y se identifica, sintácticamente, por la falta de un punto (.) como en los URI `http://webserver/` y `http://localhost/` .<br /><br /> Al establecer este atributo se determina si los extremos configurados con BasicHttpBinding utilizan el servidor proxy al obtener acceso a los recursos locales. Si este atributo es `true`, las solicitudes que se realicen en recursos locales de Internet no usarán el servidor proxy. Utilice el nombre de host (en lugar del host local) si desea que los clientes pasen por un proxy al hablar con los servicios del mismo equipo cuando este atributo está establecido como `true`.<br /><br /> Cuando este atributo es `false`, todas las solicitudes de Internet se realizan a través del servidor proxy.|  
+|`bypassProxyOnLocal`|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. El valor predeterminado es `false`.<br /><br /> Un recurso de Internet es local si tiene una dirección local. Una dirección local es aquella que se encuentra en el mismo equipo, en la LAN local o en la intranet y se identifica, sintácticamente, por la falta de un punto (.) como en los URI `http://webserver/` y `http://localhost/` .<br /><br /> Al establecer este atributo se determina si los extremos configurados con BasicHttpBinding utilizan el servidor proxy al obtener acceso a los recursos locales. Si este atributo es `true`, las solicitudes que se realicen en recursos locales de Internet no usarán el servidor proxy. Utilice el nombre de host (en lugar del host local) si desea que los clientes pasen por un proxy al hablar con los servicios del mismo equipo cuando este atributo está establecido como `true`.<br /><br /> Cuando este atributo es `false`, todas las solicitudes de Internet se realizan a través del servidor proxy.|  
 |`closeTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`hostNameComparisonMode`|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Este atributo es del tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI. El valor predeterminado es <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que omite el nombre del host en la coincidencia.|  
 |`maxBufferPoolSize`|Un valor entero que especifica la cantidad de memoria máxima que se asigna para el uso realizado por el administrador de los búferes que reciben los mensajes del canal. El valor predeterminado es 524288 (0x80000) bytes.<br /><br /> El administrador de búfer reduce el coste de utilizar los búferes con un grupo de búferes. Es necesario que los búferes procesen los mensajes del servicio cuando salen del canal. Si no hay memoria suficiente en el grupo de búferes para procesar la carga de mensajes, el administrador de búfer debe asignar memoria adicional del montón CLR, que aumenta la carga de recolección de elementos no utilizados. La amplia asignación del montón de elementos no utilizados de CLR es una indicación de que el tamaño del grupo de búferes es demasiado pequeño y de que el rendimiento podría mejorar con una asignación mayor aumentando el límite especificado por este atributo.|  
@@ -73,12 +75,12 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 |`messageEncoding`|Define el codificador utilizado para codificar el mensaje SOAP. Los valores válidos incluyen los siguientes:<br /><br /> -Text: usar un codificador de mensajes de texto.<br />-MTOM: usar un codificador del mecanismo de la organización de transmisión de mensajes 1,0 (MTOM).<br /><br /> El valor predeterminado es Text. Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
 |`name`|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único entre los enlaces del mismo tipo. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|`proxyAddress`|Un URI que contiene la dirección del proxy HTTP. Si `useSystemWebProxy` se establece como `true`, esta configuración debe ser `null`. De manera predeterminada, es `null`.|  
+|`proxyAddress`|Un URI que contiene la dirección del proxy HTTP. Si `useSystemWebProxy` se establece como `true`, esta configuración debe ser `null`. El valor predeterminado es `null`.|  
 |`receiveTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |`sendTimeout`|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |`textEncoding`|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos incluyen los siguientes:<br /><br /> -BigEndianUnicode: codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|  
 |`transferMode`|Un valor <xref:System.ServiceModel.TransferMode> válido que especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta.|  
-|`useDefaultWebProxy`|Valor de tipo booleano que especifica si se debería utilizar el proxy HTTP configurado automáticamente del sistema, si está disponible. De manera predeterminada, es `true`.|  
+|`useDefaultWebProxy`|Valor de tipo booleano que especifica si se debería utilizar el proxy HTTP configurado automáticamente del sistema, si está disponible. El valor predeterminado es `true`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -93,12 +95,14 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  BasicHttpBinding usa HTTP como transporte para enviar mensajes SOAP 1.1. Un servicio puede utilizar este enlace para exponer extremos que cumplen con WS-I BP 1.1, como los que utilizan los clientes ASMX. De igual forma, un cliente puede utilizar BasicHttpBinding para comunicarse con servicios que exponen extremos que cumplen con WS-I BP 1.1, como el Servicio Web de ASMX o servicios configurados con BasicHttpBinding.  
   
  La seguridad está desactivada de forma predeterminada, pero se puede Agregar estableciendo el atributo de modo del [\<security>](security-of-basichttpbinding.md) elemento secundario en un valor distinto de `None` . De forma predeterminada, usa una codificación de mensajes "Text" y codificación de texto UTF-8.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra el uso de la clase <xref:System.ServiceModel.BasicHttpBinding> que proporciona comunicación HTTP e interoperabilidad máxima a los servicios Web de primera y segunda generación. El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el atributo `binding` del elemento `<endpoint>`. Si desea configurar el enlace básico y cambiar algunos de sus valores, es necesario definir una configuración de enlace. El extremo debe hacer referencia a la configuración de enlace por nombre utilizando el atributo `bindingConfiguration` del elemento `<endpoint>`, como se muestra en el siguiente código de configuración para el servicio.  
   
 ```xml  
@@ -136,6 +140,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. La funcionalidad del ejemplo anterior se puede llevar a cabo quitando bindingConfiguration de la dirección del punto de conexión y el nombre del enlace.  
   
 ```xml  
@@ -172,7 +177,7 @@ Representa un enlace que un servicio Windows Communication Foundation (WCF) pued
   
  Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>

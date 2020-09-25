@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8db75f486c7c08b6a02401af35c9edf9969f9063
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785989"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201283"
 ---
 # <a name="nesting-datarelations"></a>Anidar objetos DataRelation
+
 En una representación relacional de datos, las tablas individuales contienen filas que están relacionadas entre sí por una columna o un conjunto de columnas. En el <xref:System.Data.DataSet> de ADO.NET, la relación entre tablas se implementa mediante una <xref:System.Data.DataRelation>. Cuando se crea una **DataRelation**, las relaciones de elementos primarios y secundarios de las columnas solo se administran a través de la relación. Las tablas y las columnas son entidades independientes. En la representación jerárquica de los datos proporcionada por XML, las relaciones primaria-secundaria se representan mediante elementos primarios que contienen elementos secundarios anidados.  
   
  Para facilitar el anidamiento de objetos secundarios cuando un **conjunto** de datos se sincroniza con un <xref:System.Xml.XmlDataDocument> o se escribe como datos XML mediante **WriteXml**, la **DataRelation** expone una propiedad **anidada** . Al establecer la propiedad **Nested** de una **DataRelation** en **true** , las filas secundarias de la relación se anidan dentro de la columna primaria cuando se escriben como datos XML o se sincronizan con **XmlDataDocument**. La propiedad **Nested** de la **DataRelation** es **false**de forma predeterminada.  
@@ -136,4 +137,4 @@ customerOrders.Nested = true;
 - [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
 - [Agregar objetos DataRelation](adding-datarelations.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

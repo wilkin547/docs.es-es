@@ -5,14 +5,15 @@ helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-ms.openlocfilehash: 4c4ea35bff17a0e5188f26884e93cf77173a7df8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1716b11106775bed2c0d6ccb62e8d5b032b6e8be
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176141"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly> (Elemento)
+
 Especifica el ensamblado que proporciona el administrador de dominios de aplicación para el dominio de aplicación predeterminado en el proceso.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -36,6 +38,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
 |`value`|Atributo necesario. Especifica el nombre para mostrar del ensamblado que proporciona el administrador del dominio de aplicación para el dominio de aplicación predeterminado en el proceso.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -45,7 +48,8 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Para especificar el tipo del administrador del dominio de aplicación, debe especificar este elemento y el [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento. Si no se especifica ninguno de estos elementos, se omite el otro.  
   
  Cuando se carga el dominio de aplicación predeterminado, <xref:System.TypeLoadException> se produce si el ensamblado especificado no existe o si el ensamblado no contiene el tipo especificado por el [\<appDomainManagerType>](appdomainmanagertype-element.md) elemento; y el proceso no se inicia. Si se encuentra el ensamblado pero la información de la versión no coincide, <xref:System.IO.FileLoadException> se produce una excepción.  
@@ -59,6 +63,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
  Este elemento de configuración solo está disponible en el .NET Framework 4 y versiones posteriores.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo especificar que el administrador del dominio de aplicación para el dominio de aplicación predeterminado de un proceso es el `MyMgr` tipo del `AdMgrExample` ensamblado.  
   
 ```xml  
@@ -71,11 +76,11 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType>Element](appdomainmanagertype-element.md)
+- [Elemento \<appDomainManagerType>](appdomainmanagertype-element.md)
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
 - [SetAppDomainManagerType (Método)](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

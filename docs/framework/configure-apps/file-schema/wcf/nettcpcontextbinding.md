@@ -2,14 +2,15 @@
 title: <netTcpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-ms.openlocfilehash: 88b3da6c81d771db255f6c0a4e86984c9ba294fe
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb6094b962c0f1199f0a16eb7d0821a95eba4c77
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546157"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195041"
 ---
 # \<netTcpContextBinding>
+
 Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requiere que se firme el nivel de protección. El contextExchangeMechanism para NetTcpContextBinding es SOAPHeader.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -62,6 +63,7 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -81,7 +83,7 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 |portSharingEnabled|Valor de tipo booleano que especifica si el uso compartido de puerto TCP está habilitado para esta conexión. Si éste es `false`, cada enlace utiliza su propio puerto exclusivo. Este valor sólo es relevante para los servicios, porque los clientes no se ven afectados.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
-|transactionFlow|Valor booleano que especifica si el enlace admite las transacciones WS del flujo. De manera predeterminada, es `false`.|  
+|transactionFlow|Valor booleano que especifica si el enlace admite las transacciones WS del flujo. El valor predeterminado es `false`.|  
 |transactionProtocol|Especifica el protocolo de transacción que se va a usar con este enlace. Los valores válidos son<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> El valor predeterminado es OleTransactions. Este atributo es del tipo <xref:System.ServiceModel.TransactionProtocol>.|  
 |transferMode|Un valor <xref:System.ServiceModel.TransferMode> que especifica si los mensajes se almacenan en búfer, se transmiten o si son una solicitud o una respuesta.|  
   
@@ -99,7 +101,7 @@ Especifica un contexto para <xref:System.ServiceModel.NetTcpBinding> que requier
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.NetTcpContextBinding>

@@ -2,14 +2,15 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: 26537980a6be5c0fe12661d93a6ba5fe862ceb4e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8638d56ccb4aaa1c5ac735aa268823af2b1fbc6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398155"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176076"
 ---
 # \<channelPoolSettings>
+
 Especifica los valores de grupo de canal para un enlace personalizado.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -29,6 +30,7 @@ Especifica los valores de grupo de canal para un enlace personalizado.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,6 +42,7 @@ Especifica los valores de grupo de canal para un enlace personalizado.
 |`maxOutboundChannelsPerEndpoint`|Entero positivo que especifica el número máximo de canales que se pueden almacenar en el grupo para cada punto de conexión remoto. El valor predeterminado es 10.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -48,7 +51,8 @@ Especifica los valores de grupo de canal para un enlace personalizado.
 |-------------|-----------------|  
 |[\<oneWay>](oneway.md)|Habilita el enrutamiento del paquete para un enlace personalizado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Las cuotas se utilizan como un mecanismo de la directiva para evitar el consumo excesivo de recursos . Evitan los ataques por denegación de servicio (DoS), tanto malintencionados como involuntarios. Utilice este elemento al establecer las cuotas del canal en un canal personalizado.  
   
  `ChannelPoolSettings` especifica tres cuotas:  

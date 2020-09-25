@@ -2,14 +2,15 @@
 title: <add> de <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 29b067e6ec20992084f9ab3bab087222bdd56da2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 453593918de15613edb801cca8a16c9dbf71aa90
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400622"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176089"
 ---
 # <a name="add-of-knowncertificates"></a>\<add> de \<knownCertificates>
+
 Agrega un certificado X.509 a la colección de certificados conocidos.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,13 +35,14 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|findValue|String. Valor que se va a buscar.|  
+|findValue|Cadena Valor que se va a buscar.|  
 |storeLocation|Enumeración. Una de las dos ubicaciones de almacén en que buscar.|  
 |storeName|Enumeración. Uno de los almacenes del sistema en que buscar.|  
 |x509FindType|Enumeración. Uno de los campos de certificado en que buscar.|  
@@ -70,6 +72,7 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
 |Enumeración|Los valores incluyen: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, y TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -78,7 +81,8 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
 |-------------|-----------------|  
 |[\<knownCertificates>](knowncertificates.md)|Representa una colección de certificados X.509 que se proporcionan por un servicio de token de seguridad (STS) para la validación de tokens de seguridad.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El escenario del token emitido tiene tres etapas. En la primera fase, un cliente que intenta tener acceso a un servicio se conoce como *servicio de token seguro*. El servicio de token seguro autentica, a continuación, al cliente y como consecuencia el cliente emite un token, normalmente un token del lenguaje de marcado de aserción de seguridad (SAML). El cliente vuelve a continuación al servicio con el token. El servicio examina el token para los datos que permite al servicio autenticar el token y, por consiguiente, al cliente. Para autenticar el token, el servicio debe conocer el certificado que usa el servicio de token seguro.  
   
  El [\<issuedTokenAuthentication>](issuedtokenauthentication-of-servicecredentials.md) elemento es el repositorio para cualquier certificado de servicio de token seguro. Para agregar certificados, use [\<knownCertificates>](knowncertificates.md) . Inserte un [ \<add> \<knownCertificates> elemento Element](add-of-knowncertificates.md) para cada certificado, tal como se muestra en el ejemplo siguiente.  
@@ -99,6 +103,7 @@ Agrega un certificado X.509 a la colección de certificados conocidos.
  Para revisar las condiciones requeridas para que un cliente sea autenticado por un servicio federado, así como más información sobre el uso de este elemento de configuración, consulte [How to: configure Credentials on a servicio de Federación](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Para obtener más información sobre los escenarios federados, vea [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se agrega el certificado al repositorio para todos los certificados STS.  
   
 ```xml  

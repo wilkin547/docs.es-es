@@ -3,14 +3,15 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: bcd8e00b770517e3faff011b4acee08ebdc5a0df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79152741"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201361"
 ---
 # \<federationConfiguration>
+
 Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) al usar la autenticación federada a través del protocolo WS-Federation. Configura <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase o para proporcionar el control de acceso basado en notificaciones.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -27,6 +28,7 @@ Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -50,7 +52,8 @@ Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 
 |-------------|-----------------|  
 |[\<system.identityModel.services>](system-identitymodel-services.md)|Sección de configuración para la autenticación mediante el protocolo WS-Federation.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El \<federationConfiguration> elemento proporciona valores en dos escenarios diferentes:  
   
 - Al usar WS-Federation en una aplicación web pasiva, el elemento contiene opciones de configuración que configuran <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). También hace referencia a la configuración de identidad que se va a usar para configurar los controladores y certificados de tokens de seguridad, así como a los componentes como el administrador de autorización de notificaciones y el administrador de autenticación de notificaciones.  
@@ -67,11 +70,12 @@ Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 
   
 4. Si hay varios `<federationConfiguration>` elementos con nombre presentes y no hay ningún `<federationConfiguration>` elemento sin nombre, se produce una excepción.  
   
- Normalmente, solo `<federationConfiguration>` se define una sección. Esta sección es la configuración de Federación predeterminada. Puede especificar varios elementos con el nombre único `<federationConfiguration>` ; sin embargo, en este caso, si desea cargar una configuración de Federación distinta de la sin nombre, debe proporcionar un controlador para. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>y establezca la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propiedad dentro del controlador en un <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado con los valores del elemento adecuado `<federationConfiguration>` en el archivo de configuración.  
+ Normalmente, solo `<federationConfiguration>` se define una sección. Esta sección es la configuración de Federación predeterminada. Puede especificar varios elementos con el nombre único `<federationConfiguration>` ; sin embargo, en este caso, si desea cargar una configuración de Federación distinta de la sin nombre, debe proporcionar un controlador para. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> y establezca la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> propiedad dentro del controlador en un <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> objeto inicializado con los valores del elemento adecuado `<federationConfiguration>` en el archivo de configuración.  
   
  El `<federationConfiguration>` elemento se representa mediante la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> clase. La clase representa el propio objeto de configuración <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> . <xref:System.IdentityModel.Services.Configuration.FederationConfiguration>Se establece una sola instancia en la <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> propiedad y se proporciona la configuración federada para la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el XML siguiente se muestra un `<federationConfiguration>` elemento que especifica los valores para WSFAM y especifica que el SAM debe usar el controlador de cookies predeterminado (una instancia de la <xref:System.IdentityModel.Services.ChunkedCookieHandler> clase).  
   
 > [!WARNING]

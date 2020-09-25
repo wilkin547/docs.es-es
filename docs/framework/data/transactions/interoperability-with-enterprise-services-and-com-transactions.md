@@ -3,14 +3,15 @@ title: Interoperabilidad con Enterprise Services y transacciones de COM+
 description: Comprenda la interoperabilidad con Enterprise Services y transacciones COM+ en .NET mediante el espacio de nombres System. Transactions.
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-ms.openlocfilehash: ebd6166fbd99ef102cf10ba1bcef9e3eb8aaa5da
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: 48cb006a4294b7c43de262eb2d19c6c4ea9d22fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141906"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186775"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Interoperabilidad con Enterprise Services y transacciones de COM+
+
 El espacio de nombres <xref:System.Transactions> admite la interoperabilidad entre los objetos de transacción creados utilizando este espacio de nombres y las transacciones creadas a través de COM+.  
   
  Puede utilizar la enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> al crear una nueva <xref:System.Transactions.TransactionScope> instancia para especificar el nivel de interoperabilidad con COM+.  
@@ -18,6 +19,7 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
  De forma predeterminada, cuando el código de aplicación comprueba la <xref:System.Transactions.Transaction.Current%2A> propiedad estática, <xref:System.Transactions> intenta buscar una transacción que, de lo contrario, es actual o un <xref:System.Transactions.TransactionScope> objeto que determina que <xref:System.Transactions.Transaction.Current%2A> es **null**. Si no encuentra ninguno de estos, <xref:System.Transactions> consulta una transacción en el contexto de COM+. Tenga en cuenta que aunque <xref:System.Transactions> puede buscar una transacción del contexto de COM+, todavía favorece transacciones que son nativas a <xref:System.Transactions>.  
   
 ## <a name="interoperability-levels"></a>Niveles de la interoperabilidad  
+
  La enumeración <xref:System.Transactions.EnterpriseServicesInteropOption> define los niveles siguientes de interoperabilidad. <xref:System.Transactions.EnterpriseServicesInteropOption.None>, <xref:System.Transactions.EnterpriseServicesInteropOption.Full> y <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>.  
   
  La clase <xref:System.Transactions.TransactionScope> proporciona constructores que aceptan <xref:System.Transactions.EnterpriseServicesInteropOption> como un parámetro.  
@@ -28,7 +30,7 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Full> especifica que las transacciones ambientes para <xref:System.Transactions> y <xref:System.EnterpriseServices> siempre son los mismos. Producir crear un nuevo <xref:System.EnterpriseServices> contexto transaccional y aplicar la transacción que es actual para que <xref:System.Transactions.TransactionScope> sea actual para ese contexto. Como a tal, la transacción en <xref:System.Transactions.Transaction.Current%2A> está completamente en sincronización con la transacción en <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Este valor presenta una reducción del rendimiento porque quizá sea necesario crear nuevos contextos COM+ .  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>especifica los siguientes requisitos:  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> especifica los siguientes requisitos:  
   
 - Cuando se comprueba <xref:System.Transactions.Transaction.Current%2A>, <xref:System.Transactions> debería admitir las transacciones en el contexto de COM+ si detecta que se está ejecutando en un contexto distinto del contexto predeterminado. Observe que el contexto predeterminado no puede contener una transacción. Por consiguiente, en el contexto predeterminado, la transacción almacenada en el almacenamiento local de subprocesos utilizado por <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> se devuelve incluso con <xref:System.Transactions>, para <xref:System.Transactions.Transaction.Current%2A>.  
   
@@ -38,7 +40,7 @@ El espacio de nombres <xref:System.Transactions> admite la interoperabilidad ent
   
  En resumen, las reglas siguientes se aplican al crear un nuevo ámbito de la transacción:  
   
-1. <xref:System.Transactions.Transaction.Current%2A>se comprueba para ver si hay una transacción. Comprueba los resultados en:  
+1. <xref:System.Transactions.Transaction.Current%2A> se comprueba para ver si hay una transacción. Comprueba los resultados en:  
   
     - Una comprobación para ver si hay un ámbito.  
   

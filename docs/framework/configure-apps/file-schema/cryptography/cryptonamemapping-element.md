@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: d31c5cd52ffe0e2a6eb5784735e76436d216444b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9ffae33a3c8a06d6cfcabf5a58b7d72baeda79c5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155224"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201803"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping> (Elemento)
+
 Contiene asignaciones de clases a nombres descriptivos.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Contiene asignaciones de clases a nombres descriptivos.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -53,6 +56,7 @@ Contiene asignaciones de clases a nombres descriptivos.
 |`mscorlib`|Contiene el \<cryptographySettings> elemento.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el **\<cryptoNameMapping>** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución. Después, puede pasar la cadena "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y usar el <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para devolver un `MyCryptoRSAClass` objeto.  
   
 ```xml  
@@ -77,6 +81,6 @@ Contiene asignaciones de clases a nombres descriptivos.
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de los archivos de configuración](../index.md)
-- [Esquema de la configuración de criptografía](index.md)
-- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
+- [Esquema de configuración de criptografía](index.md)
+- [servicios criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)

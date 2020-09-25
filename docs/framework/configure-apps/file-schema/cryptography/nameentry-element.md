@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: a339638587f8b544bbc1b0073553f6232ce09694
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4341b1fcd3762e5aa55f0ba988f7f49d4b5cacd6
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71699776"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201777"
 ---
 # <a name="nameentry-element"></a>\<nameEntry> (Elemento)
+
 Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que una clase tenga varios nombres descriptivos.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -31,6 +32,7 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -41,6 +43,7 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 |**class**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en el [\<cryptoClass>](cryptoclass-element.md) elemento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -50,10 +53,12 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.web`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El atributo de **nombre** puede ser el nombre de una de las clases abstractas que se encuentran en el <xref:System.Security.Cryptography> espacio de nombres. Cuando se llama al método **Create** en una clase de criptografía abstracta, el nombre de la clase abstracta se pasa al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> método. **CreateFromName** devuelve una instancia del tipo indicado por el atributo de **clase** . Si el atributo **Name** es un nombre corto, como RSA, puede usar ese nombre al llamar al método **CreateFromName** .  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el **\<nameEntry>** elemento para hacer referencia a una clase de criptografía y configurar el tiempo de ejecución. Después, puede pasar la cadena "RSA" al <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> método y usar el <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> método para devolver un `MyCryptoRSAClass` objeto.  
   
 ```xml  
@@ -78,6 +83,6 @@ Asigna un nombre de clase a un nombre de algoritmo descriptivo, que permite que 
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de los archivos de configuración](../index.md)
-- [Esquema de la configuración de criptografía](index.md)
-- [Servicios criptográficos](../../../../standard/security/cryptographic-services.md)
+- [Esquema de configuración de criptografía](index.md)
+- [servicios criptográficos](../../../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)

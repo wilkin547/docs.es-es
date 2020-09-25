@@ -9,14 +9,15 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: f0c4c1845e9542d0f3b836ff03f16bdf2979ebd8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bb7fc5405b1ee2f0f054bc6e9f043a3f9fcd1ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504503"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176167"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>Elemento \<specifiedPickupDirectory> (configuración de red)
+
 Configura el directorio local de un servidor SMTP (Protocolo simple de transferencia de correo).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -34,27 +35,31 @@ Configura el directorio local de un servidor SMTP (Protocolo simple de transfere
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`pickupDirectoryLocation`|Directorio en el que las aplicaciones guardan el correo electrónico para su procesamiento posterior por parte del servidor SMTP.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<smtp>(Elemento, configuración de red)](smtp-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
+|[Elemento \<smtp> (configuración de red)](smtp-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El `specifiedPickupDirectory` atributo establece el directorio en el que las aplicaciones guardan los mensajes de correo que el servidor SMTP va a procesar.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se especifica c:\maildrop como directorio de recogida de correo.  
   
 ```xml  
@@ -71,7 +76,7 @@ Configura el directorio local de un servidor SMTP (Protocolo simple de transfere
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
