@@ -2,22 +2,25 @@
 title: Literales NULL e inferencia de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5797c9f55b1a1c89cc27787af6f9ad7bfffc5767
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249826"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185072"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literales NULL e inferencia de tipos (Entity SQL)
-Los literales null son compatibles con cualquier tipo del sistema de tipos [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Sin embargo, para que el tipo de un literal NULL se infiera correctamente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , impone ciertas restricciones sobre dónde se puede utilizar un literal null.  
+
+Los literales null son compatibles con cualquier tipo del sistema de tipos [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Sin embargo, para que el tipo de un literal NULL se infiera correctamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impone ciertas restricciones sobre dónde se puede utilizar un literal null.  
   
 ## <a name="typed-nulls"></a>Valores null con tipo  
+
  Los valores null con tipo se pueden utilizar en cualquier lugar. La inferencia de tipos no es necesaria para los valores null con tipo porque el tipo es conocido. Por ejemplo, puede crear un valor null de tipo Int16 con la siguiente construcción [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
  `(cast(null as Int16))`  
   
 ## <a name="free-floating-null-literals"></a>Literales null flotantes  
+
  Los literales null flotantes se pueden utilizar en los siguientes contextos.  
   
 - Como un argumento para una expresión CAST o TREAT. Esta es la forma que se recomienda para generar una expresión null con tipo.  
@@ -40,6 +43,6 @@ Los literales null son compatibles con cualquier tipo del sistema de tipos [!INC
   
  Los literales null flotantes no se pueden utilizar en otros escenarios. Por ejemplo, no se puede utilizar como argumentos para un constructor row.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)

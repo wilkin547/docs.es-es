@@ -2,14 +2,15 @@
 title: <endpoint> de <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f1ffbc1e8efac70523d7f631c8cf9ba9a1622bfc
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 79d827691ec3898ad94af9835077c61ea35990ab
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855324"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185852"
 ---
 # <a name="endpoint-of-client"></a>\<endpoint> de \<client>
+
 Especifica el contrato, enlace y propiedades de dirección del extremo del canal, que es utilizado por clientes para conectar a los extremos de servicio en el servidor.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Especifica el contrato, enlace y propiedades de dirección del extremo del canal
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,7 +46,7 @@ Especifica el contrato, enlace y propiedades de dirección del extremo del canal
 |bindingConfiguration|Opcional. Una cadena que contiene el nombre de la configuración de enlace que se va a utilizar cuando se instancia el extremo. La configuración del enlace debe estar en el ámbito en el punto definido del punto de conexión. El valor predeterminado es una cadena vacía.<br /><br /> Este atributo se utiliza junto con `binding` para hacer referencia a una configuración de enlace concreta en el archivo de configuración. Establezca este atributo si está intentando utilizar un enlace personalizado. De lo contrario, puede producirse una excepción.|  
 |contrato|Atributo de cadena necesario.<br /><br /> Una cadena que indica qué contrato está exponiendo este punto de conexión. El ensamblado debe implementar el tipo de contrato.|  
 |endpointConfiguration|Cadena que especifica el nombre del punto de conexión estándar establecido por el atributo `kind`, que hace referencia a la información de configuración adicional de este punto de conexión estándar. El mismo nombre se debe definir en la sección `<standardEndpoints>`.|  
-|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la `<extensions>` sección o en Machine. config. Si no se especifica nada, se crea un extremo de canal común.|  
+|kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un punto de conexión de canal común.|  
 |name|Atributo de cadena opcional. Este atributo identifica singularmente un extremo para un contrato determinado. Puede definir varios clientes para un tipo de contrato determinado. Cada definición tiene que diferenciarse por un nombre de configuración unívoco. Si se omite este atributo, el punto de conexión correspondiente se usa como el punto de conexión predeterminado asociado al tipo de contrato especificado. El valor predeterminado es una cadena vacía.<br /><br /> El atributo de `name` de un enlace se utiliza para la exportación de la definición a través de WSDL.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -61,6 +63,7 @@ Especifica el contrato, enlace y propiedades de dirección del extremo del canal
 |[\<client>](client.md)|Una sección de configuración que define una lista de puntos de conexión a los que un cliente puede conectarse.|  
   
 ## <a name="example"></a>Ejemplo  
+
  Éste es un ejemplo de una configuración del extremo del canal.  
   
 ```xml  

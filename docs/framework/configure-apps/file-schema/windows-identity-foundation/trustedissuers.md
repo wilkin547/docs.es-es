@@ -3,14 +3,15 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: 50fc7194823fb0c5c426fb54ffd50b17c3714ed9
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 08cddd19f40f039f86e100cc7ee6a78633502eb2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251754"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185566"
 ---
 # \<trustedIssuers>
+
 Configura la lista de certificados de emisor de confianza utilizados por el registro de nombres de emisores basados en la configuración ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> ).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -42,9 +43,11 @@ Configura la lista de certificados de emisor de confianza utilizados por el regi
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -61,12 +64,14 @@ Configura la lista de certificados de emisor de confianza utilizados por el regi
 |-------------|-----------------|  
 |[\<issuerNameRegistry>](issuernameregistry.md)|Configura el registro de nombres de emisores. **Importante:**  El `type` atributo del `<issuerNameRegistry>` elemento debe hacer referencia <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> a la clase para `<trustedIssuers>` que el elemento sea válido.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Windows Identity Foundation (WIF) proporciona una implementación única de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase desde el cuadro, la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> clase. El registro de nombres de emisores de configuración mantiene una lista de emisores de confianza que se cargan desde la configuración. La lista asocia cada nombre de emisor con el certificado X. 509 necesario para comprobar la firma de los tokens generados por el emisor. La lista de certificados de emisor de confianza se especifica en el `<trustedIssuers>` elemento. Cada elemento de la lista asocia un nombre de emisor de mnemotécnico con el certificado X. 509 necesario para comprobar la firma de los tokens generados por dicho emisor. Los certificados de confianza se especifican con el formato ASN. 1 codificado de la huella digital del certificado y se agregan a la colección mediante el `<add>` elemento. Puede borrar o quitar emisores (certificados) de la lista mediante los `<clear>` `<remove>` elementos y.  
   
  El `type` atributo del `<issuerNameRegistry>` elemento debe hacer referencia <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> a la clase para `<trustedIssuers>` que el elemento sea válido.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente XML muestra cómo especificar el registro de nombres de emisor basado en la configuración.  
   
 ```xml  

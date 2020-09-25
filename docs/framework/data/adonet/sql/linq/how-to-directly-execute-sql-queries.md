@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 59bd404e41f6be1181d6a625c31ee23358db0df3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7ebd02581d789266396b58296bbd6ad312dd468e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286370"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200581"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Procedimiento para ejecutar directamente consultas SQL
+
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte las consultas que se escriben en consultas SQL parametrizadas (en formato de texto) y las envía al servidor SQL Server para su procesamiento.  
   
  SQL no puede ejecutar todos los métodos que podrían estar localmente disponibles para una aplicación. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta convertir estos métodos locales en operaciones y funciones equivalentes que estén disponibles en el entorno de SQL. La mayoría de los métodos y operadores de .NET Framework tipos integrados tienen traducciones directas a comandos SQL. Algunos se pueden generar a partir de las funciones que están disponibles. Aquellos que no se pueden generar, inician excepciones en tiempo de ejecución. Para obtener más información, consulte [SQL-CLR Type mapping](sql-clr-type-mapping.md).  
@@ -21,6 +22,7 @@ ms.locfileid: "84286370"
  Cuando una consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no es suficiente para una tarea especializada, puede utilizar el método <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> para ejecutar una consulta SQL y después convertir el resultado de la consulta directamente en objetos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente, supongamos que los datos de la clase `Customer` ocupan dos tablas (customer1 y customer2). La consulta devuelve una secuencia de objetos `Customer`.  
   
  [!code-csharp[DLinqQuerying#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#4)]
@@ -29,6 +31,7 @@ ms.locfileid: "84286370"
  Siempre que los nombres de columna de los resultados tabulares coincidan con las propiedades de columna de la clase de entidad, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] crea los objetos fuera de cualquier consulta SQL.  
   
 ## <a name="example"></a>Ejemplo  
+
  El método <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> también permite el uso de parámetros. Utilice código como el siguiente para ejecutar una consulta parametrizada.  
   
  [!code-csharp[DLinqQuerying#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#5)]

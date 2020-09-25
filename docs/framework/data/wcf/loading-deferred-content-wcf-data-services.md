@@ -9,27 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 811118755c4688bd0ea8cb9ba37b2101ab6c52cf
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6eff454bf4f79f7fe215828956ffe79d0c1f6757
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568955"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194328"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Cargar contenido diferido (Servicios de datos de WCF)
+
 De forma predeterminada, WCF Data Services limita la cantidad de datos que devuelve una consulta. Sin embargo, es posible cargar explícitamente datos adicionales, incluidos los datos de la respuesta paginados, las entidades relacionadas y los flujos de datos binarios, del servicio de datos cuando sea necesario. En este tema se describe cómo cargar dicho contenido aplazado en una aplicación.  
   
 ## <a name="related-entities"></a>Entidades relacionadas  
+
  Cuando se ejecuta una consulta, solo se devuelven las entidades pertenecientes al conjunto de entidades direccionado. Por ejemplo, cuando una consulta al servicio de datos Northwind devuelve entidades `Customers`, no se devuelven de forma predeterminada las entidades `Orders` relacionadas aunque haya una relación entre `Customers` y `Orders`. Además, cuando está habilitada la paginación en el servicio de datos, debe cargar explícitamente las páginas de datos subsiguientes del servicio. Hay dos maneras de cargar las entidades relacionadas:  
   
-- **Carga diligente**: puede usar la opción de consulta `$expand` para solicitar que la consulta devuelva entidades que están relacionadas por una asociación con el conjunto de entidades solicitado por la consulta. Utilice el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en <xref:System.Data.Services.Client.DataServiceQuery%601> para agregar la opción `$expand` a la consulta que se envía al servicio de datos. Puede solicitar varios conjuntos de entidades relacionados separándolos mediante comas, como muestra el ejemplo siguiente. Todas las entidades solicitadas por la consulta se devuelven en una única respuesta. En el ejemplo siguiente se devuelve `Order_Details` y `Customers` junto con el conjunto de entidades `Orders`:  
+- **Carga diligente**: puede usar la `$expand` opción de consulta para solicitar que la consulta devuelva entidades que están relacionadas por una asociación con el conjunto de entidades solicitado por la consulta. Utilice el método <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> en <xref:System.Data.Services.Client.DataServiceQuery%601> para agregar la opción `$expand` a la consulta que se envía al servicio de datos. Puede solicitar varios conjuntos de entidades relacionados separándolos mediante comas, como muestra el ejemplo siguiente. Todas las entidades solicitadas por la consulta se devuelven en una única respuesta. En el ejemplo siguiente se devuelve `Order_Details` y `Customers` junto con el conjunto de entidades `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
-     WCF Data Services limita a 12 el número de conjuntos de entidades que se pueden incluir en una sola consulta mediante la opción de consulta `$expand`.  
+     WCF Data Services limita a 12 el número de conjuntos de entidades que se pueden incluir en una sola consulta mediante la `$expand` opción de consulta.  
   
-- **Carga explícita**: puede llamar al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> en la instancia de <xref:System.Data.Services.Client.DataServiceContext> para cargar explícitamente las entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
+- **Carga explícita**: puede llamar al <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> método en la <xref:System.Data.Services.Client.DataServiceContext> instancia para cargar explícitamente las entidades relacionadas. Cada llamada al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> crea una solicitud independiente al servicio de datos. En el ejemplo siguiente se carga explícitamente `Order_Details` para una entidad `Orders`:  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  
@@ -37,6 +39,7 @@ De forma predeterminada, WCF Data Services limita la cantidad de datos que devue
  Al considerar qué opción se debe usar, observe que hay una correlación entre el número de solicitudes al servicio de datos y la cantidad de datos devueltos en una sola respuesta. Use la carga diligente cuando su aplicación requiera objetos asociados y desee evitar la latencia agregada de las solicitudes adicionales para recuperarlos explícitamente. Sin embargo, si hay casos en que la aplicación solo necesita los datos para determinadas instancias de entidades relacionadas, debería plantearse cargar explícitamente esas entidades llamando al método <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>. Para obtener más información, consulte [Cómo: cargar entidades relacionadas](how-to-load-related-entities-wcf-data-services.md).  
   
 ## <a name="paged-content"></a>Contenido paginado  
+
  Si la paginación está habilitada en el servicio de datos, la configuración del servicio de datos limita el número de entradas de la fuente que devuelve el servicio de datos. Los límites de página pueden establecerse por separado para cada conjunto de entidades. Para obtener más información, vea [configurar el servicio de datos](configuring-the-data-service-wcf-data-services.md). Si está habilitada la paginación, la última entrada de la fuente contiene un vínculo a la página de datos siguiente. Este vínculo está contenido en un objeto <xref:System.Data.Services.Client.DataServiceQueryContinuation%601>. El URI a la página de datos siguiente se obtiene llamando al método <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> del objeto <xref:System.Data.Services.Client.QueryOperationResponse%601> que se obtiene cuando se ejecuta <xref:System.Data.Services.Client.DataServiceQuery%601>. A continuación, el objeto <xref:System.Data.Services.Client.DataServiceQueryContinuation%601> devuelto se usa para cargar la página de resultados siguiente. Debe enumerar los resultados de la consulta antes de llamar al método <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A>. Considere la posibilidad de usar un bucle `do…while` para enumerar el resultado de la consulta primero y, a continuación, comprobar el valor de un vínculo siguiente `non-null`. Cuando el método <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> devuelve `null` (`Nothing` en Visual Basic), no hay ninguna página de resultados adicional para la consulta original. En el ejemplo siguiente se muestra un bucle `do…while` que carga los datos del cliente paginados del servicio de datos de ejemplo Northwind.  
   
  [!code-csharp[Astoria Northwind Client#LoadNextLink](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadnextlink)]
@@ -55,9 +58,10 @@ De forma predeterminada, WCF Data Services limita la cantidad de datos que devue
  Para obtener más información, consulte [Cómo: cargar resultados paginados](how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>Flujos de datos binarios  
- WCF Data Services permite tener acceso a datos de objetos binarios grandes (BLOB) como un flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe utilizar el método <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext> para tener acceso al flujo de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).  
-  
-## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+ WCF Data Services permite tener acceso a datos de objetos binarios grandes (BLOB) como un flujo de datos. La transmisión por secuencias aplaza la carga de datos binarios hasta que se necesita, y el cliente puede procesar estos datos más eficazmente. Para aprovecharse de esta funcionalidad, el servicio de datos debe implementar el proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md). Cuando está habilitada la transmisión por secuencias, los tipos de entidad se devuelven sin los datos binarios relacionados. En este caso, debe utilizar el <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> método de la <xref:System.Data.Services.Client.DataServiceContext> clase para tener acceso al flujo de datos para los datos binarios del servicio. De igual forma, use el método <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> para agregar o cambiar los datos binarios de una entidad como un flujo. Para obtener más información, vea [trabajar con datos binarios](working-with-binary-data-wcf-data-services.md).  
+  
+## <a name="see-also"></a>Consulte también
+
+- [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)

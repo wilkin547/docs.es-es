@@ -2,14 +2,15 @@
 title: Funciones canónicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: f8ca9e2027e82db89e91287fda02d2014d53f325
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 11e22d527c4266f45ea5d26f2ec95926ebe46332
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185254"
 ---
 # <a name="canonical-functions"></a>Funciones canónicas
+
 Esta sección describe las funciones canónicas que son admitidas por todos los proveedores de datos y pueden ser utilizadas por todas las tecnologías de creación de consultas. Las funciones canónicas no pueden ser ampliadas por un proveedor.  
   
  Estas funciones canónicas se convertirán en la funcionalidad de origen de datos correspondiente para el proveedor. Esto permite que las llamadas a funciones se expresen de forma común en los orígenes de datos.  
@@ -23,9 +24,11 @@ Esta sección describe las funciones canónicas que son admitidas por todos los 
  En el caso de los escenarios de LINQ, las consultas en el Entity Framework implican la asignación de métodos CLR a métodos en el origen de datos subyacente. Los métodos de CLR se asignan a funciones canónicas de modo que un conjunto específico de métodos se asignará correctamente, con independencia del origen de datos.  
   
 ## <a name="canonical-functions-namespace"></a>Espacio de nombres de funciones canónicas  
+
  El espacio de nombres para una función canónica es <xref:System.Data.Metadata.Edm>. El espacio de nombres <xref:System.Data.Metadata.Edm> se incluye automáticamente en todas las consultas. Sin embargo, si se importa otro espacio de nombres que contiene una función con el mismo nombre que una función canónica (en el espacio de nombres <xref:System.Data.Metadata.Edm>), se debe especificar el espacio de nombres.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Funciones canónicas de agregado](aggregate-canonical-functions.md)  
  Describe las funciones canónicas de agregado de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
@@ -47,7 +50,7 @@ Esta sección describe las funciones canónicas que son admitidas por todos los 
  [Otras funciones canónicas](other-canonical-functions.md)  
  Describe las funciones no clasificadas como funciones bit a bit, de fecha y hora, de cadena, matemáticas o de agregado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)

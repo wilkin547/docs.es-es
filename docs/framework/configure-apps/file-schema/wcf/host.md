@@ -2,14 +2,15 @@
 title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
-ms.openlocfilehash: b764bc21e9c4555b39c3d096212b6e6bcabb62ff
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 524226cbb826486def18c1b3b66c5b4a3c456dec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855216"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91185683"
 ---
 # \<host>
+
 Especifica los valores para un host de servicio.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Especifica los valores para un host de servicio.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<service>**](service.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<host>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <host>
@@ -31,12 +32,15 @@ Especifica los valores para un host de servicio.
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  

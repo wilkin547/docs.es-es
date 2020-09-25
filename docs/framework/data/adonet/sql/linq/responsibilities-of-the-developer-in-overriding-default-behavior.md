@@ -2,30 +2,31 @@
 title: Responsabilidades del desarrollador al invalidar un comportamiento predeterminado
 ms.date: 03/30/2017
 ms.assetid: c6909ddd-e053-46a8-980c-0e12a9797be1
-ms.openlocfilehash: 4bfb108e81f64ea368c6bcc846553eb1af5c23b1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 88a7076e12e39ed23aa6d661aa90f74258f3dded
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91200438"
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Responsabilidades del desarrollador al invalidar un comportamiento predeterminado
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]no aplica los siguientes requisitos, pero el comportamiento es indefinido si no se cumplen estos requisitos.  
+
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no aplica los siguientes requisitos, pero el comportamiento es indefinido si no se cumplen estos requisitos.  
   
-- El método de invalidación no debe llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]produce una excepción si se llama a estos métodos en un método de invalidación.  
+- El método de invalidación no debe llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> o <xref:System.Data.Linq.Table%601.Attach%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] produce una excepción si se llama a estos métodos en un método de invalidación.  
   
 - No se pueden utilizar métodos de invalidación para iniciar, confirmar o detener una transacción. La operación <xref:System.Data.Linq.DataContext.SubmitChanges%2A> se realiza bajo una transacción. Una transacción anidada interna puede interferir con la transacción externa. Los métodos de invalidación de carga solo pueden iniciar una transacción después de determinar que la operación no se realiza en <xref:System.Transactions.Transaction>.  
   
-- Se espera que los métodos de invalidación sigan la asignación de simultaneidad optimista aplicable. Se espera que el método de invalidación inicie <xref:System.Data.Linq.ChangeConflictException> cuando se produzca un conflicto de simultaneidad optimista. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]detecta esta excepción para que pueda procesar correctamente la <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opción proporcionada en. <xref:System.Data.Linq.DataContext.SubmitChanges%2A>  
+- Se espera que los métodos de invalidación sigan la asignación de simultaneidad optimista aplicable. Se espera que el método de invalidación inicie <xref:System.Data.Linq.ChangeConflictException> cuando se produzca un conflicto de simultaneidad optimista. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detecta esta excepción para que pueda procesar correctamente la <xref:System.Data.Linq.DataContext.SubmitChanges%2A> opción proporcionada en <xref:System.Data.Linq.DataContext.SubmitChanges%2A> .  
   
 - Se espera que los métodos de invalidación de creación (`Insert`) y de actualización (`Update`) devuelvan los valores de las columnas generadas por la base de datos a los miembros de objeto correspondientes cuando la operación se complete.  
   
-     Por ejemplo, si `Order.OrderID` se asigna a una columna de identidad (clave principal de*incremento automático* ), `InsertOrder()` el método de invalidación debe recuperar el identificador generado por la `Order.OrderID` base de datos y establecer el miembro en dicho identificador. De igual forma, los miembros de marca de tiempo deben estar actualizados con los valores de marca de tiempo generados por la base de datos para garantizar que los objetos actualizados sean coherentes. Si no se propagan los valores generados por la base de datos, puede haber incoherencias entre la base de datos y los objetos de los que <xref:System.Data.Linq.DataContext> realiza un seguimiento.  
+     Por ejemplo, si `Order.OrderID` se asigna a una columna de identidad (clave principal de*incremento automático* ), el `InsertOrder()` método de invalidación debe recuperar el identificador generado por la base de datos y establecer el `Order.OrderID` miembro en dicho identificador. De igual forma, los miembros de marca de tiempo deben estar actualizados con los valores de marca de tiempo generados por la base de datos para garantizar que los objetos actualizados sean coherentes. Si no se propagan los valores generados por la base de datos, puede haber incoherencias entre la base de datos y los objetos de los que <xref:System.Data.Linq.DataContext> realiza un seguimiento.  
   
 - Es el usuario quien debe invocar la API dinámica correcta. Por ejemplo, en el método de invalidación de actualización, solo se puede llamar al método <xref:System.Data.Linq.DataContext.ExecuteDynamicUpdate%2A>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no detecta ni comprueba si el método dinámico invocado coincide con la operación aplicable. Los resultados no están definidos si se llama a un método no aplicable (por ejemplo, <xref:System.Data.Linq.DataContext.ExecuteDynamicDelete%2A> para un objeto que se va a actualizar).  
   
 - Finalmente, se espera que el método de invalidación realice la operación indicada. Las semántica de las operaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], como la carga diligente, la carga aplazada y <xref:System.Data.Linq.DataContext.SubmitChanges%2A> requieren que los métodos de invalidación proporcionen el servicio indicado. Por ejemplo, una invalidación de carga que solo devuelva una colección vacía sin comprobar el contenido en la base de datos probablemente generará datos incoherentes.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Personalización de operaciones de actualización, inserción y eliminación](customizing-insert-update-and-delete-operations.md)
+- [Personalizar operaciones de actualización, inserción y eliminación](customizing-insert-update-and-delete-operations.md)
