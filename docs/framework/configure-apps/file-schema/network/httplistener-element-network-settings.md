@@ -2,14 +2,15 @@
 title: Elemento <httpListener> (configuración de red)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: 0054be3d2002e4ea5247f25d8094386ac7242422
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78526559164939667eab8848bc5fd2af6749d474
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088375"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195446"
 ---
 # <a name="httplistener-element-network-settings"></a>Elemento \<httpListener> (configuración de red)
+
 Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> clase.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -17,7 +18,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<settings>**](settings-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<httpListener>**
 
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <httpListener  
@@ -28,6 +29,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 ## <a name="type"></a>Tipo  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,6 +39,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 |unescapeRequestUrl|Valor booleano que indica si una <xref:System.Net.HttpListener> instancia de usa el URI sin escape sin formato en lugar del URI convertido.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -45,7 +48,8 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 |-----------------|---------------------|  
 |[settings](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El atributo **unescapeRequestUrl** indica si <xref:System.Net.HttpListener> usa el URI sin escape sin formato en lugar del URI convertido en el que se convierten los valores con codificación porcentual y se toman otros pasos de normalización.  
   
  Cuando una <xref:System.Net.HttpListener> instancia recibe una solicitud a través del `http.sys` servicio, crea una instancia de la cadena URI proporcionada por `http.sys` y la expone como la <xref:System.Net.HttpListenerRequest.Url%2A?displayProperty=nameWithType> propiedad.  
@@ -85,7 +89,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
 |Clave del Registro|Valor predeterminado|Descripción|  
 |------------------|-------------------|-----------------|  
 |EnableNonUTF8|1|Si es cero, `http.sys` solo acepta direcciones URL con codificación UTF-8.<br /><br /> Si es distinto de cero, `http.sys` también acepta direcciones URL codificadas en ANSI o codificadas con DBCS en las solicitudes.|  
-|FavorUTF8|1|Si es distinto de cero, `http.sys` siempre intenta descodificar una dirección URL como UTF-8 primero; si se produce un error en esa conversión y EnableNonUTF8 es distinto de cero, http. sys intenta descodificarlo como ANSI o DBCS.<br /><br /> Si cero (y EnableNonUTF8 es distinto de cero), `http.sys` intenta descodificarlo como ANSI o DBCS; si no se realiza correctamente, intenta una conversión UTF-8.|  
+|FavorUTF8|1|Si es distinto de cero, `http.sys` siempre intenta descodificar una dirección URL como UTF-8 primero; si se produce un error en esa conversión y EnableNonUTF8 es distinto de cero, Http.sys intenta descodificarlo como ANSI o DBCS.<br /><br /> Si cero (y EnableNonUTF8 es distinto de cero), `http.sys` intenta descodificarlo como ANSI o DBCS; si no se realiza correctamente, intenta una conversión UTF-8.|  
   
  Cuando <xref:System.Net.HttpListener> recibe una solicitud, utiliza el URI convertido de `http.sys` como entrada para la <xref:System.Net.HttpListenerRequest.Url%2A> propiedad.  
   
@@ -114,6 +118,7 @@ Personaliza los parámetros utilizados por la <xref:System.Net.HttpListener> cla
  La <xref:System.Net.Configuration.HttpListenerElement.UnescapeRequestUrl%2A> propiedad se puede utilizar para obtener el valor actual del atributo **unescapeRequestUrl** de los archivos de configuración aplicables.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo configurar la <xref:System.Net.HttpListener> clase cuando recibe una solicitud para usar el URI sin formato en lugar del URI convertido desde `http.sys` como entrada a la <xref:System.Net.HttpListenerRequest.Url%2A> propiedad.  
   
 ```xml  

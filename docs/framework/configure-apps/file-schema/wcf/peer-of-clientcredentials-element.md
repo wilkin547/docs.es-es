@@ -2,14 +2,15 @@
 title: <peer> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: a8144ca7bad5654bf8f77259ea1717442665fc81
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75d8543d7db5eee1345d54f934fc89c9593b85ac
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555463"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186996"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<peer> del \<clientCredentials> elemento
+
 Especifica las credenciales usadas al autenticar clientes punto a punto.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,9 +32,11 @@ Especifica las credenciales usadas al autenticar clientes punto a punto.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -50,10 +53,11 @@ Especifica las credenciales usadas al autenticar clientes punto a punto.
 |-------------|-----------------|  
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar un cliente a un servicio.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento de configuración especifica las credenciales que un nodo del mismo nivel utiliza para autenticarse en otros nodos de la malla, así como los valores de autenticación que un nodo del mismo nivel utiliza para autenticar otros nodos entre pares. Para obtener más información, consulte [autenticación de mensajes de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) y [protección de aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>

@@ -2,14 +2,15 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bb41c0fed944ce4db11878b9213a62c6f851418e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558854"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201049"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
+
 Trata un objeto de un tipo base determinado como un objeto del tipo derivado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -19,6 +20,7 @@ TREAT ( expression as type)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `expression`  
  Cualquier expresión de consulta válida que devuelve una entidad.  
   
@@ -32,9 +34,11 @@ TREAT ( expression as type)
 > La expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo de la expresión.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Un valor del tipo de datos especificado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  TREAT se utiliza para realizar una conversión entre clases relacionadas. Por ejemplo, si `Employee` deriva de `Person` y p es de tipo `Person`, `TREAT(p AS NamespaceName.Employee)` convierte una instancia de `Person` genérica a `Employee`; es decir, permite tratar p como `Employee`.  
   
  TREAT se utiliza en situaciones de herencia donde se puede realizar una consulta como la siguiente:  
@@ -52,7 +56,7 @@ WHERE p IS OF (NamespaceName.Employee)
   
  En la tabla siguiente se muestra el comportamiento del tratamiento en algunos patrones típicos y algunos patrones menos comunes. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   
-|Patrón|Comportamiento|  
+|Modelo|Comportamiento|  
 |-------------|--------------|  
 |`TREAT (null AS EntityType)`|Devuelve `DbNull`.|  
 |`TREAT (null AS ComplexType)`|Inicia una excepción.|  
@@ -62,11 +66,12 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|Inicia una excepción.|  
   
 ## <a name="example"></a>Ejemplo  
+
  La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador TREAT para convertir un objeto del tipo Course en una colección de objetos del tipo OnsiteCourse. La consulta se basa en el [modelo School](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
 - [Tipos estructurados que aceptan valores NULL](nullable-structured-types-entity-sql.md)

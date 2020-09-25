@@ -8,15 +8,16 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 4f2d6cf34c820c60181d5287298898af5eb8d038
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8cc8bdcf776befafba967ee2649a6ada789d07c5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569045"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194367"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Cómo: Interceptar mensajes de Data Services (Data Services de WCF)
-Con WCF Data Services, puede interceptar mensajes de solicitud para que pueda agregar lógica personalizada a una operación. Para interceptar un mensaje, se usan métodos especialmente atribuidos en el servicio de datos. Para obtener más información, vea [interceptores](interceptors-wcf-data-services.md).  
+
+Con WCF Data Services, puede interceptar mensajes de solicitud para que pueda agregar lógica personalizada a una operación. Para interceptar un mensaje, se usan métodos con atributos especiales con el servicio de datos. Para obtener más información, vea [interceptores](interceptors-wcf-data-services.md).  
   
  En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind. Este servicio se crea cuando se completa la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md).  
   
@@ -44,18 +45,20 @@ Con WCF Data Services, puede interceptar mensajes de solicitud para que pueda ag
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se define un método de interceptor de consultas para el conjunto de entidades `Orders` que devuelve una expresión lambda. Esta expresión contiene un delegado que filtra los pedidos (`Orders`) solicitados basándose en los clientes (`Customers`) relacionados que tienen un nombre de contacto concreto. El nombre se determina a su vez en función del usuario que realiza la solicitud. En este ejemplo se supone que el servicio de datos se hospeda dentro de una aplicación web ASP.NET que usa WCF, y que la autenticación está habilitada. La clase <xref:System.Web.HttpContext> se usa para recuperar el principio de la solicitud actual.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptor)]
  [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptor)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se define un método interceptor de cambios para el conjunto de entidades `Products`. Este método valida la entrada al servicio para una operación <xref:System.Data.Services.UpdateOperations.Add> o <xref:System.Data.Services.UpdateOperations.Change> y produce una excepción si se hace un cambio en un producto que ya no se fabrica. También bloquea la eliminación de productos como una operación no admitida.  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Definición de una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md)
+- [Procedimiento para definir una operación de servicio](how-to-define-a-service-operation-wcf-data-services.md)
 - [Definir Servicios de datos de WCF](defining-wcf-data-services.md)

@@ -2,14 +2,15 @@
 title: <behavior> de <endpointBehaviors>
 ms.date: 03/30/2017
 ms.assetid: b90ca3bc-3c22-4174-b903-e3a39898bd27
-ms.openlocfilehash: 489678a5adeae3965acae90a847c4b087478354d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d191b968e1c3fd1db0837ba7e03f210a1b00062d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140814"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201504"
 ---
 # <a name="behavior-of-endpointbehaviors"></a>\<behavior> de \<endpointBehaviors>
+
 El elemento `behavior` contiene una colección de valores para el comportamiento de un punto de conexión. Su `name` indiza cada comportamiento. Los puntos de conexión se pueden vincular a cada comportamiento a través de este nombre. A partir de .NET Framework 4, no es necesario que los enlaces y los comportamientos tengan un nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ El elemento `behavior` contiene una colección de valores para el comportamiento
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  

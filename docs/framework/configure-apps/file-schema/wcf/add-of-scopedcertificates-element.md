@@ -1,15 +1,16 @@
 ---
-title: <add>del <scopedCertificates> elemento
+title: <add> del <scopedCertificates> elemento
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-ms.openlocfilehash: b00a342108beca69a906fbf6212915768e98778f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 28777ecac130295a8ba82a8e4d67cc519d088d8a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398342"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195147"
 ---
-# <a name="add-of-scopedcertificates-element"></a>\<add>del \<scopedCertificates> elemento
+# <a name="add-of-scopedcertificates-element"></a>\<add> del \<scopedCertificates> elemento
+
 Agrega un certificado X.509 a la colección de certificados con ámbito.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,14 +34,15 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios  
   
 ### <a name="attributes"></a>Atributos  
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|targetUri|String. Especifica el URI del servicio asociado al certificado.|  
-|findValue|String. Valor que se va a buscar.|  
+|targetUri|Cadena Especifica el URI del servicio asociado al certificado.|  
+|findValue|Cadena Valor que se va a buscar.|  
 |x509FindType|Enumeración. Uno de los campos de certificado en que buscar.|  
 |storeLocation|Enumeración. Una de las dos ubicaciones de almacén en que buscar.|  
 |storeName|Enumeración. Uno de los almacenes del sistema en que buscar.|  
@@ -70,6 +72,7 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
 |Enumeración|Los valores incluyen: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople, y TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -78,7 +81,8 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
 |-------------|-----------------|  
 |[\<scopedCertificates>](scopedcertificates-element.md)|Representa una colección de certificados X.509 proporcionada por servicios concretos (con ámbito) para la autenticación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Este elemento permite al cliente configurar un certificado del servicio que se va a utilizar basándose en la dirección URL del servicio con el que se comunica. Esto es especialmente útil en escenarios del token emitidos donde un cliente puede estar comunicándose con varios servicios (el servicio final, así como los servicios del token de seguridad intermediarios). Para los enlaces que utilizan la seguridad del mensaje basada en certificados, este certificado se utiliza para cifrar los mensajes del servicio y se espera que sea utilizado por el servicio para firmar las respuestas para el cliente.  
   
  Si un enlace requiere un certificado para el servicio y no se encuentra ningún certificado concreto para la dirección URL del servicio en ScopedCertificates, se utilizará el certificado predeterminado.  
@@ -86,6 +90,7 @@ Agrega un certificado X.509 a la colección de certificados con ámbito.
  Para obtener más información, consulte la sección "certificados con ámbito" de [Cómo: crear un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se agrega un certificado X.509 a la colección.  
   
 ```xml  

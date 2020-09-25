@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2b83fd10da506202427aaeee454411822ff1ae5b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153521"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201686"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter>(Elemento \<add> ) para para \<listeners>\<source>
+
 Agrega un filtro a un agente de escucha en la colección `Listeners` para un origen de seguimiento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -36,6 +37,7 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -46,6 +48,7 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 |`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase de filtro especificada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -59,12 +62,14 @@ Agrega un filtro a un agente de escucha en la colección `Listeners` para un ori
 |`listeners`|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.|  
 |`add`|Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El `<filter>` elemento debe estar contenido en un `<add>` elemento para un agente de escucha de origen de seguimiento que especifique el tipo del agente de escucha, no solo el nombre de un agente de escucha definido en [\<sharedListeners>](sharedlisteners-element.md) . Si el agente de escucha se define en [\<sharedListeners>](sharedlisteners-element.md) , el filtro para ese agente de escucha debe definirse en ese elemento.  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el `<filter>` elemento para agregar un filtro al agente `console` de escucha de la `Listeners` colección para el origen de seguimiento `myTraceSource` , especificando el nivel de evento de filtro como `Error` .  
   
 ```xml  

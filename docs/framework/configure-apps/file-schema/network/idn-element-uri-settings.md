@@ -2,12 +2,12 @@
 title: Elemento <idn> (configuración de URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 533b2562f6e5c8d6c2bf452e56dff9a8bf8ab376
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f45922ecd5f7476362aab5348d91415d8e31c53f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71698172"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195407"
 ---
 # <a name="idn-element-uri-settings"></a>Elemento \<idn> (configuración de URI)
 
@@ -26,6 +26,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -36,7 +37,7 @@ Especifica si el análisis de nombres de dominio internacionalizados (IDN) se ap
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
   
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -44,13 +45,13 @@ None
 |-----------------|---------------------|  
 |[uri](uri-element-uri-settings.md)|Contiene opciones que especifican cómo el .NET Framework controla las direcciones web expresadas mediante identificadores uniformes de recursos (URI).|  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La clase existente se ha <xref:System.Uri> ampliado en .NET Framework 3,5. 3,0 SP1 y 2,0 SP1 compatible con los identificadores de recursos internacionales (IRI) y los nombres de dominio internacionalizados (IDN). Los usuarios actuales no verán ningún cambio en el comportamiento de .NET Framework 2,0 a menos que habiliten específicamente la compatibilidad con IRI e IDN. Esto garantiza la compatibilidad de las aplicaciones con versiones anteriores de .NET Framework.
 
 Para habilitar la compatibilidad con IRI, se necesitan los dos cambios siguientes:
 
-1. Agregue la siguiente línea al archivo Machine. config en el directorio .NET Framework 2,0:
+1. Agregue la siguiente línea al archivo machine.config en el directorio .NET Framework 2,0:
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  

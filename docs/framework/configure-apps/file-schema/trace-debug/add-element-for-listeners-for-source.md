@@ -1,5 +1,5 @@
 ---
-title: <add>(Elemento <listeners> ) para<source>
+title: <add> (Elemento <listeners> ) para <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,14 +8,15 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: 883eef32172c5a7f900197995b4c57c3d5a84e19
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a5abaffbad986785b8879297883da9614f0a8103
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153690"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201699"
 ---
-# <a name="add-element-for-listeners-for-source"></a>\<add>(Elemento \<listeners> ) para\<source>
+# <a name="add-element-for-listeners-for-source"></a>\<add> (Elemento \<listeners> ) para \<source>
+
 Agrega un agente de escucha a la colección `Listeners` para un origen de seguimiento.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,6 +35,7 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -44,7 +46,7 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 |`initializeData`|Atributo opcional.<br /><br /> Cadena pasada al constructor de la clase especificada. <xref:System.Configuration.ConfigurationException>Se produce una excepción si la clase no tiene un constructor que toma una cadena.|  
 |`name`|Atributo opcional.<br /><br /> Especifica el nombre del agente de escucha.|  
 |`traceOutputOptions`|Atributo opcional.<br /><br /> Especifica el <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> valor de propiedad para el agente de escucha de seguimiento.|  
-|[atributos personalizados]|Atributos opcionales.<br /><br /> Especifica el valor para los atributos específicos del agente de escucha identificados por el <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para ese agente de escucha. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>es un ejemplo de un atributo adicional que es único para la <xref:System.Diagnostics.DelimitedListTraceListener> clase.|  
+|[atributos personalizados]|Atributos opcionales.<br /><br /> Especifica el valor para los atributos específicos del agente de escucha identificados por el <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> método para ese agente de escucha. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> es un ejemplo de un atributo adicional que es único para la <xref:System.Diagnostics.DelimitedListTraceListener> clase.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -62,7 +64,8 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 |`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
 |`listeners`|Especifica los agentes de escucha que recopilan, almacenan y enrutan los mensajes.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Las clases de agente de escucha incluidas con el .NET Framework derivan de la <xref:System.Diagnostics.TraceListener> clase.  
   
  Si no especifica el `name` atributo del agente de escucha de seguimiento, la <xref:System.Diagnostics.TraceListener.Name%2A> propiedad del agente de escucha de seguimiento tiene como valor predeterminado una cadena vacía (""). Si la aplicación tiene solo un agente de escucha, puede agregarlo sin especificar un nombre y puede quitarlo si especifica una cadena vacía para el nombre. Sin embargo, si la aplicación tiene más de un agente de escucha, debe especificar un nombre único para cada agente de escucha de seguimiento, lo que le permite identificar y administrar agentes de escucha de seguimiento individuales en la <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> colección.  
@@ -87,9 +90,11 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|Nombre del archivo en el que <xref:System.Diagnostics.XmlWriterTraceListener> escribe.|  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo utilizar `<add>` los elementos para agregar los agentes `console` de escucha y `textListener` a la `Listeners` colección para el origen de seguimiento `TraceSourceApp` . El `textListener` agente de escucha escribe la salida del seguimiento en el archivo myListener. log.  
   
 ```xml  

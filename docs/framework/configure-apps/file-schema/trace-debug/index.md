@@ -11,14 +11,15 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 037d08b33e9aa6a64d236b36ebcf821b604b03df
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ae089e941d75df7ba1cd87b5b92a514a33bfbf85
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69927117"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195199"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Esquema de la configuración de seguimiento y depuración
+
 La configuración de seguimiento y depuración especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.  
   
  En la tabla siguiente se describe la función de cada elemento de configuración de seguimiento y depuración.  

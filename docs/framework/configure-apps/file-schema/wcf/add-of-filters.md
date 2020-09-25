@@ -2,14 +2,15 @@
 title: <add> de <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 280c516b17a133930bc4b6621a8c9bc7f4781085
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c1de0605bc8afc502a85d9b2917b975ee45a3d26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850565"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201660"
 ---
 # <a name="add-of-filters"></a>\<add> de \<filters>
+
 Filtro de XPath que especifica el tipo de mensaje que se va a registrar.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -37,6 +39,7 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
 |filter|Cadena que especifica una consulta en un documento XML definida por una expresión de XPath 1.0. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -45,7 +48,8 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
 |-------------|-----------------|  
 |[\<filters>](filters.md)|Contiene una colección de filtros de XPath que se utilizan para controlar qué tipo de mensaje se registra.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Los filtros sólo se aplican en el nivel de transporte, el especificado por `logMessagesAtTransportLevel` es `true`. El nivel de servicio y el registro de mensajes incorrectos no se ven afectados por los filtros.  
   
  Para agregar un filtro a la colección, utilice la palabra clave `add`. Cuando se definen uno o más filtros, sólo se registran los mensajes que coinciden por lo menos con uno de los filtros. Si no se define ningún filtro, todos los mensajes atraviesan.  
@@ -55,6 +59,7 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
  A continuación, se muestra un ejemplo sobre cómo configurar un filtro que sólo graba mensajes que tienen una sección de encabezado SOAP.  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra un ejemplo sobre cómo configurar un filtro que sólo graba mensajes que tienen una sección de encabezado SOAP.  
   
 ```xml  

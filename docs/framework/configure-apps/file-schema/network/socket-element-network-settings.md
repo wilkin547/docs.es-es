@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8df32745007b2a145d35b8cfcc4cbd2bd17eb33
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089086"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201738"
 ---
 # <a name="socket-element-network-settings"></a>Elemento \<socket> (configuración de red)
+
 Especifica si las operaciones de socket utilizan puertos de finalización.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -34,17 +35,19 @@ Especifica si las operaciones de socket utilizan puertos de finalización.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|**Attribute**|**Descripción**|  
+|**Atributo**|**Descripción**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Indica si el socket siempre debe utilizar los puertos de finalización para las llamadas al método Accept. El valor predeterminado es `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Indica si el socket siempre debe utilizar los puertos de finalización para las llamadas al método Connect. El valor predeterminado es `false`.|  
 |`ipProtectionLevel`|Especifica el valor predeterminado <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> que se va a usar para un socket. El valor predeterminado depende de la versión de Windows.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -53,7 +56,8 @@ Especifica si las operaciones de socket utilizan puertos de finalización.
 |-----------------|---------------------|  
 |[settings](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Los `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` atributos y se usan para especificar el comportamiento predeterminado con respecto al uso de puertos de finalización por las clases del <xref:System.Net.Sockets?displayProperty=nameWithType> espacio de nombres. Los puertos de finalización se recomiendan para las aplicaciones de servidor de alto rendimiento.  
   
  El valor predeterminado de los `alwaysUseCompletionPortsForAccept` `alwaysUseCompletionPortsForConnect` atributos y es **false**.  
@@ -84,9 +88,11 @@ Especifica si las operaciones de socket utilizan puertos de finalización.
  La <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propiedad se puede utilizar para obtener el valor actual del `ipProtectionLevel` atributo desde los archivos de configuración aplicables.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo especificar que se deben usar los puertos de finalización y que el valor predeterminado <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> debe ser no restringido.  
   
 ```xml  

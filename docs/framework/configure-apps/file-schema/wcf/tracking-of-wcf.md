@@ -1,15 +1,16 @@
 ---
-title: <tracking>de WCF
+title: <tracking> de WCF
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: e8f74d635299a965b754536234e6be28e4e7a104
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 223a30cd79d346d6ae36ca64fa887a683e6bfc8d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399417"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201439"
 ---
-# <a name="tracking-of-wcf"></a>\<tracking>de WCF
+# <a name="tracking-of-wcf"></a>\<tracking> de WCF
+
 Representa una sección de configuración para definir los valores de seguimiento de un servicio de flujo de trabajo.  
   
  Para obtener más información sobre el seguimiento del flujo de trabajo y su configuración, consulte [seguimiento y](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) seguimiento del flujo de trabajo y [configuración del seguimiento para un flujo de trabajo](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
@@ -77,9 +78,11 @@ Representa una sección de configuración para definir los valores de seguimient
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -95,7 +98,8 @@ Representa una sección de configuración para definir los valores de seguimient
 |-------------|-----------------|  
 |system.ServiceModel|El elemento raíz de todos los elementos de configuración de flujo de trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El seguimiento ofrece la posibilidad de examinar la ejecución de un flujo de trabajo. La infraestructura de seguimiento del flujo de trabajo instrumenta un flujo de trabajo para emitir registros que reflejan los eventos clave durante la ejecución. Por ejemplo, cuando una instancia de flujo de trabajo se inicia o completa, se emiten los registros de seguimiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa un sistema de procesamiento de pedidos, el Id. del pedido se puede extraer junto con el registro de seguimiento. En general, la habilitación del seguimiento de WF facilita el diagnóstico o los análisis comerciales durante la ejecución de un flujo de trabajo.  
   
 ## <a name="see-also"></a>Consulte también

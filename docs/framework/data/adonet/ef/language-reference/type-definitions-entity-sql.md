@@ -2,18 +2,20 @@
 title: Definiciones de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 35f660a66fd706b37187056830af5e06ac586caa
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7e4e6f0e9f64816d10a69a8b0639728e4cd7af80
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319248"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201023"
 ---
 # <a name="type-definitions-entity-sql"></a>Definiciones de tipo (Entity SQL)
+
 Las definiciones de tipo se usan en la instrucción de declaración de una función inline de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-## <a name="remarks"></a>Comentarios  
- La instrucción de declaración de una función insertada se compone de la palabra clave [function](function-entity-sql.md) seguida del identificador que representa el nombre de función (por ejemplo, "MiFuncion") seguido de una lista de definiciones de parámetros entre paréntesis (por ejemplo, "colección de tasas ()". Decimal) ").  
+## <a name="remarks"></a>Observaciones  
+
+ La instrucción de declaración de una función insertada se compone de la palabra clave [function](function-entity-sql.md) seguida del identificador que representa el nombre de función (por ejemplo, "MiFuncion") seguido de una lista de definiciones de parámetros entre paréntesis (por ejemplo, "colección de tasas (decimal)").  
   
  La lista de definición de parámetros está formada por cero o más definiciones de parámetro. Cada definición de parámetro consta de un identificador (el nombre del parámetro proporcionado a la función, por ejemplo, "cuota") seguido de una definición de tipo (por ejemplo, "Collection(Decimal)").  
   
@@ -23,7 +25,7 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
   
 - La palabra clave `COLLECTION` seguida de otra definición de tipo entre paréntesis (por ejemplo, "Collection(AdventureWorks.Order)").  
   
-- La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Las definiciones de propiedad tienen un formato como "`identifier type_definition`, `identifier type_definition`,...".  
+- La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Las definiciones de propiedad tienen un formato como " `identifier type_definition` , `identifier type_definition` ,...".  
   
 - La palabra clave REF seguida del tipo del identificador entre paréntesis (por ejemplo, "Ref(AdventureWorks.Order)"). El operador de definición de tipo REF requiere un tipo de entidad como argumento. No puede especificar un tipo primitivo como argumento.  
   
@@ -46,6 +48,7 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
  Los tipos de entidad admitidos solo hacen referencia a tipos de entidad del espacio de nombres actual. Entre ellos no se incluyen los tipos primitivos.  
   
 ## <a name="examples"></a>Ejemplos  
+
  A continuación se muestra un ejemplo de una definición de tipo simple.  
   
 ```sql  
@@ -86,7 +89,7 @@ Function UnReference(p1 Ref(AdventureWorks.Order)) AS (
 select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Información general sobre Entity SQL](entity-sql-overview.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)

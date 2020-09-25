@@ -5,22 +5,25 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 49e5ad2e6ae3dc50a0f48fcc3df2f7ec49ed7f88
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b921e78c1b3d3d90d9ac8b4a459df496cf6d14dd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544406"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180587"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usar un servicio de datos en una aplicación cliente (Data Services de WCF)
+
 Puede tener acceso a un servicio que exponga una fuente de Open Data Protocol (OData) proporcionando un URI a un explorador Web. El URI proporciona la dirección de un recurso y los mensajes de solicitud se envían a estas direcciones para obtener acceso o cambiar los datos subyacentes que el recurso representa. El explorador emite un comando GET de HTTP y devuelve el recurso solicitado como una fuente de OData. Para obtener más información, consulte [acceso al servicio desde un explorador Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   
  Aunque un explorador Web puede ser útil para probar que un servicio de OData devuelve los datos esperados, normalmente se accede a los servicios OData de producción que permiten también crear, actualizar y eliminar datos mediante código de aplicación o lenguajes de scripting en una página web. En este tema se proporciona información general sobre cómo obtener acceso a las fuentes de OData desde una aplicación cliente.  
   
 ## <a name="accessing-and-changing-data-using-rest-semantics"></a>Obtener acceso y cambiar datos mediante la semántica REST  
+
  OData ayuda a garantizar la interoperabilidad entre servicios que exponen fuentes y aplicaciones de OData que consumen fuentes de OData. Las aplicaciones tienen acceso a los datos y los cambian en un servicio basado en OData enviando mensajes de solicitud de una acción HTTP concreta y con un URI que direcciona un recurso de entidad en el que se debe realizar la acción. Cuando sea obligatorio proporcionar datos de la entidad, se proporcionan mediante una carga específicamente codificada en el cuerpo del mensaje.  
   
 ### <a name="http-actions"></a>Acciones HTTP  
+
  OData admite las siguientes acciones HTTP para realizar operaciones de creación, lectura, actualización y eliminación en los datos de entidad que representa el recurso direccionado:  
   
 - **Http Get** : se trata de la acción predeterminada cuando se tiene acceso a un recurso desde un explorador. No se proporciona ninguna carga en el mensaje de solicitud y se devuelve un método de respuesta con una carga que contiene los datos solicitados.  
@@ -36,6 +39,7 @@ Puede tener acceso a un servicio que exponga una fuente de Open Data Protocol (O
  Para obtener más información, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Formatos de carga  
+
  Para una solicitud PUT, POST o MERGE de HTTP, la carga de un mensaje de solicitud contiene los datos de entidad que el usuario envía al servicio de datos. El contenido de la carga depende del formato de datos del mensaje. Las respuestas HTTP a todas las acciones, excepto DELETE, también contienen este tipo de carga. OData admite los siguientes formatos de carga para tener acceso a los datos y cambiarlos con el servicio:  
   
 - **Atom** : codificación de mensajes basada en XML que se define en OData como una extensión del Protocolo de publicación Atom (AtomPub) para habilitar el intercambio de datos a través de http para fuentes web, podcasts, wikis y funcionalidad de Internet basada en XML. Para obtener más información, consulte [OData: formato Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
@@ -45,13 +49,14 @@ Puede tener acceso a un servicio que exponga una fuente de Open Data Protocol (O
  El formato de mensaje de la carga se solicita en el encabezado del mensaje de la solicitud HTTP. Para obtener más información, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Acceso y modificación de datos mediante bibliotecas de cliente  
+
  WCF Data Services incluye bibliotecas de cliente que le permiten consumir más fácilmente una fuente de OData desde .NET Framework y aplicaciones cliente basadas en Silverlight. Estas bibliotecas simplifican el envío y recepción de los mensajes HTTP. También traducen la carga del mensaje en objetos CLR que representan los datos de entidad. Las bibliotecas cliente representan las dos clases principales <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601>. Estas clases le permiten consultar un servicio de datos y, a continuación, trabajar con los datos de entidad devueltos como objetos CLR. Para obtener más información, vea [WCF Data Services biblioteca de cliente](wcf-data-services-client-library.md) y [WCF Data Services (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Puede usar el cuadro de diálogo **Agregar referencia de servicio** en Visual Studio para agregar una referencia a un servicio de datos. Esta herramienta solicita metadatos de servicio desde un servicio de datos al que se ha hecho referencia y genera el <xref:System.Data.Services.Client.DataServiceContext> que representa un servicio de datos, además de generar las clases de servicio de datos cliente que representan las entidades. Para obtener más información, vea [generar la biblioteca de cliente del servicio de datos](generating-the-data-service-client-library-wcf-data-services.md).  
   
  Hay bibliotecas de programación disponibles que puede usar para consumir una fuente de OData en otros tipos de aplicaciones cliente. Para obtener más información sobre el SDK de OData, vea [el SDK de oData: código de ejemplo](https://www.odata.org/ecosystem/#sdk).
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Acceso a recursos de servicios de datos](accessing-data-service-resources-wcf-data-services.md)
 - [Guía de inicio rápido](quickstart-wcf-data-services.md)

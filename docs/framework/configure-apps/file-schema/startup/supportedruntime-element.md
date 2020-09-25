@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 79b49cbc9b122e6591d07643a341841b262edff4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554044"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91201712"
 ---
 # <a name="supportedruntime-element"></a>Elemento \<supportedRuntime>
 
@@ -36,7 +36,7 @@ Especifica qué Common Language Runtime versión y, opcionalmente, .NET Framewor
 |**version**|Atributo opcional.<br /><br /> Un valor de cadena que especifica la versión de Common Language Runtime (CLR) que es compatible con esta aplicación. Para obtener los valores válidos del `version` atributo, vea la sección [sobre valores de la versión en tiempo de ejecución](#version) . **Nota:**  A través del .NET Framework 3,5, el valor de "*versión del tiempo de ejecución*" tiene la forma *principal*. *secundaria*. *compilación*. A partir de la .NET Framework 4, solo se requieren los números de versión principal y secundaria (es decir, "v 4.0" en lugar de "v 4.0.30319"). Se recomienda la cadena más corta.|
 |**sku**|Atributo opcional.<br /><br /> Valor de cadena que especifica la referencia de almacén (SKU), que a su vez especifica qué versión de .NET Framework es compatible con esta aplicación.<br /><br /> A partir de .NET Framework 4.0, se recomienda el uso del atributo `sku`.  Cuando está presente, indica la versión de .NET Framework que la aplicación tiene como destino.<br /><br /> Para obtener los valores válidos del atributo SKU, consulte la sección [valores de "SKU ID"](#sku) .|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Si el **\<supportedRuntime>** elemento no está presente en el archivo de configuración de la aplicación, se utiliza la versión del Runtime que se usa para compilar la aplicación.
 
@@ -55,7 +55,9 @@ Si el **\<supportedRuntime>** elemento con el `sku` atributo está presente en e
 Se recomienda probar las aplicaciones con todas las versiones de .NET Framework en las que puedan ejecutarse.
 
 <a name="version"></a>
+
 ## <a name="runtime-version-values"></a>Valores de "runtime version"
+
 El `runtime` atributo especifica la versión de Common Language Runtime (CLR) necesaria para una aplicación determinada. Tenga en cuenta que todas las versiones de .NET Framework V4. x especifican el `v4.0` CLR. En la tabla siguiente se enumeran los valores válidos para el valor de *versión en tiempo de ejecución* del `version` atributo.
 
 |Versión de .NET Framework|Atributo `version`|
@@ -73,7 +75,7 @@ El `sku` atributo usa un moniker de la plataforma de destino (TFM) para indicar 
 
 |Versión de .NET Framework|Atributo `sku`|
 |----------------------------|---------------------|
-|4,0|".NETFramework,Version=v4.0"|
+|4.0|".NETFramework,Version=v4.0"|
 |4.0, Client Profile|".NETFramework,Version=v4.0,Profile=Client"|
 |4.0, actualización 1 de la plataforma|". NETFramework, versión = v 4.0.1 "|
 |4.0, Client Profile, actualización 1|". NETFramework, versión = v 4.0.1, perfil = cliente "|
@@ -108,7 +110,7 @@ En el ejemplo siguiente se muestra cómo especificar la versión del runtime com
 
 Este elemento se puede utilizar en el archivo de configuración de la aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Esquema de configuración de inicio](index.md)
 - [Esquema de los archivos de configuración](../index.md)

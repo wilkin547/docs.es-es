@@ -9,14 +9,15 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1435ee8ea887b5d7d3e785eef0f25ffed14b1b97
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115863"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195277"
 ---
 # <a name="probing-element"></a>\<probing> (Elemento)
+
 Especifica los subdirectorios base de la aplicación para los Common Language Runtime que se van a buscar al cargar los ensamblados.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -31,6 +32,7 @@ Especifica los subdirectorios base de la aplicación para los Common Language Ru
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -52,6 +54,7 @@ Ninguno.
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo especificar subdirectorios base de la aplicación en el que el tiempo de ejecución debe buscar ensamblados.  
   
 ```xml  
@@ -67,6 +70,6 @@ Ninguno.
 ## <a name="see-also"></a>Consulte también
 
 - [Esquema de configuración en tiempo de ejecución](index.md)
-- [Esquema del archivo de configuración](../index.md)
+- [Esquema de los archivos de configuración](../index.md)
 - [Especificar la ubicación de un ensamblado](../../../../standard/assembly/location.md)
 - [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../deployment/how-the-runtime-locates-assemblies.md)
