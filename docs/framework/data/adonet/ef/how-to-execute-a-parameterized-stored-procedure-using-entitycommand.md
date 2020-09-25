@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
-ms.openlocfilehash: 7a055fc3e62821285fe2b6e1333d516c477d025b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ec1ff7cdbdc83bc409b191f0aefe2b50cbad9225
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549762"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192170"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
+
 En este tema se muestra cómo ejecutar un procedimiento almacenado parametrizado usando la clase <xref:System.Data.EntityClient.EntityCommand>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Para ejecutar el código de este ejemplo  
@@ -27,11 +28,12 @@ En este tema se muestra cómo ejecutar un procedimiento almacenado parametrizado
 3. Importe el procedimiento almacenado `GetStudentGrades` y especifique entidades `CourseGrade` como tipo de valor devuelto. Para obtener información sobre cómo importar un procedimiento almacenado, consulte [Cómo: importar un procedimiento almacenado](/previous-versions/dotnet/netframework-4.0/bb896231(v=vs.100)).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente ejecuta el procedimiento almacenado `GetStudentGrades` donde `StudentId` es un parámetro necesario. Los resultados los lee después una clase <xref:System.Data.EntityClient.EntityDataReader>.  
   
  [!code-csharp[DP EntityServices Concepts#StoredProcWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#storedprocwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#StoredProcWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#storedprocwithentitycommand)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md)

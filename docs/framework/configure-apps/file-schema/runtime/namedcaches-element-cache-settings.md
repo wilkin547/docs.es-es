@@ -6,14 +6,15 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: e0640ca18d386141f3c03135019eb4fe959b5bf8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ad76c01bba859934be399d73262bd974309efe98
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153963"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192404"
 ---
 # <a name="namedcaches-element-cache-settings"></a>Elemento \<namedCaches> (configuración de caché)
+
 Especifica una colección de valores de configuración para las <xref:System.Runtime.Caching.MemoryCache> instancias con nombre. La <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> propiedad hace referencia a la colección de valores de configuración de uno o más `namedCaches` elementos del archivo de configuración.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Especifica una colección de valores de configuración para las <xref:System.Run
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<memoryCache>**](memorycache-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<namedCaches>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <namedCaches>  
@@ -30,9 +31,11 @@ Especifica una colección de valores de configuración para las <xref:System.Run
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `None`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -60,14 +63,16 @@ Especifica una colección de valores de configuración para las <xref:System.Run
 |[\<memoryCache>](memorycache-element-cache-settings.md)|Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> .|  
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Contiene tipos que permiten implementar el almacenamiento en caché de resultados en las aplicaciones integradas en el .NET Framework.|  
   
-## <a name="remarks"></a>Comentarios  
- La sección de configuración de la memoria caché del archivo Web. config puede contener los `add` `remove` atributos, y `clear` para la `namedCaches` colección. Cada `namedCaches` entrada se identifica de forma única mediante el `name` atributo.  
+## <a name="remarks"></a>Observaciones  
+
+ La sección de configuración de la memoria caché del archivo Web.config puede contener los `add` `remove` atributos, y `clear` para la `namedCaches` colección. Cada `namedCaches` entrada se identifica de forma única mediante el `name` atributo.  
   
  Puede recuperar instancias de entradas de la memoria caché haciendo referencia a la información de los archivos de configuración de la aplicación. De forma predeterminada, solo la instancia de caché predeterminada tiene una entrada en el archivo de configuración. La instancia de caché predeterminada es la instancia de que se devuelve desde la <xref:System.Runtime.Caching.MemoryCache.Default%2A> propiedad.  
   
  Si establece el atributo name en "default", el elemento utiliza la instancia de la memoria caché predeterminada.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo establecer el nombre de la memoria caché en el nombre de la entrada de caché predeterminado estableciendo el `name` atributo en "default".  
   
  Los atributos `cacheMemoryLimitMegabytes` y `physicalMemoryPercentage` se establecen en cero. Establecer estos atributos en cero significa que se utiliza la heurística de ajuste automático de tamaño de la <xref:System.Runtime.Caching.MemoryCache> clase. La implementación de caché compara la carga de memoria actual con los límites de memoria absoluta y basada en porcentajes cada dos minutos.  
@@ -91,4 +96,4 @@ Especifica una colección de valores de configuración para las <xref:System.Run
   
 ## <a name="see-also"></a>Consulte también
 
-- [\<memoryCache>(Elemento, configuración de caché)](memorycache-element-cache-settings.md)
+- [\<memoryCache> (Elemento, configuración de caché)](memorycache-element-cache-settings.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b7144b0a7004ba32b21cbc98513df574a5a9e1d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153417"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195186"
 ---
 # <a name="listeners-element-for-source"></a>Elemento \<listeners> para \<source>
+
 Agrega o quita los agentes de escucha de la <xref:System.Diagnostics.TraceSource.Listeners%2A> colección para <xref:System.Diagnostics.TraceSource> . Un agente de escucha dirige los resultados del seguimiento a un destino adecuado, como un registro, una ventana o un archivo de texto.  
   
 [**\<configuration>**](../configuration-element.md)  
@@ -34,9 +35,11 @@ Agrega o quita los agentes de escucha de la <xref:System.Diagnostics.TraceSource
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -56,12 +59,14 @@ Agrega o quita los agentes de escucha de la <xref:System.Diagnostics.TraceSource
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
 |`source`|Contiene un origen de seguimiento que inicia mensajes de seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
+
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar el `<listeners>` elemento para agregar un agente de escucha de seguimiento de la consola al `mySource` origen y quitar el agente de escucha de seguimiento predeterminado.  
   
 ```xml  

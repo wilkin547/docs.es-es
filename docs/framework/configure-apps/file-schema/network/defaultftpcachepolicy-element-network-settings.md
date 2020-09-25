@@ -8,14 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 9261a430642cb4d5ac4507835bd0fd3561bd8c02
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e081882aa8df89c0a1bf5d4c60f1395a3319c417
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088430"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190376"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>Elemento \<defaultFtpCachePolicy> (configuración de red)
+
 Describe si el almacenamiento en caché de FTP está activo y describe la Directiva de almacenamiento en caché predeterminada.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -32,6 +33,7 @@ Describe si el almacenamiento en caché de FTP está activo y describe la Direct
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -54,6 +56,7 @@ Describe si el almacenamiento en caché de FTP está activo y describe la Direct
 |`Revalidate`|Atiende una solicitud utilizando la copia almacenada en caché del recurso si la marca de tiempo es igual que la marca de tiempo del recurso en el servidor; de lo contrario, el recurso se descarga del servidor, se presenta al llamador y se almacena en la caché.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -65,6 +68,7 @@ Describe si el almacenamiento en caché de FTP está activo y describe la Direct
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo especificar una directiva de almacenamiento en caché de FTP de `NoCacheNoStore` .  
   
 ```xml  

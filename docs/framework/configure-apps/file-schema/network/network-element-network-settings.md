@@ -9,14 +9,15 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 36857e63871b4672df349934594f0887a042609e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: cd142febc0b3aacf1be7978178a6a05d9b9aebbf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504555"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190285"
 ---
 # <a name="network-element-network-settings"></a>Elemento \<network> (configuración de red)
+
 Configura las opciones de red para un servidor de Protocolo simple de transferencia de correo (SMTP) externo.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -41,11 +42,12 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Description|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`clientDomain`|Especifica el nombre de dominio de cliente que se va a usar en la solicitud de protocolo SMTP inicial para conectarse al servidor de correo SMTP. El valor predeterminado es el nombre localhost del equipo local que envía la solicitud.|  
 |`defaultCredentials`|Especifica si se deben usar las credenciales de usuario predeterminadas para obtener acceso al servidor de correo SMTP para las transacciones SMTP. El valor predeterminado es `false`.|  
@@ -57,15 +59,17 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
 |`userName`|Especifica el nombre de usuario que se utilizará para la autenticación en el servidor de correo SMTP. Este atributo no tiene ningún valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[\<smtp>(Elemento, configuración de red)](smtp-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
+|[Elemento \<smtp> (configuración de red)](smtp-element-network-settings.md)|Configura las opciones de envío de correo del Protocolo simple de transferencia de correo (SMTP).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Algunos servidores SMTP requieren que se autentique en el servidor antes de usarlo. Si desea autenticarse con las credenciales de red predeterminadas en el host, establezca el `defaultCredentials` atributo en `true` . La <xref:System.Net.Configuration.SmtpNetworkElement.DefaultCredentials%2A?displayProperty=nameWithType> propiedad se puede utilizar para obtener el valor actual del `defaultCredentials` atributo desde los archivos de configuración aplicables.  
   
  También puede usar la autenticación básica (un nombre de usuario y una contraseña) para autenticarse en el servidor SMTP. Para usar esta opción, debe especificar un nombre de usuario y una contraseña válidos para el servidor SMTP especificado.  
@@ -90,6 +94,7 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
  La <xref:System.Net.Configuration.SmtpNetworkElement.EnableSsl%2A?displayProperty=nameWithType> propiedad se puede utilizar para obtener el valor actual del `enableSsl` atributo desde los archivos de configuración aplicables.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se especifican los parámetros SMTP adecuados para enviar correo electrónico con las credenciales de red predeterminadas.  
   
 ```xml  
@@ -110,7 +115,7 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>

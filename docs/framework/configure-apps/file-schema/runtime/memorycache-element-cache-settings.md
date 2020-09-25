@@ -6,21 +6,22 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 94c21e0408b7616bf0c8a24267b72bfa7cc3aaa0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 14480682c5d221216df5da3844897855d1d92a0d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153989"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192430"
 ---
 # <a name="memorycache-element-cache-settings"></a>Elemento \<memoryCache> (configuración de caché)
+
 Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> . La clase <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> define un elemento [memoryCache](memorycache-element-cache-settings.md) que se puede usar para configurar la memoria caché. Se pueden usar varias instancias de la clase <xref:System.Runtime.Caching.MemoryCache> en una sola aplicación. Cada elemento `memoryCache` del archivo de configuración puede contener valores de configuración para una instancia de <xref:System.Runtime.Caching.MemoryCache> con nombre.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.runtime.caching>**](system-runtime-caching-element-cache-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<memoryCache>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <memoryCache>
@@ -31,9 +32,11 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 ```  
   
 ## <a name="type"></a>Tipo  
+
  Clase<xref:System.Runtime.Caching.MemoryCache> .  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,7 +61,8 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 |[\<configuration>](../configuration-element.md)|Especifica el elemento raíz de cada archivo de configuración usado por las aplicaciones Common Language Runtime y .NET Framework.|  
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Contiene tipos que permiten implementar el almacenamiento en caché de resultados en las aplicaciones integradas en el .NET Framework.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  La clase <xref:System.Runtime.Caching.MemoryCache> es una implementación concreta de la clase abstracta <xref:System.Runtime.Caching.ObjectCache> . Se puede proporcionar información de configuración a las instancias de la clase <xref:System.Runtime.Caching.MemoryCache> a partir de archivos de configuración de la aplicación. La sección de configuración [memoryCache](memorycache-element-cache-settings.md) contiene una colección de configuración `namedCaches` .  
   
  Cuando se inicializa un objeto de la caché basada en memoria, primero intenta encontrar una entrada `namedCaches` que coincida con el nombre del parámetro que se pasa al constructor de memoria caché. Si se encuentra una entrada `namedCaches` , se recupera la información de sondeo y administración de memoria del archivo de configuración.  
@@ -72,6 +76,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 - <xref:System.Runtime.Caching.MemoryCache.PollingInterval%2A>  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo establecer el nombre del <xref:System.Runtime.Caching.MemoryCache> objeto en el nombre del objeto de caché predeterminado estableciendo el `name` atributo en "default".  
   
  Los atributos `cacheMemoryLimitMegabytes` y `physicalMemoryLimitPercentage` se establecen en cero. El hecho de establecer estos atributos en cero implica que la heurística de ajuste automático de tamaño de <xref:System.Runtime.Caching.MemoryCache> se usa de forma predeterminada. La implementación de la memoria caché debe comparar cada dos minutos la carga de memoria actual con los límites de memoria absoluto y de porcentaje.  
@@ -94,5 +99,5 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
 ## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Caching.MemoryCache>
-- [\<system.runtime.caching>(Elemento, configuración de caché)](system-runtime-caching-element-cache-settings.md)
-- [\<namedCaches>(Elemento, configuración de caché)](namedcaches-element-cache-settings.md)
+- [\<system.runtime.caching> (Elemento, configuración de caché)](system-runtime-caching-element-cache-settings.md)
+- [\<namedCaches> (Elemento, configuración de caché)](namedcaches-element-cache-settings.md)

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: bd6ab1123ef3f84f7e8a06b25ce48aed37e4bef7
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73115842"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195264"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> (Elemento)
+
 Especifica si el tiempo de ejecución aplica la directiva de editor.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -33,6 +34,7 @@ Especifica si el tiempo de ejecución aplica la directiva de editor.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -61,7 +63,8 @@ Ninguno.
 |`dependentAssembly`|Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `<dependentAssembly>` elemento para cada ensamblado.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Cuando un proveedor de componentes publica una nueva versión de un ensamblado, el proveedor puede incluir una directiva de edición para que las aplicaciones que usan la versión anterior utilicen ahora la nueva versión. Para especificar si se va a aplicar la Directiva de edición para un ensamblado determinado, coloque el **\<publisherPolicy>** elemento en el **\<dependentAssembly>** elemento.  
   
  La configuración predeterminada para el atributo **aplicar** es **sí**. Al establecer el atributo **Apply** en **no** , se reemplaza cualquier configuración anterior de **sí** para un ensamblado.  
@@ -69,6 +72,7 @@ Ninguno.
  El permiso es necesario para que una aplicación ignore explícitamente la Directiva de edición mediante el [\<publisherPolicy apply="no"/>](publisherpolicy-element.md) elemento en el archivo de configuración de la aplicación. El permiso se concede estableciendo la <xref:System.Security.Permissions.SecurityPermissionFlag> marca en <xref:System.Security.Permissions.SecurityPermission> . Para obtener más información, vea [permisos de seguridad de redirección de enlace de ensamblados](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se desactiva la Directiva de edición para el ensamblado, `myAssembly` .  
   
 ```xml  

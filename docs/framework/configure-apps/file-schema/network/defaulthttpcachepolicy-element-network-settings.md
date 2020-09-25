@@ -8,14 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4120c57fbb65da1c124414cbe9cfba7ae64388f8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74088416"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190324"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>Elemento \<defaultHttpCachePolicy> (configuración de red)
+
 Describe si el almacenamiento en caché de HTTP está activo y describe la Directiva de almacenamiento en caché predeterminada.  
 
 [**\<configuration>**](../configuration-element.md)\
@@ -35,6 +36,7 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +49,7 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 |`policyLevel`|Especifica si la Directiva de almacenamiento en caché es automática o si se omite la memoria caché. El valor predeterminado es `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -55,15 +58,18 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la Direc
 |-------------|-----------------|  
 |[requestCaching](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  El valor del `policyLevel` atributo es `BypassCache` o `Default` .  
   
  Los valores de `maximumAge` los `maximumStale` elementos, y `minimumFresh` son un intervalo de tiempo explícito con un formato de *d*.* HH*:*mm*:*SS* (días, horas, minutos y segundos), o las constantes `minValue` o `maxValue` , según corresponda.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
+
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo especificar una hora de actualización mínima de seis horas, una duración máxima de dos días y un tiempo de expiración máximo de cuatro horas.  
   
 ```xml  

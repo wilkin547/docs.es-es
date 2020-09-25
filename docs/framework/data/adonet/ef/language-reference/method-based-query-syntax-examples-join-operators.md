@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 3b1445b39bdcd9a9b4d0672be0598233319cb85d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7f02379f4ececb75981ab262f22ebdeb510739ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286836"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91191963"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Ejemplos de sintaxis de consulta basada en métodos: Operadores de combinación
+
 En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.Join%2A> los <xref:System.Linq.Enumerable.GroupJoin%2A> métodos y para consultar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) con la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
  En los ejemplos de este tema se usan las siguientes `using` / `Imports` instrucciones:  
@@ -24,12 +25,14 @@ En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.
 ## <a name="groupjoin"></a>GroupJoin  
   
 ### <a name="example"></a>Ejemplo  
+
  El ejemplo siguiente realiza una <xref:System.Linq.Enumerable.GroupJoin%2A> en las tablas SalesOrderHeader y SalesOrderDetail para buscar el número de pedidos por cliente. Una combinación de grupo es el equivalente a una combinación externa izquierda, que devuelve cada elemento del primer origen de datos (izquierdo), incluso si no hay elementos correlacionados en el otro origen de datos.  
   
  [!code-csharp[DP L2E Examples#GroupJoin2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin2_mq)]
  [!code-vb[DP L2E Examples#GroupJoin2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupjoin2_mq)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se realiza una operación <xref:System.Linq.Enumerable.GroupJoin%2A> en las tablas Contact y SalesOrderHeader para buscar el número de pedidos por contacto. Se muestran el recuento de pedidos y los identificadores para cada contacto.  
   
  [!code-csharp[DP L2E Examples#GroupJoin_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#groupjoin_mq)]
@@ -38,12 +41,14 @@ En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.
 ## <a name="join"></a>Join  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se realiza una combinación en las tablas Contact y SalesOrderHeader.  
   
  [!code-csharp[DP L2E Examples#JoinSimple_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#joinsimple_mq)]
  [!code-vb[DP L2E Examples#JoinSimple_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#joinsimple_mq)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se realiza una combinación en las tablas Contact y SalesOrderHeader, agrupando los resultados por identificador de contacto.  
   
  [!code-csharp[DP L2E Examples#JoinWithGroupedResults_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#joinwithgroupedresults_mq)]

@@ -1,15 +1,16 @@
 ---
-title: <dataContractSerializer>de <System. Runtime. Serialization>
+title: <dataContractSerializer> de <System. Runtime. Serialization>
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: eb556f533af1f99049382e9a2e34465f88d563db
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a8d379e7a37bca0cdb58836a6afdf814320e2411
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398078"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190194"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> de \<system.runtime.serialization>
+
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -37,6 +38,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -58,7 +60,8 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 |-------------|-----------------|  
 |[\<system.runtime.serialization>](system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Para obtener más información sobre los tipos conocidos, vea <xref:System.Runtime.Serialization.DataContractSerializer> y [tipos conocidos del contrato de datos](../../../wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Consulte también

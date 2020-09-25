@@ -2,14 +2,15 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: da57ca3ba3bc0036727a749f1cab9ec3657a4fda
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6f9cb127deb5651ed27a0ef5802512fb5b6c7b54
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855346"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190103"
 ---
 # \<dynamicEndpoint>
+
 Este elemento de configuración define un punto de conexión estándar que contiene información para permitir que una aplicación funcione como un programa cliente que pueda buscar la dirección del punto de conexión dinámicamente en tiempo de ejecución.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -45,9 +46,11 @@ Este elemento de configuración define un punto de conexión estándar que conti
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
+
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  

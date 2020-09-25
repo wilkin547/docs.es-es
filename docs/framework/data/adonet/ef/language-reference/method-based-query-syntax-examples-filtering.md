@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: 8bc8f46a1afa6afad0b1893dfd0f09878be0e7a2
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 392181f201c7b18b1b38f62f5f35c5657cbbe601
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397475"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192001"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Ejemplos de sintaxis de consulta basada en métodos: Filtrado
+
 En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains` métodos y para consultar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) con la sintaxis de consulta basada en métodos. Tenga en cuenta dónde...`Contains` no se puede usar como parte de una [consulta compilada](compiled-queries-linq-to-entities.md).  
   
  El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.  
   
- En los ejemplos de este tema se usan `using` las siguientes / `Imports` instrucciones:  
+ En los ejemplos de este tema se usan las siguientes `using` / `Imports` instrucciones:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -25,24 +26,28 @@ En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains
 ## <a name="where"></a>Where  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se devuelven todos los pedidos en línea.  
   
  [!code-csharp[DP L2E Examples#Where1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where1_mq)]
  [!code-vb[DP L2E Examples#Where1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where1_mq)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se devuelven los pedidos en los que la cantidad de pedido es superior a 2 e inferior a 6.  
   
  [!code-csharp[DP L2E Examples#Where2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where2_mq)]
  [!code-vb[DP L2E Examples#Where2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where2_mq)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se devuelven todos los productos de color rojo.  
   
  [!code-csharp[DP L2E Examples#Where3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#where3_mq)]
  [!code-vb[DP L2E Examples#Where3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#where3_mq)]  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se utiliza el método `Where` para buscar los pedidos que se realizaron después del 1 de diciembre de 2003 y, a continuación, se utiliza la propiedad de navegación `order.SalesOrderDetail` para obtener los detalles de cada pedido.  
   
  [!code-csharp[DP L2E Examples#WhereNavProperty_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty_mq)]
@@ -51,6 +56,7 @@ En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains
 ## <a name="wherecontains"></a>Where…Contains  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa una matriz como parte de una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` que coincide con un valor de la matriz.  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#3)]
@@ -60,11 +66,12 @@ En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains
 > Como parte del predicado de una cláusula `Where…Contains`, puede utilizar <xref:System.Array>, <xref:System.Collections.Generic.List%601> o una colección de cualquier tipo que implemente la interfaz <xref:System.Collections.Generic.IEnumerable%601>. También puede declarar e inicializar una colección en una consulta LINQ to Entities. Para obtener más información, vea el ejemplo siguiente.  
   
 ### <a name="example"></a>Ejemplo  
+
  El ejemplo siguiente declara e inicializa las matrices en una cláusula `Where…Contains` para encontrar todos los productos que tienen un `ProductModelID` o `Size` que coincide con un valor de las matrices.  
   
  [!code-csharp[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e arraysandlistsinqueries/cs/program.cs#4)]
  [!code-vb[DP L2E ArraysAndListsInQueries#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e arraysandlistsinqueries/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

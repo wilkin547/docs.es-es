@@ -2,14 +2,15 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 2749bc6c66d491a8a160d98b508fb43aa027b806
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 775ec3a4d3dd8709c61fb46155b5085a3343d218
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398040"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192274"
 ---
 # \<diagnostics>
+
 El elemento `diagnostics` define valores que pueden ser utilizados por un administrador para la inspección y control en tiempo de ejecución.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -41,6 +42,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,7 +51,7 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |---------------|-----------------|  
 |etwProviderId|Cadena que especifica el identificador del proveedor de la traza de eventos, que escribe los eventos en las sesiones de ETW.|  
 |performanceCounters|Especifica si se habilitan los contadores de rendimiento para el ensamblado. Los valores válidos son<br /><br /> -OFF: los contadores de rendimiento están deshabilitados.<br />-ServiceOnly: solo se habilitan los contadores de rendimiento relevantes para este servicio.<br />-All: los contadores de rendimiento se pueden ver en tiempo de ejecución.<br />-Default: se crea una instancia de contador de rendimiento única _WCF_Admin. Esta instancia se utiliza para habilitar la colección de datos de SQM usados por la infraestructura. Ninguno de los valores de contador para esta instancia está actualizado y por consiguiente permanecerá a cero. Éste es el valor predeterminado si ninguna configuración está presente para WCF.|  
-|wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). De manera predeterminada, es `false`.|  
+|wmiProviderEnabled|Un valor booleano que especifica si el proveedor de WMI para el ensamblado está habilitado. El proveedor de WMI se requiere para que el usuario obtenga acceso en tiempo de ejecución a las características de control e inspección de Windows Communication Foundation (WCF). El valor predeterminado es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
@@ -64,7 +66,8 @@ El elemento `diagnostics` define valores que pueden ser utilizados por un admini
 |-------------|-----------------|  
 |serviceModel|Elemento raíz de todos los elementos de configuración de WCF.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  La sección `diagnostics` define los valores de diagnóstico para todos los servicios situados en un ensamblado. No es posible definir los valores de diagnóstico independientes en el nivel de servicio a menos que sólo haya un servicio en el ensamblado. Los atributos se establecen según los requisitos de la sección.  
   
 ## <a name="example"></a>Ejemplo  

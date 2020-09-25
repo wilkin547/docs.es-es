@@ -5,14 +5,15 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 48da852bd1e209aed5ed5e75d8e510027a96d6d7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 568c0c814dcc57be0f5be435bb7750c970ffec19
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558014"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192456"
 ---
 # <a name="loadfromremotesources-element"></a>Elemento \<loadFromRemoteSources>
+
 Especifica si se debe conceder plena confianza a los ensamblados cargados desde orígenes remotos en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
@@ -30,6 +31,7 @@ Especifica si se debe conceder plena confianza a los ensamblados cargados desde 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -40,12 +42,13 @@ Especifica si se debe conceder plena confianza a los ensamblados cargados desde 
   
 ## <a name="enabled-attribute"></a>atributo Enabled  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`false`|No conceda plena confianza a las aplicaciones de orígenes remotos. Este es el valor predeterminado.|  
 |`true`|Conceda plena confianza a las aplicaciones desde orígenes remotos.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -55,7 +58,7 @@ Especifica si se debe conceder plena confianza a los ensamblados cargados desde 
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 En el .NET Framework 3,5 y versiones anteriores, si carga un ensamblado desde una ubicación remota, el código del ensamblado se ejecuta en confianza parcial con un conjunto de permisos concedidos que depende de la zona desde la que se carga. Por ejemplo, si carga un ensamblado desde un sitio web, se carga en la zona de Internet y se le concede el conjunto de permisos de Internet. En otras palabras, se ejecuta en un espacio aislado de Internet.
 
@@ -113,10 +116,10 @@ En el ejemplo siguiente se muestra cómo conceder plena confianza a los ensambla
 </configuration>  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Usos más implícitos de la Directiva CAS: loadFromRemoteSources](/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [Esquema de configuración en tiempo de ejecución](index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

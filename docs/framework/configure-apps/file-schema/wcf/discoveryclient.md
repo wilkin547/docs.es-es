@@ -2,14 +2,15 @@
 title: <discoveryClient>
 ms.date: 03/30/2017
 ms.assetid: a78f74c3-1152-4149-ab29-3f12d316caeb
-ms.openlocfilehash: 71305720cad0206ec3dabb1863e2f1cd72eb85f0
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: af9cf127652f1e12ae57948f9b4a6a26285af793
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73739037"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91192261"
 ---
 # \<discoveryClient>
+
 Elemento de configuración para crear un enlace personalizado que habilita una aplicación cliente para buscar automáticamente un servicio detectable y encontrar su dirección en tiempo de ejecución.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -39,6 +40,7 @@ Elemento de configuración para crear un enlace personalizado que habilita una a
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
