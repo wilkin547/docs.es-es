@@ -2,17 +2,19 @@
 title: Aplicaciones cliente seguras
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 8a946ab9b4cb75f7f890a01f0647f8a719c7bc03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 96b43d28d3e22df66cb7f7010916b5c7f7a86b77
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551548"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189011"
 ---
 # <a name="secure-client-applications"></a>Aplicaciones cliente seguras
+
 Por lo general las aplicaciones constan de varios elementos que deben estar protegidos ante las vulnerabilidades que pueden provocar pérdidas de datos o poner en peligro el sistema de cualquier otro modo. La creación de interfaces de usuario seguras puede impedir un gran número de problemas ya que bloquea a los atacantes antes de que puedan tener acceso a los datos o a los recursos del sistema.  
   
 ## <a name="validate-user-input"></a>Validar datos introducidos por el usuario  
+
  Al construir una aplicación en la que se obtiene acceso a datos, debe presuponer que todos los datos proporcionados por el usuario son malintencionados, a no ser que se demuestre lo contrario. De no ser así, la aplicación puede estar expuesta a ataques. .NET Framework contiene clases que ayudan a exigir un dominio de valores para los controles de información introducida por el usuario, como la limitación del número de caracteres que se pueden introducir. Los enlaces de eventos permiten escribir procedimientos para comprobar la validez de los valores. Los datos introducidos por el usuario se pueden validar y tipar fuertemente, lo que limita la exposición de una aplicación ante ataques de inyección de script y SQL.  
   
 > [!IMPORTANT]
@@ -31,6 +33,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
  Describe cómo utilizar la clase <xref:System.Text.RegularExpressions.Regex> para comprobar la validez de los datos introducidos por el usuario.  
   
 ## <a name="windows-applications"></a>Aplicaciones para Windows  
+
  En versiones anteriores, las aplicaciones Windows normalmente se ejecutaban con todos los permisos. .NET Framework proporciona la infraestructura para restringir la ejecución del código en una aplicación Windows mediante la seguridad de acceso del código (CAS). Sin embargo, CAS no es suficiente por sí solo para proteger la aplicación.  
   
  [Seguridad en los formularios Windows Forms](/dotnet/desktop/winforms/windows-forms-security)  
@@ -43,6 +46,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
  Describe cómo usar la implementación de `ClickOnce` en una aplicación de Windows Forms y describe las implicaciones en la seguridad.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET y servicios Web XML  
+
  Por lo general, las aplicaciones ASP.NET deben restringir el acceso a algunas porciones del sitio web y proporcionan otros mecanismos para la protección de datos y la seguridad del sitio. Estos vínculos proporcionan información útil para proteger la aplicación ASP.NET.  
   
  Los servicios Web XML proporcionan datos que pueden consumir las aplicaciones ASP.NET, las aplicaciones de Windows Forms u otros servicios Web. Debe administrar la seguridad del propio servicio Web así como la de la aplicación cliente.  
@@ -57,6 +61,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 |[Prácticas de seguridad básicas para aplicaciones web](/previous-versions/aspnet/zdh19h94(v=vs.100))|Información general sobre la seguridad y vínculos para profundizar en el tema.|  
   
 ## <a name="remoting"></a>Comunicación remota  
+
  La comunicación remota de .NET permite crear fácilmente aplicaciones ampliamente distribuidas, tanto si los componentes de las aplicaciones están todos en un equipo como si están repartidos por el mundo. Puede generar aplicaciones cliente que utilizan los objetos de otros procesos en el mismo equipo o en cualquier otro equipo que se puede alcanzar a través de su red. También puede usar .NET Remoting para comunicar con otros dominios de aplicación en el mismo proceso.  
   
 |Recurso|Descripción|  
@@ -65,7 +70,7 @@ Por lo general las aplicaciones constan de varios elementos que deben estar prot
 |[Seguridad en comunicación remota](/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Describe la autenticación y el cifrado, así como temas adicionales de seguridad relacionados con la comunicación remota.|  
 |[Consideraciones de seguridad y de interacción remota](../../misc/security-and-remoting-considerations.md)|Describe problemas de seguridad con objetos protegidos y con el cruce entre dominios de aplicación.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Recomendaciones para las estrategias de acceso a datos](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))

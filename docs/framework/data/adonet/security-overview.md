@@ -2,23 +2,25 @@
 title: Introducción a la seguridad
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ede9b24828da74c043bed103595073c4607c51f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550695"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91188998"
 ---
 # <a name="security-overview"></a>Introducción a la seguridad
 
 La protección de una aplicación es un proceso continuo. Es prácticamente imposible que se llegue a un momento en el que un programador pueda garantizar que una aplicación es invulnerable ante todo tipo de ataques, ya que no es posible predecir los tipos de ataques que surgirán en un futuro con las nuevas tecnologías. Al contrario, el hecho de que nadie haya detectado (o publicado) aún brechas de seguridad en un sistema, no quiere decir que éstas no existan o no puedan existir en un futuro. Por lo tanto, es necesario planificar la seguridad durante la fase de diseño del proyecto, así como la forma en que se mantendrá la seguridad durante el ciclo de vida de la aplicación.
 
 ## <a name="design-for-security"></a>Diseñar la seguridad
+
  Uno de los mayores problemas de la programación de aplicaciones seguras es el hecho de que a menudo la seguridad no se planifica con antelación, sino que se implementa cuando el código de un proyecto se ha completado. Esta práctica genera aplicaciones poco seguras, ya que no se ha dedicado suficiente tiempo a entender qué hace que una aplicación sea segura.
 
  La implementación de la seguridad de última hora conduce a más errores, ya que el software se interrumpe según las nuevas restricciones o se tiene que volver a escribir para adaptarse a la funcionalidad imprevista. Cada línea de código revisado incluye la posibilidad de insertar un error nuevo. En ese sentido, debe tener en cuenta la seguridad al principio del proceso de programación de manera que se desarrolle junto con la programación de nuevas características.
 
 ### <a name="threat-modeling"></a>Modelo de amenazas
+
  No se puede proteger un sistema de ataques a menos que comprenda todos los posibles ataques a los que está expuesto. El proceso de evaluación de las amenazas de seguridad, denominados *modelado de amenazas*, es necesario para determinar la probabilidad y las consecuencias de las infracciones de seguridad en la aplicación ADO.net.
 
  El modelo de amenazas está compuesto de tres pasos principales: comprender la visión del adversario, caracterizar la seguridad del sistema y determinar las amenazas.
@@ -32,6 +34,7 @@ Para obtener más información, vea los siguientes recursos:
 |El sitio de [modelado de amenazas](https://www.microsoft.com/securityengineering/sdl/threatmodeling) en el portal de ingeniería de seguridad|Los recursos de esta página le ayudarán a entender el proceso de modelo de amenazas y a desarrollar modelos de amenazas que puede usar para proteger sus propias aplicaciones|
 
 ## <a name="the-principle-of-least-privilege"></a>Principio de los privilegios mínimos
+
  Cuando diseñe, compile e implemente la aplicación, debe asumir que ésta será objeto de ataques. Estos ataques suelen proceder de código malintencionado que se activa con los permisos del usuario que ejecuta el código. Otros pueden provenir de código no dañino, cuyas vulnerabilidades aprovecha un atacante. Cuando se planifica la seguridad, siempre hay que asumir que se puede producir la peor situación posible.
 
  Una medida para contrarrestar los ataques consiste en intentar establecer tantos muros en el código como sea posible mediante la ejecución con los privilegios mínimos. El principio de los privilegios mínimos indica que se deben conceder privilegios para la menor cantidad de código posible durante el tiempo mínimo necesario para conseguir que se realice el trabajo.
@@ -105,7 +108,7 @@ Para obtener más información, vea los siguientes recursos:
 |[Administración de directivas de seguridad](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Proporciona información sobre la creación y administración de la directiva de seguridad.|
 |[Prácticas recomendadas de la Directiva de seguridad](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Proporciona vínculos a temas que describen cómo administrar la directiva de seguridad.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proteger aplicaciones de ADO.NET](securing-ado-net-applications.md)
 - [Seguridad en .NET](../../../standard/security/index.md)

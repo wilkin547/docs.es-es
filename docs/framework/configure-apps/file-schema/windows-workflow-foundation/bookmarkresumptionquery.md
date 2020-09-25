@@ -3,14 +3,15 @@ title: <bookmarkResumptionQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 226de75d-d25c-48d5-b069-4b7d80a6852b
-ms.openlocfilehash: b2a81a42a17474bdb0124bec6d3c3eeefa514411
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: efd1e4e54223ff9f5d60b4087fbe5b6bebf1af2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189595"
 ---
 # \<bookmarkResumptionQuery>
+
 Representa una consulta que se usa para realizar el seguimiento de la reanudación de un marcador dentro de una instancia de flujo de trabajo. La consulta es necesaria para que un participante del seguimiento se suscriba a los registros de reanudación del marcador.  
   
  Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .  
@@ -38,6 +39,7 @@ Representa una consulta que se usa para realizar el seguimiento de la reanudaci�
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +49,7 @@ Representa una consulta que se usa para realizar el seguimiento de la reanudaci�
 |name|Una cadena que especifica el nombre del registro del marcador al que va a suscribirse.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  

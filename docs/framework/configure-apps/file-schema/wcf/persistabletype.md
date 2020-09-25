@@ -2,14 +2,15 @@
 title: <persistableType>
 ms.date: 03/30/2017
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-ms.openlocfilehash: 328caaefe0cc24da45b460cab0a672dc8a6ccce1
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6425b21fe50865beb7bb2876ea478b415fbe3944
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70855073"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181523"
 ---
 # \<persistableType>
+
 Especifica todos los tipos con persistencia.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Especifica todos los tipos con persistencia.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<persistableTypes>**](persistabletypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<persistableType>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <comContracts>
@@ -34,9 +35,11 @@ Especifica todos los tipos con persistencia.
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -47,6 +50,7 @@ Especifica todos los tipos con persistencia.
 |name|Un atributo opcional que contiene una cadena que especifica el nombre del tipo con persistencia.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  None  
   
 ### <a name="parent-elements"></a>Elementos primarios  

@@ -3,14 +3,15 @@ title: Autenticación en SQL Server
 description: Obtenga información sobre la autenticación con SQL Server para ADO.NET, incluido el modo de autenticación de Windows y el modo mixto.
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c4f62391a0d9b5ada27f56eef4c3467d99b4c6d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286551"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91197539"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
+
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
   
 - La autenticación de Windows es el modo predeterminado y a veces se le conoce como seguridad integrada porque este modelo de seguridad de SQL Server está estrechamente integrado en Windows. Se confía en las cuentas de usuario y grupo específicas de Windows para iniciar sesión en SQL Server. Los usuarios de Windows que ya se han autenticado no tienen que presentar credenciales adicionales.  
@@ -30,6 +31,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > Los inicios de sesión son distintos de los usuarios de base de datos. Debe asignar inicios de sesión o grupos de Windows a usuarios o roles de base de datos en una operación independiente. A continuación, conceda permisos a los usuarios o roles para tener acceso a los objetos de base de datos.  
   
 ## <a name="authentication-scenarios"></a>Escenarios de autenticación  
+
  La autenticación de Windows suele ser la mejor opción en las siguientes situaciones:  
   
 - Hay un controlador de dominio.  
@@ -50,6 +52,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > La especificación de autenticación de Windows no deshabilita los inicios de sesión de SQL Server. Para deshabilitar los inicios de sesión de SQL Server de privilegios elevados, use la instrucción ALTER LOGIN DISABLE de Transact-SQL.  
   
 ## <a name="login-types"></a>Tipos de inicios de sesión  
+
  SQL Server admite tres tipos de inicios de sesión:  
   
 - Una cuenta de usuario local de Windows o una cuenta de dominio de confianza. SQL Server se basa en Windows para autenticar las cuentas de usuario de Windows.  
@@ -62,6 +65,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > SQL Server proporciona inicios de sesión creados a partir de certificados o claves asimétricas que solo se usan para la firma del código. No se pueden usar para conectarse a SQL Server.  
   
 ## <a name="mixed-mode-authentication"></a>Modo mixto de autenticación  
+
  Si tiene que usar la autenticación de modo mixto, debe crear inicios de sesión de SQL Server, que se almacenan en SQL Server. Luego debe proporcionar el nombre de usuario y la contraseña de SQL Server en tiempo de ejecución.  
   
 > [!IMPORTANT]
@@ -73,11 +77,12 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 > La concatenación de cadenas de conexión a partir de datos proporcionados por el usuario puede dejarle vulnerable ante ataques de inyección de cadenas de conexión. Utilice <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Para obtener más información, vea [Generadores de cadenas de conexión](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
+
  Para obtener más información, vea los recursos siguientes.  
   
-|Resource|Descripción|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
-|[Principals](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe los inicios de sesión y otras entidades de seguridad de SQL Server.|  
+|[Entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe los inicios de sesión y otras entidades de seguridad de SQL Server.|  
   
 ## <a name="see-also"></a>Consulte también
 

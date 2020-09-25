@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 38c43fa509b5259aa94ca416aadb51b405fc5dc7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b142ef820e964eaf5f1afed53a6b12a9344c7dda
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90542403"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91189336"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Procedimiento para llamar a funciones definidas por el modelo en consultas
+
 En este tema se describe cómo llamar a las funciones definidas en el modelo conceptual desde LINQ to Entities consultas.  
   
  En el procedimiento siguiente se proporciona un esquema de alto nivel para llamar a una función definida por el modelo desde una consulta LINQ to Entities. El ejemplo que sigue proporciona más detalles sobre los pasos del procedimiento. El procedimiento da por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, vea [Cómo: definir funciones personalizadas en el modelo conceptual](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
@@ -24,6 +25,7 @@ En este tema se describe cómo llamar a las funciones definidas en el modelo con
 2. Llame a la función en una consulta LINQ to Entities.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo llamar a una función que se define en el modelo conceptual desde una consulta LINQ to Entities. En el ejemplo se usa el modelo School. Para obtener información sobre el modelo School, vea [crear la base de datos de ejemplo School](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) y [generar el archivo School. edmx](/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
  La siguiente función del modelo conceptual devuelve el número de años transcurridos desde que se contrató a un instructor. Para obtener información sobre cómo agregar la función a un modelo conceptual, vea [Cómo: definir funciones personalizadas en el modelo conceptual](/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))).  
@@ -31,18 +33,20 @@ En este tema se describe cómo llamar a las funciones definidas en el modelo con
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, agregue el siguiente método a su aplicación y utilice un atributo <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> para asignarlo a la función del modelo conceptual:  
   
  [!code-csharp[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#2)]
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>Ejemplo  
+
  Ahora puede llamar a la función de modelo conceptual desde una consulta de LINQ to Entities. El siguiente código llama al método para mostrar todos los instructores que se contrataron hace más de diez años:  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [.edmx, Información general sobre el archivo](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

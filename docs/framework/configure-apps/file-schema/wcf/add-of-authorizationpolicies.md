@@ -2,14 +2,15 @@
 title: <add> de <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: e2597bc51e788c919bfe3ce3422ae2911cc6b33b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 39cb89340907743c727a425bb2f140ac34842e3b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400697"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181679"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> de \<authorizationPolicies>
+
 Especifica una directiva de autorización para la transformación de notificaciones.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Especifica una directiva de autorización para la transformación de notificacio
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<authorizationPolicies>**](authorizationpolicies.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <authorizationPolicies>
@@ -30,9 +31,11 @@ Especifica una directiva de autorización para la transformación de notificacio
 ```  
   
 ## <a name="type"></a>Tipo  
+
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -42,6 +45,7 @@ Especifica una directiva de autorización para la transformación de notificacio
 |`policyType`|Atributo de cadena requerido.<br /><br /> El modelo de control de acceso de Windows Communication Foundation (WCF) admite el aprovisionamiento de un conjunto de directivas de autorización como tipos. Este atributo especifica una directiva de autorización que permite la transformación de un conjunto de notificaciones de entrada en otro conjunto de notificaciones. Se puede permitir o denegar el acceso en base a eso.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -50,7 +54,8 @@ Especifica una directiva de autorización para la transformación de notificacio
 |-------------|-----------------|  
 |[\<authorizationPolicies>](authorizationpolicies.md)|Especifica una colección de tipos de directiva de autorización.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
+
  Cada directiva de autorización contiene un atributo `policyType` necesario único que es una cadena. El atributo especifica una directiva de autorización que permite la transformación de un conjunto de demandas de entrada en otro conjunto de demandas. Se puede permitir o denegar el acceso en base a eso. Para obtener más información sobre cómo funciona una directiva de autorización, vea <xref:System.IdentityModel.Policy.IAuthorizationPolicy> y [Directiva de autorización](../../../wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Consulte también
