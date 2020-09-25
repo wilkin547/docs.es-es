@@ -8,26 +8,28 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 3e2bd3f4ca5402abe4a7f8ec8f5410effaee6700
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568822"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180613"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Actualizar el servicio de datos (Servicios de datos de WCF)
+
 Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fuente de Open Data Protocol (OData), la biblioteca traduce las entradas de la fuente en instancias de las clases del servicio de datos de cliente. La instancia de <xref:System.Data.Services.Client.DataServiceContext> a la que pertenece la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> realiza el seguimiento de estas clases del servicio de datos. El cliente realiza el seguimiento de los cambios en las entidades que se notifican utilizando métodos de <xref:System.Data.Services.Client.DataServiceContext>. Estos métodos permiten al cliente realizar el seguimiento de las entidades agregadas y eliminadas y también de los cambios que se realizan en los valores de propiedad o en las relaciones entre instancias de entidad. Estos cambios se devuelven al servicio de datos como operaciones basadas en REST al llamar al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
 > [!NOTE]
 > Al utilizar una instancia de <xref:System.Data.Services.Client.DataServiceCollection%601> para enlazar los datos a los controles, los cambios realizados en los datos del control enlazado se notifican automáticamente a <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulte [enlazar datos a controles](binding-data-to-controls-wcf-data-services.md).  
   
 ## <a name="adding-modifying-and-changing-entities"></a>Agregar, modificar y cambiar entidades  
+
  Cuando se usa el cuadro de diálogo de **Agregar referencia de servicio** en Visual Studio para agregar una referencia a una fuente de oData, cada una de las clases de servicio de datos de cliente resultantes tiene un método de *creación* estático que toma un parámetro para cada propiedad de entidad que no admite valores NULL. Puede usar este método para crear instancias de clases de tipos de entidad, como en el ejemplo siguiente:  
   
  [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
  [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
- Para agregar una instancia de entidad, llame al método *AddTo* adecuado en la clase <xref:System.Data.Services.Client.DataServiceContext> generada por el cuadro de diálogo **Agregar referencia de servicio** , como en el ejemplo siguiente:  
+ Para agregar una instancia de entidad, llame al método *AddTo* adecuado en la <xref:System.Data.Services.Client.DataServiceContext> clase generada por el cuadro de diálogo **Agregar referencia de servicio** , como en el ejemplo siguiente:  
   
  [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
  [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
@@ -47,6 +49,7 @@ Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fu
  Para obtener más información, vea [Cómo: agregar, modificar y eliminar entidades](how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Adjuntar entidades  
+
  La biblioteca de clientes le permite guardar las actualizaciones que realizó en una entidad sin ejecutar primero ninguna consulta para cargar la entidad en la instancia de la clase <xref:System.Data.Services.Client.DataServiceContext>. Use el método <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> para adjuntar un objeto existente a un conjunto de entidades concreto de la instancia de <xref:System.Data.Services.Client.DataServiceContext>. Después puede modificar el objeto y guardar los cambios en el servicio de datos. En el ejemplo siguiente, se adjunta al contexto un objeto de cliente que se ha cambiado y, a continuación, se llama a <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> para marcar el objeto adjunto como <xref:System.Data.Services.Client.EntityStates.Modified> antes de llamar a <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>:  
   
  [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
@@ -65,9 +68,10 @@ Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fu
  Para obtener más información, consulte [Cómo: adjuntar una entidad existente a DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md).  
   
 ## <a name="creating-and-modifying-relationship-links"></a>Crear y modificar vínculos de relación  
- Cuando se agrega una nueva entidad mediante el método <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> o el método *AddTo* adecuado de la clase <xref:System.Data.Services.Client.DataServiceContext> que genera el cuadro de diálogo **Agregar referencia de servicio** , las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente.  
+
+ Cuando se agrega una nueva entidad mediante el <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> método o el método *AddTo* adecuado de la <xref:System.Data.Services.Client.DataServiceContext> clase que genera el cuadro de diálogo de **Agregar referencia de servicio** , las relaciones entre la nueva entidad y las entidades relacionadas no se definen automáticamente.  
   
- Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Las relaciones entre las entidades se definen como asociaciones en el modelo y la clase <xref:System.Data.Services.Client.DataServiceContext> realiza el seguimiento de cada relación como objeto de vínculo en el contexto. WCF Data Services proporciona los métodos siguientes en la clase <xref:System.Data.Services.Client.DataServiceContext> para crear, modificar y eliminar estos vínculos:  
+ Puede crear y cambiar las relaciones entre las instancias de las entidades y hacer que la biblioteca de cliente refleje esos cambios en el servicio de datos. Las relaciones entre las entidades se definen como asociaciones en el modelo y la clase <xref:System.Data.Services.Client.DataServiceContext> realiza el seguimiento de cada relación como objeto de vínculo en el contexto. WCF Data Services proporciona los métodos siguientes en la <xref:System.Data.Services.Client.DataServiceContext> clase para crear, modificar y eliminar estos vínculos:  
   
 |Método|Descripción|  
 |------------|-----------------|  
@@ -91,11 +95,12 @@ Cuando se usa la biblioteca de cliente de WCF Data Services para consumir una fu
  Para obtener más información, vea [Cómo: definir relaciones de entidades](how-to-define-entity-relationships-wcf-data-services.md).  
   
 ## <a name="saving-changes"></a>Guardar los cambios  
+
  El seguimiento de los cambios se realiza en la instancia de la clase <xref:System.Data.Services.Client.DataServiceContext>, pero los cambios no se envían al servidor inmediatamente. Una vez que haya efectuado los cambios necesarios de una actividad determinada, llame al método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> para enviar todos los cambios al servicio de datos. Para obtener más información, vea [administrar el contexto del servicio de datos](managing-the-data-service-context-wcf-data-services.md). También puede guardar cambios de forma asincrónica utilizando los métodos <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> y <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>. Para obtener más información, vea [operaciones asincrónicas](asynchronous-operations-wcf-data-services.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+- [Biblioteca cliente de Data Services de WCF](wcf-data-services-client-library.md)
 - [Consultar el servicio de datos](querying-the-data-service-wcf-data-services.md)
 - [Operaciones asincrónicas](asynchronous-operations-wcf-data-services.md)
 - [Procesamiento por lotes de operaciones](batching-operations-wcf-data-services.md)

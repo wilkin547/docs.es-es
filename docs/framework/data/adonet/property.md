@@ -1,15 +1,16 @@
 ---
-title: Propiedad
+title: propiedad
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: d1e20a6570c458041ec5d8ececbfa291ca9e4612
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6aeb29c5aa608987466ec858416a4ac141ff1da3
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735399"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180925"
 ---
-# <a name="property"></a>Propiedad
+# <a name="property"></a>propiedad
+
 *Las propiedades* son los bloques de creación fundamentales de [tipos de entidad](entity-type.md) y [tipos complejos](complex-type.md). Las propiedades definen la forma y características de datos que una instancia del tipo de entidad o la instancia del tipo complejo contendrá. Las propiedades en un modelo conceptual son análogas a las propiedades definidas en una clase. Del mismo modo que las propiedades en una clase definen la forma de la clase y proporcionan información sobre los objetos, las propiedades en un modelo conceptual definen la forma de un tipo de entidad y proporcionan información sobre las instancias del tipo de entidad.  
   
 > [!NOTE]
@@ -17,9 +18,9 @@ ms.locfileid: "73735399"
   
  Una definición de propiedad contiene la siguiente información:  
   
-- nombre de propiedad. (Necesario)  
+- nombre de propiedad. (Requerido)  
   
-- Un tipo de propiedad. (Necesario)  
+- Un tipo de propiedad. (Requerido)  
   
 - Un conjunto de [aspectos](facet.md). (Opcional)  
   
@@ -29,6 +30,7 @@ ms.locfileid: "73735399"
 > Un tipo complejo puede, por sí mismo, tener propiedades complejas.  
   
 ## <a name="example"></a>Ejemplo  
+
  El diagrama siguiente muestra un modelo conceptual con tres tipos de entidades: `Book`, `Publisher` y `Author`. Cada tipo de entidad tiene varias propiedades, aunque la información de tipo para cada propiedad no se muestra en el diagrama. Las propiedades que son [claves de entidad](entity-key.md) se denotan con (Key).  
   
  ![Modelo de ejemplo con tres tipos de entidad](./media/property/example-model-three-entity-types.gif)  
@@ -41,7 +43,7 @@ ms.locfileid: "73735399"
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
 - [Entity Data Model](entity-data-model.md)

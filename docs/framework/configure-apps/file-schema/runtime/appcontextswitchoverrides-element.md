@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab74886edcc86c900c56017867a3b81c9cb7886e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552289"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176154"
 ---
 # <a name="appcontextswitchoverrides-element"></a>Elemento \<AppContextSwitchOverrides>
 
@@ -29,6 +29,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 ```
 
 ## <a name="attributes-and-elements"></a>Atributos y elementos
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
 
 ### <a name="attributes"></a>Atributos
@@ -39,11 +40,12 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 
 ### <a name="value-attribute"></a>Atributo de valor
 
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|
 |"nombre = valor"|Un nombre de conmutador predefinido junto con su valor ( `true` o `false` ). Varios pares de nombre/valor de modificador se separan mediante signos de punto y coma (";"). Para obtener una lista de nombres de conmutadores predefinidos admitidos por el .NET Framework, vea la sección Comentarios.|
 
 ### <a name="child-elements"></a>Elementos secundarios
+
  Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
@@ -53,7 +55,8 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
+
  A partir de .NET Framework 4,6, el `<AppContextSwitchOverrides>` elemento de un archivo de configuración permite a los llamadores de una API determinar si su aplicación puede aprovechar la nueva funcionalidad o mantener la compatibilidad con versiones anteriores de una biblioteca. Por ejemplo, si el comportamiento de una API ha cambiado entre dos versiones de una biblioteca, el `<AppContextSwitchOverrides>` elemento permite a los llamadores de esa API rechazar el nuevo comportamiento en las versiones de la biblioteca que admiten la nueva funcionalidad. En el caso de las aplicaciones que llaman a las API en el .NET Framework, el `<AppContextSwitchOverrides>` elemento también puede permitir que los autores de llamadas cuyas aplicaciones tengan como destino una versión anterior de la .NET Framework puedan optar a la nueva funcionalidad si su aplicación se ejecuta en una versión de la .NET Framework que incluye esa funcionalidad.
 
  El `value` atributo del `<AppContextSwitchOverrides>` elemento se compone de una sola cadena formada por uno o varios pares de nombre/valor delimitados por punto y coma.  Cada nombre identifica un modificador de compatibilidad y su valor correspondiente es un booleano ( `true` o `false` ) que indica si el modificador está establecido. De forma predeterminada, el modificador es `false` y las bibliotecas proporcionan la nueva funcionalidad. Solo proporcionan la funcionalidad anterior si el modificador está establecido (es decir, su valor es `true` ). Esto permite que las bibliotecas proporcionen un nuevo comportamiento para una API existente, a la vez que permiten a los autores de llamadas que dependen del comportamiento anterior dejar de participar en la nueva funcionalidad.
@@ -176,7 +179,7 @@ En el ejemplo siguiente se usa el `<add>` elemento para agregar dos valores a la
 </configuration>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Mitigación de nuevos comportamientos en .NET Framework 4.6 y versiones posteriores](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
