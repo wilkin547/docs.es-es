@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 392b69633e596f0682fdfb4a5875f46755203ff7
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 61a00e766b0f975691b9f2a7c7561bb4f1d33c02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474896"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174308"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
+
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -65,9 +66,11 @@ protected override void Finalize()
  Es posible forzar la recolección de elementos no utilizados si se llama a <xref:System.GC.Collect%2A>, pero debe evitarse esta llamada porque puede dar lugar a problemas de rendimiento.  
   
 ## <a name="using-finalizers-to-release-resources"></a>Uso de finalizadores para liberar recursos  
+
  En general, C# no requiere tanta administración de memoria por parte del desarrollador como los lenguajes que no están diseñados para un runtime con recolección de elementos no utilizados. Esto es debido a que el recolector de elementos no utilizados de .NET administra implícitamente la asignación y liberación de memoria para los objetos. En cambio, cuando la aplicación encapsule recursos no administrados, como ventanas, archivos y conexiones de red, debería usar finalizadores para liberar dichos recursos. Cuando el objeto cumple los requisitos para su finalización, el recolector de elementos no utilizados ejecuta el método `Finalize` del objeto.
   
 ## <a name="explicit-release-of-resources"></a>Liberación explícita de recursos  
+
  Si la aplicación usa un recurso externo costoso, también es recomendable liberar explícitamente el recurso antes de que el recolector de elementos no utilizados libere el objeto. Para liberar el recurso, implemente un método `Dispose` desde la interfaz <xref:System.IDisposable> que realiza la limpieza necesaria del objeto. Esto puede mejorar considerablemente el rendimiento de la aplicación. Aun con este control explícito sobre los recursos, el finalizador se convierte en una salvaguarda para limpiar recursos si se produce un error en la llamada al método `Dispose`.  
   
  Para obtener más información sobre la limpieza de recursos, vea los siguientes artículos:  
@@ -79,6 +82,7 @@ protected override void Finalize()
 - [using (instrucción)](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se crean tres clases que forman una cadena de herencia. La clase `First` es la clase base, `Second` se deriva de `First` y `Third` se deriva de `Second`. Los tres tienen finalizadores. En `Main`, se crea una instancia de la clase más derivada. Cuando ejecute el programa, observe que se llama a los finalizadores de las tres clases automáticamente y en orden, desde la más derivada hasta la menos derivada.  
   
  [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  

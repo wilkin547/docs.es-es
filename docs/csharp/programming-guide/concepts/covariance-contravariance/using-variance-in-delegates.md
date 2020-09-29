@@ -3,19 +3,21 @@ title: Usar varianza en delegados (C#)
 description: Aprenda a usar la varianza en delegados con los ejemplos de código de covarianza y contravarianza incluidos.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 6704c3bf09dd854335f1e2719ccc8462cb7cde26
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105684"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176323"
 ---
 # <a name="using-variance-in-delegates-c"></a>Usar varianza en delegados (C#)
+
 Al asignar un método a un delegado, la *covarianza* y la *contravarianza* proporcionan flexibilidad para hacer coincidir un tipo de delegado con una firma de método. La covarianza permite que un método tenga un tipo de valor devuelto más derivado que el definido en el delegado. La contravarianza permite un método que tiene tipos de parámetro menos derivados que los del tipo de delegado.  
   
 ## <a name="example-1-covariance"></a>Ejemplo 1: Covarianza  
   
 ### <a name="description"></a>Descripción  
+
  En este ejemplo se muestra cómo se pueden usar delegados con métodos que tienen tipos de valor devuelto derivados del tipo de valor devuelto en la firma del delegado. El tipo de datos devuelto por `DogsHandler` es de tipo `Dogs`, que se deriva del tipo `Mammals` definido en el delegado.  
   
 ### <a name="code"></a>Código  

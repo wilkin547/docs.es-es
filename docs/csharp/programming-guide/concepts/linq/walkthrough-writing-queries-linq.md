@@ -8,14 +8,15 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: cfd2917d330a9229338790c35911502be5cd9391
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bdf91f6f52a68309cfcd276b222083c8cb67a0cc
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559153"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176245"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
+
 Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
   
 ## <a name="create-a-c-project"></a>Crear un proyecto de C#  
@@ -40,6 +41,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
 5. Observe que el proyecto tiene una referencia a System.Core.dll y una directiva `using` para el espacio de nombres <xref:System.Linq?displayProperty=nameWithType>.  
   
 ## <a name="create-an-in-memory-data-source"></a>Crear un origen de datos en memoria  
+
  El origen de datos de las consultas es una simple lista de objetos `Student`. Cada registro `Student` tiene un nombre, un apellido y una matriz de enteros que representa sus puntuaciones de las pruebas en la clase. Copie este código en el proyecto. Observe las siguientes características:  
   
 - La clase `Student` consta de propiedades implementadas automáticamente.  
@@ -173,6 +175,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
      [!code-csharp[csLINQGettingStarted#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#21)]  
   
 ## <a name="next-steps"></a>Pasos siguientes  
+
  Cuando se haya familiarizado con los aspectos básicos del uso de consultas en C#, estará preparado para leer la documentación y ejemplos del tipo específico de proveedor LINQ que le interese:  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

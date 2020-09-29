@@ -4,12 +4,12 @@ description: Aprenda a usar la herencia en bibliotecas y aplicaciones en C#.
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: b0d6a4a3db4d6606375cc3364ee7abc3029f1d9b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91190467"
 ---
 # <a name="inheritance-in-c-and-net"></a>Herencia en C# y .NET
 
@@ -277,6 +277,7 @@ Ahora se puede crear una instancia de un objeto `Book`, invocar sus miembros ún
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>Diseño de clases base abstractas y sus clases derivadas
+
 <a name="abstract"></a>
 
 En el ejemplo anterior, se define una clase base que proporciona una implementación para una serie de métodos con el fin de permitir que las clases derivadas compartan código. En muchos casos, sin embargo, no se espera que la clase base proporcione una implementación. En su lugar, la clase base es una *clase abstracta* que declara *métodos abstractos*; sirve como una plantilla que define los miembros que debe implementar cada clase derivada. Normalmente, en una clase base abstracta, la implementación de cada tipo derivado es exclusiva de ese tipo. La clase se ha marcado con la palabra clave abstract porque no tenía mucho sentido crear instancias de un objeto `Publication`, aunque la clase proporcionara las implementaciones de funcionalidad común a las publicaciones.

@@ -2,12 +2,12 @@
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
 ms.date: 08/17/2020
-ms.openlocfilehash: 72395acafb403a4e34858eb2b982ec83b9f3cee1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 56d4eecb2831a57460b01ff4da8150d6dcce5bc5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608112"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173424"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -23,7 +23,7 @@ Vista del Explorador de soluciones del microservicio Ordering.API que muestra la
 
 **Figura 7-23.** Nivel de aplicación en el proyecto de API web de ASP.NET Core Ordering.API
 
-En ASP.NET Core se incluye un simple [contenedor de IoC integrado](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection) (representado por la interfaz IServiceProvider) que admite la inserción de constructores de forma predeterminada, y ASP.NET hace que determinados servicios estén disponibles a través de DI. En ASP.NET Core se usa el término *servicio* para cualquiera de los tipos que se registran para la inserción mediante DI. Los servicios del contenedor integrado se configuran en el método ConfigureServices de la clase Startup de la aplicación. Las dependencias se implementan en los servicios que un tipo necesita y que se registran en el contenedor IoC.
+En ASP.NET Core se incluye un simple [contenedor de IoC integrado](/aspnet/core/fundamentals/dependency-injection) (representado por la interfaz IServiceProvider) que admite la inserción de constructores de forma predeterminada, y ASP.NET hace que determinados servicios estén disponibles a través de DI. En ASP.NET Core se usa el término *servicio* para cualquiera de los tipos que se registran para la inserción mediante DI. Los servicios del contenedor integrado se configuran en el método ConfigureServices de la clase Startup de la aplicación. Las dependencias se implementan en los servicios que un tipo necesita y que se registran en el contenedor IoC.
 
 Normalmente, le interesará insertar dependencias que implementen objetos de infraestructura. Una dependencia habitual para insertar es un repositorio. Pero también podría insertar cualquier otra dependencia de infraestructura que pueda tener. Para las implementaciones más sencillas, también podría insertar directamente el objeto de patrón de unidades de trabajo (el objeto DbContext de EF), porque DBContext también es la implementación de los objetos de persistencia de infraestructura.
 

@@ -3,14 +3,15 @@ title: Realizar particiones de datos (C#)
 description: Aprenda a crear particiones de los datos en LINQ. Vea una ilustración que muestra los resultados de las operaciones de creación de particiones.
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 3c85eaec2dc01b683234a27714750354982be440
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 31beacd672addb3eb38ade8f2bf9cfae25f4d27a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302612"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176271"
 ---
 # <a name="partitioning-data-c"></a>Realizar particiones de datos (C#)
+
 Partición en LINQ es la operación de dividir una secuencia de entrada en dos secciones, sin reorganizar los elementos, y devolver después una de las secciones.  
   
  En la siguiente ilustración se muestran los resultados de tres operaciones de partición diferentes en una secuencia de caracteres. La primera operación devuelve los tres primeros elementos de la secuencia. La segunda operación omite los tres primeros elementos y devuelve los restantes. La tercera operación omite los dos primeros elementos de la secuencia y devuelve los tres siguientes.  

@@ -6,20 +6,22 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: b54db325c568dec702e4e50c3c265286662092fe
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 61d79f5647fa05edade9aef90653544b08c20c83
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864766"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181835"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guía de programación de C#)
+
 Una definición de clase o estructura es como un plano que especifica qué puede hacer el tipo. Un objeto es básicamente un bloque de memoria que se ha asignado y configurado de acuerdo con el plano. Un programa puede crear muchos objetos de la misma clase. Los objetos también se denominan instancias y pueden almacenarse en una variable con nombre, o en una matriz o colección. El código de cliente es el código que usa estas variables para llamar a los métodos y acceder a las propiedades públicas del objeto. En un lenguaje orientado a objetos, como C#, un programa típico consta de varios objetos que interactúan dinámicamente.  
   
 > [!NOTE]
 > Los tipos estáticos se comportan de forma diferente a lo que se describe aquí. Para más información, vea [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).
   
 ## <a name="struct-instances-vs-class-instances"></a>Instancias de estructura frente a Instancias de clase  
+
  Puesto que las clases son tipos de referencia, una variable de un objeto de clase contiene una referencia a la dirección del objeto del montón administrado. Si se asigna un segundo objeto del mismo tipo al primer objeto, ambas variables hacen referencia al objeto de esa dirección. Este punto se analiza con más detalle más adelante en este tema.  
   
  Las instancias de clases se crean mediante el [operador new](../../language-reference/operators/new-operator.md). En el ejemplo siguiente, `Person` es el tipo, y `person1` y `person 2` son instancias u objetos de ese tipo.  
@@ -36,6 +38,7 @@ Una definición de clase o estructura es como un plano que especifica qué puede
 > La asignación y desasignación de memoria en el montón administrado están muy optimizadas en Common Language Runtime. En la mayoría de los casos, no existe ninguna diferencia significativa en el costo de rendimiento entre asignar una instancia de clase en el montón y asignar una instancia de estructura en la pila.
   
 ## <a name="object-identity-vs-value-equality"></a>Identidad de objeto frente a igualdad de valores  
+
  Cuando se comparan dos objetos para comprobar si son iguales, primero debe determinar si quiere saber si las dos variables representan el mismo objeto en la memoria o si los valores de uno o varios de sus campos son equivalentes. Si tiene previsto comparar valores, debe tener en cuenta si los objetos son instancias de tipos de valor (estructuras) o tipos de referencia (clases, delegados y matrices).  
   
 - Para determinar si dos instancias de clase hacen referencia a la misma ubicación en la memoria (lo que significa que tienen la misma *identidad*), use el método estático <xref:System.Object.Equals%2A>. (<xref:System.Object?displayProperty=nameWithType> es la clase base implícita para todos los tipos de valor y tipos de referencia, incluidas las clases y estructuras definidas por el usuario).  
@@ -49,6 +52,7 @@ Una definición de clase o estructura es como un plano que especifica qué puede
 - Para determinar si los valores de los campos de dos instancias de clase son iguales, puede usar el método <xref:System.Object.Equals%2A> o el [operador ==](../../language-reference/operators/equality-operators.md#equality-operator-). En cambio, úselos solo si la clase los ha invalidado o sobrecargado para proporcionar una definición personalizada de lo que significa "igualdad" para los objetos de ese tipo. La clase también puede implementar la interfaz <xref:System.IEquatable%601> o la interfaz <xref:System.Collections.Generic.IEqualityComparer%601>. Ambas interfaces proporcionan métodos que pueden servir para comprobar la igualdad de valores. Al diseñar sus propias clases que invaliden `Equals`, asegúrese de seguir las instrucciones descritas en [Procedimiento: Definición de la igualdad de valores para un tipo](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md) y <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  Para obtener más información:  
   
 - [Clases](./classes.md)  

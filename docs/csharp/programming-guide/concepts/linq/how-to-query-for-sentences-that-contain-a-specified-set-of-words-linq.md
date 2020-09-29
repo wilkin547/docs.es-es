@@ -3,14 +3,15 @@ title: Procedimiento para buscar frases que contengan un conjunto especificado d
 description: Aprenda a usar LINQ en C# para buscar frases de un archivo de texto que contengan coincidencias con cada una de las palabras de un conjunto, que podría rellenarse en tiempo de ejecución.
 ms.date: 07/20/2015
 ms.assetid: 0724b429-4b87-4d26-a7b1-409358f3fc20
-ms.openlocfilehash: daf86d6641b82fb77ca237e8a190b4f60b9dea4d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 7c5979fc42b6446948ae974e599807b5cb8db04a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465655"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176284"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a>Procedimiento para buscar frases que contengan un conjunto especificado de palabras (LINQ) (C#)
+
 En este ejemplo se muestra cómo buscar frases en un archivo de texto que contengan coincidencias con cada uno de los conjuntos de palabras especificados. Aunque la matriz de términos de búsqueda está codificada de forma rígida en este ejemplo, también se podría rellenar dinámicamente en tiempo de ejecución. En este ejemplo, la consulta devuelve las frases que contienen las palabras "Historically", "data" e "integrated".  
   
 ## <a name="example"></a>Ejemplo  
@@ -68,6 +69,7 @@ Historically, the world of data and the world of objects have not been well inte
  En la llamada a <xref:System.String.Split%2A>, los signos de puntuación se usan como separadores para quitar las frases de la cadena. Si no lo hiciera podría tener, por ejemplo, una cadena "Historically", lo que no coincidiría con el "Historically" de la matriz `wordsToMatch`. Podría tener que usar separadores adicionales, en función de los tipos de puntuación del texto de origen.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
 
 ## <a name="see-also"></a>Consulte también

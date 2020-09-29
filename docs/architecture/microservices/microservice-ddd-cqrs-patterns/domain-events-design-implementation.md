@@ -2,12 +2,12 @@
 title: Eventos de dominio, diseño e implementación
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga una vista detallada de los eventos de dominio, un concepto clave para establecer la comunicación entre agregados.
 ms.date: 10/08/2018
-ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 651d9cb98444c0729b97f523cc3d688f0f8d51d5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173376"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de dominio: diseño e implementación
 
@@ -342,7 +342,7 @@ Por último, es importante mencionar que en ocasiones es posible que le interese
 
 Como se mencionó, los eventos de dominio se usan para implementar explícitamente los efectos secundarios de los cambios en el dominio. Para usar la terminología de DDD, los eventos de dominio se usan para implementar explícitamente los efectos secundarios a través de uno o varios agregados. Además, para una mejor escalabilidad y un menor impacto en los bloqueos de base de datos, la coherencia final se usa entre agregados dentro del mismo dominio.
 
-La aplicación de referencia usa [MediatR](https://github.com/jbogard/MediatR) para propagar los eventos de dominio sincrónicamente entre agregados, dentro de una única transacción. No obstante, también puede usar una implementación de AMQP como [RabbitMQ](https://www.rabbitmq.com/) o [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview) para propagar los eventos de dominio de forma asincrónica con la coherencia eventual. Pero, como se mencionó anteriormente, hay que tener en cuenta la necesidad de acciones compensatorias en caso de que se produzcan errores.
+La aplicación de referencia usa [MediatR](https://github.com/jbogard/MediatR) para propagar los eventos de dominio sincrónicamente entre agregados, dentro de una única transacción. No obstante, también puede usar una implementación de AMQP como [RabbitMQ](https://www.rabbitmq.com/) o [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) para propagar los eventos de dominio de forma asincrónica con la coherencia eventual. Pero, como se mencionó anteriormente, hay que tener en cuenta la necesidad de acciones compensatorias en caso de que se produzcan errores.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

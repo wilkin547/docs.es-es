@@ -5,12 +5,12 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e2c0126d0920df18271f8889d8e117cd374d979
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937469"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91174191"
 ---
 # <a name="use-attributes-in-c"></a>Uso de atributos en C\#
 
@@ -21,6 +21,7 @@ Considere el atributo `[Obsolete]`. Se puede aplicar a clases, structs, métodos
 En este tutorial, se le introducirá a cómo agregar atributos al código, cómo crear y usar sus propios atributos y cómo usar algunos atributos que se integran en .NET Core.
 
 ## <a name="prerequisites"></a>Requisitos previos
+
 Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download).
 Puede ejecutar esta aplicación en Windows, Ubuntu Linux, macOS o en un contenedor de Docker.
 Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.

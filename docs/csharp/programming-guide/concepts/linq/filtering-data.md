@@ -3,14 +3,15 @@ title: Filtrado de datos (C#)
 description: El filtrado, también conocido como selección, restringe los resultados en función de una condición. Obtenga información sobre los métodos de operador de consulta estándar de LINQ en C# que realizan el filtrado.
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: f9f6d691da73b566e5135f6692c87ba3a8978005
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 51bf9f930ba67ba07c7c0f357910d5e36014138d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103929"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186047"
 ---
 # <a name="filtering-data-c"></a>Filtrado de datos (C#)
+
 El filtrado hace referencia a la operación de restringir el conjunto de resultados, de manera que solo contenga los elementos que cumplen una condición especificada. También se conoce como selección.  
   
  En la ilustración siguiente se muestran los resultados de filtrar una secuencia de caracteres. El predicado de la operación de filtrado especifica que el carácter debe ser "A".  
@@ -27,6 +28,7 @@ El filtrado hace referencia a la operación de restringir el conjunto de resulta
 |Where|Selecciona valores basados en una función de predicado.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
+
  En el siguiente ejemplo se usa la cláusula `where` para filtrar de una matriz aquellas cadenas que tienen una longitud específica.  
   
 ```csharp  

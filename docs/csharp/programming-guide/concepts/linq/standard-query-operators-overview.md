@@ -3,14 +3,15 @@ title: Información general sobre operadores de consulta estándar (C#)
 description: Los operadores de consulta estándar de LINQ ofrecen funcionalidades de consulta, como filtrado, proyección, agregación y ordenación en C#.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1ff98e47641dbe7a884b7d6c7758c1fe61b95091
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302326"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178780"
 ---
 # <a name="standard-query-operators-overview-c"></a>Información general sobre operadores de consulta estándar (C#)
+
 Los *operadores de consulta estándar* son los métodos que constituyen el modelo LINQ. La mayoría de estos métodos funciona en secuencias; donde una secuencia es un objeto cuyo tipo implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> o la interfaz <xref:System.Linq.IQueryable%601>. Los operadores de consulta estándar ofrecen funcionalidades de consulta, como las funciones de filtrado, proyección, agregación y ordenación, entre otras.  
   
  Hay dos conjuntos de operadores de consulta estándar de LINQ: uno que actúa sobre objetos de tipo <xref:System.Collections.Generic.IEnumerable%601> y otro sobre objetos de tipo <xref:System.Linq.IQueryable%601>. Los métodos que forman cada conjunto son miembros estáticos de las clases <xref:System.Linq.Enumerable> y <xref:System.Linq.Queryable>, respectivamente. Se definen como *métodos de extensión* del tipo en el que actúan. Se puede llamar a los métodos de extensión mediante sintaxis de método estático o sintaxis de método de instancia.  
@@ -68,12 +69,15 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
+
  Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave dedicadas de lenguaje C# y Visual Basic para que se puedan invocar como parte de una *expresión* *de consulta*. Para obtener más información sobre los operadores de consulta estándar que incluyen palabras clave dedicadas y sus sintaxis correspondientes, vea [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md).  
   
 ## <a name="extending-the-standard-query-operators"></a>Extender los operadores de consulta estándar  
+
  Puede aumentar el conjunto de operadores de consulta estándar creando métodos específicos de dominio que sean adecuados para su tecnología o dominio de destino. También puede reemplazar los operadores de consulta estándar con sus propias implementaciones que proporcionen otros servicios tales como evaluación remota, traducción de consultas y optimización. Vea <xref:System.Linq.Enumerable.AsEnumerable%2A> para obtener un ejemplo.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  Los vínculos siguientes llevan a artículos que ofrecen información adicional sobre los distintos operadores de consulta estándar según la funcionalidad.  
   
  [Ordenación de datos [C#]](./sorting-data.md)  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 9d927e8517ddbdb1c5a9a8aa8ca3c321bf7e8d9c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301988"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178546"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Procedimiento Recorrer en iteración un árbol de directorio (Guía de programación de C#)
+
 La frase "recorrer en iteración un árbol de directorios" significa obtener acceso a cada uno de los archivos de todos los subdirectorios anidados bajo una carpeta raíz especificada hasta un nivel de profundidad cualquiera. No es necesario abrir cada archivo. Simplemente puede recuperar el nombre del archivo o subdirectorio como un `string`, o puede recuperar información adicional en el formato de un objeto <xref:System.IO.FileInfo?displayProperty=nameWithType> o <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>.  
   
 > [!NOTE]
@@ -37,6 +38,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 > Los sistemas de archivos NTFS pueden contener *puntos de reanálisis* en forma de *puntos de unión*, *vínculos simbólicos* y *vínculos físicos*. Los métodos de .NET Framework como <xref:System.IO.DirectoryInfo.GetFiles%2A> y <xref:System.IO.DirectoryInfo.GetDirectories%2A> no devolverán ningún subdirectorio en un punto de reanálisis. Este comportamiento protege frente al riesgo de provocar un bucle infinito cuando dos puntos de reanálisis se hacen referencia entre sí. En general, debería ser muy cuidadoso al tratar con puntos de reanálisis para asegurarse de no modificar o eliminar archivos involuntariamente. Si quiere obtener un control preciso de los puntos de reanálisis, use la invocación de plataforma o código nativo para llamar directamente a los métodos de sistema de archivos Win32 adecuados.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo recorrer un árbol de directorios mediante recursividad. El enfoque recursivo resulta elegante, pero puede producir una excepción de desbordamiento de la pila si el árbol de directorios es grande y cuenta con muchos elementos anidados.  
   
  Las excepciones concretas que se controlan y las acciones determinadas que se realizan en cada archivo o carpeta se proporcionan simplemente como ejemplos. Debe modificar este código para que se ajuste a sus requisitos concretos. Para obtener más información, vea los comentarios del código.  
@@ -44,6 +46,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo recorrer en iteración los archivos y las carpetas de un árbol de directorios sin usar la recursividad. Esta técnica usa el tipo de colección genérica <xref:System.Collections.Generic.Stack%601>, que es una pila de tipo LIFO (último en entrar, primero en salir).  
   
  Las excepciones concretas que se controlan y las acciones determinadas que se realizan en cada archivo o carpeta se proporcionan simplemente como ejemplos. Debe modificar este código para que se ajuste a sus requisitos concretos. Para obtener más información, vea los comentarios del código.  
@@ -55,6 +58,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Si debe almacenar el contenido de un árbol de directorios, ya sea en memoria o en el disco, la mejor opción es almacenar solamente la propiedad <xref:System.IO.FileSystemInfo.FullName%2A> (de tipo `string`) para cada archivo. Después, puede usar esta cadena para crear un nuevo objeto <xref:System.IO.FileInfo> o <xref:System.IO.DirectoryInfo>, según sea necesario, o para abrir cualquier archivo que requiera un procesamiento adicional.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Un código eficaz de iteración de archivos debe tener en cuenta las numerosas dificultades del sistema de archivos. Para más información sobre el sistema de archivos de Windows, vea [NTFS overview](/windows-server/storage/file-server/ntfs-overview) (Introducción a NTFS).  
   
 ## <a name="see-also"></a>Vea también

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 13321cdc83637105a2b981902ce984e6a90a25d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863869"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91181822"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
+
 El lenguaje C# está diseñado para que las versiones entre clases [base](../../language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  
   
  En C#, las clases derivadas pueden contener métodos con el mismo nombre que los métodos de clase base.  
@@ -65,6 +66,7 @@ El lenguaje C# está diseñado para que las versiones entre clases [base](../../
  Con la palabra clave `new` se indica al compilador que su definición oculta la definición contenida en la clase base. Éste es el comportamiento predeterminado.  
   
 ## <a name="override-and-method-selection"></a>Selección de método y reemplazo  
+
  Cuando se llama a un método en una clase, el compilador de C# selecciona el mejor método para llamar si hay más de uno compatible con la llamada, como cuando hay dos métodos con el mismo nombre y parámetros que son compatibles con el parámetro pasado. Los métodos siguientes serían compatibles:  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  

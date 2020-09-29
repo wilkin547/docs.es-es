@@ -6,14 +6,15 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 8f7dc027396e327f08a591ced6bd6df176a17606
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302040"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178689"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Control de excepciones (Guía de programación de C#)
+
 Los programadores de C# usan un bloque [try](../../language-reference/keywords/try-catch.md) para separar el código que podría verse afectado por una excepción. Los bloques [catch](../../language-reference/keywords/try-catch.md) asociados se usan para controlar las excepciones resultantes. Los bloques [finally](../../language-reference/keywords/try-finally.md) contienen código que se ejecuta independientemente de si se produce una excepción en el bloque `try`, como la liberación de recursos asignados en el bloque `try`. Los bloques `try` requieren uno o varios bloques `catch` asociados, un bloque `finally` o ambos.  
   
  En los ejemplos siguientes se muestra una instrucción `try-catch`, una instrucción `try-finally` y una instrucción `try-catch-finally`.  
@@ -27,6 +28,7 @@ Los programadores de C# usan un bloque [try](../../language-reference/keywords/t
  Un bloque `try` sin un bloque `catch` o `finally` produce un error del compilador.  
   
 ## <a name="catch-blocks"></a>Bloques catch  
+
  Los bloques `catch` pueden especificar el tipo de excepción que quiere detectar. La especificación de tipo se denomina *filtro de excepciones*. El tipo de excepción se debe derivar de <xref:System.Exception>. En general, no especifique <xref:System.Exception> como el filtro de excepciones a menos que sepa cómo controlar todas las excepciones que puedan producirse en el bloque `try` o que haya incluido una instrucción [throw](../../language-reference/keywords/throw.md) al final del bloque `catch`.  
   
  Se pueden encadenar juntos varios bloques `catch` con distintos filtros de excepciones. Los bloques `catch` se evalúan de arriba abajo en el código, pero solo se ejecuta un bloque `catch` para cada excepción que se produce. Se ejecuta el primer bloque `catch` que especifica el tipo exacto o una clase base de la excepción producida. Si no hay ningún bloque `catch` que especifique un filtro de excepciones coincidente, se selecciona un bloque `catch` sin filtros, si hay alguno en la instrucción. Es importante colocar primero los bloques `catch` con los tipos de excepción más específicos (es decir, los más derivados).  
@@ -44,6 +46,7 @@ Los programadores de C# usan un bloque [try](../../language-reference/keywords/t
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
 ## <a name="finally-blocks"></a>Bloques Finally  
+
  Los bloques `finally` permiten limpiar las acciones que se realizan en un bloque `try`. Si está presente, el bloque `finally` se ejecuta en último lugar, después del bloque `try` y de cualquier bloque `catch` coincidente. Los bloques `finally` siempre se ejecutan, independientemente de si se produce una excepción o si se encuentra un bloque `catch` que coincida con el tipo de excepción.  
   
  Los bloques `finally` pueden usarse para liberar recursos como secuencias de archivo, conexiones de base de datos y controladores de gráficos sin necesidad de esperar a que el recolector de elementos no utilizados en tiempo de ejecución finalice los objetos. Consulte [using (Instrucción)](../../language-reference/keywords/using-statement.md) para obtener más información.  

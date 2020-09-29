@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: ccdee1a86ab0c292721e69346cb7cedb03d4c28b
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: f60c1ea4f3f029ec3b81a4197a711523ec372df9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91186164"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anónimos (Guía de programación de C#)
 
@@ -48,6 +48,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los tipos anónimos son tipos [class](../../language-reference/keywords/class.md) que derivan directamente de [object](../../language-reference/builtin-types/reference-types.md) y que no se pueden convertir a ningún tipo excepto [object](../../language-reference/builtin-types/reference-types.md). El compilador proporciona un nombre para cada tipo anónimo, aunque la aplicación no pueda acceder a él. Desde el punto de vista de Common Language Runtime, un tipo anónimo no es diferente de otros tipos de referencia.  
   
  Si dos o más inicializadores de objeto anónimo en un ensamblado especifican una secuencia de propiedades que están en el mismo orden y que tienen los mismos nombres y tipos, el compilador trata el objeto como instancias del mismo tipo. Comparten la misma información de tipo generada por el compilador.  

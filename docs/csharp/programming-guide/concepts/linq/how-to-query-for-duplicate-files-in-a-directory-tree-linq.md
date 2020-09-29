@@ -3,14 +3,15 @@ title: Procedimiento para buscar archivos duplicados en un árbol de directorios
 description: Obtenga información sobre cómo usar LINQ en C# para consultar nombres de archivo duplicados en directorios diferentes y cómo consultar archivos cuyo tamaño y horas de LastWrite también coinciden.
 ms.date: 07/20/2015
 ms.assetid: 1ff5562b-0d30-46d1-b426-a04e8f78c840
-ms.openlocfilehash: 72acb0e0823138821d321ed3845ff7ac137aee0c
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 87874fdb5bcfd66ffecf3379e315dfa019e89898
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104566"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91176297"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-c"></a>Procedimiento para buscar archivos duplicados en un árbol de directorios (LINQ) (C#)
+
 A veces, los archivos que tienen el mismo nombre pueden estar en más de una carpeta. Por ejemplo, en la carpeta de instalación de Visual Studio, hay varias carpetas que tienen un archivo readme.htm. En este ejemplo se muestra cómo buscar estos nombres de archivos duplicados en una carpeta raíz especificada. En el segundo ejemplo se muestra cómo buscar archivos cuyo tamaño y fecha de LastWrite también coinciden.  
   
 ## <a name="example"></a>Ejemplo  
@@ -171,6 +172,7 @@ class QueryDuplicateFileNames
  En la primera consulta se usa una clave simple para determinar una coincidencia; se buscan archivos que tengan el mismo nombre, pero cuyo contenido podría ser diferente. En la segunda consulta se usa una clave compuesta para coincidir con tres propiedades del objeto <xref:System.IO.FileInfo>. En esta consulta es mucho más probable que se encuentren archivos que tienen el mismo nombre y un contenido similar o idéntico.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
 ## <a name="see-also"></a>Vea también

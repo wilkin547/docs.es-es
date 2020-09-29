@@ -6,16 +6,17 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102052"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91178871"
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 
 ## <a name="reference-types"></a>Tipos de referencia  
+
 Un tipo que se define como una [clase](../../language-reference/keywords/class.md), es un *tipo de referencia*. Al declarar una variable de un tipo de referencia en tiempo de ejecución, esta contendrá el valor [null](../../language-reference/keywords/null.md) hasta que se cree expresamente una instancia de la clase mediante el operador [new](../../language-reference/operators/new-operator.md) o se le asigne un objeto de un tipo compatible que se ha creado en otro lugar, tal y como se muestra en el ejemplo siguiente:
 
 ```csharp

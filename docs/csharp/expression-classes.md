@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos de marco que admiten árboles 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 548f5ba6a2de00d9556621791515555b6f6a325c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180444"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Tipos de marco que admiten árboles de expresión
 
@@ -58,6 +58,7 @@ var addition = Expression.Add(one, two);
 En este sencillo ejemplo puede ver que hay muchos tipos implicados a la hora de crear árboles de expresiones y trabajar con ellos. Esta complejidad resulta necesaria para proporcionar las capacidades del vocabulario variado que ofrece el lenguaje C#.
 
 ## <a name="navigating-the-apis"></a>Navegar por las API
+
 Hay tipos de nodos de expresión que se asignan a casi todos los elementos de sintaxis del lenguaje C#. Cada tipo tiene métodos específicos para ese tipo de elemento del lenguaje. Es mucha información como para recordarla toda. En lugar de intentar memorizar todo, estas son las técnicas que uso para trabajar con árboles de expresiones:
 
 1. Fíjese en los miembros de la enumeración `ExpressionType` para determinar los posibles nodos que debe examinar. Esto resulta muy útil cuando quiere atravesar y comprender un árbol de expresión.
