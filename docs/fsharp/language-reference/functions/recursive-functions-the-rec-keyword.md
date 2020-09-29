@@ -2,12 +2,12 @@
 title: 'Funciones recursivas: palabra clave rec'
 description: "Obtenga información sobre cómo se usa la palabra clave ' Rec ' de F # con la palabra clave ' Let ' para definir una función recursiva."
 ms.date: 08/12/2020
-ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558717"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438074"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funciones recursivas: palabra clave rec
 
@@ -29,14 +29,14 @@ and function2-nameparameter-list =
 ...
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las funciones recursivas, que se llaman a sí mismas, se identifican explícitamente en el lenguaje F # con la `rec` palabra clave. La `rec` palabra clave hace que el nombre del `let` enlace esté disponible en su cuerpo.
 
 En el ejemplo siguiente se muestra una función recursiva que *calcula el número*<sup>de Fibonacci</sup> con la definición matemática.
 
 ```fsharp
-let fib n =
+let rec fib n =
     match n with
     | 0 | 1 -> 1
     | n -> fib (n-1) + fib (n-2)
