@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e746362657a25487e98ddac09fa4337b00dfe805
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169133"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -241,7 +241,7 @@ Otro enfoque para desacoplar la aplicación de los detalles de implementación c
 
 ### <a name="feature-organization"></a>Organización de las características
 
-De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
+De forma predeterminada, las aplicaciones ASP.NET Core organizan su estructura de carpetas para que incluir controladores y vistas, y con frecuencia ViewModels. El código del lado cliente para admitir estas estructuras del lado servidor normalmente se almacena por separado en la carpeta wwwroot. Pero es posible que esta organización genere problemas en aplicaciones grandes, puesto que trabajar con cualquier característica determinada a menudo requiere saltar entre estas carpetas. Esto se complica cada vez más a medida que aumenta el número de archivos y subcarpetas en cada carpeta, lo que da lugar a una gran cantidad de desplazamiento por el Explorador de soluciones. Una solución a este problema consiste en organizar el código de aplicación por _característica_ en lugar de por tipo de archivo. Este estilo profesional se conoce normalmente como carpetas de características o [sectores de características](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (vea también: [Vertical Slice](https://deviq.com/vertical-slices/) (Sectores verticales).
 
 ASP.NET Core MVC admite las áreas para este propósito. Con las áreas, se pueden crear conjuntos independientes de carpetas de controladores y vistas (así como los modelos asociados) en cada carpeta de área. En la figura 7-1 se muestra una estructura de carpetas de ejemplo, en la que se usan áreas.
 
@@ -301,7 +301,7 @@ Después, esta convención se especifica como una opción al agregar compatibili
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC también usa una convención para localizar vistas. Se puede reemplazar con una convención personalizada para que las vistas se ubiquen en las carpetas de características (mediante el nombre de la característica proporcionado por FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional en el artículo de MSDN Magazine [Sectores de características para ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
+ASP.NET Core MVC también usa una convención para localizar vistas. Se puede reemplazar con una convención personalizada para que las vistas se ubiquen en las carpetas de características (mediante el nombre de la característica proporcionado por FeatureConvention, anteriormente). Puede obtener más información sobre este enfoque y descargar un ejemplo funcional en el artículo de MSDN Magazine [Sectores de características para ASP.NET Core MVC](/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="apis-and-no-locblazor-applications"></a>API y aplicaciones Blazor
 
@@ -313,7 +313,7 @@ La adición de una interfaz de administrador de Blazor WebAssembly a eShopOnWeb 
 
 Podría preguntarse por qué es necesario agregar un proyecto `BlazorShared` independiente cuando ya existe un proyecto `ApplicationCore` común que podría usarse para compartir los tipos que requieren tanto `PublicApi` como `BlazorAdmin`. La respuesta es que este proyecto incluye toda la lógica empresarial de la aplicación y, por tanto, es mucho mayor de lo necesario y es mucho más probable que deba mantenerse protegido en el servidor. Recuerde que cualquier biblioteca a la que haga referencia `BlazorAdmin` se descargará en los exploradores de los usuarios cuando carguen la aplicación Blazor.
 
-Dependiendo de si se usa el patrón [Backends For Frontends (BFF)](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends), es posible que las API que consume la aplicación WebAssembly Blazor no compartan sus tipos con Blazor al 100 %. En concreto, una API pública pensada para ser usada por muchos clientes diferentes puede definir sus propios tipos de solicitud y de resultado, en lugar de compartirlos en un proyecto compartido específico del cliente. En el ejemplo de eShopOnWeb, se supone que el proyecto `PublicApi` está hospedando una API pública, por lo que no todos sus tipos de solicitud y de respuesta proceden del proyecto `BlazorShared`.
+Dependiendo de si se usa el patrón [Backends For Frontends (BFF)](/azure/architecture/patterns/backends-for-frontends), es posible que las API que consume la aplicación WebAssembly Blazor no compartan sus tipos con Blazor al 100 %. En concreto, una API pública pensada para ser usada por muchos clientes diferentes puede definir sus propios tipos de solicitud y de resultado, en lugar de compartirlos en un proyecto compartido específico del cliente. En el ejemplo de eShopOnWeb, se supone que el proyecto `PublicApi` está hospedando una API pública, por lo que no todos sus tipos de solicitud y de respuesta proceden del proyecto `BlazorShared`.
 
 ### <a name="cross-cutting-concerns"></a>Intereses transversales
 
@@ -387,7 +387,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Puede obtener más detalles sobre la implementación de filtros y descargar un ejemplo funcional en el artículo de MSDN Magazine [ASP.NET Core: filtros reales de ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
+Puede obtener más detalles sobre la implementación de filtros y descargar un ejemplo funcional en el artículo de MSDN Magazine [ASP.NET Core: filtros reales de ASP.NET Core MVC](/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>Referencias: estructuración de aplicaciones
 >

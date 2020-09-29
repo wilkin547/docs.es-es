@@ -4,16 +4,16 @@ description: Application Insights es una plataforma de diagnóstico sin servidor
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 42791b052ebb068c9b7109291e66b30b47e5821f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522738"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173326"
 ---
 # <a name="telemetry-with-application-insights"></a>Telemetría con Application Insights
 
-[Application Insights](https://docs.microsoft.com/azure/application-insights) es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar las prioridades y diagnosticar problemas en aplicaciones web, aplicaciones móviles, aplicaciones de escritorio y microservicios. Puede activar Application Insights para las aplicaciones de funciones simplemente activando un conmutador en el portal. Application Insights proporciona todas estas funcionalidades sin necesidad de configurar un servidor o de configurar su propia base de datos. Todas las funcionalidades de Application Insights se proporcionan como un servicio que se integra automáticamente con sus aplicaciones.
+[Application Insights](/azure/application-insights) es una plataforma de diagnóstico sin servidor que permite a los desarrolladores detectar, evaluar las prioridades y diagnosticar problemas en aplicaciones web, aplicaciones móviles, aplicaciones de escritorio y microservicios. Puede activar Application Insights para las aplicaciones de funciones simplemente activando un conmutador en el portal. Application Insights proporciona todas estas funcionalidades sin necesidad de configurar un servidor o de configurar su propia base de datos. Todas las funcionalidades de Application Insights se proporcionan como un servicio que se integra automáticamente con sus aplicaciones.
 
 ![Logotipo de Application Insights](./media/application-insights-logo.png)
 
@@ -24,7 +24,7 @@ Agregar Application Insights a las aplicaciones existentes es tan sencillo como 
 - Analizar en profundidad el rendimiento por operación y medir el tiempo que se tarda en llamar a dependencias de terceros
 - Supervisar el uso de CPU, la memoria y la velocidad en todos los servidores que hospedan las aplicaciones de funciones
 - Ver un streaming en vivo de métricas que incluya el recuento de solicitudes y la latencia de las aplicaciones de funciones
-- Usar [Analytics](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) para buscar, consultar y crear gráficos personalizados con los datos de las funciones
+- Usar [Analytics](/azure/application-insights/app-insights-analytics) para buscar, consultar y crear gráficos personalizados con los datos de las funciones
 
 ![Explorador de métricas](./media/metrics-explorer.png)
 
@@ -37,7 +37,7 @@ public static TelemetryClient telemetry = new TelemetryClient()
 };
 ```
 
-El código siguiente mide cuánto tiempo se tarda en insertar una nueva fila en una instancia de [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview):
+El código siguiente mide cuánto tiempo se tarda en insertar una nueva fila en una instancia de [Azure Table Storage](/azure/cosmos-db/table-storage-overview):
 
 ```csharp
 var operation = TableOperation.Insert(entry);
@@ -55,7 +55,7 @@ La telemetría personalizada muestra que el tiempo promedio para insertar una nu
 
 Application Insights proporciona una forma eficaz y cómoda de registrar la telemetría detallada de las aplicaciones sin servidor. Tiene un control total sobre el nivel de seguimiento y registro que se proporciona. Puede realizar un seguimiento de las estadísticas personalizadas como eventos, dependencias y la vista de página. Por último, el potente análisis le permite escribir consultas que formulan preguntas importantes y generan gráficos e información avanzada.
 
-Para más información, consulte [Supervisión de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
+Para más información, consulte [Supervisión de Azure Functions](/azure/azure-functions/functions-monitoring).
 
 >[!div class="step-by-step"]
 >[Anterior](azure-functions.md)

@@ -2,12 +2,12 @@
 title: Comunicación asincrónica basada en mensajes
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedor | Las comunicaciones asincrónicas basadas en mensajes son un concepto fundamental en la arquitectura de microservicios, porque es la mejor manera de mantener los microservicios independientes entre sí mientras siguen sincronizándose.
 ms.date: 09/20/2018
-ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679180"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169250"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -59,7 +59,7 @@ Un punto importante es que es posible que le interese comunicarse con varios mic
 
 En la comunicación controlada por eventos asincrónica, un microservicio publica los eventos en un bus de eventos y muchos microservicios pueden suscribirse a él para recibir una notificación y actuar en consecuencia. La implementación determinará qué protocolo se va a usar para las comunicaciones basadas en mensajes y controladas por eventos. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) puede ayudar a lograr una comunicación en cola confiable.
 
-Al usar un bus de eventos, es posible que le interese usar una capa de abstracción (como una interfaz de bus de eventos) basada en una implementación relacionada en las clases con código que use la API de un agente de mensajes como [RabbitMQ](https://www.rabbitmq.com/) o un Service Bus como [Azure Service Bus con Topics](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Como alternativa, es posible que le interese usar un Service Bus de nivel superior como NServiceBus, MassTransit o Brighter para articular el bus de eventos y el sistema de publicación y suscripción.
+Al usar un bus de eventos, es posible que le interese usar una capa de abstracción (como una interfaz de bus de eventos) basada en una implementación relacionada en las clases con código que use la API de un agente de mensajes como [RabbitMQ](https://www.rabbitmq.com/) o un Service Bus como [Azure Service Bus con Topics](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Como alternativa, es posible que le interese usar un Service Bus de nivel superior como NServiceBus, MassTransit o Brighter para articular el bus de eventos y el sistema de publicación y suscripción.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Una nota sobre las tecnologías de mensajería destinadas a sistemas de producción
 
@@ -75,7 +75,7 @@ Un desafío al implementar una arquitectura controlada por eventos entre varios 
 
 - Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Uso del patrón de [orígenes de eventos](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) completo.
+- Uso del patrón de [orígenes de eventos](/azure/architecture/patterns/event-sourcing) completo.
 
 - Uso del [patrón de bandeja de salida](https://www.kamilgrzybek.com/design/the-outbox-pattern/): una tabla de base de datos transaccional como una cola de mensajes que será la base para un componente de creador de eventos que creará el evento y lo publicará.
 

@@ -2,12 +2,12 @@
 title: Desafíos y soluciones de la administración de datos distribuidos
 description: Descubra cuáles son los desafíos y soluciones de la administración de datos distribuidos en el mundo de los microservicios.
 ms.date: 09/20/2018
-ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1439dd5a04c3991a2b3b2ef12763843f9f339a29
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144323"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152656"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafíos y soluciones de la administración de datos distribuidos
 
@@ -25,7 +25,7 @@ Un segundo desafío es implementar consultas que recuperen datos de varios micro
 
 **Puerta de enlace de API**. Para una agregación de datos simple de varios microservicios que poseen diferentes bases de datos, el enfoque recomendado es utilizar un microservicio de agregación conocido como puerta de enlace de API. No obstante, se debe tener cuidado con la implementación de este patrón, ya que puede ser un punto de obstrucción en el sistema y puede infringir el principio de autonomía de microservicio. Para mitigar esta posibilidad, puede tener varias puertas de enlace de API y que cada una se centre en un segmento vertical o área de negocio del sistema. El patrón de puerta de enlace de API se detalla más adelante en la [sección Puerta de enlace de API](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication).
 
-**CQRS con tablas de consulta o lectura**. Otra solución para la agregación de datos de varios microservicios es el [patrón de vista materializada](https://docs.microsoft.com/azure/architecture/patterns/materialized-view). En este enfoque, se genera de antemano (se preparan los datos desnormalizados antes de que se produzcan las consultas reales) una tabla de solo lectura con los datos que pertenecen a varios microservicios. La tabla tiene un formato adaptado a las necesidades de la aplicación cliente.
+**CQRS con tablas de consulta o lectura**. Otra solución para la agregación de datos de varios microservicios es el [patrón de vista materializada](/azure/architecture/patterns/materialized-view). En este enfoque, se genera de antemano (se preparan los datos desnormalizados antes de que se produzcan las consultas reales) una tabla de solo lectura con los datos que pertenecen a varios microservicios. La tabla tiene un formato adaptado a las necesidades de la aplicación cliente.
 
 Piense en algo parecido a la pantalla de una aplicación móvil. Si solo tiene una base de datos, puede reunir los datos de esa pantalla mediante una consulta SQL que realiza una combinación compleja que implica varias tablas. Pero, si tiene varias bases de datos y cada una pertenece a un microservicio diferente, no se puede consultar las bases de datos y crear una instrucción join (combinación) de SQL. La consulta compleja se convierte en un desafío. Para abordar esta necesidad, se puede usar un enfoque CQRS: crear una tabla desnormalizada en otra base de datos que se use solo para las consultas. La tabla se puede diseñar específicamente para los datos que necesita para la consulta compleja, con una relación uno a uno entre los campos que son necesarios para la pantalla de la aplicación y las columnas de la tabla de consulta. También pueden utilizarse con fines informativos.
 

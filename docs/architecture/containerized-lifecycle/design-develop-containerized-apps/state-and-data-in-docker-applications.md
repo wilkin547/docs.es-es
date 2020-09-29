@@ -2,12 +2,12 @@
 title: Estado y datos en aplicaciones de Docker
 description: Conozca la opción disponible para guardar el estado en aplicaciones en contenedor.
 ms.date: 08/06/2020
-ms.openlocfilehash: dc9a1a3eccb77e9fd67e69fd3295f3db1edf5e66
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: d55519e9340ec06588c2dae3e7363d03f263ce39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915334"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163471"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Estado y datos en aplicaciones de Docker
 
@@ -27,7 +27,7 @@ Desde el almacenamiento remoto:
 
 - [Azure Storage](https://azure.microsoft.com/documentation/services/storage/) proporciona almacenamiento con distribución geográfica y representa una buena solución de persistencia a largo plazo para los contenedores.
 
-- Bases de datos relacionales remotas como [Azure SQL Database](https://azure.microsoft.com/services/sql-database/), bases de datos NoSQL como [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) o servicios de caché como [Redis](https://redis.io/).
+- Bases de datos relacionales remotas como [Azure SQL Database](https://azure.microsoft.com/services/sql-database/), bases de datos NoSQL como [Azure Cosmos DB](/azure/cosmos-db/introduction) o servicios de caché como [Redis](https://redis.io/).
 
 Desde el contenedor de Docker:
 

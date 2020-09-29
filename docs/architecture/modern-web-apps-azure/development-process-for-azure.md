@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 640cfebea3c70314be4a597bc07b0dc6854f5848
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607898"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169042"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -46,9 +46,9 @@ Para empezar a desarrollar una aplicación ASP.NET Core con CI/CD, puede usar Az
 
 Para crear una canalización de versión de la aplicación, debe tener el código de la aplicación en el control de código fuente. Configure un repositorio local y conéctelo a un repositorio remoto de un proyecto de equipo. Siga estas instrucciones:
 
-- [Comparta el código con Git y Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs), o bien
+- [Comparta el código con Git y Visual Studio](/azure/devops/git/share-your-code-in-git-vs), o bien
 
-- [Comparta el código con TFVC y Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs).
+- [Comparta el código con TFVC y Visual Studio](/azure/devops/tfvc/share-your-code-in-tfvc-vs).
 
 Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la hoja App Services de Azure Portal y cree una aplicación web. Haga clic en +Agregar, seleccione la plantilla Aplicación web, haga clic en Crear y proporcione un nombre y otros detalles. La aplicación web será accesible desde {nombre}.azurewebsites.net.
 
@@ -58,13 +58,13 @@ Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la ho
 
 El proceso de compilación de CI realizará una compilación automatizada siempre que se confirme código nuevo en el repositorio de control de código fuente del proyecto. Esto ofrece información inmediata de que el código se compila (y, de forma ideal, que pasa las pruebas automatizadas) y que potencialmente se puede implementar. Esta compilación de CI generará un artefacto de paquete de implementación web y lo publicará para su uso por el proceso de CD.
 
-[Definir el proceso de compilación de CI](https://docs.microsoft.com/azure/devops/pipelines/ecosystems/dotnet-core)
+[Definir el proceso de compilación de CI](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Asegúrese de habilitar la integración continua para que el sistema ponga en cola una compilación cada vez que alguien del equipo confirme código nuevo. Pruebe la compilación y compruebe que está generando un paquete de implementación web como uno de sus artefactos.
 
 Cuando la compilación se realice correctamente, el proceso de CD implementará los resultados de la compilación de CI en la aplicación web de Azure. Para configurar esto, se crea y configura una *Versión*, que se implementará en Azure App Service.
 
-[Implementación de una aplicación web de Azure](https://docs.microsoft.com/azure/devops/pipelines/targets/webapp)
+[Implementación de una aplicación web de Azure](/azure/devops/pipelines/targets/webapp)
 
 Una vez que se configura la canalización de CI/CD, puede realizar actualizaciones en la aplicación web y confirmarlas en el control de código fuente para que se implementen.
 
@@ -82,7 +82,7 @@ El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no
 
 #### <a name="step-2-application-code-repository"></a>Paso 2. Repositorio de código de la aplicación
 
-Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](https://docs.microsoft.com/azure/devops/git/pull-requests)).
+Cuando esté listo para compartir el código con el equipo, debe insertar los cambios desde el repositorio de origen local al repositorio de código fuente compartido del equipo. Si ha estado trabajando en una rama personalizada, este paso normalmente implica combinar el código en una rama compartida (posiblemente por medio de una [solicitud de incorporación de cambios](/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Paso 3. Servidor de compilación: Integración continua. Compilar, probar, empaquetar
 

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Exp
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dd9cdf3cdda0605d9454fe096be01655e67a0d0a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539364"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169302"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
@@ -205,7 +205,7 @@ El enfoque monolítico es habitual y muchas organizaciones realizan el desarroll
 
 ![Figura 5-14](./media/image5-14.png)
 
-La implementación de aplicaciones monolíticas en Microsoft Azure se puede conseguir con máquinas virtuales dedicadas para cada instancia. Con [Azure Virtual Machine Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente. [Azure App Services](https://azure.microsoft.com/services/app-service/) puede ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Azure App Services también puede ejecutar instancias únicas de contenedores de Docker, lo que simplifica la implementación. Con Docker, se puede implementar una única máquina virtual como un host de Docker y ejecutar varias instancias. Con el equilibrador de Azure, como se muestra en la figura 5-14, se puede administrar el escalado.
+La implementación de aplicaciones monolíticas en Microsoft Azure se puede conseguir con máquinas virtuales dedicadas para cada instancia. Con [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente. [Azure App Services](https://azure.microsoft.com/services/app-service/) puede ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Azure App Services también puede ejecutar instancias únicas de contenedores de Docker, lo que simplifica la implementación. Con Docker, se puede implementar una única máquina virtual como un host de Docker y ejecutar varias instancias. Con el equilibrador de Azure, como se muestra en la figura 5-14, se puede administrar el escalado.
 
 La implementación en los distintos hosts se puede administrar con técnicas de implementación tradicionales. Los hosts de Docker se pueden administrar con comandos como **docker run** ejecutados manualmente o a través de la automatización como canalizaciones de entrega continua (CD).
 

@@ -17,14 +17,15 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: d4abe6c3825de211d737f402a745c8953adca4b8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 4b61217a3d6812ea3ab036f82d49bba05c20629e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125714"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173248"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (Opciones del compilador de C#)
+
 La opción **-filealign** permite especificar el tamaño de las secciones en el archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ La opción **-filealign** permite especificar el tamaño de las secciones en el 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `number`  
  Un valor que especifica el tamaño de las secciones del archivo de salida. Los valores válidos son 512, 1024, 2048, 4096 y 8192. Estos valores están en bytes.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cada sección se alineará en un límite que es un múltiplo del valor **-filealign**. No hay ningún valor predeterminado fijo. Si no se especifica **-filealign**, Common Language Runtime elige un valor predeterminado en tiempo de compilación.  
   
  Al especificar el tamaño de la sección, el tamaño del archivo de salida se ve afectado. Modificar el tamaño de la sección puede ser útil para los programas que se ejecutan en dispositivos más pequeños.  

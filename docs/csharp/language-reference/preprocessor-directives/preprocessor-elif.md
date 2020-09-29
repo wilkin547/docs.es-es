@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-ms.openlocfilehash: 3aa9082b392b352091b9fde74a85f9dd155ad7b1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 383c143792a39bb3abcd255804360ad5e2f8ef74
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132292"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168704"
 ---
 # <a name="elif-c-reference"></a>#elif (Referencia de C#)
+
 `#elif` permite crear una directiva condicional compuesta. La expresión `#elif` se evaluará si ninguna de las expresiones de las directivas [#if](./preprocessor-if.md) o `#elif` (opcional) precedentes se evalúan como `true`. Si una expresión `#elif` se evalúa como `true`, el compilador incluye en la compilación todo el código comprendido entre `#elif` y la siguiente directiva condicional. Por ejemplo:  
   
 ```csharp
@@ -30,6 +31,7 @@ ms.locfileid: "89132292"
  Se pueden usar los operadores `==` (igualdad), `!=` (desigualdad), `&&` (y), así como `||` (o), para evaluar varios símbolos. Es posible agrupar símbolos y operadores mediante paréntesis.  
   
 ## <a name="remarks"></a>Observaciones  
+
  `#elif` equivale a usar:  
   
 ```csharp

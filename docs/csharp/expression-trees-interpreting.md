@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo escribir código para examinar la 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: ea205d42b02ea7b38c04cb70d322329cf7c1d495
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004652"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173313"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
@@ -22,6 +22,7 @@ Ese diseño hace que la visita de todos los nodos de un árbol de expresión sea
 Si el tipo de nodo tiene elementos secundarios, visítelos recursivamente. En cada nodo secundario, repita el proceso que ha usado en el nodo raíz: determine el tipo, y si el tipo tiene elementos secundarios, visite cada uno de ellos.
 
 ## <a name="examining-an-expression-with-no-children"></a>Examinar una expresión sin elementos secundarios
+
 Empecemos visitando cada nodo en un árbol de expresión sencillo.
 Aquí se muestra el código que crea una expresión constante y, después, examina sus propiedades:
 

@@ -4,12 +4,12 @@ description: Azure Functions proporciona funcionalidades sin servidor mediante v
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 2dee60e3635be94a55ee26a7f04942bc59cb8dec
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171811"
 ---
 # <a name="azure-functions"></a>Comprobación de
 
@@ -19,7 +19,7 @@ Azure Functions proporciona una experiencia de proceso sin servidor. Un *desenca
 
 La versión del entorno de ejecución actual 3.0 es compatible con aplicaciones de .NET Core 3.1 multiplataforma. También se admiten lenguajes adicionales además de C#, como JavaScript, F# y Java. Las funciones creadas en el portal proporcionan una sintaxis de scripting enriquecida. Las funciones creadas como proyectos independientes se pueden implementar con funcionalidades y compatibilidad completas con la plataforma.
 
-Para más información, consulte la [documentación de Azure Functions](https://docs.microsoft.com/azure/azure-functions).
+Para más información, consulte la [documentación de Azure Functions](/azure/azure-functions).
 
 ## <a name="programming-language-support"></a>Compatibilidad con lenguajes de programación
 
@@ -35,15 +35,15 @@ Todos los siguientes idiomas se admiten en la disponibilidad general (GA).
 |**TypeScript**|Nodo 10 y 12 (mediante JavaScript)|
 |**PowerShell**|PowerShell Core 6|
 
-Para más información, consulte [Lenguajes admitidos](https://docs.microsoft.com/azure/azure-functions/supported-languages).
+Para más información, consulte [Lenguajes admitidos](/azure/azure-functions/supported-languages).
 
 ## <a name="app-service-plans"></a>Planes de App Service
 
 Las funciones están respaldadas por un *plan de App Service*. El plan define los recursos que usa la aplicación de funciones. Puede asignar planes a una región, determinar el tamaño y el número de máquinas virtuales que se usarán y elegir un plan de tarifa. Para un enfoque sin servidor auténtico, las aplicaciones de funciones pueden usar el plan de **consumo**. El plan de consumo escalará automáticamente el back-end en función de la carga.
 
-Otra opción de hospedaje para las aplicaciones de función es el [plan Premium](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan). Este plan proporciona una instancia siempre activada para evitar el inicio en frío, admite características avanzadas como la conectividad de VNet y se ejecuta en hardware premium.
+Otra opción de hospedaje para las aplicaciones de función es el [plan Premium](/azure/azure-functions/functions-premium-plan). Este plan proporciona una instancia siempre activada para evitar el inicio en frío, admite características avanzadas como la conectividad de VNet y se ejecuta en hardware premium.
 
-Para más información, consulte [Planes de App Service](https://docs.microsoft.com/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
+Para más información, consulte [Planes de App Service](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview).
 
 ## <a name="create-your-first-function"></a>Crear su primera función
 
@@ -53,11 +53,11 @@ Existen tres formas comunes de crear aplicaciones de funciones.
 - Cree los recursos necesarios con la CLI de Azure.
 - Crear las funciones localmente mediante su entorno de desarrollo integrado favorito y publicarlas en Azure.
 
-Para más información sobre la creación de una función con scripts en el portal, consulte [Creación de su primera función en Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function).
+Para más información sobre la creación de una función con scripts en el portal, consulte [Creación de su primera función en Azure Portal](/azure/azure-functions/functions-create-first-azure-function).
 
-Para compilar desde la CLI de Azure, consulte [Creación de su primera función con la CLI de Azure](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function-azure-cli).
+Para compilar desde la CLI de Azure, consulte [Creación de su primera función con la CLI de Azure](/azure/azure-functions/functions-create-first-azure-function-azure-cli).
 
-Para crear una función desde Visual Studio, consulte [Creación de la primera función mediante Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+Para crear una función desde Visual Studio, consulte [Creación de la primera función mediante Visual Studio](/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
 ## <a name="understand-triggers-and-bindings"></a>Descripción de los desencadenadores y enlaces
 
@@ -114,7 +114,7 @@ public static string Run(Stream myBlob, string name, TraceWriter log)
 
 El ejemplo es una función simple que toma el nombre del archivo que se modificó o cargó en Blob Storage y lo coloca en una cola para su procesamiento posterior.
 
-Para obtener una lista completa de los desencadenadores y enlaces, consulte [Conceptos básicos sobre los enlaces y desencadenadores de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
+Para obtener una lista completa de los desencadenadores y enlaces, consulte [Conceptos básicos sobre los enlaces y desencadenadores de Azure Functions](/azure/azure-functions/functions-triggers-bindings).
 
 >[!div class="step-by-step"]
 >[Anterior](azure-serverless-platform.md)

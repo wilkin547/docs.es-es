@@ -2,12 +2,12 @@
 title: Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 description: Modernización de aplicaciones de .NET existentes con Azure Cloud y contenedores Windows
 ms.date: 04/28/2018
-ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73089633"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172175"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 
@@ -69,7 +69,7 @@ En la figura 2-2 se muestra la asignación de dependencias integrada para todas 
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Uso de Azure Site Recovery para migrar las máquinas virtuales existentes a máquinas virtuales de Azure
 
-Como parte de la solución integral [Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview) es una herramienta que se puede usar para migrar fácilmente las aplicaciones web a máquinas virtuales de Azure. Puede usar Site Recovery para replicar máquinas virtuales locales y servidores físicos en Azure, o para replicarlos en una ubicación local secundaria. Incluso puede replicar una carga de trabajo que se ejecuta en una máquina virtual de Azure compatible, en una máquina virtual de *Hyper-V* local, en una máquina virtual de *VMware* o en un servidor físico Windows o Linux. Si se replican en Azure, se elimina el costo y la complejidad de mantener un centro de datos secundario.
+Como parte de la solución integral [Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) es una herramienta que se puede usar para migrar fácilmente las aplicaciones web a máquinas virtuales de Azure. Puede usar Site Recovery para replicar máquinas virtuales locales y servidores físicos en Azure, o para replicarlos en una ubicación local secundaria. Incluso puede replicar una carga de trabajo que se ejecuta en una máquina virtual de Azure compatible, en una máquina virtual de *Hyper-V* local, en una máquina virtual de *VMware* o en un servidor físico Windows o Linux. Si se replican en Azure, se elimina el costo y la complejidad de mantener un centro de datos secundario.
 
 Site Recovery también es adecuado para entornos híbridos que tienen una parte en el entorno local y otra parte en Azure. Site Recovery ayuda a garantizar la continuidad empresarial, ya que mantiene las aplicaciones en funcionamiento tanto en las máquinas virtuales como en los servidores físicos locales disponibles si un sitio deja de funcionar. Replica las cargas de trabajo que se ejecutan en máquinas virtuales y servidores físicos para que estén disponibles en una ubicación secundaria si el sitio principal no está disponible. Recupera las cargas de trabajo en el sitio principal cuando vuelva a estar en funcionamiento.
 

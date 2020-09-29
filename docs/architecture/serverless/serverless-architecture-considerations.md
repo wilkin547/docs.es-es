@@ -4,12 +4,12 @@ description: Comprenda los desafíos de diseñar aplicaciones sin servidor, desd
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 3c07e1149e6af41a6b9a9317238e5c71015d2c4e
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: fbbb0c38cea58902124743fb99f9ab31b3d09be9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135677"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171655"
 ---
 # <a name="serverless-architecture-considerations"></a>Consideraciones sobre la arquitectura sin servidor
 
@@ -23,7 +23,7 @@ Hay varias soluciones para adoptar el estado sin poner en peligro las ventajas d
 
 - Usar un almacén de datos temporal o una memoria caché distribuida, como Redis
 - Almacenar el estado en una base de datos, como SQL o CosmosDB
-- Controlar el estado a través de un motor de flujo de trabajo como [funciones duraderas](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview)
+- Controlar el estado a través de un motor de flujo de trabajo como [funciones duraderas](/azure/azure-functions/durable/durable-functions-overview)
 
 En resumidas cuentas, debe ser consciente de la necesidad de cualquier administración de estados en aquellos procesos que tiene en mente implementar con sin servidor.
 
@@ -63,7 +63,7 @@ Las reglas suelen especificar cómo escalar verticalmente (aumentar los recursos
 
 ## <a name="monitoring-tracing-and-logging"></a>Supervisión, seguimiento y registro
 
-Un aspecto que a menudo se pasa por alto de DevOps es la supervisión de aplicaciones una vez implementadas. Es importante tener una estrategia para supervisar funciones sin servidor. El mayor desafío suele ser la correlación, o bien reconocer cuándo llama un usuario a varias funciones como parte de la misma interacción. La mayoría de las plataformas sin servidor permiten un registro de consolas que se puede importar en herramientas de terceros. También hay opciones para automatizar la recopilación de telemetría, generar y realizar un seguimiento de identificadores de correlación y supervisar acciones específicas para proporcionar información detallada. Azure proporciona la [plataforma de Application Insights](https://docs.microsoft.com/azure/azure-functions/functions-monitoring) avanzada para la supervisión y el análisis.
+Un aspecto que a menudo se pasa por alto de DevOps es la supervisión de aplicaciones una vez implementadas. Es importante tener una estrategia para supervisar funciones sin servidor. El mayor desafío suele ser la correlación, o bien reconocer cuándo llama un usuario a varias funciones como parte de la misma interacción. La mayoría de las plataformas sin servidor permiten un registro de consolas que se puede importar en herramientas de terceros. También hay opciones para automatizar la recopilación de telemetría, generar y realizar un seguimiento de identificadores de correlación y supervisar acciones específicas para proporcionar información detallada. Azure proporciona la [plataforma de Application Insights](/azure/azure-functions/functions-monitoring) avanzada para la supervisión y el análisis.
 
 ## <a name="inter-service-dependencies"></a>Dependencias entre servicios
 

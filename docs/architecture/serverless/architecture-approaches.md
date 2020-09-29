@@ -4,12 +4,12 @@ description: Introducción a los enfoques de arquitectura para la creación de a
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 74de96bef48f16ced4adf82855a740aa0afcdf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ab84d1f3425c1fda787756b73fd8315fe6d4231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522900"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171980"
 ---
 # <a name="architecture-approaches"></a>Enfoques de arquitectura
 
@@ -21,7 +21,7 @@ Este capítulo es una introducción a los patrones de arquitectura física y ló
 
 Las aplicaciones empresariales modernas siguen diversos patrones de arquitectura. En esta sección se recoge una selección de los patrones más comunes. Los patrones que se enumeran aquí no son necesariamente todos los procedimientos recomendados, sino que muestran diferentes enfoques.
 
-Para más información, consulte [Guía de arquitectura de aplicaciones de Azure](https://docs.microsoft.com/azure/architecture/guide/).
+Para más información, consulte [Guía de arquitectura de aplicaciones de Azure](/azure/architecture/guide/).
 
 ## <a name="monoliths"></a>Monolitos
 
@@ -65,7 +65,7 @@ Puede usarse sin servidor para implementar una o más capas.
 
 ## <a name="microservices"></a>Microservicios
 
-Las arquitecturas de **[microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** contienen características comunes que incluyen:
+Las arquitecturas de **[microservicios](/azure/architecture/guide/architecture-styles/microservices)** contienen características comunes que incluyen:
 
 - Las aplicaciones se componen de varios servicios pequeños.
 - Cada servicio se ejecuta en su propio proceso.

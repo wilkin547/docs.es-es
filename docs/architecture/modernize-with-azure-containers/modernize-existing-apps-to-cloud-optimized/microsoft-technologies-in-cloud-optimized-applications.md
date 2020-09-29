@@ -2,12 +2,12 @@
 title: Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: b257497835638dd65c894998e95bd7e9d784b7bf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546515"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172019"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 
@@ -15,7 +15,7 @@ En la lista siguiente se describen las herramientas, tecnologías y soluciones q
 
 - **Infraestructura en la nube**: la infraestructura que proporciona la plataforma de proceso, el sistema operativo, la red y el almacenamiento. Microsoft Azure se coloca en este nivel.
 
-- **Entorno de ejecución**: esta capa proporciona el entorno para la ejecución de la aplicación. Si usa contenedores, esta capa normalmente se basa en el [motor de Docker](https://docs.docker.com/engine/), que se ejecuta en hosts Linux o Windows. (Los [contenedores Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) se admiten a partir de Windows Server 2016. Los contenedores Windows son la mejor opción para las aplicaciones de .NET Framework existentes que se ejecutan en Windows).
+- **Entorno de ejecución**: esta capa proporciona el entorno para la ejecución de la aplicación. Si usa contenedores, esta capa normalmente se basa en el [motor de Docker](https://docs.docker.com/engine/), que se ejecuta en hosts Linux o Windows. (Los [contenedores Windows](/virtualization/windowscontainers/about/) se admiten a partir de Windows Server 2016. Los contenedores Windows son la mejor opción para las aplicaciones de .NET Framework existentes que se ejecutan en Windows).
 
 - **Nube administrada**: cuando se elige una opción de nube administrada, se puede evitar el gasto y la complejidad de la administración y la compatibilidad de la infraestructura subyacente, las máquinas virtuales, las revisiones del sistema operativo y la configuración de red. Si decide migrar mediante IaaS, usted es responsable de todas estas tareas y de los costos asociados. En una opción de nube administrada, solo se administran las aplicaciones y los servicios que se desarrollan. Normalmente, el proveedor de servicios en la nube administra todo lo demás. Algunos ejemplos de servicios en la nube administrados de Azure son [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) y servicios de proceso administrados como [VMSS](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/) y [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 

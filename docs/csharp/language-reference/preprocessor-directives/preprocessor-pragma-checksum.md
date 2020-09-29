@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 60c491000337fd50da217e97054e86faccb2e7d7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: df665704ac813adbbf6473e81fad0a1c7ff616d0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91168574"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Referencia del programador de C#)
+
 Genera sumas de comprobación de archivos de código fuente para ayudar con la depuración de páginas ASP.NET.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -24,6 +25,7 @@ Genera sumas de comprobación de archivos de código fuente para ayudar con la d
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `"filename"`  
  El nombre del archivo que requiere la supervisión para cambios o actualizaciones.  
   
@@ -33,7 +35,8 @@ Genera sumas de comprobación de archivos de código fuente para ayudar con la d
  `"checksum_bytes"`  
  La cadena de dígitos hexadecimales que representa los bytes de la suma de comprobación. Debe ser un número par de dígitos hexadecimales. Un número impar de dígitos genera una advertencia de tiempo de compilación y la directiva se ignora.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El depurador de Visual Studio usa una suma de comprobación para asegurarse de que siempre encuentra el código fuente correcto. El compilador calcula la suma de comprobación para un archivo de origen y, después, emite el resultado en el archivo de base de datos del programa (PDB). Después, el depurador usa el archivo PDB para comparar la suma de comprobación que calcula para el archivo de origen.  
   
  Esta solución no funciona para proyectos de ASP.NET, ya que la suma de comprobación calculada es para el archivo de código fuente generado, no para el archivo .aspx. Para solucionar este problema, `#pragma checksum` proporciona compatibilidad de la suma de comprobación con páginas ASP.NET.  

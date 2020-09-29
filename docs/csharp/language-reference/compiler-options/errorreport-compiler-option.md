@@ -9,14 +9,15 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 5b3143f4da81ac693626778263c277e3a484c45e
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6238ac392ff99d18d9cc7ea07e23b08ff235c14f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125727"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173235"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Opciones del compilador de C#)
+
 Esta opción proporciona una forma cómoda de notificar un error interno del compilador de C# a Microsoft.
 
 > [!NOTE]
@@ -29,6 +30,7 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
 ```
 
 ## <a name="arguments"></a>Argumentos
+
  **Ninguna**  
  No se recopilarán informes sobre errores internos del compilador ni se enviarán a Microsoft.
 
@@ -38,7 +40,8 @@ Esta opción proporciona una forma cómoda de notificar un error interno del com
 
  **send**: envía automáticamente informes de errores internos del compilador a Microsoft. Para habilitar esta opción, debe aceptar la directiva de recopilación de datos de Microsoft. La primera vez que especifique **-errorreport:send** en un equipo, un mensaje del compilador le remitirá a un sitio web que contiene la directiva de recopilación de datos de Microsoft.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
+
  Cuando el compilador no puede procesar un archivo de código fuente, se produce un error interno del compilador (ICE). Cuando se produce un ICE, el compilador no genera un archivo de salida ni otro tipo de diagnóstico útil que pueda usar para corregir el código.
 
  En versiones anteriores, cuando recibía un ICE, se le recomendaba que se pusiera en contacto con los servicios de soporte técnico de Microsoft para informar del problema. Mediante el uso de **-errorreport**, puede proporcionar información sobre los ICE al equipo de Visual C#. Sus informes de error pueden ayudar a mejorar las futuras versiones del compilador.

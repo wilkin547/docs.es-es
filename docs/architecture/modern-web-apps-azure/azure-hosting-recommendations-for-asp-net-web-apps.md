@@ -4,12 +4,12 @@ description: Aplicaciones web modernas con ASP.NET Core y Azure | Recomendacione
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: 547654e77812481daffc9a03ccd28d3d2f6b5f09
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 19626aea07fb26222af575a709b54577ca12589b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164426"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169224"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendaciones de hospedaje en Azure de aplicaciones web ASP.NET Core
 
@@ -54,7 +54,7 @@ Además de las aplicaciones que no están optimizadas para la nube, las aplicaci
 
 ![Arquitectura básica de Azure](./media/image1-5.png)
 
-Un número pequeño de recursos en un único grupo de recursos es normalmente suficiente para administrar este tipo de aplicación. Las aplicaciones que se implementan normalmente como una sola unidad, en lugar de las aplicaciones que se componen de muchos procesos independientes, son buenas candidatas para este [enfoque arquitectónico básico](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). A pesar de su arquitectura sencilla, este enfoque permite a la aplicación hospedada escalarse de manera vertical (más recursos por nodo) y horizontal (más nodos hospedados) para satisfacer cualquier aumento en la demanda. Con el escalado automático, la aplicación puede configurarse para ajustar automáticamente el número de nodos que hospedan la aplicación según la demanda y la carga media entre los nodos.
+Un número pequeño de recursos en un único grupo de recursos es normalmente suficiente para administrar este tipo de aplicación. Las aplicaciones que se implementan normalmente como una sola unidad, en lugar de las aplicaciones que se componen de muchos procesos independientes, son buenas candidatas para este [enfoque arquitectónico básico](/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). A pesar de su arquitectura sencilla, este enfoque permite a la aplicación hospedada escalarse de manera vertical (más recursos por nodo) y horizontal (más nodos hospedados) para satisfacer cualquier aumento en la demanda. Con el escalado automático, la aplicación puede configurarse para ajustar automáticamente el número de nodos que hospedan la aplicación según la demanda y la carga media entre los nodos.
 
 ### <a name="app-service-web-apps-for-containers"></a>App Service Web Apps for Containers
 
@@ -74,7 +74,7 @@ A medida que partes de aplicaciones más grandes se dividen en sus propios *micr
 
 ![Arquitectura de ejemplo de microservicios con varios patrones de diseño comunes observados.](./media/image1-10.png)
 
-[Más información sobre los patrones de diseño que se deben considerar al crear sistemas basados en microservicios.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
+[Más información sobre los patrones de diseño que se deben considerar al crear sistemas basados en microservicios.](/azure/architecture/microservices/design/patterns)
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -100,7 +100,7 @@ Azure Dev Spaces:
 - Reducir el número de entornos de integración requeridos por equipo
 - Eliminar la necesidad de simular determinados servicios en un sistema distribuido para desarrollo y pruebas
 
-[Más información sobre Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about).
+[Más información sobre Azure Dev Spaces](/azure/dev-spaces/about).
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 

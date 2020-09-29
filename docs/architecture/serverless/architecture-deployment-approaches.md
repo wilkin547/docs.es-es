@@ -4,12 +4,12 @@ description: Una guía para las distintas formas en que se implementan las arqui
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522729"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173346"
 ---
 # <a name="architecture-deployment-approaches"></a>Enfoques para la implementación de arquitecturas
 
@@ -17,7 +17,7 @@ Independientemente del enfoque de arquitectura utilizado para diseñar una aplic
 
 ## <a name="n-tier-applications"></a>Aplicaciones de n niveles
 
-El [modelo arquitectónico de n niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) es una arquitectura madura y simplemente hace referencia a las aplicaciones que separan diferentes capas lógicas en niveles físicos independientes. La arquitectura de n niveles es una implementación física de una arquitectura de n capas. La implementación más común de esta arquitectura incluye:
+El [modelo arquitectónico de n niveles](/azure/architecture/guide/architecture-styles/n-tier) es una arquitectura madura y simplemente hace referencia a las aplicaciones que separan diferentes capas lógicas en niveles físicos independientes. La arquitectura de n niveles es una implementación física de una arquitectura de n capas. La implementación más común de esta arquitectura incluye:
 
 - Un nivel de presentación, por ejemplo, una aplicación web.
 - Un nivel de acceso a datos o API, como una API REST.
@@ -56,11 +56,11 @@ El enfoque tradicional para el hospedaje de aplicaciones requiere la compra de h
 
 La virtualización de hardware, a través de "máquinas virtuales", permite la infraestructura como servicio (IaaS). Las máquinas host se particionan de manera eficaz para proporcionar recursos a instancias con asignaciones para su propia memoria, CPU y almacenamiento. El equipo aprovisiona las máquinas virtuales necesarias y configura las redes asociadas y el acceso al almacenamiento.
 
-Para más información, consulte la sección sobre [arquitectura de referencia de n niveles de máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier).
+Para más información, consulte la sección sobre [arquitectura de referencia de n niveles de máquina virtual](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier).
 
 Aunque la virtualización y la infraestructura como servicio (IaaS) abordan muchos problemas, todavía dejan mucha responsabilidad en manos del equipo de infraestructura. El equipo mantiene las versiones del sistema operativo, aplica las revisiones de seguridad e instala las dependencias de terceros en las máquinas de destino. Las aplicaciones suelen comportarse de manera distinta en las máquina de producción en comparación con el entorno de prueba. Surgen problemas debido a las distintas versiones de dependencia o niveles de SKU de sistema operativo. Aunque muchas organizaciones implementan aplicaciones de n niveles en estos destinos, muchas empresas se benefician de la implementación en un modelo nativo que está más en la nube, como [plataforma como servicio](#platform-as-a-service-paas). Las arquitecturas con microservicios son más desafiantes debido a los requisitos de escalado horizontal para la elasticidad y resistencia.
 
-Para más información, consulte la documentación de [Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/).
+Para más información, consulte la documentación de [Virtual Machines](/azure/virtual-machines/).
 
 ## <a name="platform-as-a-service-paas"></a>Plataforma como servicio (PaaS)
 
@@ -81,7 +81,7 @@ La desventaja principal de PaaS solía ser la dependencia del proveedor. Por eje
 
 El software como servicio o SaaS se hospeda de manera centralizada y está disponible sin necesidad de aprovisionamiento o instalación local. A menudo, SaaS se hospeda en PaaS como plataforma para la implementación de software. SaaS proporciona servicios para ejecutar y conectarse con software existente. SaaS suele ser vertical y específica del sector. SaaS suele tener licencia y habitualmente proporciona un modelo cliente/servidor. La mayoría de las ofertas de SaaS modernas usan aplicaciones basadas en la Web para el cliente. Las empresas suelen considerar SaaS como una solución empresarial para las ofertas de licencias. Por lo general, no se implementa como consideración de arquitectura para la escalabilidad y el mantenimiento de una aplicación. En realidad, la mayoría de las soluciones de SaaS se basan en IaaS, PaaS o back-ends sin servidor.
 
-Obtenga más información sobre SaaS mediante una [aplicación de ejemplo](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app).
+Obtenga más información sobre SaaS mediante una [aplicación de ejemplo](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app).
 
 ## <a name="containers-and-functions-as-a-service-faas"></a>Contenedores y funciones como servicio (FaaS)
 
@@ -105,7 +105,7 @@ En la imagen siguiente se muestra una instalación de Kubernetes de ejemplo. Los
 
 ![Kubernetes](./media/kubernetes-example.png)
 
-Para más información sobre la orquestación, consulte [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes).
+Para más información sobre la orquestación, consulte [Kubernetes en Azure](/azure/aks/intro-kubernetes).
 
 Funciones como servicio (FaaS) es un servicio de contenedor especializado similar a sin servidor. Una implementación específica de FaaS, denominada [OpenFaaS](https://github.com/openfaas/faas), se basa en contenedores para proporcionar funcionalidades sin servidor. OpenFaaS proporciona plantillas que empaquetan todas las dependencias de contenedor necesarias para ejecutar un fragmento de código. El uso de plantillas simplifica el proceso de implementación de código como una unidad funcional. OpenFaaS está destinado a arquitecturas que ya incluyen contenedores y orquestadores, porque puede usar la infraestructura existente. Aunque proporciona funcionalidad sin servidor, requiere específicamente el uso de Docker y un orquestador.
 
@@ -130,7 +130,7 @@ Entre las ventajas de la implementación sin servidor se incluyen:
 - **Escala instantánea.** La implementación sin servidor se puede escalar para que coincida con las cargas de trabajo de manera automática y rápida.
 - **Tiempo de comercialización más rápido.** Los desarrolladores se centran en el código e implementan directamente en la plataforma sin servidor. Los componentes se pueden liberar independientemente entre sí.
 
-Sin servidor se suele describir en el contexto de proceso, pero también se puede aplicar a los datos. Por ejemplo, [Azure SQL](https://docs.microsoft.com/azure/sql-database) y [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) proporcionan bases de datos en la nube que no requieren la configuración de clústeres o máquinas host. Este libro se centra en el proceso sin servidor.
+Sin servidor se suele describir en el contexto de proceso, pero también se puede aplicar a los datos. Por ejemplo, [Azure SQL](/azure/sql-database) y [Cosmos DB](/azure/cosmos-db) proporcionan bases de datos en la nube que no requieren la configuración de clústeres o máquinas host. Este libro se centra en el proceso sin servidor.
 
 ## <a name="summary"></a>Resumen
 
@@ -154,16 +154,16 @@ El capítulo siguiente se centrará en la arquitectura sin servidor, los casos d
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Guía de la arquitectura de aplicaciones en Azure](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-- [SQL de Azure](https://docs.microsoft.com/azure/sql-database)
-- [Estilo de arquitectura de n niveles](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-- [Kubernetes en Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-- [Microservicios](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-- [Arquitectura de referencia de n niveles de máquina virtual](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-- [Máquinas virtuales](https://docs.microsoft.com/azure/virtual-machines/)
+- [Guía de la arquitectura de aplicaciones en Azure](/azure/architecture/guide/)
+- [Azure Cosmos DB](/azure/cosmos-db)
+- [SQL de Azure](/azure/sql-database)
+- [Estilo de arquitectura de n niveles](/azure/architecture/guide/architecture-styles/n-tier)
+- [Kubernetes en Azure](/azure/aks/intro-kubernetes)
+- [Microservicios](/azure/architecture/guide/architecture-styles/microservices)
+- [Arquitectura de referencia de n niveles de máquina virtual](/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Máquinas virtuales](/azure/virtual-machines/)
 - [¿Qué es Docker?](../microservices/container-docker-introduction/docker-defined.md)
-- [Aplicación SaaS Wingtip Tickets](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Aplicación SaaS Wingtip Tickets](/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[Anterior](architecture-approaches.md)

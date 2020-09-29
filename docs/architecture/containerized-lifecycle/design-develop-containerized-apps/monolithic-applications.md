@@ -2,12 +2,12 @@
 title: Aplicaciones monolíticas
 description: Descripción de los conceptos básicos para incluir en un contenedor aplicaciones monolíticas.
 ms.date: 08/06/2020
-ms.openlocfilehash: f188a2ff576436d9378030e0a858ffb8110dad17
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c9a5baf209a47f62f421a236c0b04fe5dae37e3a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915443"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163549"
 ---
 # <a name="monolithic-applications"></a>Aplicaciones monolíticas
 
@@ -37,7 +37,7 @@ Desde la perspectiva de la infraestructura, cada servidor puede ejecutar muchas 
 
 Por último, desde la perspectiva de la disponibilidad, las aplicaciones monolíticas deben implementarse como un conjunto. Esto significa que, en caso de que deba *detener e iniciar*, todas las funcionalidades y todos los usuarios se verán afectados durante el período de implementación. En determinadas situaciones, el uso de Azure y de contenedores puede minimizar estas situaciones y reducir la probabilidad de tiempo de inactividad en la aplicación, como se aprecia en la figura 4-3.
 
-Las aplicaciones monolíticas pueden implementarse en Azure con máquinas virtuales dedicadas para cada instancia. Con [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente.
+Las aplicaciones monolíticas pueden implementarse en Azure con máquinas virtuales dedicadas para cada instancia. Con [Azure VM Scale Sets](/azure/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente.
 
 También puede usar [Azure App Services](https://azure.microsoft.com/services/app-service/) para ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Azure App Services también puede ejecutar instancias únicas de contenedores de Docker, lo que simplifica la implementación.
 

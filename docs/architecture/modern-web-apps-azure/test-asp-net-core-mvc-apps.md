@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ca86388b9f5dfe5e63ead1b5f84486ba2181af57
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539248"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169081"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -149,7 +149,7 @@ En la mayoría de los casos, es recomendable que use controladores de excepcione
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Pruebas de integración en aplicaciones ASP.NET Core
 
-La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core deberían consistir en la prueba de servicios y otros tipos de implementación definidos en el proyecto de la infraestructura. Por ejemplo, podría [probar que EF Core actualiza y recupera correctamente los datos que espera](https://docs.microsoft.com/ef/core/miscellaneous/testing/) de las clases de acceso a los datos que residen en el proyecto de infraestructura. La mejor manera de probar si el proyecto de ASP.NET Core MVC se comporta correctamente es realizar pruebas funcionales en la aplicación que se ejecuta en un host de prueba.
+La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core deberían consistir en la prueba de servicios y otros tipos de implementación definidos en el proyecto de la infraestructura. Por ejemplo, podría [probar que EF Core actualiza y recupera correctamente los datos que espera](/ef/core/miscellaneous/testing/) de las clases de acceso a los datos que residen en el proyecto de infraestructura. La mejor manera de probar si el proyecto de ASP.NET Core MVC se comporta correctamente es realizar pruebas funcionales en la aplicación que se ejecuta en un host de prueba.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Pruebas funcionales en aplicaciones ASP.NET Core
 

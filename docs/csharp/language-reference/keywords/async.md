@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 5a70389c9c423300fad03123cfc4738dfe10e481
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 78079d9940ea5363215411acea6b9ca269ff3ae1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118525"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91160546"
 ---
 # <a name="async-c-reference"></a>async (Referencia de C#)
 
@@ -40,6 +40,7 @@ Si el método que la palabra clave `async` modifica no contiene una expresión o
  La palabra clave `async` es contextual en el sentido de que es una palabra clave cuando modifica un método, una expresión lambda o un método anónimo. En todos los demás contextos, se interpreta como identificador.
 
 ## <a name="example"></a>Ejemplo
+
 En el ejemplo siguiente se muestra la estructura y el flujo de control entre un controlador de eventos asincrónicos, `StartButton_Click`, y un método asincrónico, `ExampleMethodAsync`. El resultado del método asincrónico es el número de caracteres de una página web. El código es adecuado para una aplicación Windows Presentation Foundation (WPF) o de la Tienda Windows creada en Visual Studio; vea los comentarios del código para configurar la aplicación.
 
 Puede ejecutar este código en Visual Studio como una aplicación Windows Presentation Foundation (WPF) o una aplicación de la Tienda Windows. Necesita un control de botón denominado `StartButton` y un control de cuadro de texto denominado `ResultsTextBox`. Recuerde establecer los nombres y el controlador de manera que tenga algo similar a esto:
@@ -68,6 +69,7 @@ Para ejecutar el código como una aplicación de la Tienda Windows:
 > Para obtener más información sobre las tareas y el código que se ejecuta mientras se espera la finalización de una tarea, vea [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md). Para ver un ejemplo completo de la consola que usa elementos similares, consulte el artículo [Iniciar varias tareas asincrónicas y procesarlas a medida que se completan (C#)](../../programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md).
 
 ## <a name="return-types"></a>Tipos de valor devueltos
+
 Un método asincrónico puede tener los siguientes tipos de valor devuelto:
 
 - <xref:System.Threading.Tasks.Task>

@@ -13,14 +13,15 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 366bad1029904b3571be0a76d827ff0213d776bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b1d7fbbe98aaad16454fdd71c161f2a17a2f4f2e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125753"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91173261"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (Opciones del compilador de C#)
+
 La opción **-doc** permite insertar comentarios de documentación en un archivo XML.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -30,10 +31,12 @@ La opción **-doc** permite insertar comentarios de documentación en un archivo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `file`  
  Archivo de salida para XML, que se llena con los comentarios de los archivos de código fuente de la compilación.  
   
 ## <a name="remarks"></a>Observaciones  
+
  En los archivos de código fuente, es posible procesar y agregar al archivo XML los comentarios de documentación que preceden a lo siguiente:  
   
 - Tipos definidos por el usuario como una [clase](../keywords/class.md), un [delegado](../builtin-types/reference-types.md#the-delegate-type) o una [interfaz](../keywords/interface.md)  

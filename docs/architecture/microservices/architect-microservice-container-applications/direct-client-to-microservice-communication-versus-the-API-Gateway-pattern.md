@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306960"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152707"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -25,7 +25,7 @@ En este enfoque, cada microservicio tiene un punto de conexión público, a vece
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-En un entorno de producción basado en un clúster, la dirección URL anterior estaría asignada al equilibrador de carga que se utiliza en el clúster, que a su vez distribuye las solicitudes entre los microservicios. En entornos de producción, se puede tener un controlador de entrega de aplicaciones (ADC) como [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) entre los microservicios e Internet. Este controlador actúa como una capa transparente que no solo realiza el equilibrio de carga, sino que también protege sus servicios, ya que ofrece terminación SSL. Esto mejora la carga de los hosts, puesto que Azure Application Gateway se descarga de la terminación SSL y de otras tareas de enrutamiento que consumen mucha CPU. En cualquier caso, un equilibrador de carga y el ADC son transparentes desde un punto de vista de la arquitectura de aplicación lógica.
+En un entorno de producción basado en un clúster, la dirección URL anterior estaría asignada al equilibrador de carga que se utiliza en el clúster, que a su vez distribuye las solicitudes entre los microservicios. En entornos de producción, se puede tener un controlador de entrega de aplicaciones (ADC) como [Azure Application Gateway](/azure/application-gateway/application-gateway-introduction) entre los microservicios e Internet. Este controlador actúa como una capa transparente que no solo realiza el equilibrio de carga, sino que también protege sus servicios, ya que ofrece terminación SSL. Esto mejora la carga de los hosts, puesto que Azure Application Gateway se descarga de la terminación SSL y de otras tareas de enrutamiento que consumen mucha CPU. En cualquier caso, un equilibrador de carga y el ADC son transparentes desde un punto de vista de la arquitectura de aplicación lógica.
 
 Una arquitectura de comunicación directa de cliente a microservicio podría bastar para una pequeña aplicación basada en microservicio, especialmente si se trata de una aplicación web del lado cliente como, por ejemplo, una aplicación de ASP.NET MVC. Pero al compilar aplicaciones grandes y complejas basadas en microservicios (por ejemplo, al administrar docenas de tipos de microservicio) y, sobre todo, cuando las aplicaciones cliente son aplicaciones móviles remotas o aplicaciones web SPA, este enfoque se enfrenta a algunos problemas.
 
@@ -95,13 +95,13 @@ Una puerta de enlace de API puede ofrecer varias características. Dependiendo d
 
 **Proxy inverso o enrutamiento de puerta de enlace**. La puerta de enlace de API ofrece un proxy inverso para redirigir o enrutar las solicitudes (enrutamiento de capa 7, normalmente solicitudes HTTP) a los puntos de conexión de los microservicios internos. La puerta de enlace proporciona un único punto de conexión o dirección URL para las aplicaciones cliente y, a continuación, asigna internamente las solicitudes a un grupo de microservicios internos. Esta característica de enrutamiento ayuda a desconectar las aplicaciones cliente de los microservicios, pero también resulta práctica al modernizar una API monolítica colocando la puerta de enlace de API entre la API monolítica y las aplicaciones cliente; de este modo, se pueden agregar nuevas API como nuevos microservicios mientras se sigue usando la API monolítica heredada hasta que se divida en muchos microservicios en el futuro. Debido a la puerta de enlace de API, las aplicaciones cliente no notarán si las API que se usan se implementan como microservicios internos o una API monolítica y, lo que es más importante, al evolucionar y refactorizar la API monolítica en microservicios, gracias al enrutamiento de la puerta de enlace de API, las aplicaciones cliente no se verán afectadas por ningún cambio de URI.
 
-Para obtener más información, consulte [Patrón Gateway Routing](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
+Para obtener más información, consulte [Patrón Gateway Routing](/azure/architecture/patterns/gateway-routing).
 
 **Agregación de solicitudes.** Como parte del patrón de puerta de enlace, es posible agregar varias solicitudes de cliente (normalmente las solicitudes HTTP) dirigidas a varios microservicios internos en una sola solicitud de cliente. Este patrón es especialmente útil cuando una página o pantalla de cliente necesita información de varios microservicios. Con este enfoque, la aplicación cliente envía una solicitud única a la puerta de enlace de API que envía varias solicitudes a los microservicios internos y, a continuación, agrega los resultados y envía todo el contenido de nuevo a la aplicación cliente. La ventaja principal y el objetivo de este patrón de diseño radica en la reducción del intercambio de mensajes entre las aplicaciones cliente y la API de back-end, lo cual es especialmente importante para las aplicaciones remotas fuera del centro de datos donde residen los microservicios, como aplicaciones móviles o solicitudes de aplicaciones SPA que provienen de JavaScript en exploradores de cliente remotos. En el caso de las aplicaciones web normales que realizan las solicitudes en el entorno del servidor (como una aplicación web ASP.NET Core MVC), este patrón no es tan importante, ya que la latencia es mucho menor que para las aplicaciones cliente remotas.
 
 Dependiendo del producto de puerta de enlace de API que use, es posible que pueda realizar esta agregación. Pero en muchos casos resulta más flexible crear microservicios de agregación en el ámbito de la puerta de enlace de API, de manera que la agregación se define en el código (es decir, código de C#):
 
-Para obtener más información, consulte [Patrón Gateway Aggregation](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
+Para obtener más información, consulte [Patrón Gateway Aggregation](/azure/architecture/patterns/gateway-aggregation).
 
 **Cuestiones transversales o descarga de puerta de enlace.** Dependiendo de las características que ofrece cada producto de puerta de enlace de API, puede descargar la funcionalidad de microservicios individuales a la puerta de enlace, lo que simplifica la implementación de cada microservicio consolidando las cuestiones transversales en un nivel. Esto resulta especialmente útil para las características especializadas, que pueden ser bastante complicadas de implementar correctamente en cada microservicio interno, como la funcionalidad siguiente:
 
@@ -115,7 +115,7 @@ Para obtener más información, consulte [Patrón Gateway Aggregation](https://d
 - Encabezados, cadenas de consulta y transformación de notificaciones
 - Creación de listas blancas IP
 
-Para obtener más información, consulte [Patrón Gateway Offloading](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
+Para obtener más información, consulte [Patrón Gateway Offloading](/azure/architecture/patterns/gateway-offloading).
 
 ## <a name="using-products-with-api-gateway-features"></a>Uso de productos con características de puerta de enlace de API
 

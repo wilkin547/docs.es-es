@@ -2,12 +2,12 @@
 title: Comunicación en una arquitectura de microservicio
 description: Explore distintas formas de comunicación entre microservicios, y comprenda las implicaciones de formas sincrónicas y asincrónicas.
 ms.date: 01/30/2020
-ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401524"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91169263"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicación en una arquitectura de microservicio
 
@@ -35,7 +35,7 @@ El segundo eje define si la comunicación tiene un único receptor o varios:
 
 - Receptor único. Cada solicitud debe ser procesada por un receptor o servicio exactamente. Un ejemplo de este tipo de comunicación es el [patrón Command](https://en.wikipedia.org/wiki/Command_pattern).
 
-- Varios receptores. Cada solicitud puede ser procesada por entre cero y varios receptores. Este tipo de comunicación debe ser asincrónica. Un ejemplo es el mecanismo de [publicación o suscripción](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) empleado en patrones como la [arquitectura controlada por eventos](https://microservices.io/patterns/data/event-driven-architecture.html). Se basa en una interfaz de bus de eventos o un agente de mensajes para propagar las actualizaciones de datos entre varios microservicios mediante eventos; normalmente se implementa a través de un bus de servicio o algún artefacto similar como [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) mediante [temas y suscripciones](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+- Varios receptores. Cada solicitud puede ser procesada por entre cero y varios receptores. Este tipo de comunicación debe ser asincrónica. Un ejemplo es el mecanismo de [publicación o suscripción](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) empleado en patrones como la [arquitectura controlada por eventos](https://microservices.io/patterns/data/event-driven-architecture.html). Se basa en una interfaz de bus de eventos o un agente de mensajes para propagar las actualizaciones de datos entre varios microservicios mediante eventos; normalmente se implementa a través de un bus de servicio o algún artefacto similar como [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) mediante [temas y suscripciones](/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Una aplicación basada en microservicio suele usar una combinación de estos estilos de comunicación. El tipo más común es la comunicación de un único receptor con un protocolo sincrónico como HTTP/HTTPS al invocar a un servicio normal HTTP Web API. Además, los microservicios suelen usar protocolos de mensajería para la comunicación asincrónica entre microservicios.
 
@@ -81,7 +81,7 @@ Cuando un cliente usa la comunicación solicitud-respuesta, envía una solicitud
 
 **Figura 4-16**. Uso de la comunicación solicitud-respuesta HTTP (sincrónica o asincrónica)
 
-Cuando un cliente usa la comunicación solicitud-respuesta, da por hecho que la respuesta llegará en poco tiempo, normalmente en menos de un segundo, o unos pocos segundos como máximo. Si se retrasan las respuestas, debe implementar la comunicación asincrónica basada en [patrones de mensajería](https://docs.microsoft.com/azure/architecture/patterns/category/messaging) y [tecnologías de mensajería](https://en.wikipedia.org/wiki/Message-oriented_middleware), que es otro enfoque que se explica en la sección siguiente.
+Cuando un cliente usa la comunicación solicitud-respuesta, da por hecho que la respuesta llegará en poco tiempo, normalmente en menos de un segundo, o unos pocos segundos como máximo. Si se retrasan las respuestas, debe implementar la comunicación asincrónica basada en [patrones de mensajería](/azure/architecture/patterns/category/messaging) y [tecnologías de mensajería](https://en.wikipedia.org/wiki/Message-oriented_middleware), que es otro enfoque que se explica en la sección siguiente.
 
 Un estilo arquitectónico popular para la comunicación solicitud-respuesta es [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Este enfoque se basa en el protocolo [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) y está estrechamente relacionado con él, ya que adopta verbos HTTP como GET, POST y PUT. REST es el enfoque de arquitectura de comunicación más usado a la hora de crear servicios. Puede implementar servicios REST cuando desarrolle servicios Web API de ASP.NET Core.
 

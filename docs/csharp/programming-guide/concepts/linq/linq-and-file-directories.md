@@ -3,12 +3,12 @@ title: LINQ y directorios de archivos (C#)
 description: Estos recursos de LINQ de C# para las operaciones del sistema de archivos no se usan para cambiar el contenido de los archivos o carpetas.
 ms.date: 07/20/2015
 ms.assetid: b66c55e4-0f72-44e5-b086-519f9962335c
-ms.openlocfilehash: ac00e29f90ee1c04ab9978b6ada3ae5f28991a1c
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: d8ef8ac8a8ff25f0bbac417c07e39f516eee27f2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165672"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91170485"
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ y directorios de archivos (C#)
 
@@ -40,6 +40,7 @@ Muchas operaciones de sistema de archivos son esencialmente consultas y, por tan
  Muestra cómo recorrer en iteración las carpetas de un árbol, abrir cada archivo y consultar el contenido del archivo.  
   
 ## <a name="comments"></a>Comentarios  
+
  Hay cierta complejidad en la creación de un origen de datos que representa de forma precisa el contenido del sistema de archivos y controla las excepciones correctamente. En los ejemplos de esta sección se crea una colección de instantáneas de objetos <xref:System.IO.FileInfo> que representa todos los archivos en una carpeta raíz especificada y todas sus subcarpetas. El estado real de cada <xref:System.IO.FileInfo> puede cambiar en el periodo comprendido entre el comienzo y el fin de la ejecución de una consulta. Por ejemplo, se puede crear una lista de objetos <xref:System.IO.FileInfo> para usarla como origen de datos. Si se intenta tener acceso a la propiedad `Length` en una consulta, el objeto <xref:System.IO.FileInfo> intentará tener acceso al sistema de archivos para actualizar el valor de `Length`. Si el archivo ya no existe, se obtendrá una excepción <xref:System.IO.FileNotFoundException> en la consulta, aunque no se esté consultando el sistema de archivos directamente. Algunas consultas de esta sección usan un método independiente que consume estas excepciones concretas en casos determinados. Otra opción consiste en mantener actualizado el origen de datos de manera dinámica mediante <xref:System.IO.FileSystemWatcher>.  
   
 ## <a name="see-also"></a>Vea también

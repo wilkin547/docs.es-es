@@ -3,14 +3,15 @@ title: Depuración de árboles de expresión en Visual Studio (C#)
 description: Obtenga información sobre la propiedad DebugView en Visual Studio. Vea cómo usar esta propiedad para analizar la estructura y el contenido de los árboles de expresión.
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: fab378149fb14ccf6a66434c933aa24a8c9c6119
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5dcf56f96ecdbfdc3f4cb171fdb30b96456b59c9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555619"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91154137"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Depuración de árboles de expresión en Visual Studio (C#)
+
 Se puede analizar la estructura y el contenido de los árboles de expresión cuando se depuran las aplicaciones. Para obtener una introducción rápida a la estructura del árbol de expresión, puede usar la propiedad `DebugView`, que representa los árboles de expresión [con una sintaxis especial](debugview-syntax.md). Observe que `DebugView` solo está disponible en modo de depuración.  
 
 ![Captura de pantalla de DebugView de un árbol de expresión en el depurador de VS.](media/debugging-expression-trees-in-visual-studio/debugview-expression-tree.png)

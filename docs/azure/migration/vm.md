@@ -3,12 +3,12 @@ title: Migración de una aplicación web ASP.NET a una máquina virtual de Azure
 description: Vea cómo migrar una aplicación web ASP.NET de un entorno local a una máquina virtual de Azure.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174249"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171564"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Migración de una aplicación web ASP.NET a una máquina virtual de Azure
 
@@ -60,6 +60,7 @@ Azure Virtual Network permite:
 Para comenzar, consulte la [documentación de Virtual Network](/azure/virtual-network/)
 
 ### <a name="active-directory"></a>Grafo de
+
 Muchas aplicaciones usan Active Directory para la autenticación y administración de identidades.
 
 - Azure AD Connect permite integrar sus directorios locales con Azure Active Directory. Para comenzar, consulte [Integración de los directorios locales con Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect).
@@ -75,11 +76,13 @@ Si su aplicación usa una base de datos local, la aplicación no podrá comunica
 ### <a name="high-availability-and-scalability"></a>Alta disponibilidad y escalabilidad
 
 #### <a name="virtual-machine-scale-sets"></a>Virtual Machine Scale Sets
+
 Si desea asegurarse de que la aplicación tenga alta disponibilidad y pueda escalar, migre la imagen de su máquina virtual a un conjunto de escalado de máquinas virtuales de Azure para mejorar la disponibilidad y escalabilidad de la aplicación. VM Scale Sets permite usar una máquina virtual existente ya configurada o configurar una canalización de compilación para crear una imagen con la aplicación.
 
 Para comenzar, consulte [Implementación de la aplicación en conjuntos de escalado de máquinas virtuales](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Registro centralizado
+
 Si la aplicación se ejecuta en varias instancias, considere la posibilidad de almacenar los registros en una ubicación centralizada, por ejemplo, [Azure Storage](/azure/storage/).
 
 ## <a name="next-steps"></a>Pasos siguientes

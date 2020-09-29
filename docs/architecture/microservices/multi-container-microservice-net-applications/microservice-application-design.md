@@ -2,12 +2,12 @@
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 11aa6327a8d870a1ff6356b88695b693c27f99a9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76965768"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91172344"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -158,7 +158,7 @@ Los desarrolladores y arquitectos de software usan muchos modelos arquitectónic
 
 - CRUD simple, de un nivel y una capa.
 
-- [Tradicional de N capas](https://docs.microsoft.com/previous-versions/msp-n-p/ee658109(v=pandp.10)).
+- [Tradicional de N capas](/previous-versions/msp-n-p/ee658109(v=pandp.10)).
 
 - [Diseño controlado por dominios de N capas](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 

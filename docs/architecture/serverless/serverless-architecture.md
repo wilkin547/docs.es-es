@@ -4,18 +4,18 @@ description: Exploración de las diversas arquitecturas y aplicaciones que admit
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7d80ce3957c2ad90a67ae6ba1fc2786af30fcc1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522410"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171720"
 ---
 # <a name="serverless-architecture"></a>Arquitectura sin servidor
 
 Existen muchos enfoques relacionados con el uso de arquitecturas [sin servidor](https://azure.com/serverless). En este capítulo se exploran algunos ejemplos de arquitecturas comunes que se integran sin servidor. También trata sobre los problemas que pueden constituir desafíos adicionales o que requieren una atención adicional al implementar arquitecturas sin servidor. Por último, se proporcionan varios ejemplos de diseño que ilustran varios casos de uso de arquitecturas sin servidor.
 
-Los hosts sin servidor suelen usar un nivel existente basado en contenedores o PaaS para administrar las instancias sin servidor. Por ejemplo, Azure Functions se basa en [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service se usa para escalar horizontalmente instancias y administrar el entorno de ejecución que ejecuta el código de Azure Functions. En el caso de funciones basadas en Windows, el host se ejecuta como PaaS y escala horizontalmente el entorno de ejecución de .NET. En el caso de las funciones basadas en Linux, el host utiliza contenedores.
+Los hosts sin servidor suelen usar un nivel existente basado en contenedores o PaaS para administrar las instancias sin servidor. Por ejemplo, Azure Functions se basa en [Azure App Service](/azure/app-service/). App Service se usa para escalar horizontalmente instancias y administrar el entorno de ejecución que ejecuta el código de Azure Functions. En el caso de funciones basadas en Windows, el host se ejecuta como PaaS y escala horizontalmente el entorno de ejecución de .NET. En el caso de las funciones basadas en Linux, el host utiliza contenedores.
 
 ![Arquitectura de Azure Functions](./media/azure-functions-architecture.png)
 
@@ -71,7 +71,7 @@ El gran volumen de dispositivos e información a menudo requiere una arquitectur
 - Facilita el control de versiones independiente para que los desarrolladores puedan actualizar la lógica de negocios de un dispositivo específico sin tener que implementar todo el sistema.
 - Resistencia y menos tiempo de inactividad.
 
-La generalización de IoT ha dado lugar a varios productos sin servidor que se centran específicamente en cuestiones de IoT, como [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). El modo sin servidor automatiza tareas como el registro de dispositivos, la aplicación de directivas, el seguimiento e, incluso, la implementación de código en los dispositivos *del perímetro*. El perímetro se refiere a dispositivos como sensores y actuadores que están conectados a Internet, pero no constituyen una parte activa de este.
+La generalización de IoT ha dado lugar a varios productos sin servidor que se centran específicamente en cuestiones de IoT, como [Azure IoT Hub](/azure/iot-hub). El modo sin servidor automatiza tareas como el registro de dispositivos, la aplicación de directivas, el seguimiento e, incluso, la implementación de código en los dispositivos *del perímetro*. El perímetro se refiere a dispositivos como sensores y actuadores que están conectados a Internet, pero no constituyen una parte activa de este.
 
 >[!div class="step-by-step"]
 >[Anterior](architecture-approaches.md)
