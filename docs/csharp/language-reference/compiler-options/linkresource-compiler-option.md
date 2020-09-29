@@ -12,14 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 4efa0cbf286b40ad971bad66a7acce15e553eb39
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466110"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194107"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (Opciones del compilador de C#)
+
 Crea un vínculo a un recurso de .NET en el archivo de salida. El archivo de recursos no se agrega al archivo de salida. Esta opción difiere de la opción [-resource](./resource-compiler-option.md), la cual sí inserta un archivo de recursos en el archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Crea un vínculo a un recurso de .NET en el archivo de salida. El archivo de rec
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `filename`  
  El archivo de recursos de .NET con el que quiere crear un vínculo desde el ensamblado.  
   
@@ -39,6 +41,7 @@ Crea un vínculo a un recurso de .NET en el archivo de salida. El archivo de rec
  La accesibilidad del recurso: pública o privada. El valor predeterminado es public.  
   
 ## <a name="remarks"></a>Observaciones  
+
  De manera predeterminada, los recursos vinculados son públicos en el ensamblado cuando se crean con el compilador de C#. Para que sean privados, especifique el modificador de accesibilidad `private`. No se permite ningún otro modificador distinto de `public` o `private`.  
   
  **-linkresource** requiere una de las opciones [-target](./target-compiler-option.md) distinta de **-target:module**.  
@@ -52,6 +55,7 @@ Crea un vínculo a un recurso de .NET en el archivo de salida. El archivo de rec
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
 ## <a name="example"></a>Ejemplo  
+
  Para compilar `in.cs` y vincularlo al archivo de recursos `rf.resource`:  
   
 ```console  
@@ -59,6 +63,7 @@ csc -linkresource:rf.resource in.cs
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  Compile `A.cs` en un archivo DLL, vincúlelo a un archivo DLL nativo N.dll y coloque el resultado en la caché global de ensamblados (GAC). En este ejemplo, A.dll y N.dll residen en la GAC.  
   
 ```console  
@@ -67,6 +72,7 @@ gacutil -i A.dll
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo hace lo mismo que el anterior, pero usa las opciones de Assembly Linker.  
   
 ```console  

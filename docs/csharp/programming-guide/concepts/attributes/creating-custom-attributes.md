@@ -3,14 +3,15 @@ title: Crear atributos personalizados (C#)
 description: Aprenda a crear atributos personalizados en C# mediante la definición de una clase de atributo que se derive de la clase de atributos.
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 7d6f98620388af8715652dcbcfe78366952b853d
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6946b707134b2bdbc245b8786f144517a5870440
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925090"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202610"
 ---
 # <a name="creating-custom-attributes-c"></a>Crear atributos personalizados (C#)
+
 Para crear sus propios atributos personalizados, defina una clase de atributo derivada directa o indirectamente de <xref:System.Attribute>, que agiliza y facilita la identificación de las definiciones de atributos en los metadatos. Imagínese que desea etiquetar tipos con el nombre del programador que los escribió. Puede definir una clase de atributos `Author` personalizada:  
   
 ```csharp  

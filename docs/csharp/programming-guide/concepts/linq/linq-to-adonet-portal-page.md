@@ -3,14 +3,15 @@ title: LINQ to ADO.NET (Página de portal)
 description: LINQ to ADO.NET permite consultar sobre cualquier objeto enumerable de ADO.NET mediante el modelo de programación de LINQ. Obtenga información sobre las tres tecnologías de LINQ de ADO.NET.
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
-ms.openlocfilehash: 0b09e678d29d27de5758cf5a5fcacd7391342792
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 6d8a6a7a90abe12dacec9a017f80c1ff1abd46f1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165762"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202557"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Página de portal)
+
 LINQ to ADO.NET permite consultar sobre cualquier objeto enumerable de ADO.NET mediante el modelo de programación de Language Integrated Query (LINQ).  
   
 > [!NOTE]
@@ -19,6 +20,7 @@ LINQ to ADO.NET permite consultar sobre cualquier objeto enumerable de ADO.NET m
  Hay tres tecnologías de Language Integrated Query (LINQ) de ADO.NET independientes: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y LINQ to Entities. LINQ to DataSet proporciona consultas más ricas y optimizadas de <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] permite consultar directamente los esquemas de base de datos de SQL Server y LINQ to Entities permite consultar un modelo Entity Data Model.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
+
  <xref:System.Data.DataSet> es uno de los componentes más usados de ADO.NET, además de un elemento clave del modelo de programación desconectado en el que se basa ADO.NET. En cambio, a pesar de su importancia, <xref:System.Data.DataSet> tiene funciones de consulta limitadas.  
   
  LINQ to DataSet permite compilar capacidades de consulta más complejas en <xref:System.Data.DataSet> mediante la misma funcionalidad de consulta disponible para muchos otros orígenes de datos.  
@@ -26,6 +28,7 @@ LINQ to ADO.NET permite consultar sobre cualquier objeto enumerable de ADO.NET m
  Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
+
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] proporciona una infraestructura en tiempo de ejecución para administrar los datos relacionales como objetos. En [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], el modelo de datos de una base de datos relacional se asigna a un modelo de objetos expresado en el lenguaje de programación del desarrollador. Cuando se ejecuta la aplicación, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] convierte a SQL las consultas integradas en el lenguaje en el modelo de objetos y las envía a la base de datos para su ejecución. Cuando la base de datos devuelve los resultados, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] los vuelve a convertir en objetos que se pueden manipular.  
   
  [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] incluye compatibilidad con los procedimientos almacenados y las funciones definidas por el usuario de la base de datos, además de con la herencia en el modelo de objetos.  
@@ -33,6 +36,7 @@ LINQ to ADO.NET permite consultar sobre cualquier objeto enumerable de ADO.NET m
  Para más información, vea [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md).  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
+
  A través del modelo Entity Data Model, los datos relacionales se exponen como objetos en el entorno .NET. Esto hace de la capa de objetos un objetivo idóneo para la compatibilidad con LINQ, ya que permite a los programadores formular consultas en la base de datos con el lenguaje usado para compilar la lógica empresarial. Esta funcionalidad se conoce como LINQ to Entities. Para más información, vea [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
 ## <a name="see-also"></a>Consulte también

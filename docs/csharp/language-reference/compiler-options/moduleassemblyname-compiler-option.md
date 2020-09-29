@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9131db17d767c76fe6a57f5d5353474153e0c269
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125259"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194094"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Opción del compilador de C#)
+
 Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ Especifica un ensamblado con tipos no públicos a los que puede acceder un archi
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `assembly_name`  
  El nombre del ensamblado a cuyos tipos no públicos .netmodule puede tener acceso.  
   
 ## <a name="remarks"></a>Observaciones  
+
  Se debería usar **-moduleassemblyname** al compilar un .netmodule cuando se den las condiciones siguientes:  
   
 - .netmodule necesita tener acceso a los tipos no públicos de un ensamblado existente.  
@@ -47,6 +50,7 @@ Especifica un ensamblado con tipos no públicos a los que puede acceder un archi
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo compila un ensamblado con un tipo privado que concede acceso de ensamblado de confianza a un ensamblado llamado csman_an_assembly.  
   
 ```csharp  
@@ -67,6 +71,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo compila un .netmodule que tiene acceso a un tipo no público del ensamblado moduleassemblyname_1.dll. Sabiendo que este .netmodule se integrará en un ensamblado denominado csman_an_assembly, se puede especificar **-moduleassemblyname**, lo que permite que .netmodule tenga acceso a los tipos no públicos de un ensamblado que ha concedido acceso de ensamblado de confianza a csman_an_assembly.  
   
 ```csharp  
@@ -81,6 +86,7 @@ class B {
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  Este ejemplo de código compila el ensamblado csman_an_assembly, haciendo referencia al ensamblado compilado previamente y a .netmodule.  
   
 ```csharp  

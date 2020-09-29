@@ -3,14 +3,15 @@ title: Procedimiento para calcular valores de columna en un archivo de texto CSV
 description: En este ejemplo se muestra cómo realizar cálculos agregados mediante LINQ en C#, como sumas, promedios, mínimos y máximos, en las columnas de un archivo .csv.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a475de9c769a66fdded490a3f7eccdb74a434186
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105320"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195602"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ) (C#)
+
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
   
 ## <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
@@ -160,6 +161,7 @@ class SumColumns
  La consulta funciona usando el método <xref:System.String.Split%2A> para convertir cada línea de texto en una matriz. Cada elemento de matriz representa una columna. Por último, el texto de cada columna se convierte en su representación numérica. Si el archivo es un archivo separado por tabulaciones, actualice el argumento del método `Split` a `\t`.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
 ## <a name="see-also"></a>Consulte también

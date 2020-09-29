@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: c39be5cb52964abbea5bc5636c6fa74d8411a331
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 7a37c4e9f6333c00c7842df0fdaf353df516974d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382092"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91205079"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversiones de puntero (Guía de programación de C#)
+
 En la tabla siguiente se muestran las conversiones de puntero implícitas predefinidas. Las conversiones implícitas pueden ocurrir en muchas situaciones, incluidas las instrucciones de asignación y de invocación de método.  
   
 ## <a name="implicit-pointer-conversions"></a>Conversiones de puntero implícitas  
@@ -33,6 +34,7 @@ En la tabla siguiente se muestran las conversiones de puntero implícitas predef
 |Cualquier tipo de puntero|sbyte, byte, short, ushort, int, uint, long o ulong|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente, un puntero a `int` se convierte en un puntero a `byte`. Tenga en cuenta que el puntero señala al byte dirigido más bajo de la variable. Cuando incrementa el resultado sucesivamente, hasta el tamaño de `int` (4 bytes), puede mostrar los bytes restantes de la variable.  
   
  [!code-csharp[csProgGuidePointers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers2.cs#3)]  

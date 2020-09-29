@@ -14,14 +14,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7b84953f85545c0400c7136c258849f259e8b48a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd7346ae4094a84a398306394f771e040dd7b72f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124804"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193795"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
+
 La opción **-reference** hace que el compilador importe información de tipo [public](../keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,13 +33,15 @@ La opción **-reference** hace que el compilador importe información de tipo [p
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `filename`  
  El nombre de un archivo que contiene un manifiesto del ensamblado. Para importar más de un archivo, incluya una opción **-reference** diferente para cada archivo.  
   
  `alias`  
  Un identificador de C# válido que representa un espacio de nombres raíz que contendrá todos los espacios de nombres del ensamblado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Para importar desde más de un archivo, incluya una opción **-reference** para cada archivo.  
   
  Los archivos que se importen deben contener un manifiesto; el archivo de salida debe haberse compilado con una de las opciones [-target](./target-compiler-option.md) distinta de [-target:module](./target-module-compiler-option.md).  
@@ -65,6 +68,7 @@ La opción **-reference** hace que el compilador importe información de tipo [p
 > En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, consulta [Procedimiento para agregar o quitar referencias mediante el Administrador de referencias](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se muestra cómo usar la característica [alias externo](../keywords/extern-alias.md).  
   
  Compile el archivo de origen e importe los metadatos desde `grid.dll` y `grid20.dll`, que se han compilado previamente. Los dos archivos DLL contienen versiones independientes del mismo componente y se usan dos **-reference** con opciones de alias para compilar el archivo de origen. Las opciones tiene este aspecto:  

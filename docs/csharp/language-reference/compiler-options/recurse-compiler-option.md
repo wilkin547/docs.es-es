@@ -9,14 +9,15 @@ helpviewer_keywords:
 - recurse compiler option [C#]
 - -recurse compiler option [C#]
 ms.assetid: 4e8212e5-04e3-45b1-8a42-41bc50e683b0
-ms.openlocfilehash: 3edd7e23358bc0569dae6204d519209df1ade290
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9e84ff95f7f0addac1c2c2d79af0ab53572da27f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124830"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193808"
 ---
 # <a name="-recurse-c-compiler-options"></a>-recurse (Opciones del compilador de C#)
+
 La opción -recurse permite compilar archivos de código fuente de todos los directorios secundarios del directorio especificado (dir) o del directorio del proyecto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ La opción -recurse permite compilar archivos de código fuente de todos los dir
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `dir` (opcional)  
  El directorio en el que quiere que comience la búsqueda. Si no se especifica, la búsqueda comienza en el directorio del proyecto.  
   
@@ -33,6 +35,7 @@ La opción -recurse permite compilar archivos de código fuente de todos los dir
  Los archivos que buscará. Se admiten los caracteres comodín.  
   
 ## <a name="remarks"></a>Comentarios  
+
  La opción **-recurse** permite compilar archivos de código fuente de todos los directorios secundarios del directorio especificado (`dir`) o del directorio del proyecto.  
   
  Puede usar caracteres comodín en un nombre de archivo para compilar todos los archivos coincidentes en el directorio del proyecto sin usar **-recurse**.  
@@ -40,6 +43,7 @@ La opción -recurse permite compilar archivos de código fuente de todos los dir
  Esta opción del compilador no está disponible en Visual Studio y no se puede cambiar mediante programación.  
   
 ## <a name="example"></a>Ejemplo  
+
  Compila todos los archivos de C# en el directorio actual:  
   
 ```console  

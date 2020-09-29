@@ -12,14 +12,15 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 6f90ce6c1590784cefbd5f15ca8a36941aad77ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465694"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193782"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (Opciones del compilador de C#)
+
 Inserta el recurso especificado en el archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Inserta el recurso especificado en el archivo de salida.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `filename`  
  El archivo de recursos de .NET que quiere insertar en el archivo de salida.  
   
@@ -39,6 +41,7 @@ Inserta el recurso especificado en el archivo de salida.
  La accesibilidad del recurso: pública o privada. El valor predeterminado es public.  
   
 ## <a name="remarks"></a>Observaciones  
+
  Use [-linkresource](./linkresource-compiler-option.md) para vincular un recurso a un ensamblado y no agregar el archivo de recursos al archivo de salida.  
   
  De manera predeterminada, los recursos son públicos en el ensamblado cuando se crean mediante el compilador de C#. Para que sean privados, especifique el modificador de accesibilidad `private`. No se permite ninguna otra accesibilidad distinta de `public` o `private`.  
@@ -62,6 +65,7 @@ Inserta el recurso especificado en el archivo de salida.
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   
 ## <a name="example"></a>Ejemplo  
+
  Compile `in.cs` y adjunte el archivo de recursos `rf.resource`:  
   
 ```console  

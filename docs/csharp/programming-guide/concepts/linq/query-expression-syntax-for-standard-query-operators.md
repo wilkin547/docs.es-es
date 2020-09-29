@@ -3,17 +3,19 @@ title: Sintaxis de las expresiones de consulta para operadores de consulta está
 description: Aprenda sobre las expresiones de consulta para operadores de consulta estándar. Consulte una lista de los operadores de consulta estándar con cláusulas de expresiones de consulta equivalentes.
 ms.date: 07/20/2015
 ms.assetid: e1e17ef2-68ff-4c26-b6e2-015668227fa5
-ms.openlocfilehash: b43d2095ee7d059be6f834b576ca0e6ab0a87585
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f85563de496eaf423ea7a43c6d7100bb93eae5b1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299128"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195529"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)
+
 Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave de lenguaje C# para que se puedan invocar como parte de una *expresión de consulta*. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente *basada en métodos*. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación.  
   
 ## <a name="query-expression-syntax-table"></a>Tabla de sintaxis de expresiones de consulta  
+
  En la tabla siguiente se muestran los operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes.  
   
 |Método|Sintaxis de la expresión de consulta de C#|  

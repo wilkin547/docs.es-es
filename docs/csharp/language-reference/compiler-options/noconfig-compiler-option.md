@@ -10,14 +10,15 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: 677b96df8c6686e46c0db93eabe72dd483b947e4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: d62f16a3926aaa78e79c25b1c9b8d84e4401795a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89466071"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194081"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (Opciones del compilador de C#)
+
 La opción **-noconfig** comunica al compilador que no compile con el archivo csc.rsp, que está ubicado y se carga desde el mismo directorio que el archivo csc.exe.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -27,6 +28,7 @@ La opción **-noconfig** comunica al compilador que no compile con el archivo cs
 ```  
   
 ## <a name="remarks"></a>Observaciones  
+
  El archivo csc.rsp hace referencia a todos los ensamblados incluidos en .NET. Las referencias reales que incluye el entorno de desarrollo Visual Studio de .NET dependen del tipo de proyecto.  
   
  Es posible modificar el archivo csc.rsp y especificar opciones de compiladores adicionales que puedan incluirse en cada compilación desde la línea de comandos con csc.exe (excepto la opción **-noconfig**).  

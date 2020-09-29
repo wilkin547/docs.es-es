@@ -9,14 +9,15 @@ helpviewer_keywords:
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-ms.openlocfilehash: 4c812314ed9c1abcd7d2f34b2281140175621312
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: eda4ce5604beb25ae2d72ac94fbbe7dde9695820
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125961"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196811"
 ---
 # <a name="-codepage-c-compiler-options"></a>-codepage (Opciones del compilador de C#)
+
 Esta opción especifica qué página de códigos se va a usar durante la compilación si la página necesaria no es la página de códigos predeterminada actual del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ Esta opción especifica qué página de códigos se va a usar durante la compila
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `id`  
  El id. de la página de códigos que se va a usar para todos los archivos de código fuente de la compilación.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El compilador primero intenta interpretar todos los archivos de código fuente como UTF-8. Si los archivos de código fuente se encuentran en una codificación distinta de UTF-8 y usan caracteres que no sean ASCII de 7 bits, emplee la opción **-codepage** para especificar qué página de códigos debe usarse. **-codepage** se aplica a todos los archivos de código fuente de su compilación.  
 
  Vea [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) para obtener información sobre cómo buscar las páginas de códigos que se admiten en su sistema.  

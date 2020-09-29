@@ -5,14 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 1ac5dc5a5f4e974c9202d2ce23f61071494e1977
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 717e27c23724e63c03a38b028ef99dc6530b4745
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381819"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195485"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Visualización de argumentos de la línea de comandos (Guía de programación de C#)
+
 El acceso a los argumentos proporcionados para un archivo ejecutable en la línea de comandos se puede realizar a través de un parámetro opcional para `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
   
 |Entrada en la línea de comandos|Matriz de cadenas que se pasa a Main|  
@@ -25,6 +26,7 @@ El acceso a los argumentos proporcionados para un archivo ejecutable en la líne
 > Si se ejecuta una aplicación en Visual Studio, se pueden especificar argumentos de línea de comandos en la [Página Depuración, Diseñador de proyectos](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se muestran los argumentos de la línea de comandos pasados a una aplicación de la línea de comandos. La salida que se muestra corresponde a la primera entrada de la tabla anterior.  
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  

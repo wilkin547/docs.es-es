@@ -3,14 +3,15 @@ title: Habilitar un origen de datos para realizar consultas LINQ
 description: Obtenga información sobre cómo extender LINQ en C# para habilitar la consulta de cualquier origen de datos en el patrón LINQ, lo que facilita a los clientes la consulta de un origen de datos.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: a3a03aa3c67ef80507de4607e21eee4d247d622d
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103941"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202622"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
+
 Hay varias maneras de extender LINQ para permitir consultar cualquier origen de datos en el modelo LINQ El origen de datos podría ser una estructura de datos, un servicio Web, un sistema de archivos o una base de datos, por nombrar algunos. El modelo LINQ facilita a los clientes las consultas a un origen de datos para el que las consultas LINQ están habilitadas, ya que la sintaxis y el modelo de consulta no cambian. Las maneras en las que LINQ se puede extender a estos orígenes de datos son las siguientes:  
   
 - Implementar la interfaz <xref:System.Collections.Generic.IEnumerable%601> en un tipo para habilitar las consultas de LINQ to Objects para ese tipo.  
@@ -26,12 +27,15 @@ Hay varias maneras de extender LINQ para permitir consultar cualquier origen de 
 ## <a name="how-to-enable-linq-querying-of-your-data-source"></a>Cómo habilitar las consultas LINQ de un origen de datos  
   
 ### <a name="in-memory-data"></a>Datos en memoria  
+
  Hay dos maneras de habilitar las consultas LINQ para datos en memoria. Si los datos son de un tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>, puede consultar los datos utilizando LINQ to Objects. Si no tiene sentido habilitar la enumeración de su tipo implementando la interfaz <xref:System.Collections.Generic.IEnumerable%601>, puede definir métodos de operador de consulta estándar de LINQ en ese tipo o crear métodos de operador de consulta estándar de LINQ que extiendan el tipo. Las implementaciones personalizadas de los operadores de consulta estándar deberían utilizar ejecución diferida para devolver los resultados.  
   
 ### <a name="remote-data"></a>Datos remotos  
+
  La mejor opción para permitir las consultas LINQ para un origen de datos remoto consiste en implementar la interfaz <xref:System.Linq.IQueryable%601>. Sin embargo, esto es diferente de extender un proveedor como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para un origen de datos. En Visual Studio 2008, no existen modelos de proveedor para extender tecnologías de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] existentes, como LINQ, a otros tipos de origen de datos.
   
 ## <a name="iqueryable-linq-providers"></a>Proveedores LINQ de IQueryable  
+
  Los proveedores de LINQ que implementan <xref:System.Linq.IQueryable%601> pueden variar ampliamente en su complejidad. En esta sección se analizan los diferentes niveles de complejidad.  
   
  Un proveedor de `IQueryable` menos complejo podría interactuar con un solo método de un servicio Web. Este tipo de proveedor es muy específico, ya que espera información específica en las consultas que administra. Posee un sistema de tipos cerrado, y expone quizá un único tipo de resultado. La mayor parte de la ejecución de la consulta ocurre localmente, por ejemplo, utilizando las implementaciones <xref:System.Linq.Enumerable> de los operadores de consulta estándar. Un proveedor menos complejo podría examinar sólo una expresión de llamada a método en el árbol de expresión que representa la consulta, y dejaría que la lógica restante de la consulta se procesara en otra parte.  

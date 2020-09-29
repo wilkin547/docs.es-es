@@ -6,19 +6,21 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 1bb494ded34065bb76b72db40375555ca1eb6953
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 07b3e54c9ffeb1abacaf5ddd04d2058697e653e4
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541856"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203974"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructores estáticos (Guía de programación de C#)
+
 Un constructor estático se usa para inicializar cualquier dato [estático](../../language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez. Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  
   
  [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
 
 ## <a name="remarks"></a>Comentarios
+
 Los constructores estáticos tienen las propiedades siguientes:  
   
 - Un constructor estático no permite modificadores de acceso ni tiene parámetros.  
@@ -52,11 +54,13 @@ Los constructores estáticos tienen las propiedades siguientes:
 - Los constructores estáticos también son un lugar adecuado para aplicar comprobaciones en tiempo de ejecución en el parámetro de tipo que no se puede comprobar en tiempo de compilación a través de restricciones (restricciones de parámetro de tipo).
 
 ## <a name="example"></a>Ejemplo
+
  En este ejemplo, la clase `Bus` tiene un constructor estático. Cuando se crea la primera instancia de `Bus` (`bus1`), se invoca el constructor estático para inicializar la clase. En el resultado del ejemplo, se comprueba que el constructor estático se ejecuta solo una vez, incluso si se crean dos instancias de `Bus`, y que se ejecuta antes de que se ejecute el constructor de instancia.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
+
 Para obtener más información, consulte la sección sobre [constructores estáticos](~/_csharplang/spec/classes.md#static-constructors) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Vea también

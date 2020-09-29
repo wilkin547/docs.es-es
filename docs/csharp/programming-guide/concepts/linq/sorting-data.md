@@ -3,14 +3,15 @@ title: Ordenación de datos (C#)
 description: Aprenda sobre las operaciones de ordenación y los métodos de operador de consulta estándar que realizan operaciones de ordenación en LINQ en C#.
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 5feeb0e2229fc370fdcb9608817f41832bffd7cc
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 0665e5dec95fd2929d24d82568de66597df1c0bd
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302339"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91195511"
 ---
 # <a name="sorting-data-c"></a>Ordenación de datos (C#)
+
 Una operación de ordenación ordena los elementos de una secuencia según uno o varios atributos. El primer criterio de ordenación realiza una ordenación primaria de los elementos. Al especificar un segundo criterio de ordenación, se pueden ordenar los elementos dentro de cada grupo de ordenación primaria.  
   
  En la ilustración siguiente se muestran los resultados de una operación de ordenación alfabética en una secuencia de caracteres:
@@ -34,6 +35,7 @@ Una operación de ordenación ordena los elementos de una secuencia según uno o
 ### <a name="primary-sort-examples"></a>Ejemplos de ordenación principal  
   
 #### <a name="primary-ascending-sort"></a>Orden ascendente principal  
+
  En el siguiente ejemplo se muestra cómo usar la cláusula `orderby` en una consulta LINQ para ordenar las cadenas de una matriz por la longitud de la cadena, en orden ascendente.  
   
 ```csharp  
@@ -57,6 +59,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>Orden descendente principal  
+
  En el siguiente ejemplo se muestra cómo usar la cláusula `orderby descending` en una consulta LINQ para ordenar las cadenas por su letra inicial, en orden descendente.  
   
 ```csharp  
@@ -82,6 +85,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>Ejemplos de ordenación secundaria  
   
 #### <a name="secondary-ascending-sort"></a>Orden ascendente secundario  
+
  En el siguiente ejemplo se muestra cómo usar la cláusula `orderby` en una consulta LINQ para realizar una ordenación principal y secundaria de las cadenas de una matriz. Las cadenas se ordenan primero por su longitud y, después, por la letra inicial de la cadena, en orden ascendente.  
   
 ```csharp  
@@ -105,6 +109,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>Orden descendente secundario  
+
  En el siguiente ejemplo se muestra cómo usar la cláusula `orderby descending` en una consulta LINQ para realizar una ordenación principal en orden ascendente y una ordenación secundaria en orden descendente. Las cadenas se ordenan primero por su longitud y, después, por la letra inicial de la cadena.  
   
 ```csharp  

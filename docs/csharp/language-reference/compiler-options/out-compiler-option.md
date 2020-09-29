@@ -9,14 +9,15 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: d1b79879639e1cbdc3dc040977d9fcd0c3a73602
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 409760ee0b147065a2128c62c304fb5d70cfcf42
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125025"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91193886"
 ---
 # <a name="-out-c-compiler-options"></a>-out (Opciones del compilador de C#)
+
 La opción **-out** especifica el nombre del archivo de salida.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ La opción **-out** especifica el nombre del archivo de salida.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `filename`  
  El nombre del archivo de salida creado por el compilador.  
   
 ## <a name="remarks"></a>Observaciones  
+
  En la línea de comandos, es posible especificar varios archivos de salida de una compilación. El compilador espera encontrar al menos un archivo de código fuente después de la opción **-out**. Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **-out**.  
   
  Hay que especificar el nombre completo y la extensión del archivo que se quiere crear.  
@@ -59,6 +62,7 @@ La opción **-out** especifica el nombre del archivo de salida.
      Para establecer esta opción del compilador mediante programación: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> es una propiedad de solo lectura que se determina a partir de una combinación del tipo de proyecto (ejecutable, biblioteca, etc.) y el nombre del ensamblado. Es necesario modificar una de estas propiedades o ambas para establecer el nombre del archivo de salida.  
   
 ## <a name="example"></a>Ejemplo  
+
  Compile `t.cs` y cree el archivo de salida `t.exe`, así como compile `t2.cs` y cree el archivo de salida del módulo `mymodule.netmodule`:  
   
 ```console  

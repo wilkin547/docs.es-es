@@ -7,14 +7,15 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 6db076bc22e098c285b74a8c10e8b5f456c2c55e
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: c51fa61aa4c501921d5c7ace99a8c5aaf7b29f58
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299986"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203922"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Procedimiento para crear una clave del Registro (guía de programación de C#)
+
 En este ejemplo se agrega el par de valores "Name" e "Isabella" al Registro del usuario actual en la clave "Names".  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,6 +36,7 @@ key.Close();
 - Sustituya el parámetro `Name` por el nombre de un valor que exista directamente en el nodo Names.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Examine la estructura del Registro para buscar una ubicación adecuada para la clave. Por ejemplo, es posible que quiera abrir la clave Software del usuario actual y crear una clave con el nombre de la empresa. Luego agregue los valores del Registro a la clave de la empresa.  
   
  Las condiciones siguientes pueden generar una excepción:  
@@ -50,6 +52,7 @@ key.Close();
 - Que la clave del Registro sea de solo lectura.  
   
 ## <a name="net-security"></a>Seguridad de .NET  
+
  Es más seguro escribir datos en la carpeta de usuario (`Microsoft.Win32.Registry.CurrentUser`) que en el equipo local (`Microsoft.Win32.Registry.LocalMachine`).  
   
  Cuando se crea un valor del Registro, se debe decidir qué hacer si ese valor ya existe. Puede que otro proceso, quizás uno malintencionado, ya haya creado el valor y tenga acceso a él. Al colocar datos en el valor del Registro, estos están a disposición del otro proceso. Para evitarlo, use el método `Overload:Microsoft.Win32.RegistryKey.GetValue` . Si la clave aún no existe, devuelve null.  

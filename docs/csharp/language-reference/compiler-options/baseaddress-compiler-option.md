@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 76da496f7045f12778bba273947b913be1b94e3e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537254"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196850"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (Opciones del compilador de C#)
+
 La opción **-baseaddress** permite especificar la dirección base preferida para cargar un archivo DLL. Para obtener más información sobre cuándo y por qué usar esta opción, vea el [blog de Larry Osterman](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ La opción **-baseaddress** permite especificar la dirección base preferida par
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `address`  
  La dirección base del archivo DLL. Esta dirección puede especificarse como un número octal, hexadecimal o decimal.  
   
 ## <a name="remarks"></a>Observaciones  
+
  La dirección base predeterminada para un archivo DLL se establece mediante Common Language Runtime de .NET.  
   
  Tenga en cuenta que la palabra de orden inferior en esta dirección se redondeará. Por ejemplo, si especifica 0x11110001, se redondeará a 0x11110000.  

@@ -3,14 +3,15 @@ title: Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C
 description: Aprenda a dividir un archivo en varios mediante grupos. Vea un ejemplo de código y examine los recursos adicionales disponibles.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7be01be0f1539eb6ed4f4857af2625672319493
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301065"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203935"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Procedimiento para dividir un archivo en muchos mediante grupos (LINQ) (C#)
+
 En este ejemplo se muestra una manera de combinar el contenido de dos archivos y luego crear un conjunto de archivos nuevos que organicen los datos de una forma nueva.  
   
 ### <a name="to-create-the-data-files"></a>Para crear los archivos de datos  

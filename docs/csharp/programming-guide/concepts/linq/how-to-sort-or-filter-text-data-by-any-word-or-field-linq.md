@@ -3,14 +3,15 @@ title: Procedimiento para ordenar o filtrar datos de texto por palabra o campo (
 description: Aprenda a ordenar o filtrar datos de texto por cualquier palabra o campo. Vea un ejemplo para ordenar líneas de texto estructurado por cualquier campo de la línea.
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: f27ce44f4b0b05bc9094b7e108af8f65170bb58a
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 05858cc787d3916b204910df10d3291796cebc02
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301325"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203948"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Procedimiento para ordenar o filtrar datos de texto por palabra o campo (LINQ) (C#)
+
 En el ejemplo siguiente se muestra cómo ordenar líneas de texto estructurado, como valores separados por comas, por cualquier campo de la línea. El campo se puede especificar dinámicamente en tiempo de ejecución. Supongamos que los campos de scores.csv representan el número de identificación de un alumno, seguido de una serie de cuatro calificaciones.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Para crear un archivo que contenga datos  

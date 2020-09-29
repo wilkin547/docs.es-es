@@ -3,14 +3,15 @@ title: Operaciones cuantificadoras (C#)
 description: Aprenda sobre las operaciones cuantificadoras. Estas operaciones devuelven un valor booleano que indica si algunos o todos los elementos de una secuencia satisfacen una condición.
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: ce06f887d3ad7b10cbdedf9e33072df2c0819ef1
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ffefe1715fd8a074692967e825e0f55673bb2b27
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87299154"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91202544"
 ---
 # <a name="quantifier-operations-c"></a>Operaciones cuantificadoras (C#)
+
 Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que indica si algunos o todos los elementos de una secuencia cumplen una condición.  
   
  En la siguiente ilustración se muestran dos operaciones cuantificadoras diferentes en dos secuencias de origen distintas. La primera operación pregunta si uno o varios de los elementos son el carácter "A", y el resultado es `true`. La segunda operación pregunta si todos los elementos son el carácter "A", y el resultado es `true`.  
@@ -30,16 +31,19 @@ Las operaciones cuantificadoras devuelven un valor <xref:System.Boolean> que ind
 ## <a name="query-expression-syntax-examples"></a>Ejemplos de sintaxis de expresiones de consulta  
   
 ### <a name="all"></a>Todas  
+
 En el ejemplo siguiente se usa `All` para comprobar que todas las cadenas tienen una longitud específica.
   
 [!code-csharp[All](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#All)]  
   
 ### <a name="any"></a>Cualquiera  
+
 En el ejemplo siguiente se usa `Any` para comprobar que las cadenas se inician con "o".  
   
 [!code-csharp[Any](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Any)]  
   
 ### <a name="contains"></a>Contiene  
+
 En el ejemplo siguiente se usa `Contains` para comprobar que una matriz tenga un elemento específico.  
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  

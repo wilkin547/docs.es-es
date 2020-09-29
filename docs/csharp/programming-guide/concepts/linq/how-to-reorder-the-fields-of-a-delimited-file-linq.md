@@ -3,14 +3,15 @@ title: Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (
 description: Obtenga información sobre cómo reorganizar los campos de un archivo .csv de LINQ en C#. En el ejemplo se cambia el orden de las columnas, se realizan combinaciones en ellas y se ordenan las filas por un valor de columna.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 674e6a62112e17107eff690d7656f52488cd08c1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547302"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91203961"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Procedimiento para reordenar los campos de un archivo delimitado (LINQ) (C#)
+
 Un archivo de valores separados por comas (CSV) es un archivo de texto que se usa a menudo para almacenar datos de hoja de cálculo u otros datos tabulares que se representan mediante filas y columnas. Mediante el uso del método <xref:System.String.Split%2A> para separar los campos, es muy fácil consultar y manipular los archivos CSV con LINQ. De hecho, la misma técnica puede usarse para reordenar los elementos de cualquier línea estructurada de texto, no se limita a un archivo CSV.  
   
  En el ejemplo siguiente, suponga que las tres columnas representan el "apellido", el "nombre" y el "ID" de los alumnos. Los campos están en orden alfabético según el apellido de los alumnos. La consulta genera una nueva secuencia en la que la columna de identificador aparece en primer lugar, seguida por una segunda columna que combina el nombre y el apellido del alumno. Las líneas se reordenan según el campo ID. Los resultados se guardan en un archivo nuevo y no se modifican los datos originales.  
@@ -77,6 +78,7 @@ class CSVFiles
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
 Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
   
 ## <a name="see-also"></a>Consulte también

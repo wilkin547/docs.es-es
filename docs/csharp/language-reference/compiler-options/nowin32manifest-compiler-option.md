@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -nowin32manifest compiler option [C#]
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
-ms.openlocfilehash: 8514ab5b118e320d456d1b7367fab3b463c3607a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 13bbee66901149d54632d9b164431f8898cdf52e
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125064"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91194003"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (Opciones del compilador de C#)
+
 Use la opción **-nowin32manifest** para indicar al compilador que no inserte ningún manifiesto de aplicación en el archivo ejecutable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ Use la opción **-nowin32manifest** para indicar al compilador que no inserte ni
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando se use esta opción, la aplicación estará sujeta a la virtualización en Windows Vista a menos que proporcione un manifiesto de aplicación en un archivo de recursos Win32 o durante un paso de compilación posterior.  
   
  En Visual Studio, defina esta opción en la página de **propiedades de la aplicación** seleccionando la opción **Crear aplicación sin manifiesto** en la lista desplegable **Manifiesto**. Para más información, vea [Página de aplicación, Diseñador de proyectos (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  

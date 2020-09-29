@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 5c90696edd3031271e16cd2c1a332da5b605f81f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: c92ad61b2f482631230e0e6aeb0af5716a4fcb61
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125948"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91196837"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Opciones del compilador de C#)
+
 La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../keywords/checked.md) o [unchecked](../keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
 ```  
   
 ## <a name="remarks"></a>Observaciones  
+
  Una instrucción aritmética de enteros que está en el ámbito de la palabra clave `checked` o `unchecked` no está sujeta al efecto de la opción **-checked**.  
   
  Si una instrucción aritmética de enteros que no está en el ámbito de la palabra clave `checked` o `unchecked` produce un valor fuera del intervalo del tipo de datos, y si se usa **-checked+** (o **-checked**) en la compilación, la instrucción provoca una excepción en tiempo de ejecución. Si se usa **-checked-** en la compilación, la instrucción no produce una excepción en tiempo de ejecución.  
@@ -47,6 +49,7 @@ La opción **-checked** especifica si una instrucción aritmética de enteros qu
  Para acceder a esta opción del compilador mediante programación, vea <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Ejemplo  
+
  El comando siguiente compila `t2.cs`. El uso de `-checked` en el comando especifica que cualquier instrucción de aritmética de enteros del archivo que no esté en el ámbito de la palabra clave `checked` o `unchecked` y que produzca un valor fuera del intervalo del tipo de datos provocará una excepción en tiempo de ejecución.  
   
 ```console  
