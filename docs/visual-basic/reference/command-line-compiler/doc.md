@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408678"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097714"
 ---
 # <a name="-doc"></a>-doc
+
 Procesa los comentarios de documentación generando un archivo XML.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ o
 |`file`|Es necesario si se usa `-doc:`. Especifica el archivo XML de salida, que se rellena con los comentarios de los archivos de código fuente de la compilación. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La opción `-doc` controla si el compilador genera un archivo XML que contiene los comentarios de documentación. Si usa la sintaxis `-doc:file`, el parámetro `file` especifica el nombre del archivo XML. Si usa `-doc` o `-doc+`, el compilador toma el nombre del archivo XML desde el archivo ejecutable o la biblioteca que el compilador va a crear. Si usa `-doc-` o no especifica la opción `-doc`, el compilador no crea un archivo XML.  
   
  En los archivos de código fuente, los comentarios de documentación pueden preceder a las siguientes definiciones:  
@@ -55,6 +57,7 @@ o
 |1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Establezca el valor en el cuadro **Generar archivo de documentación XML**.|  
   
 ## <a name="example"></a>Ejemplo  
+
  Vea [Documentar el código con XML (Visual Basic)](../../programming-guide/program-structure/documenting-your-code-with-xml.md) para obtener un ejemplo.  
   
 ## <a name="see-also"></a>Vea también

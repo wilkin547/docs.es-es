@@ -9,14 +9,15 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 633b457106203e213f5d30003e576b7e8132f4d2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b489a164e56a5e3bdbf7e3cdf24ec330fadedf38
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400492"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097558"
 ---
 # <a name="-reference-visual-basic"></a>-reference (Visual Basic)
+
 Hace que el compilador facilite al proyecto que se está compilando información de tipos en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ o
 |`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los archivos que importe deben contener metadatos de ensamblado. Solo los tipos públicos son visibles fuera del ensamblado. La opción [-addmodule](addmodule.md) importa metadatos de un módulo.  
   
  Si hace referencia a un ensamblado (ensamblado A) que a su vez hace referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
@@ -55,6 +57,7 @@ o
  La forma abreviada de `-reference` es `-r`.  
   
 ## <a name="example"></a>Ejemplo  
+
  El comando siguiente compila el archivo de código fuente `Input.vb` y hace referencia a ensamblados de `Metad1.dll` y `Metad2.dll` para generar `Out.exe`.  
   
 ```console

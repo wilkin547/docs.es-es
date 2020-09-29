@@ -2,16 +2,17 @@
 title: Migración de DNX a CLI de .NET Core
 description: Migre de las herramientas de DNX a las herramientas de la CLI de .NET Core.
 ms.date: 06/20/2016
-ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e5ebbab2551cf750a5b1136e7b1d4b67816c3b03
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503823"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071123"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migración de DNX a CLI de .NET Core (project.json)
 
 ## <a name="overview"></a>Información general
+
 Con la versión RC1 de .NET Core y ASP.NET Core 1.0, presentamos las herramientas DNX. Con la versión RC2 de .NET Core y ASP.NET Core 1.0, hicimos la transición de DNX a .NET Core CLI.
 
 Resumamos un poco de qué se trata DNX como un breve recordatorio. DNX era un entorno de ejecución y un conjunto de herramientas para compilar aplicaciones de .NET Core y, más específicamente, de ASP.NET Core 1.0. Constaba de 3 componentes principales:
@@ -25,9 +26,11 @@ Con la presentación de la CLI, todos los componentes anteriores ahora forman pa
 En esta guía de migración se analizarán los aspectos fundamentales sobre cómo migrar proyectos de DNX a la CLI de .NET Core. Si recién está comenzando un proyecto en .NET Core desde cero, puede omitir sin problemas este documento.
 
 ## <a name="main-changes-in-the-tooling"></a>Principales cambios en las herramientas
+
 En primer lugar, es necesario describir algunos cambios generales en las herramientas.
 
 ### <a name="no-more-dnvm"></a>No más DNVM
+
 DNVM, abreviatura para el inglés de *Administrador de versiones DotNet* era un script de PowerShell/búsqueda intensiva que se usaba para instalar un DNX en la máquina. Ayudó a los usuarios a obtener el DNX que necesitaban a partir de la fuente que especificaban (o la fuente predeterminada), además de marcar cierto DNX como "activo", lo que lo ubicaría en la $PATH de la sesión especificada. Esto le permitiría usar las diversas herramientas.
 
 DNVM se interrumpió porque su conjunto de características se volvió redundante debido a los cambios introducidos con la CLI de .NET Core.
@@ -42,6 +45,7 @@ Por lo tanto, no se necesitan las características de instalación de DNVM. ¿Qu
 Si agrega un paquete de cierta versión a las dependencias, hace referencia a un entorno de ejecución en su `project.json`. Con este cambio, la aplicación podrá usar los nuevos bits de entorno de ejecución. Incorporar estos bits a la máquina es similar a lo que sucede con la CLI: instala el entorno de ejecución a través de los instaladores nativos que admite o a través del script de instalación.
 
 ### <a name="different-commands"></a>Otros comandos
+
 Si usó DNX, usaba algunos comandos provenientes de uno de sus tres componentes (DNX, DNU o DNVM). Con la CLI, algunos de estos comandos cambian, algunos no están disponibles y otros son iguales, pero con pequeñas diferencias semánticas.
 
 La tabla siguiente muestra la asignación entre los comandos de DNX/DNU y sus contrapartes de la CLI.
@@ -61,22 +65,27 @@ La tabla siguiente muestra la asignación entre los comandos de DNX/DNU y sus co
 (\*): por diseño, la CLI no admite estas características.
 
 ## <a name="dnx-features-that-are-not-supported"></a>Características de DNX no admitidas
+
 Tal como muestra la tabla anterior, hay características de DNX que decidimos no admitir en la CLI, al menos por el momento. En esta sección se analizarán las más importantes y se describe el razonamiento detrás de la decisión de no admitirlas, además de las soluciones que puede implementar si las necesita.
 
 ### <a name="global-commands"></a>Comandos globales
+
 DNU incluía un concepto llamado "comandos globales". En esencia, se trataba de aplicaciones de consola empaquetadas como paquetes NuGet con un script de shell que podría invocar el DNX especificado para ejecutar la aplicación.
 
 La CLI no admite este concepto. Sin embargo, sí admite el concepto de agregar comandos por proyecto que se pueden invocar con la conocida sintaxis `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalación de dependencias
+
 A partir de la versión v1, la CLI de .NET Core no tiene un comando `install` para instalar dependencias. Para instalar un paquete desde NuGet, necesita agregarlo como una dependencia al archivo `project.json` y, luego, ejecutar `dotnet restore` ([vea la nota](#dotnet-restore-note)).
 
 ### <a name="running-your-code"></a>Ejecución del código
+
 Existen dos formas principales de ejecutar el código. Una es desde el origen, con `dotnet run`. A diferencia de `dnx run`, no hará ninguna compilación en memoria. En realidad, invocará a `dotnet build` para compilar el código y, luego, ejecutar el archivo binario compilado.
 
 La otra forma es usar el `dotnet` mismo para ejecutar el código. Para ello, proporcione una ruta de acceso al ensamblado: `dotnet path/to/an/assembly.dll`.
 
 ## <a name="migrating-your-dnx-project-to-net-core-cli"></a>Migración del proyecto DNX a la CLI de .NET Core
+
 Además de usar los comandos nuevos cuando se trabaja con el código, hay 3 aspectos importantes que se dejaron en la migración desde DNX:
 
 1. Si lo tiene, migre el archivo `global.json` para usar la CLI.
@@ -84,6 +93,7 @@ Además de usar los comandos nuevos cuando se trabaja con el código, hay 3 aspe
 3. Migración de cualquier API de DNX a sus contrapartes de BCL.
 
 ### <a name="changing-the-globaljson-file"></a>Cambio del archivo global.json
+
 El archivo `global.json` actúa como un archivo de solución tanto para los proyectos de RC1 como para los de RC2 (o posteriores). A fin de que la CLI de .NET Core (como también Visual Studio) diferencie entre RC1 y las versiones posteriores, usa la propiedad `"sdk": { "version" }` para hacer la distinción entre qué proyecto es RC1 o posterior. Si `global.json` no tiene este nodo, se supone que es la versión más reciente.
 
 Con el fin de actualizar el archivo `global.json`, quite la propiedad o establézcala en la versión exacta de las herramientas que desea usar; en este caso, **1.0.0-preview2-003121**:

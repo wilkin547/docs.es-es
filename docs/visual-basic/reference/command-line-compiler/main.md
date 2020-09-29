@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403166"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065624"
 ---
 # <a name="-main"></a>-main
+
 Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,10 +24,12 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `location`  
  Obligatorio. Nombre de la clase o módulo que contiene el procedimiento `Sub Main` al que se va a llamar cuando el programa se inicia. Puede tener el formato **-main:module** o **-main:namespace.module**.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Use esta opción al crear un archivo ejecutable o un programa ejecutable de Windows. Si la opción **-main** se omite, el compilador busca un elemento `Sub Main` compartido válido en todas las clases y módulos públicos.  
   
  Vea [Procedimiento Main en Visual Basic](../../programming-guide/program-structure/main-procedure.md) para obtener una explicación de los distintos formatos del procedimiento `Main`.  
@@ -46,6 +49,7 @@ Especifica la clase o el módulo que contiene el procedimiento `Sub Main`.
 4. Modifique el valor del cuadro **Objeto de inicio**.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente código se compilan `T2.vb` y `T3.vb`, especificando que el procedimiento `Sub Main` va a estar en la clase `Test2`.  
   
 ```console

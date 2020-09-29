@@ -2,12 +2,12 @@
 title: Implementar un modelo de dominio de microservicio con .NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738754"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152551"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
@@ -152,7 +152,7 @@ En este fragmento de código, la mayoría de las validaciones o la lógica relac
 
 Además, la nueva operación OrderItem(params) también es controlada y realizada por el método AddOrderItem de la raíz de agregado Order. Por lo tanto, la mayoría de la lógica o las validaciones relacionadas con esa operación (especialmente todo lo que afecta a la coherencia entre otras entidades secundarias) estará en una única ubicación dentro de la raíz de agregado. Ese es el fin último del patrón de raíz de agregado.
 
-Cuando use Entity Framework Core 1.1 o posterior, una entidad DDD se puede expresar mejor porque permite [asignar a campos](https://docs.microsoft.com/ef/core/modeling/backing-field) además de a propiedades. Esto resulta útil al proteger colecciones de entidades secundarias u objetos de valor. Con esta mejora, puede usar campos privados simples en lugar de propiedades y puede implementar cualquier actualización de la colección de campos en los métodos públicos y proporcionar acceso de solo lectura mediante el método AsReadOnly.
+Cuando use Entity Framework Core 1.1 o posterior, una entidad DDD se puede expresar mejor porque permite [asignar a campos](/ef/core/modeling/backing-field) además de a propiedades. Esto resulta útil al proteger colecciones de entidades secundarias u objetos de valor. Con esta mejora, puede usar campos privados simples en lugar de propiedades y puede implementar cualquier actualización de la colección de campos en los métodos públicos y proporcionar acceso de solo lectura mediante el método AsReadOnly.
 
 En DDD, interesa actualizar la entidad únicamente mediante métodos de la entidad (o el constructor) para controlar cualquier invariable y la coherencia de los datos, de modo que las propiedades solo se definan con un descriptor de acceso get. Las propiedades se basan en campos privados. A los miembros privados solo se puede acceder desde la clase. Pero hay una excepción: EF Core también debe establecer estos campos (de forma que pueda devolver el objeto con los valores adecuados).
 

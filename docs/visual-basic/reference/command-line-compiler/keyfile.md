@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c81486243195f7d022bd474ef6db20d069b3a018
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408580"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085157"
 ---
 # <a name="-keyfile"></a>-keyfile
+
 Especifica un archivo que contiene una clave o un par de claves que asigna un nombre seguro al ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,10 +24,12 @@ Especifica un archivo que contiene una clave o un par de claves que asigna un no
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `file`  
  Obligatorio. Archivo que contiene la clave. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").  
   
 ## <a name="remarks"></a>Comentarios  
+
  El compilador inserta la clave pública en el manifiesto del ensamblado y firma después el ensamblado final con la clave privada. Para generar un archivo de claves, escriba `sn -k file` en la línea de comandos. Para obtener más información, consulte [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
  Si se compila con `-target:module`, el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado que se crea al compilar un ensamblado con [-addmodule](addmodule.md).  

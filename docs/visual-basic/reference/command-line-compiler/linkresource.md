@@ -9,14 +9,15 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 43ebb61efa26ed11af573e2c4e73a6fd71ac0902
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8c4f753f94aedaf0a4f997a3f9b99fb3f417abf8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403205"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065689"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
+
 Crea un vínculo a un recurso administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,6 +33,7 @@ o
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `filename`  
  Obligatorio. El archivo de recursos que se va a vincular al ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").  
   
@@ -39,6 +41,7 @@ o
  Opcional. El nombre lógico del recurso. El nombre que se usa para cargar el recurso. El valor predeterminado es el nombre del archivo. Opcionalmente, puede especificar si el archivo es público o privado en el manifiesto del ensamblado, por ejemplo: `-linkres:filename.res,myname.res,public`. De forma predeterminada, `filename` es público en el ensamblado.  
   
 ## <a name="remarks"></a>Comentarios  
+
  La opción `-linkresource` no inserta el archivo de recursos en el archivo de salida; para hacerlo, use la opción `-resource`.  
   
  La opción `-linkresource` requiere una de las opciones de `-target` que no sea `-target:module`.  
@@ -53,6 +56,7 @@ o
 > La opción `-linkresource` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el código siguiente se compila `in.vb` y se vincula al archivo de recursos `rf.resource`.  
   
 ```console  

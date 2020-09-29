@@ -7,14 +7,15 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: 337cb794ef9a405a178f1998cbe27b5da7709382
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d4b50d56373676bf78a7591102095209401c907d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397446"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097597"
 ---
 # <a name="-optimize"></a>-optimize
+
 Habilita o deshabilita las optimizaciones del compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -30,6 +31,7 @@ Habilita o deshabilita las optimizaciones del compilador.
 |`+` &#124; `-`|Opcional. La opción `-optimize-` deshabilita las optimizaciones del compilador. La opción `-optimize+` habilita las optimizaciones del compilador. De forma predeterminada, las optimizaciones están deshabilitadas.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Gracias a las optimizaciones del compilador, el archivo de salida será más pequeño, más rápido y más eficaz. Pero como las optimizaciones causan la reestructuración del código en el archivo de salida, `-optimize+` puede dificultar la depuración.  
   
  Todos los módulos generados con `-target:module` para un ensamblado deben usar la misma configuración de `-optimize` que el ensamblado. Para obtener más información, vea [-target (Visual Basic)](target.md).  
@@ -41,6 +43,7 @@ Habilita o deshabilita las optimizaciones del compilador.
 |1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**.<br />     <br />2.  Haga clic en la pestaña **Compilar**.<br />3.  Haga clic en el botón **Avanzada** .<br />4.  Modifique la casilla **Habilitar optimizaciones**.|  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente compila `T2.vb` y habilita las optimizaciones del compilador.  
   
 ```console

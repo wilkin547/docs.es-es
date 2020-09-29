@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 575b337c262fbb36a9e118aa293916c296cc2db3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408567"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085235"
 ---
 # <a name="-keycontainer"></a>-keycontainer
+
 Especifica un nombre de contenedor de claves para un par de claves que asigna un nombre seguro al ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Especifica un nombre de contenedor de claves para un par de claves que asigna un
 |`container`|Obligatorio. Archivo contenedor que contiene la clave. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El compilador crea un componente compartible mediante la inserción de una clave pública en el manifiesto del ensamblado y la firma del ensamblado final con la clave privada. Para generar un archivo de claves, escriba `sn -k file` en la línea de comandos. La opción `-i` instala el par de claves en un contenedor. Para obtener más información, vea [Sn.exe (herramienta de nombre seguro)](../../../framework/tools/sn-exe-strong-name-tool.md).  
   
  Si se compila con `-target:module`, el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado que se crea al compilar un ensamblado con [-addmodule](addmodule.md).  
@@ -43,6 +45,7 @@ Especifica un nombre de contenedor de claves para un par de claves que asigna un
 > La opción `-keycontainer` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el código siguiente se compila el archivo de código fuente `Input.vb` y se especifica un contenedor de claves.  
   
 ```console  

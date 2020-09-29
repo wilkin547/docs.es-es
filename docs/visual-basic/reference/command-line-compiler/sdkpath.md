@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /sdkpath compiler option [Visual Basic]
 - sdkpath compiler option [Visual Basic]
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
-ms.openlocfilehash: 85aba17b330af1b25b39f462844bc1a4856a448a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18bf22861c1cbc3a37ef917b421491c2d01efba8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403114"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085118"
 ---
 # <a name="-sdkpath"></a>-sdkpath
+
 Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `path`  
  Directorio que contiene las versiones de mscorlib.dll y Microsoft.VisualBasic.dll que se van a usar para la compilación. Esta ruta de acceso no se comprueba hasta que se carga. Si el nombre de archivo contiene un espacio, escríbalo entre comillas (" ").  
   
 ## <a name="remarks"></a>Comentarios  
+
  Esta opción indica al compilador de Visual Basic que cargue los archivos mscorlib.dll y Microsoft.VisualBasic.dll desde una ubicación no predeterminada. La opción `-sdkpath` se ha diseñado para usarse con [-netcf](netcf.md). En .NET Compact Framework se usan otras versiones de estas bibliotecas de compatibilidad para evitar el uso de tipos y características del lenguaje que no se encuentran en los dispositivos.  
   
 > [!NOTE]
@@ -38,6 +41,7 @@ Especifica la ubicación de mscorlib.dll y Microsoft.VisualBasic.dll.
  Puede especificar que el compilador debe compilar sin una referencia a la biblioteca de tiempo de ejecución de Visual Basic mediante la opción del compilador `-vbruntime`. Para obtener más información, vea [-vbruntime](vbruntime.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente compila `Myfile.vb` con .NET Compact Framework, mediante las versiones de mscorlib.dll y Microsoft.VisualBasic.dll que se encuentran en el directorio de instalación predeterminado de .NET Compact Framework en la unidad C. Normalmente, se usaría la versión más reciente de .NET Compact Framework.  
   
 ```console

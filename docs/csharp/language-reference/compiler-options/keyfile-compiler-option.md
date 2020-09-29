@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5af40da18895d47933cb809d710e31a40f14513b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125493"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152434"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (Opciones del compilador de C#)
+
 Especifica el nombre de archivo que contiene la clave criptográfica.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -31,7 +32,8 @@ Especifica el nombre de archivo que contiene la clave criptográfica.
 |----------|----------------|  
 |`file`|El nombre del archivo que contiene la clave de nombre seguro.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Cuando se usa esta opción, el compilador inserta la clave pública del archivo especificado en el manifiesto del ensamblado y, después, firma el último ensamblado con la clave privada. Para generar un archivo de clave, escriba sn -k `file` en la línea de comandos.  
   
  Si se compila con la opción **-target:module**, el nombre del archivo de claves se mantiene en el módulo y se incorpora en el ensamblado que se crea al compilar un ensamblado con la opción [-addmodule](./addmodule-compiler-option.md).  

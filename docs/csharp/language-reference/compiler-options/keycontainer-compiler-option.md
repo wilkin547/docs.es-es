@@ -9,14 +9,15 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 8b11380683159b7792149558a5dd432707ba3818
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 93ee5cd755a4fd6918d2a5825b63151a201a8f6a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125506"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152473"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (Opciones del compilador de C#)
+
 Especifica el nombre del contenedor de claves criptográficas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,10 +27,12 @@ Especifica el nombre del contenedor de claves criptográficas.
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `string`  
  El nombre del contenedor de claves de nombre seguro.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Cuando se utiliza la opción **-keycontainer**, el compilador crea un componente que se puede compartir. El compilador inserta una clave pública del contenedor especificado en el manifiesto del ensamblado y firma el último ensamblado con la clave privada. Para generar un archivo de claves, escriba `sn -k file` en la línea de comandos. `sn -i` instala el par de claves en un contenedor. Esta opción no se admite cuando el compilador se ejecuta en CoreCLR. Para firmar un ensamblado al compilar en CoreCLR, utilice la opción [-keyfile](keyfile-compiler-option.md).
   
  Si se compila con [-target:module](./target-module-compiler-option.md), el nombre del archivo de claves se mantiene en el módulo y se incorpora al ensamblado al compilar este módulo en un ensamblado con [-addmodule](./addmodule-compiler-option.md).  

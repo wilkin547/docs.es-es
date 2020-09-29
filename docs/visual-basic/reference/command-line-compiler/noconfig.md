@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: ee7cd1b8039a8d9312a8b058cc85c41ca536ed2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d7fc73aa24e3d2e323170f38f0f5d689f9c3abaf
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401945"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065559"
 ---
 # <a name="-noconfig"></a>-noconfig
+
 Especifica que el compilador no debe hacer referencia automáticamente a los ensamblados de .NET Framework que se usan habitualmente ni importar los espacios de nombres `System` y `Microsoft.VisualBasic`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,6 +24,7 @@ Especifica que el compilador no debe hacer referencia automáticamente a los ens
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  La opción `-noconfig` indica al compilador que no compile con el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe. El archivo Vbc.rsp hace referencia a los ensamblados de .NET Framework que se usan habitualmente e importa los espacios de nombres `System` y `Microsoft.VisualBasic`. El compilador hace referencia implícitamente al ensamblado System.dll a menos que se especifique la opción `-nostdlib`. La opción `-nostdlib` indica al compilador que no compile con Vbc.rsp ni haga referencia automáticamente al ensamblado System.dll.  
   
 > [!NOTE]

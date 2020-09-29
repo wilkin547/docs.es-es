@@ -8,14 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400583"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098922"
 ---
 # <a name="-optioninfer"></a>-optioninfer
+
 Permite el uso de la inferencia de tipo de variable local en declaraciones de variables.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
 > Puede utilizar la opción `-noconfig` para conservar los valores predeterminados internos del compilador en lugar de los especificados en vbc.rsp. El valor predeterminado del compilador para esta opción es `-optioninfer-`.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si el archivo de código fuente contiene una [instrucción Option Infer](../../language-reference/statements/option-infer-statement.md), la declaración reemplaza la configuración `-optioninfer` del compilador de la línea de comandos.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Para establecer -optioninfer en el IDE de Visual Studio  
@@ -43,6 +45,7 @@ Permite el uso de la inferencia de tipo de variable local en declaraciones de va
 2. En la pestaña **Compilar**, modifique el valor del cuadro **Option infer**.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente código compila `test.vb` con la inferencia de tipo de variable local habilitada.  
   
 ```console

@@ -9,17 +9,19 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 41ee25397d519f189b462291d823586113c78b67
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f05c53eec326517052eb9a46e57e8b9c18ea698f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541544"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91149691"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Información general sobre interoperabilidad (Guía de programación de C#)
+
 En el tema se describen métodos para habilitar la interoperabilidad entre el código administrado y el código no administrado de C#.  
   
 ## <a name="platform-invoke"></a>Invocación de plataforma  
+
  La *invocación de plataforma* es un servicio que permite al código administrado llamar a funciones no administradas que se implementan en bibliotecas de vínculos dinámicos (DLL), como las de la API de Microsoft Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  
   
 Para más información, consulte [Consumir funciones DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md) y [Procedimiento Utilizar la invocación de plataforma para reproducir un archivo de sonido](./how-to-use-platform-invoke-to-play-a-wave-file.md).
@@ -28,9 +30,11 @@ Para más información, consulte [Consumir funciones DLL no administradas](../..
 > [Common Language Runtime](../../../standard/clr.md) (CLR) administra el acceso a los recursos del sistema. Si se llama al código no administrado que está fuera de CLR, se omite este mecanismo de seguridad y, por lo tanto, existe un riesgo de seguridad. Por ejemplo, el código no administrado podría llamar directamente a recursos en código no administrado, omitiendo los mecanismos de seguridad de CLR. Para obtener más información, vea [Seguridad en .NET](../../../standard/security/index.md).  
   
 ## <a name="c-interop"></a>Interoperabilidad de C++  
+
  Puede usar la interoperabilidad de C++, también conocida como It Just Works (IJW), para encapsular una clase de C++ nativa de modo que el código creado en C# o en otro lenguaje de .NET pueda consumirla. Para ello, escriba código de C++ para encapsular un componente DLL o COM nativo. A diferencia de otros lenguajes de .NET, Visual C++ cuenta con compatibilidad de interoperabilidad que permite que haya código administrado y no administrado en la misma aplicación, e incluso en el mismo archivo. Después, compile el código de C++ mediante el modificador del compilador **/clr** para generar un ensamblado administrado. Finalmente, agregue una referencia al ensamblado en el proyecto de C# y use los objetos encapsulados igual que usaría otras clases administradas.  
   
 ## <a name="exposing-com-components-to-c"></a>Exponer componentes COM en C\#
+
  Puede usar un componente COM de un proyecto de C#. Los pasos generales son los siguientes:  
   
 1. Busque un componente COM para usarlo y registrarlo. Use regsvr32.exe para registrar un componente DLL COM o para anular su registro.  
@@ -46,6 +50,7 @@ Para más información, consulte [Consumir funciones DLL no administradas](../..
  Para obtener más información, vea [Exponer componentes COM en .NET Framework](../../../framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>Exponer C# en COM  
+
  Los clientes COM pueden consumir tipos de C# que se han expuesto correctamente. Los pasos básicos para exponer tipos de C# son los siguientes:  
   
 1. Agregue atributos de interoperabilidad al proyecto de C#.  

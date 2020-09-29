@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: b6a2f3ba0772d8f8c8c6a762a1be01703d21b778
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d9388ace03f654458eb955e989673b7441e72f23
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403140"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085144"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
+
 Especifica un espacio de nombres para todas las declaraciones de tipos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,6 +33,7 @@ Especifica un espacio de nombres para todas las declaraciones de tipos.
 |`namespace`|Nombre del espacio de nombres en el que se van a incluir todas las declaraciones de tipos para el proyecto actual.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si usa el archivo ejecutable de Visual Studio (devenv.exe) para compilar un proyecto creado en el entorno de desarrollo integrado de Visual Studio, utilice `-rootnamespace` para especificar el valor de la propiedad <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>. Para obtener más información, vea [Modificadores de línea de comandos para Devenv](/visualstudio/ide/reference/devenv-command-line-switches).  
   
  Use el desensamblador de MSIL de Common Language Runtime (`Ildasm.exe`) para ver los nombres de los espacios de nombres en el archivo de salida.  
@@ -41,6 +43,7 @@ Especifica un espacio de nombres para todas las declaraciones de tipos.
 |1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Aplicación** .<br />3.  Modifique el valor del cuadro **Espacio de nombres raíz**.|  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente compila `In.vb` y agrega todas las declaraciones de tipos en el espacio de nombres `mynamespace`.  
   
 ```console

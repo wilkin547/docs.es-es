@@ -3,12 +3,12 @@ title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810890"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078221"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -364,9 +364,11 @@ Una lista de etiquetas delimitada por punto y coma que designa el paquete.
 Determina la ruta de acceso de salida en la que se va a quitar el paquete empaquetado. El valor predeterminado es `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+
 Este valor booleano indica si el paquete debe crear un paquete de símbolos adicionales cuando se empaqueta el proyecto. El formato del paquete de símbolos se controla mediante la propiedad `SymbolPackageFormat`.
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 Especifica el formato del paquete de símbolos. Si es "symbols.nupkg", se crea un paquete de símbolos heredado con una extensión *.symbols.nupkg* que contiene archivos PDB, DLL y otros archivos de salida. Si es "snupkg", se crea un paquete de símbolos snupkg que contiene los archivos PDB portátiles. El valor predeterminado es "symbols.nupkg".
 
 ### <a name="includesource"></a>IncludeSource
@@ -386,9 +388,11 @@ Especifica la dirección URL del repositorio donde reside el código fuente del 
 Especifica el tipo del repositorio. El valor predeterminado es “git”.
 
 ### <a name="repositorybranch"></a>RepositoryBranch
+
 Especifica el nombre de la rama de origen en el repositorio. Cuando el proyecto se empaqueta en un paquete NuGet, se agrega a los metadatos del paquete.
 
 ### <a name="repositorycommit"></a>RepositoryCommit
+
 Confirmación o conjunto de cambios opcionales de repositorio para indicar en qué origen se ha compilado el paquete. `RepositoryUrl` también se debe especificar para que esta propiedad se incluya. Cuando el proyecto se empaqueta en un paquete NuGet, esta confirmación o conjunto de cambios se agrega a los metadatos del paquete.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis

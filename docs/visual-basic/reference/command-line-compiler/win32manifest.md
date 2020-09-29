@@ -6,14 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414264"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098883"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
+
 Identifica un archivo de manifiesto de la aplicación Win32 definido por el usuario que se va a insertar en un archivo ejecutable portable (PE) del proyecto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Identifica un archivo de manifiesto de la aplicación Win32 definido por el usua
 |`fileName`|Ruta de acceso al archivo de manifiesto personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El compilador de Visual Basic inserta de forma predeterminada un manifiesto de aplicación que especifica un nivel de ejecución solicitado de asInvoker. Crea el manifiesto en la misma carpeta en la que se ha compilado el archivo ejecutable, normalmente la carpeta bin\Debug o bin\Release cuando se usa Visual Studio. Si quiere proporcionar un manifiesto personalizado, por ejemplo para especificar un nivel de ejecución solicitado de highestAvailable o requireAdministrator, use esta opción para especificar el nombre del archivo.  
   
 > [!NOTE]
@@ -47,6 +49,7 @@ Identifica un archivo de manifiesto de la aplicación Win32 definido por el usua
  Puede proporcionar el manifiesto de aplicación como un paso personalizado posterior a la compilación o como parte de un archivo de recursos Win32 con la opción `-nowin32manifest`. Use esa misma opción si quiere que la aplicación esté sujeta a virtualización de archivos y Registro en Windows Vista. Esto evitará que el compilador cree e incruste un manifiesto predeterminado en el archivo PE.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra el manifiesto predeterminado que el compilador de Visual Basic inserta en un archivo PE.  
   
 > [!NOTE]

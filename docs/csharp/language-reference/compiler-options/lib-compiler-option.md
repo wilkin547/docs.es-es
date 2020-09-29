@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125454"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152447"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (Opciones del compilador de C#)
+
 La opción **-lib** especifica la ubicación de los ensamblados a los que se hace referencia mediante la opción [-reference (Opciones del compilador de C#)](./reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `dir1`  
  Un directorio para el compilador para buscar un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime.  
   
@@ -33,6 +35,7 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
  Uno o varios directorios adicionales para buscar las referencias a ensamblados. Separe los nombres de directorio adicionales con una coma y sin espacio en blanco entre ellos.  
   
 ## <a name="remarks"></a>Observaciones  
+
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
   
 1. Directorio de trabajo actual. Es el directorio desde donde se invoca al compilador.  
@@ -62,6 +65,7 @@ La opción **-lib** especifica la ubicación de los ensamblados a los que se hac
  Para obtener información sobre cómo establecer esta opción del compilador mediante programación, vea <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
 ## <a name="example"></a>Ejemplo  
+
  Compile t2.cs para crear un archivo .exe. El compilador buscará referencias a ensamblados en el directorio de trabajo y en el directorio raíz de la unidad C.  
   
 ```console  

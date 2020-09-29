@@ -6,14 +6,15 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: fc8dfe41ea56531ff34cd5e551ef24d636227e47
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7ded2b7d102430d8d4e545da5ab6ce8bafe3609e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400505"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095428"
 ---
 # <a name="-recurse"></a>-recurse
+
 Compila archivos de código fuente de todos los directorios secundarios del directorio especificado o del directorio del proyecto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,6 +24,7 @@ Compila archivos de código fuente de todos los directorios secundarios del dire
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `dir`  
  Opcional. El directorio en el que quiere que comience la búsqueda. Si no se especifica, la búsqueda comienza en el directorio del proyecto.  
   
@@ -30,12 +32,14 @@ Compila archivos de código fuente de todos los directorios secundarios del dire
  Obligatorio. Los archivos que buscará. Se admiten los caracteres comodín.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Puede usar caracteres comodín en un nombre de archivo para compilar todos los archivos coincidentes en el directorio del proyecto sin usar `-recurse`. Si no se especifica ningún nombre de archivo de salida, el compilador basa el nombre del archivo de salida en el primer archivo de entrada procesado. Normalmente es el primer archivo de la lista de archivos compilados cuando está ordenada alfabéticamente. Por esta razón, es mejor especificar un archivo de salida mediante la opción `-out`.  
   
 > [!NOTE]
 > La opción `-recurse` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente comando compilar todos los archivos de Visual Basic del directorio actual.  
   
 ```console

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a91bd74d0be4f1cb223091ee2527f9567b4ca5db
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408554"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058474"
 ---
 # <a name="-libpath"></a>-libpath
+
 Especifica la ubicación de los ensamblados a los que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Especifica la ubicación de los ensamblados a los que se hace referencia.
 |`dirList`|Obligatorio. Lista delimitada por punto y coma de directorios para que el compilador busque un ensamblado al que se hace referencia si no lo encuentra en el directorio de trabajo actual (el directorio desde el que se invoca al compilador) o en el directorio del sistema de Common Language Runtime. Si el nombre del directorio contiene un espacio, escríbalo entre comillas (" ").|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La opción `-libpath` especifica la ubicación de los ensamblados a los que se hace referencia con la opción [-reference](reference.md).  
   
  El compilador busca referencias a ensamblados que no presentan la ruta completa en el siguiente orden:  
@@ -50,6 +52,7 @@ Especifica la ubicación de los ensamblados a los que se hace referencia.
 |1.  Seleccione un proyecto en el **Explorador de soluciones**. En el menú **Proyecto**, haga clic en **Propiedades**. <br />2.  Haga clic en la pestaña **Referencias**.<br />3.  Haga clic en el botón **Rutas de acceso de referencia...** .<br />4.  En el cuadro de diálogo **Rutas de acceso de referencia**, escriba el nombre del directorio en el cuadro **Carpeta:** .<br />5.  Haga clic en **Agregar carpeta**.|  
   
 ## <a name="example"></a>Ejemplo  
+
  El código siguiente compila `T2.vb` para crear un archivo. exe. El compilador busca las referencias de ensamblado en el directorio de trabajo, en el directorio raíz de la unidad C:, y en el directorio New Assemblies (Ensamblados nuevos) de la unidad C:.  
   
 ```console  

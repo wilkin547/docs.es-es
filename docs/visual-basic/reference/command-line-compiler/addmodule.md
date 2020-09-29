@@ -6,14 +6,15 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 9e8146497d63d949f138d6cd08c9ea8c7b03c651
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2db122acc03056a9cb6f355119d4c4e6da6ed175
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097792"
 ---
 # <a name="-addmodule"></a>-addmodule
+
 Hace que el compilador facilite al proyecto que se está compilando toda la información de tipos presente en los archivos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,10 +24,12 @@ Hace que el compilador facilite al proyecto que se está compilando toda la info
 ```  
   
 ## <a name="arguments"></a>Argumentos  
+
  `fileList`  
  Obligatorio. Lista delimitada por comas de archivos que contienen metadatos, pero que no contienen manifiestos de ensamblado. Los nombres de archivo que contienen espacios deben ir entre comillas (" ").  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los archivos mostrados con el parámetro `fileList` se deben crear con la opción `-target:module` o con otro equivalente del compilador para `-target:module`.  
   
  Todos los módulos agregados con `-addmodule` deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, se puede especificar un módulo de cualquier directorio en el tiempo de compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si no es así, obtendrá un error <xref:System.TypeLoadException>.  
@@ -39,6 +42,7 @@ Hace que el compilador facilite al proyecto que se está compilando toda la info
 > La opción `-addmodule` no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el código siguiente se crea un módulo.  
   
  [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  

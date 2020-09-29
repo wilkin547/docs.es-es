@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f125a6a8d9287cb515478a10c2679c07817ae9a6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281542"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087367"
 ---
 # <a name="whats-new-in-net-core-21"></a>Novedades de .NET Core 2.1
 
@@ -131,6 +131,7 @@ La publicación independiente se basa en las versiones del tiempo de ejecución 
 Con el SDK de .NET Core 2.0, las aplicaciones independientes se publican con el tiempo de ejecución de .NET Core 2.0.0 a menos que se especifique una versión diferente a través de la propiedad `RuntimeFrameworkVersion`. Con este nuevo comportamiento, ya no será necesario configurar esta propiedad para seleccionar una versión de tiempo de ejecución más alta para una aplicación independiente. El enfoque más sencillo a partir de ahora es publicar siempre con el SDK de .NET Core 2.1 (v. 2.1.300).
 
 Para obtener más información, vea [Puesta al día del runtime de implementación autocontenida](../deploying/runtime-patch-selection.md).
+
 ## <a name="windows-compatibility-pack"></a>Paquete de compatibilidad de Windows
 
 Al trasladar el código existente de .NET Framework a .NET Core, puede usar el [paquete de compatibilidad de Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Esto proporciona acceso a 20 000 API más de las que están disponibles en .NET Core. Estas API incluyen tipos en el espacio de nombres <xref:System.Drawing?displayProperty=nameWithType>, la clase <xref:System.Diagnostics.EventLog>, WMI, contadores de rendimiento, servicios de Windows y los tipos y miembros de Registro de Windows.
