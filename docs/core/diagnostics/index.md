@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538532"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437994"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -27,6 +27,10 @@ El [registro y seguimiento](logging-tracing.md) son técnicas relacionadas. Hace
 ## <a name="unit-testing"></a>Pruebas unitarias
 
 Las [pruebas unitarias](../testing/index.md) son un componente clave de la integración continua y la implementación de software de alta calidad. Las pruebas unitarias están diseñadas para brindarle una advertencia temprana cuando se daña algo.
+
+## <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
+
+Las herramientas de diagnóstico que se usan en los entornos de Linux que no están en contenedores también se pueden utilizar para [recopilar diagnósticos en contenedores](diagnostics-in-containers.md). Solo es necesario realizar algunos cambios en la utilización para asegurarse de que las herramientas funcionan en un contenedor de Docker.
 
 ## <a name="debug-linux-dumps"></a>Depuración de volcados de Linux
 

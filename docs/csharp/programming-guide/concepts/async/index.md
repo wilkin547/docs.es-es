@@ -2,12 +2,12 @@
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 02290e374aa97cb5d5ec6410c917751066949b23
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414986"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438100"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Programación asincrónica con async y await
 
@@ -123,7 +123,7 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-:::image type="content" source="media/asynchronous-breakfast.png" alt-text="Desayuno asincrónico":::
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="Desayuno sincrónico":::
 
 El desayuno preparado de forma asincrónica tardó unos 20 minutos porque algunas tareas pudieron efectuarse simultáneamente.
 
@@ -184,7 +184,7 @@ while (breakfastTasks.Count > 0)
 Después de todos estos cambios, la versión final del código tiene un aspecto similar al siguiente: <a id="final-version"></a>.
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
-:::image type="content" source="media/whenany-async-breakfast.png" alt-text="Cualquier desayuno asincrónico":::
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="Desayuno sincrónico":::
 
 La versión final del desayuno preparado de forma asincrónica tardó aproximadamente 15 minutes porque algunas tareas pudieron efectuarse simultáneamente y el código pudo supervisar varias tareas a la vez, tomando medidas solo en caso necesario.
 
