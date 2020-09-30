@@ -1,19 +1,19 @@
 ---
-title: Tipos de datos escalares de Protobuf - gRPC para desarrolladores de WCF
-description: Obtenga información sobre los tipos de datos básicos y conocidos que protobuf y gRPC admiten en .NET Core.
+title: Tipos de datos escalares de protobuf-gRPC para desarrolladores de WCF
+description: Obtenga información sobre los tipos de datos básicos y conocidos que admiten protobuf y gRPC en .NET Core.
 ms.date: 09/09/2019
-ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5447067b953d257258950d020636e0b38245e20d
+ms.sourcegitcommit: 665f8fc55258356f4d2f4a6585b750c974b26675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249440"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91573649"
 ---
 # <a name="protobuf-scalar-data-types"></a>Tipos de datos escalares de Protobuf
 
-El búfer de protocolo (Protobuf) admite un intervalo de tipos de valor escalar nativos. En la tabla siguiente se enumeran todos ellos con su tipo equivalente de C-:
+El búfer de protocolo (protobuf) admite un intervalo de tipos de valores escalares nativos. En la tabla siguiente se enumeran todos con su tipo C# equivalente:
 
-| Tipo de protobuf | Tipo de C#      | Notas |
+| Tipo de Protobuf | Tipo de C#      | Notas |
 | ------------- | ------------ | ----- |
 | `double`      | `double`     |       |
 | `float`       | `float`      |       |
@@ -33,16 +33,16 @@ El búfer de protocolo (Protobuf) admite un intervalo de tipos de valor escalar 
 
 Notas:
 
-1. La codificación `int32` `int64` estándar para y es ineficiente cuando se trabaja con valores firmados. Si es probable que el campo `sint32` `sint64` contenga números negativos, úselo o en su lugar. Estos tipos se asignan `int` `long` a los tipos y C- y, respectivamente.
-2. Los `fixed` campos siempre utilizan el mismo número de bytes independientemente del valor. Este comportamiento hace que la serialización y la deserialización sean más rápidas para valores más grandes.
-3. Las cadenas Protobuf están codificadas en UTF-8 (o ASCII de 7 bits). La longitud codificada no puede ser mayor que 2<sup>32</sup>.
-4. El tiempo de ejecución `ByteString` de Protobuf proporciona `byte[]` un tipo que se asigna fácilmente hacia y desde matrices de C.
+1. La codificación estándar para `int32` y `int64` es ineficaz cuando se trabaja con valores con signo. Si es probable que el campo contenga números negativos, use `sint32` o `sint64` en su lugar. Estos tipos se asignan a `int` los `long` tipos C# y, respectivamente.
+2. Los `fixed` campos siempre utilizan el mismo número de bytes, independientemente de cuál sea el valor. Este comportamiento hace que la serialización y la deserialización sean más rápidas para los valores más grandes.
+3. Las cadenas protobuf son codificadas con UTF-8 (o ASCII de 7 bits). La longitud codificada no puede ser mayor que 2<sup>32</sup>.
+4. El tiempo de ejecución de protobuf proporciona un `ByteString` tipo que se asigna fácilmente a las matrices de C# y desde ellas `byte[]` .
 
 ## <a name="other-net-primitive-types"></a>Otros tipos primitivos de .NET
 
 ### <a name="dates-and-times"></a>Fechas y horas
 
-Los tipos escalares nativos no proporcionan valores de fecha y <xref:System.DateTimeOffset>hora, equivalentes a Los valores de C's , <xref:System.DateTime>, y <xref:System.TimeSpan>. Puede especificar estos tipos mediante algunas de las extensiones "Tipos bien conocidos" de Google. Estas extensiones proporcionan compatibilidad de generación de código y tiempo de ejecución para tipos de campo complejos en las plataformas admitidas.
+Los tipos escalares nativos no proporcionan valores de fecha y hora, equivalentes a <xref:System.DateTimeOffset> , <xref:System.DateTime> y de C# <xref:System.TimeSpan> . Puede especificar estos tipos mediante el uso de algunas de las extensiones de "tipos conocidos" de Google. Estas extensiones proporcionan compatibilidad con el entorno de ejecución y la generación de código para los tipos de campo complejos en las plataformas admitidas.
 
 En la tabla siguiente se muestran los tipos de fecha y hora:
 
@@ -67,7 +67,7 @@ message Meeting {
 }  
 ```
 
-Las propiedades generadas en la clase de C- no son los tipos de fecha y hora de .NET. Las propiedades `Timestamp` usan `Duration` las `Google.Protobuf.WellKnownTypes` clases y del espacio de nombres. Estas clases proporcionan métodos `DateTimeOffset`para `DateTime`convertir `TimeSpan`a , , y .
+Las propiedades generadas en la clase C# no son los tipos de fecha y hora de .NET. Las propiedades usan las clases `Timestamp` y `Duration` en el espacio de nombres `Google.Protobuf.WellKnownTypes`. Estas clases proporcionan métodos para realizar conversiones a `DateTimeOffset`, `DateTime` y `TimeSpan`, y desde estas.
 
 ```csharp
 // Create Timestamp and Duration from .NET DateTimeOffset and TimeSpan
@@ -83,21 +83,21 @@ TimeSpan? duration = meeting.Duration?.ToTimeSpan();
 ```
 
 > [!NOTE]
-> El `Timestamp` tipo funciona con las horas UTC. `DateTimeOffset`los valores siempre tienen un `DateTime.Kind` desplazamiento de `DateTimeKind.Utc`cero y la propiedad siempre es .
+> El tipo `Timestamp` funciona con horas UTC. Los valores `DateTimeOffset` siempre tienen un desplazamiento de cero, y la propiedad `DateTime.Kind` siempre es `DateTimeKind.Utc`.
 
 ### <a name="systemguid"></a>System.Guid
 
-Protobuf no admite directamente el <xref:System.Guid> `UUID` tipo, conocido como en otras plataformas. No hay ningún tipo conocido para ello.
+Protobuf no es compatible directamente con el <xref:System.Guid> tipo, conocido como `UUID` en otras plataformas. No hay ningún tipo conocido para ella.
 
-El mejor enfoque `Guid` es controlar `string` los valores como `8-4-4-4-12` un campo, `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`utilizando el formato hexadecimal estándar (por ejemplo, ). Todos los idiomas y plataformas pueden analizar ese formato.
+El mejor enfoque es controlar `Guid` los valores como un `string` campo, utilizando el `8-4-4-4-12` formato hexadecimal estándar (por ejemplo, `45a9fda3-bd01-47a9-8460-c1cd7484b0b3` ). Todos los lenguajes y plataformas pueden analizar ese formato.
 
-No use un `bytes` campo `Guid` para los valores. Los problemas con *la endianidad* [(definición](https://en.wikipedia.org/wiki/Endianness)de Wikipedia) pueden dar lugar a un comportamiento errático cuando Protobuf está interactuando con otras plataformas, como Java.
+No use un `bytes` campo para `Guid` los valores. Los problemas con *modos endian* ([definición de Wikipedia](https://en.wikipedia.org/wiki/Endianness)) pueden dar lugar a un comportamiento errático cuando protobuf interactúa con otras plataformas, como Java.
 
 ### <a name="nullable-types"></a>Tipos que aceptan valores NULL
 
-La generación de código Protobuf para C- usa los tipos nativos, como `int` para `int32`. Por lo tanto, los valores siempre se incluyen y no pueden ser null.
+La generación de código de Protobuf para C# usa los tipos nativos, como `int` para `int32`. Por lo tanto, los valores siempre se incluyen y no pueden ser null.
 
-En el caso de los `int?` valores que requieren null explícito, como el uso en el código de C, los "Tipos bien conocidos" de Protobuf incluyen contenedores que se compilan en tipos de C. Para usarlos, `wrappers.proto` importe `.proto` en su archivo, así:
+En el caso de los valores que requieren valores NULL explícitos, como `int?` el uso de en el código de c#, los "tipos conocidos" de protobuf incluyen contenedores que se compilan en tipos de C# que aceptan valores NULL. Para usarlos, importe `wrappers.proto` en el `.proto` archivo, de la siguiente manera:
 
 ```protobuf  
 syntax = "proto3"
@@ -112,11 +112,11 @@ message Person {
 }
 ```
 
-Protobuf usará la `T?` simple (por ejemplo, `int?`) para la propiedad de mensaje generada.
+Protobuf usará el simple `T?` (por ejemplo, `int?` ) para la propiedad de mensaje generada.
 
-En la tabla siguiente se muestra la lista completa de tipos de contenedor con su tipo equivalente de C-:
+En la tabla siguiente se muestra la lista completa de tipos de contenedor con su tipo C# equivalente:
 
-| Tipo de C#   | Envoltura de tipo bien conocido       |
+| Tipo de C#   | Contenedor de Tipo conocido       |
 | --------- | ----------------------------- |
 | `double?` | `google.protobuf.DoubleValue` |
 | `float?`  | `google.protobuf.FloatValue`  |
@@ -125,23 +125,23 @@ En la tabla siguiente se muestra la lista completa de tipos de contenedor con su
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Los tipos `Timestamp` conocidos `Duration` y se representan en .NET como clases. En C-8 y posteriores, puede usar tipos de referencia que aceptan valores NULL. Pero es importante comprobar si es null en las propiedades de `DateTimeOffset` `TimeSpan`esos tipos cuando se convierte a o .
+Los tipos conocidos `Timestamp` y `Duration` se representan en .net como clases. En C# 8 y versiones posteriores, puede usar tipos de referencia que aceptan valores NULL. Pero es importante comprobar si hay valores NULL en las propiedades de esos tipos cuando se realiza la conversión a `DateTimeOffset` o `TimeSpan` .
 
 ## <a name="decimals"></a>Decimals
 
-Protobuf no admite de forma `decimal` nativa el `double` `float`tipo .NET, solo y . Hay una discusión en curso en el proyecto Protobuf sobre la posibilidad de agregar un tipo estándar `Decimal` a los tipos conocidos, con soporte de plataforma para lenguajes y marcos que lo admiten. Aún no se ha implementado nada.
+Protobuf no admite de forma nativa el tipo `decimal` de .NET, solo `double` y `float`. En el proyecto protobuf, hay una discusión en curso sobre la posibilidad de agregar un `Decimal` tipo estándar a los tipos conocidos, con compatibilidad de plataforma para los lenguajes y marcos que lo admiten. Todavía no se ha implementado nada.
 
-Es posible crear una definición de `decimal` mensaje para representar el tipo que funcionaría para la serialización segura entre clientes y servidores .NET. Pero los desarrolladores de otras plataformas tendrían que entender el formato que se está utilizando e implementar su propio manejo para él.
+Es posible crear una definición de mensaje para representar el `decimal` tipo que funcionaría para la serialización segura entre clientes y servidores .net. Sin embargo, los desarrolladores de otras plataformas tendrían que conocer el formato que se usa e implementar su propio control.
 
 ### <a name="creating-a-custom-decimal-type-for-protobuf"></a>Creación de un tipo decimal personalizado para Protobuf
 
-Una implementación simple podría ser `Money` similar al tipo no estándar `currency` que usan algunas API de Google, sin el campo.
+Una implementación sencilla podría ser similar al `Money` tipo no estándar que usan algunas API de Google, sin el `currency` campo.
 
 ```protobuf
 package CustomTypes;
 
 // Example: 12345.6789 -> { units = 12345, nanos = 678900000 }
-message Decimal {
+message DecimalValue {
 
     // Whole units part of the amount
     int64 units = 1;
@@ -152,20 +152,20 @@ message Decimal {
 }
 ```
 
-El `nanos` campo representa `0.999_999_999` valores `-0.999_999_999`de to . Por ejemplo, `decimal` `1.5m` el valor se `{ units = 1, nanos = 500_000_000 }`representaría como . Esta es `nanos` la razón por `sfixed32` la que el campo `int32` de este ejemplo utiliza el tipo, que codifica más eficazmente que para valores más grandes. Si `units` el campo es `nanos` negativo, el campo también debe ser negativo.
+El campo `nanos` representa los valores de `0.999_999_999` a `-0.999_999_999`. Por ejemplo, el valor `decimal` `1.5m` se representaría como `{ units = 1, nanos = 500_000_000 }`. Este es el motivo por el que el campo `nanos` de este ejemplo usa el tipo `sfixed32`, que codifica de forma más eficaz que `int32` para los valores más grandes. Si el campo `units` es negativo, el campo `nanos` también debe serlo.
 
 > [!NOTE]
-> Hay varios otros algoritmos `decimal` para codificar valores como cadenas de bytes, pero este mensaje es más fácil de entender que cualquiera de ellos. Los valores no se ven afectados por la endianidad en diversas plataformas.
+> Existen varios algoritmos para codificar los valores `decimal` como cadenas de bytes, pero este mensaje es más fácil de entender que cualquiera de ellos. Los valores no se ven afectados por modos endian en distintas plataformas.
 
-La conversión entre este `decimal` tipo y el tipo DeBCL podría implementarse en C- de la siguiente manera:
+La conversión entre este tipo y el tipo `decimal` de BCL podría implementarse en C# de la siguiente manera:
 
 ```csharp
 namespace CustomTypes
 {
-    public partial class GrpcDecimal
+    public partial class DecimalValue
     {
         private const decimal NanoFactor = 1_000_000_000;
-        public GrpcDecimal(long units, int nanos)
+        public DecimalValue(long units, int nanos)
         {
             Units = units;
             Nanos = nanos;
@@ -174,23 +174,23 @@ namespace CustomTypes
         public long Units { get; }
         public int Nanos { get; }
 
-        public static implicit operator decimal(CustomTypes.Decimal grpcDecimal)
+        public static implicit operator decimal(CustomTypes.DecimalValue grpcDecimal)
         {
             return grpcDecimal.Units + grpcDecimal.Nanos / NanoFactor;
         }
 
-        public static implicit operator CustomTypes.Decimal(decimal value)
+        public static implicit operator CustomTypes.DecimalValue(decimal value)
         {
             var units = decimal.ToInt64(value);
             var nanos = decimal.ToInt32((value - units) * NanoFactor);
-            return new CustomTypes.Decimal(units, nanos);
+            return new CustomTypes.DecimalValue(units, nanos);
         }
     }
 }
 ```
 
 > [!IMPORTANT]
-> Siempre que utilice tipos de *must* mensajes personalizados como `.proto`este, debe documentarlos con comentarios en . A continuación, otros desarrolladores pueden implementar la conversión hacia y desde el tipo equivalente en su propio lenguaje o marco de trabajo.
+> Siempre que use tipos de mensaje personalizados como este, *debe* documentarlos con comentarios en `.proto` . A continuación, otros desarrolladores pueden implementar la conversión a y desde el tipo equivalente en su propio lenguaje o marco.
 
 >[!div class="step-by-step"]
 >[Anterior](protobuf-messages.md)
