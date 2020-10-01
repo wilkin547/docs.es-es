@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 87c696323af442021af267f0d8c523418e2234f7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246784"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609478"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procedimiento para recuperar la huella digital de un certificado
 Al escribir una aplicación Windows Communication Foundation (WCF) que usa un certificado X. 509 para la autenticación, a menudo es necesario especificar las notificaciones que se encuentran en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. (Vea [Cómo: ver certificados con el complemento MMC](how-to-view-certificates-with-the-mmc-snap-in.md)). En segundo lugar, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de notificaciones).  

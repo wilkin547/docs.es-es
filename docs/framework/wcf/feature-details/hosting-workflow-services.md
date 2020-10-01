@@ -2,12 +2,12 @@
 title: Hospedar servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: 95d8d8b8ea15ef543471afb19462ccb424e8e39b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0b89eb05513d6b3973de50cd6360711c4f967f68
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555814"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609465"
 ---
 # <a name="hosting-workflow-services"></a>Hospedar servicios de flujo de trabajo
 
@@ -46,7 +46,7 @@ Debe hospedarse un servicio del flujo de trabajo para que responda a los mensaje
  Un archivo. xamlx que define un servicio de flujo de trabajo debe contener un <`Service`> elemento raíz o un elemento raíz que contenga cualquier tipo derivado de <xref:System.Workflow.ComponentModel.Activity> . Al usar la plantilla de actividad de Visual Studio, se crea un archivo. xamlx. Cuando se usa la plantilla de servicio de flujo de trabajo WCF, se crea un archivo. xamlx.
 
 ## <a name="hosting-workflow-services-under-windows-server-app-fabric"></a>Hospedar servicios de flujo de trabajo en Windows Server App Fabric
- El hospedaje de un servicio de flujo de trabajo en Windows Server App Fabric se realiza del mismo modo que el hospedaje en IIS/WAS. La única diferencia es el hecho de que Windows Server App Fabric se instala. Windows Server App Fabric proporciona herramientas que se agregan al Administrador de Internet Information Services, además de los commandlets de PowerShell. Estas herramientas simplifican la implementación, la administración y el seguimiento de los servicios de flujo de trabajo y los servicios WCF.
+ El hospedaje de un servicio de flujo de trabajo en Windows Server App Fabric se realiza del mismo modo que el hospedaje en IIS/WAS. La única diferencia es el hecho de que Windows Server App Fabric se instala. Windows Server App fabric proporciona herramientas que se agregan al administrador de Internet Information Services, así como a commandlets de PowerShell. Estas herramientas simplifican la implementación, la administración y el seguimiento de los servicios de flujo de trabajo y los servicios WCF.
 
 ## <a name="referencing-custom-activities"></a>Hacer referencia a actividades personalizadas
  Las referencias a las actividades personalizadas se deben agregar a la `Assemblies` sección <> en <`System.Web.Compilation`> para que se carguen en el dominio de aplicación y el deserializador XAML pueda buscar los tipos. Esta configuración se puede realizar en el nivel de la aplicación o en el archivo Web.config de la raíz si la configuración se debe aplicar a todas las aplicaciones del equipo.

@@ -2,12 +2,12 @@
 title: Compatibilidad de transmisión de datos de SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a396e3e172c63b0b71b085d4694184c42cc42f3e
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791400"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609250"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 
@@ -20,13 +20,13 @@ La compatibilidad con streaming también permitirá que las aplicaciones de nive
 > [!WARNING]
 > Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.
 >
-> Los miembros agregados para admitir streaming se usan para recuperar datos de consultas y para pasar parámetros a consultas y procedimientos almacenados. La característica de streaming está dirigida a escenarios OLTP y de migración de datos básicos, y es aplicable en entornos de migración de datos locales y remotos.
+> Los miembros agregados para admitir streaming se usan para recuperar datos de consultas y para pasar parámetros a consultas y procedimientos almacenados. La característica de streaming aborda escenarios básicos de migración de datos y OLTP, y es aplicable a entornos de migración de datos locales y fuera de las instalaciones.
 
 ## <a name="streaming-support-from-sql-server"></a>Compatibilidad con streaming desde SQL Server
 
-La compatibilidad con streaming desde SQL Server introduce una <xref:System.Data.Common.DbDataReader> nueva funcionalidad en <xref:System.Data.SqlClient.SqlDataReader> y en las clases para <xref:System.IO.Stream>obtener <xref:System.Xml.XmlReader>objetos, <xref:System.IO.TextReader> y y reaccionar ante ellos. Estas clases se usan para recuperar datos de consultas. Como resultado, la compatibilidad con streaming desde SQL Server aborda escenarios de OLTP y se aplica a entornos locales y fuera de las instalaciones.
+La compatibilidad con streaming desde SQL Server introduce una nueva funcionalidad en <xref:System.Data.Common.DbDataReader> y en las <xref:System.Data.SqlClient.SqlDataReader> clases para <xref:System.IO.Stream> obtener <xref:System.Xml.XmlReader> objetos, y <xref:System.IO.TextReader> y reaccionar ante ellos. Estas clases se usan para recuperar datos de consultas. Como resultado, la compatibilidad con streaming desde SQL Server aborda escenarios de OLTP y se aplica a entornos locales y fuera de las instalaciones.
 
-Se han agregado los siguientes miembros <xref:System.Data.SqlClient.SqlDataReader> a para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
+Se han agregado los siguientes miembros a <xref:System.Data.SqlClient.SqlDataReader> para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ Se han agregado los siguientes miembros <xref:System.Data.SqlClient.SqlDataReade
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-Se han agregado los siguientes miembros <xref:System.Data.Common.DbDataReader> a para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
+Se han agregado los siguientes miembros a <xref:System.Data.Common.DbDataReader> para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -50,13 +50,13 @@ Se han agregado los siguientes miembros <xref:System.Data.Common.DbDataReader> a
 
 ## <a name="streaming-support-to-sql-server"></a>Compatibilidad de streaming con SQL Server
 
-La compatibilidad de streaming con SQL Server introduce una <xref:System.Data.SqlClient.SqlParameter> nueva funcionalidad en la clase para que pueda <xref:System.Xml.XmlReader>aceptar <xref:System.IO.Stream>y reaccionar a los objetos, y <xref:System.IO.TextReader> . <xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.
+La compatibilidad de streaming con SQL Server introduce una nueva funcionalidad en la <xref:System.Data.SqlClient.SqlParameter> clase para que pueda aceptar y reaccionar a los <xref:System.Xml.XmlReader> <xref:System.IO.Stream> objetos, y <xref:System.IO.TextReader> . <xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.
 
 Al desechar un objeto <xref:System.Data.SqlClient.SqlCommand> o llamar a <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> se cancela cualquier operación de streaming. Si una aplicación envía <xref:System.Threading.CancellationToken>, la cancelación no se puede garantizar.
 
 Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptarán <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.IO.Stream>:
 
-- **Binary**
+- **Binario**
 
 - **VarBinary**
 
@@ -70,7 +70,7 @@ Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> acep
 
 - **Xml**
 
-El tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptará un <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.
+El tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptará un <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader> .
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> puede aceptar valores de tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream>.
 
