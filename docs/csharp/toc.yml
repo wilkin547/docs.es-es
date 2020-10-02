@@ -56,7 +56,7 @@
       href: tutorials/upgrade-to-nullable-references.md
     - name: Generación y consumo de flujos asincrónicos
       href: tutorials/generate-consume-asynchronous-stream.md
-    - name: Aplicación de capacidades de datos con la coincidencia de patrones
+    - name: Creación de algoritmos controlados por datos con coincidencia de patrones
       href: tutorials/pattern-matching.md
     - name: Aplicación de consola
       href: tutorials/console-teleprompter.md
