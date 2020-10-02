@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: eae792ddaa6655bfdcd932d3cb695f9dafa68130
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240849"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247597"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -109,7 +109,7 @@ En la carpeta raíz del proyecto, ejecute `dotnet new classlib -o PluginBase`. A
 
 Esta interfaz `ICommand` es la que van a implementar todos los complementos.
 
-Ahora que se ha definido la interfaz `ICommand`, el proyecto de aplicación se puede rellenar un poco más. Agregue una referencia desde el proyecto `AppWithPlugin` al proyecto `PluginBase` con el comando `dotnet add AppWithPlugin\AppWithPlugin.csproj reference PluginBase\PluginBase.csproj` desde la carpeta raíz.
+Ahora que se ha definido la interfaz `ICommand`, el proyecto de aplicación se puede rellenar un poco más. Agregue una referencia desde el proyecto `AppWithPlugin` al proyecto `PluginBase` con el comando `dotnet add AppWithPlugin/AppWithPlugin.csproj reference PluginBase/PluginBase.csproj` desde la carpeta raíz.
 
 Reemplace el comentario `// Load commands from plugins` con el fragmento de código siguiente para habilitarlo para cargar complementos desde rutas de acceso de archivo determinadas:
 
@@ -261,7 +261,7 @@ El elemento `<Private>false</Private>` es importante. Indica a MSBuild que no co
 
 Del mismo modo, el elemento `<ExcludeAssets>runtime</ExcludeAssets>` también es importante si `PluginBase` hace referencia a otros paquetes. Esta configuración tiene el mismo efecto que `<Private>false</Private>` pero funciona en las referencias de paquete que pueden incluir el proyecto `PluginBase` o una de sus dependencias.
 
-Ahora que se ha completado el proyecto `HelloPlugin`, se debe actualizar el proyecto `AppWithPlugin` para saber dónde se puede encontrar el complemento `HelloPlugin`. Después del comentario `// Paths to plugins to load`, agregue `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` como un elemento de la matriz `pluginPaths`.
+Ahora que se ha completado el proyecto `HelloPlugin`, se debe actualizar el proyecto `AppWithPlugin` para saber dónde se puede encontrar el complemento `HelloPlugin`. Después del comentario `// Paths to plugins to load`, agregue `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` (esta ruta de acceso podría ser diferente en función de la versión de .NET Core que use) como un elemento de la matriz de `pluginPaths`.
 
 ## <a name="plugin-with-library-dependencies"></a>Complemento con dependencias de biblioteca
 

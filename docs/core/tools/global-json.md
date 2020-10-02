@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar el archivo global.json para e
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062800"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872394"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -81,9 +81,9 @@ En la siguiente tabla se muestran los posibles valores de la clave `rollForward`
 | `minor`       | Usa el nivel de revisión más reciente para las versiones principal y secundaria y la banda de características especificadas. <br> Si no se encuentra, se pone al día hasta la siguiente banda de características superior dentro de la misma versión principal/secundaria y usa el nivel de revisión más reciente para esa banda de características. <br> Si no se encuentra, se pone al día hasta la siguiente versión secundaria y banda de características superiores dentro de la misma versión principal y usa el nivel de revisión más reciente para esa banda de características. <br> Si no se encuentra, se produce un error. |
 | `major`       | Usa el nivel de revisión más reciente para las versiones principal y secundaria y la banda de características especificadas. <br> Si no se encuentra, se pone al día hasta la siguiente banda de características superior dentro de la misma versión principal/secundaria y usa el nivel de revisión más reciente para esa banda de características. <br> Si no se encuentra, se pone al día hasta la siguiente versión secundaria y banda de características superiores dentro de la misma versión principal y usa el nivel de revisión más reciente para esa banda de características. <br> Si no se encuentra, se pone al día hasta la siguiente versión principal, secundaria y banda de características superiores y usa el nivel de revisión más reciente para esa banda de características. <br> Si no se encuentra, se produce un error. |
 | `latestPatch` | Usa el nivel de revisión instalado más reciente que coincide con la versión principal, secundaria y banda de características solicitadas con un nivel de revisión y que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
-| `latestFeature` | Usa la banda de características instalada superior y el nivel de revisión que coincide con la versión principal y secundaria solicitadas con una banda de características que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
-| `latestMinor` | Usa la versión secundaria y la banda de características instaladas superiores y el nivel de revisión que coincide con la versión principal solicitada con una versión secundaria que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
-| `latestMajor` | Usa el SDK de .NET Core instalado superior con una versión principal que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
+| `latestFeature` | Usa la banda de características instalada superior y el nivel de revisión que coincide con la versión principal y secundaria solicitados con una banda de características y un nivel de revisión que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
+| `latestMinor` | Usa la versión secundaria y la banda de características instalados superiores y la versión de revisión que coincide con la versión principal solicitada con una versión secundaria que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
+| `latestMajor` | Usa el SDK de .NET Core instalado superior con una versión que es mayor o igual que el valor especificado. <br> Si no se encuentra, se produce un error. |
 | `disable`     | No se pone al día. Se requiere una coincidencia exacta. |
 
 ### <a name="msbuild-sdks"></a>msbuild-sdks
@@ -175,7 +175,7 @@ A partir de .NET Core 3.0, se aplican las reglas siguientes al determinar qué v
 - Si se encuentra un archivo *global.json* que no especifica una versión del SDK pero sí un valor `allowPrerelease`, se usa la versión del SDK instalada superior (lo que equivale a establecer `rollForward` en `latestMajor`). El que la versión más reciente del SDK pueda ser publicada o preliminar, depende del valor de `allowPrerelease`. `true` indica que se tienen en cuenta las versiones preliminares; `false` indica que solo se tienen en cuenta las versiones publicadas.
 - Si se encuentra un archivo *global.json* y especifica una versión del SDK:
 
-  - Si no hay ningún valor `rollFoward` establecido, se usa `latestPatch` como directiva de `rollForward` predeterminada. De lo contrario, vea cada valor y su comportamiento en la sección [rollForward](#rollforward).
+  - Si no hay ningún valor `rollForward` establecido, se usa `latestPatch` como directiva de `rollForward` predeterminada. De lo contrario, vea cada valor y su comportamiento en la sección [rollForward](#rollforward).
   - En la sección [allowPrerelease](#allowprerelease) se explica si se tienen en cuenta las versiones preliminares y cuál es el comportamiento predeterminado cuando `allowPrerelease` no está establecido.
 
 ## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)

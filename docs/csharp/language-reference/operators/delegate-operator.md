@@ -1,16 +1,16 @@
 ---
 description: 'Operador delegate: referencia de C#'
 title: 'Operador delegate: referencia de C#'
-ms.date: 07/18/2019
+ms.date: 09/25/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: db2bf673db12e4a10741a26112820726a4b8aaee
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122256"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247662"
 ---
 # <a name="delegate-operator-c-reference"></a>Operador delegate (referencia de C#)
 
@@ -30,6 +30,18 @@ Al usar el operador `delegate`, puede omitir la lista de parámetros. Si lo hace
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 Esta es la única funcionalidad de los métodos anónimos que las expresiones lambda no admiten. En todos los demás casos, una expresión lambda es una de las maneras preferidas de escribir código alineado.
+
+A partir de C# 9.0, puede usar [descartes](../../discards.md) para especificar dos o más parámetros de entrada de un método anónimo que no usa el método:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+Por compatibilidad con versiones anteriores, si solo un parámetro se denomina `_`, `_` se trata como el nombre de ese parámetro dentro de un método anónimo.
+
+También a partir de C# 9.0, puede usar el modificador `static` en la declaración de un método anónimo:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetStatic" :::
+
+Un método anónimo estático no puede capturar variables locales ni el estado de la instancia desde el ámbito de inclusión.
 
 También puede usar la palabra clave `delegate` para declarar un [tipo delegado](../builtin-types/reference-types.md#the-delegate-type).
 

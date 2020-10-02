@@ -1,0 +1,58 @@
+---
+ms.openlocfilehash: 6c2aff4abf558307d599ff7533c82286e037bc71
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406158"
+---
+### <a name="systemsecuritycryptography-apis-not-supported-on-blazor-webassembly"></a>No se admiten las API de System.Security.Cryptography en Blazor WebAssembly
+
+Las API de <xref:System.Security.Cryptography> inician una excepción <xref:System.PlatformNotSupportedException> en tiempo de ejecución cuando se ejecutan en un explorador.
+
+#### <a name="change-description"></a>Descripción del cambio
+
+En versiones anteriores de .NET, la mayoría de las API de <xref:System.Security.Cryptography> no están disponibles para las aplicaciones de Blazor WebAssembly. A partir de .NET 5.0, las aplicaciones de Blazor WebAssembly tienen como destino el área expuesta de la API de .NET 5 completa, sin embargo, no se admiten todas las API de .NET 5 debido a las restricciones de espacio aislado del explorador. En .NET 5.0 y versiones posteriores, las API de <xref:System.Security.Cryptography> no compatibles inician una excepción <xref:System.PlatformNotSupportedException> cuando se ejecutan en WebAssembly.
+
+> [!TIP]
+> El [analizador de compatibilidad de plataformas](../../../../docs/core/compatibility/code-analysis.md#ca1416-platform-compatibility) marcará todas las llamadas a las API afectadas al compilar un proyecto que admita la plataforma del explorador. Este analizador se ejecuta de forma predeterminada en las aplicaciones .NET 5.0 y versiones posteriores.
+
+#### <a name="reason-for-change"></a>Motivo del cambio
+
+Microsoft no puede enviar OpenSSL como una dependencia en la configuración de Blazor WebAssembly. Se intentó solucionar este error realizando la integración con la API de `SubtleCrypto` del explorador. Sin embargo, requirió importantes cambios en la API que dificultaron su integración.
+
+#### <a name="version-introduced"></a>Versión introducida
+
+5.0 RC1
+
+#### <a name="recommended-action"></a>Acción recomendada
+
+En este momento no hay ninguna solución alternativa adecuada que sugerir.
+
+#### <a name="category"></a>Categoría
+
+- ASP.NET Core
+- Criptografía
+
+#### <a name="affected-apis"></a>API afectadas
+
+Todas las API de <xref:System.Security.Cryptography?displayProperty=fullName>, excepto las siguientes:
+
+- `System.Security.Cryptography.RandomNumberGenerator`
+- `System.Security.Cryptography.IncrementalHash`
+- `System.Security.Cryptography.SHA1`
+- `System.Security.Cryptography.SHA256`
+- `System.Security.Cryptography.SHA384`
+- `System.Security.Cryptography.SHA512`
+- `System.Security.Cryptography.SHA1Managed`
+- `System.Security.Cryptography.SHA256Managed`
+- `System.Security.Cryptography.SHA384Managed`
+- `System.Security.Cryptography.SHA512Managed`
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Security.Cryptography`
+
+-->

@@ -1,25 +1,27 @@
 ---
 description: 'Modificador static: Referencia de C#'
 title: 'Modificador static: Referencia de C#'
-ms.date: 04/22/2020
+ms.date: 09/25/2020
 f1_keywords:
 - static
 - static_CSharpKeyword
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: f42636d1bbdf4342297f46f50ec6dfc2a70eacad
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142068"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247727"
 ---
 # <a name="static-c-reference"></a>static (Referencia de C#)
 
 En esta página se trata la palabra clave del modificador `static`. La palabra clave `static` también forma parte de la directiva [`using static`](using-static.md).
 
 Use el modificador `static` para declarar un miembro estático, que pertenece al propio tipo en lugar de a un objeto específico. El modificador `static` se puede usar para declarar clases `static`. En las clases, las interfaces y las estructuras, puede agregar el modificador `static` a los campos, los métodos, las propiedades, los operadores, los eventos y los constructores. El modificador `static` no se puede usar con indizadores ni finalizadores. Para más información, vea [Clases estáticas y sus miembros](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+
+A partir de C# 9.0, puede agregar el modificador `static` a una [expresión lambda](../operators/lambda-expressions.md) o un [método anónimo](../operators/delegate-operator.md). Una expresión lambda o un método anónimo estático no pueden capturar variables locales o el estado de la instancia.
 
 ## <a name="example---static-class"></a>Ejemplo: clase estática
 
@@ -66,7 +68,7 @@ En este ejemplo se muestra que se puede inicializar un campo `static` mediante o
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)

@@ -2,12 +2,12 @@
 title: Introducción a Azure y .NET
 description: Obtenga información sobre los conceptos básicos que necesita saber acerca de Azure y .NET.
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: e4a071e302247332cdc98c1aabf595cb4f8e2eff
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174327"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171577"
 ---
 # <a name="introduction-to-azure-and-net"></a>Introducción a Azure y .NET
 
@@ -28,7 +28,7 @@ Este documento proporciona información general sobre los conceptos clave y los 
 
 **Servicios administrados**: Azure proporciona algunos servicios en los que se proporciona información o datos a Azure y la implementación de Azure toma las acciones oportunas. Un ejemplo es Azure Blob Storage, donde se proporcionan los archivos y Azure se encarga de leerlos, escribirlos y almacenarlos.
 
-**Azure SDK para .NET**: A veces conocido como **bibliotecas de Azure para .NET**, esto hace referencia colectivamente a los [paquetes NuGet](https://www.nuget.org/profiles/azure-sdk) que instala en el proyecto que proporcionan varias interacciones y funcionalidad con los servicios de Azure. En estos paquetes también se incluyen las bibliotecas de administración que se usan para aprovisionar y administrar los recursos.
+El **SDK de Azure para .NET** hace referencia colectivamente a los paquetes [NuGet](packages.md) que instala en el proyecto y que proporcionan varias interacciones y funcionalidades con los servicios de Azure. En estos paquetes también se incluyen las bibliotecas de administración que se usan para aprovisionar y administrar los recursos.
 
 ## <a name="choosing-a-hosting-option"></a>Elección de una opción de hospedaje
 
@@ -77,6 +77,7 @@ Si usa el SDK de Azure para .NET para acceder a los recursos de Azure o administ
 * **API REST**: El SDK de Azure para .NET es una abstracción construida sobre la [API de REST de Azure](/rest/api/azure/). Si lo desea, puede usar la API de REST de Azure en lugar de o junto con el SDK de Azure para .NET.
 
 ## <a name="diagnosing-problems-in-the-cloud"></a>Diagnóstico de problemas en la nube
+
 Una vez que se implementa la aplicación en Azure, es posible encontrar casos en los que funciona en desarrollo, pero no en Azure. A continuación se muestran dos buenos lugares para empezar cuando se diagnostican problemas:
 
 * **Depuración remota en Visual Studio**: la mayoría de los servicios de proceso de Azure (incluidos los servicios que se describen en este documento) admiten la depuración remota con Visual Studio y la adquisición de registros. Para explorar las funcionalidades de Visual Studio con la aplicación, abra la ventana de herramientas de Cloud Explorer escribiendo "Cloud Explorer" en la barra de herramientas de inicio rápido de Visual Studio (en la esquina superior derecha) y, a continuación, busque la aplicación en el árbol. Para más información, consulte [Solución de problemas de una aplicación web en Azure App Service con Visual Studio](/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug).

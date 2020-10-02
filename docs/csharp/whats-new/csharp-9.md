@@ -2,21 +2,21 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
+ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738728"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91247623"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
 C# 9.0 agrega las siguientes características y mejoras al lenguaje C#:
 
-- Registros
-- Establecedores de solo inicialización
-- Instrucciones de nivel superior
-- Mejoras de coincidencia de patrones
+- [Registros](#record-types)
+- [Establecedores de solo inicialización](#init-only-setters)
+- [Instrucciones de nivel superior](#top-level-statements)
+- [Mejoras de coincidencia de patrones](#pattern-matching-enhancements)
 - Enteros con tamaño nativos
 - Punteros de función
 - Supresión de la emisión de la marca localsinit
@@ -48,7 +48,6 @@ La definición del registro crea un tipo `Person` que contiene dos propiedades d
 - Invalidación de <xref:System.Object.GetHashCode>
 - Copiar y clonar miembros
 - `PrintMembers` y <xref:System.Object.ToString>
-- Método `Deconstruct`
 
 Los registros admiten la herencia. Puede declarar un nuevo registro derivado de `Person` como se indica a continuación:
 
@@ -64,7 +63,6 @@ El compilador sintetiza versiones diferentes de los métodos anteriores. Las sig
 - Los registros tienen una representación de cadena coherente que se genera de forma automática.
 - Los registros admiten la construcción de copias. La construcción de copias correctas debe incluir las jerarquías de herencia y las propiedades agregadas por los desarrolladores.
 - Los registros se pueden copiar con modificaciones. Estas operaciones de copia y modificación admiten la mutación no destructiva.
-- Todos los registros admiten la desconstrucción.
 
 Además de las sobrecargas de `Equals` conocidas, `operator ==` y `operator !=`, el compilador sintetiza una nueva propiedad `EqualityContract`. La propiedad devuelve un objeto `Type` que coincide con el tipo del registro. Si el tipo base es `object`, la propiedad es `virtual`. Si el tipo base es otro tipo de registro, la propiedad es un `override`. Si el tipo de registro es `sealed`, la propiedad es `sealed`. El método `GetHashCode` sintetizado usa el valor `GetHashCode` de todas las propiedades y campos declarados en el tipo base y el tipo de registro. Estos métodos sintetizados imponen la igualdad basada en valores en una jerarquía de herencia. Esto significa que un registro `Student` nunca se considerará igual que un registro `Person` con el mismo nombre. Los tipos de los dos registros deben coincidir y todas las propiedades compartidas entre los tipos de registro deben ser iguales.
 
@@ -224,15 +222,15 @@ Otra aplicación muy útil de esta característica es para combinarla con propie
 
 Puede devolver una instancia creada por el constructor predeterminado mediante una expresión `return new();`.
 
-Una característica similar mejora la resolución de tipos de destino de las expresiones condicionales. Con este cambio, las dos expresiones no necesitan tener una conversión implícita de una a otra, pero pueden tener conversiones implícitas a un tipo de destino. Lo más probable es que no note este cambio. Lo que observará es que ahora funcionan algunas expresiones condicionales para las que anteriormente se necesitan conversiones o que no se compilaban.
+Una característica similar mejora la resolución de tipos de destino de las [expresiones condicionales](../language-reference/operators/conditional-operator.md). Con este cambio, las dos expresiones no necesitan tener una conversión implícita de una a otra, pero pueden tener conversiones implícitas a un tipo de destino. Lo más probable es que no note este cambio. Lo que observará es que ahora funcionan algunas expresiones condicionales para las que anteriormente se necesitan conversiones o que no se compilaban.
 
-A partir de C# 9.0, puede agregar el modificador `static` a expresiones lambda o métodos anónimos. Las expresiones lambda estáticas son análogas a las funciones `static` locales: una expresión lambda o una función anónima estática no puede capturar variables locales ni el estado de la instancia. El modificador `static` impide la captura accidental de otras variables.
+A partir de C# 9.0, puede agregar el modificador `static` a [expresiones lambda](../language-reference/operators/lambda-expressions.md) o [métodos anónimos](../language-reference/operators/delegate-operator.md). Las expresiones lambda estáticas son análogas a las funciones `static` locales: un método anónimo o una expresión lambda estáticos no puede capturar variables locales ni el estado de la instancia. El modificador `static` impide la captura accidental de otras variables.
 
 Los tipos de valor devueltos de covariante proporcionan flexibilidad a los tipos de valor devueltos de las funciones reemplazadas. Una función virtual reemplazada puede devolver un tipo derivado del tipo de valor devuelto declarado en el método de clase base. Esto puede ser útil para los registros y para otros tipos que admiten métodos de generador o clonación virtuales.
 
-Además, el bucle `foreach` reconocerá y usará un método de extensión `GetEnumerator` que, de otro modo, satisface el patrón `foreach`. Este cambio significa que `foreach` es coherente con otras construcciones basadas en patrones, como el patrón asincrónico y la desconstrucción basada en patrones. En la práctica, esto quiere decir que puede agregar compatibilidad con `foreach` a cualquier tipo. Debe limitar su uso a cuando la enumeración de un objeto tiene sentido en el diseño.
+Además, el bucle [`foreach` ](../language-reference/keywords/foreach-in.md) reconocerá y usará un método de extensión `GetEnumerator` que, de otro modo, satisface el patrón `foreach`. Este cambio significa que `foreach` es coherente con otras construcciones basadas en patrones, como el patrón asincrónico y la desconstrucción basada en patrones. En la práctica, esto quiere decir que puede agregar compatibilidad con `foreach` a cualquier tipo. Debe limitar su uso a cuando la enumeración de un objeto tiene sentido en el diseño.
 
-Después, puede usar descartes como parámetros para las expresiones lambda. De esta forma no tiene que asignar un nombre al argumento y el compilador puede evitar usarlo. Use `_` para cualquier argumento.
+Después, puede usar descartes como parámetros para las expresiones lambda. De esta forma no tiene que asignar un nombre al argumento y el compilador puede evitar usarlo. Use `_` para cualquier argumento. Para más información, consulte sección sobre [parámetros de entrada de una expresión lambda](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) en el artículo sobre [expresiones lambda](../language-reference/operators/lambda-expressions.md).
 
 Por último, ahora puede aplicar atributos a las funciones locales. Por ejemplo, puede aplicar anotaciones de atributo que admiten un valor NULL a las funciones locales.
 

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo el analizador de API de .NET puede
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da4b2add206daa431124a7d24efc2676cbcaa69
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598100"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406250"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -85,6 +85,9 @@ La supresión global es el método recomendado para garantizar la coherencia del
 
 ## <a name="discover-cross-platform-issues"></a>Detección de problemas multiplataforma
 
+> [!NOTE]
+> .NET 5.0 presenta el [analizador de compatibilidad de plataformas](platform-compat-analyzer.md) como sustituto de esta característica. El analizador de compatibilidad de plataformas se incluye en el SDK de .NET (no es necesario instalarlo por separado) y está activado de forma predeterminada.
+
 De forma similar a las API en desuso, el analizador identifica todas las API que no son multiplataforma. Por ejemplo, <xref:System.Console.WindowWidth?displayProperty=nameWithType> funciona en Windows, pero no en Linux y macOS. El Id. de diagnóstico se muestra en la ventana **Lista de errores**. Puede suprimir dicha advertencia si hace clic con el botón derecho y selecciona **Acciones rápidas y refactorizaciones**. A diferencia de los casos de degradación donde tiene dos opciones (seguir usando el miembro en desuso y suprimir advertencias o no utilizarlo en absoluto), en este caso, si va a desarrollar el código solo para algunas plataformas, puede suprimir todas las advertencias para todas las demás plataformas en las que no pretende ejecutar el código. Para ello, solo tiene que editar el archivo de proyecto y agregar la propiedad `PlatformCompatIgnore` que enumera todas las plataformas que se deben ignorar. Los valores permitidos son: `Linux`, `macOS` y `Windows`.
 
 ```xml
@@ -129,3 +132,4 @@ El usuario decide cómo se deben tratar los diagnósticos: como advertencias, er
 
 - Entrada de blog de [introducción al analizador de API](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/).
 - Vídeo de demostración del [analizador de API](https://youtu.be/eeBEahYXGd0) de YouTube.
+- [Analizador de compatibilidad de plataformas](platform-compat-analyzer.md)

@@ -2,13 +2,13 @@
 title: Descartes - Guía de C#
 description: Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse.
 ms.technology: csharp-fundamentals
-ms.date: 07/21/2017
-ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 09/22/2020
+ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100638"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869319"
 ---
 # <a name="discards---c-guide"></a>Descartes - Guía de C#
 
@@ -20,12 +20,14 @@ Para indicar que una variable es un descarte, se le asigna como nombre el carác
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-En C# 7.0, se admiten descartes en asignaciones en los contextos siguientes:
+En C# 7.0 y posteriores, se admiten descartes en asignaciones en los contextos siguientes:
 
 - [Deconstrucción](deconstruct.md) de tuplas y objetos.
 - Coincidencia de patrones con [is](language-reference/keywords/is.md) y [switch](language-reference/keywords/switch.md).
 - Llamadas de métodos con parámetros `out`.
 - Un carácter de subrayado `_` independiente cuando no hay `_` dentro del ámbito.
+
+A partir de C# 9.0, se pueden usar descartes para especificar los parámetros de entrada de una expresión lambda que no se utilizan. Para más información, consulte sección sobre [parámetros de entrada de una expresión lambda](language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) en el artículo sobre [expresiones lambda](language-reference/operators/lambda-expressions.md).
 
 Cuando `_` es un descarte válido, si se intenta recuperar su valor o usarlo en una operación de asignación, se genera el error del compilador CS0301: "El nombre '\_' no existe en el contexto actual". Esto se debe a que no se le ha asignado un valor a `_`, y es posible que tampoco se le haya asignado una ubicación de almacenamiento. Si fuese una variable real no se podría descartar más de un valor, como en el ejemplo anterior.
 
@@ -79,8 +81,8 @@ Tenga en cuenta que `_` también es un identificador válido. Cuando se usa fuer
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Deconstrucción de tuplas y otros tipos](deconstruct.md)
+- [Deconstruir tuplas y otros tipos](deconstruct.md)
 - [Palabra clave `is`](language-reference/keywords/is.md)
 - [Palabra clave `switch`](language-reference/keywords/switch.md)

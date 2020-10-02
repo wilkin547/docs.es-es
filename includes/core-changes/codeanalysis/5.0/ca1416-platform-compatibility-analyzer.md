@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 4a7616d2ffaabab5279342ebc1082c93a174a52d
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90721279"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406183"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: Compatibilidad de plataformas
 
@@ -20,7 +20,7 @@ En los proyectos que tienen como destino las plataformas para las que no están 
 
 #### <a name="examples"></a>Ejemplos
 
-- El método <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> solo se admite en Windows (está decorado con el atributo `[SupportedOSPlatform("windows")]`). El código siguiente generará una advertencia CA1416 en tiempo de compilación si el proyecto [tiene como destino](../../../../docs/standard/frameworks.md) `net5.0` (pero no `net5.0-windows`). Para ver las acciones que puede realizar para evitar la advertencia, consulte la sección [Acción recomendada](#recommended-action).
+- El método <xref:System.Console.Beep(System.Int32,System.Int32)?displayProperty=nameWithType> solo se admite en Windows y está decorado con el atributo `[SupportedOSPlatform("windows")]`. El código siguiente generará una advertencia CA1416 en tiempo de compilación si el proyecto [tiene como destino](../../../../docs/standard/frameworks.md) `net5.0` (pero no `net5.0-windows`). Para ver las acciones que puede realizar para evitar la advertencia, consulte la sección [Acción recomendada](#recommended-action).
 
   ```csharp
   public void PlayCMajor()
@@ -29,7 +29,7 @@ En los proyectos que tienen como destino las plataformas para las que no están 
   }
   ```
 
-- El método <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> no se admite en el explorador (está decorado con el atributo `[UnsupportedOSPlatform("browser")]`). El código siguiente generará una advertencia CA1416 en tiempo de compilación si el proyecto usa el SDK de WebAssembly de Blazor (`<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">`) o si incluye `browser` como plataforma compatible (`<SupportedPlatform Include="browser" />`) en el archivo del proyecto.
+- El método <xref:System.Drawing.Image.FromFile(System.String)?displayProperty=nameWithType> no se admite en el explorador y está decorado con el atributo `[UnsupportedOSPlatform("browser")]`. El código siguiente generará una advertencia CA1416 en tiempo de compilación si el proyecto admite la plataforma del explorador.
 
   ```csharp
   public void CreateImage()
@@ -37,6 +37,17 @@ En los proyectos que tienen como destino las plataformas para las que no están 
       Image newImage = Image.FromFile("SampImag.jpg");
   }
   ```
+
+  > [!TIP]
+  >
+  > - Los proyectos de Blazor WebAssembly y los de la biblioteca de clases de Razor incluyen compatibilidad con los exploradores automáticamente.
+  > - Para agregar de forma manual el explorador como una plataforma compatible para el proyecto, agregue la entrada siguiente al archivo de proyecto:
+  >
+  >  ```xml
+  >  <ItemGroup>
+  >    <SupportedPlatform Include="browser" />
+  >  </ItemGroup>
+  >  ```
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -68,7 +79,7 @@ public void PlayCMajor()
 }
 ```
 
-También puede marcar la API como específica de la plataforma, en cuyo caso la tarea de comprobar los requisitos corresponde a los autores de las llamadas. Puede marcar métodos o tipos específicos, o un ensamblado completo.
+Si va a crear una biblioteca, puede marcar la API como específica de la plataforma. En este caso, la carga de los requisitos de comprobación recae en los autores de las llamadas. Puede marcar métodos o tipos específicos, o un ensamblado completo.
 
 ```csharp
 [SupportedOSPlatform("windows")]

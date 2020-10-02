@@ -1,15 +1,17 @@
 ---
 title: Introducción a .NET para Apache Spark
 description: Descubra cómo ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, macOS y Ubuntu.
-ms.date: 06/25/2020
+ms.date: 09/17/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d7297b11a2b5b21420fcb2f0f9ae823cb29b88d1
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.author: luquinta
+author: luisquintanilla
+ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359004"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866050"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -21,13 +23,13 @@ En este tutorial aprenderá a:
 >
 > * Preparar el entorno de .NET para Apache Spark
 > * Implementar la primer aplicación .NET para Apache Spark
-> * Compilar y ejecutar una aplicación .NET para Apache Spark sencilla
+> * Compilar y ejecutar una aplicación .NET para Apache Spark
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>Preparación del entorno
 
-Antes de comenzar a escribir la aplicación, debe configurar algunas dependencias de requisitos previos. Si puede ejecutar `dotnet`, `java`, `mvn`, `spark-shell` desde el entorno de línea de comandos, el entorno ya está preparado y puede ir directamente a la sección siguiente. Si no puede ejecutar alguno o ninguno de los comandos, siga estos pasos.
+Antes de comenzar a escribir la aplicación, debe configurar algunas dependencias de requisitos previos. Si puede ejecutar `dotnet`, `java`, `spark-shell`, desde el entorno de línea de comandos, el entorno ya está preparado y puede ir directamente a la sección siguiente. Si no puede ejecutar alguno o ninguno de los comandos, siga estos pasos.
 
 ### <a name="1-install-net"></a>1. Instalación de .NET
 
@@ -73,14 +75,17 @@ Para extraer los archivos de Apache Spark:
 
 ![Instalación de Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
 
-Ejecute los comandos siguientes para establecer las variables de entorno que se usan para buscar Apache Spark en **Windows**:
+Ejecute los comandos siguientes para establecer las variables de entorno que se usan para buscar Apache Spark. En Windows, asegúrese de ejecutar el símbolo del sistema en modo de administrador.
+
+#### <a name="windows"></a>[Windows](#tab/windows)
 
 ```console
-setx HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
-setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M HADOOP_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
+setx /M PATH "%PATH%;%HADOOP_HOME%;%SPARK_HOME%\bin"
 ```
 
-Ejecute los comandos siguientes para establecer las variables de entorno que se usan para buscar Apache Spark en **macOS** y **Ubuntu**:
+#### <a name="maclinux"></a>[Mac o Linux:](#tab/linux)
 
 ```bash
 export SPARK_HOME=~/bin/spark-2.4.1-bin-hadoop2.7/
@@ -88,9 +93,13 @@ export PATH="$SPARK_HOME/bin:$PATH"
 source ~/.bashrc
 ```
 
+---
+
 Una vez que se haya instalado todo y establecido las variables de entorno, abra un símbolo del sistema o terminal **nuevo** y ejecute el comando siguiente:
 
-`%SPARK_HOME%\bin\spark-submit --version`
+```text
+spark-submit --version
+```
 
 Si el comando se ejecuta e imprime la información de versión, puede pasar al paso siguiente.
 
@@ -98,12 +107,12 @@ Si recibe un error `'spark-submit' is not recognized as an internal or external 
 
 ### <a name="5-install-net-for-apache-spark"></a>5. Instalación de .NET para Apache Spark
 
-Descargue la versión [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) de la página de .NET para Apache Spark en GitHub. Por ejemplo, si se encuentra en una máquina Windows y planea usar .NET Core, [descargue la versión Windows x64 netcoreapp3.1](https://github.com/dotnet/spark/releases/download/v0.8.0/Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip).
+Descargue la versión [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) de la página de .NET para Apache Spark en GitHub. Por ejemplo, si se encuentra en una máquina Windows y planea usar .NET Core, [descargue la versión Windows x64 netcoreapp3.1](https://github.com/dotnet/spark/releases).
 
 Para extraer Microsoft.Spark.Worker:
 
 * Busque el archivo **Microsoft.Spark.Worker.netcoreapp3.1.win-x64-0.8.0.zip** que ha descargado.
-* Haga clic con el botón derecho y seleccione **7-Zip -> Extraer archivos...** .
+* Haga clic con el botón derecho y seleccione **7-Zip -> Extraer archivos...**
 * Escriba **C:\bin** en el campo **Extraer en**.
 * Desactive la casilla situada debajo del campo **Extraer en**.
 * Seleccione **Aceptar**.
@@ -119,15 +128,23 @@ Para extraer Microsoft.Spark.Worker:
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. Establecimiento de DOTNET_WORKER_DIR y comprobación de las dependencias
 
-Ejecute uno de los comandos siguientes para establecer la Variable de entorno `DOTNET_WORKER_DIR`, que las aplicaciones .NET usan con el fin de buscar .NET para Apache Spark.
+Ejecute uno de los comandos siguientes para establecer la variable de entorno `DOTNET_WORKER_DIR`, que las aplicaciones .NET usan con el fin de buscar .NET para Apache Spark. Asegúrese de reemplazar `<PATH-DOTNET_WORKER_DIR>` por el directorio donde descargó y extrajo el `Microsoft.Spark.Worker`. En Windows, asegúrese de ejecutar el símbolo del sistema en modo de administrador.
 
-En **Windows**, cree una [variable de entorno nueva](https://www.java.com/en/download/help/path.xml) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, `C:\bin\Microsoft.Spark.Worker\`).
+#### <a name="windows"></a>[Windows](#tab/windows)
 
-En **macOS**, cree una variable de entorno nueva mediante `export DOTNET_WORKER_DIR <your_path>` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker/* ).
+```console
+setx /M DOTNET_WORKER_DIR <PATH-DOTNET-WORKER-DIR>
+```
 
-En **Ubuntu**, cree una [variable de entorno nueva](https://help.ubuntu.com/community/EnvironmentVariables) llamada `DOTNET_WORKER_DIR` y establézcala en el directorio donde se ha descargado y extraído Microsoft.Spark.Worker (por ejemplo, *~/bin/Microsoft.Spark.Worker*).
+#### <a name="maclinux"></a>[Mac o Linux:](#tab/linux)
 
-Por último, confirme que puede ejecutar `dotnet`, `java`, `mvn`, `spark-shell` desde la línea de comandos antes de pasar a la sección siguiente.
+```bash
+export DOTNET_WORKER_DIR=<PATH-DOTNET-WORKER-DIR>
+```
+
+---
+
+Por último, confirme que puede ejecutar `dotnet`, `java`, `spark-shell` desde la línea de comandos antes de pasar a la sección siguiente.
 
 ## <a name="write-a-net-for-apache-spark-app"></a>Escritura de una aplicación de .NET para Apache Spark
 
@@ -136,24 +153,30 @@ Por último, confirme que puede ejecutar `dotnet`, `java`, `mvn`, `spark-shell` 
 En el símbolo del sistema o terminal, ejecute los comandos siguientes para crear una aplicación de consola nueva:
 
 ```dotnetcli
-dotnet new console -o mySparkApp
-cd mySparkApp
+dotnet new console -o MySparkApp
+cd MySparkApp
 ```
 
-El comando `dotnet` crea una aplicación `new` de tipo `console` de forma automática. El parámetro `-o` crea un directorio denominado *mySparkApp* donde se almacena la aplicación y lo rellena con los archivos necesarios. El comando `cd mySparkApp` cambia el directorio al directorio de la aplicación que acaba de crear.
+El comando `dotnet` crea una aplicación `new` de tipo `console` de forma automática. El parámetro `-o` crea un directorio denominado *mySparkApp* donde se almacena la aplicación y lo rellena con los archivos necesarios. El comando `cd MySparkApp` cambia el directorio al directorio de la aplicación que acaba de crear.
 
 ### <a name="2-install-nuget-package"></a>2. Instalación del paquete NuGet
 
 Para usar .NET para Apache Spark en una aplicación, instale el paquete Microsoft.Spark. En el símbolo del sistema o terminal, ejecute el comando siguiente:
 
-`dotnet add package Microsoft.Spark --version 0.8.0`
+```dotnetcli
+dotnet add package Microsoft.Spark
+```
 
-### <a name="3-code-your-app"></a>3. Diseño del código de la aplicación
+> [!NOTE]
+> En este tutorial se usa la versión más reciente del paquete NuGet de `Microsoft.Spark`, a menos que se especifique lo contrario.
+
+### <a name="3-write-your-app"></a>3. Escritura de la aplicación
 
 Abra *Program.cs* en Visual Studio Code o cualquier editor de texto, y reemplace todo el código por lo siguiente:
 
 ```csharp
 using Microsoft.Spark.Sql;
+using static Microsoft.Spark.Sql.Functions;
 
 namespace MySparkApp
 {
@@ -161,43 +184,41 @@ namespace MySparkApp
     {
         static void Main(string[] args)
         {
-            // Create a Spark session.
-            SparkSession spark = SparkSession
-                .Builder()
-                .AppName("word_count_sample")
-                .GetOrCreate();
+            // Create Spark session
+            SparkSession spark =
+                SparkSession
+                    .Builder()
+                    .AppName("word_count_sample")
+                    .GetOrCreate();
 
-            // Create initial DataFrame.
-            DataFrame dataFrame = spark.Read().Text("input.txt");
+            // Create initial DataFrame
+            string filePath = args[0];
+            DataFrame dataFrame = spark.Read().Text(filePath);
 
-            // Count words.
-            DataFrame words = dataFrame
-                .Select(Functions.Split(Functions.Col("value"), " ").Alias("words"))
-                .Select(Functions.Explode(Functions.Col("words"))
-                .Alias("word"))
-                .GroupBy("word")
-                .Count()
-                .OrderBy(Functions.Col("count").Desc());
+            //Count words
+            DataFrame words =
+                dataFrame
+                    .Select(Split(Col("value")," ").Alias("words"))
+                    .Select(Explode(Col("words")).Alias("word"))
+                    .GroupBy("word")
+                    .Count()
+                    .OrderBy(Col("count").Desc());
 
-            // Show results.
+            // Display results
             words.Show();
 
-            // Stop Spark session.
+            // Stop Spark session
             spark.Stop();
         }
     }
 }
 ```
 
-### <a name="4-create-and-add-a-data-file"></a>4. Creación y adición de un archivo de datos
+El objeto [SparkSession](xref:Microsoft.Spark.Sql.SparkSession) es el punto de entrada de las aplicaciones Apache Spark, que administra el contexto y la información de la aplicación. Mediante el método [Text](xref:Microsoft.Spark.Sql.DataFrameReader.Text%2A), los datos de texto del archivo especificado por `filePath` se leen en un [DataFrame](xref:Microsoft.Spark.Sql.DataFrame). Un DataFrame es una manera de organizar los datos en un conjunto de columnas con nombre. A continuación, se aplica una serie de transformaciones para dividir las frases en el archivo, agrupar cada una de las palabras, contarlas y ordenarlas en orden descendente. El resultado de estas operaciones se almacena en otro DataFrame. Tenga en cuenta que, en este momento, no se ha realizado ninguna operación porque .NET para Apache Spark evalúa los datos de forma diferida. No es hasta que se llama al método [Show](xref:Microsoft.Spark.Sql.DataFrame.Show%2A) para mostrar el contenido del DataFrame transformado `words` en la consola que se ejecutan las operaciones definidas en las líneas anteriores. Cuando ya no necesite la sesión de Spark, use el método [Stop](xref:Microsoft.Spark.Sql.SparkSession.Stop%2A) para detener la sesión.
 
-Abra el símbolo del sistema o terminal y vaya a la carpeta de la aplicación.
+### <a name="4-create-data-file"></a>4. Creación del archivo de datos
 
-```bash
-cd <your-app-output-directory>
-```
-
-La aplicación procesa un archivo que contiene líneas de texto. Cree un archivo *input.txt* en el directorio *mySparkApp*, con el texto siguiente:
+La aplicación procesa un archivo que contiene líneas de texto. Cree un archivo llamado *input.txt* en el directorio *MySparkApp*, con el texto siguiente:
 
 ```text
 Hello World
@@ -205,39 +226,74 @@ This .NET app uses .NET for Apache Spark
 This .NET app counts words with Apache Spark
 ```
 
+Guarde los cambios y cierre el archivo.
+
 ## <a name="run-your-net-for-apache-spark-app"></a>Ejecución de la aplicación de .NET para Apache Spark
 
-1. Ejecute el comando siguiente para compilar la aplicación:
+Ejecute el comando siguiente para compilar la aplicación:
 
-   ```dotnetcli
-   dotnet build
-   ```
+```dotnetcli
+dotnet build
+```
 
-2. Ejecute el comando siguiente para enviar la aplicación para que se ejecute en Apache Spark:
+Desplácese al directorio de salida de la compilación y use el comando `spark-submit` para enviar la aplicación para que se ejecute en Apache Spark. Asegúrese de reemplazar `<version>` por la versión del trabajo de .NET y `<path-of-input.txt>` por la ruta de acceso del archivo *input.txt* donde está almacenado.
 
-   ```console
-   spark-submit \
-   --class org.apache.spark.deploy.dotnet.DotnetRunner \
-   --master local \
-   microsoft-spark-2.4.x-<version>.jar \
-   dotnet HelloSpark.dll
-   ```
+### <a name="windows"></a>[Windows](#tab/windows)
 
-   > [!NOTE]
-   > Este comando asume que se ha descargado Apache Spark y se ha agregado a la variable de entorno PATH para poder usar `spark-submit`. De lo contrario, tendría que usar la ruta de acceso completa (por ejemplo, *C:\bin\apache-spark\bin\spark-submit* o *~/spark/bin/spark-submit*).
+```console
+spark-submit ^
+--class org.apache.spark.deploy.dotnet.DotnetRunner ^
+--master local ^
+microsoft-spark-2.4.x-<version>.jar ^
+dotnet MySparkApp.dll <path-of-input.txt>
+```
 
-3. Cuando la aplicación se ejecuta, los datos de recuento de palabras del archivo *input.txt* se escriben en la consola.
+### <a name="maclinux"></a>[Mac o Linux:](#tab/linux)
+
+```bash
+spark-submit \
+--class org.apache.spark.deploy.dotnet.DotnetRunner \
+--master local \
+microsoft-spark-2.4.x-<version>.jar \
+dotnet MySparkApp.dll <path-of-input.txt>
+```
+
+---
+
+> [!NOTE]
+> Este comando asume que se ha descargado Apache Spark y se ha agregado a la variable de entorno PATH para poder usar `spark-submit`. De lo contrario, tendría que usar la ruta de acceso completa (por ejemplo, *C:\bin\apache-spark\bin\spark-submit* o *~/spark/bin/spark-submit*).
+
+Cuando la aplicación se ejecuta, los datos de recuento de palabras del archivo *input.txt* se escriben en la consola.
+
+```console
++------+-----+
+|  word|count|
++------+-----+
+|  .NET|    3|
+|Apache|    2|
+|   app|    2|
+|  This|    2|
+| Spark|    2|
+| World|    1|
+|counts|    1|
+|   for|    1|
+| words|    1|
+|  with|    1|
+| Hello|    1|
+|  uses|    1|
++------+-----+
+```
 
 ¡Enhorabuena! Ha creado y ejecutado correctamente una aplicación de .NET para Apache Spark.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha aprendido a:
+En este tutorial, ha aprendido a:
 > [!div class="checklist"]
 >
-> * Preparar el entorno de Windows para .NET para Apache Spark
+> * Preparar el entorno de .NET para Apache Spark
 > * Implementar la primer aplicación .NET para Apache Spark
-> * Compilar y ejecutar una aplicación .NET para Apache Spark sencilla
+> * Compilar y ejecutar una aplicación .NET para Apache Spark
 
 Para ver un vídeo en el que se explican los pasos anteriores, consulte la [serie de vídeos .NET para Apache Spark 101](https://channel9.msdn.com/Series/NET-for-Apache-Spark-101/Run-Your-First-NET-for-Apache-Spark-App).
 

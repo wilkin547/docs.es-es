@@ -3,18 +3,18 @@ title: Telemetría del SDK de .NET Core
 description: Descubra las características de telemetría del SDK de .NET Core que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlas.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: bad6de138b9c35bcd8c5556df82103f959508b52
+ms.sourcegitcommit: d04388f94dbcd756ffd608536c869aee3242cdb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359238"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91206359"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetría del SDK de .NET Core
 
 El [SDK de .NET Core](index.md) incluye una característica de telemetría que recopila datos de uso e información de excepción cuando se bloquea el CLI de .NET Core. El CLI de .NET Core incluye el SDK de .NET Core y es el conjunto de verbos que permiten compilar, probar y publicar las aplicaciones de .NET Core. Es importante que el equipo de .NET entienda cómo se usan las herramientas con el fin de mejorarlas. Con la información sobre los errores, el equipo consigue resolver problemas y corregir errores.
 
-Los datos recopilados son anónimos y se publican de forma agregada bajo la [licencia de atribución de Creative Commons](https://creativecommons.org/licenses/by/4.0/).
+Los datos recopilados se publican de forma agregada bajo la [licencia de atribución de Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Ámbito
 
@@ -41,7 +41,7 @@ El SDK de .NET Core muestra texto similar al siguiente cuando se ejecuta por pri
 ```console
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
@@ -68,7 +68,7 @@ La característica de telemetría recopila los siguientes datos:
 | >=2.0        | Opciones y argumentos del comando: se recopilan varias opciones y argumentos (no cadenas arbitrarias). Vea [opciones recopiladas](#collected-options). Con hash a partir de la versión 2.1.300. |
 | >=2.0         | Si el SDK se ejecuta en un contenedor. |
 | >=2.0         | Plataformas de destino (desde el evento `TargetFramework`), con hash a partir de 2.1. |
-| >=2.0         | Dirección MAC con hash: identificador único y anónimo criptográficamente (SHA256) para una máquina. |
+| >=2.0         | Dirección de Media Access Control (MAC) con hash (SHA256). |
 | >=2.0         | Directorio de trabajo actual con hash. |
 | >=2.0         | Informe de instalación correcta, con el nombre de archivo exe del instalador con hash. |
 | >=2.1.300     | Versión de kernel. |

@@ -2,12 +2,12 @@
 title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
 ms.date: 06/08/2020
-ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 6ae8f6637319cd2c8c24f3e673fb6094f36b9f2f
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359173"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91180460"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio Code
 
@@ -120,7 +120,7 @@ Para crear los métodos de prueba:
    Test Run Successful.
    Total tests: 3
         Passed: 3
-   Total time: 5.1116 Seconds
+    Total time: 5.1116 Seconds
    ```
 
 ## <a name="handle-test-failures"></a>Administración de errores de prueba
@@ -150,14 +150,14 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
      Error Message:
       Assert.IsFalse failed. Expected for 'Error': false; Actual: True
      Stack Trace:
-     at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper()
-       in C:\Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
+        at StringLibraryTest.UnitTest1.TestDoesNotStartWithUpper() in C:\
+   Projects\ClassLibraryProjects\StringLibraryTest\UnitTest1.cs:line 33
 
    Test Run Failed.
    Total tests: 3
         Passed: 2
         Failed: 1
-   Total time: 1.7825 Seconds
+    Total time: 1.7825 Seconds
    ```
 
 1. Quite la cadena "Error" que agregó en el paso 1. Vuelva a ejecutar la prueba y se superarán las pruebas.
@@ -173,6 +173,12 @@ Ahora que se han superado todas las pruebas al ejecutar la versión de depuraci�
    ```
 
    Las pruebas se superan.
+
+## <a name="debug-tests"></a>Depuración de pruebas
+
+Si usa Visual Studio Code como IDE, puede emplear el mismo proceso que se muestra en [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](debugging-with-visual-studio-code.md) para depurar código mediante el proyecto de prueba unitaria. En lugar de iniciar el proyecto de aplicación *Showcase*, abra *StringLibraryTest/UnitTest1.cs* y seleccione **Ejecutar todas las pruebas** entre las líneas 7 y 8. Si no puede encontrarlo, presione <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>P</kbd> para abrir la paleta de comandos y escriba **Recargar ventana**.
+
+Visual Studio Code inicia el proyecto de prueba con el depurador asociado. La ejecución se detendrá en cualquier punto de interrupción que haya agregado al proyecto de prueba o al código de la biblioteca subyacente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

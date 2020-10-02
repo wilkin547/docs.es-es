@@ -4,12 +4,12 @@ description: Información general sobre métodos, parámetros de método y valor
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495543"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874709"
 ---
 # <a name="methods-in-c"></a>Métodos de C#
 
@@ -125,9 +125,10 @@ Un autor de llamada puede luego invocar el método de una de las tres maneras si
 
 - Si se pasa una matriz del tipo adecuado que contenga el número de elementos que se quiera.
 - Si se pasa una lista separada por comas de los argumentos individuales del tipo adecuado para el método.
+- Pasando `null`.
 - Si no se proporciona un argumento a la matriz de parámetros.
 
-En el ejemplo siguiente se define un método denominado `GetVowels` que devuelve todas las vocales de una matriz de parámetros. El método `Main` muestra las tres formas de invocar el método. Los autores de llamadas no deben proporcionar argumentos para los parámetros que incluyen el modificador `params`. En ese caso, el parámetro es `null`.
+En el ejemplo siguiente se define un método denominado `GetVowels` que devuelve todas las vocales de una matriz de parámetros. El método `Main` muestra las cuatro formas de invocar el método. Los autores de llamadas no deben proporcionar argumentos para los parámetros que incluyen el modificador `params`. En ese caso, el parámetro es una matriz vacía.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 

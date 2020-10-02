@@ -1,22 +1,22 @@
 ---
 title: Propiedades de MSBuild para Microsoft.NET.Sdk
-description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET Core.
+description: Referencia de las propiedades y los elementos de MSBuild admitidos por el SDK de .NET.
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
+ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656267"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91354458"
 ---
-# <a name="msbuild-reference-for-net-core-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET Core
+# <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
-Esta página es una referencia de las propiedades y los elementos de MSBuild que puede usar para configurar proyectos de .NET Core.
+Esta página es una referencia de las propiedades y los elementos de MSBuild que puede usar para configurar proyectos de .NET.
 
 > [!NOTE]
-> Esta página es un trabajo en curso y no muestra todas las propiedades de MSBuild útiles para el SDK de .NET Core. Para obtener una lista de las propiedades comunes de MSBuild, vea [Propiedades comunes de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+> Esta página es un trabajo en curso y no muestra todas las propiedades de MSBuild útiles para el SDK de .NET. Para obtener una lista de las propiedades comunes de MSBuild, vea [Propiedades comunes de MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="framework-properties"></a>Propiedades del marco de trabajo
 
@@ -123,7 +123,7 @@ El siguiente código XML excluye del recorte el ensamblado `System.Security`.
 
 ### <a name="useapphost"></a>UseAppHost
 
-La propiedad `UseAppHost` se presentó en la versión 2.1.400 del SDK de .NET Core. Controla si se crea o no un archivo ejecutable nativo para una implementación. Un archivo ejecutable nativo es obligatorio para las implementaciones independientes.
+La propiedad `UseAppHost` se presentó en la versión 2.1.400 del SDK de .NET. Controla si se crea o no un archivo ejecutable nativo para una implementación. Un archivo ejecutable nativo es obligatorio para las implementaciones independientes.
 
 En .NET Core 3.0 y versiones posteriores, se crea de forma predeterminada un ejecutable dependiente del marco de trabajo. Establezca la propiedad `UseAppHost` en `false` para deshabilitar la generación del archivo ejecutable.
 
@@ -133,7 +133,7 @@ En .NET Core 3.0 y versiones posteriores, se crea de forma predeterminada un e
 </PropertyGroup>
 ```
 
-Para obtener más información sobre la implementación, vea [Implementación de aplicaciones .NET Core](../deploying/index.md).
+Para más información sobre la implementación, consulte [Implementación de aplicaciones .NET](../deploying/index.md).
 
 ## <a name="compile-properties"></a>Propiedades de compilación
 
@@ -147,7 +147,7 @@ La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres 
 > [!NOTE]
 > Si se especifican los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` para un elemento `EmbeddedResource`, el nombre del archivo de manifiesto generado para ese archivo de recurso se basa en esos metadatos.
 
-De forma predeterminada, en un nuevo proyecto de .NET Core, esta propiedad se establece en `true`. Si se establece en `false` y no se especifica ningún metadato `LogicalName`, `ManifestResourceName` o `DependentUpon` para el elemento `EmbeddedResource` del archivo de proyecto, el nombre del archivo de manifiesto del recurso se basa en el espacio de nombres raíz del proyecto y en la ruta de acceso relativa al archivo *.resx*. Para más información, consulte [Denominación de los archivos de manifiesto de recurso](../resources/manifest-file-names.md).
+De forma predeterminada, en un nuevo proyecto de .NET, esta propiedad se establece en `true`. Si se establece en `false` y no se especifica ningún metadato `LogicalName`, `ManifestResourceName` o `DependentUpon` para el elemento `EmbeddedResource` del archivo de proyecto, el nombre del archivo de manifiesto del recurso se basa en el espacio de nombres raíz del proyecto y en la ruta de acceso relativa al archivo *.resx*. Para más información, consulte [Denominación de los archivos de manifiesto de recurso](../resources/manifest-file-names.md).
 
 ```xml
 <PropertyGroup>
@@ -190,7 +190,7 @@ En la siguiente tabla se muestran las opciones disponibles.
 
 ### <a name="analysismode"></a>AnalysisMode
 
-A partir de .NET 5.0 RC2, el SDK de .NET incluye todas las [reglas "CA" de calidad del código](/visualstudio/code-quality/code-analysis-for-managed-code-warnings). De forma predeterminada, solo [algunas reglas están habilitadas](../../fundamentals/productivity/code-analysis.md#enabled-rules) como advertencias de compilación. La propiedad `AnalysisMode` le permite personalizar el conjunto de reglas que están habilitadas de forma predeterminada. Puede cambiar a un modo de análisis más agresivo (exclusión) o a uno más conservador (inclusión). Por ejemplo, si quiere habilitar todas las reglas de forma predeterminada como advertencias de compilación, establezca el valor en `AllEnabledByDefault`.
+A partir de .NET 5.0 RC2, el SDK de .NET incluye todas las [reglas "CA" de calidad del código](../../fundamentals/code-analysis/quality-rules/index.md). De forma predeterminada, solo [algunas reglas están habilitadas](../../fundamentals/code-analysis/overview.md#enabled-rules) como advertencias de compilación. La propiedad `AnalysisMode` le permite personalizar el conjunto de reglas que están habilitadas de forma predeterminada. Puede cambiar a un modo de análisis más agresivo (exclusión) o a uno más conservador (inclusión). Por ejemplo, si quiere habilitar todas las reglas de forma predeterminada como advertencias de compilación, establezca el valor en `AllEnabledByDefault`.
 
 ```xml
 <PropertyGroup>
@@ -203,12 +203,12 @@ En la siguiente tabla se muestran las opciones disponibles.
 | Value | Significado |
 |-|-|
 | `Default` | Modo predeterminado, en el que ciertas reglas están habilitadas como advertencias de compilación, otras están habilitadas como sugerencias del IDE de Visual Studio y el resto están deshabilitadas. |
-| `AllEnabledByDefault` | Modo agresivo o de exclusión, en el que todas las reglas están habilitadas de forma predeterminada como advertencias de compilación. Puede [excluir](../../fundamentals/productivity/configure-code-analysis-rules.md) de forma selectiva reglas individuales para deshabilitarlas. |
-| `AllDisabledByDefault` | Modo conservador o de inclusión, en el que todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](../../fundamentals/productivity/configure-code-analysis-rules.md) de forma selectiva reglas individuales para habilitarlas. |
+| `AllEnabledByDefault` | Modo agresivo o de exclusión, en el que todas las reglas están habilitadas de forma predeterminada como advertencias de compilación. Puede [excluir](../../fundamentals/code-analysis/configuration-options.md) de forma selectiva reglas individuales para deshabilitarlas. |
+| `AllDisabledByDefault` | Modo conservador o de inclusión, en el que todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](../../fundamentals/code-analysis/configuration-options.md) de forma selectiva reglas individuales para habilitarlas. |
 
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de calidad del código (CAxxxx) se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de calidad del código de .NET](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) también se tratan como errores. Si no quiere que las advertencias de análisis de calidad del código se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
+La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las advertencias de análisis de calidad del código (CAxxxx) se deben tratar como advertencias e interrumpir la compilación. Si usa la marca `-warnaserror` al compilar los proyectos, las advertencias de [análisis de calidad del código de .NET](../../fundamentals/code-analysis/overview.md#code-quality-analysis) también se tratan como errores. Si no quiere que las advertencias de análisis de calidad del código se traten como errores, puede establecer la propiedad `CodeAnalysisTreatWarningsAsErrors` de MSBuild en `false` en el archivo del proyecto.
 
 ```xml
 <PropertyGroup>
@@ -218,7 +218,7 @@ La propiedad `CodeAnalysisTreatWarningsAsErrors` le permite configurar si las ad
 
 ### <a name="enablenetanalyzers"></a>EnableNETAnalyzers
 
-De forma predeterminada, el [análisis de calidad del código de .NET](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en `true`. Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
+De forma predeterminada, el [análisis de calidad del código de .NET](../../fundamentals/code-analysis/overview.md#code-quality-analysis) está habilitado para los proyectos que tienen como destino .NET 5.0 o una versión posterior. Puede habilitar el análisis de código de .NET para los proyectos que tienen como destino versiones anteriores de .NET estableciendo la propiedad `EnableNETAnalyzers` en `true`. Para deshabilitar el análisis de código en cualquier proyecto, establezca esta propiedad en `false`.
 
 ```xml
 <PropertyGroup>
@@ -231,7 +231,7 @@ De forma predeterminada, el [análisis de calidad del código de .NET](../../fun
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
-El [análisis del estilo del código de .NET](../../fundamentals/productivity/code-analysis.md#code-style-analysis) está deshabilitado de forma predeterminada en la compilación para todos los proyectos de .NET. Puede habilitar el análisis del estilo del código para los proyectos de .NET estableciendo la propiedad `EnforceCodeStyleInBuild` en `true`.
+El [análisis del estilo del código de .NET](../../fundamentals/code-analysis/overview.md#code-style-analysis) está deshabilitado de forma predeterminada en la compilación para todos los proyectos de .NET. Puede habilitar el análisis del estilo del código para los proyectos de .NET estableciendo la propiedad `EnforceCodeStyleInBuild` en `true`.
 
 ```xml
 <PropertyGroup>
@@ -239,11 +239,11 @@ El [análisis del estilo del código de .NET](../../fundamentals/productivity/co
 </PropertyGroup>
 ```
 
-Todas las reglas de estilo del código [configuradas](../../fundamentals/productivity/code-analysis.md#code-style-analysis) como advertencias o errores se ejecutarán en la compilación y notificarán infracciones.
+Todas las reglas de estilo del código [configuradas](../../fundamentals/code-analysis/overview.md#code-style-analysis) como advertencias o errores se ejecutarán en la compilación y notificarán infracciones.
 
 ## <a name="run-time-configuration-properties"></a>Propiedades de configuración del tiempo de ejecución
 
-Puede configurar algunos comportamientos del tiempo de ejecución si especifica las propiedades de MSBuild en el archivo de proyecto de la aplicación. Para obtener información sobre otras formas de configurar el comportamiento del tiempo de ejecución, consulte [Opciones de configuración del tiempo de ejecución de .NET Core](../run-time-config/index.md).
+Puede configurar algunos comportamientos del tiempo de ejecución si especifica las propiedades de MSBuild en el archivo de proyecto de la aplicación. Para obtener información sobre otras formas de configurar el comportamiento del tiempo de ejecución, consulte [Opciones de configuración en tiempo de ejecución de .NET Core](../run-time-config/index.md).
 
 - [ConcurrentGarbageCollection](#concurrentgarbagecollection)
 - [InvariantGlobalization](#invariantglobalization)

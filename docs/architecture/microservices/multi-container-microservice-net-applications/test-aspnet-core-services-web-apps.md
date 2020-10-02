@@ -2,12 +2,12 @@
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 ms.date: 08/07/2020
-ms.openlocfilehash: a27b3b8d392c5e1a7d1961307e6de95659cd823e
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024607"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872463"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -140,7 +140,7 @@ Recientemente se han reestructurado las pruebas de referencia de la aplicación 
 
 3. **Pruebas funcionales o de integración de aplicación**, que se centran en la integración de microservicios, con casos de prueba para ejercer varios microservicios. Estas pruebas se encuentran en el proyecto **Application.FunctionalTests**.
 
-Las pruebas unitarias y de integración por microservicio se incluyen en una carpeta de prueba en cada microservicio y las pruebas de carga y aplicación se incluyen en la carpeta de pruebas de la carpeta de soluciones, como se muestra en la figura 6-25.
+Mientras que las pruebas unitarias y de integración se organizan en una carpeta de prueba en el proyecto de microservicio, las pruebas de carga y aplicación se administran por separado en la carpeta raíz, como se muestra en la figura 6-25.
 
 ![Captura de pantalla de VS que apunta a algunos de los proyectos de prueba de la solución.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 

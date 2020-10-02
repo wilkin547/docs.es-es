@@ -2,15 +2,15 @@
 title: Cambios importantes en ASP.NET Core
 titleSuffix: ''
 description: Enumera los cambios importantes en ASP.NET Core.
-ms.date: 09/11/2020
+ms.date: 09/18/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a4534367184127604ed53bf1fdafabbf8ff575d1
+ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539609"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91406198"
 ---
 # <a name="aspnet-core-breaking-changes"></a>Cambios importantes en ASP.NET Core
 
@@ -37,6 +37,8 @@ En esta página se documentan los siguientes cambios importantes en ASP.NET Cor
 - [Azure: Paquetes de integración de Azure con prefijo de Microsoft quitados](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Los métodos de serialización BinaryFormatter están obsoletos y se prohíben en las aplicaciones ASP.NET](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: espacio en blanco no significativo recortado de componentes en el tiempo de compilación](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: Los tipos JSObjectReference y JSInProcessObjectReference han cambiado a internal](#blazor-jsobjectreference-and-jsinprocessobjectreference-types-changed-to-internal).
+- [Blazor: La característica ProtectedBrowserStorage se ha movido a una plataforma compartida](#blazor-protectedbrowserstorage-feature-moved-to-shared-framework)
 - [Blazor: Los campos públicos RenderTreeFrame de solo lectura se han convertido en propiedades](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor: Plataforma de destino de paquetes NuGet cambiada](#blazor-target-framework-of-nuget-packages-changed)
 - [Almacenamiento en caché: se ha quitado la propiedad CompactOnMemoryPressure](#caching-compactonmemorypressure-property-removed)
@@ -102,6 +104,7 @@ En esta página se documentan los siguientes cambios importantes en ASP.NET Cor
 - [SPA: cambio predeterminado de reserva de registrador de consola de SpaServices y NodeServices](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [SPA: SpaServices y NodeServices se han marcado como obsoletos](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Archivos estáticos: tipo de contenido CSV cambiado a compatible con los estándares](#static-files-csv-content-type-changed-to-standards-compliant)
+- [No se admiten las API de System.Security.Cryptography en Blazor WebAssembly](#systemsecuritycryptography-apis-not-supported-on-blazor-webassembly)
 - [Marco de destino: no se admite .NET Framework](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
@@ -123,6 +126,14 @@ En esta página se documentan los siguientes cambios importantes en ASP.NET Cor
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: JSObjectReference and JSInProcessObjectReference types changed to internal](~/includes/core-changes/aspnetcore/5.0/blazor-jsobjectreference-to-internal.md)]
+
+***
+
+[!INCLUDE[Blazor: ProtectedBrowserStorage feature moved to shared framework](~/includes/core-changes/aspnetcore/5.0/blazor-protectedbrowserstorage-moved.md)]
 
 ***
 
@@ -206,6 +217,10 @@ En esta página se documentan los siguientes cambios importantes en ASP.NET Cor
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Cryptography APIs not supported on Blazor WebAssembly](~/includes/core-changes/cryptography/5.0/cryptography-apis-not-supported-on-blazor-webassembly.md)]
 
 ***
 

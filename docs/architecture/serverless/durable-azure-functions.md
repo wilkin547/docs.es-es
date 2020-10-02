@@ -4,12 +4,12 @@ description: Azure Durable Functions amplía el entorno de ejecución de Azure F
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1498b5a19bc92b7db16f7422a35ac3afffb82b60
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72522856"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91171798"
 ---
 # <a name="durable-azure-functions"></a>Funciones de Azure duraderas
 
@@ -96,9 +96,9 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 
-- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Enlaces para Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-- [Administración de instancias con Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](/azure/azure-functions/durable-functions-overview)
+- [Enlaces para Durable Functions](/azure/azure-functions/durable-functions-bindings)
+- [Administración de instancias con Durable Functions](/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
 >[Anterior](event-grid.md)
