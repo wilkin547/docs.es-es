@@ -331,6 +331,8 @@ items:
             href: ../core/diagnostics/event-counters.md
           - name: Registro y seguimiento
             href: ../core/diagnostics/logging-tracing.md
+          - name: Recopilación de diagnósticos en contenedores
+            href: ../core/diagnostics/diagnostics-in-containers.md
           - name: Herramientas globales de la CLI de .NET Core
             items:
               - name: dotnet-counters
@@ -370,6 +372,10 @@ items:
                     href: code-analysis/code-quality-rule-options.md
                   - name: Configuraciones predefinidas
                     href: code-analysis/predefined-configurations.md
+              - name: Reglas de estilo de código
+                items:
+                  - name: Opciones de la regla
+                    href: code-analysis/code-style-rule-options.md
           - name: Referencia de reglas
             items:
               - name: Reglas de calidad del código
@@ -928,7 +934,24 @@ items:
                       - name: CA2249
                         href: code-analysis/quality-rules/ca2249.md
               - name: Reglas de estilo de código
-                href: /visualstudio/ide/editorconfig-language-conventions
+                items:
+                  - name: Información general
+                    href: code-analysis/style-rules/index.md
+                  - name: Reglas del lenguaje
+                    items:
+                      - name: Información general
+                        displayName: language rules
+                        href: code-analysis/style-rules/language-rules.md
+                  - name: Reglas de formato
+                    items:
+                      - name: Información general
+                        displayName: formatting rules
+                        href: code-analysis/style-rules/formatting-rules.md
+                  - name: Reglas de nomenclatura
+                    items:
+                      - name: Información general
+                        displayName: naming rules
+                        href: code-analysis/style-rules/naming-rules.md
           - name: Analizador de compatibilidad de plataformas
             href: ../standard/analyzers/platform-compat-analyzer.md
           - name: Analizador de API
