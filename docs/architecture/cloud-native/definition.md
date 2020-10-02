@@ -3,12 +3,12 @@ title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dce8da57b90519880e322a26de403d8e7cb718c2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160910"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654697"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -26,7 +26,7 @@ Cloud Native Computing Foundation proporciona una [definición oficial](https://
 
 Las aplicaciones se han vuelto cada vez más complejas con usuarios que requieren más y más. Los usuarios esperan una capacidad de respuesta rápida, características innovadoras y sin tiempo de inactividad. Los problemas de rendimiento, los errores periódicos y la incapacidad de moverse rápidamente ya no son aceptables. Se trasladarán fácilmente a su competidor.
 
-La nube nativa es mucho más *rápida* y *ágil*. Los sistemas empresariales están evolucionando desde la habilitación de las capacidades empresariales a armas de transformación estratégica, lo que acelera la velocidad y el crecimiento de la empresa. Es imperativo obtener ideas al mercado inmediatamente.
+La nube nativa es la *velocidad* y la *agilidad*. Los sistemas empresariales están evolucionando desde la habilitación de las capacidades empresariales hasta las armas de transformación estratégica que aceleran la velocidad y el crecimiento de la empresa. Es imperativo obtener ideas al mercado inmediatamente.
 
 Estas son algunas compañías que han implementado estas técnicas. Piense en la velocidad, la agilidad y la escalabilidad que han logrado.
 
@@ -227,7 +227,7 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
 | Supervisión del estado | Detectar y corregir errores automáticamente.|
 | Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
-| Escalado | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
+| Ampliación | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|
 | Detección de servicios | Permite que los contenedores se localicen entre sí.|
 | Actualizaciones sucesivas | Coordine actualizaciones incrementales con una implementación sin tiempo de inactividad. Revertir cambios problemáticos automáticamente.|
@@ -276,7 +276,7 @@ Los proveedores de nube proporcionan las API para que pueda comunicarse con sus 
 
 Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube*y el capítulo 4, *patrones de comunicación nativa en la nube*.
 
-## <a name="automation"></a>Automation
+## <a name="automation"></a>Automatización
 
 Como ha visto, los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas? ¿Cómo se implementan rápidamente características y actualizaciones de aplicaciones? ¿Cómo se redondea la imagen completa?
 
