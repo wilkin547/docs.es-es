@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 93fc0296eeb410ba7ca0e781bededbe79820506d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91178871"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91607738"
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 
@@ -103,7 +103,7 @@ En el ejemplo siguiente se define una clase pública que contiene una [propiedad
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [Programación orientada a objetos](../concepts/object-oriented-programming.md)
+- [Programación orientada a objetos](../../tutorials/intro-to-csharp/object-oriented-programming.md)
 - [Polimorfismo](polymorphism.md)
 - [Nombres de identificador](../inside-a-program/identifier-names.md)
 - [Miembros](members.md)

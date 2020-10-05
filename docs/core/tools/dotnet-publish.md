@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
 ms.date: 02/24/2020
-ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537774"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654899"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -145,7 +145,7 @@ Para obtener más información, vea los siguientes recursos:
 
 - **`-p:PublishReadyToRun=true`**
 
-  Compila los ensamblados de aplicación con el formato ReadyToRun (R2R). R2R es una forma de compilación Ahead Of Time (AOT). Para obtener más información, vea [Imágenes ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images). Disponible desde el SDK de .NET Core 3.0.
+  Compila los ensamblados de aplicación con el formato ReadyToRun (R2R). R2R es una forma de compilación Ahead Of Time (AOT). Para obtener más información, vea [Imágenes ReadyToRun](../deploying/ready-to-run.md). Disponible desde el SDK de .NET Core 3.0.
 
   Se recomienda especificar esta opción en un perfil de publicación en lugar de hacerlo en la línea de comandos. Para obtener más información, vea [MSBuild](#msbuild).
 

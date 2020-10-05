@@ -15,13 +15,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-author: ghogen
-ms.openlocfilehash: c59ccc5a8b2f11fda9c4734487092c1aabb74908
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 386311228abb08600acc249e80702c724c137900
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925584"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609270"
 ---
 # <a name="service-application-programming-architecture"></a>Arquitectura de programación de aplicaciones de servicio
 Las aplicaciones de servicios de Windows se basan en una clase que hereda de la clase <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>. Se sustituyen los métodos de esta clase y se define la funcionalidad para que determinen el comportamiento del servicio.  

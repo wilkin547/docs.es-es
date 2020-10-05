@@ -10,13 +10,12 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-author: ghogen
-ms.openlocfilehash: 2a04e330ea7dc37552053b2a7915909c011727f8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 9e672a19cec814694eddb35672c5c669efd40eb2
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925792"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91608613"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Procedimiento para continuar un servicio de Windows (Visual Basic)
 En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceController> para continuar un servicio IIS Admin en el equipo local.  
