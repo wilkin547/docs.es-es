@@ -1028,6 +1028,8 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: Implementación de archivo único y ejecutable
         href: ../core/deploying/single-file.md
+      - name: ReadyToRun
+        href: ../core/deploying/ready-to-run.md
       - name: Recorte de implementaciones autocontenidas
         items:
           - name: Introducción y procedimientos

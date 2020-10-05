@@ -7,12 +7,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 1b5ca6484f45dcee33009d8b8c12a43fa41f63de
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c5ee2fae9167dd508332d8e97a589a8ddb0394ac
+ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554454"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91712621"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de rendimiento en el .NET Framework
 
@@ -114,7 +114,7 @@ En este tema se proporciona una lista de los contadores de rendimiento que se pu
 |**Bytes por segundo promocionados de gen. 1**|Muestra los bytes por segundo que se promocionan de la generación 1 a la generación 2. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador.<br /><br /> La memoria se promueve cuando sobrevive a una recolección de elementos no utilizados. No se promueve nada desde la generación 2 porque es la generación más antigua. Este contador es un indicador de los objetos de una duración muy larga que se crean por segundo.<br /><br /> Este contador muestra la diferencia entre los valores observados en las dos últimas muestras divididos entre la duración del intervalo de obtención de muestras.|  
 |**Tamaño del montón de gen. 2**|Muestra el número actual de bytes en la generación 2. Los objetos no se asignan directamente en esta generación; se promocionan desde la generación 1 durante las recolecciones de elementos no utilizados de generación 1 anteriores. Este contador se actualiza al final de una recolección de elementos no utilizados, no durante cada asignación.|  
 |**Tamaño del montón del objeto grande**|Muestra el tamaño actual, en bytes, del montón de objetos grandes. Los objetos que superan aproximadamente 85.000 bytes se tratan como objetos grandes en el recolector de elementos no utilizados y se asignan directamente en un montón especial. No se promocionan a través de las generaciones. Este contador se actualiza al final de una recolección de elementos no utilizados, no durante cada asignación.|  
-|**Id. del proceso**|Muestra el identificador de proceso de la instancia de proceso CLR que se está supervisando.|  
+|**Identificador del proceso**|Muestra el identificador de proceso de la instancia de proceso CLR que se está supervisando.|  
 |**Memoria de finalización promocionada de gen. 0**|Muestra los bytes de memoria que se promocionan de la generación 0 a la generación 1 solo porque están a la espera de ser finalizados. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados.|  
 |**Memoria promocionada de gen. 0**|Muestra los bytes de memoria que sobreviven la recolección de elementos no utilizados y que se promocionan de la generación 0 a la generación 1. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados.|  
 |**Memoria promocionada de gen. 1**|Muestra los bytes de memoria que sobreviven la recolección de elementos no utilizados y que se promocionan de la generación 1 a la generación 2. Los objetos que se promocionan únicamente porque están a la espera de ser finalizados no se incluyen en este contador. Este contador no es acumulativo; muestra el valor observado al final de la última recolección de elementos no utilizados. Este contador se restablece a 0 si la última recolección de elementos no utilizados era únicamente una colección de generación 0.|  
@@ -130,8 +130,8 @@ La categoría de redes de .NET CLR de la consola de rendimiento incluye contador
 |**Conexiones establecidas**|El número total acumulativo de objetos <xref:System.Net.Sockets.Socket> para los sockets de secuencias que se conectaron alguna vez dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
 |**Datagramas recibidos**|El número total acumulativo de paquetes de datagramas recibidos por todos los objetos <xref:System.Net.Sockets.Socket> dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
 |**Datagramas enviados**|El número total acumulativo de paquetes de datagramas enviados por todos los objetos <xref:System.Net.Sockets.Socket> dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
-|**Duración promedio de HttpWebRequest**|El tiempo promedio para la finalización de todos los objetos <xref:System.Net.HttpWebRequest> que finalizaron en el último intervalo dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
-|**Promedio de tiempo en cola de HttpWebRequest**|El promedio de tiempo en cola de todos los objetos <xref:System.Net.HttpWebRequest> que abandonaron la cola en el último intervalo dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
+|**Duración media de HttpWebRequests**|El tiempo promedio para la finalización de todos los objetos <xref:System.Net.HttpWebRequest> que finalizaron en el último intervalo dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
+|**Tiempo medio de cola de HttpWebRequests**|El promedio de tiempo en cola de todos los objetos <xref:System.Net.HttpWebRequest> que abandonaron la cola en el último intervalo dentro del <xref:System.AppDomain> desde que se inició el proceso.|  
 |**HttpWebRequests creadas por segundo**|El número de objetos <xref:System.Net.HttpWebRequest> creados por segundo dentro del <xref:System.AppDomain>.|  
 |**HttpWebRequests en cola por segundo**|El número de objetos <xref:System.Net.HttpWebRequest> que se agregaron a la cola por segundo dentro del <xref:System.AppDomain>.|  
 |**HttpWebRequests anuladas por segundo**|El número de objetos <xref:System.Net.HttpWebRequest> donde la aplicación llamó al método <xref:System.Net.HttpWebRequest.Abort%2A> por segundo dentro del <xref:System.AppDomain>.|  
@@ -169,11 +169,11 @@ Los contadores de rendimiento de red para eventos incluyen lo siguiente:
   
  Hay dos contadores de duración que miden cuánto tardaron los objetos <xref:System.Net.HttpWebRequest> en pasar a través de una parte o la totalidad de su ciclo de vida:  
   
-- **Duración promedio de HttpWebRequest**  
+- **Duración media de HttpWebRequests**  
   
-- **Promedio de tiempo en cola de HttpWebRequest**  
+- **Tiempo medio de cola de HttpWebRequests**  
   
- Para el contador de la **Duración promedio de HttpWebRequest**, la duración de la mayoría de los objetos <xref:System.Net.HttpWebRequest> siempre comienza con la hora en que se creó el objeto hasta la hora en que la aplicación cerró la secuencia de respuesta. Hay dos casos poco comunes:  
+ En el caso del contador de **duración promedio de HttpWebRequests** , la duración de la mayoría de los <xref:System.Net.HttpWebRequest> objetos siempre comienza con la hora a la que se crea el objeto hasta el momento en que la aplicación cierra la secuencia de respuesta. Hay dos casos poco comunes:  
   
 - Si la aplicación nunca llama al método <xref:System.Net.HttpWebRequest.GetResponse%2A> o <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, la duración del objeto <xref:System.Net.HttpWebRequest> se omite.  
   
@@ -231,4 +231,4 @@ for (int i = 0; i < Array.Length; i++)
 ## <a name="see-also"></a>Vea también
 
 - [Contadores de rendimiento](performance-counters.md)
-- [Generación de perfiles en tiempo de ejecución](runtime-profiling.md)
+- [Generar perfiles en tiempo de ejecución](runtime-profiling.md)
