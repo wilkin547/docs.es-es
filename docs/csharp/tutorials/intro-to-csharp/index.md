@@ -3,12 +3,12 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 9a93e34f7b54d12b3f69589d7bb2181fc240403c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554572"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609185"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -56,3 +56,9 @@ Este tutorial solo se encuentra disponible para ejecutarse en el equipo con un e
 Creará una aplicación de consola y conocerá las características básicas orientadas a objetos que forman parte del lenguaje C#.
 
 En este tutorial se presupone que ha completado los tutoriales de introducción en línea y ha instalado el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [Visual Studio Code](https://code.visualstudio.com/).
+
+## <a name="object-oriented-programming"></a>[Programación orientada a objetos](object-oriented-programming.md)
+
+En este tutorial se enseñan los conceptos que se usan en la programación orientada a objetos. Aprenderá los conceptos de *abstracción*, *encapsulación*, *herencia* y *polimorfismo* mediante ejemplos de C#.
+
+En este tutorial se presupone que ha completado los tutoriales de introducción en línea y que ha instalado el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [Visual Studio Code](https://code.visualstudio.com/) o [Visual Studio](https://visualstudio.com) en el equipo de desarrollo.

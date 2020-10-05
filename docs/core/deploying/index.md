@@ -2,12 +2,12 @@
 title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET Core. .NET Core puede publicar aplicaciones específicas de la plataforma o multiplataforma. Puede publicar una aplicación como independiente o como dependiente de la plataforma. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
 ms.date: 04/01/2020
-ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720116"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654677"
 ---
 # <a name="net-core-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET Core
 
@@ -149,6 +149,34 @@ Sirve para publicar una aplicación independiente. Se creará un archivo ejecuta
 
 ```dotnet
 dotnet publish -r win-x64
+```
+
+## <a name="publish-with-readytorun-images"></a>Publicar con imágenes ReadyToRun
+
+La publicación con imágenes ReadyToRun mejorará el tiempo de inicio de la aplicación, a costa de aumentar el tamaño de la aplicación. Para publicar con ReadyToRun, consulte [ReadyToRun](ready-to-run.md) para obtener más información.
+
+### <a name="advantages"></a>Ventajas
+
+- **Tiempo de inicio mejorado**\
+La aplicación pasará menos tiempo ejecutando el JIT.
+
+### <a name="disadvantages"></a>Inconvenientes
+
+- **Mayor tamaño**\
+La aplicación será más grande en el disco.
+
+### <a name="examples"></a>Ejemplos
+
+Publique una aplicación independiente y ReadyToRun. Se creará un archivo ejecutable de macOS de 64 bits.
+
+```dotnet
+dotnet publish -c Release -r osx-x64 -p:PublishReadyToRun=true
+```
+
+Publique una aplicación independiente y ReadyToRun. Se creará un archivo ejecutable de Windows de 64 bits.
+
+```dotnet
+dotnet publish -c Release -r win-x64 -p:PublishReadyToRun=true
 ```
 
 ## <a name="see-also"></a>Vea también
