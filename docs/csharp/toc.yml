@@ -36,6 +36,8 @@
               href: tutorials/intro-to-csharp/arrays-and-collections.md
             - name: Introducción a las clases
               href: tutorials/intro-to-csharp/introduction-to-classes.md
+            - name: Programación orientada a objetos
+              href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: Exploración de C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: 'Exploración de la interpolación de cadenas: tutorial interactivo'
@@ -491,8 +493,6 @@
               href: programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying1.md
             - name: Características de IDE de Visual Studio y herramientas para LINQ
               href: programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md
-        - name: Programación orientada a objetos
-          href: programming-guide/concepts/object-oriented-programming.md
         - name: Reflexión
           href: programming-guide/concepts/reflection.md
         - name: Serialización (C#)
