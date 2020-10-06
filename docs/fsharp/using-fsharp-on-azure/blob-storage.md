@@ -4,12 +4,12 @@ description: Almacene datos no estructurados en la nube con Azure BLOB Storage.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: d9c587cdd21a1b81205d182652b3690b976687c0
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100157"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756252"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure BLOB Storage mediante F\#
 
@@ -43,7 +43,7 @@ En el tutorial, escriba la cadena de conexión en el script, como se indica a co
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L11-L11)]
 
-Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave mediante Azure portal si cree que puede estar en peligro.
+Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave con el Azure Portal si cree que se ha puesto en peligro.
 
 En el caso de las aplicaciones reales, la mejor manera de mantener la cadena de conexión de almacenamiento se encuentra en un archivo de configuración. Para capturar la cadena de conexión de un archivo de configuración, puede hacer lo siguiente:
 
@@ -99,7 +99,7 @@ Para enumerar los blobs de un contenedor, primero obtenga una referencia de cont
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L67-L80)]
 
-También puede asignar nombres a los blobs con la información de la ruta de acceso. De este modo crea una estructura de directorios virtuales que puede organizar y recorrer tal como lo haría en un sistema de archivos tradicional. Tenga en cuenta que la estructura de directorios es solo virtual: los únicos recursos disponibles en el almacenamiento de blobs son contenedores y blobs. Sin embargo, la biblioteca de cliente de almacenamiento ofrece un `CloudBlobDirectory` objeto para hacer referencia a un directorio virtual y simplificar el proceso de trabajar con blobs organizados de este modo.
+También puede asignar nombres a los blobs con la información de la ruta de acceso. De este modo crea una estructura de directorios virtuales que puede organizar y recorrer tal como lo haría en un sistema de archivos tradicional. La estructura de directorios es solo virtual: los únicos recursos disponibles en BLOB Storage son contenedores y BLOBs. Sin embargo, la biblioteca de cliente de almacenamiento ofrece un `CloudBlobDirectory` objeto para hacer referencia a un directorio virtual y simplificar el proceso de trabajar con blobs organizados de este modo.
 
 Por ejemplo, observe el siguiente conjunto de blobs en bloques incluidos en un contenedor denominado `photos`:
 
@@ -173,7 +173,7 @@ Ahora, llame a la rutina. Se usa `Async.RunSynchronously` para forzar la ejecuci
 
 ## <a name="writing-to-an-append-blob"></a>Escritura en un blob en anexos
 
-Un blob en anexos se optimiza para las operaciones de anexado, como el registro. Como un blob en bloques, un blob en anexos se compone también de bloques, pero en el caso del blob en anexos cuando se agrega un nuevo bloque, siempre se anexa al final del blob. No se puede actualizar o eliminar un bloque existente en un blob en anexos. Los identificadores de bloque para un blob en anexos no está expuestos como lo están en el caso de los blobs en bloques.
+Un blob en anexos se optimiza para las operaciones de anexado, como el registro. Al igual que un BLOB en bloques, un BLOB en anexos se compone de bloques, pero al agregar un nuevo bloque a un BLOB en anexos, siempre se anexa al final del BLOB. No se puede actualizar o eliminar un bloque existente en un blob en anexos. Los identificadores de bloque para un blob en anexos no está expuestos como lo están en el caso de los blobs en bloques.
 
 Cada bloque en un blob en anexos puede tener un tamaño diferente, hasta un máximo de 4 MB y el blob puede incluir un máximo de 50.000 bloques. El tamaño máximo de un blob en anexos es, por tanto, ligeramente superior a 195 GB (4 MB X 50.000 bloques).
 
@@ -189,7 +189,7 @@ Para permitir el acceso simultáneo a un blob desde varios clientes o varias ins
 
 - **Etag** : proporciona una manera de detectar que otro proceso ha modificado el blob o el contenedor
 
-- **Concesión** : proporciona una manera de obtener acceso exclusivo y renovable de escritura o eliminación a un blob durante un período de tiempo
+- **Concesión** : proporciona una manera de obtener acceso exclusivo, renovable, de escritura o de eliminación a un BLOB durante un período de tiempo.
 
 Para obtener más información, vea [administrar la simultaneidad en Microsoft Azure Storage](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 
@@ -207,7 +207,7 @@ Un nombre de contenedor debe ser un nombre DNS válido y cumplir las reglas de n
 1. Todas las letras del nombre de un contenedor deben aparecer en minúsculas.
 1. Los nombres de contenedor deben tener entre 3 y 63 caracteres de longitud.
 
-Tenga en cuenta que el nombre de un contenedor siempre debe estar en minúsculas. Si se incluye una letra mayúscula en un nombre de contenedor o se infringe de algún otro modo las reglas de nomenclatura de contenedores, recibirá un error 400 (solicitud incorrecta).
+El nombre de un contenedor siempre debe estar en minúsculas. Si se incluye una letra mayúscula en un nombre de contenedor o se infringe de algún otro modo las reglas de nomenclatura de contenedores, recibirá un error 400 (solicitud incorrecta).
 
 ## <a name="managing-security-for-blobs"></a>Administración de la seguridad para blobs
 
@@ -228,7 +228,7 @@ Ahora que está familiarizado con los aspectos básicos del Almacenamiento de bl
 ### <a name="tools"></a>Herramientas
 
 - [AzureStorageTypeProvider F #](https://fsprojects.github.io/AzureStorageTypeProvider/)\
-Un proveedor de tipo de F # que se puede usar para explorar blobs, tablas y colas Azure Storage activos y aplicar fácilmente operaciones CRUD en ellos.
+Un proveedor de tipo de F # que se puede usar para explorar los recursos de Azure Storage de blobs, tablas y colas, y para aplicar fácilmente operaciones CRUD en ellos.
 
 - [FSharp. Azure. Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
 Una API de F # para usar Microsoft Azure servicio Table Storage

@@ -1,15 +1,15 @@
 ---
 title: 'Uso de Administración de paquetes con F # para Azure'
-description: 'Uso de Paket o Nuget para administrar las dependencias de Azure de F #'
+description: 'Uso de Paket o NuGet para administrar las dependencias de Azure de F #'
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 011a363b264079599e8b7d402fe9896045b1fe04
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 7816c82e87db113a35fef967886c8c3e27959332
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100118"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756239"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>Administración de paquetes para las dependencias de Azure de F #
 
@@ -53,7 +53,7 @@ O para el desarrollo en mono:
 > mono paket.exe update
 ```
 
-## <a name="using-nuget"></a>Uso de Nuget
+## <a name="using-nuget"></a>Uso de NuGet
 
 Si usa [NuGet](https://www.nuget.org/) como administrador de dependencias, puede usar la `nuget.exe` herramienta para agregar dependencias de Azure. Por ejemplo:
 

@@ -2,12 +2,12 @@
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: 4d1dfa17fe9b4a683ab71ef2c9f97373579197af
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155554"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755914"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
@@ -27,7 +27,7 @@ Aunque tienen la ventaja de simplicidad, las arquitecturas monolíticas se enfre
 
 Las aplicaciones monolíticas requieren una implementación completa de toda la aplicación, incluso si solo se ha realizado un pequeño cambio. Las implementaciones completas pueden ser costosas y propensas a errores. Además, requieren un reinicio de la aplicación, lo que afecta temporalmente a la falta de disponibilidad.
 
-### <a name="scaling"></a>Escalado
+### <a name="scaling"></a>Ampliación
 
 Una aplicación monolítica se hospeda por completo en una sola instancia de máquina, lo que a menudo requiere hardware de alta capacidad. Si alguna parte del monolito requiere escalado, se debe implementar otra copia de toda la aplicación en otro equipo. Con un monolito, no es posible escalar los componentes de la aplicación de forma individual; es todo o nada. El escalado de componentes que no requieren escalado produce un uso de recursos ineficaz y costoso.
 
@@ -216,7 +216,7 @@ El comportamiento predeterminado cuando se ejecuta la aplicación también se co
 
 Además del desarrollo local, [Azure dev Spaces](/azure/dev-spaces/) proporciona una forma cómoda para que varios desarrolladores trabajen con sus propias configuraciones de Kubernetes en Azure. Como puede ver en la figura 3-7, también puede ejecutar la aplicación en Azure Dev Spaces.
 
-Además, en cualquier momento puede Agregar compatibilidad con Docker a una aplicación de ASP.NET Core existente. En el explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y **agregue**  >  **compatibilidad con Docker**, como se muestra en la figura 3-8.
+Además, en cualquier momento puede Agregar compatibilidad con Docker a una aplicación de ASP.NET Core existente. En el explorador de soluciones de Visual Studio, haga clic con el botón derecho en el proyecto y seleccione **Agregar**  >  **compatibilidad con Docker**, como se muestra en la figura 3-8.
 
 ![Compatibilidad con Docker de Visual Studio](./media/visual-studio-add-docker-support.png)
 

@@ -4,12 +4,12 @@ description: Las colas de Azure proporcionan mensajería asincrónica confiable 
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 5d6074751f226f0587c4c73bfa9ff56d9aca2bc1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100092"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756226"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue Storage mediante F\#
 
@@ -46,7 +46,7 @@ En el tutorial, escribirá la cadena de conexión en el script, de la siguiente 
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave mediante Azure portal si cree que puede estar en peligro.
+Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave con el Azure Portal si cree que se ha puesto en peligro.
 
 En el caso de las aplicaciones reales, la mejor manera de mantener la cadena de conexión de almacenamiento se encuentra en un archivo de configuración. Para capturar la cadena de conexión de un archivo de configuración, puede hacer lo siguiente:
 
@@ -117,7 +117,7 @@ En este ejemplo se muestra cómo usar un flujo de trabajo asincrónico con API c
 ## <a name="additional-options-for-de-queuing-messages"></a>Opciones adicionales para quitar mensajes de la cola
 
 Hay dos formas de personalizar la recuperación de mensajes de una cola.
-En primer lugar, puede obtener un lote de mensajes (hasta 32). En segundo lugar, puede establecer un tiempo de espera de la invisibilidad más largo o más corto para que el código disponga de más o menos tiempo para procesar cada mensaje. En el ejemplo de código siguiente `GetMessages` se usa para obtener 20 mensajes en una llamada y, a continuación, se procesa cada mensaje. También establece el tiempo de espera de la invisibilidad en cinco minutos para cada mensaje. Tenga en cuenta que los 5 minutos empiezan a contar para todos los mensajes al mismo tiempo, por lo que después de pasar los 5 minutos desde la llamada a `GetMessages`, todos los mensajes que no se han eliminado volverán a estar visibles.
+En primer lugar, puede obtener un lote de mensajes (hasta 32). En segundo lugar, puede establecer un tiempo de espera de la invisibilidad más largo o más corto para que el código disponga de más o menos tiempo para procesar cada mensaje. En el ejemplo de código siguiente `GetMessages` se usa para obtener 20 mensajes en una llamada y, a continuación, se procesa cada mensaje. También establece el tiempo de espera de la invisibilidad en cinco minutos para cada mensaje. Los 5 minutos se inician para todos los mensajes al mismo tiempo, por lo que después de que pasen 5 minutos desde la llamada a `GetMessages` , los mensajes que no se hayan eliminado volverán a estar visibles.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 

@@ -4,12 +4,12 @@ description: Almacene datos estructurados en la nube mediante Azure Table Storag
 author: sylvanc
 ms.date: 03/26/2018
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: f4a22ec14de6c92414fbcf3cca435e2b5c0805f1
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bf4f2e63c847e18d253fe5b6cf5dd7773c320fb7
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100105"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756213"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introducción a Azure Table Storage y el Table API de Azure Cosmos DB con F\#
 
@@ -55,13 +55,13 @@ Si se va a conectar a Azure Storage Table service, necesitará la cadena de cone
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Obtener la cadena de conexión de Azure Cosmos DB
 
-Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure portal, en la cuenta de Cosmos dB, vaya a **configuración**  >  **cadena de conexión**y haga clic en el botón **copiar** para copiar la cadena de conexión principal.
+Si se va a conectar a Azure Cosmos DB, necesitará la cadena de conexión para este tutorial. Puede copiar la cadena de conexión desde el Azure Portal. En el Azure portal, en la cuenta de Cosmos dB, vaya a **configuración**  >  **cadena de conexión**y seleccione el botón **copiar** para copiar la cadena de conexión principal.
 
 En el tutorial, escriba la cadena de conexión en el script, como en el ejemplo siguiente:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave mediante Azure portal si cree que puede estar en peligro.
+Sin embargo, esto **no se recomienda** para los proyectos reales. La clave de la cuenta de almacenamiento es similar a la contraseña raíz de la cuenta de almacenamiento. Siempre debe proteger la clave de la cuenta de almacenamiento. Evite distribuirla a otros usuarios, codificarla de forma rígida o guardarla en un archivo de texto que sea accesible a otros usuarios. Puede volver a generar la clave con el Azure Portal si cree que se ha puesto en peligro.
 
 En el caso de las aplicaciones reales, la mejor manera de mantener la cadena de conexión de almacenamiento se encuentra en un archivo de configuración. Para capturar la cadena de conexión de un archivo de configuración, puede hacer lo siguiente:
 
@@ -162,7 +162,7 @@ A veces, no se sabe si existe una entidad en la tabla. Y, si es así, los valore
 
 ### <a name="query-a-subset-of-entity-properties"></a>Consulta de un subconjunto de propiedades de las entidades
 
-Una consulta de tabla puede recuperar solo algunas propiedades de una entidad en lugar de todas ellas. Esta técnica, denominada proyección, puede mejorar el rendimiento de las consultas, especialmente en el caso de entidades de gran tamaño. En este caso, solo se devuelven direcciones de correo electrónico mediante `DynamicTableEntity` y `EntityResolver` . Tenga en cuenta que no se admite la proyección en el emulador de almacenamiento local, por lo que este código solo se ejecuta cuando está usando una cuenta en Table service.
+Una consulta de tabla puede recuperar solo algunas propiedades de una entidad en lugar de todas ellas. Esta técnica, denominada proyección, puede mejorar el rendimiento de las consultas, especialmente en el caso de entidades de gran tamaño. En este caso, solo se devuelven direcciones de correo electrónico mediante `DynamicTableEntity` y `EntityResolver` . No se admite la proyección en el emulador de almacenamiento local, por lo que este código solo se ejecuta cuando se usa una cuenta en el Table service.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
