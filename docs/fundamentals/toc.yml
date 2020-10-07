@@ -49,16 +49,12 @@ items:
             href: ../core/install/localized-intellisense.md
   - name: "Información general (semana\_1)"
     items:
-      - name: Paseo por .NET
-        href: ../standard/tour.md
+      - name: Introducción a .NET
+        href: ../core/introduction.md
       - name: Componentes de la arquitectura .NET
         href: ../standard/components.md
       - name: Bibliotecas de clases de .NET
         href: ../standard/class-libraries.md
-      - name: Introducción a .NET Core
-        href: ../core/introduction.md
-      - name: Información general sobre .NET Core
-        href: ../core/about.md
       - name: Información general de .NET Standard
         href: ../standard/net-standard.md
       - name: Glosario de .NET
