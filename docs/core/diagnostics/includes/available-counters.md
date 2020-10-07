@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f561550d57e98a515fa3bdf56eea1dc1759b4e69
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 4ffef401c07dbb27db7c0225acdc6817d95bfe11
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024987"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91451372"
 ---
 ## <a name="available-counters"></a>Contadores disponibles
 
@@ -18,7 +18,7 @@ Los siguientes contadores se publican como parte del entorno de ejecución de .N
 |--|--|
 | :::no-loc text="% Time in GC since last GC"::: (`time-in-gc`) | Porcentaje de tiempo de GC desde la última GC |
 | :::no-loc text="Allocation Rate"::: (`alloc-rate`) | Tasa de asignación en bytes |
-| :::no-loc text="CPU Usage"::: (`cpu-usage`) | Porcentaje de uso de CPU |
+| :::no-loc text="CPU Usage"::: (`cpu-usage`) | Porcentaje de uso de CPU del proceso |
 | :::no-loc text="Exception Count"::: (`exception-count`) | Número de excepciones que se han producido |
 | :::no-loc text="GC Heap Size"::: (`gc-heap-size`) | Número de bytes que se considera que están asignados según <xref:System.GC.GetTotalMemory(System.Boolean)?displayProperty=nameWithType> |
 | :::no-loc text="Gen 0 GC Count"::: (`gen-0-gc-count`) | Número de veces que se ha producido una GC para Gen 0 |
@@ -28,6 +28,8 @@ Los siguientes contadores se publican como parte del entorno de ejecución de .N
 | :::no-loc text="Gen 2 GC Count"::: (`gen-2-gc-count`) | Número de veces que se ha producido una GC para Gen 2 |
 | :::no-loc text="Gen 2 Size"::: (`gen-2-size`) | Número de bytes para la GC de Gen 2 |
 | :::no-loc text="LOH Size"::: (`loh-size`) | Número de bytes para la GC de Gen 3 |
+| :::no-loc text="POH Size"::: (`poh-size`) | Número de bytes del montón de objetos anclados (disponible en .NET 5 y versiones posteriores) |
+| :::no-loc text="GC Fragmentation"::: (`gc-fragmentation`) | Fragmentación de montones de recolección de elementos no utilizados (disponible en .NET 5 y versiones posteriores) |
 | :::no-loc text="Monitor Lock Contention Count"::: (`monitor-lock-contention-count`) | Número de veces que ha habido contención al intentar tomar el bloqueo del monitor, según <xref:System.Threading.Monitor.LockContentionCount?displayProperty=nameWithType> |
 | :::no-loc text="Number of Active Timers"::: (`active-timer-count`) | Número de instancias de <xref:System.Threading.Timer> que están activas actualmente, según <xref:System.Threading.Timer.ActiveCount?displayProperty=nameWithType> |
 | :::no-loc text="Number of Assemblies Loaded"::: (`assembly-count`) | Número de instancias de <xref:System.Reflection.Assembly> cargadas en un proceso en un momento dado |
@@ -35,6 +37,8 @@ Los siguientes contadores se publican como parte del entorno de ejecución de .N
 | :::no-loc text="ThreadPool Queue Length"::: (`threadpool-queue-length`) | Número de elementos de trabajo que se encuentran actualmente en cola para procesarse en <xref:System.Threading.ThreadPool> |
 | :::no-loc text="ThreadPool Thread Count"::: (`threadpool-thread-count`) | Número de subprocesos del grupo de subprocesos que existen actualmente en <xref:System.Threading.ThreadPool>, según <xref:System.Threading.ThreadPool.ThreadCount?displayProperty=nameWithType> |
 | :::no-loc text="Working Set"::: (`working-set`) | Cantidad de memoria física asignada al contexto del proceso en un momento dado según <xref:System.Environment.WorkingSet?displayProperty=nameWithType> |
+| :::no-loc text="IL Bytes Jitted"::: (`il-bytes-jitted`) | Tamaño total (en bytes) de IL que tienen compilación JIT (disponible en .NET 5 y versiones posteriores) |
+| :::no-loc text="Method Jitted Count"::: (`method-jitted-count`) | Número de métodos que tienen compilación JIT (disponible en .NET 5 y versiones posteriores) |
 
 ### <a name="microsoftaspnetcorehosting-counters"></a>Contadores "Microsoft.AspNetCore.Hosting"
 
