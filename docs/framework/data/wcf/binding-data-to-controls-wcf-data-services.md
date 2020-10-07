@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: f2cb1004ef6316bc67189c4e00930f6086cf0dad
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 178d77c225144497982487afa00f4493e17d1744
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152928"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805218"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Enlazar datos a controles (Servicios de datos de WCF)
 
@@ -36,7 +36,7 @@ Con WCF Data Services, puede enlazar controles como los `ComboBox` controles y `
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Enlazar datos a elementos de Windows Presentation Foundation  
 
- Dado que la clase <xref:System.Data.Services.Client.DataServiceCollection%601> se hereda de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, puede enlazar los objetos a un elemento o control en una aplicación Windows Presentation Foundation (WPF) tal como lo haría si usara la clase <xref:System.Collections.ObjectModel.ObservableCollection%601> para el enlace. Para obtener más información, consulte [enlace de datos (Windows Presentation Foundation)](../../../desktop-wpf/data/data-binding-overview.md). Una manera de enlazar los datos del servicio de datos a controles WPF es establecer la propiedad `DataContext` del elemento para la instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> que contiene el resultado de la consulta. En este caso, usted utiliza la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para establecer el origen del objeto para el control. Utilice la propiedad <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> para especificar qué propiedad mostrar del objeto enlazado. Si está enlazando un elemento a un objeto relacionado que devuelve una propiedad de navegación, incluya la ruta de acceso en el enlace definido para la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Esta ruta de acceso es relativa al objeto raíz establecido por la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> del control primario. En el siguiente ejemplo se establece la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> de un elemento <xref:System.Windows.Controls.StackPanel> para enlazar el control primario a una clase <xref:System.Data.Services.Client.DataServiceCollection%601> de objetos de cliente:  
+ Dado que la clase <xref:System.Data.Services.Client.DataServiceCollection%601> se hereda de la clase <xref:System.Collections.ObjectModel.ObservableCollection%601>, puede enlazar los objetos a un elemento o control en una aplicación Windows Presentation Foundation (WPF) tal como lo haría si usara la clase <xref:System.Collections.ObjectModel.ObservableCollection%601> para el enlace. Para obtener más información, consulte [enlace de datos (Windows Presentation Foundation)](/dotnet/desktop/wpf/data/data-binding-overview). Una manera de enlazar los datos del servicio de datos a controles WPF es establecer la propiedad `DataContext` del elemento para la instancia de la clase <xref:System.Data.Services.Client.DataServiceCollection%601> que contiene el resultado de la consulta. En este caso, usted utiliza la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> para establecer el origen del objeto para el control. Utilice la propiedad <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> para especificar qué propiedad mostrar del objeto enlazado. Si está enlazando un elemento a un objeto relacionado que devuelve una propiedad de navegación, incluya la ruta de acceso en el enlace definido para la propiedad <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Esta ruta de acceso es relativa al objeto raíz establecido por la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> del control primario. En el siguiente ejemplo se establece la propiedad <xref:System.Windows.FrameworkElement.DataContext%2A> de un elemento <xref:System.Windows.Controls.StackPanel> para enlazar el control primario a una clase <xref:System.Data.Services.Client.DataServiceCollection%601> de objetos de cliente:  
   
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
  [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
@@ -120,7 +120,7 @@ Con WCF Data Services, puede enlazar controles como los `ComboBox` controles y `
   
  Para obtener más información, vea [actualizar el servicio de datos](updating-the-data-service-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para generar manualmente clases del servicio de datos cliente](how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [Procedimiento para agregar una referencia a un servicio de datos](how-to-add-a-data-service-reference-wcf-data-services.md)

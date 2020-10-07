@@ -1,12 +1,12 @@
 ---
 title: Cadenas interpoladas
 ms.date: 10/31/2017
-ms.openlocfilehash: d1220f3804d571f6da229dc5dfa099a22ab1478d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c427b48ce58a59ff3878f24f1989db6ac8c8239a
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344323"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805283"
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>Cadenas interpoladas (referencia de Visual Basic)
 
@@ -30,11 +30,11 @@ La estructura de una cadena interpolada es la siguiente:
 $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."
 ```
 
-donde:
+Donde:
 
 - *field-width* es un entero con signo que indica el número de caracteres del campo. Si es positivo, el campo está alineado a la derecha. Si es negativo, está alineado a la izquierda.
 
-- *format-string* es una cadena de formato adecuada para el tipo de objeto al que se da formato. Por ejemplo, para un valor <xref:System.DateTime>, podría ser una [cadena con formato de fecha y hora estándar](../../../../standard/base-types/standard-date-and-time-format-strings.md) , como "d" o "d".
+- *format-string* es una cadena de formato adecuada para el tipo de objeto al que se da formato. Por ejemplo, para un <xref:System.DateTime> valor, podría ser una [cadena con formato de fecha y hora estándar](../../../../standard/base-types/standard-date-and-time-format-strings.md) , como "d" o "d".
 
 > [!IMPORTANT]
 > No puede haber ningún espacio en blanco entre el carácter `$` y el carácter `"` que inicia la cadena. Si lo hace, se producirá un error del compilador.
@@ -43,7 +43,7 @@ Puede utilizar una cadena interpolada en cualquier lugar que pueda utilizar un l
 
 Para incluir una llave ("{" o "}") en una cadena interpolada, use dos llaves, "{{" o "}}".  Consulte la sección Conversiones implícitas para obtener más detalles.
 
-Si la cadena interpolada contiene otros caracteres con un significado especial en una cadena interpolada, como comillas dobles ("), dos puntos (:) o coma (,), deben incluirse entre caracteres de escape si aparecen en texto literal, o bien deben incluirse en una expresión delimitada por paréntesis si son elementos del lenguaje incluidos en una expresión interpolada. En el ejemplo siguiente las comillas se escriben entre caracteres de escape para incluirlas en la cadena de resultado y se usan paréntesis para delimitar la expresión `(age == 1 ? "" : "s")` de modo que el carácter de dos puntos no se interprete como el principio de una cadena de formato.
+Si la cadena interpolada contiene otros caracteres con un significado especial en una cadena interpolada, como comillas dobles ("), dos puntos (:) o coma (,), deben incluirse entre caracteres de escape si aparecen en texto literal, o bien deben incluirse en una expresión delimitada por paréntesis si son elementos del lenguaje incluidos en una expresión interpolada. En el siguiente ejemplo se da de escape las comillas para incluirlas en la cadena de resultado:
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]
 
@@ -57,7 +57,7 @@ Hay tres conversiones de tipo implícito de una cadena interpolada:
 
    Este es el resultado final de una interpretación de cadena. Todas las apariciones de llaves dobles ("{{" y "}}") se convierten en una única llave.
 
-2. Conversión de una cadena interpolada a una variable <xref:System.IFormattable> que permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>. Esto resulta útil para incluir elementos como los formatos numéricos y de fecha correctos para cada referencia cultural.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato a la cadena mediante una llamada implícita o explícita al método <xref:System.Object.ToString>.  Todas las expresiones de interpolación contenidas se convierten en {0}, {1}, etc.
+2. Conversión de una cadena interpolada a una variable <xref:System.IFormattable> que permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia <xref:System.IFormattable>. Esto resulta útil para incluir elementos como los formatos numéricos y de fecha correctos para cada referencia cultural.  Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato a la cadena mediante una llamada implícita o explícita al método <xref:System.Object.ToString>.  Todas las expresiones de interpolación contenidas se convierten en {0} , {1} , etc.
 
    En el ejemplo siguiente se usa la reflexión para mostrar los miembros y los valores de propiedad y campo de una variable <xref:System.IFormattable> que se crea a partir de una cadena interpolada. También pasa la variable <xref:System.IFormattable> al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>.
 
@@ -65,15 +65,15 @@ Hay tres conversiones de tipo implícito de una cadena interpolada:
 
    Tenga en cuenta que la cadena interpolada solo se puede inspeccionar mediante reflexión. Si se pasa a un método de formato de cadena, como <xref:System.Console.WriteLine(System.String)>, sus elementos de formato se resuelven y se devuelve la cadena de resultado.
 
-3. Conversión de una cadena interpolada a una variable <xref:System.FormattableString> que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta. Un <xref:System.FormattableString> también incluye:
+3. Conversión de una cadena interpolada a una <xref:System.FormattableString> variable que representa una cadena de formato compuesto. El hecho de inspeccionar la cadena de formato compuesto y la manera en que se presenta como cadena de resultado podría ayudarle a protegerse frente a un ataque por inyección si estuviese compilando una consulta. <xref:System.FormattableString>También incluye:
 
       - Una sobrecarga de <xref:System.FormattableString.ToString> que genera una cadena de resultado para <xref:System.Globalization.CultureInfo.CurrentCulture>.
 
-      - <xref:System.FormattableString.Invariant%2A> método que genera una cadena para el <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Un <xref:System.FormattableString.Invariant%2A> método que genera una cadena para <xref:System.Globalization.CultureInfo.InvariantCulture> .
 
       - Un método <xref:System.FormattableString.ToString(System.IFormatProvider)> que genera una cadena de resultado para una referencia cultural especificada.
 
-    Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato.  Todas las expresiones de interpolación contenidas se convierten en {0}, {1}, etc.
+    Todas las apariciones de llaves dobles ("{{" y "}}") permanecen como llaves dobles hasta que dé formato.  Todas las expresiones de interpolación contenidas se convierten en {0} , {1} , etc.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 
