@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 15350f93ffabb10136af1b9a4d12d5301e661b29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1e9657c60ef2ff0ef30ae1607a0e7f2cedd01187
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551717"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756083"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -731,7 +731,7 @@ Windows Communication Foundation (WCF) agrega las siguientes características y 
 
 **Capacidad de configurar las opciones de seguridad de mensaje predeterminadas en TLS 1.1 o TLS 1.2**
 
-A partir de .NET Framework 4.7, WCF le permite configurar TSL 1.1 o TLS 1.2 además de SSL 3.0 y TSL 1.0 como protocolo de seguridad de mensajes predeterminado. Esta es una configuración opcional; para habilitarla, debe agregar la entrada siguiente al archivo de configuración de la aplicación:
+A partir de .NET Framework 4.7, WCF le permite configurar TLS 1.1 o TLS 1.2 además de SSL 3.0 y TLS 1.0 como protocolo de seguridad de mensajes predeterminado. Esta es una configuración opcional; para habilitarla, debe agregar la entrada siguiente al archivo de configuración de la aplicación:
 
 ```xml
 <runtime>
@@ -1431,7 +1431,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     También se admite HTTP/2, y está activado de forma predeterminada en las aplicaciones de la Plataforma universal de Windows (UWP) de Windows 10 que usan la API <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>.
 
-    Para proporcionar una forma de usar la característica [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) en aplicaciones de ASP.NET, se ha agregado un método nuevo con dos sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> y <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, a la clase <xref:System.Web.HttpResponse>.
+    Para proporcionar una forma de usar la característica [PUSH_PROMISE](https://httpwg.github.io/http2-spec/#PUSH_PROMISE) en aplicaciones de ASP.NET, se ha agregado un método nuevo con dos sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> y <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, a la clase <xref:System.Web.HttpResponse>.
 
     > [!NOTE]
     > Mientras que ASP.NET Core admite HTTP/2, la compatibilidad con la característica PUSH PROMISE aún no se ha agregado.
