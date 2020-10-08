@@ -32,7 +32,7 @@
     - name: Depuración de la aplicación
       href: how-to-guides/debug.md
     - name: Envío de trabajos a Azure Synapse Analytics
-      href: 'https://docs.microsoft.com/azure/synapse-analytics/spark/spark-dotnet'
+      href: /azure/synapse-analytics/spark/spark-dotnet
     - name: Envío de trabajos a HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md
     - name: Envío de trabajos a Databricks
