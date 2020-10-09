@@ -7,8 +7,11 @@
       href: whats-new.md
     - name: Novedades de Windows Workflow Foundation en .NET 4.5
       href: whats-new-in-wf-in-dotnet.md
-    - name: Tipos obsoletos en Windows Workflow Foundation
+    - name: Tipos y herramientas obsoletos
       href: deprecated-types.md
+      items:
+        - name: Herramienta del compilador de Workflow wfc.exe
+          href: wfc-exe-workflow-compiler-tool.md
     - name: Detalles de las características de Windows Workflow Foundation
       href: feature-specifics.md
     - name: Información general conceptual de Windows Workflow
