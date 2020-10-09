@@ -8,18 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: ccd575748c2286fa7348e2880acbfadd036d9ccd
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 239163fc2f91ccbfe8b1c111a358db87d36a8308
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247727"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654644"
 ---
 # <a name="static-c-reference"></a>static (Referencia de C#)
 
 En esta página se trata la palabra clave del modificador `static`. La palabra clave `static` también forma parte de la directiva [`using static`](using-static.md).
 
 Use el modificador `static` para declarar un miembro estático, que pertenece al propio tipo en lugar de a un objeto específico. El modificador `static` se puede usar para declarar clases `static`. En las clases, las interfaces y las estructuras, puede agregar el modificador `static` a los campos, los métodos, las propiedades, los operadores, los eventos y los constructores. El modificador `static` no se puede usar con indizadores ni finalizadores. Para más información, vea [Clases estáticas y sus miembros](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+
+A partir de C# 8,0, puede agregar el modificador `static` a una función [local](../../programming-guide/classes-and-structs/local-functions.md). Una función local estática no puede capturar variables locales o el estado de la instancia.
 
 A partir de C# 9.0, puede agregar el modificador `static` a una [expresión lambda](../operators/lambda-expressions.md) o un [método anónimo](../operators/delegate-operator.md). Una expresión lambda o un método anónimo estático no pueden capturar variables locales o el estado de la instancia.
 

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 6a0227b408b894fe450c2a6bb6017d9059d229c0
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247623"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654912"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -194,7 +194,7 @@ Cualquiera de estos patrones se puede usar en cualquier contexto en el que se pe
 
 Tres nuevas características mejoran la compatibilidad con la interoperabilidad nativa y las bibliotecas de bajo nivel que requieren alto rendimiento: enteros de tamaño nativo, punteros de función y la omisión de la marca `localsinit`.
 
-Los enteros de tamaño nativo, `nint` y `nuint`, son tipos enteros. Se expresan mediante los tipos subyacentes <xref:System.IntPtr?displayProperty=nameWithType> y <xref:System.UIntPtr?displayProperty=nameWithType>. El compilador muestra las conversiones y operaciones adicionales para estos tipos como enteros nativos. Los enteros de tamaño nativo no tienen constantes para `MaxValue` o `MinValue`, excepto `nuint.MinValue`, que tiene un valor `MinValue` de `0`. Otros valores no se pueden expresar como constantes porque depende del tamaño nativo de un entero en el equipo de destino. Puede usar valores constantes para `nint` en el intervalo [`int.MinValue` .. `int.MaxValue`]. Puede usar valores constantes para `nuint` en el intervalo [`uint.MinValue` .. `uint.MaxValue`]. El compilador realiza un plegamiento constante para todos los operadores unarios y binarios que usan los tipos <xref:System.Int32?displayProperty=nameWithType> y <xref:System.UInt32?displayProperty=nameWithType>. Si el resultado no cabe en 32 bits, la operación se ejecuta en tiempo de ejecución y no se considera una constante. Los enteros con tamaño nativo pueden aumentar el rendimiento en escenarios en los que se usa la aritmética de enteros y es necesario tener el rendimiento más rápido posible.
+Los enteros de tamaño nativo, `nint` y `nuint`, son tipos enteros. Se expresan mediante los tipos subyacentes <xref:System.IntPtr?displayProperty=nameWithType> y <xref:System.UIntPtr?displayProperty=nameWithType>. El compilador muestra las conversiones y operaciones adicionales para estos tipos como enteros nativos. Los enteros con tamaño nativo definen propiedades para `MaxValue` o `MinValue`. Estos valores no se pueden expresar como constantes en tiempo de compilación porque dependen del tamaño nativo de un entero en el equipo de destino. Estos valores son de solo lectura en el entorno de ejecución. Puede usar valores constantes para `nint` en el intervalo [`int.MinValue` .. `int.MaxValue`]. Puede usar valores constantes para `nuint` en el intervalo [`uint.MinValue` .. `uint.MaxValue`]. El compilador realiza un plegamiento constante para todos los operadores unarios y binarios que usan los tipos <xref:System.Int32?displayProperty=nameWithType> y <xref:System.UInt32?displayProperty=nameWithType>. Si el resultado no cabe en 32 bits, la operación se ejecuta en tiempo de ejecución y no se considera una constante. Los enteros con tamaño nativo pueden aumentar el rendimiento en escenarios en los que se usa la aritmética de enteros y es necesario tener el rendimiento más rápido posible.
 
 Los punteros de función proporcionan una sintaxis sencilla para acceder a los códigos de operación de lenguaje intermedio `ldftn` y `calli`. Puede declarar punteros de función con la nueva sintaxis de `delegate*`. Un tipo `delegate*` es un tipo de puntero. Al invocar el tipo `delegate*` se usa `calli`, a diferencia de un delegado que usa `callvirt` en el método `Invoke()`. Sintácticamente, las invocaciones son idénticas. La invocación del puntero de función usa la convención de llamada `managed`. Agregue la palabra clave `unmanaged` después de la sintaxis de `delegate*` para declarar que quiere la convención de llamada `unmanaged`. Se pueden especificar otras convenciones de llamada mediante atributos en la declaración de `delegate*`.
 
@@ -204,11 +204,11 @@ Estas características pueden aumentar significativamente el rendimiento en algu
 
 ## <a name="fit-and-finish-features"></a>Características de ajuste y finalización
 
-Muchas de las características restantes ayudan a escribir código de forma más eficaz. En C# 9.0, puede omitir el tipo de una nueva expresión cuando ya se conoce el tipo del objeto creado. El uso más común es en las declaraciones de campo:
+Muchas de las características restantes ayudan a escribir código de forma más eficaz. En C# 9.0, puede omitir el tipo de una [expresión `new`](../language-reference/operators/new-operator.md) cuando ya se conoce el tipo del objeto creado. El uso más común es en las declaraciones de campo:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="WeatherStationField":::
 
-El tipo de destino new también se puede usar cuando es necesario crear un objeto para pasarlo como parámetro a un método. Considere un método `ForecastFor()` con la signatura siguiente:
+El tipo de destino `new` también se puede usar cuando es necesario crear un objeto para pasarlo como argumento a un método. Considere un método `ForecastFor()` con la signatura siguiente:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="ForecastSignature":::
 
@@ -220,7 +220,7 @@ Otra aplicación muy útil de esta característica es para combinarla con propie
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
-Puede devolver una instancia creada por el constructor predeterminado mediante una expresión `return new();`.
+Puede devolver una instancia creada por el constructor predeterminado mediante una declaración `return new();`.
 
 Una característica similar mejora la resolución de tipos de destino de las [expresiones condicionales](../language-reference/operators/conditional-operator.md). Con este cambio, las dos expresiones no necesitan tener una conversión implícita de una a otra, pero pueden tener conversiones implícitas a un tipo de destino. Lo más probable es que no note este cambio. Lo que observará es que ahora funcionan algunas expresiones condicionales para las que anteriormente se necesitan conversiones o que no se compilaban.
 

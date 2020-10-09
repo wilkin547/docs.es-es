@@ -1,21 +1,21 @@
 ---
-title: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
+title: 'Tutorial: Algoritmos de compilación con coincidencia de patrones'
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
-ms-technology: csharp-whats-new
-ms.custom: mvc
-ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.technology: csharp-whats-new
+ms.custom: contperfq1
+ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156537"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91437986"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
+# <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos.
 
 C# 7 introdujo las características básicas de coincidencia de patrones. Esas características se amplían en C# 8 con nuevas expresiones y patrones. Puede escribir una funcionalidad que se comporta como si se hubiesen ampliado tipos que pueden estar en otras bibliotecas. Los patrones también se usan para crear una funcionalidad que la aplicación requiere y que no es una característica fundamental del tipo que se está ampliando.
 
-En este tutorial aprenderá lo siguiente:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -298,16 +298,16 @@ Para esta característica, usará la coincidencia de patrones, pero la integrar�
 
 En la tabla siguiente se muestran las combinaciones de valores de entrada y el multiplicador de precio en horas punta:
 
-| Day        | Tiempo         | Dirección | Recargo |
+| Día        | Time         | Dirección | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Día laborable    | hora punta de la mañana | hacia la ciudad   | x 2,00  |
-| Día laborable    | hora punta de la mañana | desde la ciudad  | x 1,00  |
-| Día laborable    | día      | hacia la ciudad   | x 1,50  |
-| Día laborable    | día      | desde la ciudad  | x 1,50  |
-| Día laborable    | hora punta de la tarde | hacia la ciudad   | x 1,00  |
-| Día laborable    | hora punta de la tarde | desde la ciudad  | x 2,00  |
-| Día laborable    | noche    | hacia la ciudad   | x 0,75  |
-| Día laborable    | noche    | desde la ciudad  | x 0,75  |
+| Día de la semana    | hora punta de la mañana | hacia la ciudad   | x 2,00  |
+| Día de la semana    | hora punta de la mañana | desde la ciudad  | x 1,00  |
+| Día de la semana    | día      | hacia la ciudad   | x 1,50  |
+| Día de la semana    | día      | desde la ciudad  | x 1,50  |
+| Día de la semana    | hora punta de la tarde | hacia la ciudad   | x 1,00  |
+| Día de la semana    | hora punta de la tarde | desde la ciudad  | x 2,00  |
+| Día de la semana    | noche    | hacia la ciudad   | x 0,75  |
+| Día de la semana    | noche    | desde la ciudad  | x 0,75  |
 | Fin de semana    | hora punta de la mañana | hacia la ciudad   | x 1,00  |
 | Fin de semana    | hora punta de la mañana | desde la ciudad  | x 1,00  |
 | Fin de semana    | día      | hacia la ciudad   | x 1,00  |

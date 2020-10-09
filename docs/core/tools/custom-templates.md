@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538100"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874725"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -63,6 +63,8 @@ El archivo *template.json* se coloca en una carpeta *.template.config* en el dir
 | `identity`        | cadena        | Un nombre único para esta plantilla. |
 | `name`            | cadena        | El nombre de la plantilla que los usuarios deben ver. |
 | `shortName`       | cadena        | Un nombre abreviado predeterminado para seleccionar la plantilla que se aplica a entornos donde el usuario especifica el nombre de la plantilla; no se selecciona mediante una GUI. Por ejemplo, un nombre abreviado es útil al usar plantillas desde un símbolo del sistema con comandos de la CLI. |
+| `sourceName`       | string        | Nombre del árbol de origen que se va a reemplazar por el nombre que especifica el usuario. El motor de plantillas buscará cualquier aparición del valor `sourceName` mencionado en el archivo de configuración y la reemplazará en los nombres de archivo y en el contenido del archivo. El valor con el que se reemplazará se puede proporcionar usando las opciones `-n` o `--name` mientras se ejecuta una plantilla. Si no se especifica ningún nombre, se usa el directorio actual.|
+| `preferNameDirectory`       | boolean        | Indica si se debe crear un directorio para la plantilla si se especifica un nombre pero no se establece un directorio de salida (en lugar de crear el contenido directamente en el directorio actual). El valor predeterminado es false.|
 
 El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json*, consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
 

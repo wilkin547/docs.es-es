@@ -1,15 +1,15 @@
 ---
 title: 'Funciones locales: Guía de programación de C#'
 description: En C#, las funciones locales son métodos privados que están anidados en otro miembro y se pueden llamar desde su miembro contenedor.
-ms.date: 06/14/2017
+ms.date: 10/02/2020
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: a91995757048c8c54253d7f4b923d5194f69bc7b
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656190"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654925"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funciones locales (Guía de programación de C#)
 
@@ -36,17 +36,19 @@ Las funciones locales aclaran la intención del código. Cualquiera que lea el c
 Una función local se define como un método anidado dentro de un miembro contenedor. Su definición tiene la siguiente sintaxis:
 
 ```csharp
-<modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
+<modifiers> <return-type> <method-name> <parameter-list>
 ```
 
-Las funciones locales pueden usar los modificadores [async](../../language-reference/keywords/async.md) y [unsafe](../../language-reference/keywords/unsafe.md).
+Puede usar los siguientes modificadores con una función local:
 
-Tenga en cuenta que todas las variables locales que se definen en el miembro contenedor, incluidos sus parámetros de método, son accesibles en la función local.
+- [`async`](../../language-reference/keywords/async.md)
+- [`unsafe`](../../language-reference/keywords/unsafe.md)
+- [`static`](../../language-reference/keywords/static.md) (en C# 8.0 y posterior). Una función local estática no puede capturar variables locales o el estado de la instancia.
+- [`extern`](../../language-reference/keywords/extern.md) (en C# 9.0 y posterior). Una función local externa debe ser `static`.
+
+Todas las variables locales que se definen en el miembro contenedor, incluidos sus parámetros de método, son accesibles en la función local no estática.
 
 A diferencia de una definición de método, una definición de función local no puede incluir el modificador de acceso de los miembros. Dado que todas las funciones locales son privadas, incluido un modificador de acceso, como la palabra clave `private`, se genera el error del compilador CS0106, "El modificador 'private' no es válido para este elemento".
-
-> [!NOTE]
-> En las versiones anteriores a C# 8.0, las funciones locales no podían incluir el modificador `static`. Al incluir la palabra clave `static`, se genera el error del compilador CS0106: "El modificador 'static' no es válido para este elemento", o bien un error del compilador que indica que debe usar C# 8.0 o una versión posterior.
 
 Además, los atributos no se pueden aplicar a la función local o a sus parámetros y parámetros de tipo.
 

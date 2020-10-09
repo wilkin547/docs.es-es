@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0.
 ms.date: 04/07/2020
-ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 43b9c69c649b83d4cf78ef4c7d131ce900a49d11
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414895"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654873"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -322,7 +322,7 @@ En ambos casos, el compilador genera la llamada a `Dispose()`. El compilador gen
 
 ## <a name="static-local-functions"></a>Funciones locales estáticas
 
-Ahora puede agregar el modificador `static` a funciones locales para asegurarse de que la función local no captura (hace referencia a) las variables del ámbito de inclusión. Si lo hace, se genera un error que dice que `CS8421`una función local estática no puede contener una referencia a \<variable>.
+Ahora puede agregar el modificador `static` a [funciones locales](../programming-guide/classes-and-structs/local-functions.md) para asegurarse de que la función local no captura las variables del ámbito de inclusión (esto es, no hace referencia a ellas). Si lo hace, se genera un error que dice que `CS8421`una función local estática no puede contener una referencia a \<variable>.
 
 Observe el código siguiente. La función local `LocalFunction` accede a la variable `y`, declarada en el ámbito de inclusión (el método `M`). Por lo tanto, `LocalFunction` no se puede declarar con el modificador `static`:
 

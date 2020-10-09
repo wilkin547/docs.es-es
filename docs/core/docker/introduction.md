@@ -3,12 +3,12 @@ title: Introducción a Docker
 description: En este artículo se proporciona una introducción e información general para Docker en el contexto de una aplicación de .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 16ad49c39d588aac8f8a7a918eb4d799f37823ac
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157796"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654827"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introducción a .NET y Docker
 
@@ -36,7 +36,7 @@ Los registros de contenedor son una colección de repositorios de imágenes. Pue
 
 Docker tiene un registro público hospedado en [Docker Hub](https://hub.docker.com/) que puede usar. Las [imágenes relacionadas con .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) aparecen en Docker Hub.
 
-El registro de contenedor de Microsoft (MCR) es el origen oficial de las imágenes de contenedor proporcionadas por Microsoft. El MCR se basa en Azure CDN para proporcionar imágenes replicadas globalmente. Sin embargo, el MCR no tiene un sitio web público, y la manera principal de obtener información sobre las imágenes de contenedor proporcionadas por Microsoft es en las [páginas de Microsoft Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).
+El [registro de contenedor de Microsoft (MCR)](/azure/container-registry) es el origen oficial de las imágenes de contenedor proporcionadas por Microsoft. El MCR se basa en Azure CDN para proporcionar imágenes replicadas globalmente. Sin embargo, el MCR no tiene un sitio web público, y la manera principal de obtener información sobre las imágenes de contenedor proporcionadas por Microsoft es en las [páginas de Microsoft Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/).
 
 ### <a name="dockerfile"></a>Dockerfile
 
@@ -72,7 +72,7 @@ Almacene y administre imágenes de contenedor en todos los tipos de implementaci
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores](build-container.md).
+- [Obtenga información sobre cómo incluir una aplicación de .NET Core en contenedores.](build-container.md)
 - [Obtenga información sobre cómo incluir una aplicación ASP.NET Core en contenedores.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
-- [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
+- [Consulte el tutorial de ASP.NET Core para los microservicios.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Obtenga información sobre las herramientas de contenedor en Visual Studio](/visualstudio/containers/overview)

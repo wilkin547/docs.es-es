@@ -3,12 +3,12 @@ title: 'Clases y objetos: tutorial de introducción a C#'
 description: Creación del primer programa con C# y análisis de los conceptos orientados a objetos
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5edb2d7b11caace2d794b7958dfeb75ef502ee2b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 57394ecb02745d69e22f4d9f1dbd4213f290cd5a
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396863"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609055"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Exploración de la programación orientada a objetos con clases y objetos
 
@@ -121,11 +121,11 @@ La clase de la cuenta bancaria debe aceptar depósitos y reintegros para que el 
 
 Se va a empezar por crear un tipo para representar una transacción. Se trata de un tipo simple que no tiene ninguna responsabilidad. Necesita algunas propiedades. Cree un archivo denominado *Transaction.cs*. Agregue el código siguiente a él:
 
-[!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
+:::code language="csharp" source="./snippets/introduction-to-classes/Transaction.cs":::
 
 Ahora se va a agregar <xref:System.Collections.Generic.List%601> de objetos `Transaction` a la clase `BankAccount`. Agregue la siguiente declaración después del constructor en el archivo *BankAccount.cs*:
 
-[!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="TransactionDeclaration":::
 
 La clase <xref:System.Collections.Generic.List%601> requiere la importación de un espacio de nombres diferente. Agregue lo siguiente al principio de *CuentaBancaria.cs*:
 
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 
 Ahora se va a cambiar la forma en que se notifica `Balance`.  Esto se puede conseguir con la suma de los valores de todas las transacciones. Modifique la declaración de `Balance` en la clase `BankAccount` por lo siguiente:
 
-[!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="BalanceComputation":::
 
 En este ejemplo se muestra un aspecto importante de las ***propiedades***. Ahora va a calcular el saldo cuando otro programador solicite el valor. El cálculo enumera todas las transacciones y proporciona la suma como el saldo actual.
 
@@ -143,13 +143,13 @@ Después, implemente los métodos `MakeDeposit` y `MakeWithdrawal`. Estos métod
 
 Esta operación introduce el concepto de las ***excepciones***. La forma habitual de indicar que un método no puede completar su trabajo correctamente consiste en generar una excepción. El tipo de excepción y el mensaje asociado a ella describen el error. En este caso, el método `MakeDeposit` genera una excepción si el importe del depósito es negativo. El método `MakeWithdrawal` genera una excepción si la cantidad retirada es negativa o si la aplicación del reintegro tiene como resultado un saldo negativo: Agregue el código siguiente después de la declaración de la lista `allTransactions`:
 
-[!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="DepositAndWithdrawal":::
 
 La instrucción [`throw`](../../language-reference/keywords/throw.md)**genera** una excepción. La ejecución del bloque actual finaliza y el control se transfiere al primer bloque `catch` coincidente que se encuentra en la pila de llamadas. Se agregará un bloque `catch` para probar este código un poco más adelante.
 
 El constructor debe obtener un cambio para que agregue una transacción inicial, en lugar de actualizar el saldo directamente. Puesto que ya escribió el método `MakeDeposit`, llámelo desde el constructor. El constructor terminado debe tener este aspecto:
 
-[!code-csharp[Constructor](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#Constructor)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="Constructor":::
 
 <xref:System.DateTime.Now?displayProperty=nameWithType> es una propiedad que devuelve la fecha y hora actuales. Para probar esto, agregue algunos depósitos y reintegros en el método `Main`, a continuación del código que crea un elemento `BankAccount`:
 
@@ -196,7 +196,7 @@ Guarde el archivo y escriba `dotnet run` para probarlo.
 
 Para finalizar este tutorial, puede escribir el método `GetAccountHistory` que crea `string` para el historial de transacciones. Agregue este método al tipo `BankAccount`:
 
-[!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
+:::code language="csharp" source="./snippets/introduction-to-classes/BankAccount.cs" id="History":::
 
 Usa la clase <xref:System.Text.StringBuilder> para dar formato a una cadena que contiene una línea para cada transacción. Se ha visto anteriormente en estos tutoriales el código utilizado para dar formato a una cadena. Un carácter nuevo es `\t`. Inserta una pestaña para dar formato a la salida.
 
@@ -212,4 +212,11 @@ Ejecute el programa para ver los resultados.
 
 Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/classes-quickstart/).
 
-Enhorabuena, ha completado todos nuestros tutoriales de introducción a C#. Si le interesa obtener más información, continúe con más [tutoriales](../index.md).
+Puede continuar con el tutorial de la [programación orientada a objetos](object-oriented-programming.md).
+
+Puede aprender más sobre estos conceptos en los artículos siguientes:
+
+- [Instrucciones If y else](../../language-reference/keywords/if-else.md)
+- [Instrucción while](../../language-reference/keywords/while.md)
+- [Instrucción do](../../language-reference/keywords/do.md)
+- [Instrucción for](../../language-reference/keywords/for.md)

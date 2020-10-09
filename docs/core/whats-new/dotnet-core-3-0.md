@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 60b511adecf37855de91f45245fc55911ba281dc
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537501"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654776"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -27,7 +27,13 @@ Microsoft considera .NET Core RC1 como listo para producción y es totalmente c
 
 ## <a name="language-improvements-c-80"></a>Mejoras del lenguaje C# 8.0
 
-C# 8.0 también forma parte de esta versión, que incluye la característica de [tipos de referencia que aceptan valores NULL](../../csharp/tutorials/nullable-reference-types.md), [flujos asincrónicos](../../csharp/tutorials/generate-consume-asynchronous-stream.md) y [más patrones](../../csharp/tutorials/pattern-matching.md). Para obtener más información sobre las características de C# 8.0, vea [Novedades de C# 8.0](../../csharp/whats-new/csharp-8.md).
+C# 8.0 también forma parte de esta versión, que incluye la característica de [tipos de referencia que aceptan valores NULL](../../csharp/language-reference/builtin-types/nullable-reference-types.md), flujos asincrónicos y más patrones. Para obtener más información sobre las características de C# 8.0, vea [Novedades de C# 8.0](../../csharp/whats-new/csharp-8.md).
+
+Tutoriales relacionados con las características del lenguaje de C# 8.0:
+
+- [Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL](../../csharp/tutorials/nullable-reference-types.md)
+- [Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0](../../csharp/tutorials/generate-consume-asynchronous-stream.md)
+- [Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos](../../csharp/tutorials/pattern-matching.md)
 
 Se han agregado mejoras del lenguaje para admitir las siguientes características de API que se detallan a continuación:
 
@@ -205,6 +211,8 @@ Excepciones de la compatibilidad cruzada:
 - Windows x64 se puede usar para compilar imágenes de Windows ARM32, ARM64 y x86.
 - Windows x86 se puede usar para compilar imágenes de Windows ARM32.
 - Linux x64 se puede usar para compilar imágenes de Linux ARM32 y ARM64.
+
+Para obtener más información, consulte [Ready to Run](../deploying/ready-to-run.md).
 
 ## <a name="runtimesdk"></a>Runtime y SDK
 

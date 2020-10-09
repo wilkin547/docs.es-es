@@ -4,12 +4,12 @@ description: Información sobre las expresiones de coincidencia de patrones en C
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 2dd1401e3ef22a02f327e44ff884182ee3e22278
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: aabd8afe9a94022557275adb313ca3bf95da7548
+ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414999"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91438021"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -139,4 +139,4 @@ Compare el código de este ejemplo con el diseño que se obtendría al crear una
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos](tutorials/pattern-matching.md)
+- [Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos](tutorials/pattern-matching.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 - icu, icu on windows, ms-icu
-ms.openlocfilehash: 6ea848d4a60069e6702b9d60fd90a55f572fb043
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 60533fbb215ffe8baba7e2d200faa1c4937294b9
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842516"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654886"
 ---
 # <a name="net-globalization-and-icu"></a>Globalización de .NET e ICU
 
@@ -152,3 +152,21 @@ install_name_tool -change "libicuuc.67.dylib" "@loader_path/libicuuc.67.dylib" /
 ```
 LD_SONAME = -Wl,-compatibility_version -Wl,$(SO_TARGET_VERSION_MAJOR) -Wl,-current_version -Wl,$(SO_TARGET_VERSION) -install_name @loader_path/$(notdir $(MIDDLE_SO_TARGET))
 ```
+
+## <a name="icu-on-webassembly"></a>ICU en WebAssembly
+
+Hay disponible una versión de ICU que es específicamente para cargas de trabajo de WebAssembly. Esta versión proporciona compatibilidad de globalización con los perfiles de escritorio. Para reducir el tamaño del archivo de datos de ICU de 24 MB a 1,4 MB (o ~ 0,3 MB si está comprimido con Brotli), esta carga de trabajo tiene una serie de limitaciones.
+
+No se admiten las siguientes API:
+
+- <xref:System.Globalization.CultureInfo.EnglishName?displayProperty=nameWithType>
+- <xref:System.Globalization.CultureInfo.NativeName?displayProperty=nameWithType>
+- <xref:System.Globalization.DateTimeFormatInfo.NativeCalendarName?displayProperty=nameWithType>
+- <xref:System.Globalization.RegionInfo.NativeName?displayProperty=nameWithType>
+
+Las siguientes API se admiten con limitaciones:
+
+- <xref:System.String.Normalize(System.Text.NormalizationForm)?displayProperty=nameWithType> y <xref:System.String.IsNormalized(System.Text.NormalizationForm)?displayProperty=nameWithType> no admiten los formularios <xref:System.Text.NormalizationForm.FormKC> y <xref:System.Text.NormalizationForm.FormKD> poco usados.
+- <xref:System.Globalization.RegionInfo.CurrencyNativeName?displayProperty=nameWithType> devuelve el mismo valor que <xref:System.Globalization.RegionInfo.CurrencyEnglishName?displayProperty=nameWithType>.
+
+Además, puede encontrar una lista de configuraciones regionales admitidas en el repositorio [dotnet/ICU](https://github.com/dotnet/icu/blob/0f49268ddfd3331ca090f1c51d2baa2f75f6c6c0/icu-filters/optimal.json#L6-L54).

@@ -3,12 +3,12 @@ title: Valores de configuración de la compilación
 description: Obtenga información sobre los valores del entorno de ejecución que configuran cómo funciona el compilador JIT para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: e5f9e1245b749864787fb808527d022665197edf
+ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762011"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91654847"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>Opciones de configuración del entorno de ejecución para compilación
 
@@ -135,7 +135,7 @@ Archivo del proyecto:
 ## <a name="readytorun"></a>ReadyToRun
 
 - Configura si el entorno de ejecución de .NET Core usa código precompilado para las imágenes con datos de ReadyToRun disponibles. Al deshabilitar esta opción, se fuerza al entorno de ejecución a compilar código de marco mediante JIT.
-- Para obtener más información, vea [ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images).
+- Para obtener más información, consulte [Ready to Run](../deploying/ready-to-run.md).
 - Si se omite esta configuración, .NET usa datos ReadyToRun cuando están disponibles. Esto es equivalente a establecer el valor en `1`.
 
 | | Nombre de valor | Valores |

@@ -1,18 +1,18 @@
 ---
 description: 'Operador new: referencia de C#'
 title: 'Operador new: referencia de C#'
-ms.date: 06/25/2019
+ms.date: 10/02/2020
 f1_keywords:
 - new_CSharpKeyword
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 88ec929317d4e6c6651233c1a1aa0ce8a8cce611
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3125f3d2c694dcfc5682ee482f3f76072ac3726d
+ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118278"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91609387"
 ---
 # <a name="new-operator-c-reference"></a>Operador new (referencia de C#)
 
@@ -29,6 +29,14 @@ Para crear una nueva instancia de un tipo, normalmente se invoca uno de los [con
 Puede usar un [inicializador de colección u objeto](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) con el operador`new` para crear una instancia e inicializar un objeto en una sola instrucción, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
+
+A partir de C# 9.0, las expresiones de invocación del constructor tienen tipo de destino. Es decir, si se conoce el tipo de destino de una expresión, puede omitir un nombre de tipo, como se muestra en el ejemplo siguiente:
+
+:::code language="csharp" source="snippets/shared/NewOperator.cs" id="SnippetTargetTyped":::
+
+Como se muestra en el ejemplo anterior, siempre se usan paréntesis en una expresión `new` con tipo de destino.
+
+Si se desconoce el tipo de destino de una expresión `new` (por ejemplo, cuando se usa la palabra clave [`var`](../keywords/var.md)), se debe especificar un nombre de tipo.
 
 ## <a name="array-creation"></a>creación de matriz
 
@@ -61,6 +69,8 @@ Un tipo definido por el usuario no puede sobrecargar el operador `new`.
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
 Para más información, vea la sección [El operador new](~/_csharplang/spec/expressions.md#the-new-operator) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+
+Para más información sobre la expresión `new` con tipo de destino, consulte la [nota de propuesta de características](~/_csharplang/proposals/csharp-9.0/target-typed-new.md).
 
 ## <a name="see-also"></a>Vea también
 
