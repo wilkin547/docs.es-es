@@ -2,12 +2,12 @@
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
 ms.date: 05/31/2020
-ms.openlocfilehash: b4bdbe5c6b3946658e6c11a40cbbb2feb07cc951
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 07e66ece1d1d1b3f252e56789461ae2922d9649a
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755914"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877579"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
@@ -25,7 +25,7 @@ Aunque tienen la ventaja de simplicidad, las arquitecturas monolíticas se enfre
 
 ### <a name="deployment"></a>Implementación
 
-Las aplicaciones monolíticas requieren una implementación completa de toda la aplicación, incluso si solo se ha realizado un pequeño cambio. Las implementaciones completas pueden ser costosas y propensas a errores. Además, requieren un reinicio de la aplicación, lo que afecta temporalmente a la falta de disponibilidad.
+Además, requieren un reinicio de la aplicación, lo que puede afectar temporalmente a la disponibilidad si no se aplican técnicas sin tiempo de inactividad durante la implementación.
 
 ### <a name="scaling"></a>Ampliación
 
@@ -139,7 +139,7 @@ Las organizaciones que implementan y mantienen un gran número de aplicaciones s
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>¿Cuándo debe evitarse el uso de contenedores y orquestadores?
 
-Si no puede compilar la aplicación siguiendo los principios de la aplicación de doce factores, considere la posibilidad de evitar contenedores y orquestadores. En estos casos, considere la posibilidad de una plataforma de hospedaje basada en VM, o posiblemente de algún sistema híbrido. Con él, siempre puede rotar determinados fragmentos de funcionalidad en contenedores independientes o incluso en funciones sin servidor.
+Si no puede compilar la aplicación siguiendo los Twelve-Factor principios de la aplicación, considere la posibilidad de evitar contenedores y orquestadores. En estos casos, considere la posibilidad de una plataforma de hospedaje basada en VM, o posiblemente de algún sistema híbrido. Con él, siempre puede rotar determinados fragmentos de funcionalidad en contenedores independientes o incluso en funciones sin servidor.
 
 ## <a name="development-resources"></a>Recursos de desarrollo
 
