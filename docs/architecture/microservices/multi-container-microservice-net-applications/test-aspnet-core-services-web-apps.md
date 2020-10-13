@@ -2,12 +2,12 @@
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
 ms.date: 08/07/2020
-ms.openlocfilehash: f76f502adf8321c9015cc6cfd0e12214a7576b5c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: af1187fb1e2afbb9fa953db5a280c9cc317ab6a8
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872463"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804775"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -120,7 +120,7 @@ public class PrimeWebDefaultRequestShould
     <https://github.com/moq/moq>
 
 - **NUnit**. Sitio oficial. \
-    <https://www.nunit.org/>
+    <https://nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementación de pruebas de servicio en una aplicación con varios contenedores
 

@@ -3,14 +3,14 @@ title: Tutorial de procesamiento por lotes con .NET para Apache Spark
 description: Aprenda a realizar el procesamiento por lotes con .NET para Apache Spark.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618290"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955400"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Procesamiento por lotes con .NET para Apache Spark
 
@@ -18,7 +18,7 @@ En este tutorial, aprenderá a realizar el procesamiento por lotes con .NET para
 
 El procesamiento por lotes se realiza normalmente sobre grandes conjuntos de valores planos que se deben preparar para su posterior análisis. El procesamiento de registros y el almacenamiento de datos son escenarios comunes de procesamiento por lotes. En este escenario, se analiza la información sobre los proyectos de GitHub, como el número de veces que se han bifurcado proyectos diferentes o cómo de recientemente se han actualización los proyectos.
 
-En este tutorial aprenderá a:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 >
@@ -26,13 +26,11 @@ En este tutorial aprenderá a:
 > * Leer datos en DataFrame y prepararlos para su análisis
 > * Procesar los datos mediante Spark SQL
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="prerequisites"></a>Requisitos previos
 
 Si esta es la primera vez que usa .NET para Apache Spark, consulte el tutorial [Introducción a .NET para Apache Spark](get-started.md) para aprender a preparar el entorno y ejecutar la primera aplicación .NET para Apache Spark.
 
-## <a name="download-the-sample-data"></a>Descarga de los datos de ejemplo
+## <a name="download-the-sample-data"></a>Descargar los datos de ejemplo
 
 [GHTorrent](http://ghtorrent.org/) supervisa todos los eventos públicos de GitHub, como información sobre los proyectos, confirmaciones y monitores, y almacena los eventos y su estructura en bases de datos. Los datos recopilados en distintos períodos de tiempo están disponibles como archivos descargables. Dado que los archivos de volcado de memoria son muy grandes, en esta guía se usa una [versión truncada del archivo de volcado](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Batch/projects_smaller.csv) que se puede descargar desde GitHub.
 
@@ -81,7 +79,7 @@ Si esta es la primera vez que usa .NET para Apache Spark, consulte el tutorial [
         .GetOrCreate();
    ```
 
-## <a name="prepare-the-data"></a>Preparar los datos
+## <a name="prepare-the-data"></a>Preparación de los datos
 
 1. Lea el archivo de entrada en un objeto `DataFrame`, que es una recopilación distribuida de datos organizados en columnas con nombre. Puede establecer las columnas para los datos mediante <xref:Microsoft.Spark.Sql.DataFrame.Schema%2A>. Use el método <xref:Microsoft.Spark.Sql.DataFrame.Show%2A> para mostrar los datos en DataFrame. Asegúrese de actualizar la ruta de acceso del archivo CSV a la ubicación de los datos de GitHub que descargó.
 

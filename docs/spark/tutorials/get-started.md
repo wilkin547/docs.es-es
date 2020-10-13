@@ -1,17 +1,17 @@
 ---
 title: Introducción a .NET para Apache Spark
 description: Descubra cómo ejecutar una aplicación .NET para Apache Spark con .NET Core en Windows, macOS y Ubuntu.
-ms.date: 09/17/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 7afb35c9d02db1d1ee2bf04d565f79588b00695e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: d4f44d095fffdfa05b82516cfe79700f9e239110
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866050"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955413"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Tutorial: Introducción a .NET para Apache Spark
 
@@ -24,8 +24,6 @@ En este tutorial aprenderá a:
 > * Preparar el entorno de .NET para Apache Spark
 > * Implementar la primer aplicación .NET para Apache Spark
 > * Compilar y ejecutar una aplicación .NET para Apache Spark
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prepare-your-environment"></a>Preparación del entorno
 

@@ -1,15 +1,15 @@
 ---
 title: Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark
 description: Sepa cómo implementar una aplicación de .NET para Apache Spark en Amazon EMR Spark.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c6cf26044693c5d923d11e1bbc72232e7009fe73
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0232896254e93525f2a6f0be05417107cf7f5432
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618264"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955478"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark
 
@@ -23,8 +23,6 @@ En este tutorial aprenderá a:
 > * Publicar la aplicación de .NET para Spark
 > * Implementar la aplicación en Amazon EMR Spark
 > * Ejecutar la aplicación
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="prerequisites"></a>Requisitos previos
 

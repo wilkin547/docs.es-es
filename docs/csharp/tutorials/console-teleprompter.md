@@ -4,12 +4,12 @@ description: Este tutorial le enseña varias características de .NET Core y el 
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: dbe64fe0a01ddab9e7a3ad0a9118b3fe59fba8aa
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 4c32b08c3e7eeaedce687ea5bc572e6a7bee0d3e
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656988"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804899"
 ---
 # <a name="console-app"></a>Aplicación de consola
 
@@ -187,7 +187,7 @@ ShowTeleprompter().Wait();
 Aquí, en `Main`, el código espera de manera sincrónica. Siempre que sea posible, debe usar el operador `await` en lugar de esperar sincrónicamente. Sin embargo, en el método `Main` de una aplicación de consola, no puede usar el operador `await`. Si así fuera, la aplicación se cerraría antes de que todas las tareas se hubieran completado.
 
 > [!NOTE]
-> Si usa C# 7.1 o una versión posterior, puede crear aplicaciones de consola con el [método `async` `Main`](../whats-new/csharp-7-1.md#async-main).
+> Si usa C# 7.1 o una versión posterior, puede crear aplicaciones de consola con el [método `async` `Main`](../whats-new/csharp-7.md#async-main).
 
 A continuación, debe escribir el segundo método asincrónico para leer de la consola y controlar las teclas "<" (menor que), ">" (mayor que), "X" o "x". Este es el método que agrega para esa tarea:
 

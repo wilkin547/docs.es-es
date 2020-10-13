@@ -1,21 +1,19 @@
 ---
 title: Envío de un trabajo de .NET para Apache Spark a Databricks
 description: Aprenda a enviar un trabajo de .NET para Apache Spark a Databricks mediante spark-submit y Set Jar.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fd04f78c47b34ca07042a4e60e2214f5f1ecac55
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557182"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955002"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Envío de un trabajo de .NET para Apache Spark a Databricks
 
 Aunque puede ejecutar .NET para trabajos de Apache Spark en clústeres de Databricks, no está disponible de forma integrada. Hay dos maneras de implementar un trabajo de .NET para Apache Spark en Databricks: `spark-submit` y Set Jar.
-
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="deploy-using-spark-submit"></a>Implementación mediante spark-submit
 

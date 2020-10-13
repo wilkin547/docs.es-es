@@ -1,26 +1,26 @@
 ---
 title: Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 description: Aprenda a implementar binarios de trabajo y función definida por el usuario de .NET para Apache Spark.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 001798bfda628ce979570bcd89e7c5553347b275
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617722"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954963"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Implementación de binarios de trabajo y función definida por el usuario de .NET para Apache Spark
 
 En este artículo de procedimientos se proporcionan instrucciones generales sobre cómo implementar binarios de trabajo y función definida por el usuario de .NET para Apache Spark. Se conocen las variables de entorno que se van a configurar, así como algunos parámetros de uso común para iniciar aplicaciones con `spark-submit`.
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
-
 ## <a name="configurations"></a>Configuraciones
+
 Las configuraciones muestran las variables de entorno generales y la configuración de parámetros para implementar los binarios de trabajo y función definida por el usuario de .NET para Apache Spark.
 
 ### <a name="environment-variables"></a>Variables de entorno
+
 Al implementar trabajos y escribir UDF, hay algunas variables de entorno de uso común que puede que tenga que establecer:
 
 | Variable de entorno         | Descripción

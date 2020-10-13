@@ -2,12 +2,12 @@
 title: Métricas de ML.NET
 description: Introducción a las métricas que se utilizan para evaluar el rendimiento de un modelo de ML.NET
 ms.date: 12/17/2019
-ms.openlocfilehash: 4aca8dbdd9f137509ab9167ecc77f9ca6994e415
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 046e0a3feea2da702dfef5ca9ce4f498fce5fb26
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679513"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804827"
 ---
 # <a name="evaluate-your-mlnet-model-with-metrics"></a>Evaluación de su modelo de ML.NET con métricas
 
@@ -23,7 +23,7 @@ Por ejemplo, para la tarea de clasificación, el modelo se evalúa midiendo el g
 |-----------|-----------------------|-----------|
 | **Precisión** |  La [precisión](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) es la proporción de predicciones correctas con un conjunto de datos de prueba. Es la relación entre el número de predicciones correctas y el número total de ejemplos de entrada. Funciona bien si hay un número similar de muestras que pertenecen a cada clase.| **Cuanto más cerca de 1,00, mejor**. Pero exactamente 1,00 indica un problema (normalmente: fuga de etiqueta/destino, sobreajuste o pruebas con datos de entrenamiento). Cuando los datos de prueba están desequilibrados (donde la mayoría de las instancias pertenece a una de las clases), el conjunto de datos es pequeño o las puntuaciones se acercan a 0,00 o 1,00, la precisión no captura realmente la eficacia de un clasificador y es necesario comprobar métricas adicionales. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) o *Área bajo la curva* mide el área bajo la curva que se creó limpiando la tasa de positivos verdaderos frente a la tasa de falsos positivos.  |   **Cuanto más cerca de 1,00, mejor**. Debe ser mayor que 0,50 para que un modelo sea aceptable. Un modelo con AUC de 0,50 o menos no tiene ningún valor. |
-| **AUCPR** | [aucPR](https://www.coursera.org/lecture/ml-classification/precision-recall-curve-rENu8) o *Área bajo la curva de una curva de precisión-recuperación*: Medida útil de éxito de predicción cuando las clases están poco equilibradas (conjuntos de datos muy sesgados). |  **Cuanto más cerca de 1,00, mejor**. Las puntuaciones altas cercanas a 1,00 muestran que el clasificador devuelve resultados precisos (alta precisión), así como una mayoría de todos los resultados positivos (recuperación alta). |
+| **AUCPR** | aucPR o *Área bajo la curva de una curva de precisión-recuperación*: Medida útil de éxito de predicción cuando las clases están poco equilibradas (conjuntos de datos muy sesgados). |  **Cuanto más cerca de 1,00, mejor**. Las puntuaciones altas cercanas a 1,00 muestran que el clasificador devuelve resultados precisos (alta precisión), así como una mayoría de todos los resultados positivos (recuperación alta). |
 | **Puntuación F1** | La [puntuación F1](https://en.wikipedia.org/wiki/F1_score) también se denomina *puntuación F equilibrada o F medida F*. Es la media armónica de la precisión y la recuperación. La puntuación F1 resulta útil cuando desea buscar un equilibrio entre la precisión y la recuperación.| **Cuanto más cerca de 1,00, mejor**.  Una puntuación F1 alcanza el mejor valor en 1,00 y la peor puntuación en 0,00. Indica cuán preciso es el clasificador. |
 
 Para obtener más información sobre las métricas de clasificación binaria, lea los artículos siguientes:
