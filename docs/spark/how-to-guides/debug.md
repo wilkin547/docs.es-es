@@ -1,25 +1,23 @@
 ---
 title: Depuración de una aplicación de .NET para Apache Spark en Windows
 description: Sepa cómo depurar una aplicación de .NET para Apache Spark en Windows.
-ms.date: 06/25/2020
+ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 249b4bccbf1378d8ef8c824f39151c33fb9f875a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 43531e6b2f9a79658f89b804dfa2bb97d6e9645b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557156"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91954989"
 ---
-# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="f071a-103">Depuración de una aplicación de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="f071a-103">Debug a .NET for Apache Spark application</span></span>
+# <a name="debug-a-net-for-apache-spark-application"></a><span data-ttu-id="78f29-103">Depuración de una aplicación de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="78f29-103">Debug a .NET for Apache Spark application</span></span>
 
-<span data-ttu-id="f071a-104">En este procedimiento se proporcionan los pasos para depurar una aplicación de .NET para Apache Spark en Windows.</span><span class="sxs-lookup"><span data-stu-id="f071a-104">This how-to provides the steps to debug your .NET for Apache Spark application on Windows.</span></span>
+<span data-ttu-id="78f29-104">En este procedimiento se proporcionan los pasos para depurar una aplicación de .NET para Apache Spark en Windows.</span><span class="sxs-lookup"><span data-stu-id="78f29-104">This how-to provides the steps to debug your .NET for Apache Spark application on Windows.</span></span>
 
-[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+## <a name="debug-your-application"></a><span data-ttu-id="78f29-105">Depuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="78f29-105">Debug your application</span></span>
 
-## <a name="debug-your-application"></a><span data-ttu-id="f071a-105">Depuración de la aplicación</span><span class="sxs-lookup"><span data-stu-id="f071a-105">Debug your application</span></span>
-
-<span data-ttu-id="f071a-106">Abra una ventana nueva del símbolo del sistema y ejecute este comando:</span><span class="sxs-lookup"><span data-stu-id="f071a-106">Open a new command prompt window and run the following command:</span></span>
+<span data-ttu-id="78f29-106">Abra una ventana nueva del símbolo del sistema y ejecute este comando:</span><span class="sxs-lookup"><span data-stu-id="78f29-106">Open a new command prompt window and run the following command:</span></span>
 
 ```shell
 spark-submit \
@@ -29,7 +27,7 @@ spark-submit \
   debug
 ```
 
-<span data-ttu-id="f071a-107">Al ejecutar el comando, verá la siguiente salida:</span><span class="sxs-lookup"><span data-stu-id="f071a-107">When you run the command, you see the following output:</span></span>
+<span data-ttu-id="78f29-107">Al ejecutar el comando, verá la siguiente salida:</span><span class="sxs-lookup"><span data-stu-id="78f29-107">When you run the command, you see the following output:</span></span>
 
 ```console
 ***********************************************************************
@@ -37,22 +35,22 @@ spark-submit \
 ***********************************************************************
 ```
 
-<span data-ttu-id="f071a-108">En el modo de depuración, DotnetRunner no inicia la aplicación de .NET, sino que espera a que el usuario inicie la aplicación de .NET.</span><span class="sxs-lookup"><span data-stu-id="f071a-108">In debug mode, DotnetRunner does not launch the .NET application, but instead waits for you to start the .NET app.</span></span> <span data-ttu-id="f071a-109">Deje abierta esta ventana del símbolo del sistema e inicie la aplicación de .NET a través del depurador de C# para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f071a-109">Leave this command prompt window open and start your .NET application through C# debugger to debug your application.</span></span> <span data-ttu-id="f071a-110">Inicie la depuración de .NET con un depurador de C# (el [depurador de Visual Studio para Windows/macOS](https://visualstudio.microsoft.com/vs/) o la [extensión del depurador de C# en Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="f071a-110">Start your .NET application with a C# debugger ([Visual Studio Debugger for Windows/macOS](https://visualstudio.microsoft.com/vs/) or [C# Debugger Extension in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) to debug your application.</span></span>
+<span data-ttu-id="78f29-108">En el modo de depuración, DotnetRunner no inicia la aplicación de .NET, sino que espera a que el usuario inicie la aplicación de .NET.</span><span class="sxs-lookup"><span data-stu-id="78f29-108">In debug mode, DotnetRunner does not launch the .NET application, but instead waits for you to start the .NET app.</span></span> <span data-ttu-id="78f29-109">Deje abierta esta ventana del símbolo del sistema e inicie la aplicación de .NET a través del depurador de C# para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="78f29-109">Leave this command prompt window open and start your .NET application through C# debugger to debug your application.</span></span> <span data-ttu-id="78f29-110">Inicie la depuración de .NET con un depurador de C# (el [depurador de Visual Studio para Windows/macOS](https://visualstudio.microsoft.com/vs/) o la [extensión del depurador de C# en Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="78f29-110">Start your .NET application with a C# debugger ([Visual Studio Debugger for Windows/macOS](https://visualstudio.microsoft.com/vs/) or [C# Debugger Extension in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)) to debug your application.</span></span>
 
-## <a name="debug-a-user-defined-function-udf"></a><span data-ttu-id="f071a-111">Depuración de una función definida por el usuario (UDF)</span><span class="sxs-lookup"><span data-stu-id="f071a-111">Debug a user-defined function (UDF)</span></span>
+## <a name="debug-a-user-defined-function-udf"></a><span data-ttu-id="78f29-111">Depuración de una función definida por el usuario (UDF)</span><span class="sxs-lookup"><span data-stu-id="78f29-111">Debug a user-defined function (UDF)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f071a-112">Las funciones definidas por el usuario solo se admiten en Windows con el depurador de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f071a-112">User-defined functions are supported only on Windows with Visual Studio Debugger.</span></span>
+> <span data-ttu-id="78f29-112">Las funciones definidas por el usuario solo se admiten en Windows con el depurador de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="78f29-112">User-defined functions are supported only on Windows with Visual Studio Debugger.</span></span>
 
-<span data-ttu-id="f071a-113">Antes de ejecutar `spark-submit`, establezca esta variable de entorno:</span><span class="sxs-lookup"><span data-stu-id="f071a-113">Before running `spark-submit`, set the following environment variable:</span></span>
+<span data-ttu-id="78f29-113">Antes de ejecutar `spark-submit`, establezca esta variable de entorno:</span><span class="sxs-lookup"><span data-stu-id="78f29-113">Before running `spark-submit`, set the following environment variable:</span></span>
 
 ```bat
 set DOTNET_WORKER_DEBUG=1
 ```
 
-<span data-ttu-id="f071a-114">Al ejecutar la aplicación de Spark, aparecerá una ventana de `Choose Just-In-Time Debugger`.</span><span class="sxs-lookup"><span data-stu-id="f071a-114">When you run your Spark application, a `Choose Just-In-Time Debugger` window will pop up.</span></span> <span data-ttu-id="f071a-115">Elija un depurador de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="f071a-115">Choose a Visual Studio debugger.</span></span>
+<span data-ttu-id="78f29-114">Al ejecutar la aplicación de Spark, aparecerá una ventana de `Choose Just-In-Time Debugger`.</span><span class="sxs-lookup"><span data-stu-id="78f29-114">When you run your Spark application, a `Choose Just-In-Time Debugger` window will pop up.</span></span> <span data-ttu-id="78f29-115">Elija un depurador de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="78f29-115">Choose a Visual Studio debugger.</span></span>
 
-<span data-ttu-id="f071a-116">El depurador se interrumpirá en esta ubicación en [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):</span><span class="sxs-lookup"><span data-stu-id="f071a-116">The debugger will break at the following location in [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):</span></span>
+<span data-ttu-id="78f29-116">El depurador se interrumpirá en esta ubicación en [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):</span><span class="sxs-lookup"><span data-stu-id="78f29-116">The debugger will break at the following location in [TaskRunner.cs](https://github.com/dotnet/spark/blob/5e9c08b430b4bc56b5f42252c4b73437377afaed/src/csharp/Microsoft.Spark.Worker/TaskRunner.cs#L52):</span></span>
 
 ```csharp
 if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
@@ -61,16 +59,16 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 }
 ```
 
-<span data-ttu-id="f071a-117">Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punto de interrupción](/visualstudio/debugger/using-breakpoints?view=vs-2019).</span><span class="sxs-lookup"><span data-stu-id="f071a-117">Navigate to the *.cs* file that contains the UDF that you plan to debug, and [set a breakpoint](/visualstudio/debugger/using-breakpoints?view=vs-2019).</span></span> <span data-ttu-id="f071a-118">El punto de interrupción indicará `The breakpoint will not currently be hit`, porque el trabajo todavía no ha cargado el ensamblado que contiene la UDF.</span><span class="sxs-lookup"><span data-stu-id="f071a-118">The breakpoint will say `The breakpoint will not currently be hit` because the worker hasn't loaded the assembly that contains UDF yet.</span></span>
+<span data-ttu-id="78f29-117">Vaya al archivo *.cs* que contiene la UDF que va a depurar y [establezca un punto de interrupción](/visualstudio/debugger/using-breakpoints?view=vs-2019).</span><span class="sxs-lookup"><span data-stu-id="78f29-117">Navigate to the *.cs* file that contains the UDF that you plan to debug, and [set a breakpoint](/visualstudio/debugger/using-breakpoints?view=vs-2019).</span></span> <span data-ttu-id="78f29-118">El punto de interrupción indicará `The breakpoint will not currently be hit`, porque el trabajo todavía no ha cargado el ensamblado que contiene la UDF.</span><span class="sxs-lookup"><span data-stu-id="78f29-118">The breakpoint will say `The breakpoint will not currently be hit` because the worker hasn't loaded the assembly that contains UDF yet.</span></span>
 
-<span data-ttu-id="f071a-119">Presione `F5` para continuar la aplicación y, a la larga, se alcanzará el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="f071a-119">Hit `F5` to continue your application and the breakpoint will eventually be hit.</span></span>
+<span data-ttu-id="78f29-119">Presione `F5` para continuar la aplicación y, a la larga, se alcanzará el punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="78f29-119">Hit `F5` to continue your application and the breakpoint will eventually be hit.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f071a-120">La ventana Choose Just-In-Time Debugger (Elegir el depurador Just-In-Time) aparece para cada tarea.</span><span class="sxs-lookup"><span data-stu-id="f071a-120">The Choose Just-In-Time Debugger window pops up for each task.</span></span> <span data-ttu-id="f071a-121">Para evitar un exceso de elementos emergentes, establezca el número de ejecutores en un número bajo.</span><span class="sxs-lookup"><span data-stu-id="f071a-121">To avoid excessive pop-ups, set the number of executors to a low number.</span></span> <span data-ttu-id="f071a-122">Por ejemplo, puede usar la opción **--master local[1]** para spark-submit para establecer el número de tareas en 1, lo que inicia una instancia de depurador única.</span><span class="sxs-lookup"><span data-stu-id="f071a-122">For example, you can use the **--master local[1]** option for spark-submit to set the number of tasks to 1, which launches a single debugger instance.</span></span>
+> <span data-ttu-id="78f29-120">La ventana Choose Just-In-Time Debugger (Elegir el depurador Just-In-Time) aparece para cada tarea.</span><span class="sxs-lookup"><span data-stu-id="78f29-120">The Choose Just-In-Time Debugger window pops up for each task.</span></span> <span data-ttu-id="78f29-121">Para evitar un exceso de elementos emergentes, establezca el número de ejecutores en un número bajo.</span><span class="sxs-lookup"><span data-stu-id="78f29-121">To avoid excessive pop-ups, set the number of executors to a low number.</span></span> <span data-ttu-id="78f29-122">Por ejemplo, puede usar la opción **--master local[1]** para spark-submit para establecer el número de tareas en 1, lo que inicia una instancia de depurador única.</span><span class="sxs-lookup"><span data-stu-id="78f29-122">For example, you can use the **--master local[1]** option for spark-submit to set the number of tasks to 1, which launches a single debugger instance.</span></span>
 
-## <a name="debug-scala-code"></a><span data-ttu-id="f071a-123">Depuración de código de Scala</span><span class="sxs-lookup"><span data-stu-id="f071a-123">Debug Scala code</span></span>
+## <a name="debug-scala-code"></a><span data-ttu-id="78f29-123">Depuración de código de Scala</span><span class="sxs-lookup"><span data-stu-id="78f29-123">Debug Scala code</span></span>
 
-<span data-ttu-id="f071a-124">Si tiene que depurar el código de Scala (`DotnetRunner`, `DotnetBackendHandler`, etc.), puede usar el comando siguiente y adjuntar un depurador al proceso en ejecución mediante [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):</span><span class="sxs-lookup"><span data-stu-id="f071a-124">If you need to debug the Scala-side code (`DotnetRunner`, `DotnetBackendHandler`, etc.), you can use the following command and attach a debugger to the running process using [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):</span></span>
+<span data-ttu-id="78f29-124">Si tiene que depurar el código de Scala (`DotnetRunner`, `DotnetBackendHandler`, etc.), puede usar el comando siguiente y adjuntar un depurador al proceso en ejecución mediante [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):</span><span class="sxs-lookup"><span data-stu-id="78f29-124">If you need to debug the Scala-side code (`DotnetRunner`, `DotnetBackendHandler`, etc.), you can use the following command and attach a debugger to the running process using [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html):</span></span>
 
 ```shell
 spark-submit \
@@ -81,11 +79,11 @@ spark-submit \
   <path-to-your-app-exe> <argument(s)-to-your-app>
 ```
 
-<span data-ttu-id="f071a-125">Después de ejecutar el comando, asocie un depurador al proceso en ejecución mediante [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span><span class="sxs-lookup"><span data-stu-id="f071a-125">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
+<span data-ttu-id="78f29-125">Después de ejecutar el comando, asocie un depurador al proceso en ejecución mediante [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span><span class="sxs-lookup"><span data-stu-id="78f29-125">After you run the command, attach a debugger to the running process using [Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="f071a-126">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="f071a-126">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="78f29-126">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="78f29-126">Next steps</span></span>
 
-* [<span data-ttu-id="f071a-127">Introducción a .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="f071a-127">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
-* [<span data-ttu-id="f071a-128">Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="f071a-128">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
-* [<span data-ttu-id="f071a-129">Implementación de una aplicación de .NET para Apache Spark en Databricks</span><span class="sxs-lookup"><span data-stu-id="f071a-129">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
-* [<span data-ttu-id="f071a-130">Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="f071a-130">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
+* [<span data-ttu-id="78f29-127">Introducción a .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="78f29-127">Get started with .NET for Apache Spark</span></span>](../tutorials/get-started.md)
+* [<span data-ttu-id="78f29-128">Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight</span><span class="sxs-lookup"><span data-stu-id="78f29-128">Deploy a .NET for Apache Spark application to Azure HDInsight</span></span>](../tutorials/hdinsight-deployment.md)
+* [<span data-ttu-id="78f29-129">Implementación de una aplicación de .NET para Apache Spark en Databricks</span><span class="sxs-lookup"><span data-stu-id="78f29-129">Deploy a .NET for Apache Spark application to Databricks</span></span>](../tutorials/databricks-deployment.md)
+* [<span data-ttu-id="78f29-130">Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="78f29-130">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>](../tutorials/amazon-emr-spark-deployment.md)
