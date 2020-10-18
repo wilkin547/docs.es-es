@@ -7,60 +7,60 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 67cb8ac602437474f35c89c9aecf66fbf40c91c9
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a4aab83fd5695633a660eab00a5032ffbe45f326
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875040"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161327"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Un valor de tipo '\<typename1>' no se puede convertir a '\<typename2>'
+# <a name="bc30955-value-of-type-typename1-cannot-be-converted-to-typename2"></a>BC30955: el valor de tipo ' \<typename1> ' no se puede convertir en ' \<typename2> '
 
-El valor de tipo ' \<typename1> ' no se puede convertir en ' \<typename2> '. La falta de coincidencia de tipos podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> '. Intente reemplazar la referencia de archivo a ' \<filepath> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.  
-  
- En una situación en la que un proyecto realiza una referencia de proyecto y una referencia de archivo, el compilador no puede garantizar que un tipo se pueda convertir en otro.  
-  
- En el siguiente pseudocódigo se muestra una situación que puede generar este error.  
-  
- `' ================ Visual Basic project P1 ================`  
-  
- `'        P1 makes a PROJECT REFERENCE to project P2`  
-  
- `'        and a FILE REFERENCE to project P3.`  
-  
- `Public commonObject As P3.commonClass`  
-  
- `commonObject = P2.getCommonClass()`  
-  
- `' ================ Visual Basic project P2 ================`  
-  
- `'        P2 makes a PROJECT REFERENCE to project P3`  
-  
- `Public Function getCommonClass() As P3.commonClass`  
-  
- `Return New P3.commonClass`  
-  
- `End Function`  
-  
- `' ================ Visual Basic project P3 ================`  
-  
- `Public Class commonClass`  
-  
- `End Class`  
-  
- Project `P1` realiza una referencia de proyecto indirecta a través de Project `P2` a Project `P3` y también una referencia de archivo directo a `P3` . La declaración de `commonObject` utiliza la referencia de archivo a `P3` , mientras que la llamada a `P2.getCommonClass` usa la referencia de proyecto a `P3` .  
-  
- El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y un nombre de archivo para el archivo de salida de `P3` (normalmente p3.dll), mientras que las referencias del proyecto identifican el proyecto de origen ( `P3` ) por nombre de proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` proceda del mismo código fuente a través de las dos referencias diferentes.  
-  
- Esta situación suele producirse cuando se mezclan las referencias de proyecto y las referencias de archivo. En la ilustración anterior, el problema no se produce si se `P1` realiza una referencia de proyecto directa a en `P3` lugar de una referencia de archivo.  
-  
- **Identificador de error:** BC30955  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-- Cambie la referencia de archivo a una referencia de proyecto.  
-  
-## <a name="see-also"></a>Consulte también
+El valor de tipo ' \<typename1> ' no se puede convertir en ' \<typename2> '. La falta de coincidencia de tipos podría deberse a la combinación de una referencia de archivo con una referencia de proyecto al ensamblado ' \<assemblyname> '. Intente reemplazar la referencia de archivo a ' \<filepath> ' en el proyecto ' \<projectname1> ' con una referencia de proyecto a ' \<projectname2> '.
+
+ En una situación en la que un proyecto realiza una referencia de proyecto y una referencia de archivo, el compilador no puede garantizar que un tipo se pueda convertir en otro.
+
+ En el siguiente pseudocódigo se muestra una situación que puede generar este error.
+
+ `' ================ Visual Basic project P1 ================`
+
+ `'        P1 makes a PROJECT REFERENCE to project P2`
+
+ `'        and a FILE REFERENCE to project P3.`
+
+ `Public commonObject As P3.commonClass`
+
+ `commonObject = P2.getCommonClass()`
+
+ `' ================ Visual Basic project P2 ================`
+
+ `'        P2 makes a PROJECT REFERENCE to project P3`
+
+ `Public Function getCommonClass() As P3.commonClass`
+
+ `Return New P3.commonClass`
+
+ `End Function`
+
+ `' ================ Visual Basic project P3 ================`
+
+ `Public Class commonClass`
+
+ `End Class`
+
+ Project `P1` realiza una referencia de proyecto indirecta a través de Project `P2` a Project `P3` y también una referencia de archivo directo a `P3` . La declaración de `commonObject` utiliza la referencia de archivo a `P3` , mientras que la llamada a `P2.getCommonClass` usa la referencia de proyecto a `P3` .
+
+ El problema en esta situación es que la referencia de archivo especifica una ruta de acceso y un nombre de archivo para el archivo de salida de `P3` (normalmente p3.dll), mientras que las referencias del proyecto identifican el proyecto de origen ( `P3` ) por nombre de proyecto. Por este motivo, el compilador no puede garantizar que el tipo `P3.commonClass` proceda del mismo código fuente a través de las dos referencias diferentes.
+
+ Esta situación suele producirse cuando se mezclan las referencias de proyecto y las referencias de archivo. En la ilustración anterior, el problema no se produce si se `P1` realiza una referencia de proyecto directa a en `P3` lugar de una referencia de archivo.
+
+ **Identificador de error:** BC30955
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+- Cambie la referencia de archivo a una referencia de proyecto.
+
+## <a name="see-also"></a>Vea también
 
 - [Conversiones de tipos en Visual Basic](../../programming-guide/language-features/data-types/type-conversions.md)
 - [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project)

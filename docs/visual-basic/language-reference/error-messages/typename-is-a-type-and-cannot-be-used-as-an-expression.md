@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: b990fe1b5374bfad71abe1ae4ebdd8c3465b542d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 09a547406f9d10058121f25d92675c37d3c76fbc
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870365"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161822"
 ---
-# <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>'\<typename>' es un tipo y no se puede usar como expresión
+# <a name="bc30108-typename-is-a-type-and-cannot-be-used-as-an-expression"></a>BC30108: ' \<typename> ' es un tipo y no se puede usar como una expresión
 
-Aparece un nombre de tipo cuando se necesita una expresión. Las expresiones deben constar de la combinación de variables, constantes, literales, propiedades y llamadas al procedimiento `Function` .  
-  
- **Identificador de error:** BC30108  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-- Quite el nombre de tipo y construya la expresión con elementos válidos.  
-  
-## <a name="see-also"></a>Consulte también
+Aparece un nombre de tipo cuando se necesita una expresión. Las expresiones deben constar de la combinación de variables, constantes, literales, propiedades y llamadas al procedimiento `Function` .
+
+ **Identificador de error:** BC30108
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+- Quite el nombre de tipo y construya la expresión con elementos válidos.
+
+## <a name="see-also"></a>Vea también
 
 - [Operadores y expresiones](../../programming-guide/language-features/operators-and-expressions/index.md)

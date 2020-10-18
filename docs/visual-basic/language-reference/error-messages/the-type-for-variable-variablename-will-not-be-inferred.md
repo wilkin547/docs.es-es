@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 3e76ffea283de2843fc5586179074c01a053ece8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870481"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161288"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>El tipo de la variable '\<variablename>' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
+# <a name="bc42110-the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>BC42110: el tipo de la variable ' \<variablename> ' no se inferirá porque está enlazado a un campo en un ámbito de inclusión
 
 El tipo de la variable ' \<variablename> ' no se inferirá porque está enlazado a un campo en un ámbito de inclusión. Cambie el nombre de ' \<variablename> ' o use el nombre completo (por ejemplo, ' me. variablename ' o ' MyBase. variablename ').
 
@@ -43,7 +43,7 @@ De forma predeterminada, este mensaje es una advertencia. Para obtener informaci
 
 **Identificador de error:** BC42110
 
-### <a name="to-address-this-warning"></a>Para resolver esta advertencia
+## <a name="to-address-this-warning"></a>Para resolver esta advertencia
 
 - Convierta la variable de control de bucle en local cambiando su nombre por un identificador que tampoco sea el nombre de un campo de la clase.
 
@@ -83,7 +83,7 @@ Class Customer
 End Class
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Option Infer (instrucción)](../statements/option-infer-statement.md)
 - [Instrucción For Each...Next](../statements/for-each-next-statement.md)

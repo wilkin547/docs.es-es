@@ -7,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: f1887e0cf71ee79f3fd0a991cd3038bcc910588c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5307b7354d3c6b91ea2a1993f5f84384784a61e5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90870675"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159695"
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a>La instrucción no es válida en un espacio de nombres
+# <a name="bc30001-statement-is-not-valid-in-a-namespace"></a>BC30001: la instrucción no es válida en un espacio de nombres
 
-La instrucción no puede aparecer en el nivel de un espacio de nombres. Las únicas declaraciones permitidas en el nivel de espacio de nombres son las declaraciones de módulos, interfaces, clases, delegados, enumeraciones y estructuras.  
-  
- **Identificador de error:** BC30001  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-- Mueva la instrucción a una ubicación dentro de un módulo, una clase, una interfaz, una estructura, una enumeración o una definición de delegado.  
-  
-## <a name="see-also"></a>Consulte también
+La instrucción no puede aparecer en el nivel de un espacio de nombres. Las únicas declaraciones permitidas en el nivel de espacio de nombres son las declaraciones de módulos, interfaces, clases, delegados, enumeraciones y estructuras.
+
+ **Identificador de error:** BC30001
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+- Mueva la instrucción a una ubicación dentro de un módulo, una clase, una interfaz, una estructura, una enumeración o una definición de delegado.
+
+## <a name="see-also"></a>Vea también
 
 - [Ámbito en Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)
 - [Espacios de nombres en Visual Basic](../../programming-guide/program-structure/namespaces.md)
