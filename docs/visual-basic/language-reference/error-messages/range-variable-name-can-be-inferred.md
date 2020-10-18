@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: d6b155de0bb62f667ca76ec9454dec1466976a9b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 63990b7d37388057ff2cdb430d29878a1c7b39ba
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400414"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162367"
 ---
-# <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="3aa83-102">El nombre de una variable de rango sólo se puede inferir a partir de un nombre simple o completo sin argumentos</span><span class="sxs-lookup"><span data-stu-id="3aa83-102">Range variable name can be inferred only from a simple or qualified name with no arguments</span></span>
+# <a name="bc36599-range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="6441e-102">BC36599: el nombre de la variable de rango solo se puede inferir de un nombre simple o completo sin argumentos</span><span class="sxs-lookup"><span data-stu-id="6441e-102">BC36599: Range variable name can be inferred only from a simple or qualified name with no arguments</span></span>
 
-<span data-ttu-id="3aa83-103">Un elemento de programación que toma uno o más argumentos se incluye en una consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="3aa83-103">A programming element that takes one or more arguments is included in a LINQ query.</span></span> <span data-ttu-id="3aa83-104">El compilador no puede inferir una variable de rango de ese elemento de programación.</span><span class="sxs-lookup"><span data-stu-id="3aa83-104">The compiler is unable to infer a range variable from that programming element.</span></span>
+<span data-ttu-id="6441e-103">Un elemento de programación que toma uno o más argumentos se incluye en una consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="6441e-103">A programming element that takes one or more arguments is included in a LINQ query.</span></span> <span data-ttu-id="6441e-104">El compilador no puede inferir una variable de rango de ese elemento de programación.</span><span class="sxs-lookup"><span data-stu-id="6441e-104">The compiler is unable to infer a range variable from that programming element.</span></span>
 
-<span data-ttu-id="3aa83-105">**Identificador de error:** BC36599</span><span class="sxs-lookup"><span data-stu-id="3aa83-105">**Error ID:** BC36599</span></span>
+<span data-ttu-id="6441e-105">**Identificador de error:** BC36599</span><span class="sxs-lookup"><span data-stu-id="6441e-105">**Error ID:** BC36599</span></span>
 
-## <a name="to-correct-this-error"></a><span data-ttu-id="3aa83-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="3aa83-106">To correct this error</span></span>
+## <a name="to-correct-this-error"></a><span data-ttu-id="6441e-106">Para corregir este error</span><span class="sxs-lookup"><span data-stu-id="6441e-106">To correct this error</span></span>
 
-<span data-ttu-id="3aa83-107">Proporcione un nombre de variable explícito para el elemento de programación, tal y como se muestra en el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="3aa83-107">Supply an explicit variable name for the programming element, as shown in the following code:</span></span>
+<span data-ttu-id="6441e-107">Proporcione un nombre de variable explícito para el elemento de programación, tal y como se muestra en el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="6441e-107">Supply an explicit variable name for the programming element, as shown in the following code:</span></span>
 
 ```vb
 Dim query = From var1 In collection1
             Select VariableAlias= SampleFunction(var1), var1
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3aa83-108">Consulte también</span><span class="sxs-lookup"><span data-stu-id="3aa83-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6441e-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="6441e-108">See also</span></span>
 
-- [<span data-ttu-id="3aa83-109">Introducción a LINQ en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3aa83-109">Introduction to LINQ in Visual Basic</span></span>](../../programming-guide/language-features/linq/introduction-to-linq.md)
-- [<span data-ttu-id="3aa83-110">Select (cláusula)</span><span class="sxs-lookup"><span data-stu-id="3aa83-110">Select Clause</span></span>](../queries/select-clause.md)
+- [<span data-ttu-id="6441e-109">Introducción a LINQ en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6441e-109">Introduction to LINQ in Visual Basic</span></span>](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="6441e-110">Select (cláusula)</span><span class="sxs-lookup"><span data-stu-id="6441e-110">Select Clause</span></span>](../queries/select-clause.md)
