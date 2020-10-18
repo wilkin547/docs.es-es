@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 94c4229d4036382e344cffb09295e218642c55d4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e16a157d0621d5baecb06ce118e3ab390bf68cf8
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402906"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162887"
 ---
-# <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>La cláusula Handles requiere una variable WithEvents definida en el tipo contenedor o en uno de sus tipos base
+# <a name="bc30506-handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>BC30506: la cláusula handles requiere una variable WithEvents definida en el tipo contenedor o en uno de sus tipos base
 
 No proporcionó una `WithEvents` variable en la `Handles` cláusula. La `Handles` palabra clave al final de una declaración de procedimiento hace que controle los eventos generados por una variable de objeto declarada mediante la `WithEvents` palabra clave.
 
@@ -69,6 +69,6 @@ Module Module1
 End Module
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Asas](../statements/handles-clause.md)

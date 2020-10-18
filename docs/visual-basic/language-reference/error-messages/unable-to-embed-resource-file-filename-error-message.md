@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
-ms.openlocfilehash: c23a1013326fc3af0b0dd29bb8007d4f17553185
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6cba7b6f896a86edcb0daddae9003cf59d30bd48
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875723"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161691"
 ---
-# <a name="unable-to-embed-resource-file-filename-error-message"></a>No se puede incrustar el archivo de recursos '\<filename>': \<error message>
+# <a name="bc30143-unable-to-embed-resource-file-filename-error-message"></a>BC30143: no se puede insertar el archivo de recursos ' \<filename> ': \<error message>
 
-El compilador Visual Basic llama a Assembly Linker (Al.exe, también conocido como ALink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al incrustar un archivo de recursos COM+ nativo directamente en el ensamblado.  
-  
- **Identificador de error:** BC30143  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-1. Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). para obtener una explicación más detallada y consejos.  
-  
-2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.  
-  
-## <a name="see-also"></a>Consulte también
+El compilador Visual Basic llama a Assembly Linker (Al.exe, también conocido como ALink) para generar un ensamblado con un manifiesto. El vinculador ha informado de un error al incrustar un archivo de recursos COM+ nativo directamente en el ensamblado.
+
+ **Identificador de error:** BC30143
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+1. Examine el mensaje de error citado y consulte el tema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). para obtener una explicación más detallada y consejos.
+
+2. Si el error persiste, reúna información sobre las circunstancias y notifíquelo a los Servicios de soporte técnico de Microsoft.
+
+## <a name="see-also"></a>Vea también
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Hable con nosotros](/visualstudio/ide/feedback-options)

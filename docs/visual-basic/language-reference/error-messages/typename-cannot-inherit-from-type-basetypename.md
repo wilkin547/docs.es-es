@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 5adb5a74c220c7b2f95ac7370040a7fa2bd34299
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5c019f9d74b11e48aa05a1480b9449fa28488b43
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872068"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161847"
 ---
-# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename>' no puede heredar del \<type> '\<basetypename>' porque amplía el acceso del \<type> fuera del ensamblado
+# <a name="bc30910-typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>BC30910: ' \<typename> ' no puede heredar de \<type> ' \<basetypename> ' porque expande el acceso de la base \<type> fuera del ensamblado
 
-Una clase o interfaz hereda de una clase base o una interfaz, pero tiene un nivel de acceso menos restrictivo.  
-  
- Por ejemplo, una `Public` interfaz hereda de una `Friend` interfaz o una `Protected` clase hereda de una `Private` clase. Esto expone la clase base o la interfaz para obtener acceso más allá del nivel previsto.  
-  
- **Identificador de error:** BC30910  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-- Cambie el nivel de acceso de la clase o la interfaz derivada para que sea al menos tan restrictiva como la de la clase base o la interfaz.  
-  
-     o bien  
-  
-- Si necesita el nivel de acceso menos restrictivo, quite la `Inherits` instrucción. No se puede heredar de una interfaz o clase base más restringida.  
-  
-## <a name="see-also"></a>Consulte también
+Una clase o interfaz hereda de una clase base o una interfaz, pero tiene un nivel de acceso menos restrictivo.
+
+ Por ejemplo, una `Public` interfaz hereda de una `Friend` interfaz o una `Protected` clase hereda de una `Private` clase. Esto expone la clase base o la interfaz para obtener acceso más allá del nivel previsto.
+
+ **Identificador de error:** BC30910
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+- Cambie el nivel de acceso de la clase o la interfaz derivada para que sea al menos tan restrictiva como la de la clase base o la interfaz.
+
+     o bien
+
+- Si necesita el nivel de acceso menos restrictivo, quite la `Inherits` instrucción. No se puede heredar de una interfaz o clase base más restringida.
+
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Class](../statements/class-statement.md)
 - [Instrucción Interface](../statements/interface-statement.md)

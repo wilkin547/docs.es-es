@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-ms.openlocfilehash: c498675ab6ae616fb63d3d76ef60bcac7e247145
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 18e7aa5f6905eaa9c509aa21fe6f5bfcd54d46f0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406513"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92163303"
 ---
-# <a name="xml-comment-exception-must-have-a-cref-attribute"></a>La excepción del comentario XML debe tener un atributo 'cref'
+# <a name="bc42319-xml-comment-exception-must-have-a-cref-attribute"></a>BC42319: la excepción de comentario XML debe tener un atributo ' CREF '
 
 La \<exception> etiqueta proporciona una manera de documentar las excepciones que puede producir un método. El atributo required `cref` designa el nombre de un miembro, que está protegido por el generador de documentación. Si el miembro existe, se traduce al nombre de elemento canónico en el archivo de documentación.
 
@@ -28,7 +28,7 @@ Agregue el `cref` atributo a la excepción como se indica a continuación:
 <exception cref="member">description</exception>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [\<exception>](../xmldoc/exception.md)
 - [Procedimiento para crear documentación XML](../../programming-guide/program-structure/how-to-create-xml-documentation.md)

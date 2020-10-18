@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: ee8f1f9ec26dc6c938f0b412dfe30832e3cfe165
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 2755f5afcb96ca7a6c4d140908649390dd66d571
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874524"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162705"
 ---
-# <a name="declaration-expected"></a>Se esperaba una declaración
+# <a name="bc30188-declaration-expected"></a>BC30188: se esperaba una declaración
 
-Una instrucción no declarativa, como una instrucción de asignación o bucle, se produce fuera de cualquier procedimiento. Solo se permiten declaraciones fuera de los procedimientos.  
-  
- Como alternativa, un elemento de programación se declara sin una palabra clave de declaración, como `Dim` o `Const` .  
-  
- **Identificador de error:** BC30188  
-  
-## <a name="to-correct-this-error"></a>Para corregir este error  
-  
-- Mueva la instrucción no declarativa al cuerpo de un procedimiento.  
-  
-- Comience la declaración con una palabra clave de declaración adecuada.  
-  
-- Asegúrese de que una palabra clave de declaración no esté mal escrita.  
-  
-## <a name="see-also"></a>Consulte también
+Una instrucción no declarativa, como una instrucción de asignación o bucle, se produce fuera de cualquier procedimiento. Solo se permiten declaraciones fuera de los procedimientos.
+
+ Como alternativa, un elemento de programación se declara sin una palabra clave de declaración, como `Dim` o `Const` .
+
+ **Identificador de error:** BC30188
+
+## <a name="to-correct-this-error"></a>Para corregir este error
+
+- Mueva la instrucción no declarativa al cuerpo de un procedimiento.
+
+- Comience la declaración con una palabra clave de declaración adecuada.
+
+- Asegúrese de que una palabra clave de declaración no esté mal escrita.
+
+## <a name="see-also"></a>Vea también
 
 - [Procedimientos](../../programming-guide/language-features/procedures/index.md)
 - [Instrucción Dim](../statements/dim-statement.md)

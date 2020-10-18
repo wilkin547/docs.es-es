@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: b7c4c9c75de1b3777f34a70470b89f323a5699f9
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250370"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162068"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>El acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz ' \<defaultpropertyname > ' de la interfaz ' \<interfacename1 > ' y ' \<defaultpropertyname > ' de la interfaz ' \<interfacename2 > '
+# <a name="bc30686-default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>BC30686: el acceso a la propiedad predeterminada es ambiguo entre los miembros heredados de la interfaz ' ' \<defaultpropertyname> de la interfaz ' \<interfacename1> ' y ' \<defaultpropertyname> ' de la interfaz ' \<interfacename2> '
 
 Una interfaz hereda de dos interfaces, cada una de las cuales declara una propiedad predeterminada con el mismo nombre. El compilador no puede resolver un acceso a esta propiedad predeterminada sin calificación. Esto se ilustra en el siguiente ejemplo:
 
@@ -36,13 +36,13 @@ Public Class testClass
 End Class
 ```
 
-Cuando se especifica `testObj(1)`, el compilador intenta resolverlo en la propiedad predeterminada. Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.
+Cuando se especifica `testObj(1)` , el compilador intenta resolverlo en la propiedad predeterminada. Sin embargo, hay dos propiedades predeterminadas posibles debido a las interfaces heredadas, por lo que el compilador señala este error.
 
-**IDENTIFICADOR de error:** BC30686
+**Identificador de error:** BC30686
 
 ## <a name="to-correct-this-error"></a>Para corregir este error
 
-- Evite la herencia de miembros con el mismo nombre. En el ejemplo anterior, si `testObj` no necesita ninguno de los miembros de, por ejemplo, `Iface2`, declárelo de la siguiente manera:
+- Evite la herencia de miembros con el mismo nombre. En el ejemplo anterior, si no `testObj` necesita ninguno de los miembros de, por ejemplo, `Iface2` , declárelo como se indica a continuación:
 
   ```vb
   Dim testObj As Iface1
