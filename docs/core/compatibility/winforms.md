@@ -2,12 +2,12 @@
 title: Cambios importantes en Windows Forms
 description: Enumera los cambios importantes en Windows Forms para .NET Core y .NET 5.
 ms.date: 09/08/2020
-ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 2311faab026bf1dfde348e231937eff73ec46172
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679010"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804871"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Cambios importantes en Windows Forms
 
@@ -17,6 +17,7 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [DataGridView ya no restablece las fuentes para los estilos de celda personalizados](#datagridview-no-longer-resets-fonts-for-customized-cell-styles) | 5.0 |
 | [OutputType establecido en WinExe para aplicaciones de WPF y WinForms](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [Excepción InvalidOperationException por parte de las API relacionadas con DataGridView](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [Uso de Microsoft.NET.Sdk por parte de las aplicaciones de WinForms y WPF](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
@@ -39,6 +40,10 @@ En esta página se documentan los siguientes cambios importantes:
 | [No se admite el modificador de compatibilidad UseLegacyImages](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [datagridview-doesnt-reset-custom-font-settings](../../../includes/core-changes/windowsforms/5.0/datagridview-doesnt-reset-custom-font-settings.md)]
+
+***
 
 [!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
 

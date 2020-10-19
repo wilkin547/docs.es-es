@@ -2,18 +2,18 @@
 title: 'Atributos reservados de C#: Análisis estático que admite un valor NULL'
 ms.date: 04/14/2020
 description: El compilador interpreta estos atributos para proporcionar un mejor análisis estático para los tipos de referencia que aceptan y que no aceptan valores NULL.
-ms.openlocfilehash: d2405162ece3df209111de65fdef54f70cc86d45
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 6678cd21de23d4ed391eff089e33939b5adff0fa
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656318"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955608"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>Los atributos reservados contribuyen al análisis estático del estado NULL del compilador.
 
 En un contexto que admite un valor NULL, el compilador realiza un análisis estático del código para determinar el estado NULL de todas las variables de tipo de referencia:
 
-- *not null*: el análisis estático ha determinado que a la variable se le asigna un valor distinto de NULL.
+- *not null*: el análisis estático determina que a la variable se le asigna un valor distinto de NULL.
 - *maybe null*: el análisis estático no puede determinar que a la variable se le asigna un valor distinto de NULL.
 
 Puede aplicar una serie de atributos que proporcionan información al compilador sobre la semántica de las API. Esa información ayuda al compilador a realizar análisis estáticos y a determinar si una variable no es NULL. En este artículo se proporciona una breve descripción de cada uno de esos atributos y cómo usarlos. En todos los ejemplos se asume el uso de C# 8.0 o una versión más reciente, y que el código se encuentra en un contexto que admite un valor NULL.

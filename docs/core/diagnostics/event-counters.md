@@ -2,12 +2,12 @@
 title: EventCounters de .NET Core
 description: En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 ms.date: 08/07/2020
-ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: be273776b888f13893fc694a111093cca1fa8a5e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062969"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955322"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters de .NET Core
 
@@ -144,6 +144,16 @@ Se puede llamar al método `AddRequest()` desde un controlador de solicitudes y 
 
 ```csharp
 public void AddRequest() => Interlocked.Increment(ref _requestCount);
+```
+
+Para evitar lecturas rasgadas (en arquitecturas de 32 bits) del campo `_requestCount` de tipo `long`, use <xref:System.Threading.Interlocked.Read%2A?displayProperty=nameWithType>.
+
+```csharp
+_requestRateCounter = new IncrementingPollingCounter("request-rate", this, () => Interlocked.Read(ref _requestCount))
+{
+    DisplayName = "Request Rate",
+    DisplayRateTimeScale = TimeSpan.FromSeconds(1)
+};
 ```
 
 ## <a name="consume-eventcounters"></a>Uso de EventCounters

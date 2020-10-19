@@ -3,12 +3,12 @@ title: Introducción al análisis de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b9dd909a83877755dc1ebafd58aae892e460b93
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240524"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756161"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introducción al análisis de sintaxis
 
@@ -51,7 +51,7 @@ Un árbol de sintaxis es una estructura de datos que usan los compiladores de C#
 
 Los cuatro pilares principales de los árboles de sintaxis son los siguientes:
 
-* La clase <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, una instancia de lo que representa un árbol de análisis completo. <xref:Microsoft.CodeAnalysis.SyntaxTree> es una clase abstracta que tiene derivados específicos del lenguaje. Use los métodos de análisis de la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analizar texto en C# o Visual Basic.
+* La clase <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, una instancia de lo que representa un árbol de análisis completo. <xref:Microsoft.CodeAnalysis.SyntaxTree> es una clase abstracta que tiene derivados específicos del lenguaje. Use los métodos de análisis de la clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (o <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analizar texto en C# o (Visual Basic).
 * La clase <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, instancias de lo que representan las construcciones sintácticas como declaraciones, instrucciones, cláusulas y expresiones.
 * La estructura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, que representa una palabra clave, identificador, operador o puntuación individuales.
 * Por último, la estructura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa sintácticamente bits de información insignificante, como el espacio en blanco entre tokens, las directivas de preprocesamiento y los comentarios.

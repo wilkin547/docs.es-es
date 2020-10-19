@@ -4,12 +4,12 @@ description: En este tutorial avanzado se ofrece una introducción a los tipos d
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: bd575b226a2ff61e938719b064ff5ede0cf66013
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249134"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805185"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -221,3 +221,6 @@ Experimente cambiando las declaraciones de tipos entre tipos de referencia que a
 Más información sobre cómo migrar una aplicación existente para usar tipos de referencia que aceptan valores NULL:
 > [!div class="nextstepaction"]
 > [Actualización de aplicaciones para usar tipos de referencia que aceptan valores NULL](upgrade-to-nullable-references.md)
+
+Obtenga información sobre cómo usar tipos de referencia que aceptan valores NULL al utilizar Entity Framework:
+> [Aspectos básicos de Entity Framework Core: trabajo con tipos de referencia que aceptan valores NULL](/ef/core/miscellaneous/nullable-reference-types)

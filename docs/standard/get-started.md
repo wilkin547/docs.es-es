@@ -1,41 +1,61 @@
 ---
-title: Introducción a .NET
-description: Incluye una relación de artículos para comenzar con. NET, tanto desde la perspectiva del lenguaje como de la plataforma.
-author: cartermp
-ms.date: 01/21/2020
+title: Tutoriales de introducción a .NET
+description: Elija un tutorial para aprender sobre el desarrollo de aplicaciones .NET o uno de los lenguajes de programación de .NET.
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438180"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755881"
 ---
-# <a name="get-started"></a>Primeros pasos
+# <a name="tutorials-for-getting-started-with-net"></a>Tutoriales de introducción a .NET
 
-Hay varias maneras de empezar a trabajar con .NET. Dado que .NET es una plataforma masiva, existen varios artículos en esta documentación que pueden ayudar a trabajar con. NET, cada uno desde una perspectiva distinta.
+Los siguientes tutoriales paso a paso se ejecutan en Windows, Linux o macOS, salvo que se indique lo contrario.
 
-## <a name="get-started-using-net-languages"></a>Introducción al uso de lenguajes .NET
+## <a name="tutorials-for-creating-apps"></a>Tutoriales para crear aplicaciones
 
-Si quiere obtener tutoriales de introducción de C#, Visual Basic y F#, vea lo siguiente:
+* Crear una aplicación de consola
+  * [mediante Visual Studio Code](../core/tutorials/with-visual-studio-code.md)
+  * [mediante Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)
+  * [mediante Visual Studio para Mac](../core/tutorials/with-visual-studio-mac.md) (macOS)
+* Creación de una aplicación web
+  * [con la interfaz de usuario web del lado servidor](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [con la interfaz de usuario web del lado cliente](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [Creación de una API web](/aspnet/core/tutorials/first-web-api)
+* [Creación de una aplicación web de llamada a procedimiento remoto](/aspnet/core/tutorials/grpc/grpc-start)
+* [Creación de una aplicación web en tiempo real](/aspnet/core/tutorials/signalr)
+* [Creación de una función sin servidor en la nube](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* [Creación de una aplicación móvil para Android e iOS](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)
+* Creación de una aplicación de escritorio de Windows
+  * [WPF](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [Windows Forms](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [Plataforma universal de Windows (UWP)](/visualstudio/get-started/csharp/tutorial-uwp)
+* [Creación de un juego con Unity](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Creación de un servicio de Windows](/aspnet/core/host-and-deploy/windows-service)
+
+## <a name="tutorials-for-creating-class-libraries"></a>Tutoriales para crear bibliotecas de clases
+
+* Creación de una biblioteca de clases
+  * [mediante Visual Studio Code](../core/tutorials/library-with-visual-studio-code.md)
+  * [mediante Visual Studio](../core/tutorials/library-with-visual-studio.md) (Windows)
+  * [mediante Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md) (macOS)
+
+## <a name="resources-for-learning-net-languages"></a>Recursos de aprendizaje para lenguajes de .NET
 
 * [Introducción a C#](../csharp/getting-started/index.md)
-* [Tutoriales de C#](../csharp/tutorials/index.md)
-* [Tutoriales de introducción de F#](../fsharp/get-started/index.md)
+* [Introducción a F#](../fsharp/get-started/index.md)
 * [Introducción a Visual Basic](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-core"></a>Introducción al uso de .NET Core
+## <a name="other-get-started-resources"></a>Otros recursos de introducción
 
-Para obtener una guía específica de .NET Core, vea lo siguiente:
+Los recursos siguientes permiten empezar a desarrollar aplicaciones .NET, pero no son tutoriales paso a paso:
 
-* [Introducción a .NET Core](../core/get-started.md)
-* [Tutoriales de .NET Core](../core/tutorials/index.md)
+* [Internet de las cosas (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Aprendizaje automático](../machine-learning/index.yml)
 
-## <a name="get-started-using-net-standard"></a>Introducción al uso de .NET Standard
+## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener un tutorial de introducción, vea [Creación de una biblioteca de .NET Standard en Visual Studio](../core/tutorials/library-with-visual-studio.md).
-
-## <a name="get-started-using-net-core-on-docker"></a>Introducción al uso de .NET Core en Docker
-
-[Introducción a .NET y Docker](../core/docker/introduction.md) muestra cómo usar .NET Core en contenedores de Docker de Windows.
+Para obtener más información sobre .NET, vea [Introducción a .NET](../core/introduction.md).

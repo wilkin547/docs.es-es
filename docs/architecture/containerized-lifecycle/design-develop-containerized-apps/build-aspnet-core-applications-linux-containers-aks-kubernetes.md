@@ -2,12 +2,12 @@
 title: Compilación de aplicaciones ASP.NET Core implementadas como contenedores de Linux en clústeres de AKS/Kubernetes
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 ms.date: 08/06/2020
-ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 8b3141d79eeb252ec3721d57293bed0e335b41d3
+ms.sourcegitcommit: a6bd4cad438fe479cbd112eae10f2cd449f06e40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916457"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91844568"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilación de aplicaciones ASP.NET Core implementadas como contenedores de Linux en un orquestador de AKS/Kubernetes
 
@@ -148,7 +148,7 @@ services:
     #...
 ```
 
-Ahora puede ejecutar la aplicación con la tecla **F5**, mediante el botón **Reproducir**, o la tecla **Ctrl + F5** al seleccionar el proyecto docker-compose, como se muestra en la imagen 4-42.
+Ahora puede ejecutar la aplicación con la tecla **F5**, mediante el botón **Reproducir**, o bien la tecla **Ctrl+F5** al seleccionar el proyecto docker-compose, como se muestra en la imagen 4-42.
 
 ![Ejecución del proyecto docker-compose con Visual Studio](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
 
@@ -198,6 +198,9 @@ Ejecute el siguiente comando desde **az cli**:
 ```powershell
 az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
+
+> [!NOTE]
+> El nombre del registro de contenedor (p. ej. `exploredocker`) debe ser único dentro de Azure y contener entre 5 y 50 caracteres alfanuméricos. Para obtener más información, vea [Creación de un registro de contenedor](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli#create-a-container-registry)
 
 ### <a name="create-the-image-in-release-mode"></a>Creación de la imagen en modo de versión
 
@@ -257,7 +260,7 @@ Inserte la imagen en Azure ACR con el comando siguiente:
 docker push <login-server-name>/<image-name>:v1
 ```
 
-Este comando tarda un poco en cargar las imágenes, pero proporciona información durante el proceso. En la siguiente imagen puede ver la salida de una imagen completada y otra en curso.
+Este comando tarda un poco en cargar las imágenes, pero proporciona información durante el proceso. En la imagen siguiente puede ver la salida de una imagen completada y otra en curso.
 
 ![Salida de la consola del comando push de Docker.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
 

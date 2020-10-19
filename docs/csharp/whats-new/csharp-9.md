@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c165ca764d93b74aac21028ed3e55e80f2a23ee0
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654912"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955172"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -232,7 +232,7 @@ Además, el bucle [`foreach` ](../language-reference/keywords/foreach-in.md) rec
 
 Después, puede usar descartes como parámetros para las expresiones lambda. De esta forma no tiene que asignar un nombre al argumento y el compilador puede evitar usarlo. Use `_` para cualquier argumento. Para más información, consulte sección sobre [parámetros de entrada de una expresión lambda](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) en el artículo sobre [expresiones lambda](../language-reference/operators/lambda-expressions.md).
 
-Por último, ahora puede aplicar atributos a las funciones locales. Por ejemplo, puede aplicar anotaciones de atributo que admiten un valor NULL a las funciones locales.
+Por último, ahora puede aplicar atributos a las [funciones locales](../programming-guide/classes-and-structs/local-functions.md). Por ejemplo, puede aplicar [anotaciones de atributo que admiten un valor NULL](../language-reference/attributes/nullable-analysis.md) a las funciones locales.
 
 ## <a name="support-for-code-generators"></a>Compatibilidad con generadores de código
 

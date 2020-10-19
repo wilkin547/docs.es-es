@@ -1,19 +1,19 @@
 ---
 title: 'Tutorial: Algoritmos de compilación con coincidencia de patrones'
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
-ms.date: 03/13/2019
+ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperfq1
-ms.openlocfilehash: 9fff9f286bd0aa7baf7632f9144dfe693bab0c32
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437986"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955634"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos.
 
-C# 7 introdujo las características básicas de coincidencia de patrones. Esas características se amplían en C# 8 con nuevas expresiones y patrones. Puede escribir una funcionalidad que se comporta como si se hubiesen ampliado tipos que pueden estar en otras bibliotecas. Los patrones también se usan para crear una funcionalidad que la aplicación requiere y que no es una característica fundamental del tipo que se está ampliando.
+C# 7 introdujo las características básicas de coincidencia de patrones. Esas características se han ampliado en C# 8 y C# 9 con nuevas expresiones y patrones. Puede escribir una funcionalidad que se comporta como si se hubiesen ampliado tipos que pueden estar en otras bibliotecas. Los patrones también se usan para crear una funcionalidad que la aplicación requiere y que no es una característica fundamental del tipo que se está ampliando.
 
 En este tutorial, aprenderá a:
 
@@ -25,7 +25,7 @@ En este tutorial, aprenderá a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de C# 8.0. El compilador de C# 8 está disponible a partir de la [versión 16.3 de Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o del [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download).
+Tendrá que configurar el equipo para ejecutar .NET 5, que incluye el compilador de C# 9. El compilador de C# 9 está disponible a partir de [Visual Studio 2019, versión 16.9 Preview 1](https://visualstudio.microsoft.com/vs/preview/) o del [SDK de .NET 5.0](https://dot.net/get-dotnet5).
 
 En este tutorial se da por supuesto que está familiarizado con C# y. NET, incluidos Visual Studio o la CLI de .NET Core.
 
@@ -47,7 +47,7 @@ Puede descargar el código de inicio del repositorio [dotnet/samples](https://gi
 
 ## <a name="pattern-matching-designs"></a>Diseños de coincidencia de patrones
 
-En el escenario que se usa en este tutorial se resaltan los tipos de problemas en los que resulta adecuado usar la coincidencia de patrones para resolverlos:
+En el escenario que se usa en este tutorial se resaltan los tipos de problemas en los que resulta adecuado usar la coincidencia de patrones para resolver lo siguiente:
 
 - Los objetos con los que necesita trabajar no están en una jerarquía de objetos que coincida con sus objetivos. Es posible que trabaje con clases que forman parte de sistemas no relacionados.
 - La funcionalidad que agrega no forma parte de la abstracción central de estas clases. El peaje que paga un vehículo *cambia* según los distintos tipos de vehículos, pero el peaje no es una función central del vehículo.
@@ -127,7 +127,7 @@ namespace toll_calculator
             }
             try
             {
-                tollCalc.CalculateToll(null);
+                tollCalc.CalculateToll(null!);
             }
             catch (ArgumentNullException e)
             {
@@ -157,10 +157,10 @@ Estas reglas se pueden implementar con el **patrón de propiedad** en la misma e
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1 }       => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
     // ...
 };
@@ -175,10 +175,10 @@ vehicle switch
 {
     // ...
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     // ...
 };
@@ -219,20 +219,20 @@ vehicle switch
 };
 ```
 
-En el código anterior se muestra la cláusula `when` de un segmento modificador. Puede usar la cláusula `when` para probar condiciones distintas de la igualdad de una propiedad. Cuando termine, tendrá un método bastante similar al siguiente:
+En el código anterior se muestra la cláusula `when` de un segmento modificador. Puede usar la cláusula `when` para probar condiciones distintas de la igualdad de una propiedad. Cuando haya terminado, tendrá un método muy similar al código siguiente:
 
 ```csharp
 vehicle switch
 {
-    Car { Passengers: 0}        => 2.00m + 0.50m,
-    Car { Passengers: 1}        => 2.0m,
-    Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c                       => 2.00m - 1.0m,
+    Car {Passengers: 0}        => 2.00m + 0.50m,
+    Car {Passengers: 1}        => 2.0m,
+    Car {Passengers: 2}        => 2.0m - 0.50m,
+    Car c                      => 2.00m - 1.0m,
 
-    Taxi { Fares: 0}  => 3.50m + 1.00m,
-    Taxi { Fares: 1 } => 3.50m,
-    Taxi { Fares: 2}  => 3.50m - 0.50m,
-    Taxi t            => 3.50m - 1.00m,
+    Taxi {Fares: 0}  => 3.50m + 1.00m,
+    Taxi {Fares: 1}  => 3.50m,
+    Taxi {Fares: 2}  => 3.50m - 0.50m,
+    Taxi t           => 3.50m - 1.00m,
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
     Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
@@ -288,9 +288,11 @@ En el ejemplo anterior, el uso de una expresión recursiva significa que no repi
 
 ## <a name="add-peak-pricing"></a>Incorporación de precio en horas punta
 
-Para la característica final, la autoridad encargada de los peajes quiere agregar precios en función de las horas punta. En las horas de mayor afluencia durante mañana y tarde, el valor de los peajes se dobla. Esa regla solo afecta el tráfico en una dirección: hacia la ciudad en la mañana y desde la ciudad en la tarde. En otros momentos durante la jornada laboral, los peajes aumentan en un 50 %. Tarde por la noche y temprano en la mañana, disminuyen en un 25 %. Durante el fin de semana, la tarifa es normal independientemente de la hora.
+Para la característica final, la autoridad encargada de los peajes quiere agregar precios en función de las horas punta. En las horas de mayor afluencia durante mañana y tarde, el valor de los peajes se dobla. Esa regla solo afecta el tráfico en una dirección: hacia la ciudad en la mañana y desde la ciudad en la tarde. En otros momentos durante la jornada laboral, los peajes aumentan en un 50 %. Tarde por la noche y temprano en la mañana, disminuyen en un 25 %. Durante el fin de semana, la tarifa es normal independientemente de la hora. Puede usar una serie de instrucciones `if` y `else` para expresar esto mediante el código siguiente:
 
-Para esta característica, usará la coincidencia de patrones, pero la integrará con otras técnicas. Podría crear una expresión de coincidencia de patrones única que consideraría todas las combinaciones de dirección, día de la semana y hora. El resultado sería una expresión complicada. Podría ser difícil de leer y de comprender. Esto implica que es difícil garantizar su exactitud. En su lugar, combine esos método para crear una tupla de valores que describa de manera concisa todos esos estados. Luego, use la coincidencia de patrones para calcular un multiplicador para el peaje. La tupla contiene tres condiciones discretas:
+[!code-csharp[FullTuplePattern](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#SnippetPremiumWithoutPattern)]
+
+El código anterior funciona correctamente, pero no es legible. Para que el código tenga sentido, tiene que encadenar todos los casos de entrada y las instrucciones `if` anidadas. En su lugar, usará la coincidencia de patrones para esta característica, pero la integrará con otras técnicas. Podría crear una expresión de coincidencia de patrones única que consideraría todas las combinaciones de dirección, día de la semana y hora. El resultado sería una expresión complicada. Podría ser difícil de leer y de comprender. Esto implica que es difícil garantizar su exactitud. En su lugar, combine esos método para crear una tupla de valores que describa de manera concisa todos esos estados. Luego, use la coincidencia de patrones para calcular un multiplicador para el peaje. La tupla contiene tres condiciones discretas:
 
 - El día es un día laborable o fin de semana.
 - La banda de tiempo cuando se cobra el peaje.
@@ -335,7 +337,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
     };
 ```
 
-Ese método funciona, pero es redundante. Puede simplificarlo tal como se muestra en el código siguiente:
+Ese método es correcto, pero es redundante. Puede simplificarlo tal como se muestra en el código siguiente:
 
 [!code-csharp[IsWeekDay](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#IsWeekDay)]
 
@@ -343,7 +345,7 @@ A continuación, agregue una función similar para categorizar la hora en los bl
 
 [!code-csharp[GetTimeBand](~/samples/snippets/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-El método anterior no usa la coincidencia de patrones. Es más claro usar una cascada familiar de instrucciones `if`. Sí agrega una `enum` privada para convertir cada intervalo de tiempo en un valor discreto.
+Agregue un elemento `enum` privado para convertir cada intervalo de tiempo en un valor discreto. Después, el método `GetTimeBand` usa *patrones relacionales* y *patrones OR conjuntivos*, ambos agregados en C# 9.0. El patrón relacional permite probar un valor numérico mediante `<`, `>`, `<=` o `>=`. El patrón `or` comprueba si una expresión coincide con uno o más patrones. También puede usar un patrón `and` para asegurarse de que una expresión coincide con dos patrones distintos, y un patrón `not` para probar que una expresión no coincide con un patrón.
 
 Después de usar esos métodos, puede usar otra expresión `switch` con el **patrón de tuplas** para calcular el recargo en los precios. Puede crear una expresión `switch` con los 16 segmentos:
 

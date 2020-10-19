@@ -3,12 +3,12 @@ title: Analizador de compatibilidad de plataformas
 description: Un analizador de Roslyn que puede ayudar a detectar problemas de compatibilidad de plataformas en aplicaciones y bibliotecas multiplataforma.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 4e842e5bbe90dd5006d9b27d0365f908b6441997
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
+ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406592"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805303"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analizador de compatibilidad de plataformas
 
@@ -25,7 +25,7 @@ Entre las nuevas API se incluyen:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El analizador de compatibilidad de plataformas es uno de los analizadores de calidad de código de Roslyn. A partir de .NET 5.0, estos analizadores se [incluyen con el SDK de .NET](../../fundamentals/productivity/code-analysis.md). El analizador de compatibilidad de plataformas está habilitado de forma predeterminada solo para los proyectos que tienen como destino `net5.0` o una versión posterior. Sin embargo, puede [habilitar](/visualstudio/code-quality/ca1416.md#configurability) para los proyectos que tienen como destino otras plataformas.
+El analizador de compatibilidad de plataformas es uno de los analizadores de calidad de código de Roslyn. A partir de .NET 5.0, estos analizadores se [incluyen con el SDK de .NET](../../fundamentals/code-analysis/overview.md). El analizador de compatibilidad de plataformas está habilitado de forma predeterminada solo para los proyectos que tienen como destino `net5.0` o una versión posterior. Sin embargo, puede [habilitar](/visualstudio/code-quality/ca1416.md#configurability) para los proyectos que tienen como destino otras plataformas.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Cómo determina el analizador la dependencia de plataformas
 
@@ -70,7 +70,7 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
     ```
 
   - **Lista Solo no compatibles** Si la versión más antigua de cada plataforma de sistema operativo es un atributo `[UnsupportedOSPlatform]`, se considera que la API no es compatible solo con las plataformas de la lista y es compatible con todas las demás plataformas. La lista podría tener el atributo `[SupportedOSPlatform]` con la misma plataforma pero con una versión superior, lo que indica que la API se admite a partir de esa versión.
-  
+
     ```csharp
     // The API was unsupported on Windows until version 10.0.19041.0.
     // The API is considered supported everywhere else without constraints.
@@ -79,16 +79,16 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
     public void ApiSupportedFromWindows8UnsupportFromWindows10();
     ```
 
-  - **Lista de incoherentes**: Si la versión más antigua de algunas plataformas es `[SupportedOSPlatform]` mientras es `[UnsupportedOSPlatform]` para otras plataformas, se considera incoherente, lo que no se admite para el analizador.
+  - **Lista de incoherentes**: Si la versión más baja para algunas plataformas es `[SupportedOSPlatform]` y `[UnsupportedOSPlatform]` lo es para otras, se considera incoherente, lo que el analizador no admite.
   - Si las versiones más bajas de los atributos `[SupportedOSPlatform]` y `[UnsupportedOSPlatform]` son iguales, el analizador considera la plataforma como parte de la **lista Solo compatibles**.
-- Los atributos de plataforma se pueden aplicar a tipos, miembros (métodos, campos, propiedades y eventos) y ensamblados con un nombre de plataforma o versión diferentes.
+- Los atributos de plataforma se pueden aplicar a tipos, miembros (métodos, campos, propiedades y eventos) y ensamblados con otros nombres o versiones de plataforma.
   - Los atributos aplicados en el `target` de nivel superior afectan a todos sus miembros y tipos.
   - Solo se aplican los atributos de nivel secundario si se adhieren a la regla de "las anotaciones secundarias pueden limitar la compatibilidad de plataformas, pero no pueden ampliarla".
-    - Cuando el elemento primario tiene la lista **Solo compatibles**, los atributos de los miembros secundarios no podían agregar una nueva compatibilidad con la plataforma, ya que podría extenderse el soporte primario; una nueva compatibilidad con la plataforma solo se puede agregar al propio elemento primario. Pero puede tener el atributo `Supported` para la misma plataforma con versiones posteriores, ya que esto limitará la compatibilidad. También puede tener el atributo `Unsupported` con la misma plataforma, lo que también limitará la compatibilidad con los elementos primarios.
-    - Cuando el elemento primario tiene una lista **Solo no compatibles**, los atributos de miembro secundario podrían agregar una nueva compatibilidad con la plataforma, ya que sería la compatibilidad con el elemento primario de restricción, pero no puede tener el atributo `Supported` para la misma plataforma que en el elemento primario, lo que ampliaría el soporte primario. La compatibilidad con la misma plataforma solo se puede agregar al nivel primario en el que se aplicó el atributo `Unsupported` original.
+    - Cuando el elemento primario tiene la lista **Solo compatibles**, los atributos de los miembros secundarios no pueden agregar una nueva compatibilidad con la plataforma, ya que eso extendería la compatibilidad con el elemento primario. La compatibilidad con una nueva plataforma solo se puede agregar al propio elemento primario. Pero el elemento secundario puede tener el atributo `Supported` para la misma plataforma con versiones posteriores, ya que eso limita la compatibilidad. Además, el elemento secundario puede tener el atributo `Unsupported` con la misma plataforma, lo que también limita la compatibilidad con el elemento primario.
+    - Cuando el elemento primario tiene la lista **Solo no compatibles**, los atributos de los miembros secundarios no pueden agregar compatibilidad con una plataforma nueva, ya que eso limitaría la compatibilidad con el elemento primario. Pero no puede tener el atributo `Supported` para la misma plataforma que el elemento primario, porque eso amplía la compatibilidad con el elemento primario. La compatibilidad con la misma plataforma solo se puede agregar al elemento primario en el que se ha aplicado el atributo `Unsupported` original.
   - Si se aplica `[SupportedOSPlatform("platformVersion")]` más de una vez para una API con el mismo nombre de `platform`, el analizador solo tiene en cuenta la que tiene la versión mínima.
-  - Si se aplica `[UnsupportedOSPlatform("platformVersion")]` más de dos veces para una API con el mismo nombre de `platform`, el analizador solo tiene en cuenta las dos con las versiones mínimas.
-  
+  - Si se aplica `[UnsupportedOSPlatform("platformVersion")]` más de dos veces para una API con el mismo nombre de `platform`, el analizador solo tiene en cuenta las dos con las versiones más anteriores.
+
   > [!NOTE]
   > No se espera que una API admitida inicialmente pero no admitida (retirada) en una versión posterior pueda volver a admitirse en una versión incluso posterior.
 
@@ -123,7 +123,7 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
       // warns: 'SupportedOnWindowsAndLinuxOnly' is supported on 'Linux'
       SupportedOnWindowsAndLinuxOnly();
 
-      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later  
+      // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is supported on 'windows' 8.0 and later
       // warns: 'ApiSupportedFromWindows8UnsupportFromWindows10' is unsupported on 'windows' 10.0.19041.0 and later
       ApiSupportedFromWindows8UnsupportFromWindows10();
 
@@ -133,7 +133,7 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
   }
 
   // an API not supported on android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -154,11 +154,11 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
   {
       DoesNotWorkOnAndroid(); // warns 'DoesNotWorkOnAndroid' is unsupported on 'android'
 
-      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFromVersion8' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFromVersion8' is supported on 'windows' 8.0 and later
       StartedWindowsSupportFromVersion8();
 
-      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'  
+      // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is unsupported on 'windows'
       // warns:'StartedWindowsSupportFrom8UnsupportedFrom10' is supported on 'windows' 8.0 and later
       // even there were 3 diagnostics found analyzer warn only for the first 2.
       StartedWindowsSupportFrom8UnsupportedFrom10();
@@ -169,15 +169,15 @@ Para más información, consulte los [ejemplos de cómo funcionan los atributos 
 
 La manera recomendada de tratar estos diagnósticos es asegurarse de que solo se llama a las API específicas de la plataforma cuando se ejecuta en una plataforma adecuada. A continuación se muestran las opciones que puede usar para solucionar las advertencias; elija lo que sea más adecuado para su situación:
 
-- **Proteja la llamada**. Para ello, puede llamar condicionalmente al código en tiempo de ejecución. Compruebe si se está ejecutando en una `Platform` deseada mediante el uso de uno de los métodos de comprobación de plataforma, por ejemplo, `OperatingSystem.Is<Platform>()` o `OperatingSystem.Is<Platform>VersionAtLeast(int major, int minor = 0, int build = 0, int revision = 0)`.
+- **Proteja la llamada**. Para ello, puede llamar condicionalmente al código en tiempo de ejecución. Compruebe si se ejecuta en una `Platform` deseada mediante uno de los métodos de comprobación de plataforma, por ejemplo, `OperatingSystem.Is<Platform>()` u `OperatingSystem.Is<Platform>VersionAtLeast(int major, int minor = 0, int build = 0, int revision = 0)`.
 
 - **Marque el sitio de llamada como específico de la plataforma**. También puede elegir marcar sus propias API como específicas de la plataforma y, por tanto, reenviar los requisitos a los autores de llamadas de forma eficaz. Marque el método o tipo contenedor o todo el ensamblado con los mismos atributos que la llamada dependiente de la plataforma a la que se hace referencia. [Ejemplos](#mark-call-site-as-platform-specific).
 
 - **Aserción del sitio de llamada con comprobación de la plataforma**. O bien, si no quiere sobrecargar una instrucción `if` adicional en tiempo de ejecución, llame a <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=nameWithType> en su lugar: [Ejemplo](#assert-the-call-site-with-platform-check).
 
-- **Elimine el código**. Por lo general, no lo que desea porque significa que perderá fidelidad cuando los usuarios de Windows usen el código. En los casos en los que existe una alternativa multiplataforma, es probable que sea mejor usarlo en las API específicas de la plataforma.
+- **Elimine el código**. Por lo general, no lo que desea porque significa que perderá fidelidad cuando los usuarios de Windows usen el código. En los casos en los que existe una alternativa multiplataforma, es probable que sea mejor usarla que las API específicas de la plataforma.
 
-- **Suprima la advertencia**. También puede suprimir la advertencia, ya sea mediante editor.config o `#pragma warning disable ca1416`. Sin embargo, esta opción debe ser el último recurso cuando se usan API específicas de la plataforma.
+- **Suprima la advertencia**. También puede suprimir la advertencia, ya sea mediante una entrada EditorConfig o `#pragma warning disable ca1416`. Sin embargo, esta opción debe ser el último recurso cuando se usan API específicas de la plataforma.
 
 ### <a name="guard-platform-specific-apis-with-guard-methods"></a>Restricción de API específicas de la plataforma con métodos de restricción
 
@@ -231,7 +231,7 @@ El nombre de la plataforma del método de restricción debe coincidir con el nom
   }
   ```
 
-- Si necesita restringir un código destinado a netstandard o netcoreapp, donde las nuevas API de <xref:System.OperatingSystem> no están disponibles, se puede usar la API de <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType> y el analizador respetará su cumplimiento. Pero no es tan optimizado como las nuevas API agregadas en <xref:System.OperatingSystem>. En caso de que la plataforma no se admita en la estructura <xref:System.Runtime.InteropServices.OSPlatform>, puede usar <xref:System.Runtime.InteropServices.OSPlatform.Create%2A?displayProperty=nameWithType> ("plataforma"), que también respeta el analizador.
+- Si necesita restringir código destinado a `netstandard` o `netcoreapp`, donde las nuevas API <xref:System.OperatingSystem> no están disponibles, se puede usar la API <xref:System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform%2A?displayProperty=nameWithType>, que el analizador respetará. Pero no es tan optimizado como las nuevas API agregadas en <xref:System.OperatingSystem>. Si la plataforma no se admite en la estructura <xref:System.Runtime.InteropServices.OSPlatform>, puede llamar a <xref:System.Runtime.InteropServices.OSPlatform.Create(System.String)?displayProperty=nameWithType> y pasar el nombre de la plataforma, que el analizador también respeta.
 
   ```csharp
   public void CallingSupportedOnlyApis()
@@ -316,7 +316,7 @@ Los nombres de la plataforma deben coincidir con la API dependiente de la plataf
   }
 
   // an API not supported on Android but supported on all other.
-  [UnsupportedOSPlatform("android")]  
+  [UnsupportedOSPlatform("android")]
   public void DoesNotWorkOnAndroid() { }
 
   // an API was unsupported on Windows until version 8.0.
@@ -381,5 +381,5 @@ Todas las comprobaciones condicionales que se usan en los [ejemplos de restricci
 - [Nombres de plataformas de destino en .NET 5](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md)
 - [Anotación de API específicas de la plataforma y detección de su uso](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-checks/platform-checks.md)
 - [Anotación de las API como no compatibles en plataformas específicas](https://github.com/dotnet/designs/blob/master/accepted/2020/platform-exclusion/platform-exclusion.md)
-- [Analizador de compatibilidad de plataformas CA1416](/visualstudio/code-quality/ca1416)
+- [Analizador de compatibilidad de plataformas CA1416](../../fundamentals/code-analysis/quality-rules/ca1416.md)
 - [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md)

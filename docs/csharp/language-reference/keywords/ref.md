@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 58a4ce30e11ca023b50e5e53b1f1554a30d44390
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d2855738c723ba6d2437257793f18349b18629dc
+ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89137089"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91877592"
 ---
 # <a name="ref-c-reference"></a>ref (Referencia de C#)
 
@@ -100,7 +100,7 @@ Este es un ejemplo de valor devuelto de referencia más completo que muestra la 
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-El método llamado también puede declarar el valor devuelto como `ref readonly` para devolver el valor por referencia y exigir que el código de llamada no pueda modificar el valor devuelto. El método de llamada puede evitar copiar el valor devuelto mediante el almacenamiento del valor en una variable de tipo [ref readonly](#ref-readonly-locals).
+El método llamado también puede declarar el valor devuelto como `ref readonly` para devolver el valor por referencia y exigir que el código de llamada no pueda modificar el valor devuelto. El método de llamada puede evitar copiar el valor devuelto si lo almacena en una variable de tipo [ref readonly](#ref-readonly-locals).
 
 Para obtener un ejemplo, vea [Un ejemplo de valores devueltos y variables locales de tipo ref](#a-ref-returns-and-ref-locals-example).
 

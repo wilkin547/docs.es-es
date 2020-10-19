@@ -2,12 +2,12 @@
 title: Cambios importantes de la biblioteca de clases base
 description: Muestra los cambios importantes en las bibliotecas básicas de .NET.
 ms.date: 07/27/2020
-ms.openlocfilehash: c3207ac7630d794f77c793cc6d1d52e158c0c084
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: d4deef295479b1f32bd72a69369a11c7375835f4
+ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738831"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955568"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Cambios importantes en las bibliotecas principales de .NET
 
@@ -17,6 +17,8 @@ En esta página se documentan los siguientes cambios importantes:
 
 | Cambio importante | Versión introducida |
 | - | :-: |
+| [Cambios de comportamiento de API relacionados con ensamblados para el formato de publicación de un solo archivo](#assembly-related-api-behavior-changes-for-single-file-publishing-format) | 5.0 |
+| [Se ha invertido el orden de las etiquetas en Activity.Tags](#order-of-tags-in-activitytags-is-reversed) | 5.0 |
 | [Nombres de parámetros modificados en RC1](#parameter-names-changed-in-rc1) | 5.0 |
 | [Atributos de OSPlatform que se han cambiado de nombre o se han quitado](#osplatform-attributes-renamed-or-removed) | 5.0 |
 | [Thread.Abort obsoleto](#threadabort-is-obsolete) | 5.0 |
@@ -55,6 +57,14 @@ En esta página se documentan los siguientes cambios importantes:
 | [Process.StartInfo produce una excepción InvalidOperationException para los procesos que no se iniciaron](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [assembly-api-behavior-changes-for-single-file-publish](../../../includes/core-changes/corefx/5.0/assembly-api-behavior-changes-for-single-file-publish.md)]
+
+***
+
+[!INCLUDE [reverse-order-of-tags-in-activity-property](../../../includes/core-changes/corefx/5.0/reverse-order-of-tags-in-activity-property.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names-rc1](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names-rc1.md)]
 

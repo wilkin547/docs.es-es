@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo el analizador de API de .NET puede
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f1268d5f208e19f1b69ed487370fb4c96723a204
-ms.sourcegitcommit: 1274a1a4a4c7e2eaf56b38da76ef7cec789726ef
+ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91406250"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91756200"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 
@@ -124,7 +124,7 @@ Todos estos diagnósticos están disponibles no solo en el IDE, sino también en
 
 ## <a name="configuration"></a>Configuración
 
-El usuario decide cómo se deben tratar los diagnósticos: como advertencias, errores, sugerencias o estar desactivados. Por ejemplo, como un arquitecto, puede decidir que los problemas de compatibilidad deben tratarse como errores y que las llamadas a algunas API en desuso generen advertencias, mientras que otras solo generan sugerencias. Puede configurar esto por separado por identificador de diagnóstico y por proyecto. Para ello, en el **Explorador de soluciones**, vaya al nodo **Dependencias** del proyecto. Expanda los nodos **Dependencias** > **Analizadores** > **Microsoft.DotNet.Analyzers.Compatibility**. Haga clic con el botón derecho en el identificador de diagnóstico, seleccione **Configurar gravedad del conjunto de reglas** y elija la opción deseada.
+El usuario decide cómo se deben tratar los diagnósticos: como advertencias, errores, sugerencias o estar desactivados. Por ejemplo, como un arquitecto, puede decidir que los problemas de compatibilidad deben tratarse como errores y que las llamadas a algunas API en desuso generen advertencias, mientras que otras solo generan sugerencias. Puede configurar esto por separado por identificador de diagnóstico y por proyecto. Para ello, en el **Explorador de soluciones**, vaya al nodo **Dependencias** del proyecto. Expanda los nodos **Dependencias** > **Analizadores** > **Microsoft.DotNet.Analyzers.Compatibility**. Haga clic con el botón derecho en el identificador de diagnóstico, seleccione **Configurar gravedad del conjunto de reglas** y, después, elija la opción deseada.
 
 ![Captura de pantalla del Explorador de soluciones donde se muestran los diagnósticos y el cuadro de diálogo emergente con la gravedad del conjunto de reglas.](media/api-analyzer/disable-notifications.jpg)
 
