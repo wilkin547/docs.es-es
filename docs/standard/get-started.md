@@ -1,41 +1,61 @@
 ---
-title: Introducción a .NET
-description: Incluye una relación de artículos para comenzar con. NET, tanto desde la perspectiva del lenguaje como de la plataforma.
-author: cartermp
-ms.date: 01/21/2020
+title: Tutoriales de introducción a .NET
+description: Elija un tutorial para aprender sobre el desarrollo de aplicaciones .NET o uno de los lenguajes de programación de .NET.
+author: tdykstra
+ms.date: 09/30/2020
 ms.technology: dotnet-standard
-ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: f1d5854d8bddea21bbb8a0a7fa032c9fbd15f3d5
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
+ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438180"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91755881"
 ---
-# <a name="get-started"></a><span data-ttu-id="a03e3-103">Primeros pasos</span><span class="sxs-lookup"><span data-stu-id="a03e3-103">Get started</span></span>
+# <a name="tutorials-for-getting-started-with-net"></a><span data-ttu-id="db699-103">Tutoriales de introducción a .NET</span><span class="sxs-lookup"><span data-stu-id="db699-103">Tutorials for getting started with .NET</span></span>
 
-<span data-ttu-id="a03e3-104">Hay varias maneras de empezar a trabajar con .NET.</span><span class="sxs-lookup"><span data-stu-id="a03e3-104">There are a number of ways to get started with .NET.</span></span> <span data-ttu-id="a03e3-105">Dado que .NET es una plataforma masiva, existen varios artículos en esta documentación que pueden ayudar a trabajar con. NET, cada uno desde una perspectiva distinta.</span><span class="sxs-lookup"><span data-stu-id="a03e3-105">Because .NET is a massive platform, there are multiple articles in this documentation that can help you get started with .NET, each from a different perspective.</span></span>
+<span data-ttu-id="db699-104">Los siguientes tutoriales paso a paso se ejecutan en Windows, Linux o macOS, salvo que se indique lo contrario.</span><span class="sxs-lookup"><span data-stu-id="db699-104">The following step-by-step tutorials run on Windows, Linux, or macOS, except as noted.</span></span>
 
-## <a name="get-started-using-net-languages"></a><span data-ttu-id="a03e3-106">Introducción al uso de lenguajes .NET</span><span class="sxs-lookup"><span data-stu-id="a03e3-106">Get started using .NET languages</span></span>
+## <a name="tutorials-for-creating-apps"></a><span data-ttu-id="db699-105">Tutoriales para crear aplicaciones</span><span class="sxs-lookup"><span data-stu-id="db699-105">Tutorials for creating apps</span></span>
 
-<span data-ttu-id="a03e3-107">Si quiere obtener tutoriales de introducción de C#, Visual Basic y F#, vea lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a03e3-107">For getting-started tutorials in C#, Visual Basic, and F#, see:</span></span>
+* <span data-ttu-id="db699-106">Crear una aplicación de consola</span><span class="sxs-lookup"><span data-stu-id="db699-106">Create a console app</span></span>
+  * [<span data-ttu-id="db699-107">mediante Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="db699-107">using Visual Studio Code</span></span>](../core/tutorials/with-visual-studio-code.md)
+  * <span data-ttu-id="db699-108">[mediante Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)</span><span class="sxs-lookup"><span data-stu-id="db699-108">[using Visual Studio](../core/tutorials/with-visual-studio.md) (Windows)</span></span>
+  * <span data-ttu-id="db699-109">[mediante Visual Studio para Mac](../core/tutorials/with-visual-studio-mac.md) (macOS)</span><span class="sxs-lookup"><span data-stu-id="db699-109">[using Visual Studio for Mac](../core/tutorials/with-visual-studio-mac.md) (macOS)</span></span>
+* <span data-ttu-id="db699-110">Creación de una aplicación web</span><span class="sxs-lookup"><span data-stu-id="db699-110">Create a web app</span></span>
+  * [<span data-ttu-id="db699-111">con la interfaz de usuario web del lado servidor</span><span class="sxs-lookup"><span data-stu-id="db699-111">with server-side web UI</span></span>](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+  * [<span data-ttu-id="db699-112">con la interfaz de usuario web del lado cliente</span><span class="sxs-lookup"><span data-stu-id="db699-112">with client-side web UI</span></span>](https://dotnet.microsoft.com/learn/aspnet/blazor-tutorial/intro)
+* [<span data-ttu-id="db699-113">Creación de una API web</span><span class="sxs-lookup"><span data-stu-id="db699-113">Create a web API</span></span>](/aspnet/core/tutorials/first-web-api)
+* [<span data-ttu-id="db699-114">Creación de una aplicación web de llamada a procedimiento remoto</span><span class="sxs-lookup"><span data-stu-id="db699-114">Create a remote procedure call web app</span></span>](/aspnet/core/tutorials/grpc/grpc-start)
+* [<span data-ttu-id="db699-115">Creación de una aplicación web en tiempo real</span><span class="sxs-lookup"><span data-stu-id="db699-115">Create a real-time web app</span></span>](/aspnet/core/tutorials/signalr)
+* [<span data-ttu-id="db699-116">Creación de una función sin servidor en la nube</span><span class="sxs-lookup"><span data-stu-id="db699-116">Create a serverless function in the cloud</span></span>](/azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-csharp)
+* <span data-ttu-id="db699-117">[Creación de una aplicación móvil para Android e iOS](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)</span><span class="sxs-lookup"><span data-stu-id="db699-117">[Create a mobile app for Android and iOS](https://dotnet.microsoft.com/learn/xamarin/hello-world-tutorial/intro) (Windows)</span></span>
+* <span data-ttu-id="db699-118">Creación de una aplicación de escritorio de Windows</span><span class="sxs-lookup"><span data-stu-id="db699-118">Create a Windows desktop app</span></span>
+  * [<span data-ttu-id="db699-119">WPF</span><span class="sxs-lookup"><span data-stu-id="db699-119">WPF</span></span>](/visualstudio/get-started/csharp/tutorial-wpf)
+  * [<span data-ttu-id="db699-120">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="db699-120">Windows Forms</span></span>](/visualstudio/ide/create-csharp-winform-visual-studio)
+  * [<span data-ttu-id="db699-121">Plataforma universal de Windows (UWP)</span><span class="sxs-lookup"><span data-stu-id="db699-121">Universal Windows Platform (UWP)</span></span>](/visualstudio/get-started/csharp/tutorial-uwp)
+* [<span data-ttu-id="db699-122">Creación de un juego con Unity</span><span class="sxs-lookup"><span data-stu-id="db699-122">Create a game using Unity</span></span>](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [<span data-ttu-id="db699-123">Creación de un servicio de Windows</span><span class="sxs-lookup"><span data-stu-id="db699-123">Create a Windows service</span></span>](/aspnet/core/host-and-deploy/windows-service)
 
-* [<span data-ttu-id="a03e3-108">Introducción a C#</span><span class="sxs-lookup"><span data-stu-id="a03e3-108">Get started in C#</span></span>](../csharp/getting-started/index.md)
-* [<span data-ttu-id="a03e3-109">Tutoriales de C#</span><span class="sxs-lookup"><span data-stu-id="a03e3-109">C# tutorials</span></span>](../csharp/tutorials/index.md)
-* [<span data-ttu-id="a03e3-110">Tutoriales de introducción de F#</span><span class="sxs-lookup"><span data-stu-id="a03e3-110">F# getting-started tutorials</span></span>](../fsharp/get-started/index.md)
-* [<span data-ttu-id="a03e3-111">Introducción a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a03e3-111">Get started in Visual Basic</span></span>](../visual-basic/getting-started/index.md)
+## <a name="tutorials-for-creating-class-libraries"></a><span data-ttu-id="db699-124">Tutoriales para crear bibliotecas de clases</span><span class="sxs-lookup"><span data-stu-id="db699-124">Tutorials for creating class libraries</span></span>
 
-## <a name="get-started-using-net-core"></a><span data-ttu-id="a03e3-112">Introducción al uso de .NET Core</span><span class="sxs-lookup"><span data-stu-id="a03e3-112">Get started using .NET Core</span></span>
+* <span data-ttu-id="db699-125">Creación de una biblioteca de clases</span><span class="sxs-lookup"><span data-stu-id="db699-125">Create a class library</span></span>
+  * [<span data-ttu-id="db699-126">mediante Visual Studio Code</span><span class="sxs-lookup"><span data-stu-id="db699-126">using Visual Studio Code</span></span>](../core/tutorials/library-with-visual-studio-code.md)
+  * <span data-ttu-id="db699-127">[mediante Visual Studio](../core/tutorials/library-with-visual-studio.md) (Windows)</span><span class="sxs-lookup"><span data-stu-id="db699-127">[using Visual Studio](../core/tutorials/library-with-visual-studio.md) (Windows)</span></span>
+  * <span data-ttu-id="db699-128">[mediante Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md) (macOS)</span><span class="sxs-lookup"><span data-stu-id="db699-128">[using Visual Studio for Mac](../core/tutorials/library-with-visual-studio-mac.md) (macOS)</span></span>
 
-<span data-ttu-id="a03e3-113">Para obtener una guía específica de .NET Core, vea lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="a03e3-113">For .NET Core-specific guidance, see:</span></span>
+## <a name="resources-for-learning-net-languages"></a><span data-ttu-id="db699-129">Recursos de aprendizaje para lenguajes de .NET</span><span class="sxs-lookup"><span data-stu-id="db699-129">Resources for learning .NET languages</span></span>
 
-* [<span data-ttu-id="a03e3-114">Introducción a .NET Core</span><span class="sxs-lookup"><span data-stu-id="a03e3-114">Get started with .NET Core</span></span>](../core/get-started.md)
-* [<span data-ttu-id="a03e3-115">Tutoriales de .NET Core</span><span class="sxs-lookup"><span data-stu-id="a03e3-115">.NET Core tutorials</span></span>](../core/tutorials/index.md)
+* [<span data-ttu-id="db699-130">Introducción a C#</span><span class="sxs-lookup"><span data-stu-id="db699-130">Get started with C#</span></span>](../csharp/getting-started/index.md)
+* [<span data-ttu-id="db699-131">Introducción a F#</span><span class="sxs-lookup"><span data-stu-id="db699-131">Get started with F#</span></span>](../fsharp/get-started/index.md)
+* [<span data-ttu-id="db699-132">Introducción a Visual Basic</span><span class="sxs-lookup"><span data-stu-id="db699-132">Get started with Visual Basic</span></span>](../visual-basic/getting-started/index.md)
 
-## <a name="get-started-using-net-standard"></a><span data-ttu-id="a03e3-116">Introducción al uso de .NET Standard</span><span class="sxs-lookup"><span data-stu-id="a03e3-116">Get started using .NET Standard</span></span>
+## <a name="other-get-started-resources"></a><span data-ttu-id="db699-133">Otros recursos de introducción</span><span class="sxs-lookup"><span data-stu-id="db699-133">Other get-started resources</span></span>
 
-<span data-ttu-id="a03e3-117">Para obtener un tutorial de introducción, vea [Creación de una biblioteca de .NET Standard en Visual Studio](../core/tutorials/library-with-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="a03e3-117">For an introductory tutorial, see [Build a .NET Standard library in Visual Studio](../core/tutorials/library-with-visual-studio.md).</span></span>
+<span data-ttu-id="db699-134">Los recursos siguientes permiten empezar a desarrollar aplicaciones .NET, pero no son tutoriales paso a paso:</span><span class="sxs-lookup"><span data-stu-id="db699-134">The following resources are for getting started with developing .NET apps but aren't step-by-step tutorials:</span></span>
 
-## <a name="get-started-using-net-core-on-docker"></a><span data-ttu-id="a03e3-118">Introducción al uso de .NET Core en Docker</span><span class="sxs-lookup"><span data-stu-id="a03e3-118">Get started using .NET Core on Docker</span></span>
+* [<span data-ttu-id="db699-135">Internet de las cosas (IoT)</span><span class="sxs-lookup"><span data-stu-id="db699-135">Internet of Things (IoT)</span></span>](https://dotnet.microsoft.com/apps/iot)
+* [<span data-ttu-id="db699-136">Aprendizaje automático</span><span class="sxs-lookup"><span data-stu-id="db699-136">Machine learning</span></span>](../machine-learning/index.yml)
 
-<span data-ttu-id="a03e3-119">[Introducción a .NET y Docker](../core/docker/introduction.md) muestra cómo usar .NET Core en contenedores de Docker de Windows.</span><span class="sxs-lookup"><span data-stu-id="a03e3-119">[Introduction to .NET and Docker](../core/docker/introduction.md) shows how you can use .NET Core on Windows Docker containers.</span></span>
+## <a name="next-steps"></a><span data-ttu-id="db699-137">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="db699-137">Next steps</span></span>
+
+<span data-ttu-id="db699-138">Para obtener más información sobre .NET, vea [Introducción a .NET](../core/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="db699-138">To learn more about .NET, see [Introduction to .NET](../core/introduction.md).</span></span>
