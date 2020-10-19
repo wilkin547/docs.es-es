@@ -4,18 +4,18 @@ description: Obtenga información sobre qué es una aplicación de archivo únic
 author: lakshanf
 ms.author: lakshanf
 ms.date: 08/28/2020
-ms.openlocfilehash: 0167e62ea46e1c23c3d4ef6ea505ee051ffaf264
-ms.sourcegitcommit: d66641bc7c14ad7d02300316e9e7e84a875a0a72
+ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91712635"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050421"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implementación de archivo único y ejecutable
 
 La agrupación de todos los archivos dependientes de la aplicación en un único binario proporciona a un desarrollador de aplicaciones la opción atractiva de implementar y distribuir la aplicación como un único archivo. Este modelo de implementación está disponible desde .NET Core 3.0 y se ha mejorado en .NET 5.0. Anteriormente en .NET Core 3.0, cuando un usuario ejecuta la aplicación de archivo único, el host de .NET Core primero extrae todos los archivos en un directorio temporal antes de ejecutar la aplicación. En .NET 5.0 se mejora esta experiencia al ejecutar directamente el código sin necesidad de extraer los archivos de la aplicación.
 
-La implementación de archivo único está disponible para el [modelo de implementación dependiente del marco](index.md#publish-framework-dependent) y [aplicaciones independientes](index.md#publish-self-contained). El tamaño del archivo único de una aplicación independiente será grande, ya que incluirá el runtime y las bibliotecas de .NET Framework. La opción de implementación de archivo único se puede combinar con las opciones de publicación [ReadyToRun](../tools/dotnet-publish.md) y [Trim (una característica experimental de .NET 5.0)](trim-self-contained.md).
+La implementación de archivo único está disponible para el [modelo de implementación dependiente del marco](index.md#publish-framework-dependent) y [aplicaciones independientes](index.md#publish-self-contained). El tamaño del archivo único de una aplicación independiente será grande, ya que incluirá el runtime y las bibliotecas de .NET Framework. La opción de implementación de archivo único se puede combinar con las opciones de publicación [ReadyToRun](ready-to-run.md) y [Trim (una característica experimental de .NET 5.0)](trim-self-contained.md).
 
 ## <a name="api-incompatibility"></a>Incompatibilidad de API
 

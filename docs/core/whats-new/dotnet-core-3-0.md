@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 8ba64a6e3bee4a5d27a07ab4ad4ef3a3f0749778
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804637"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050285"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -395,7 +395,7 @@ Los paquetes GPIO incluyen interfaces API para dispositivos *GPIO*, *SPI*, *I2C*
 Cuando está disponible, .NET Core 3.0 utiliza **OpenSSL 1.1.1**, **OpenSSL 1.1.0** o **OpenSSL 1.0.2** en un sistema Linux. Si **OpenSSL 1.1.1** está disponible, los tipos <xref:System.Net.Security.SslStream?displayProperty=nameWithType> y <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, utilizarán **TLS 1.3** (suponiendo que el cliente y el servidor admitan **TLS 1.3**).
 
 > [!IMPORTANT]
-> Windows y macOS aún no admiten **TLS 1.3**. .NET Core 3.0 será compatible con **TLS 1.3** en estos sistemas operativos cuando haya disponible soporte técnico.
+> Windows y macOS aún no admiten **TLS 1.3**.
 
 El siguiente ejemplo de C# 8.0 muestra .NET Core 3.0 en Ubuntu 18.10 al conectarse a <https://www.cloudflare.com>:
 
