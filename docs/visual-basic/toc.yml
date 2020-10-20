@@ -153,9 +153,9 @@
         - name: Tipos genéricos
           href: programming-guide/language-features/data-types/generic-types.md
           items:
-            - name: Procedimiento Definición de clases capaces de proporcionar la misma funcionalidad en tipos de datos diferentes
+            - name: Definición de clases capaces de proporcionar la misma funcionalidad en tipos diferentes
               href: programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
-            - name: Procedimiento Uso de clases genéricas
+            - name: Uso de clases genéricas
               href: programming-guide/language-features/data-types/how-to-use-a-generic-class.md
         - name: Procedimientos genéricos
           href: programming-guide/language-features/data-types/generic-procedures.md
@@ -875,14 +875,18 @@
         - name: Literal de instrucción de procesamiento XML
           href: language-reference/xml-literals/xml-processing-instruction-literal.md
     - name: Mensajes de error
-      href: language-reference/error-messages/index.md
       items:
+        - name: Introducción
+          displayName: 'error messages, compiler errors'
+          href: language-reference/error-messages/index.md
+        - name: BC30663
+          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+        - name: BC32500
+          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: '''#ElseIf'' debe ir precedida de la instrucción ''#If'' o ''#ElseIf'' correspondiente'
           href: language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
         - name: Las instrucciones "#Region" y "#End Region" no son válidas en los cuerpos de método y operaciones lambda de varias líneas
           href: language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
-        - name: No se puede aplicar '<attribute>' porque el formato del GUID '<number>' no es correcto
-          href: language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
         - name: La clase '<classname>' no es compatible con CLS porque la interfaz '<interfacename>' que implementa tampoco lo es
           href: language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
         - name: '''<elementname>'' está obsoleto (Advertencia de Visual Basic)'
@@ -949,8 +953,6 @@
           href: language-reference/error-messages/bc31043.md
         - name: '''As Any'' no se admite en instrucciones ''Declare'''
           href: language-reference/error-messages/bc30828.md
-        - name: No se puede aplicar el atributo '<attributename>' más de una vez
-          href: language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
         - name: Error de automatización
           href: language-reference/error-messages/automation-error.md
         - name: Valor de suma de comprobación incorrecto; no tiene dígitos hexadecimales o el número de dígitos hexadecimales es impar
