@@ -16,17 +16,20 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554871"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224337"
 ---
 # <a name="code-access-security"></a>Seguridad de acceso del código
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
-  
+
+> [!NOTE]
+> Dado que la seguridad de acceso del código está en desuso, el código más moderno del ecosistema de .NET no está diseñado para funcionar en un entorno de confianza parcial. Las aplicaciones que dependen de las CA no deberían esperar que las bibliotecas modernas se comporten correctamente en estos entornos, a menos que el desarrollador de bibliotecas haya realizado pasos explícitos para garantizar la compatibilidad en el espacio aislado de CAS.  
+
  Los equipos conectados de hoy en día suelen estar expuestos a código procedente de varios orígenes, posiblemente desconocidos. El código puede adjuntarse al correo electrónico, incluirse en documentos o descargarse a través de Internet. Por desgracia, muchos usuarios de equipos han experimentado personalmente las consecuencias del código móvil malintencionado, como virus y gusanos, que pueden dañar o destruir datos y costar tiempo y dinero.  
   
  Los mecanismos de seguridad más comunes proporcionan derechos a los usuarios en función de sus credenciales (normalmente una contraseña) y restringen los recursos (a menudo, los directorios y los archivos) a los que el usuario puede tener acceso. Sin embargo, este enfoque no soluciona algunos problemas: los usuarios obtienen el código de muchos orígenes, algunos de los cuales pueden ser confiables. Además, el código puede contener errores o vulnerabilidades que permitan que lo explote el código malintencionado y el usuario, a veces, no sabe cómo actuará el código. En consecuencia, los equipos pueden resultar dañados y se pueden perder datos privados si un usuario precavido y de confianza ejecuta software malintencionado o que contenga errores. La mayoría de los mecanismos de seguridad del sistema operativo requieren que cada fragmento de código deba ser de confianza para ejecutarse, excepto quizás para los scripts de una página web. Por lo tanto, sigue siendo necesario un mecanismo de seguridad de amplia aplicación que permita que el código que se origina en un equipo se ejecute con protección en otro sistema, aunque no haya ninguna relación de confianza entre los sistemas.  

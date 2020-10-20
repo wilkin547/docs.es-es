@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8b0edd9a49ca431355ab4f57fa041c5d1756d7eb
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 3164233f1ac056de385faa119143d75d3c2dc50c
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855676"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224345"
 ---
 > [!CAUTION]
 > Seguridad de acceso del código (CAS) y código de confianza parcial
@@ -13,6 +13,6 @@ ms.locfileid: "87855676"
 >
 > **Las CA no se admiten en .NET Core, .NET 5 o versiones posteriores. Las versiones de C# posteriores a 7,0 no admiten las CA.**
 >
-> Las CA de .NET Framework no deben usarse como mecanismo para aplicar los límites de seguridad basados en el origen del código u otros aspectos de identidad. Las CA y el código transparente en seguridad no se admiten como límites de seguridad con código de confianza parcial, especialmente el código de origen desconocido. Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas.
+> Las CA de .NET Framework no deben usarse como mecanismo para aplicar los límites de seguridad basados en el origen del código u otros aspectos de identidad. Las CA y el código Security-Transparent no se admiten como límites de seguridad con código de confianza parcial, especialmente el código de origen desconocido. Le aconsejamos que no cargue ni ejecute código de orígenes desconocidos sin contar con medidas de seguridad alternativas. .NET Framework no emitirá revisiones de seguridad para los ataques de elevación de privilegios que puedan detectarse en el espacio aislado de CAS.
 >
 > Esta directiva se aplica a todas las versiones de .NET Framework, pero no se aplica a la versión de .NET Framework incluida en Silverlight.
