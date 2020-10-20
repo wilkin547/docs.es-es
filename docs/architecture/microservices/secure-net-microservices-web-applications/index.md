@@ -3,12 +3,12 @@ title: Proteger microservicios y aplicaciones web de .NET
 description: 'Seguridad en microservicios y aplicaciones web .NET: familiarícese con las opciones de autenticación en las aplicaciones web ASP.NET Core.'
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 01797189ce946c39bc7b8cafdff1e69ff9760e4e
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608100"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160677"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Protección de microservicios y aplicaciones web .NET
 
@@ -119,7 +119,7 @@ public void ConfigureServices(IServiceCollection services)
 
 En la tabla siguiente se muestran proveedores de autenticación externos populares y sus paquetes NuGet asociados:
 
-| **Proveedor**  | **Package**                                          |
+| **Proveedor**  | **Paquete**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
 | **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |

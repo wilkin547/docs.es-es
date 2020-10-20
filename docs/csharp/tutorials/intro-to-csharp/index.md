@@ -3,12 +3,12 @@ title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 52b680ffe8c477624f3b5e085b7f2de13c271d81
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6037862c52fd59ba540e1f65297d787f0a964762
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609185"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162159"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -62,3 +62,7 @@ En este tutorial se presupone que ha completado los tutoriales de introducción 
 En este tutorial se enseñan los conceptos que se usan en la programación orientada a objetos. Aprenderá los conceptos de *abstracción*, *encapsulación*, *herencia* y *polimorfismo* mediante ejemplos de C#.
 
 En este tutorial se presupone que ha completado los tutoriales de introducción en línea y que ha instalado el [SDK de .NET Core](https://dotnet.microsoft.com/download) y [Visual Studio Code](https://code.visualstudio.com/) o [Visual Studio](https://visualstudio.com) en el equipo de desarrollo.
+
+## <a name="101-linq-samples"></a>[101 ejemplos de LINQ](https://github.com/dotnet/try-samples/tree/master/101-linq-samples)
+
+Este ejemplo requiere la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/main/README.md#setup). Una vez que instale la herramienta y clone el repositorio [try-samples](https://github.com/dotnet/try-samples), puede aprender Language Integrated Query (LINQ) mediante un conjunto de 101 ejemplos que puede ejecutar de forma interactiva. Puede descubrir diferentes maneras de consultar, explorar y transformar secuencias de datos.
