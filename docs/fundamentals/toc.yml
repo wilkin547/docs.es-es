@@ -1867,8 +1867,8 @@ items:
                 href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
               - name: Herramienta Definición de esquemas XML (Xsd.exe)
                 href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
-  - name: Pruebas unitarias
-    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+  - name: Pruebas
+    displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:
       - name: Información general
         href: ../core/testing/index.md
