@@ -1,25 +1,25 @@
 ---
-title: API no admitidas en .NET Core
+title: API no admitidas en .NET Core y .NET 5+
 titleSuffix: ''
-description: Obtenga información sobre qué API de .NET Framework siempre producen una excepción en .NET Core.
-ms.date: 12/23/2019
-ms.openlocfilehash: 94f334d7e4b7daf407f489ba274172ced9eefa81
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+description: Obtenga información sobre qué API de .NET siempre inician una excepción en .NET Core y .NET 5.0 y versiones posteriores.
+ms.date: 10/13/2020
+ms.openlocfilehash: 0164ebff51de82d548a02f9fde754c1052a9c2b5
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414440"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92159344"
 ---
-# <a name="apis-that-always-throw-exceptions-on-net-core"></a>API que siempre producen excepciones en .NET Core
+# <a name="apis-that-always-throw-exceptions-on-net-core-and-net-5"></a>API que siempre inician excepciones en .NET Core y .NET 5+
 
-Las siguientes API siempre producirán una <xref:System.PlatformNotSupportedException> en .NET Core en todas las plataformas, o bien en un subconjunto de estas.
+Las API siguientes siempre iniciarán una excepción <xref:System.PlatformNotSupportedException> en .NET 5.0 y versiones posteriores (incluidas todas las versiones de .NET Core) en todas las plataformas, o bien en un subconjunto de estas.
 
-En este artículo se organizan los miembros de API afectados por el espacio de nombres.
+En este artículo, las API afectadas se organizan por espacio de nombres.
 
 > [!NOTE]
 >
-> - Este artículo sigue en desarrollo. No es una lista completa de las API que producen excepciones en .NET Core.
-> - En este artículo no se incluyen las implementaciones de interfaz explícitas para la serialización binaria que se inician en .NET Core. Para obtener más información, vea [Serialización binaria en .NET Core](../../standard/serialization/binary-serialization.md#net-core).
+> - Este artículo sigue en desarrollo. No es una lista completa de las API que inician excepciones en .NET 5+.
+> - En este artículo no se incluyen las implementaciones de interfaz explícitas para la serialización binaria que inician excepciones en .NET 5+. Para obtener más información, vea [Serialización binaria en .NET Core](../../standard/serialization/binary-serialization.md#net-core).
 
 ## <a name="system"></a>Sistema
 

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 813558299b40e0b90e8047f22b788c8f1419eb5e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 524f8dc9838d7c438e8155da683c4fa5b01f36a3
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504659"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162991"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -184,7 +184,7 @@ Tipos | [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatur
 
 ### <a name="types-and-type-member-signatures"></a>Signaturas de tipos y miembros de tipo
 
-El tipo [System.Object](xref:System.Object) es conforme a CLS y es el tipo base de todos los tipos de objetos del sistema de tipos de .NET Framework. La herencia de .NET Framework es implícita (por ejemplo, la clase [String](xref:System.String) hereda implícitamente de la clase `Object`) o explícita (por ejemplo, la clase [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) hereda explícitamente de la clase [ArgumentException](xref:System.ArgumentException), que a su vez hereda también explícitamente de la clase [Exception](xref:System.Exception)). Para que un tipo derivado sea conforme a CLS, su tipo base también debe ser conforme a CLS.
+El tipo [System.Object](xref:System.Object) es conforme a CLS y es el tipo base de todos los tipos de objeto del sistema de tipos de .NET. En .NET, la herencia es implícita (por ejemplo, la clase [String](xref:System.String) hereda implícitamente de la clase `Object`) o explícita (por ejemplo, la clase [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException) hereda explícitamente de la clase [ArgumentException](xref:System.ArgumentException) que, a su vez, también hereda explícitamente de la clase [Exception](xref:System.Exception)). Para que un tipo derivado sea conforme a CLS, su tipo base también debe ser conforme a CLS.
 
 En el ejemplo siguiente se muestra un tipo derivado cuyo tipo base no es conforme a CLS. En el ejemplo, se define una clase base `Counter` que usa un entero de 32 bits sin signo como contador. Dado que la clase proporciona la funcionalidad de contador ajustando un entero sin signo, la clase se marca como no conforme a CLS. Como resultado, la clase derivada, `NonZeroCounter`, tampoco es conforme a CLS.
 
@@ -319,7 +319,7 @@ Tipo no conforme | Descripción | Alternativa conforme a CLS
 [UInt64](xref:System.UInt64) | Entero de 64 bits sin signo | [Int64](xref:System.Int64) (se puede desbordar), [BigInteger](xref:System.Numerics.BigInteger) o [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Puntero o identificador sin signo | [IntPtr](xref:System.IntPtr)
 
-La biblioteca de clases de .NET Framework o cualquier otra biblioteca de clases puede incluir otros tipos que no sean conformes a CLS; por ejemplo:
+La biblioteca de clases de .NET o cualquier otra biblioteca de clases puede incluir otros tipos que no sean conformes a CLS; por ejemplo:
 
 * Tipos de valor a los que se les ha aplicado la conversión boxing. En el siguiente ejemplo de C# se crea una clase con una propiedad pública de tipo `int*` denominada `Value`. Dado que `int*` es un tipo de valor al que se le ha aplicado la conversión boxing, el compilador lo marca como no conforme a CLS.
 
@@ -2479,7 +2479,7 @@ End Module
 
 ### <a name="attributes"></a>Atributos
 
-En los ensamblados de .NET Framework, los atributos personalizados proporcionan un mecanismo extensible para almacenar atributos personalizados y recuperar metadatos sobre objetos de programación, tales como ensamblados, tipos, miembros y parámetros de método. Los atributos personalizados deben derivar de [System.Attribute](xref:System.Attribute) o de un tipo derivado de `System.Attribute`.
+En los ensamblados de .NET, los atributos personalizados proporcionan un mecanismo extensible para almacenar atributos personalizados y recuperar metadatos sobre objetos de programación, como ensamblados, tipos, miembros y parámetros de métodos. Los atributos personalizados deben derivar de [System.Attribute](xref:System.Attribute) o de un tipo derivado de `System.Attribute`.
 
 En el ejemplo siguiente se infringe esta regla. Define una clase `NumericAttribute` que no se deriva de `System.Attribute`. Un error del compilador solo se produce cuando se aplica el atributo no conforme a CLS, y no cuando se define la clase.
 
@@ -2636,7 +2636,7 @@ En tiempo de compilación, el compilador detecta los elementos que supuestamente
 
 Los desarrolladores de componentes pueden usar el atributo `CLSCompliantAttribute` de dos maneras:
 
-* Para definir las partes de la interfaz pública expuestas por un componente que son conformes a CLS y las que no lo son. Cuando el atributo se utiliza para marcar determinados elementos del programa como conformes a CLS, este uso garantiza que dichos elementos son accesibles desde todos los lenguajes y herramientas que tienen como destino .NET Framework.
+* Para definir las partes de la interfaz pública expuestas por un componente que son conformes a CLS y las que no lo son. Cuando el atributo se usa para marcar determinados elementos del programa como conformes a CLS, su uso garantiza que esos elementos sean accesibles desde todos los lenguajes y herramientas que tienen como destino .NET.
 
 * Para garantizar que la interfaz pública de la biblioteca de componentes expone solo elementos del programa que son conformes a CLS. Si los elementos no son conformes a CLS, los compiladores normalmente emitirán una advertencia.
 
@@ -2788,7 +2788,7 @@ Si está desarrollando una aplicación en lugar de una biblioteca (es decir, si 
 
 ## <a name="cross-language-interoperability"></a>Interoperabilidad entre lenguajes
 
-La independencia de lenguaje tiene varios significados posibles. Un significado implica perfectamente tipos escritos en un lenguaje desde una aplicación escrita en otro lenguaje. Un segundo significado, que es el descrito en este artículo, implica combinar código escrito en varios lenguajes en un único ensamblado de .NET Framework.
+La independencia de lenguaje tiene varios significados posibles. Un significado implica perfectamente tipos escritos en un lenguaje desde una aplicación escrita en otro lenguaje. Un segundo significado, que es el descrito en este artículo, implica combinar código escrito en varios lenguajes en un único ensamblado de .NET.
 
 El ejemplo siguiente muestra la interoperabilidad entre lenguajes creando una biblioteca de clases de denominada Utilities.dll que incluye dos clases, `NumericLib` y `StringLib`. La clase `NumericLib` está escrita en C#, y la clase `StringLib` está escrita en Visual Basic. A continuación se muestra el código fuente para `StringUtil.vb`, que incluye un solo miembro, `ToTitleCase`, en su clase `StringLib`.
 

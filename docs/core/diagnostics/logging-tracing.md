@@ -1,13 +1,13 @@
 ---
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
-ms.date: 08/05/2019
-ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 10/12/2020
+ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714421"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997703"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -78,10 +78,10 @@ Es posible que las API de bajo nivel no sean la opción adecuada para sus necesi
 
 La interfaz de <xref:Microsoft.Extensions.Logging.ILogger> se ha utilizado para crear una interfaz de registro común en la que se pueden insertar los registradores mediante la inserción de dependencias.
 
-Por ejemplo, para que pueda elegir la mejor opción para la aplicación, `ASP.NET` ofrece compatibilidad con una selección de marcos integrados y de terceros:
+Por ejemplo, para que pueda elegir la mejor opción para la aplicación, .NET ofrece compatibilidad con una selección de marcos integrados y de terceros:
 
-- [Proveedores de registro integrados de ASP.NET](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [Proveedores de registro de terceros de ASP.NET](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [Proveedores de registro integrados de .NET](../extensions/logging-providers.md#built-in-logging-providers)
+- [Proveedores de registro de terceros de .NET](../extensions/logging-providers.md#third-party-logging-providers)
 
 ## <a name="logging-related-references"></a>Referencias relacionadas de registro
 
@@ -89,9 +89,9 @@ Por ejemplo, para que pueda elegir la mejor opción para la aplicación, `ASP.NE
 
 - [Adición de instrucciones de seguimiento al código de la aplicación](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [El registro de ASP.NET](/aspnet/core/fundamentals/logging) proporciona información general sobre las técnicas de registro que admite.
+- El [registro de .NET](../extensions/logging.md) proporciona información general sobre las técnicas de registro que admite.
 
-- [La interpolación de cadenas de C#](../../csharp/language-reference/tokens/interpolated.md) puede simplificar la escritura de código de registro.
+- La [interpolación de cadenas de C#](../../csharp/language-reference/tokens/interpolated.md) puede simplificar la escritura de código de registro.
 
 - La propiedad <xref:System.Exception.Message?displayProperty=nameWithType> es útil para las excepciones de registro.
 

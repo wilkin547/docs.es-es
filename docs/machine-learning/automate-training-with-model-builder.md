@@ -3,12 +3,12 @@ title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: da6348fb5dde83827558b66b6115d681f08948db
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679682"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92161145"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
@@ -54,9 +54,15 @@ La regresión se usa para predecir números.
 
 #### <a name="image-classification"></a>Clasificación de la imagen
 
-La clasificación de la imagen se puede utilizar para identificar imágenes de distintas categorías. Por ejemplo, diferentes tipos de terreno, animales o defectos de fabricación.
+La clasificación de imágenes se usa para identificar imágenes de distintas categorías. Por ejemplo, diferentes tipos de terreno, animales o defectos de fabricación.
 
 Puede usar el escenario de clasificación de la imagen si tiene un conjunto de imágenes y desea clasificar las imágenes en distintas categorías.
+
+#### <a name="object-detection"></a>Detección de objetos
+
+La detección de objetos se usa para ubicar y categorizar entidades dentro de las imágenes.  Por ejemplo, para buscar e identificar automóviles y personas en una imagen.
+
+Puede usar la detección de objetos cuando las imágenes contengan varios objetos de tipos diferentes.
 
 #### <a name="recommendation"></a>Recomendación
 
@@ -66,13 +72,15 @@ Puede usar el escenario de recomendación cuando tenga un conjunto de usuarios y
 
 ## <a name="environment"></a>Entorno
 
-Puede entrenar el modelo de aprendizaje automático localmente en la máquina o en la nube en Azure.
+Puede entrenar el modelo de Machine Learning localmente en el equipo o en la nube en Azure, en función del escenario.
 
 Al entrenar localmente, se trabaja dentro de las restricciones de los recursos del equipo (CPU, memoria y disco). Al entrenar en la nube, puede escalar verticalmente los recursos para satisfacer las demandas de su escenario, especialmente para grandes conjuntos de valores.
 
-El entrenamiento local se admite en todos los escenarios.
+El entrenamiento de CPU local se admite en todos los escenarios excepto en la detección de objetos.
 
-El entrenamiento de Azure se admite para la clasificación de imágenes.
+El entrenamiento de GPU local se admite para la clasificación de imágenes.
+
+El entrenamiento de Azure se admite para la clasificación de imágenes y la detección de objetos.
 
 ## <a name="data"></a>Datos
 

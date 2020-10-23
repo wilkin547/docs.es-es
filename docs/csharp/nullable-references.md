@@ -3,12 +3,12 @@ title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446677"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160885"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -124,6 +124,84 @@ El compilador genera advertencias cuando se desreferencia una variable o expresi
 ## <a name="attributes-describe-apis"></a>Atributos que describen las API
 
 Agregue atributos a las API que proporcionen al compilador más información sobre cuándo los argumentos o valores devueltos pueden admitir o no valores NULL. Puede obtener más información sobre estos atributos en nuestro artículo de la referencia del lenguaje que trata de los [atributos que admiten valores NULL](language-reference/attributes/nullable-analysis.md). Estos atributos se agregan a las bibliotecas de .NET a través de las versiones actuales y futuras. Las API que se usan más a menudo se actualizan primero.
+
+## <a name="known-pitfalls"></a>Problemas conocidos
+
+Las matrices y las estructuras que contienen tipos de referencia son problemas conocidos de la característica de tipos de referencia que aceptan valores NULL.
+
+### <a name="structs"></a>Estructuras
+
+Una estructura que contiene tipos de referencia que no aceptan valores NULL permite asignarle `default` sin ninguna advertencia. Considere el ejemplo siguiente:
+
+```csharp
+using System;
+
+#nullable enable
+
+public struct Student
+{
+    public string FirstName;
+    public string? MiddleName;
+    public string LastName;
+}
+
+public static class Program
+{
+    public static void PrintStudent(Student student)
+    {
+        Console.WriteLine($"First name: {student.FirstName.ToUpper()}");
+        Console.WriteLine($"Middle name: {student.MiddleName.ToUpper()}");
+        Console.WriteLine($"Last name: {student.LastName.ToUpper()}");
+    }
+
+    public static void Main() => PrintStudent(default);
+}
+```
+
+En el ejemplo anterior, no hay ninguna advertencia en `PrintStudent(default)` mientras que los tipos de referencia que no aceptan valores NULL `FirstName` y `LastName` son NULL.
+
+Otro caso más común es cuando se trata de estructuras genéricas. Considere el ejemplo siguiente:
+
+```csharp
+#nullable enable
+
+public struct Foo<T>
+{
+    public T Bar { get; set; }
+}
+
+public static class Program
+{
+    public static void Main()
+    {
+        string s = default(Foo<string>).Bar;
+    }
+}
+```
+
+En el ejemplo anterior, la propiedad `Bar` será `null` en tiempo de ejecución y se asigna a una cadena que no acepta valores NULL sin ninguna advertencia.
+
+### <a name="arrays"></a>Matrices
+
+Las matrices también son un problema conocido en los tipos de referencia que aceptan valores NULL. Considere el ejemplo siguiente, que no genera ninguna advertencia:
+
+```csharp
+using System;
+
+#nullable enable
+
+public static class Program
+{
+    public static void Main()
+    {
+        string[] values = new string[10];
+        string s = values[0];
+        Console.WriteLine(s.ToUpper());
+    }
+}
+```
+
+En el ejemplo anterior, la declaración de la matriz muestra que contiene cadenas que no aceptan valores NULL, mientras que todos sus elementos se inicializan en NULL. Después, a la variable `s` se le asigna un valor NULL (el primer elemento de la matriz). Por último, se desreferencia la variable `s`, lo que genera una excepción en tiempo de ejecución.
 
 ## <a name="see-also"></a>Vea también
 

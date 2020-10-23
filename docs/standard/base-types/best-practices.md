@@ -7,15 +7,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- .NET Framework regular expressions, best practices
+- .NET regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 727c3f2b8465c5d69244abe0f441d2a24e84dc5f
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554585"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162926"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 
@@ -136,7 +136,7 @@ El patrón de expresión regular usado en el ejemplo, `\b(\w+((\r?\n)|,?\s))*\w+
 
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>Expresiones regulares: compiladas en un ensamblado
 
-.NET también permite crear un ensamblado que contenga expresiones regulares compiladas. Esto lleva la merma de rendimiento de la compilación de la expresión regular del tiempo de ejecución al tiempo de diseño. Aunque también implica cierto trabajo adicional: Hay que definir las expresiones regulares de antemano y compilarlas en un ensamblado. El compilador puede hacer referencia a este ensamblado al compilar código fuente que usa expresiones regulares del ensamblado. Cada expresión regular compilada del ensamblado está representada por una clase que se deriva de <xref:System.Text.RegularExpressions.Regex>.
+.NET también permite crear un ensamblado que contenga expresiones regulares compiladas. Esto lleva la merma de rendimiento de la compilación de la expresión regular del tiempo de ejecución al tiempo de diseño. Aunque también implica cierto trabajo adicional: Hay que definir las expresiones regulares de antemano y compilarlas en un ensamblado. Después, el compilador puede hacer referencia a este ensamblado al compilar código fuente en el que se usan las expresiones regulares del ensamblado. Cada expresión regular compilada del ensamblado está representada por una clase que se deriva de <xref:System.Text.RegularExpressions.Regex>.
 
 Para compilar expresiones regulares en un ensamblado, se llama al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> y se le pasa una matriz de objetos <xref:System.Text.RegularExpressions.RegexCompilationInfo> que representan las expresiones regulares que se van a compilar y un objeto <xref:System.Reflection.AssemblyName> que contiene información sobre el ensamblado que se va a crear.
 

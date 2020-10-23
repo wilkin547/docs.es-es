@@ -2,49 +2,60 @@
 title: Componentes de la arquitectura .NET
 description: Describe los componentes de la arquitectura .NET, como .NET Standard, las implementaciones de .NET, los entornos de ejecución de .NET y las herramientas.
 author: cartermp
-ms.date: 08/23/2017
+ms.date: 10/05/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: fc34cf35e82e3a401f32561aa239996c7697aa03
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0cdd2485e81626ffc9d17380427c29fee0f82083
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547680"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050258"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
-Una aplicación de .NET se desarrolla y se ejecuta en una o varias *implementaciones de .NET*.  Las implementaciones de .NET incluyen .NET Framework, .NET Core y Mono. Hay una especificación de API común a todas las implementaciones de .NET que se denomina .NET Standard. En este artículo, se ofrece una breve introducción a cada uno de estos conceptos.
+Una aplicación de .NET se desarrolla y se ejecuta en una o varias *implementaciones de .NET*. Las implementaciones de .NET incluyen .NET Framework, .NET 5 (y .NET Core) y Mono. Hay una especificación de API común a varias implementaciones de .NET que se denomina .NET Standard. En este artículo, se ofrece una breve introducción a cada uno de estos conceptos.
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard es un conjunto de API que se implementan mediante la biblioteca de clases base de una implementación de .NET. Más formalmente, es una especificación de API de .NET que constituyen un conjunto uniforme de contratos contra los que se compila el código. Estos contratos se implementan en cada implementación de .NET. Esto permite la portabilidad entre diferentes implementaciones de .NET, de forma que el código se puede ejecutar en cualquier parte.
+.NET Standard es un conjunto de API que se implementan mediante la biblioteca de clases base de una implementación de .NET. Más formalmente, es una especificación de API de .NET que constituyen un conjunto uniforme de contratos contra los que se compila el código. Estos contratos se implementan en varias implementaciones de .NET.
 
-.NET Standard es también una [plataforma de destino](glossary.md#target-framework). Si el código tiene como destino una versión de .NET Standard, se puede ejecutar en cualquier implementación de .NET que sea compatible con esa versión de .NET Standard.
+.NET Standard es una [plataforma de destino](glossary.md#target-framework). Si el código tiene como destino una versión de .NET Standard, se puede ejecutar en cualquier implementación de .NET que sea compatible con esa versión de .NET Standard.
 
-Para obtener más información sobre .NET Standard y cómo tenerlo como destino, consulte [.NET Standard](net-standard.md).
+.NET Standard se creó para permitir la portabilidad en diferentes implementaciones de .NET, pero ahora .NET 5 ofrece una mejor manera de compartir código entre varias plataformas y cargas de trabajo. Para obtener más información, vea [.NET 5 y .NET Standard](net-standard.md#net-5-and-net-standard).
 
 ## <a name="net-implementations"></a>Implementaciones de .NET
 
 Cada implementación de .NET incluye los siguientes componentes:
 
-- Uno o varios entornos de ejecución. Ejemplos: CLR para .NET Framework, CoreCLR y CoreRT para .NET Core.
-- Una biblioteca de clases que implementa .NET Standard y puede implementar API adicionales. Ejemplos: biblioteca de clases base de .NET Framework, biblioteca de clases base de .NET Core.
-- Opcionalmente, uno o varios marcos de trabajo de la aplicación. Ejemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) y [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) se incluyen en .NET Framework y .NET Core.
+- Uno o varios entornos de ejecución. Ejemplos: CLR de .NET Framework, CLR de .NET 5.
+- Una biblioteca de clases. Ejemplos: biblioteca de clases base de .NET Framework, biblioteca de clases base de .NET 5.
+- Opcionalmente, uno o varios marcos de trabajo de la aplicación. Ejemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) y [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) se incluyen en .NET Framework y .NET 5.
 - Opcionalmente, herramientas de desarrollo. Algunas herramientas de desarrollo se comparten entre varias implementaciones.
 
-Hay cuatro implementaciones principales de .NET que Microsoft desarrolla y mantiene activamente: .NET Core, .NET Framework, Mono y UWP.
+Microsoft admite cuatro implementaciones de .NET:
 
-### <a name="net-core"></a>.NET Core
+- .NET 5 (y .NET Core) y versiones posteriores
+- .NET Framework
+- Mono
+- UWP
 
-.NET Core es una implementación multiplataforma de .NET diseñada para controlar cargas de trabajo de servidor y en la nube a escala. Se ejecuta en Windows, macOS y Linux. Implementa .NET Standard, de forma que cualquier código que tenga como destino .NET Standard se puede ejecutar en .NET Core. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) y [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) se ejecutan todos en .NET Core.
+.NET 5 es ahora la implementación principal, la que recibe desarrollo continuo. .NET 5 se basa en una única base de código que admite varias plataformas y muchas cargas de trabajo, como aplicaciones de escritorio de Windows y aplicaciones de consola multiplataforma, servicios en la nube y sitios web.
 
-Para obtener más información sobre .NET Core, consulte [Guía de .NET Core](../core/introduction.md) y [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md).
+### <a name="net-5"></a>.NET 5
+
+.NET 5 es una implementación multiplataforma de .NET diseñada para controlar cargas de trabajo de servidor y en la nube a escala. También admite otras cargas de trabajo, incluidas las aplicaciones de escritorio. Se ejecuta en Windows, macOS y Linux. Implementa .NET Standard, de forma que cualquier código que tenga como destino .NET Standard se puede ejecutar en .NET 5. [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), [Windows Forms](/dotnet/desktop/winforms/windows-forms-overview) y [Windows Presentation Foundation (WPF)](/dotnet/desktop/wpf/) se ejecutan en .NET 5.
+
+Para obtener más información, vea los siguientes recursos:
+
+- [Introducción a .NET](../core/introduction.md)
+- [Elección entre .NET 5 y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)
+- [.NET 5 y .NET Standard](net-standard.md#net-5-and-net-standard)
 
 ### <a name="net-framework"></a>.NET Framework
 
 .NET Framework es la implementación de .NET original que existe desde 2002. Las versiones 4.5 y posteriores implementan .NET Standard, de forma que el código que tiene como destino .NET Standard se puede ejecutar en esas versiones de .NET Framework. Contiene API específicas de Windows adicionales, como API para el desarrollo de escritorio de Windows con Windows Forms y WPF. .NET Framework está optimizado para crear aplicaciones de escritorio de Windows.
 
-Para más información sobre .NET Framework, consulte la [Guía de .NET Framework](../framework/index.yml).
+Para obtener más información, vea la [guía de .NET Framework](../framework/index.yml).
 
 ### <a name="mono"></a>Mono
 
@@ -56,20 +67,20 @@ Históricamente, Mono implementaba la API de .NET Framework más grande y emulab
 
 Mono se suele usar con un compilador Just-In-Time, pero también incluye un compilador estático completo (compilación Ahead Of Time) que se usa en plataformas como iOS.
 
-Para más información sobre Mono, consulte la [documentación de Mono](https://www.mono-project.com/docs/).
+Para obtener más información, vea la [documentación de Mono](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Plataforma universal de Windows (UWP)
 
-UWP es una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript. Al usar C# y Visual Basic, .NET Core proporciona las API de .NET.
+UWP es una implementación de .NET que se usa para compilar aplicaciones Windows modernas y táctiles y software para Internet de las cosas (IoT). Se ha diseñado para unificar los diferentes tipos de dispositivos de destino, incluidos equipos, tabletas, teléfonos e incluso la consola Xbox. UWP proporciona muchos servicios, como una tienda de aplicaciones centralizada, un entorno de ejecución (AppContainer) y un conjunto de API de Windows para usar en lugar de Win32 (WinRT). Pueden escribirse aplicaciones en C++, C#, Visual Basic y JavaScript.
 
-Para obtener más información sobre UWP, vea [Introducción a la Plataforma universal de Windows](/windows/uwp/get-started/universal-application-platform-guide).
+Para obtener más información, vea [Introducción a la Plataforma universal de Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>Entornos de tiempo de ejecución .NET
 
 Un entorno de ejecución es el entorno de ejecución de un programa administrado. El sistema operativo forma parte del entorno de ejecución, pero no del entorno de ejecución .NET. Estos son algunos ejemplos de los entornos de ejecución .NET:
 
 - Common Language Runtime (CLR) para .NET Framework
-- Core Common Language Runtime (CoreCLR) para .NET Core
+- Common Language Runtime (CLR) para .NET 5
 - .NET Native para la Plataforma universal de Windows
 - El entorno de ejecución Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac y el marco de escritorio de Mono
 
@@ -82,6 +93,8 @@ Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructu
 - [MSBuild](/visualstudio/msbuild/msbuild), el motor de compilación usado para compilar proyectos
 - [NuGet](/nuget/), administrador de paquetes de Microsoft para .NET
 - Herramientas de organización de compilación de código abierto, como [CAKE](https://cakebuild.net/) y [FAKE](https://fake.build/)
+
+Para obtener más información, vea [Herramientas y productividad](../core/introduction.md#tools-and-productivity).
 
 ## <a name="applicable-standards"></a>Estándares aplicables
 
@@ -105,9 +118,9 @@ Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Está
 
 ## <a name="see-also"></a>Vea también
 
-- [Selección entre .NET Core y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)
+- [Introducción a .NET](../core/introduction.md)
 - [Introducción a .NET Standard](net-standard.md)
-- [Introducción a .NET Core](../core/introduction.md)
+- [Elección entre .NET 5 y .NET Framework para aplicaciones de servidor](choosing-core-framework-server.md)
 - [Guía de .NET Framework](../framework/index.yml)
 - [Guía de C#](../csharp/index.yml)
 - [Guía de F#](../fsharp/index.yml)

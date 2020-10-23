@@ -7,18 +7,18 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - strong-named assemblies
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - strong-named assemblies, scenarios
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], strong-named
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 79c8cf2c21210fd80392a8aacf92840c11a36e43
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1d87edde97e77011b678662f61500c7acd8293b0
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378529"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92162718"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -46,7 +46,7 @@ En el siguiente escenario se firma un ensamblado con un nombre seguro y después
 
 3. El ensamblado B es un consumidor del ensamblado A. La sección de referencia del manifiesto del ensamblado B contiene un token que representa la clave pública del ensamblado A. Un token es una parte de la clave pública completa y se usa en lugar de la propia clave para ahorrar espacio.
 
-4. Common Language Runtime comprueba la firma de nombre seguro cuando el ensamblado se ubica en la caché global de ensamblados. Al enlazar por nombre seguro en tiempo de ejecución, Common Language Runtime compara la clave almacenada en el manifiesto del ensamblado B con la clave usada para generar el nombre seguro del ensamblado A. Si se superan las comprobaciones de seguridad de .NET Framework y el enlace se realiza correctamente, el ensamblado B tiene la garantía de que los bits del ensamblado A no se han alterado y que esos bits proceden realmente de los desarrolladores del ensamblado A.
+4. Common Language Runtime comprueba la firma de nombre seguro cuando el ensamblado se ubica en la caché global de ensamblados. Al enlazar por nombre seguro en tiempo de ejecución, Common Language Runtime compara la clave almacenada en el manifiesto del ensamblado B con la que se usa para generar el nombre seguro del ensamblado A. Si se superan las comprobaciones de seguridad de .NET y el enlace se realiza correctamente, el ensamblado B tiene la garantía de que los bits del ensamblado A no se han alterado y que proceden realmente de los desarrolladores del ensamblado A.
 
 > [!NOTE]
 > Este escenario no soluciona los problemas de confianza. Los ensamblados pueden llevar firmas completas de Microsoft Authenticode además de un nombre seguro. Las firmas de Authenticode incluyen un certificado que establece la confianza. Es importante tener en cuenta que los nombres seguros no requieren que el código se firme de esta manera. Los nombres seguros solo proporcionan una identidad única.

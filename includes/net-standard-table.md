@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72b371dc2a6475efa2e0353f87dbdfa96c4c7c0e
+ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74802840"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92050406"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
-| .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
+| .NET Core y .NET 5       | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 | 3.0 |
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | N/A<sup>3</sup> |
 | Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
 | Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
@@ -21,7 +21,7 @@ ms.locfileid: "74802840"
 
 <sup>2 Las versiones siguientes representan las reglas que usa NuGet para determinar si una determinada biblioteca de .NET Standard es aplicable. Aunque NuGet considera a .NET Framework 4.6.1 compatible con .NET Standard (versiones 1.5 a 2.0) hay varios problemas con el consumo de bibliotecas de .NET Standard que se compilaron para esas versiones desde proyectos de .NET Framework 4.6.1. Para los proyectos de .NET Framework que tengan que usar estas bibliotecas, se recomienda actualizar el proyecto para destinarlo a .NET Framework 4.7.2 o una versión posterior.</sup>
 
-<sup>3 .NET Framework no admitirá .NET Standard 2.1 o versiones posteriores. Para más detalles, vea el [anuncio de .NET Standard 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/).</sup>
+<sup>3 .NET Framework no es compatible con .NET Standard 2.1. Para obtener más información, vea el [anuncio de .NET Standard 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/).</sup>
 
 - Las columnas representan las versiones de .NET Standard. Cada celda de encabezado es un vínculo a un documento que muestra qué API se han agregado en esa versión de .NET Standard.
 - Las filas representan las diferentes implementaciones de .NET.

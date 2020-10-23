@@ -2,12 +2,12 @@
 title: Programación orientada a objetos (C#)
 description: C# proporciona compatibilidad completa para la programación orientada a objetos incluida la abstracción, la encapsulación, la herencia y el polimorfismo.
 ms.date: 09/30/2020
-ms.openlocfilehash: 8a8dc8dc6d40c539b988ea203654d994e88c357a
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 6e0155621be544b01453b8c107debb3a9b6c38f9
+ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91614666"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91997657"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
@@ -162,7 +162,7 @@ Reemplácelo por el código siguiente:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-El método agregado es  , lo que significa que solo se le puede llamar desde clases derivadas. Esa declaración impide que otros clientes llamen al método. También es `virtual` para que las clases derivadas puedan cambiar el comportamiento. El tipo de valor devuelto es `Transaction?`. La anotación `?` indica que el método puede devolver `null`. Agregue la siguiente implementación en `LineOfCreditAccount` para cobrar una cuota cuando se supere el límite de retirada:
+El método agregado es `protected`, lo que significa que solo se puede llamar desde clases derivadas. Esa declaración impide que otros clientes llamen al método. También es `virtual` para que las clases derivadas puedan cambiar el comportamiento. El tipo de valor devuelto es `Transaction?`. La anotación `?` indica que el método puede devolver `null`. Agregue la siguiente implementación en `LineOfCreditAccount` para cobrar una cuota cuando se supere el límite de retirada:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 

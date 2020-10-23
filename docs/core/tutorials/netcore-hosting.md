@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 03cf188fc74e8a70798c0bcc4a6940730abfc07c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 380bfb3aa5e5715fe95e0d7772700bac9ab4a5be
+ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180469"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92160989"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -27,7 +27,7 @@ También querrá una aplicación de .NET Core sencilla con la que probar el host
 
 ## <a name="hosting-apis"></a>API de hospedaje
 
-Hay tres API distintas que pueden usarse para hospedar .NET Core. En este artículo (y sus [ejemplos](https://github.com/dotnet/samples/tree/master/core/hosting) asociados) se tratan todas las opciones.
+Hay dos API distintas que pueden usarse para hospedar .NET Core. En este artículo (y sus [ejemplos](https://github.com/dotnet/samples/tree/master/core/hosting) asociados) se describen estas dos opciones.
 
 * El método preferido para hospedar el tiempo de ejecución de .NET Core en .NET Core 3.0 y superior es con las APIs de las bibliotecas `nethost` y `hostfxr`. Estos puntos de entrada tratan la complejidad de buscar y configurar el entorno de ejecución para la inicialización y permiten tanto el inicio de una aplicación administrada como la llamada a un método administrado estático.
 * El método preferido para hospedar el entorno de ejecución .NET Core antes de la versión .NET Core 3.0 es con la API de [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h). Esta API expone funciones para iniciar y detener fácilmente el entorno de ejecución e invocar código administrado (ya sea mediante el inicio de un archivo .exe administrado o una llamada a métodos estáticos administrados).
@@ -40,11 +40,11 @@ Tenga en cuenta que los hosts de ejemplo están pensados para usarse con fines d
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>Creación de un host mediante `nethost.h` y `hostfxr.h`
 
-En los siguientes pasos se explica cómo usar las bibliotecas `nethost` y `hostfxr` para iniciar el entorno de ejecución de .NET Core en una aplicación nativa y llamar a un método estático administrado. En el [ejemplo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) se utiliza el encabezado `nethost` y la biblioteca instalados con el SDK de .NET así como copias de los archivos [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) y [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) del repositorio [dotnet/core-setup](https://github.com/dotnet/core-setup).
+En los siguientes pasos se explica cómo usar las bibliotecas `nethost` y `hostfxr` para iniciar el entorno de ejecución de .NET Core en una aplicación nativa y llamar a un método estático administrado. En el [ejemplo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) se usa el encabezado `nethost` y la biblioteca instalados con el SDK de .NET así como copias de los archivos [`coreclr_delegates.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/coreclr_delegates.h) y [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) del repositorio [dotnet/runtime](https://github.com/dotnet/runtime).
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>Paso 1: Carga de `hostfxr` y obtención de funciones de hospedaje exportadas
 
-La biblioteca `nethost` proporciona la función `get_hostfxr_path` para buscar la biblioteca `hostfxr`. La biblioteca `hostfxr` expone funciones para hospedar el entorno de ejecución de .NET Core. Encontrará la lista completa de funciones en [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) y en el [documento de diseño de hospedaje nativo](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md). El ejemplo y este tutorial usan lo siguiente:
+La biblioteca `nethost` proporciona la función `get_hostfxr_path` para buscar la biblioteca `hostfxr`. La biblioteca `hostfxr` expone funciones para hospedar el entorno de ejecución de .NET Core. Encontrará la lista completa de funciones en [`hostfxr.h`](https://github.com/dotnet/runtime/blob/master/src/installer/corehost/cli/hostfxr.h) y en el [documento de diseño de hospedaje nativo](https://github.com/dotnet/runtime/blob/master/docs/design/features/native-hosting.md). El ejemplo y este tutorial usan lo siguiente:
 
 * `hostfxr_initialize_for_runtime_config`: Inicializa un contexto de host y se prepara para la inicialización del entorno de ejecución de .NET Core mediante la configuración del entorno de ejecución especificado.
 * `hostfxr_get_runtime_delegate`: Obtiene un delegado para la funcionalidad del entorno de ejecución.
