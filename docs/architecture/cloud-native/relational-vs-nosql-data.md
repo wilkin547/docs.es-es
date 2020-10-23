@@ -3,12 +3,12 @@ title: Soluciones relacionales y datos NoSQL
 description: Más información sobre los datos relacionales y NoSQL en aplicaciones nativas de la nube
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: 6e7725c2d67452218d1c6bda89c2fec6aa4a2b96
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163640"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434860"
 ---
 # <a name="relational-vs-nosql-data"></a>Soluciones relacionales y datos NoSQL
 
@@ -30,7 +30,7 @@ Las bases de datos NoSQL incluyen varios modelos diferentes para el acceso y la 
 | :-------- | :-------- |
 | Almacén de documentos | Los datos y los metadatos se almacenan de forma jerárquica en documentos basados en JSON dentro de la base de datos. |
 | Almacén de valores de clave | La más sencilla de las bases de datos NoSQL, los datos se representan como una colección de pares clave-valor. |
-| Almacén de columnas anchas | Los datos relacionados se almacenan como un conjunto de pares de clave-valor anidados dentro de una sola columna. |
+| Wide-Column Store | Los datos relacionados se almacenan como un conjunto de pares de clave-valor anidados dentro de una sola columna. |
 | Almacén de grafos | Los datos se almacenan en una estructura de grafos como propiedades de nodo, borde y datos. |
 
 ## <a name="the-cap-theorem"></a>Teorema CAP
@@ -65,7 +65,7 @@ Este tipo de resultado se conoce como coherencia eventual, una característica d
 
 La alta disponibilidad y la escalabilidad masiva suelen ser más críticas para el negocio que la coherencia fuerte. Los desarrolladores pueden implementar técnicas y patrones como sagas, CQRS y mensajería asincrónica para adoptar la coherencia final.
 
-> En la actualidad, se debe tener cuidado al conidering las restricciones de teorema CAP. Ha surgido un nuevo tipo de base de datos, denominado NewSQL, que extiende el motor de base de datos relacional para admitir la escalabilidad horizontal y el rendimiento escalable de los sistemas NoSQL.
+> En la actualidad, se debe tener cuidado al considerar las restricciones de teorema CAP. Ha surgido un nuevo tipo de base de datos, denominado NewSQL, que extiende el motor de base de datos relacional para admitir la escalabilidad horizontal y el rendimiento escalable de los sistemas NoSQL.
 
 ## <a name="considerations-for-relational-vs-nosql-systems"></a>Consideraciones sobre sistemas relacionales y NoSQL
 
@@ -107,7 +107,7 @@ En la ilustración anterior, tenga en cuenta que cada una de ellas se basa en un
 Estas características son especialmente importantes para las organizaciones que aprovisionan un gran número de bases de datos, pero tienen recursos limitados para administrarlas.
 Puede aprovisionar una base de datos de Azure en minutos seleccionando la cantidad de núcleos de procesamiento, la memoria y el almacenamiento subyacente. Puede escalar la base de datos sobre la marcha y ajustar dinámicamente los recursos con poco o ningún tiempo de inactividad.
 
-## <a name="azure-sql-database"></a>Azure SQL Database
+## <a name="azure-sql-database"></a>Azure SQL Database
 
 Los equipos de desarrollo con experiencia en Microsoft SQL Server deben considerar [Azure SQL Database](/azure/sql-database/). Es una base de datos relacional como servicio (DBaaS) totalmente administrada basada en el Motor de base de datos de Microsoft SQL Server. El servicio comparte muchas características que se encuentran en la versión local de SQL Server y ejecuta la versión estable más reciente del Motor de base de datos de SQL Server.
 
@@ -131,7 +131,7 @@ Sin embargo, Microsoft continúa su compromiso de mantener Azure como una "plata
 
 ### <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)   es una base de datos relacional de código abierto y un pilar para aplicaciones basadas en la [pila de software LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Ampliamente elegido para cargas de trabajo de *lectura intensiva* , se usa en muchas organizaciones de gran tamaño, como Facebook, Twitter y YouTube. La edición Community está disponible de forma gratuita, mientras que la edición Enterprise requiere una compra de licencias. Creado originalmente en 1995, el producto fue adquirido por Sun Microsystems en 2008. Oracle adquirió Sun y MySQL en 2010.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) es una base de datos relacional de código abierto y un pilar para aplicaciones basadas en la [pila de software LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)). Ampliamente elegido para cargas de trabajo de *lectura intensiva* , se usa en muchas organizaciones de gran tamaño, como Facebook, Twitter y YouTube. La edición Community está disponible de forma gratuita, mientras que la edición Enterprise requiere una compra de licencias. Creado originalmente en 1995, el producto fue adquirido por Sun Microsystems en 2008. Oracle adquirió Sun y MySQL en 2010.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) es un servicio de base de datos relacional administrado basado en el motor de servidor de MySQL de código abierto. Usa MySQL Community Edition. El servidor de Azure MySQL es el punto administrativo para el servicio. Es el mismo motor de MySQL Server que se usa para las implementaciones locales. El motor puede crear una sola base de datos por servidor o varias bases de datos por cada servidor que comparta recursos. Puede seguir administrando los datos con las mismas herramientas de código abierto sin tener que aprender nuevas habilidades ni administrar máquinas virtuales.
 
@@ -233,7 +233,7 @@ Azure Cosmos DB ofrece cinco [modelos de coherencia](/azure/cosmos-db/consistenc
 | Ocasional | No hay garantía de ordenación para las lecturas. Finalmente, las réplicas convergerán. |
 | Prefijo constante | Las lecturas siguen siendo eventuales, pero los datos se devuelven en el orden en que se escriben. |
 | Sesión | Garantiza que se pueden leer los datos escritos durante la sesión actual. Es el nivel de coherencia predeterminado. |
-| De obsolescencia limitada | Lee las escrituras finales por el intervalo que especifique. |  
+| De obsolescencia entrelazada | Lee las escrituras finales por el intervalo que especifique. |  
 | Alta  | Se garantiza que las lecturas devuelven la última versión confirmada de un elemento. Un cliente nunca ve una lectura parcial o no confirmada. |  
 
 En el artículo que se [encuentra detrás de la bola: Cosmos dB se han explicado los niveles de coherencia](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), el administrador de programas de Microsoft Jeremy Likness proporciona una excelente explicación de los cinco modelos.
@@ -258,7 +258,7 @@ Internamente, Cosmos DB administra automáticamente la ubicación de las [partic
 
 ## <a name="newsql-databases"></a>Bases de datos NewSQL
 
-*NewSQL*   es una tecnología de base de datos emergente que combina la escalabilidad distribuida de NoSQL con las garantías ACID de una base de datos relacional. Las bases de datos de NewSQL son importantes para los sistemas empresariales que deben procesar grandes volúmenes de datos, en entornos distribuidos, con compatibilidad total transaccional y cumplimiento de ACID. Aunque una base de datos NoSQL puede proporcionar una escalabilidad masiva, no garantiza la coherencia de los datos. Los problemas intermitentes de los datos incoherentes pueden suponer una carga en el equipo de desarrollo. Los desarrolladores deben crear medidas de seguridad en su código de microservicio para administrar los problemas causados por datos incoherentes.
+*NewSQL* es una tecnología de base de datos emergente que combina la escalabilidad distribuida de NoSQL con las garantías acid de una base de datos relacional. Las bases de datos de NewSQL son importantes para los sistemas empresariales que deben procesar grandes volúmenes de datos, en entornos distribuidos, con compatibilidad total transaccional y cumplimiento de ACID. Aunque una base de datos NoSQL puede proporcionar una escalabilidad masiva, no garantiza la coherencia de los datos. Los problemas intermitentes de los datos incoherentes pueden suponer una carga en el equipo de desarrollo. Los desarrolladores deben crear medidas de seguridad en su código de microservicio para administrar los problemas causados por datos incoherentes.
 
 Cloud Native Computing Foundation (CNCF) incluye varios proyectos de base de datos NewSQL.
 
