@@ -149,9 +149,13 @@ items:
         href: ../standard/whats-new/whats-new-in-dotnet-standard.md
   - name: Herramientas y diagnósticos
     items:
+      - name: Información general
+        displayName: 'diagnostics,tools,tooling,productivity,instrumentation'
+        href: tools-and-productivity.md
       - name: SDK de .NET Core
         items:
           - name: Información general
+            displayName: '.net sdk,software development kit,software dev kit,tool'
             href: ../core/sdk.md
           - name: Mensajes de error
             items:
@@ -166,6 +170,7 @@ items:
       - name: CLI de .NET Core
         items:
           - name: Información general
+            displayName: '.net cli,command-line interface,cli,tool'
             href: ../core/tools/index.md
           - name: Referencia
             items:
@@ -255,23 +260,6 @@ items:
                     href: ../core/tools/dotnet-list-package.md
                   - name: dotnet remove package
                     href: ../core/tools/dotnet-remove-package.md
-          - name: Herramientas globales y locales
-            items:
-              - name: Administración de herramientas
-                href: ../core/tools/global-tools.md
-              - name: Herramientas de solución de problemas
-                href: ../core/tools/troubleshoot-usage-issues.md
-              - name: Creación de herramientas para la CLI
-                items:
-                  - name: 1 - Creación de una herramienta
-                    displayName: 'tools, tutorials, cli'
-                    href: ../core/tools/global-tools-how-to-create.md
-                  - name: 2 - Uso de una herramienta global
-                    displayName: 'tools, tutorials, cli'
-                    href: ../core/tools/global-tools-how-to-use.md
-                  - name: 3- Uso de una herramienta local
-                    href: ../core/tools/local-tools-how-to-use.md
-                    displayName: 'tools, tutorials, cli'
           - name: Información general de global.json
             href: ../core/tools/global-json.md
           - name: Telemetría
@@ -297,6 +285,17 @@ items:
               - name: 3 - Crear un paquete de plantillas
                 href: ../core/tutorials/cli-templates-create-template-pack.md
                 displayName: 'tutorials, cli'
+      - name: Entornos de desarrollo integrados (IDE)
+        items:
+          - name: Visual Studio
+            displayName: 'ide,integrated development environment,vs'
+            href: /visualstudio/windows/
+          - name: Visual Studio para Mac
+            displayName: 'ide,integrated development environment,vs for mac,macOS,Mac'
+            href: /visualstudio/mac/
+          - name: Visual Studio Code
+            displayName: 'ide,integrated development environment,code,vs code,oss ide,'
+            href: 'https://code.visualstudio.com/docs'
       - name: MSBuild y archivos del proyecto
         items:
           - name: SDK de proyecto
@@ -317,21 +316,43 @@ items:
             href: ../core/tools/csproj.md
           - name: Administración de dependencias
             href: ../core/tools/dependencies.md
-      - name: Herramientas adicionales de .NET Core
+      - name: Herramientas globales y locales
+        items:
+          - name: Administración de herramientas
+            displayName: 'global tool,local tool'
+            href: ../core/tools/global-tools.md
+          - name: Herramientas de solución de problemas
+            displayName: 'global tool troubleshooting,local tool troubleshooting,'
+            href: ../core/tools/troubleshoot-usage-issues.md
+          - name: Creación de herramientas para la CLI
+            items:
+              - name: 1 - Creación de una herramienta
+                displayName: 'tools,tutorials,cli,create global tool,create local tool'
+                href: ../core/tools/global-tools-how-to-create.md
+              - name: 2 - Uso de una herramienta global
+                displayName: 'tools,tutorials,cli,understand global tool'
+                href: ../core/tools/global-tools-how-to-use.md
+              - name: 3- Uso de una herramienta local
+                href: ../core/tools/local-tools-how-to-use.md
+                displayName: 'tools,tutorials,cli,local tool'
+      - name: Herramientas adicionales
         items:
           - name: Información general
             href: ../core/additional-tools/index.md
-          - name: Herramienta de desinstalación de .NET Core
+          - name: Herramienta de desinstalación de .NET
             href: ../core/additional-tools/uninstall-tool.md
           - name: Proveedor de WCF Web Service Reference
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
-          - name: dotnet-svcutil
+          - name: Utilidad del servicio WCF
+            displayName: dotnet-svcutil
             href: ../core/additional-tools/dotnet-svcutil-guide.md
-          - name: dotnet-svcutil.xmlserializer
+          - name: Serializador XML del servicio WCF
+            displayName: dotnet-svcutil.xmlserializer
             href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
           - name: Generador de serializador XML
+            displayName: 'sgen,sgen.exe,Microsoft.XmlSerializer.Generator,XmlSerializer'
             href: ../core/additional-tools/xml-serializer-generator.md
-      - name: Herramientas de diagnóstico
+      - name: Diagnóstico e instrumentación
         items:
           - name: Información general
             href: ../core/diagnostics/index.md
