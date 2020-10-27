@@ -7,10 +7,8 @@ items:
     items:
       - name: Información general
         href: get-started/index.md
-      - name: ".NET\_Framework y versiones fuera de banda"
+      - name: Versiones fuera de banda
         href: get-started/the-net-framework-and-out-of-band-releases.md
-      - name: .NET Core y código abierto
-        href: get-started/net-core-and-open-source.md
       - name: Requisitos del sistema
         href: get-started/system-requirements.md
   - name: Guía de instalación
