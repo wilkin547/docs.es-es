@@ -3,13 +3,13 @@ title: Prueba unitaria del código C# en .NET Core mediante pruebas de dotnet y 
 description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y xUnit.'
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: feff4cabbd10064ef4acca12d4f960f2a40a2b12
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: e1972858be00e8a884efbd66b618ddb9ab77e9ba
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656389"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471542"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Prueba unitaria de C# en .NET Core mediante pruebas de dotnet y xUnit
 
@@ -39,16 +39,16 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
   dotnet new sln -o unit-testing-using-dotnet-test
   ```
 
-  El comando [`dotnet new sln`](../tools/dotnet-new.md) crea una nueva solución en el directorio *unit-testing-using-dotnet-test*.
-* Cambie el directorio a la carpeta *unit-testing-using-dotnet-test*.
+  El comando [`dotnet new sln`](../tools/dotnet-new.md) crea una nueva solución en el directorio *unit-testing-using-dotnet-test* .
+* Cambie el directorio a la carpeta *unit-testing-using-dotnet-test* .
 * Ejecute el siguiente comando:
 
   ```dotnetcli
   dotnet new classlib -o PrimeService
   ```
 
-   El comando [`dotnet new classlib`](../tools/dotnet-new.md) crea un nuevo proyecto de biblioteca de clases en la carpeta *PrimeService*. La nueva biblioteca de clases contendrá el código que se va a probar.
-* Cambie el nombre de *Class1.cs* a *PrimeService.cs*.
+   El comando [`dotnet new classlib`](../tools/dotnet-new.md) crea un nuevo proyecto de biblioteca de clases en la carpeta *PrimeService* . La nueva biblioteca de clases contendrá el código que se va a probar.
+* Cambie el nombre de *Class1.cs* a *PrimeService.cs* .
 * Reemplace el código de *PrimeService.cs* por el código siguiente:
   
   ```csharp
@@ -72,7 +72,7 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
 
 <!-- preceding code shows an english bias. Message makes no sense outside english -->
 
-* En el directorio *unit-testing-using-dotnet-test*, ejecute el comando siguiente para agregar el proyecto de biblioteca de clases a la solución:
+* En el directorio *unit-testing-using-dotnet-test* , ejecute el comando siguiente para agregar el proyecto de biblioteca de clases a la solución:
 
   ```dotnetcli
   dotnet sln add ./PrimeService/PrimeService.csproj
@@ -85,7 +85,7 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
   ```
 
 * El comando anterior:
-  * Crea el proyecto *PrimeService.Tests* en el directorio *PrimeService.Tests*. El proyecto de prueba usa [xUnit](https://xunit.net/) como biblioteca de pruebas.
+  * Crea el proyecto *PrimeService.Tests* en el directorio *PrimeService.Tests* . El proyecto de prueba usa [xUnit](https://xunit.net/) como biblioteca de pruebas.
   * Configura el ejecutor de pruebas agregando los siguientes `<PackageReference />`elementos al archivo del proyecto:
     * "Microsoft.NET.Test.Sdk"
     * "xunit"
@@ -97,7 +97,7 @@ Las instrucciones siguientes proporcionan los pasos para crear la solución de p
   dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
   ```
 
-* Agregue la biblioteca de clases `PrimeService` como dependencia al proyecto *PrimeService.Tests*:
+* Agregue la biblioteca de clases `PrimeService` como dependencia al proyecto *PrimeService.Tests* :
 
   ```dotnetcli
   dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj  
@@ -128,10 +128,10 @@ Siga las instrucciones de "Reemplace el código de *PrimeService.cs* por el sigu
 
 Un enfoque popular en el desarrollo controlado por pruebas (TDD) consiste en escribir una prueba antes de implementar un código de destino. En este tutorial se usa el enfoque TDD. Se puede llamar al método `IsPrime`, pero sin implementar. Se produce un error en una llamada de prueba a `IsPrime`. Con TDD, se escribe una prueba a sabiendas de que en esta se produce un error. El código de destino se actualiza para conseguir que se supere la prueba. Siga repitiendo este enfoque, escribiendo una prueba con errores y, a continuación, actualizando el código de destino que se va a pasar.
 
-Actualice el proyecto *PrimeService.Tests*:
+Actualice el proyecto *PrimeService.Tests* :
 
-* Elimine *PrimeService.Tests/UnitTest1.cs*.
-* Cree un archivo *PrimeService.Tests/PrimeService_IsPrimeShould.cs*.
+* Elimine *PrimeService.Tests/UnitTest1.cs* .
+* Cree un archivo *PrimeService.Tests/PrimeService_IsPrimeShould.cs* .
 * Reemplace el código de *PrimeService_IsPrimeShould.cs* por el código siguiente:
 
 ```csharp
@@ -142,17 +142,11 @@ namespace Prime.UnitTests.Services
 {
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [Fact]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.False(result, "1 should not be prime");
         }
@@ -160,7 +154,7 @@ namespace Prime.UnitTests.Services
 }
 ```
 
-El atributo `[Fact]` declara un método de prueba que el ejecutor de pruebas ejecuta. En la carpeta *PrimeService.Tests*, ejecute `dotnet test`. El comando [dotnet test](../tools/dotnet-test.md) compila ambos proyectos y ejecuta las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria.
+El atributo `[Fact]` declara un método de prueba que el ejecutor de pruebas ejecuta. En la carpeta *PrimeService.Tests* , ejecute `dotnet test`. El comando [dotnet test](../tools/dotnet-test.md) compila ambos proyectos y ejecuta las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria.
 
 Se produce un error en la prueba porque no se ha implementado `IsPrime`. Con el enfoque TDD, solo tiene que escribir código suficiente para que se supere esta prueba. Actualice `IsPrime` con el siguiente código:
 
@@ -182,7 +176,8 @@ Ejecute `dotnet test`. La prueba se supera.
 Agregue pruebas de números primos para 0 y -1. Podría copiar la prueba anterior y cambiar el siguiente código para usar 0 y -1:
 
 ```csharp
-var result = _primeService.IsPrime(1);
+var primeService = new PrimeService();
+bool result = primeService.IsPrime(1);
 
 Assert.False(result, "1 should not be prime");
 ```
@@ -198,7 +193,8 @@ En lugar de crear pruebas nuevas, aplique los atributos de xUnit anteriores para
 [Fact]
 public void IsPrime_InputIs1_ReturnFalse()
 {
-    var result = _primeService.IsPrime(1);
+    var primeService = new PrimeService();
+    bool result = primeService.IsPrime(1);
 
     Assert.False(result, "1 should not be prime");
 }

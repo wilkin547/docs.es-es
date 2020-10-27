@@ -9,24 +9,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 7826e71fee235d32655ccfbc9060c3bbb48d76c5
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134775"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471656"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
 Los *tipos de valor* y los [tipos de referencia](../keywords/reference-types.md) son las dos categorías principales de tipos de C#. Una variable de un tipo de valor contiene una instancia del tipo. Esto difiere de una variable de un tipo de referencia, que contiene una referencia a una instancia del tipo. De forma predeterminada, al [asignar](../operators/assignment-operator.md), pasar un argumento a un método o devolver el resultado de un método, se copian los valores de variable. En el caso de las variables de tipo de valor, se copian las instancias de tipo correspondientes. En el ejemplo siguiente se muestra ese comportamiento:
 
-[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/shared/ValueTypes.cs#ValueTypeCopied)]
 
 Como se muestra en el ejemplo anterior, las operaciones en una variable de tipo de valor solo afectan a esa instancia del tipo de valor, almacenado en la variable.
 
 Si un tipo de valor contiene un miembro de datos de un tipo de referencia, solo se copia la referencia a la instancia del tipo de referencia al copiar una instancia de tipo de valor. Tanto la instancia de tipo de valor original como la copia tienen acceso a la misma instancia de tipo de referencia. En el ejemplo siguiente se muestra ese comportamiento:
 
-[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/shared/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > Para que el código sea menos propenso a errores y más sólido, defina y use tipos de valor inmutables. En este artículo se usan tipos de valor mutables solo con fines de demostración.
@@ -42,7 +42,7 @@ Un [tipo de valor que admite valores NULL](nullable-value-types.md) `T?` represe
 
 ## <a name="built-in-value-types"></a>Tipos de valor integrados
 
-C# proporciona los siguientes tipos de valor integrados, también conocidos como *tipos simples*:
+C# proporciona los siguientes tipos de valor integrados, también conocidos como *tipos simples* :
 
 - [Tipos numéricos integrales](integral-numeric-types.md)
 - [Tipos numéricos de punto flotante](floating-point-numeric-types.md)

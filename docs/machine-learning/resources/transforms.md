@@ -3,11 +3,11 @@ title: Transformaciones de datos
 description: Explore los componentes de ingeniería de características que se admiten en ML.NET.
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397756"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224207"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 
@@ -102,7 +102,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa%2A> | Detectar picos en los datos de serie temporal con el análisis de espectro singular (SSA) |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike%2A> | Detectar picos en los datos de serie temporal independientes y distribuidos de manera idéntica (IID) con puntuaciones de Martingala y estimaciones de densidad de kernel adaptable |
 
-## <a name="missing-values"></a>Valores ausentes
+## <a name="missing-values"></a>Valores que faltan
 
 | Transformación | Definición |
 | --- | --- |

@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62d98adab0122936957301ee737c366541b0cfe6
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874725"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471555"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -25,7 +25,7 @@ Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una
 
 ### <a name="net-default-templates"></a>Plantillas predeterminadas .NET
 
-Cuando instala el [SDK de .NET Core](https://dotnet.microsoft.com/download), recibe más de una docena de plantillas integradas para crear proyectos y archivos, incluidas las aplicaciones de consola, bibliotecas de clases, proyectos de prueba unitaria, aplicaciones de ASP.NET Core (incluidos los proyectos [Angular](https://angular.io/) y [React](https://facebook.github.io/react/)), y archivos de configuración. Para enumerar las plantillas integradas, ejecute el comando `dotnet new` con la opción `-l|--list`:
+Cuando instala el [SDK de .NET Core](https://dotnet.microsoft.com/download), recibe más de una docena de plantillas integradas para crear proyectos y archivos, incluidas las aplicaciones de consola, bibliotecas de clases, proyectos de prueba unitaria, aplicaciones de ASP.NET Core (incluidos los proyectos [Angular](https://angular.io/) y [React](https://reactjs.org/)), y archivos de configuración. Para enumerar las plantillas integradas, ejecute el comando `dotnet new` con la opción `-l|--list`:
 
 ```dotnetcli
 dotnet new --list
@@ -36,7 +36,7 @@ dotnet new --list
 Una plantilla consta de las siguientes partes:
 
 - Archivos de origen y carpetas.
-- Un archivo de configuración (*template.json*).
+- Un archivo de configuración ( *template.json* ).
 
 ### <a name="source-files-and-folders"></a>Archivos de origen y carpetas
 
@@ -49,7 +49,7 @@ Los archivos de origen y las carpetas incluyen todos los archivos y carpetas que
 
 Los archivos y las carpetas que se almacenan en la plantilla no se limitan a tipos de proyectos .NET formales. Los archivos de origen y las carpetas pueden constar de cualquier contenido que quiera crear cuando se use la plantilla, incluso si el motor de plantillas genera solo un archivo como su salida.
 
-Los archivos que genera la plantilla se pueden modificar según la lógica y la configuración que ha proporcionado en el archivo de configuración *template.json*. El usuario puede invalidar esta configuración pasando las opciones al comando `dotnet new <TEMPLATE>`. Un ejemplo común de una lógica personalizada es proporcionar un nombre para una clase o variable en el archivo de código que se implementa mediante una plantilla.
+Los archivos que genera la plantilla se pueden modificar según la lógica y la configuración que ha proporcionado en el archivo de configuración *template.json* . El usuario puede invalidar esta configuración pasando las opciones al comando `dotnet new <TEMPLATE>`. Un ejemplo común de una lógica personalizada es proporcionar un nombre para una clase o variable en el archivo de código que se implementa mediante una plantilla.
 
 ### <a name="templatejson"></a>template.json
 
@@ -57,7 +57,7 @@ El archivo *template.json* se coloca en una carpeta *.template.config* en el dir
 
 | Miembro            | Tipo          | Descripción |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | Identificador URI           | El esquema JSON para el archivo *template.json*. Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
+| `$schema`         | Identificador URI           | El esquema JSON para el archivo *template.json* . Los editores que admiten los esquemas JSON habilitan las características de edición JSON cuando se especifica el esquema. Por ejemplo, [Visual Studio Code](https://code.visualstudio.com/) necesita este miembro para habilitar IntelliSense. Use un valor de `http://json.schemastore.org/template`. |
 | `author`          | cadena        | El autor de la plantilla. |
 | `classifications` | array(string) | Cero o más características de la plantilla que un usuario puede usar para buscar la plantilla al buscarla. Las clasificaciones también aparecen en la columna *Etiquetas* cuando aparece en una lista de plantillas que se han generado mediante el comando `dotnet new -l|--list`. |
 | `identity`        | cadena        | Un nombre único para esta plantilla. |
@@ -66,11 +66,11 @@ El archivo *template.json* se coloca en una carpeta *.template.config* en el dir
 | `sourceName`       | string        | Nombre del árbol de origen que se va a reemplazar por el nombre que especifica el usuario. El motor de plantillas buscará cualquier aparición del valor `sourceName` mencionado en el archivo de configuración y la reemplazará en los nombres de archivo y en el contenido del archivo. El valor con el que se reemplazará se puede proporcionar usando las opciones `-n` o `--name` mientras se ejecuta una plantilla. Si no se especifica ningún nombre, se usa el directorio actual.|
 | `preferNameDirectory`       | boolean        | Indica si se debe crear un directorio para la plantilla si se especifica un nombre pero no se establece un directorio de salida (en lugar de crear el contenido directamente en el directorio actual). El valor predeterminado es false.|
 
-El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json*, consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
+El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json* , consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
 
 #### <a name="example"></a>Ejemplo
 
-Por ejemplo, esta es una carpeta de plantillas que tiene dos archivos de contenido: *console.cs* y *readme.txt*. Tenga en cuenta que existe la carpeta requerida denominada *.template.config* que contiene el archivo *template.json*.
+Por ejemplo, esta es una carpeta de plantillas que tiene dos archivos de contenido: *console.cs* y *readme.txt* . Tenga en cuenta que existe la carpeta requerida denominada *.template.config* que contiene el archivo *template.json* .
 
 ```text
 └───mytemplate
@@ -98,7 +98,7 @@ La carpeta *mytemplate* es un paquete de plantilla instalable. Una vez instalado
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Empaquetar una plantilla en un paquete NuGet (archivo nupkg)
 
-Una plantilla personalizada se empaqueta con el comando la [dotnet pack](dotnet-pack.md) y un archivo *.csproj*. Como alternativa, se puede usar [NuGet](/nuget/tools/nuget-exe-cli-reference) con el comando [nuget pack](/nuget/tools/cli-ref-pack) junto con un archivo *.nuspec*. Pero NuGet necesita .NET Framework en Windows y [Mono](https://www.mono-project.com/) en Linux y macOS.
+Una plantilla personalizada se empaqueta con el comando la [dotnet pack](dotnet-pack.md) y un archivo *.csproj* . Como alternativa, se puede usar [NuGet](/nuget/tools/nuget-exe-cli-reference) con el comando [nuget pack](/nuget/tools/cli-ref-pack) junto con un archivo *.nuspec* . Pero NuGet necesita .NET Framework en Windows y [Mono](https://www.mono-project.com/) en Linux y macOS.
 
 El archivo *.csproj* es ligeramente diferente al archivo *.csproj* de un proyecto de código tradicional. Tenga en cuenta la siguiente configuración:
 
@@ -108,7 +108,7 @@ El archivo *.csproj* es ligeramente diferente al archivo *.csproj* de un proyect
 01. Se debe establecer la configuración de metadatos genérica: `<Title>`, `<Authors>`, `<Description>` y `<PackageTags>`.
 01. Debe establecerse la configuración `<TargetFramework>`, aunque no se usen los datos binarios generados por el proceso de la plantilla. En el ejemplo siguiente se establece en `netstandard2.0`.
 
-Un paquete de plantillas, en forma de un paquete NuGet *.nupkg*, requiere que todas las plantillas se almacenan en la carpeta *content* dentro del paquete. Hay algunas opciones de configuración más para agregar a un archivo *.csproj* para asegurarse de que el paquete *.nupkg* generado se puede instalar como un paquete de plantilla:
+Un paquete de plantillas, en forma de un paquete NuGet *.nupkg* , requiere que todas las plantillas se almacenan en la carpeta *content* dentro del paquete. Hay algunas opciones de configuración más para agregar a un archivo *.csproj* para asegurarse de que el paquete *.nupkg* generado se puede instalar como un paquete de plantilla:
 
 01. El valor `<IncludeContentInPack>` se establece en `true` para incluir cualquier archivo que el proyecto establece como **content** en el paquete NuGet.
 01. El valor `<IncludeBuildOutput>` se establece en `false` para excluir todos los archivos binarios generados por el compilador desde el paquete NuGet.
@@ -116,7 +116,7 @@ Un paquete de plantillas, en forma de un paquete NuGet *.nupkg*, requiere que to
 
 Una manera sencilla de excluir todos los archivos de código para que el proyecto de su plantilla no los compile es usando el elemento `<Compile Remove="**\*" />` del archivo de proyecto, dentro de un elemento `<ItemGroup>`.
 
-Una manera sencilla de estructurar su paquete de plantillas es colocar todas las plantillas en carpetas individuales y luego cada carpeta de plantillas dentro de una carpeta *templates* que se encuentra en el mismo directorio que el archivo *.csproj* . De esta manera, puede usar un solo elemento del proyecto para incluir todos los archivos y carpetas en *templates* como **content**. Dentro de un elemento `<ItemGroup>`, cree un elemento `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`.
+Una manera sencilla de estructurar su paquete de plantillas es colocar todas las plantillas en carpetas individuales y luego cada carpeta de plantillas dentro de una carpeta *templates* que se encuentra en el mismo directorio que el archivo *.csproj* . De esta manera, puede usar un solo elemento del proyecto para incluir todos los archivos y carpetas en *templates* como **content** . Dentro de un elemento `<ItemGroup>`, cree un elemento `<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />`.
 
 Este es un archivo *.csproj* de ejemplo que sigue todas las pautas anteriores. Empaqueta la carpeta secundaria *templates* en la carpeta del paquete *content* y excluye cualquier archivo de código de la compilación.
 
@@ -146,7 +146,7 @@ Este es un archivo *.csproj* de ejemplo que sigue todas las pautas anteriores. E
 </Project>
 ```
 
-En el siguiente ejemplo se muestra la estructura de archivos y carpetas de usar *.csproj*  para crear un paquete de plantillas. El archivo *MyDotnetTemplates.csproj* y la carpeta *templates* se encuentran en la raíz de un directorio denominado *project_folder*. La carpeta *templates* contiene dos plantillas: *mytemplate1* y *mytemplate2*. Cada plantilla tiene archivos de contenido y una carpeta *.template.config* con un archivo de configuración *template.json*.
+En el siguiente ejemplo se muestra la estructura de archivos y carpetas de usar *.csproj*  para crear un paquete de plantillas. El archivo *MyDotnetTemplates.csproj* y la carpeta *templates* se encuentran en la raíz de un directorio denominado *project_folder* . La carpeta *templates* contiene dos plantillas: *mytemplate1* y *mytemplate2* . Cada plantilla tiene archivos de contenido y una carpeta *.template.config* con un archivo de configuración *template.json* .
 
 ```text
 project_folder
@@ -181,7 +181,7 @@ dotnet new -i <NUGET_PACKAGE_ID>
 
 ### <a name="to-install-a-template-from-a-local-nupkg-file"></a>Para instalar una plantilla de un archivo nupkg local
 
-Proporcione la ruta de acceso a un archivo de paquete NuGet *.nupkg*.
+Proporcione la ruta de acceso a un archivo de paquete NuGet *.nupkg* .
 
 ```dotnetcli
 dotnet new -i <PATH_TO_NUPKG_FILE>
@@ -189,7 +189,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 ### <a name="to-install-a-template-from-a-file-system-directory"></a>Para instalar una plantilla desde un directorio de sistema de archivos
 
-Las plantillas se pueden instalar desde una carpeta de plantillas, como la carpeta *mytemplate1* del ejemplo anterior. Especifique la ruta de acceso de la carpeta *.template.config*. La ruta de acceso al directorio de plantillas no es necesario que sea absoluto. Sin embargo, se requiere una ruta de acceso absoluta para desinstalar una plantilla que se instala desde una carpeta.
+Las plantillas se pueden instalar desde una carpeta de plantillas, como la carpeta *mytemplate1* del ejemplo anterior. Especifique la ruta de acceso de la carpeta *.template.config* . La ruta de acceso al directorio de plantillas no es necesario que sea absoluto. Sin embargo, se requiere una ruta de acceso absoluta para desinstalar una plantilla que se instala desde una carpeta.
 
 ```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
@@ -227,7 +227,7 @@ Currently installed items:
 ...
 ```
 
-El primer nivel de los elementos situados después de `Currently installed items:` son los identificadores usados en la desinstalación de una plantilla. Y en el ejemplo anterior, se enumeran `Microsoft.DotNet.Common.ItemTemplates` y `Microsoft.DotNet.Common.ProjectTemplates.3.0`. Si la plantilla se instaló mediante una ruta de acceso del sistema de archivos, este identificador será la ruta de acceso de la carpeta *.template.config*.
+El primer nivel de los elementos situados después de `Currently installed items:` son los identificadores usados en la desinstalación de una plantilla. Y en el ejemplo anterior, se enumeran `Microsoft.DotNet.Common.ItemTemplates` y `Microsoft.DotNet.Common.ProjectTemplates.3.0`. Si la plantilla se instaló mediante una ruta de acceso del sistema de archivos, este identificador será la ruta de acceso de la carpeta *.template.config* .
 
 ## <a name="uninstalling-a-template"></a>Desinstalación de una plantilla
 
@@ -239,7 +239,7 @@ Si el paquete lo instaló una fuente de NuGet o un archivo *.nupkg* directamente
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-Si el paquete se instaló mediante la especificación de una ruta de acceso a la carpeta *.template.config*, use esa ruta de acceso **absoluta** para desinstalar el paquete. Puede ver la ruta de acceso absoluta de la plantilla en el resultado proporcionado por el comando `dotnet new -u`. Para obtener más información, consulte la sección [Obtención de una lista de plantillas instaladas](#get-a-list-of-installed-templates) anterior.
+Si el paquete se instaló mediante la especificación de una ruta de acceso a la carpeta *.template.config* , use esa ruta de acceso **absoluta** para desinstalar el paquete. Puede ver la ruta de acceso absoluta de la plantilla en el resultado proporcionado por el comando `dotnet new -u`. Para obtener más información, consulte la sección [Obtención de una lista de plantillas instaladas](#get-a-list-of-installed-templates) anterior.
 
 ```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>

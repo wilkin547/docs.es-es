@@ -3,13 +3,13 @@ title: Prueba unitaria de C# con MSTest y .NET Core
 description: 'Aprenda los conceptos de pruebas unitarias en C# y .NET Core: cree paso a paso una solución de ejemplo mediante pruebas de dotnet y MSTest.'
 author: ncarandini
 ms.author: wiwagn
-ms.date: 09/08/2017
-ms.openlocfilehash: 765b57dce323c10dc5fcbf395cb7d52be76046c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.date: 10/21/2020
+ms.openlocfilehash: c6132251ecc4f453189937f93cf8024dcb8b91f5
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656363"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471614"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Prueba unitaria de C# con MSTest y .NET Core
 
@@ -19,7 +19,7 @@ Este tutorial le guía por una experiencia interactiva de creación de una soluc
 
 ## <a name="create-the-source-project"></a>Creación del proyecto de origen
 
-Abra una ventana del Shell. Cree un directorio llamado *unit-testing-using-mstest* que contenga la solución. En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear un archivo de solución nuevo para la biblioteca de clases y el proyecto de prueba. A continuación, cree un directorio *PrimeService*. En el esquema siguiente se muestra la estructura de directorios y archivos hasta el momento:
+Abra una ventana del Shell. Cree un directorio llamado *unit-testing-using-mstest* que contenga la solución. En este directorio nuevo, ejecute [`dotnet new sln`](../tools/dotnet-new.md) para crear un archivo de solución nuevo para la biblioteca de clases y el proyecto de prueba. A continuación, cree un directorio *PrimeService* . En el esquema siguiente se muestra la estructura de directorios y archivos hasta el momento:
 
 ```console
 /unit-testing-using-mstest
@@ -27,7 +27,7 @@ Abra una ventana del Shell. Cree un directorio llamado *unit-testing-using-mstes
     /PrimeService
 ```
 
-Convierta *PrimeService* en el directorio actual y ejecute [`dotnet new classlib`](../tools/dotnet-new.md) para crear el proyecto de origen. Cambie el nombre de *Class1.cs* a *PrimeService.cs*. Creará una implementación de errores de la clase `PrimeService`:
+Convierta *PrimeService* en el directorio actual y ejecute [`dotnet new classlib`](../tools/dotnet-new.md) para crear el proyecto de origen. Cambie el nombre de *Class1.cs* a *PrimeService.cs* . Creará una implementación de errores de la clase `PrimeService`:
 
 ```csharp
 using System;
@@ -44,11 +44,11 @@ namespace Prime.Services
 }
 ```
 
-Cambie nuevamente el directorio al directorio *unit-testing-using-mstest*. Ejecute [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.
+Cambie nuevamente el directorio al directorio *unit-testing-using-mstest* . Ejecute [`dotnet sln add PrimeService/PrimeService.csproj`](../tools/dotnet-sln.md) para agregar el proyecto de biblioteca de clases a la solución.
 
 ## <a name="create-the-test-project"></a>Crear el proyecto de prueba
 
-A continuación, cree el directorio *PrimeService.Tests*. En el esquema siguiente se muestra la estructura de directorios:
+A continuación, cree el directorio *PrimeService.Tests* . En el esquema siguiente se muestra la estructura de directorios:
 
 ```console
 /unit-testing-using-mstest
@@ -59,7 +59,7 @@ A continuación, cree el directorio *PrimeService.Tests*. En el esquema siguient
     /PrimeService.Tests
 ```
 
-Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un proyecto nuevo con [`dotnet new mstest`](../tools/dotnet-new.md). Este comando de dotnet nuevo crea un proyecto de prueba que usa MSTest como la biblioteca de pruebas. La plantilla generada configura el ejecutor de pruebas en el archivo *PrimeServiceTests.csproj*:
+Convierta el directorio *PrimeService.Tests* en el directorio actual y cree un proyecto nuevo con [`dotnet new mstest`](../tools/dotnet-new.md). Este comando de dotnet nuevo crea un proyecto de prueba que usa MSTest como la biblioteca de pruebas. La plantilla generada configura el ejecutor de pruebas en el archivo *PrimeServiceTests.csproj* :
 
 ```xml
 <ItemGroup>
@@ -90,7 +90,7 @@ En el esquema siguiente se muestra el diseño de solución final:
         PrimeServiceTests.csproj
 ```
 
-Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-using-mstest*.
+Ejecute [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md) en el directorio *unit-testing-using-mstest* .
 
 ## <a name="create-the-first-test"></a>Creación de la primera prueba
 
@@ -105,17 +105,11 @@ namespace Prime.UnitTests.Services
     [TestClass]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [TestMethod]
         public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            var primeService = new PrimeService();
+            bool result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
         }
@@ -140,7 +134,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-En el directorio *unit-testing-using-mstest*, vuelva a ejecutar `dotnet test`. El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`. Después de compilar ambos proyectos, se ejecuta esta única prueba. Pasa.
+En el directorio *unit-testing-using-mstest* , vuelva a ejecutar `dotnet test`. El comando `dotnet test` ejecuta una compilación del proyecto `PrimeService` y luego del proyecto `PrimeService.Tests`. Después de compilar ambos proyectos, se ejecuta esta única prueba. Pasa.
 
 ## <a name="add-more-features"></a>Adición de más características
 

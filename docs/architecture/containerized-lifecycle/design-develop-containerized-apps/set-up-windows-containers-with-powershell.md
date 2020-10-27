@@ -2,12 +2,12 @@
 title: Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores con Windows (basado en Docker estándar)
 description: Obtenga información sobre cómo usar PowerShell al trabajar con Docker en contenedores de Windows.
 ms.date: 08/06/2020
-ms.openlocfilehash: be30fd4092f51acd4972c05b3c3ccc936aebd884
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6096e4cbad4fb37b485d595c650dc10dc5ed5a22
+ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539793"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434814"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores con Windows (basado en Docker estándar)
 
@@ -16,7 +16,7 @@ Con los [contenedores de Windows](/virtualization/windowscontainers/about/index)
 Para usar contenedores de Windows, simplemente debe escribir comandos de Windows PowerShell en el archivo Dockerfile, como se muestra en el ejemplo siguiente:
 
 ```dockerfile
-FROM microsoft/windowsservercore
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]

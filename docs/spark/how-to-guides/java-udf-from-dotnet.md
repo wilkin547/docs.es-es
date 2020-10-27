@@ -1,15 +1,17 @@
 ---
 title: Invocación de UDF de Java desde la aplicación .NET para Apache Spark
 description: Obtenga información sobre cómo invocar UDF de Java desde una aplicación .NET para Apache Spark.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e309a1e8cda2a559f300a07155c005677db85945
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: edf525102bf5503dcb51247b5fa590aa0d42b369
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878073"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224123"
 ---
 # <a name="call-a-java-udf-from-your-net-for-apache-spark-application"></a>Invocación de una UDF de Java desde la aplicación .NET para Apache Spark
 

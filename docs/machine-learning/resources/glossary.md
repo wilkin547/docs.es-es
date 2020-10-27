@@ -4,17 +4,17 @@ description: Un glosario de los términos importantes sobre aprendizaje automát
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397768"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223743"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
 La lista siguiente es una compilación de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 
-## <a name="accuracy"></a>Exactitud
+## <a name="accuracy"></a>Precisión
 
 En [clasificación](#classification), la exactitud es el número de elementos correctamente clasificados dividido entre el número total de elementos en el conjunto de pruebas. Va desde 0 (el menos preciso) a 1 (el más preciso). La exactitud es una de las métricas de evaluación del rendimiento del modelo. Trátela junto con el valor de [precisión](#precision), el de [recuperación](#recall) y la [puntuación F](#f-score).
 
@@ -36,7 +36,7 @@ En ML.NET, un catálogo es una colección de funciones de extensión, agrupadas 
 
 Por ejemplo, cada tarea de aprendizaje automático (clasificación binaria, regresión, clasificación, etcétera) tiene un catálogo de algoritmos de aprendizaje automático disponibles (instructores). El catálogo para los instructores de clasificación binaria es: <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers>.
 
-## <a name="classification"></a>clasificación
+## <a name="classification"></a>Clasificación
 
 Cuando los datos se usan para predecir una categoría, la tarea de [aprendizaje automático supervisado](#supervised-machine-learning) se llama clasificación. La [clasificación binaria](#binary-classification) hace referencia a la predicción de únicamente dos categorías (por ejemplo, clasificar una imagen como la foto de un "gato" o un "perro"). La [clasificación multiclase ](#multiclass-classification) hace referencia a la predicción de varias categorías (por ejemplo, clasificar una imagen como la foto de una raza específica de perro).
 
@@ -122,7 +122,7 @@ Un vector de [características](#feature) que se compone únicamente de valores 
 
 Todas las operaciones necesarias para ajustar un modelo a un conjunto de datos. Una canalización consta de pasos de importación, transformación, caracterización y aprendizaje de datos. Una vez que una canalización está entrenada, se convierte en un modelo.
 
-## <a name="precision"></a>Precisión
+## <a name="precision"></a>Precision
 
 En [clasificación](#classification), la precisión de una clase es el número de elementos con una predicción correcta en cuando a pertenencia a esa clase dividido entre el número total de elementos cuya predicción señalaba la pertenencia a esa clase.
 
@@ -153,7 +153,7 @@ En [regresión](#regression), una métrica de evaluación que es la suma de todo
 
 En [regresión](#regression), una métrica de evaluación que es la raíz cuadrada del promedio de los cuadrados de los errores.
 
-## <a name="scoring"></a>Puntuación
+## <a name="scoring"></a>Puntuaciones
 
 La puntuación es el proceso de aplicar nuevos datos a un modelo de Machine Learning entrenado y generar predicciones. La puntuación también se conoce como inferencia. Según el tipo de modelo, la puntuación puede ser un valor sin procesar, una probabilidad o una categoría.
 
@@ -161,7 +161,7 @@ La puntuación es el proceso de aplicar nuevos datos a un modelo de Machine Lear
 
 Una subclase de aprendizaje automático en la que un modelo deseado predice la etiqueta de datos aún no vistos. Algunos ejemplos son la clasificación, la regresión y la predicción estructurada. Para obtener más información, vea el artículo [Aprendizaje supervisado](https://en.wikipedia.org/wiki/Supervised_learning) en Wikipedia.
 
-## <a name="training"></a>Aprendizaje
+## <a name="training"></a>Cursos
 
 El proceso de identificación de un [modelo](#model) para un conjunto de datos de entrenamiento determinado. Para un modelo lineal, esto significa buscar las ponderaciones. Para un árbol, implica la identificación de los puntos de división.
 

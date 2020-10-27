@@ -21,19 +21,19 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398314"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223515"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referencia integrados (referencia de C#)
 
 C# tiene un número de tipos de referencia integrados. Tienen palabras clave u operadores que son sinónimos para un tipo en la biblioteca de .NET.
 
-## <a name="the-object-type"></a>Tipo object
+## <a name="the-object-type"></a>El tipo de objeto
 
-El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing*. Cuando una variable de tipo `object` se convierte en un tipo de valor, se dice que se *aplica la conversión unboxing*. Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md).
+El tipo `object` es un alias de <xref:System.Object?displayProperty=nameWithType> en .NET. En el sistema de tipos unificado de C#, todos los tipos, los predefinidos y los definidos por el usuario, los tipos de referencia y los tipos de valores, heredan directa o indirectamente de <xref:System.Object?displayProperty=nameWithType>. Puede asignar valores de cualquier tipo a las variables de tipo `object`. Cualquier variable `object` puede asignarse a su valor predeterminado con el literal `null`. Cuando una variable de un tipo de valor se convierte en objeto, se dice que se aplica la *conversión boxing* . Cuando una variable de tipo `object` se convierte en un tipo de valor, se dice que se *aplica la conversión unboxing* . Para obtener más información, vea [Conversión boxing y unboxing](../../programming-guide/types/boxing-and-unboxing.md).
 
 ## <a name="the-string-type"></a>Tipo string
 
@@ -60,14 +60,14 @@ string a = "good " + "morning";
 
 Crea un objeto de cadena que contiene "good morning".
 
-Las cadenas son *inmutables*: el contenido de un objeto de cadena no se puede modificar una vez creado el objeto, aunque la sintaxis parezca indicar que se puede hacer. Por ejemplo, al escribir este código, el compilador crea en realidad otro objeto de cadena para almacenar la nueva secuencia de caracteres, y este nuevo objeto se asigna a `b`. La memoria que se había asignado para `b` (cuando contiene la cadena "h") es entonces apto para la recolección de elementos.
+Las cadenas son *inmutables* : el contenido de un objeto de cadena no se puede modificar una vez creado el objeto, aunque la sintaxis parezca indicar que se puede hacer. Por ejemplo, al escribir este código, el compilador crea en realidad otro objeto de cadena para almacenar la nueva secuencia de caracteres, y este nuevo objeto se asigna a `b`. La memoria que se había asignado para `b` (cuando contiene la cadena "h") es entonces apto para la recolección de elementos.
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-El [operador](../operators/member-access-operators.md#indexer-operator-) `[]` puede usarse para el acceso de solo lectura a determinados caracteres de una cadena. Los valores válidos comienzan por `0` y deben ser menores que la longitud de la cadena:
+El  [operador](../operators/member-access-operators.md#indexer-operator-)`[]` puede usarse para el acceso de solo lectura a determinados caracteres de una cadena. Los valores válidos comienzan por `0` y deben ser menores que la longitud de la cadena:
 
 ```csharp
 string str = "test";
@@ -176,7 +176,7 @@ El ejemplo siguiente usa `dynamic` en varias declaraciones. El método `Main` ta
 - [Uso de tipo dinámico](../../programming-guide/types/using-type-dynamic.md)
 - [Procedimientos recomendados para el uso de cadenas](../../../standard/base-types/best-practices-strings.md)
 - [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)
-- [Creación de cadenas nuevas](../../../standard/base-types/creating-new.md)
+- [Creación de cadenas](../../../standard/base-types/creating-new.md)
 - [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md)
 - [Procedimiento para convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

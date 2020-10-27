@@ -3,13 +3,13 @@ title: Cambios importantes y las bibliotecas de .NET
 description: Procedimientos recomendados para explorar los cambios importantes al crear bibliotecas de .NET.
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398512"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223336"
 ---
-# <a name="breaking-changes"></a>Cambios importantes
+# <a name="breaking-changes"></a>Últimos cambios
 
 Es importante para una biblioteca de .NET buscar el equilibrio entre la estabilidad para los usuarios existentes y la innovación para el futuro. Los creadores de bibliotecas tienden a la refactorización y el replanteamiento de código hasta que es perfecto, pero realizar cambios importantes que afectan a los usuarios existentes tiene un impacto negativo, especialmente para bibliotecas de bajo nivel.
 
@@ -17,7 +17,7 @@ Es importante para una biblioteca de .NET buscar el equilibrio entre la estabili
 
 El uso que la comunidad de .NET realiza de una biblioteca cambia el efecto de los cambios importantes en los usuarios finales.
 
-- **Las bibliotecas de nivel bajo e intermedio**, como un serializador, un analizador de HTML, un asignador relacional de objetos de base de datos o un marco web, son las más afectadas por cambios importantes.
+- **Las bibliotecas de nivel bajo e intermedio** , como un serializador, un analizador de HTML, un asignador relacional de objetos de base de datos o un marco web, son las más afectadas por cambios importantes.
 
   Los usuarios finales y otras bibliotecas como dependencias de NuGet usan los paquetes de bloques de creación para desarrollar aplicaciones. Por ejemplo, está creando una aplicación y está usando a un cliente de código abierto para llamar a un servicio web. Una actualización importante a una dependencia que usa el cliente no es algo que pueda solucionar. Debería cambiarse el cliente de código abierto y no tiene control sobre él. Tendrá que buscar versiones compatibles de las bibliotecas o enviar una corrección a la biblioteca de cliente y esperar a una nueva versión. La peor situación posible es si quiere usar dos bibliotecas que dependen de versiones incompatibles de una biblioteca de terceros.
 
@@ -62,7 +62,7 @@ Por ejemplo, ASP.NET Core MVC tiene el concepto de una [versión de compatibilid
 
 Un cambio importante de archivo binario se produce al cambiar la API pública de la biblioteca, ya que los ensamblados compilados con versiones anteriores de la biblioteca ya no pueden llamar a la API. Por ejemplo, cambiar la firma de un método mediante la adición de un nuevo parámetro hará que los ensamblados compilados con la versión anterior de la biblioteca inicien una excepción <xref:System.MissingMethodException>.
 
-Un cambio importante de archivo binario también puede afectar a un **ensamblado completo**. Cambiar el nombre de un ensamblado con `AssemblyName` cambiará la identidad del ensamblado, como lo hará agregar, quitar o cambiar la clave de nomenclatura segura del ensamblado. Un cambio de identidad de un ensamblado afectará a todo el código compilado que lo usa.
+Un cambio importante de archivo binario también puede afectar a un **ensamblado completo** . Cambiar el nombre de un ensamblado con `AssemblyName` cambiará la identidad del ensamblado, como lo hará agregar, quitar o cambiar la clave de nomenclatura segura del ensamblado. Un cambio de identidad de un ensamblado afectará a todo el código compilado que lo usa.
 
 ❌ NO cambie un nombre de ensamblado.
 

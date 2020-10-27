@@ -1,15 +1,17 @@
 ---
 title: Escritura y llamada a UDF en entornos interactivos de .NET para Apache Spark
 description: Obtenga información sobre cómo escribir y llamar a UDF en shells interactivos de .NET para Apache Spark.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7f050b39b1d2f0e2f506c522259485d87c7a185a
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955015"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224129"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Escritura y llamada a UDF en entornos interactivos de .NET para Apache Spark
 
@@ -59,7 +61,7 @@ Estos son algunos aspectos importantes que tener en cuenta al implementar las UD
 
     Como se aprecia en el caso de `udf2_fails`, se ve el mensaje de error que indica que el tipo `Submission#7` no está marcado como serializable; esto se debe a que .NET Interactive encapsula todos los objetos definidos en una celda con su clase `Submission#`, que se genera sobre la marcha y, por tanto, no se marca como `Serializable`.
 
-    Por este motivo, es **obligatorio que una UDF que hace referencia a un objeto personalizado se defina en la misma celda que ese objeto**.
+    Por este motivo, es **obligatorio que una UDF que hace referencia a un objeto personalizado se defina en la misma celda que ese objeto** .
 
 2. **¿Por qué no funcionan las variables de difusión con .NET Interactive?**
     Por los motivos explicados anteriormente, las variables de difusión no funcionan con .NET Interactive. Es aconsejable repasar [esta guía sobre las variables de difusión](broadcast-guide.md) para comprender mejor qué son y cómo usarlas. El motivo por el que las variables de difusión no funcionan con escenarios interactivos se debe al diseño de .NET Interactive de anexar cada objeto definido en una celda con su clase de envío de celda; al no estar marcada como serializable, se inicia la misma excepción que se ha mostrado antes.
