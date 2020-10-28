@@ -2,12 +2,12 @@
 title: Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 8bedfb44523b4f67845d40fadfaa72d64622ba26
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449483"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687701"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 
@@ -47,4 +47,4 @@ Los proyectos de subconjuntos portátiles permiten a los programadores de ensamb
 ## <a name="see-also"></a>Consulte también
 
 - [Acceso a los servicios mediante un cliente WCF](accessing-services-using-a-wcf-client.md)
-- [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+- [Biblioteca de clases portable](../cross-platform/portable-class-library.md)
