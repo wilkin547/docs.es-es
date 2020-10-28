@@ -725,24 +725,20 @@ items:
         href: misc/using-libraries-from-partially-trusted-code.md
       - name: Utilizar el método Assert
         href: misc/using-the-assert-method.md
-  - name: Creación de aplicaciones de consola
-    href: ../standard/building-console-apps.md
-  - name: Consumo de eventos en una aplicación de formularios Web Forms
-    href: ../standard/events/how-to-consume-events-in-a-web-forms-application.md
-  - name: Analizador de código de .NET Framework
-    href: ../standard/analyzers/framework-analyzer.md
+  - name: Análisis de código
+    href: code-analyzers.md
   - name: Desarrollo para varias plataformas
     items:
       - name: Información general
-        href: ../standard/cross-platform/index.md
+        href: cross-platform/index.md
         displayName: cross platform
       - name: Biblioteca de clases portable
-        href: ../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md
+        href: cross-platform/portable-class-library.md
       - name: Uso de la Biblioteca de clases portable con MVVM
-        href: ../standard/cross-platform/using-portable-class-library-with-model-view-view-model.md
+        href: cross-platform/using-portable-class-library-with-model-view-view-model.md
       - name: Recursos de aplicación para bibliotecas destinadas a varias plataformas
-        href: ../standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
+        href: cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md
       - name: Compatibilidad de .NET Framework para aplicaciones de Microsoft Store y Windows Runtime
-        href: ../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md
+        href: cross-platform/support-for-windows-store-apps-and-windows-runtime.md
       - name: Transferencia de un URI a Windows Runtime
-        href: ../standard/cross-platform/passing-a-uri-to-the-windows-runtime.md
+        href: cross-platform/passing-a-uri-to-the-windows-runtime.md
