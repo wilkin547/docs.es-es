@@ -1524,6 +1524,8 @@ items:
             href: ../standard/attributes/retrieving-information-stored-in-attributes.md
       - name: Elección entre tipos de tupla y anónimos
         href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+      - name: Conceptos sobre las aplicaciones de consola
+        href: ../standard/building-console-apps.md
   - name: Inserción de dependencias
     items:
       - name: Introducción
