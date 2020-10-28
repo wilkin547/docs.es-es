@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 6bbadd05187946cfdc601f9c026d685609251193
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471948"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687560"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -1855,7 +1855,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
   - Puede cambiar el destino de una biblioteca de clases de la Tienda Windows o la Tienda de Windows Phone como biblioteca de clases portable.
 
-  Para obtener más información sobre estos cambios, vea [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+  Para obtener más información sobre estos cambios, vea [Biblioteca de clases portable](../cross-platform/portable-class-library.md).
 
 - El conjunto de contenido de .NET Framework ahora incluye documentación para .NET Native, que es una tecnología de precompilación para crear e implementar aplicaciones de Windows. .NET Native compila aplicaciones directamente en código nativo, en lugar de hacerlo en un lenguaje intermedio (IL), lo que mejora el rendimiento. Para obtener información detallada, vea [Compilar aplicaciones con .NET Native](../net-native/index.md).
 
@@ -2125,13 +2125,12 @@ Las aplicaciones de la Tienda Windows 8.x están diseñadas para factores de for
 
 ### <a name="portable-class-libraries"></a>Bibliotecas de clases portables <a name="portable"></a>
 
-El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones posteriores) permite escribir y compilar ensamblados administrados capaces de funcionar en múltiples plataformas de .NET Framework. Mediante el uso de Biblioteca de clases portable, puede elegir las plataformas de destino, como Windows Phone y .NET para aplicaciones de la Tienda Windows 8.x. Los tipos y miembros disponibles en el proyecto se restringen automáticamente a los tipos y miembros comunes de estas plataformas. Para obtener más información, consulte [Biblioteca de clases portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+El proyecto de Biblioteca de clases portable de Visual Studio 2012 (y versiones posteriores) permite escribir y compilar ensamblados administrados capaces de funcionar en múltiples plataformas de .NET Framework. Mediante el uso de Biblioteca de clases portable, puede elegir las plataformas de destino, como Windows Phone y .NET para aplicaciones de la Tienda Windows 8.x. Los tipos y miembros disponibles en el proyecto se restringen automáticamente a los tipos y miembros comunes de estas plataformas. Para obtener más información, consulte [Biblioteca de clases portable](../cross-platform/portable-class-library.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [.NET Framework y versiones fuera de banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novedades de accesibilidad en .NET Framework](whats-new-in-accessibility.md)
-- [Novedades de Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [Novedades de Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Novedades de C++ en Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
