@@ -15,26 +15,24 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47021873956f971709b49c1b224e43e4c7f482d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545708"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687296"
 ---
-# <a name="handling-and-raising-events"></a>Controlar y provocar eventos
+# <a name="handle-and-raising-events"></a>Control y generación de eventos
 
-Los eventos de .NET se basan en el modelo de delegado. El modelo de delegado sigue el [patrón de diseño del observador](observer-design-pattern.md), que permite que un suscriptor se registre con un proveedor y reciba notificaciones de él. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.  
-  
- Para obtener información sobre el control de eventos en las aplicaciones de la Tienda de Windows 8.x, vea [Introducción a eventos y eventos enrutados](/previous-versions/windows/apps/hh758286(v=win.10)).  
+Los eventos de .NET se basan en el modelo de delegado. El modelo de delegado sigue el [patrón de diseño del observador](observer-design-pattern.md), que permite que un suscriptor se registre con un proveedor y reciba notificaciones de él. El emisor de un evento inserta una notificación de que se ha producido un evento, y un receptor de eventos recibe la notificación y define una respuesta a la misma. En este artículo se describen los componentes principales del modelo de delegado, cómo consumir eventos en las aplicaciones y cómo implementar eventos en el código.
   
 ## <a name="events"></a>Events
 
-Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría deberse a la interacción del usuario, como hacer clic en un botón, o podría derivarse de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento*. El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría deberse a la interacción del usuario, como hacer clic en un botón, o podría derivarse de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento* . El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 Para definir un evento, se utiliza la palabra clave [`event`](../../csharp/language-reference/keywords/event.md) de C# o [`Event`](../../visual-basic/language-reference/statements/event-statement.md) de Visual Basic en la signatura de la clase de eventos y se especifica el tipo de delegado para el evento. Los delegados se describen en la sección siguiente.  
   
-Normalmente, para generar un evento, se agrega un método marcado como `protected` y `virtual` (en C#) o `Protected` y `Overridable` (en Visual Basic). Asigne a este método el nombre `On`*EventName*; por ejemplo, `OnDataReceived`. El método debe tomar un parámetro que especifica un objeto de datos de evento, que es un objeto de tipo <xref:System.EventArgs> o un tipo derivado. Este método se proporciona para permitir que las clases derivadas reemplacen la lógica para generar el evento. Una clase derivada siempre debería llamar al método `On`*EventName* de la clase base para asegurarse de que los delegados registrados reciben el evento.  
+Normalmente, para generar un evento, se agrega un método marcado como `protected` y `virtual` (en C#) o `Protected` y `Overridable` (en Visual Basic). Asigne a este método el nombre `On`*EventName* ; por ejemplo, `OnDataReceived`. El método debe tomar un parámetro que especifica un objeto de datos de evento, que es un objeto de tipo <xref:System.EventArgs> o un tipo derivado. Este método se proporciona para permitir que las clases derivadas reemplacen la lógica para generar el evento. Una clase derivada siempre debería llamar al método `On`*EventName* de la clase base para asegurarse de que los delegados registrados reciben el evento.  
 
 En el ejemplo siguiente se muestra cómo declarar un evento denominado `ThresholdReached`. El evento está asociado al delegado <xref:System.EventHandler> y se genera en un método denominado `OnThresholdReached`.  
   
@@ -82,19 +80,19 @@ En el ejemplo siguiente se muestra un método de control de eventos denominado `
 
 .NET permite a los suscriptores registrarse para las notificaciones de eventos estática o dinámicamente. Los controladores de eventos estáticos son efectivos durante toda la vida de la clase cuyos eventos controlan. Los controladores de eventos dinámicos se activan y desactivan explícitamente durante la ejecución de un programa, normalmente en respuesta a alguna lógica condicional del programa. Por ejemplo, pueden utilizarse si las notificaciones de eventos solo son necesarias en condiciones específicas o si una aplicación proporciona varios controladores de eventos y las condiciones en tiempo de ejecución determinan cuál es el que debe utilizarse. En el ejemplo de la sección anterior se muestra cómo agregar dinámicamente un controlador de eventos. Para obtener más información, vea [Eventos](../../visual-basic/programming-guide/language-features/events/index.md) (en Visual Basic) y [Eventos](../../csharp/programming-guide/events/index.md) (en C#).  
   
-## <a name="raising-multiple-events"></a>Generar múltiples eventos  
+## <a name="raising-multiple-events"></a>Generar múltiples eventos
+
  Si la clase genera varios eventos, el compilador genera un campo por cada instancia de delegado de eventos. Si el número de eventos es alto, es posible que el costo de almacenamiento de un campo por delegado no sea aceptable. Para estos casos, .NET dispone de propiedades de evento que se pueden usar con otra estructura de datos (de elección propia) para almacenar los delegados de eventos.  
   
  Las propiedades de evento están compuestas de declaraciones de evento acompañadas de descriptores de acceso de evento. Los descriptores de acceso de eventos son métodos que se definen para agregar o quitar instancias de delegados de eventos de la estructura de datos de almacenamiento. Hay que tener en cuenta que las propiedades de evento son más lentas que los campos de evento, ya que se debe recuperar cada delegado de evento antes de poder invocarlo. La memoria y la velocidad se ven afectadas. Si la clase define muchos eventos que no se provocan con frecuencia, es posible que desee implementar propiedades de evento. Para obtener más información, vea [Cómo: Controlar varios eventos mediante las propiedades de evento](how-to-handle-multiple-events-using-event-properties.md).  
   
-## <a name="related-topics"></a>Temas relacionados  
+## <a name="related-articles"></a>Artículos relacionados
   
 |Title|Descripción|  
 |-----------|-----------------|  
 |[Cómo: Provocar y utilizar eventos](how-to-raise-and-consume-events.md)|Contiene ejemplos de cómo generar y consumir eventos.|  
 |[Cómo: Controlar varios eventos mediante las propiedades de evento](how-to-handle-multiple-events-using-event-properties.md)|Muestra cómo utilizar propiedades de evento para controlar varios eventos.|  
-|[Modelo de diseño de observador](observer-design-pattern.md)|Describe el patrón de diseño que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor.|  
-|[Cómo: Consumir eventos en una aplicación de formularios Web Forms](how-to-consume-events-in-a-web-forms-application.md)|Muestra cómo controlar un evento generado por un control de formularios Web Forms.|  
+|[Modelo de diseño de observador](observer-design-pattern.md)|Describe el patrón de diseño que permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor.|
   
 ## <a name="see-also"></a>Vea también
 
@@ -105,3 +103,4 @@ En el ejemplo siguiente se muestra un método de control de eventos denominado `
 - [Eventos (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Eventos (Guía de programación de C#)](../../csharp/programming-guide/events/index.md)
 - [Introducción a eventos y eventos enrutados (aplicaciones de UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Eventos en las aplicaciones de Microsoft Store 8.x](/previous-versions/windows/apps/hh758286(v=win.10))
