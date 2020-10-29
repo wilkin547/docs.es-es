@@ -1,15 +1,17 @@
 ---
 title: Creación de funciones definidas por el usuario (UDF) en .NET para Apache Spark
 description: Obtenga información sobre cómo implementar funciones definidas por el usuario (UDF) en .NET para aplicaciones Apache Spark.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 769bcf0a912d27e191dad82138648d1aefb3c3b6
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 50e631b0c561ebdf081d4c1b7d16bf25abb322e5
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955041"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224187"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Creación de funciones definidas por el usuario (UDF) en .NET para Apache Spark
 
@@ -184,6 +186,12 @@ Observe que `func` y `func2` ya no comparten clausura y cada una tiene la suya p
 
 * Los valores NULL de las UDF pueden iniciar excepciones. Es responsabilidad del desarrollador controlarlas.
 * Las UDF no aprovechan las optimizaciones que proporcionan las funciones integradas de Spark, por lo que se recomienda usar las funciones integradas siempre que sea posible.
+
+## <a name="faqs"></a>Preguntas más frecuentes
+
+**¿Por qué aparece el error `System.NotImplementedException: The method or operation is not implemented.` o `System.InvalidCastException: Unable to cast object of type 'System.Collections.Hashtable' to type 'System.Collections.Generic.IDictionary` al intentar llamar a una UDF con `ArrayType`, `MapType`, `ArrayList` o `HashTable` como argumento o tipo de valor devuelto?**  
+La compatibilidad con `ArrayType` y `MapType` no se proporciona hasta [v1.0](https://github.com/dotnet/spark/releases/tag/v1.0.0), así que este error aparece si se usa una versión de .NET para Apache Spark anterior a esa y se intentan pasar estos tipos como argumentos a la UDF o como un tipo de valor devuelto.
+Los tipos `ArrayList` y `HashTable` no se pueden admitir como tipos de valor devuelto de una UDF porque son colecciones no genéricas y, por tanto, sus definiciones de tipo de elemento no se pueden proporcionar a Spark.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

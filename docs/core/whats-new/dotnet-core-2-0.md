@@ -2,12 +2,12 @@
 title: Novedades de .NET Core 2.0
 description: Obtenga información sobre las características nuevas de .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdca38d1584107727fe8e20b80ab2337f4cb05f1
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397846"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223712"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novedades de .NET Core 2.0
 
@@ -72,7 +72,7 @@ Por ejemplo, para crear una aplicación "Hola mundo" de Visual Basic, haga estos
 
 1. Escriba el comando `dotnet new console -lang vb`.
 
-   El comando crea un archivo del proyecto con una extensión de archivo `.vbproj`, además de un archivo de código fuente de Visual Basic llamado *Program.vb*. Este archivo contiene el código fuente para escribir la cadena "Hola mundo" en la ventana de consola.
+   El comando crea un archivo del proyecto con una extensión de archivo `.vbproj`, además de un archivo de código fuente de Visual Basic llamado *Program.vb* . Este archivo contiene el código fuente para escribir la cadena "Hola mundo" en la ventana de consola.
 
 1. Escriba el comando `dotnet run`. La [CLI de .NET Core](../tools/index.md) compila y ejecuta automáticamente la aplicación, con lo que se muestra el mensaje "Hola mundo" en la ventana de la consola.
 
@@ -104,13 +104,13 @@ También puede desarrollar aplicaciones que tienen Linux como destino como un so
 
 ### <a name="support-for-net-standard-20"></a>Compatibilidad con .NET Standard 2.0
 
-.NET Standard define un conjunto de API con control de versiones que debe estar disponible en las implementaciones de .NET que cumplen con esa versión del estándar. .NET Standard está dirigido a los desarrolladores de bibliotecas. Pretende garantizar la funcionalidad que está disponible a una biblioteca que tiene como destino una versión de .NET Standard en cada implementación de .NET. .NET Core 1.x es compatible con la versión 1.6 de .NET Standard; .NET Core 2.0 es compatible con la versión más reciente, .NET Standard 2.0. Para más información, consulte [.NET Standard](../../standard/net-standard.md).
+.NET Standard define un conjunto de API con versión que debe estar disponible en las implementaciones de .NET que se ajustan a esa versión del estándar. .NET Standard está dirigido a los desarrolladores de bibliotecas. Pretende garantizar la funcionalidad que está disponible a una biblioteca que tiene como destino una versión de .NET Standard en cada implementación de .NET. .NET Core 1.x es compatible con la versión 1.6 de .NET Standard; .NET Core 2.0 es compatible con la versión más reciente, .NET Standard 2.0. Para más información, consulte [.NET Standard](../../standard/net-standard.md).
 
-.NET Standard 2.0 incluye más de 20 000 API más que las disponibles en .NET Standard 1.6. Gran parte de esta área expuesta expandida es resultado de la incorporación de las API comunes de .NET Framework y Xamarin en .NET Standard.
+.NET Standard 2.0 incluye más de 20 000 API más que las disponibles en .NET Standard 1.6. Gran parte de esta área expuesta expandida es resultado de la incorporación de las API comunes de .NET Framework y Xamarin en .NET Standard.
 
-Las bibliotecas de clases .NET Standard 2.0 también pueden hacer referencia a bibliotecas de clases .NET Framework siempre que llamen a las API que existen en .NET Standard 2.0. No es necesario realizar una nueva compilación de las bibliotecas .NET Framework.
+Las bibliotecas de clases de .NET Standard 2.0 también pueden hacer referencia a bibliotecas de clases de .NET Framework, siempre que llamen a las API que existen en .NET Standard 2.0. No es necesario realizar una nueva compilación de las bibliotecas .NET Framework.
 
-Si desea ver una lista de las API que se agregaron a .NET Standard desde la última versión, .NET Standard 1.6, consulte el artículo de [comparación entre .NET Standard 2.0 y 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Para obtener una lista de las API que se han agregado a .NET Standard desde su última versión, .NET Standard 1.6, vea [.NET Standard 2.0 frente a 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Área expuesta expandida
 
@@ -130,7 +130,7 @@ Visual Studio 2017 versión 15.3 y, en algunos casos, Visual Studio para Mac, of
 
 Si el SDK de .NET Core 2.0 SDK está instalado, puede redestinar los proyectos de .NET Core 1.x a .NET Core 2.0 y las bibliotecas .NET Standard 1.x a .NET Standard 2.0.
 
-Para redestinar el proyecto en Visual Studio, abra la pestaña **Aplicación** del cuadro de diálogo de propiedades del proyecto y cambie el valor de **plataforma de destino** a **.NET Core 2.0** o **.NET Standard 2.0**. También puede cambiarlo si hace clic con el botón derecho en el proyecto y selecciona la opción **Edit \*.csproj file** (Editar archivo .csproj). Para más información, consulte la sección [Herramientas](#tooling) anteriormente en este tema.
+Para redestinar el proyecto en Visual Studio, abra la pestaña **Aplicación** del cuadro de diálogo de propiedades del proyecto y cambie el valor de **plataforma de destino** a **.NET Core 2.0** o **.NET Standard 2.0** . También puede cambiarlo si hace clic con el botón derecho en el proyecto y selecciona la opción **Edit \*.csproj file** (Editar archivo .csproj). Para más información, consulte la sección [Herramientas](#tooling) anteriormente en este tema.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Compatibilidad con Live Unit Testing en .NET Core
 

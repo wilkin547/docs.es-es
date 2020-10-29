@@ -4,12 +4,12 @@ description: Aprenda a implementar una aplicación de .NET para Apache Spark en 
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 8ef1429d265c87347bb8771dc01b319fcb9e84d0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c745231f76142c11002ac6663906c8c44c69cdae
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955376"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223355"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight
 
@@ -51,11 +51,11 @@ Antes de empezar, haga las tareas siguientes:
 
 1. Visite [Azure Portal](https://portal.azure.com).
 
-2. Seleccione **+ Crear un recurso**. Después, seleccione **HDInsight** en la categoría **Análisis**.
+2. Seleccione **+ Crear un recurso** . Después, seleccione **HDInsight** en la categoría **Análisis** .
 
     ![Creación de un recurso de HDInsight desde Azure Portal](./media/hdinsight-deployment/create-hdinsight-resource.png)
 
-3. En **Datos básicos**, proporcione los valores siguientes:
+3. En **Datos básicos** , proporcione los valores siguientes:
 
     |Propiedad.  |Descripción  |
     |---------|---------|
@@ -65,26 +65,26 @@ Antes de empezar, haga las tareas siguientes:
     |Ubicación   | Seleccione una ubicación para el grupo de recursos. La plantilla utiliza esta ubicación para crear el clúster, así como para el almacenamiento de clúster predeterminado. |
     |Tipo de clúster| Seleccione **Spark** como el tipo de clúster.|
     |Versión del clúster|Este campo se rellenará automáticamente con la versión predeterminada una vez que se haya seleccionado el tipo de clúster. Seleccione una versión 2.3 o 2.4 de Spark.|
-    |Nombre de usuario de inicio de sesión del clúster| Escriba el nombre de usuario de inicio de sesión del clúster.  El nombre predeterminado es *admin*. |
+    |Nombre de usuario de inicio de sesión del clúster| Escriba el nombre de usuario de inicio de sesión del clúster.  El nombre predeterminado es *admin* . |
     |Contraseña de inicio de sesión de clúster| Escriba una contraseña de inicio de sesión. |
-    |Nombre de usuario de Secure Shell (SSH)| Escriba el nombre de usuario de SSH. De manera predeterminada, esta cuenta comparte la contraseña con la cuenta de *nombre de usuario de inicio de sesión del clúster*. |
+    |Nombre de usuario de Secure Shell (SSH)| Escriba el nombre de usuario de SSH. De manera predeterminada, esta cuenta comparte la contraseña con la cuenta de *nombre de usuario de inicio de sesión del clúster* . |
 
-4. Seleccione **Siguiente: Almacenamiento>>** para continuar en la página **Almacenamiento**. En **Almacenamiento**, proporcione los valores siguientes:
+4. Seleccione **Siguiente: Almacenamiento>>** para continuar en la página **Almacenamiento** . En **Almacenamiento** , proporcione los valores siguientes:
 
     |Propiedad.  |Descripción  |
     |---------|---------|
-    |Tipo de almacenamiento principal|Use el valor predeterminado **Azure Storage**.|
-    |Método de selección|Use el valor predeterminado **Seleccionar de la lista**.|
+    |Tipo de almacenamiento principal|Use el valor predeterminado **Azure Storage** .|
+    |Método de selección|Use el valor predeterminado **Seleccionar de la lista** .|
     |Cuenta de almacenamiento principal|Elija su suscripción y una de sus cuentas de almacenamiento activas en esa suscripción.|
     |Contenedor|Este contenedor es el contenedor de blobs específico de la cuenta de almacenamiento en la que el clúster busca archivos para ejecutar la aplicación en la nube. Puede asignarle cualquier nombre disponible.|
 
-5. Seleccione **Revisar y crear** y, después, **Crear**. La creación del clúster tarda aproximadamente 20 minutos. Se debe crear el clúster para poder continuar con el paso siguiente.
+5. Seleccione **Revisar y crear** y, después, **Crear** . La creación del clúster tarda aproximadamente 20 minutos. Se debe crear el clúster para poder continuar con el paso siguiente.
 
 ## <a name="publish-your-app"></a>Publicar la aplicación
 
 Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apache Spark: comenzar en 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro), que proporciona acceso al clúster de Spark a todos los archivos que necesita para ejecutar la aplicación.
 
-1. Para publicar *mySparkApp*, ejecute los comandos siguientes:
+1. Para publicar *mySparkApp* , ejecute los comandos siguientes:
 
    **En Windows:**
 
@@ -100,11 +100,11 @@ Luego, publique la aplicación *mySparkApp* creada en el tutorial [.NET para Apa
    foo@bar:~/path/to/app$ dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
-2. Realice las tareas siguientes para comprimir los archivos de la aplicación publicados para que pueda cargarlos fácilmente en el clúster de HDInsight.
+2. Realice las tareas siguientes para comprimir los archivos de la aplicación publicados para que pueda cargarlos fácilmente en el clúster de HDInsight. Comprima el contenido de la carpeta de publicación, *publish.zip* , por ejemplo, que se ha creado como resultado del paso 1. Todos los elementos ensamblados deben estar en la primera capa del archivo ZIP y no debe haber ninguna capa de carpeta intermedia. Esto significa que, al descomprimir *publish.zip* , todos los ensamblados se extraen en el directorio de trabajo actual.
 
    **En Windows:**
 
-   Vaya a *mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64*. Luego, haga clic con el botón derecho en la carpeta **Publicar** y seleccione **Enviar a > Carpeta comprimida (en zip)** . Asigne el nombre **publish.zip** a la carpeta nueva.
+   Use un programa de extracción, como 7-zip o WinZip, para extraer el archivo en el directorio bin con todos los archivos binarios publicados.
 
    **En Linux, ejecute el comando siguiente:**
 
@@ -132,23 +132,23 @@ Después, use el Explorador de Azure Storage para cargar los cinco archivos sig
 
    Cree un nuevo archivo llamado **install-worker.sh** en el equipo local y pegue el [contenido de install-worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) que se encuentra en GitHub. Después, cargue *install-worker.sh* en el contenedor de blobs.
 
-4. El clúster necesita el archivo publish.zip que contiene los archivos publicados de la aplicación. Vaya a la carpeta publicada, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** y busque **publish.zip**. Después, cargue *publish.zip* en el contenedor de blobs.
+4. El clúster necesita el archivo publish.zip que contiene los archivos publicados de la aplicación. Vaya a la carpeta publicada, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** y busque **publish.zip** . Después, cargue *publish.zip* en el contenedor de blobs.
 
-5. El clúster necesita el código de aplicación que se ha empaquetado en un archivo jar. Vaya a la carpeta publicada, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** y busque **microsoft-spark-2.3.x-0.3.0.jar**. Después, cargue el archivo jar en el contenedor de blobs.
+5. El clúster necesita el código de aplicación que se ha empaquetado en un archivo jar. Vaya a la carpeta publicada, **mySparkApp/bin/Release/netcoreapp3.0/ubuntu.16.04-x64** y busque **microsoft-spark-2.3.x-0.3.0.jar** . Después, cargue el archivo jar en el contenedor de blobs.
 
    Puede haber varios archivos .jar (para las versiones 2.3.x y 2.4.x de Spark). Debe elegir el archivo .jar que coincida con la versión de Spark que se haya elegido durante la creación del clúster. Por ejemplo, elija *microsoft-spark-2.3.x-0.3.0.jar* si se ha elegido Spark 2.3.2 durante la creación del clúster.
 
-6. El clúster necesita la entrada a la aplicación. Vaya al directorio **mySparkApp** y busque **input.txt**. Cargue el archivo de entrada en el directorio **user/sshuser** en el contenedor de blobs. Se conectará al clúster mediante SSH y en esta carpeta es donde el clúster buscará su entrada. El archivo *input.txt* es el único archivo que se carga en un directorio concreto.
+6. El clúster necesita la entrada a la aplicación. Vaya al directorio **mySparkApp** y busque **input.txt** . Cargue el archivo de entrada en el directorio **user/sshuser** en el contenedor de blobs. Se conectará al clúster mediante SSH y en esta carpeta es donde el clúster buscará su entrada. El archivo *input.txt* es el único archivo que se carga en un directorio concreto.
 
 ## <a name="run-the-hdinsight-script-action"></a>Ejecución de la acción de script de HDInsight
 
 Cuando el clúster se esté ejecutando y haya cargado los archivos en Azure, ejecute el script **install-worker.sh** en el clúster.
 
-1. Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **Acciones de script**.
+1. Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **Acciones de script** .
 
 2. Seleccione **+ Enviar nuevo** y proporcione los valores siguientes:
 
-   |Propiedad.  |Descripción  |
+   |Propiedad  |Descripción  |
    |---------|---------|
    | Tipo de script |Personalizados|
    | NOMBRE | Instalación del trabajo|
@@ -160,7 +160,7 @@ Cuando el clúster se esté ejecutando y haya cargado los archivos en Azure, eje
 
 ## <a name="run-your-app"></a>Ejecutar la aplicación
 
-1. Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **SSH e inicio de sesión del clúster**.
+1. Vaya al clúster de HDInsight de Spark en Azure Portal y luego seleccione **SSH e inicio de sesión del clúster** .
 
 2. Copie la información de inicio de sesión de SSH y pegue el inicio de sesión en un terminal. Inicie sesión en el clúster con la contraseña que se ha establecido durante la creación del clúster. Debería ver mensajes de bienvenida a Ubuntu y Spark.
 
@@ -180,7 +180,7 @@ Cuando el clúster se esté ejecutando y haya cargado los archivos en Azure, eje
 
 HDInsight guarda los datos en Azure Storage, por lo que puede eliminar un clúster de forma segura cuando no se esté usando. También se le cobrará por un clúster de HDInsight aunque no se esté usando. Como en muchas ocasiones los cargos por el clúster son mucho más elevados que los cargos por el almacenamiento, desde el punto de vista económico tiene sentido eliminar clústeres cuando no se estén usando.
 
-También puede seleccionar el nombre del grupo de recursos para abrir la página del grupo de recursos y, a continuación, seleccionar **Eliminar grupo de recursos**. Al eliminar el grupo de recursos, se eliminan tanto el clúster de HDInsight Spark como la cuenta de almacenamiento predeterminada.
+También puede seleccionar el nombre del grupo de recursos para abrir la página del grupo de recursos y, a continuación, seleccionar **Eliminar grupo de recursos** . Al eliminar el grupo de recursos, se eliminan tanto el clúster de HDInsight Spark como la cuenta de almacenamiento predeterminada.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -3,12 +3,12 @@ title: Análisis de las dependencias para trasladar código a .NET Core
 description: Obtenga información sobre cómo analizar dependencias externas para trasladar el proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 2aa09e551a99358d3a6961fafcfc0aa8dbd976b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 430da45052e3953ab49f182b1773fc6d74bd2221
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397924"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223601"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Análisis de las dependencias para trasladar código a .NET Core
 
@@ -50,7 +50,7 @@ La manera más fácil de inspeccionar las carpetas de paquetes NuGet consiste en
 
 Busque una carpeta con nombres que usen uno de los patrones siguientes: `netstandardX.Y` o `netcoreappX.Y`.
 
-Estos valores son los [monikers de la plataforma de destino (TFM)](../../standard/frameworks.md) que se asignan a las versiones de los perfiles de [.NET Standard](../../standard/net-standard.md), .NET Core y de la Biblioteca de clases portable (PCL) tradicional compatibles con .NET Core.
+Estos valores son los [monikers de la plataforma de destino (TFM)](../../standard/frameworks.md), que se asignan a versiones de perfiles de [.NET Standard](../../standard/net-standard.md), .NET Core y de la Biblioteca de clases portable (PCL) tradicional compatibles con .NET Core.
 
 > [!IMPORTANT]
 > Cuando examine los TFM compatibles con un paquete, tenga en cuenta que `netcoreapp*`, aunque sea compatible, es solo para los proyectos de .NET Core, y no para los proyectos de .NET Standard.

@@ -5,12 +5,12 @@ ms.date: 10/05/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: a4a59fea3ab1a6bc93a12e3f0aa13dea726d8121
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: a4736e46eb7c25b64278bed8f2c2457002936b81
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050407"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224160"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -78,7 +78,7 @@ Se proporcionan artefactos derivados para permitir una lectura más cómoda y ha
 
 El principal vehículo de distribución de los ensamblados de referencia de .NET Standard son los paquetes NuGet. Las implementaciones se entregarán de diversas formas, adecuadas para cada implementación de .NET.
 
-Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco de trabajo ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md)`netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varias implementaciones de .NET deben tener como destino este marco. Para obtener el conjunto más amplio de API, indique `netstandard2.0` como destino, puesto que el número de API disponibles se ha doblado entre .NET Standard 1.6 y 2.0.
+Los paquetes NuGet tienen como destino uno o varios [marcos](frameworks.md). Los paquetes de .NET Standard tienen como destino el marco ".NET Standard". Puede establecer como destino el marco de .NET Standard mediante el [TFM compacto](frameworks.md)`netstandard` (por ejemplo, `netstandard1.4`). Las bibliotecas diseñadas para ejecutarse en varias implementaciones de .NET deben tener como destino este marco. Para obtener el conjunto más amplio de API, indique `netstandard2.0` como destino, puesto que el número de API disponibles se ha doblado entre .NET Standard 1.6 y 2.0.
 
 El metapaquete [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) hace referencia al conjunto completo de paquetes NuGet que definen .NET Standard.  La manera más común de establecer como destino `netstandard` consiste en hacer referencia a este metapaquete. Describe y proporciona acceso a las aproximadamente 40 bibliotecas de .NET y las API asociadas que definen .NET Standard. Puede hacer referencia a paquetes adicionales que tienen como destino `netstandard` para obtener acceso a otras API.
 
@@ -132,7 +132,7 @@ Estas son algunas instrucciones para el código nuevo de .NET 5:
 
   Si va a compilar bibliotecas reutilizables que planea enviar en NuGet, tenga en cuenta el equilibrio entre el alcance y el conjunto de características disponibles. .NET Standard 2.0 es la última versión admitida por .NET Framework, por lo que ofrece un buen alcance con un conjunto de características bastante amplio. No se recomienda establecer .NET Standard 1.x como destino, ya que se limitaría el conjunto de características disponibles a cambio de un mínimo aumento del alcance.
 
-  Si no tiene que admitir .NET Framework, puede usar .NET Standard 2.1 o .NET 5. Se recomienda omitir .NET Standard 2.1 y pasar directamente a .NET 5. En última instancia,. las bibliotecas más utilizadas tendrán como destino tanto .NET Standard 2.0 como .NET 5. Al admitir .NET Standard 2.0 se obtiene el máximo alcance, mientras que al admitir .NET 5 se garantiza el aprovechamiento de las características más recientes de la plataforma para los clientes que ya usan .NET 5.
+  Si no necesita admitir .NET Framework, puede usar .NET Standard 2.1 o .NET 5. Se recomienda omitir .NET Standard 2.1 y pasar directamente a .NET 5. En última instancia,. las bibliotecas más utilizadas tendrán como destino tanto .NET Standard 2.0 como .NET 5. Al admitir .NET Standard 2.0 se obtiene el máximo alcance, mientras que al admitir .NET 5 se garantiza el aprovechamiento de las características más recientes de la plataforma para los clientes que ya usan .NET 5.
 
 ### <a name="net-standard-problems"></a>Problemas con .NET Standard
 
@@ -152,7 +152,7 @@ Estos son algunos problemas con .NET Standard que ayudan a explicar por qué .NE
 
 - Excepciones no admitidas por la plataforma en tiempo de ejecución
 
-  .NET Standard expone API específicas de la plataforma. El código se podría compilar sin errores y parecer ser portable a cualquier plataforma aunque lo no sea. Cuando se ejecuta en una plataforma que no tiene una implementación para una API concreta, se obtienen errores en tiempo de ejecución.
+  .NET Standard expone API específicas de la plataforma. El código se podría compilar sin errores y parecer ser portable a cualquier plataforma aunque lo no sea. Cuando se ejecuta en una plataforma que no tiene una implementación de una API determinada, se obtienen errores en tiempo de ejecución.
 
   **Solución en .NET 5:** El SDK de .NET 5 incluye analizadores de código que están habilitados de forma predeterminada. El analizador de compatibilidad de plataformas detecta el uso involuntario de las API que no se admiten en las plataformas en las se que pretenden ejecutar. Para obtener más información, vea [Analizador de compatibilidad de plataformas](analyzers/platform-compat-analyzer.md).
 

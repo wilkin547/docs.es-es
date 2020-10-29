@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: ffeaa1e11512cab64695c120f844594b8c5014a8
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281113"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223489"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -47,11 +47,11 @@ Al escribir pruebas para el código, este se desacopla naturalmente, ya que, de 
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de una buena prueba unitaria
 
-- **Rápida**. No es infrecuente que los proyectos maduros tengan miles de pruebas unitarias. Las pruebas unitarias deberían tardar muy poco tiempo en ejecutarse. Milisegundos.
-- **Aislada**. Las pruebas unitarias son independientes, se pueden ejecutar de forma aislada y no tienen ninguna dependencia en ningún factor externo, como sistemas de archivos o bases de datos.
-- **Reiterativa**. La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
-- **Autocomprobada**. La prueba debe ser capaz de detectar automáticamente si el resultado ha sido correcto o incorrecto sin necesidad de intervención humana.
-- **Oportuna**. Una prueba unitaria no debe tardar un tiempo desproporcionado en escribirse en comparación con el código que se va a probar. Si observa que la prueba del código tarda mucho en comparación con su escritura, considere un diseño más fácil de probar.
+- **Rápida** . No es infrecuente que los proyectos maduros tengan miles de pruebas unitarias. Las pruebas unitarias deberían tardar muy poco tiempo en ejecutarse. Milisegundos.
+- **Aislada** . Las pruebas unitarias son independientes, se pueden ejecutar de forma aislada y no tienen ninguna dependencia en ningún factor externo, como sistemas de archivos o bases de datos.
+- **Reiterativa** . La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
+- **Autocomprobada** . La prueba debe ser capaz de detectar automáticamente si el resultado ha sido correcto o incorrecto sin necesidad de intervención humana.
+- **Oportuna** . Una prueba unitaria no debe tardar un tiempo desproporcionado en escribirse en comparación con el código que se va a probar. Si observa que la prueba del código tarda mucho en comparación con su escritura, considere un diseño más fácil de probar.
 
 ## <a name="code-coverage"></a>Cobertura de código
 
@@ -63,11 +63,11 @@ Un alto porcentaje de cobertura de código no es un indicador de éxito, ni impl
 
 Desafortunadamente, el término *ficticio* se emplea de forma incorrecta al referirse a las pruebas. Los puntos siguientes definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
 
-*Emulación*: una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
+*Emulación* : una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
 
-*Objeto ficticio*: un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara una instrucción Assert en ella.
+*Objeto ficticio* : un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara una instrucción Assert en ella.
 
-*Stub*: un stub es un reemplazo controlable para una dependencia existente (o colaborador) en el sistema. Con un stub, puede probar el código sin tratar directamente con la dependencia. De forma predeterminada, una emulación empieza como un stub.
+*Stub* : un stub es un reemplazo controlable para una dependencia existente (o colaborador) en el sistema. Con un stub, puede probar el código sin tratar directamente con la dependencia. De forma predeterminada, una emulación empieza como un stub.
 
 Tenga en cuenta el fragmento de código siguiente:
 
@@ -115,6 +115,8 @@ Lo principal que debe recordar sobre los objetos ficticios frente a los stubs es
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
+No intente incluir dependencias en la infraestructura al escribir pruebas unitarias. Estas vuelven las pruebas lentas y frágiles, así que deberían reservarse para las pruebas de integración. Puede evitar esas dependencias en su aplicación si sigue el [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle) (Principio de dependencias explícitas) y usando la [Inserción de dependencias](../extensions/dependency-injection.md). También puede mantener las pruebas unitarias en un proyecto separado de las pruebas de integración. De esta forma, se garantiza que el proyecto de pruebas unitarias no tenga referencias a paquetes de infraestructura ni dependencias de estos.
+
 ### <a name="naming-your-tests"></a>Asignar nombre a las pruebas
 
 El nombre de la prueba debe constar de tres partes:
@@ -147,7 +149,7 @@ Las pruebas van más allá de garantizar que el código funciona, también propo
 
 #### <a name="why"></a>¿Por qué?
 
-- Separa claramente lo que se está probando de los pasos *organizar* y *declarar*.
+- Separa claramente lo que se está probando de los pasos *organizar* y *declarar* .
 - Menos posibilidad de mezclar aserciones con el código para "actuar".
 
 La legibilidad es uno de los aspectos más importantes a la hora de escribir una prueba. Al separar cada una de estas acciones dentro de la prueba, se resaltan claramente las dependencias necesarias para llamar al código, la forma de llamarlo y lo que se intenta declarar. Aunque es posible combinar algunos pasos y reducir el tamaño de la prueba, el objetivo principal es que sea lo más legible posible.
@@ -186,7 +188,7 @@ La asignación de nombres a las variables de las pruebas unitarias es tan import
 #### <a name="why"></a>¿Por qué?
 
 - Evita la necesidad de que el lector de la prueba inspeccione el código de producción con el fin de averiguar lo que hace que el valor sea especial.
-- Muestra explícitamente lo que se intenta *probar*, en lugar de lo que se intenta *lograr*.
+- Muestra explícitamente lo que se intenta *probar* , en lugar de lo que se intenta *lograr* .
 
 Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una cadena tiene un aspecto fuera de lo normal, puede preguntarse por qué se ha elegido un determinado valor para un parámetro o valor devuelto. Esto puede dar lugar a un vistazo más detallado a los detalles de implementación, en lugar de centrarse en la prueba.
 

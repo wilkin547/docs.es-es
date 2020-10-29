@@ -1,38 +1,39 @@
 ---
-title: Información general acerca de .NET Framework
-description: Consulte la información general sobre .NET Framework, que es una tecnología que admite la creación y ejecución de servicios web y aplicaciones Windows.
-ms.date: 03/30/2017
+title: Información general acerca de .NET Framework
+description: Lea una introducción sobre .NET Framework, que es una tecnología que permite la compilación y ejecución de servicios web y aplicaciones Windows.
+ms.date: 10/21/2020
 helpviewer_keywords:
 - application development [.NET Framework]
 - common language runtime
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 3577a3ad13d9ef6935a1bed8a29e3d594857928e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75b2e94b93eabdbf8a6a40f38c1b12a8caddd98a
+ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557767"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92471749"
 ---
 # <a name="overview-of-net-framework"></a>Información general acerca de .NET Framework
 
 .NET Framework es una tecnología que admite la creación y ejecución de servicios web y aplicaciones Windows. El diseño de .NET Framework está enfocado a cumplir los objetivos siguientes:
 
-- Proporcionar un entorno coherente de programación orientada a objetos, en el que el código de los objetos se pueda almacenar y ejecutar de forma local, ejecutar de forma local pero distribuida en Internet o ejecutar de forma remota.
+- Proporcionar un entorno de programación orientada a objetos coherente en el que el código de los objetos se pueda almacenar y ejecutar de forma local, ejecutar de forma local pero distribuida en Internet o ejecutar de forma remota.
 
-- Proporcionar un entorno de ejecución de código que reduzca lo máximo posible la implementación de software y los conflictos de versiones.
+- Proporcionar un entorno de ejecución de código que:
 
-- Ofrecer un entorno de ejecución de código que promueva la ejecución segura del mismo, incluso del creado por terceras personas desconocidas o que no son de plena confianza.
+  - Minimice los conflictos de implementación de software y control de versiones.
 
-- Proporcionar un entorno de ejecución de código que elimine los problemas de rendimiento de los entornos en los que se utilizan scripts o intérpretes de comandos.
+  - Fomente la ejecución segura de código, incluso del creado por terceros desconocidos o que no son de plena confianza.
 
-- Ofrecer al programador una experiencia coherente entre tipos de aplicaciones muy diferentes, como las basadas en Windows o en Web.
+  - Elimine los problemas de rendimiento de los entornos con scripts o interpretados.
 
-- Basar toda la comunicación en estándares del sector para asegurar que el código de .NET Framework se puede integrar con otros tipos de código.
+- Ofrecer al desarrollador una experiencia coherente entre tipos de aplicaciones muy diferentes, como las basadas en Windows o en web.
 
-> [!NOTE]
-> Para una introducción general a .NET Framework para usuarios y desarrolladores, consulte [Introducción](index.md).
+- Basar toda la comunicación en estándares del sector para garantizar que el código basado en .NET Framework se integre con otro código.
+
+[!INCLUDE [net-framework-future](../../../includes/net-framework-future.md)]
 
 .NET Framework consta de dos componentes principales: Common Language Runtime (CLR) y la biblioteca de clases de .NET Framework. Common Language Runtime es el fundamento de .NET Framework. El tiempo de ejecución se puede considerar como un agente que administra el código en tiempo de ejecución y proporciona servicios centrales, como la administración de memoria, la administración de subprocesos y la comunicación remota, al tiempo que aplica una seguridad de tipos estricta y otras formas de especificación del código que promueven su seguridad y solidez. De hecho, el concepto de administración de código es un principio básico del motor en tiempo de ejecución. El código destinado al tiempo de ejecución se denomina código administrado, a diferencia del resto de código, que se conoce como código no administrado. La biblioteca de clases es una colección completa orientada a objetos de tipos reutilizables que se puede emplear para desarrollar aplicaciones que abarcan desde las tradicionales herramientas de interfaz gráfica de usuario (GUI) o de línea de comandos hasta aplicaciones basadas en las innovaciones más recientes proporcionadas por ASP.NET, como formularios Web Forms y servicios web XML.
 

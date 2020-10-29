@@ -4,12 +4,12 @@ description: Aprenda a crear bibliotecas de .NET Core con la CLI de .NET Core.
 author: cartermp
 ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e98ce9e08c8d92bb4c89348e21cece60de811848
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396200"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223702"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>Desarrollo de bibliotecas con la CLI de .NET Core
 
@@ -33,7 +33,7 @@ Además, si desea admitir destinos de .NET Framework anteriores, deberá instala
 | 4.0                    | Windows SDK para Windows 7 y .NET Framework 4         |
 | 2.0, 3.0 y 3.5      | Entorno de ejecución de .NET Framework 3.5 SP1 (o una versión posterior a Windows 8) |
 
-## <a name="how-to-target-the-net-standard"></a>Estándar .NET como destino
+## <a name="how-to-target-net-standard"></a>Establecimiento de .NET Standard como destino
 
 Si no conoce .NET Standard, consulte el tema [.NET Standard](../../standard/net-standard.md) para más información.
 
@@ -295,9 +295,9 @@ let doWork data = async {
 
 Escenarios de consumo similares a este significan que las API a las que se tiene acceso deben tener una estructura distinta para C# y para F#.  Un enfoque común para lograrlo es factorizar toda la lógica de una biblioteca en un proyecto central, con los proyectos de C# y F# definiendo los niveles de API que hacen llamadas a ese proyecto central.  En el resto de la sección se usarán los siguientes nombres:
 
-* **AwesomeLibrary.Core**: un proyecto central que contiene toda la lógica de la biblioteca
-* **AwesomeLibrary.CSharp**: un proyecto con API públicas pensado para el consumo en C#
-* **AwesomeLibrary.FSharp**: un proyecto con API públicas pensado para el consumo en F#
+* **AwesomeLibrary.Core** : un proyecto central que contiene toda la lógica de la biblioteca
+* **AwesomeLibrary.CSharp** : un proyecto con API públicas pensado para el consumo en C#
+* **AwesomeLibrary.FSharp** : un proyecto con API públicas pensado para el consumo en F#
 
 Puede ejecutar los siguientes comandos en su terminal para generar la misma estructura de esta guía:
 
@@ -319,7 +319,7 @@ Esto agregará los tres proyectos anteriores y un archivo de solución que los v
 
 ### <a name="project-to-project-referencing"></a>Referencias entre proyectos
 
-La mejor manera de hacer referencia a un proyecto es usar la CLI de .NET Core para agregar una referencia de proyecto. Desde los directorios del proyecto **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp**, puede ejecutar el siguiente comando:
+La mejor manera de hacer referencia a un proyecto es usar la CLI de .NET Core para agregar una referencia de proyecto. Desde los directorios del proyecto **AwesomeLibrary.CSharp** y **AwesomeLibrary.FSharp** , puede ejecutar el siguiente comando:
 
 ```dotnetcli
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj

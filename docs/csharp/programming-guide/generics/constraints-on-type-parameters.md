@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301949"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224315"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
-Las restricciones informan al compilador sobre las capacidades que debe tener un argumento de tipo. Sin restricciones, el argumento de tipo puede ser cualquier tipo. El compilador solo puede suponer los miembros de <xref:System.Object?displayProperty=nameWithType>, que es la clase base fundamental de los tipos .NET. Para más información, vea [Por qué usar restricciones](#why-use-constraints). Si el código de cliente usa un tipo que no cumple una restricción, el compilador emite un error. Las restricciones se especifican con la palabra clave contextual `where`. En la tabla siguiente se muestran los siete tipos de restricciones:
+Las restricciones informan al compilador sobre las capacidades que debe tener un argumento de tipo. Sin restricciones, el argumento de tipo puede ser cualquier tipo. El compilador solo puede suponer los miembros de <xref:System.Object?displayProperty=nameWithType>, que es la clase base fundamental de los tipos .NET. Para más información, vea [Por qué usar restricciones](#why-use-constraints). Si el código de cliente usa un tipo que no cumple una restricción, el compilador emite un error. Las restricciones se especifican con la palabra clave contextual `where`. En la tabla siguiente se muestran los distintos tipos de restricciones:
 
 |Restricción|Descripción|
 |----------------|-----------------|

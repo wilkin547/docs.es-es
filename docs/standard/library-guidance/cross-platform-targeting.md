@@ -2,12 +2,12 @@
 title: Destino multiplataforma para bibliotecas de .NET
 description: Procedimientos recomendados para la creación de bibliotecas de .NET multiplataforma.
 ms.date: 08/12/2019
-ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731448"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223350"
 ---
 # <a name="cross-platform-targeting"></a>Destinatarios multiplataforma
 
@@ -15,7 +15,7 @@ La plataforma .NET moderna es compatible con varios sistemas operativos y dispos
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard es la mejor manera de agregar compatibilidad multiplataforma a una biblioteca de .NET. [.NET Standard](../net-standard.md) es una especificación de API de .NET que se prevé que esté disponible en todas las implementaciones de .NET. El destino .NET Standard le permite generar bibliotecas que están limitadas a usar las API que se encuentran en una versión concreta de .NET Standard, lo que significa que la pueden usar todas las plataformas que implementan esa versión de .NET Standard.
+.NET Standard es la mejor manera de agregar compatibilidad multiplataforma a una biblioteca de .NET. [.NET Standard](../net-standard.md) es una especificación de API de .NET que se prevé que esté disponible en todas las implementaciones de .NET. El establecimiento de .NET Standard como destino permite generar bibliotecas restringidas a usar las API de una versión concreta de .NET Standard, lo que significa que lo pueden usar todas las plataformas que implementan esa versión de .NET Standard.
 
 ![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 

@@ -3,12 +3,12 @@ title: Traslado de bibliotecas a .NET Core
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: ac9da2f850bf1e4e36367ad2154849a0c7efd535
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: dcacf4d59964e0ef2009b4e9694d7f562e3a1547
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164287"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223562"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -38,12 +38,12 @@ En este artículo se trata la portabilidad de dependencias de terceros y qué ha
 
 ## <a name="retarget-to-net-framework-472"></a>Redestinar a .NET Framework 4.7.2
 
-Si el código no apunta a .NET Framework 4.7.2, se recomienda que lo redestine a esta plataforma. De esta forma, se garantiza la disponibilidad de las últimas alternativas de API en los casos donde el estándar .NET no admite las API existentes.
+Si el código no apunta a .NET Framework 4.7.2, se recomienda que lo redestine a esta plataforma. Así, se garantiza la disponibilidad de las alternativas de API más recientes en los casos en que .NET Standard no admite las API existentes.
 
 Haga lo siguiente para cada uno de los proyectos de Visual Studio que desea trasladar:
 
-1. Haga clic con el botón derecho en el proyecto y seleccione **Propiedades**.
-1. En la lista desplegable **Plataforma de destino**, seleccione **.NET Framework 4.7.2**.
+1. Haga clic con el botón derecho en el proyecto y seleccione **Propiedades** .
+1. En la lista desplegable **Plataforma de destino** , seleccione **.NET Framework 4.7.2** .
 1. Compile de nuevo el proyecto.
 
 Debido a que sus proyectos ahora apuntan a .NET Framework 4.7.2, use esa versión de .NET Framework como la base para portar el código.
@@ -120,8 +120,8 @@ La mejor forma de asegurarse de que todo funciona correctamente cuando traslada 
 En última instancia, el esfuerzo de portabilidad depende significativamente de la estructura del código .NET Framework. Una forma conveniente de portar el código consiste en comenzar por la *base* de la biblioteca, que son los componentes fundamentales del código. Pueden ser los modelos de datos u otras clases y métodos fundamentales que todo lo demás usa directa o indirectamente.
 
 1. Porte el proyecto de prueba que comprueba el nivel de la biblioteca cuya portabilidad se está realizando actualmente.
-1. Copie la base de la biblioteca en un nuevo proyecto .NET Core y seleccione la versión del estándar .NET que desea admitir.
-1. Haga los cambios necesarios para la compilación del código. Muchas de estas acciones pueden requerir agregar dependencias del paquete NuGet al archivo *csproj*.
+1. Copie la base de la biblioteca en un nuevo proyecto de .NET Core y seleccione la versión de .NET Standard que quiere admitir.
+1. Haga los cambios necesarios para la compilación del código. Muchas de estas acciones pueden requerir agregar dependencias del paquete NuGet al archivo *csproj* .
 1. Ejecute las pruebas y haga los ajustes que sean necesarios.
 1. Elija el nivel de código siguiente que se va a portar y repita los pasos anteriores.
 

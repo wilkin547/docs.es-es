@@ -4,12 +4,12 @@ description: Obtenga información sobre las plataformas de destino para las apli
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: 85bc05f07cfcc5f59a8a27790ee3d78a497cecdc
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065258"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223461"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
@@ -25,7 +25,7 @@ Para plataformas de destino basadas en paquetes (por ejemplo, .NET Standard y .N
 
 ## <a name="latest-versions"></a>Últimas versiones
 
-En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET.
+En la tabla siguiente se definen las plataformas de destino más comunes, cómo se hace referencia a ellas y la versión de [.NET Standard](net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET.
 
 | Marco de destino      | Latest <br/> versión estable | Moniker de la plataforma de destino (TFM) | Implementado <br/> versión de .NET Standard |
 | :-: | :-: | :-: | :-: |
@@ -69,7 +69,7 @@ Para obtener más información sobre los TFM de .NET 5, vea la página [Nombres
 
 ## <a name="how-to-specify-a-target-framework"></a>Procedimiento para especificar una plataforma de destino
 
-Las plataformas de destino se especifican en un archivo del proyecto. Cuando especifique una única plataforma de destino, use el elemento **TargetFramework**. En el siguiente archivo de proyecto de aplicación de consola se muestra cómo elegir como destino .NET 5.0:
+Las plataformas de destino se especifican en un archivo del proyecto. Cuando especifique una única plataforma de destino, use el elemento **TargetFramework** . En el siguiente archivo de proyecto de aplicación de consola se muestra cómo elegir como destino .NET 5.0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -82,7 +82,7 @@ Las plataformas de destino se especifican en un archivo del proyecto. Cuando esp
 </Project>
 ```
 
-Al especificar varias plataformas de destino, puede hacer referencia de forma condicional a ensamblados para cada plataforma de destino. En el código, puede compilar de forma condicional en esos ensamblados utilizando símbolos de preprocesador con lógica *if-then-else*.
+Al especificar varias plataformas de destino, puede hacer referencia de forma condicional a ensamblados para cada plataforma de destino. En el código, puede compilar de forma condicional en esos ensamblados utilizando símbolos de preprocesador con lógica *if-then-else* .
 
 El siguiente proyecto de biblioteca tiene como destino las API de .NET Standard (`netstandard1.4`) y de .NET Framework (`net40` y `net45`). Use el elemento **TargetFrameworks** plural con varias plataformas de destino. Los atributos `Condition` incluyen paquetes específicos de la implementación cuando se compila la biblioteca para los dos TFM de .NET Framework:
 
@@ -116,7 +116,7 @@ public class MyClass
     {
 #if NET40
         Console.WriteLine("Target framework: .NET Framework 4.0");
-#elif NET45  
+#elif NET45
         Console.WriteLine("Target framework: .NET Framework 4.5");
 #else
         Console.WriteLine("Target framework: .NET Standard 1.4");

@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: e79907f364939462b7d0d5814c4752be23bcfdf3
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 33c00e90d768021e36a7987be0ddd7daec4cfcec
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381598"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224042"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 
@@ -18,27 +18,7 @@ En este tutorial, explorará la creación de un **analizador** y una **correcci�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-> [!NOTE]
-> La plantilla actual de Visual Studio **Analyzer con corrección de código (.NET Standard)** tiene un error conocido y debe corregirse en la versión 16.7 de Visual Studio 2019. Los proyectos de la plantilla no se compilarán a menos que se realicen los siguientes cambios:
->
-> 1. Seleccione **Herramientas** > **Opciones** > **Administrador de paquetes NuGet** > **Orígenes de paquetes**
->    - Haga clic en el signo más (+) para agregar un nuevo origen:
->    - Establezca el **Origen** en `https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json` y seleccione **Actualizar**.
-> 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **MakeConst.Vsix** y seleccione **Editar archivo del proyecto**.
->    - Actualice el nodo `<AssemblyName>` para agregar el sufijo `.Visx`:
->      - `<AssemblyName>MakeConst.Vsix</AssemblyName>`
->    - Actualice el nodo `<ProjectReference>` en la línea 41 para modificar el valor `TargetFramework`:
->      - `<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.0" />`
-> 1. Actualice el archivo *MakeConstUnitTests.cs* en el proyecto *MakeConst.Test*:
->    - Cambie la línea 9 a la siguiente, observe la modificación del espacio de nombres:
->      - `using Verify = Microsoft.CodeAnalysis.CSharp.Testing.MSTest.CodeFixVerifier<`
->    - Cambie la línea 24 al siguiente método:
->      - `await Verify.VerifyAnalyzerAsync(test);`
->    - Cambie la línea 62 al siguiente método:
->      - `await Verify.VerifyCodeFixAsync(test, expected, fixtest);`
-
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads), versión 16.7 o posterior
 
 Debe instalar el **SDK de .NET Compiler Platform** a través del Instalador de Visual Studio:
 
@@ -68,11 +48,11 @@ const int x = 0;
 Console.WriteLine(x);
 ```
 
-El análisis para determinar si una variable se puede convertir en constante, que requiere un análisis sintáctico, un análisis constante de la expresión del inicializador y un análisis del flujo de datos para garantizar que no se escriba nunca en la variable. .NET Compiler Platform proporciona las API que facilita la realización de este análisis. El primer paso es crear un proyecto en C# del **analizador con corrección de código**.
+El análisis para determinar si una variable se puede convertir en constante, que requiere un análisis sintáctico, un análisis constante de la expresión del inicializador y un análisis del flujo de datos para garantizar que no se escriba nunca en la variable. .NET Compiler Platform proporciona las API que facilita la realización de este análisis. El primer paso es crear un proyecto en C# del **analizador con corrección de código** .
 
 - En Visual Studio, elija **Archivo > Nuevo > Proyecto...** para mostrar el cuadro de diálogo Nuevo proyecto.
-- En **Visual C# > Extensibilidad**, elija **Analizador con corrección de código (.NET Standard)** .
-- Asigne al proyecto el nombre "**MakeConst**" y haga clic en Aceptar.
+- En **Visual C# > Extensibilidad** , elija **Analizador con corrección de código (.NET Standard)** .
+- Asigne al proyecto el nombre " **MakeConst** " y haga clic en Aceptar.
 
 La plantilla del analizador con corrección de código crea tres proyectos: uno contiene el analizador y la corrección de código, el segundo es un proyecto de prueba unitaria y el tercero es el proyecto de VSIX. El proyecto de inicio predeterminado es el proyecto de VSIX. Presione <kbd>F5</kbd> para iniciar el proyecto de VSIX. De esta forma se inicia una segunda instancia de Visual Studio que ha cargado el nuevo analizador.
 
@@ -94,7 +74,7 @@ No tiene que iniciar una segunda copia de Visual Studio, y cree código para pro
 
 ## <a name="create-analyzer-registrations"></a>Creación de registros del analizador
 
-La plantilla crea la clase `DiagnosticAnalyzer` inicial en el archivo **MakeConstAnalyzer.cs**. Este analizador inicial muestra dos propiedades importantes de cada analizador.
+La plantilla crea la clase `DiagnosticAnalyzer` inicial en el archivo **MakeConstAnalyzer.cs** . Este analizador inicial muestra dos propiedades importantes de cada analizador.
 
 - Cada analizador de diagnóstico debe proporcionar un atributo `[DiagnosticAnalyzer]` que describe el lenguaje en el que opera.
 - Cada analizador de diagnóstico debe derivar de la clase <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer>.
@@ -106,7 +86,7 @@ La plantilla también muestra las características básicas que forman parte de 
 
 Registre acciones en la invalidación del método <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer.Initialize(Microsoft.CodeAnalysis.Diagnostics.AnalysisContext)?displayProperty=nameWithType>. En este tutorial, repasará **nodos de sintaxis** que buscan declaraciones locales y verá cuáles de ellos tienen valores constantes. Si una declaración puede ser constante, el analizador creará y notificará un diagnóstico.
 
-El primer paso es actualizar las constantes de registro y el método `Initialize`, por lo que estas constantes indican su analizador "Make Const". La mayoría de las constantes de cadena se definen en el archivo de recursos de cadena. Debe seguir dicha práctica para una localización más sencilla. Abra el archivo **Resources.resx** para el proyecto de analizador **MakeConst**. Muestra el editor de recursos. Actualice los recursos de cadena como sigue:
+El primer paso es actualizar las constantes de registro y el método `Initialize`, por lo que estas constantes indican su analizador "Make Const". La mayoría de las constantes de cadena se definen en el archivo de recursos de cadena. Debe seguir dicha práctica para una localización más sencilla. Abra el archivo **Resources.resx** para el proyecto de analizador **MakeConst** . Muestra el editor de recursos. Actualice los recursos de cadena como sigue:
 
 - Cambie `AnalyzerTitle` por "La variable puede convertirse en constante".
 - Cambie `AnalyzerMessageFormat` por "Puede convertirse en constante".
@@ -149,7 +129,7 @@ int x = 0;
 Console.WriteLine(x);
 ```
 
-El primer paso es encontrar las declaraciones locales. Agregue el código siguiente a `AnalyzeNode` en **MakeConstAnalyzer.cs**:
+El primer paso es encontrar las declaraciones locales. Agregue el código siguiente a `AnalyzeNode` en **MakeConstAnalyzer.cs** :
 
 ```csharp
 var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
@@ -329,7 +309,7 @@ El código anterior también realizó un par de cambios en el código que compil
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-Ejecute estas dos pruebas para asegurarse de que pasen. En Visual Studio, abra el **Explorador de pruebas**; para ello, seleccione **Prueba** > **Windows** > **Explorador de pruebas**. A continuación, seleccione el vínculo **Ejecutar todo**.
+Ejecute estas dos pruebas para asegurarse de que pasen. En Visual Studio, abra el **Explorador de pruebas** ; para ello, seleccione **Prueba** > **Windows** > **Explorador de pruebas** . A continuación, seleccione el vínculo **Ejecutar todo** .
 
 ## <a name="create-tests-for-valid-declarations"></a>Creación de pruebas para declaraciones válidas
 
@@ -504,7 +484,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 }
 ```
 
-Debe escribir algo más de código en el proveedor de corrección de código para reemplazar la palabra clave `var` por el nombre de tipo correcto. Vuelva a **CodeFixProvider.cs**. El código que se va a agregar realiza los pasos siguientes:
+Debe escribir algo más de código en el proveedor de corrección de código para reemplazar la palabra clave `var` por el nombre de tipo correcto. Vuelva a **CodeFixProvider.cs** . El código que se va a agregar realiza los pasos siguientes:
 
 - Compruebe si la declaración es una declaración `var` y, en su caso:
 - Cree un tipo para el tipo deducido.

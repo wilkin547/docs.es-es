@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 0539519c2e1dd429983226065e8508ac148e25a8
-ms.sourcegitcommit: eb7e87496f42361b1da98562dd75b516c9d58bbc
+ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91877566"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223589"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -132,7 +132,7 @@ Los entornos de desarrollo integrado para .NET incluyen los siguientes:
 
 El [SDK de .NET](sdk.md) es un conjunto de bibliotecas y herramientas para desarrollar y ejecutar aplicaciones .NET.
 
-Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet-core/), puede elegir el SDK o un *entorno de ejecución*, como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
+Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet-core/), puede elegir el SDK o un *entorno de ejecución* , como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
 
 La descarga del SDK incluye los componentes siguientes:
 
@@ -153,7 +153,7 @@ Para obtener más información, vea los siguientes recursos:
 
 ### <a name="project-system-and-msbuild"></a>Sistema del proyecto y MSBuild
 
-Una aplicación .NET se crea a partir de código fuente mediante [MSBuild](/visualstudio/msbuild/msbuild). Un archivo del proyecto ( *.csproj*, *.fsproj* o *.vbproj*) especifica [destinos](/visualstudio/msbuild/msbuild-targets) y [tareas](/visualstudio/msbuild/msbuild-tasks) asociadas que se encargan de compilar, empaquetar y publicar código. Existen identificadores de SDK que hacen referencia a colecciones estándar de destinos y tareas. El uso de estos identificadores ayuda a reducir el tamaño de los archivos del proyecto y facilita el trabajo con ellos. Por ejemplo, este es un archivo del proyecto para una aplicación de consola:
+Una aplicación .NET se crea a partir de código fuente mediante [MSBuild](/visualstudio/msbuild/msbuild). Un archivo del proyecto ( *.csproj* , *.fsproj* o *.vbproj* ) especifica [destinos](/visualstudio/msbuild/msbuild-targets) y [tareas](/visualstudio/msbuild/msbuild-tasks) asociadas que se encargan de compilar, empaquetar y publicar código. Existen identificadores de SDK que hacen referencia a colecciones estándar de destinos y tareas. El uso de estos identificadores ayuda a reducir el tamaño de los archivos del proyecto y facilita el trabajo con ellos. Por ejemplo, este es un archivo del proyecto para una aplicación de consola:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ Los lenguajes .NET de nivel alto, como C#, compilan en un conjunto de instruccio
 
 Como la compilación JIT tiene lugar durante la ejecución de la aplicación, el tiempo de compilación es parte del tiempo de ejecución. Por tanto, los compiladores JIT tienen que compensar el tiempo invertido en optimizar el código con el ahorro que puede generar el código resultante. Pero un compilador JIT conoce el hardware real y puede liberar a los desarrolladores de tener que enviar diferentes implementaciones para distintas plataformas.
 
-El compilador JIT de .NET puede realizar la *compilación en niveles*, lo que significa que puede volver a compilar métodos concretos en tiempo de ejecución. Esta característica le permite compilar rápidamente mientras todavía puede generar una versión muy optimizada del código para los métodos que se usan con frecuencia.
+El compilador JIT de .NET puede realizar la *compilación en niveles* , lo que significa que puede volver a compilar métodos concretos en tiempo de ejecución. Esta característica le permite compilar rápidamente mientras todavía puede generar una versión muy optimizada del código para los métodos que se usan con frecuencia.
 
 Para obtener más información, vea [Proceso de ejecución administrada](../standard/managed-execution-process.md) y [Compilación en niveles](whats-new/dotnet-core-3-0.md#tiered-compilation).
 
@@ -236,13 +236,13 @@ La experiencia predeterminada para la mayoría de las cargas de trabajo de .NET 
 
 El *recolector de elementos no utilizados* (GC) administra la asignación y liberación de la memoria para las aplicaciones. Cada vez que el código crea un objeto, el CLR le asigna memoria del [montón administrado](../standard/garbage-collection/fundamentals.md#the-managed-heap). Siempre que haya espacio de direcciones disponible en el montón nativo, el motor en tiempo de ejecución continúa asignando espacio a los objetos nuevos. Cuando no queda suficiente espacio de direcciones libre, el GC comprueba los objetos del montón administrado que la aplicación ya no usa. Después, reclama esa memoria.
 
-El recolector de elementos no utilizados es uno de los servicios del CLR que ayudan a garantizar la *protección de la memoria*. Un programa tiene protección de la memoria si tiene acceso solo a la memoria asignada. Por ejemplo, el entorno de ejecución garantiza que una aplicación no accede a memoria sin asignar más allá de los límites de una matriz.
+El recolector de elementos no utilizados es uno de los servicios del CLR que ayudan a garantizar la *protección de la memoria* . Un programa tiene protección de la memoria si tiene acceso solo a la memoria asignada. Por ejemplo, el entorno de ejecución garantiza que una aplicación no accede a memoria sin asignar más allá de los límites de una matriz.
 
 Para obtener más información, vea [Administración de memoria automática](../standard/automatic-memory-management.md) y [Fundamentos de la recolección de elementos no utilizados](../standard/garbage-collection/fundamentals.md).
 
 ### <a name="working-with-unmanaged-resources"></a>Trabajar con recursos no administrados
 
-En ocasiones el código debe hacer referencia a *recursos no administrados*. Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática. Por ejemplo, un identificador de archivo es un recurso no administrado. Un objeto <xref:System.IO.FileStream> es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado. Cuando haya acabado de usar <xref:System.IO.FileStream>, tiene que liberar de forma explícita el identificador de archivo.
+En ocasiones el código debe hacer referencia a *recursos no administrados* . Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática. Por ejemplo, un identificador de archivo es un recurso no administrado. Un objeto <xref:System.IO.FileStream> es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado. Cuando haya acabado de usar <xref:System.IO.FileStream>, tiene que liberar de forma explícita el identificador de archivo.
 
 En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de <xref:System.IDisposable>. Cuando haya acabado de usar el objeto, deberá llamar al método <xref:System.IDisposable.Dispose> del objeto, que es el responsable de liberar cualquier recurso no administrado. Los lenguajes de .NET proporcionan una práctica instrucción `using` ([C#](../csharp/language-reference/keywords/using.md), [F#](../fsharp/language-reference/resource-management-the-use-keyword.md), [VB](../visual-basic/language-reference/statements/using-statement.md)) que garantiza la llamada al método `Dispose`.
 
@@ -254,7 +254,7 @@ Las aplicaciones .NET se pueden publicar en dos modos diferentes:
 
 * La publicación de una aplicación como *independiente* genera un archivo ejecutable que incluye el [entorno de ejecución](#sdk-and-runtimes) y las [bibliotecas](#runtime-libraries) de .NET, así como la aplicación y sus dependencias. Los usuarios de la aplicación pueden ejecutarla en un equipo que no tenga instalado el entorno de ejecución de .NET. Las aplicaciones independientes son específicas de la plataforma y, opcionalmente, se pueden publicar mediante una forma de [compilación AOT](#aot-compiler).
 
-* La publicación de una aplicación como *dependiente del marco* genera un archivo ejecutable y archivos binarios (archivos *.dll*) que solo incluyen la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el [entorno de ejecución](#sdk-and-runtimes) de .NET por separado. El archivo ejecutable es específico de la plataforma, pero los archivos *.dll* de las aplicaciones dependientes del marco son multiplataforma.
+* La publicación de una aplicación como *dependiente del marco* genera un archivo ejecutable y archivos binarios (archivos *.dll* ) que solo incluyen la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el [entorno de ejecución](#sdk-and-runtimes) de .NET por separado. El archivo ejecutable es específico de la plataforma, pero los archivos *.dll* de las aplicaciones dependientes del marco son multiplataforma.
 
   Puede instalar varias versiones del tiempo de ejecución en paralelo para ejecutar aplicaciones dependientes del marco destinadas a otras versiones del tiempo de ejecución. Para obtener más información, vea [Plataformas de destino](../standard/frameworks.md).
 
@@ -344,7 +344,7 @@ Parte de la terminología de .NET puede resultar confusa porque la misma palabra
   | versión de .NET Framework de destino | La colección de API de las que depende una aplicación o biblioteca de .NET. Ejemplos: .NET Core 3.1, .NET Standard 2.0 |
   | Moniker de la plataforma de destino (TFM)  | TFM es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET. Ejemplo: `net462` para .NET Framework 4.6.2. |
   | Aplicación dependiente de la plataforma | Una aplicación que solo se puede ejecutar en un equipo en el que se ha instalado el tiempo de ejecución desde la [página de descargas de .NET](https://dotnet.microsoft.com/download/dotnet-core). En este caso, "marco" es lo mismo que el "tiempo de ejecución" que se descarga de la página de descargas de .NET. |
-  
+
 * **SDK**
 
   |Context  | Significado de "SDK" |

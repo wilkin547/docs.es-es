@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495478"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526610"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -143,7 +143,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 - **`--type <TYPE>`**
 
-  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son `project`, `item` y `other`.
+  Filtra plantillas en función de los tipos disponibles. Los valores predefinidos son `project` e `item`.
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
@@ -190,11 +190,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Si se especifica, no se ejecuta ninguna restauración implícita durante la creación del proyecto. Disponible a partir del SDK de .NET Core 2.2.
 
-***
+**_
 
 ### <a name="classlib"></a>classlib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. Valores: `netcoreapp<version>` para crear una biblioteca de clases de .NET Core o `netstandard<version>` para crear una biblioteca de clases de .NET Standard. El valor predeterminado es `netstandard2.0`.
 
@@ -208,11 +208,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> wpf, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
 
@@ -226,11 +226,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="winforms-winformslib"></a><a name="winforms"></a> winforms, winformslib
 
-- **`--langVersion <VERSION_NUMBER>`**
+- _ *`--langVersion <VERSION_NUMBER>`**
 
   Establece la propiedad `LangVersion` en el archivo del proyecto creado. Por ejemplo, use `--langVersion 7.3` para emplear C# 7.3.
 
@@ -240,11 +240,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="worker-grpc"></a><a name="web-others"></a> worker, grpc
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
 
@@ -256,11 +256,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="mstest-xunit"></a><a name="test"></a> mstest, xunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino. Opción disponible a partir del SDK de .NET Core 3.0.
 
@@ -279,11 +279,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="nunit"></a>nunit
 
-- **`-f|--framework <FRAMEWORK>`**
+- _ *`-f|--framework <FRAMEWORK>`**
 
   Especifica el [marco](../../standard/frameworks.md) de destino.
 
@@ -304,11 +304,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="page"></a>página
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   Espacio de nombres del código generado. El valor predeterminado es `MyApp.Namespace`.
 
@@ -316,19 +316,19 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Crea la página sin PageModel.
 
-***
+**_
 
 ### <a name="viewimports-proto"></a><a name="namespace"></a> viewimports, proto
 
-- **`-na|--namespace <NAMESPACE_NAME>`**
+- _ *`-na|--namespace <NAMESPACE_NAME>`**
 
   Espacio de nombres del código generado. El valor predeterminado es `MyApp.Namespace`.
 
-***
+**_
 
 ### <a name="blazorserver"></a>blazorserver
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -395,11 +395,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="web"></a>web
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   Excluye *launchSettings.json* de la plantilla generada.
 
@@ -423,11 +423,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Desactiva HTTPS.
 
-***
+**_
 
 ### <a name="mvc-webapp"></a><a name="web-options"></a> mvc, webapp
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -513,11 +513,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Determina si el proyecto está configurado para usar la [compilación en tiempo de ejecución de Razor](/aspnet/core/mvc/views/view-compilation#runtime-compilation) en las compilaciones de depuración. Opción disponible a partir del SDK de .NET Core 3.1.201.
 
-***
+**_
 
 ### <a name="angular-react"></a><a name="spa"></a> angular, react
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Disponible desde el SDK de .NET Core 3.0.
   
@@ -554,11 +554,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
 
-***
+**_
 
 ### <a name="reactredux"></a>reactredux
 
-- **`--exclude-launch-settings`**
+- _ *`--exclude-launch-settings`**
 
   Excluye *launchSettings.json* de la plantilla generada.
 
@@ -582,11 +582,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Desactiva HTTPS.
 
-***
+**_
 
 ### <a name="razorclasslib"></a>razorclasslib
 
-- **`--no-restore`**
+- _ *`--no-restore`**
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
@@ -594,11 +594,11 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   Permite agregar vistas y páginas de Razor tradicionales además de los componentes a esta biblioteca. Disponible desde el SDK de .NET Core 3.0.
 
-***
+**_
   
 ### <a name="webapi"></a>webapi
 
-- **`-au|--auth <AUTHENTICATION_TYPE>`**
+- _ *`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Tipo de autenticación que se va a usar. Los valores posibles son:
 
@@ -663,13 +663,13 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   No se ejecuta ninguna restauración implícita durante la creación del proyecto.
 
-***
+**_
 
 ### <a name="globaljson"></a>globaljson
 
-- **`--sdk-version <VERSION_NUMBER>`**
+- _ *`--sdk-version <VERSION_NUMBER>`**
 
-  Especifica la versión del SDK de .NET Core que se usará en el archivo *global.json*.
+  Especifica la versión del SDK de .NET Core que se usará en el archivo *global.json* .
 
 ***
 
@@ -711,13 +711,13 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
   dotnet new spa -l
   ```
 
-- Enumeración de todas las plantillas que coinciden con la subcadena *we*. No se encuentra ninguna coincidencia exacta, por lo que se ejecuta la coincidencia de subcadena con las columnas de nombre corto y de nombre.
+- Enumeración de todas las plantillas que coinciden con la subcadena *we* . No se encuentra ninguna coincidencia exacta, por lo que se ejecuta la coincidencia de subcadena con las columnas de nombre corto y de nombre.
 
   ```dotnetcli
   dotnet new we -l
   ```
 
-- Intento de invocar a la plantilla que coincide con *ng*. Si no se puede determinar una única coincidencia, se enumeran las plantillas que son coincidencias parciales.
+- Intento de invocar a la plantilla que coincide con *ng* . Si no se puede determinar una única coincidencia, se enumeran las plantillas que son coincidencias parciales.
 
   ```dotnetcli
   dotnet new ng

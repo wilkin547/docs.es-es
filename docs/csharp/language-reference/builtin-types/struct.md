@@ -1,7 +1,7 @@
 ---
-description: Obtenga información sobre el tipo de estructura en C#.
 title: 'Tipos de estructura: Referencia de C#'
-ms.date: 04/21/2020
+description: Obtenga información sobre el tipo de estructura en C#.
+ms.date: 10/23/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7f3940ce487b9e382150234f317cf1dba34bb060
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132734"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526607"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
-Un *tipo de estructura* (o *tipo struct*) es un [tipo de valor](value-types.md) que puede encapsular datos y funcionalidad relacionada. Para definir un tipo de estructura se usa la palabra clave `struct`:
+Un *tipo de estructura* (o *tipo struct* ) es un [tipo de valor](value-types.md) que puede encapsular datos y funcionalidad relacionada. Para definir un tipo de estructura se usa la palabra clave `struct`:
 
-[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-Los tipos de estructura tienen *semántica de valores*. Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
+Los tipos de estructura tienen *semántica de valores* . Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
 
-Normalmente, los tipos de estructura se usan para diseñar tipos de pequeño tamaño centrados en datos que proporcionan poco o ningún comportamiento. Por ejemplo, en .NET se usan los tipos de estructura para representar un número ([entero](integral-numeric-types.md) y [real](floating-point-numeric-types.md)), un [valor booleano](bool.md), un [caracter Unicode](char.md), una [instancia de tiempo](xref:System.DateTime). Si le interesa el comportamiento de un tipo, considere la posibilidad de definir una [clase](../keywords/class.md). Los tipos de clase tienen *semántica de referencias*. Es decir, una variable de un tipo de clase contiene una referencia a una instancia del tipo, no la propia instancia.
+Normalmente, los tipos de estructura se usan para diseñar tipos de pequeño tamaño centrados en datos que proporcionan poco o ningún comportamiento. Por ejemplo, en .NET se usan los tipos de estructura para representar un número ([entero](integral-numeric-types.md) y [real](floating-point-numeric-types.md)), un [valor booleano](bool.md), un [caracter Unicode](char.md), una [instancia de tiempo](xref:System.DateTime). Si le interesa el comportamiento de un tipo, considere la posibilidad de definir una [clase](../keywords/class.md). Los tipos de clase tienen *semántica de referencias* . Es decir, una variable de un tipo de clase contiene una referencia a una instancia del tipo, no la propia instancia.
 
-Dado que los tipos de estructura tienen semántica del valor, le recomendamos que defina tipos de estructura *inmutables*.
+Dado que los tipos de estructura tienen semántica del valor, le recomendamos que defina tipos de estructura *inmutables* .
 
 ## <a name="readonly-struct"></a>Estructura `readonly`
 
 A partir de C# 7.2, usa el modificador `readonly` para declarar que un tipo de estructura es inmutable:
 
-[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 Todos los miembros de datos de una estructura `readonly` debe ser de solo lectura tal como se indica a continuación:
 
 - Cualquier declaración de campo debe tener el [modificador `readonly`](../keywords/readonly.md)
-- Cualquier propiedad, incluidas las implementadas automáticamente, deben ser de solo lectura
+- Cualquier propiedad, incluidas las implementadas automáticamente, debe ser de solo lectura. En C# 9.0 y versiones posteriores, una propiedad puede tener un [descriptor de acceso `init`](../../whats-new/csharp-9.md#init-only-setters).
 
 Esto garantiza que ningún miembro de una estructura `readonly` modifique el estado de la misma. En C# 8.0 y en versiones posteriores, eso significa que otros miembros de instancia, excepto los constructores, son implícitamente [`readonly`](#readonly-instance-members).
 
@@ -54,20 +54,24 @@ Normalmente, se aplica el modificador `readonly` a los siguientes tipos de miemb
 
 - Métodos:
 
-  [!code-csharp[readonly method](snippets/StructType.cs#ReadonlyMethod)]
+  [!code-csharp[readonly method](snippets/shared/StructType.cs#ReadonlyMethod)]
 
   También puede aplicar el modificador `readonly` a los métodos que invalidan los métodos declarados en <xref:System.Object?displayProperty=nameWithType>:
 
-  [!code-csharp[readonly override](snippets/StructType.cs#ReadonlyOverride)]
+  [!code-csharp[readonly override](snippets/shared/StructType.cs#ReadonlyOverride)]
 
 - Propiedades e indizadores:
 
-  [!code-csharp[readonly property get](snippets/StructType.cs#ReadonlyProperty)]
+  [!code-csharp[readonly property get](snippets/shared/StructType.cs#ReadonlyProperty)]
 
   Si tiene que aplicar el modificador `readonly` a los dos descriptores de acceso de una propiedad o un indizador, aplíquelo en la declaración de la propiedad o el indizador.
 
   > [!NOTE]
   > El compilador declara un descriptor de acceso `get` de una [propiedad implementada automáticamente](../../programming-guide/classes-and-structs/auto-implemented-properties.md) como `readonly`, con independencia de la presencia del modificador `readonly` en la declaración de una propiedad.
+
+  En C# 9.0 y versiones posteriores, puede aplicar el modificador `readonly` a una propiedad o un indizador con un descriptor de acceso `init`:
+
+  :::code language="csharp" source="snippets/shared/StructType.cs" id="ReadonlyWithInit":::
 
 No se puede aplicar el modificador `readonly` a los miembros estáticos de un tipo de estructura.
 
@@ -95,7 +99,7 @@ Normalmente, para crear una instancia de un tipo de estructura, se llama a un co
 
 Si se puede acceder a todos los campos de instancia de un tipo de estructura, también puede crear una instancia de él sin el operador `new`. En ese caso, debe inicializar todos los campos de instancia antes del primer uso de la instancia. En el siguiente ejemplo se muestra cómo hacerlo:
 
-[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/shared/StructType.cs#WithoutNew)]
 
 En el caso de los [tipos de valor integrados](value-types.md#built-in-value-types), use los literales correspondientes para especificar un valor del tipo.
 
@@ -118,11 +122,11 @@ A partir de C# 7.2, puede usar el modificador `ref` en la declaración de un ti
 
 Normalmente, se define un tipo de estructura `ref` cuando se necesita un tipo que también incluye miembros de datos de tipos de estructura `ref`:
 
-[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+[!code-csharp[ref struct](snippets/shared/StructType.cs#RefStruct)]
 
 Para declarar una estructura `ref` como [`readonly`](#readonly-struct), combine los modificadores `readonly` y `ref` en la declaración de tipos (el modificador `readonly` debe ir delante del modificador `ref`):
 
-[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+[!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 En .NET, <xref:System.Span%601?displayProperty=nameWithType> y <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> son ejemplos de una estructura `ref`.
 

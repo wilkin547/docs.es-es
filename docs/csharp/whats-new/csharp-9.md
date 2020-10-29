@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 0ac3b410cd9ba886ee55aede952700f145f1b31b
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
+ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955172"
+ms.lasthandoff: 10/26/2020
+ms.locfileid: "92526592"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -30,11 +30,11 @@ C# 9.0 agrega las siguientes características y mejoras al lenguaje C#:
 - Inicializadores de módulo
 - Nuevas características para métodos parciales
 
-C# 9.0 es compatible con **.NET 5**. Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
+C# 9.0 es compatible con **.NET 5** . Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
 
 ## <a name="record-types"></a>Tipos de registro
 
-En C# 9.0 se presentan los ***tipos de registro***, un tipo de referencia que ofrece métodos sintetizados para proporcionar semántica de valores para la igualdad. Los registros son inmutables de forma predeterminada.
+En C# 9.0 se presentan los *_tipos de registro_* , un tipo de referencia que ofrece métodos sintetizados para proporcionar semántica de valores para la igualdad. Los registros son inmutables de forma predeterminada.
 
 Los tipos de registro facilitan la creación de tipos de referencia inmutables en .NET. Históricamente, los tipos de .NET se han clasificado principalmente como tipos de referencia (incluidas las clases y los tipos anónimos) y tipos de valor (incluidas las estructuras y tuplas). Aunque se recomiendan los tipos de valor inmutables, los tipos de valor mutable no suelen generar errores. Las variables de tipo de valor contienen los valores para que los cambios se realicen en una copia de los datos originales cuando los tipos de valor se pasan a los métodos.
 
@@ -86,7 +86,7 @@ El compilador sintetiza dos métodos que admiten la salida impresa: una invalida
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-En los ejemplos mostrados hasta ahora se usa la sintaxis tradicional para declarar propiedades. Hay una forma más concisa denominada ***registros posicionales***.  Estos son los tres tipos de registro definidos anteriormente como registros posicionales:
+En los ejemplos mostrados hasta ahora se usa la sintaxis tradicional para declarar propiedades. Hay una forma más concisa denominada _*_registros posicionales_*_ .  Estos son los tres tipos de registro definidos anteriormente como registros posicionales:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ El compilador genera un método `Deconstruct` para los registros posicionales. E
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Por último, los registros admiten ***expresiones with***. Una ***expresión with*** indica al compilador que cree una copia de un registro, pero *con* (with) propiedades especificadas modificadas:
+Por último, los registros admiten _*_expresiones with_*_ . Una _*_expresión with_*_ indica al compilador que cree una copia de un registro, pero con propiedades especificadas modificadas:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -106,9 +106,9 @@ La línea anterior crea un registro `Person` en el que la propiedad `LastName` e
 
 ## <a name="init-only-setters"></a>Establecedores de solo inicialización
 
-Los ***establecedores de solo inicialización*** proporcionan una sintaxis coherente para inicializar los miembros de un objeto. Los inicializadores de propiedades indican con claridad qué valor establece cada propiedad. El inconveniente es que esas propiedades se deben establecer. A partir de C# 9.0, puede crear descriptores de acceso `init` en lugar de descriptores de acceso `set` para propiedades e indizadores. Los autores de la llamada pueden usar la sintaxis de inicializador de propiedad para establecer estos valores en expresiones de creación, pero esas propiedades son de solo lectura una vez que se ha completado la construcción. Los establecedores de solo inicialización proporcionan una ventana para cambiar el estado, que se cierra cuando finaliza la fase de construcción. La fase de construcción finaliza de forma eficaz después de que se complete toda la inicialización, incluidos los inicializadores de propiedades y las expresiones with.
+Los ***establecedores de solo inicialización** proporcionan una sintaxis coherente para inicializar miembros de un objeto. Los inicializadores de propiedades indican con claridad qué valor establece cada propiedad. El inconveniente es que esas propiedades se deben establecer. A partir de C# 9.0, puede crear descriptores de acceso `init` en lugar de descriptores de acceso `set` para propiedades e indizadores. Los autores de la llamada pueden usar la sintaxis de inicializador de propiedad para establecer estos valores en expresiones de creación, pero esas propiedades son de solo lectura una vez que se ha completado la construcción. Los establecedores de solo inicialización proporcionan una ventana para cambiar el estado, que se cierra cuando finaliza la fase de construcción. La fase de construcción finaliza de forma eficaz después de que se complete toda la inicialización, incluidos los inicializadores de propiedades y las expresiones with.
 
-En el ejemplo anterior de los registros posicionales se muestra el uso de un establecedor de solo inicialización para establecer una propiedad mediante una expresión with. Puede declarar los establecedores de solo inicialización en cualquier tipo que escriba. Por ejemplo, en la estructura siguiente se define una estructura de observación meteorológica:
+Puede declarar los establecedores de solo `init` en cualquier tipo que escriba. Por ejemplo, en la estructura siguiente se define una estructura de observación meteorológica:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/WeatherObservation.cs" ID="DeclareWeatherObservation":::
 
@@ -127,7 +127,7 @@ Los establecedores de solo inicialización pueden ser útiles para establecer la
 
 ## <a name="top-level-statements"></a>Instrucciones de nivel superior
 
-Las ***instrucciones de nivel superior*** eliminación operaciones innecesarias de muchas aplicaciones. Considere el famoso programa "Hola mundo":
+Las _*_instrucciones de nivel superior_*_ quitan complejidad innecesaria de muchas aplicaciones. Considere el famoso programa "Hola mundo":
 
 ```csharp
 using System;
@@ -164,12 +164,12 @@ Y sobre todo, las instrucciones de nivel superior no limitan el ámbito ni la co
 
 C# 9 incluye nuevas mejoras de coincidencia de patrones:
 
-- Los ***patrones de tipo*** comparan si una variable es un tipo
-- Los ***patrones entre paréntesis*** aplican o resaltan la prioridad de las combinaciones de patrones
-- En los ***patrones `and` conjuntivos*** es necesario que los dos patrones coincidan
-- En los ***patrones `or` disyuntivo*** es necesario que uno de los dos patrones coincida
-- En los ***patrones `not` negados*** es necesario que un patrón no coincida
-- Los ***patrones relacionales*** requieren que la entrada sea menor que, mayor que, menor o igual que, o mayor o igual que una constante determinada.
+- Los _*_patrones de tipo_*_ comprueban si una variable es un tipo
+- Los _*_patrones entre paréntesis_*_ aplican o resaltan la prioridad de las combinaciones de patrones
+- En los _*_patrones `and` conjuntivos_*_ es necesario que los dos patrones coincidan
+- En los _*_patrones `or` disyuntivos_*_ es necesario que alguno de los dos patrones coincida
+- En los _*_patrones `not` negados_*_ es necesario que un patrón no coincida
+- Los _*_patrones relacionales_*_ requieren que la entrada sea menor que, mayor que, menor o igual que, o mayor o igual que una constante determinada.
 
 Estos patrones enriquecen la sintaxis de los patrones. Tenga en cuenta estos ejemplos:
 
@@ -196,7 +196,7 @@ Tres nuevas características mejoran la compatibilidad con la interoperabilidad 
 
 Los enteros de tamaño nativo, `nint` y `nuint`, son tipos enteros. Se expresan mediante los tipos subyacentes <xref:System.IntPtr?displayProperty=nameWithType> y <xref:System.UIntPtr?displayProperty=nameWithType>. El compilador muestra las conversiones y operaciones adicionales para estos tipos como enteros nativos. Los enteros con tamaño nativo definen propiedades para `MaxValue` o `MinValue`. Estos valores no se pueden expresar como constantes en tiempo de compilación porque dependen del tamaño nativo de un entero en el equipo de destino. Estos valores son de solo lectura en el entorno de ejecución. Puede usar valores constantes para `nint` en el intervalo [`int.MinValue` .. `int.MaxValue`]. Puede usar valores constantes para `nuint` en el intervalo [`uint.MinValue` .. `uint.MaxValue`]. El compilador realiza un plegamiento constante para todos los operadores unarios y binarios que usan los tipos <xref:System.Int32?displayProperty=nameWithType> y <xref:System.UInt32?displayProperty=nameWithType>. Si el resultado no cabe en 32 bits, la operación se ejecuta en tiempo de ejecución y no se considera una constante. Los enteros con tamaño nativo pueden aumentar el rendimiento en escenarios en los que se usa la aritmética de enteros y es necesario tener el rendimiento más rápido posible.
 
-Los punteros de función proporcionan una sintaxis sencilla para acceder a los códigos de operación de lenguaje intermedio `ldftn` y `calli`. Puede declarar punteros de función con la nueva sintaxis de `delegate*`. Un tipo `delegate*` es un tipo de puntero. Al invocar el tipo `delegate*` se usa `calli`, a diferencia de un delegado que usa `callvirt` en el método `Invoke()`. Sintácticamente, las invocaciones son idénticas. La invocación del puntero de función usa la convención de llamada `managed`. Agregue la palabra clave `unmanaged` después de la sintaxis de `delegate*` para declarar que quiere la convención de llamada `unmanaged`. Se pueden especificar otras convenciones de llamada mediante atributos en la declaración de `delegate*`.
+Los punteros de función proporcionan una sintaxis sencilla para acceder a los códigos de operación de lenguaje intermedio `ldftn` y `calli`. Puede declarar punteros de función con la nueva sintaxis de `delegate_`. Un tipo `delegate*` es un tipo de puntero. Al invocar el tipo `delegate*` se usa `calli`, a diferencia de un delegado que usa `callvirt` en el método `Invoke()`. Sintácticamente, las invocaciones son idénticas. La invocación del puntero de función usa la convención de llamada `managed`. Agregue la palabra clave `unmanaged` después de la sintaxis de `delegate*` para declarar que quiere la convención de llamada `unmanaged`. Se pueden especificar otras convenciones de llamada mediante atributos en la declaración de `delegate*`.
 
 Por último, puede agregar <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute?displayProperty=nameWithType> para indicar al compilador que no emita la marca `localsinit`. Esta marca indica al CLR que inicialice en cero todas las variables locales. La marca `localsinit` ha sido el comportamiento predeterminado en C# desde la versión 1.0. Pero la inicialización en cero adicional puede afectar al rendimiento en algunos escenarios. En concreto, cuando se usa `stackalloc`. En esos casos, puede agregar <xref:System.Runtime.CompilerServices.SkipLocalsInitAttribute>. Puede agregarlo a un único método o propiedad, a un objeto `class`, `struct`, `interface`, o incluso a un módulo. Este atributo no afecta a los métodos `abstract`; afecta al código generado para la implementación.
 
@@ -226,7 +226,7 @@ Una característica similar mejora la resolución de tipos de destino de las [ex
 
 A partir de C# 9.0, puede agregar el modificador `static` a [expresiones lambda](../language-reference/operators/lambda-expressions.md) o [métodos anónimos](../language-reference/operators/delegate-operator.md). Las expresiones lambda estáticas son análogas a las funciones `static` locales: un método anónimo o una expresión lambda estáticos no puede capturar variables locales ni el estado de la instancia. El modificador `static` impide la captura accidental de otras variables.
 
-Los tipos de valor devueltos de covariante proporcionan flexibilidad a los tipos de valor devueltos de las funciones reemplazadas. Una función virtual reemplazada puede devolver un tipo derivado del tipo de valor devuelto declarado en el método de clase base. Esto puede ser útil para los registros y para otros tipos que admiten métodos de generador o clonación virtuales.
+Los tipos de valor devuelto covariantes proporcionan flexibilidad a los tipos de valor devuelto de los métodos [override](../language-reference/keywords/override.md). Un método override puede devolver un tipo derivado del tipo de valor devuelto del método base invalidado. Esto puede ser útil para los registros y para otros tipos que admiten métodos de generador o clonación virtuales.
 
 Además, el bucle [`foreach` ](../language-reference/keywords/foreach-in.md) reconocerá y usará un método de extensión `GetEnumerator` que, de otro modo, satisface el patrón `foreach`. Este cambio significa que `foreach` es coherente con otras construcciones basadas en patrones, como el patrón asincrónico y la desconstrucción basada en patrones. En la práctica, esto quiere decir que puede agregar compatibilidad con `foreach` a cualquier tipo. Debe limitar su uso a cuando la enumeración de un objeto tiene sentido en el diseño.
 
@@ -240,9 +240,9 @@ Dos últimas características admiten generadores de código de C#. Los generado
 
 Un generador de código lee atributos u otros elementos de código mediante las API de análisis de Roslyn. A partir de esa información, agrega código nuevo a la compilación. Los generadores de código fuente solo pueden agregar código; no se les permite modificar ningún código existente en la compilación.
 
-Las dos características agregadas para los generadores de código son las extensiones de la ***sintaxis de métodos parciales*** y los ***inicializadores de módulos***. En primer lugar, los cambios en los métodos parciales. Antes de C# 9.0, los métodos parciales eran `private`, pero no podían especificar un modificador de acceso, tener un valor devuelto `void` ni parámetros `out`. Estas restricciones implican que si no se proporciona ninguna implementación de método, el compilador quita todas las llamadas al método parcial. En C# 9.0 se quitan estas restricciones, pero es necesario que las declaraciones de métodos parciales tengan una implementación. Los generadores de código pueden proporcionar esa implementación. Para evitar la introducción de un cambio importante, el compilador tiene en cuenta cualquier método parcial sin un modificador de acceso para seguir las reglas anteriores. Si el método parcial incluye el modificador de acceso `private`, las nuevas reglas rigen ese método parcial.
+Las dos características agregadas a los generadores de código son las extensiones de la **sintaxis de métodos parciales** y los _*_inicializadores de módulos_*_ . En primer lugar, los cambios en los métodos parciales. Antes de C# 9.0, los métodos parciales eran `private`, pero no podían especificar un modificador de acceso, tener un valor devuelto `void` ni parámetros `out`. Estas restricciones implican que si no se proporciona ninguna implementación de método, el compilador quita todas las llamadas al método parcial. En C# 9.0 se quitan estas restricciones, pero es necesario que las declaraciones de métodos parciales tengan una implementación. Los generadores de código pueden proporcionar esa implementación. Para evitar la introducción de un cambio importante, el compilador tiene en cuenta cualquier método parcial sin un modificador de acceso para seguir las reglas anteriores. Si el método parcial incluye el modificador de acceso `private`, las nuevas reglas rigen ese método parcial.
 
-La segunda característica nueva para los generadores de código son los ***inicializadores de módulos***. Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El tiempo de ejecución llamará a estos métodos cuando se cargue el ensamblado. Un método de inicializador de módulo:
+La segunda característica nueva de los generadores de código son los _inicializadores de módulos_ . Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El tiempo de ejecución llamará a estos métodos cuando se cargue el ensamblado. Un método de inicializador de módulo:
 
 - Debe ser estático
 - No debe tener parámetros

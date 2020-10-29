@@ -4,18 +4,18 @@ description: Obtenga información sobre cómo escribir código para examinar la 
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 960d72384a7e5f570fc1f94200a7d3b2179343fd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 39baf32c9c53d57227d52b9370f8165ff92d708d
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173313"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92223677"
 ---
 # <a name="interpreting-expressions"></a>Interpretación de expresiones
 
 [Anterior: Ejecución de expresiones](expression-trees-execution.md)
 
-Ahora, vamos a escribir código para examinar la estructura de un *árbol de expresión*. Cada nodo de un árbol de expresión será un objeto de una clase derivada de `Expression`.
+Ahora, vamos a escribir código para examinar la estructura de un *árbol de expresión* . Cada nodo de un árbol de expresión será un objeto de una clase derivada de `Expression`.
 
 Ese diseño hace que la visita de todos los nodos de un árbol de expresión sea una operación recursiva relativamente sencilla. La estrategia general es comenzar en el nodo raíz y determinar qué tipo de nodo es.
 
@@ -249,7 +249,7 @@ Vamos a probar un ejemplo más complicado, todavía limitando los tipos de nodo 
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-Antes de que ejecute esto en el algoritmo de visitante, haga un ejercicio de reflexión para calcular cuál podría ser el resultado. Recuerde que el operador `+` es un *operador binario*: debe tener dos elementos secundarios, que representen los operandos izquierdo y derecho. Existen varias maneras posibles de construir un árbol que pueda ser correcto:
+Antes de que ejecute esto en el algoritmo de visitante, haga un ejercicio de reflexión para calcular cuál podría ser el resultado. Recuerde que el operador `+` es un *operador binario* : debe tener dos elementos secundarios, que representen los operandos izquierdo y derecho. Existen varias maneras posibles de construir un árbol que pueda ser correcto:
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -260,10 +260,10 @@ Expression<Func<int>> sum4 = () => 1 + ((2 + 3) + 4);
 Expression<Func<int>> sum5 = () => (1 + (2 + 3)) + 4;
 ```
 
-Puede ver la separación en dos respuestas posibles para resaltar la más prometedora. La primera representa las expresiones *asociativas por la derecha*. La segunda representa las expresiones *asociativas por la izquierda*.
+Puede ver la separación en dos respuestas posibles para resaltar la más prometedora. La primera representa las expresiones *asociativas por la derecha* . La segunda representa las expresiones *asociativas por la izquierda* .
 La ventaja de los dos formatos es que el formato escala a cualquier número arbitrario de expresiones de adición.
 
-Si ejecuta esta expresión a través del visitante, verá este resultado y comprobará que la expresión de adición simple es *asociativa por la izquierda*.
+Si ejecuta esta expresión a través del visitante, verá este resultado y comprobará que la expresión de adición simple es *asociativa por la izquierda* .
 
 Para ejecutar este ejemplo, y ver el árbol de expresión completo, tuve que realizar un cambio en el árbol de expresión de origen. Cuando el árbol de expresión contiene todas las constantes, el árbol resultante simplemente contiene el valor constante de `10`. El compilador realiza toda la adición y reduce la expresión a su forma más simple. Simplemente con agregar una variable a la expresión es suficiente para ver el árbol original:
 
@@ -516,7 +516,7 @@ En primer lugar, los visitantes solo controlan constantes que son enteros. Los v
 
 Incluso en el último ejemplo se reconoce un subconjunto de los tipos de nodo posibles.
 Todavía puede proporcionarle muchas expresiones que provocarán que se produzca un error.
-En .NET Standard se incluye una implementación completa con el nombre <xref:System.Linq.Expressions.ExpressionVisitor> que puede controlar todos los tipos de nodo posibles.
+En .NET Standard se incluye una implementación completa con el nombre <xref:System.Linq.Expressions.ExpressionVisitor> que puede controlar todos los tipos de nodo posibles.
 
 Por último, la biblioteca que he usado en este artículo se ha creado con fines de demostración y aprendizaje. No está optimizada. La he escrito para dejar claro las estructuras que he usado y para resaltar las técnicas usadas para visitar los nodos y analizar lo que hay ahí. Una implementación de producción prestaría más atención al rendimiento.
 

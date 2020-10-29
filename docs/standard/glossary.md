@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 10/13/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1d9330b68f80da934777cb3aee6d2b3cb52c8256
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050349"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224409"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -52,11 +52,11 @@ Vea la [documentación de ASP.NET Core](/aspnet/#pivot=core).
 
 Un archivo *.dll*/ *.exe* que puede contener una colección de API a la que puede llamarse mediante aplicaciones u otros ensamblados.
 
-Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
+Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios* . Vea también [biblioteca](#library).
 
 ## <a name="bcl"></a>BCL
 
-Biblioteca de clases base. También se conoce como *biblioteca de marco*.
+Biblioteca de clases base. También se conoce como *biblioteca de marco* .
 
 Un conjunto de bibliotecas que conforman los espacios de nombres de System.\* (y hasta cierto punto Microsoft.\*). BCL es un marco de nivel inferior de uso general donde se compilan marcos de trabajo de la aplicación de nivel superior, como ASP.NET Core.
 
@@ -98,7 +98,7 @@ Todo el software en tiempo de ejecución, las herramientas de desarrollo y los r
 
 El término "ecosistema de .NET" se diferencia de términos parecidos como "pila de .NET" en que incluye bibliotecas y aplicaciones de terceros. Aquí se muestra un ejemplo en una frase:
 
-- "La finalidad de [.NET Standard](#net-standard) es establecer una mayor uniformidad en el ecosistema de .NET".
+- "La finalidad de [.NET Standard](#net-standard) es establecer una mayor uniformidad en el ecosistema de .NET".
 
 ## <a name="framework"></a>marco de trabajo
 
@@ -138,7 +138,7 @@ Similar a [AOT](#aot), este compilador convierte el [IL](#il) en código de máq
 Una implementación de .NET incluye lo siguiente:
 
 - Uno o varios entornos de ejecución. Ejemplos: [CLR](#clr) y [CoreRT](#corert).
-- Una biblioteca de clases que implementa una versión de .NET Standard y puede incluir API adicionales. Ejemplos: [BCL](#bcl) para [.NET Framework](#net-framework) y para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions).
+- Biblioteca de clases que implementa una versión de .NET Standard y puede incluir API adicionales. Ejemplos: [BCL](#bcl) para [.NET Framework](#net-framework) y para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions).
 - Opcionalmente, uno o varios marcos de trabajo de la aplicación. Ejemplos: [ASP.NET](#aspnet), Windows Forms y WPF se incluyen en .NET Framework y .NET 5.
 - Opcionalmente, herramientas de desarrollo. Algunas herramientas de desarrollo se comparten entre varias implementaciones.
 
@@ -213,7 +213,7 @@ Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/mast
 
 Conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions). También se conoce como el SDK de .NET Core.
 
-Incluye la [CLI de .NET](#net-cli) para compilar aplicaciones, el entorno de ejecución, y las bibliotecas de .NET para compilar y ejecutar aplicaciones, y el ejecutable dotnet (*dotnet.exe*) que ejecuta comandos de la CLI y ejecuta aplicaciones.
+Incluye la [CLI de .NET](#net-cli) para compilar aplicaciones, el entorno de ejecución, y las bibliotecas de .NET para compilar y ejecutar aplicaciones, y el ejecutable dotnet ( *dotnet.exe* ) que ejecuta comandos de la CLI y ejecuta aplicaciones.
 
 Vea [Información general sobre el SDK de .NET](../core/sdk.md).
 
@@ -235,7 +235,7 @@ Esta tecnología se puede considerar como un compilador [JIT](#jit) persistente.
 
 Un paquete de NuGet &mdash; o simplemente un paquete &mdash; es un archivo *.zip* con uno o varios ensamblados del mismo nombre junto con metadatos adicionales, como el nombre del autor.
 
-El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml*) para usar con varios marcos de destino y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib*.
+El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml* ) para usar con varios marcos de destino y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib* .
 
 ## <a name="platform"></a>platform
 
@@ -244,7 +244,7 @@ Un sistema operativo y el hardware en que se ejecuta, como Windows, macOS, Linux
 Aquí tiene ejemplos de uso en frases:
 
 - ".NET Core es una implementación multiplataforma de .NET".
-- "Los perfiles de PCL representan plataformas de Microsoft, mientras que .NET Standard es independiente de la plataforma".
+- "Los perfiles de PCL representan plataformas de Microsoft, mientras que .NET Standard es independiente de la plataforma".
 
 La documentación heredada de .NET a veces usa el término "plataforma de .NET" para referirse a una [implementación de .NET](#implementation-of-net) o a [la pila de .NET](#stack) que incluyen todas las implementaciones. Estos dos usos tienden a confundirse con el significado principal (sistema operativo o hardware), por tanto, tratamos de evitar estos usos.
 
@@ -278,7 +278,7 @@ A veces, la documentación heredada de .NET usa "entorno de ejecución" para ind
 
 Un conjunto de tecnologías de programación que se usan para compilar y ejecutar aplicaciones.
 
-La "pila de .NET" hace referencia a .NET Standard y a todas las implementaciones de .NET. La frase "una pila de .NET" puede hacer referencia a una implementación de .NET.
+La "pila de .NET" hace referencia a .NET Standard y a todas las implementaciones de .NET. La frase "una pila de .NET" puede hacer referencia a una implementación de .NET.
 
 ## <a name="target-framework"></a>versión de .NET Framework de destino
 
@@ -306,7 +306,7 @@ Una implementación de .NET que se usa para compilar aplicaciones Windows modern
 
 ## <a name="workload"></a>carga de trabajo
 
-Un tipo de aplicación que alguien compila. Más genérico que [modelo de aplicación](#app-model). Por ejemplo, en la parte superior de todas las páginas de documentación de .NET, incluida esta, hay una lista desplegable para **Cargas de trabajo**, que permite cambiar a la documentación de **Web**, **Dispositivos móviles**, **Nube**, **Escritorio** y **Machine Learning y datos**.
+Un tipo de aplicación que alguien compila. Más genérico que [modelo de aplicación](#app-model). Por ejemplo, en la parte superior de todas las páginas de documentación de .NET, incluida esta, hay una lista desplegable para **Cargas de trabajo** , que permite cambiar a la documentación de **Web** , **Dispositivos móviles** , **Nube** , **Escritorio** y **Machine Learning y datos** .
 
 En algunos contextos, *carga de trabajo* hace referencia a una colección de características de Visual Studio que puede elegir instalar para admitir un tipo determinado de aplicación. Para obtener un ejemplo, vea [Selección de una carga de trabajo](../core/install/windows.md#select-a-workload).
 

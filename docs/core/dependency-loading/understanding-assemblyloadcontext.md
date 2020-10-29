@@ -4,12 +4,12 @@ description: Conceptos clave para comprender la finalidad y el comportamiento de
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 43fb0d792ddeb20b8a141af452a86dd50f37ba43
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 4d3f0e50e7c336469bd9af4d1589427388684434
+ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523610"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92332827"
 ---
 # <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>Descripción de System.Runtime.Loader.AssemblyLoadContext
 
@@ -52,11 +52,11 @@ Los artículos [Algoritmo de carga de ensamblado administrado](loading-managed.m
 
 En esta sección se tratan los principios generales de las funciones y eventos relevantes.
 
-- **Ser reiterativo**. Una consulta para una dependencia concreta siempre debe tener como resultado la misma respuesta. Se debe devolver la misma instancia de dependencia cargada. Este requisito es fundamental para la coherencia de la caché. En el caso concreto de los ensamblados administrados, creamos una caché de <xref:System.Reflection.Assembly>. La clave de caché es un nombre de ensamblado sencillo, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
-- **Normalmente no se inician**.  Se espera que estas funciones devuelvan `null`, en lugar de iniciarse, cuando no se pueda encontrar la dependencia solicitada. El inicio finalizará la búsqueda prematuramente y propagará una excepción al autor de la llamada. El inicio se debe restringir a errores inesperados, como un ensamblado dañado o una condición de memoria insuficiente.
-- **Evitar la recursividad**. Tenga en cuenta que estas funciones y controladores implementan las reglas de carga para buscar dependencias. Su implementación no debe llamar a las API que desencadenan la recursividad. Normalmente, el código debería llamar a las funciones de carga **AssemblyLoadContext** que requieran una ruta de acceso concreta o un argumento de referencia de memoria.
-- **Cargar en el elemento AssemblyLoadContext correcto**. La elección de dónde cargar las dependencias es específica de la aplicación.  Estos eventos y funciones implementan la opción. Cuando el código llama a las funciones de carga por ruta de acceso **AssemblyLoadContext**, les llama en la instancia en la que se quiere cargar el código. En algún momento, devolver `null` y permitir que <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> controle la carga puede ser la opción más sencilla.
-- **Tenga en cuenta las carreras de subprocesos**. La carga la pueden desencadenar varios subprocesos. AssemblyLoadContext controla las carreras de subprocesos mediante la adición atómica de ensamblados a su caché. La instancia del que pierde la carrera se descarta. En la lógica de implementación, no agregue lógica adicional que no controle correctamente varios subprocesos.
+- **Ser reiterativo** . Una consulta para una dependencia concreta siempre debe tener como resultado la misma respuesta. Se debe devolver la misma instancia de dependencia cargada. Este requisito es fundamental para la coherencia de la caché. En el caso concreto de los ensamblados administrados, se crea una caché de <xref:System.Reflection.Assembly>. La clave de caché es un nombre de ensamblado sencillo, <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>.
+- **Normalmente no se inician** .  Se espera que estas funciones devuelvan `null`, en lugar de iniciarse, cuando no se pueda encontrar la dependencia solicitada. El inicio finalizará la búsqueda prematuramente y propagará una excepción al autor de la llamada. El inicio se debe restringir a errores inesperados, como un ensamblado dañado o una condición de memoria insuficiente.
+- **Evitar la recursividad** . Tenga en cuenta que estas funciones y controladores implementan las reglas de carga para buscar dependencias. Su implementación no debe llamar a las API que desencadenan la recursividad. Normalmente, el código debería llamar a las funciones de carga **AssemblyLoadContext** que requieran una ruta de acceso concreta o un argumento de referencia de memoria.
+- **Cargar en el elemento AssemblyLoadContext correcto** . La elección de dónde cargar las dependencias es específica de la aplicación.  Estos eventos y funciones implementan la opción. Cuando el código llama a las funciones de carga por ruta de acceso **AssemblyLoadContext** , les llama en la instancia en la que se quiere cargar el código. En algún momento, devolver `null` y permitir que <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> controle la carga puede ser la opción más sencilla.
+- **Tenga en cuenta las carreras de subprocesos** . La carga la pueden desencadenar varios subprocesos. AssemblyLoadContext controla las carreras de subprocesos mediante la adición atómica de ensamblados a su caché. La instancia del que pierde la carrera se descarta. En la lógica de implementación, no agregue lógica adicional que no controle correctamente varios subprocesos.
 
 ## <a name="how-are-dynamic-dependencies-isolated"></a>¿Cómo se aíslan las dependencias dinámicas?
 

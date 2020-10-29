@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 35e408ed3552550f19879409128784b2513e56c8
+ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209648"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92224258"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de clases de .NET
 
@@ -42,9 +42,9 @@ Muchos desarrolladores de bibliotecas han pasado de producir bibliotecas especí
 
 Las bibliotecas de .NET Standard son un reemplazo de los conceptos de bibliotecas específicas de la plataforma y portables. Son específicas de la plataforma ya que exponen toda la funcionalidad de la plataforma subyacente (sin plataformas sintéticas ni intersecciones de plataforma). Son portables ya que funcionan en todas las plataformas compatibles.
 
-.NET Standard expone un conjunto de _contratos_ de bibliotecas. Las implementaciones de .NET deben admitir cada contrato por completo o no admitirlo. Cada implementación, por tanto, admite un conjunto de contratos de .NET Standard. Como consecuencia, cada biblioteca de clases de .NET Standard es compatible con las plataformas que admiten sus dependencias del contrato.
+.NET Standard expone un conjunto de _contratos_ de bibliotecas. Las implementaciones de .NET deben admitir cada contrato por completo o no admitirlo. Cada implementación, por tanto, admite un conjunto de contratos de .NET Standard. Como consecuencia, cada biblioteca de clases de .NET Standard es compatible con las plataformas que admiten sus dependencias del contrato.
 
-.NET Standard no expone toda la funcionalidad de .NET Framework (ni es un objetivo); en cambio, expone muchas más API que las bibliotecas de clases portables. Se agregarán más API con el tiempo.
+.NET Standard no expone toda la funcionalidad de .NET Framework (ni es un objetivo); en cambio, expone muchas más API que las bibliotecas de clases portables. Se agregarán más API con el tiempo.
 
 Las siguientes plataformas admiten las bibliotecas de .NET Standard:
 
