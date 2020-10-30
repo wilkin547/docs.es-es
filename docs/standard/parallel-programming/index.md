@@ -6,20 +6,20 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: 02087cf58720388c64d8aba5424db0b54828219a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: edb3d38b0815c6703720292a45e302c62c81650b
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661970"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925342"
 ---
 # <a name="parallel-programming-in-net"></a>Programación en paralelo en .NET
 
 Muchos equipos y estaciones de trabajo personales tienen varios núcleos de CPU que permiten ejecutar múltiples subprocesos simultáneamente. Para aprovecharse del hardware, puede paralelizar el código para distribuir el trabajo entre varios procesadores.
 
-En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. Visual Studio y .NET Framework mejoran la compatibilidad para la programación paralela proporcionando un tiempo de ejecución, tipos de biblioteca de clases y herramientas de diagnóstico. Estas características, que se presentaron con .NET Framework 4, simplifican el desarrollo en paralelo. Puede escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos.
+En el pasado, la paralelización requería manipulación de bajo nivel de los subprocesos y bloqueos. Visual Studio y .NET mejoran la compatibilidad para la programación paralela proporcionando un tiempo de ejecución, tipos de biblioteca de clases y herramientas de diagnóstico. Estas características, que se presentaron en .NET Framework 4, simplifican el desarrollo en paralelo. Puede escribir código paralelo eficaz, específico y escalable de forma natural sin tener que trabajar directamente con subprocesos ni el bloque de subprocesos.
 
-La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en .NET Framework:
+La siguiente ilustración proporciona una información general de alto nivel de la arquitectura de programación paralela en .NET.
 
 ![Arquitectura de programación en paralelo de .NET](./media/tpl-architecture.png)
 
