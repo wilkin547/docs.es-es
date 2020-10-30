@@ -5,26 +5,26 @@ ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
-- objects [.NET Framework], grouping in collections
+- objects [.NET], grouping in collections
 - Array class, grouping data in collections
-- threading [.NET Framework], safety
+- threading [.NET], safety
 - Collections classes
-- collections [.NET Framework]
+- collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3d5b16dccdd9867293a52c74a2d379c807fd93e7
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662750"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889353"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 
 A menudo, los datos similares pueden controlarse de forma más eficaz si se almacenan y manipulan como si fuesen una colección. Puede utilizar la clase <xref:System.Array?displayProperty=nameWithType> o las clases de los espacios de nombres <xref:System.Collections>, <xref:System.Collections.Generic>,<xref:System.Collections.Concurrent> y <xref:System.Collections.Immutable> para agregar, quitar y modificar elementos individuales o un intervalo de elementos de una colección.
 
-Hay dos tipos principales de colecciones: las colecciones genéricas y las colecciones no genéricas. Las colecciones genéricas se agregaron en la versión 2.0 de.NET Framework y son colecciones con seguridad de tipos en tiempo de compilación. Debido a esto, las colecciones genéricas normalmente ofrecen un mejor rendimiento. Las colecciones genéricas aceptan un parámetro de tipo cuando se construyen y no requieren conversiones con el tipo <xref:System.Object> al agregar o quitar elementos de la colección.  Además, la mayoría de colecciones genéricas son compatibles con las aplicaciones de la Tienda Windows. Las colecciones no genéricas almacenan elementos como <xref:System.Object>, requieren una conversión y la mayoría de ellas no son compatibles con el desarrollo de aplicaciones de la Tienda Windows. Sin embargo, puede que vea colecciones no genéricas en código antiguo.
+Hay dos tipos principales de colecciones: las colecciones genéricas y las colecciones no genéricas. Las colecciones genéricas son de seguridad de tipos en tiempo de compilación. Debido a esto, las colecciones genéricas normalmente ofrecen un mejor rendimiento. Las colecciones genéricas aceptan un parámetro de tipo cuando se construyen y no requieren conversiones con el tipo <xref:System.Object> al agregar o quitar elementos de la colección.  Además, la mayoría de colecciones genéricas son compatibles con las aplicaciones de la Tienda Windows. Las colecciones no genéricas almacenan elementos como <xref:System.Object>, requieren una conversión y la mayoría de ellas no son compatibles con el desarrollo de aplicaciones de la Tienda Windows. Sin embargo, puede que vea colecciones no genéricas en código antiguo.
 
-A partir de .NET Framework 4, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos con el fin de obtener acceso a los elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres <xref:System.Collections.Immutable> ([paquete de NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para los subprocesos, ya que las operaciones se realizan en una copia de la colección original, mientras que la colección original no se puede modificar.
+A partir de .NET Framework 4, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos para acceder a los elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres <xref:System.Collections.Immutable> ([paquete de NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para los subprocesos, ya que las operaciones se realizan en una copia de la colección original, mientras que la colección original no se puede modificar.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>Características comunes de las colecciones
@@ -33,11 +33,11 @@ Todas las colecciones ofrecen métodos para agregar, quitar o buscar elementos e
 
 - **Capacidad para enumerar la colección**
 
-    Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir procesar una iteración en la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), [Introducción a las consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) y [Operaciones básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+    Las colecciones de .NET Framework implementan <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> para permitir recorrer en iteración la colección. Un enumerador puede considerarse como un puntero móvil para cualquier elemento de la colección. Las instrucciones [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) y [For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) usan el enumerador expuesto por el método <xref:System.Collections.IEnumerable.GetEnumerator%2A> y ocultan la complejidad que supone manipular el enumerador. Además, cualquier colección que implementa <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> se considera un *tipo consultable* y se puede consultar con LINQ. Las consultas LINQ proporcionan un modelo común para acceder a los datos. Por lo general, son más concisas y legibles que los bucles `foreach` estándar y ofrecen capacidad de filtrado, ordenación y agrupación. Las consultas LINQ también pueden mejorar el rendimiento. Para obtener más información, vea [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), [Introducción a las consultas LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) y [Operaciones básicas de consulta (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 - **Capacidad de copiar el contenido de la colección en una matriz**
 
-    Todas las colecciones se pueden copiar en una matriz mediante el método **CopyTo**; sin embargo, el orden de los elementos de la nueva matriz se basa en la secuencia en la que los devuelve el enumerador. La matriz resultante siempre es unidimensional con un límite inferior de cero.
+    Todas las colecciones se pueden copiar en una matriz mediante el método **CopyTo** ; sin embargo, el orden de los elementos de la nueva matriz se basa en la secuencia en la que los devuelve el enumerador. La matriz resultante siempre es unidimensional con un límite inferior de cero.
 
 Además, muchas clases de colecciones contienen las siguientes características:
 
