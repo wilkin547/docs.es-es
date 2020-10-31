@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], saving
-- time zone objects [.NET Framework], serializing
-- time zone objects [.NET Framework], saving
+- time zones [.NET], saving
+- time zone objects [.NET], serializing
+- time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: c8084cb8edff64b9d598f4fd0a62a362491c7aa7
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281250"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063409"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedimiento para guardar zonas horarias en un recurso incrustado
 
@@ -23,9 +23,9 @@ Una aplicación que tiene en cuenta la zona horaria suele requerir la presencia 
 
 Normalmente, la serialización de un <xref:System.TimeZoneInfo> objeto se produce aparte de la aplicación que tiene en cuenta la zona horaria. Dependiendo del almacén de datos utilizado para contener objetos serializados <xref:System.TimeZoneInfo> , los datos de zona horaria se pueden serializar como parte de una rutina de instalación o instalación (por ejemplo, cuando los datos se almacenan en una clave de aplicación del registro) o como parte de una rutina de utilidad que se ejecuta antes de que se compile la aplicación final (por ejemplo, cuando los datos serializados se almacenan en un archivo de recursos XML de .net).
 
-Además de un archivo de recursos que se compila con la aplicación, se pueden usar otros almacenes de datos para la información de zona horaria. Entre ellas se incluyen las siguientes:
+Además de un archivo de recursos que se compila con la aplicación, se pueden usar otros almacenes de datos para la información de zona horaria. Entre ellas, se incluyen las siguientes:
 
-- El registro. Tenga en cuenta que una aplicación debe usar las subclaves de su propia clave de aplicación para almacenar datos de zona horaria personalizados en lugar de usar las subclaves de HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
+- El registro. Tenga en cuenta que una aplicación debe usar las subclaves de su propia clave de aplicación para almacenar datos de zona horaria personalizados en lugar de usar las subclaves de HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones.
 
 - Archivos de configuración.
 
@@ -55,7 +55,7 @@ Además de un archivo de recursos que se compila con la aplicación, se pueden u
 
 9. Agregue el archivo. resx generado al proyecto de Visual Studio de la aplicación.
 
-10. Con la ventana **propiedades** de Visual Studio, asegúrese de que la propiedad **acción de compilación** del archivo. resx esté establecida en **recurso incrustado**.
+10. Con la ventana **propiedades** de Visual Studio, asegúrese de que la propiedad **acción de compilación** del archivo. resx esté establecida en **recurso incrustado** .
 
 ## <a name="example"></a>Ejemplo
 
@@ -68,13 +68,13 @@ En este ejemplo se serializan <xref:System.TimeZoneInfo> objetos para que estén
 
 Dado que el <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> método agrega información de encabezado completa a un archivo de recursos de .net XML, no se puede usar para agregar recursos a un archivo existente. Para controlar esto, el ejemplo se comprueba para el archivo SerializedTimeZones. resx y, si existe, se almacenan todos sus recursos distintos de las dos zonas horarias serializadas en un <xref:System.Collections.Generic.Dictionary%602> objeto genérico. A continuación, se elimina el archivo existente y se agregan los recursos existentes a un nuevo archivo SerializedTimeZones. resx. Los datos de zona horaria serializados también se agregan a este archivo.
 
-Los campos de clave (o **nombre**) de los recursos no deben contener espacios incrustados. <xref:System.String.Replace%28System.String%2CSystem.String%29>Se llama al método para quitar todos los espacios incrustados de los identificadores de zona horaria antes de que se asignen al archivo de recursos.
+Los campos de clave (o **nombre** ) de los recursos no deben contener espacios incrustados. <xref:System.String.Replace%28System.String%2CSystem.String%29>Se llama al método para quitar todos los espacios incrustados de los identificadores de zona horaria antes de que se asignen al archivo de recursos.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
 Para este ejemplo se necesita:
 
-- Que se va a agregar al proyecto una referencia a System. Windows. Forms. dll y System. Core. dll.
+- Que se va a agregar al proyecto una referencia a System.Windows.Forms.dll y System.Core.dll.
 
 - Que se importen los espacios de nombres siguientes:
 
@@ -85,4 +85,4 @@ Para este ejemplo se necesita:
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Información general sobre zonas horarias](time-zone-overview.md)
-- [Procedimiento para restaurar zonas horarias de un recurso incrustado](restore-time-zones-from-an-embedded-resource.md)
+- [Cómo: restaurar zonas horarias de un recurso incrustado](restore-time-zones-from-an-embedded-resource.md)

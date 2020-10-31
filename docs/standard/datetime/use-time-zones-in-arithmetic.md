@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], arithmetic operations
-- arithmetic operations [.NET Framework], dates and times
-- dates [.NET Framework], adding and subtracting
+- time zones [.NET], arithmetic operations
+- arithmetic operations [.NET], dates and times
+- dates [.NET], adding and subtracting
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
-ms.openlocfilehash: af19145f7caa9dbe8630ae7593734769e98720d0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cb1abbcab10d52f9ba898e2f4e2468b04cfcff1f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280925"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064267"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
 
@@ -63,4 +63,4 @@ Para este ejemplo se necesita:
 ## <a name="see-also"></a>Consulte también
 
 - [Fechas, horas y zonas horarias](index.md)
-- [Efectuar operaciones aritméticas con fechas y horas](performing-arithmetic-operations.md)
+- [Realizar operaciones aritméticas con fechas y horas](performing-arithmetic-operations.md)

@@ -8,28 +8,28 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - DateTime structure, converting
-- time zones [.NET Framework], conversions
+- time zones [.NET], conversions
 - UTC times, converting
 - DateTimeOffset structure, converting
 - converting DateTimeOffset and DateTime values
-- dates [.NET Framework], converting
+- dates [.NET], converting
 - converting times
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 86f2c982d7f87e83102933d1de73d6e13086dc87
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: cccfa37663e5a046b08f70a89ebb7f3566486139
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924908"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063851"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>Conversión entre DateTime y DateTimeOffset
 
 Aunque la <xref:System.DateTimeOffset> estructura proporciona un mayor grado de reconocimiento de la zona horaria que la <xref:System.DateTime> estructura, los <xref:System.DateTime> parámetros se utilizan con más frecuencia en las llamadas a métodos. Por este motivo, la capacidad de convertir <xref:System.DateTimeOffset> valores en <xref:System.DateTime> valores y viceversa es especialmente importante. En este tema se muestra cómo realizar estas conversiones de forma que conserve tanta información de zona horaria como sea posible.
 
 > [!NOTE]
-> Los <xref:System.DateTime> <xref:System.DateTimeOffset> tipos y tienen algunas limitaciones cuando representan las horas de las zonas horarias. Con su <xref:System.DateTime.Kind%2A> propiedad, <xref:System.DateTime> solo puede reflejar la hora universal coordinada (UTC) y la zona horaria local del sistema. <xref:System.DateTimeOffset>refleja el desplazamiento de una hora con respecto a la hora UTC, pero no refleja la zona horaria real a la que pertenece ese desplazamiento. Para obtener más información sobre los valores de hora y la compatibilidad con las zonas horarias, vea [elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](choosing-between-datetime.md).
+> Los <xref:System.DateTime> <xref:System.DateTimeOffset> tipos y tienen algunas limitaciones cuando representan las horas de las zonas horarias. Con su <xref:System.DateTime.Kind%2A> propiedad, <xref:System.DateTime> solo puede reflejar la hora universal coordinada (UTC) y la zona horaria local del sistema. <xref:System.DateTimeOffset> refleja el desplazamiento de una hora con respecto a la hora UTC, pero no refleja la zona horaria real a la que pertenece ese desplazamiento. Para obtener más información sobre los valores de hora y la compatibilidad con las zonas horarias, vea [elegir entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo](choosing-between-datetime.md).
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>Conversiones entre DateTime y DateTimeOffset
 

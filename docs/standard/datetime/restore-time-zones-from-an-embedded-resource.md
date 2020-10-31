@@ -6,15 +6,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], deserializing
-- time zones [.NET Framework], restoring
+- time zones [.NET], deserializing
+- time zones [.NET], restoring
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
-ms.openlocfilehash: b1cece13c88b3a49c9c4c90045a07dd009d4282d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1dd3dff2441ac5e21f3ebf97d58919a7c65d42c5
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84281328"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063435"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento para restaurar zonas horarias de un recurso incrustado
 
@@ -26,7 +26,7 @@ En este tema se describe cómo restaurar zonas horarias que se han guardado en u
 
 2. Cree una instancia <xref:System.Resources.ResourceManager> de un objeto pasando el nombre completo del archivo de recursos incrustado y una referencia al ensamblado que contiene el archivo de recursos.
 
-   Si no puede determinar el nombre completo del archivo de recursos incrustado, use [Ildasm. exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) para examinar el manifiesto del ensamblado. Una `.mresource` entrada identifica el recurso. En el ejemplo, el nombre completo del recurso es `SerializeTimeZoneData.SerializedTimeZones` .
+   Si no puede determinar el nombre completo del archivo de recursos incrustado, use el [Ildasm.exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) para examinar el manifiesto del ensamblado. Una `.mresource` entrada identifica el recurso. En el ejemplo, el nombre completo del recurso es `SerializeTimeZoneData.SerializedTimeZones` .
 
    Si el archivo de recursos está incrustado en el mismo ensamblado que contiene el código de creación de instancias de zona horaria, puede recuperar una referencia a él llamando al `static` `Shared` método (en Visual Basic) <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> .
 
@@ -49,7 +49,7 @@ Dado que los datos de las zonas horarias personalizadas (zonas horarias a las qu
 
 Para este ejemplo se necesita:
 
-- Que se va a agregar al proyecto una referencia a System. Windows. Forms. dll y System. Core. dll.
+- Que se va a agregar al proyecto una referencia a System.Windows.Forms.dll y System.Core.dll.
 
 - Que se importen los espacios de nombres siguientes:
 
@@ -60,4 +60,4 @@ Para este ejemplo se necesita:
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Información general sobre zonas horarias](time-zone-overview.md)
-- [Procedimiento para guardar zonas horarias en un recurso incrustado](save-time-zones-to-an-embedded-resource.md)
+- [Cómo: guardar zonas horarias en un recurso incrustado](save-time-zones-to-an-embedded-resource.md)

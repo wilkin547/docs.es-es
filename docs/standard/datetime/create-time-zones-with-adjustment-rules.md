@@ -6,16 +6,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- time zones [.NET Framework], creating
-- time zones [.NET Framework], and adjustment rules
-- adjustment rule [.NET Framework]
+- time zones [.NET], creating
+- time zones [.NET], and adjustment rules
+- adjustment rule [.NET]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-ms.openlocfilehash: b7e938581dfde3f1566aa2506302292686c2fc5c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 28ab7c8ceabcfd64a6797cf5a85869c469963983
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278173"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063825"
 ---
 # <a name="how-to-create-time-zones-with-adjustment-rules"></a>Procedimiento para crear zonas horarias con reglas de ajuste
 
@@ -93,4 +93,4 @@ Para este ejemplo se necesita:
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Información general sobre zonas horarias](time-zone-overview.md)
-- [Procedimiento para crear zonas horarias sin reglas de ajuste](create-time-zones-without-adjustment-rules.md)
+- [Cómo: crear zonas horarias sin reglas de ajuste](create-time-zones-without-adjustment-rules.md)
