@@ -8,17 +8,17 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- event properties [.NET Framework]
-- multiple events [.NET Framework]
-- event handling [.NET Framework], with multiple events
-- events [.NET Framework], multiple
+- event properties [.NET]
+- multiple events [.NET]
+- event handling [.NET], with multiple events
+- events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: 5b528aa2145ba703ce605ce22ae7d643f1e5b8d0
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769020"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064241"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  

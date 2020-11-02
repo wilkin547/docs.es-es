@@ -9,23 +9,24 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - Asynchronous Pattern
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
-- components [.NET Framework], asynchronous
+- threading [.NET], asynchronous features
+- components [.NET], asynchronous
 - AsyncOperation class
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 8ea767976d82881d8f983c1b1e3cbf9475c73995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2294379d37d4cd9e7fae494a6548561258743d74
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536046"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888885"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos
+
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](event-based-asynchronous-pattern-overview.md).  
   
  En este tutorial se explica cómo crear un componente que implementa el modelo asincrónico basado en eventos. Se implementa mediante clases auxiliares del espacio de nombres <xref:System.ComponentModel?displayProperty=nameWithType>, lo que garantiza que el componente funcione correctamente en cualquier modelo de aplicación, incluidas aplicaciones de ASP.NET, de consola y de Windows Forms. Este componente también se puede diseñar con un control <xref:System.Windows.Forms.PropertyGrid> y sus propios diseñadores personalizados.  

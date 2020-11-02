@@ -11,16 +11,16 @@ helpviewer_keywords:
 - metacharacters, quantifiers
 - minimal matching quantifiers
 - quantifiers in regular expressions
-- .NET Framework regular expressions, quantifiers
+- .NET regular expressions, quantifiers
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063814"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889431"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -114,7 +114,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-at-least-n-times-n"></a>Coincidir al menos n veces: {n,}  
- El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n*, donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,}?`.  
+ El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n* , donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,}?`.  
   
  Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta coincidir con un límite de palabra seguido de por lo menos dos dígitos, seguidos de un límite de palabra y de un carácter que no sea un dígito. En el ejemplo siguiente se muestra esta expresión regular. La expresión regular no coincide con la frase `"7 days"` porque solo contiene un dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.  
   

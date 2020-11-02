@@ -8,7 +8,7 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- strings [.NET Framework], removing characters
+- strings [.NET], removing characters
 - Remove method
 - TrimEnd method
 - Trim method
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 630fe6b51d151d1f1384f2e3cde62750c303d883
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: d0057d503474f3f6ff886acda3ce1d72fb3ebe21
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446898"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888599"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Recorte y eliminación de caracteres de cadenas en .NET
 Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás. En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena. En la tabla siguiente se describen los métodos de recorte disponibles.  
@@ -50,7 +50,7 @@ Si va a analizar una frase en las palabras que la forman, el resultado pueden se
 
  El método **String.TrimEnd** quita caracteres del final de una cadena, creando un nuevo objeto de cadena. A este método se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar. El orden de los elementos en la matriz de caracteres no afecta a la operación de recorte. El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.  
   
- En el ejemplo siguiente se quitan las últimas letras de una cadena con el método **TrimEnd**. En este ejemplo, se invierte la posición de los caracteres `'r'` y `'W'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia. Observe que este código quita la última palabra de `MyString` y parte de la primera.  
+ En el ejemplo siguiente se quitan las últimas letras de una cadena con el método **TrimEnd** . En este ejemplo, se invierte la posición de los caracteres `'r'` y `'W'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia. Observe que este código quita la última palabra de `MyString` y parte de la primera.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -58,7 +58,7 @@ Si va a analizar una frase en las palabras que la forman, el resultado pueden se
   
  Con este código se muestra `He` en la consola.  
   
- En el ejemplo siguiente se quita la última palabra de una cadena con el método **TrimEnd**. En este código hay una coma después de `Hello` y, como la coma no está especificada en la matriz de caracteres que se deben recortar, la operación se detiene en la coma.  
+ En el ejemplo siguiente se quita la última palabra de una cadena con el método **TrimEnd** . En este código hay una coma después de `Hello` y, como la coma no está especificada en la matriz de caracteres que se deben recortar, la operación se detiene en la coma.  
   
  [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
  [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
@@ -68,7 +68,7 @@ Si va a analizar una frase en las palabras que la forman, el resultado pueden se
   
 ## <a name="trimstart"></a>TrimStart
 
- El método **String.TrimStart** es parecido al método **String.TrimEnd**, con la diferencia de que crea una nueva cadena quitando caracteres del comienzo de un objeto de cadena existente. Al método **TrimStart** se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar. Lo mismo que en el método **TrimEnd**, el orden de los elementos en la matriz de caracteres no afecta a la operación de recorte. El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.  
+ El método **String.TrimStart** es parecido al método **String.TrimEnd** , con la diferencia de que crea una nueva cadena quitando caracteres del comienzo de un objeto de cadena existente. Al método **TrimStart** se le pasa una matriz de caracteres para especificar los caracteres que se van a quitar. Lo mismo que en el método **TrimEnd** , el orden de los elementos en la matriz de caracteres no afecta a la operación de recorte. El recorte se detiene cuando se encuentra un carácter no especificado en la matriz.  
   
  En el siguiente ejemplo se quita la primera palabra de una cadena. En este ejemplo, se invierte la posición de los caracteres `'l'` y `'H'` para ilustrar que el orden de los caracteres en la matriz no tiene importancia.  
   

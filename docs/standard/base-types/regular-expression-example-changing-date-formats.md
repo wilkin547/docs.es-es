@@ -9,19 +9,19 @@ helpviewer_keywords:
 - searching with regular expressions, examples
 - parsing text with regular expressions, examples
 - regular expressions, examples
-- .NET Framework regular expressions, examples
-- regular expressions [.NET Framework], examples
+- .NET regular expressions, examples
+- regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 3b657ac6c88a1ee846f7f1d2156a18fd34621808
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b5eca8c294349fada9cfb1cb3ed8e2012edd8bda
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803955"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889418"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Ejemplo de expresiones regulares: Cambiar formatos de fecha
-En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para reemplazar las fechas con el formato *mm*/*dd*/*aa* con fechas que tienen el formato *dd*-*mm*-*aa*.  
+En el siguiente ejemplo de código, se usa el método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> para reemplazar las fechas con el formato *mm*/*dd*/*aa* con fechas que tienen el formato *dd*-*mm*-*aa* .  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 

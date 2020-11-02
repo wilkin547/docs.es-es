@@ -5,22 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8b54aea1409f2b4c0a3d39d215922ba62c2a3563
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656975"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188320"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 
-Al trabajar con datos en Windows Communication Foundation (WCF), debe tener en cuenta varias categorías de amenazas. La tabla siguiente enumera las clases más importantes de amenazas relacionadas con el procesamiento de datos. WCF proporciona herramientas para mitigar estas amenazas.
+Al trabajar con datos en Windows Communication Foundation (WCF), debe tener en cuenta varias categorías de amenazas. En la siguiente lista se muestran las clases de amenazas más importantes relacionadas con el procesamiento de datos. WCF proporciona herramientas para mitigar estas amenazas.
 
-Denegación de servicio al recibir datos que no son de confianza, los datos pueden hacer que el lado receptor tenga acceso a una cantidad desproporcionada de varios recursos, como memoria, subprocesos, conexiones disponibles o ciclos de procesador provocando cálculos prolongados. Un ataque por denegación de servicio contra un servidor puede provocar que se bloquee y no pueda procesar los mensajes de otros clientes legítimos.
+* Denegación de servicio
 
-La ejecución de código malintencionado los datos entrantes que no son de confianza provocan que el lado receptor ejecute código que no pretendía.
+  Al recibir datos que no son de confianza, los datos pueden hacer que el lado receptor tenga acceso a una cantidad desproporcionada de varios recursos, como memoria, subprocesos, conexiones disponibles o ciclos de procesador produciendo largos cálculos. Un ataque por denegación de servicio contra un servidor puede provocar que se bloquee y no pueda procesar los mensajes de otros clientes legítimos.
 
-Divulgación de información: el atacante remoto obliga a la parte receptora a responder a sus solicitudes de manera que divulgar más información de la que pretende.
+* Ejecución de código malintencionado
+
+  Los datos entrantes que no son de confianza provocan que el lado receptor ejecute código que no pretendía ejecutar.
+
+* Divulgación de información
+
+  El atacante remoto obliga a la parte receptora a que responda a sus solicitudes de manera que divulga más información de la que pretende.
 
 ## <a name="user-provided-code-and-code-access-security"></a>Código proporcionado por usuario y seguridad de acceso del código
 
@@ -155,7 +161,7 @@ Esta cuota limita la profundidad máxima del anidamiento de elementos XML. Por e
 
 #### <a name="maxnametablecharcount"></a>MaxNameTableCharCount
 
-Esta cuota limita el tamaño de la *tabla de nombres*del lector. La tabla de nombres contiene ciertas cadenas (como espacios de nombres y prefijos) que se encuentran al procesar un documento XML. Puesto que estas cadenas están almacenadas en búfer en memoria, establezca esta cuota para evitar el almacenamiento en búfer excesivo cuando se espera la transmisión por secuencias.
+Esta cuota limita el tamaño de la *tabla de nombres* del lector. La tabla de nombres contiene ciertas cadenas (como espacios de nombres y prefijos) que se encuentran al procesar un documento XML. Puesto que estas cadenas están almacenadas en búfer en memoria, establezca esta cuota para evitar el almacenamiento en búfer excesivo cuando se espera la transmisión por secuencias.
 
 #### <a name="maxstringcontentlength"></a>MaxStringContentLength
 
@@ -169,7 +175,7 @@ Esta cuota limita el tamaño máximo de una matriz de primitivas que devuelve el
 
 La codificación XML binaria WCF compatible con incluye una característica de *cadenas de diccionario* . Una cadena grande puede estar codificada utilizando solo unos bytes. Esto permite considerables ganancias de rendimiento, pero introduce nuevas amenazas de la denegación de servicio que se deben mitigar.
 
-Hay dos tipos de diccionarios: *estático* y *dinámico*. El diccionario estático es una lista integrada de cadenas largas que se puede representar utilizando un código corto en la codificación binaria. Esta lista de cadenas se fija cuando el lector se crea y no se puede modificar. Ninguna de las cadenas del diccionario estático que WCF utiliza de forma predeterminada es lo suficientemente grande como para suponer una amenaza grave de denegación de servicio, aunque todavía se pueden utilizar en un ataque de expansión de diccionario. En escenarios avanzados donde proporciona su propio diccionario estático, vaya con cuidado al introducir cadenas de diccionario grandes.
+Hay dos tipos de diccionarios: *estático* y *dinámico* . El diccionario estático es una lista integrada de cadenas largas que se puede representar utilizando un código corto en la codificación binaria. Esta lista de cadenas se fija cuando el lector se crea y no se puede modificar. Ninguna de las cadenas del diccionario estático que WCF utiliza de forma predeterminada es lo suficientemente grande como para suponer una amenaza grave de denegación de servicio, aunque todavía se pueden utilizar en un ataque de expansión de diccionario. En escenarios avanzados donde proporciona su propio diccionario estático, vaya con cuidado al introducir cadenas de diccionario grandes.
 
 La característica de diccionarios dinámicos permite a los mensajes definir sus propias cadenas y asociarlas a códigos cortos. Estas asignaciones de cadena a código se mantienen en memoria durante la sesión completa de comunicación, de manera que los mensajes subsiguientes no tienen que reenviar las cadenas y pueden utilizar los códigos ya definidos. Estas cadenas pueden ser de longitud arbitraria y por consiguiente provocar una amenaza más seria que aquellas en el diccionario estático.
 

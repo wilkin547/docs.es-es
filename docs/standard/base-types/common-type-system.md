@@ -9,19 +9,19 @@ dev_langs:
 helpviewer_keywords:
 - type system
 - common type system
-- assemblies [.NET Framework], types
+- assemblies [.NET], types
 - reference types
 - value types
 - cross-language interoperability
-- namespaces [.NET Framework], types
+- namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: 4e3fc4cb03a0b8fd63b41bd912374c29eef3a29a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555164"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889509"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 
@@ -249,7 +249,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Además de incluir la propiedad propiamente dicha, el Lenguaje Intermedio de Microsoft (MSIL) de un tipo que contiene una propiedad de lectura incluye un método `get_`*propertyname* y el lenguaje MSIL de un tipo que contiene una propiedad de escritura incluye un método `set_`*propertyname*.  
+ Además de incluir la propiedad propiamente dicha, el Lenguaje Intermedio de Microsoft (MSIL) de un tipo que contiene una propiedad de lectura incluye un método `get_`*propertyname* y el lenguaje MSIL de un tipo que contiene una propiedad de escritura incluye un método `set_`*propertyname* .  
 
 ### <a name="methods"></a>Métodos
 

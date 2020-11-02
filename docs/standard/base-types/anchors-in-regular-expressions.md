@@ -13,15 +13,15 @@ helpviewer_keywords:
 - anchors, in regular expressions
 - metacharacters, atomic zero-width assertions
 - metacharacters, anchors
-- .NET Framework regular expressions, anchors
-- .NET Framework regular expressions, atomic zero-width assertions
+- .NET regular expressions, anchors
+- .NET regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a6330eebbc69b9a3877a99a4373810d5a124c570
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290634"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889171"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  

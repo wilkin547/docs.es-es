@@ -4,16 +4,17 @@ description: La ubicación de un ensamblado .NET determina cómo lo encuentra CL
 ms.date: 08/20/2019
 helpviewer_keywords:
 - locating assemblies
-- assemblies [.NET Framework], location
+- assemblies [.NET], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-ms.openlocfilehash: 7ab3804b14b586e1430d654f4da32a310bcb6cc9
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 1fa1c486c0cddce4ddcfae7f2df27e2e85c88e66
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379895"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687597"
 ---
 # <a name="assembly-location"></a>Ubicación del ensamblado
+
 La ubicación de un ensamblado determina si Common Language Runtime lo encontrará cuando se haga referencia a él y también puede determinar si el ensamblado se puede compartir con otros ensamblados. Puede implementar un ensamblado en las ubicaciones siguientes:
 
 - El directorio de la aplicación o subdirectorios de este.

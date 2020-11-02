@@ -7,20 +7,20 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- formatting [.NET Framework], dates
+- formatting [.NET], dates
 - custom DateTime format string
 - format specifiers, custom date and time
 - format strings
 - custom date and time format strings
-- formatting [.NET Framework], time
+- formatting [.NET], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 95f655ace1b2fb38100e3cc1089c4a3f61c5b264
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557364"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888638"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 
@@ -31,7 +31,7 @@ Una cadena de formato de fecha y hora estándar usa un único especificador de f
 - Para definir la representación de texto de un valor de fecha y hora que se puede convertir en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante una operación de análisis.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato** , que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.
 

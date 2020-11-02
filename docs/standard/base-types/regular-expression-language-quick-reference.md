@@ -11,16 +11,16 @@ helpviewer_keywords:
 - searching with regular expressions, language elements
 - pattern-matching with regular expressions, language elements
 - regular expressions, language elements
-- regular expressions [.NET Framework]
+- regular expressions [.NET]
 - cheat sheet
-- .NET Framework regular expressions, language elements
+- .NET regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 986e7417d85655acc66a5c308aa79477c96fd629
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556805"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889314"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
 
@@ -47,10 +47,10 @@ El carácter de barra diagonal inversa (\\) en una expresión regular indica que
 |`\f`|Coincide con un avance de página, \u000C.|`[\f]{2,}`|`"\f\f\f"` en `"\f\f\f"`|
 |`\n`|Coincide con una nueva línea, \u000A.|`\r\n(\w+)`|`"\r\nThese"` en `"\r\nThese are\ntwo lines."`|
 |`\e`|Coincide con un escape, \u001B.|`\e`|`"\x001B"` en `"\x001B"`|
-|`\` *nnn*|Usa la representación octal para especificar un carácter (*nnn* consta de dos o tres dígitos).|`\w\040\w`|`"a b"`, `"c d"` en `"a bc d"`|
-|`\x` *nn*|Usa la representación hexadecimal para especificar un carácter (*nn* consta de exactamente dos dígitos).|`\w\x20\w`|`"a b"`, `"c d"` en `"a bc d"`|
-|`\c` *X*<br /><br /> `\c` *x*|Coincide con el carácter de control ASCII especificado por *X* o *x*, donde *X* o *x* es la letra del carácter de control.|`\cC`|`"\x0003"` en `"\x0003"` (Ctrl-C)|
-|`\u` *nnnn*|Coincide con un carácter Unicode usando la representación hexadecimal (exactamente cuatro dígitos, según representa *nnnn*).|`\w\u0020\w`|`"a b"`, `"c d"` en `"a bc d"`|
+|`\` *nnn*|Usa la representación octal para especificar un carácter ( *nnn* consta de dos o tres dígitos).|`\w\040\w`|`"a b"`, `"c d"` en `"a bc d"`|
+|`\x` *nn*|Usa la representación hexadecimal para especificar un carácter ( *nn* consta de exactamente dos dígitos).|`\w\x20\w`|`"a b"`, `"c d"` en `"a bc d"`|
+|`\c` *X*<br /><br /> `\c` *x*|Coincide con el carácter de control ASCII especificado por *X* o *x* , donde *X* o *x* es la letra del carácter de control.|`\cC`|`"\x0003"` en `"\x0003"` (Ctrl-C)|
+|`\u` *nnnn*|Coincide con un carácter Unicode usando la representación hexadecimal (exactamente cuatro dígitos, según representa *nnnn* ).|`\w\u0020\w`|`"a b"`, `"c d"` en `"a bc d"`|
 |`\`|Cuando va seguido de un carácter que no se reconoce como un carácter de escape en esta y otras tablas de este tema, coincide con ese carácter. Por ejemplo, `\*` es igual que `\x2A`y `\.` es igual que `\x2E`. Esto permite que el motor de expresiones regulares elimine la ambigüedad de los elementos del lenguaje (como \* o ?) y los literales de carácter (representados por `\*` o `\?`).|`\d+[\+-x\*]\d+`|`"2+2"` y `"3*9"` en `"(2+2) * 3*9"`|
 
 ## <a name="character-classes"></a>Clases de caracteres
@@ -59,12 +59,12 @@ Una clase de caracteres coincide con cualquiera de un juego de caracteres. Las c
 
 |Clase de carácter|Descripción|Modelo|Coincidencias|
 |---------------------|-----------------|-------------|-------------|
-|`[` *grupo_caracteres* `]`|Coincide con cualquier carácter individual de *grupo_caracteres*. De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas.|`[ae]`|`"a"` en `"gray"`<br /><br /> `"a"`, `"e"` en `"lane"`|
-|`[^` *grupo_caracteres* `]`|Negativo: coincide con cualquier carácter individual que no esté en *grupo_caracteres*. De forma predeterminada, los caracteres de *grupo_caracteres* distinguen entre mayúsculas y minúsculas.|`[^aei]`|`"r"`, `"g"`, `"n"` en `"reign"`|
-|`[` *primero* `-` *último* `]`|Rango de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* a *último*.|`[A-Z]`|`"A"`, `"B"` en `"AB123"`|
+|`[` *grupo_caracteres* `]`|Coincide con cualquier carácter individual de *grupo_caracteres* . De forma predeterminada, la coincidencia distingue entre mayúsculas y minúsculas.|`[ae]`|`"a"` en `"gray"`<br /><br /> `"a"`, `"e"` en `"lane"`|
+|`[^` *grupo_caracteres* `]`|Negativo: coincide con cualquier carácter individual que no esté en *grupo_caracteres* . De forma predeterminada, los caracteres de *grupo_caracteres* distinguen entre mayúsculas y minúsculas.|`[^aei]`|`"r"`, `"g"`, `"n"` en `"reign"`|
+|`[` *primero* `-` *último* `]`|Rango de caracteres: coincide con cualquier carácter individual en el intervalo de *primero* a *último* .|`[A-Z]`|`"A"`, `"B"` en `"AB123"`|
 |`.`|Carácter comodín: coincide con cualquier carácter excepto con \n.<br /><br /> Para coincidir con un carácter de punto literal (. o `\u002E`), debe anteponerle el carácter de escape (`\.`).|`a.e`|`"ave"` en `"nave"`<br /><br /> `"ate"` en `"water"`|
-|`\p{` *nombre* `}`|Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` en `"City Lights"`<br /><br /> `"Д"`, `"Ж"` en `"ДЖem"`|
-|`\P{` *nombre* `}`|Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` en `"City"`<br /><br /> `"e"`, `"m"` en `"ДЖem"`|
+|`\p{` *nombre* `}`|Coincide con cualquier carácter individual que pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre* .|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` en `"City Lights"`<br /><br /> `"Д"`, `"Ж"` en `"ДЖem"`|
+|`\P{` *nombre* `}`|Coincide con cualquier carácter individual que no pertenezca a la categoría general Unicode o al bloque con nombre especificado por *nombre* .|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` en `"City"`<br /><br /> `"e"`, `"m"` en `"ДЖem"`|
 |`\w`|Coincide con cualquier carácter de una palabra.|`\w`|`"I"`, `"D"`, `"A"`, `"1"`, `"3"` en `"ID A1.3"`|
 |`\W`|Coincide con cualquier carácter que no pertenezca a una palabra.|`\W`|`" "`, `"."` en `"ID A1.3"`|
 |`\s`|Coincide con cualquier carácter que sea un espacio en blanco.|`\w\s`|`"D "` en `"ID A1.3"`|
@@ -97,7 +97,7 @@ Las construcciones de agrupamiento definen subexpresiones de una expresión regu
 |`(?<` *nombre* `>` *subexpresión* `)`<br /> o <br />`(?'` *nombre* `'` *subexpresión* `)`|Captura la subexpresión coincidente en un grupo con nombre.|`(?<double>\w)\k<double>`|`"ee"` en `"deep"`|
 |`(?<` *nombre1* `-` *nombre2* `>` *subexpresión* `)` <br /> o <br /> `(?'` *nombre1* `-` *nombre2* `'` *subexpresión* `)`|Define una definición de grupo de equilibrio. Para obtener más información, consulte la sección "Definiciones de grupos de equilibrio" en [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` en `"3+2^((1-3)*(3-1))"`|
 |`(?:` *subexpresión* `)`|Define un grupo sin captura.|`Write(?:Line)?`|`"WriteLine"` en `"Console.WriteLine()"`<br /><br /> `"Write"` en `"Console.Write(value)"`|
-|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión*. Para obtener más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` en `"A12xl A12XL a12xl"`|
+|`(?imnsx-imnsx:` *subexpresión* `)`|Aplica o deshabilita las opciones especificadas dentro de *subexpresión* . Para obtener más información, consulte [Opciones de expresiones regulares](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` en `"A12xl A12XL a12xl"`|
 |`(?=` *subexpresión* `)`|Aserción de búsqueda anticipada positiva de ancho cero.|`\w+(?=\.)`|`"is"`, `"ran"` y `"out"` en `"He is. The dog ran. The sun is out."`|
 |`(?!` *subexpresión* `)`|Aserción de búsqueda anticipada negativa de ancho cero.|`\b(?!un)\w+\b`|`"sure"`, `"used"` en `"unsure sure unity used"`|
 |`(?<=` *subexpresión* `)`|Aserción de búsqueda tardía positiva de ancho cero.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` en `"1851 1999 1950 1905 2003"`|
@@ -139,8 +139,8 @@ Las estructuras de alternancia modifican una expresión regular para habilitar o
 |Construcciones de alternancia|Descripción|Modelo|Coincidencias|
 |---------------------------|-----------------|-------------|-------------|
 |<code>&#124;</code>|Coincide con cualquier elemento separado por el carácter de barra vertical (<code>&#124;</code>).|<code>th(e&#124;is&#124;at)</code>|`"the"`, `"this"` en `"this is the day."`|
-|`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no*. *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` en `"A10 C103 910"`|
-|`(?(` *nombre* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre*, un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` en `"Dogs.jpg \"Yiska playing.jpg\""`|
+|`(?(` *expresión* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si el patrón de expresión regular designado por *expresión* coincide; de lo contrario, coincide con la parte opcional *no* . *expresión* se interpreta como una aserción de ancho cero.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` en `"A10 C103 910"`|
+|`(?(` *nombre* `)` *sí* <code>&#124;</code> *no* `)`|Coincide con *sí* si *nombre* , un grupo de captura con nombre o numerado, tiene una coincidencia; de lo contrario, coincide con la parte opcional *no* .|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` en `"Dogs.jpg \"Yiska playing.jpg\""`|
 
 ## <a name="substitutions"></a>Sustituciones
 
@@ -148,8 +148,8 @@ Las sustituciones son elementos del lenguaje de expresiones regulares que se adm
 
 |Carácter|Descripción|Modelo|Modelo de reemplazo|Cadena de entrada|Cadena de resultado|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$` *número*|Sustituye la subcadena que coincide con el grupo *número*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
-|`${` *nombre* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
+|`$` *número*|Sustituye la subcadena que coincide con el grupo *número* .|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`${` *nombre* `}`|Sustituye la subcadena que coincide con el grupo con nombre *nombre* .|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|Sustituye un "$" literal.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|Sustituye una copia de toda la coincidencia.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|
 |``$` ``|Sustituye todo el texto de la cadena de entrada delante de la coincidencia.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|

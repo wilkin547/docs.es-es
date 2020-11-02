@@ -3,7 +3,7 @@ title: Establecimiento de atributos de ensamblado
 description: Puede establecer atributos de ensamblado para un ensamblado .NET, incluidos los atributos de identidad del ensamblado, informativos, de manifiesto del ensamblado y de nombre seguro.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], attributes
+- assemblies [.NET], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e3a077dcd1b62a4676a3ac6492a90e38c548e41b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 32318d647dee8f3f397e3497e7c2da640bd492d0
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378646"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687682"
 ---
 # <a name="set-assembly-attributes"></a>Establecimiento de atributos de ensamblado
 
@@ -40,7 +40,7 @@ En la tabla siguiente se describen los atributos de versión y de referencia cul
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica la referencia cultural que admite el ensamblado. Un ensamblado también puede especificar independencia de la referencia cultural, lo que indica que contiene los recursos para la referencia cultural predeterminada. **Nota:**  El tiempo de ejecución trata cualquier ensamblado que no tenga el atributo de referencia cultural establecido en NULL como un ensamblado satélite. Estos ensamblados están sujetos a las reglas de enlace de ensamblados satélite. Para más información, consulte [Cómo el motor en tiempo de ejecución ubica ensamblados](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Valor que establece atributos de ensamblado, como por ejemplo, si se puede ejecutar el ensamblado en paralelo.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico con el formato *versión_principal*.*versión_secundaria*.*compilación*.*revisión* (por ejemplo, 2.4.0.0). Common Language Runtime usa este valor para realizar operaciones de enlace en ensamblados con nombre seguro. **Nota:**  Si el atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> no se aplica a un ensamblado, el número de versión que especifica el atributo <xref:System.Reflection.AssemblyVersionAttribute> lo utilizan las propiedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico con el formato *versión_principal* . *versión_secundaria* . *compilación* . *revisión* (por ejemplo, 2.4.0.0). Common Language Runtime usa este valor para realizar operaciones de enlace en ensamblados con nombre seguro. **Nota:**  Si el atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> no se aplica a un ensamblado, el número de versión que especifica el atributo <xref:System.Reflection.AssemblyVersionAttribute> lo utilizan las propiedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> y <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 
 En el ejemplo de código siguiente se muestra cómo aplicar los atributos de versión y referencia cultural a un ensamblado.
 
@@ -98,10 +98,10 @@ Puede utilizar atributos de nombre seguro para establecer un nombre seguro para 
 |Atributos de nombre seguro|Descripción|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|Valor booleano que indica que se está usando la firma retardada.|
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|Valor de cadena que indica el nombre del archivo que contiene la clave pública (si se usa la firma retardada) o las claves públicas y privadas que se pasan como un parámetro al constructor de este atributo. Tenga en cuenta que el nombre de archivo es relativo a la ruta de acceso del archivo de salida ( *.exe* o *.dll*), no a la ruta de acceso del archivo de origen.|
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|Valor de cadena que indica el nombre del archivo que contiene la clave pública (si se usa la firma retardada) o las claves públicas y privadas que se pasan como un parámetro al constructor de este atributo. Tenga en cuenta que el nombre de archivo es relativo a la ruta de acceso del archivo de salida ( *.exe* o *.dll* ), no a la ruta de acceso del archivo de origen.|
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|Indica el contenedor de claves que contiene el par de claves que se pasa como parámetro al constructor de este atributo.|
 
-En el ejemplo de código siguiente, se muestran los atributos que se aplicarán cuando se use la firma retardada para crear un ensamblado con nombre seguro con un archivo de clave pública denominado *myKey.snk*.
+En el ejemplo de código siguiente, se muestran los atributos que se aplicarán cuando se use la firma retardada para crear un ensamblado con nombre seguro con un archivo de clave pública denominado *myKey.snk* .
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("myKey.snk")];

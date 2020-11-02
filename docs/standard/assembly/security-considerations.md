@@ -3,32 +3,33 @@ title: Consideraciones de seguridad sobre ensamblados
 description: Cuando se compila un ensamblado .NET, se pueden especificar los permisos que son necesarios para su ejecución. En este artículo se describen los ensamblados con nombre seguro y las herramientas de firma.
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], security
+- assemblies [.NET], security
 - signcodes
-- names [.NET Framework], assemblies
+- names [.NET], assemblies
 - strong-named assemblies, security considerations
 - signing assemblies
-- assemblies [.NET Framework], signing
+- assemblies [.NET], signing
 - granting permissions, assemblies
-- assemblies [.NET Framework], strong-named
-- names [.NET Framework], strong names
-- permissions [.NET Framework], assemblies
-- security [.NET Framework], assemblies
+- assemblies [.NET], strong-named
+- names [.NET], strong names
+- permissions [.NET], assemblies
+- security [.NET], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 91ea206abf80da275651854b9f13aa0116b7a1c5
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290024"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687266"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
+
 Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
   
  La evidencia se utiliza de dos formas distintas:  
   
-- La evidencia de entrada se combina con la evidencia recopilada por el cargador para crear un juego final de evidencias que se utiliza en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load**, **Assembly.LoadFrom** y **Activator.CreateInstance**.  
+- La evidencia de entrada se combina con la evidencia recopilada por el cargador para crear un juego final de evidencias que se utiliza en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load** , **Assembly.LoadFrom** y **Activator.CreateInstance** .  
   
 - La evidencia de entrada se utiliza sin modificaciones como el conjunto final de evidencias utilizadas en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load(byte[])** y **AppDomain.DefineDynamicAssembly()** .  
   

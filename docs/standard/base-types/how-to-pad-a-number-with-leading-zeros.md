@@ -7,17 +7,17 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
-- number formatting [.NET Framework]
-- numbers [.NET Framework], format strings
+- numeric format strings [.NET]
+- formatting [.NET], numbers
+- number formatting [.NET]
+- numbers [.NET], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-ms.openlocfilehash: 6ef0ddb37f1bc73254aa639d7c018ec6a01abd9b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7c3ee376fde34663ee0599c0b1ae654871a71206
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447191"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888461"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Procedimiento para rellenar un número con ceros a la izquierda
 
@@ -29,9 +29,9 @@ Si quiere agregar ceros a la izquierda de un entero, puede hacerlo mediante la [
 
 1. Determine si desea mostrar el entero como valor decimal o hexadecimal.
 
-    - Para mostrar el entero como valor decimal, llame a su método `ToString(String)` y pase la cadena "D*n*" como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.
+    - Para mostrar el entero como valor decimal, llame a su método `ToString(String)` y pase la cadena "D *n* " como valor del parámetro `format`, donde *n* representa la longitud mínima de la cadena.
 
-    - Para mostrar el entero como valor hexadecimal, llame a su método `ToString(String)` y pase la cadena "X*n*" como valor del parámetro format, donde *n* representa la longitud mínima de la cadena.
+    - Para mostrar el entero como valor hexadecimal, llame a su método `ToString(String)` y pase la cadena "X *n* " como valor del parámetro format, donde *n* representa la longitud mínima de la cadena.
 
 También puede usar la cadena de formato en una cadena interpolada en ambos, [C#](../../csharp/language-reference/tokens/interpolated.md) y [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md), o puede llamar a un método, como <xref:System.String.Format%2A?displayProperty=nameWithType> o <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, que usa [formato compuesto](composite-formatting.md).
 
@@ -54,7 +54,7 @@ En el ejemplo siguiente se aplica formato a varios valores enteros con ceros a l
 
 1. Agregue el número de ceros a la izquierda que desea incluir en la cadena con formato a la longitud de la cadena numérica sin rellenar. Al agregar el número de ceros iniciales se define la longitud total de la cadena rellenada.
 
-1. Llame al método `ToString(String)` del valor entero y pase la cadena "D*n*" para cadenas decimales y "X*n*" para cadenas hexadecimales, donde *n* representa la longitud total de la cadena rellenada. También puede usar la cadena de formato "D*n*" o "X*n*" en un método que admita formato compuesto.
+1. Llame al método `ToString(String)` del valor entero y pase la cadena "D *n* " para cadenas decimales y "X *n* " para cadenas hexadecimales, donde *n* representa la longitud total de la cadena rellenada. También puede usar la cadena de formato "D *n* " o "X *n* " en un método que admita formato compuesto.
 
 En el ejemplo siguiente se rellena un valor entero con cinco ceros a la izquierda.
 

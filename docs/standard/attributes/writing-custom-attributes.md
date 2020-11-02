@@ -10,19 +10,19 @@ dev_langs:
 helpviewer_keywords:
 - multiple attribute instances
 - AttributeTargets enumeration
-- attributes [.NET Framework], custom
+- attributes [.NET], custom
 - AllowMultiple property
 - custom attributes
 - AttributeUsageAttribute class, custom attributes
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: f047e18531b46f0c89be9a6feaa9aa50341205e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550930"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889197"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
@@ -104,7 +104,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
   
 - Las clases de atributos se deben declarar como clases públicas.  
   
-- Por convención, el nombre de la clase de atributo termina con la palabra **Attribute**. Aunque no es obligatoria, se recomienda seguir esta convención para mejorar la legibilidad. Cuando se aplica el atributo, la inclusión de la palabra Attribute es opcional.  
+- Por convención, el nombre de la clase de atributo termina con la palabra **Attribute** . Aunque no es obligatoria, se recomienda seguir esta convención para mejorar la legibilidad. Cuando se aplica el atributo, la inclusión de la palabra Attribute es opcional.  
   
 - Todas las clases de atributo deben heredar directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>.  
   

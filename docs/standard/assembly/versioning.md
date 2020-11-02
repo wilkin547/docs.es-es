@@ -5,16 +5,16 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - informational versions
 - version numbers, assemblies
-- assemblies [.NET Framework], versioning
+- assemblies [.NET], versioning
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-ms.openlocfilehash: fdffbcc0bbafed62228cba35e8f85fbec7f7fbab
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c94e0c74b8beed29537b53d7476715e2cacb7b80
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380082"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687642"
 ---
 # <a name="assembly-versioning"></a>Versiones de los ensamblados
 
@@ -51,7 +51,7 @@ Cada ensamblado tiene dos maneras distintas de expresar la información de versi
 
 Cada ensamblado tiene un número de versión como parte de su identidad. Por tanto, el motor en tiempo de ejecución considera que son totalmente diferentes dos ensamblados que se diferencien por el número de versión. El número de versión se representa físicamente como una cadena de cuatro partes con el formato siguiente:  
   
-\<*versión principal*>.\<*versión secundaria*>.\<*número de compilación*>.\<*revisión*>  
+\<*major version*>.\<*minor version*>.\<*build number*>.\<*revision*>  
   
 Por ejemplo, la versión 1.5.1254.0 indica que 1 es la versión principal, 5 es la versión secundaria, 1254 es el número de compilación y 0 es el número de revisión.  
   

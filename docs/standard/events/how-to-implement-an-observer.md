@@ -7,15 +7,15 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- observers [.NET Framework], observer design pattern
-- observer design pattern [.NET Framework], implementing observers
+- observers [.NET], observer design pattern
+- observer design pattern [.NET], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: 43236ead15be0777f4284ba553a2f2f5e09d0a73
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 71df673b580f711ad692454d12beea991810f508
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769000"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064215"
 ---
 # <a name="how-to-implement-an-observer"></a>Procedimiento para implementar un observador
 El modelo de diseño de observador requiere una división entre un observador, que registra notificaciones, y un proveedor, que controla los datos y envía notificaciones a uno o varios observadores. En este tema se describe cómo crear un observador. En un tema relacionado, [Cómo: Implementar un proveedor](how-to-implement-a-provider.md), se describe cómo crear un proveedor.  

@@ -7,17 +7,18 @@ helpviewer_keywords:
 - dynamic assemblies, assembly manifest
 - metadata, assembly manifest
 - culture, assembly manifest
-- assemblies [.NET Framework], metadata
+- assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4f4d09f559ac66e1f3bc38af0781f7e01e7461d5
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380171"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687590"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
-Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE ( *.exe* o *.dll*) con código de Lenguaje Intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga solo la información sobre el manifiesto del ensamblado.  
+
+Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE ( *.exe* o *.dll* ) con código de Lenguaje Intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga solo la información sobre el manifiesto del ensamblado.  
   
  En la siguiente ilustración se muestran las distintas formas de almacenar un manifiesto.  
   

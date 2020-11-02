@@ -7,15 +7,15 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - constructs, miscellaneous
-- .NET Framework regular expressions, miscellaneous constructs
+- .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: 8ca888074aa757a1bfba786a7bec5928b75b1da2
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f7800dee67513f885339fad67c7a999cc06cca36
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290414"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889275"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  

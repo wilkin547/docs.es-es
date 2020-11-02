@@ -10,14 +10,14 @@ dev_langs:
 helpviewer_keywords:
 - retrieving attributes
 - multiple attribute instances
-- attributes [.NET Framework], retrieving
+- attributes [.NET], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
-ms.openlocfilehash: cf147a0ae6833039247c4c0878996973cc3db545
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 710f3e3d1051bad4a61e59e330204d622b9fd683
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661866"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889210"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperar información almacenada en atributos
 La recuperación de un atributo personalizado es un proceso sencillo. En primer lugar, declare una instancia del atributo que desea recuperar. A continuación, utilice el método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar el atributo nuevo en el valor del atributo que desea recuperar. Una vez inicializado el nuevo atributo, basta con usar sus propiedades para obtener los valores.  
@@ -71,7 +71,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-different-scopes"></a>Recuperar varias instancias de un atributo aplicadas a diferentes ámbitos  
- Los métodos <xref:System.Attribute.GetCustomAttributes%2A> y <xref:System.Attribute.GetCustomAttribute%2A> no buscan una clase completa y devuelven todas las instancias de un atributo de esa clase. En su lugar, buscan solo un método especificado o un miembro a la vez. Si tiene una clase con el mismo atributo aplicado a todos los miembros y desea recuperar los valores de todos los atributos aplicados a dichos miembros, debe proporcionar cada método o miembro individualmente a **GetCustomAttributes** y **GetCustomAttribute**.  
+ Los métodos <xref:System.Attribute.GetCustomAttributes%2A> y <xref:System.Attribute.GetCustomAttribute%2A> no buscan una clase completa y devuelven todas las instancias de un atributo de esa clase. En su lugar, buscan solo un método especificado o un miembro a la vez. Si tiene una clase con el mismo atributo aplicado a todos los miembros y desea recuperar los valores de todos los atributos aplicados a dichos miembros, debe proporcionar cada método o miembro individualmente a **GetCustomAttributes** y **GetCustomAttribute** .  
   
  En el ejemplo de código siguiente se toma una clase como parámetro y busca `DeveloperAttribute` (definido previamente) en el nivel de clase y en todos los métodos individuales de esa clase.  
   

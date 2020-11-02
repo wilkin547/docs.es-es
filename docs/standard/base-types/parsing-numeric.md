@@ -9,15 +9,15 @@ dev_langs:
 helpviewer_keywords:
 - parsing strings, numeric strings
 - numeric strings
-- enumerations [.NET Framework], parsing strings
+- enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: b184bad10b816c1eae798302337b5c901732ad7f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2ddefde4c9dceffb6adf7e17a965a2b15ff60ed2
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589544"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889028"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizar cadenas numéricas en .NET
 Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  

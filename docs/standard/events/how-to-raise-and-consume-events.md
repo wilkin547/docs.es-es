@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- events [.NET Framework], raising
+- events [.NET], raising
 - raising events
-- events [.NET Framework], samples
+- events [.NET], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 4054e1a26c3392870af994a6eceafae92176a332
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: c9121c6b2635788ad8ad7abc6d2b5a58448049a6
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769280"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064202"
 ---
 # <a name="how-to-raise-and-consume-events"></a>Procedimiento para provocar y consumir eventos
 En los ejemplos de este tema se muestra cómo trabajar con eventos. Se incluyen ejemplos del delegado <xref:System.EventHandler>, el delegado <xref:System.EventHandler%601> y un delegado personalizado, para ilustrar eventos con y sin datos.  

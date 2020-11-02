@@ -8,21 +8,21 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- numeric format strings [.NET Framework]
-- formatting [.NET Framework], numbers
+- numeric format strings [.NET]
+- formatting [.NET], numbers
 - format strings
 - custom numeric format strings
-- numbers [.NET Framework], formatting
+- numbers [.NET], formatting
 - format specifiers, numeric
-- formatting numbers [.NET Framework]
+- formatting numbers [.NET]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 7cf61746e483fe5aa2ee5e3421219240e8700172
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6e99191ecfb59e73656b98b8fb5185114194ab09
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90541584"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888703"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -31,7 +31,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
 Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten las cadenas de formato numérico personalizado. Por ejemplo, se puede proporcionar una cadena de formato numérico a los métodos <xref:System.Int32.ToString%28System.String%29> y <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> del tipo <xref:System.Int32> . La [característica de formato compuesto](composite-formatting.md) de .NET, que utilizan algunos métodos `Write` y `WriteLine` de las clases <xref:System.Console> y <xref:System.IO.StreamWriter>, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y el método <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, admite también cadenas de formato numérico personalizado. La característica [interpolación de cadenas](../../csharp/language-reference/tokens/interpolated.md) admite también cadenas de formato numérico personalizado.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato** , que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 
@@ -45,7 +45,7 @@ Algunas sobrecargas del método `ToString` de todos los tipos numéricos admiten
 |"‰"|Marcador de posición de "por mil"|Multiplica un número por 1000 e inserta un símbolo de "por mil" adaptado en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notación exponencial|Si va seguido al menos de un 0 (cero), da formato al resultado usando notación exponencial. El modelo de mayúsculas de "E" o "e" indica el modelo de mayúsculas del símbolo de exponente en la cadena de resultado. El número de ceros que siguen al carácter "E" o "e" determina el número mínimo de dígitos en el exponente. Un signo más (+) indica que un carácter de signo precede siempre al exponente. Un signo menos (-) indica que un carácter de signo solo precede a los exponentes negativos.<br /><br /> Más información: [Especificadores personalizados "E" y "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|
 |"\\"|Carácter de escape|Hace que el carácter siguiente se interprete como un literal en lugar de como un especificador de formato personalizado.<br /><br /> Más información: [Carácter de escape "\\"](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|
-|'*cadena*'<br /><br /> "*string*"|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de carácter](#character-literals).|68 ("# ' grados'") -> 68 grados<br /><br /> 68 ("# ' grados'") -> 68 grados|
+|' *cadena* '<br /><br /> " *string* "|Delimitador de cadena literal|Indica que los caracteres que encierra se deben copiar en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de carácter](#character-literals).|68 ("# ' grados'") -> 68 grados<br /><br /> 68 ("# ' grados'") -> 68 grados|
 |;|Separador de secciones|Define secciones con cadenas de formato diferentes para los números positivos, negativos y cero.<br /><br /> Más información: [Separador de sección ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|
 |Otros|Todos los demás caracteres|El carácter se copia en la cadena de resultado sin modificar.<br/><br/>Más información: [Literales de carácter](#character-literals).|68 ("# °") -> 68 °|
 

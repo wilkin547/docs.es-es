@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- I/O [.NET Framework], compression
+- I/O [.NET], compression
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769241"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188294"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Procedimiento para comprimir y extraer archivos
 
@@ -49,7 +49,7 @@ Para ejecutar el ejemplo, cree una carpeta de *inicio* en su carpeta de programa
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Ejemplo 2: Extraer determinadas extensiones de archivo
 
-El ejemplo siguiente recorre en iteración el contenido de un archivo *.zip* existente y extrae archivos que tienen una extensión *.txt*. Usa la clase <xref:System.IO.Compression.ZipArchive> para tener acceso al archivo zip y la clase <xref:System.IO.Compression.ZipArchiveEntry> para inspeccionar las entradas individuales. El método de extensión <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para el objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponible en la clase <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
+El ejemplo siguiente recorre en iteración el contenido de un archivo *.zip* existente y extrae archivos que tienen una extensión *.txt* . Usa la clase <xref:System.IO.Compression.ZipArchive> para tener acceso al archivo zip y la clase <xref:System.IO.Compression.ZipArchiveEntry> para inspeccionar las entradas individuales. El método de extensión <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para el objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponible en la clase <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
 Para ejecutar el ejemplo, coloque un archivo *.zip* llamado *result.zip* en su carpeta de programa. Cuando se le pida, proporcione un nombre de carpeta al que se va a extraer.
 
