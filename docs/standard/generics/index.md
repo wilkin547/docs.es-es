@@ -9,30 +9,30 @@ dev_langs:
 - cpp
 helpviewer_keywords:
 - generic methods, type inference
-- generics [.NET Framework], collections
-- generic interfaces [.NET Framework]
+- generics [.NET], collections
+- generic interfaces [.NET]
 - constructed generic types
 - nested generic types
 - generic type definitions
-- generic classes [.NET Framework]
-- generics [.NET Framework], interfaces
-- generics [.NET Framework], about
-- generics [.NET Framework]
-- generic collections [.NET Framework]
-- generic delegates [.NET Framework]
+- generic classes [.NET]
+- generics [.NET], interfaces
+- generics [.NET], about
+- generics [.NET]
+- generic collections [.NET]
+- generic delegates [.NET]
 - generic type arguments
-- generics [.NET Framework], delegates
-- generics [.NET Framework], features
-- constraints [.NET Framework]
+- generics [.NET], delegates
+- generics [.NET], features
+- constraints [.NET]
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 91bb96c04c8a5d410f0a88c7e8eedf622fe66c94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599820"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063161"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -56,17 +56,17 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
 - Una *definición de tipo genérico* es una clase, estructura o declaración de interfaz que funciona como una plantilla, con marcadores de posición para los tipos que puede contener o utilizar. Por ejemplo, la clase <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> puede contener dos tipos: claves y valores. Dado que una definición de tipo genérico es solo una plantilla, no se pueden crear instancias de una clase, estructura o interfaz que sea una definición de tipo genérico.  
   
-- Los*parámetros de tipo genérico*, o *parámetros de tipo*, son los marcadores de posición en una definición de método o tipo genérico. El tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> tiene dos parámetros de tipo, `TKey` y `TValue`, que representan los tipos de sus claves y valores.  
+- Los *parámetros de tipo genérico* , o *parámetros de tipo* , son los marcadores de posición en una definición de método o tipo genérico. El tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> tiene dos parámetros de tipo, `TKey` y `TValue`, que representan los tipos de sus claves y valores.  
   
-- Un *tipo genérico construido*, o *tipo construido*, es el resultado de especificar los tipos para los parámetros de tipo genérico de una definición de tipo genérico.  
+- Un *tipo genérico construido* , o *tipo construido* , es el resultado de especificar los tipos para los parámetros de tipo genérico de una definición de tipo genérico.  
   
 - Un *argumento de tipo genérico* es cualquier tipo que se sustituye por un parámetro de tipo genérico.  
   
 - El término general *tipo genérico* incluye tanto tipos construidos como definiciones de tipo genérico.  
   
-- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
+- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza* . Para obtener más información, vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
   
-- Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
+- Las *restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   
 - Una *definición de método genérico* es un método con dos listas de parámetros: una lista de parámetros de tipo genérico y una lista de parámetros formales. Los parámetros de tipo pueden aparecer como el tipo de valor devuelto o como los tipos de los parámetros formales, como se muestra en el siguiente código.  
   
@@ -99,7 +99,7 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
  Las siguientes son algunas limitaciones de los genéricos:  
   
-- Los tipos genéricos pueden derivarse de la mayoría de las clases base, como <xref:System.MarshalByRefObject> (y pueden utilizarse restricciones para exigir que los parámetros de tipo genérico se deriven de clases base como <xref:System.MarshalByRefObject>). Sin embargo, .NET Framework no admite los tipos genéricos enlazados a un contexto. Un tipo genérico puede derivarse de <xref:System.ContextBoundObject>, pero al intentar crear una instancia de dicho tipo, se genera una <xref:System.TypeLoadException>.  
+- Los tipos genéricos pueden derivarse de la mayoría de las clases base, como <xref:System.MarshalByRefObject> (y pueden utilizarse restricciones para exigir que los parámetros de tipo genérico se deriven de clases base como <xref:System.MarshalByRefObject>). Sin embargo, .NET no es compatible con los tipos genéricos enlazados a un contexto. Un tipo genérico puede derivarse de <xref:System.ContextBoundObject>, pero al intentar crear una instancia de dicho tipo, se genera una <xref:System.TypeLoadException>.  
   
 - Las enumeraciones no pueden tener parámetros de tipo genérico. Una enumeración solo puede ser genérica a propósito (por ejemplo, porque está anidada en un tipo genérico definido mediante Visual Basic, C# o C++). Para más información, vea "Enumeraciones" en [Common Type System](../base-types/common-type-system.md).  
   

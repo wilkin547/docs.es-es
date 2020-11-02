@@ -3,12 +3,12 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c206e56e095d1ca068fa2aa6f60e891895f7f999
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888579"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063246"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core
 
@@ -65,7 +65,7 @@ Le recomendamos que use el siguiente proceso al portar un proyecto a .NET Core:
 
 1. Use el [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md) para analizar los ensamblados y ver si se pueden portar a .NET Core.
 
-   La herramienta Analizador de portabilidad de .NET analiza los ensamblados compilados y genera un informe. Este informe muestra un resumen de portabilidad de alto nivel y un desglose de cada API que está usando y que no está disponible en NET Core. Al usar la herramienta, envíe solo el proyecto específico que quiera convertir para centrarse en los cambios de la API que puedan ser necesarios. Muchas de las API tienen una disponibilidad equivalente en .NET Core, por lo que podrá cambiar a estas.
+   La herramienta Analizador de portabilidad de .NET analiza los ensamblados compilados y genera un informe. Este informe muestra un resumen de portabilidad de alto nivel y un desglose de cada API que usa y que no está disponible en .NET Core. Al usar la herramienta, envíe solo el proyecto específico que quiera convertir para centrarse en los cambios de la API que puedan ser necesarios. Muchas de las API tienen una disponibilidad equivalente en .NET Core, por lo que podrá cambiar a estas.
 
    Al leer los informes generados por el analizador, la información importante son las API que realmente se usan, y no necesariamente el porcentaje de compatibilidad con la plataforma de destino. Muchas API tienen opciones equivalentes en .NET Standard/Core, por lo que comprender los escenarios en los que la biblioteca o la aplicación necesitan la API ayudará a determinar las consecuencias de la portabilidad.
 
