@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 463ccec5f60ff10331d501d39144a979d95eff95
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549985"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281732"
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 
@@ -56,7 +56,7 @@ La criptografía se utiliza para lograr los objetivos siguientes:
 
 Para alcanzar estos objetivos, se puede usar una combinación de algoritmos y prácticas conocidas como primitivas criptográficas para crear un esquema criptográfico. En la tabla siguiente se enumeran las primitivas criptográficas y su uso.
 
-|Primitiva criptográfica|Use|
+|Primitiva criptográfica|Uso|
 |-----------------------------|---------|
 |Cifrado de clave secreta (criptografía simétrica)|Realiza la transformación de los datos para impedir que terceros los lean. Este tipo de cifrado utiliza una clave secreta compartida para cifrar y descifrar los datos.|
 |Cifrado de clave pública (criptografía asimétrica)|Realiza la transformación de los datos para impedir que terceros los lean. Este tipo de cifrado utiliza un par de claves pública y privada para cifrar y descifrar los datos.|
@@ -71,7 +71,7 @@ El cifrado de clave secreta también se denomina cifrado simétrico puesto que s
 
 El tipo de algoritmo de clave secreta denominado cifrado de bloques se utiliza para cifrar un bloque de datos cada vez. Los cifrados de bloques, como Estándar de cifrado de datos (DES), TripleDES y Estándar de cifrado avanzado (CA), transforman criptográficamente un bloque de entrada de *n* bytes en un bloque de salida de bytes cifrados. Si desea cifrar o descifrar una secuencia de bytes, debe hacerlo bloque a bloque. Dado que *n* es pequeño (8 bytes para DES y TripleDES y 16 bytes [valor predeterminado], 24 bytes o 32 bytes para AES), los valores mayores que *n* deben cifrarse bloque a bloque. Los valores que son menores que *n* tienen que ampliarse hasta *n* para que se puedan procesar.
 
-Una forma sencilla de cifrado de bloques es el modo Electronic Codebook (ECB). El modo ECB no se considera un modo seguro porque no utiliza un vector de inicialización para iniciar el primer bloque de texto simple. Para una clave secreta *k*determinada, un cifrado de bloques simple que no utiliza un vector de inicialización codificará el mismo bloque de entrada de texto simple en el mismo bloque de salida de texto cifrado. Por tanto, si hay bloques duplicados dentro la secuencia de texto simple de entrada, habrá bloques duplicados en la secuencia de texto cifrado de salida. Estos bloques de salida duplicados podrían alertar a los usuarios sin autorización sobre la posibilidad de que se haya utilizado un cifrado débil en los algoritmos y los posibles modos de ataque. El modo de cifrado ECB es por tanto bastante vulnerable al análisis, y en última instancia, a la detección de claves.
+Una forma sencilla de cifrado de bloques es el modo Electronic Codebook (ECB). El modo ECB no se considera un modo seguro porque no utiliza un vector de inicialización para iniciar el primer bloque de texto simple. Para una clave secreta *k* determinada, un cifrado de bloques simple que no utiliza un vector de inicialización codificará el mismo bloque de entrada de texto simple en el mismo bloque de salida de texto cifrado. Por tanto, si hay bloques duplicados dentro la secuencia de texto simple de entrada, habrá bloques duplicados en la secuencia de texto cifrado de salida. Estos bloques de salida duplicados podrían alertar a los usuarios sin autorización sobre la posibilidad de que se haya utilizado un cifrado débil en los algoritmos y los posibles modos de ataque. El modo de cifrado ECB es por tanto bastante vulnerable al análisis, y en última instancia, a la detección de claves.
 
 Las clases de cifrado de bloques que se proporcionan en la biblioteca de clases base utilizan un modo de encadenamiento predeterminado denominado encadenamiento de bloques de cifrado (CBC), aunque este valor puede cambiarse, si así se desea.
 
@@ -178,13 +178,13 @@ Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alic
 
 ## <a name="random-number-generation"></a>generación de números aleatorios
 
-La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de la .NET Framework utilizan generadores de números aleatorios para generar claves criptográficas.
+La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de .NET usan generadores de números aleatorios para generar claves criptográficas.
 
 La clase <xref:System.Security.Cryptography.RandomNumberGenerator> es una implementación de un algoritmo generador de números aleatorios.
 
 ## <a name="clickonce-manifests"></a>Manifiestos de ClickOnce
 
-En el .NET Framework 3,5, las siguientes clases de criptografía permiten obtener y comprobar información sobre las firmas de manifiesto para las aplicaciones que se implementan mediante la [tecnología ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
+Las siguientes clases de criptografía permiten obtener y comprobar información sobre las firmas de manifiesto para las aplicaciones que se implementan mediante la [tecnología ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - La clase <xref:System.Security.Cryptography.ManifestSignatureInformation> obtiene información sobre una firma de manifiesto cuando se utiliza la sobrecarga de su método <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> .
 
@@ -192,7 +192,7 @@ En el .NET Framework 3,5, las siguientes clases de criptografía permiten obtene
 
 - La clase <xref:System.Security.Cryptography.ManifestSignatureInformationCollection> proporciona una colección de objetos <xref:System.Security.Cryptography.ManifestSignatureInformation> de solo lectura de las firmas comprobadas.
 
- Además, las clases siguientes proporcionan información de firma específica:
+Además, las clases siguientes proporcionan información de firma específica:
 
 - <xref:System.Security.Cryptography.StrongNameSignatureInformation> contiene información sobre la firma de nombre seguro de un manifiesto.
 
@@ -204,11 +204,11 @@ En el .NET Framework 3,5, las siguientes clases de criptografía permiten obtene
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Clases de criptografía de próxima generación (CNG)
 
-En el .NET Framework 3,5 y versiones posteriores, las clases de Cryptography Next Generation (CNG) proporcionan un contenedor administrado en torno a las funciones CNG nativas. (CNG es el sustituto de CryptoAPI). Estas clases tienen "CNG" como parte de sus nombres. La clase contenedora de claves <xref:System.Security.Cryptography.CngKey> es fundamental en estas clases contenedoras CNG, pues abstrae el almacenamiento y el uso de claves CNG. Esta clase permite almacenar de forma segura un par de claves o una clave pública y hacer referencia a ella utilizando un nombre de cadena simple. La clase de firma <xref:System.Security.Cryptography.ECDsaCng> y la clase de cifrado <xref:System.Security.Cryptography.ECDiffieHellmanCng> basadas en curvas elípticas pueden utilizar los objetos <xref:System.Security.Cryptography.CngKey> .
+Las clases de Criptografía de próxima generación (CNG) proporcionan un contenedor administrado en torno a funciones CNG nativas. (CNG es el sustituto de CryptoAPI). Estas clases tienen "CNG" como parte de sus nombres. La clase contenedora de claves <xref:System.Security.Cryptography.CngKey> es fundamental en estas clases contenedoras CNG, pues abstrae el almacenamiento y el uso de claves CNG. Esta clase permite almacenar de forma segura un par de claves o una clave pública y hacer referencia a ella utilizando un nombre de cadena simple. La clase de firma <xref:System.Security.Cryptography.ECDsaCng> y la clase de cifrado <xref:System.Security.Cryptography.ECDiffieHellmanCng> basadas en curvas elípticas pueden utilizar los objetos <xref:System.Security.Cryptography.CngKey> .
 
 La clase <xref:System.Security.Cryptography.CngKey> se utiliza en otras numerosas operaciones, entre las que se incluyen la apertura, creación, eliminación y exportación de claves. También proporciona acceso al identificador de clave subyacente que se va a utilizar en las llamadas directas a las funciones nativas.
 
-El .NET Framework 3,5 también incluye una serie de clases CNG compatibles, como las siguientes:
+.NET también incluye una serie de clases CNG compatibles, como las siguientes:
 
 - <xref:System.Security.Cryptography.CngProvider> mantiene un proveedor de almacenamiento de claves.
 
@@ -216,7 +216,7 @@ El .NET Framework 3,5 también incluye una serie de clases CNG compatibles, como
 
 - <xref:System.Security.Cryptography.CngProperty> mantiene las propiedades clave que se utilizan con frecuencia.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Modelo de criptografía](cryptography-model.md) : describe cómo se implementa la criptografía en la biblioteca de clases base.
 - [Criptografía multiplataforma](cross-platform-cryptography.md)

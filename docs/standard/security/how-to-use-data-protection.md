@@ -17,12 +17,12 @@ helpviewer_keywords:
 - decryption
 - data [.NET], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-ms.openlocfilehash: 263a07ddf357734e819fffdd41cdff60657adf15
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: d3fe7ef3ddbc6e75a248101829b11a8abcb3c15a
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557065"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282048"
 ---
 # <a name="how-to-use-data-protection"></a>Procedimiento para usar la protección de datos
 
@@ -35,7 +35,7 @@ ms.locfileid: "87557065"
   
 Use la clase <xref:System.Security.Cryptography.ProtectedData> para cifrar una copia de una matriz de bytes. Esta funcionalidad está disponible en .NET Framework, .NET Core y .NET 5.  Puede especificar que los datos cifrados por la cuenta de usuario actual solo puedan ser descifrados por la misma cuenta de usuario o que puedan ser descifrados por cualquier cuenta del equipo.  Consulte la enumeración <xref:System.Security.Cryptography.DataProtectionScope> para obtener una descripción detallada de las opciones de <xref:System.Security.Cryptography.ProtectedData>.  
   
-### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Para cifrar datos en un archivo o una secuencia usando la protección de datos  
+## <a name="encrypt-data-to-a-file-or-stream-using-data-protection"></a>Cifrado de datos en un archivo o una secuencia mediante la protección de datos  
   
 1. Cree una entropía aleatoria.  
   
