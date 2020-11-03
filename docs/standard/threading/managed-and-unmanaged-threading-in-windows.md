@@ -3,18 +3,18 @@ title: Subprocesamiento administrado y no administrado en Windows
 ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], unmanaged
-- threading [.NET Framework], managed
+- threading [.NET], unmanaged
+- threading [.NET], managed
 - threading [.NET], managed
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7b2eca1275aba5139bd19662674cd76d95e92fd0
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924388"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189165"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 
@@ -52,7 +52,7 @@ Un subproceso administrado se puede marcar para indicar que hospedará un conten
  Si el estado de contenedor no se establece antes de que se inicie el subproceso, el subproceso se inicializa como un contenedor multiproceso (MTA). El subproceso de finalizador y todos los subprocesos controlados por <xref:System.Threading.ThreadPool> son MTA.  
   
 > [!IMPORTANT]
-> Para el código de inicio de aplicación, la única manera de controlar el estado de contenedor es aplicar <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> al procedimiento de punto de entrada. En .NET Framework 1.0 y 1.1, la propiedad <xref:System.Threading.Thread.ApartmentState%2A> se puede establecer como la primera línea de código. Esto no está permitido en .NET Framework 2.0.  
+> Para el código de inicio de aplicación, la única manera de controlar el estado de contenedor es aplicar <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> al procedimiento de punto de entrada.
   
  Los objetos administrados que están expuestos a COM se comportan como si tuviesen agregado el cálculo de referencias con subprocesamiento libre. En otras palabras, se pueden llamar desde cualquier apartamento COM en un modo de subprocesamiento libre. Los únicos objetos administrados que no muestran este comportamiento de subprocesamiento libre son aquellos que derivan de <xref:System.EnterpriseServices.ServicedComponent> o <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   
