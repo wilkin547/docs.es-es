@@ -17,7 +17,7 @@
           href: tour-of-csharp/features.md
 - name: Tutoriales
   items:
-    - name: Introducción
+    - name: Información general
       displayName: tutorials
       href: tutorials/index.md
     - name: Introducción a la programación con C#
@@ -46,6 +46,8 @@
               href: tutorials/intro-to-csharp/introduction-to-classes.md
             - name: Programación orientada a objetos
               href: tutorials/intro-to-csharp/object-oriented-programming.md
+    - name: Exploración de instrucciones de nivel superior
+      href: tutorials/exploration/top-level-statements.md
     - name: Exploración de C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: 'Exploración de la interpolación de cadenas: tutorial interactivo'
