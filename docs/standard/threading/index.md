@@ -4,21 +4,22 @@ description: Consulte vínculos a artículos relativos a los subprocesos adminis
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], about threading
+- threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 570db45138c85c4252967404da4404d434660d69
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 15af6268c8e5de853ead0817c85f4261c7fc9692
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599755"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189178"
 ---
 # <a name="managed-threading"></a>Subprocesamiento administrado
+
 Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadores, desea que la aplicación proporcione la interacción con mayor capacidad de respuesta con el usuario, incluso si la aplicación actualmente hace otro trabajo. Usar varios subprocesos de ejecución es una de las formas más eficaces de mantener que la aplicación siga respondiendo al usuario y, al mismo tiempo, usar el procesador entre eventos de usuario o durante los mismos. Si bien esta sección presenta los conceptos básicos del subprocesamiento, se centra en los conceptos del subprocesamiento administrado y su uso.  
   
 > [!NOTE]
-> A partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), clases de colecciones simultáneas nuevas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un nuevo modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
+> A partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), clases de colecciones simultáneas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Principios básicos del subprocesamiento administrado](managed-threading-basics.md)  

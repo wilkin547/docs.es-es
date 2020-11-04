@@ -7,20 +7,20 @@ helpviewer_keywords:
 - IO namespace
 - files, I/O
 - System.IO namespace
-- I/O [.NET Framework]
+- I/O [.NET]
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-ms.openlocfilehash: 2f7da6bd967abce8c2fefdc54a0043b5505e22e3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: aced59995c8d0f478d0565c8fb8faa4f40c32968
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558945"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189204"
 ---
 # <a name="file-and-stream-io"></a>E/S de archivos y secuencias
 
-La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET Framework, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.
+La E/S (entrada/salida) de archivos y secuencias hace referencia a la transferencia de datos con destino u origen en un medio de almacenamiento. En .NET, los espacios de nombres `System.IO` contienen tipos que permiten la lectura y escritura, tanto sincrónica como asincrónica, en archivos y flujos de datos. Estos espacios de nombres también contienen tipos que realizan la compresión y la descompresión de archivos, así como tipos que permiten la comunicación a través de canalizaciones y puertos de serie.
 
 Un archivo es una colección de bytes ordenada y con nombre que tiene un almacenamiento persistente. Cuando se trabaja con archivos, se opera con las rutas de acceso de directorios, almacenamiento en disco y nombres de archivo y de directorio. En cambio, una secuencia es una sucesión de bytes que se puede utilizar para leer y escribir en una memoria auxiliar, que puede ser uno de los distintos tipos de medios de almacenamiento (por ejemplo, discos o memoria). Al igual que hay varios tipos de memorias auxiliares distintas de los discos, existen varios tipos de secuencias distintas de las secuencias de archivo, como las secuencias de red, de memoria y de canalización.
 
@@ -28,7 +28,7 @@ Un archivo es una colección de bytes ordenada y con nombre que tiene un almacen
 
 Se pueden utilizar los tipos del espacio de nombres <xref:System.IO?displayProperty=nameWithType> para interactuar con archivos y directorios. Por ejemplo, se pueden obtener y establecer las propiedades de los archivos y directorios, y recuperar colecciones de archivos y de directorios basándose en criterios de búsqueda.
 
-Para obtener las convenciones de nomenclatura de las rutas de acceso y las maneras de expresar una ruta de acceso de archivo para los sistemas Windows, incluidos con la sintaxis de dispositivo DOS compatible en .NET Core 1.1 y versiones posteriores, y .NET Framework 4.6.2 y versiones posteriores, vea [Formatos de ruta de acceso de archivo en los sistemas Windows](file-path-formats.md).
+Para obtener las convenciones de nomenclatura de las rutas de acceso y las maneras de expresar una ruta de acceso de archivo para los sistemas Windows, incluidos con la sintaxis de dispositivo DOS compatible en .NET Core 1.1 y versiones posteriores, y .NET Framework 4.6.2 y versiones posteriores, consulte [Formatos de ruta de acceso de archivo en los sistemas Windows](file-path-formats.md).
 
 Estas son algunas clases de archivo y directorio de uso general:
 
@@ -142,7 +142,7 @@ Vea [Almacenamiento aislado](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operaciones de E/S en aplicaciones de Microsoft Store
 
-El conjunto de .NET para las aplicaciones de la Tienda Windows 8.x contiene muchos de los tipos necesarios para leer y escribir en secuencias. Sin embargo, dicho conjunto no incluye todos los tipos de E/S de .NET Framework.
+El conjunto de .NET para las aplicaciones de la Tienda Windows 8.x contiene muchos de los tipos necesarios para leer y escribir en secuencias. Sin embargo, dicho conjunto no incluye todos los tipos de E/S de .NET.
 
 Estas son algunas diferencias importantes que se deben tener en cuenta al utilizar operaciones de E/S en las aplicaciones de la Tienda Windows 8.x:
 
@@ -162,7 +162,7 @@ Para obtener más información sobre las operaciones de E/S en una aplicación d
 
 Cuando se utilizan las clases del espacio de nombres <xref:System.IO?displayProperty=nameWithType>, se deben seguir los requisitos de seguridad del sistema operativo como las listas de control de acceso (ACL) para controlar el acceso a los archivos y directorios. Este requisito es adicional a cualquier requisito <xref:System.Security.Permissions.FileIOPermission>. Se pueden administrar las listas de control de acceso mediante programación. Para obtener más información, vea [Cómo: Agregar o quitar entradas de la lista de control de acceso](how-to-add-or-remove-access-control-list-entries.md).
 
-Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. En su lugar, use el [almacenamiento aislado](isolated-storage.md) para las aplicaciones tradicionales de .NET Framework, o bien [datos de aplicaciones](/previous-versions/windows/apps/hh464917(v=win.10)) para las aplicaciones de la Tienda Windows 8.x.
+Las políticas de seguridad predeterminadas impiden que las aplicaciones de intranet o Internet obtengan acceso a los archivos del equipo del usuario. Por lo tanto, no use las clases de E/S que requieren una ruta a un archivo físico al escribir el código que se descarga a través de Internet o una intranet. En su lugar, use el [almacenamiento aislado](isolated-storage.md) para aplicaciones .NET.
 
 Solo se realiza una comprobación de seguridad cuando se construye la secuencia. Por consiguiente, no abra una secuencia y se la pase al código o a los dominios de aplicación de menos confianza.
 
@@ -178,7 +178,7 @@ Describe las ventajas de rendimiento y el funcionamiento básico de la E/S asinc
 Describe un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de las formas estándar de asociar código a los datos guardados.
 
 - [Canalizaciones](pipe-operations.md)\
-Describe las operaciones anónimas y de canalización con nombre de .NET Framework.
+Describe las operaciones anónimas y de canalización con nombre de .NET.
 
 - [Archivos asignados a memoria](memory-mapped-files.md)\
 Describe los archivos asignados a memoria, que incluyen el contenido de archivos en disco en memoria virtual. Puede usar archivos asignados a memoria para editar archivos muy grandes y crear memoria compartida para la comunicación entre procesos.
