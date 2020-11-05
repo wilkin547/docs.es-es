@@ -2,12 +2,12 @@
 title: Asignación de eShopOnContainers a los servicios de Azure
 description: Asignación de eShopOnContainers a servicios de Azure como Azure Kubernetes Service, API Gateway y Azure Service Bus.
 ms.date: 05/13/2020
-ms.openlocfilehash: e938bf9a8f93f9e375a22ffb94395b9e85b0fe63
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155269"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400453"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Asignación de eShopOnContainers a los servicios de Azure
 
@@ -24,7 +24,7 @@ Todos los componentes del lado servidor de esta arquitectura se asignan fácilme
 
 Los servicios hospedados en contenedores de la aplicación, desde ASP.NET Core aplicaciones MVC hasta los microservicios de catálogo y de ordenación, se pueden hospedar y administrar en Azure Kubernetes Service (AKS). La aplicación se puede ejecutar localmente en Docker y Kubernetes, y los mismos contenedores se pueden implementar en entornos de ensayo y producción hospedados en AKS. Este proceso se puede automatizar, como veremos en la sección siguiente.
 
-AKS proporciona servicios de administración para clústeres individuales de contenedores. La aplicación implementará clústeres de AKS independientes para cada microservicio que se muestra en el diagrama de arquitectura anterior. Este enfoque permite escalar cada servicio individual de forma independiente según sus necesidades de recursos. Cada microservicio también se puede implementar de forma independiente y, idealmente, estas implementaciones deberían incurrir en tiempo de inactividad del sistema.
+AKS proporciona servicios de administración para clústeres individuales de contenedores. La aplicación implementará contenedores independientes para cada microservicio en el clúster de AKS, tal como se muestra en el diagrama de arquitectura anterior. Este enfoque permite escalar cada servicio individual de forma independiente según sus necesidades de recursos. Cada microservicio también se puede implementar de forma independiente y, idealmente, estas implementaciones deberían incurrir en tiempo de inactividad del sistema.
 
 ## <a name="api-gateway"></a>API Gateway
 
