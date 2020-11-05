@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo se utiliza F# interactivo (dotnet 
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 770ac24feababcfc840ae26196ba8b6180d378a0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: ba9111efccceca03fda43ff11c3f111610541595
+ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282016"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93342688"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -86,11 +86,12 @@ dotnet fsi Script.fsx
 [1; 9; 25; 49; 81]
 ```
 
-El scripting de F# es compatible de forma nativa con [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md) y [Visual Studio para Mac](../../get-started/get-started-visual-studio-for-mac.md).
+El scripting de F# es compatible de forma nativa con [Visual Studio](../../get-started/get-started-visual-studio.md), [Visual Studio Code](../../get-started/get-started-vscode.md) y [Visual Studio para Mac](../../get-started/get-started-with-visual-studio-for-mac.md).
 
 ## <a name="referencing-packages-in-f-interactive"></a>Referencia a paquetes en F# interactivo
 
-> [!NOTE] La administración de paquetes es una característica de F# 5 que está disponible actualmente con el último SDK de .NET 5.
+> [!NOTE]
+> La administración de paquetes es una característica de F# 5 que está disponible actualmente con el último SDK de .NET 5.
 
 F# interactivo permite hacer referencia a paquetes de NuGet con la sintaxis `#r "nuget:"` y una versión opcional:
 
