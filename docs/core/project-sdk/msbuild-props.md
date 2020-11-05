@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: ac5d082acae582352680782deadb71a86f977f3b
-ms.sourcegitcommit: 2e4adc490c1d2a705a0592b295d606b10b9f51f1
+ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91354458"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063233"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -142,7 +142,7 @@ Para más información sobre la implementación, consulte [Implementación de ap
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres del archivo de manifiesto del recurso se generan a partir de la información de tipo de los archivos de código fuente que se ubican conjuntamente con archivos de recursos. Por ejemplo, si *Form1.resx* está en la misma carpera que *Form1.cs*, y `EmbeddedResourceUseDependentUponConvention` se establece en `true`, el archivo *.resources* generado toma su nombre del primer tipo que se define en *Form1.cs*. Por ejemplo, si `MyNamespace.Form1` es el primer tipo definido en *Form1.cs*, el nombre de archivo generado es *myNameSpace.Form1.Resources*.
+La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres del archivo de manifiesto del recurso se generan a partir de la información de tipo de los archivos de código fuente que se ubican conjuntamente con archivos de recursos. Por ejemplo, si *Form1.resx* está en la misma carpera que *Form1.cs* , y `EmbeddedResourceUseDependentUponConvention` se establece en `true`, el archivo *.resources* generado toma su nombre del primer tipo que se define en *Form1.cs*. Por ejemplo, si `MyNamespace.Form1` es el primer tipo definido en *Form1.cs* , el nombre de archivo generado es *myNameSpace.Form1.Resources*.
 
 > [!NOTE]
 > Si se especifican los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` para un elemento `EmbeddedResource`, el nombre del archivo de manifiesto generado para ese archivo de recurso se basa en esos metadatos.
@@ -231,6 +231,9 @@ De forma predeterminada, el [análisis de calidad del código de .NET](../../fun
 
 ### <a name="enforcecodestyleinbuild"></a>EnforceCodeStyleInBuild
 
+> [!NOTE]
+> En la actualidad, esta característica es experimental y puede cambiar entre las versiones .NET 5 y .NET 6.
+
 El [análisis del estilo del código de .NET](../../fundamentals/code-analysis/overview.md#code-style-analysis) está deshabilitado de forma predeterminada en la compilación para todos los proyectos de .NET. Puede habilitar el análisis del estilo del código para los proyectos de .NET estableciendo la propiedad `EnforceCodeStyleInBuild` en `true`.
 
 ```xml
@@ -267,7 +270,7 @@ La propiedad `ConcurrentGarbageCollection` configura si está habilitada la [rec
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
 
-La propiedad `InvariantGlobalization` configura si la aplicación se ejecuta en modo *invariable de globalización*, lo que significa que no tiene acceso a datos específicos de la referencia cultural. Establezca el valor en `true` para ejecutar en el modo invariable de globalización. Para obtener más información, consulte [Modo invariable](../run-time-config/globalization.md#invariant-mode).
+La propiedad `InvariantGlobalization` configura si la aplicación se ejecuta en modo *invariable de globalización* , lo que significa que no tiene acceso a datos específicos de la referencia cultural. Establezca el valor en `true` para ejecutar en el modo invariable de globalización. Para obtener más información, consulte [Modo invariable](../run-time-config/globalization.md#invariant-mode).
 
 ```xml
 <PropertyGroup>

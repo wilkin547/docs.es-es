@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-ms.openlocfilehash: 5767bac0bb1e3ae9e586e9a10d8452d421519447
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 956db9ace4ae00062accdd6e80c7911aaac7523f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287576"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064254"
 ---
 # <a name="generic-collections-in-net"></a>Colecciones genéricas en .NET
 
@@ -45,7 +45,7 @@ ms.locfileid: "84287576"
   
  La estructura genérica <xref:System.ArraySegment%601> proporciona una manera de delimitar un intervalo de elementos en una matriz unidimensional basada en cero de cualquier tipo. El parámetro de tipo genérico es el tipo de los elementos de la matriz.  
   
- El delegado genérico <xref:System.EventHandler%601> elimina la necesidad de declarar un tipo de delegado para controlar los eventos, siempre que el evento siga el patrón de control de eventos que usa .NET Framework. Por ejemplo, supongamos que ha creado una clase `MyEventArgs`, derivada de <xref:System.EventArgs>, para contener los datos del evento. Puede declarar el evento de la siguiente manera:  
+ El delegado genérico <xref:System.EventHandler%601> elimina la necesidad de declarar un tipo de delegado para controlar los eventos, si el evento sigue el patrón de control de eventos que usa .NET. Por ejemplo, supongamos que ha creado una clase `MyEventArgs`, derivada de <xref:System.EventArgs>, para contener los datos del evento. Puede declarar el evento de la siguiente manera:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

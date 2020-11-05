@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: b332db80069e18d3b52cd03eef4995eaad3fda7b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7af6e1e73016e67c097b4fdbfb5f5d2d84e00d3
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583406"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188138"
 ---
 # <a name="threads-and-threading"></a>Subprocesos y subprocesamiento
 
@@ -24,7 +24,7 @@ El multithreading le permite aumentar la capacidad de respuesta de su aplicació
 Un *proceso* es un programa en ejecución. Un sistema operativo utiliza procesos para separar las aplicaciones que se están ejecutando. Un *subproceso* es la unidad básica a la que el sistema operativo asigna tiempo de procesador. Cada subproceso tiene una [prioridad de programación](scheduling-threads.md) y mantiene un conjunto de estructuras que el sistema usa para guardar el contexto del subproceso mientras la ejecución del subproceso está pausada. El contexto del subproceso incluye toda la información que el subproceso necesita para reanudar sin problemas la ejecución, incluido el conjunto de pila y registros de CPU del subproceso. Dentro de un proceso, se pueden ejecutar varios subprocesos. Todos los subprocesos de un proceso comparten su espacio de direcciones virtuales. Un subproceso puede ejecutar cualquier parte del código de programa, incluidas las partes que esté ejecutando otro subproceso.
 
 > [!NOTE]
-> .NET Framework proporciona una manera de aislar las aplicaciones dentro de un proceso mediante el uso de *dominios de aplicación*. Los dominios de aplicación no están disponibles en .NET Core. Para obtener más información, vea la sección [Dominios de aplicación y subprocesos](../../framework/app-domains/application-domains.md#application-domains-and-threads) del artículo [Dominios de aplicación](../../framework/app-domains/application-domains.md).
+> .NET Framework proporciona una manera de aislar las aplicaciones dentro de un proceso mediante el uso de *dominios de la aplicación*. Los dominios de aplicación no están disponibles en .NET Core. Para obtener más información, vea la sección [Dominios de aplicación y subprocesos](../../framework/app-domains/application-domains.md#application-domains-and-threads) del artículo [Dominios de aplicación](../../framework/app-domains/application-domains.md).
 
 De forma predeterminada, un programa de .NET se inicia con un único subproceso, que se suele conocer como subproceso *principal*. Sin embargo, puede crear subprocesos adicionales para ejecutar código en paralelo o simultáneamente con el subproceso principal. Normalmente, estos subprocesos se denominan subprocesos de *trabajo*.
 
@@ -38,7 +38,7 @@ Si el programa realiza operaciones que pueden realizarse en paralelo, puede redu
 
 ## <a name="how-to-use-multithreading-in-net"></a>Cómo usar el multithreading en .NET
 
-A partir de .NET Framework 4, el método recomendado para utilizar el multithreading es usar las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/introduction-to-plinq.md). Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md).
+A partir de .NET Framework 4, la forma recomendada de usar el multithreading consiste en emplear las bibliotecas [TPL](../parallel-programming/task-parallel-library-tpl.md) y [PLINQ](../parallel-programming/introduction-to-plinq.md). Para obtener más información, vea [Programación en paralelo](../parallel-programming/index.md).
 
 Las bibliotecas TPL y PLINQ se basan en los subprocesos de <xref:System.Threading.ThreadPool>. La clase <xref:System.Threading.ThreadPool?displayProperty=nameWithType> proporciona una aplicación .NET con un grupo de subprocesos de trabajo. También puede usar grupos de subprocesos. Para obtener más información, vea [Grupo de subprocesos administrado](the-managed-thread-pool.md).
 

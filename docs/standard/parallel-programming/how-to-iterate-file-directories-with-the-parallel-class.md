@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555658"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925264"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Cómo: Recorrer en iteración directorios con la clase paralela
 En muchos casos, la iteración de archivo es una operación que se puede paralelizar fácilmente. El tema [Cómo: Recorrer en iteración directorios con PLINQ](how-to-iterate-file-directories-with-plinq.md) muestra la manera más fácil de realizar esta tarea para muchos escenarios. Sin embargo, pueden surgir complicaciones cuando el código tiene que tratar con los muchos tipos de excepciones que pueden surgir al obtener acceso al sistema de archivos. En el ejemplo siguiente se muestra un enfoque para el problema. Usa una iteración basada en la pila para recorrer todos los archivos y carpetas en un directorio especificado y habilita el código para detectar y controlar diversas excepciones. Por supuesto, la forma de controlar las excepciones depende de usted.  
@@ -24,7 +24,7 @@ En muchos casos, la iteración de archivo es una operación que se puede paralel
  [!code-csharp[TPL_Parallel#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/parallel_file.cs#08)]
  [!code-vb[TPL_Parallel#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/fileiteration08.vb#08)]  
   
- En este ejemplo, la E/S de archivo se realiza de forma sincrónica. Al trabajar con archivos grandes o conexiones de red lentas, puede ser preferible obtener acceso a los archivos de forma asincrónica. Puede combinar las técnicas de E/S asincrónica con la iteración paralela. Para más información, consulte [TPL and Traditional .NET Framework Asynchronous Programming](tpl-and-traditional-async-programming.md) (TPL y la programación asincrónica tradicional de .NET).  
+ En este ejemplo, la E/S de archivo se realiza de forma sincrónica. Al trabajar con archivos grandes o conexiones de red lentas, puede ser preferible obtener acceso a los archivos de forma asincrónica. Puede combinar las técnicas de E/S asincrónica con la iteración paralela. Para obtener más información, vea [TPL y la programación asincrónica tradicional de .NET Framework](tpl-and-traditional-async-programming.md).  
   
  El ejemplo utiliza la variable local `fileCount` para mantener un número total de archivos procesados. Dado que varias tareas podrían tener acceso simultáneamente a la variable, el acceso a la misma se sincroniza llamando al método <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>.  
   

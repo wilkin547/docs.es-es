@@ -8,16 +8,16 @@ dev_langs:
 - vb
 - cpp
 helpviewer_keywords:
-- threading [.NET Framework], creating
-- threading [.NET Framework], passing data to threads
-- threading [.NET Framework], retrieving data from threads
+- threading [.NET], creating
+- threading [.NET], passing data to threads
+- threading [.NET], retrieving data from threads
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
-ms.openlocfilehash: 811028d3c853441ff3a61d3628a44e5c65ba7059
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: a1e8f8f6e017d29f352d79ea08c09b2d97041bba
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84661919"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188385"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Creación de subprocesos y análisis los datos en el inicio
 
@@ -40,9 +40,9 @@ Cuando se crea un proceso de sistema operativo, el sistema operativo inserta un 
   
 ## <a name="passing-data-to-threads"></a>Paso de datos a subprocesos
 
- En .NET Framework 2.0, el delegado <xref:System.Threading.ParameterizedThreadStart> ofrece una forma sencilla de pasar un objeto que contiene datos a un subproceso al llamar a la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Vea <xref:System.Threading.ParameterizedThreadStart> para obtener código muestra.  
+El delegado <xref:System.Threading.ParameterizedThreadStart> ofrece una forma sencilla de pasar un objeto que contiene datos a un subproceso al llamar a <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType>. Vea <xref:System.Threading.ParameterizedThreadStart> para obtener código muestra.
   
- El uso del delegado <xref:System.Threading.ParameterizedThreadStart> no es una forma con seguridad de tipos de pasar datos, porque la sobrecarga del método <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> acepta cualquier objeto. Una alternativa consiste en encapsular el procedimiento de subprocesos y los datos en una clase del asistente y utilizar el delegado <xref:System.Threading.ThreadStart> para ejecutar el procedimiento de subprocesos. En el siguiente ejemplo se muestra esta técnica:
+ El uso del delegado <xref:System.Threading.ParameterizedThreadStart> no es una forma con seguridad de tipos de pasar datos, porque el método <xref:System.Threading.Thread.Start(System.Object)?displayProperty=nameWithType> acepta cualquier objeto. Una alternativa consiste en encapsular el procedimiento de subprocesos y los datos en una clase del asistente y utilizar el delegado <xref:System.Threading.ThreadStart> para ejecutar el procedimiento de subprocesos. En el siguiente ejemplo se muestra esta técnica:
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

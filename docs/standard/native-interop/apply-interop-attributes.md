@@ -4,22 +4,22 @@ description: En este artículo se resumen los atributos de interoperabilidad COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
-- .NET Framework, exposing components to COM
-- attributes [.NET Framework], design-time functionality
+- .NET, exposing components to COM
+- attributes [.NET], design-time functionality
 - conversion-tool attributes
-- attributes [.NET Framework], interop-specific
-- attributes [.NET Framework], conversion-tool
+- attributes [.NET], interop-specific
+- attributes [.NET], conversion-tool
 - interoperation with unmanaged code, applying attributes
-- interoperation with unmanaged code, exposing .NET Framework components
+- interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291336"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188684"
 ---
 # <a name="applying-interop-attributes"></a>Aplicar atributos de interoperabilidad
 El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres categorías de atributos específicos de interoperabilidad: los que se aplican por parte del usuario en tiempo de diseño, los que se aplican mediante herramientas de interoperabilidad COM y durante el proceso de conversión, y los que se aplican por parte del usuario o interoperabilidad COM.  
@@ -41,7 +41,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Representa tipos visibles para COM cuando el valor del atributo es igual a **false**. Este atributo se puede aplicar a un tipo individual o a un ensamblado completo para controlar la visibilidad de COM. De forma predeterminada, todos los tipos públicos son visibles; no se necesita el atributo para hacerlos visibles.|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|Especifica el identificador de envío (DISPID) de COM de un método o campo. Este atributo contiene el DISPID para el método, campo o propiedad que describe.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Indica la interfaz predeterminada para una clase COM implementada en .NET.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|
-|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Indica la posición física de cada campo dentro de una clase cuando se usa con **StructLayoutAttribute**, y **LayoutKind** se establece en Explicit.|  
+|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Indica la posición física de cada campo dentro de una clase cuando se usa con **StructLayoutAttribute** , y **LayoutKind** se establece en Explicit.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Especifica el identificador único global (GUID) de una clase, interfaz o una biblioteca de tipos completa. La cadena que se pasa al atributo debe tener un formato que sea un argumento de constructor aceptable para el tipo de **System.Guid**.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Indica la implementación de la interfaz **IDispatch** que usa el Common Language Runtime cuando expone interfaces duales e interfaces dispinterface a COM.|  
 |<xref:System.Runtime.InteropServices.InAttribute>|Indica que los datos se deben serializar en el llamador. Se puede usar para parámetros de atributo.|  
@@ -51,7 +51,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.OptionalAttribute>|Indica que un parámetro es opcional.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
 |<xref:System.Runtime.InteropServices.OutAttribute>|Indica que los datos de un campo o parámetro deben serializarse desde un objeto que se llama a su llamador.|  
 |<xref:System.Runtime.InteropServices.PreserveSigAttribute>|Suprime la transformación de la firma retval o del valor HRESULT que normalmente tiene lugar durante las llamadas de interoperabilidad. El atributo afecta a la serialización, así como a la exportación de bibliotecas de tipos.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
-|<xref:System.Runtime.InteropServices.ProgIdAttribute>|Especifica el ProgID de una clase de .NET Framework. Se puede usar para clases de atributos.|  
+|<xref:System.Runtime.InteropServices.ProgIdAttribute>|Especifica el valor ProgID de una clase de .NET. Se puede usar para clases de atributos.|  
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|Controla el diseño físico de los campos de una clase.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
   
 ## <a name="conversion-tool-attributes"></a>Atributos de la herramienta de conversión  

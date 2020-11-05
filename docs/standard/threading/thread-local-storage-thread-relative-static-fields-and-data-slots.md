@@ -3,20 +3,21 @@ title: 'Almacenamiento local de subprocesos: Campos estáticos relacionados con 
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- threading [.NET Framework], local storage
-- threading [.NET Framework], thread-relative static fields
+- threading [.NET], local storage
+- threading [.NET], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: adeeb6c95769d8e1ac120d4fb26d8aaedf7a1d4d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f80cc09d87116d3daff8047c1d1398c5e6104178
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291089"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188164"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local de subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
-Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
+
+Puede usar el almacenamiento local para el subproceso (TLS) administrado a fin de almacenar los datos que sean exclusivos de un subproceso y un dominio de la aplicación. .NET proporciona dos maneras de usar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
   
 - Use campos estáticos relacionados con subprocesos (campos `Shared` relacionados con subprocesos en Visual Basic) si puede anticipar las necesidades exactas en tiempo de compilación. Los campos estáticos relacionados con subprocesos proporcionan el mejor rendimiento. También proporcionan las ventajas de la comprobación de tipos en tiempo de compilación.  
   
@@ -24,7 +25,7 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
   
  En C++ no administrado, use `TlsAlloc` para asignar ranuras de forma dinámica y `__declspec(thread)` para declarar que una variable debería asignarse en el almacenamiento relacionado con los subprocesos. Los campos estáticos y las ranuras para datos relacionados con los subprocesos proporcionan la versión administrada de este comportamiento.  
   
- En .NET Framework 4, puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para crear objetos locales de subprocesos que se inicializan de forma diferida la primera vez que se usa el objeto. Para obtener más información, vea [Inicialización diferida](../../framework/performance/lazy-initialization.md).  
+Puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para crear objetos locales de subprocesos que se inicializan de forma diferida la primera vez que se usa el objeto. Para obtener más información, vea [Inicialización diferida](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicidad de los datos en la TLS administrada  
  Si usa los campos estáticos o las ranuras para datos relacionados con subprocesos, los datos de la TLS administrada son exclusivos de la combinación de subproceso y dominio de aplicación.  
@@ -45,7 +46,8 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
  Tenga en cuenta que cualquier código del constructor de clase se ejecutará en el primer subproceso del primer contexto que acceda al campo. En todos los demás subprocesos o contextos del mismo dominio de aplicación, los campos se inicializarán como `null` (`Nothing` en Visual Basic) si son tipos de referencia o como valores predeterminados si son tipos de valor. Por lo tanto, no debe basarse en los constructores de clase para inicializar campos estáticos relacionados con subprocesos. En su lugar, evite inicializar los campos estáticos relacionados con subprocesos y suponga que se han inicializado como `null` (`Nothing`) o con sus valores predeterminados.  
   
 ## <a name="data-slots"></a>Ranuras para datos  
- .NET Framework proporciona ranuras para datos dinámicos exclusivas para la combinación de subproceso y dominio de aplicación. Hay dos tipos de ranuras para datos: ranuras con nombre y ranuras sin nombre. Ambos tipos se implementan mediante la estructura <xref:System.LocalDataStoreSlot>.  
+
+.NET proporciona ranuras para datos dinámicos exclusivas para la combinación de subproceso y dominio de la aplicación. Hay dos tipos de ranuras para datos: ranuras con nombre y ranuras sin nombre. Ambos tipos se implementan mediante la estructura <xref:System.LocalDataStoreSlot>.  
   
 - Para crear una ranura de datos con nombre, use los métodos <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Para obtener una referencia a una ranura con nombre existente, pase su nombre al método <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
   

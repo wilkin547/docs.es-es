@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd7112b3052f246a01e4a36d6d425b37cb6174dd
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599807"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188047"
 ---
 # <a name="handling-io-errors-in-net"></a>Control de errores de E/S en .NET
 
@@ -46,7 +46,7 @@ Sin embargo, las condiciones precisas en las que el sistema operativo devuelve c
 
 Debido a esta dependencia en el sistema operativo, condiciones de excepción idénticas (como el caso en que el directorio no encontró el error en nuestro ejemplo) pueden dar lugar a que un método de E/S genere cualquier clase entera de excepciones de E/S. Esto significa que, al llamar a API de E/S, el código debe prepararse para controlar la mayoría de estas excepciones o todas, como se muestra en la siguiente tabla:
 
-| Tipo de excepción | .NET Core | .NET Framework |
+| Tipo de excepción | .NET Core, y .NET 5 y versiones posteriores | .NET Framework |
 |---|---|---|
 | <xref:System.IO.IOException> | Sí | Sí |
 | <xref:System.IO.FileNotFoundException> | Sí | Sí |

@@ -2,18 +2,18 @@
 title: Nombres seguros y bibliotecas de .NET
 description: Procedimientos recomendados para nombres de seguros de las bibliotecas de .NET.
 ms.date: 10/16/2018
-ms.openlocfilehash: b72d4a8c320ac857fbcd6abe44f467805f72b5b3
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 6f9533d768331964a8e640243536b12ddde158e5
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654565"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189217"
 ---
 # <a name="strong-naming"></a>Nombres seguros
 
 Nombres seguros se refiere a firmar un ensamblado con una clave, generando un [ensamblado con nombre seguro](../assembly/strong-named.md). Una vez que un ensamblado tiene un nombre seguro, crea una identidad única en función del nombre y del número de versión del ensamblado y puede ayudar a evitar conflictos de ensamblado.
 
-El inconveniente de los nombres seguros es que .NET Framework en Windows habilita la carga estricta de ensamblados una vez que un ensamblado tiene un nombre seguro. Una referencia de ensamblado con nombre seguro debe coincidir exactamente con la versión del ensamblado cargado, obligando a los desarrolladores a [configurar redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) cuando se usa el ensamblado:
+El inconveniente de los nombres seguros es que .NET Framework en Windows habilita la carga estricta de ensamblados una vez que un ensamblado tiene un nombre seguro. Una referencia de ensamblado con nombre seguro debe coincidir exactamente con la versión del ensamblado cargado, obligando a los desarrolladores a [configurar redirecciones de enlace](../../framework/configure-apps/redirect-assembly-versions.md) cuando se usa el ensamblado:
 
 ```xml
 <configuration>
@@ -28,7 +28,7 @@ El inconveniente de los nombres seguros es que .NET Framework en Windows habilit
 </configuration>
 ```
 
-Cuando los desarrolladores de .NET se quejan de los nombres seguros, normalmente se quejan de la carga estricta de los ensamblados. Afortunadamente, este problema está aislado en .NET Framework. .NET Core, Xamarin, UWP y la mayoría del resto de implementaciones de .NET no tienen carga estricta de ensamblados y quitan el principal inconveniente de los nombres seguros.
+Cuando los desarrolladores de .NET se quejan de los nombres seguros, normalmente se quejan de la carga estricta de los ensamblados. Afortunadamente, este problema está aislado en .NET Framework. .NET 5 y versiones posteriores, .NET Core, Xamarin, UWP y la mayoría del resto de implementaciones de .NET carecen de la carga estricta de ensamblados, que es el principal inconveniente de los nombres seguros.
 
 Un aspecto importante de los nombres seguros es que son virales: un ensamblado con nombre seguro solamente pueden hacer referencia otros ensamblados con nombre seguro. Si la biblioteca no tiene un nombre seguro, es que se ha excluido a los desarrolladores que están creando una aplicación o biblioteca que necesita nombres seguros para usarla.
 
@@ -40,7 +40,7 @@ Las ventajas de los nombres seguros son:
 
 ## <a name="create-strong-named-net-libraries"></a>Creación de bibliotecas de .NET con nombre seguro
 
-Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. La asignación de un nombre seguro a un ensamblado garantiza que la mayoría de los usuarios pueden usarlo y la carga estricta del ensamblado solo afecta a .NET Framework.
+Se deben asignar un nombre seguro a las bibliotecas de .NET de código abierto. La asignación de un nombre seguro a un ensamblado garantiza que la mayoría de los usuarios puedan utilizarlo, y la carga estricta del ensamblado solo afecta a .NET Framework.
 
 > [!NOTE]
 > Esta guía es específica de las bibliotecas de .NET distribuidas públicamente, como las bibliotecas de .NET publicadas en NuGet.org. La mayoría de las aplicaciones .NET no necesitan nombres seguros y estos no se deben utilizar de forma predeterminada.

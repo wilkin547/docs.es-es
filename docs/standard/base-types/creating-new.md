@@ -11,18 +11,19 @@ helpviewer_keywords:
 - Join method
 - Format method
 - Concat method
-- strings [.NET Framework], creating
+- strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7dedaf61f56f19343299c841bb4cee70fb9c767a
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596453"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889444"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
-.NET Framework permite crear cadenas mediante asignaciones simples y además sobrecarga un constructor de clases para admitir la creación de cadenas con una serie de parámetros distintos. .NET Framework también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean nuevos objetos de cadena al combinar varias cadenas, matrices de cadenas u objetos.  
+
+.NET permite crear cadenas mediante asignaciones simples y, además, sobrecarga un constructor de clases para admitir la creación de cadenas mediante una serie de parámetros. .NET también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean objetos de cadena mediante la combinación de varias cadenas, matrices de cadenas u objetos.  
   
 ## <a name="creating-strings-using-assignment"></a>Creación de cadenas mediante asignaciones  
  La manera más sencilla de crear un objeto <xref:System.String> es asignar un literal de cadena a un objeto <xref:System.String>.  

@@ -2,12 +2,12 @@
 title: Dependencias y bibliotecas de .NET
 description: Procedimientos recomendados para administrar las dependencias de NuGet en las bibliotecas de. NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d189a3364b501272e29de72b6018844877bf2128
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291375"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189308"
 ---
 # <a name="dependencies"></a>Dependencias
 
@@ -23,9 +23,9 @@ En el momento de la compilación, NuGet analiza todos los paquetes de los que de
 
 La mayoría de las dependencias de rombo se resuelven con facilidad; sin embargo, pueden crear problemas en determinadas circunstancias:
 
-1. **Las referencias de paquetes NuGet en conflicto** impiden que una versión se resuelva durante la restauración de paquetes.
-2. **Los cambios importantes entre las versiones** provocan errores y excepciones en tiempo de ejecución.
-3. **El ensamblado del paquete tiene un nombre seguro**, la versión del ensamblado cambió y la aplicación se ejecuta en .NET Framework. Se necesitan redirecciones de enlace de ensamblados.
+- **Las referencias de paquetes NuGet en conflicto** impiden que una versión se resuelva durante la restauración de paquetes.
+- **Los cambios importantes entre las versiones** provocan errores y excepciones en tiempo de ejecución.
+- **El ensamblado del paquete tiene un nombre seguro** , la versión del ensamblado ha cambiado y la aplicación se ejecuta en .NET Framework. Se necesitan redirecciones de enlace de ensamblados.
 
 No es posible saber qué paquetes se utilizarán junto con los suyos. Una buena forma de reducir la probabilidad de que una dependencia de rombo interrumpa la biblioteca es minimizar el número de paquetes de los que usted depende.
 

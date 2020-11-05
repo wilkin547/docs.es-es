@@ -1,7 +1,8 @@
 ---
-title: 'Introducción a Common Language Runtime (CLR): .NET Framework'
-description: Introducción a Common Language Runtime (CLR), el entorno de tiempo de ejecución de .NET. CLR ejecuta código y proporciona servicios para facilitar el proceso de desarrollo.
-ms.date: 04/02/2019
+title: 'Información general sobre Common Language Runtime: .NET'
+titleSuffix: ''
+description: Información general sobre Common Language Runtime (CLR), el entorno de tiempo de ejecución de .NET. CLR ejecuta código y proporciona servicios para facilitar el proceso de desarrollo.
+ms.date: 10/22/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -10,32 +11,32 @@ helpviewer_keywords:
 - runtime
 - common language runtime
 - metadata, runtime functionality
-- .NET Framework, common language runtime
+- .NET, common language runtime
 - language compilers
 - managed code
 - source code execution
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: ef455ac1c49c1f457d0fa432db91b5375c045840
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 39543a511e8f405d9205df2697bcf4fd1194bd7a
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769215"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687508"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Introducción a Common Language Runtime
 
-.NET Framework proporciona un entorno en tiempo de ejecución denominado Common Language Runtime, que ejecuta el código y proporciona servicios que facilitan el proceso de desarrollo.
+.NET proporciona un entorno de ejecución denominado Common Language Runtime, que ejecuta el código y proporciona servicios que facilitan el proceso de desarrollo.
 
-Los compiladores y las herramientas exponen la funcionalidad de Common Language Runtime y permiten escribir código con las ventajas que proporciona este entorno de ejecución administrado. El código desarrollado con un compilador de lenguaje orientado al tiempo de ejecución se denomina código administrado. Este código se beneficia de características como: la integración entre lenguajes, el control de excepciones entre lenguajes, la seguridad mejorada, la compatibilidad con la implementación y las versiones, un modelo simplificado de interacción y servicios de generación de perfiles y depuración.
+Los compiladores y las herramientas exponen la funcionalidad de Common Language Runtime y permiten escribir código con las ventajas que proporciona este entorno de ejecución administrado. El código que se desarrolla con un compilador de lenguaje y que tiene como destino el entorno de ejecución se denomina código administrado. El código administrado se beneficia de características como la integración entre lenguajes, el control de excepciones entre lenguajes, la seguridad mejorada, la compatibilidad con la implementación y el control de versiones, un modelo simplificado para interacción de componentes, y servicios de generación de perfiles y depuración.
 
 > [!NOTE]
-> Los compiladores y las herramientas pueden generar resultados que Common Language Runtime puede consumir porque el sistema de tipos, el formato de metadatos y el entorno en tiempo de ejecución (el sistema de ejecución virtual) están todos definidos según un estándar público, la especificación Common Language Infrastructure de ECMA. Para obtener más información, consulte [ECMA C# and Common Language Infrastructure Specifications](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Especificaciones de ECMA C# y Common Language Infrastructure).
+> Los compiladores y las herramientas pueden generar resultados que Common Language Runtime puede consumir porque el sistema de tipos, el formato de metadatos y el entorno de ejecución (el sistema de ejecución virtual) están todos definidos según un estándar público, la especificación Common Language Infrastructure de ECMA. Para obtener más información, consulte [ECMA C# and Common Language Infrastructure Specifications](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) (Especificaciones de ECMA C# y Common Language Infrastructure).
 
 Para permitir al motor en tiempo de ejecución proporcionar servicios al código administrado, los compiladores de lenguajes deben emitir metadatos que describen los tipos, los miembros y las referencias del código. Los metadatos se almacenan con el código; cada archivo ejecutable portable (PE) de Common Language Runtime cargable contiene metadatos. El motor en tiempo de ejecución utiliza los metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.
 
-El tiempo de ejecución controla automáticamente la disposición de los objetos y administra las referencias a éstos, liberándolos cuando ya no se utilizan. Los objetos cuya duración se administra de esta forma se denominan datos administrados. La recolección de elementos no utilizados elimina pérdidas de memoria así como otros errores habituales de programación. Con un código administrado se pueden utilizar datos administrados, datos no administrados o estos dos tipos de datos en una aplicación .NET Framework. Como los compiladores de lenguajes proporcionan sus propios tipos, como tipos primitivos, no siempre se sabe (o no es necesario saber) si los datos se están administrando.
+El tiempo de ejecución controla automáticamente la disposición de los objetos y administra las referencias a éstos, liberándolos cuando ya no se utilizan. Los objetos cuya duración se administra de esta forma se denominan datos administrados. La recolección de elementos no utilizados elimina pérdidas de memoria así como otros errores habituales de programación. Si el código es administrado, en la aplicación de .NET puede usar datos administrados, datos no administrados o ambas opciones. Como los compiladores de lenguajes proporcionan sus propios tipos, como tipos primitivos, no siempre se sabe (o no es necesario saber) si los datos se están administrando.
 
 Common Language Runtime facilita el diseño de los componentes y de las aplicaciones cuyos objetos interactúan entre lenguajes distintos. Los objetos escritos en lenguajes diferentes pueden comunicarse entre sí, lo que permite integrar sus comportamientos de forma precisa. Por ejemplo, puede definir una clase y, a continuación, utilizar un lenguaje diferente para derivar una clase de la clase original o llamar a un método de la clase original. También se puede pasar al método de una clase una instancia de una clase escrita en un lenguaje diferente. Esta integración entre lenguajes diferentes es posible porque los compiladores y las herramientas de lenguajes orientados al motor en tiempo de ejecución utilizan un sistema de tipos común definido por el motor en tiempo de ejecución, y los lenguajes siguen las reglas en tiempo de ejecución para definir nuevos tipos, así como para crear, utilizar, almacenar y enlazar tipos.
 
@@ -63,7 +64,9 @@ Las herramientas y los compiladores de lenguajes exponen la funcionalidad del mo
 
 ## <a name="clr-versions"></a>Versiones de CLR
 
-El número de versión de .NET Framework no se corresponde necesariamente con el número de versión del CLR que incluye. Para obtener una lista de las versiones de .NET Framework y sus versiones de CLR correspondientes, consulte [Versiones y dependencias de .NET Framework](../framework/migration-guide/versions-and-dependencies.md). Las versiones de .NET Core tienen una versión de producto única, es decir, no hay ninguna versión independiente de CLR. Para obtener una lista de las versiones de .NET Core, consulte [Descarga de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+Las versiones de .NET Core, y .NET 5 y versiones posteriores, tienen una versión de producto única, es decir, no hay ninguna versión del CLR independiente. Para obtener una lista de las versiones de .NET Core, consulte [Descarga de .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
+
+Pero el número de versión de .NET Framework no se corresponde necesariamente con el del CLR que incluye. Para obtener una lista de las versiones de .NET Framework y sus versiones de CLR correspondientes, consulte [Versiones y dependencias de .NET Framework](../framework/migration-guide/versions-and-dependencies.md).
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -71,5 +74,5 @@ El número de versión de .NET Framework no se corresponde necesariamente con el
 |-----------|-----------------|
 |[Proceso de ejecución administrada](managed-execution-process.md)|Describe los pasos requeridos para aprovechar al máximo las ventajas de Common Language Runtime.|
 |[Administración automática de la memoria](automatic-memory-management.md)|Describe cómo asigna y libera memoria el recolector de elementos no utilizados.|
-|[Información general acerca de .NET Framework](../framework/get-started/overview.md)|Describe conceptos clave de .NET Framework como Common Type System (CTS), interoperabilidad entre lenguajes, ejecución administrada, dominios de aplicación y ensamblados.|
+|[Información general acerca de .NET Framework](../framework/get-started/overview.md)|Se describen conceptos clave de .NET Framework, como Common Type System (CTS), la interoperabilidad entre lenguajes, la ejecución administrada, los dominios de la aplicación y los ensamblados.|
 |[Sistema de tipos comunes](./base-types/common-type-system.md)|Describe cómo declarar, usar y administrar tipos en el motor en tiempo de ejecución para permitir la integración entre lenguajes.|

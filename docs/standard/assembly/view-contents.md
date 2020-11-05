@@ -6,7 +6,7 @@ helpviewer_keywords:
 - assembly manifest, viewing information
 - Ildasm.exe
 - MSIL Disassembler
-- assemblies [.NET Framework], viewing contents
+- assemblies [.NET], viewing contents
 - viewing assembly information
 - MSIL
 - viewing MSIL information
@@ -15,18 +15,18 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: be2311c601effbebd519e33b7a5e13d49f44bd05
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380067"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687502"
 ---
 # <a name="how-to-view-assembly-contents"></a>Procedimiento para ver el contenido de un ensamblado
 
 Se puede usar [Ildasm.exe (Desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un archivo. Si el archivo que se examina es un ensamblado, esta información puede incluir los atributos del ensamblado y referencias a otros módulos y ensamblados. Esta información puede ser útil para determinar si un archivo es un ensamblado o forma parte de uno y si el archivo tiene referencias a otros módulos o ensamblados.
 
-Para mostrar el contenido de un ensamblado mediante *Ildasm.exe*, escriba **ildasm \<nombre del ensamblado>** en un símbolo del sistema. Por ejemplo, el comando siguiente desensambla el ensamblado *Hello.exe*.
+Para mostrar el contenido de un ensamblado mediante *Ildasm.exe* , escriba **ildasm \<assembly name>** en un símbolo del sistema. Por ejemplo, el comando siguiente desensambla el ensamblado *Hello.exe*.
 
 ```cmd
 ildasm Hello.exe
@@ -107,14 +107,14 @@ En la tabla siguiente se explica cada directiva del manifiesto del ensamblado *H
 
 |Directiva|Descripción|
 |---------------|-----------------|
-|**.assembly extern \<nombre del ensamblado>**|Especifica otro ensamblado que contiene elementos a los que hace referencia el módulo actual (en este ejemplo, `mscorlib`).|
+|**.assembly extern \<assembly name>**|Especifica otro ensamblado que contiene elementos a los que hace referencia el módulo actual (en este ejemplo, `mscorlib`).|
 |**.publickeytoken \<token>**|Especifica el token de la clave real del ensamblado al que se hace referencia.|
-|**.ver \<número de versión>**|Especifica el número de versión del ensamblado al que se hace referencia.|
-|**.assembly \<nombre de ensamblado>**|Especifica el nombre del ensamblado.|
-|**.hash algorithm \<valor int32>**|Especifica el algoritmo hash usado.|
-|**.ver \<número de versión>**|Especifica el número de versión del ensamblado.|
-|**.module \<nombre del archivo>**|Especifica el nombre de los módulos que componen el ensamblado. En este ejemplo, el ensamblado consta de un único archivo.|
-|**.subsystem \<valor>**|Especifica el entorno de aplicación necesario para el programa. En este ejemplo, el valor 3 indica que este ejecutable se ejecuta desde una consola.|
+|**.ver \<version number>**|Especifica el número de versión del ensamblado al que se hace referencia.|
+|**.assembly \<assembly name>**|Especifica el nombre del ensamblado.|
+|**.hash algorithm \<int32 value>**|Especifica el algoritmo hash usado.|
+|**.ver \<version number>**|Especifica el número de versión del ensamblado.|
+|**.module \<file name>**|Especifica el nombre de los módulos que componen el ensamblado. En este ejemplo, el ensamblado consta de un único archivo.|
+|**.subsystem \<value>**|Especifica el entorno de aplicación necesario para el programa. En este ejemplo, el valor 3 indica que este ejecutable se ejecuta desde una consola.|
 |**.corflags**|De momento, un campo reservado de los metadatos.|
 
 Un manifiesto de ensamblado puede contener varias directivas diferentes, según el contenido del ensamblado. Para obtener una lista completa de las directivas del manifiesto del ensamblado, vea la documentación de Ecma, especialmente "Partition II: Metadata Definition and Semantics (Partición II: definición y semántica de los metadatos)" y "Partition III: CIL Instruction Set (Partición III: conjunto de instrucciones CIL)”.

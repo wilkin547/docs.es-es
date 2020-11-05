@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo recortar aplicaciones autocontenid
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
-ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
+ms.openlocfilehash: bf38ffe4d47986ae78c6cf2b2e5ecb292411ba6c
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90770460"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925290"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Recorte de implementaciones autocontenidas y ejecutables
 
@@ -36,6 +36,39 @@ Cuando el código hace referencia indirectamente a un ensamblado mediante la ref
 <ItemGroup>
     <TrimmerRootAssembly Include="System.Security" />
 </ItemGroup>
+```
+
+### <a name="support-for-ssl-certificates"></a>Compatibilidad con certificados SSL
+
+Si la aplicación carga certificados SSL, como en el caso de una aplicación de ASP.NET Core, querrá asegurarse de evitar el recorte de los ensamblados que facilitan la carga de los certificados SSL.
+
+Se puede actualizar el archivo del proyecto para incluir lo siguiente en ASP.NET Core 3.1:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>...</PropertyGroup>
+  <!--Include the following for .aspnetcore 3.1-->
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net" />
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
+```
+
+Si se usa .NET 5.0, se puede actualizar el archivo del proyecto para incluir lo siguiente:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+ <PropertyGroup>...</PropertyGroup>
+ <!--Include the following for .net 5.0-->
+ <ItemGroup>
+    <TrimmerRootAssembly Include="System.Net.Security" />
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+  ...
+</Project>
 ```
 
 ## <a name="trim-your-app---cli"></a>Recorte de la aplicación: CLI
@@ -71,7 +104,7 @@ Para obtener más información, vea [Publicación de aplicaciones .NET Core con
 
 Visual Studio crea perfiles de publicación reutilizables que controlan cómo se publica la aplicación.
 
-01. En el panel **Explorador de soluciones**, haga clic con el botón derecho en el proyecto que quiera publicar. Seleccione **Publicar...** .
+01. En el panel **Explorador de soluciones** , haga clic con el botón derecho en el proyecto que quiera publicar. Seleccione **Publicar...** .
 
     :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="Explorador de soluciones con un menú contextual en el que se resalta la opción Publicar.":::
 
@@ -81,7 +114,7 @@ Visual Studio crea perfiles de publicación reutilizables que controlan cómo s
 
     :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicación de Visual Studio con el botón Editar.":::
 
-01. En el cuadro de diálogo **Configuración de perfil**, establezca las opciones siguientes:
+01. En el cuadro de diálogo **Configuración de perfil** , establezca las opciones siguientes:
 
     - Establezca **Modo de implementación** en **Independiente**.
     - Establezca **Tiempo de ejecución de destino** en la plataforma en la que quiera publicar.

@@ -7,22 +7,23 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- threading [.NET Framework], design guidelines
-- threading [.NET Framework], best practices
+- threading [.NET], design guidelines
+- threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546372"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189009"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
+
 El multithreading requiere que la programación sea cuidadosa. La complejidad de muchas tareas se puede reducir poniendo las solicitudes de ejecución en cola por subprocesos del grupo de subprocesos. En este tema se tratan situaciones más complicadas, como coordinar el trabajo de múltiples subprocesos, o controlar los subprocesos que se bloquean.  
   
 > [!NOTE]
-> A partir de NET Framework 4, la biblioteca TPL y PLINQ proporcionan API que reducen parte de la complejidad y los riesgos que entraña la programación multiproceso. Para más información, consulte [Programación en paralelo en .NET](../parallel-programming/index.md).  
+> A partir de .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API que reducen parte de la complejidad y los riesgos de la programación multiproceso. Para más información, consulte [Programación en paralelo en .NET](../parallel-programming/index.md).  
   
 ## <a name="deadlocks-and-race-conditions"></a>Interbloqueos y condiciones de carrera  
  El multithreading resuelve problemas de rendimiento y de capacidad de respuesta, pero al hacerlo también crea nuevos problemas, como interbloqueos y condiciones de carrera.  
@@ -61,7 +62,7 @@ else {
 ### <a name="race-conditions"></a>Condiciones de carrera  
  Una condición de carrera es un error que se produce cuando el resultado de un programa depende del primero de dos o más subprocesos que consiga llegar hasta un bloque específico de código. Ejecutar el programa muchas veces genera distintos resultados y no es posible predecir el resultado de una ejecución específica.  
   
- Un ejemplo sencillo de una condición de carrera es el incremento de un campo. Suponga una clase que tiene un campo privado **static** (**Shared** en Visual Basic) que se incrementa cada vez que se crea una instancia de la clase, mediante código como `objCt++;` (C#) o `objCt += 1` (Visual Basic). Esta operación requiere cargar el valor de `objCt` en un registro, incrementar el valor y almacenarlo en `objCt`.  
+ Un ejemplo sencillo de una condición de carrera es el incremento de un campo. Suponga una clase que tiene un campo privado **static** ( **Shared** en Visual Basic) que se incrementa cada vez que se crea una instancia de la clase, mediante código como `objCt++;` (C#) o `objCt += 1` (Visual Basic). Esta operación requiere cargar el valor de `objCt` en un registro, incrementar el valor y almacenarlo en `objCt`.  
   
  En una aplicación multiproceso, un subproceso que realiza los tres pasos puede adelantar al subproceso que ha cargado e incrementado el valor; cuando el primer subproceso reanuda la ejecución y almacena su valor, sobrescribe `objCt` sin tener en cuenta el hecho de que el valor ha cambiado mientras tanto.  
   
@@ -95,7 +96,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
   
 - Tenga cuidado al efectuar bloqueos en instancias, por ejemplo `lock(this)` en C# o `SyncLock(Me)` en Visual Basic. Si otra parte del código de la aplicación, ajeno al tipo, bloquea el objeto, podrían producirse interbloqueos.  
   
-- Asegúrese de que un subproceso que entra en un monitor siempre sale de ese monitor, aun en el caso de que se produzca una excepción mientras el subproceso se encuentra en el monitor. La instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md) de C# y la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) de Visual Basic ofrecen automáticamente este comportamiento mediante un bloque **finally** que garantiza la llamada a <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Si no está seguro de que se llamará a **Exit**, considere la posibilidad de cambiar el diseño con el fin de usar **Mutex**. Una zona de exclusión mutua se libera automáticamente cuando finaliza el subproceso al que pertenece.  
+- Asegúrese de que un subproceso que entra en un monitor siempre sale de ese monitor, aun en el caso de que se produzca una excepción mientras el subproceso se encuentra en el monitor. La instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md) de C# y la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) de Visual Basic ofrecen automáticamente este comportamiento mediante un bloque **finally** que garantiza la llamada a <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Si no está seguro de que se llamará a **Exit** , considere la posibilidad de cambiar el diseño con el fin de usar **Mutex**. Una zona de exclusión mutua se libera automáticamente cuando finaliza el subproceso al que pertenece.  
   
 - Utilice varios subprocesos para tareas que requieren recursos diferentes, y evite asignar varios subprocesos a un solo recurso. Por ejemplo, en tareas que impliquen beneficios de E/S por tener un subproceso propio, ya que ese subproceso se bloquea durante las operaciones de E/S y, de este modo, permite ejecutar otros subprocesos. Los datos proporcionados por el usuario son otro recurso que se beneficia de la utilización de un subproceso dedicado. En un equipo de un solo procesador, una tarea que implica un cálculo intensivo coexiste con los datos proporcionados por el usuario y con tareas que implican la E/S, pero varias tareas de cálculo intensivo compiten entre ellas.  
   
@@ -125,7 +126,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
     ```  
   
     > [!NOTE]
-    > En .NET Framework 2.0 y versiones posteriores, use el método <xref:System.Threading.Interlocked.Add%2A> para incrementos atómicos mayores que 1.  
+    > Use el método <xref:System.Threading.Interlocked.Add%2A> para incrementos atómicos mayores que 1.  
   
      En el segundo ejemplo, se actualiza una variable de tipo de referencia sólo si es una referencia nula (`Nothing` en Visual Basic).  
   
@@ -160,7 +161,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
     ```  
   
     > [!NOTE]
-    > A partir de .NET Framework 2.0, la sobrecarga del método <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> proporciona una alternativa de seguridad de tipos para tipos de referencia.
+    > El método <xref:System.Threading.Interlocked.CompareExchange%60%601%28%60%600%40%2C%60%600%2C%60%600%29> proporciona una alternativa con seguridad de tipos para tipos de referencia.
   
 ## <a name="recommendations-for-class-libraries"></a>Recomendaciones para las bibliotecas de clases  
  Tenga en cuenta las instrucciones siguientes cuando diseñe bibliotecas de clases para el multithreading:  
@@ -169,7 +170,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
   
 - Procure que los datos estáticos (`Shared` en Visual Basic) sean seguros para subprocesos de manera predeterminada.  
   
-- No convierta los datos de instancia en datos seguros para subprocesos de manera predeterminada. Al agregar bloqueos para crear código seguro para subprocesos, se reduce el rendimiento, se incrementa la contención de bloqueos y se crea la posibilidad de que se produzcan interbloqueos. En los modelos de aplicación comunes, sólo un subproceso a la vez ejecuta código de usuario, lo que minimiza la necesidad de la seguridad para subprocesos. Por esta razón, las bibliotecas de clases de .NET Framework no son seguras para subprocesos de forma predeterminada.  
+- No convierta los datos de instancia en datos seguros para subprocesos de manera predeterminada. Al agregar bloqueos para crear código seguro para subprocesos, se reduce el rendimiento, se incrementa la contención de bloqueos y se crea la posibilidad de que se produzcan interbloqueos. En los modelos de aplicación comunes, sólo un subproceso a la vez ejecuta código de usuario, lo que minimiza la necesidad de la seguridad para subprocesos. Por esta razón, las bibliotecas de clases de .NET no son seguras para subprocesos de forma predeterminada.  
   
 - Evite proporcionar métodos estáticos que alteren el estado estático. En escenarios de servidor comunes, el estado estático se comparte entre las solicitudes, lo que significa que varios subprocesos pueden ejecutar a la vez ese código. De este modo, se abre la posibilidad de errores de subprocesos. Considere la posibilidad de utilizar un modelo de diseño que encapsule los datos en instancias no compartidas por las solicitudes. Además, si se sincronizan los datos estáticos, las llamadas entre los métodos estáticos que modifican el estado pueden generar interbloqueos o sincronización redundante, lo que afecta negativamente al rendimiento.  
   

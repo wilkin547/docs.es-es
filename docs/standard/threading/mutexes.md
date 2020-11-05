@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
-- threading [.NET Framework], Mutex class
+- threading [.NET], Mutex class
 - Mutex class, about Mutex class
-- threading [.NET Framework], cross-process synchronization
+- threading [.NET], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-ms.openlocfilehash: f9267bdd19a14995851f2689651c001815812912
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ba31fff03cfffda7cf2a40a3a82b2222e8951035
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291180"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188996"
 ---
 # <a name="mutexes"></a>Mutexes
+
 Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso exclusivo a un recurso. La clase <xref:System.Threading.Mutex> usa más recursos del sistema que la clase <xref:System.Threading.Monitor>, pero se pueden calcular sus referencias a través de los límites de dominio de aplicación, se puede usar con varias esperas y se puede usar para sincronizar subprocesos en distintos procesos. Para ver una comparación de los mecanismos de sincronización administrados, consulte [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md).  
   
  Para ver ejemplos de código, consulte la documentación de referencia para los constructores <xref:System.Threading.Mutex.%23ctor%2A>.  
@@ -30,10 +31,7 @@ Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso excl
  Si un subproceso es propietario de <xref:System.Threading.Mutex>, puede especificar la misma <xref:System.Threading.Mutex> en llamadas repetidas de solicitud de espera sin bloquear su ejecución; sin embargo, debe liberar <xref:System.Threading.Mutex> la misma cantidad de veces para liberar la propiedad.  
   
 ## <a name="abandoned-mutexes"></a>Exclusiones mutuas abandonadas  
- Si un subproceso finaliza sin liberar <xref:System.Threading.Mutex>, la exclusión mutua se considera abandonada. A menudo, esto indica un grave error de programación porque el recurso al que protege la exclusión mutua podría quedar con un estado no coherente. En la versión 2.0 de .NET Framework, se genera <xref:System.Threading.AbandonedMutexException> en el subproceso siguiente que adquiere la exclusión mutua.  
-  
-> [!NOTE]
-> En las versiones 1.0 y 1.1 de .NET Framework, una clase <xref:System.Threading.Mutex> abandonada se establece en el estado señalado y el siguiente subproceso en espera obtiene la propiedad. Si no hay ningún subproceso en espera, <xref:System.Threading.Mutex> se mantiene en un estado señalado. No se inicia ninguna excepción.  
+ Si un subproceso finaliza sin liberar <xref:System.Threading.Mutex>, la exclusión mutua se considera abandonada. A menudo, esto indica un grave error de programación porque el recurso al que protege la exclusión mutua podría quedar con un estado no coherente. Se inicia una excepción <xref:System.Threading.AbandonedMutexException> en el siguiente subproceso que adquiere la exclusión mutua.
   
  En el caso de una exclusión mutua en todo el sistema, una exclusión mutua abandonada podría indicar que una aplicación finalizó inesperadamente (por ejemplo, con el Administrador de tareas de Windows).  
   
@@ -43,7 +41,8 @@ Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso excl
  Una exclusión mutua local solo existe dentro del proceso. La puede usar cualquier subproceso del proceso que tenga una referencia al objeto <xref:System.Threading.Mutex> local. Cada objeto <xref:System.Threading.Mutex> es una exclusión mutua local independiente.  
   
 ### <a name="access-control-security-for-system-mutexes"></a>Seguridad de control de acceso para exclusiones mutuas del sistema  
- La versión 2.0 de .NET Framework proporciona la capacidad de consultar y establecer la seguridad de control de acceso Windows para objetos de sistema con nombre. Se recomienda proteger las exclusiones mutuas del sistema desde el momento en que se crean, porque los objetos de sistema son globales y, por lo tanto, puede bloquearlos un código distinto del suyo.  
+
+.NET proporciona la capacidad de consultar y establecer la seguridad de control de acceso de Windows para los objetos del sistema con nombre. Se recomienda proteger las exclusiones mutuas del sistema desde el momento en que se crean, porque los objetos de sistema son globales y, por lo tanto, puede bloquearlos un código distinto del suyo.  
   
  Para obtener información sobre la seguridad de control de acceso para las exclusiones mutuas, vea las clases <xref:System.Security.AccessControl.MutexSecurity> y <xref:System.Security.AccessControl.MutexAccessRule>, la enumeración <xref:System.Security.AccessControl.MutexRights>, los métodos <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> y <xref:System.Threading.Mutex.OpenExisting%2A> de la clase <xref:System.Threading.Mutex> y el constructor <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: b4d58734fba4b834d5f5819a6bf19da0b7b7e8db
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 012ac4078c1e2f17d6eef88ee295b11161a0e24a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285318"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925277"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Posibles problemas con PLINQ
 
@@ -62,7 +62,7 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 ## <a name="limit-calls-to-thread-safe-methods"></a>Limitar las llamadas a métodos seguros para subprocesos
 
-La mayoría de los métodos estáticos de .NET Framework son seguros para subprocesos y se les puede llamar simultáneamente desde varios subprocesos. Sin embargo, incluso en estos casos, la sincronización que esto supone puede conducir a una ralentización importante en la consulta.
+La mayoría de los métodos estáticos de .NET son seguros para subprocesos y se les puede llamar desde varios simultáneamente. Sin embargo, incluso en estos casos, la sincronización que esto supone puede conducir a una ralentización importante en la consulta.
 
 > [!NOTE]
 > Puede comprobarlo si inserta algunas llamadas a <xref:System.Console.WriteLine%2A> en las consultas. Aunque este método se usa en los ejemplos de la documentación para fines de demostración, no debe usarlo en consultas PLINQ.

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - WaitHandle class, code examples
 - asynchronous programming, status polling
 - polling asynchronous operation status
-- delegates [.NET Framework], asynchronous
+- delegates [.NET], asynchronous
 - synchronous calling in asynchronous manner
 - waiting for asynchronous calls
-- status information [.NET Framework], asynchronous operations
+- status information [.NET], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-ms.openlocfilehash: ff2d30c00e7b6becb0c3ff910d825c2e9d6f78e3
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: d518e5f64096fde5c9b14222dc4fe0634e6bb7b1
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662646"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888898"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 
-.NET Framework permite llamar a cualquier método de forma asincrónica. Para ello, es necesario que defina un delegado con la misma firma que el método al que desea llamar. Common Language Runtime definirá automáticamente los métodos `BeginInvoke` y `EndInvoke` para este delegado, con las firmas adecuadas.
+.NET permite llamar a cualquier método de forma asincrónica. Para ello, defina un delegado con la misma signatura que el método al que quiera llamar. Common Language Runtime define automáticamente los métodos `BeginInvoke` y `EndInvoke` para este delegado, con las signaturas adecuadas.
 
 > [!NOTE]
 > Las llamadas de delegado asincrónicas, específicamente los métodos `BeginInvoke` y `EndInvoke` , no se admiten en .NET Compact Framework.

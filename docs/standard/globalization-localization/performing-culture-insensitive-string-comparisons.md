@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - String.CompareTo method
 - String.Compare method
-- string comparison [.NET Framework], culture-insensitive
-- strings [.NET Framework], comparing
+- string comparison [.NET], culture-insensitive
+- strings [.NET], comparing
 - culture-insensitive string operations, comparisons
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
-ms.openlocfilehash: 91996bc721db55b24521be97e4d9accd53ef7924
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1d8dc3f1bf686550eb94d7fb3003d4c21741739e
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288620"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064150"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
 De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas. Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar. Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  
@@ -30,7 +30,7 @@ De manera predeterminada, el método <xref:System.String.Compare%2A?displayPrope
   
  Las comparaciones de cadenas que no tienen en cuenta la referencia cultural admitidas por el método <xref:System.String.Compare%2A?displayProperty=nameWithType> pueden ser lingüísticas (se basan en las convenciones de ordenación de la referencia cultural de todos los idiomas) o no lingüísticas (se basan en el valor ordinal de los caracteres de la cadena). La mayoría de las comparaciones de cadenas que no tienen en cuenta la referencia cultural son no lingüísticas. En estas comparaciones, especifique el valor de enumeración <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> u <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`. Por ejemplo, si una decisión de seguridad (como una comparación de nombre de usuario o contraseña) está basada en el resultado de una comparación de cadenas, la operación no debe tener en cuenta la referencia cultural y debe ser no lingüística para garantizar que el resultado no se ve afectado por las convenciones de una determinada referencia cultural o idioma.  
   
- Utilice una comparación de cadenas de tipo lingüística y que tenga en cuenta la referencia cultural si desea administrar lingüísticamente las cadenas pertinentes de varias referencias culturales de forma coherente. Por ejemplo, si la aplicación muestra palabras que utilizan varios juegos de caracteres en un cuadro de lista, tal vez desee mostrar las palabras en el mismo orden sin tener en cuenta la referencia cultural actual. En las comparaciones lingüísticas que no tienen en cuenta la referencia cultural, .NET Framework define una referencia cultural de todos los idiomas que está basada en las convenciones lingüísticas del inglés. Para realizar una comparación lingüística que no tenga en cuenta la referencia cultural, especifique <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> o <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`.  
+ Utilice una comparación de cadenas de tipo lingüística y que tenga en cuenta la referencia cultural si desea administrar lingüísticamente las cadenas pertinentes de varias referencias culturales de forma coherente. Por ejemplo, si la aplicación muestra palabras que utilizan varios juegos de caracteres en un cuadro de lista, tal vez desee mostrar las palabras en el mismo orden sin tener en cuenta la referencia cultural actual. En las comparaciones lingüísticas que no tienen en cuenta la referencia cultural, .NET define una referencia cultural invariable basada en las convenciones lingüísticas del inglés. Para realizar una comparación lingüística que no tenga en cuenta la referencia cultural, especifique <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> o <xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`.  
   
  En el siguiente ejemplo se realizan dos comparaciones de cadenas no lingüísticas que no tienen en cuenta la referencia cultural. La primera comparación distingue mayúsculas de minúsculas, pero la segunda no.  
   

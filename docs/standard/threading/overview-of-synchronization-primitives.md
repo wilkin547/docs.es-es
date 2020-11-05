@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-ms.openlocfilehash: 7347c9b40f150febc6a163ae3aa3267123ea0e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d5ae0fe5813952742950582a4282cd1c6ab6a870
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739376"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188983"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre las primitivas de sincronización
 
@@ -32,13 +32,13 @@ Varias primitivas de sincronización de .NET derivan de la clase <xref:System.Th
 - <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, que se deriva de <xref:System.Threading.EventWaitHandle> y, cuando está señalizada, se restablece automáticamente a un estado no señalizado después de liberar un subproceso en espera único.
 - <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, que se deriva de <xref:System.Threading.EventWaitHandle> y, cuando está señalizado, permanece en un estado señalizado hasta que se llama al método <xref:System.Threading.EventWaitHandle.Reset%2A>.
 
-En .NET Framework, dado que <xref:System.Threading.WaitHandle> deriva de <xref:System.MarshalByRefObject?displayProperty=nameWithType>, estos tipos se pueden usar para sincronizar las actividades de subprocesos en los límites del dominio de aplicación.
+En .NET Framework, como <xref:System.Threading.WaitHandle> deriva de <xref:System.MarshalByRefObject?displayProperty=nameWithType>, estos tipos se pueden usar para sincronizar las actividades de subprocesos entre los límites del dominio de la aplicación.
 
-En .NET Framework y .NET Core, algunos de estos tipos pueden representar los controladores de sincronización del sistema con nombre, que son visibles en todo el sistema operativo y se pueden usar para la sincronización entre procesos:
+En .NET Framework, y .NET Core y .NET 5 y versiones posteriores, algunos de estos tipos pueden representar controladores de sincronización del sistema con nombre, que son visibles en todo el sistema operativo y se pueden usar para la sincronización entre procesos:
 
-- <xref:System.Threading.Mutex> (.NET Framework y .NET Core),
-- <xref:System.Threading.Semaphore> (.NET Framework y .NET Core en Windows),
-- <xref:System.Threading.EventWaitHandle> (.NET Framework y .NET Core en Windows).
+- <xref:System.Threading.Mutex>
+- <xref:System.Threading.Semaphore> (en Windows)
+- <xref:System.Threading.EventWaitHandle> (en Windows)
 
 Para más información, vea la referencia de API <xref:System.Threading.WaitHandle>.
 

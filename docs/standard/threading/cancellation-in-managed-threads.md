@@ -9,17 +9,18 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662841"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188476"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
+
 A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la cancelación cooperativa de operaciones asincrónicas o sincrónicas de ejecución prolongada. Este modelo se basa en un objeto ligero denominado token de cancelación. El objeto que invoca una o más operaciones cancelables, por ejemplo creando un nuevo subproceso o tarea, pasa el token a cada operación. Las operaciones individuales pueden pasar a su vez copias del token a otras operaciones. En algún momento posterior, el objeto que creó el token puede usarlo para solicitar que las operaciones se detengan. Solo el objeto solicitante puede emitir la solicitud de cancelación y cada agente de escucha es responsable de observar la solicitud y responder a ella de manera puntual.  
   
- El patrón general para implementar el modelo de cancelación cooperativa es:  
+El patrón general para implementar el modelo de cancelación cooperativa es:  
   
 - Crear una instancia de un objeto <xref:System.Threading.CancellationTokenSource>, que administra y envía una notificación de cancelación a los tokens de cancelación individuales.  
   
@@ -36,7 +37,7 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
   
  ![CancellationTokenSource y tokens de cancelación](media/vs-cancellationtoken.png "VS_CancellationToken")  
   
- El nuevo modelo de cancelación facilita la creación de bibliotecas y aplicaciones compatibles con la cancelación y admite las siguientes características:  
+ El modelo de cancelación cooperativa facilita la creación de bibliotecas y aplicaciones compatibles con la cancelación, y admite las características siguientes:  
   
 - La cancelación es cooperativa y no se impone al agente de escucha. El agente de escucha determina cómo finalizar correctamente en respuesta a una solicitud de cancelación.  
   
@@ -44,7 +45,7 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
   
 - El objeto solicitante emite la solicitud de cancelación para todas las copias del token usando simplemente una llamada de método.  
   
-- Si los une en un *token vinculado*, un agente de escucha puede escuchar varios tokens simultáneamente.  
+- Si los une en un *token vinculado* , un agente de escucha puede escuchar varios tokens simultáneamente.  
   
 - El código de usuario puede observar y responder a las solicitudes de cancelación desde código de biblioteca y el código de biblioteca puede observar y responder a las solicitudes de cancelación desde código de usuario.  
   
@@ -59,19 +60,19 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
 |<xref:System.Threading.CancellationToken>|Tipo de valor ligero pasado a uno o varios agentes de escucha, normalmente como un parámetro de método. Los agentes de escucha supervisan el valor de la propiedad `IsCancellationRequested` del token mediante sondeo, devolución de llamada o identificador de espera.|  
 |<xref:System.OperationCanceledException>|Las sobrecargas del constructor de esta excepción aceptan <xref:System.Threading.CancellationToken> como parámetro. Los agentes de escucha pueden generar esta excepción para comprobar el origen de la cancelación y notificar a otros que ha respondido a una solicitud de cancelación.|  
   
- El nuevo modelo de cancelación se integra en .NET Framework en varios tipos. Los más importantes son <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> y <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Le recomendamos usar este nuevo modelo de cancelación para todo el código de biblioteca y aplicación nuevo.  
+ El modelo de cancelación se integra en .NET en varios tipos. Los más importantes son <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> y <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Se recomienda usar este nuevo modelo de cancelación cooperativa para todo el código nuevo de una biblioteca y una aplicación.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, el objeto solicitante crea un objeto <xref:System.Threading.CancellationTokenSource> y, a continuación, pasa su propiedad <xref:System.Threading.CancellationTokenSource.Token%2A> a la operación cancelable. La operación que recibe la solicitud supervisa el valor de la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token mediante sondeo. Cuando el valor se convierte en `true`, el agente de escucha puede finalizar de la manera adecuada. En este ejemplo el método simplemente sale, que es lo único necesario en muchos casos.  
   
 > [!NOTE]
-> En el ejemplo se usa el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demostrar que el nuevo marco de cancelación es compatible con las API heredadas. Para obtener un ejemplo en donde se utiliza el nuevo tipo preferido, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, vea [Procedimiento: Cancelar una tarea y sus elementos secundarios](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+> En el ejemplo se usa el método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> para demostrar que el nuevo marco de cancelación cooperativa es compatible con API heredadas. Para obtener un ejemplo en el que se usa el tipo preferido, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, vea [Procedimiento para cancelar una tarea y sus elementos secundarios](../parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>Cancelación de operaciones frente a cancelación de objetos  
- En el nuevo marco de cancelación, la cancelación se refiere a las operaciones, no a objetos. La solicitud de cancelación significa que la operación debe detenerse lo antes posible después de realizar cualquier limpieza necesaria. Un token de cancelación debe hacer referencia a una "operación cancelable", independientemente de si esa operación está implementada en su programa. Después de establecer la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token en `true`, no puede restablecerse a `false`. Por lo tanto, los tokens de cancelación no pueden volver a usarse una vez cancelados.  
+ En el marco de cancelación cooperativa, la cancelación se refiere a las operaciones, no a los objetos. La solicitud de cancelación significa que la operación debe detenerse lo antes posible después de realizar cualquier limpieza necesaria. Un token de cancelación debe hacer referencia a una "operación cancelable", independientemente de si esa operación está implementada en su programa. Después de establecer la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token en `true`, no puede restablecerse a `false`. Por lo tanto, los tokens de cancelación no pueden volver a usarse una vez cancelados.  
   
  Si necesita un mecanismo de cancelación de objetos, puede basarlo en el mecanismo de cancelación de operaciones mediante una llamada al método <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType>, tal como se muestra en el ejemplo siguiente.  
   
@@ -121,7 +122,7 @@ A partir de .NET Framework 4, .NET Framework usa un modelo unificado para la 
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- En el nuevo código destinado a .NET Framework 4, <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> y <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> admiten el nuevo marco de cancelación en sus métodos `Wait`. <xref:System.Threading.CancellationToken> puede pasarse al método y, cuando se solicita la cancelación, el evento se activa y genera <xref:System.OperationCanceledException>.  
+<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> y <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> admiten el marco de cancelación en sus métodos `Wait`. <xref:System.Threading.CancellationToken> puede pasarse al método y, cuando se solicita la cancelación, el evento se activa y genera <xref:System.OperationCanceledException>.  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

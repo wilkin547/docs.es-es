@@ -10,17 +10,18 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 74d821aff8308618f7c0efeb1b453db8214b877e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e6f9a760d7673eecf161b1d84d890cc14d09235e
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555951"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189022"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
-Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de .NET Framework 4, se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](/previous-versions/ms810613(v=msdn.10)).  
+
+Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. Puede usar código administrado para acceder a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows acceden a los archivos asignados a memoria, como se describe en [Administración de archivos asignados a memoria](/previous-versions/ms810613(v=msdn.10)).  
   
- Hay dos tipos de archivos asignados a memoria:  
+Hay dos tipos de archivos asignados a memoria:  
   
 - Archivos asignados a memoria persistentes  
   
@@ -35,11 +36,11 @@ Un archivo asignado a memoria incluye el contenido de un archivo en la memoria v
   
  Para trabajar con un archivo asignado a memoria, debe crear una vista de todo o parte del archivo asignado a memoria. También puede crear varias vistas a la misma parte del archivo asignado a memoria, creando de esta forma memoria simultánea. Para que dos vistas sigan siendo simultáneas, tienen que crearse a partir del mismo archivo asignado a memoria.  
   
- También puede ser necesario el uso de varias vistas si el archivo es mayor que el tamaño del espacio de memoria lógico de la aplicación disponible para la asignación de memoria (2 GB en un equipo de 32 bits).  
+ También puede ser necesario usar varias vistas si el archivo tiene un tamaño mayor que el espacio de memoria lógico de la aplicación disponible para la asignación de memoria (2 GB en un equipo de 32 bits).  
   
  Hay dos tipos de vista: vista de acceso secuencial y vista de acceso aleatorio. Use las vistas de acceso secuencial para obtener acceso secuencial a un archivo; es la vista recomendada para los archivos no persistentes y las IPC. Se recomiendan usar las vistas de acceso aleatorio para trabajar con archivos persistentes.  
   
- El acceso a los archivos asignados a memoria se realiza a través del administrador de memoria del sistema operativo, de modo que el archivo se divide automáticamente en varias páginas y el acceso se realizará según sea necesario. El usuario no tiene que encargarse de administrar la memoria.  
+ El acceso a los archivos asignados a memoria se realiza a través del administrador de memoria del sistema operativo, de modo que el archivo se divide automáticamente en varias páginas y el acceso se realiza según sea necesario. El usuario no tiene que encargarse de administrar la memoria.  
   
  En la siguiente ilustración se muestra cómo varios procesos pueden presentar simultáneamente varias vistas superpuestas del mismo archivo asignado a memoria.
 

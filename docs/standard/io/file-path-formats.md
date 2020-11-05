@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679604"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188060"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -90,7 +90,7 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 - El especificador de ruta de acceso de dispositivo (`\\.\` o `\\?\`), que identifica la ruta de acceso como una ruta de acceso de dispositivo DOS.
 
    > [!NOTE]
-   > `\\?\` se admite en todas las versiones de .NET Core y en .NET Framework a partir de la versión 4.6.2.
+   > `\\?\` se admite en todas las versiones de .NET Core, y .NET 5 y versiones posteriores, y en .NET Framework a partir de la versión 4.6.2.
 
 - Un vínculo simbólico para el objeto de dispositivo "real" (C: en el caso de un nombre de unidad o Volume{b75e2c83-0000-0000-0000-602f00000000} en el caso de un identificador de volumen).
 
@@ -194,10 +194,10 @@ Normalmente, todas las rutas de acceso que se pasan a una API de Windows se pasa
 
 1. Para mejorar el rendimiento omitiendo la normalización, si ya se ha normalizado.
 
-1. Solo en .NET Framework, para omitir la comprobación `MAX_PATH` de la longitud de ruta de acceso para permitir rutas de acceso que tienen más de 259 caracteres. En la mayoría de API se permite esto, con algunas excepciones.
+1. Solo en .NET Framework, para omitir la comprobación `MAX_PATH` de la longitud de ruta de acceso para permitir rutas de acceso que tienen más de 259 caracteres. En la mayoría de API se permite esto, con algunas excepciones.
 
 > [!NOTE]
-> En .NET Core las rutas de acceso largas se administran de forma implícita y no se realiza una comprobación `MAX_PATH`. La comprobación `MAX_PATH` solo se aplica a .NET Framework.
+> En .NET Core, y .NET 5 y versiones posteriores, las rutas de acceso largas se administran de forma implícita y no se realiza una comprobación `MAX_PATH`. La comprobación `MAX_PATH` solo se aplica a .NET Framework.
 
 La omisión de la normalización y las comprobaciones de ruta de acceso máximas es la única diferencia entre las dos sintaxis de ruta de acceso de dispositivo. En los demás casos son idénticas. Tenga cuidado al omitir la normalización, dado que es muy fácil crear rutas de acceso difíciles de controlar para las aplicaciones "normales".
 

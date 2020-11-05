@@ -3,12 +3,12 @@ title: Valores de configuración de redes
 description: Obtenga información sobre los valores del entorno de ejecución que configuran las redes para las aplicaciones de .NET Core.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: d43b68206cc82f4a41df02bd5998702b4f5d0590
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bda608e83bb1b093d7d9b860de9607f6734720aa
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538138"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188307"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>Opciones de configuración del entorno de ejecución para las redes
 
@@ -16,9 +16,11 @@ ms.locfileid: "90538138"
 
 - Configura si está habilitada la compatibilidad con el protocolo HTTP/2.
 
-- Si se omite esta configuración, la compatibilidad con el protocolo HTTP/2 está deshabilitada. Esto es equivalente a establecer el valor en `false`.
-
 - Introducido en .NET Core 3.0.
+
+- Solo para .NET Core 3.0: Si se omite esta configuración, la compatibilidad con el protocolo HTTP/2 está deshabilitada. Esto es equivalente a establecer el valor en `false`.
+
+- .NET Core 3.1, y .NET 5 y versiones posteriores: si se omite esta configuración, se habilita la compatibilidad con el protocolo HTTP/2. Esto es equivalente a establecer el valor en `true`.
 
 | | Nombre de valor | Valores |
 | - | - | - |
@@ -43,3 +45,17 @@ ms.locfileid: "90538138"
 
 > [!NOTE]
 > A partir de .NET 5, la configuración `System.Net.Http.UseSocketsHttpHandler` ya no está disponible.
+
+## <a name="latin1-headers-net-core-31-only"></a>Encabezados Latin1 (solo .NET Core 3.1)
+
+- Este modificador permite relajar la validación de encabezados HTTP y habilita <xref:System.Net.Http.SocketsHttpHandler> para enviar caracteres codificados mediante ISO-8859-1 (Latin-1) en los encabezados.
+
+- Si se omite esta configuración, un intento de enviar un carácter que no sea ASCII iniciará una excepción <xref:System.Net.Http.HttpRequestException>. Esto es equivalente a establecer el valor en `false`.
+
+| | Nombre de valor | Valores |
+| - | - | - |
+| **runtimeconfig.json** | `System.Net.Http.SocketsHttpHandler.AllowLatin1Headers` | `false`: deshabilitado.<br/>`true`: habilitado. |
+| **Variable del entorno** | `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_ALLOWLATIN1HEADERS` | `0`: deshabilitado.<br/>`1`: habilitado. |
+
+> [!NOTE]
+> Esta opción solo está disponible en .NET Core 3.1 desde la versión 3.1.9, y no en versiones anteriores o posteriores. En .NET 5 se recomienda usar <xref:System.Net.Http.SocketsHttpHandler.RequestHeaderEncodingSelector>.

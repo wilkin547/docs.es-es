@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-ms.openlocfilehash: c42ea0b5ba4cb01304ceae4ba2d2fc91b629a9b3
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cc27ba47c88d424a80eb47aaa310bdfd6d18433a
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420531"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93187923"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 
@@ -61,9 +61,9 @@ Además de exponer las interfaces implementadas explícitamente por una clase en
 
 |Interfaz|Descripción|
 |---------------|-----------------|
-|Interfaz de clase (\_*nombreDeClase*)|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|
+|Interfaz de clase (\_*nombreDeClase* )|Interfaz, expuesta por el runtime y no definida explícitamente, que expone todas las interfaces públicas, métodos, propiedades y campos que se exponen explícitamente en un objeto administrado.|
 |**IConnectionPoint** e **IConnectionPointContainer**|Interfaz para objetos que son origen de eventos basados en delegados (interfaz para registrar suscriptores de eventos).|
-|**IDispatchEx** (solo .NET Framework)|Interfaz proporcionada por el tiempo de ejecución si la clase implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|
+|**IDispatchEx** (solo .NET Framework)|Interfaz proporcionada por el tiempo de ejecución si la clase implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch** , permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|
 |**IEnumVARIANT**|Interfaz para clases de tipo de colección que enumera los objetos de la colección si la clase implementa **IEnumerable**.|
 
 ## <a name="introducing-the-class-interface"></a>Presentar la interfaz de clase
@@ -181,7 +181,7 @@ Para obtener el DispId de un miembro de interfaz en tiempo de ejecución, los cl
 
 Las interfaces duales permiten el enlace en tiempo de diseño y en tiempo de ejecución de los clientes COM con los miembros de interfaz. El establecimiento de la interfaz de clase en dual puede ser útil en tiempo de diseño y durante las pruebas. Esta opción también es aceptable para una clase administrada (y sus clases base) que no se va a modificar nunca. En todos los demás casos, no es necesario establecer la interfaz de clase en dual.
 
-Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual (**ClassInterfaceType.AutoDual**) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de compilación.
+Una interfaz dual generada automáticamente puede ser apropiada en algunos casos, pero a menudo genera complicaciones de control de versiones. Por ejemplo, los clientes COM que usen la interfaz de clase de una clase derivada se pueden interrumpir con facilidad si se hacen cambios en la clase base. Si la clase base es de terceros, el usuario no tiene control sobre el diseño de la interfaz de clase. Además, a diferencia de una interfaz de solo envío, una interfaz dual ( **ClassInterfaceType.AutoDual** ) proporciona una descripción de la interfaz de clase en la biblioteca de tipos exportada. Dicha descripción hace que los clientes enlazados en tiempo de ejecución almacenen en caché los identificadores DispId en tiempo de compilación.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Asegúrese de que todas las notificaciones de eventos COM están enlazadas tardíamente.
 

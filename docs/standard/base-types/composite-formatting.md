@@ -8,18 +8,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - parameter specifiers
-- strings [.NET Framework], alignment
+- strings [.NET], alignment
 - format specifiers, composite formatting
-- strings [.NET Framework], composite
+- strings [.NET], composite
 - composite formatting
-- objects [.NET Framework], formatting multiple objects
+- objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 36197b382c449a2570e1d5530f307c4e66b0d983
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e15452016aa61cf44950e8b9e7fca58f23471ae7
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447269"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889470"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -56,7 +56,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
 ## <a name="format-item-syntax"></a>Sintaxis de elemento de formato  
  Cada elemento de formato presenta la siguiente sintaxis, formada por los siguientes componentes:  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{` *index* [`,`*alignment* ][`:`*formatString* ]`}`  
   
  Las llaves ("{" y "}") son necesarias.  
   
@@ -74,7 +74,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como esta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción de tipo <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
   
 ### <a name="alignment-component"></a>Alignment (Componente)  
- El componente opcional *alignment* es un entero con signo que indica el ancho de campo con formato preferido. Si el valor de *alignment* es menor que la longitud de la cadena con formato, se omite *alignment* y se usa la longitud de la cadena con formato como el ancho de campo. Los datos con formato del campo están alineados a la derecha si *alignment* es positivo y a la izquierda si *alignment* es negativo. Si hace falta relleno, se utiliza un espacio en blanco. Si se especifica *alignment*, es necesaria la coma.  
+ El componente opcional *alignment* es un entero con signo que indica el ancho de campo con formato preferido. Si el valor de *alignment* es menor que la longitud de la cadena con formato, se omite *alignment* y se usa la longitud de la cadena con formato como el ancho de campo. Los datos con formato del campo están alineados a la derecha si *alignment* es positivo y a la izquierda si *alignment* es negativo. Si hace falta relleno, se utiliza un espacio en blanco. Si se especifica *alignment* , es necesaria la coma.  
   
  El siguiente ejemplo define dos matrices, que contiene los nombres de empleados y otra contiene las horas que han trabajado en un período de dos semanas. La cadena de formato compuesto alinea a la izquierda los nombres en un campo de 20 caracteres y alinea a la derecha las horas en un campo de 5 caracteres. Tenga en cuenta que la cadena de formato estándar "N1" también se usa para dar formato a las horas con un dígito fraccionario.  
   
@@ -82,9 +82,9 @@ La característica de formato compuesto se admite mediante métodos como los sig
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String (Componente)  
- El componente *formatString* opcional es una cadena de formato adecuada para el tipo de objeto al que se da formato. Especifique una cadena de formato numérico estándar o personalizado si el objeto correspondiente es un valor numérico, una cadena de formato de fecha y hora estándar o personalizado si el objeto correspondiente es un objeto <xref:System.DateTime>, o una [cadena de formato de enumeración](enumeration-format-strings.md) si el objeto correspondiente es un valor de enumeración. Si no se especifica *formatString*, se usa el especificador de formato general ("G") para un tipo numérico, de fecha y hora o de enumeración. Si se especifica *formatString*, son necesarios los dos puntos.  
+ El componente *formatString* opcional es una cadena de formato adecuada para el tipo de objeto al que se da formato. Especifique una cadena de formato numérico estándar o personalizado si el objeto correspondiente es un valor numérico, una cadena de formato de fecha y hora estándar o personalizado si el objeto correspondiente es un objeto <xref:System.DateTime>, o una [cadena de formato de enumeración](enumeration-format-strings.md) si el objeto correspondiente es un valor de enumeración. Si no se especifica *formatString* , se usa el especificador de formato general ("G") para un tipo numérico, de fecha y hora o de enumeración. Si se especifica *formatString* , son necesarios los dos puntos.  
   
- En la tabla siguiente se enumeran los tipos o las categorías de tipo de la biblioteca de clases de .NET Framework que admiten un conjunto predefinido de cadenas de formato, y se proporcionan vínculos a temas que muestran las cadenas de formato admitidas. Observe que la asignación de formato a cadenas es un mecanismo extensible que permite definir cadenas de formato nuevas para todos los tipos existentes, así como definir un conjunto de cadenas de formato admitidas por un tipo definido por la aplicación. Para obtener más información, consulte los temas sobre las interfaces <xref:System.IFormattable> y <xref:System.ICustomFormatter>.  
+ En la tabla siguiente se enumeran los tipos o las categorías de tipos de la biblioteca de clases de .NET que admiten un conjunto predefinido de cadenas de formato, y se proporcionan vínculos a temas en los que se muestran las cadenas de formato admitidas. Observe que la asignación de formato a cadenas es un mecanismo extensible que permite definir cadenas de formato nuevas para todos los tipos existentes, así como definir un conjunto de cadenas de formato admitidas por un tipo definido por la aplicación. Para obtener más información, consulte los temas sobre las interfaces <xref:System.IFormattable> y <xref:System.ICustomFormatter>.  
   
 |Tipo o categoría de tipo|Vea|  
 |---------------------------|---------|  
@@ -123,7 +123,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
 2. Si hay disponible una implementación de <xref:System.ICustomFormatter>, el runtime llama al método <xref:System.ICustomFormatter.Format%2A>. Pasa al método el valor *formatString* del elemento de formato, si hay alguno, o `null` si no lo hay, junto con la implementación de <xref:System.IFormatProvider>. Si la llamada al método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> devuelve `null`, la ejecución avanza al siguiente paso; en caso contrario, se devuelve el resultado de la llamada a <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>.
   
-3. Si el valor implementa la interfaz <xref:System.IFormattable>, se llama al método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> de esta. Se pasa al método el valor *formatString*, si hubiera uno presente en el elemento de formato, o `null` si no lo hubiera. El argumento <xref:System.IFormatProvider> se determina de la siguiente forma:  
+3. Si el valor implementa la interfaz <xref:System.IFormattable>, se llama al método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> de esta. Se pasa al método el valor *formatString* , si hubiera uno presente en el elemento de formato, o `null` si no lo hubiera. El argumento <xref:System.IFormatProvider> se determina de la siguiente forma:  
   
     - Para un valor numérico, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea null, el runtime solicita un objeto <xref:System.Globalization.NumberFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.NumberFormatInfo> para la referencia cultural del subproceso actual.  
   

@@ -11,17 +11,18 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 79ff899e2964ae2c1e90b7178616c612dddf6d86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0f7e8dde395feb548e6808547a223a3fa8855561
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287511"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063916"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Realizar operaciones de cadena que no distinguen entre referencias culturales
-La mayoría de los métodos de .NET Framework que realizan operaciones de cadenas que no distinguen entre referencias culturales de manera predeterminada proporcionan sobrecargas de método que permiten especificar explícitamente la referencia cultural que se usará para pasar un parámetro <xref:System.Globalization.CultureInfo>. Estas sobrecargas permiten eliminar variaciones de referencia cultural en reglas de ordenación y asignaciones de mayúsculas y minúsculas y garantizan resultados que no distinguen entre referencias culturales.  
+
+La mayoría de los métodos de .NET que realizan operaciones de cadenas que no distinguen entre referencias culturales de manera predeterminada proporcionan sobrecargas de método que permiten pasar un parámetro <xref:System.Globalization.CultureInfo> para especificar explícitamente la referencia cultural que se va a usar. Estas sobrecargas permiten eliminar variaciones de referencia cultural en reglas de ordenación y asignaciones de mayúsculas y minúsculas y garantizan resultados que no distinguen entre referencias culturales.  
   
- En esta sección se proporcionan los temas siguientes para mostrar cómo realizar operaciones de cadenas que no distinguen entre referencias culturales con métodos de .NET Framework que tienen en cuenta las referencias culturales de manera predeterminada.  
+ En esta sección se proporcionan los artículos siguientes para mostrar cómo realizar operaciones de cadenas que no distinguen entre referencias culturales con métodos de .NET que tienen en cuenta las referencias culturales de manera predeterminada.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Realizar comparaciones de cadenas que no distinguen entre referencias culturales](performing-culture-insensitive-string-comparisons.md)  

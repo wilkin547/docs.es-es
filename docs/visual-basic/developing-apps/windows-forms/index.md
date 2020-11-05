@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 9d061aeccb914cce80e02bb7df44dae2edf25412
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef02662a5492f117b252e464e92ec46e7484ef66
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557024"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282170"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 
@@ -28,7 +28,7 @@ Puede crear aplicaciones de Windows Forms y de servicios de Windows con Visual 
 
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilación de interfaces de usuario completas e interactivas
 
-Windows Forms es el componente cliente inteligente de .NET Framework, un conjunto de bibliotecas administradas que habilitan tareas comunes de las aplicaciones, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como Visual Studio, se pueden crear aplicaciones de Windows Forms que muestran información, solicitan datos a los usuarios y se comunican con equipos remotos a través de una red.
+Windows Forms es el componente cliente inteligente de .NET Framework y .NET Core (desde .NET Core 3.0). Se trata de un conjunto de bibliotecas administradas que habilitan tareas comunes de las aplicaciones, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como Visual Studio, se pueden crear aplicaciones de Windows Forms que muestran información, solicitan datos a los usuarios y se comunican con equipos remotos a través de una red.
 
 En Windows Forms, un formulario es una superficie visual en la que se muestra información al usuario. Normalmente, las aplicaciones de Windows Forms se compilan mediante la colocación de controles en los formularios y el desarrollo de respuestas a las acciones del usuario, como clics del mouse o presiones de teclas. Un *control* es un elemento de interfaz de usuario (UI) discreto que muestra datos o acepta la entrada de datos.
 
@@ -97,7 +97,7 @@ Para obtener una introducción completa a ClickOnce, vea [Seguridad e implementa
 
 ## <a name="other-controls-and-features"></a>Otros controles y características
 
-Hay muchas otras características en Windows Forms que simplifican y agilizan las tareas comunes de implementación, como la posibilidad de crear cuadros de diálogo, imprimir, agregar ayuda y documentación, y localizar la aplicación a varios idiomas. Además, Windows Forms se basa en el sólido sistema de seguridad de .NET Framework, lo que permite publicar aplicaciones más seguras para los clientes.
+Hay muchas otras características en Windows Forms que simplifican y agilizan las tareas comunes de implementación, como la posibilidad de crear cuadros de diálogo, imprimir, agregar documentación y localizar la aplicación a varios idiomas. Además, Windows Forms se basa en el sólido sistema de seguridad de .NET, lo que permite publicar aplicaciones más seguras para los clientes.
 
 Para obtener información detallada sobre cómo usar estas características, vea los siguientes temas de la Ayuda:
 

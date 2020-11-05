@@ -2,12 +2,12 @@
 title: Destino multiplataforma para bibliotecas de .NET
 description: Procedimientos recomendados para la creación de bibliotecas de .NET multiplataforma.
 ms.date: 08/12/2019
-ms.openlocfilehash: 6309e300861ab286dcaba3256267b3459e6e0d10
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 038a03904c4cfe49758562b5748fef06ae1afa4b
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223350"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189256"
 ---
 # <a name="cross-platform-targeting"></a>Destinatarios multiplataforma
 
@@ -33,7 +33,7 @@ El destino .NET Standard, así como la compilación correcta del proyecto, no ga
 
 ❌ EVITE incluir un destino de `netstandard1.x`.
 
-> .NET Standard 1.x se distribuye como un conjunto pormenorizado de paquetes NuGet, que crea un gráfico de dependencias de paquete grande y da lugar a que los desarrolladores descarguen una gran cantidad de paquetes al compilar. Las plataformas .NET modernas, incluidas .NET Framework 4.6.1, UWP y Xamarin, admiten .NET Standard 2.0. Solo debe utilizar .NET Standard 1.x como destino si necesita específicamente una plataforma anterior como destino.
+> .NET Standard 1.x se distribuye como un conjunto pormenorizado de paquetes NuGet, que crea un gráfico de dependencias de paquete grande y da lugar a que los desarrolladores descarguen una gran cantidad de paquetes al compilar. Las implementaciones de .NET modernas admiten .NET Standard 2.0. Solo debe utilizar .NET Standard 1.x como destino si necesita específicamente una plataforma anterior como destino.
 
 ✔️ INCLUYA un destino de `netstandard2.0` si necesita un destino de `netstandard1.x`.
 
@@ -115,7 +115,7 @@ public static class GpsLocation
 
 ## <a name="older-targets"></a>Destinos antiguos
 
-.NET admite las versiones de destino de .NET Framework que llevan mucho tiempo sin soporte técnico, así como las plataformas que ya no se suelen utilizar. Si bien es valioso hacer que la biblioteca funcione en tantos destinos como sea posible, tener que trabajar con API ausentes puede agregar una sobrecarga significativa. Creemos que ciertos marcos ya no valen la pena como destino, considerando su alcance y limitaciones.
+.NET admite las versiones de destino de .NET Framework que llevan mucho tiempo sin soporte técnico, así como las plataformas que ya no se suelen usar. Si bien es valioso hacer que la biblioteca funcione en tantos destinos como sea posible, tener que trabajar con API ausentes puede agregar una sobrecarga significativa. Creemos que ciertos marcos ya no valen la pena como destino, considerando su alcance y limitaciones.
 
 ❌ NO incluya un destino de Biblioteca de clases portátil (PCL). Por ejemplo, `portable-net45+win8+wpa81+wp8`.
 

@@ -5,25 +5,25 @@ ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
-- threading [.NET Framework], multiple threads
-- threading [.NET Framework], about threading
+- threading [.NET], multiple threads
+- threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: d4a4ceabf29bd0f6f537e59ba477f9da686b1ef5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769098"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93189139"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
-Los cinco primeros temas de esta sección están diseñados para ayudarle a determinar cuándo se debe utilizar un subproceso administrado así como para explicar algunas características básicas. Para obtener información sobre las clases que proporcionan características adicionales, vea [Objetos y características de subprocesos](threading-objects-and-features.md) e [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md).  
+Los cinco primeros artículos de esta sección están diseñados para ayudarle a determinar cuándo usar un subproceso administrado y para explicar algunas características básicas. Para obtener información sobre las clases que proporcionan características adicionales, vea [Objetos y características de subprocesos](threading-objects-and-features.md) e [Información general sobre los primitivos de sincronización](overview-of-synchronization-primitives.md).  
   
- En el resto de los temas de esta sección se tratan cuestiones más avanzadas, incluida la interacción del subproceso administrado con el sistema operativo Windows.  
+ En el resto de los artículos de esta sección se describen temas más avanzados, incluida la interacción del subproceso administrado con el sistema operativo Windows.  
   
 > [!NOTE]
-> En .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
+> A partir de .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>En esta sección
 
@@ -31,7 +31,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  Se explican las ventajas y desventajas de varios subprocesos y se describen los escenarios en los que puede crear subprocesos o utilizar subprocesos del grupo de subprocesos.  
   
  [Excepciones en subprocesos administrados](exceptions-in-managed-threads.md)  
- Se describe el comportamiento de las excepciones no controladas en subprocesos de distintas versiones de .NET Framework, en particular las situaciones que pueden provocar la finalización de la aplicación.  
+ Se describe el comportamiento de las excepciones no controladas en subprocesos de distintas versiones de .NET, en concreto las situaciones que pueden provocar la finalización de la aplicación.  
   
  [Sincronizar datos para subprocesamiento múltiple](synchronizing-data-for-multithreading.md)  
  Se describen las estrategias de sincronización de datos en las clases que se utilizarán con varios subprocesos.  
@@ -48,7 +48,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
 ## <a name="reference"></a>Referencia
 
  <xref:System.Threading.Thread>  
- Proporciona documentación de referencia para la clase **Thread**, que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
+ Proporciona documentación de referencia para la clase **Thread** , que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Proporciona una manera segura de implementar multithreading junto con objetos de interfaz de usuario.  
@@ -62,4 +62,4 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  Se describen los problemas comunes con multithreading y las estrategias para evitar problemas.  
   
  [Programación en paralelo](../parallel-programming/index.md)  
- Describe la biblioteca TPL y PLINQ, que simplifican significativamente el trabajo de crear aplicaciones de .NET Framework asincrónicas y multiproceso.
+ Se describe la biblioteca TPL y PLINQ, que simplifican considerablemente el trabajo de crear aplicaciones de .NET asincrónicas y multiproceso.

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555925"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188567"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 
@@ -59,7 +59,7 @@ La utilización de un almacenamiento aislado permite que las aplicaciones que no
 
 Los administradores pueden limitar la cantidad de almacenamiento aislado de que disponen un usuario o una aplicación, basándose en un nivel de confianza adecuado. Además, los administradores pueden quitar los datos que se conservan de un usuario por completo. Para crear o tener acceso al almacenamiento aislado, el código debe disponer del permiso <xref:System.Security.Permissions.IsolatedStorageFilePermission> correspondiente.
 
-El código debe tener todos los derechos del sistema operativo de plataforma nativa necesarios para tener acceso al almacenamiento aislado. Se deben cumplir las listas de control de acceso (ACL) que controlan qué usuarios tienen derechos para usar el sistema de archivos. Las aplicaciones de .NET Framework ya tienen los derechos de sistema operativo para tener acceso al almacenamiento aislado a menos que lleven a cabo una suplantación (específica de plataforma). En ese caso, la aplicación tiene la responsabilidad de garantizar que la identidad del usuario suplantado disponga de los derechos de sistema operativo adecuados para tener acceso al almacenamiento aislado. Este acceso proporciona una forma cómoda para que el código que se ejecuta o se descarga desde Web lea y escriba en un área de almacenamiento relacionada con un usuario concreto.
+El código debe tener todos los derechos del sistema operativo de plataforma nativa necesarios para tener acceso al almacenamiento aislado. Se deben cumplir las listas de control de acceso (ACL) que controlan qué usuarios tienen derechos para usar el sistema de archivos. Las aplicaciones de .NET ya tienen los derechos de sistema operativo para acceder al almacenamiento aislado a menos que realicen la suplantación (específica de la plataforma). En ese caso, la aplicación tiene la responsabilidad de garantizar que la identidad del usuario suplantado disponga de los derechos de sistema operativo adecuados para tener acceso al almacenamiento aislado. Este acceso proporciona una forma cómoda para que el código que se ejecuta o se descarga desde Web lea y escriba en un área de almacenamiento relacionada con un usuario concreto.
 
 Para controlar el acceso al almacenamiento aislado, Common Language Runtime usa objetos <xref:System.Security.Permissions.IsolatedStorageFilePermission> . Cada objeto tiene propiedades que especifican los valores siguientes:
 
@@ -195,7 +195,7 @@ En ocasiones resulta útil comprobar un cambio en el almacenamiento aislado usan
 
 ## <a name="creating-enumerating-and-deleting-isolated-storage"></a>Crear, enumerar y eliminar almacenamiento aislado
 
-.NET Framework proporciona tres clases en el espacio de nombres <xref:System.IO.IsolatedStorage> para ayudar a realizar tareas relacionadas con el almacenamiento aislado:
+.NET proporciona tres clases del espacio de nombres <xref:System.IO.IsolatedStorage> para ayudar a realizar tareas relacionadas con el almacenamiento aislado:
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>deriva de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> y proporciona administración básica de archivos de aplicación y ensamblado almacenados. Una instancia de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa un único almacén ubicado en el sistema de archivos.
 

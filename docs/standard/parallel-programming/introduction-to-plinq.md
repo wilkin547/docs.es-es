@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 37414c7963a3803518b41a5c6d262740313e2b37
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662464"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925355"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
@@ -109,7 +109,7 @@ En la ilustración siguiente se muestra la diferencia entre `foreach` y <xref:Sy
 
 ## <a name="cancellation"></a>Cancelación
 
-PLINQ se integra con los tipos de cancelación en .NET Framework 4. (Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../threading/cancellation-in-managed-threads.md)). Por lo tanto, a diferencia de las consultas LINQ to Objects secuenciales, las consultas PLINQ se pueden cancelar. Para crear una consulta PLINQ cancelable, use el operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la consulta y proporcione una instancia <xref:System.Threading.CancellationToken> como argumento. Cuando la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token se establece en true, PLINQ lo tendrá en cuenta, detendrá el procesamiento de todos los subprocesos e iniciará <xref:System.OperationCanceledException>.
+PLINQ se integra con los tipos de cancelación en .NET. (Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../threading/cancellation-in-managed-threads.md)). Por lo tanto, a diferencia de las consultas LINQ to Objects secuenciales, las consultas PLINQ se pueden cancelar. Para crear una consulta PLINQ cancelable, use el operador <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> en la consulta y proporcione una instancia <xref:System.Threading.CancellationToken> como argumento. Cuando la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token se establece en true, PLINQ lo tendrá en cuenta, detendrá el procesamiento de todos los subprocesos e iniciará <xref:System.OperationCanceledException>.
 
 Es posible que una consulta PLINQ siga procesando algunos elementos una vez establecido el token de cancelación.
 

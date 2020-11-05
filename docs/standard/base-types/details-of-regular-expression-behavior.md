@@ -7,18 +7,18 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - regular expressions, behavior
-- .NET Framework regular expressions, behavior
+- .NET regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 802c84bf93b3821459ab652e69a12fcc50280b9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a93e0e7bac782d9a4ce47c1586796b063563d2b6
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290557"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888677"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 
-El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.
+El motor de expresiones regulares de .NET es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET se implementan mediante un motor NFA tradicional.
 
 ## <a name="benefits-of-the-nfa-engine"></a>Ventajas del motor NFA
 
@@ -33,11 +33,11 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
 > [!NOTE]
 > Para obtener información sobre la reducción del rendimiento que causa un retroceso excesivo y sobre las maneras de crear una expresión regular para solucionarlo, consulte [Retroceso](backtracking-in-regular-expressions.md).
 
-## <a name="net-framework-engine-capabilities"></a>Funcionalidades del motor de .NET Framework
+## <a name="net-engine-capabilities"></a>Funcionalidades del motor de .NET
 
- Para aprovechar las ventajas de un motor NFA tradicional, el motor de expresiones regulares de .NET Framework incluye un conjunto completo de construcciones que permiten a los programadores dirigir el motor de retroceso. Estas construcciones se pueden usar para buscar coincidencias con mayor rapidez o para dar preferencia a determinadas expansiones frente a otras.
+ Para aprovechar las ventajas de un motor NFA tradicional, el motor de expresiones regulares de .NET incluye un conjunto completo de construcciones que permiten a los programadores dirigir el motor de retroceso. Estas construcciones se pueden usar para buscar coincidencias con mayor rapidez o para dar preferencia a determinadas expansiones frente a otras.
 
- Otras características del motor de expresiones regulares de .NET Framework son las siguientes:
+ Otras características del motor de expresiones regulares de .NET son las siguientes:
 
 - Cuantificadores diferidos: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. Estas construcciones le indican al motor de retroceso que busque primero el número mínimo de repeticiones. En cambio, los cuantificadores expansivos normales intentan buscar primero el número máximo de repeticiones. En el siguiente ejemplo se ilustra la diferencia entre ambos. Una expresión regular coincide con una oración que termina con un número, y hay un grupo de capturas diseñado para extraer ese número. La expresión regular `.+(\d+)\.` incluye el cuantificador expansivo `.+`, lo que hace que el motor de expresiones regulares capture solo el último dígito del número. En cambio, la expresión regular `.+?(\d+)\.` incluye el cuantificador diferido `.+?`, lo que hace que el motor de expresiones regulares capture el número entero.
 
@@ -149,7 +149,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
 |[Retroceso](backtracking-in-regular-expressions.md)|Proporciona información sobre la manera en que el retroceso de expresiones regulares se bifurca para buscar coincidencias alternativas.|
 |[Compilar y reutilizar](compilation-and-reuse-in-regular-expressions.md)|Proporciona información sobre cómo compilar y reutilizar expresiones regulares para aumentar el rendimiento.|
 |[Seguridad para subprocesos](thread-safety-in-regular-expressions.md)|Proporciona información sobre la seguridad para subprocesos de expresiones regulares y explica cuándo se debe sincronizar el acceso a objetos de expresión regular.|
-|[Expresiones regulares de .NET Framework](regular-expressions.md)|Proporciona información general sobre el aspecto del lenguaje de programación de expresiones regulares.|
+|[Expresiones regulares de .NET](regular-expressions.md)|Proporciona información general sobre el aspecto del lenguaje de programación de expresiones regulares.|
 |[Modelo de objetos de expresión regular](the-regular-expression-object-model.md)|Proporciona información y ejemplos de código que muestran cómo usar las clases de expresiones regulares.|
 |[Lenguaje de expresiones regulares: referencia rápida](regular-expression-language-quick-reference.md)|Ofrece información sobre el conjunto de caracteres, operadores y construcciones que se pueden usar para definir expresiones regulares.|
 

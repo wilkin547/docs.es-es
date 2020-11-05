@@ -10,14 +10,14 @@ helpviewer_keywords:
 - character classes
 - regular expressions, character classes
 - characters, matching syntax
-- .NET Framework regular expressions, character classes
+- .NET regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 619a32d98d697b3b1d461921bfe581acb720be68
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292103"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888729"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
 
@@ -48,7 +48,7 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
  .NET admite expresiones de sustracción de clases de caracteres, que permiten definir un conjunto de caracteres como el resultado de excluir una clase de caracteres de otra clase de caracteres. Para obtener más información, consulte [Sustracción de clases de caracteres](#CharacterClassSubtraction).  
   
 > [!NOTE]
-> Las clases que coinciden con los caracteres por categoría, como [\w](#WordCharacter) para que coincidan con caracteres alfabéticos o [\p{}](#CategoryOrBlock) para que coincidan con una categoría Unicode, que se basan en la clase <xref:System.Globalization.CharUnicodeInfo> para proporcionar información sobre las categorías de caracteres.  A partir de .NET Framework 4.6.2, las categorías de caracteres se basan en [el estándar Unicode, versión 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). Desde .NET Framework 4 hasta .NET Framework 4.6.1, se basan en el [estándar Unicode, versión 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+> Las clases que coinciden con los caracteres por categoría, como [\w](#WordCharacter) para que coincidan con caracteres alfabéticos o [\p{}](#CategoryOrBlock) para que coincidan con una categoría Unicode, que se basan en la clase <xref:System.Globalization.CharUnicodeInfo> para proporcionar información sobre las categorías de caracteres. En .NET Framework 4.6.2 y versiones posteriores, las categorías de caracteres se basan en el [estándar Unicode, versión 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/).
   
 <a name="PositiveGroup"></a>
 ## <a name="positive-character-group--"></a>Grupo de caracteres positivos: [ ]  
@@ -71,7 +71,7 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
 
 En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen clases de caracteres positivos.  
   
-|Modelo|Descripción|  
+|Patrón|Descripción|  
 |-------------|-----------------|  
 |`[aeiou]`|Coincide con todas las vocales.|  
 |`[\p{P}\d]`|Coincide con todos los caracteres de puntuación y de dígitos decimales.|  
@@ -84,7 +84,7 @@ En la tabla siguiente se recogen algunos de los patrones de expresiones regulare
   
  La expresión regular `gr[ae]y\s\S+?[\s|\p{P}]` se define de la siguiente manera:  
   
-|Modelo|Descripción|  
+|Patrón|Descripción|  
 |-------------|-----------------|  
 |`gr`|Coincide con los caracteres literales "gr".|  
 |`[ae]`|Coincide con una "a" o una "e".|  
@@ -134,7 +134,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen grupos de caracteres negativos.  
   
-|Modelo|Descripción|  
+|Patrón|Descripción|  
 |-------------|-----------------|  
 |`[^aeiou]`|Coincide con todos los caracteres excepto las vocales.|  
 |`[^\p{P}\d]`|Coincide con todos los caracteres excepto los caracteres de puntuación y de dígitos decimales.|  
@@ -182,7 +182,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  La construcción de expresión regular  
   
- `\p{`*nombre* `}`  
+ `\p{` *nombre* `}`  
   
  coincide con cualquier carácter que pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -226,7 +226,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="word-character-w"></a>Carácter de palabra: \w  
  `\w` coincide con cualquier carácter de palabra. Un carácter de palabra es un miembro de alguna de las categorías Unicode enumeradas en la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -260,7 +260,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
   
  En otras palabras, coincide con cualquier carácter excepto con los que figuran en las categorías Unicode de la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Ll|Letra, minúscula|  
 |Lu|Letra, mayúscula|  
@@ -293,7 +293,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="whitespace-character-s"></a>Carácter de espacio en blanco: \s  
  `\s` coincide con cualquier carácter de espacio en blanco. Equivale a las secuencias de escape y las categorías Unicode que figuran en la tabla siguiente.  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |`\f`|El carácter de avance de página, \u000C.|  
 |`\n`|El carácter de nueva línea, \u000A.|  
@@ -380,7 +380,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 ## <a name="supported-unicode-general-categories"></a>Categorías generales Unicode compatibles  
  Unicode define las categorías generales que se muestran en la tabla siguiente. Para obtener más información, consulte las secciones sobre el "formato de archivo UCD" y los "valores de categorías generales" en la [base de datos de caracteres Unicode](https://www.unicode.org/reports/tr44/).  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |`Lu`|Letra, mayúscula|  
 |`Ll`|Letra, minúscula|  
@@ -439,7 +439,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> o bien<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> O bien<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -483,7 +483,7 @@ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacte
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> o bien<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> O bien<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  

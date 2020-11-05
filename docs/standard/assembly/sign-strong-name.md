@@ -5,19 +5,19 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
-- assemblies [.NET Framework], signing
-- assemblies [.NET Framework], strong-named
+- assemblies [.NET], signing
+- assemblies [.NET], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d4888a12ac0494ca34eac3553a5374c3517fee38
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5192f7f372b9ef7927930c3599aebc6fca9f1f0f
+ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378615"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687648"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedimiento para firmar un ensamblado con un nombre seguro
 
@@ -28,7 +28,7 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 - Mediante la pestaña **Firma** del cuadro de diálogo **Propiedades** de un proyecto en Visual Studio. Esta es la forma más sencilla y cómoda de firmar un ensamblado con un nombre seguro.  
   
-- Mediante el uso de [Assembly Linker (Al.exe)](../../framework/tools/al-exe-assembly-linker.md) para vincular un módulo de código de .NET Framework (un archivo *.netmodule*) a un archivo de claves.  
+- Mediante el uso de [Assembly Linker (Al.exe)](../../framework/tools/al-exe-assembly-linker.md) para vincular un módulo de código de .NET Framework (un archivo *.netmodule* ) a un archivo de claves.  
   
 - Mediante el uso de atributos de ensamblado para insertar la información de nombre seguro en el código. Se puede usar el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> , dependiendo de dónde esté ubicado el archivo de claves que se va a utilizar.  
   
@@ -38,13 +38,13 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 ## <a name="create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Creación y firma de un ensamblado con un nombre seguro mediante el uso de Visual Studio  
   
-1. En el **Explorador de soluciones**, abra el menú contextual del proyecto y luego elija **Propiedades**.  
+1. En el **Explorador de soluciones** , abra el menú contextual del proyecto y luego elija **Propiedades**.  
   
 2. Elija la pestaña **Firma** .  
   
 3. Active la casilla **Firmar el ensamblado** .  
   
-4. En la casilla **Elija un archivo de clave de nombre seguro**, elija **Examinar** y, a continuación, navegue hasta el archivo de claves. Para crear un nuevo archivo de claves, elija **Nuevo** y escriba su nombre en el cuadro de diálogo **Crear clave de nombre seguro**.  
+4. En la casilla **Elija un archivo de clave de nombre seguro** , elija **Examinar** y, a continuación, navegue hasta el archivo de claves. Para crear un nuevo archivo de claves, elija **Nuevo** y escriba su nombre en el cuadro de diálogo **Crear clave de nombre seguro**.  
   
 > [!NOTE]
 > Para [retrasar la firma de un ensamblado](delay-sign.md), elija un archivo de clave pública.  
@@ -53,13 +53,13 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
   
 En [Símbolo del sistema para desarrolladores de Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md), escriba el comando siguiente:  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/out:** \<*assemblyName*> *\<moduleName>* **/keyfile:** \<*keyfileName*>  
 
 Dónde:  
 
-- *assemblyName* es el nombre del ensamblado seguro con firma (un archivo *.dll* o *.exe*) que emitirá la herramienta Assembly Linker.  
+- *assemblyName* es el nombre del ensamblado seguro con firma (un archivo *.dll* o *.exe* ) que emitirá la herramienta Assembly Linker.  
   
-- *moduleName* es el nombre de un módulo de código de .NET Framework (un archivo *.netmodule*) que incluye uno o varios tipos. Puede crear un archivo *.netmodule* si compila el código con el modificador `/target:module` en C# o Visual Basic.
+- *moduleName* es el nombre de un módulo de código de .NET Framework (un archivo *.netmodule* ) que incluye uno o varios tipos. Puede crear un archivo *.netmodule* si compila el código con el modificador `/target:module` en C# o Visual Basic.
   
 - *keyfileName* es el nombre del contenedor o del archivo que incluye el par de claves. Assembly Linker interpreta una ruta de acceso relativa en relación con el directorio actual.  
 
@@ -80,7 +80,7 @@ Para obtener más información sobre esta herramienta, consulte el tema sobre [A
    > [!NOTE]
    > Los compiladores de C# y Visual Basic emiten advertencias del compilador (CS1699 y BC41008, respectivamente) cuando encuentran el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> en el código fuente. Las advertencias se pueden omitir.  
 
-En el ejemplo siguiente se usa el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> con un archivo de claves denominado *keyfile.snk*, que está ubicado en el directorio en el cual se compila el ensamblado.  
+En el ejemplo siguiente se usa el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> con un archivo de claves denominado *keyfile.snk* , que está ubicado en el directorio en el cual se compila el ensamblado.  
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("keyfile.snk")];

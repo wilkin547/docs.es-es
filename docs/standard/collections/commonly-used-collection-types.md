@@ -4,21 +4,21 @@ description: Descubra los tipos de colecciones utilizados con frecuencia en .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- collections [.NET Framework], generic
-- objects [.NET Framework], grouping in collections
-- generics [.NET Framework], collections
+- collections [.NET], generic
+- objects [.NET], grouping in collections
+- generics [.NET], collections
 - IList interface, grouping data in collections
 - IDictionary interface, grouping data in collections
 - grouping data in collections, generic collection types
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: d0f2abc71524408c2bd2fa35a1a2dde0e664d273
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8677ba5b4404d49e2f6e07cda19ac437254a5897
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600846"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889392"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de colección utilizados normalmente
 Los tipos de colecciones son las variaciones comunes de las colecciones de datos, como tablas hash, colas, pilas, bolsas, diccionarios y listas.  
@@ -35,10 +35,10 @@ Los tipos de colecciones son las variaciones comunes de las colecciones de datos
   
 |Title|Descripción|  
 |-----------|-----------------|  
-|[Colecciones y estructuras de datos](index.md)|Describe los diversos tipos de colecciones disponibles en .NET Framework, incluidas las pilas, colas, listas, matrices y diccionarios.|  
+|[Colecciones y estructuras de datos](index.md)|Se describen los diversos tipos de colecciones disponibles en .NET, como las pilas, las colas, las listas, las matrices y los diccionarios.|  
 |[Tipos de las colecciones Hashtable y Dictionary](hashtable-and-dictionary-collection-types.md)|Describe las características de los tipos de diccionario basado en hash genéricos y no genéricos.|  
 |[Tipos de colecciones ordenadas](sorted-collection-types.md)|Describe las clases que proporcionan funcionalidad de ordenación para las listas y los conjuntos.|  
-|[Genéricos](../generics/index.md)|Describe la característica de genéricos, incluidas las colecciones, los delegados y las interfaces genéricos proporcionados por .NET Framework. Proporciona vínculos a la documentación de características para C#, Visual Basic y Visual C++, así como a tecnologías de apoyo como la reflexión.|  
+|[Genéricos](../generics/index.md)|Se describe la característica de los genéricos proporcionados por .NET, incluidos los delegados, las colecciones y las interfaces genéricas. Proporciona vínculos a la documentación de características para C#, Visual Basic y Visual C++, así como a tecnologías de apoyo como la reflexión.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Collections?displayProperty=nameWithType>  

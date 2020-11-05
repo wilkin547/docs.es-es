@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: dee5a4b54806bdadc18d759c5df7016da060fd75
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662854"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93062976"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -24,7 +24,7 @@ En las próximas siguientes se describen las herramientas disponibles para inves
 
 ### <a name="memory-performance-counters"></a>Contadores de rendimiento de memoria
 
-Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Generar perfiles en tiempo de ejecución](../../framework/debug-trace-profile/runtime-profiling.md). La categoría CLR Memory de contadores de rendimiento de .NET, tal y como se describe en [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md), ofrece información sobre el recolector de elementos no utilizados.
+Puede usar contadores de rendimiento para recopilar datos de rendimiento. Para obtener instrucciones, vea [Generar perfiles en tiempo de ejecución](../../framework/debug-trace-profile/runtime-profiling.md). La categoría CLR Memory de .NET de los contadores de rendimiento, como se describe en [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md), ofrece información sobre el recolector de elementos no utilizados.
 
 ### <a name="debugging-with-sos"></a>Depurar con SOS
 
@@ -34,7 +34,7 @@ Para instalar WinDbg, instale las Herramientas de depuración para Windows desde
 
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados
 
-El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de .NET Framework 4, los [eventos ETW de recolección de elementos no utilizados](../../framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:
+El Seguimiento de eventos para Windows (ETW) es un sistema de seguimiento que complementa la compatibilidad con la generación de perfiles y la depuración proporcionada por .NET. A partir de .NET Framework 4, los [eventos de ETW de recolección de elementos no utilizados](../../framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:
 
 - La generación de objetos que se recolecta.
 
@@ -52,7 +52,7 @@ Los generadores de perfiles pueden proporcionar información completa. Sin embar
 
 ### <a name="application-domain-resource-monitoring"></a>Supervisión de recursos de dominio de aplicación
 
-A partir de .NET Framework 4, la supervisión de recursos de dominio de aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de aplicación. Para más información, consulte [Supervisión de recursos de dominio de aplicación](app-domain-resource-monitoring.md).
+A partir de .NET Framework 4, la supervisión de recursos del dominio de la aplicación (ARM) permite a los anfitriones supervisar el uso de la CPU y la memoria por parte del dominio de la aplicación. Para más información, consulte [Supervisión de recursos de dominio de aplicación](app-domain-resource-monitoring.md).
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionar problemas de rendimiento
 
@@ -182,7 +182,7 @@ Es probable que la generación 0 tenga un número mayor de objetos en un sistema
 
 El uso de CPU será elevado durante una recolección de elementos no utilizados. Si se dedica una cantidad significativa de tiempo de proceso a una recolección de elementos no utilizados, el número de recolecciones es demasiado frecuente o la recolección está durando demasiado. Una proporción de asignación de objetos mayor en el montón administrado hace que la recolección de elementos no utilizados se realice con más frecuencia. Al disminuir la proporción de asignación se reduce la frecuencia de las recolecciones de elementos no utilizados.
 
-Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para más información, consulte [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
+Puede supervisar las proporciones de asignación mediante el contador de rendimiento `Allocated Bytes/second`. Para obtener más información, vea [Contadores de rendimiento en .NET Framework](../../framework/debug-trace-profile/performance-counters.md).
 
 La duración de una recolección suele depender del número de objetos que sobrevivan después de la asignación. El recolector de elementos no utilizados debe pasar por una gran cantidad de memoria si hay que recolectar muchos objetos. El trabajo para compactar los supervivientes lleva mucho tiempo. Para determinar cuántos objetos se controlaron durante una recolección, establezca un punto de interrupción en el depurador al final de una recolección de elementos no utilizados para una generación especificada.
 
@@ -230,7 +230,7 @@ En el procedimiento siguiente se describe cómo establecer un punto de interrupc
 
   Este comando fuerza una interrupción si **RestartEE** se ejecuta una vez recuperados los objetos de generación 2 para la recolección de elementos no utilizados.
 
-  En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.
+  En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE** , por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.
 
 ## <a name="performance-check-procedures"></a>Procedimientos para comprobar el rendimiento
 
@@ -282,7 +282,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada
 
-1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):
+1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones ( **pe** ):
 
     **!pe**
 
@@ -330,7 +330,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   o bien
 
-- Use el comando **vmstat**:
+- Use el comando **vmstat** :
 
   **!vmstat**
 
@@ -352,7 +352,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 1. Inicie el Administrador de tareas de Windows.
 
-2. En la pestaña **Rendimiento**, busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).
+2. En la pestaña **Rendimiento** , busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema** ).
 
     Si el **Total** se aproxima al **Límite** hay poca memoria física.
 

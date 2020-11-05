@@ -6,19 +6,19 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], about globalization
+- globalization [.NET], about globalization
 - global applications, globalization
-- international applications [.NET Framework], globalization
+- international applications [.NET], globalization
 - world-ready applications, globalization
-- application development [.NET Framework], globalization
+- application development [.NET], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: adc617362cf3ba07ff63f1095968e2bd88df88d9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66ed197f102583553112083e3a21f89e33cd3e3f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291921"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064176"
 ---
 # <a name="globalization"></a>Globalización
 
@@ -102,7 +102,7 @@ Normalmente, las cadenas ordenadas que se muestran en la interfaz de usuario se 
 
 La comparación de cadenas según la referencia cultural se define mediante el objeto <xref:System.Globalization.CompareInfo>, que devuelve la propiedad <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> de cada referencia cultural. Las comparaciones de cadenas según la referencia cultural que usan las sobrecargas del método <xref:System.String.Compare%2A?displayProperty=nameWithType> usan también el objeto <xref:System.Globalization.CompareInfo>.
 
-.NET usa tablas para realizar ordenaciones según la referencia cultural de los datos de las cadenas. El contenido de estas tablas, que contienen datos en prioridades de ordenación y normalización de cadenas, viene determinado por la versión del estándar Unicode que se implementa mediante una versión concreta de .NET. En la tabla siguiente se enumeran las versiones de Unicode implementadas por las versiones de .NET Framework especificadas y .NET Core. Tenga en cuenta que esta lista de versiones compatibles de Unicode se aplica solo a la comparación y ordenación de caracteres; no se aplica a la clasificación de caracteres Unicode por categoría. Para obtener más información, consulte la sección "Las cadenas y el estándar Unicode" en el artículo <xref:System.String>.
+.NET usa tablas para realizar ordenaciones según la referencia cultural de los datos de las cadenas. El contenido de estas tablas, que contienen datos en prioridades de ordenación y normalización de cadenas, viene determinado por la versión del estándar Unicode que se implementa mediante una versión concreta de .NET. En la tabla siguiente se enumeran las versiones de Unicode implementadas por las versiones de .NET especificadas. Esta lista de versiones de Unicode compatibles solo se aplica a la comparación y ordenación de caracteres; no se aplica a la clasificación de caracteres Unicode por categoría. Para obtener más información, consulte la sección "Las cadenas y el estándar Unicode" en el artículo <xref:System.String>.
 
 |Versión de .NET Framework|Sistema operativo|Versión de Unicode|
 |----------------------------|----------------------|---------------------|
@@ -112,9 +112,9 @@ La comparación de cadenas según la referencia cultural se define mediante el o
 |.NET Framework 4|Todos los sistemas operativos|Unicode 5.0|
 |.NET Framework 4.5 y versiones posteriores en Windows 7|Unicode 5.0|
 |.NET Framework 4.5 y versiones posteriores en Windows 8 y sistemas operativos posteriores|Unicode 6.3.0|
-|.NET Core (todas las versiones)|Depende de la versión del estándar Unicode compatible con el sistema operativo subyacente.|
+|.NET Core, y .NET 5 y versiones posteriores|Depende de la versión del estándar Unicode compatible con el sistema operativo subyacente.|
 
-A partir de .NET Framework 4.5 y en todas las versiones de .NET Core, la ordenación y la comparación de cadenas dependen del sistema operativo. .NET Framework 4.5 y las versiones posteriores en Windows 7 recuperan los datos de sus propias tablas que implementan Unicode 5.0. .NET Framework 4.5 y las versiones posteriores en Windows 8 y ediciones subsiguientes recuperan los datos de tablas del sistema operativo que implementan Unicode 6.3. En .NET Core, la versión admitida de Unicode depende del sistema operativo subyacente. Si serializa datos ordenados según la referencia cultural, puede usar la clase <xref:System.Globalization.SortVersion> para determinar cuándo se deben ordenar los datos serializados de forma que sea coherente con el criterio de ordenación del sistema operativo y de .NET. Para obtener un ejemplo, consulte el tema de la clase <xref:System.Globalization.SortVersion>.
+A partir de .NET Framework 4.5 y en todas las versiones de .NET Core, .NET 5 y versiones posteriores, la ordenación y la comparación de cadenas dependen del sistema operativo. .NET Framework 4.5 y las versiones posteriores que se ejecutan en Windows 7 recuperan los datos de sus propias tablas que implementan Unicode 5.0. .NET Framework 4.5 y las versiones posteriores que se ejecutan en Windows 8 y versiones posteriores recuperan los datos de tablas del sistema operativo que implementan Unicode 6.3. En .NET Core, y .NET 5 y versiones posteriores, la versión admitida de Unicode depende del sistema operativo subyacente. Si serializa datos ordenados según la referencia cultural, puede usar la clase <xref:System.Globalization.SortVersion> para determinar cuándo se deben ordenar los datos serializados de forma que sea coherente con el criterio de ordenación del sistema operativo y de .NET. Para obtener un ejemplo, consulte el tema de la clase <xref:System.Globalization.SortVersion>.
 
 Si la aplicación realiza ordenaciones extensas específicas de la referencia cultural de los datos de cadena, puede trabajar con la clase <xref:System.Globalization.SortKey> para comparar cadenas. Un criterio de ordenación refleja las prioridades de ordenación específicas de la referencia cultural, incluidas las prioridades alfabéticas, de mayúsculas y minúsculas, y diacríticas de una cadena determinada. Dado que las comparaciones que usan criterios de ordenación son binarias, son más rápidas que las comparaciones que usan un objeto <xref:System.Globalization.CompareInfo> de forma implícita o explícita. Para crear un criterio de ordenación específico de la referencia cultural para una cadena determinada, pase la cadena al método <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>.
 

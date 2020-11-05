@@ -2,12 +2,12 @@
 title: 'Serialización de tipos: .NET'
 description: Obtenga información sobre cómo .NET serializa los tipos en una representación nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706271"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188398"
 ---
 # <a name="type-marshaling"></a>Serialización de tipos
 
@@ -87,7 +87,7 @@ Cuando se llama a métodos en objetos COM en .NET, el runtime de .NET cambia las
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |
 | `string`  | `BSTR`                         |
-| Tipos delegados | `_Delegate*` en .NET Framework. No permitido en .NET Core. |
+| Tipos delegados | `_Delegate*` en .NET Framework. No se permite en .NET Core, ni en .NET 5 y versiones posteriores. |
 | `System.Drawing.Color` | `OLECOLOR`        |
 | Matriz de .NET | `SAFEARRAY`                   |
 | `string[]` | `SAFEARRAY` de `BSTR`        |

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: abf31ea69af6a85140efb783959a9a586ef6a59e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5033cc24fce5fc17a950e4797de1ef4071e2b98a
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278004"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925381"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Procedimiento para iterar directorios con PLINQ
 
@@ -35,7 +35,7 @@ La segunda consulta utiliza los métodos estáticos <xref:System.IO.Directory.En
   
  Cuando se usa <xref:System.IO.Directory.GetFiles%2A>, asegúrese de que tiene suficientes permisos en todos los directorios del árbol. De lo contrario, se producirá una excepción y no se devolverá ningún resultado. Cuando se usa <xref:System.IO.Directory.EnumerateDirectories%2A> en una consulta PLINQ, resulta problemático controlar las excepciones de E/S de una forma correcta que le permita continuar la iteración. Si el código debe administrar E/S o excepciones de acceso no autorizado, debe considerar el enfoque descrito en [Procedimiento Iteración de directorios de archivos con la clase Parallel](how-to-iterate-file-directories-with-the-parallel-class.md).  
   
- Si la latencia de E/S es un problema, por ejemplo con E/S de archivos a través de una red, considere la posibilidad de usar una de las técnicas de E/S asincrónicas descritas en [TPL y la programación asincrónica tradicional de .NET Framework](tpl-and-traditional-async-programming.md) y en esta [entrada de blog ](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
+ Si la latencia de E/S es un problema (por ejemplo, con E/S de archivos a través de una red), valore la posibilidad de usar una de las técnicas de E/S asincrónicas descritas en [TPL y la programación asincrónica tradicional de .NET Framework](tpl-and-traditional-async-programming.md) y en esta [entrada de blog](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Event-based Asynchronous Pattern
 - ProgressChangedEventArgs class
 - BackgroundWorker component
-- events [.NET Framework], asynchronous
+- events [.NET], asynchronous
 - AsyncOperationManager class
-- threading [.NET Framework], asynchronous features
+- threading [.NET], asynchronous features
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: c235a838504889a105ef98df47f7373a145503da
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b9c3edeb468445e6f7a58ead194559bed5636579
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289452"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92888859"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidir cuándo implementar el modelo asincrónico basado en eventos
 
-El modelo asincrónico basado en eventos proporciona un modelo para exponer el comportamiento asincrónico de una clase. Con la incorporación de este patrón, .NET Framework define dos modelos para exponer el comportamiento asincrónico: el modelo asincrónico basado en la interfaz <xref:System.IAsyncResult?displayProperty=nameWithType> y el modelo basado en eventos. En este tema se describe cuándo es adecuado permitirle implementar ambos modelos.
+El modelo asincrónico basado en eventos proporciona un modelo para exponer el comportamiento asincrónico de una clase. Con la introducción de este modelo, .NET define dos modelos para exponer el comportamiento asincrónico: el modelo asincrónico basado en la interfaz <xref:System.IAsyncResult?displayProperty=nameWithType> y el modelo basado en eventos. En este artículo se describe cuándo es adecuado implementarlos.
 
 Para obtener más información sobre la programación asincrónica con la interfaz <xref:System.IAsyncResult>, vea [Modelo de programación asincrónica (APM)](asynchronous-programming-model-apm.md).
 

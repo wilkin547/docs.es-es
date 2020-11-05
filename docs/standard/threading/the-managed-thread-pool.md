@@ -9,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET], thread pool
 - threading [.NET], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-ms.openlocfilehash: 2671ce7c9721b15de8a3805da27040e973a62804
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 099670f8451e9e2cf78b372d3a4d393882a30407
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223798"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188697"
 ---
 # <a name="the-managed-thread-pool"></a>Grupo de subprocesos administrado
 
@@ -40,7 +40,7 @@ Para más información, consulte [Excepciones en subprocesos administrados](exce
   
 ### <a name="maximum-number-of-thread-pool-threads"></a>Número máximo de subprocesos del grupo de subprocesos
 
-El número de operaciones que se pueden poner en cola en el grupo de subprocesos está limitado únicamente por la memoria disponible. Sin embargo, el grupo de subprocesos limita el número de subprocesos que pueden estar activos en el proceso de forma simultánea. Si todos los subprocesos del grupo de subprocesos están ocupados, los elementos de trabajo adicionales se pondrán en cola hasta que estén disponibles subprocesos para ejecutarlos. A partir de .NET Framework 4, el tamaño predeterminado del grupo de subprocesos de un proceso depende de varios factores, como el tamaño del espacio de direcciones virtuales. Un proceso puede llamar al método <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> para determinar el número de subprocesos.  
+El número de operaciones que se pueden poner en cola en el grupo de subprocesos está limitado únicamente por la memoria disponible. Sin embargo, el grupo de subprocesos limita el número de subprocesos que pueden estar activos en el proceso de forma simultánea. Si todos los subprocesos del grupo de subprocesos están ocupados, los elementos de trabajo adicionales se pondrán en cola hasta que estén disponibles subprocesos para ejecutarlos. El tamaño predeterminado del grupo de subprocesos de un proceso depende de varios factores, como el tamaño del espacio de direcciones virtuales. Un proceso puede llamar al método <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> para determinar el número de subprocesos.  
   
 El número máximo de subprocesos se puede controlar con los métodos <xref:System.Threading.ThreadPool.GetMaxThreads%2A?displayProperty=nameWithType> y <xref:System.Threading.ThreadPool.SetMaxThreads%2A?displayProperty=nameWithType>.  
 
@@ -54,14 +54,14 @@ El grupo de subprocesos ofrece nuevos subprocesos de trabajo o subprocesos de fi
 > [!NOTE]
 > Cuando la demanda es baja, el número real de subprocesos del grupo de subprocesos puede descender por debajo de los valores mínimos.  
   
-Cuando se alcanza el mínimo, el grupo de subprocesos puede crear subprocesos adicionales o esperar hasta que se completen algunas tareas. A partir de .NET Framework 4, el grupo de subprocesos crea y destruye subprocesos de trabajo para optimizar el rendimiento, definido como el número de tareas que se completan por unidad de tiempo. Si hay demasiados pocos subprocesos, puede que los recursos disponibles no se usen de manera óptima, mientras que si hay demasiados subprocesos, puede aumentar la contención de recursos.  
+Cuando se alcanza el mínimo, el grupo de subprocesos puede crear subprocesos adicionales o esperar hasta que se completen algunas tareas. El grupo de subprocesos crea y destruye subprocesos de trabajo para optimizar el rendimiento, que se define como el número de tareas que se completan por unidad de tiempo. Si hay demasiados pocos subprocesos, puede que los recursos disponibles no se usen de manera óptima, mientras que si hay demasiados subprocesos, puede aumentar la contención de recursos.  
   
 > [!CAUTION]
 > Puede utilizar el método <xref:System.Threading.ThreadPool.SetMinThreads%2A?displayProperty=nameWithType> para aumentar el número mínimo de subprocesos inactivos. Sin embargo, aumentar innecesariamente estos valores puede causar problemas de rendimiento. Si se inician demasiadas tareas al mismo tiempo, puede que todas ellas parezcan funcionar con lentitud. En la mayoría de los casos, el grupo de subprocesos funciona mejor con su propio algoritmo de asignación de subprocesos.  
 
 ## <a name="using-the-thread-pool"></a>Uso del grupo de subprocesos
 
-A partir de .NET Framework 4, la manera más fácil de usar el grupo de subprocesos es utilizar la [Biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md). De forma predeterminada, los tipos de biblioteca TPL, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, usan subprocesos del grupo de subprocesos para ejecutar tareas.
+La manera más fácil de usar el grupo de subprocesos consiste en utilizar la [biblioteca TPL](../parallel-programming/task-parallel-library-tpl.md). De forma predeterminada, los tipos de biblioteca TPL, como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, usan subprocesos del grupo de subprocesos para ejecutar tareas.
 
 También puede utilizar el grupo de subprocesos llamando a <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> desde código administrado (o [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) desde código no administrado) y pasando un delegado <xref:System.Threading.WaitCallback?displayProperty=nameWithType> que represente al método que realiza la tarea.
 

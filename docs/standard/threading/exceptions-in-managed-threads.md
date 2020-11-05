@@ -1,28 +1,26 @@
 ---
 title: Excepciones en subprocesos administrados
-description: Vea cómo se controlan las excepciones no controladas en .NET. Con .NET versión 2.0,la mayoría de las excepciones de subprocesos no controladas continúan naturalmente y conducen a la finalización de la aplicación.
+description: Vea cómo se controlan las excepciones no controladas en .NET. La mayoría de las excepciones de subprocesos no controladas continúan naturalmente y conducen a la finalización de la aplicación.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - unhandled exceptions,in managed threads
-- threading [.NET Framework],unhandled exceptions
-- threading [.NET Framework],exceptions in managed threads
+- threading [.NET],unhandled exceptions
+- threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: b7cf7e94156eedc82c7ec5c863ee013b75d22e73
+ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767889"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93188333"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
-A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
+
+Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.
   
-> [!NOTE]
-> Se trata de un cambio significativo con respecto a las versiones 1.0 y 1.1 de .NET Framework, que ofrecen un mecanismo de seguridad para muchas excepciones no controladas; por ejemplo, excepciones no controladas en subprocesos de grupo. Vea [Cambio con respecto a las versiones anteriores](#ChangeFromPreviousVersions) más adelante en este tema.  
-  
- Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:  
+Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:  
   
 - Se genera <xref:System.Threading.ThreadAbortException> en un subproceso, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
   
@@ -38,13 +36,13 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
 > Es posible que el runtime inicie una excepción no controlada antes de que un código administrado haya tenido ocasión de instalar un controlador de excepciones. Aunque el código administrado no tuviera ninguna oportunidad de controlar la excepción, esta puede continuar normalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Exponer problemas de subprocesamiento durante el desarrollo  
- Cuando se permite que los subprocesos se interrumpan silenciosamente, sin finalizar la aplicación, graves problemas de programación pueden pasar inadvertidos. Se trata de un problema concreto de servicios y otras aplicaciones que se ejecutan durante períodos prolongados. A medida que los subprocesos dejan de ejecutarse, el estado del programa se daña gradualmente. Puede que el rendimiento de la aplicación se degrade o que la aplicación deje de responder.  
+ Cuando se permite que los subprocesos se interrumpan silenciosamente, sin finalizar la aplicación, graves problemas de programación pueden pasar inadvertidos. Se trata de un problema concreto de los servicios y otras aplicaciones que se ejecutan durante períodos prolongados. A medida que los subprocesos dejan de ejecutarse, el estado del programa se daña gradualmente. Puede que el rendimiento de la aplicación se degrade o que la aplicación deje de responder.  
   
  Si se permite que las excepciones no controladas en subprocesos continúen naturalmente hasta que el sistema operativo finalice el programa, estos problemas se exponen durante el desarrollo y pruebas. Los informes de errores en la finalización de programas admiten la depuración.  
   
-<a name="ChangeFromPreviousVersions"></a>
-## <a name="change-from-previous-versions"></a>Cambio con respecto a las versiones anteriores  
- El cambio más significativo está relacionado con los subprocesos administrados. En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime ofrece un mecanismo de seguridad para las excepciones no controladas en las situaciones siguientes:  
+## <a name="change-from-previous-versions"></a>Cambio con respecto a las versiones anteriores
+
+En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime proporciona un mecanismo de seguridad para las excepciones no controladas en las situaciones siguientes:  
   
 - No hay ninguna excepción no controlada en un subproceso de grupo. Cuando una tarea inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego devuelve el subproceso al grupo de subprocesos.  
   
@@ -54,10 +52,11 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
  El estado en primer plano o en segundo plano de un subproceso administrado no afecta a este comportamiento.  
   
- En el caso de excepciones no controladas en subprocesos que se originan en código no administrado, la diferencia es más sutil. El cuadro de diálogo de adjuntos JIT del runtime -se adelanta al cuadro de diálogo del sistema operativo en el caso de excepciones no controladas en subprocesos que han pasado por código nativo. El proceso finaliza siempre.  
-  
-### <a name="migrating-code"></a>Migrar código  
- En general, el cambio expondrá problemas de programación anteriormente no reconocidos para que se puedan corregir. Pero, en algunos casos, los programadores podrían haber aprovechado el mecanismo de seguridad de runtime; por ejemplo, para finalizar subprocesos. Según la situación, deben plantearse una de las estrategias de migración siguientes:  
+ En el caso de excepciones no controladas en subprocesos que se originan en código no administrado, la diferencia es más sutil. El cuadro de diálogo de adjuntos JIT del runtime -se adelanta al cuadro de diálogo del sistema operativo en el caso de excepciones no controladas en subprocesos que han pasado por código nativo. El proceso finaliza siempre.
+
+### <a name="migration"></a>Migración
+
+Si va a migrar de .NET Framework 1.0 o 1.1, y ha aprovechado las ventajas del mecanismo de seguridad del entorno de ejecución, por ejemplo, para finalizar subprocesos, considere una de las estrategias de migración siguientes:  
   
 - Reestructurar el código para que el subproceso salga correctamente cuando se reciba una señal.  
   
@@ -65,17 +64,17 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
 - Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
   
- En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Instrucciones de diseño de excepciones](../design-guidelines/exceptions.md).  
+En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Instrucciones de diseño de excepciones](../design-guidelines/exceptions.md).  
   
-### <a name="application-compatibility-flag"></a>Marca de compatibilidad de aplicaciones  
- Como medida temporal de compatibilidad, los administradores pueden colocar una marca de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación. De ese modo, Common Language Runtime revierte al comportamiento de las versiones 1.0 y 1.1.  
+Como medida temporal de compatibilidad, los administradores pueden colocar una marca de compatibilidad en la sección `<runtime>` del archivo de configuración de la aplicación. De ese modo, Common Language Runtime revierte al comportamiento de las versiones 1.0 y 1.1.  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  
 ```  
   
-## <a name="host-override"></a>Invalidación de host  
- En la versión 2.0 de .NET Framework, un host no administrado puede usar la interfaz [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de la API de hospedaje para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime. Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.  
+## <a name="host-override"></a>Invalidación de host
+
+Un host no administrado puede usar la interfaz [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) de Hosting API para invalidar la directiva de excepciones no controladas predeterminada de Common Language Runtime. Se usa la función [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) para establecer la directiva de excepciones no controladas.  
   
 ## <a name="see-also"></a>Vea también
 

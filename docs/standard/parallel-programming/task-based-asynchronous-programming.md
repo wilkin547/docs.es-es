@@ -9,16 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 968da880fc7e0e811f5e8712ccb43726426a019e
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720168"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925251"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 
-La biblioteca TPL se basa en el concepto de *tarea*, que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:
+La biblioteca TPL se basa en el concepto de *tarea* , que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:
 
 - Un uso más eficaz y más escalable de los recursos del sistema.
 
@@ -28,7 +28,7 @@ La biblioteca TPL se basa en el concepto de *tarea*, que representa una operaci�
 
      Las tareas y el marco que se crea en torno a ellas proporcionan un amplio conjunto de API que admiten el uso de esperas, cancelaciones, continuaciones, control robusto de excepciones, estado detallado, programación personalizada, y más.
 
-Por estos dos motivos, en .NET Framework, TPL es la API preferida para escribir código multiproceso, asincrónico y paralelo.
+Por estos dos motivos, en .NET, TPL es la API preferida para escribir código multiproceso, asincrónico y en paralelo.
 
 ## <a name="creating-and-running-tasks-implicitly"></a>Crear y ejecutar tareas implícitamente
 
@@ -94,39 +94,27 @@ Cada tarea recibe un identificador entero que la identifica de manera inequívoc
 
 ## <a name="task-creation-options"></a>Opciones de creación de tareas
 
-La mayoría de las API que crean tareas proporcionan sobrecargas que aceptan un parámetro <xref:System.Threading.Tasks.TaskCreationOptions>. Al especificar una de estas opciones, se le está indicando al programador cómo se programa la tarea en el grupo de subprocesos. En la tabla siguiente se muestran las diversas opciones de creación de tareas.
+La mayoría de las API que crean tareas proporcionan sobrecargas que aceptan un parámetro <xref:System.Threading.Tasks.TaskCreationOptions>. Al especificar una o más de estas opciones, se le indica al programador de tareas cómo programar la tarea en el grupo de subprocesos. Las opciones se pueden combinar con una operación **OR** bit a bit.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> valor de parámetro|Descripción|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
-|<xref:System.Threading.Tasks.TaskCreationOptions.None>|Es la opción predeterminada si no se especifica ninguna opción. El programador usa su heurística predeterminada para programar la tarea.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que la tarea debe programarse de modo que las tareas creadas anteriormente tengan más posibilidades de ejecutarse antes y que las tareas posteriormente tengan más posibilidades de ejecutarse después.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Especifica que la tarea representa una operación de ejecución prolongada.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Especifica que una tarea debe crearse como un elemento secundario asociado de la tarea actual, si existe. Para más información, consulte [Tareas secundarias asociadas y desasociadas](attached-and-detached-child-tasks.md).|
-|<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Especifica que, si una tarea interna especifica la opción `AttachedToParent`, esa tarea no se convertirá en una tarea secundaria asociada.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Especifica que el programador de tareas para tareas creadas llamando a métodos como <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> desde dentro de una tarea determinada es el programador predeterminado en lugar del programador en el que se ejecuta esta tarea.|
-
-Las opciones pueden combinarse con una operación **OR**. En el ejemplo siguiente se muestra una tarea que tiene las opciones <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> y <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>.
+En el ejemplo siguiente se muestra una tarea que tiene las opciones <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning> y <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>.
 
 [!code-csharp[TPL_TaskIntro#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#03)]
 [!code-vb[TPL_TaskIntro#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#03)]
 
 ## <a name="tasks-threads-and-culture"></a>Tareas, subprocesos y referencia cultural
 
-Cada subproceso tiene asociada una referencia cultural asociada y una interfaz de usuario de referencia cultural, que está definida por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. La referencia cultural de un subproceso se usa en operaciones como dar formato, analizar, ordenar y comparar cadenas. La referencia cultural de la interfaz de usuario de un subproceso se usa en la búsqueda de recursos. Por lo general, a menos que especifique una referencia cultural predeterminada para todos los subprocesos de un dominio de aplicación usando las propiedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, la referencia cultural del sistema define la referencia cultural predeterminada y la referencia cultural de la interfaz de usuario de un subproceso. Si establece explícitamente la referencia cultural de un subproceso e inicia un nuevo subproceso, el nuevo subproceso no hereda la referencia cultural del subproceso que realiza la llamada; en su lugar, su referencia cultural es la referencia cultural predeterminada del sistema. El modelo de programación basado en tareas para las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6 siguen este procedimiento.
+Cada subproceso tiene asociada una referencia cultural y una interfaz de usuario de referencia cultural, que se definen mediante las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. La referencia cultural de un subproceso se usa en operaciones como dar formato, analizar, ordenar y comparar cadenas. La referencia cultural de la interfaz de usuario de un subproceso se usa en la búsqueda de recursos.
 
-> [!IMPORTANT]
-> Tenga en cuenta que la referencia cultural del subproceso que realiza la llamada como parte del contexto de una tarea se aplica a las aplicaciones *destinadas* a .NET Framework 4.6, no a las que *se ejecutan* en .NET Framework 4.6. Puede elegir como destino una versión determinada de .NET Framework al crear el proyecto en Visual Studio seleccionado esta versión en la lista desplegable situada en la parte superior del cuadro de diálogo **Nuevo proyecto** o fuera de Visual Studio puede usar el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Para las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6 o que no están destinadas a una versión específica de .NET Framework, la referencia cultural del subproceso en el que se ejecuta sigue determinando la referencia cultural de la tarea.
+A menos que especifique una referencia cultural predeterminada para todos los subprocesos de un dominio de la aplicación con las propiedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, la referencia cultural del sistema define la predeterminada y la de la interfaz de usuario de un subproceso. Si establece explícitamente la referencia cultural de un subproceso e inicia un nuevo subproceso, el nuevo subproceso no hereda la referencia cultural del subproceso que realiza la llamada; en su lugar, su referencia cultural es la referencia cultural predeterminada del sistema. Pero en la programación basada en tareas, las tareas usan la referencia cultural del subproceso que realiza la llamada, aunque la tarea se ejecute de forma asincrónica en otro subproceso.
 
-A partir de las aplicaciones destinadas a .NET Framework 4.6, cada tarea hereda la referencia cultural del subproceso que realiza la llamada, aunque la tarea se ejecute de forma asincrónica en un subproceso del grupo de subprocesos.
+Esto se muestra en el ejemplo siguiente. Cambia la referencia cultural actual de la aplicación al francés (Francia), o bien al inglés (Estados Unidos), si el francés (Francia) es la referencia cultural actual. Después, invoca un delegado llamado `formatDelegate` que devuelve algunos números con el formato de valores de moneda de la nueva referencia cultural. Si una tarea invoca el delegado de forma sincrónica o asincrónica, la tarea usa la referencia cultural del subproceso que realiza la llamada.
 
-Esto se muestra en el ejemplo siguiente. Usa el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> para elegir .NET Framework 4.6 como destino y cambia la referencia cultural actual de la aplicación a francés (Francia) o, si francés (Francia) es la referencia cultural actual, a inglés (Estados Unidos). Después, invoca un delegado llamado `formatDelegate` que devuelve algunos números con el formato de valores de moneda de la nueva referencia cultural. Tenga en cuenta si el delegado se ejecuta como una tarea tanto de forma sincrónica como asincrónica, devuelve el resultado esperado porque la tarea asincrónica hereda la referencia cultural del subproceso que realiza la llamada.
+:::code language="csharp" source="snippets/cs/asyncculture1.cs" id="1":::
 
-[!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
-[!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
+:::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
-Si utiliza Visual Studio, puede omitir el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> y seleccionar en su lugar .NET Framework 4.6 como destino al crear el proyecto en el cuadro de diálogo **Nuevo proyecto**.
-
-Para que la salida refleje el comportamiento de las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6, quite el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> del código fuente. La salida reflejará las convenciones de formato de la referencia cultural predeterminada del sistema, no la referencia cultural del subproceso que realiza la llamada.
+> [!NOTE]
+> En las versiones de .NET Framework anteriores a .NET Framework 4.6, la referencia cultural de una tarea viene determinada por la referencia cultural del subproceso en el que se *ejecuta* , no por la del *subproceso que realiza la llamada*. En el caso de las tareas asincrónicas, esto significa que la referencia cultural que usa la tarea podría ser diferente a la del subproceso que realiza la llamada.
 
 Para obtener más información sobre las tareas asincrónicas y la referencia cultural, consulte la sección "Referencia cultural y operaciones asincrónicas basadas en tareas" en el tema <xref:System.Globalization.CultureInfo>.
 

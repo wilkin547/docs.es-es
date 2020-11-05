@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SortedList class, grouping data in collections
 - grouping data in collections, SortedList collection type
 - SortedList collection type
-- collections [.NET Framework], SortedList collection type
+- collections [.NET], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-ms.openlocfilehash: 2d9d3744859eea1a09923980b3b4c57eca6bba97
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 339d247f3b7e775de740c6c1ce786b078441c699
+ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287944"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92889327"
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas
 
@@ -45,7 +45,7 @@ Para listas ordenadas o diccionarios que deben ser accesibles simultáneamente d
 > [!NOTE]
 > Para los valores que contienen sus propias claves (por ejemplo, registros de empleados que contienen un número de id. de empleado), puede derivar de la clase genérica <xref:System.Collections.ObjectModel.KeyedCollection%602> para crear una colección con clave que tenga algunas características de lista y algunas características de diccionario.
 
-A partir de .NET Framework 4, la clase <xref:System.Collections.Generic.SortedSet%601> proporciona un árbol que mantiene los datos ordenados después de las inserciones, eliminaciones y búsquedas. Esta clase y la clase <xref:System.Collections.Generic.HashSet%601> implementan la interfaz <xref:System.Collections.Generic.ISet%601>.
+A partir de .NET Framework 4, la clase <xref:System.Collections.Generic.SortedSet%601> proporciona un árbol de equilibrio automático que mantiene los datos ordenados después de las operaciones de inserción, eliminación y búsqueda. Esta clase y la clase <xref:System.Collections.Generic.HashSet%601> implementan la interfaz <xref:System.Collections.Generic.ISet%601>.
 
 ## <a name="see-also"></a>Vea también
 

@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-ms.openlocfilehash: 05d934b80e60a8630db5b70e16a07c014598487a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c66eae48df54b330843b4967f957264f2bddee1d
+ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599768"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92925316"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -45,7 +45,7 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
 ## <a name="limit-calls-to-thread-safe-methods"></a>Limitar las llamadas a métodos seguros para subprocesos  
- La mayoría de los métodos estáticos de .NET Framework son seguros para subprocesos y se les puede llamar simultáneamente desde varios subprocesos. Sin embargo, incluso en estos casos, la sincronización que esto supone puede conducir a una ralentización importante en la consulta.  
+ La mayoría de los métodos estáticos de .NET son seguros para subprocesos y se les puede llamar desde varios simultáneamente. Sin embargo, incluso en estos casos, la sincronización que esto supone puede conducir a una ralentización importante en la consulta.  
   
 > [!NOTE]
 > Puede comprobarlo si inserta algunas llamadas a <xref:System.Console.WriteLine%2A> en las consultas. Aunque este método se usa en los ejemplos de la documentación para fines de demostración, no debe usarlo en bucles paralelos a menos que sea necesario.  
@@ -69,7 +69,7 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
 ## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>Evitar la ejecución de bucles en paralelo en el subproceso de la interfaz de usuario  
  Es importante que la interfaz de usuario (IU) de la aplicación siga respondiendo. Si una operación contiene bastante trabajo para garantizar la paralelización, no se debería ejecutar en el subproceso de la interfaz de usuario.  Conviene descargarla para que se ejecute en un subproceso en segundo plano. Por ejemplo, si desea utilizar un bucle en paralelo para calcular datos que después se presentarán en un control de IU, considere ejecutar el bucle dentro de una instancia de la tarea en lugar de directamente en un controlador de eventos de IU.  Solo si el cálculo básico se ha completado se debería serializar la actualización de nuevo en el subproceso de la interfaz de usuario.  
   
- Si ejecuta bucles en paralelo en el subproceso de la interfaz de usuario, tenga cuidado de evitar la actualización de los controles de la interfaz de usuario desde el interior del bucle. Si se intenta actualizar los controles de la interfaz de usuario desde dentro de un bucle en paralelo que se está ejecutando en el subproceso de la interfaz de usuario, se pueden provocar daños en el estado, excepciones, retrasos en las actualizaciones e incluso interbloqueos, dependiendo de cómo se invoque la actualización de la interfaz de usuario. En el siguiente ejemplo, el bucle en paralelo bloquea el subproceso de la interfaz de usuario en el que se está ejecutando hasta que todas las iteraciones se completan. Sin embargo, si se está ejecutando una iteración del bucle en un subproceso en segundo plano (como puede hacer <xref:System.Threading.Tasks.Parallel.For%2A>), la llamada a Invoke produce que se envíe un mensaje al subproceso de la interfaz de usuario, que se bloquea mientras espera a que ese mensaje se procese. Puesto que se bloquea el subproceso de la interfaz de usuario cuando se ejecuta <xref:System.Threading.Tasks.Parallel.For%2A>, el mensaje puede no procesarse nunca y el subproceso de la interfaz de usuario se interbloquea.  
+ Si ejecuta bucles en paralelo en el subproceso de la interfaz de usuario, tenga cuidado de evitar la actualización de los controles de la interfaz de usuario desde el interior del bucle. Si se intenta actualizar los controles de la interfaz de usuario desde dentro de un bucle en paralelo que se está ejecutando en el subproceso de la interfaz de usuario, se pueden provocar daños en el estado, excepciones, retrasos en las actualizaciones e incluso interbloqueos, dependiendo de cómo se invoque la actualización de la interfaz de usuario. En el ejemplo siguiente, el bucle en paralelo bloquea el subproceso de la interfaz de usuario en el que se ejecuta hasta que se completan todas las iteraciones. Sin embargo, si se está ejecutando una iteración del bucle en un subproceso en segundo plano (como puede hacer <xref:System.Threading.Tasks.Parallel.For%2A>), la llamada a Invoke produce que se envíe un mensaje al subproceso de la interfaz de usuario, que se bloquea mientras espera a que ese mensaje se procese. Puesto que se bloquea el subproceso de la interfaz de usuario cuando se ejecuta <xref:System.Threading.Tasks.Parallel.For%2A>, el mensaje puede no procesarse nunca y el subproceso de la interfaz de usuario se interbloquea.  
   
  [!code-csharp[TPL_Pitfalls#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#02)]
  [!code-vb[TPL_Pitfalls#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#02)]  

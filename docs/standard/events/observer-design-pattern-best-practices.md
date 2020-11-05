@@ -3,18 +3,19 @@ title: Procedimientos recomendados para modelos de diseño de observador
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- observer design pattern [.NET Framework], best practices
-- best practices [.NET Framework], observer design pattern
+- observer design pattern [.NET], best practices
+- best practices [.NET], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
-ms.openlocfilehash: b4f8e568dcb6790dac1dc8fc5c969d6fa1367c4e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e75343e1ca1c7f69306ee45148f2dc0eec3585f
+ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288464"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93064085"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedimientos recomendados para modelos de diseño de observador
-En .NET Framework, el patrón de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  
+
+En .NET, el modelo de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  
   
 ## <a name="threading"></a>Subprocesos  
  Normalmente, para implementar el método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>, un proveedor agrega un observador determinado a una lista de suscriptores que se representa mediante un objeto de colección; por su parte, para implementar el método <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, el proveedor quita un observador determinado de la lista de suscriptores. Un observador puede llamar a estos métodos en cualquier momento. Además, dado que el contrato de proveedor/observador no especifica quién es el responsable de cancelar la suscripción después del método de devolución de llamada <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, el proveedor y el observador pueden intentar quitar el mismo miembro de la lista. Debido a esta posibilidad, ambos métodos <xref:System.IObservable%601.Subscribe%2A> y <xref:System.IDisposable.Dispose%2A> deben ser seguros para subprocesos. Normalmente, esto implica el uso de una [colección simultánea](../parallel-programming/data-structures-for-parallel-programming.md) o un bloqueo. Las implementaciones que no son seguras para subprocesos deben documentar explícitamente que no lo son.  
