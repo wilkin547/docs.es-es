@@ -63,7 +63,7 @@
         - name: 'Tipos de referencia que aceptan valores NULL: propuesta'
           href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
         - name: 'Tipos de referencias que aceptan valores NULL: especificación'
-          href: ../../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: Coincidencia de patrones recursiva
           href: ../../../../_csharplang/proposals/csharp-8.0/patterns.md
         - name: Métodos de interfaz predeterminados
@@ -88,6 +88,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/records.md
         - name: Instrucciones de nivel superior
           href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: 'Tipos de referencias que aceptan valores NULL: especificación'
+          href: ../../../../_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md
         - name: Mejoras de coincidencia de patrones
           href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
         - name: Establecedores de solo inicialización
