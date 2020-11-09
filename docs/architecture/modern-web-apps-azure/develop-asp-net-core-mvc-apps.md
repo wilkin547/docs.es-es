@@ -41,7 +41,7 @@ Si opta por crear su aplicación web mediante Razor Pages o las vistas de MVC, l
 
 ## <a name="mapping-requests-to-responses"></a>Asignación de solicitudes a respuestas
 
-En su núcleo, las aplicaciones ASP.NET Core asignan las solicitudes entrantes a las respuestas salientes. En un nivel bajo, esto se realiza mediante software intermedio y las aplicaciones y microservicios sencillos de ASP.NET Core pueden constar únicamente de software intermedio personalizado. Cuando se usa ASP.NET Core MVC, se puede trabajar en un cierto nivel superior y pensar en términos de _rutas_, _controladores_ y _acciones_. Cada solicitud entrante se compara con la tabla de enrutamiento de la aplicación y, si se encuentra una ruta coincidente, se llama al método de acción asociado (perteneciente a un controlador) para controlar la solicitud. Si no se encuentra ninguna ruta que coincida, se llama a un controlador de errores (en este caso, se devuelve un resultado de NotFound).
+En su núcleo, las aplicaciones ASP.NET Core asignan las solicitudes entrantes a las respuestas salientes. En un nivel bajo, esto se realiza mediante software intermedio y las aplicaciones y microservicios sencillos de ASP.NET Core pueden constar únicamente de software intermedio personalizado. Cuando se usa ASP.NET Core MVC, se puede trabajar en un cierto nivel superior y pensar en términos de _rutas_ , _controladores_ y _acciones_. Cada solicitud entrante se compara con la tabla de enrutamiento de la aplicación y, si se encuentra una ruta coincidente, se llama al método de acción asociado (perteneciente a un controlador) para controlar la solicitud. Si no se encuentra ninguna ruta que coincida, se llama a un controlador de errores (en este caso, se devuelve un resultado de NotFound).
 
 Las aplicaciones ASP.NET Core MVC pueden usar rutas convencionales, rutas de atributo o las dos. Las rutas convencionales se definen en el código, especificando _convenciones_ de enrutamiento con una sintaxis similar a la del ejemplo siguiente:
 
@@ -52,7 +52,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-En este ejemplo, se agregó una ruta con el nombre "default" a la tabla de enrutamiento. Define una plantilla de ruta con marcadores de posición para _controlador_, _acción_ e _identificador_. Los marcadores de posición de acción y controlador tienen el valor predeterminado especificado ("Home" e "Index", respectivamente), y el marcador de posición del identificador es opcional (en virtud de la aplicación de "?"). La convención que se define aquí indica que la primera parte de una solicitud se debe corresponder al nombre del controlador, la segunda parte a la acción y después, si es necesario, una tercera parte representará un parámetro de identificador. Las rutas convencionales normalmente se definen en un solo lugar para la aplicación, por ejemplo, en el método Configure de la clase Startup.
+En este ejemplo, se agregó una ruta con el nombre "default" a la tabla de enrutamiento. Define una plantilla de ruta con marcadores de posición para _controlador_ , _acción_ e _identificador_. Los marcadores de posición de acción y controlador tienen el valor predeterminado especificado ("Home" e "Index", respectivamente), y el marcador de posición del identificador es opcional (en virtud de la aplicación de "?"). La convención que se define aquí indica que la primera parte de una solicitud se debe corresponder al nombre del controlador, la segunda parte a la acción y después, si es necesario, una tercera parte representará un parámetro de identificador. Las rutas convencionales normalmente se definen en un solo lugar para la aplicación, por ejemplo, en el método Configure de la clase Startup.
 
 Las rutas de atributo se aplican directamente a los controladores y acciones, en lugar de especificarse globalmente. Esto tiene la ventaja de que son mucho más sencillas de detectar cuando se examina un método concreto, pero significa que la información de enrutamiento no se mantiene en un lugar de la aplicación. Con las rutas de atributo, se pueden especificar fácilmente varias rutas para una acción determinada, así como combinar rutas entre controladores y acciones. Por ejemplo:
 
@@ -85,7 +85,7 @@ Razor Pages no usa el enrutamiento de atributos. Puede especificar información 
 @page "{id:int}"
 ```
 
-En el ejemplo anterior, la página en cuestión coincidiría con una ruta con un parámetro `id` de número entero. Por ejemplo, la página *Products.cshtml*, que se encuentra en la raíz de `/Pages`, tendría esta ruta:
+En el ejemplo anterior, la página en cuestión coincidiría con una ruta con un parámetro `id` de número entero. Por ejemplo, la página *Products.cshtml* , que se encuentra en la raíz de `/Pages`, tendría esta ruta:
 
 ```csharp
 "/Products/123"

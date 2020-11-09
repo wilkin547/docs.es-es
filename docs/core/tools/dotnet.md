@@ -2,12 +2,12 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para la CLI de .NET Core) y su uso.
 ms.date: 02/13/2020
-ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e182e1b8dff725c479297f7f1587ceaccf2942f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537670"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281628"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
@@ -262,7 +262,7 @@ dotnet myapp.dll
 
   Especifica la ubicación de los runtime de .NET Core, si no están instalados en la ubicación predeterminada. La ubicación predeterminada en Windows es `C:\Program Files\dotnet`. La ubicación predeterminada en Linux y macOS es `/usr/share/dotnet`. Esta variable de entorno solo se usa cuando se ejecutan aplicaciones a través de archivos ejecutables generados (hosts de aplicaciones). `DOTNET_ROOT(x86)` se usa en su lugar cuando se ejecuta un archivo ejecutable de 32 bits en un sistema operativo de 64 bits.
 
-- `DOTNET_PACKAGES`
+- `NUGET_PACKAGES`
 
   La carpeta de paquetes globales. Si no se establece, el valor predeterminado es `~/.nuget/packages` en Unix o `%userprofile%\.nuget\packages` en Windows.
 

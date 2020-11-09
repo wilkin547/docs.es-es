@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: d008fbeabf58a3dddf1ee96fc655b6a685f8edfd
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223589"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329799"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "92223589"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Plataforma universal de Windows (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Juegos](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
+* [Juegos](https://dotnet.microsoft.com/apps/games)
 * [Internet de las cosas (IoT)](https://dotnet.microsoft.com/apps/iot)
 * [Aprendizaje automático](../machine-learning/index.yml)
 * [Aplicaciones de consola](tutorials/with-visual-studio-code.md)
@@ -236,13 +236,13 @@ La experiencia predeterminada para la mayoría de las cargas de trabajo de .NET 
 
 El *recolector de elementos no utilizados* (GC) administra la asignación y liberación de la memoria para las aplicaciones. Cada vez que el código crea un objeto, el CLR le asigna memoria del [montón administrado](../standard/garbage-collection/fundamentals.md#the-managed-heap). Siempre que haya espacio de direcciones disponible en el montón nativo, el motor en tiempo de ejecución continúa asignando espacio a los objetos nuevos. Cuando no queda suficiente espacio de direcciones libre, el GC comprueba los objetos del montón administrado que la aplicación ya no usa. Después, reclama esa memoria.
 
-El recolector de elementos no utilizados es uno de los servicios del CLR que ayudan a garantizar la *protección de la memoria* . Un programa tiene protección de la memoria si tiene acceso solo a la memoria asignada. Por ejemplo, el entorno de ejecución garantiza que una aplicación no accede a memoria sin asignar más allá de los límites de una matriz.
+El recolector de elementos no utilizados es uno de los servicios del CLR que ayudan a garantizar la *protección de la memoria*. Un programa tiene protección de la memoria si tiene acceso solo a la memoria asignada. Por ejemplo, el entorno de ejecución garantiza que una aplicación no accede a memoria sin asignar más allá de los límites de una matriz.
 
 Para obtener más información, vea [Administración de memoria automática](../standard/automatic-memory-management.md) y [Fundamentos de la recolección de elementos no utilizados](../standard/garbage-collection/fundamentals.md).
 
 ### <a name="working-with-unmanaged-resources"></a>Trabajar con recursos no administrados
 
-En ocasiones el código debe hacer referencia a *recursos no administrados* . Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática. Por ejemplo, un identificador de archivo es un recurso no administrado. Un objeto <xref:System.IO.FileStream> es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado. Cuando haya acabado de usar <xref:System.IO.FileStream>, tiene que liberar de forma explícita el identificador de archivo.
+En ocasiones el código debe hacer referencia a *recursos no administrados*. Los recursos no administrados son recursos que el entorno de ejecución .NET no mantiene de forma automática. Por ejemplo, un identificador de archivo es un recurso no administrado. Un objeto <xref:System.IO.FileStream> es un objeto administrado, pero hace referencia a un identificador de archivo, que es uno no administrado. Cuando haya acabado de usar <xref:System.IO.FileStream>, tiene que liberar de forma explícita el identificador de archivo.
 
 En .NET, los objetos que hacen referencia a recursos no administrados implementan la interfaz de <xref:System.IDisposable>. Cuando haya acabado de usar el objeto, deberá llamar al método <xref:System.IDisposable.Dispose> del objeto, que es el responsable de liberar cualquier recurso no administrado. Los lenguajes de .NET proporcionan una práctica instrucción `using` ([C#](../csharp/language-reference/keywords/using.md), [F#](../fsharp/language-reference/resource-management-the-use-keyword.md), [VB](../visual-basic/language-reference/statements/using-statement.md)) que garantiza la llamada al método `Dispose`.
 

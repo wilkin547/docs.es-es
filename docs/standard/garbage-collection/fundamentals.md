@@ -138,7 +138,7 @@ La recolección de elementos no utilizados se produce principalmente con la recl
 
   Los objetos de la generación 2 que sobreviven a una recolección se mantienen en esta generación hasta que en una recolección posterior se determina que no se pueden alcanzar.
   
-  Los objetos del montón de objetos grandes (a veces denominado *generación 3*) también se recopilan en la generación 2.
+  Los objetos del montón de objetos grandes (a veces denominado *generación 3* ) también se recopilan en la generación 2.
 
 Las recolecciones de elementos no utilizados se producen en generaciones concretas según lo permitan las condiciones. La recolección de una generación significa recolectar los objetos de esa generación y de todas las generaciones anteriores. Una recolección de elementos no utilizados de la generación 2 se denomina también recolección de elementos no utilizados completa, porque reclama los objetos de todas las generaciones (es decir, todos los objetos del montón administrado).
 

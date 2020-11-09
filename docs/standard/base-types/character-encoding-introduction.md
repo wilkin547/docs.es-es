@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 572fcd289eea720873d94e7fc71f3b4a030d1d70
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812125"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282316"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Cada `char`acter se representa mediante un solo valor de char. Ese patrón se aplica a la mayoría de los idiomas del mundo. Por ejemplo, esta es la salida de dos acter chinos que suenan como char*nǐ hǎo* y significan *Hola*:
+Cada `char`acter se representa mediante un solo valor de char. Ese patrón se aplica a la mayoría de los idiomas del mundo. Por ejemplo, esta es la salida de dos acter chinos que suenan como char*nǐ hǎo* y significan *Hola* :
 
 ```csharp
 PrintChars("你好");
@@ -110,7 +110,7 @@ Estos son algunos ejemplos de asignaciones de puntos de código, con vínculos a
 |Decimal|Hex       |Ejemplo|Descripción|
 |------:|----------|-------|-----------|
 |10     | `U+000A` |N/D| [LINE FEED](https://www.unicode.org/charts/PDF/U0000.pdf) |
-|65     | `U+0061` | a | [LATIN SMALL LETTER A](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|97     | `U+0061` | a | [LATIN SMALL LETTER A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATIN CAPITAL LETTER Y WITH MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [OLD TURKIC LETTER ORKHON AT](https://www.unicode.org/charts/PDF/U10C00.pdf) |
 |127.801| `U+1F339`| 🌹 | [ROSE emoji](https://www.unicode.org/charts/PDF/U1F300.pdf) |
@@ -128,13 +128,13 @@ En el diagrama siguiente se ilustra la relación entre el BMP y los puntos de c�
 
 ## <a name="utf-16-code-units"></a>Unidades de código UTF-16
 
-El formato de transformación Unicode de 16 bits ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) es un sistema de codificación de acter que emplea char*unidades de código* de 16 bits para representar puntos de código Unicode. .NET usa UTF-16 para codificar el texto de una instancia de `string`. Una instancia de `char` representa una unidad de código de 16 bits.
+El formato de transformación Unicode de 16 bits ( [UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)) es un sistema de codificación de acter que emplea char*unidades de código* de 16 bits para representar puntos de código Unicode. .NET usa UTF-16 para codificar el texto de una instancia de `string`. Una instancia de `char` representa una unidad de código de 16 bits.
 
 Una sola unidad de código de 16 bits puede representar cualquier punto de código en el intervalo de 16 bits del plano básico multilingüe. Sin embargo, un punto de código en el intervalo suplementario necesita dos instancias de `char`.
 
 ## <a name="surrogate-pairs"></a>Pares suplentes
 
-La conversión de dos valores de 16 bits en un único valor de 21 bits se facilita mediante un intervalo especial denominado *puntos de código suplentes*, de `U+D800` a `U+DFFF` (decimal 55.296 a 57.343), ambos incluidos.
+La conversión de dos valores de 16 bits en un único valor de 21 bits se facilita mediante un intervalo especial denominado *puntos de código suplentes* , de `U+D800` a `U+DFFF` (decimal 55.296 a 57.343), ambos incluidos.
 
 En el diagrama siguiente se ilustra la relación entre el BMP y los puntos de código suplentes.
 

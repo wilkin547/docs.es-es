@@ -2,12 +2,12 @@
 title: Creación de una biblioteca de clases de .NET Standard mediante Visual Studio para Mac
 description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio para Mac.
 ms.date: 06/08/2020
-ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a78cc68d29095e4fefcaf1d3b2158d673b8892ec
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537644"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400570"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Tutorial: Creación de una biblioteca de .NET Standard mediante Visual Studio para Mac
 
@@ -18,8 +18,8 @@ Una *biblioteca de clases* define los tipos y los métodos que se llaman desde u
 > [!NOTE]
 > Sus comentarios son muy importantes. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
 >
-> - En Visual Studio para Mac, seleccione **Ayuda** > **Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores. Puede realizar un seguimiento de sus comentarios en el portal de la [Comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/41/index.html).
-> - Para hacer una sugerencia, seleccione **Ayuda** > **Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de la Comunidad de desarrolladores de Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> - En Visual Studio para Mac, seleccione **Ayuda** > **Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores. Puede realizar un seguimiento de sus comentarios en el portal de la [Comunidad de desarrolladores](https://aka.ms/feedback/report?space=41).
+> - Para hacer una sugerencia, seleccione **Ayuda** > **Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de la Comunidad de desarrolladores de Visual Studio para Mac](https://aka.ms/feedback/suggest?space=41).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -37,11 +37,11 @@ Una solución de Visual Studio sirve como contenedor de uno o varios proyectos. 
 
 1. En la ventana de inicio, seleccione **Nuevo proyecto**.
 
-1. En el cuadro de diálogo **Nuevo proyecto**, en el nodo **Multiplataforma**, seleccione **Biblioteca** y luego seleccione la plantilla **Biblioteca de .NET Standard**. A continuación, seleccione **Siguiente**.
+1. En el cuadro de diálogo **Nuevo proyecto** , en el nodo **Multiplataforma** , seleccione **Biblioteca** y luego seleccione la plantilla **Biblioteca de .NET Standard**. A continuación, seleccione **Siguiente**.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Cuadro de diálogo Nuevo proyecto":::
 
-1. En el cuadro de diálogo para **configurar la nueva biblioteca de .NET Standard**, elija ".NET Standard 2.1" y seleccione **Siguiente**.
+1. En el cuadro de diálogo para **configurar la nueva biblioteca de .NET Standard** , elija ".NET Standard 2.1" y seleccione **Siguiente**.
 
    :::image type="content" source="media/library-with-visual-studio-mac/choose-net-std-21.png" alt-text="Selección de .NET Standard 2.1":::
 
@@ -53,7 +53,7 @@ Una solución de Visual Studio sirve como contenedor de uno o varios proyectos. 
 
    :::image type="content" source="media/library-with-visual-studio-mac/solution-dock-icon.png" alt-text="Icono de acoplamiento del panel de solución":::
 
-1. En el panel **Solución**, expanda el nodo `StringLibrary` para mostrar el archivo de clase proporcionado por la plantilla *Class1.cs*. Haga clic presionando <kbd>control</kbd> en el archivo, seleccione **Cambiar nombre** en el menú contextual y denomínelo *StringLibrary.cs*. Abra el archivo y reemplace el contenido por el código siguiente:
+1. En el panel **Solución** , expanda el nodo `StringLibrary` para mostrar el archivo de clase proporcionado por la plantilla *Class1.cs*. Haga clic presionando <kbd>control</kbd> en el archivo, seleccione **Cambiar nombre** en el menú contextual y denomínelo *StringLibrary.cs*. Abra el archivo y reemplace el contenido por el código siguiente:
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibrary/Class1.cs":::
 
@@ -73,7 +73,7 @@ Una solución de Visual Studio sirve como contenedor de uno o varios proyectos. 
 
 Agregue una aplicación de consola que use la biblioteca de clases. La aplicación solicitará al usuario que escriba una cadena y notificará si la cadena comienza con un carácter en mayúsculas.
 
-1. En el panel **Solución**, haga clic pulsando <kbd>control</kbd> en la solución `ClassLibraryProjects`. Agregue un nuevo proyecto de **aplicación de consola**; para ello, seleccione la plantilla de las plantillas de **Web and Console** (Web y consola) > **Aplicación** y seleccione **Siguiente**.
+1. En el panel **Solución** , haga clic pulsando <kbd>control</kbd> en la solución `ClassLibraryProjects`. Agregue un nuevo proyecto de **aplicación de consola** ; para ello, seleccione la plantilla de las plantillas de **Web and Console** (Web y consola) > **Aplicación** y seleccione **Siguiente**.
 
 1. Seleccione **.NET Core 3.1** como **Marco de destino** y, a continuación, seleccione **Siguiente**.
 
@@ -93,9 +93,9 @@ Agregue una aplicación de consola que use la biblioteca de clases. La aplicaci�
 
 En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a la biblioteca de clases. Para que pueda llamar a los métodos de la biblioteca de clases, cree una referencia de proyecto al proyecto de biblioteca de clases.
 
-1. En el panel **Soluciones**, haga clic presionando <kbd>control</kbd> en el nodo **Dependencias** del nuevo proyecto **ShowCase**. En el menú contextual, seleccione **Agregar referencia**.
+1. En el panel **Soluciones** , haga clic presionando <kbd>control</kbd> en el nodo **Dependencias** del nuevo proyecto **ShowCase**. En el menú contextual, seleccione **Agregar referencia**.
 
-1. En el cuadro de diálogo **Referencias**, seleccione **StringLibrary** y **Aceptar**.
+1. En el cuadro de diálogo **Referencias** , seleccione **StringLibrary** y **Aceptar**.
 
 ## <a name="run-the-app"></a>Ejecutar la aplicación
 

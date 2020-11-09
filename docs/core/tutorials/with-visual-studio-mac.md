@@ -2,12 +2,12 @@
 title: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio para Mac.
 ms.date: 06/02/2020
-ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0248e48865541a7c73b9e219a06a57996c5cf601
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537605"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400531"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac
 
@@ -16,8 +16,8 @@ En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de
 > [!NOTE]
 > Sus comentarios son muy importantes. Hay dos maneras de proporcionar comentarios al equipo de desarrollo de Visual Studio para Mac:
 >
-> * En Visual Studio para Mac, seleccione **Ayuda** > **Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores. Puede realizar un seguimiento de sus comentarios en el portal de la [Comunidad de desarrolladores](https://developercommunity.visualstudio.com/spaces/8/index.html).
-> * Para hacer una sugerencia, seleccione **Ayuda** > **Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de la Comunidad de desarrolladores de Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> * En Visual Studio para Mac, seleccione **Ayuda** > **Notificar un problema** en el menú o **Notificar un problema** desde la pantalla de bienvenida, que abre una ventana para presentar un informe de errores. Puede realizar un seguimiento de sus comentarios en el portal de la [Comunidad de desarrolladores](https://aka.ms/feedback/report?space=41).
+> * Para hacer una sugerencia, seleccione **Ayuda** > **Aportar una sugerencia** en el menú o **Aportar una sugerencia** desde la pantalla de bienvenida, que le lleva a la [página web de la Comunidad de desarrolladores de Visual Studio para Mac](https://aka.ms/feedback/suggest?space=41).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -37,11 +37,11 @@ Cree un proyecto de aplicación de consola de .NET Core denominado "HelloWorld".
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Botón Nuevo en la pantalla Inicio de Visual Studio para Mac":::
 
-1. En el cuadro de diálogo **Nuevo proyecto**, seleccione **Aplicación** en el nodo **Web and Console** (Web y consola). Seleccione la plantilla **Aplicación de consola** y haga clic en **Siguiente**.
+1. En el cuadro de diálogo **Nuevo proyecto** , seleccione **Aplicación** en el nodo **Web and Console** (Web y consola). Seleccione la plantilla **Aplicación de consola** y haga clic en **Siguiente**.
 
    :::image type="content" source="media/with-visual-studio-mac/visual-studio-mac-new-dialog.png" alt-text="Lista de plantillas de Nuevo proyecto":::
 
-1. En el cuadro de diálogo **Plataforma de destino** del cuadro de diálogo para **configurar la nueva aplicación de consola**, seleccione **.NET Core 3.1** y seleccione **Siguiente**.
+1. En el cuadro de diálogo **Plataforma de destino** del cuadro de diálogo para **configurar la nueva aplicación de consola** , seleccione **.NET Core 3.1** y seleccione **Siguiente**.
 
    :::image type="content" source="media/with-visual-studio-mac/target-framework.png" alt-text="Selección de la plataforma de destino":::
 
@@ -82,7 +82,7 @@ namespace HelloWorld
 
 Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y la hora.
 
-1. En *Program.cs*, reemplace el contenido del método `Main`, que es la línea que llama a `Console.WriteLine`, por el código siguiente:
+1. En *Program.cs* , reemplace el contenido del método `Main`, que es la línea que llama a `Console.WriteLine`, por el código siguiente:
 
    :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="MainMethod":::
 
