@@ -1167,6 +1167,8 @@ items:
                         href: code-analysis/style-rules/ide0081.md
                       - name: IDE0100
                         href: code-analysis/style-rules/ide0100.md
+                      - name: IDE0110
+                        href: code-analysis/style-rules/ide0110.md
                   - name: Reglas varias
                     items:
                       - name: IDE0076
@@ -1295,6 +1297,8 @@ items:
             href: ../standard/base-types/type-conversion.md
           - name: Tablas de conversión de tipos
             href: ../standard/base-types/conversion-tables.md
+          - name: Elección entre tipos de tupla y anónimos
+            href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
           - name: Bibliotecas del marco
             href: ../standard/framework-libraries.md
           - name: Introducción a la biblioteca de clases
@@ -1385,6 +1389,19 @@ items:
         href: ../standard/numerics.md
       - name: 'Fechas, horas y zonas horarias'
         href: ../standard/datetime/
+      - name: Atributos
+        items:
+          - name: Información general
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: Aplicación de atributos
+            href: ../standard/attributes/applying-attributes.md
+          - name: Escritura de atributos personalizados
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: Recuperación de la información almacenada en atributos
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+  - name: Bibliotecas en tiempo de ejecución
+    items:
       - name: 'Formato de números, fechas y otros tipos'
         items:
           - name: Información general
@@ -1419,14 +1436,20 @@ items:
                 href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
               - name: Visualización de las fechas en calendarios no gregorianos
                 href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
-      - name: Manipulación de las cadenas
+      - name: Cadenas
         items:
           - name: Codificación de caracteres de .NET
             href: ../standard/base-types/character-encoding-introduction.md
           - name: Procedimiento para usar las clases de codificación de caracteres
             href: ../standard/base-types/character-encoding.md
-          - name: Procedimientos recomendados para el uso de cadenas
-            href: ../standard/base-types/best-practices-strings.md
+          - name: Procedimientos recomendados
+            items:
+              - name: Comparar cadenas
+                href: ../standard/base-types/best-practices-strings.md
+              - name: Mostrar y conservar datos con formato
+                href: ../standard/base-types/best-practices-display-data.md
+          - name: "Cambios de comportamiento en .NET\_5+ (Windows)"
+            href: ../standard/base-types/string-comparison-net-5-plus.md
           - name: Operaciones básicas de cadenas
             items:
               - name: Información general
@@ -1438,10 +1461,12 @@ items:
                 href: ../standard/base-types/trimming.md
               - name: Relleno de cadenas
                 href: ../standard/base-types/padding.md
-              - name: Comparación de cadenas
+              - name: Métodos de comparación
                 href: ../standard/base-types/comparing.md
               - name: Cambio de mayúsculas y minúsculas
                 href: ../standard/base-types/changing-case.md
+              - name: Separación de las partes de una cadena
+                href: ../standard/base-types/divide-up-strings.md
               - name: Uso de la clase StringBuilder
                 href: ../standard/base-types/stringbuilder.md
               - name: Procedimiento para realizar manipulaciones básicas de cadena
@@ -1501,7 +1526,7 @@ items:
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
                   - name: comprobar que las cadenas están en un formato de correo electrónico válido
                     href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
-      - name: Análisis de las cadenas
+      - name: Análisis (conversión) de cadenas
         items:
           - name: Información general
             href: ../standard/base-types/parsing-strings.md
@@ -1511,59 +1536,213 @@ items:
             href: ../standard/base-types/parsing-datetime.md
           - name: Análisis de otras cadenas
             href: ../standard/base-types/parsing-other.md
-      - name: Atributos
+      - name: Inserción de dependencias
+        items:
+          - name: Introducción
+            href: ../core/extensions/dependency-injection.md
+            displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
+          - name: Usar la inserción de dependencias
+            href: ../core/extensions/dependency-injection-usage.md
+            displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
+          - name: Instrucciones para la inserción de dependencias
+            href: ../core/extensions/dependency-injection-guidelines.md
+            displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
+      - name: Configuración
         items:
           - name: Información general
-            href: ../standard/attributes/index.md
-            displayName: attributes
-          - name: Aplicación de atributos
-            href: ../standard/attributes/applying-attributes.md
-          - name: Escritura de atributos personalizados
-            href: ../standard/attributes/writing-custom-attributes.md
-          - name: Recuperación de la información almacenada en atributos
-            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
-      - name: Elección entre tipos de tupla y anónimos
-        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
-      - name: Conceptos sobre las aplicaciones de consola
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Proveedores de configuración
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Implementación de un proveedor de configuración personalizado
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
+          - name: Patrón de opciones
+            href: ../core/extensions/options.md
+      - name: Registro
+        items:
+          - name: Información general
+            href: ../core/extensions/logging.md
+          - name: Proveedores de registro
+            href: ../core/extensions/logging-providers.md
+          - name: Implementación de un proveedor de registro personalizado
+            href: ../core/extensions/custom-logging-provider.md
+          - name: Registro de alto rendimiento
+            href: ../core/extensions/high-performance-logging.md
+          - name: Formato de registro de la consola
+            href: ../core/extensions/console-log-formatter.md
+      - name: HostBuilder (host genérico)
+        href: ../core/extensions/generic-host.md
+      - name: Serialización
+        items:
+          - name: Información general
+            href: ../standard/serialization/index.md
+          - name: Serialización de JSON
+            items:
+              - name: Información general
+                href: ../standard/serialization/system-text-json-overview.md
+                displayName: json serialization
+              - name: Cómo serializar y deserializar JSON
+                href: ../standard/serialization/system-text-json-how-to.md
+              - name: Procedimientos para escribir convertidores personalizados
+                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: Migración desde Newtonsoft.json
+                href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+          - name: Serialización binaria
+            items:
+              - name: Información general
+                href: ../standard/serialization/binary-serialization.md
+                displayName: binary serialization
+              - name: Guía de seguridad de BinaryFormatter
+                href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: Conceptos de serialización
+                href: ../standard/serialization/serialization-concepts.md
+              - name: Serialización básica
+                href: ../standard/serialization/basic-serialization.md
+              - name: Serialización selectiva
+                href: ../standard/serialization/selective-serialization.md
+              - name: Serialización personalizada
+                href: ../standard/serialization/custom-serialization.md
+              - name: Pasos del proceso de serialización
+                href: ../standard/serialization/steps-in-the-serialization-process.md
+              - name: Serialización tolerante a versiones
+                href: ../standard/serialization/version-tolerant-serialization.md
+              - name: Directrices de serialización
+                href: ../standard/serialization/serialization-guidelines.md
+              - name: Procedimiento Fragmentación de datos serializados
+                href: ../standard/serialization/how-to-chunk-serialized-data.md
+              - name: Procedimiento para determinar si un objeto de .NET Standard es serializable
+                href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+              - name: Ejemplo
+                href: ../standard/serialization/basic-serialization-technology-sample.md
+          - name: Serialización de SOAP y XML
+            items:
+              - name: Información general
+                href: ../standard/serialization/xml-and-soap-serialization.md
+              - name: Serialización XML en profundidad
+                href: ../standard/serialization/introducing-xml-serialization.md
+              - name: Ejemplos
+                href: ../standard/serialization/examples-of-xml-serialization.md
+              - name: Herramienta de definición de esquemas XML
+                href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+              - name: Control de la serialización XML mediante atributos
+                href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+              - name: Atributos que controlan la serialización XML
+                href: ../standard/serialization/attributes-that-control-xml-serialization.md
+              - name: Serialización XML con servicios web XML
+                href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+              - name: Atributos que controlan la serialización SOAP codificada
+                href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+              - name: Temas procedimentales
+                items:
+                  - name: Serialización de un objeto
+                    href: ../standard/serialization/how-to-serialize-an-object.md
+                  - name: Deserialización de un objeto
+                    href: ../standard/serialization/how-to-deserialize-an-object.md
+                  - name: Uso de la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML
+                    href: ../standard/serialization/xml-schema-def-tool-gen.md
+                  - name: Control de la serialización de clases derivadas
+                    href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+                  - name: Especificación de un nombre de elemento alternativo para una secuencia XML
+                    href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+                  - name: Calificación del elemento XML y los nombres del atributo XML
+                    href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+                  - name: Serialización de un objeto como secuencia XML con codificación SOAP
+                    href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+                  - name: Invalidación de la serialización XML SOAP codificada
+                    href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+              - name: Elementos de serialización XML
+                items:
+                  - name: system.xml.serialization
+                    href: ../standard/serialization/system-xml-serialization-element.md
+                  - name: dateTimeSerialization
+                    href: ../standard/serialization/datetimeserialization-element.md
+                  - name: schemaImporterExtensions
+                    href: ../standard/serialization/schemaimporterextensions-element.md
+                  - name: agregar elemento para schemaImporterExtensions
+                    href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+                  - name: xmlSerializer
+                    href: ../standard/serialization/xmlserializer-element.md
+              - name: Herramientas
+                items:
+                  - name: Herramienta Generador de serializador XML (Sgen.exe)
+                    href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+                  - name: Herramienta Definición de esquemas XML (Xsd.exe)
+                    href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+      - name: E/S de archivos y secuencias
+        items:
+          - name: Información general
+            href: ../standard/io/index.md
+          - name: Formatos de ruta de acceso de archivo en los sistemas Windows
+            href: ../standard/io/file-path-formats.md
+          - name: Tareas de E/S comunes
+            href: ../standard/io/common-i-o-tasks.md
+            items:
+              - name: Procedimiento para copiar directorios
+                href: ../standard/io/how-to-copy-directories.md
+              - name: Procedimiento para enumerar directorios y archivos
+                href: ../standard/io/how-to-enumerate-directories-and-files.md
+              - name: Procedimiento para leer y escribir en un archivo de datos recién creado
+                href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+              - name: Procedimiento para abrir y anexar a un archivo de registro
+                href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+              - name: Procedimiento para escribir texto en un archivo
+                href: ../standard/io/how-to-write-text-to-a-file.md
+              - name: Procedimiento para leer texto de un archivo
+                href: ../standard/io/how-to-read-text-from-a-file.md
+              - name: Procedimiento para leer caracteres de una cadena
+                href: ../standard/io/how-to-read-characters-from-a-string.md
+              - name: Procedimiento para escribir caracteres en una cadena
+                href: ../standard/io/how-to-write-characters-to-a-string.md
+              - name: Procedimiento para agregar o quitar entradas de la lista de control de acceso
+                href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+              - name: Procedimiento para comprimir y extraer archivos
+                href: ../standard/io/how-to-compress-and-extract-files.md
+              - name: Crear secuencias
+                href: ../standard/io/composing-streams.md
+              - name: Procedimiento para convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa
+                href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+          - name: E/S de archivos asincrónica
+            href: ../standard/io/asynchronous-file-i-o.md
+          - name: Control de errores de E/S de disco
+            href: ../standard/io/handling-io-errors.md
+          - name: Almacenamiento aislado
+            href: ../standard/io/isolated-storage.md
+            items:
+              - name: Tipos de aislamiento
+                href: ../standard/io/types-of-isolation.md
+              - name: Procedimiento para obtener los almacenes de almacenamiento aislado
+                href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+              - name: Procedimiento para enumerar los almacenes de almacenamiento aislado
+                href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+              - name: Procedimiento para eliminar almacenes de almacenamiento aislado
+                href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+              - name: Procedimiento para prever condiciones de espacio insuficiente con almacenamiento aislado
+                href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+              - name: Procedimiento para crear archivos y directorios en almacenamiento aislado
+                href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+              - name: Procedimiento para buscar archivos y directorios existentes en almacenamiento aislado
+                href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+              - name: Procedimiento para leer y escribir en archivos en almacenamiento aislado
+                href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+              - name: Procedimiento para eliminar archivos y directorios en almacenamiento aislado
+                href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+          - name: Canalizaciones
+            href: ../standard/io/pipe-operations.md
+            items:
+              - name: Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
+                href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+              - name: Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
+                href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+          - name: Canalizaciones
+            href: ../standard/io/pipelines.md
+          - name: Trabajo con búferes
+            href: ../standard/io/buffers.md
+          - name: Archivos asignados a memoria
+            href: ../standard/io/memory-mapped-files.md
+      - name: Clase System.Console
         href: ../standard/building-console-apps.md
-  - name: Inserción de dependencias
-    items:
-      - name: Introducción
-        href: ../core/extensions/dependency-injection.md
-        displayName: 'dependency injection,di,ioc,ioc container,dependency container,inversion of control'
-      - name: Usar la inserción de dependencias
-        href: ../core/extensions/dependency-injection-usage.md
-        displayName: 'use dependency injection,di,di examples,ioc,ioc container,dependency container,inversion of control'
-      - name: Instrucciones para la inserción de dependencias
-        href: ../core/extensions/dependency-injection-guidelines.md
-        displayName: 'dependency injection best practices,guidelines,di,ioc,ioc container,dependency container,inversion of control'
-  - name: Configuración
-    items:
-      - name: Información general
-        href: ../core/extensions/configuration.md
-        displayName: 'configuration,config,configuration sources,config sources'
-      - name: Proveedores de configuración
-        href: ../core/extensions/configuration-providers.md
-        displayName: 'configuration providers,config providers'
-      - name: Implementación de un proveedor de configuración personalizado
-        href: ../core/extensions/custom-configuration-provider.md
-        displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
-      - name: Patrón de opciones
-        href: ../core/extensions/options.md
-  - name: Registro
-    items:
-      - name: Información general
-        href: ../core/extensions/logging.md
-      - name: Proveedores de registro
-        href: ../core/extensions/logging-providers.md
-      - name: Implementación de un proveedor de registro personalizado
-        href: ../core/extensions/custom-logging-provider.md
-      - name: Registro de alto rendimiento
-        href: ../core/extensions/high-performance-logging.md
-      - name: Formato de registro de la consola
-        href: ../core/extensions/console-log-formatter.md
-  - name: HostBuilder (host genérico)
-    href: ../core/extensions/generic-host.md
   - name: Acceso a datos
     items:
       - name: LINQ
@@ -1572,77 +1751,8 @@ items:
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
         href: ../standard/data/sqlite/
-  - name: E/S de archivos y secuencias
-    items:
-      - name: Información general
-        href: ../standard/io/index.md
-      - name: Formatos de ruta de acceso de archivo en los sistemas Windows
-        href: ../standard/io/file-path-formats.md
-      - name: Tareas de E/S comunes
-        href: ../standard/io/common-i-o-tasks.md
-        items:
-          - name: Procedimiento para copiar directorios
-            href: ../standard/io/how-to-copy-directories.md
-          - name: Procedimiento para enumerar directorios y archivos
-            href: ../standard/io/how-to-enumerate-directories-and-files.md
-          - name: Procedimiento para leer y escribir en un archivo de datos recién creado
-            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
-          - name: Procedimiento para abrir y anexar a un archivo de registro
-            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
-          - name: Procedimiento para escribir texto en un archivo
-            href: ../standard/io/how-to-write-text-to-a-file.md
-          - name: Procedimiento para leer texto de un archivo
-            href: ../standard/io/how-to-read-text-from-a-file.md
-          - name: Procedimiento para leer caracteres de una cadena
-            href: ../standard/io/how-to-read-characters-from-a-string.md
-          - name: Procedimiento para escribir caracteres en una cadena
-            href: ../standard/io/how-to-write-characters-to-a-string.md
-          - name: Procedimiento para agregar o quitar entradas de la lista de control de acceso
-            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
-          - name: Procedimiento para comprimir y extraer archivos
-            href: ../standard/io/how-to-compress-and-extract-files.md
-          - name: Crear secuencias
-            href: ../standard/io/composing-streams.md
-          - name: Procedimiento para convertir flujos de .NET Framework en flujos de Windows Runtime y viceversa
-            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
-      - name: E/S de archivos asincrónica
-        href: ../standard/io/asynchronous-file-i-o.md
-      - name: Control de errores de E/S de disco
-        href: ../standard/io/handling-io-errors.md
-      - name: Almacenamiento aislado
-        href: ../standard/io/isolated-storage.md
-        items:
-          - name: Tipos de aislamiento
-            href: ../standard/io/types-of-isolation.md
-          - name: Procedimiento para obtener los almacenes de almacenamiento aislado
-            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
-          - name: Procedimiento para enumerar los almacenes de almacenamiento aislado
-            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
-          - name: Procedimiento para eliminar almacenes de almacenamiento aislado
-            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
-          - name: Procedimiento para prever condiciones de espacio insuficiente con almacenamiento aislado
-            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-          - name: Procedimiento para crear archivos y directorios en almacenamiento aislado
-            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
-          - name: Procedimiento para buscar archivos y directorios existentes en almacenamiento aislado
-            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
-          - name: Procedimiento para leer y escribir en archivos en almacenamiento aislado
-            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
-          - name: Procedimiento para eliminar archivos y directorios en almacenamiento aislado
-            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
-      - name: Canalizaciones
-        href: ../standard/io/pipe-operations.md
-        items:
-          - name: Procedimiento para usar canalizaciones anónimas para la comunicación local entre procesos
-            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-          - name: Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
-            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
-      - name: Canalizaciones
-        href: ../standard/io/pipelines.md
-      - name: Trabajo con búferes
-        href: ../standard/io/buffers.md
-      - name: Archivos asignados a memoria
-        href: ../standard/io/memory-mapped-files.md
+      - name: Entity Framework Core
+        href: /ef/core/
   - name: 'Procesamiento paralelo, simultaneidad y asincronía'
     items:
       - name: Información general
@@ -1795,102 +1905,6 @@ items:
             href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
       - name: Subprocesos
         href: ../standard/threading/
-  - name: Serialización
-    items:
-      - name: Información general
-        href: ../standard/serialization/index.md
-      - name: Serialización de JSON
-        items:
-          - name: Información general
-            href: ../standard/serialization/system-text-json-overview.md
-            displayName: json serialization
-          - name: Cómo serializar y deserializar JSON
-            href: ../standard/serialization/system-text-json-how-to.md
-          - name: Procedimientos para escribir convertidores personalizados
-            href: ../standard/serialization/system-text-json-converters-how-to.md
-          - name: Migración desde Newtonsoft.json
-            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-      - name: Serialización binaria
-        items:
-          - name: Información general
-            href: ../standard/serialization/binary-serialization.md
-            displayName: binary serialization
-          - name: Guía de seguridad de BinaryFormatter
-            href: ../standard/serialization/binaryformatter-security-guide.md
-          - name: Conceptos de serialización
-            href: ../standard/serialization/serialization-concepts.md
-          - name: Serialización básica
-            href: ../standard/serialization/basic-serialization.md
-          - name: Serialización selectiva
-            href: ../standard/serialization/selective-serialization.md
-          - name: Serialización personalizada
-            href: ../standard/serialization/custom-serialization.md
-          - name: Pasos del proceso de serialización
-            href: ../standard/serialization/steps-in-the-serialization-process.md
-          - name: Serialización tolerante a versiones
-            href: ../standard/serialization/version-tolerant-serialization.md
-          - name: Directrices de serialización
-            href: ../standard/serialization/serialization-guidelines.md
-          - name: Procedimiento Fragmentación de datos serializados
-            href: ../standard/serialization/how-to-chunk-serialized-data.md
-          - name: Procedimiento para determinar si un objeto de .NET Standard es serializable
-            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-          - name: Ejemplo
-            href: ../standard/serialization/basic-serialization-technology-sample.md
-      - name: Serialización de SOAP y XML
-        items:
-          - name: Información general
-            href: ../standard/serialization/xml-and-soap-serialization.md
-          - name: Serialización XML en profundidad
-            href: ../standard/serialization/introducing-xml-serialization.md
-          - name: Ejemplos
-            href: ../standard/serialization/examples-of-xml-serialization.md
-          - name: Herramienta de definición de esquemas XML
-            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
-          - name: Control de la serialización XML mediante atributos
-            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
-          - name: Atributos que controlan la serialización XML
-            href: ../standard/serialization/attributes-that-control-xml-serialization.md
-          - name: Serialización XML con servicios web XML
-            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
-          - name: Atributos que controlan la serialización SOAP codificada
-            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
-          - name: Temas procedimentales
-            items:
-              - name: Serialización de un objeto
-                href: ../standard/serialization/how-to-serialize-an-object.md
-              - name: Deserialización de un objeto
-                href: ../standard/serialization/how-to-deserialize-an-object.md
-              - name: Uso de la herramienta de definición de esquemas XML para generar clases y documentos de esquema XML
-                href: ../standard/serialization/xml-schema-def-tool-gen.md
-              - name: Control de la serialización de clases derivadas
-                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
-              - name: Especificación de un nombre de elemento alternativo para una secuencia XML
-                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-              - name: Calificación del elemento XML y los nombres del atributo XML
-                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
-              - name: Serialización de un objeto como secuencia XML con codificación SOAP
-                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-              - name: Invalidación de la serialización XML SOAP codificada
-                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
-          - name: Elementos de serialización XML
-            items:
-              - name: system.xml.serialization
-                href: ../standard/serialization/system-xml-serialization-element.md
-              - name: dateTimeSerialization
-                href: ../standard/serialization/datetimeserialization-element.md
-              - name: schemaImporterExtensions
-                href: ../standard/serialization/schemaimporterextensions-element.md
-              - name: agregar elemento para schemaImporterExtensions
-                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
-              - name: xmlSerializer
-                href: ../standard/serialization/xmlserializer-element.md
-          - name: Herramientas
-            items:
-              - name: Herramienta Generador de serializador XML (Sgen.exe)
-                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
-              - name: Herramienta Definición de esquemas XML (Xsd.exe)
-                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
   - name: Pruebas
     displayName: 'xUnit,NUnit,MSTest,unit test,test,integration test,load test,smoke test, web test'
     items:
