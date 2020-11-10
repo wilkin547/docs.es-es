@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cryptography [.NET], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 8a8b5988a13ab571284b08c7aaece3542467aa71
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 75bb0fa52b8002efe0027f026de8c0910735e55e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556974"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440977"
 ---
 # <a name="encrypting-data"></a>Cifrar datos
 
@@ -41,23 +41,23 @@ CryptoStream cryptStream = new CryptoStream(myStream, aes.CreateEncryptor(key, i
   
 Después de ejecutar este código, los datos escritos en el objeto **CryptoStream** se cifran mediante el algoritmo AES.  
   
-En el ejemplo siguiente se muestra todo el proceso de crear una secuencia, cifrarla, escribir en ella y cerrarla. En este ejemplo se crea una secuencia de archivos que se cifra mediante la clase **CryptoStream** y la clase **AES** . Se escribe un mensaje en la secuencia cifrada con la clase <xref:System.IO.StreamWriter> .
+En el ejemplo siguiente se muestra todo el proceso de crear una secuencia, cifrarla, escribir en ella y cerrarla. En este ejemplo se crea una secuencia de archivos que se cifra mediante la clase **CryptoStream** y la clase **AES** . El IV generado se escribe en el principio de <xref:System.IO.FileStream> , por lo que se puede leer y usar para el descifrado. A continuación, se escribe un mensaje en la secuencia cifrada con la <xref:System.IO.StreamWriter> clase. Aunque se puede usar la misma clave varias veces para cifrar y descifrar los datos, se recomienda generar un nuevo IV aleatorio cada vez. De esta manera, los datos cifrados siempre son diferentes, incluso cuando el texto sin formato es el mismo.
   
 :::code language="csharp" source="snippets/encrypting-data/csharp/aes-encrypt.cs":::
 :::code language="vb" source="snippets/encrypting-data/vb/aes-encrypt.vb":::
 
-El código cifra el flujo mediante el algoritmo simétrico AES y escribe "Hola mundo!" en la secuencia. Si el código es correcto, crea un archivo cifrado denominado *TestData.txt* y muestra el texto siguiente en la consola:  
+El código cifra el flujo mediante el algoritmo simétrico de AES y escribe IV y después cifrado como "Hola mundo!" en la secuencia. Si el código es correcto, crea un archivo cifrado denominado *TestData.txt* y muestra el texto siguiente en la consola:
   
 ```console  
-The text was encrypted.  
+The text was encrypted.
 ```  
 
-Puede descifrar el archivo mediante el ejemplo de descifrado simétrico en [descifrar datos](decrypting-data.md). Este ejemplo y este ejemplo especifican la misma clave y el IV.
+Puede descifrar el archivo mediante el ejemplo de descifrado simétrico en [descifrar datos](decrypting-data.md). Este ejemplo y este ejemplo especifican la misma clave.
 
-Sin embargo, si se produce una excepción, el código muestra el texto siguiente en la consola:  
+Sin embargo, si se produce una excepción, el código muestra el texto siguiente en la consola:
   
 ```console  
-The encryption failed.  
+The encryption failed.
 ```
 
 ## <a name="asymmetric-encryption"></a>Cifrado asimétrico

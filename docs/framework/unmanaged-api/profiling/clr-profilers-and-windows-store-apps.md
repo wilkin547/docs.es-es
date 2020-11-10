@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 8922f057cb59258e2dd002cec4015af518dc255f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553361"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440085"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -94,7 +94,7 @@ Uno de los primeros obstáculos será la carga de inicio y la carga de conexión
 
 **Firma de la DLL del generador de perfiles**
 
-Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos formas de hacerlo:
+Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos modos para hacer esto:
 
 - Asegúrese de que la DLL del generador de perfiles está firmada.
 
@@ -356,7 +356,7 @@ El archivo DLL del generador de perfiles puede distinguir los archivos WinMD de 
 
 ### <a name="reading-metadata-from-winmds"></a>Leer metadatos de archivos winmd
 
-Los archivos WinMD, como los módulos normales, contienen metadatos que se pueden leer a través de las [API de metadatos](../metadata/index.md). Sin embargo, CLR asigna Windows Runtime tipos a tipos de .NET Framework cuando lee archivos WinMD para que los desarrolladores que programan en código administrado y utilicen el archivo WinMD puedan tener una experiencia de programación más natural. Para ver algunos ejemplos de estas asignaciones, consulte [.NET Framework Support for Windows store apps and Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Los archivos WinMD, como los módulos normales, contienen metadatos que se pueden leer a través de las [API de metadatos](../metadata/index.md). Sin embargo, CLR asigna Windows Runtime tipos a tipos de .NET Framework cuando lee archivos WinMD para que los desarrolladores que programan en código administrado y utilicen el archivo WinMD puedan tener una experiencia de programación más natural. Para ver algunos ejemplos de estas asignaciones, consulte [.NET Framework Support for Windows store apps and Windows Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
 Por lo tanto, ¿qué vista obtendrá el generador de perfiles cuando use las API de metadatos: la vista de Windows Runtime sin formato o la vista de .NET Framework asignada?  La respuesta es que depende de usted.
 
@@ -406,9 +406,9 @@ Es posible usar la API de generación de perfiles de CLR para analizar el códig
 
 **Interacción del CLR con el Windows Runtime**
 
-- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Aplicaciones de la tienda Windows**
+**Aplicaciones de la Tienda Windows**
 
 - [Acceso a archivos y permisos (aplicaciones de Windows Runtime](/previous-versions/windows/apps/hh967755(v=win.10))
 

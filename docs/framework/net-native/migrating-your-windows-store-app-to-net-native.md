@@ -2,12 +2,12 @@
 title: Migrar la aplicación de la Tienda Windows a .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ee17e50590a80d8973197b46910d5e22296c265f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556933"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440899"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la tienda Windows a .NET Native
 
@@ -208,7 +208,9 @@ En .NET Native:
 - El encabezado `SetCookie2` de las respuestas se omite como obsoleto.
 
 <a name="Interop"></a>
+
 ### <a name="interop-differences"></a>Diferencias de interoperabilidad
+
  **Interfaces API desusadas**
 
  Hay una serie de interfaces API poco utilizadas para la interoperabilidad con código administrado que están desusadas. Cuando se usa con .NET Native, estas API pueden producir <xref:System.NotImplementedException> una <xref:System.PlatformNotSupportedException> excepción o, o producir un error del compilador. En .NET para aplicaciones de la Tienda Windows, estas API se marcan como obsoletas, aunque al llamarlas se genera una advertencia del compilador en lugar de un error del compilador.
@@ -661,9 +663,9 @@ Use las herramientas de compilación x86 que se utilizan de manera predeterminad
 
 No se admite la habilitación de .NET Native en una biblioteca de pruebas unitarias para un proyecto de aplicaciones de la tienda Windows y hace que el proyecto no se compile.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción](getting-started-with-net-native.md)
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Información general de .NET para aplicaciones de la tienda Windows](/previous-versions/windows/apps/br230302(v=vs.140))
-- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

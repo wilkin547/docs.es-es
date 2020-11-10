@@ -1,26 +1,25 @@
 ---
 title: ¿Qué es F#?
-description: Obtenga información sobre qué F# es el lenguaje de programación F# y qué programación es como. Obtenga información sobre los tipos de datos enriquecidos, las funciones y cómo encajan entre sí.
+description: 'Obtenga información sobre el lenguaje de programación de F # y la programación de F #. Obtenga información sobre los tipos de datos enriquecidos, las funciones y cómo encajan entre sí.'
 ms.date: 08/03/2018
-ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 37dc2f472d65a046e4bf67e672e2a96f4d4afded
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332730"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439667"
 ---
 # <a name="what-is-f"></a>Qué es F\#
 
-F#es un lenguaje de programación funcional que facilita la escritura de código correcto y fácil de mantener.
+F # es un lenguaje de programación funcional que facilita la escritura de código correcto y fácil de mantener.
 
-F#la programación implica principalmente definir tipos y funciones que se infieren de tipo y se generalizan automáticamente. Esto permite que el foco permanezca en el dominio del problema y manipule sus datos, en lugar de los detalles de la programación.
+La programación en F # implica principalmente la definición de tipos y funciones que se infieren de tipo y se generalizan automáticamente. Esto permite que el foco permanezca en el dominio del problema y manipule sus datos, en lugar de los detalles de la programación.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
 
 // Defines a function that takes a name and produces a greeting.
-let getGreeting name =
-    sprintf "Hello, %s! Isn't F# great?" name
+let getGreeting name = $"Hello, {name}! Isn't F# great?"
 
 [<EntryPoint>]
 let main args =
@@ -35,7 +34,7 @@ let main args =
     0
 ```
 
-F#tiene numerosas características, entre las que se incluyen:
+F # tiene numerosas características, entre las que se incluyen:
 
 * Sintaxis ligera
 * Inmutable de forma predeterminada
@@ -45,7 +44,7 @@ F#tiene numerosas características, entre las que se incluyen:
 * Detección de patrones
 * Programación asincrónica
 
-En la [ F# referencia del lenguaje](./language-reference/index.md)se documenta un conjunto completo de características.
+En la [Referencia del lenguaje F #](./language-reference/index.md)se documenta un conjunto completo de características.
 
 ## <a name="rich-data-types"></a>Tipos de datos enriquecidos
 
@@ -72,11 +71,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#los registros y las uniones discriminadas son no NULL, inmutables y comparables de forma predeterminada, lo que facilita su uso.
+Los registros de F # y las uniones discriminadas son no NULL, inmutables y comparables de forma predeterminada, lo que facilita su uso.
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Aplicación de corrección con funciones y coincidencia de patrones
 
-F#las funciones son fáciles de declarar y eficaces en la práctica. Cuando se combina con la [coincidencia de patrones](./language-reference/pattern-matching.md), permiten definir el comportamiento cuya corrección se aplica mediante el compilador.
+Las funciones de F # son fáciles de declarar y eficaces en la práctica. Cuando se combina con la [coincidencia de patrones](./language-reference/pattern-matching.md), permiten definir el comportamiento cuya corrección se aplica mediante el compilador.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +92,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#las funciones son también de primera clase, lo que significa que se pueden pasar como parámetros y devolverse desde otras funciones.
+Las funciones de F # son también de primera clase, lo que significa que se pueden pasar como parámetros y devolverse desde otras funciones.
 
 ## <a name="functions-to-define-operations-on-objects"></a>Funciones para definir operaciones en objetos
 
-F#tiene compatibilidad total con objetos, que son tipos de datos útiles cuando es necesario combinar datos y funcionalidad. F#las funciones se usan para manipular objetos.
+F # es totalmente compatible con objetos, que son tipos de datos útiles cuando es necesario combinar datos y funcionalidad. Las funciones de F # se utilizan para manipular objetos.
 
 ```fsharp
 type Set<'T when 'T: comparison>(elements: seq<'T>) =
@@ -118,8 +117,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-En lugar de escribir código orientado a objetos, en F#, a menudo escribirá código que trata los objetos como otro tipo de datos para las funciones que se van a manipular. Las características como las [interfaces genéricas](./language-reference/interfaces.md), las [expresiones de objeto](./language-reference/object-expressions.md)y el uso prudente de [los miembros](./language-reference/members/index.md) son comunes en los programas más grandes. F#
+En lugar de escribir código orientado a objetos, en F #, a menudo escribirá código que trata los objetos como otro tipo de datos para las funciones que se van a manipular. Las características como las [interfaces genéricas](./language-reference/interfaces.md), las [expresiones de objeto](./language-reference/object-expressions.md)y el uso prudente de [los miembros](./language-reference/members/index.md) son comunes en los programas de F # más grandes.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de un conjunto F# mayor de características, consulte el [ F# paseo](tour.md).
+Para obtener más información sobre un conjunto mayor de características de F #, consulte el [paseo por f #](tour.md).
