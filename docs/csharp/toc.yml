@@ -48,6 +48,8 @@
               href: tutorials/intro-to-csharp/object-oriented-programming.md
     - name: Exploración de instrucciones de nivel superior
       href: tutorials/exploration/top-level-statements.md
+    - name: Exploración de patrones en objetos
+      href: tutorials/exploration/patterns-objects.md
     - name: Exploración de C# 6
       href: tutorials/exploration/csharp-6.yml
     - name: 'Exploración de la interpolación de cadenas: tutorial interactivo'
@@ -224,7 +226,7 @@
     - name: Índice de artículos
       displayName: how to's
       href: how-to/index.md
-    - name: Análisis de cadenas mediante `String.Split`
+    - name: División de cadenas en subcadenas
       href: how-to/parse-strings-using-split.md
     - name: Concatenación de cadenas
       href: how-to/concatenate-multiple-strings.md
@@ -234,7 +236,7 @@
       href: how-to/modify-string-contents.md
     - name: Comparación de cadenas
       href: how-to/compare-strings.md
-    - name: 'Conversión segura mediante coincidencia de patrones, operadores is y as'
+    - name: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
       href: how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
 - name: SDK de .NET Compiler Platform (API de Roslyn)
   items:
