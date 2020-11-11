@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 10/9/2020
-  ms.openlocfilehash: 0a173d85f5e7969831a2ace6aa860b6fde8cf579
-  ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+  ms.openlocfilehash: 65e2dbf0613a9bdd63bd8695f06b8c931e28268d
+  ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/30/2020
-  ms.locfileid: "93064189"
+  ms.lasthandoff: 11/10/2020
+  ms.locfileid: "94441053"
 highlightedContent:
   items:
   - title: Descarga de .NET
@@ -228,14 +228,14 @@ additionalContent:
         text: .NET para Apache Spark
     - title: Internet de las cosas (IoT)
       links:
-      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
-        text: 'En .NET: Más información sobre la compatibilidad de IoT en .NET Core'
-      - url: /archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
-        text: Programación de IoT multiplataforma con .NET Core 3.0
-      - url: https://github.com/dotnet/iot
-        text: Bibliotecas de IoT de .NET Core
-      - url: https://www.nuget.org/packages/System.Device.Gpio
-        text: Paquete NuGet System.Device.Gpio
+      - url: /dotnet/iot/
+        text: Bibliotecas .NET IoT
+      - url: /dotnet/iot/quickstarts/sensehat
+        text: Introducción en 5 minutos
+      - url: /dotnet/iot/tutorials/blink-led
+        text: Hacer parpadear un LED
+      - url: https://aka.ms/IoTNet101
+        text: Serie de vídeos de .NET IoT 101
   - title: API y referencia del lenguaje
     summary: Busque información en la documentación sobre API y referencia del lenguaje de .NET.
     items:
