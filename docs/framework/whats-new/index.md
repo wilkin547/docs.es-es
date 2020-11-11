@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 13346836b6cc1c9db4a1b6fd93a11615c2a843c0
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: da0e92f394507a37b0b6c163b41a575abc1c1a2b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687560"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441114"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -71,7 +71,7 @@ La accesibilidad mejorada, que permite que una aplicación proporcione una exper
 
 #### <a name="base-classes"></a>Clases base
 
-**Impacto de FIPS reducido sobre la criptografía** . En versiones anteriores de .NET Framework, las clases del proveedor de servicios criptográficos administrados, como <xref:System.Security.Cryptography.SHA256Managed>, producen una excepción <xref:System.Security.Cryptography.CryptographicException> cuando las bibliotecas criptográficas del sistema están configuradas en "modo FIPS". Estas excepciones se producen porque las versiones administradas de las clases de proveedor de servicios criptográficos, a diferencia de las bibliotecas criptográficas, no han pasado por la certificación 140-2 de FIPS (Estándar federal de procesamiento de información). Dado que pocos desarrolladores tienen sus máquinas de desarrollo en modo FIPS, las excepciones se producen normalmente en los sistemas de producción.
+**Impacto de FIPS reducido sobre la criptografía**. En versiones anteriores de .NET Framework, las clases del proveedor de servicios criptográficos administrados, como <xref:System.Security.Cryptography.SHA256Managed>, producen una excepción <xref:System.Security.Cryptography.CryptographicException> cuando las bibliotecas criptográficas del sistema están configuradas en "modo FIPS". Estas excepciones se producen porque las versiones administradas de las clases de proveedor de servicios criptográficos, a diferencia de las bibliotecas criptográficas, no han pasado por la certificación 140-2 de FIPS (Estándar federal de procesamiento de información). Dado que pocos desarrolladores tienen sus máquinas de desarrollo en modo FIPS, las excepciones se producen normalmente en los sistemas de producción.
 
 De forma predeterminada en las aplicaciones que tienen como destino .NET Framework 4.8, las siguientes clases de criptografía administrada ya no producen una excepción <xref:System.Security.Cryptography.CryptographicException> en este caso:
 
@@ -190,11 +190,11 @@ Para permitir la compatibilidad con la escalabilidad de alto PPP en modo mixto, 
 
 El entorno de ejecución de .NET Framework 4.8 incluye los siguientes cambios y mejoras:
 
-**Mejoras en el compilador JIT** . El compilador Just-in-time (JIT) de .NET Framework 4.8 se basa en el compilador JIT de .NET Core 2.1. Muchas de las optimizaciones y todas las correcciones de errores realizadas en el compilador JIT de .NET Core 2.1 se incluyen en el compilador JIT de .NET Framework 4.8.
+**Mejoras en el compilador JIT**. El compilador Just-in-time (JIT) de .NET Framework 4.8 se basa en el compilador JIT de .NET Core 2.1. Muchas de las optimizaciones y todas las correcciones de errores realizadas en el compilador JIT de .NET Core 2.1 se incluyen en el compilador JIT de .NET Framework 4.8.
 
-**Mejoras de NGEN** . El entorno de ejecución ha mejorado la administración de memoria para las imágenes del [Generador de imágenes nativo](../tools/ngen-exe-native-image-generator.md) (NGEN) de forma que los datos asignados a partir de imágenes NGEN no son residentes en memoria. Esto reduce la superficie expuesta a ataques que intentan ejecutar código arbitrario mediante la modificación de la memoria que se va a ejecutar.
+**Mejoras de NGEN**. El entorno de ejecución ha mejorado la administración de memoria para las imágenes del [Generador de imágenes nativo](../tools/ngen-exe-native-image-generator.md) (NGEN) de forma que los datos asignados a partir de imágenes NGEN no son residentes en memoria. Esto reduce la superficie expuesta a ataques que intentan ejecutar código arbitrario mediante la modificación de la memoria que se va a ejecutar.
 
-**Examen de todos los ensamblados con antimalware** . En versiones anteriores de .NET Framework, el entorno de ejecución examina todos los ensamblados cargados desde el disco mediante Windows Defender o software antimalware de terceros. Sin embargo, los ensamblados cargados desde otros orígenes, como con el método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, no se examinan y pueden contener posiblemente software malintencionado no detectado. A partir de .NET Framework 4.8 que se ejecuta en Windows 10, el entorno de ejecución desencadena un examen mediante soluciones antimalware que implementan la [Interfaz de detección de antimalware (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
+**Examen de todos los ensamblados con antimalware**. En versiones anteriores de .NET Framework, el entorno de ejecución examina todos los ensamblados cargados desde el disco mediante Windows Defender o software antimalware de terceros. Sin embargo, los ensamblados cargados desde otros orígenes, como con el método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, no se examinan y pueden contener posiblemente software malintencionado no detectado. A partir de .NET Framework 4.8 que se ejecuta en Windows 10, el entorno de ejecución desencadena un examen mediante soluciones antimalware que implementan la [Interfaz de detección de antimalware (AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472"></a>
 
@@ -720,11 +720,11 @@ _ *Extensibilidad de caché de objetos**
 
 A partir de .NET Framework 4.7, ASP.NET agrega un nuevo conjunto de API que permiten que los desarrolladores reemplacen las implementaciones predeterminadas de ASP.NET por la supervisión de memoria y el almacenamiento en caché de objetos en memoria. Ahora los desarrolladores pueden reemplazar cualquiera de los siguientes tres componentes si la implementación de ASP.NET no es adecuada:
 
-- **Almacén de caché de objetos** . En la nueva sección de configuración de proveedores de caché, los desarrolladores pueden insertar implementaciones nuevas de una caché de objetos para una aplicación de ASP.NET mediante la nueva interfaz **ICacheStoreProvider** .
+- **Almacén de caché de objetos**. En la nueva sección de configuración de proveedores de caché, los desarrolladores pueden insertar implementaciones nuevas de una caché de objetos para una aplicación de ASP.NET mediante la nueva interfaz **ICacheStoreProvider**.
 
-- **Supervisión de memoria** . El monitor de memoria predeterminado de ASP.NET notifica a las aplicaciones cuando se ejecutan cerca del límite de bytes privado configurado para el proceso o cuando queda poca RAM física total disponible en la máquina. Las notificaciones se activan cuando se está cerca de estos límites. En el caso de algunas aplicaciones, las notificaciones se activan demasiado cerca de los límites configurados como para permitir reacciones que sean útiles. Los desarrolladores ahora pueden usar la propiedad <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> para escribir sus propios monitores de memoria y, así, reemplazar el predeterminado.
+- **Supervisión de memoria**. El monitor de memoria predeterminado de ASP.NET notifica a las aplicaciones cuando se ejecutan cerca del límite de bytes privado configurado para el proceso o cuando queda poca RAM física total disponible en la máquina. Las notificaciones se activan cuando se está cerca de estos límites. En el caso de algunas aplicaciones, las notificaciones se activan demasiado cerca de los límites configurados como para permitir reacciones que sean útiles. Los desarrolladores ahora pueden usar la propiedad <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType> para escribir sus propios monitores de memoria y, así, reemplazar el predeterminado.
 
-- **Reacciones por límite de memoria** . De forma predeterminada, ASP.NET intenta recortar la caché de objetos y llama periódicamente a <xref:System.GC.Collect%2A?displayProperty=nameWithType> cuando se está cerca del límite de proceso de bytes privados. En algunas aplicaciones, la frecuencia de llamadas a <xref:System.GC.Collect%2A?displayProperty=nameWithType> o la cantidad de caché que se recorta no son suficientes. Ahora los desarrolladores puede reemplazar o complementar el comportamiento predeterminado si suscriben las implementaciones de **IObserver** al monitor de memoria de la aplicación.
+- **Reacciones por límite de memoria**. De forma predeterminada, ASP.NET intenta recortar la caché de objetos y llama periódicamente a <xref:System.GC.Collect%2A?displayProperty=nameWithType> cuando se está cerca del límite de proceso de bytes privados. En algunas aplicaciones, la frecuencia de llamadas a <xref:System.GC.Collect%2A?displayProperty=nameWithType> o la cantidad de caché que se recorta no son suficientes. Ahora los desarrolladores puede reemplazar o complementar el comportamiento predeterminado si suscriben las implementaciones de **IObserver** al monitor de memoria de la aplicación.
 
 <a name="wcf47"></a>
 
@@ -746,10 +746,10 @@ A partir de .NET Framework 4.7, WCF le permite configurar TLS 1.1 o TLS 1.2 
 
 WCF incluye varios cambios de código que eliminan condiciones de carrera, por lo que se mejora el rendimiento y la confiabilidad de las opciones de serialización. Se incluyen los siguientes:
 
-- Mayor compatibilidad para combinar código asincrónico y sincrónico en las llamadas a **SocketConnection.BeginRead** y **SocketConnection.Read** .
-- Confiabilidad mejorada cuando se anula una conexión con **SharedConnectionListener** y **DuplexChannelBinder** .
+- Mayor compatibilidad para combinar código asincrónico y sincrónico en las llamadas a **SocketConnection.BeginRead** y **SocketConnection.Read**.
+- Confiabilidad mejorada cuando se anula una conexión con **SharedConnectionListener** y **DuplexChannelBinder**.
 - Confiabilidad mejorada de las operaciones de serialización al llamar al método <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=nameWithType>.
-- Confiabilidad mejorada cuando se elimina un objeto waiter mediante una llamada al método **ChannelSynchronizer.RemoveWaiter** .
+- Confiabilidad mejorada cuando se elimina un objeto waiter mediante una llamada al método **ChannelSynchronizer.RemoveWaiter**.
 
 <a name="wf47"></a>
 
@@ -819,7 +819,7 @@ Los validadores de anotación de datos permiten realizar la validación agregand
 
 2. El archivo de recursos está almacenado en la carpeta App_LocalResources.
 
-3. El nombre del archivo de recursos localizados tiene la forma `DataAnnotation.Localization.{`*nombre*`}.resx`, donde *nombre* es un nombre de referencia cultural en el formato *códigoDeIdioma*`-`*códigoDePaís/Región* o *códigoDeIdioma* .
+3. El nombre del archivo de recursos localizados tiene la forma `DataAnnotation.Localization.{`*nombre*`}.resx`, donde *nombre* es un nombre de referencia cultural en el formato *códigoDeIdioma*`-`*códigoDePaís/Región* o *códigoDeIdioma*.
 
 4. El nombre de clave del recurso es la cadena asignada al atributo <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> y su valor es el mensaje de error localizado.
 
@@ -1585,9 +1585,9 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     Es conveniente usar un formato coherente para los modificadores porque son un contrato formal que expone una biblioteca. Las siguientes son dos formatos obvios.
 
-    - *Modificador* . *espacio de nombres* . *nombre del modificador*
+    - *Modificador*. *espacio de nombres*. *nombre del modificador*
 
-    - *Modificador* . *biblioteca* . *nombre del modificador*
+    - *Modificador*. *biblioteca*. *nombre del modificador*
 
   - **Cambios en el modelo asincrónico basado en tareas (TAP)**
 
@@ -1758,7 +1758,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Paquetes de .NET Framework de código abierto**
 
-  Los paquetes de .NET Core como las colecciones inmutables, las [API de SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) y las API de red, como las que se encuentran en el espacio de nombres <xref:System.Net.Http>, ahora están disponibles como paquetes de código abierto en [GitHub](https://github.com/). Para acceder al código, consulte [.NET en GitHub](https://github.com/dotnet/runtime). Para obtener más información y saber cómo contribuir a estos paquetes, vea [.NET Core y código abierto](../get-started/net-core-and-open-source.md) y la [página principal de .NET en GitHub](https://github.com/dotnet/home).
+  Los paquetes de .NET Core como las colecciones inmutables, las [API de SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) y las API de red, como las que se encuentran en el espacio de nombres <xref:System.Net.Http>, ahora están disponibles como paquetes de código abierto en [GitHub](https://github.com/). Para acceder al código, consulte [.NET en GitHub](https://github.com/dotnet/runtime). Para obtener más información sobre cómo colaborar en estos paquetes, vea [Introducción a .NET](../../core/introduction.md) y la [página principal de .NET en GitHub](https://github.com/dotnet/home).
 
 <a name="v452"></a>
 
@@ -2081,13 +2081,13 @@ Se han agregado varias características nuevas a Windows Workflow Foundation (W
 
 - Características mejoradas del Diseñador de flujo de trabajo, como las siguientes:
 
-  - Funcionalidades de búsqueda de flujo de trabajo mejoradas en Visual Studio, incluidas **Búsqueda rápida** y **Buscar en archivos** .
+  - Funcionalidades de búsqueda de flujo de trabajo mejoradas en Visual Studio, incluidas **Búsqueda rápida** y **Buscar en archivos**.
 
   - Capacidad de crear automáticamente una actividad Secuencia cuando una segunda actividad secundaria se agrega a una actividad del contenedor y para incluir ambas actividades en la actividad Secuencia.
 
   - Compatibilidad con el movimiento panorámico, que permite cambiar la parte visible de un flujo de trabajo sin usar las barras de desplazamiento.
 
-  - Una nueva vista **Esquema del documento** , en la que se muestran los componentes de un flujo de trabajo en una vista de esquema con forma de árbol y que le permite seleccionar un componente en la vista **Esquema del documento** .
+  - Una nueva vista **Esquema del documento** , en la que se muestran los componentes de un flujo de trabajo en una vista de esquema con forma de árbol y que le permite seleccionar un componente en la vista **Esquema del documento**.
 
   - Capacidad de agregar anotaciones a las actividades.
 

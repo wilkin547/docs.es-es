@@ -3,12 +3,12 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 00d6bb513a6bd8ee511b69c07272f605c39e5619
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 7719742294c04aadbfd2e5f223040d3b5b485b5b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063246"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439747"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core
 
@@ -119,4 +119,4 @@ Le recomendamos que use el siguiente proceso al portar un proyecto a .NET Core:
 
 - [Migración de ASP.NET s ASP.NET Core](/aspnet/core/migration/proper-to-2x)
 - [Migración de aplicaciones de WPF a .NET Core](/dotnet/desktop/wpf/migration/convert-project-from-net-framework)
-- [Migración de aplicaciones de Windows Forms a .NET Core](winforms.md)
+- [Migración a .NET de aplicaciones de Windows Forms para .NET Framework](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true)
