@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: fca2c641520bd9cd19a48bff2119a6f09c3713ea
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 41a666fd5f368e6990e08a36700e18f648939213
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382105"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440346"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
 
@@ -23,7 +23,7 @@ Los espacios de nombres se usan mucho en programación de C# de dos maneras. En 
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-[!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]
+[!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
 Para más información, vea [using (Directiva)](../../language-reference/keywords/using-directive.md).
 
