@@ -65,7 +65,7 @@ items:
         items:
           - name: Usar Visual Studio
             items:
-              - name: Crear una aplicación de consola
+              - name: Creación de una aplicación de consola
                 href: ../core/tutorials/with-visual-studio.md
                 displayName: 'tutorials, visual studio, vs'
               - name: Depuración de una aplicación
@@ -88,7 +88,7 @@ items:
                 displayName: 'tutorials, visual studio, vs'
           - name: Usar Visual Studio Code
             items:
-              - name: Crear una aplicación de consola
+              - name: Creación de una aplicación de consola
                 href: ../core/tutorials/with-visual-studio-code.md
                 displayName: 'tutorials, visual studio code, vs code, cli'
               - name: Depuración de una aplicación
@@ -111,7 +111,7 @@ items:
                 displayName: tutorials
           - name: Uso de Visual Studio para Mac
             items:
-              - name: Crear una aplicación de consola
+              - name: Creación de una aplicación de consola
                 href: ../core/tutorials/with-visual-studio-mac.md
                 displayName: 'tutorials, visual studio for mac, vs for mac, cli'
               - name: Depuración de una aplicación
@@ -161,10 +161,18 @@ items:
             items:
               - name: NETSDK1005 y NETSDK1047
                 href: ../core/tools/sdk-errors/netsdk1005.md
+              - name: NETSDK1013
+                href: ../core/tools/sdk-errors/netsdk1013.md
+              - name: NETSDK1022
+                href: ../core/tools/sdk-errors/netsdk1022.md
               - name: NETSDK1059
                 href: ../core/tools/sdk-errors/netsdk1059.md
+              - name: NETSDK1071
+                href: ../core/tools/sdk-errors/netsdk1071.md
               - name: NETSDK1073
                 href: ../core/tools/sdk-errors/netsdk1073.md
+              - name: NETSDK1079
+                href: ../core/tools/sdk-errors/netsdk1079.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
       - name: CLI de .NET Core
@@ -1029,6 +1037,8 @@ items:
                             href: code-analysis/style-rules/ide0034.md
                           - name: IDE0037
                             href: code-analysis/style-rules/ide0037.md
+                          - name: IDE0039
+                            href: code-analysis/style-rules/ide0039.md
                           - name: IDE0042
                             href: code-analysis/style-rules/ide0042.md
                           - name: IDE0045
