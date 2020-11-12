@@ -2,12 +2,12 @@
 title: Segmentos
 description: 'Obtenga información sobre cómo usar los segmentos para los tipos de datos de F # existentes y cómo definir sus propios segmentos para otros tipos de datos.'
 ms.date: 12/23/2019
-ms.openlocfilehash: d3ddb2c247c36a85842f565f051372c5f2c9a9e9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559016"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557084"
 ---
 # <a name="slices"></a>Segmentos
 
@@ -148,6 +148,62 @@ let xs = [1 .. 10]
 
 printfn "%A" xs.[2..5] // Includes the 5th index
 ```
+
+## <a name="built-in-f-empty-slices"></a>Segmentos vacíos de F # integrados
+
+Las listas, matrices, secuencias, cadenas, matrices 2D, matrices 3D y 4D matrices de F # producirán un segmento vacío si la sintaxis podría producir un segmento que no existe.
+
+Tenga en cuenta lo siguiente.
+
+```fsharp
+let l = [ 1..10 ]
+let a = [| 1..10 |]
+let s = "hello!"
+
+let emptyList = l.[-2..(-1)]
+let emptyArray = a.[-2..(-1)]
+let emptyString = s.[-2..(-1)]
+```
+
+Los desarrolladores de C# pueden esperar que se produzca una excepción en lugar de producir un segmento vacío. Se trata de una decisión de diseño que se basa en el hecho de que las colecciones vacías se componen en F #. Una lista vacía de F # puede estar formada por otra lista de F #, una cadena vacía se puede Agregar a una cadena existente, etc. Puede ser común tomar los segmentos en función de los valores pasados como parámetros y ser tolerante de los límites fuera de los límites mediante la generación de una colección vacía que se ajusta a la naturaleza de composición del código de F #.
+
+## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Segmentos de índice fijo para matrices 3D y 4D
+
+En el caso de las matrices F # 3D y 4D, puede "corregir" un índice determinado y segmentar otras dimensiones con ese índice fijo.
+
+Para ilustrar esto, considere la siguiente matriz 3D:
+
+*z = 0*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 0 | 1 |
+| **1** | 2 | 3 |
+
+*z = 1*
+| x\y   | 0 | 1 |
+|-------|---|---|
+| **0** | 4 | 5 |
+| **1** | 6 | 7 |
+
+Si desea extraer el segmento `[| 4; 5 |]` de la matriz, use un segmento de índice fijo.
+
+```fsharp
+let dim = 2
+let m = Array3D.zeroCreate<int> dim dim dim
+
+let mutable count = 0
+
+for z in 0..dim-1 do
+    for y in 0..dim-1 do
+        for x in 0..dim-1 do
+            m.[x,y,z] <- count
+            count <- count + 1
+
+// Now let's get the [4;5] slice!
+m.[*, 0, 1]
+```
+
+La última línea corrige las `y` `z` lenguas y de la matriz 3D y toma el resto de los `x` valores que corresponden a la matriz.
 
 ## <a name="see-also"></a>Consulte también
 

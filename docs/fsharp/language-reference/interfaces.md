@@ -2,12 +2,12 @@
 title: Interfaces
 description: 'Obtenga información sobre cómo las interfaces de F # especifican conjuntos de miembros relacionados que otras clases implementan.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 36272b52fcff83e8e8a54ccc4e6ecd1252a91819
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0cef2932045dae401f5aa069107815543457ca4a
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558132"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557056"
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -41,7 +41,7 @@ let class-name (argument-list) =
     member-list
 ```
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Las declaraciones de interfaz son similares a las declaraciones de clase, salvo que no se implementa ningún miembro. En su lugar, todos los miembros son abstractos, como se indica en la palabra clave `abstract` . No se proporciona un cuerpo de método para los métodos abstractos. Sin embargo, puede proporcionar una implementación predeterminada al incluir también una definición independiente del miembro como un método junto con la `default` palabra clave. Hacerlo es equivalente a crear un método virtual en una clase base en otros lenguajes .NET. Este tipo de método virtual se puede invalidar en las clases que implementan la interfaz.
 
@@ -100,6 +100,67 @@ Las expresiones de objeto proporcionan una manera breve de implementar una inter
 Las interfaces pueden heredar de una o varias interfaces base.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+
+## <a name="implementing-interfaces-with-default-implementations"></a>Implementar interfaces con implementaciones predeterminadas
+
+C# admite la definición de interfaces con implementaciones predeterminadas, como:
+
+```csharp
+using System;
+
+namespace CSharp
+{
+    public interface MyDim
+    {
+        public int Z => 0;
+    }
+}
+```
+
+Se pueden utilizar directamente desde F #:
+
+```fsharp
+open CSharp
+
+// You can implement the interface via a class
+type MyType() =
+    member _.M() = ()
+
+    interface MyDim
+
+let md = MyType() :> MyDim
+printfn $"DIM from C#: %d{md.Z}"
+
+// You can also implement it via an object expression
+let md' = { new MyDim }
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
+```
+
+Puede invalidar una implementación predeterminada con `override` , como invalidar cualquier miembro virtual.
+
+Cualquier miembro de una interfaz que no tenga una implementación predeterminada todavía debe implementarse explícitamente.
+
+## <a name="implementing-the-same-interface-at-different-generic-instantiations"></a>Implementar la misma interfaz en distintas instancias genéricas
+
+F # admite la implementación de la misma interfaz en distintas instancias genéricas, como por ejemplo:
+
+```fsharp
+type IA<'T> =
+    abstract member Get : unit -> 'T
+
+type MyClass() =
+    interface IA<int> with
+        member x.Get() = 1
+    interface IA<string> with
+        member x.Get() = "hello"
+
+let mc = MyClass()
+let iaInt = mc :> IA<int>
+let iaString = mc :> IA<string>
+
+iaInt.Get() // 1
+iaString.Get() // "hello"
+```
 
 ## <a name="see-also"></a>Vea también
 

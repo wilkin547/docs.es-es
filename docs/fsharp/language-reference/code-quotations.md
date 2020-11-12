@@ -2,16 +2,16 @@
 title: Expresiones de código delimitadas
 description: 'Obtenga información sobre las expresiones de código delimitadas de F #, una característica del lenguaje que permite generar y trabajar con las expresiones de código de F # mediante programación.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 070e127397a5da7d70281d08ef7cafdb9b4f4fe5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: dc37fdbd6cd29e5ee94e5c0186dfe2bfeb666f32
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558340"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557199"
 ---
 # <a name="code-quotations"></a>Expresiones de código delimitadas
 
-En este artículo se describen las expresiones de *código delimitadas*, una característica del lenguaje que permite generar y trabajar con las expresiones de código de F # mediante programación. Esta característica permite generar un árbol de sintaxis abstracta que representa el código de F #. A continuación, el árbol de sintaxis abstracta puede atravesarse y procesarse según las necesidades de la aplicación. Por ejemplo, puede usar el árbol para generar código de F # o generar código en otro lenguaje.
+En este artículo se describen las expresiones de *código delimitadas* , una característica del lenguaje que permite generar y trabajar con las expresiones de código de F # mediante programación. Esta característica permite generar un árbol de sintaxis abstracta que representa el código de F #. A continuación, el árbol de sintaxis abstracta puede atravesarse y procesarse según las necesidades de la aplicación. Por ejemplo, puede usar el árbol para generar código de F # o generar código en otro lenguaje.
 
 ## <a name="quoted-expressions"></a>Expresiones entre comillas
 
@@ -37,6 +37,21 @@ Pero las siguientes expresiones son válidas.
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
 Para evaluar las comillas de F #, debe utilizar el [evaluador de Comillas de f #](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Proporciona compatibilidad para evaluar y ejecutar objetos de expresión de F #.
+
+Las comillas de F # también conservan la información de restricciones de tipos. Considere el ejemplo siguiente:
+
+```fsharp
+open FSharp.Linq.RuntimeHelpers
+
+let eval q = LeafExpressionConverter.EvaluateQuotation q
+
+let inline negate x = -x
+// val inline negate: x: ^a ->  ^a when  ^a : (static member ( ~- ) :  ^a ->  ^a)
+
+<@ negate 1.0 @>  |> eval
+```
+
+La restricción generada por la `inline` función se conserva en el código qutoation. `negate`Ahora se puede evaluar el formulario quotated de la función.
 
 ## <a name="expr-type"></a>Tipo de expresión
 
@@ -66,7 +81,7 @@ En el ejemplo siguiente se muestra el uso de expresiones de código delimitadas 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet601.fs)]
 
-### <a name="output"></a>Output
+### <a name="output"></a>Resultados
 
 ```fsharp
 fun (x:System.Int32) -> x + 1
