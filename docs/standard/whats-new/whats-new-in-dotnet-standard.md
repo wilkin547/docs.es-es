@@ -4,12 +4,12 @@ description: En este artículo, se resumen las nuevas características y mejoras
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 28d6a3546e08bbc3a7d4a26f08ba9cc5e16a901b
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 419988901923b890aaf0a540d155775214e62c52
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438200"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282100"
 ---
 # <a name="whats-new-in-net-standard"></a>Novedades de .NET Standard
 
@@ -35,7 +35,7 @@ ms.locfileid: "80438200"
 
 ### <a name="a-vastly-expanded-set-of-apis"></a>Un conjunto de API ampliamente expandido
 
-Con la versión 1.6, .NET Standard incluía un subconjunto relativamente pequeño de API. Entre las excluidas estaban muchas API utilizadas habitualmente en .NET Framework o Xamarin. Esto complica el desarrollo, ya que los desarrolladores tienen que encontrar sustitutas adecuadas para API familiares para desarrollar aplicaciones y bibliotecas destinadas a varias implementaciones de .NET. .NET Standard 2.0 soluciona esta limitación con la incorporación de más de 20 000 API más de las que estaban disponibles en .NET Standard 1.6, la versión anterior del estándar. Si quiere obtener una lista de las API agregadas a .NET Standard 2.0, vea [comparación entre .NET Standard 2.0 y 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Con la versión 1.6, .NET Standard incluía un subconjunto relativamente pequeño de API. Entre las excluidas había muchas API usadas habitualmente en .NET Framework o Xamarin. Esto complica el desarrollo, ya que los desarrolladores tienen que encontrar sustitutas adecuadas para API familiares para desarrollar aplicaciones y bibliotecas destinadas a varias implementaciones de .NET. .NET Standard 2.0 soluciona esta limitación con la incorporación de más de 20 000 API más de las que estaban disponibles en .NET Standard 1.6, la versión anterior del estándar. Si quiere obtener una lista de las API agregadas a .NET Standard 2.0, vea [comparación entre .NET Standard 2.0 y 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 Alguna de las adiciones al espacio de nombres <xref:System> de .NET Standard 2.0 incluyen:
 
@@ -53,7 +53,7 @@ Alguna de las adiciones al espacio de nombres <xref:System> de .NET Standard 2.0
 
 ### <a name="support-for-net-framework-libraries"></a>Compatibilidad con las bibliotecas .NET Framework
 
-La gran mayoría de las bibliotecas tienen como destino .NET Framework en lugar de .NET Standard. Sin embargo, la mayoría de las llamadas de esas bibliotecas se realizan a las API incluidas en .NET Standard 2.0. A partir de .NET Standard 2.0, puede acceder a las bibliotecas de .NET Framework desde una biblioteca de .NET Standard usando una [corrección de compatibilidad](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Este nivel de compatibilidad es transparente para los desarrolladores; no tiene que hacer nada para aprovechar las ventajas de las bibliotecas de .NET Framework.
+Muchas bibliotecas tienen como destino .NET Framework en lugar de .NET Standard. Sin embargo, la mayoría de las llamadas de esas bibliotecas se realizan a las API incluidas en .NET Standard 2.0. A partir de .NET Standard 2.0, puede acceder a las bibliotecas de .NET Framework desde una biblioteca de .NET Standard usando una [corrección de compatibilidad](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Este nivel de compatibilidad es transparente para los desarrolladores; no tiene que hacer nada para aprovechar las ventajas de las bibliotecas de .NET Framework.
 
 El único requisito es que las API a las que llaman las bibliotecas de clases .NET Framework estén incluidas en .NET Standard 2.0.
 
@@ -65,7 +65,7 @@ Ahora puede desarrollar bibliotecas de .NET Standard en Visual Basic. Visual St
 
 Con la versión de .NET Core 2.0 y .NET Standard 2.0, Visual Studio 2017 y la [CLI de .NET Core](../../core/tools/index.md) incluyen compatibilidad con herramientas para crear bibliotecas de .NET Standard.
 
-Si instala Visual Studio con la carga de trabajo de **desarrollo multiplataforma de .NET Core**, puede crear un proyecto de biblioteca de .NET Standard 2.0 al usar una plantilla de proyecto, como se muestra en la ilustración siguiente:
+Si instala Visual Studio con la carga de trabajo de **desarrollo multiplataforma de .NET Core** , puede crear un proyecto de biblioteca de .NET Standard 2.0 al usar una plantilla de proyecto, como se muestra en la ilustración siguiente:
 
 <!-- markdownlint-disable MD025 -->
 

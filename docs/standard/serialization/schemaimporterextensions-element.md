@@ -1,21 +1,22 @@
 ---
 title: <schemaImporterExtensions> (Elemento)
-description: El elemento <schemaImporterExtensions> contiene tipos que se usan en XmlSchemaImporter para asignar tipos XSD a tipos de .NET Framework.
+description: El elemento <schemaImporterExtensions> contiene tipos que se usan en XmlSchemaImporter para asignar tipos XSD a tipos de .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - schemaImporterExtensions element
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
-ms.openlocfilehash: c46c5cb6e01463723f0f2ce3873fb4a6ec0b4e60
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 35626618a8dd7c63a7008d10bc3568484836a488
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84278407"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282267"
 ---
-# <a name="schemaimporterextensions-element"></a>\<schemaImporterExtensions> (Elemento)
-Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar de los tipos XSD a los tipos de .NET Framework. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
+# <a name="schemaimporterextensions-element"></a>Elemento \<schemaImporterExtensions>
+
+Contiene tipos que <xref:System.Xml.Serialization.XmlSchemaImporter> usa para asignar de los tipos XSD a los tipos de .NET. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +39,7 @@ Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaIm
 |[Elemento \<system.xml.serialization>](system-xml-serialization-element.md)|El elemento de nivel superior para controlar la serialización XML.|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente muestra cómo agregar tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> al asignar los tipos XSD a los tipos de .NET Framework.  
+ El ejemplo de código siguiente muestra cómo agregar tipos que <xref:System.Xml.Serialization.XmlSchemaImporter> usa al asignar los tipos XSD a los tipos de .NET.  
   
 ```xml  
 <system.xml.serialization>  

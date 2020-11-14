@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 909d979d46b30939e304af071de65d230febd92d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380136"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282403"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serialización y deserialización de JSON en .NET: información general
 
@@ -27,8 +27,9 @@ La biblioteca también proporciona clases para trabajar con un Document Object M
 
 ## <a name="how-to-get-the-library"></a>Cómo obtener la biblioteca
 
-* La biblioteca está integrada como parte del marco compartido de [.NET Core 3.0](https://aka.ms/netcore3download).
-* En cuanto a otros marcos de destino, instale el paquete NuGet [System.Text.Json](https://www.nuget.org/packages/System.Text.Json), que admite lo siguiente:
+* La biblioteca está integrada como parte del marco compartido para .NET Core 3.0 y versiones posteriores.
+* Para versiones anteriores del marco, instale el paquete [System.Text.Json](https://www.nuget.org/packages/System.Text.Json) de NuGet, que admite lo siguiente:
+
   * .NET Standard 2.0 y versiones posteriores
   * .NET Framework 4.7.2 y versiones posteriores
   * .NET Core 2.0, 2.1 y 2.2

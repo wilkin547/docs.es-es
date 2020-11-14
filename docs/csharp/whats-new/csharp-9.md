@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c256c03831ac759bc45467f38e85fd3a2884dda4
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526592"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282342"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -30,7 +30,7 @@ C# 9.0 agrega las siguientes características y mejoras al lenguaje C#:
 - Inicializadores de módulo
 - Nuevas características para métodos parciales
 
-C# 9.0 es compatible con **.NET 5** . Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
+C# 9.0 es compatible con **.NET 5**. Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
 
 ## <a name="record-types"></a>Tipos de registro
 
@@ -86,7 +86,7 @@ El compilador sintetiza dos métodos que admiten la salida impresa: una invalida
 "Student { LastName = Wagner, FirstName = Bill, Level = 11 }"
 ```
 
-En los ejemplos mostrados hasta ahora se usa la sintaxis tradicional para declarar propiedades. Hay una forma más concisa denominada _*_registros posicionales_*_ .  Estos son los tres tipos de registro definidos anteriormente como registros posicionales:
+En los ejemplos mostrados hasta ahora se usa la sintaxis tradicional para declarar propiedades. Hay una forma más concisa denominada _*_registros posicionales_*_.  Estos son los tres tipos de registro definidos anteriormente como registros posicionales:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="PositionalRecords":::
 
@@ -98,7 +98,7 @@ El compilador genera un método `Deconstruct` para los registros posicionales. E
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Por último, los registros admiten _*_expresiones with_*_ . Una _*_expresión with_*_ indica al compilador que cree una copia de un registro, pero con propiedades especificadas modificadas:
+Por último, los registros admiten _*_expresiones with_*_. Una _*_expresión with_*_ indica al compilador que cree una copia de un registro, pero con propiedades especificadas modificadas:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
@@ -240,9 +240,9 @@ Dos últimas características admiten generadores de código de C#. Los generado
 
 Un generador de código lee atributos u otros elementos de código mediante las API de análisis de Roslyn. A partir de esa información, agrega código nuevo a la compilación. Los generadores de código fuente solo pueden agregar código; no se les permite modificar ningún código existente en la compilación.
 
-Las dos características agregadas a los generadores de código son las extensiones de la **sintaxis de métodos parciales** y los _*_inicializadores de módulos_*_ . En primer lugar, los cambios en los métodos parciales. Antes de C# 9.0, los métodos parciales eran `private`, pero no podían especificar un modificador de acceso, tener un valor devuelto `void` ni parámetros `out`. Estas restricciones implican que si no se proporciona ninguna implementación de método, el compilador quita todas las llamadas al método parcial. En C# 9.0 se quitan estas restricciones, pero es necesario que las declaraciones de métodos parciales tengan una implementación. Los generadores de código pueden proporcionar esa implementación. Para evitar la introducción de un cambio importante, el compilador tiene en cuenta cualquier método parcial sin un modificador de acceso para seguir las reglas anteriores. Si el método parcial incluye el modificador de acceso `private`, las nuevas reglas rigen ese método parcial.
+Las dos características agregadas a los generadores de código son las extensiones de la **sintaxis de métodos parciales** y los _*_inicializadores de módulos_*_. En primer lugar, los cambios en los métodos parciales. Antes de C# 9.0, los métodos parciales eran `private`, pero no podían especificar un modificador de acceso, tener un valor devuelto `void` ni parámetros `out`. Estas restricciones implican que si no se proporciona ninguna implementación de método, el compilador quita todas las llamadas al método parcial. En C# 9.0 se quitan estas restricciones, pero es necesario que las declaraciones de métodos parciales tengan una implementación. Los generadores de código pueden proporcionar esa implementación. Para evitar la introducción de un cambio importante, el compilador tiene en cuenta cualquier método parcial sin un modificador de acceso para seguir las reglas anteriores. Si el método parcial incluye el modificador de acceso `private`, las nuevas reglas rigen ese método parcial.
 
-La segunda característica nueva de los generadores de código son los _inicializadores de módulos_ . Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El tiempo de ejecución llamará a estos métodos cuando se cargue el ensamblado. Un método de inicializador de módulo:
+La segunda característica nueva de los generadores de código son los _inicializadores de módulos_. Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El tiempo de ejecución llamará a estos métodos cuando se cargue el ensamblado. Un método de inicializador de módulo:
 
 - Debe ser estático
 - No debe tener parámetros

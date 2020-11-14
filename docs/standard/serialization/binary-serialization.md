@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.openlocfilehash: 2ede74dd8a48735a7ded450d1da6d9cda8fc5ae6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bfb504862232345db07bdc92993069fc87afdbeb
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554500"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282096"
 ---
 # <a name="binary-serialization"></a>Serialización binaria
 
@@ -25,7 +25,7 @@ La serialización se puede definir como el proceso de almacenar el estado de un 
 Al implementar un mecanismo de la serialización en un entorno orientado a objetos, tiene que realizar varios intercambios entre la facilidad de uso y la flexibilidad. El proceso se puede automatizar en gran medida, con tal de que sea proporcionado el control suficiente sobre el proceso. Por ejemplo, las situaciones se pueden presentar donde la serialización binaria simple no es suficiente, o podría haber una razón concreta para decidir qué campos en una clase necesitan ser serializados. Las secciones siguientes examinan el sólido mecanismo de serialización proporcionado con .NET y resaltan varias características importantes que permiten personalizar el proceso para satisfacer las necesidades.
 
 > [!NOTE]
-> El estado de un objeto UTF-8 o UTF-7 codificado no se conserva si el objeto se serializa y se deserializa utilizando distintas versiones de .NET Framework.
+> El estado de un objeto UTF-8 o UTF-7 codificado no se conserva si el objeto se serializa y se deserializa utilizando distintas versiones de .NET.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -351,7 +351,7 @@ Describe el mecanismo de la serialización XML que está incluido con Common Lan
 Describe las instrucciones de la codificación seguras que hay que seguir al escribir el código que realiza la serialización.
 
 - [Comunicación remota de .NET](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-Describe los diversos métodos a partir de .NET Framework para las comunicaciones remotas.
+Describe los diversos métodos en .NET Framework para las comunicaciones remotas.
 
 - [Servicios web XML creados con ASP.NET y clientes de servicio web XML](/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Artículos en los que se describe y explica cómo programar servicios web XML creados con ASP.NET.

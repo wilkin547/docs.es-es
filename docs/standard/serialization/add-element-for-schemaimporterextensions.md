@@ -1,22 +1,23 @@
 ---
 title: Elemento <add> para <schemaImporterExtensions>
-description: El elemento <add> agrega los tipos que usa la clase XmlSchemaImporter para asignar tipos XSD a tipos de .NET Framework.
+description: El elemento <add> agrega los tipos que usa la clase XmlSchemaImporter para asignar tipos XSD a tipos de .NET.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
-ms.openlocfilehash: 6fd8113ad39a22c927035fca574151ae8f002685
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 38d8ebd6e973632b23865ad60e007d9aa21e7da6
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288334"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281998"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>Elemento \<add> para \<schemaImporterExtensions>
-Agrega tipos utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar los tipos XSD a los tipos de .NET Framework. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
+
+Agrega tipos que <xref:System.Xml.Serialization.XmlSchemaImporter> utiliza para asignar los tipos XSD a los tipos de .NET. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../framework/configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
- \<configuration>  
+\<configuration>  
 \<system.xml.serialization>  
 \<schemaImporterExtensions>  
 \<add>  

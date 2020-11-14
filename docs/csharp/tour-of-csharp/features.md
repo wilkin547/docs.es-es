@@ -2,12 +2,12 @@
 title: 'Recorrido por C#: áreas principales del lenguaje'
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 08/06/2020
-ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558180"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400753"
 ---
 # <a name="major-language-areas"></a>Áreas principales del lenguaje
 
@@ -17,30 +17,30 @@ C# y .NET proporcionan muchos tipos de colecciones diferentes. Las matrices tien
 
 ### <a name="arrays"></a>Matrices
 
-Una [***matriz***](../programming-guide/arrays/index.md) es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados. Las variables contenidas en una matriz, denominadas también ***elementos*** de la matriz, son todas del mismo tipo. Este tipo se denomina ***tipo de elemento*** de la matriz.
+Una matriz [***array** _](../programming-guide/arrays/index.md) es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados. Las variables contenidas en una matriz, denominadas también _*_elementos_*_ de la matriz, son todas del mismo tipo. Este tipo se denomina _*_tipo de elemento_*_ de la matriz.
 
-Los tipos de matriz son tipos de referencia, y la declaración de una variable de matriz simplemente establece un espacio reservado para una referencia a una instancia de matriz. Las instancias de matriz reales se crean dinámicamente en tiempo de ejecución mediante el operador `new`. La operación `new` especifica la ***longitud*** de la nueva instancia de matriz, que luego se fija para la vigencia de la instancia. Los índices de los elementos de una matriz van de `0` a `Length - 1`. El operador `new` inicializa automáticamente los elementos de una matriz a su valor predeterminado, que, por ejemplo, es cero para todos los tipos numéricos y `null` para todos los tipos de referencias.
+Los tipos de matriz son tipos de referencia, y la declaración de una variable de matriz simplemente establece un espacio reservado para una referencia a una instancia de matriz. Las instancias de matriz reales se crean dinámicamente en tiempo de ejecución mediante el operador `new`. La operación `new` especifica la _*_longitud_*_ de la nueva instancia de matriz, que luego se fija para la vigencia de la instancia. Los índices de los elementos de una matriz van de `0` a `Length - 1`. El operador `new` inicializa automáticamente los elementos de una matriz a su valor predeterminado, que, por ejemplo, es cero para todos los tipos numéricos y `null` para todos los tipos de referencias.
 
 En el ejemplo siguiente se crea una matriz de elementos `int`, se inicializa la matriz y se imprime el contenido de la matriz.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-Este ejemplo se crea y se pone en funcionamiento en una ***matriz unidimensional***. C# también admite ***matrices multidimensionales***. El número de dimensiones de un tipo de matriz, conocido también como ***rango*** del tipo de matriz, es una más el número de comas escritas entre los corchetes del tipo de matriz. En el ejemplo siguiente se asignan una matriz unidimensional, bidimensional y tridimensional, respectivamente.
+Este ejemplo se crea y se pone en funcionamiento en una _*_matriz unidimensional_*_. C# también admite _*_matrices multidimensionales_*_. El número de dimensiones de un tipo de matriz, conocido también como _*_rango_*_ del tipo de matriz, es una más el número de comas escritas entre los corchetes del tipo de matriz. En el ejemplo siguiente se asignan una matriz unidimensional, bidimensional y tridimensional, respectivamente.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
 La matriz `a1` contiene 10 elementos, la matriz `a2` 50 (10 × 5) elementos y la matriz `a3` 100 (10 × 5 × 2) elementos.
-El tipo de elemento de una matriz puede ser cualquiera, incluido un tipo de matriz. Una matriz con elementos de un tipo de matriz a veces se conoce como ***matriz escalonada*** porque las longitudes de las matrices de elementos no tienen que ser iguales. En el ejemplo siguiente se asigna una matriz de matrices de `int`:
+El tipo de elemento de una matriz puede ser cualquiera, incluido un tipo de matriz. Una matriz con elementos de un tipo de matriz a veces se conoce como _*_matriz escalonada_*_ porque las longitudes de las matrices de elementos no tienen que ser iguales. En el ejemplo siguiente se asigna una matriz de matrices de `int`:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArrayOfArrays":::
 
 La primera línea crea una matriz con tres elementos, cada uno de tipo `int[]` y cada uno con un valor inicial de `null`. Las líneas siguientes inicializan entonces los tres elementos con referencias a instancias de matriz individuales de longitud variable.
 
-El operador `new` permite especificar los valores iniciales de los elementos de matriz mediante un ***inicializador de matriz***, que es una lista de las expresiones escritas entre los delimitadores `{` y `}`. En el ejemplo siguiente se asigna e inicializa un tipo `int[]` con tres elementos.
+El operador `new` permite especificar los valores iniciales de los elementos de matriz mediante un _*_inicializador de matriz_*_ , que es una lista de las expresiones escritas entre los delimitadores `{` y `}`. En el ejemplo siguiente se asigna e inicializa un tipo `int[]` con tres elementos.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeArray":::
 
-La longitud de la matriz se deduce del número de expresiones entre `{` y `}`. Las declaraciones de variables y campos locales se pueden acortar más para que así no sea necesario reformular el tipo de matriz.
+La longitud de la matriz se deduce del número de expresiones entre `{` y `}`. La inicialización de la matriz se puede acortar aún más, de modo que no sea necesario reformular el tipo de matriz.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="InitializeShortened":::
 
@@ -56,19 +56,19 @@ La instrucción `foreach` utiliza la interfaz <xref:System.Collections.Generic.I
 
 ## <a name="string-interpolation"></a>Interpolación de cadenas
 
-La [***interpolación de cadenas***](../language-reference/tokens/interpolated.md) de C# le permite dar formato a las cadenas mediante la definición de expresiones cuyos resultados se colocan en una cadena de formato. Por ejemplo, en el ejemplo siguiente se imprime la temperatura de un día determinado a partir de un conjunto de datos meteorológicos:
+La [_*_interpolación de cadenas_*_](../language-reference/tokens/interpolated.md) de C# le permite dar formato a las cadenas mediante la definición de expresiones cuyos resultados se colocan en una cadena de formato. Por ejemplo, en el ejemplo siguiente se imprime la temperatura de un día determinado a partir de un conjunto de datos meteorológicos:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Una cadena interpolada se declara mediante el token `$`. La interpolación de cadenas evalúa las expresiones entre `{` y `}`, convierte el resultado en un elemento `string` y reemplaza el texto entre corchetes por el resultado de cadena de la expresión. El elemento `:` presente en la primera expresión, `{weatherData.Date:MM-DD-YYYY}`, especifica la *cadena de formato*. En el ejemplo anterior, especifica que la fecha debe imprimirse en formato "MM-DD-AAAA".
+Una cadena interpolada se declara mediante el token `$`. La interpolación de cadenas evalúa las expresiones entre `{` y `}`, convierte el resultado en un elemento `string` y reemplaza el texto entre corchetes por el resultado de cadena de la expresión. El elemento `:` presente en la primera expresión, `{weatherData.Date:MM-DD-YYYY}`, especifica la _cadena de formato*. En el ejemplo anterior, especifica que la fecha debe imprimirse en formato "MM-DD-AAAA".
 
 ## <a name="pattern-matching"></a>Detección de patrones
 
-El lenguaje C# proporciona expresiones de [***coincidencia de patrones***](../pattern-matching.md) para consultar el estado de un objeto y ejecutar código basado en dicho estado. Puede inspeccionar los tipos y los valores de las propiedades y los campos para determinar qué acción se debe realizar. La expresión `switch` es la expresión primaria para la coincidencia de patrones.
+El lenguaje C# proporciona expresiones de [***coincidencia de patrones** _](../pattern-matching.md) para consultar el estado de un objeto y ejecutar código basado en dicho estado. Puede inspeccionar los tipos y los valores de las propiedades y los campos para determinar qué acción se debe realizar. La expresión `switch` es la expresión primaria para la coincidencia de patrones.
 
 ## <a name="delegates-and-lambda-expressions"></a>Delegados y expresiones lambda
 
-Un [***tipo de delegado***](../delegates-overview.md) representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son similares al concepto de punteros de función de otros lenguajes. A diferencia de los punteros de función, los delegados están orientados a objetos y tienen seguridad de tipos.
+Un [_*_tipo de delegado_*_](../delegates-overview.md) representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son similares al concepto de punteros de función de otros lenguajes. A diferencia de los punteros de función, los delegados están orientados a objetos y tienen seguridad de tipos.
 
 En el siguiente ejemplo se declara y usa un tipo de delegado denominado `Function`.
 
@@ -98,7 +98,7 @@ En este pequeño ejemplo se muestran las características principales de la prog
 
 ## <a name="attributes"></a>Atributos
 
-Los tipos, los miembros y otras entidades en un programa de C # admiten modificadores que controlan ciertos aspectos de su comportamiento. Por ejemplo, la accesibilidad de un método se controla mediante los modificadores `public`, `protected`, `internal` y `private`. C # generaliza esta funcionalidad de manera que los tipos de información declarativa definidos por el usuario se puedan adjuntar a las entidades del programa y recuperarse en tiempo de ejecución. Los programas especifican esta información declarativa adicional mediante la definición y el uso de [***atributos***](../programming-guide/concepts/attributes/index.md).
+Los tipos, los miembros y otras entidades en un programa de C # admiten modificadores que controlan ciertos aspectos de su comportamiento. Por ejemplo, la accesibilidad de un método se controla mediante los modificadores `public`, `protected`, `internal` y `private`. C # generaliza esta funcionalidad de manera que los tipos de información declarativa definidos por el usuario se puedan adjuntar a las entidades del programa y recuperarse en tiempo de ejecución. Los programas especifican esta información declarativa adicional mediante la definición y el uso de [_ *_atributos_**](../programming-guide/concepts/attributes/index.md).
 
 En el ejemplo siguiente se declara un atributo `HelpAttribute` que se puede colocar en entidades de programa para proporcionar vínculos a la documentación asociada.
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4289b809d9a401de92c74063a42216f3051543f6
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3699edda6cce24adb8e932d6e8b8a0a5bb977142
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188567"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282030"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
 
@@ -37,7 +37,7 @@ Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo d
 
 ## <a name="data-compartments-and-stores"></a>Compartimientos y almacenes de datos
 
-Cuando una aplicación almacena datos en un archivo, el nombre de archivo y la ubicación de almacenamiento se deben elegir con cuidado para minimizar el riesgo de que otra aplicación llegue a conocer dicha ubicación, lo que la haría susceptible de recibir daños. Si no se dispone de un sistema estándar que controle estos problemas, el desarrollo de técnicas ad hoc para minimizar los conflictos de almacenamiento puede ser complicado, y los resultados poco confiables.
+Cuando una aplicación almacena datos en un archivo, el nombre de archivo y la ubicación de almacenamiento se deben elegir con cuidado para minimizar el riesgo de que otra aplicación llegue a conocer dicha ubicación, lo que la haría susceptible de recibir daños. Si no se dispone de un sistema estándar que controle estos problemas, la improvisación de técnicas ad hoc para minimizar los conflictos de almacenamiento puede ser complicada y los resultados poco confiables.
 
 Con el almacenamiento aislado, los datos están siempre aislados por usuario y ensamblado. Las credenciales como el origen o el nombre seguro del ensamblado determinan la identidad del ensamblado. Los datos se pueden aislar también por el dominio de la aplicación, usando credenciales parecidas.
 
@@ -138,13 +138,14 @@ Ahora plantéese usar un sistema multiusuario con dos usuarios registrados _Mall
 
 Si Mallory quiere atacar a Bob, puede escribir datos en la ubicación de almacenamiento de nivel de máquina y luego intentar influir en Bob para que lea desde el almacén de nivel de máquina. Cuando Bob ejecute una aplicación que lea en este almacén, la aplicación operará en los datos que Mallory colocó en él, pero desde el contexto de una cuenta de usuario de Bob. En el resto de este documento se contemplan varios vectores de ataque y los pasos que pueden seguir las aplicaciones para minimizar el riesgo de estos ataques.
 
-__Nota:__ Para que se produzca este tipo de ataque, Mallory necesita lo siguiente:
-
-* Una cuenta de usuario en la máquina.
-* La capacidad de colocar un archivo en una ubicación conocida en el sistema de archivos.
-* Saber que, en algún momento, Bob ejecutará una aplicación que intente leer estos datos.
-
-No se trata de vectores de amenazas que se aplican a entornos de escritorio de un solo usuario estándar, como equipos domésticos o estaciones de trabajo empresariales de un solo empleado.
+> [!NOTE]
+> Para que se produzca este tipo de ataque, Mallory necesita lo siguiente:
+>
+> * Una cuenta de usuario en la máquina.
+> * La capacidad de colocar un archivo en una ubicación conocida en el sistema de archivos.
+> * Saber que, en algún momento, Bob ejecutará una aplicación que intente leer estos datos.
+>
+> No se trata de vectores de amenazas que se aplican a entornos de escritorio de un solo usuario estándar, como equipos domésticos o estaciones de trabajo empresariales de un solo empleado.
 
 #### <a name="elevation-of-privilege"></a>Elevación de privilegios
 
@@ -221,7 +222,7 @@ El almacenamiento aislado resulta útil en muchas situaciones, incluidos estos c
 
 - Movilidad. Las aplicaciones pueden usar también el almacenamiento aislado con perfiles de usuario móvil. De esta manera los almacenes aislados de un usuario se pueden trasladar con el perfil.
 
-No debe usar el almacenamiento aislado en las situaciones siguientes:
+No use el almacenamiento aislado en las situaciones siguientes:
 
 - Para guardar información confidencial, como claves o contraseñas sin cifrar, ya que el almacenamiento aislado no está protegido contra código de plena confianza, contra código no administrado ni contra usuarios de confianza del equipo.
 

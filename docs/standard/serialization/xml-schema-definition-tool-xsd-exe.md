@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado, lo que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 0275ecfebd427feb104013024654d4a0bc98748a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288984"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281754"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -32,7 +32,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> Para que las herramientas de .NET Framework funcionen como deben, hay que configurar correctamente las variables de entorno `Path`, `Include` y `Lib`. Establezca estas variables de entorno ejecutando SDKVars.bat, que se encuentra en el directorio \<SDK>\v2.0\Bin. SDKVars.bat debe ejecutarse en cada shell de comando.
+> Para que las herramientas de .NET Framework funcionen como deben, hay que configurar correctamente las variables de entorno `Path`, `Include` y `Lib`. Establezca estas variables de entorno ejecutando SDKVars.bat, que se encuentra en el directorio \<SDK>\\\<version>\Bin. SDKVars.bat debe ejecutarse en cada shell de comando.
 
 ## <a name="argument"></a>Argumento
 
@@ -105,7 +105,7 @@ El uso del modificador `/parameters` permite especificar un único archivo XML q
 </xsd>
 ```
 
-Si el XML anterior está incluido en un archivo denominado GenerateSchemas.xml, use el modificador `/parameters` escribiendo lo siguiente en una línea de comandos y presionando **Entrar**:
+Si el XML anterior está incluido en un archivo denominado GenerateSchemas.xml, use el modificador `/parameters` escribiendo lo siguiente en una línea de comandos y presionando **Entrar** :
 
 ```console
  xsd /p:GenerateSchemas.xml

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: f69e80592e9321de64421b977a63b83d8be2ad9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6291799aadc429e943996f2256d773ac36dd370f
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289491"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282396"
 ---
 # <a name="systemxmlserialization-element"></a>\<system.xml.serialization> (Elemento)
 
@@ -41,7 +41,7 @@ Ninguno.
 |Elemento|Descripción|
 |-------------|-----------------|
 |[Elemento \<dateTimeSerialization>](datetimeserialization-element.md)|Determina el modo de serialización XML de los objetos <xref:System.DateTime>.|
-|[Elemento \<schemaImporterExtensions>](schemaimporterextensions-element.md)|Contiene tipos que son utilizados por <xref:System.Xml.Serialization.XmlSchemaImporter> para asignar de los tipos XSD a los tipos de .NET Framework.|
+|[Elemento \<schemaImporterExtensions>](schemaimporterextensions-element.md)|Contiene tipos que <xref:System.Xml.Serialization.XmlSchemaImporter> usa para asignar de los tipos XSD a los tipos de .NET.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
@@ -51,7 +51,7 @@ Ninguno.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo de código siguiente muestra cómo especificar el modo de la serialización de un objeto <xref:System.DateTime> y la suma de tipos utilizada por <xref:System.Xml.Serialization.XmlSchemaImporter> al asignar los tipos XSD a los tipos de .NET Framework.
+El ejemplo de código siguiente muestra cómo especificar el modo de la serialización de un objeto <xref:System.DateTime> y la suma de tipos utilizada por <xref:System.Xml.Serialization.XmlSchemaImporter> al asignar los tipos XSD a los tipos de .NET.
 
 ```xml
 <system.xml.serialization>

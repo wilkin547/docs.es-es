@@ -1,19 +1,21 @@
 ---
 title: Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedores | Los microservicios son servicios modulares que se pueden implementar de forma independiente. Los contenedores de Docker (para Linux y Windows) simplifican la implementación y las pruebas mediante la unión de un servicio y sus dependencias en una sola unidad que, después, se ejecuta en un entorno aislado.
-ms.date: 09/02/2020
-ms.openlocfilehash: aea5012fee102f388827d146043e69592e14f22b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.date: 11/10/2020
+ms.openlocfilehash: 2055dacd46f90ba3714edb1437bcacad4c175e65
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379140"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507272"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor
 
 ![Portada del libro](./media/cover-small.png)
 
-**EDICIÓN v3.1.2**: actualizada a ASP.NET Core 3.1
+**EDICIÓN v3.1** : actualizada a ASP.NET Core 3.1
+
+Consulte el [registro de cambios](https://aka.ms/MicroservicesEbookChangelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
 
 Esta guía es una introducción al desarrollo de aplicaciones basadas en microservicios y a su administración mediante contenedores. En ella se trata el diseño de la arquitectura y los métodos de implementación con .NET Core y contenedores de Docker.
 
@@ -84,11 +86,11 @@ Hemos creado esta guía para ayudarle a entender la arquitectura de aplicaciones
 
 Coautores:
 
-> **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
+> **Cesar de la Torre** , administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
 >
-> **Bill Wagner**, desarrollador de contenido sénior de C+E, Microsoft Corp.
+> **Bill Wagner** , desarrollador de contenido sénior de C+E, Microsoft Corp.
 >
-> **Mike Rousos**, ingeniero de software principal del equipo de CAT de la división de desarrollo, Microsoft
+> **Mike Rousos** , ingeniero de software principal del equipo de CAT de la división de desarrollo, Microsoft
 
 Editores:
 
@@ -98,55 +100,55 @@ Editores:
 
 Participantes y revisores:
 
-> **Jeffrey Richter**, ingeniero de software asociado del equipo de Azure, Microsoft
+> **Jeffrey Richter** , ingeniero de software asociado del equipo de Azure, Microsoft
 >
-> **Jimmy Bogard**, arquitecto jefe de Headspring
+> **Jimmy Bogard** , arquitecto jefe de Headspring
 >
-> **Udi Dahan**, fundador y director general de Particular Software
+> **Udi Dahan** , fundador y director general de Particular Software
 >
-> **Jimmy Nilsson**, cofundador y director general de Factor10
+> **Jimmy Nilsson** , cofundador y director general de Factor10
 >
-> **Glenn Condron**, director de programas sénior del equipo de ASP.NET
+> **Glenn Condron** , director de programas sénior del equipo de ASP.NET
 >
-> **Mark Fussell**, responsable principal de administración de programas del equipo de Azure Service Fabric, Microsoft
+> **Mark Fussell** , responsable principal de administración de programas del equipo de Azure Service Fabric, Microsoft
 >
-> **Diego Vega**, responsable de administración de programas del equipo de Entity Framework, Microsoft
+> **Diego Vega** , responsable de administración de programas del equipo de Entity Framework, Microsoft
 >
-> **Barry Dorrans**, director de programas de seguridad sénior
+> **Barry Dorrans** , director de programas de seguridad sénior
 >
-> **Rowan Miller**, director de programas sénior, Microsoft
+> **Rowan Miller** , director de programas sénior, Microsoft
 >
-> **Ankit Asthana**, director principal de administración de programas del equipo de .NET, Microsoft
+> **Ankit Asthana** , director principal de administración de programas del equipo de .NET, Microsoft
 >
-> **Scott Hunter**, director asociado de administración de programas del equipo de .NET, Microsoft
+> **Scott Hunter** , director asociado de administración de programas del equipo de .NET, Microsoft
 >
-> **Nish Anil**, director de administración de programas, equipo de .NET, Microsoft
+> **Nish Anil** , director de administración de programas, equipo de .NET, Microsoft
 >
-> **Dylan Reisenberger**, arquitecto y responsable de desarrollo de Polly
+> **Dylan Reisenberger** , arquitecto y responsable de desarrollo de Polly
 >
-> **Steve "ardalis" Smith**: instructor y arquitecto de software de [Ardalis.com](https://ardalis.com)
+> **Steve "ardalis" Smith** : instructor y arquitecto de software de [Ardalis.com](https://ardalis.com)
 >
-> **Cooper Ian**, arquitecto de codificación de Brighter
+> **Cooper Ian** , arquitecto de codificación de Brighter
 >
-> **Unai Zorrilla**, arquitecto y responsable de desarrollo de Plain Concepts
+> **Unai Zorrilla** , arquitecto y responsable de desarrollo de Plain Concepts
 >
-> **Eduard Tomas**, responsable de desarrollo de Plain Concepts
+> **Eduard Tomas** , responsable de desarrollo de Plain Concepts
 >
-> **Ramon Tomas**, desarrollador de Plain Concepts
+> **Ramon Tomas** , desarrollador de Plain Concepts
 >
-> **David Sanz**, desarrollador de Plain Concepts
+> **David Sanz** , desarrollador de Plain Concepts
 >
-> **Javier Valero**, director de operaciones de Grupo Solutio
+> **Javier Valero** , director de operaciones de Grupo Solutio
 >
-> **Pierre Millet**, consultor sénior, Microsoft
+> **Pierre Millet** , consultor sénior, Microsoft
 >
-> **Michael Friis**, administrador de productos de Docker Inc.
+> **Michael Friis** , administrador de productos de Docker Inc.
 >
-> **Charles Lowell**, ingeniero de software del equipo de CAT de VS, Microsoft
+> **Charles Lowell** , ingeniero de software del equipo de CAT de VS, Microsoft
 >
-> **Miguel Veloso**, ingeniero de desarrollo de software en Plain Concepts
+> **Miguel Veloso** , ingeniero de desarrollo de software en Plain Concepts
 >
-> **Sumit Ghosh**, asesor principal en Neudesic
+> **Sumit Ghosh** , asesor principal en Neudesic
 
 ## <a name="copyright"></a>Copyright
 

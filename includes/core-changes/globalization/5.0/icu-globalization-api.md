@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 18718ebc934e0175c20411055b8c0a90ef6b175f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 02b5dc181abe384c1a5f47c042e475f67a0afe1c
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539486"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400810"
 ---
 ### <a name="globalization-apis-use-icu-libraries-on-windows"></a>Las API de globalización usan bibliotecas de ICU en Windows
 
@@ -12,14 +12,51 @@ ms.locfileid: "90539486"
 
 #### <a name="change-description"></a>Descripción del cambio
 
-Anteriormente, las bibliotecas de .NET usaban API de [compatibilidad con el idioma nacional (NLS)](/windows/win32/intl/national-language-support) para la funcionalidad de globalización. Por ejemplo, las funciones de NLS se usaban para obtener datos de referencia cultural, como modelos de formato de fecha y hora, comparar cadenas y aplicar mayúsculas y minúsculas en las cadenas en la referencia cultural adecuada.
+En .NET Core 1.0 a 3.1 y .NET Framework 4 y versiones posteriores, las bibliotecas de .NET usan las API de [compatibilidad con el idioma nacional (NLS)](/windows/win32/intl/national-language-support) para la funcionalidad de globalización en Windows. Por ejemplo, las funciones de NLS se usaban para comparar cadenas, obtener información de referencia cultural y aplicar mayúsculas y minúsculas en las cadenas en la referencia cultural adecuada.
 
-A partir de .NET 5.0, si una aplicación se ejecuta en la actualización de mayo de 2019 de Windows 10 o posterior, las bibliotecas de .NET usan las API de globalización de [ICU](http://site.icu-project.org/home). Las versiones de la actualización de mayo de 2019 de Windows 10 o posteriores incluyen la biblioteca nativa de ICU. Si el tiempo de ejecución de .NET no puede cargar ICU, utilizará NLS en su lugar.
+A partir de .NET 5.0, si una aplicación se ejecuta en la actualización de mayo de 2019 de Windows 10 o posterior, las bibliotecas de .NET usan las API de globalización de [ICU](http://site.icu-project.org/home) de manera predeterminada.
 
-Este cambio se introdujo por dos motivos:
+> [!NOTE]
+> Las versiones de la actualización de mayo de 2019 de Windows 10 o posteriores incluyen la biblioteca nativa de ICU. Si el tiempo de ejecución de .NET no puede cargar ICU, utilizará NLS en su lugar.
 
-- Las aplicaciones tienen el mismo comportamiento de globalización en distintas plataformas, como Linux, macOS y Windows.
-- Las aplicaciones pueden controlar el comportamiento de la globalización mediante el uso de bibliotecas ICU personalizadas.
+#### <a name="behavioral-differences"></a>Diferencias de comportamiento
+
+Es posible que vea cambios en la aplicación aunque no se dé cuenta de que usa las instalaciones de globalización. En esta sección se enumeran algunos de los cambios de comportamiento que podría ver, pero también hay otros.
+
+##### <a name="stringindexof"></a>String.IndexOf
+
+Considere el código siguiente que llama a <xref:System.String.IndexOf(System.String)?displayProperty=nameWithType> para buscar el índice del carácter de nueva línea en una cadena.
+
+```csharp
+string s = "Hello\r\nworld!";
+int idx = s.IndexOf("\n");
+Console.WriteLine(idx);
+```
+
+- En versiones anteriores de .NET en Windows, el fragmento de código imprime `6`.
+- En .NET 5.0 y versiones posteriores en Windows 19H1 y versiones posteriores, el fragmento de código imprime `-1`.
+
+Para corregir este código mediante la realización de una búsqueda ordinal en lugar de una búsqueda según la referencia cultural, llame a la sobrecarga <xref:System.String.IndexOf(System.String,System.StringComparison)> y pase <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> como argumento.
+
+Puede ejecutar las reglas de análisis de código [CA1307: Especificar StringComparison para mayor claridad](../../../../docs/fundamentals/code-analysis/quality-rules/ca1307.md) y [CA1309: Usar StringComparison ordinal](../../../../docs/fundamentals/code-analysis/quality-rules/ca1309.md) para buscar estos sitios de llamada en el código.
+
+Para más información, consulte [Cambios de comportamiento al comparar cadenas en .NET 5 +](../../../../docs/standard/base-types/string-comparison-net-5-plus.md).
+
+##### <a name="currency-symbol"></a>Símbolo de moneda
+
+Considere el código siguiente que da formato a una cadena con el especificador de formato de divisa `C`. La referencia cultural del subproceso actual se establece en una referencia cultural que solo incluye el idioma, no el país.
+
+```csharp
+System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de");
+string text = string.Format("{0:C}", 100);
+```
+
+- En versiones anteriores de .NET en Windows, el valor del texto es `"100,00 €"`.
+- En .NET 5.0 y versiones posteriores en Windows 19H1 y versiones posteriores, el valor del texto es `"100,00 ¤"`, que usa el símbolo de moneda internacional en lugar del euro. En ICU, el diseño es que una moneda es una propiedad de un país o región, no un idioma.
+
+#### <a name="reason-for-change"></a>Motivo del cambio
+
+Este cambio se presentó para unificar el comportamiento de globalización de .NET en todos los sistemas operativos compatibles. También ofrece la posibilidad de que las aplicaciones agrupen sus propias bibliotecas de globalización en lugar de depender de las bibliotecas integradas del sistema operativo.
 
 #### <a name="version-introduced"></a>Versión introducida
 
@@ -31,13 +68,19 @@ No se requiere ninguna acción por parte del desarrollador. Sin embargo, si dese
 
 #### <a name="category"></a>Categoría
 
-Globalización
+- Bibliotecas de Core .NET
+- Globalización
 
 #### <a name="affected-apis"></a>API afectadas
 
 - <xref:System.Span%601?displayProperty=fullName>
 - <xref:System.String?displayProperty=fullName>
 - La mayoría de tipos del espacio de nombres <xref:System.Globalization?displayProperty=fullName>
+- <xref:System.Array.Sort%2A?displayProperty=fullName> (al ordenar una matriz de cadenas)
+- <xref:System.Collections.Generic.List%601.Sort?displayProperty=fullName> (cuando los elementos de lista son cadenas)
+- <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> (cuando las claves son cadenas)
+- <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> (cuando las claves son cadenas)
+- <xref:System.Collections.Generic.SortedSet%601?displayProperty=fullName> (cuando el conjunto contiene cadenas)
 
 <!--
 
@@ -46,5 +89,10 @@ Globalización
 - ``T:System.Span`1``
 - `T:System.String`
 - `N:System.Globalization`
+- `Overload:System.Array.Sort`
+- ``M:System.Collections.Generic.List`1.Sort``
+- ``T:System.Collections.Generic.SortedDictionary`2``
+- ``T:System.Collections.Generic.SortedList`2``
+- ``T:System.Collections.Generic.SortedSet`1``
 
 -->

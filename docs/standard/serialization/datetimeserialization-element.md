@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: a2684ab72c1fb109d711e333e01836d3399caf86
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84289647"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281764"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> (Elemento)
 Determina el modo de serialización XML de los objetos <xref:System.DateTime>.  
@@ -47,9 +47,10 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
 |system.xml.serialization|El elemento de nivel superior para controlar la serialización XML.|  
   
 ## <a name="remarks"></a>Comentarios  
- En las versiones 1.0, 1.1, 2.0 y posteriores de .NET Framework, cuando esta propiedad se establece en **Local**, los objetos <xref:System.DateTime> siempre reciben formato según la hora local. Es decir, la información de zona horaria local siempre se incluye con los datos serializados. Establezca esta propiedad en **Local** para garantizar la compatibilidad con las versiones anteriores de .NET Framework.  
+
+Cuando esta propiedad se establece en **Local** , los objetos <xref:System.DateTime> siempre tienen el formato de hora local. Es decir, la información de zona horaria local siempre se incluye con los datos serializados.
   
- En la versión 2.0 y posteriores de .NET Framework que tienen esta propiedad establecida en **Roundtrip**, los objetos <xref:System.DateTime> se examinan para determinar si están en la zona horaria local, UTC o una no especificada. Los objetos <xref:System.DateTime> se serializan a continuación de este tipo de manera que esta información se conserva. Éste es el comportamiento predeterminado y el que se recomienda para todas las aplicaciones nuevas que no funcionan con versiones anteriores de .Net Framework.  
+Cuando esta propiedad se establece en **Roundtrip** , los objetos <xref:System.DateTime> se examinan para determinar si se encuentran en la zona horaria local, UTC o una zona horaria no especificada. Los objetos <xref:System.DateTime> se serializan a continuación de este tipo de manera que esta información se conserva. Éste es el comportamiento predeterminado y el que se recomienda para todas las aplicaciones nuevas que no funcionan con versiones anteriores de .Net Framework.  
   
 ## <a name="see-also"></a>Vea también
 

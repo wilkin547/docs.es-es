@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537747"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281615"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -77,7 +77,13 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`--blame-crash`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
 
-  Ejecuta las pruebas en modo de culpa y recopila un volcado de memoria cuando el host de prueba se cierra de forma inesperada. Esta opción solo se admite en Windows. Un directorio que contenga *procdump.exe* y *procdump64.exe* debe estar en la variable de entorno PATH o PROCDUMP_PATH. [Descargue las herramientas](/sysinternals/downloads/procdump). Implica `--blame`.
+  Ejecuta las pruebas en modo de culpa y recopila un volcado de memoria cuando el host de prueba se cierra de forma inesperada. Esta opción depende de la versión de .NET que se use, del tipo de error y del sistema operativo.
+  
+  En el caso de las excepciones en el código administrado, se recopilará automáticamente un volcado de memoria en .NET 5.0 y versiones posteriores. Generará un volcado de memoria para el host de prueba o cualquier proceso secundario que también se haya ejecutado en .NET 5.0 y se haya bloqueado. Los bloqueos en código nativo no generarán volcado de memoria. Esta opción funciona en Windows, macOS y Linux.
+  
+  Los volcados de memoria en código nativo o cuando se usa .NET Core 3.1 o versiones anteriores solo se pueden recopilar en Windows, mediante Procdump. Un directorio que contenga *procdump.exe* y *procdump64.exe* debe estar en la variable de entorno PATH o PROCDUMP_PATH. [Descargue las herramientas](/sysinternals/downloads/procdump). Implica `--blame`.
+  
+  Para recopilar un volcado de memoria de una aplicación nativa que se ejecuta en .NET 5.0 o una versión posterior, se puede establecer la variable de entorno `VSTEST_DUMP_FORCEPROCDUMP` en `1` para forzar el uso de Procdump.
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
 
@@ -97,14 +103,14 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`--blame-hang-timeout <TIMESPAN>`** (Disponible desde el SDK de versión preliminar de .NET 5.0)
 
-  Tiempo de espera por prueba, después del cual se desencadena un volcado de bloqueo y finaliza el proceso de host de prueba. El valor de tiempo de espera se especifica en uno de los siguientes formatos:
+  Tiempo de espera por prueba, después del cual se desencadena un volcado de bloqueo y se genera un volcado de memoria del proceso de host de prueba y todos sus procesos secundarios y se finalizan. El valor de tiempo de espera se especifica en uno de los siguientes formatos:
   
-  - 1,5 h
-  - 90 m
-  - 5400 s
-  - 5 400 000 ms
+  - 1.5h, 1.5hour, 1.5hours
+  - 90m, 90min, 90minute, 90minutes
+  - 5400s, 5400sec, 5400second, 5400seconds
+  - 5400000ms, 5400000mil, 5400000millisecond, 5400000milliseconds
 
-  Cuando no se usa ninguna unidad (por ejemplo, 5 400 000), se supone que el valor está en milisegundos. Cuando se usa junto con las pruebas basadas en datos, el comportamiento de tiempo de espera depende del adaptador de prueba usado. En xUnit y NUnit, el tiempo de espera se renueva después de cada caso de prueba. En MSTest, el tiempo de espera se usa en todos los casos de prueba. Esta opción se admite en Windows con netcoreapp2.1 y versiones posteriores, y en Linux con netcoreapp3.1 y versiones posteriores. macOS no se admite.
+  Cuando no se usa ninguna unidad (por ejemplo, 5 400 000), se supone que el valor está en milisegundos. Cuando se usa junto con las pruebas basadas en datos, el comportamiento de tiempo de espera depende del adaptador de prueba usado. En xUnit y NUnit, el tiempo de espera se renueva después de cada caso de prueba. En MSTest, el tiempo de espera se usa en todos los casos de prueba. Esta opción se admite en Windows con netcoreapp2.1 y versiones posteriores, en Linux con netcoreapp3.1 y versiones posteriores y en macOS con net5.0 o versiones posteriores. Implica `--blame` y `--blame-hang`.
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -116,7 +122,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
   
   Para recopilar la cobertura de código en cualquier plataforma compatible con .NET Core, instale [Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) y use la opción `--collect:"XPlat Code Coverage"`.
 
-  En Windows, puede recopilar la cobertura de código mediante la opción `--collect "Code Coverage"`. Esta opción genera un archivo *.coverage*, que se puede abrir en Visual Studio 2019 Enterprise. Para más información, vea [Uso de cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) y [Personalización del análisis de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
+  En Windows, puede recopilar la cobertura de código mediante la opción `--collect "Code Coverage"`. Esta opción genera un archivo *.coverage* , que se puede abrir en Visual Studio 2019 Enterprise. Para más información, vea [Uso de cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) y [Personalización del análisis de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
 
 - **`-d|--diag <LOG_FILE>`**
 
@@ -124,7 +130,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Fuerza el uso del host de prueba de `dotnet` o .NET Framework para los archivos binarios de prueba. Esta opción solo determina el tipo de host que se va a usar. La versión de Framework real que se va a usar viene determinada por *runtimeConfig.json* del proyecto de prueba. Si no se especifica, se usa el [atributo de ensamblado TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) para determinar el tipo de host. Si ese atributo se quita de *.dll*, se usa el host de .NET Framework.
+  Fuerza el uso del host de prueba de `dotnet` o .NET Framework para los archivos binarios de prueba. Esta opción solo determina el tipo de host que se va a usar. La versión de Framework real que se va a usar viene determinada por *runtimeConfig.json* del proyecto de prueba. Si no se especifica, se usa el [atributo de ensamblado TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) para determinar el tipo de host. Si ese atributo se quita de *.dll* , se usa el host de .NET Framework.
 
 - **`--filter <EXPRESSION>`**
 
@@ -264,7 +270,7 @@ Las expresiones se pueden combinar con operadores condicionales:
 
 | Operador            | Función |
 | ------------------- | -------- |
-| <code>&#124;</code> | O       |
+| <code>&#124;</code> | O       |
 | `&`                 | AND      |
 
 Si usa operadores condicionales (por ejemplo, `(Name~TestMethod1) | (Name~TestMethod2)`), puede incluir las expresiones entre paréntesis.

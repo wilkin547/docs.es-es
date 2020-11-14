@@ -6,17 +6,20 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: f1254f345a8b3bb796217442cbad36d2e942b403
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517209"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282246"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
   
- Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
+ Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
+
+> [!Note]  
+> Las **compilaciones 20236 y posteriores** del SDK de Windows 10, Windows 10 HLK, Windows 10 WDK y Windows 10 ADK requieren especificar el algoritmo de resumen. El comando `sign` de SignTool requiere que el **algoritmo de resumen de archivo** `/fd` y la opción **algoritmo de resumen de marca de tiempo** `/td` se especifiquen durante la firma y la marca de tiempo, respectivamente. Se generará una advertencia (inicialmente, código de error 0) si `/fd` no se especifica durante la firma y si `/td` no se especifica durante la marca de tiempo. En versiones posteriores de SignTool, la advertencia se convertirá en un error. Se recomienda SHA256, el que el sector considera más seguro que SHA1.  
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -76,7 +79,8 @@ signtool [command] [options] [file_name | ...]
 |`/d`  *Desc*|Especifica una descripción del contenido firmado.|  
 |`/du`  *URL*|Especifica el localizador uniforme de recursos (URL) de la descripción ampliada del contenido firmado.|  
 |`/f`  *SignCertFile*|Especifica el certificado de firma en un archivo. Si el archivo está en formato de intercambio de información personal (PFX) y protegido por una contraseña, utilice la opción `/p` para especificar la contraseña. Si el archivo no contiene claves privadas, utilice las opciones `/csp` y `/kc` para especificar el CSP y el nombre de contenedor de claves privadas, respectivamente.|  
-|`/fd`|Especifica el algoritmo de resumen de archivo que se va a usar para crear signaturas de archivo. El valor predeterminado es SHA1.|  
+|`/fd`|Especifica el algoritmo de resumen de archivo que se va a usar para crear signaturas de archivo. </br> **Nota:** Se genera una advertencia si el modificador `/fd` no se proporciona durante la firma. El algoritmo predeterminado es SHA1, pero se recomienda SHA256.|
+|`/fd`  *certHash*|Si se especifica la cadena *certHash* , se establecerá de manera predeterminada en el algoritmo que se usa en el certificado de firma. </br> **Nota:** Solo está disponible en las compilaciones 20236 y posteriores del kit de Windows 10.|  
 |`/i`  *IssuerName*|Especifica el nombre del emisor del certificado de firma. Este valor puede corresponder a una subcadena del nombre del emisor completo.|  
 |`/kc`  *PrivKeyContainerName*|Especifica el nombre del contenedor de claves privadas.|  
 |`/n`  *SubjectName*|Especifica el nombre del sujeto del certificado de firma. Este valor puede corresponder a una subcadena del nombre del sujeto completo.|  
@@ -91,8 +95,8 @@ signtool [command] [options] [file_name | ...]
 |`/sha1`  *Hash*|Especifica el hash SHA1 del certificado de firma. El hash SHA1 se especifica normalmente cuando varios certificados cumplen los criterios especificados por los modificadores restantes.|  
 |`/sm`|Especifica que se utiliza un almacén de equipo, en lugar de un almacén de usuario.|  
 |`/t`  *URL*|Especifica la dirección URL del servidor con marca de tiempo. Si esta opción (o `/tr`) no está presente, el archivo firmado no tendrá marca de tiempo. Se genera una advertencia si se produce algún error relacionado con la marca de tiempo. Esta opción no se puede combinar con la opción `/tr`.|  
-|`/td`  *alg*|Se utiliza con la opción `/tr` para solicitar un algoritmo de resumen utilizado por el servidor de marca de tiempo RFC 3161.|  
-|`/tr`  *URL*|Especifica la dirección URL del servidor con marca de tiempo RFC 3161. Si esta opción (o `/t`) no está presente, el archivo firmado no tendrá marca de tiempo. Se genera una advertencia si se produce algún error relacionado con la marca de tiempo. Esta opción no se puede combinar con la opción `/t`.|  
+|`/td`  *alg*|Se utiliza con la opción `/tr` para solicitar un algoritmo de resumen utilizado por el servidor de marca de tiempo RFC 3161. </br> **Nota:** Se genera una advertencia si el modificador `/td` no se proporciona durante la marca de tiempo. El algoritmo predeterminado es SHA1, pero se recomienda SHA256. <br/> El modificador `/td` se debe declarar después del modificador `/tr`, no antes. Si el modificador `/td` se declara antes del modificador `/tr`, la marca de tiempo que se devuelve procede del algoritmo SHA1 en lugar del algoritmo SHA256 previsto. |
+|`/tr`  *URL*|Especifica la dirección URL del servidor con marca de tiempo RFC 3161. Si esta opción (o `/t`) no está presente, el archivo firmado no tendrá marca de tiempo. Se genera una advertencia si se produce algún error relacionado con la marca de tiempo. Esta opción no se puede combinar con la opción `/t`.|
 |`/u`  *Usage*|Especifica el uso mejorado de clave (EKU) que debe encontrarse en el certificado de firma. El valor de uso se puede especificar mediante un identificador de objetos (OID) o una cadena. El uso predeterminado es "Firma de código" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Especifica el uso de "Comprobación de componentes del sistema de Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
@@ -106,7 +110,7 @@ signtool [command] [options] [file_name | ...]
 |----------------------|-----------------|  
 |`/p7`|Agrega marcas de tiempo a archivos PKCS #7.|  
 |`/t`  *URL*|Especifica la dirección URL del servidor con marca de tiempo. El archivo al que se va a agregar la marca de tiempo se debe haber firmado previamente. Se requiere la opción `/t` o `/tr`.|  
-|`/td`  *alg*|Solicita un algoritmo de resumen utilizado por el servidor de marca de tiempo RFC 3161. `/td` se utiliza con la opción `/tr`.|  
+|`/td`  *alg*|Se utiliza con la opción `/tr` para solicitar un algoritmo de resumen utilizado por el servidor de marca de tiempo RFC 3161. </br> **Nota:** Se genera una advertencia si el modificador `/td` no se proporciona durante la marca de tiempo. El algoritmo predeterminado es SHA1, pero se recomienda SHA256. <br/> El modificador `/td` se debe declarar después del modificador `/tr`, no antes. Si el modificador `/td` se declara antes del modificador `/tr`, la marca de tiempo que se devuelve procede del algoritmo SHA1 en lugar del algoritmo SHA256 previsto. |
 |`/tp` *index*|Agrega una marca de tiempo a la signatura en *index*.|  
 |`/tr`  *URL*|Especifica la dirección URL del servidor con marca de tiempo RFC 3161. El archivo al que se va a agregar la marca de tiempo se debe haber firmado previamente. Se requiere la opción `/tr` o `/t`.|  
   
@@ -128,7 +132,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica un algoritmo hash opcional que se usará al buscar un archivo en un catálogo.|  
 |`/kp`|Especifica que la comprobación debe realizarse con la directiva de firma de controladores en modo kernel.|  
 |`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en Windows 8 y versiones posteriores.|  
-|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
+|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID* : *VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
 |`/p7`|Comprueba los archivos PKCS #7. No se usa ninguna directiva existente para la validación de PKCS #7. Se comprueba la signatura y se genera una cadena para el certificado de firma.|  
 |`/pa`|Especifica que se debe usar la directiva de comprobación de Authenticode predeterminada. Si no se especifica la opción `/pa`, la herramienta Firmar utiliza la directiva de comprobación de controladores de Windows. Esta opción no se puede combinar con la opción `catdb`.|  
 |`/pg` *PolicyGUID*|Especifica una directiva de comprobación por GUID. *PolicyGUID* corresponde a la propiedad ActionID de la directiva de comprobación. Esta opción no se puede combinar con la opción `catdb`.|  
@@ -146,7 +150,7 @@ signtool [command] [options] [file_name | ...]
 |0|La ejecución se realizó correctamente.|  
 |1|Error en la ejecución.|  
 |2|La ejecución ha finalizado con advertencias.|  
-  
+
 ## <a name="examples"></a>Ejemplos  
  El comando siguiente agrega el archivo de catálogo MyCatalogFileName.cat al componente del sistema y la base de datos del controlador. La opción `/u` genera un nombre único si es necesario para impedir que se reemplace un archivo de catálogo existente denominado `MyCatalogFileName.cat`.  
   
@@ -156,38 +160,44 @@ signtool catdb /v /u MyCatalogFileName.cat
   
  El comando siguiente firma un archivo automáticamente y para ello usa el mejor certificado.  
   
-```console  
-signtool sign /a MyFile.exe  
-```  
-  
+```console
+signtool sign /a /fd SHA256 MyFile.exe
+```
+
  El comando siguiente firma un archivo digitalmente con un certificado almacenado en un archivo PFX protegido por contraseña.  
   
 ```console  
-signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
+signtool sign /f MyCert.pfx /p MyPassword /fd SHA256 MyFile.exe
 ```  
   
  El comando siguiente firma digitalmente un archivo y le agrega una marca de tiempo. El certificado utilizado para firmar el archivo se almacena en un archivo PFX.  
   
 ```console  
-signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
+signtool sign /f MyCert.pfx /t http://timestamp.digicert.com /fd SHA256 MyFile.exe
 ```  
   
  El comando siguiente firma un archivo con un certificado ubicado en el almacén `My` cuyo nombre de sujeto sea `My Company Certificate`.  
   
 ```console  
-signtool sign /n "My Company Certificate" MyFile.exe  
+signtool sign /n "My Company Certificate" /fd SHA256 MyFile.exe
 ```  
   
  El comando siguiente firma un control ActiveX y proporciona información que Internet Explorer muestra cuando se le pide al usuario que instale el control.  
   
 ```console  
-Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
+Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html /fd SHA256 MyControl.exe
 ```  
   
  El comando siguiente agrega una marca de tiempo a un archivo que ya se ha firmado digitalmente.  
   
 ```console  
-signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
+signtool timestamp /t http://timestamp.digicert.com MyFile.exe
+```  
+
+El comando siguiente agrega una marca de tiempo a un archivo mediante un servidor de marca de tiempo RFC 3161.  
+  
+```console  
+signtool timestamp /tr http://timestamp.digicert.com /td SHA256 MyFile.exe
 ```  
   
  El comando siguiente comprueba que se ha firmado un archivo.  

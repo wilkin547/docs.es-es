@@ -1,21 +1,23 @@
 ---
 title: 'Procedimiento para escribir convertidores personalizados para la serialización de JSON: .NET'
+description: Aprenda a crear convertidores personalizados para las clases de serialización de JSON que se proporcionan en el espacio de nombres System.Text.Json.
 ms.date: 01/10/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
+zone_pivot_groups: dotnet-version
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ba6b61232ccf7ed493fe5809e5c0b8ba21091d3d
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811072"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329812"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Procedimiento para escribir convertidores personalizados para la serialización de JSON (cálculo de referencias) en .NET
 
@@ -28,10 +30,20 @@ Un *convertidor* es una clase que convierte un objeto o un valor en JSON; tambi�
 
 También puede escribir convertidores personalizados para personalizar o extender `System.Text.Json` con funcionalidad no incluida en la versión actual. Los siguientes escenarios se describen más adelante en este artículo:
 
+::: zone pivot="dotnet-5-0"
+
+* [Deserialización de tipos inferidos en las propiedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization).
+* [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
 * [Deserialización de tipos inferidos en las propiedades de objeto](#deserialize-inferred-types-to-object-properties).
 * [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key).
 * [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization).
 * [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
 
 ## <a name="custom-converter-patterns"></a>Patrones de convertidores personalizados
 
@@ -177,10 +189,20 @@ Solo se elige un convertidor integrado si no se registra ningún convertidor per
 
 En las secciones siguientes se proporcionan ejemplos de convertidor que abordan algunos escenarios comunes que la funcionalidad integrada no controla.
 
-* [Deserialización de los tipos inferidos en propiedades de objeto](#deserialize-inferred-types-to-object-properties)
-* [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key)
-* [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization)
+::: zone pivot="dotnet-5-0"
+
+* [Deserialización de tipos inferidos en las propiedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization).
 * [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
+
+::: zone pivot="dotnet-core-3-1"
+
+* [Deserialización de tipos inferidos en las propiedades de objeto](#deserialize-inferred-types-to-object-properties).
+* [Compatibilidad para diccionarios con una clave que no sea de cadena](#support-dictionary-with-non-string-key).
+* [Compatibilidad con la deserialización polimórfica](#support-polymorphic-deserialization).
+* [Compatibilidad con el recorrido de ida y vuelta para Stack\<T>](#support-round-trip-for-stackt).
+::: zone-end
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>Deserialización de los tipos inferidos en propiedades de objeto
 
@@ -221,6 +243,8 @@ Sin el convertidor personalizado, la deserialización coloca un elemento `JsonEl
 
 La [carpeta de pruebas unitarias](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) en el espacio de nombres `System.Text.Json.Serialization` tiene más ejemplos de convertidores personalizados que controlan la deserialización en propiedades `object`.
 
+::: zone pivot="dotnet-core-3-1"
+
 ### <a name="support-dictionary-with-non-string-key"></a>Compatibilidad para diccionarios con una clave que no sea de cadena
 
 La compatibilidad integrada con colecciones de diccionarios es para `Dictionary<string, TValue>`. Por lo tanto, la clave debe ser una cadena. Para admitir un diccionario con un entero o algún otro tipo como clave, se requiere un convertidor personalizado.
@@ -252,6 +276,7 @@ La salida JSON de la serialización es similar al ejemplo siguiente:
 ```
 
 La [carpeta de pruebas unitarias](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) en el espacio de nombres `System.Text.Json.Serialization` tiene más ejemplos de convertidores personalizados que controlan los diccionarios con una clave que no sea de cadena.
+::: zone-end
 
 ### <a name="support-polymorphic-deserialization"></a>Compatibilidad con la deserialización polimórfica
 
@@ -307,6 +332,29 @@ En el código siguiente se muestra un convertidor personalizado que permite el r
 El código siguiente registra el convertidor:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/RoundtripStackOfT.cs?name=SnippetRegister)]
+
+## <a name="handle-null-values"></a>Control de valores NULL
+
+De forma predeterminada, el serializador controla los valores NULL de la siguiente manera:
+
+* Para tipos de referencia y tipos de `Nullable<T>`:
+
+  * No pasa `null` a los convertidores personalizados en la serialización.
+  * No pasa `JsonTokenType.Null` a los convertidores personalizados en la deserialización.
+  * Devuelve una instancia de `null` en la deserialización.
+  * Escribe `null` directamente con el escritor en la serialización.
+
+* Para los tipos de valor distintos a NULL:
+
+  * Pasa `JsonTokenType.Null` a los convertidores personalizados en la deserialización. (Si no hay ningún convertidor personalizado disponible, el convertidor interno produce una excepción `JsonException` para el tipo).
+
+Este comportamiento de administración de valores NULL sirve principalmente para optimizar el rendimiento omitiendo una llamada adicional al convertidor. Además, evita la aplicación de convertidores para tipos que aceptan valores NULL que comprobar para `null` al principio de cada invalidación de método `Read` y `Write`.
+
+::: zone pivot="dotnet-5-0"
+Para permitir que un convertidor personalizado administre `null` para un tipo de valor o referencia, invalide <xref:System.Text.Json.Serialization.JsonConverter%601.HandleNull%2A?displayProperty=nameWithType> para devolver `true`, como se muestra en el ejemplo siguiente:
+
+:::code language="csharp" source="snippets/system-text-json-how-to-5-0/csharp/CustomConverterHandleNull.cs" highlight="19":::
+::: zone-end
 
 ## <a name="other-custom-converter-samples"></a>Otros ejemplos de convertidor personalizado
 

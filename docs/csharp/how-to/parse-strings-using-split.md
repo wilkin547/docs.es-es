@@ -1,6 +1,6 @@
 ---
-title: Análisis de cadenas mediante String.Split (Guía de C#)
-description: El método Split devuelve una matriz de cadenas divididas por un conjunto de delimitadores. Es una manera sencilla de analizar cadenas.
+title: División de cadenas mediante String.Split (Guía de C#)
+description: El método Split devuelve una matriz de cadenas divididas por un conjunto de delimitadores. Es una manera sencilla de extraer subcadenas de una cadena.
 ms.date: 01/03/2018
 helpviewer_keywords:
 - splitting strings [C#]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: 7c5d8fa462775c6f3a9981693129997dda6c2286
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 5361a3c60905edd19b180c5ddb14064a85f64337
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324145"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400505"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>Procedimiento para analizar cadenas mediante String.Split en C\#
+# <a name="how-to-separate-strings-using-stringsplit-in-c"></a>Procedimiento para separar cadenas mediante String.Split en C\#
 
 El método <xref:System.String.Split%2A?displayProperty=nameWithType> crea una matriz de subcadenas mediante la división de la cadena de entrada en función de uno o varios delimitadores. A menudo, este método es la manera más fácil de separar una cadena en límites de palabras. También sirve para dividir las cadenas en otras cadenas o caracteres específicos.
 
@@ -50,6 +50,7 @@ Las instancias consecutivas de cualquier separador generan la cadena vacía en l
 
 ## <a name="see-also"></a>Vea también
 
+- [Extracción de elementos de una cadena](../../standard/base-types/divide-up-strings.md)
 - [Guía de programación de C#](../programming-guide/index.md)
 - [Cadenas](../programming-guide/strings/index.md)
 - [Expresiones regulares de .NET](../../standard/base-types/regular-expressions.md)

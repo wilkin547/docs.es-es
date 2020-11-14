@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 18f17839361d0cb60a52fbf4415665855f1d53be
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223489"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281654"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -47,11 +47,11 @@ Al escribir pruebas para el código, este se desacopla naturalmente, ya que, de 
 
 ## <a name="characteristics-of-a-good-unit-test"></a>Características de una buena prueba unitaria
 
-- **Rápida** . No es infrecuente que los proyectos maduros tengan miles de pruebas unitarias. Las pruebas unitarias deberían tardar muy poco tiempo en ejecutarse. Milisegundos.
-- **Aislada** . Las pruebas unitarias son independientes, se pueden ejecutar de forma aislada y no tienen ninguna dependencia en ningún factor externo, como sistemas de archivos o bases de datos.
-- **Reiterativa** . La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
-- **Autocomprobada** . La prueba debe ser capaz de detectar automáticamente si el resultado ha sido correcto o incorrecto sin necesidad de intervención humana.
-- **Oportuna** . Una prueba unitaria no debe tardar un tiempo desproporcionado en escribirse en comparación con el código que se va a probar. Si observa que la prueba del código tarda mucho en comparación con su escritura, considere un diseño más fácil de probar.
+- **Rápida**. No es infrecuente que los proyectos maduros tengan miles de pruebas unitarias. Las pruebas unitarias deberían tardar muy poco tiempo en ejecutarse. Milisegundos.
+- **Aislada**. Las pruebas unitarias son independientes, se pueden ejecutar de forma aislada y no tienen ninguna dependencia en ningún factor externo, como sistemas de archivos o bases de datos.
+- **Reiterativa**. La ejecución de una prueba unitaria debe ser coherente con sus resultados, es decir, devolver siempre el mismo resultado si no cambia nada entre ejecuciones.
+- **Autocomprobada**. La prueba debe ser capaz de detectar automáticamente si el resultado ha sido correcto o incorrecto sin necesidad de intervención humana.
+- **Oportuna**. Una prueba unitaria no debe tardar un tiempo desproporcionado en escribirse en comparación con el código que se va a probar. Si observa que la prueba del código tarda mucho en comparación con su escritura, considere un diseño más fácil de probar.
 
 ## <a name="code-coverage"></a>Cobertura de código
 
@@ -149,7 +149,7 @@ Las pruebas van más allá de garantizar que el código funciona, también propo
 
 #### <a name="why"></a>¿Por qué?
 
-- Separa claramente lo que se está probando de los pasos *organizar* y *declarar* .
+- Separa claramente lo que se está probando de los pasos *organizar* y *declarar*.
 - Menos posibilidad de mezclar aserciones con el código para "actuar".
 
 La legibilidad es uno de los aspectos más importantes a la hora de escribir una prueba. Al separar cada una de estas acciones dentro de la prueba, se resaltan claramente las dependencias necesarias para llamar al código, la forma de llamarlo y lo que se intenta declarar. Aunque es posible combinar algunos pasos y reducir el tamaño de la prueba, el objetivo principal es que sea lo más legible posible.
@@ -188,7 +188,7 @@ La asignación de nombres a las variables de las pruebas unitarias es tan import
 #### <a name="why"></a>¿Por qué?
 
 - Evita la necesidad de que el lector de la prueba inspeccione el código de producción con el fin de averiguar lo que hace que el valor sea especial.
-- Muestra explícitamente lo que se intenta *probar* , en lugar de lo que se intenta *lograr* .
+- Muestra explícitamente lo que se intenta *probar* , en lugar de lo que se intenta *lograr*.
 
 Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una cadena tiene un aspecto fuera de lo normal, puede preguntarse por qué se ha elegido un determinado valor para un parámetro o valor devuelto. Esto puede dar lugar a un vistazo más detallado a los detalles de implementación, en lugar de centrarse en la prueba.
 
@@ -227,7 +227,7 @@ Al incorporar lógica al conjunto de pruebas, aumenta considerablemente la posib
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>Se prefieren métodos auxiliares a la instalación y el desmontaje
 
-Si necesita un objeto o un estado similares para las pruebas, se prefiere un método auxiliar al aprovechamiento de los atributos de instalación y desmontaje, si existen.
+Si necesita un objeto o un estado similares para las pruebas, se prefiere un método auxiliar al aprovechamiento de los atributos `Setup` y `Teardown`, si existen.
 
 #### <a name="why"></a>¿Por qué?
 

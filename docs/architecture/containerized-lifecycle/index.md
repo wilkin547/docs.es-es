@@ -1,19 +1,21 @@
 ---
 title: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 description: Obtenga información general de alto nivel del proceso de desarrollo e implementación para desarrollar e implementar aplicaciones en contenedores con la plataforma y las herramientas de Microsoft y Docker.
-ms.date: 07/30/2020
-ms.openlocfilehash: c506a3423ac4511f23452192e361e88dce6efec4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/10/2020
+ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160702"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506667"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 
 ![Portada del libro](./media/devops-book-cover-large-we.png)
 
-**EDICIÓN v3.1**: actualizada a ASP.NET Core 3.1
+**EDICIÓN v3.1** : actualizada a ASP.NET Core 3.1
+
+Consulte el [registro de cambios](https://aka.ms/DockerLifecycleEbookChangelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
 
 En esta guía se incluye información general para desarrollar e implementar aplicaciones ASP.NET Core en contenedores con Docker, mediante la plataforma y las herramientas de Microsoft. En ella también se incluye una presentación de alto nivel de Azure DevOps, a fin de implementar canalizaciones de CI/CD, así como Azure Container Registry (ACR) y Azure Kubernetes Services (AKS) para la implementación.
 
@@ -27,7 +29,7 @@ Hemos creado esta guía para ayudarle a entender la arquitectura de aplicaciones
 
 Autor:
 
-> **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
+> **Cesar de la Torre** , administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
 
 Editor de adquisiciones:
 
@@ -35,9 +37,9 @@ Editor de adquisiciones:
 
 Editor de desarrollo:
 
-> **Bob Russell**, profesional de soluciones en Microsoft
+> **Bob Russell** , profesional de soluciones en Microsoft
 >
-> [**Octal Publishing, Inc.** ](http://www.octalpub.com/)
+> [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
 Producción editorial:
 
@@ -47,15 +49,15 @@ Producción editorial:
 
 Revisor:
 
-> **Bob Russell**, profesional de soluciones en Microsoft
+> **Bob Russell** , profesional de soluciones en Microsoft
 
 Participantes y revisores:
 
-> **Nish Anil**, director de administración de programas, equipo de .NET, Microsoft
+> **Nish Anil** , director de administración de programas, equipo de .NET, Microsoft
 >
-> **Miguel Veloso**, ingeniero de desarrollo de software en Plain Concepts
+> **Miguel Veloso** , ingeniero de desarrollo de software en Plain Concepts
 >
-> **Sumit Ghosh**, asesor principal en Neudesic
+> **Sumit Ghosh** , asesor principal en Neudesic
 
 ## <a name="copyright"></a>Copyright
 

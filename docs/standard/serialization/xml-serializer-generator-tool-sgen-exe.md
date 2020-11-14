@@ -3,12 +3,12 @@ title: Herramienta Generador de serializador XML (Sgen.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado, que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: b6d9406ca6a69f7bdff3129b55c89dd5d1589d3f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288945"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93282345"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 
@@ -23,7 +23,7 @@ sgen [options]
 ```
   
 > [!TIP]
-> Para que las herramientas de .NET Framework funcionen como deben, hay que configurar correctamente las variables de entorno `Path`, `Include` y `Lib`. Establezca estas variables de entorno ejecutando SDKVars.bat, que se encuentra en el directorio \<SDK>\v2.0\Bin. SDKVars.bat debe ejecutarse en cada shell de comando.
+> Para que las herramientas de .NET Framework funcionen como deben, hay que configurar correctamente las variables de entorno `Path`, `Include` y `Lib`. Establezca estas variables de entorno ejecutando SDKVars.bat, que se encuentra en el directorio \<SDK>\\\<version>\Bin. SDKVars.bat debe ejecutarse en cada shell de comando.
   
 ## <a name="parameters"></a>Parámetros  
   

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar el archivo global.json para e
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 714e32ec841cee214f801de65bccf0041af66b0b
+ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872394"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93281550"
 ---
 # <a name="globaljson-overview"></a>Información general de global.json
 
@@ -55,7 +55,7 @@ Indica si la resolución del SDK debe tener en cuenta las versiones preliminares
 Si no se establece este valor de forma explícita, el valor predeterminado depende de si se está ejecutando desde Visual Studio:
 
 - Si **no** se está en Visual Studio, el valor predeterminado es `true`.
-- Si se está en Visual Studio, se usa el estado de versión preliminar solicitado. Es decir, si se usa una versión preliminar de Visual Studio o se establece la opción **Usar versiones preliminares del SDK de .NET Core** (en **Herramientas** > **Opciones** > **Entorno** > **Características en versión preliminar**), el valor predeterminado es `true`; de lo contrario, `false`.
+- Si se está en Visual Studio, se usa el estado de versión preliminar solicitado. Es decir, si se usa una versión preliminar de Visual Studio o se establece la opción **Usar versiones preliminares del SDK de .NET Core** (en **Herramientas** > **Opciones** > **Entorno** > **Características en versión preliminar** ), el valor predeterminado es `true`; de lo contrario, `false`.
 
 #### <a name="rollforward"></a>rollForward
 
@@ -64,6 +64,7 @@ Si no se establece este valor de forma explícita, el valor predeterminado depen
 - Disponible a partir del SDK de .NET Core 3.0.
 
 Directiva de puesta al día que se va a usar al seleccionar una versión del SDK, ya sea como reserva si falta una versión específica del SDK o como una directiva para usar una versión superior. Se debe especificar una [versión](#version) con un valor `rollForward`, a menos que se esté estableciendo en `latestMajor`.
+El comportamiento predeterminado de puesta al día lo determinan las [reglas de coincidencia](#matching-rules).
 
 Para comprender las directivas disponibles y su comportamiento, tenga en cuenta las siguientes definiciones de una versión del SDK en el formato `x.y.znn`:
 
@@ -163,7 +164,7 @@ dotnet new globaljson --sdk-version 3.0.100
 ## <a name="matching-rules"></a>Reglas de coincidencia
 
 > [!NOTE]
-> Las reglas de coincidencia se rigen por el punto de entrada de `dotnet.exe`, que es común en todos los runtime instalados de .NET Core. Las reglas de coincidencia de la última versión instalada del runtime de .NET Core se usan cuando se tienen varios runtime instalados en paralelo.
+> Las reglas de coincidencia se rigen por el punto de entrada de `dotnet.exe`, que es común en todos los runtime instalados de .NET Core. Las reglas de coincidencia de la última versión instalada del runtime de .NET Core se usan cuando se tienen varios runtime instalados en paralelo o si usa un archivo *global.json*.
 
 ## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
@@ -171,7 +172,7 @@ A partir de .NET Core 3.0, se aplican las reglas siguientes al determinar qué v
 
 - Si no se encuentra ningún archivo *global.json* o en *global.json* no se especifica una versión del SDK ni un valor `allowPrerelease`, se usa la versión del SDK instalada más reciente (lo que equivale a establecer `rollForward` en `latestMajor`). El que se consideren o no las versiones preliminares del SDK depende de cómo se invoque a `dotnet`.
   - Si **no** se está en Visual Studio, se tienen en cuenta las versiones preliminares.
-  - Si se está en Visual Studio, se usa el estado de versión preliminar solicitado. Es decir, si se usa una versión preliminar de Visual Studio o se establece la opción **Usar versiones preliminares del SDK de .NET Core** (en **Herramientas** > **Opciones** > **Entorno** > **Características en versión preliminar**), se tienen en cuenta las versiones preliminares; de lo contrario, solo se consideran las versiones publicadas.
+  - Si se está en Visual Studio, se usa el estado de versión preliminar solicitado. Es decir, si se usa una versión preliminar de Visual Studio o se establece la opción **Usar versiones preliminares del SDK de .NET Core** (en **Herramientas** > **Opciones** > **Entorno** > **Características en versión preliminar** ), se tienen en cuenta las versiones preliminares; de lo contrario, solo se consideran las versiones publicadas.
 - Si se encuentra un archivo *global.json* que no especifica una versión del SDK pero sí un valor `allowPrerelease`, se usa la versión del SDK instalada superior (lo que equivale a establecer `rollForward` en `latestMajor`). El que la versión más reciente del SDK pueda ser publicada o preliminar, depende del valor de `allowPrerelease`. `true` indica que se tienen en cuenta las versiones preliminares; `false` indica que solo se tienen en cuenta las versiones publicadas.
 - Si se encuentra un archivo *global.json* y especifica una versión del SDK:
 
@@ -196,7 +197,7 @@ La **versión de características** del SDK de .NET Core se representa por medio
 
 La **versión de revisión** se define mediante los dos últimos dígitos (`yz`) de la última parte del número (`xyz`) para las versiones 2.1.100 del SDK y posteriores. Por ejemplo, si especifica `2.1.300` como la versión del SDK, la selección del SDK busca hasta `2.1.399` pero `2.1.400` no se considera una versión de revisión para `2.1.300`.
 
-Las versiones del SDK de .NET Core de `2.1.100` a `2.1.201` se publicaron durante la transición entre las combinaciones de número de versión y no procesan correctamente la notación `xyz`. Si estas versiones se especifican en el archivo *global.json*, se recomienda encarecidamente asegurarse de que las versiones especificadas están en los equipos de destino.
+Las versiones del SDK de .NET Core de `2.1.100` a `2.1.201` se publicaron durante la transición entre las combinaciones de número de versión y no procesan correctamente la notación `xyz`. Si estas versiones se especifican en el archivo *global.json* , se recomienda encarecidamente asegurarse de que las versiones especificadas están en los equipos de destino.
 
 ---
 

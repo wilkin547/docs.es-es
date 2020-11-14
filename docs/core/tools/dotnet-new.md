@@ -4,13 +4,13 @@ description: El comando dotnet new crea proyectos de .NET Core basados en la pla
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 09/01/2020
-ms.openlocfilehash: 4a4c8e2806fee663b5f6aa255a6f24250a072a85
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.date: 09/04/2020
+ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
+ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526610"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93400596"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -78,7 +78,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor Aplicación de servidor                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| Aplicación de Blazor WebAssembly                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
+| Aplicación de Blazor WebAssembly                       | [blazorwasm](#blazorwasm)       | [C#]         | Web/Blazor/WebAssembly                | 3.1.300    |
 | Vacío de ASP.NET Core                           | [web](#web)                     | [C#], F#     | Web/Vacío                             | 1.0        |
 | Aplicación web de ASP.NET Core (Model-View-Controller) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | Aplicación web de ASP.NET Core                         | [webapp, razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2, 2.0   |
@@ -397,6 +397,110 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 **_
 
+### <a name="blazorwasm"></a>blazorwasm
+
+- _ *`-f|--framework <FRAMEWORK>`**
+
+  Especifica el [marco](../../standard/frameworks.md) de destino.
+
+  En la tabla siguiente se enumeran los valores predeterminados según el número de versión del SDK que esté usando:
+
+  | Versión del SDK | Valor predeterminado   |
+  |-------------|-----------------|
+  | 5.0         | `net5.0`        |
+  | 3.1         | `netcoreapp3.1` |
+
+- **`--no-restore`**
+
+  No se ejecuta ninguna restauración implícita durante la creación del proyecto.
+
+- **`-ho|--hosted`**
+
+  Incluye un host de ASP.NET Core para la aplicación Blazor WebAssembly.
+
+- **`-au|--auth <AUTHENTICATION_TYPE>`**
+
+  Tipo de autenticación que se va a usar. Los valores posibles son:
+
+  - `None`: sin autenticación (valor predeterminado).
+  - `Individual`: autenticación individual.
+  - `IndividualB2C`: autenticación individual con Azure AD B2C.
+  - `SingleOrg`: autenticación organizativa para un solo inquilino.
+
+- **`--authority <AUTHORITY>`**
+
+  La autoridad del proveedor de OIDC. Úsela con la autenticación `Individual`. El valor predeterminado es `https://login.microsoftonline.com/`.
+
+- **`--aad-b2c-instance <INSTANCE>`**
+
+  Instancia de Azure Active Directory B2C con la que se realiza la conexión. Úsela con la autenticación `IndividualB2C`. El valor predeterminado es `https://aadB2CInstance.b2clogin.com/`.
+
+- **`-ssp|--susi-policy-id <ID>`**
+
+  Identificador de la directiva de registro e inicio de sesión de este proyecto. Úsela con la autenticación `IndividualB2C`.
+
+- **`--aad-instance <INSTANCE>`**
+
+  Instancia de Azure Active Directory con la que se realiza la conexión. Úsela con la autenticación `SingleOrg`. El valor predeterminado es `https://login.microsoftonline.com/`.
+
+- **`--client-id <ID>`**
+
+  Identificador de cliente de este proyecto. Úselo con la autenticación `IndividualB2C`, `SingleOrg` o `Individual` en escenarios independientes. El valor predeterminado es `33333333-3333-3333-33333333333333333`.
+
+- **`--domain <DOMAIN>`**
+
+  Dominio del inquilino del directorio. Úsela con las autenticaciones `SingleOrg` o `IndividualB2C`. El valor predeterminado es `qualified.domain.name`.
+
+- **`--app-id-uri <URI>`**
+
+  El URI del id. de la aplicación de la API de servidor a la que quiere llamar. Úsela con las autenticaciones `SingleOrg` o `IndividualB2C`. El valor predeterminado es `api.id.uri`.
+
+- **`--api-client-id <ID>`**
+
+  El id. de cliente de la API que el servidor hospeda. Úsela con las autenticaciones `SingleOrg` o `IndividualB2C`. El valor predeterminado es `11111111-1111-1111-11111111111111111`.
+
+- **`-s|--default-scope <SCOPE>`**
+
+  El ámbito de la API que el cliente debe solicitar para aprovisionar un token de acceso. Úsela con las autenticaciones `SingleOrg` o `IndividualB2C`. El valor predeterminado es `user_impersonation`.
+
+- **`--tenant-id <ID>`**
+
+  Identificador de inquilino del directorio con el que se realiza la conexión. Úsela con la autenticación `SingleOrg`. El valor predeterminado es `22222222-2222-2222-2222-222222222222`.
+
+- **`-r|--org-read-access`**
+
+  Concede a esta aplicación acceso de lectura al directorio. Solo se aplica a la autenticación `SingleOrg`.
+
+- **`--exclude-launch-settings`**
+
+  Excluye *launchSettings.json* de la plantilla generada.
+
+- **`-p|--pwa`**
+
+  Genera una aplicación web progresiva (PWA) que admite la instalación y el uso sin conexión.
+
+- **`--no-https`**
+
+  Desactiva HTTPS. Esta opción solo se aplica si no se usan `Individual`, `IndividualB2C` o `SingleOrg` en `--auth`.
+
+- **`-uld|--use-local-db`**
+
+  Especifica que se debería usar LocalDB en vez de SQLite. Solo se aplica a las autenticaciones `Individual` y `IndividualB2C`.
+
+- **`--called-api-url <URL>`**
+
+  Dirección URL de la API que se va a llamar desde la aplicación web. Solo se aplica a la autenticación `SingleOrg` o `IndividualB2C` sin un host especificado de ASP.NET Core. El valor predeterminado es `https://graph.microsoft.com/v1.0/me`.
+
+- **`--calls-graph`**
+
+  Especifica si la aplicación web llama a Microsoft Graph. Solo se aplica a la autenticación `SingleOrg`.
+
+- **`--called-api-scopes <SCOPES>`**
+
+  Ámbitos para solicitar llamar a la API desde la aplicación web. Solo se aplica a la autenticación `SingleOrg` o `IndividualB2C` sin un host especificado de ASP.NET Core. De manera predeterminada, es `user.read`.
+
+**_
+
 ### <a name="web"></a>web
 
 - _ *`--exclude-launch-settings`**
@@ -669,7 +773,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  Especifica la versión del SDK de .NET Core que se usará en el archivo *global.json* .
+  Especifica la versión del SDK de .NET Core que se usará en el archivo *global.json*.
 
 ***
 
@@ -711,13 +815,13 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
   dotnet new spa -l
   ```
 
-- Enumeración de todas las plantillas que coinciden con la subcadena *we* . No se encuentra ninguna coincidencia exacta, por lo que se ejecuta la coincidencia de subcadena con las columnas de nombre corto y de nombre.
+- Enumeración de todas las plantillas que coinciden con la subcadena *we*. No se encuentra ninguna coincidencia exacta, por lo que se ejecuta la coincidencia de subcadena con las columnas de nombre corto y de nombre.
 
   ```dotnetcli
   dotnet new we -l
   ```
 
-- Intento de invocar a la plantilla que coincide con *ng* . Si no se puede determinar una única coincidencia, se enumeran las plantillas que son coincidencias parciales.
+- Intento de invocar a la plantilla que coincide con *ng*. Si no se puede determinar una única coincidencia, se enumeran las plantillas que son coincidencias parciales.
 
   ```dotnetcli
   dotnet new ng

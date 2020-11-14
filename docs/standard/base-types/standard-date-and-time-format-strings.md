@@ -1,7 +1,7 @@
 ---
 title: Cadenas con formato de fecha y hora estándar
-description: En este artículo, aprenderá a usar una cadena de formato de fecha y hora estándar para definir la representación de texto de un valor de fecha y hora en .NET.
-ms.date: 03/30/2017
+description: Aprenda a usar una cadena de formato de fecha y hora estándar para definir la representación de texto de un valor de fecha y hora en .NET.
+ms.date: 11/05/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,30 +14,30 @@ helpviewer_keywords:
 - custom date and time format strings
 - formatting [.NET], time
 - date and time strings
-ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 36aaef2676383263b2009fd283f1671ef970f20e
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.custom: contperfq2
+ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
+ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888638"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94329760"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 
-Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:
+Una cadena de formato de fecha y hora estándar usa un único carácter como especificador de formato para definir la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una [cadena con formato de fecha y hora personalizado](custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:
 
 - Para definir la cadena resultante una operación de formato.
 
 - Para definir la representación de texto de un valor de fecha y hora que se puede convertir en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante una operación de análisis.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato** , que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
-
-Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.
+> Puede descargar la **Utilidad de formato** , que es una aplicación de Windows Forms de .NET que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a>En la tabla siguiente se describen los especificadores de formato de fecha y hora estándar. A menos que se indique lo contrario, un determinado especificador de formato de fecha y hora estándar genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>. Consulte la sección [Notas](#Notes) para obtener información adicional sobre cómo usar cadenas de formato de fecha y hora estándar.
+## <a name="table-of-format-specifiers"></a>Tabla de especificadores de formato
+
+<a name="table"></a>En la tabla siguiente se describen los especificadores de formato de fecha y hora estándar. A menos que se indique lo contrario, un determinado especificador de formato de fecha y hora estándar genera una representación de cadena idéntica independientemente de que se use con un valor <xref:System.DateTime> o <xref:System.DateTimeOffset>. Vea [Configuración del Panel de control](#control-panel-settings) y [Propiedades de DateTimeFormatInfo](#datetimeformatinfo-properties) para obtener información adicional sobre el uso de cadenas de formato de fecha y hora estándar.
 
 |Especificador de formato|Descripción|Ejemplos|
 |----------------------|-----------------|--------------|
@@ -98,9 +98,16 @@ Las cadenas de formato estándar también se pueden usar en operaciones de anál
 
 En las próximas secciones se describen los especificadores de formato estándar para los valores <xref:System.DateTime> y <xref:System.DateTimeOffset>.
 
+## <a name="date-formats"></a>Formatos de fecha
+
+Este grupo incluye los formatos siguientes:
+
+- [El especificador de formato de fecha corta ("d")](#the-short-date-d-format-specifier)
+- [El especificador de formato de fecha larga ("D")](#the-long-date-d-format-specifier)
+
 <a name="ShortDate"></a>
 
-## <a name="the-short-date-d-format-specifier"></a>El especificador de formato de fecha corta ("d")
+### <a name="the-short-date-d-format-specifier"></a>El especificador de formato de fecha corta ("d")
 
 El especificador de formato estándar "d" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> de una referencia cultural concreta. Por ejemplo, la cadena de formato personalizado devuelta por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A> de la referencia cultural de todos los idiomas es "MM/dd/yyyy".
 
@@ -120,7 +127,7 @@ En el ejemplo siguiente se usa el especificador de formato "d" para mostrar un v
 
 <a name="LongDate"></a>
 
-## <a name="the-long-date-d-format-specifier"></a>El especificador de formato de fecha larga ("D")
+### <a name="the-long-date-d-format-specifier"></a>El especificador de formato de fecha larga ("D")
 
 El especificador de formato estándar "D" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "dddd, dd MMMM yyyy".
 
@@ -139,9 +146,23 @@ En el ejemplo siguiente se usa el especificador de formato "D" para mostrar un v
 
 [Volver a la tabla](#table)
 
+## <a name="date-and-time-formats"></a>Formatos de fecha y hora
+
+Este grupo incluye los formatos siguientes:
+
+- [El especificador de formato de fecha completa y hora corta ("f")](#the-full-date-short-time-f-format-specifier).
+- [El especificador de formato de fecha completa y hora larga ("F")](#the-full-date-long-time-f-format-specifier).
+- [El especificador de formato de fecha general y hora corta ("g")](#the-general-date-short-time-g-format-specifier).
+- [El especificador de formato de fecha general y hora larga ("G")](#the-general-date-long-time-g-format-specifier).
+- [El especificador de formato de operación de ida y vuelta ("O", "o")](#the-round-trip-o-o-format-specifier).
+- [El especificador de formato RFC1123 ("R", "r")](#the-rfc1123-r-r-format-specifier).
+- [El especificador de formato que se puede ordenar ("s")](#the-sortable-s-format-specifier).
+- [El especificador de formato universal que se puede ordenar ("u")](#the-universal-sortable-u-format-specifier).
+- [El especificador de formato completo universal ("U")](#the-universal-full-u-format-specifier).
+
 <a name="FullDateShortTime"></a>
 
-## <a name="the-full-date-short-time-f-format-specifier"></a>El especificador de formato de fecha completa y hora corta ("f")
+### <a name="the-full-date-short-time-f-format-specifier"></a>El especificador de formato de fecha completa y hora corta ("f")
 
 El especificador de formato estándar "f" representa una combinación de los patrones de fecha larga ("D") y hora corta ("t"), separados por un espacio.
 
@@ -166,7 +187,7 @@ En el ejemplo siguiente se usa el especificador de formato "f" para mostrar un v
 
 <a name="FullDateLongTime"></a>
 
-## <a name="the-full-date-long-time-f-format-specifier"></a>El especificador de formato de fecha completa y hora larga ("F")
+### <a name="the-full-date-long-time-f-format-specifier"></a>El especificador de formato de fecha completa y hora larga ("F")
 
 El especificador de formato estándar "F" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "dddd, dd MMMM yyyy HH:mm:ss".
 
@@ -190,7 +211,7 @@ En el ejemplo siguiente se usa el especificador de formato "F" para mostrar un v
 
 <a name="GeneralDateShortTime"></a>
 
-## <a name="the-general-date-short-time-g-format-specifier"></a>El especificador de formato de fecha general y hora corta ("g")
+### <a name="the-general-date-short-time-g-format-specifier"></a>El especificador de formato de fecha general y hora corta ("g")
 
 El especificador de formato estándar "g" representa una combinación de los patrones de fecha corta ("d") y hora corta ("t"), separados por un espacio.
 
@@ -214,7 +235,7 @@ En el ejemplo siguiente se usa el especificador de formato "g" para mostrar un v
 
 <a name="GeneralDateLongTime"></a>
 
-## <a name="the-general-date-long-time-g-format-specifier"></a>El especificador de formato de fecha general y hora larga ("G")
+### <a name="the-general-date-long-time-g-format-specifier"></a>El especificador de formato de fecha general y hora larga ("G")
 
 El especificador de formato estándar "G" representa una combinación de los patrones de fecha corta ("d") y hora larga ("T"), separados por un espacio.
 
@@ -236,29 +257,9 @@ En el ejemplo siguiente se usa el especificador de formato "G" para mostrar un v
 
 [Volver a la tabla](#table)
 
-<a name="MonthDay"></a>
-
-## <a name="the-month-m-m-format-specifier"></a>El especificador de formato de mes ("M", "m")
-
-El especificador de formato estándar "M" o "m" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "MMMM dd".
-
-En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
-
-|Propiedad.|Descripción|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define el formato global de la cadena de resultado.|
-|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|
-
-En el ejemplo siguiente se usa el especificador de formato "m" para mostrar un valor de fecha y hora.
-
-[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
-[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
-
-[Volver a la tabla](#table)
-
 <a name="Roundtrip"></a>
 
-## <a name="the-round-trip-o-o-format-specifier"></a>El especificador de formato de operación de ida y vuelta ("O", "o")
+### <a name="the-round-trip-o-o-format-specifier"></a>El especificador de formato de operación de ida y vuelta ("O", "o")
 
 El especificador de formato estándar "O" u "o" representa una cadena de formato de fecha y hora personalizado mediante un patrón que conserva la información de la zona horaria y emite una cadena de resultado que cumple con la norma ISO 8601. En los valores <xref:System.DateTime>, este especificador de formato está diseñado para conservar los valores de fecha y hora junto con la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> en el texto. La cadena con formato se puede recuperar usando el método <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> o <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> si el parámetro `styles` está establecido en <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>.
 
@@ -290,7 +291,7 @@ En el ejemplo siguiente se usa el especificador de formato "o" para crear una ca
 
 <a name="RFC1123"></a>
 
-## <a name="the-rfc1123-r-r-format-specifier"></a>El especificador de formato RFC1123 ("R", "r")
+### <a name="the-rfc1123-r-r-format-specifier"></a>El especificador de formato RFC1123 ("R", "r")
 
 El especificador de formato estándar "R" o "r" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A?displayProperty=nameWithType>. El patrón refleja una norma definida y la propiedad es de solo lectura. Por consiguiente, siempre es el mismo, sea cual fuere la referencia cultural utilizada o el proveedor de formato proporcionado. La cadena de formato personalizado es "ddd, dd MMM yyyy HH':'mm':'ss 'GMT'". Cuando se utiliza este especificador de formato estándar, la operación de formato o análisis utiliza siempre la referencia cultural de todos los idiomas.
 
@@ -313,7 +314,7 @@ En el ejemplo siguiente se utiliza el especificador de formato "r" para mostrar 
 
 <a name="Sortable"></a>
 
-## <a name="the-sortable-s-format-specifier"></a>El especificador de formato que se puede ordenar ("s")
+### <a name="the-sortable-s-format-specifier"></a>El especificador de formato que se puede ordenar ("s")
 
 El especificador de formato estándar "s" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A?displayProperty=nameWithType>. El patrón refleja una norma definida (ISO 8601) y la propiedad es de solo lectura. Por consiguiente, siempre es el mismo, sea cual fuere la referencia cultural utilizada o el proveedor de formato proporcionado. La cadena de formato personalizado es "yyyy'-'MM'-'dd'T'HH':'mm':'ss".
 
@@ -328,53 +329,9 @@ En el ejemplo siguiente se utiliza el especificador de formato "s" para mostrar 
 
 [Volver a la tabla](#table)
 
-<a name="ShortTime"></a>
-
-## <a name="the-short-time-t-format-specifier"></a>El especificador de formato de hora corta ("t")
-
-El especificador de formato estándar "t" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "HH:mm".
-
-La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
-
-|Propiedad.|Descripción|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Define la cadena que indica las horas comprendidas desde medianoche hasta antes del mediodía en un reloj de 12 horas.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Define la cadena que indica las horas comprendidas desde el mediodía hasta antes de medianoche en un reloj de 12 horas.|
-
-En el ejemplo siguiente se usa el especificador de formato "t" para mostrar un valor de fecha y hora.
-
-[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
-[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
-
-[Volver a la tabla](#table)
-
-<a name="LongTime"></a>
-
-## <a name="the-long-time-t-format-specifier"></a>El especificador de formato de hora larga ("T")
-
-El especificador de formato estándar "T" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de una referencia cultural concreta. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "HH:mm:ss".
-
-En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
-
-|Propiedad.|Descripción|
-|--------------|-----------------|
-|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
-|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
-|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Define la cadena que indica las horas comprendidas desde medianoche hasta antes del mediodía en un reloj de 12 horas.|
-|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Define la cadena que indica las horas comprendidas desde el mediodía hasta antes de medianoche en un reloj de 12 horas.|
-
-En el ejemplo siguiente se usa el especificador de formato "T" para mostrar un valor de fecha y hora.
-
-[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
-[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
-
-[Volver a la tabla](#table)
-
 <a name="UniversalSortable"></a>
 
-## <a name="the-universal-sortable-u-format-specifier"></a>El especificador de formato universal que se puede ordenar ("u")
+### <a name="the-universal-sortable-u-format-specifier"></a>El especificador de formato universal que se puede ordenar ("u")
 
 El especificador de formato estándar "u" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A?displayProperty=nameWithType>. El patrón refleja una norma definida y la propiedad es de solo lectura. Por consiguiente, siempre es el mismo, sea cual fuere la referencia cultural utilizada o el proveedor de formato proporcionado. La cadena de formato personalizado es "yyyy'-'MM'-'dd HH':'mm':'ss'Z'". Cuando se utiliza este especificador de formato estándar, la operación de formato o análisis utiliza siempre la referencia cultural de todos los idiomas.
 
@@ -389,7 +346,7 @@ En el ejemplo siguiente se usa el especificador de formato "u" para mostrar un v
 
 <a name="UniversalFull"></a>
 
-## <a name="the-universal-full-u-format-specifier"></a>El especificador de formato completo universal ("U")
+### <a name="the-universal-full-u-format-specifier"></a>El especificador de formato completo universal ("U")
 
 El especificador de formato estándar "U" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> de una referencia cultural especificada. El patrón es igual que el patrón de "F". Sin embargo, el valor <xref:System.DateTime> se convierte automáticamente en una hora UTC antes de darle formato.
 
@@ -413,9 +370,87 @@ En el ejemplo siguiente se usa el especificador de formato "U" para mostrar un v
 
 [Volver a la tabla](#table)
 
+## <a name="time-formats"></a>Formatos de hora
+
+Este grupo incluye los formatos siguientes:
+
+- [El especificador de formato de hora corta ("t")](#the-short-time-t-format-specifier).
+- [El especificador de formato de hora larga ("T")](#the-long-time-t-format-specifier).
+
+<a name="ShortTime"></a>
+
+### <a name="the-short-time-t-format-specifier"></a>El especificador de formato de hora corta ("t")
+
+El especificador de formato estándar "t" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "HH:mm".
+
+La información de formato de un objeto <xref:System.Globalization.DateTimeFormatInfo> específico afecta a la cadena de resultado. En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
+
+|Propiedad.|Descripción|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Define la cadena que indica las horas comprendidas desde medianoche hasta antes del mediodía en un reloj de 12 horas.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Define la cadena que indica las horas comprendidas desde el mediodía hasta antes de medianoche en un reloj de 12 horas.|
+
+En el ejemplo siguiente se usa el especificador de formato "t" para mostrar un valor de fecha y hora.
+
+[!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+[!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]
+
+[Volver a la tabla](#table)
+
+<a name="LongTime"></a>
+
+### <a name="the-long-time-t-format-specifier"></a>El especificador de formato de hora larga ("T")
+
+El especificador de formato estándar "T" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de una referencia cultural concreta. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "HH:mm:ss".
+
+En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que pueden controlar el formato de la cadena devuelta. El especificador de formato personalizado devuelto por la propiedad <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de algunas referencias culturales quizás no use todas las propiedades.
+
+|Propiedad.|Descripción|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Define el formato del componente de hora de la cadena de resultado.|
+|<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Define la cadena que separa los componentes de hora, minutos y segundos de una hora.|
+|<xref:System.Globalization.DateTimeFormatInfo.AMDesignator%2A>|Define la cadena que indica las horas comprendidas desde medianoche hasta antes del mediodía en un reloj de 12 horas.|
+|<xref:System.Globalization.DateTimeFormatInfo.PMDesignator%2A>|Define la cadena que indica las horas comprendidas desde el mediodía hasta antes de medianoche en un reloj de 12 horas.|
+
+En el ejemplo siguiente se usa el especificador de formato "T" para mostrar un valor de fecha y hora.
+
+[!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+[!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]
+
+[Volver a la tabla](#table)
+
+## <a name="partial-date-formats"></a>Formatos de fecha parcial
+
+Este grupo incluye los formatos siguientes:
+
+- [El especificador de formato de mes ("M", "m")](#the-month-m-m-format-specifier).
+- [El especificador de formato de mes y año ("Y", "y")](#the-year-month-y-y-format-specifier)
+
+<a name="MonthDay"></a>
+
+### <a name="the-month-m-m-format-specifier"></a>El especificador de formato de mes ("M", "m")
+
+El especificador de formato estándar "M" o "m" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A?displayProperty=nameWithType> actual. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "MMMM dd".
+
+En la tabla siguiente se enumeran las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> que controlan el formato de la cadena devuelta.
+
+|Propiedad.|Descripción|
+|--------------|-----------------|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Define el formato global de la cadena de resultado.|
+|<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Define los nombres de meses traducidos que pueden aparecer en la cadena de resultado.|
+
+En el ejemplo siguiente se usa el especificador de formato "m" para mostrar un valor de fecha y hora.
+
+[!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+[!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]
+
+[Volver a la tabla](#table)
+
 <a name="YearMonth"></a>
 
-## <a name="the-year-month-y-y-format-specifier"></a>El especificador de formato de mes y año ("Y", "y")
+### <a name="the-year-month-y-y-format-specifier"></a>El especificador de formato de mes y año ("Y", "y")
 
 El especificador de formato estándar "Y" o "y" representa una cadena de formato de fecha y hora personalizado que está definida por la propiedad <xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A?displayProperty=nameWithType> de una referencia cultural especificada. Por ejemplo, la cadena de formato personalizado para la referencia cultural de todos los idiomas es "yyyy MMMM".
 
@@ -435,15 +470,13 @@ En el ejemplo siguiente se usa el especificador de formato "y" para mostrar un v
 
 <a name="Notes"></a>
 
-## <a name="notes"></a>Notas
+## <a name="control-panel-settings"></a>Configuración del Panel de control
 
-### <a name="control-panel-settings"></a>Configuración del Panel de control
-
-Los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Estas configuraciones se utilizan para inicializar el objeto <xref:System.Globalization.DateTimeFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.
+En Windows, los valores de configuración del elemento **Configuración regional y de idioma** del Panel de control influyen en la cadena de resultado generada por una operación de formato. Estas configuraciones se utilizan para inicializar el objeto <xref:System.Globalization.DateTimeFormatInfo> asociado a la referencia cultural del subproceso actual, que proporciona valores que se utilizan para controlar el formato. Los equipos que usan configuraciones diferentes generarán cadenas de resultado distintas.
 
 Asimismo, si se usa el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> para crear instancias de un nuevo objeto <xref:System.Globalization.CultureInfo> que representa la misma referencia cultural que la referencia cultural del sistema actual, cualquier personalización establecida por el elemento **Configuración regional y de idioma** del Panel de control se aplicará al nuevo objeto <xref:System.Globalization.CultureInfo> . Puede usar el constructor <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> para crear un objeto <xref:System.Globalization.CultureInfo> que no refleje las personalizaciones de un sistema.
 
-### <a name="datetimeformatinfo-properties"></a>Propiedades de DateTimeFormatInfo
+## <a name="datetimeformatinfo-properties"></a>Propiedades de DateTimeFormatInfo
 
 El formato se ve influenciado por las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual, proporcionado implícitamente por la referencia cultural del subproceso actual o explícitamente por el parámetro <xref:System.IFormatProvider> del método que invoca el formato. En el parámetro <xref:System.IFormatProvider>, la aplicación debe especificar un objeto <xref:System.Globalization.CultureInfo>, que representa una referencia cultural, o un objeto <xref:System.Globalization.DateTimeFormatInfo>, que representa las convenciones de formato de fecha y hora de una determinada referencia cultural. Muchos de los especificadores de formato de fecha y hora estándar son alias de patrones de formato definidos en las propiedades del objeto <xref:System.Globalization.DateTimeFormatInfo> actual. La aplicación puede modificar el resultado generado por algunos especificadores de formato de fecha y hora estándar al cambiar los patrones de formato de fecha y hora correspondientes de la propiedad <xref:System.Globalization.DateTimeFormatInfo> apropiada.
 
