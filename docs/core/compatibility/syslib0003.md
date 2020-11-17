@@ -3,20 +3,20 @@ title: Advertencia SYSLIB0003
 description: Obtenga información sobre las obsolescencias que generan la advertencia en tiempo de compilación SYSLIB0003.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: ca774f3e4b5132cf40c632f7c49d3f183f5d578f
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: a9f925904641a1aa4fd229c81ff680850e4f84bd
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333181"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439968"
 ---
-# <a name="syslib0003-code-access-security-is-not-supported"></a><span data-ttu-id="34eee-103">SYSLIB0003: no se admite la seguridad de acceso del código</span><span class="sxs-lookup"><span data-stu-id="34eee-103">SYSLIB0003: Code access security is not supported</span></span>
+# <a name="syslib0003-code-access-security-is-not-supported"></a><span data-ttu-id="870c6-103">SYSLIB0003: no se admite la seguridad de acceso del código</span><span class="sxs-lookup"><span data-stu-id="870c6-103">SYSLIB0003: Code access security is not supported</span></span>
 
-<span data-ttu-id="34eee-104">La [seguridad de acceso del código (CAS)](../../framework/data/adonet/code-access-security.md) es una tecnología heredada no admitida.</span><span class="sxs-lookup"><span data-stu-id="34eee-104">[Code access security (CAS)](../../framework/data/adonet/code-access-security.md) is an unsupported, legacy technology.</span></span> <span data-ttu-id="34eee-105">La infraestructura para habilitar CAS, que solo existe en .NET Framework 2.x-4.x, está en desuso y no recibe mantenimiento ni correcciones de seguridad.</span><span class="sxs-lookup"><span data-stu-id="34eee-105">The infrastructure to enable CAS, which exists only in .NET Framework 2.x - 4.x, is deprecated and not receiving servicing or security fixes.</span></span>
+<span data-ttu-id="870c6-104">La [seguridad de acceso del código (CAS)](../../framework/data/adonet/code-access-security.md) es una tecnología heredada no admitida.</span><span class="sxs-lookup"><span data-stu-id="870c6-104">[Code access security (CAS)](../../framework/data/adonet/code-access-security.md) is an unsupported, legacy technology.</span></span> <span data-ttu-id="870c6-105">La infraestructura para habilitar CAS, que solo existe en .NET Framework 2.x-4.x, está en desuso y no recibe mantenimiento ni correcciones de seguridad.</span><span class="sxs-lookup"><span data-stu-id="870c6-105">The infrastructure to enable CAS, which exists only in .NET Framework 2.x - 4.x, is deprecated and not receiving servicing or security fixes.</span></span>
 
-<span data-ttu-id="34eee-106">Como resultado, la mayoría de los tipos relacionados con la seguridad de acceso del código (CAS) de .NET están obsoletos a partir de .NET 5.0.</span><span class="sxs-lookup"><span data-stu-id="34eee-106">As a result, most code access security (CAS)-related types in .NET are obsolete, starting in .NET 5.0.</span></span> <span data-ttu-id="34eee-107">Esto incluye atributos de CAS, como <xref:System.Security.Permissions.SecurityPermissionAttribute>, objetos de permiso de CAS, como <xref:System.Net.SocketPermission>, tipos derivados de <xref:System.Security.Policy.EvidenceBase> y otras API auxiliares.</span><span class="sxs-lookup"><span data-stu-id="34eee-107">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span> <span data-ttu-id="34eee-108">El uso de estas API genera una advertencia `SYSLIB0003` en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="34eee-108">Using these APIs generates warning `SYSLIB0003` at compile time.</span></span>
+<span data-ttu-id="870c6-106">Como resultado, la mayoría de los tipos relacionados con la seguridad de acceso del código (CAS) de .NET están obsoletos a partir de .NET 5.0.</span><span class="sxs-lookup"><span data-stu-id="870c6-106">As a result, most code access security (CAS)-related types in .NET are obsolete, starting in .NET 5.0.</span></span> <span data-ttu-id="870c6-107">Esto incluye atributos de CAS, como <xref:System.Security.Permissions.SecurityPermissionAttribute>, objetos de permiso de CAS, como <xref:System.Net.SocketPermission>, tipos derivados de <xref:System.Security.Policy.EvidenceBase> y otras API auxiliares.</span><span class="sxs-lookup"><span data-stu-id="870c6-107">This includes CAS attributes, such as <xref:System.Security.Permissions.SecurityPermissionAttribute>, CAS permission objects, such as <xref:System.Net.SocketPermission>, <xref:System.Security.Policy.EvidenceBase>-derived types, and other supporting APIs.</span></span> <span data-ttu-id="870c6-108">El uso de estas API genera una advertencia `SYSLIB0003` en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="870c6-108">Using these APIs generates warning `SYSLIB0003` at compile time.</span></span>
 
-<span data-ttu-id="34eee-109">La lista completa de API de CAS obsoletas es la siguiente:</span><span class="sxs-lookup"><span data-stu-id="34eee-109">The complete list of obsolete CAS APIs is as follows:</span></span>
+<span data-ttu-id="870c6-109">La lista completa de API de CAS obsoletas es la siguiente:</span><span class="sxs-lookup"><span data-stu-id="870c6-109">The complete list of obsolete CAS APIs is as follows:</span></span>
 
 - <xref:System.AppDomain.PermissionSet?displayProperty=fullName>
 - <xref:System.Configuration.ConfigurationPermission?displayProperty=fullName>
@@ -135,7 +135,7 @@ ms.locfileid: "92333181"
 - <xref:System.Security.Permissions.WebBrowserPermissionLevel?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermission?displayProperty=fullName>
 - <xref:System.Security.Permissions.ZoneIdentityPermissionAttribute?displayProperty=fullName>
-- [<span data-ttu-id="34eee-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span><span class="sxs-lookup"><span data-stu-id="34eee-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
+- [<span data-ttu-id="870c6-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span><span class="sxs-lookup"><span data-stu-id="870c6-110">System.Security.Policy.ApplicationTrust.ApplicationTrust(PermissionSet, IEnumerable\<StrongName>)</span></span>](/dotnet/api/system.security.policy.applicationtrust.-ctor#System_Security_Policy_ApplicationTrust__ctor_System_Security_PermissionSet_System_Collections_Generic_IEnumerable_System_Security_Policy_StrongName__)
 - <xref:System.Security.Policy.ApplicationTrust.FullTrustAssemblies?displayProperty=fullName>
 - <xref:System.Security.Policy.FileCodeGroup?displayProperty=fullName>
 - <xref:System.Security.Policy.GacInstalled?displayProperty=fullName>
@@ -161,9 +161,9 @@ ms.locfileid: "92333181"
 - <xref:System.Web.AspNetHostingPermissionAttribute?displayProperty=fullName>
 - <xref:System.Xaml.Permissions.XamlLoadPermission?displayProperty=fullName>
 
-## <a name="workarounds"></a><span data-ttu-id="34eee-111">Soluciones alternativas</span><span class="sxs-lookup"><span data-stu-id="34eee-111">Workarounds</span></span>
+## <a name="workarounds"></a><span data-ttu-id="870c6-111">Soluciones alternativas</span><span class="sxs-lookup"><span data-stu-id="870c6-111">Workarounds</span></span>
 
-- <span data-ttu-id="34eee-112">Si está imponiendo cualquier permiso de seguridad, quite el atributo o la llamada que impone el permiso.</span><span class="sxs-lookup"><span data-stu-id="34eee-112">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
+- <span data-ttu-id="870c6-112">Si está imponiendo cualquier permiso de seguridad, quite el atributo o la llamada que impone el permiso.</span><span class="sxs-lookup"><span data-stu-id="870c6-112">If you're asserting any security permission, remove the attribute or call that asserts the permission.</span></span>
 
   ```csharp
   // REMOVE the attribute below.
@@ -178,7 +178,7 @@ ms.locfileid: "92333181"
   }
   ```
 
-- <span data-ttu-id="34eee-113">Si está denegando o restringiendo (mediante `PermitOnly`) cualquier permiso, póngase en contacto con el asesor de seguridad.</span><span class="sxs-lookup"><span data-stu-id="34eee-113">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="34eee-114">Dado que el entorno de ejecución .NET 5.0+ no respeta los atributos de CAS, la aplicación podría tener una brecha de seguridad si se basa incorrectamente en la infraestructura de CAS para restringir el acceso a estos métodos.</span><span class="sxs-lookup"><span data-stu-id="34eee-114">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
+- <span data-ttu-id="870c6-113">Si está denegando o restringiendo (mediante `PermitOnly`) cualquier permiso, póngase en contacto con el asesor de seguridad.</span><span class="sxs-lookup"><span data-stu-id="870c6-113">If you're denying or restricting (via `PermitOnly`) any permission, contact your security advisor.</span></span> <span data-ttu-id="870c6-114">Dado que el entorno de ejecución .NET 5.0+ no respeta los atributos de CAS, la aplicación podría tener una brecha de seguridad si se basa incorrectamente en la infraestructura de CAS para restringir el acceso a estos métodos.</span><span class="sxs-lookup"><span data-stu-id="870c6-114">Because CAS attributes are not honored by the .NET 5.0+ runtime, your application could have a security hole if it incorrectly relies on the CAS infrastructure to restrict access to these methods.</span></span>
 
   ```csharp
   // REVIEW the attribute below; could indicate security vulnerability.
@@ -193,7 +193,7 @@ ms.locfileid: "92333181"
   }
   ```
 
-- <span data-ttu-id="34eee-115">Si está pidiendo algún permiso (excepto <xref:System.Security.Permissions.PrincipalPermission>), quite la petición.</span><span class="sxs-lookup"><span data-stu-id="34eee-115">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="34eee-116">Todas las peticiones se realizan correctamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="34eee-116">All demands will succeed at run time.</span></span>
+- <span data-ttu-id="870c6-115">Si está pidiendo algún permiso (excepto <xref:System.Security.Permissions.PrincipalPermission>), quite la petición.</span><span class="sxs-lookup"><span data-stu-id="870c6-115">If you're demanding any permission (except <xref:System.Security.Permissions.PrincipalPermission>), remove the demand.</span></span> <span data-ttu-id="870c6-116">Todas las peticiones se realizan correctamente en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="870c6-116">All demands will succeed at run time.</span></span>
 
   ```csharp
   // REMOVE the attribute below; it will always succeed.
@@ -208,8 +208,10 @@ ms.locfileid: "92333181"
   }
   ```
 
-- <span data-ttu-id="34eee-117">Si está pidiendo <xref:System.Security.Permissions.PrincipalPermission>, vea las instrucciones de [SYSLIB0002: PrincipalPermissionAttribute está obsoleto](syslib0002.md#workarounds).</span><span class="sxs-lookup"><span data-stu-id="34eee-117">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [SYSLIB0002: PrincipalPermissionAttribute is obsolete](syslib0002.md#workarounds).</span></span> <span data-ttu-id="34eee-118">Estas instrucciones se aplican tanto a <xref:System.Security.Permissions.PrincipalPermission> como a <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="34eee-118">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
+- <span data-ttu-id="870c6-117">Si está pidiendo <xref:System.Security.Permissions.PrincipalPermission>, vea las instrucciones de [SYSLIB0002: PrincipalPermissionAttribute está obsoleto](syslib0002.md#workarounds).</span><span class="sxs-lookup"><span data-stu-id="870c6-117">If you're demanding <xref:System.Security.Permissions.PrincipalPermission>, consult the guidance for [SYSLIB0002: PrincipalPermissionAttribute is obsolete](syslib0002.md#workarounds).</span></span> <span data-ttu-id="870c6-118">Estas instrucciones se aplican tanto a <xref:System.Security.Permissions.PrincipalPermission> como a <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span><span class="sxs-lookup"><span data-stu-id="870c6-118">That guidance applies for both <xref:System.Security.Permissions.PrincipalPermission> and <xref:System.Security.Permissions.PrincipalPermissionAttribute>.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="34eee-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="34eee-119">See also</span></span>
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
-- [<span data-ttu-id="34eee-120">SYSLIB0002: PrincipalPermissionAttribute está obsoleto</span><span class="sxs-lookup"><span data-stu-id="34eee-120">SYSLIB0002: PrincipalPermissionAttribute is obsolete</span></span>](syslib0002.md)
+## <a name="see-also"></a><span data-ttu-id="870c6-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="870c6-119">See also</span></span>
+
+- [<span data-ttu-id="870c6-120">SYSLIB0002: PrincipalPermissionAttribute está obsoleto</span><span class="sxs-lookup"><span data-stu-id="870c6-120">SYSLIB0002: PrincipalPermissionAttribute is obsolete</span></span>](syslib0002.md)
