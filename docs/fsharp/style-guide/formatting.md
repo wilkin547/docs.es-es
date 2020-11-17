@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: 401c0688cd7d0a945dc469f1ab5841b21e1d4ab4
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359290"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688259"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -642,21 +642,17 @@ En algunos casos, `do...yield` puede ayudar a mejorar la legibilidad. Estos caso
 
 ## <a name="formatting-if-expressions"></a>Aplicar formato a expresiones if
 
-La sangría de los condicionales depende del tamaño de las expresiones que los componen. Si `cond` `e1` y `e2` son cortos, simplemente escríbalos en una línea:
+La sangría de los condicionales depende del tamaño y la complejidad de las expresiones que los hacen.
+Basta con escribirlas en una línea cuando:
+
+- `cond`, `e1` y `e2` son cortos
+- `e1` y `e2` no son `if/then/else` expresiones en sí mismas.
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Si `cond` , `e1` o `e2` son más largas, pero no varias líneas:
-
-```fsharp
-if cond
-then e1
-else e2
-```
-
-Si alguna de las expresiones es de varias líneas:
+Si alguna de las expresiones es una o varias líneas `if/then/else` .
 
 ```fsharp
 if cond then
@@ -665,13 +661,26 @@ else
     e2
 ```
 
-A varios condicionales con `elif` y `else` se les aplica una sangría en el mismo ámbito que el `if` :
+A varios condicionales con `elif` y `else` se les aplica una sangría en el mismo ámbito que `if` cuando siguen las reglas de las expresiones de una línea `if/then/else` .
 
 ```fsharp
 if cond1 then e1
 elif cond2 then e2
 elif cond3 then e3
 else e4
+```
+
+Si alguna de las condiciones o expresiones es de varias líneas, la `if/then/else` expresión completa es de varias líneas:
+
+```fsharp
+if cond1 then
+    e1
+elif cond2 then
+    e2
+elif cond3 then
+    e3
+else
+    e4
 ```
 
 ### <a name="pattern-matching-constructs"></a>Construcciones de coincidencia de patrones
@@ -879,6 +888,41 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
+```
+
+### <a name="formatting-constructors-static-members-and-member-invocations"></a>Constructores de formato, miembros estáticos e invocaciones de miembros
+
+Si la expresión es corta, separe los argumentos con espacios y guárdelos en una línea.
+
+```fsharp
+let person = new Person(a1, a2)
+
+let myRegexMatch = Regex.Match(input, regex)
+
+let untypedRes = checker.ParseFile(file, source, opts)
+```
+
+Si la expresión es larga, use nuevas líneas y Aplique sangría a un ámbito, en lugar de aplicar sangría al corchete.
+
+```fsharp
+let person =
+    new Person(
+        argument1,
+        argument2
+    )
+
+let myRegexMatch =
+    Regex.Match(
+        "my longer input string with some interesting content in it",
+        "myRegexPattern"
+    )
+
+let untypedRes =
+    checker.ParseFile(
+        fileName,
+        sourceText,
+        parsingOptionsWithDefines
+    )
 ```
 
 ## <a name="formatting-attributes"></a>Aplicar formato a atributos

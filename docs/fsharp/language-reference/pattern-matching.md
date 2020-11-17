@@ -1,13 +1,13 @@
 ---
 title: Coincidencia de modelos
 description: 'Obtenga información sobre cómo se usan los patrones en F # para comparar datos con estructuras lógicas, descomponer datos en elementos constituyentes o extraer información de los datos.'
-ms.date: 08/15/2020
-ms.openlocfilehash: 6d284b941824bc15a8e872a4e28e22c0e159191d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.date: 11/12/2020
+ms.openlocfilehash: e167712b082b7f587e41a78edcaf0a0db9c7294b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811514"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687810"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -47,6 +47,7 @@ Los patrones admitidos se muestran en la tabla siguiente. En tiempo de ejecució
 |Patrón junto con anotación de tipo|*patrón* : *tipo*|`a : int`|
 |Modelo de prueba de tipo|:? *tipo* [como *identificador* ]|`:? System.DateTime as dt`|
 |Patrón null|null|`null`|
+|Patrón Name|*Name expr*|`nameof str`|
 
 ## <a name="constant-patterns"></a>Patrones constantes
 
@@ -139,7 +140,7 @@ El ejemplo siguiente es como `detectZeroTuple` el que se muestra en la sección 
 
 ## <a name="cons-pattern"></a>Patrón de cons
 
-El patrón cons se usa para descomponer una lista en el primer elemento, el *encabezado*y una lista que contiene los elementos restantes, la *cola*.
+El patrón cons se usa para descomponer una lista en el primer elemento, el *encabezado* y una lista que contiene los elementos restantes, la *cola*.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
@@ -214,6 +215,22 @@ El patrón null coincide con el valor null que puede aparecer cuando se trabaja 
 En el ejemplo siguiente se usa el patrón NULL y el patrón variable.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+
+## <a name="nameof-pattern"></a>Patrón Name
+
+El `nameof` patrón coincide con una cadena cuando su valor es igual a la expresión que sigue a la `nameof` palabra clave. Por ejemplo:
+
+```fsharp
+let f (str: string) =
+    match str with
+    | nameof str -> "It's 'str'!"
+    | _ -> "It is not 'str'!"
+
+f "str" // matches
+f "asdf" // does not match
+```
+
+Vea el [`nameof`](nameof.md) operador para obtener información sobre lo que puede tomar como nombre.
 
 ## <a name="see-also"></a>Consulte también
 
