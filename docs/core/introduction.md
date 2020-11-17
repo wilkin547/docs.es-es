@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 09/28/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 5c600ca999089d005f4f8eb2db332e938df7bfcb
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329799"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506745"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -24,7 +24,7 @@ ms.locfileid: "94329799"
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Plataforma universal de Windows (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * [Juegos](https://dotnet.microsoft.com/apps/games)
-* [Internet de las cosas (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Internet de las cosas (IoT)](/dotnet/iot)
 * [Aprendizaje automático](../machine-learning/index.yml)
 * [Aplicaciones de consola](tutorials/with-visual-studio-code.md)
 * [Servicios de Windows](/aspnet/core/host-and-deploy/windows-service)
@@ -132,7 +132,7 @@ Los entornos de desarrollo integrado para .NET incluyen los siguientes:
 
 El [SDK de .NET](sdk.md) es un conjunto de bibliotecas y herramientas para desarrollar y ejecutar aplicaciones .NET.
 
-Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet-core/), puede elegir el SDK o un *entorno de ejecución* , como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
+Al [descargar .NET](https://dotnet.microsoft.com/download/dotnet-core/), puede elegir el SDK o un *entorno de ejecución*, como el de .NET o el de ASP.NET Core. Instale un entorno de ejecución en un equipo que quiera preparar para ejecutar aplicaciones .NET. Instale el SDK en un equipo que quiera usar para el desarrollo. Al descargar el SDK, obtiene automáticamente los entornos de ejecución.
 
 La descarga del SDK incluye los componentes siguientes:
 
@@ -153,7 +153,7 @@ Para obtener más información, vea los siguientes recursos:
 
 ### <a name="project-system-and-msbuild"></a>Sistema del proyecto y MSBuild
 
-Una aplicación .NET se crea a partir de código fuente mediante [MSBuild](/visualstudio/msbuild/msbuild). Un archivo del proyecto ( *.csproj* , *.fsproj* o *.vbproj* ) especifica [destinos](/visualstudio/msbuild/msbuild-targets) y [tareas](/visualstudio/msbuild/msbuild-tasks) asociadas que se encargan de compilar, empaquetar y publicar código. Existen identificadores de SDK que hacen referencia a colecciones estándar de destinos y tareas. El uso de estos identificadores ayuda a reducir el tamaño de los archivos del proyecto y facilita el trabajo con ellos. Por ejemplo, este es un archivo del proyecto para una aplicación de consola:
+Una aplicación .NET se crea a partir de código fuente mediante [MSBuild](/visualstudio/msbuild/msbuild). Un archivo del proyecto ( *.csproj*, *.fsproj* o *.vbproj*) especifica [destinos](/visualstudio/msbuild/msbuild-targets) y [tareas](/visualstudio/msbuild/msbuild-tasks) asociadas que se encargan de compilar, empaquetar y publicar código. Existen identificadores de SDK que hacen referencia a colecciones estándar de destinos y tareas. El uso de estos identificadores ayuda a reducir el tamaño de los archivos del proyecto y facilita el trabajo con ellos. Por ejemplo, este es un archivo del proyecto para una aplicación de consola:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -221,7 +221,7 @@ Los lenguajes .NET de nivel alto, como C#, compilan en un conjunto de instruccio
 
 Como la compilación JIT tiene lugar durante la ejecución de la aplicación, el tiempo de compilación es parte del tiempo de ejecución. Por tanto, los compiladores JIT tienen que compensar el tiempo invertido en optimizar el código con el ahorro que puede generar el código resultante. Pero un compilador JIT conoce el hardware real y puede liberar a los desarrolladores de tener que enviar diferentes implementaciones para distintas plataformas.
 
-El compilador JIT de .NET puede realizar la *compilación en niveles* , lo que significa que puede volver a compilar métodos concretos en tiempo de ejecución. Esta característica le permite compilar rápidamente mientras todavía puede generar una versión muy optimizada del código para los métodos que se usan con frecuencia.
+El compilador JIT de .NET puede realizar la *compilación en niveles*, lo que significa que puede volver a compilar métodos concretos en tiempo de ejecución. Esta característica le permite compilar rápidamente mientras todavía puede generar una versión muy optimizada del código para los métodos que se usan con frecuencia.
 
 Para obtener más información, vea [Proceso de ejecución administrada](../standard/managed-execution-process.md) y [Compilación en niveles](whats-new/dotnet-core-3-0.md#tiered-compilation).
 
@@ -254,7 +254,7 @@ Las aplicaciones .NET se pueden publicar en dos modos diferentes:
 
 * La publicación de una aplicación como *independiente* genera un archivo ejecutable que incluye el [entorno de ejecución](#sdk-and-runtimes) y las [bibliotecas](#runtime-libraries) de .NET, así como la aplicación y sus dependencias. Los usuarios de la aplicación pueden ejecutarla en un equipo que no tenga instalado el entorno de ejecución de .NET. Las aplicaciones independientes son específicas de la plataforma y, opcionalmente, se pueden publicar mediante una forma de [compilación AOT](#aot-compiler).
 
-* La publicación de una aplicación como *dependiente del marco* genera un archivo ejecutable y archivos binarios (archivos *.dll* ) que solo incluyen la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el [entorno de ejecución](#sdk-and-runtimes) de .NET por separado. El archivo ejecutable es específico de la plataforma, pero los archivos *.dll* de las aplicaciones dependientes del marco son multiplataforma.
+* La publicación de una aplicación como *dependiente del marco* genera un archivo ejecutable y archivos binarios (archivos *.dll*) que solo incluyen la propia aplicación y sus dependencias. Los usuarios de la aplicación tienen que instalar el [entorno de ejecución](#sdk-and-runtimes) de .NET por separado. El archivo ejecutable es específico de la plataforma, pero los archivos *.dll* de las aplicaciones dependientes del marco son multiplataforma.
 
   Puede instalar varias versiones del tiempo de ejecución en paralelo para ejecutar aplicaciones dependientes del marco destinadas a otras versiones del tiempo de ejecución. Para obtener más información, vea [Plataformas de destino](../standard/frameworks.md).
 

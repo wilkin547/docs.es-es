@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-ms.openlocfilehash: 73b930efa893fd2b481c4c130754154a0d10d5b4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ef3fe36ce0c53821fb79fd7689ec6f7176af3e2f
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547889"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440860"
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 
@@ -52,7 +52,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  [Depurar, trazar y generar perfiles](./debug-trace-profile/index.md)  
  Explica cómo probar, optimizar y generar perfiles de aplicaciones de .NET Framework y el entorno de la aplicación. En esta sección se incluye información tanto para administradores como para programadores.  
   
- [Desarrollo de varias plataformas](../standard/cross-platform/index.md)  
+ [Desarrollo de varias plataformas](./cross-platform/index.md)  
  Proporciona información sobre cómo usar .NET Framework para compilar ensamblados que se pueden compartir entre varias plataformas y varios dispositivos, como teléfonos, escritorio y web.  
   
  [Implementación](./deployment/index.md)  
@@ -62,10 +62,12 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  Proporciona información sobre el almacenamiento en caché, la inicialización diferida, la confiabilidad y eventos ETW.  
 
 ## <a name="reference"></a>Referencia  
+
  [Biblioteca de clases .NET Framework](../../api/index.md?view=netframework-4.7)  
  Proporciona sintaxis, ejemplos de código e información de uso para cada una de las clases incluidas en los espacios de nombres de .NET Framework.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Introducción](./get-started/index.md)  
  Proporciona información general completa de .NET Framework y vínculos a recursos adicionales.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-ms.openlocfilehash: 6f2611488e7f653783cab833ad47131978bf74aa
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e94e80d0342f68098a08e184b6bf3f48c14e817b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166840"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440886"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -52,7 +52,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 |**/linenum**|Incluye referencias a líneas de código fuente originales.|
 |**/nobar**|Suprime la ventana emergente del indicador de progreso del desensamblado.|
 |**/noca**|Suprime la salida de atributos personalizados.|
-|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el entorno de Windows Runtime nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el entorno de Windows Runtime nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Desensambla únicamente tipos y miembros públicos. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Incluye todos los nombres entre comillas simples.|
 |**/raweh**|Muestra sin formato las cláusulas de control de excepciones.|

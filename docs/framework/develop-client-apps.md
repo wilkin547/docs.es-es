@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 33d0ca2918e4e3b00e2b09f7a47c538bbe903dba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e8d3a95b58cd2cabc41be31b7a4b66b1a79317d6
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547914"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439435"
 ---
 # <a name="develop-client-applications-with-net-framework"></a>Desarrollo de aplicaciones cliente con .NET Framework
 
@@ -39,7 +39,7 @@ Se describe cómo crear aplicaciones para UWP que se pueden poner a disposición
 [API de .NET para aplicaciones para UWP](../../api/index.md?view=dotnet-uwp-10.0)\
 Referencia de los tipos de .NET que admiten aplicaciones para UWP.
   
-[Desarrollo para varias plataformas](../standard/cross-platform/index.md)\
+[Desarrollo para varias plataformas](./cross-platform/index.md)\
 Se describen las diferentes maneras en que se puede usar .NET Framework para establecer varios tipos de aplicación cliente como destino.
 
 [Introducción a sitios web de ASP.NET](https://dotnet.microsoft.com/apps/aspnet/web-apps)\

@@ -3,12 +3,12 @@ title: Advertencia SYSLIB0007
 description: Obtenga información sobre las obsolescencias que generan la advertencia en tiempo de compilación SYSLIB0007.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: d5410a3b3d33515e2ee6f578cad2f4deaec9c25d
-ms.sourcegitcommit: dfcbc096ad7908cd58a5f0aeabd2256f05266bac
+ms.openlocfilehash: 4c0feac1d673e3462a4f2db470825b15cf1b1706
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92333178"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439947"
 ---
 # <a name="syslib0007-default-implementations-of-cryptography-algorithms-not-supported"></a>SYSLIB0007: implementaciones predeterminadas de algoritmos de criptografía no compatibles
 
@@ -20,7 +20,7 @@ El sistema de configuración de criptografía de .NET Framework no permite la a
 - <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=fullName>
 - <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=fullName>
 
-## <a name="workaround"></a>Solución alternativa
+## <a name="workarounds"></a>Soluciones alternativas
 
 - La acción recomendada consiste en reemplazar las llamadas a las API que ahora son obsoletas por llamadas a métodos de generador para algoritmos específicos, como por ejemplo <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType>. Esto le proporciona control total sobre los algoritmos de los que se crean instancias.
 
@@ -33,6 +33,8 @@ El sistema de configuración de criptografía de .NET Framework no permite la a
   | <xref:System.Security.Cryptography.HMAC.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | El algoritmo HMACSHA1 no se recomienda para la mayoría de las aplicaciones modernas. Considere la posibilidad de usar un algoritmo más seguro si es posible. Consulte con el asesor de seguridad para obtener más información. |
   | <xref:System.Security.Cryptography.KeyedHashAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.HMACSHA1.%23ctor> | El algoritmo HMACSHA1 no se recomienda para la mayoría de las aplicaciones modernas. Considere la posibilidad de usar un algoritmo más seguro si es posible. Consulte con el asesor de seguridad para obtener más información. |
   | <xref:System.Security.Cryptography.SymmetricAlgorithm.Create?displayProperty=nameWithType> | <xref:System.Security.Cryptography.Aes.Create?displayProperty=nameWithType> |
+
+[!INCLUDE [suppress-syslib-warning](../../../includes/suppress-syslib-warning.md)]
 
 ## <a name="see-also"></a>Vea también
 

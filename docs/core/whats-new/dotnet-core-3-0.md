@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: b0b1f4492d68ff2f2218b7c977f57cad3f582bb0
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.openlocfilehash: 2488499c1b0e8d12eb3be04b9bb885649b4da974
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050285"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439734"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -307,7 +307,7 @@ dotnet new winforms
 
 Visual Studio 2019 agrega plantillas de **nuevo proyecto** para WPF y Windows Forms de .NET Core 3.0.
 
-Para obtener más información sobre cómo migrar una aplicación existente de .NET Framework, vea los artículos sobre [cómo portar proyectos de WPF](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) y [cómo portar proyectos de Windows Forms](../porting/winforms.md).
+Para obtener más información sobre cómo migrar una aplicación existente de .NET Framework, vea los artículos sobre [cómo portar proyectos de WPF](/dotnet/desktop/wpf/migration/convert-project-from-net-framework) y [cómo portar proyectos de Windows Forms](/dotnet/desktop/winforms/migration/?view=netdesktop-5.0&preserve-view=true).
 
 #### <a name="winforms-high-dpi"></a>PPP alto de WinForms
 

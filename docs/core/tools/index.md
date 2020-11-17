@@ -1,23 +1,23 @@
 ---
-title: CLI de .NET Core
+title: CLI de .NET
 titleSuffix: ''
-description: Información general de la CLI de .NET Core y sus características.
+description: Información general de la CLI de .NET y sus características.
 ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 6a12e2d16afe36092c10e14a7465fa3bdbb23f32
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062696"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633861"
 ---
-# <a name="net-core-cli-overview"></a>Información general sobre la CLI de .NET Core
+# <a name="net-cli-overview"></a>Información general sobre la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-La interfaz de la línea de comandos (CLI) de .NET Core es una cadena de herramientas multiplataforma para desarrollar, compilar, ejecutar y publicar aplicaciones .NET Core.
+La interfaz de la línea de comandos (CLI) de .NET es una cadena de herramientas multiplataforma que sirve para desarrollar, compilar, ejecutar y publicar aplicaciones .NET.
 
-La CLI de .NET Core se incluye con el [SDK de .NET Core](../sdk.md). Para más información sobre cómo instalar el SDK de .NET Core, consulte [Instalación de .NET Core](../install/windows.md).
+La CLI de .NET se incluye con el [SDK de .NET](../sdk.md). Para obtener más información sobre cómo instalar el SDK de .NET, vea [Instalación de .NET Core](../install/windows.md).
 
 ## <a name="cli-commands"></a>Comandos de la CLI
 
@@ -64,7 +64,7 @@ De forma predeterminada, se instalan los siguientes comandos:
 - [`tool run`](global-tools.md#invoke-a-local-tool) Disponible a partir del SDK de .NET Core 3.0.
 - [`tool uninstall`](dotnet-tool-uninstall.md)
 
-Las herramientas son aplicaciones de consola que se instalan mediante paquetes NuGet y se invocan desde el símbolo del sistema. Puede encargarse de escribir las herramientas o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
+Las herramientas son aplicaciones de consola que se instalan mediante paquetes NuGet y se invocan desde el símbolo del sistema. Puede encargarse de escribir las herramientas o instalar las escritas por terceros. Las herramientas también se denominan herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales. Para obtener más información, vea la [información general sobre las herramientas de .NET](global-tools.md).
 
 ## <a name="command-structure"></a>Estructura de comandos
 
@@ -80,7 +80,7 @@ dotnet /build_output/my_app.dll
 
 El controlador se denomina [dotnet](dotnet.md) y tiene dos responsabilidades, ejecutar una [aplicación dependiente del marco](../deploying/index.md) o ejecutar un comando.
 
-Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`. Si quiere usar una versión específica del entorno de ejecución .NET Core, use la opción `--fx-version <VERSION>` (consulte la referencia del [comando dotnet](dotnet.md)).
+Para ejecutar una aplicación dependiente del marco, especifique la aplicación después del controlador, por ejemplo, `dotnet /path/to/my_app.dll`. Cuando ejecute el comando desde la carpeta donde reside la DLL de la aplicación, simplemente ejecute `dotnet my_app.dll`. Si quiere usar una versión específica del entorno de ejecución .NET, use la opción `--fx-version <VERSION>` (consulte la referencia del [comando dotnet](dotnet.md)).
 
 Cuando se proporciona un comando para el controlador, `dotnet.exe` inicia el proceso de ejecución del comando de la CLI. Por ejemplo:
 
@@ -105,4 +105,4 @@ Las opciones que se pasan en la línea de comandos son las opciones para el coma
 ## <a name="see-also"></a>Vea también
 
 - [Repositorio de GitHub dotnet/sdk](https://github.com/dotnet/sdk/)
-- [.NET Core installation guide](../install/windows.md) (Guía de instalación de .NET Core)
+- [Guía de instalación de .NET](../install/windows.md)

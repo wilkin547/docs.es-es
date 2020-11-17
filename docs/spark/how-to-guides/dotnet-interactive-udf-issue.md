@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d07d757f9e47a84c75f46b190bdb613b8d2db7c1
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8fb729a0b8220d15af641f916383bbd6146e2e33
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224129"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441081"
 ---
 # <a name="write-and-call-udfs-in-net-for-apache-spark-interactive-environments"></a>Escritura y llamada a UDF en entornos interactivos de .NET para Apache Spark
 
@@ -49,7 +49,7 @@ Ahora se verá lo que sucede si se llama a la UDF en la misma celda en la que es
 
 El error resaltado anteriormente se debe a que primero se deben compilar los ensamblados de UDF y enviarse a los trabajos antes de que se pueda llamar en un objeto DataFrame.
 
-Estos son algunos aspectos importantes que tener en cuenta al implementar las UDF en la experiencia interactiva de .NET para Apache Spark (como los [cuadernos de Azure Synapse](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
+Estos son algunos aspectos importantes que tener en cuenta al implementar las UDF en la experiencia interactiva de .NET para Apache Spark (como los [cuadernos de Azure Synapse](/azure/synapse-analytics/spark/apache-spark-development-using-notebooks)).
 
 ## <a name="faqs"></a>Preguntas más frecuentes
 
@@ -61,7 +61,7 @@ Estos son algunos aspectos importantes que tener en cuenta al implementar las UD
 
     Como se aprecia en el caso de `udf2_fails`, se ve el mensaje de error que indica que el tipo `Submission#7` no está marcado como serializable; esto se debe a que .NET Interactive encapsula todos los objetos definidos en una celda con su clase `Submission#`, que se genera sobre la marcha y, por tanto, no se marca como `Serializable`.
 
-    Por este motivo, es **obligatorio que una UDF que hace referencia a un objeto personalizado se defina en la misma celda que ese objeto** .
+    Por este motivo, es **obligatorio que una UDF que hace referencia a un objeto personalizado se defina en la misma celda que ese objeto**.
 
 2. **¿Por qué no funcionan las variables de difusión con .NET Interactive?**
     Por los motivos explicados anteriormente, las variables de difusión no funcionan con .NET Interactive. Es aconsejable repasar [esta guía sobre las variables de difusión](broadcast-guide.md) para comprender mejor qué son y cómo usarlas. El motivo por el que las variables de difusión no funcionan con escenarios interactivos se debe al diseño de .NET Interactive de anexar cada objeto definido en una celda con su clase de envío de celda; al no estar marcada como serializable, se inicia la misma excepción que se ha mostrado antes.

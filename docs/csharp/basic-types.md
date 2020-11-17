@@ -4,12 +4,12 @@ description: Obtenga información sobre los tipos principales (valores numérico
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ddc6b51e48758d203fa570a664fe06d0a5b52c5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465265"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439721"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -23,8 +23,10 @@ Entre la información almacenada en un tipo se puede incluir lo siguiente:
   
 - Los miembros (métodos, campos, eventos, etc.) que contiene.  
   
-- El tipo base del que hereda.  
-  
+- El tipo base del que hereda.
+
+- Interfaces que implementa.
+
 - La ubicación donde se asignará la memoria para variables en tiempo de ejecución.  
   
 - Los tipos de operaciones permitidas.  

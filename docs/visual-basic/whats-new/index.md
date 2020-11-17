@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ada336ee5fce317315bb5f3974e0366f7bca3985
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495738"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557108"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -23,6 +23,8 @@ En este tema se enumeran los nombres de las características clave de cada versi
 
 Visual Basic 16.0/Visual Studio 2019, versión 16.0\
 Para las nuevas características, vea [Visual Basic 16.0](#visual-basic-160).
+
+Puede descargar el SDK de .NET más reciente de la [página de descargas de .NET](https://dotnet.microsoft.com/download).
 
 ## <a name="previous-versions"></a>Versiones anteriores
 
@@ -182,7 +184,7 @@ Puede definir un literal binario con el prefijo `&B` o `&b`. Además, puede usar
 
 Para obtener más información, vea la sección "Asignaciones literales" de los tipos de datos [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) y [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Compatibilidad con los valores devueltos de referencia de C#** ](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Compatibilidad con los valores devueltos de referencia de C#**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 A partir de C# 7.0, C# admite los valores devueltos de referencia. Es decir, cuando el método de llamada recibe un valor devuelto mediante referencia, puede cambiar el valor de esta. Visual Basic no le permite crear métodos con valores devueltos de referencia, pero le permite consumirlos y modificarlos.
 

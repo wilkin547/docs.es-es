@@ -2,12 +2,12 @@
 title: 'Serialización de tipos: .NET'
 description: Obtenga información sobre cómo .NET serializa los tipos en una representación nativa.
 ms.date: 01/18/2019
-ms.openlocfilehash: bedaf49a5f7c5274f5e1bc7774490fec73651259
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 7fc3dfe950ecd3ed0ff5e4eb0e101c1596a831e1
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188398"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441003"
 ---
 # <a name="type-marshaling"></a>Serialización de tipos
 
@@ -65,7 +65,7 @@ En la tabla siguiente se incluyen las reglas de serialización predeterminadas q
 | `System.ArgIterator` | `va_list` | No permitido |
 | `System.Collections.IEnumerator` | `IEnumVARIANT*` | No permitido |
 | `System.Collections.IEnumerable` | `IDispatch*` | No permitido |
-| `System.DateTimeOffset` | `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 || `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 |
+| `System.DateTimeOffset` | `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 | `int64_t` que representa el número de tics desde la medianoche del 1 de enero de 1601 |
 
 Algunos tipos solo pueden serializarse como parámetros y no como campos. Estas herramientas se muestran en la tabla siguiente:
 

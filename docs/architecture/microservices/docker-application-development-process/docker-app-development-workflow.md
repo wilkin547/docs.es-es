@@ -2,12 +2,12 @@
 title: Flujo de trabajo de desarrollo para aplicaciones de Docker
 description: Comprenda los detalles del flujo de trabajo para desarrollar aplicaciones basadas en Docker. Comience paso a paso, profundice en algunos detalles para optimizar Dockerfiles y termine con el flujo de trabajo simplificado disponible cuando se usa Visual Studio.
 ms.date: 01/30/2020
-ms.openlocfilehash: 04b59a6c30b4fb8f34fe1d0e5cd5328ac77ecb4e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1ae4e3cda71676caeab849a92207477652050e25
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172559"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594598"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -290,7 +290,7 @@ El archivo resultante es entonces:
 11
 12  FROM base AS final
 13  WORKDIR /app
-14  COPY --from=publish /app
+14  COPY --from=publish /app .
 15  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 

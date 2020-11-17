@@ -4,12 +4,12 @@ description: En este artículo, se resumen las nuevas características y mejoras
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 419988901923b890aaf0a540d155775214e62c52
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282100"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557277"
 ---
 # <a name="whats-new-in-net-standard"></a>Novedades de .NET Standard
 
@@ -65,7 +65,7 @@ Ahora puede desarrollar bibliotecas de .NET Standard en Visual Basic. Visual St
 
 Con la versión de .NET Core 2.0 y .NET Standard 2.0, Visual Studio 2017 y la [CLI de .NET Core](../../core/tools/index.md) incluyen compatibilidad con herramientas para crear bibliotecas de .NET Standard.
 
-Si instala Visual Studio con la carga de trabajo de **desarrollo multiplataforma de .NET Core** , puede crear un proyecto de biblioteca de .NET Standard 2.0 al usar una plantilla de proyecto, como se muestra en la ilustración siguiente:
+Si instala Visual Studio con la carga de trabajo de **desarrollo multiplataforma de .NET Core**, puede crear un proyecto de biblioteca de .NET Standard 2.0 al usar una plantilla de proyecto, como se muestra en la ilustración siguiente:
 
 <!-- markdownlint-disable MD025 -->
 
@@ -95,3 +95,4 @@ dotnet new classlib -lang vb
 
 - [.NET Standard](../net-standard.md)
 - [Introducing .NET Standard](https://devblogs.microsoft.com/dotnet/introducing-net-standard/) (Introducción a .NET Standard)
+- [Descarga del SDK de .NET](https://dotnet.microsoft.com/download)
