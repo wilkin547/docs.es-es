@@ -1,18 +1,17 @@
 ---
 title: Miembros virtuales
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 22eb71ccfc1b9a3d359b0453e4ff47f3f41827f5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620773"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828405"
 ---
 # <a name="virtual-members"></a>Miembros virtuales
 Los miembros virtuales se pueden invalidar, lo que cambia el comportamiento de la subclase. Son bastante similares a las devoluciones de llamada en términos de extensibilidad que proporcionan, pero son mejores en cuanto al rendimiento de la ejecución y el consumo de memoria. Además, los miembros virtuales se sienten más naturales en escenarios que requieren la creación de una clase especial de un tipo existente (especialización).
@@ -23,7 +22,7 @@ Los miembros virtuales se pueden invalidar, lo que cambia el comportamiento de l
 
  Los miembros virtuales, como las devoluciones de llamada (y quizás más que las devoluciones de llamada), son caros de diseñar, probar y mantener, ya que cualquier llamada a un miembro virtual se puede invalidar de maneras imprevisibles y puede ejecutar código arbitrario. Además, normalmente se requiere mucho más esfuerzo para definir claramente el contrato de los miembros virtuales, por lo que el costo de diseñar y documentarlos es mayor.
 
- ❌NO haga que los miembros sean virtuales a menos que tenga una buena razón para hacerlo y conozca todos los costos relacionados con el diseño, la prueba y el mantenimiento de los miembros virtuales.
+ ❌ NO haga que los miembros sean virtuales a menos que tenga una buena razón para hacerlo y conozca todos los costos relacionados con el diseño, la prueba y el mantenimiento de los miembros virtuales.
 
  Los miembros virtuales son menos permisivo en lo que se refiere a los cambios que se pueden realizar en ellos sin interrumpir la compatibilidad. Además, son más lentos que los miembros no virtuales, principalmente porque las llamadas a miembros virtuales no se insertan.
 

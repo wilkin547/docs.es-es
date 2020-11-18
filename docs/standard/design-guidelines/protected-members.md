@@ -1,7 +1,6 @@
 ---
 title: Miembros protegidos
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - members [.NET Framework], protected
 - protected members
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-ms.openlocfilehash: afcb92e48996d594fcedc5b579922b179f754b9d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cc2ab3e605cfb5382f107dead0c95495858fc6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286124"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828730"
 ---
 # <a name="protected-members"></a>Miembros protegidos
 Los miembros protegidos por sí mismos no proporcionan ninguna extensibilidad, pero pueden realizar la extensibilidad mediante subclases más eficaces. Se pueden usar para exponer opciones de personalización avanzadas sin complicar innecesariamente la interfaz pública principal.
@@ -32,7 +31,7 @@ Los miembros protegidos por sí mismos no proporcionan ninguna extensibilidad, p
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)
 - [Diseñar extensibilidad](designing-for-extensibility.md)

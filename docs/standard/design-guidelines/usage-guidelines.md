@@ -1,16 +1,15 @@
 ---
 title: Instrucciones de uso
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], usage guidelines
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
-ms.openlocfilehash: 03eaba3e52cb25619f65637efb4f414c22770440
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d6ea7c7b9ada95e3d0c425aaea18be6cdbb4ce35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291349"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828509"
 ---
 # <a name="usage-guidelines"></a>Instrucciones de uso
 
@@ -25,15 +24,15 @@ La <xref:System.IDisposable?displayProperty=nameWithType> interfaz no se trata e
 
 [Matrices](arrays.md)  
 [Atributos](attributes.md)  
-[Recopilaciones](guidelines-for-collections.md)  
+[Colecciones](guidelines-for-collections.md)  
 [Serialización](serialization.md)  
-[Uso de System. XML](system-xml-usage.md)  
+[ Uso deSystem.Xml](system-xml-usage.md)  
 [Operadores de igualdad](equality-operators.md)  
 
 *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 
 *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)

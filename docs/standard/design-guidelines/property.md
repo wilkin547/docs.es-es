@@ -1,17 +1,16 @@
 ---
 title: Diseño de propiedades
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: c49b42ab369ace582c76d7f326da309415e8c45b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291947"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828743"
 ---
 # <a name="property-design"></a>Diseño de propiedades
 Aunque las propiedades son técnicamente muy similares a los métodos, son bastante diferentes en cuanto a sus escenarios de uso. Deberían aparecer como campos inteligentes. Tienen la sintaxis de llamada de los campos y la flexibilidad de los métodos.
@@ -20,7 +19,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  Tenga en cuenta que si el tipo de la propiedad es un tipo de referencia mutable, el valor de la propiedad se puede cambiar aunque la propiedad sea de solo lectura.
 
- ❌NO proporcione propiedades o propiedades de solo conjunto con el establecedor que tenga una accesibilidad más amplia que el captador.
+ ❌ NO proporcione propiedades o propiedades de solo conjunto con el establecedor que tenga una accesibilidad más amplia que el captador.
 
  Por ejemplo, no utilice propiedades con un establecedor público y un captador protegido.
 
@@ -34,7 +33,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  ✔️ conservar el valor anterior si un establecedor de propiedad produce una excepción.
 
- ❌Evite iniciar excepciones desde captadores de propiedad.
+ ❌ Evite iniciar excepciones desde captadores de propiedad.
 
  Los captadores de propiedad deben ser operaciones simples y no deben tener ninguna condición previa. Si un captador puede producir una excepción, probablemente se debe volver a diseñar para que sea un método. Tenga en cuenta que esta regla no se aplica a los indexadores, donde se esperan excepciones como resultado de la validación de los argumentos.
 
@@ -47,11 +46,11 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  ✔️ considere la posibilidad de proporcionar indexadores en tipos que representan colecciones de elementos.
 
- ❌Evite el uso de propiedades indizadas con más de un parámetro.
+ ❌ Evite el uso de propiedades indizadas con más de un parámetro.
 
  Si el diseño requiere varios parámetros, reconsidere si la propiedad realmente representa un descriptor de acceso a una colección lógica. Si no es así, use los métodos en su lugar. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set` .
 
- ❌Evite los indizadores con tipos de parámetros distintos de <xref:System.Int32?displayProperty=nameWithType> ,, <xref:System.Int64?displayProperty=nameWithType> <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> o una enumeración.
+ ❌ Evite los indizadores con tipos de parámetros distintos de <xref:System.Int32?displayProperty=nameWithType> ,, <xref:System.Int64?displayProperty=nameWithType> <xref:System.String?displayProperty=nameWithType> , <xref:System.Object?displayProperty=nameWithType> o una enumeración.
 
  Si el diseño requiere otros tipos de parámetros, vuelva a evaluar de forma segura si la API representa realmente un descriptor de acceso a una colección lógica. En caso contrario, utilice un método. Considere la posibilidad de iniciar el nombre del método con `Get` o `Set` .
 
@@ -59,13 +58,13 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  En C#, los indizadores se llaman de forma predeterminada Item. <xref:System.Runtime.CompilerServices.IndexerNameAttribute>Se puede usar para personalizar este nombre.
 
- ❌NO proporcione un indexador y métodos que sean semánticamente equivalentes.
+ ❌ NO proporcione un indexador y métodos que sean semánticamente equivalentes.
 
- ❌NO proporcione más de una familia de indexadores sobrecargados en un tipo.
+ ❌ NO proporcione más de una familia de indexadores sobrecargados en un tipo.
 
  Esto lo exige el compilador de C#.
 
- ❌No utilice propiedades indizadas no predeterminadas.
+ ❌ No utilice propiedades indizadas no predeterminadas.
 
  Esto lo exige el compilador de C#.
 
@@ -86,7 +85,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

@@ -1,7 +1,6 @@
 ---
 title: Diseño de parámetros
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
 - members [.NET Framework], parameters
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621592"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828808"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
 
@@ -24,11 +23,11 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  Por ejemplo, suponga que desea diseñar un método que enumera una colección e imprime cada elemento en la consola. Este tipo de método debe tomar <xref:System.Collections.IEnumerable> como parámetro, no <xref:System.Collections.ArrayList> o <xref:System.Collections.IList> , por ejemplo.
 
- ❌No use parámetros reservados.
+ ❌ No use parámetros reservados.
 
  Si se necesita más entrada a un miembro en alguna versión futura, se puede Agregar una nueva sobrecarga.
 
- ❌NO tenga métodos expuestos públicamente que tomen punteros, matrices de punteros o matrices multidimensionales como parámetros.
+ ❌ NO tenga métodos expuestos públicamente que tomen punteros, matrices de punteros o matrices multidimensionales como parámetros.
 
  Los punteros y las matrices multidimensionales son relativamente difíciles de usar correctamente. En casi todos los casos, las API se pueden rediseñar para evitar que estos tipos sean parámetros.
 
@@ -43,7 +42,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
  ✔️ utilizar enumeraciones si, de lo contrario, un miembro tendría dos o más parámetros booleanos.
 
- ❌No use valores booleanos a menos que esté absolutamente seguro de que nunca habrá una necesidad de más de dos valores.
+ ❌ No use valores booleanos a menos que esté absolutamente seguro de que nunca habrá una necesidad de más de dos valores.
 
  Las enumeraciones ofrecen algún espacio para la adición futura de valores, pero debe tener en cuenta todas las implicaciones de agregar valores a las enumeraciones, que se describen en el [diseño de enumeraciones](enum.md).
 
@@ -60,7 +59,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  No asuma que los argumentos de enumeración estarán en el intervalo definido por la enumeración. CLR permite convertir cualquier valor entero en un valor de enumeración incluso si el valor no está definido en la enumeración.
 
- ❌NO se usa <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para las comprobaciones de intervalo de enumeración.
+ ❌ NO se usa <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para las comprobaciones de intervalo de enumeración.
 
  ✔️ Tenga en cuenta que es posible que los argumentos mutables hayan cambiado después de que se validaran.
 
@@ -71,15 +70,15 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
 
  Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, como C#, VB.NET y C++, pasan de forma predeterminada los parámetros por valor.
 
- Cuando se pasa un argumento a través de un `ref` parámetro, el miembro recibe una referencia al argumento real pasado. Si el argumento es un tipo de valor, se coloca una referencia al argumento en la pila. Si el argumento es un tipo de referencia, se coloca en la pila una referencia a la referencia. `Ref`los parámetros se pueden usar para permitir que el miembro modifique los argumentos pasados por el autor de la llamada.
+ Cuando se pasa un argumento a través de un `ref` parámetro, el miembro recibe una referencia al argumento real pasado. Si el argumento es un tipo de valor, se coloca una referencia al argumento en la pila. Si el argumento es un tipo de referencia, se coloca en la pila una referencia a la referencia. `Ref` los parámetros se pueden usar para permitir que el miembro modifique los argumentos pasados por el autor de la llamada.
 
- `Out`los parámetros son similares a `ref` los parámetros, con algunas pequeñas diferencias. El parámetro se considera inicialmente sin asignar y no se puede leer en el cuerpo del miembro antes de que se le asigne algún valor. Además, el parámetro tiene que tener asignado algún valor antes de que el miembro devuelva.
+ `Out` los parámetros son similares a `ref` los parámetros, con algunas pequeñas diferencias. El parámetro se considera inicialmente sin asignar y no se puede leer en el cuerpo del miembro antes de que se le asigne algún valor. Además, el parámetro tiene que tener asignado algún valor antes de que el miembro devuelva.
 
- ❌Evite usar `out` `ref` parámetros o.
+ ❌ Evite usar `out` `ref` parámetros o.
 
  El uso de `out` `ref` parámetros o requiere experiencia con punteros, comprender cómo difieren los tipos de valor y de referencia, y cómo controlar métodos con varios valores devueltos. Además, la diferencia entre `out` los `ref` parámetros y no se comprende ampliamente. Los arquitectos de marco de trabajo que diseñan para una audiencia general no deben esperar que los usuarios dominen con `out` `ref` parámetros o.
 
- ❌NO pase tipos de referencia por referencia.
+ ❌ NO pase tipos de referencia por referencia.
 
  Hay algunas excepciones limitadas a la regla, como un método que se puede utilizar para intercambiar referencias.
 
@@ -112,11 +111,11 @@ public class String {
 
  ✔️ considere la posibilidad de agregar la palabra clave params a los parámetros de matriz si espera que los usuarios finales pasen matrices con un número pequeño de elementos. Si se espera que se pasen muchos elementos en escenarios comunes, es probable que los usuarios no pasen estos elementos en línea de todas formas, por lo que no es necesario usar la palabra clave params.
 
- ❌Evite usar matrices params si el llamador casi siempre tendrá la entrada en una matriz.
+ ❌ Evite usar matrices params si el llamador casi siempre tendrá la entrada en una matriz.
 
  Por ejemplo, nunca se llamaría a los miembros con parámetros de matriz de bytes pasando bytes individuales. Por esta razón, los parámetros de matriz de bytes del .NET Framework no utilizan la palabra clave params.
 
- ❌No utilice matrices params si la matriz es modificada por el miembro que toma el parámetro params array.
+ ❌ No utilice matrices params si la matriz es modificada por el miembro que toma el parámetro params array.
 
  Debido al hecho de que muchos compiladores convierten los argumentos en el miembro en una matriz temporal en el sitio de llamada, la matriz puede ser un objeto temporal y, por tanto, se perderán todas las modificaciones de la matriz.
 
@@ -136,7 +135,7 @@ public class String {
 
  Debe validar que la matriz no sea NULL antes del procesamiento.
 
- ❌No utilice los `varargs` métodos, también conocidos como puntos suspensivos.
+ ❌ No utilice los `varargs` métodos, también conocidos como puntos suspensivos.
 
  Algunos lenguajes CLR, como C++, admiten una Convención alternativa para pasar listas de parámetros de variables llamadas `varargs` métodos. La Convención no debe usarse en marcos de trabajo, ya que no es conforme a CLS.
 
@@ -145,7 +144,7 @@ public class String {
 
  ✔️ proporcionan una alternativa para cualquier miembro que toma un argumento de puntero, ya que los punteros no son conformes a CLS.
 
- ❌Evite realizar una comprobación costosa de los argumentos de puntero.
+ ❌ Evite realizar una comprobación costosa de los argumentos de puntero.
 
  ✔️ seguir las convenciones comunes relacionadas con los punteros al diseñar miembros con punteros.
 

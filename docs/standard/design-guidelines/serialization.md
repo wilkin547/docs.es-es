@@ -1,14 +1,13 @@
 ---
 title: Serialización
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-ms.openlocfilehash: d07549da371e403adca089c601ee5b028b268086
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85481e9d759a71346d83c66f67d9623fc32e76ec
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291687"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828678"
 ---
 # <a name="serialization"></a>Serialización
 La serialización es el proceso de convertir un objeto en un formato que se puede almacenar o transportar fácilmente. Por ejemplo, puede serializar un objeto, transportarlo a través de Internet mediante HTTP y deserializarlo en el equipo de destino.
@@ -32,7 +31,7 @@ La serialización es el proceso de convertir un objeto en un formato que se pued
 
  ✔️ considere la posibilidad de admitir la serialización en tiempo de ejecución si las instancias de su tipo necesitan viajar a través de límites de .NET Remoting.
 
- ❌Evite admitir la serialización en tiempo de ejecución o la serialización XML solo por motivos de persistencia generales. Prefiere la serialización de contrato de datos en su lugar.
+ ❌ Evite admitir la serialización en tiempo de ejecución o la serialización XML solo por motivos de persistencia generales. Prefiere la serialización de contrato de datos en su lugar.
 
 ## <a name="supporting-data-contract-serialization"></a>Admitir la serialización de contrato de datos
  Los tipos pueden admitir la serialización de contrato de datos aplicando <xref:System.Runtime.Serialization.DataContractAttribute> al tipo y <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros (campos y propiedades) del tipo.
@@ -47,7 +46,7 @@ La serialización es el proceso de convertir un objeto en un formato que se pued
 
  No se llama a los constructores cuando se deserializan los objetos. (Hay excepciones a la regla. Se llama a los constructores de colecciones marcadas con <xref:System.Runtime.Serialization.CollectionDataContractAttribute> durante la deserialización). Por consiguiente, cualquier lógica que se ejecute durante la construcción normal debe implementarse como una de las devoluciones de llamada de serialización.
 
- `OnDeserializedAttribute`es el atributo de devolución de llamada que se usa con más frecuencia. Los otros atributos de la familia son <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> y <xref:System.Runtime.Serialization.OnSerializedAttribute>. Se pueden utilizar para marcar devoluciones de llamada que se ejecutan antes de la deserialización, antes de la serialización y, por último, después de la serialización, respectivamente.
+ `OnDeserializedAttribute` es el atributo de devolución de llamada que se usa con más frecuencia. Los otros atributos de la familia son <xref:System.Runtime.Serialization.OnDeserializingAttribute>, <xref:System.Runtime.Serialization.OnSerializingAttribute> y <xref:System.Runtime.Serialization.OnSerializedAttribute>. Se pueden utilizar para marcar devoluciones de llamada que se ejecutan antes de la deserialización, antes de la serialización y, por último, después de la serialización, respectivamente.
 
  ✔️ considere la posibilidad de usar <xref:System.Runtime.Serialization.KnownTypeAttribute> para indicar tipos concretos que deben usarse al deserializar un gráfico de objetos complejo.
 
@@ -66,7 +65,7 @@ La serialización es el proceso de convertir un objeto en un formato que se pued
 ## <a name="supporting-xml-serialization"></a>Admitir la serialización XML
  La serialización de contrato de datos es la tecnología de serialización principal (predeterminada) en el .NET Framework, pero hay escenarios de serialización que la serialización de contrato de datos no admite. Por ejemplo, no proporciona control total sobre la forma del XML generado o utilizado por el serializador. Si se requiere un control preciso, se debe usar la serialización XML y es necesario diseñar los tipos para admitir esta tecnología de serialización.
 
- ❌Evite diseñar los tipos específicamente para la serialización XML, a menos que tenga un motivo muy seguro para controlar la forma del XML generado. Esta tecnología de serialización ha sido reemplazada por la serialización de contrato de datos que se describió en la sección anterior.
+ ❌ Evite diseñar los tipos específicamente para la serialización XML, a menos que tenga un motivo muy seguro para controlar la forma del XML generado. Esta tecnología de serialización ha sido reemplazada por la serialización de contrato de datos que se describió en la sección anterior.
 
  ✔️ considere la posibilidad <xref:System.Xml.Serialization.IXmlSerializable> de implementar la interfaz si desea tener un mayor control sobre la forma del XML serializado que la que se ofrece al aplicar los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permiten controlar totalmente la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando `XmlSchemaProviderAttribute` .
 
@@ -102,7 +101,7 @@ public class Person : ISerializable
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de uso](usage-guidelines.md)

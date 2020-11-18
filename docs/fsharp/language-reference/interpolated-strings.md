@@ -2,12 +2,12 @@
 title: Cadenas interpoladas
 description: 'Obtenga información sobre las cadenas interpoladas, una forma especial de cadena que permite incrustar expresiones de F # directamente dentro de ellas.'
 ms.date: 11/12/2020
-ms.openlocfilehash: a49d4e743306fd9bdabb1e019ec4e6c77e0e1f5a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8c552b44cea7d6c51ec333b6bdd4d407c6f10da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688637"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829692"
 ---
 # <a name="interpolated-strings"></a>Cadenas interpoladas
 
@@ -44,7 +44,7 @@ let str = $"A pair of braces: {{}}"
 
 ## <a name="typed-interpolated-strings"></a>Cadenas interpoladas con tipo
 
-Las cadenas interpoladas también pueden tener especificadores de formato de F # para aplicar la seguridad de tipos.
+Las cadenas interpoladas también pueden tener especificadores de formato de F # para exigir la seguridad de tipos.
 
 ```fsharp
 let name = "Phillip"
@@ -72,7 +72,7 @@ printfn $"""Name: {"Phillip"}, Age: %d{age}"""
 
 ## <a name="aligning-expressions-in-interpolated-strings"></a>Alinear expresiones en cadenas interpoladas
 
-Puede alinear a la izquierda o alinear a la derecha expresiones dentro de cadenas interpoladas con `|` y una especificación de cuántos espacios. La siguiente cadena interpolada alinea las expresiones izquierda y derecha a la izquierda y a la derecha, respectivamente, por 7 espacios.
+Puede alinear a la izquierda o alinear a la derecha expresiones dentro de cadenas interpoladas con `|` y una especificación de cuántos espacios. La siguiente cadena interpolada alinea las expresiones izquierda y derecha a la izquierda y a la derecha, respectivamente, por siete espacios.
 
 ```fsharp
 printfn $"""|{"Left",-7}|{"Right",7}|"""
@@ -89,7 +89,7 @@ printfn $"The speed of light is {speedOfLight:N3} km/s."
 // "The speed of light is 299,792.458 km/s."
 ```
 
-Además, una cadena interpolada también se puede typechecked como una <xref:System.FormattableString> a través de una anotación de tipo:
+Además, también se puede comprobar el tipo de una cadena interpolada como <xref:System.FormattableString> a través de una anotación de tipo:
 
 ```fsharp
 let frmtStr = $"The speed of light is {speedOfLight:N3} km/s." : FormattableString

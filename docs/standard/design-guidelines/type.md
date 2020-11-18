@@ -1,19 +1,18 @@
 ---
 title: Instrucciones de diseño de tipos
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines
 - type design guidelines, about type design guidelines
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-ms.openlocfilehash: 17bd300277a039818a3d563c8f2d5f99eb2fc68d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 56b4cb6e93cd44c42fbc2921c9ecfd947c304b3b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289569"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828548"
 ---
 # <a name="type-design-guidelines"></a>Instrucciones de diseño de tipos
 Desde la perspectiva de CLR, solo hay dos categorías de tipos: tipos de referencia y tipos de valor, pero para la finalidad de un debate sobre el diseño del marco, dividimos los tipos en grupos más lógicos, cada uno con sus propias reglas de diseño específicas.
@@ -37,6 +36,6 @@ Desde la perspectiva de CLR, solo hay dos categorías de tipos: tipos de referen
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)
