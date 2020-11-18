@@ -2,7 +2,6 @@
 title: Asegurar la integridad de los datos mediante códigos hash
 description: Obtenga información sobre cómo garantizar la integridad de los datos mediante códigos hash en .NET. Un valor hash es un valor numérico de longitud fija que solo identifica datos.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - encryption [.NET], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 3205e37f283cb205f5edfc5948a9cb9f7256f752
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 085a0ea387e3415e6e916bcdf9055ffaa6753fef
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556961"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831096"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Asegurar la integridad de los datos mediante códigos hash
 Un valor hash es un valor numérico de longitud fija que solo identifica datos. Los valores hash representan grandes cantidades de datos como valores numéricos mucho menores, por lo que se usan con firmas digitales. Puede firmar un valor hash de forma más eficaz que un valor mayor. Los valores hash también son útiles para comprobar la integridad de datos enviados a través de canales no seguros. El valor hash de los datos recibidos puede compararse con el valor hash de los datos porque se envió para determinar si se alteraron los datos.  
@@ -59,7 +58,7 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

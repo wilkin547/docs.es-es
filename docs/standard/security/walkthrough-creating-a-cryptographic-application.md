@@ -2,7 +2,6 @@
 title: 'Tutorial: Crear una aplicación criptográfica'
 description: Recorra la creación de una aplicación criptográfica. Obtenga información acerca de cómo cifrar y descifrar contenido en una aplicación Windows Forms.
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cryptography [NET], cryptographic application example
 - cryptography [NET], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 16a887f23c584daa83106ae61c497bcae8dc4dd2
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 70218d60abb336cdb35fc2e89e62a50b6bd79c67
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557195"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830563"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 
@@ -50,7 +49,7 @@ En este tutorial se usan las siguientes directrices para el cifrado:
 |Importar una clave pública|Carga la clave desde un archivo XML en el contenedor de claves.|  
 |Probar la aplicación|Enumera los procedimientos para probar esta aplicación.|  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 
 Necesitará los componentes siguientes para completar este tutorial:  
   
@@ -225,7 +224,7 @@ Después de haber compilado la aplicación, ejecute los siguientes escenarios de
   
 2. Haga clic en el botón `Decrypt File` y seleccione el archivo que acaba de cifrar. Esta acción se llevará a cabo correctamente porque dispone del par de claves completo para efectuar el descifrado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md) : describe cómo se implementa la criptografía en la biblioteca de clases base.
 - [servicios criptográficos](cryptographic-services.md)

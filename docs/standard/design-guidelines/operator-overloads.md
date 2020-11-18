@@ -1,26 +1,25 @@
 ---
 title: Sobrecargas de operador
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - operators [.NET Framework], overloads
 - names [.NET Framework], overloaded operators
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 893b7d1f76dfb059a0ddca77dfd8654812e9ae12
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289738"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830043"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
 Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fueran primitivos de lenguaje integrados.
 
  Aunque se permite y útil en algunas situaciones, las sobrecargas de operador deben usarse con precaución. Hay muchos casos en los que la sobrecarga de operadores se ha desusado, por ejemplo, cuando los diseñadores de Marcos empezaron a usar operadores para las operaciones que deberían ser métodos simples. Las instrucciones siguientes le ayudarán a decidir cuándo y cómo usar la sobrecarga de operadores.
 
- ❌Evite definir sobrecargas de operador, excepto en los tipos que deben sentir como tipos primitivos (integrados).
+ ❌ Evite definir sobrecargas de operador, excepto en los tipos que deben sentir como tipos primitivos (integrados).
 
  ✔️ considere la posibilidad de definir sobrecargas de operador en un tipo que se parezca a un tipo primitivo.
 
@@ -28,11 +27,11 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 
  ✔️ definir sobrecargas de operador en Structs que representan números (como <xref:System.Decimal?displayProperty=nameWithType> ).
 
- ❌NO se debe aplicar a la definición de sobrecargas de operador.
+ ❌ NO se debe aplicar a la definición de sobrecargas de operador.
 
  La sobrecarga de operadores es útil en los casos en los que es inmediatamente obvio cuál será el resultado de la operación. Por ejemplo, tiene sentido poder restar un <xref:System.DateTime> de otro `DateTime` y obtener <xref:System.TimeSpan> . Sin embargo, no es apropiado usar el operador de Unión lógica para unir dos consultas de base de datos o usar el operador Shift para escribir en una secuencia.
 
- ❌NO proporcione sobrecargas de operador a menos que al menos uno de los operandos sea del tipo que define la sobrecarga.
+ ❌ NO proporcione sobrecargas de operador a menos que al menos uno de los operandos sea del tipo que define la sobrecarga.
 
  ✔️ operadores de sobrecarga de manera simétrica.
 
@@ -91,17 +90,17 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 ### <a name="conversion-operators"></a>Operadores de conversión
  Los operadores de conversión son operadores unarios que permiten la conversión de un tipo a otro. Los operadores deben definirse como miembros estáticos en el operando o en el tipo de valor devuelto. Hay dos tipos de operadores de conversión: implícito y explícito.
 
- ❌NO proporcione un operador de conversión si los usuarios finales no esperan claramente esa conversión.
+ ❌ NO proporcione un operador de conversión si los usuarios finales no esperan claramente esa conversión.
 
- ❌NO defina operadores de conversión fuera del dominio de un tipo.
+ ❌ NO defina operadores de conversión fuera del dominio de un tipo.
 
  Por ejemplo, <xref:System.Int32> , <xref:System.Double> y <xref:System.Decimal> son todos los tipos numéricos, mientras que <xref:System.DateTime> no es. Por consiguiente, no debería haber ningún operador de conversión para convertir un `Double(long)` en `DateTime` . En tal caso, se prefiere un constructor.
 
- ❌NO proporcione un operador de conversión implícito si la conversión es potencialmente perdida.
+ ❌ NO proporcione un operador de conversión implícito si la conversión es potencialmente perdida.
 
  Por ejemplo, no debería haber una conversión implícita de `Double` a `Int32` porque `Double` tiene un intervalo más amplio que `Int32` . Se puede proporcionar un operador de conversión explícito aunque la conversión sea potencialmente perdida.
 
- ❌NO genere excepciones a partir de conversiones implícitas.
+ ❌ NO genere excepciones a partir de conversiones implícitas.
 
  Es muy difícil que los usuarios finales sepan lo que sucede, ya que es posible que no sean conscientes de que se está llevando a cabo una conversión.
 
@@ -111,7 +110,7 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

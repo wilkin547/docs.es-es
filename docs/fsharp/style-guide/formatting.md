@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: 'Obtenga información sobre las directrices para dar formato a código de F #.'
 ms.date: 08/31/2020
-ms.openlocfilehash: af98be75f21cbc594ff9cf779561d49e4965845a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 8f5e333c015f30ae8449c76a3075763370a98e4d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688259"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830524"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -102,7 +102,7 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-definitions"></a>Colocar parámetros en una línea nueva para definiciones largas
 
-Si tiene una definición de función muy larga, coloque los parámetros en nuevas líneas y aplíqueles sangría para que coincidan con el nivel de sangría del parámetro subsiguiente.
+Si tiene una definición de función larga, coloque los parámetros en nuevas líneas y aplíqueles sangría para que coincidan con el nivel de sangría del parámetro subsiguiente.
 
 ```fsharp
 module M =
@@ -308,7 +308,7 @@ Los espacios de nombres, excepciones, eventos y proyectos/ `.dll` nombres tambi�
 
 ### <a name="avoid-underscores-in-names"></a>Evitar el carácter de subrayado en los nombres
 
-Históricamente, algunas bibliotecas de F # usaban guiones bajos en los nombres. Sin embargo, esto ya no se acepta ampliamente, en parte porque entra en conflicto con las convenciones de nomenclatura de .NET. Dicho esto, algunos programadores de F # usan subrayados en gran medida, en parte por motivos históricos, y la tolerancia y el respeto son importantes. Sin embargo, tenga en cuenta que el estilo suele estar deshabilitado por otros usuarios que tienen la opción de usarlos.
+Históricamente, algunas bibliotecas de F # usaban guiones bajos en los nombres. Sin embargo, esto ya no se acepta ampliamente, en parte porque entra en conflicto con las convenciones de nomenclatura de .NET. Dicho esto, algunos programadores de F # usan subrayados en gran medida, en parte por motivos históricos, y la tolerancia y el respeto son importantes. Sin embargo, a menudo el estilo está desparecido por otros usuarios que tienen la opción de usarlos.
 
 Una excepción incluye la interoperabilidad con componentes nativos, donde los guiones bajos son comunes.
 
@@ -643,7 +643,7 @@ En algunos casos, `do...yield` puede ayudar a mejorar la legibilidad. Estos caso
 ## <a name="formatting-if-expressions"></a>Aplicar formato a expresiones if
 
 La sangría de los condicionales depende del tamaño y la complejidad de las expresiones que los hacen.
-Basta con escribirlas en una línea cuando:
+Escríbalos en una línea cuando:
 
 - `cond`, `e1` y `e2` son cortos
 - `e1` y `e2` no son `if/then/else` expresiones en sí mismas.
@@ -992,7 +992,7 @@ Evite colocar el atributo en la misma línea que el valor.
 
 ## <a name="formatting-computation-expression-operations"></a>Operaciones de expresiones de cálculo de formato
 
-Al crear operaciones personalizadas para [expresiones de cálculo](../language-reference/computation-expressions.md) , se recomienda usar la nomenclatura CamelCase:
+Al crear operaciones personalizadas para [expresiones de cálculo](../language-reference/computation-expressions.md), se recomienda usar la nomenclatura CamelCase:
 
 ```fsharp
 type MathBuilder () =
@@ -1031,5 +1031,5 @@ let myNumber =
     }
 ```
 
-En última instancia, la Convención de nomenclatura utilizada debe estar controlada por el dominio que se está modelando.
+En última instancia, el dominio que se está modelando debe impulsar la Convención de nomenclatura.
 Si es idiomático usar una Convención diferente, se debe usar esa Convención en su lugar.
