@@ -1,7 +1,6 @@
 ---
 title: Buscar las zonas horarias definidas en un sistema local
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], local
 - time zones [.NET], finding local system time zones
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - UTC times, finding local system time zones
 - time zones [.NET], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-ms.openlocfilehash: c968c7891a4fc9b77ed6224a9fc5f8f6d8f5d80b
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 02467e10494e72c83ad9521228f6c4151c4a6bd1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063695"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817944"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Buscar las zonas horarias definidas en un sistema local
 
@@ -35,7 +34,7 @@ También puede crear instancias de un objeto <xref:System.TimeZoneInfo> que repr
 
 El identificador de zona horaria es un campo clave que identifica de forma única la zona horaria. Aunque la mayoría de las claves son relativamente cortas, el identificador de zona horaria es comparativamente largo. En la mayoría de los casos, su valor corresponde a la propiedad <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType>, que se utiliza para proporcionar el nombre de la hora estándar de la zona horaria. Sin embargo, hay excepciones. La mejor manera de asegurarse de que se proporciona un identificador válido es enumerar las zonas horarias disponibles en el sistema y anotar los identificadores de las zonas horarias presentes.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Cómo: obtener acceso a los objetos de zona horaria local y UTC predefinidos](access-utc-and-local.md)

@@ -1,7 +1,6 @@
 ---
 title: Efectuar operaciones aritméticas con fechas y horas
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - DateTime structure, arithmetic operations
 - DateTimeOffset structure, arithmetic operations
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
-ms.openlocfilehash: 8350454c0570bcf0ba82fa5d83639da0433c785c
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: af294c45359f6226c4189aabb34fdfc670bbd1c9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063565"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817775"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Efectuar operaciones aritméticas con fechas y horas
 
@@ -83,7 +82,7 @@ Por ejemplo, el código siguiente se parece al código anterior que sumaba dos h
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora](use-time-zones-in-arithmetic.md)

@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para obtener acceso a los objetos de zona horaria local y UTC predefinidos
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - time zones [.NET], retrieving
 - time zones [.NET], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-ms.openlocfilehash: 598cd631fab1ddc115bc6153580351b1dc14d5bf
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b92ac812ed0bd0e80bb3a6ab03b52746eb15db97
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063890"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818113"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Procedimiento para obtener acceso a los objetos de zona horaria local y UTC predefinidos
 
@@ -51,7 +50,7 @@ Para este ejemplo se necesita:
 
 - Que el <xref:System> espacio de nombres se debe importar con la `using` instrucción (necesaria en el código de C#).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Buscar las zonas horarias definidas en un sistema local](finding-the-time-zones-on-local-system.md)

@@ -1,7 +1,6 @@
 ---
 title: Guardado y restauración de zonas horarias
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
-ms.openlocfilehash: 6a05bf4ce062a3f4e539e9b89779cb468b9782a6
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 0658bad6da078b6e44695a92b6cb2b22576f6424
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063396"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817580"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Guardado y restauración de zonas horarias
 
@@ -72,6 +71,6 @@ Almacenar una cadena de zona horaria serializada de esta manera también separa 
 
 Para obtener un ejemplo en el que se usa un recurso incrustado para almacenar datos de zona horaria serializados, consulte [Cómo: guardar zonas horarias en un recurso incrustado](save-time-zones-to-an-embedded-resource.md) y [Cómo: restaurar zonas horarias desde un recurso incrustado](restore-time-zones-from-an-embedded-resource.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)

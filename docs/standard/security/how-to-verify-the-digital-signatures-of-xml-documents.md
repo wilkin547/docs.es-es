@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para comprobar las firmas digitales de documentos XML
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-ms.openlocfilehash: b9b2dc6a558d1fd6acd2922a7c8ad82ce8776c26
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9cbebd34866b66c00bf4aca708d75e315b067b0d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557052"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820077"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Procedimiento para comprobar las firmas digitales de documentos XML
 
@@ -90,11 +89,11 @@ Nunca almacene ni transfiera la clave privada de un par de claves asimétricas e
   
 No inserte nunca una clave privada directamente en el código fuente.  Las claves incrustadas se pueden leer fácilmente desde un ensamblado mediante el [Ildasm.exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como el Bloc de notas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)
 - [Criptografía multiplataforma](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [Procedimiento para firmar documentos XML con firmas digitales](how-to-sign-xml-documents-with-digital-signatures.md)
+- [Firmar documentos XML con firmas digitales](how-to-sign-xml-documents-with-digital-signatures.md)
 - [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

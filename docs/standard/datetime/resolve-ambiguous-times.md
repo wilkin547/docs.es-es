@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para resolver horas ambiguas
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - time zones [.NET], ambiguous time
 - ambiguous time [.NET]
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
-ms.openlocfilehash: 467153ad1217e529f52bf90262c4264de069ff00
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 29a549d519bd3b6c10fef8205b30a07a71f01d1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063526"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817762"
 ---
 # <a name="how-to-resolve-ambiguous-times"></a>Procedimiento para resolver horas ambiguas
 
@@ -53,7 +52,7 @@ Para este ejemplo se necesita:
 
 - Que el <xref:System> espacio de nombres se debe importar con la `using` instrucción (necesaria en el código de C#).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Cómo: permitir que los usuarios resuelvan horas ambiguas](let-users-resolve-ambiguous-times.md)

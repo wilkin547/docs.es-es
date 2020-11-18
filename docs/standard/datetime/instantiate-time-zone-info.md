@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para crear una instancia de un objeto TimeZoneInfo
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - instantiating time zone objects
 - time zone objects [.NET], instantiation
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
-ms.openlocfilehash: 34606c0e227d7826cd6188f42fc2fb23f17105ca
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c4e441e793244dfe368fb86c3e77fcf67a685558
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063656"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817827"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>Procedimiento para crear una instancia de un objeto TimeZoneInfo
 
@@ -41,7 +40,7 @@ Si se encuentra la zona horaria, el método devuelve su objeto <xref:System.Time
 
 Si la aplicación se basa en una zona horaria que debe estar presente, debe llamar primero al método <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> para recuperar la información de zona horaria del registro. Si se produce un error en la llamada al método, el controlador de excepciones debe crear una nueva instancia de la zona horaria o volver a crearla mediante la deserialización de un objeto <xref:System.TimeZoneInfo> serializado. Consulte [Cómo: restaurar zonas horarias de un recurso incrustado](restore-time-zones-from-an-embedded-resource.md) para obtener un ejemplo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
 - [Buscar las zonas horarias definidas en un sistema local](finding-the-time-zones-on-local-system.md)

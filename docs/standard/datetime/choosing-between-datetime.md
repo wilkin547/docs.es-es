@@ -2,7 +2,6 @@
 title: Comparación de DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo
 description: Obtenga información sobre las diferencias entre los tipos DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo para representar información de fecha y hora en .NET.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5d6173642e88165bb52d5d9cfc85c8889ce763a5
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23c846dfd634e476b60ffd867519a60a0ae6b6cf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063877"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818100"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Elección entre DateTime, DateTimeOffset, TimeSpan y TimeZoneInfo
 
@@ -119,6 +118,6 @@ En algunos casos, si desea aprovechar al máximo la clase <xref:System.TimeZoneI
 
 Para aprovechar la compatibilidad de zona horaria en .NET, debe conocer la zona horaria a la que pertenece un valor de fecha y hora cuando se crea una instancia de ese objeto de fecha y hora. A menudo, no se conoce la zona horaria, especialmente en aplicaciones web o de red.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)

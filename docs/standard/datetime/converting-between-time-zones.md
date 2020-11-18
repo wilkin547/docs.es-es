@@ -2,7 +2,6 @@
 title: Convertir horas entre zonas horarias
 description: Aprenda a convertir las horas entre de una zona horaria a otra en .NET. Aprenda también a convertir valores DateTimeOffset que tienen un reconocimiento limitado de la zona horaria.
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 3539b3c2b71be331bdea3161b7e8ba6da407cbab
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: b42b4c07b9b5f376c34a70d7400218c50296f324
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063838"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818035"
 ---
 # <a name="converting-times-between-time-zones"></a>Convertir horas entre zonas horarias
 

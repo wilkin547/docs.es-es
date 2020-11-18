@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para guardar zonas horarias en un recurso incrustado
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - time zone objects [.NET], serializing
 - time zone objects [.NET], saving
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
-ms.openlocfilehash: 3d355003b3e6309644fa1ccaf779b2e63b0523d2
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 23f86076b2858404f3dbc900d8c40a6509abe8db
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063409"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817606"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Procedimiento para guardar zonas horarias en un recurso incrustado
 
@@ -55,7 +54,7 @@ Además de un archivo de recursos que se compila con la aplicación, se pueden u
 
 9. Agregue el archivo. resx generado al proyecto de Visual Studio de la aplicación.
 
-10. Con la ventana **propiedades** de Visual Studio, asegúrese de que la propiedad **acción de compilación** del archivo. resx esté establecida en **recurso incrustado** .
+10. Con la ventana **propiedades** de Visual Studio, asegúrese de que la propiedad **acción de compilación** del archivo. resx esté establecida en **recurso incrustado**.
 
 ## <a name="example"></a>Ejemplo
 
@@ -68,7 +67,7 @@ En este ejemplo se serializan <xref:System.TimeZoneInfo> objetos para que estén
 
 Dado que el <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> método agrega información de encabezado completa a un archivo de recursos de .net XML, no se puede usar para agregar recursos a un archivo existente. Para controlar esto, el ejemplo se comprueba para el archivo SerializedTimeZones. resx y, si existe, se almacenan todos sus recursos distintos de las dos zonas horarias serializadas en un <xref:System.Collections.Generic.Dictionary%602> objeto genérico. A continuación, se elimina el archivo existente y se agregan los recursos existentes a un nuevo archivo SerializedTimeZones. resx. Los datos de zona horaria serializados también se agregan a este archivo.
 
-Los campos de clave (o **nombre** ) de los recursos no deben contener espacios incrustados. <xref:System.String.Replace%28System.String%2CSystem.String%29>Se llama al método para quitar todos los espacios incrustados de los identificadores de zona horaria antes de que se asignen al archivo de recursos.
+Los campos de clave (o **nombre**) de los recursos no deben contener espacios incrustados. <xref:System.String.Replace%28System.String%2CSystem.String%29>Se llama al método para quitar todos los espacios incrustados de los identificadores de zona horaria antes de que se asignen al archivo de recursos.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 

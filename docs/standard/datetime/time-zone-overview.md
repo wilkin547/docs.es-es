@@ -1,7 +1,6 @@
 ---
 title: Información general sobre zonas horarias
 ms.date: 04/10/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - time zones [.NET], about time zones
 - transition time [.NET]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - adjustment rule [.NET]
 - time zones [.NET], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-ms.openlocfilehash: 0f0fdbe4b63ddc9d55f7397fa71198d72e60e669
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1e876fd608b088b02385467367948440549e96e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064111"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817515"
 ---
 # <a name="time-zone-overview"></a>Información general sobre zonas horarias
 
@@ -71,6 +70,6 @@ Dado que cada zona horaria se caracteriza por un desplazamiento desde la hora UT
 
 Para obtener más información sobre cómo convertir horas entre zonas horarias, consulte [Convertir horas entre zonas horarias](converting-between-time-zones.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Fechas, horas y zonas horarias](index.md)
