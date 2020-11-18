@@ -46,6 +46,8 @@
               href: tutorials/intro-to-csharp/introduction-to-classes.md
             - name: Programación orientada a objetos
               href: tutorials/intro-to-csharp/object-oriented-programming.md
+    - name: Exploración de los tipos de registros
+      href: tutorials/exploration/records.md
     - name: Exploración de instrucciones de nivel superior
       href: tutorials/exploration/top-level-statements.md
     - name: Exploración de patrones en objetos
