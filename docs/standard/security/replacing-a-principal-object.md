@@ -1,7 +1,6 @@
 ---
 title: Reemplazar un objeto Principal
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - security [.NET], replacing principal objects
 - security [.NET], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-ms.openlocfilehash: fced91aef991bc228e65128d5e8d69e6a46588e5
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b8f7a8fbd3b9c65126d6a3a65a5f6722f2ad93de
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557104"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824179"
 ---
 # <a name="replacing-a-principal-object"></a>Reemplazar un objeto Principal
 
@@ -34,7 +33,7 @@ En el ejemplo siguiente se muestra cómo se crea un objeto de entidad de segurid
 [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
 [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [Objetos Principal e Identity](principal-and-identity-objects.md)

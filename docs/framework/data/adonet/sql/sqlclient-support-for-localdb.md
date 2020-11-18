@@ -2,20 +2,18 @@
 title: Compatibilidad de SqlClient para LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 841c455605b0b32668d26cab16a6207dc1c0f716
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 55ab1346de6f5c14f15d01344a984c18edf30e02
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203428"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824485"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Compatibilidad de SqlClient para LocalDB
 
-A partir del nombre de código de SQL Server Denali, estará disponible una versión ligera de SQL Server, denominada LocalDB. En este tema se describe cómo conectarse a una base de datos de LocalDB.  
+En este artículo se describe cómo conectarse a una base de datos de LocalDB. LocalDB es una versión ligera de SQL Server.
   
-## <a name="remarks"></a>Observaciones  
-
- Para obtener más información sobre LocalDB, incluido cómo instalar y configurar la instancia de LocalDB, vea los Libros en pantalla de SQL Server.  
+## <a name="remarks"></a>Comentarios
   
  Para resumir lo que puede hacer con LocalDB:  
   
@@ -31,7 +29,7 @@ A partir del nombre de código de SQL Server Denali, estará disponible una ver
   
  `User Instance=True` no se permite al conectarse a una base de datos de LocalDB.  
   
- Puede descargar LocalDB desde [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si va a usar sqlcmd.exe para modificar datos en la instancia de LocalDB, necesita sqlcmd de SQL Server 2012, que también puede obtener de SQL Server 2012 Feature Pack.  
+Para obtener información acerca de cómo instalar LocalDB, vea [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
   
 ## <a name="programmatically-create-a-named-instance"></a>Crear mediante programación una instancia con nombre  
 

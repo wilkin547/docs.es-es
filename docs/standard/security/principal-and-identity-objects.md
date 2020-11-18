@@ -2,7 +2,6 @@
 title: Objetos Principal e Identity
 description: Lea acerca de los objetos de identidad, que representan a los usuarios de .NET. También puede leer sobre los objetos de entidad de seguridad, que encapsulan un objeto de identidad & un rol.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - WindowsIdentity objects
 - GenericIdentity objects
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: 79caeed6ed64a07238e398af1e12f51640b88b62
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: cfda506fc29e9a86e97b3c99faf2d4155c894f03
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555259"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824244"
 ---
 # <a name="principal-and-identity-objects"></a>Objetos Principal e Identity
 

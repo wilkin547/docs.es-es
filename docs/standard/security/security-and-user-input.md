@@ -2,19 +2,18 @@
 title: Seguridad e introducción de datos por el usuario
 description: El código podría pasar datos especificados por el usuario como parámetros a otro código, lo que puede afectar a la seguridad. Puede realizar la comprobación de intervalo para rechazar entradas problemáticas.
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - security [.NET], user input
 - user input, security
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: e46bf8e653567637b4e6236849981fdb32df447c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: e476db90dd1fd579f4ecfe3f2088cc76c955b9c0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555947"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824062"
 ---
 # <a name="security-and-user-input"></a>Seguridad e introducción de datos por el usuario
 
@@ -58,7 +57,7 @@ A continuación se indican algunas consideraciones importantes que afectan a los
 
 - Tenga cuidado con los nombres de usuario que pueden tener más de un formato canónico. Por ejemplo, a menudo puede utilizar cualquier forma de MIDOMINIO\\*nombreUsuario* o de *nombreUsuario*@mydomain.example.com.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de codificación segura](secure-coding-guidelines.md)
 - [Seguridad de ASP.NET Core](/aspnet/core/security/)

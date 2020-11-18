@@ -1,7 +1,6 @@
 ---
 title: Trabajar con calendarios
 ms.date: 04/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
-ms.openlocfilehash: d15bafd097c72515a33bed7dd85d88aef54246ba
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c30af36b3426c4abbdf9c55f6c9062a5d8fc8c23
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280899"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824257"
 ---
 # <a name="work-with-calendars"></a>Trabajar con calendarios
 
@@ -58,7 +57,7 @@ Todos los calendarios de .NET derivan de la <xref:System.Globalization.Calendar?
 
 Un calendario se puede usar de dos maneras:
 
-- Como el calendario empleado por una referencia cultural específica. Cada objeto <xref:System.Globalization.CultureInfo> tiene un calendario actual, que es el calendario que el objeto está usando actualmente. Las representaciones de cadena de todos los valores de fecha y hora reflejan automáticamente la referencia cultural actual y su calendario actual. Normalmente, el calendario actual es el calendario predeterminado de la referencia cultural. <xref:System.Globalization.CultureInfo>los objetos también tienen calendarios opcionales, que incluyen calendarios adicionales que puede utilizar la referencia cultural.
+- Como el calendario empleado por una referencia cultural específica. Cada objeto <xref:System.Globalization.CultureInfo> tiene un calendario actual, que es el calendario que el objeto está usando actualmente. Las representaciones de cadena de todos los valores de fecha y hora reflejan automáticamente la referencia cultural actual y su calendario actual. Normalmente, el calendario actual es el calendario predeterminado de la referencia cultural. <xref:System.Globalization.CultureInfo> los objetos también tienen calendarios opcionales, que incluyen calendarios adicionales que puede utilizar la referencia cultural.
 
 - Como calendario independiente de una referencia cultural concreta. En este caso, los métodos de <xref:System.Globalization.Calendar> se emplean para expresar las fechas como valores que reflejen el calendario.
 
@@ -187,9 +186,9 @@ Sin embargo, si la era cambia, el propósito de este código es ambiguo. ¿Es la
 
   - <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)>Método de la <xref:System.Globalization.JapaneseCalendar> clase o <xref:System.Globalization.JapaneseLunisolarCalendar> .
 
-  - Un <xref:System.DateTime> <xref:System.DateTimeOffset> método de análisis o, como <xref:System.DateTime.Parse%2A> , <xref:System.DateTime.TryParse%2A> , <xref:System.DateTime.ParseExact%2A> o <xref:System.DateTime.TryParseExact%2A> , que incluye la cadena que se va a analizar y, opcionalmente, un <xref:System.Globalization.DateTimeStyles> argumento si la referencia cultural actual es japonesa-Japón ("ja-JP") y el calendario de la referencia cultural es <xref:System.Globalization.JapaneseCalendar> . La cadena que se va a analizar debe incluir la era.
+  - Un <xref:System.DateTime> <xref:System.DateTimeOffset> método de análisis o, como <xref:System.DateTime.Parse%2A> , <xref:System.DateTime.TryParse%2A> , <xref:System.DateTime.ParseExact%2A> o <xref:System.DateTime.TryParseExact%2A> , que incluye la cadena que se va a analizar y, opcionalmente, un <xref:System.Globalization.DateTimeStyles> argumento si la referencia cultural actual es Japanese-Japan ("ja-JP") y el calendario de la referencia cultural es <xref:System.Globalization.JapaneseCalendar> . La cadena que se va a analizar debe incluir la era.
 
-  - Un <xref:System.DateTime> <xref:System.DateTimeOffset> método de análisis o que incluye un `provider` parámetro de tipo <xref:System.IFormatProvider> . `provider`debe ser un <xref:System.Globalization.CultureInfo> objeto que represente la referencia cultural japonesa-Japón ("ja-JP") cuyo calendario actual sea <xref:System.Globalization.JapaneseCalendar> o un <xref:System.Globalization.DateTimeFormatInfo> objeto cuya <xref:System.Globalization.DateTimeFormatInfo.Calendar> propiedad sea <xref:System.Globalization.JapaneseCalendar> . La cadena que se va a analizar debe incluir la era.
+  - Un <xref:System.DateTime> <xref:System.DateTimeOffset> método de análisis o que incluye un `provider` parámetro de tipo <xref:System.IFormatProvider> . `provider` debe ser un <xref:System.Globalization.CultureInfo> objeto que represente la referencia cultural Japanese-Japan ("ja-JP") cuyo calendario actual sea <xref:System.Globalization.JapaneseCalendar> o un <xref:System.Globalization.DateTimeFormatInfo> objeto cuya <xref:System.Globalization.DateTimeFormatInfo.Calendar> propiedad sea <xref:System.Globalization.JapaneseCalendar> . La cadena que se va a analizar debe incluir la era.
 
   En el ejemplo siguiente se usan tres de estos métodos para crear una instancia de una fecha y hora en la era Meiji, que comenzó el 8 de septiembre de 1868 y finalizó el 29 de julio de 1912.
 
@@ -216,7 +215,7 @@ En el ejemplo siguiente se intenta crear una instancia de una fecha en el año 6
 
 Si no desea realizar comprobaciones de intervalo relajado, puede restaurar las comprobaciones de intervalo estrictas de varias maneras, dependiendo de la versión de .NET en la que se ejecuta la aplicación:
 
-- **.Net Core:** Agregue lo siguiente al archivo de configuración *. netcore. Runtime. JSON* :
+- **.Net Core:** Agregue lo siguiente al *.netcore.runtime.jsen* el archivo de configuración:
 
   ```json
   "runtimeOptions": {
@@ -226,7 +225,7 @@ Si no desea realizar comprobaciones de intervalo relajado, puede restaurar las c
   }
   ```
 
-- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app. config* :
+- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app.config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -241,8 +240,8 @@ Si no desea realizar comprobaciones de intervalo relajado, puede restaurar las c
 
    |  |  |
    |--|--|
-   | **Clave** | **HKEY_LOCAL_MACHINE \Software\Microsoft \\ . NETFramework\AppContext** |
-   | **Nombre** | Switch. System. Globalization. EnforceJapaneseEraYearRanges |
+   | **Clave** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **Nombre** | Switch.SysTEM. Globalization. EnforceJapaneseEraYearRanges |
    | **Tipo** | REG_SZ |
    | **Valor** | true |
 
@@ -276,7 +275,7 @@ En aquellos casos donde la representación de cadena de una fecha se expresa en 
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
 
-En los calendarios japoneses, el primer año de una era se denomina gannen (元年). Por ejemplo, en lugar de Heisei 1, el primer año de la era Heisei puede describirse como Heisei gannen. .NET adopta esta Convención en las operaciones de formato para las fechas y horas con el formato de las cadenas de formato de fecha y hora estándar o personalizado siguientes cuando se usan con un <xref:System.Globalization.CultureInfo> objeto que representa la referencia cultural japonesa-Japón ("ja-JP") con la <xref:System.Globalization.JapaneseCalendar> clase:
+En los calendarios japoneses, el primer año de una era se denomina gannen (元年). Por ejemplo, en lugar de Heisei 1, el primer año de la era Heisei puede describirse como Heisei gannen. .NET adopta esta Convención en las operaciones de formato para las fechas y horas con el formato de las cadenas de formato de fecha y hora estándar o personalizado siguientes cuando se usan con un <xref:System.Globalization.CultureInfo> objeto que representa la referencia cultural Japanese-Japan ("ja-JP") con la <xref:System.Globalization.JapaneseCalendar> clase:
 
 - [El patrón de fecha larga](../base-types/standard-date-and-time-format-strings.md#LongDate), indicado por la cadena de formato de fecha y hora estándar "D".
 - [El patrón de hora larga completa](../base-types/standard-date-and-time-format-strings.md#FullDateLongTime), indicado por la cadena de formato de fecha y hora estándar "F".
@@ -291,7 +290,7 @@ Por ejemplo, en el ejemplo siguiente se muestra una fecha en el primer año de l
 
 Si no desea este comportamiento en las operaciones de formato, puede restaurar el comportamiento anterior, que siempre representa el primer año de una era como "1" en lugar de "gannen", haciendo lo siguiente, en función de la versión de .NET:
 
-- **.Net Core:** Agregue lo siguiente al archivo de configuración *. netcore. Runtime. JSON* :
+- **.Net Core:** Agregue lo siguiente al *.netcore.runtime.jsen* el archivo de configuración:
 
   ```json
   "runtimeOptions": {
@@ -301,7 +300,7 @@ Si no desea este comportamiento en las operaciones de formato, puede restaurar e
   }
   ```
 
-- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app. config* :
+- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app.config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -316,8 +315,8 @@ Si no desea este comportamiento en las operaciones de formato, puede restaurar e
 
    |  |  |
    |--|--|
-   | **Clave** | **HKEY_LOCAL_MACHINE \Software\Microsoft \\ . NETFramework\AppContext** |
-   | **Nombre** | Switch. System. Globalization. FormatJapaneseFirstYearAsANumber |
+   | **Clave** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **Nombre** | Switch.SysTEM. Globalization. FormatJapaneseFirstYearAsANumber |
    | **Tipo** | REG_SZ |
    | **Valor** | true |
 
@@ -329,7 +328,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 .NET también se ha actualizado para que las operaciones de análisis de fecha y hora admitan cadenas que contengan el año representado como "1" o gannen. Aunque no debería ser necesario, puede restaurar el comportamiento anterior para reconocer solo "1" como el primer año de una era. Puede hacerlo de la siguiente manera, en función de la versión de .NET:
 
-- **.Net Core:** Agregue lo siguiente al archivo de configuración *. netcore. Runtime. JSON* :
+- **.Net Core:** Agregue lo siguiente al *.netcore.runtime.jsen* el archivo de configuración:
 
   ```json
   "runtimeOptions": {
@@ -339,7 +338,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
   }
   ```
 
-- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app. config* :
+- **.NET Framework 4,6 o posterior:** Establezca el siguiente modificador de AppContext en el archivo *app.config* :
 
   ```xml
   <?xml version="1.0" encoding="utf-8"?>
@@ -354,12 +353,12 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
    |  |  |
    |--|--|
-   | **Clave** | **HKEY_LOCAL_MACHINE \Software\Microsoft \\ . NETFramework\AppContext** |
-   | **Nombre** | Switch. System. Globalization. EnforceLegacyJapaneseDateParsing |
+   | **Clave** | **HKEY_LOCAL_MACHINE\Software\Microsoft\\ . NETFramework\AppContext** |
+   | **Nombre** | Switch.SysTEM. Globalization. EnforceLegacyJapaneseDateParsing |
    | **Tipo** | REG_SZ |
    | **Valor** | true |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Cómo: Mostrar fechas en calendarios no gregorianos](../base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Ejemplo: utilidad de intervalo de semana natural](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
