@@ -2,7 +2,6 @@
 title: Diseño de enumeraciones
 description: Diseño para enumeraciones, que son una clase especial de tipo de valor. Las enumeraciones simples contienen conjuntos pequeños y cerrados de opciones. Las enumeraciones de marcas admiten operaciones bit a bit en valores de enumeración.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines, enumerations
 - simple enumerations
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-ms.openlocfilehash: 40a9faf53dc8a03674cd59074244c15cd304bdd2
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: a2e19197b114daa2a0956a6fc87231a6a81de916
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821364"
 ---
 # <a name="enum-design"></a>Diseño de enumeraciones
 
@@ -29,17 +28,17 @@ Las enumeraciones de marca están diseñadas para admitir las operaciones bit a 
 
 ✔️ favorecer el uso de una enumeración en lugar de constantes estáticas.
 
-❌No use una enumeración para los conjuntos abiertos (como la versión del sistema operativo, los nombres de sus amigos, etc.).
+❌ No use una enumeración para los conjuntos abiertos (como la versión del sistema operativo, los nombres de sus amigos, etc.).
 
-❌NO proporcione valores de enumeración reservados que estén pensados para uso futuro.
+❌ NO proporcione valores de enumeración reservados que estén pensados para uso futuro.
 
 Siempre puede simplemente agregar valores a la enumeración existente en una fase posterior. Vea [Agregar valores a enumeraciones](#add_value) para obtener más información sobre cómo agregar valores a las enumeraciones. Los valores reservados solo contaminan el conjunto de valores reales y tienden a provocar errores de usuario.
 
-❌Evite exponer públicamente las enumeraciones con un solo valor.
+❌ Evite exponer públicamente las enumeraciones con un solo valor.
 
 Una práctica común para garantizar la extensibilidad futura de las API de C es agregar parámetros reservados a las firmas de método. Estos parámetros reservados se pueden expresar como enumeraciones con un único valor predeterminado. Esto no se debe hacer en las API administradas. La sobrecarga de métodos permite agregar parámetros en futuras versiones.
 
-❌NO incluya valores Sentinel en las enumeraciones.
+❌ NO incluya valores Sentinel en las enumeraciones.
 
 Aunque a veces son útiles para los desarrolladores de Framework, los valores de centinela son confusos para los usuarios del marco. Se utilizan para realizar un seguimiento del estado de la enumeración en lugar de ser uno de los valores del conjunto representado por la enumeración.
 
@@ -65,9 +64,9 @@ Para el uso en memoria, tenga en cuenta que los objetos administrados siempre es
 
 ✔️ HACER que las enumeraciones de marcas de nombre tengan sustantivos plural o sintagmas nominales y simples de enumeración con nombres singulares o sintagmas nominales.
 
-❌NO se extiende <xref:System.Enum?displayProperty=nameWithType> directamente.
+❌ NO se extiende <xref:System.Enum?displayProperty=nameWithType> directamente.
 
-<xref:System.Enum?displayProperty=nameWithType>es un tipo especial usado por CLR para crear enumeraciones definidas por el usuario. La mayoría de los lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C#, la `enum` palabra clave se usa para definir una enumeración.
+<xref:System.Enum?displayProperty=nameWithType> es un tipo especial usado por CLR para crear enumeraciones definidas por el usuario. La mayoría de los lenguajes de programación proporcionan un elemento de programación que proporciona acceso a esta funcionalidad. Por ejemplo, en C#, la `enum` palabra clave se usa para definir una enumeración.
 
 <a name="design"></a>
 
@@ -79,11 +78,11 @@ Para el uso en memoria, tenga en cuenta que los objetos administrados siempre es
 
 ✔️ considere la posibilidad de proporcionar valores de enumeración especiales para combinaciones de marcas de uso frecuente.
 
-Las operaciones bit a bit son un concepto avanzado y no deben ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite>es un ejemplo de este tipo de valor especial.
+Las operaciones bit a bit son un concepto avanzado y no deben ser necesarias para tareas sencillas. <xref:System.IO.FileAccess.ReadWrite> es un ejemplo de este tipo de valor especial.
 
-❌Evite crear enumeraciones de marca en las que determinadas combinaciones de valores no sean válidas.
+❌ Evite crear enumeraciones de marca en las que determinadas combinaciones de valores no sean válidas.
 
-❌Evite usar valores de enumeración de marca de cero, a menos que el valor represente "todas las marcas se borren" y se denomine adecuadamente, como se indica en la siguiente instrucción.
+❌ Evite usar valores de enumeración de marca de cero, a menos que el valor represente "todas las marcas se borren" y se denomine adecuadamente, como se indica en la siguiente instrucción.
 
 ✔️ el nombre del valor cero de las enumeraciones de marcas `None` . En el caso de una enumeración de marca, el valor siempre debe significar "se borran todas las marcas".
 
@@ -101,7 +100,7 @@ Si tiene datos reales sobre las incompatibilidades de aplicaciones producidas po
 
 *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de diseño de tipos](type.md)
 - [Directrices de diseño de marco](index.md)

@@ -2,17 +2,16 @@
 title: Asignar nombres a parámetros
 description: Obtenga información sobre las directrices para la nomenclatura de parámetros. Por ejemplo, use nombres de parámetro descriptivos & la grafía Camel, & considere la posibilidad de asignar nombres en función del significado en lugar del tipo.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b62cfbd58f671745054c557041e5d60af345c8d3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583523"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820844"
 ---
 # <a name="naming-parameters"></a>Asignar nombres a parámetros
 Aparte de la razón obvia de legibilidad, es importante seguir las directrices para los nombres de parámetro, ya que los parámetros se muestran en la documentación y en el diseñador cuando las herramientas de diseño visual proporcionan la funcionalidad de exploración de clases y de IntelliSense.
@@ -30,7 +29,7 @@ Aparte de la razón obvia de legibilidad, es importante seguir las directrices p
 
  ✔️ CONSIDERE nombres descriptivos para los parámetros de sobrecarga de operadores si esto agrega un valor significativo.
 
- ❌No utilice abreviaturas ni índices numéricos para los nombres de parámetro de sobrecarga del operador.
+ ❌ No utilice abreviaturas ni índices numéricos para los nombres de parámetro de sobrecarga del operador.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 

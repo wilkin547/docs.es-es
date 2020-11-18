@@ -2,7 +2,6 @@
 title: Nombres de miembros de tipos
 description: Obtenga información sobre las directrices para asignar nombres a los miembros de tipos en .NET como, por ejemplo, métodos, propiedades, eventos y campos.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
 - methods [.NET Framework], names
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: de613673989bd174ac80adda566d04600059642d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 85f3137b4a8d75de92b12d6535415743395db890
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662503"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820918"
 ---
 # <a name="names-of-type-members"></a>Nombres de miembros de tipos
 Los tipos están conformados por miembros: métodos, propiedades, eventos, constructores y campos. En las siguientes secciones se detallan las instrucciones para asignar un nombre a los miembros de tipos.
@@ -41,7 +40,7 @@ public class String {
 
  ✔️ las propiedades de nombre mediante un nombre, una frase o un adjetivo.
 
- ❌NO tenga propiedades que coincidan con el nombre de los métodos "Get" como en el ejemplo siguiente:
+ ❌ NO tenga propiedades que coincidan con el nombre de los métodos "Get" como en el ejemplo siguiente:
 
  `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
 
@@ -73,7 +72,7 @@ public class Control {
 
  Por ejemplo, un evento de cierre que tuviera lugar antes de cerrar una ventana se llamaría `Closing`, mientras que uno que lo hiciera después se llamaría `Closed`.
 
- ❌No use prefijos "Before" o "after" o posteriores para indicar eventos anteriores y posteriores. Utilice tiempos verbales que indiquen presente y futuro, como se ha explicado.
+ ❌ No use prefijos "Before" o "after" o posteriores para indicar eventos anteriores y posteriores. Utilice tiempos verbales que indiquen presente y futuro, como se ha explicado.
 
  ✔️ los controladores de eventos de nombre (delegados usados como tipos de eventos) con el sufijo "EventHandler", como se muestra en el ejemplo siguiente:
 
@@ -92,7 +91,7 @@ public class Control {
 
  ✔️ asignar nombres a los campos con un nombre, una frase o un adjetivo.
 
- ❌No use un prefijo para los nombres de campo.
+ ❌ No use un prefijo para los nombres de campo.
 
  Por ejemplo, no utilice "g_" ni "s_" para indicar campos estáticos.
 
@@ -100,7 +99,7 @@ public class Control {
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de nomenclatura](naming-guidelines.md)

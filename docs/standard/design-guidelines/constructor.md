@@ -1,7 +1,6 @@
 ---
 title: Diseño de constructores
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, constructors
 - constructors, design guidelines
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
-ms.openlocfilehash: a258bebac57258cc1e8fbe2d6b5ccce88cb28872
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27fb73aa01adf31117d1b82724873db3a03fd269
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280353"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821403"
 ---
 # <a name="constructor-design"></a>Diseño de constructores
 
@@ -55,11 +54,11 @@ Si no declara explícitamente ningún constructor en un tipo, muchos lenguajes (
 
 Agregar un constructor con parámetros a una clase impide que el compilador agregue el constructor sin parámetros. Esto suele provocar cambios bruscos accidentales.
 
-❌Evite definir explícitamente constructores sin parámetros en Structs.
+❌ Evite definir explícitamente constructores sin parámetros en Structs.
 
 Esto hace que la creación de matrices sea más rápida, ya que si no se define el constructor sin parámetros, no es necesario que se ejecute en cada ranura de la matriz. Tenga en cuenta que muchos compiladores, incluido C#, no permiten que los Structs tengan constructores sin parámetros por esta razón.
 
-❌Evite llamar a miembros virtuales en un objeto dentro de su constructor.
+❌ Evite llamar a miembros virtuales en un objeto dentro de su constructor.
 
 La llamada a un miembro virtual hará que se llame a la invalidación más derivada, incluso si el constructor del tipo más derivado aún no se ha ejecutado completamente.
 
@@ -69,7 +68,7 @@ La llamada a un miembro virtual hará que se llame a la invalidación más deriv
 
 Un constructor estático, también denominado constructor de clase, se usa para inicializar un tipo. CLR llama al constructor estático antes de que se cree la primera instancia del tipo o se llame a cualquier miembro estático de ese tipo. El usuario no tiene control sobre cuándo se llama al constructor estático. Si un constructor estático no es privado, se puede llamar mediante código que no sea CLR. Dependiendo de las operaciones realizadas en el constructor, esto puede provocar un comportamiento inesperado. El compilador de C# obliga a los constructores estáticos a ser privados.
 
-❌NO genere excepciones desde constructores estáticos.
+❌ NO genere excepciones desde constructores estáticos.
 
 Si se produce una excepción desde un constructor de tipos, el tipo no se puede usar en el dominio de aplicación actual.
 
@@ -79,7 +78,7 @@ Si se produce una excepción desde un constructor de tipos, el tipo no se puede 
 
 *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

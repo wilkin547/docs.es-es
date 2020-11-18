@@ -1,7 +1,6 @@
 ---
 title: Diseño de eventos
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -10,15 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: 852c99b1a41691911f7ae82d3b8104526811757d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289829"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821338"
 ---
 # <a name="event-design"></a>Diseño de eventos
-Los eventos son la forma de devoluciones de llamada que se usa con más frecuencia (construcciones que permiten al marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen miembros que toman delegados, miembros virtuales y complementos basados en interfaz. los datos de los estudios de facilidad de uso indican que la mayoría de los desarrolladores se sienten más cómodos con eventos que si usan los otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.
+Los eventos son la forma de devoluciones de llamada que se usa con más frecuencia (construcciones que permiten al marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen miembros que toman delegados, miembros virtuales y complementos basados en interfaz. Los datos de los estudios de facilidad de uso indican que la mayoría de los desarrolladores se sienten más cómodos con los eventos que usan los otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.
 
  Es importante tener en cuenta que hay dos grupos de eventos: los eventos que se generan antes de que cambie un estado del sistema, denominados eventos previos, y eventos generados después de un cambio de estado, denominados eventos posteriores. Un ejemplo de evento anterior sería `Form.Closing` , que se desencadena antes de que se cierre un formulario. Un ejemplo de evento posterior sería `Form.Closed` , que se genera después de cerrar un formulario.
 
@@ -40,11 +39,11 @@ Los eventos son la forma de devoluciones de llamada que se usa con más frecuenc
 
  El parámetro debe tener el nombre `e` y debe escribirse como la clase de argumento de evento.
 
- ❌NO pase NULL como remitente al generar un evento no estático.
+ ❌ NO pase NULL como remitente al generar un evento no estático.
 
  ✔️ pasar null como remitente al generar un evento estático.
 
- ❌NO pase NULL como parámetro de datos de evento al generar un evento.
+ ❌ NO pase NULL como parámetro de datos de evento al generar un evento.
 
  Debe pasar `EventArgs.Empty` si no desea pasar datos al método de control de eventos. Los desarrolladores esperan que este parámetro no sea NULL.
 
@@ -63,7 +62,7 @@ Los eventos son la forma de devoluciones de llamada que se usa con más frecuenc
 
  ✔️ usar <xref:System.EventArgs?displayProperty=nameWithType> o su subclase como el tipo del segundo parámetro del controlador de eventos y llamarlo `e` .
 
- ❌NO tener más de dos parámetros en los controladores de eventos.
+ ❌ NO tener más de dos parámetros en los controladores de eventos.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 

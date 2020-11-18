@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para descifrar elementos XML con claves asimétricas
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - XML encryption
 - decryption
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
-ms.openlocfilehash: 4a06628ddde0920133bfd74568786fbca6d5cf09
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 0456c89987b37840daa1c84342528d11c6da73a4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556779"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822235"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Procedimiento para descifrar elementos XML con claves asimétricas
 
@@ -87,11 +86,11 @@ No almacene nunca una clave criptográfica simétrica en texto sin formato ni tr
   
  Cuando termine de usar una clave criptográfica, bórrela de la memoria estableciendo cada byte en cero o llamando al método <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> de la clase criptográfica administrada.  A veces, las claves criptográficas se pueden leer desde la memoria con un depurador o desde un disco duro si la ubicación de memoria se pagina en el disco.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)
 - [Criptografía multiplataforma](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
-- [Procedimiento para cifrar elementos XML con claves asimétricas](how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+- [Cifrar elementos XML con claves asimétricas](how-to-encrypt-xml-elements-with-asymmetric-keys.md)
 - [ASP.NET Core protección de datos](/aspnet/core/security/data-protection/introduction)

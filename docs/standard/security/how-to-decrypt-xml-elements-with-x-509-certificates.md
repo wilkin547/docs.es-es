@@ -1,7 +1,6 @@
 ---
 title: Procedimiento para descifrar elementos XML con certificados X.509
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
-ms.openlocfilehash: f60947a3b722f33c88b696d47c6a4000a1cb076b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 02a4a4ada6dcc242a96d630699797f2ea76987e3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555739"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820285"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Procedimiento para descifrar elementos XML con certificados X.509
 
@@ -80,7 +79,7 @@ En este ejemplo se supone que un archivo llamado `"test.xml"` se encuentra en el
 
 El certificado X.509 usado en este ejemplo se usa únicamente para pruebas.  Las aplicaciones deben usar un certificado X. 509 generado por una entidad de certificación de confianza.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

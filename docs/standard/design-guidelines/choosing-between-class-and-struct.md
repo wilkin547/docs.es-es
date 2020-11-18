@@ -2,7 +2,6 @@
 title: Elegir entre clases y structs
 description: Obtenga información sobre cómo decidir si diseñar un tipo como una clase o diseñar un tipo como un struct. Comprenda cómo se diferencian los tipos de referencia y los tipos de valor en .NET.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
 - class library design guidelines [.NET Framework], classes
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662607"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821481"
 ---
 # <a name="choosing-between-class-and-struct"></a>Elegir entre clases y structs
 Una de las decisiones de diseño básicas a las que se enfrenta cada diseñador de Marcos es si se debe diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Es fundamental comprender mejor las diferencias en el comportamiento de los tipos de referencia y los tipos de valor para tomar esta decisión.
@@ -37,7 +36,7 @@ Una de las decisiones de diseño básicas a las que se enfrenta cada diseñador 
 
  ✔️ considere la posibilidad de definir un struct en lugar de una clase si las instancias del tipo son pequeñas y suelen ser de corta duración o se incrustan normalmente en otros objetos.
 
- ❌Evite definir un struct a menos que el tipo tenga todas las características siguientes:
+ ❌ Evite definir un struct a menos que el tipo tenga todas las características siguientes:
 
 - Representa lógicamente un valor único, similar a los tipos primitivos ( `int` , `double` , etc.).
 

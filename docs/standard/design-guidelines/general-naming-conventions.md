@@ -2,7 +2,6 @@
 title: Convenciones generales de nomenclatura
 description: Utilice convenciones de nomenclatura generales relacionadas con la elección de palabras, instrucciones sobre el uso de abreviaturas y acrónimos, así como instrucciones para evitar nombres específicos del idioma.
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - type names, conflicts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: b7f06a57c57800afcfa7febf9452094b4ad5ddc1
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769085"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821104"
 ---
 # <a name="general-naming-conventions"></a>Convenciones generales de nomenclatura
 
@@ -35,22 +34,22 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  El nombre de la propiedad `CanScrollHorizontally` es mejor que `ScrollableX` (una referencia oculta al eje X).
 
- ❌No use caracteres de subrayado, guiones ni cualquier otro carácter no alfanumérico.
+ ❌ No use caracteres de subrayado, guiones ni cualquier otro carácter no alfanumérico.
 
- ❌No use la notación húngara.
+ ❌ No use la notación húngara.
 
- ❌Evite el uso de identificadores que entren en conflicto con palabras clave de lenguajes de programación de uso generalizado.
+ ❌ Evite el uso de identificadores que entren en conflicto con palabras clave de lenguajes de programación de uso generalizado.
 
  Según la regla 4 del Common Language Specification (CLS), todos los lenguajes compatibles deben proporcionar un mecanismo que permita el acceso a los elementos con nombre que utilizan una palabra clave de ese lenguaje como identificador. C#, por ejemplo, usa el signo @ como mecanismo de escape en este caso. Sin embargo, sigue siendo una buena idea evitar palabras clave comunes, ya que es mucho más difícil usar un método con la secuencia de escape que una sin ella.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Usar abreviaturas y acrónimos
- ❌No utilice abreviaturas ni contracciones como parte de los nombres de identificadores.
+ ❌ No utilice abreviaturas ni contracciones como parte de los nombres de identificadores.
 
  Por ejemplo, use `GetWindow` en lugar de `GetWin` .
 
- ❌No use ningún acrónimo que no se acepte ampliamente y, incluso si es así, solo cuando sea necesario.
+ ❌ No use ningún acrónimo que no se acepte ampliamente y, incluso si es así, solo cuando sea necesario.
 
-## <a name="avoiding-language-specific-names"></a>Evitar nombres específicos del idioma
+## <a name="avoiding-language-specific-names"></a>Evitar nombres de Language-Specific
  ✔️ utilizar nombres semánticamente interesantes en lugar de palabras clave específicas del lenguaje para los nombres de tipo.
 
  Por ejemplo, `GetLength` es un nombre mejor que `GetInt` .
@@ -63,9 +62,9 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 |---------|------------------|-----------|---------|
 |**sbyte**|**SByte**|**char**|**SByte**|
 |**byte**|**Byte**|**unsigned char**|**Byte**|
-|**short**|**Pequeño**|**short**|**Int16**|
+|**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Entero**|**int**|**Int32**|
+|**int**|**Integer**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
@@ -91,7 +90,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  ✔️ usar un sufijo numérico para indicar una nueva versión de una API existente, especialmente si el nombre existente de la API es el único que tiene sentido (es decir, si se trata de un estándar del sector) y si agregar un sufijo significativo (o cambiar el nombre) no es una opción adecuada.
 
- ❌No use el sufijo "ex" (u otro similar) de un identificador para distinguirlo de una versión anterior de la misma API.
+ ❌ No use el sufijo "ex" (u otro similar) de un identificador para distinguirlo de una versión anterior de la misma API.
 
  ✔️ usar el sufijo "64" al introducir las versiones de las API que operan en un entero de 64 bits (un entero largo) en lugar de un entero de 32 bits. Solo tiene que tomar este enfoque cuando existe la API de 32 bits existente; no lo haga para las nuevas API con una versión de 64 bits.
 
@@ -99,7 +98,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de diseño de los marcos](index.md)
 - [Directrices de nomenclatura](naming-guidelines.md)

@@ -1,20 +1,19 @@
 ---
 title: Atributos
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617566"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821624"
 ---
 # <a name="attributes"></a>Atributos
-<xref:System.Attribute?displayProperty=nameWithType>es una clase base que se usa para definir atributos personalizados.
+<xref:System.Attribute?displayProperty=nameWithType> es una clase base que se usa para definir atributos personalizados.
 
  Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, el marco de trabajo define <xref:System.ObsoleteAttribute> , que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
 
@@ -34,11 +33,11 @@ ms.locfileid: "85617566"
 
  ✔️ proporcionan parámetros de constructor para inicializar las propiedades correspondientes a los argumentos necesarios. Cada parámetro debe tener el mismo nombre (aunque con distintas mayúsculas y minúsculas) que la propiedad correspondiente.
 
- ❌Evite proporcionar parámetros de constructor para inicializar las propiedades correspondientes a los argumentos opcionales.
+ ❌ Evite proporcionar parámetros de constructor para inicializar las propiedades correspondientes a los argumentos opcionales.
 
  En otras palabras, no tiene propiedades que se puedan establecer con un constructor y un establecedor. Esta instrucción hace que sea muy explícito qué argumentos son opcionales y cuáles son necesarios, y evita tener dos maneras de hacer lo mismo.
 
- ❌Evite sobrecargar los constructores de atributos personalizados.
+ ❌ Evite sobrecargar los constructores de atributos personalizados.
 
  Tener un solo constructor se comunica claramente al usuario qué argumentos son obligatorios y cuáles son opcionales.
 

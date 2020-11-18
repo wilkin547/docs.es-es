@@ -1,18 +1,17 @@
 ---
 title: Diseño de interfaces
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - interfaces [.NET Framework], design guidelines
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: f589d47d5b945179430275598996b2fb77e92848
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289036"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821013"
 ---
 # <a name="interface-design"></a>Diseño de interfaces
 Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay casos en los que las interfaces son más adecuadas o son la única opción.
@@ -25,7 +24,7 @@ Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay ca
 
  ✔️ considere la posibilidad de definir una interfaz si necesita admitir su funcionalidad en tipos que ya heredan de algún otro tipo.
 
- ❌Evite el uso de interfaces de marcador (interfaces sin miembros).
+ ❌ Evite el uso de interfaces de marcador (interfaces sin miembros).
 
  Si necesita marcar una clase como una característica específica (marcador), en general, use un atributo personalizado en lugar de una interfaz.
 
@@ -37,7 +36,7 @@ Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay ca
 
  Esto ayuda a validar el diseño de la interfaz. Por ejemplo, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consume la <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interfaz.
 
- ❌NO agregue miembros a una interfaz que se haya enviado anteriormente.
+ ❌ NO agregue miembros a una interfaz que se haya enviado anteriormente.
 
  Si lo hace, se interrumpirán las implementaciones de la interfaz. Debe crear una nueva interfaz con el fin de evitar problemas de control de versiones.
 
@@ -47,7 +46,7 @@ Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay ca
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de diseño de tipos](type.md)
 - [Directrices de diseño de marco](index.md)

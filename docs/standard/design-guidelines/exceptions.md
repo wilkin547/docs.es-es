@@ -1,19 +1,18 @@
 ---
 title: Instrucciones de diseño de excepciones
 ms.date: 10/22/2008
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], exceptions
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-ms.openlocfilehash: d7580d4d3953b279824bba76b44c4134a7293b7a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 776e559bb1629245c275cb4463531a8dd4b230ae
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289777"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94821156"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
 El control de excepciones tiene muchas ventajas en comparación con los informes de errores basados en valores devueltos. Un buen diseño del marco ayuda al desarrollador de la aplicación a obtener las ventajas de las excepciones. En esta sección se describen las ventajas de las excepciones y se presentan las directrices para usarlas de forma eficaz.  
