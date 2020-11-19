@@ -2,17 +2,16 @@
 title: Patrones para la programación asincrónica
 description: Obtenga información sobre el patrón asincrónico basado en tareas (TAP), el patrón asincrónico basado en eventos (EAP) y el modelo de programación asincrónica (APM) en .NET.
 ms.date: 10/16/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: d8a68295836fb1e87ab82425ab0973fc1b65f4b2
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: bc0e37c060ab6375f943b4b50053e3046c05a556
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888768"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830342"
 ---
 # <a name="asynchronous-programming-patterns"></a>Patrones para la programación asincrónica
 

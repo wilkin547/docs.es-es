@@ -2,7 +2,6 @@
 title: Colecciones y estructuras de datos
 description: Aprenda a usar colecciones y estructuras de datos en .NET. Use colecciones genéricas y no genéricas en operaciones seguras para subprocesos.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - grouping data in collections
 - objects [.NET], grouping in collections
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 4ed4197ecdffad9579424957bf3f1f7ac6a782d7
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889353"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823854"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 
@@ -37,7 +36,7 @@ Todas las colecciones ofrecen métodos para agregar, quitar o buscar elementos e
 
 - **Capacidad de copiar el contenido de la colección en una matriz**
 
-    Todas las colecciones se pueden copiar en una matriz mediante el método **CopyTo** ; sin embargo, el orden de los elementos de la nueva matriz se basa en la secuencia en la que los devuelve el enumerador. La matriz resultante siempre es unidimensional con un límite inferior de cero.
+    Todas las colecciones se pueden copiar en una matriz mediante el método **CopyTo**; sin embargo, el orden de los elementos de la nueva matriz se basa en la secuencia en la que los devuelve el enumerador. La matriz resultante siempre es unidimensional con un límite inferior de cero.
 
 Además, muchas clases de colecciones contienen las siguientes características:
 

@@ -4,16 +4,15 @@ description: Language Integrated Query (LINQ) proporciona funcionalidades de con
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ed78082c97511a8dbcc48d413a75a46c9da906a9
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555001"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825837"
 ---
 # <a name="linq-overview"></a>Información general de LINQ
 

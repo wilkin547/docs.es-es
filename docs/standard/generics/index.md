@@ -2,7 +2,6 @@
 title: Elementos genéricos en .NET
 description: Obtenga información sobre los elementos genéricos en .NET. Defina y use los elementos genéricos, obtenga más información sobre las ventajas y los inconvenientes que presentan, conozca los lenguajes y las bibliotecas de clases que admiten, y mucho más.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 6455de8e6b874547be7838090fc0527a6ce72b71
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 40a789d9eaa835b1c464f25b5a33a7c1d766d2f8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063161"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827261"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -56,15 +55,15 @@ Los genéricos permiten personalizar un método, clase, estructura o interfaz co
   
 - Una *definición de tipo genérico* es una clase, estructura o declaración de interfaz que funciona como una plantilla, con marcadores de posición para los tipos que puede contener o utilizar. Por ejemplo, la clase <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> puede contener dos tipos: claves y valores. Dado que una definición de tipo genérico es solo una plantilla, no se pueden crear instancias de una clase, estructura o interfaz que sea una definición de tipo genérico.  
   
-- Los *parámetros de tipo genérico* , o *parámetros de tipo* , son los marcadores de posición en una definición de método o tipo genérico. El tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> tiene dos parámetros de tipo, `TKey` y `TValue`, que representan los tipos de sus claves y valores.  
+- Los *parámetros de tipo genérico*, o *parámetros de tipo*, son los marcadores de posición en una definición de método o tipo genérico. El tipo genérico <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> tiene dos parámetros de tipo, `TKey` y `TValue`, que representan los tipos de sus claves y valores.  
   
-- Un *tipo genérico construido* , o *tipo construido* , es el resultado de especificar los tipos para los parámetros de tipo genérico de una definición de tipo genérico.  
+- Un *tipo genérico construido*, o *tipo construido*, es el resultado de especificar los tipos para los parámetros de tipo genérico de una definición de tipo genérico.  
   
 - Un *argumento de tipo genérico* es cualquier tipo que se sustituye por un parámetro de tipo genérico.  
   
 - El término general *tipo genérico* incluye tanto tipos construidos como definiciones de tipo genérico.  
   
-- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza* . Para obtener más información, vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
+- La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
   
 - Las *restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   

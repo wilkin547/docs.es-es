@@ -2,16 +2,15 @@
 title: Colecciones seguras para subprocesos
 description: Empiece a usar colecciones seguras para subprocesos mediante el espacio de nombres System.Collections.Concurrent en .NET, que incluye clases de colección escalables y seguras para subprocesos.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 27b0e887d7dcff6a6c792cf2dfab6a449f59646f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5f64d7b6a9b3564248a2b6113724e948066bf45c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547693"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827755"
 ---
 # <a name="thread-safe-collections"></a>Colecciones seguras para subprocesos
 .NET Framework 4 introduce el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que incluye varias clases de colección que son a la vez seguras para subprocesos y escalables. Varios subprocesos pueden agregar o quitar elementos de estas colecciones sin ningún riesgo y de un modo eficaz, sin requerir una sincronización adicional en código de usuario. Al escribir un código nuevo, utilice las clases de colección simultáneas siempre que varios subprocesos se vayan a escribir en la colección de forma simultánea. Si solo está leyendo en una colección compartida, puede utilizar las clases en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Recomendamos no utilizar clases de colección 1.0 a menos que estén destinadas a .NET Framework 1.1. o un runtime de una versión anterior.  

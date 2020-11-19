@@ -2,7 +2,6 @@
 title: Controlar y provocar eventos
 description: Obtenga más información sobre cómo controlar y provocar eventos de .NET, que se basan en el modelo de delegado. Este modelo permite a los suscriptores registrarse o recibir notificaciones de los proveedores.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a2bfbe9a411d3099d02df7a43a42baaad2bb32da
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: e0b8de574475490cd3b15383b6ebc2ace4b74663
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064098"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828275"
 ---
 # <a name="handle-and-raising-events"></a>Control y generación de eventos
 
@@ -28,11 +27,11 @@ Los eventos de .NET se basan en el modelo de delegado. El modelo de delegado sig
   
 ## <a name="events"></a>Events
 
-Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría deberse a la interacción del usuario, como hacer clic en un botón, o podría derivarse de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento* . El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  
+Un evento es un mensaje que envía un objeto cuando ocurre una acción. La acción podría deberse a la interacción del usuario, como hacer clic en un botón, o podría derivarse de cualquier otra lógica del programa, como el cambio del valor de una propiedad. El objeto que provoca el evento se conoce como *emisor del evento*. El emisor del evento no sabe qué objeto o método recibirá (controlará) los eventos que genera. El evento normalmente es un miembro del emisor del evento; por ejemplo, el evento <xref:System.Web.UI.WebControls.Button.Click> es un miembro de la clase <xref:System.Web.UI.WebControls.Button>, y el evento <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> es un miembro de la clase que implementa la interfaz <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 Para definir un evento, se utiliza la palabra clave [`event`](../../csharp/language-reference/keywords/event.md) de C# o [`Event`](../../visual-basic/language-reference/statements/event-statement.md) de Visual Basic en la signatura de la clase de eventos y se especifica el tipo de delegado para el evento. Los delegados se describen en la sección siguiente.  
   
-Normalmente, para generar un evento, se agrega un método marcado como `protected` y `virtual` (en C#) o `Protected` y `Overridable` (en Visual Basic). Asigne a este método el nombre `On`*EventName* ; por ejemplo, `OnDataReceived`. El método debe tomar un parámetro que especifica un objeto de datos de evento, que es un objeto de tipo <xref:System.EventArgs> o un tipo derivado. Este método se proporciona para permitir que las clases derivadas reemplacen la lógica para generar el evento. Una clase derivada siempre debería llamar al método `On`*EventName* de la clase base para asegurarse de que los delegados registrados reciben el evento.  
+Normalmente, para generar un evento, se agrega un método marcado como `protected` y `virtual` (en C#) o `Protected` y `Overridable` (en Visual Basic). Asigne a este método el nombre `On`*EventName*; por ejemplo, `OnDataReceived`. El método debe tomar un parámetro que especifica un objeto de datos de evento, que es un objeto de tipo <xref:System.EventArgs> o un tipo derivado. Este método se proporciona para permitir que las clases derivadas reemplacen la lógica para generar el evento. Una clase derivada siempre debería llamar al método `On`*EventName* de la clase base para asegurarse de que los delegados registrados reciben el evento.  
 
 En el ejemplo siguiente se muestra cómo declarar un evento denominado `ThresholdReached`. El evento está asociado al delegado <xref:System.EventHandler> y se genera en un método denominado `OnThresholdReached`.  
   
