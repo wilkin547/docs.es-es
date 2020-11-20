@@ -376,6 +376,26 @@ items:
             href: ../core/diagnostics/eventpipe.md
           - name: Registro y seguimiento
             href: ../core/diagnostics/logging-tracing.md
+          - name: Eventos en tiempo de ejecución
+            items:
+              - name: Información general
+                href: ../fundamentals/diagnostics/runtime-events.md
+              - name: Eventos de contención
+                href: ../fundamentals/diagnostics/runtime-contention-events.md
+              - name: Eventos de excepción
+                href: ../fundamentals/diagnostics/runtime-exception-events.md
+              - name: Eventos de recolección de elementos no utilizados
+                href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
+              - name: Eventos de interoperabilidad
+                href: ../fundamentals/diagnostics/runtime-interop-events.md
+              - name: Eventos de cargador y enlazador
+                href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
+              - name: Eventos de método
+                href: ../fundamentals/diagnostics/runtime-method-events.md
+              - name: Eventos ThreadPool
+                href: ../fundamentals/diagnostics/runtime-thread-events.md
+              - name: Eventos del sistema de tipos
+                href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Recopilación de diagnósticos en contenedores
             href: ../core/diagnostics/diagnostics-in-containers.md
           - name: Herramientas globales de la CLI de .NET Core
@@ -1592,8 +1612,6 @@ items:
                 href: ../standard/serialization/how-to-chunk-serialized-data.md
               - name: Procedimiento para determinar si un objeto de .NET Standard es serializable
                 href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
-              - name: Ejemplo
-                href: ../standard/serialization/basic-serialization-technology-sample.md
           - name: Serialización de SOAP y XML
             items:
               - name: Información general
