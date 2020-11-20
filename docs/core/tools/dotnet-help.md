@@ -2,12 +2,12 @@
 title: Comando dotnet help
 description: El comando dotnet help muestra documentación en línea más detallada para el comando especificado.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59e74a318118b6fd39d1895df02d76daa6fc9e1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: d583142edabb24df972bdf9a06dbfe04688f9d97
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463689"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634473"
 ---
 # <a name="dotnet-help-reference"></a>Referencia de dotnet help
 
@@ -31,7 +31,7 @@ El comando `dotnet help` abre la página de referencia para obtener información
 
 - **`COMMAND_NAME`**
 
-  Nombre del comando de la CLI de .NET Core. Para obtener una lista de los comandos de la CLI válidos, vea [Comandos de la CLI](index.md#cli-commands).
+  Nombre del comando de la CLI de .NET. Para obtener una lista de los comandos de la CLI válidos, vea [Comandos de la CLI](index.md#cli-commands).
 
 ## <a name="options"></a>Opciones
 

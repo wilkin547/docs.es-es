@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 6805564ccd8a8b4911c7c687d97a06df2910c015
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281615"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634388"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -122,7 +122,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
   
   Para recopilar la cobertura de código en cualquier plataforma compatible con .NET Core, instale [Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) y use la opción `--collect:"XPlat Code Coverage"`.
 
-  En Windows, puede recopilar la cobertura de código mediante la opción `--collect "Code Coverage"`. Esta opción genera un archivo *.coverage* , que se puede abrir en Visual Studio 2019 Enterprise. Para más información, vea [Uso de cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) y [Personalización del análisis de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
+  En Windows, puede recopilar la cobertura de código mediante la opción `--collect "Code Coverage"`. Esta opción genera un archivo *.coverage*, que se puede abrir en Visual Studio 2019 Enterprise. Para más información, vea [Uso de cobertura de código](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) y [Personalización del análisis de cobertura de código](/visualstudio/test/customizing-code-coverage-analysis).
 
 - **`-d|--diag <LOG_FILE>`**
 
@@ -130,7 +130,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Fuerza el uso del host de prueba de `dotnet` o .NET Framework para los archivos binarios de prueba. Esta opción solo determina el tipo de host que se va a usar. La versión de Framework real que se va a usar viene determinada por *runtimeConfig.json* del proyecto de prueba. Si no se especifica, se usa el [atributo de ensamblado TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) para determinar el tipo de host. Si ese atributo se quita de *.dll* , se usa el host de .NET Framework.
+  Fuerza el uso del host de prueba de `dotnet` o .NET Framework para los archivos binarios de prueba. Esta opción solo determina el tipo de host que se va a usar. La versión de Framework real que se va a usar viene determinada por *runtimeConfig.json* del proyecto de prueba. Si no se especifica, se usa el [atributo de ensamblado TargetFramework](/dotnet/api/system.runtime.versioning.targetframeworkattribute) para determinar el tipo de host. Si ese atributo se quita de *.dll*, se usa el host de .NET Framework.
 
 - **`--filter <EXPRESSION>`**
 

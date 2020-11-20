@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 3fb19c2b36d97710685cac4ecd10f47a119814ce
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189191"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634251"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Utilizar SpinLock para la sincronización de bajo nivel
 
@@ -26,7 +26,7 @@ En el siguiente ejemplo se muestra cómo usar <xref:System.Threading.SpinLock>. 
   
  En este ejemplo se usa la clase <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, que requiere la sincronización del usuario para el acceso multiproceso. Otra opción consiste en usar <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>, que no requiere ningún bloqueo de usuario.  
   
- Tenga en cuenta el uso de `false` en la llamada a <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>. Esto proporciona el mejor rendimiento. Especifique `true` en las arquitecturas IA64 para usar la barrera de memoria, que vacía los búferes de escritura para garantizar que ahora el bloqueo esté disponible para que salgan otros subprocesos.  
+ Tenga en cuenta el uso de `false` en la llamada a <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>. Esto proporciona el mejor rendimiento. Especifique `true` en las arquitecturas IA64 para usar la barrera de memoria, que vacía los búferes de escritura para garantizar que ahora el bloqueo esté disponible para que entren otros subprocesos.
   
 ## <a name="see-also"></a>Vea también
 

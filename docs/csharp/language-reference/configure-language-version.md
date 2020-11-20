@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: 327a98da37b97830ac7f752a3621a92d8cb161e0
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495465"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634510"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -80,7 +80,7 @@ Las compilaciones de todos los subdirectorios del directorio que contenga ese ar
 
 ## <a name="c-language-version-reference"></a>Referencia de la versión del lenguaje C#
 
-En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es posible que el compilador no entienda necesariamente todos los valores si es más antiguo. Si instala .NET Core 3.0 o posterior, tiene acceso a todo lo que aparece.
+En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es posible que el compilador no entienda necesariamente todos los valores si es más antiguo. Si instala el SDK de .NET más reciente, tendrá acceso a todo lo que aparece.
 
 [!INCLUDE [langversion-table](includes/langversion-table.md)]
 
@@ -106,7 +106,8 @@ En la siguiente tabla se muestran las versiones actuales del lenguaje C#. Es pos
 > 7.1
 > 7.2
 > 7.3
-> 8.0 (default)
+> 8.0
+> 9.0 (default)
 > latestmajor
 > preview
 > latest

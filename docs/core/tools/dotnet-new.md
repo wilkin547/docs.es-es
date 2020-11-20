@@ -1,16 +1,16 @@
 ---
 title: Comando dotnet new
-description: El comando dotnet new crea proyectos de .NET Core basados en la plantilla especificada.
+description: El comando dotnet new crea proyectos de .NET en función de la plantilla especificada.
 no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/04/2020
-ms.openlocfilehash: 2ee06c37cd950f3b9771db2f30fe353435641d67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 3ee644f05ea5929ffc7b11054ef1d974b811f418
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400596"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634460"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -35,7 +35,7 @@ dotnet new -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet new` crea un proyecto de .NET Core u otros artefactos basados en una plantilla.
+El comando `dotnet new` crea un proyecto de .NET u otros artefactos basados en una plantilla.
 
 El comando llama al [motor de plantillas](https://github.com/dotnet/templating) para crear los artefactos en el disco basándose en las opciones y la plantilla especificadas.
 
@@ -56,7 +56,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
   - Si la CLI no encuentra ninguna coincidencia de plantilla al invocar `dotnet new`, ni siquiera parcial.
   - Si hay disponible una versión más reciente de la plantilla. En este caso, se crea el proyecto o el artefacto, pero la CLI le advierte de que hay una versión actualizada de la plantilla.
 
-  En la tabla siguiente se muestran las plantillas que vienen preinstaladas en el SDK de .NET Core. El lenguaje predeterminado de la plantilla se muestra entre corchetes. Haga clic en el vínculo del nombre corto para ver las opciones específicas de la plantilla.
+  En la tabla siguiente se muestran las plantillas que vienen preinstaladas con el SDK de .NET. El lenguaje predeterminado de la plantilla se muestra entre corchetes. Haga clic en el vínculo del nombre corto para ver las opciones específicas de la plantilla.
 
 | Plantillas                                    | Nombre corto                      | Lenguaje     | Etiquetas                                  | Inclusión |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -135,7 +135,7 @@ El comando llama al [motor de plantillas](https://github.com/dotnet/templating) 
 
 - **`--nuget-source <SOURCE>`**
 
-  Especifica un origen de NuGet para usarlo durante la instalación. Disponible a partir del SDK de .NET Core 2.1.
+  Especifica un origen de NuGet para usarlo durante la instalación.
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -177,6 +177,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -196,7 +197,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Especifica el [marco](../../standard/frameworks.md) de destino. Valores: `netcoreapp<version>` para crear una biblioteca de clases de .NET Core o `netstandard<version>` para crear una biblioteca de clases de .NET Standard. El valor predeterminado es `netstandard2.0`.
+  Especifica el [marco](../../standard/frameworks.md) de destino. Valores: `net5.0` o `netcoreapp<version>` para crear una biblioteca de clases de .NET, o bien `netstandard<version>` para crear una de .NET Standard. El valor predeterminado para el SDK de .NET 5.0 es `net5.0`.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -214,7 +215,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - _ *`-f|--framework <FRAMEWORK>`**
 
-  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `netcoreapp3.1`. Disponible a partir del SDK de .NET Core 3.1.
+  Especifica el [marco](../../standard/frameworks.md) de destino. El valor predeterminado es `net5.0`. Disponible a partir del SDK de .NET Core 3.1.
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -268,6 +269,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -291,6 +293,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.2         | `netcoreapp2.2` |
@@ -515,6 +518,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -602,6 +606,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
 
@@ -654,6 +659,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -674,6 +680,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.0` |
@@ -759,6 +766,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
   | Versión del SDK | Valor predeterminado   |
   |-------------|-----------------|
+  | 5.0         | `net5.0`        |
   | 3.1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
   | 2.1         | `netcoreapp2.1` |
@@ -773,7 +781,7 @@ Cada plantilla de proyecto puede tener opciones adicionales disponibles. Las pla
 
 - _ *`--sdk-version <VERSION_NUMBER>`**
 
-  Especifica la versión del SDK de .NET Core que se usará en el archivo *global.json*.
+  Especifica la versión del SDK de .NET que se va a usar en el archivo *global.json*.
 
 ***
 

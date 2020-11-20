@@ -2,12 +2,12 @@
 title: Comando dotnet run
 description: El comando dotnet run proporciona una opción conveniente para ejecutar la aplicación desde el código fuente.
 ms.date: 02/19/2020
-ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c80f290c75e3bac65ae73fe8edada53db4ce86f8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102778"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634421"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -43,7 +43,7 @@ El comando `dotnet run` debe usarse en el contexto de proyectos, no de ensamblad
 dotnet myapp.dll
 ```
 
-Para más información sobre el controlador `dotnet`, consulte el tema [Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core ](index.md).
+Para obtener más información sobre el controlador `dotnet`, vea el tema [Herramientas de la interfaz de la línea de comandos (CLI) de .NET](index.md).
 
 Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias de la aplicación que se encuentran fuera del entorno de tiempo de ejecución compartido desde la caché de NuGet. Dado que se usan dependencias almacenadas en caché, no se recomienda utilizar `dotnet run` para ejecutar aplicaciones en producción. En su lugar, [cree una implementación](../deploying/index.md) mediante el comando [`dotnet publish`](dotnet-publish.md) e implemente la salida publicada.
 
@@ -129,7 +129,7 @@ Para ejecutar la aplicación, el comando `dotnet run` resuelve las dependencias 
   dotnet run --configuration Release -- --help
   ```
 
-- Restaure las dependencias y herramientas del proyecto en el directorio actual mostrando solo la salida mínima y, después, ejecute el proyecto: (SDK de .NET Core 2.0 y versiones superiores):
+- Restaure las dependencias y herramientas del proyecto en el directorio actual para mostrar solo la salida mínima y, después, ejecute el proyecto:
 
   ```dotnetcli
   dotnet run --verbosity m

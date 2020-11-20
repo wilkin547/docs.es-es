@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 02/27/2020
-ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: dcb68d6c690f2e12b61cfdfa6dc288bd474721c1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925481"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634408"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -46,7 +46,7 @@ A veces, puede que no sea conveniente ejecutar la restauración de NuGet implíc
 
 ### <a name="specify-feeds"></a>Especificación de fuentes
 
-Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instala el SDK de .NET Core, se proporciona un archivo de configuración predeterminado. Para especificar fuentes adicionales, realice una de las acciones siguientes:
+Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instala el SDK de .NET, se proporciona un archivo de configuración predeterminado. Para especificar fuentes adicionales, realice una de las acciones siguientes:
 
 - Cree su propio archivo *nuget.config* en el directorio del proyecto. Para obtener más información, vea [Configuraciones comunes de NuGet](/nuget/consume-packages/configuring-nuget-behavior) y [Diferencias de nuget.config](#nugetconfig-differences) más adelante en este artículo.
 - Use comandos de `dotnet nuget` como [`dotnet nuget add source`](dotnet-nuget-add-source.md).
@@ -71,11 +71,11 @@ Hay tres configuraciones específicas que `dotnet restore` omite:
 
 - [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
 
-  Los redireccionamientos de enlace no funcionan con elementos de `<PackageReference>` y .NET Core solo admite elementos de `<PackageReference>` para los paquetes NuGet.
+  Los redireccionamientos de enlace no funcionan con elementos de `<PackageReference>` y .NET solo admite elementos de `<PackageReference>` para los paquetes NuGet.
 
 - [solution](/nuget/schema/nuget-config-file#solution-section)
 
-  Esta configuración es específica para Visual Studio y no se aplica a .NET Core. .NET Core no usa un archivo `packages.config` y, en su lugar, usa elementos de `<PackageReference>` para los paquetes NuGet.
+  Esta configuración es específica para Visual Studio y no se aplica a .NET. .NET no usa un archivo `packages.config` y, en su lugar, usa elementos de `<PackageReference>` para los paquetes NuGet.
 
 - [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 

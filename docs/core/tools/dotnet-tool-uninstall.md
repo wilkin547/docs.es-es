@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet tool uninstall
-description: El comando dotnet tool uninstall desinstala del equipo la herramienta especificada de .NET Core.
+description: El comando dotnet tool uninstall desinstala del equipo la herramienta especificada de .NET.
 ms.date: 02/14/2020
-ms.openlocfilehash: 0416f91019a49e17f1be14a1d928ad1fafaa736c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 34dffde8f9c930327c6b42d1d89bb4f511959fb2
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463309"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634095"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -15,7 +15,7 @@ ms.locfileid: "81463309"
 
 ## <a name="name"></a>NOMBRE
 
-`dotnet tool uninstall`: desinstala la [herramienta de .NET Core](global-tools.md) especificada del equipo.
+`dotnet tool uninstall`: desinstala la [herramienta de .NET](global-tools.md) especificada del equipo.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -31,7 +31,7 @@ dotnet tool uninstall -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas de .NET Core. Para usar el comando, especifique una de las siguientes opciones:
+El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas de .NET. Para usar el comando, especifique una de las siguientes opciones:
 
 * Para desinstalar una herramienta global que se instaló en la ubicación predeterminada, use la opción `--global`.
 * Para desinstalar una herramienta global que se instaló en una ubicación personalizada, use la opción `--tool-path`.
@@ -43,7 +43,7 @@ El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas d
 
 - **`PACKAGE_NAME`**
 
-  Nombre o identificador del paquete NuGet que contiene la herramienta de .NET Core que se quiere desinstalar. Para conocer el nombre el paquete, use el comando [dotnet tool list](dotnet-tool-list.md).
+  Nombre o identificador del paquete NuGet que contiene la herramienta de .NET que se va a desinstalar. Para conocer el nombre el paquete, use el comando [dotnet tool list](dotnet-tool-list.md).
 
 ## <a name="options"></a>Opciones
 
@@ -79,6 +79,6 @@ El comando `dotnet tool uninstall` permite desinstalar del equipo herramientas d
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas de .NET Core](global-tools.md)
-- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Herramientas de .NET](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET mediante la CLI de .NET](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

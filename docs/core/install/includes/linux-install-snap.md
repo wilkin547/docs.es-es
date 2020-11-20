@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5e77b7bd73c09e061a94a29703cf5286814d1ebb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ab2fc0645f76870dead99b5f45eef763643fb27
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602691"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506906"
 ---
 
 [.NET Core está disponible desde el almacén de snaps.](https://snapcraft.io/dotnet-sdk)
@@ -15,18 +15,18 @@ Solo las versiones admitidas de .NET Core están disponibles mediante Snap.
 
 ### <a name="install-the-sdk"></a>Instalación del SDK
 
-Los paquetes Snap para el SDK de .NET Core se publican con el mismo identificador: `dotnet-sdk`. Se puede instalar una versión específica del SDK mediante la especificación del canal. El SDK incluye el entorno de ejecución correspondiente. En la tabla siguiente se enumeran los canales:
+Los paquetes Snap para el SDK de .NET se publican con el mismo identificador: `dotnet-sdk`. Se puede instalar una versión específica del SDK mediante la especificación del canal. El SDK incluye el entorno de ejecución correspondiente. En la tabla siguiente se enumeran los canales:
 
-| Versión de .NET Core | Paquete Snap             |
-|-------------------|--------------------------|
-| 3.1 (LTS)         | `3.1` o `latest/stable` |
-| 2.1 (LTS)         | `2.1`                    |
-| .NET 5.0 (versión preliminar)  | `5.0/beta`               |
+| Versión de .NET | Paquete Snap             |
+|--------------|--------------------------|
+| 5.0          | `5.0` o `latest/stable` |
+| 3.1 (LTS)    | `3.1` o `lts/stable`    |
+| 2.1 (LTS)    | `2.1`                    |
 
-Use el comando `snap install` para instalar un paquete Snap del SDK de .NET Core. Use el parámetro `--channel` para indicar qué versión se va a instalar. Si se omite este parámetro, se usa `latest/stable`. En este ejemplo, se especifica `3.1`:
+Use el comando `snap install` para instalar un paquete Snap del SDK de .NET. Use el parámetro `--channel` para indicar qué versión se va a instalar. Si se omite este parámetro, se usa `latest/stable`. En este ejemplo, se especifica `5.0`:
 
 ```bash
-sudo snap install dotnet-sdk --classic --channel=3.1
+sudo snap install dotnet-sdk --classic --channel=5.0
 ```
 
 A continuación, registre el comando `dotnet` del sistema con el comando `snap alias`:
@@ -35,32 +35,33 @@ A continuación, registre el comando `dotnet` del sistema con el comando `snap a
 sudo snap alias dotnet-sdk.dotnet dotnet
 ```
 
-Este comando tiene el formato `sudo snap alias {package}.{command} {alias}`. Puede elegir cualquier nombre de `{alias}` que prefiera. Por ejemplo, puede asignar un nombre al comando después de la versión específica instalada por el snap `sudo snap alias dotnet-sdk.dotnet dotnet31`. Cuando use el comando `dotnet31`, invocará esta versión específica de .NET. Sin embargo, esta operación no es compatible con la mayoría de los tutoriales y ejemplos, donde se espera que esté disponible un comando `dotnet`.
+Este comando tiene el formato `sudo snap alias {package}.{command} {alias}`. Puede elegir cualquier nombre de `{alias}` que prefiera. Por ejemplo, puede asignar un nombre al comando después de la versión específica instalada por el snap `sudo snap alias dotnet-sdk.dotnet dotnet50`. Cuando use el comando `dotnet50`, invocará esta versión específica de .NET. Sin embargo, esta operación no es compatible con la mayoría de los tutoriales y ejemplos, donde se espera que esté disponible un comando `dotnet`.
 
 ### <a name="install-the-runtime"></a>Instalación de la instancia en tiempo de ejecución
 
 Los paquetes Snap de .NET Core Runtime se publican con su propio identificador de paquete. En la tabla siguiente se muestra una lista de los identificadores de paquete:
 
-| Versión de .NET Core | Paquete Snap        |
+| Versión de .NET      | Paquete Snap        |
 |-------------------|---------------------|
+| 5.0               | `dotnet-runtime-50` |
 | 3.1 (LTS)         | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
 | 2.2               | `dotnet-runtime-22` |
 | 2.1 (LTS)         | `dotnet-runtime-21` |
 
-Use el comando `snap install` para instalar un paquete Snap de .NET Core Runtime. En este ejemplo, se instala .NET Core 3.1:
+Use el comando `snap install` para instalar un paquete Snap del entorno de ejecución de .NET. En este ejemplo, se instala .NET 5.0:
 
 ```bash
-sudo snap install dotnet-runtime-31 --classic
+sudo snap install dotnet-runtime-50 --classic
 ```
 
 A continuación, registre el comando `dotnet` del sistema con el comando `snap alias`:
 
 ```bash
-sudo snap alias dotnet-runtime-31.dotnet dotnet
+sudo snap alias dotnet-runtime-50.dotnet dotnet
 ```
 
-Este comando tiene el formato `sudo snap alias {package}.{command} {alias}`. Puede elegir cualquier nombre de `{alias}` que prefiera. Por ejemplo, puede asignar un nombre al comando después de la versión específica instalada por el snap `sudo snap alias dotnet-runtime-31.dotnet dotnet31`. Cuando use el comando `dotnet31`, invocará esta versión específica de .NET. Sin embargo, esta operación no es compatible con la mayoría de los tutoriales y ejemplos, donde se espera que esté disponible un comando `dotnet`.
+Este comando tiene el formato `sudo snap alias {package}.{command} {alias}`. Puede elegir cualquier nombre de `{alias}` que prefiera. Por ejemplo, puede asignar un nombre al comando después de la versión específica instalada por el snap `sudo snap alias dotnet-runtime-50.dotnet dotnet50`. Cuando use el comando `dotnet50`, invocará esta versión específica de .NET. Sin embargo, esta operación no es compatible con la mayoría de los tutoriales y ejemplos, donde se espera que esté disponible un comando `dotnet`.
 
 ### <a name="ssl-certificate-errors"></a>Errores de certificado SSL
 

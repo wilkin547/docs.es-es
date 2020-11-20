@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 68b41eef0b604b80a9659eddf45d6512eac44fd6
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 8fa8d33ce9ece20a18c5c1542bc44cf569e9fa2e
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91607738"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440411"
 ---
 # <a name="classes-c-programming-guide"></a>Clases (Guía de programación de C#)
 
@@ -59,7 +59,7 @@ Aunque a veces se usan indistintamente, una clase y un objeto son cosas diferent
  Customer object2;
 ```
 
- No se recomienda crear referencias de objeto como esta, que no hace referencia a ningún objeto, ya que, si se intenta obtener acceso a un objeto a través de este tipo de referencia, se producirá un error en tiempo de ejecución. Pero dicha referencia puede haberse creado para hacer referencia a un objeto, ya sea creando un nuevo objeto o asignándola a un objeto existente, como en el siguiente ejemplo:  
+ No se recomienda crear referencias de objeto como esta, que no hace referencia a ningún objeto, ya que, si se intenta obtener acceso a un objeto a través de este tipo de referencia, se producirá un error en tiempo de ejecución. Pero este tipo de referencia se puede haber creado para hacer referencia a un objeto, ya sea creando uno o asignándola a un objeto existente, como en el ejemplo siguiente:  
 
  ```csharp
  Customer object3 = new Customer();
@@ -70,7 +70,7 @@ Aunque a veces se usan indistintamente, una clase y un objeto son cosas diferent
   
 ## <a name="class-inheritance"></a>Herencia de clases  
 
-Las clases admiten completamente la *herencia*, una característica fundamental de la programación orientada a objetos. Al crear una clase, puede heredar de cualquier otra interfaz o clase que no esté definida como [sealed](../../language-reference/keywords/sealed.md); y otras clases pueden heredar de su clase e invalidar los métodos virtuales de la clase.
+Las clases admiten completamente la *herencia*, una característica fundamental de la programación orientada a objetos. Al crear una clase, puede heredar de cualquier otra que no esté definida como [sellada](../../language-reference/keywords/sealed.md), y otras clases pueden heredar de esa e invalidar sus métodos virtuales. Además, puede implementar una o varias interfaces.
 
 La herencia se consigue mediante una *derivación*, en la que se declara una clase mediante una *clase base*, desde la que hereda los datos y el comportamiento. Una clase base se especifica anexando dos puntos y el nombre de la clase base seguido del nombre de la clase derivada, como en el siguiente ejemplo:  
 
@@ -84,7 +84,7 @@ La herencia se consigue mediante una *derivación*, en la que se declara una cla
 
 Cuando una clase declara una clase base, hereda todos los miembros de la clase base excepto los constructores. Para obtener más información, vea [Herencia](inheritance.md).
   
-A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. En cambio, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente más de una interfaz. Para obtener más información, vea [Interfaces](../interfaces/index.md).  
+A diferencia de C++, una clase de C# solo puede heredar directamente de una clase base. En cambio, dado que una clase base puede heredar de otra clase, una clase podría heredar indirectamente varias clases base. Además, una clase puede implementar directamente una o varias interfaces. Para obtener más información, vea [Interfaces](../interfaces/index.md).  
   
 Una clase puede declararse [abstracta](../../language-reference/keywords/abstract.md). Una clase abstracta contiene métodos abstractos que tienen una definición de firma, pero no tienen ninguna implementación. No se pueden crear instancias de las clases abstractas. Solo se pueden usar a través de las clases derivadas que implementan los métodos abstractos. Por el contrario, la clase [sealed](../../language-reference/keywords/sealed.md) no permite que otras clases se deriven de ella. Para más información, vea [Clases y miembros de clase abstractos y sellados](abstract-and-sealed-classes-and-class-members.md).  
   

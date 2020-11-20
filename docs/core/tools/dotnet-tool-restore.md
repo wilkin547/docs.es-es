@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet tool restore
-description: El comando dotnet tool restore instala en el equipo las herramientas locales de .NET Core que se encuentran en el ámbito del directorio actual.
+description: El comando dotnet tool restore instala en el equipo las herramientas locales de .NET que se encuentran en el ámbito del directorio actual.
 ms.date: 02/14/2020
-ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 1b7fd10102f2c957b3eb235f6897b60bc8ca9c07
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302677"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634277"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -15,7 +15,7 @@ ms.locfileid: "87302677"
 
 ## <a name="name"></a>NOMBRE
 
-`dotnet tool restore`: instala en el equipo las herramientas locales de .NET Core que se encuentran en el ámbito del directorio actual.
+`dotnet tool restore`: instala en el equipo las herramientas locales de .NET que se encuentran en el ámbito del directorio actual.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -79,5 +79,5 @@ El comando `dotnet tool restore` busca el archivo de manifiesto de las herramien
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas de .NET Core](global-tools.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Herramientas de .NET](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

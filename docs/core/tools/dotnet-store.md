@@ -2,12 +2,12 @@
 title: Comando dotnet store
 description: El comando “dotnet store” almacena los ensamblados especificados en el almacenamiento de paquetes en tiempo de ejecución.
 ms.date: 02/14/2020
-ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8efb11c6bf648bc7787d5627e02b180abb8a0afd
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463393"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634342"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -51,7 +51,7 @@ dotnet store -h|--help
 
 - **`--framework-version <FRAMEWORK_VERSION>`**
 
-  Especifica la versión del SDK de .NET Core. Esta opción le permite seleccionar una versión de un marco concreto más allá del marco de trabajo especificado en la opción `-f|--framework`.
+  Especifica la versión del SDK de .NET. Esta opción le permite seleccionar una versión de un marco concreto más allá del marco de trabajo especificado en la opción `-f|--framework`.
 
 - **`-h|--help`**
 
@@ -59,7 +59,7 @@ dotnet store -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Especifica la ruta de acceso al almacenamiento de paquetes en tiempo de ejecución. Si no se especifica, el valor predeterminado es el subdirectorio *store* del directorio de instalación de .NET Core de perfil de usuario.
+  Especifica la ruta de acceso al almacenamiento de paquetes en tiempo de ejecución. Si no se especifica, el valor predeterminado es el subdirectorio *store* del directorio de instalación de .NET del perfil de usuario.
 
 - **`--skip-optimization`**
 

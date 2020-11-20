@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet tool install
-description: El comando dotnet tool install instala la herramienta especificada de .NET Core en el equipo.
+description: El comando dotnet tool install instala la herramienta especificada de .NET en el equipo.
 ms.date: 02/14/2020
-ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 1dd870a8f91e557a2f59919682616aa8817fc070
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702816"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634329"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -15,7 +15,7 @@ ms.locfileid: "83702816"
 
 ## <a name="name"></a>NOMBRE
 
-`dotnet tool install`: instala la [herramienta de .NET Core](global-tools.md) especificada en el equipo.
+`dotnet tool install`: instala la [herramienta de .NET](global-tools.md) especificada en el equipo.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -40,7 +40,7 @@ dotnet tool install -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet tool install` permite instalar en el equipo herramientas de .NET Core. Para usar el comando, especifique una de las siguientes opciones de instalación:
+El comando `dotnet tool install` permite instalar herramientas de .NET en el equipo. Para usar el comando, especifique una de las siguientes opciones de instalación:
 
 * Para instalar una herramienta global en la ubicación predeterminada, use la opción `--global`.
 * Para instalar una herramienta global en una ubicación personalizada, use la opción `--tool-path`.
@@ -67,7 +67,7 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 - **`PACKAGE_NAME`**
 
-  Nombre o identificador del paquete NuGet que contiene la herramienta de .NET Core que se quiere instalar.
+  Nombre o identificador del paquete NuGet que contiene la herramienta de .NET que se va a instalar.
 
 ## <a name="options"></a>Opciones
 
@@ -81,7 +81,7 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 - **`framework <FRAMEWORK>`**
 
-  Especifica el [marco de destino](../../standard/frameworks.md) para instalar la herramienta. De forma predeterminada, el SDK de .NET Core intenta elegir la plataforma de destino más apropiada.
+  Especifica el [marco de destino](../../standard/frameworks.md) para instalar la herramienta. De forma predeterminada, el SDK de .NET intenta elegir la plataforma de destino más apropiada.
 
 - **`-g|--global`**
 
@@ -127,6 +127,6 @@ Para obtener más información, vea [Instalación de una herramienta local](glob
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas de .NET Core](global-tools.md)
-- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Herramientas de .NET](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET mediante la CLI de .NET](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

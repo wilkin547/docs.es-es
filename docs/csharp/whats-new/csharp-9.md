@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: c65f7220c44e86fac7e8beba28277bf43af95088
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282342"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557225"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -32,9 +32,11 @@ C# 9.0 agrega las siguientes características y mejoras al lenguaje C#:
 
 C# 9.0 es compatible con **.NET 5**. Para obtener más información, vea [Control de versiones del lenguaje C#](../language-reference/configure-language-version.md).
 
+Puede descargar el SDK de .NET más reciente de la [página de descargas de .NET](https://dotnet.microsoft.com/download).
+
 ## <a name="record-types"></a>Tipos de registro
 
-En C# 9.0 se presentan los *_tipos de registro_* , un tipo de referencia que ofrece métodos sintetizados para proporcionar semántica de valores para la igualdad. Los registros son inmutables de forma predeterminada.
+En C# 9.0 se presentan los *_tipos de registro_*, un tipo de referencia que ofrece métodos sintetizados para proporcionar semántica de valores para la igualdad. Los registros son inmutables de forma predeterminada.
 
 Los tipos de registro facilitan la creación de tipos de referencia inmutables en .NET. Históricamente, los tipos de .NET se han clasificado principalmente como tipos de referencia (incluidas las clases y los tipos anónimos) y tipos de valor (incluidas las estructuras y tuplas). Aunque se recomiendan los tipos de valor inmutables, los tipos de valor mutable no suelen generar errores. Las variables de tipo de valor contienen los valores para que los cambios se realicen en una copia de los datos originales cuando los tipos de valor se pasan a los métodos.
 
@@ -66,7 +68,7 @@ El compilador sintetiza versiones diferentes de los métodos anteriores. Las sig
 
 Además de las sobrecargas de `Equals` conocidas, `operator ==` y `operator !=`, el compilador sintetiza una nueva propiedad `EqualityContract`. La propiedad devuelve un objeto `Type` que coincide con el tipo del registro. Si el tipo base es `object`, la propiedad es `virtual`. Si el tipo base es otro tipo de registro, la propiedad es un `override`. Si el tipo de registro es `sealed`, la propiedad es `sealed`. El método `GetHashCode` sintetizado usa el valor `GetHashCode` de todas las propiedades y campos declarados en el tipo base y el tipo de registro. Estos métodos sintetizados imponen la igualdad basada en valores en una jerarquía de herencia. Esto significa que un registro `Student` nunca se considerará igual que un registro `Person` con el mismo nombre. Los tipos de los dos registros deben coincidir y todas las propiedades compartidas entre los tipos de registro deben ser iguales.
 
-Los registros también tienen un constructor sintetizado y un método "clone" para crear copias. El constructor sintetizado tiene un argumento del tipo de registro. Genera un nuevo registro con los mismos valores para todas las propiedades del registro. Este constructor es privado si el registro está sellado; de lo contrario está protegido. El método "clone" sintetizado admite la construcción de copias para las jerarquías de registros. El término "clone" está entre comillas porque el nombre real es el compilador generado. No se puede crear un método denominado `Clone` en un tipo de registro. El método "clone" sintetizado devuelve el tipo de registro que se copia mediante el envío virtual. El compilador agrega distintos modificadores para el método "clone", en función de los modificadores de acceso de `record`:
+Los registros también tienen un constructor sintetizado y un método "clone" para crear copias. El constructor sintetizado tiene un solo parámetro del tipo de registro. Genera un nuevo registro con los mismos valores para todas las propiedades del registro. Este constructor es privado si el registro está sellado; de lo contrario está protegido. El método "clone" sintetizado admite la construcción de copias para las jerarquías de registros. El término "clone" está entre comillas porque el nombre real es el compilador generado. No se puede crear un método denominado `Clone` en un tipo de registro. El método "clone" sintetizado devuelve el tipo de registro que se copia mediante el envío virtual. El compilador agrega distintos modificadores para el método "clone", en función de los modificadores de acceso de `record`:
 
 - Si el tipo de registro es `abstract`, el método "clone" también es `abstract`. Si el tipo base no es `object`, el método también es `override`.
 - Para los tipos de registro que no son `abstract` cuando el tipo base es `object`:
@@ -98,11 +100,13 @@ El compilador genera un método `Deconstruct` para los registros posicionales. E
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="DeconstructRecord":::
 
-Por último, los registros admiten _*_expresiones with_*_. Una _*_expresión with_*_ indica al compilador que cree una copia de un registro, pero con propiedades especificadas modificadas:
+Por último, los registros admiten [expresiones `with`](../language-reference/operators/with-expression.md). Una _*_ expresión `with`_ *_ indica al compilador que cree una copia de un registro, pero con* propiedades especificadas modificadas:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-La línea anterior crea un registro `Person` en el que la propiedad `LastName` es una copia de `person` y el valor `FirstName` es "Paul". Puede establecer cualquier número de propiedades en una expresión with.  El usuario puede escribir cualquiera de los miembros sintetizados excepto el método "clone". Si un tipo de registro tiene un método que coincide con la signatura de cualquier método sintetizado, el compilador no sintetiza ese método. El ejemplo de registro `Dog` anterior contiene un método <xref:System.String.ToString> codificado a mano como ejemplo.
+La línea anterior crea un registro `Person` en el que la propiedad `LastName` es una copia de `person` y el valor `FirstName` es `"Paul"`. Puede establecer cualquier número de propiedades en una expresión `with`.
+
+El usuario puede escribir cualquiera de los miembros sintetizados excepto el método "clone". Si un tipo de registro tiene un método que coincide con la signatura de cualquier método sintetizado, el compilador no sintetiza ese método. El ejemplo de registro `Dog` anterior contiene un método <xref:System.String.ToString> codificado a mano como ejemplo.
 
 ## <a name="init-only-setters"></a>Establecedores de solo inicialización
 
@@ -242,7 +246,7 @@ Un generador de código lee atributos u otros elementos de código mediante las 
 
 Las dos características agregadas a los generadores de código son las extensiones de la **sintaxis de métodos parciales** y los _*_inicializadores de módulos_*_. En primer lugar, los cambios en los métodos parciales. Antes de C# 9.0, los métodos parciales eran `private`, pero no podían especificar un modificador de acceso, tener un valor devuelto `void` ni parámetros `out`. Estas restricciones implican que si no se proporciona ninguna implementación de método, el compilador quita todas las llamadas al método parcial. En C# 9.0 se quitan estas restricciones, pero es necesario que las declaraciones de métodos parciales tengan una implementación. Los generadores de código pueden proporcionar esa implementación. Para evitar la introducción de un cambio importante, el compilador tiene en cuenta cualquier método parcial sin un modificador de acceso para seguir las reglas anteriores. Si el método parcial incluye el modificador de acceso `private`, las nuevas reglas rigen ese método parcial.
 
-La segunda característica nueva de los generadores de código son los _inicializadores de módulos_. Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El tiempo de ejecución llamará a estos métodos cuando se cargue el ensamblado. Un método de inicializador de módulo:
+La segunda característica nueva de los generadores de código son los _inicializadores de módulos_. Los inicializadores de módulos son métodos que tienen asociado el atributo <xref:System.Runtime.CompilerServices.ModuleInitializerAttribute>. El entorno de ejecución llamará a estos métodos antes de cualquier otro acceso de campo o invocación de método en todo el módulo. Un método de inicializador de módulo:
 
 - Debe ser estático
 - No debe tener parámetros

@@ -1,16 +1,16 @@
 ---
-title: 'Tutorial: Instalación y uso de herramientas locales de .NET Core'
+title: 'Tutorial: Instalación y uso de herramientas locales de .NET'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta local.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062682"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633886"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
 
@@ -201,7 +201,7 @@ dotnet tool uninstall dotnetsay
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Si recibe un mensaje de error al seguir el tutorial, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Vea también
 

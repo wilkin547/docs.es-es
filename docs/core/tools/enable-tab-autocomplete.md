@@ -1,24 +1,24 @@
 ---
 title: Habilitación de la finalización con tabulación
-description: En este artículo se describe cómo habilitar la finalización con tabulación para la CLI de .NET Core para PowerShell, Bash y zsh.
+description: En este artículo se describe cómo habilitar la finalización con tabulación para la CLI de .NET en PowerShell, bash y zsh.
 author: adegeo
 ms.author: adegeo
 ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: cd46305b8cd82825671a3a1568e8b93de1bbab26
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 31bf5e74644680fc30ca5b79972fbed6367363e1
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062813"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634017"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
+# <a name="how-to-enable-tab-completion-for-the-net-cli"></a>Procedimiento para habilitar la finalización con tabulación para la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
 En este artículo se describe cómo configurar la finalización con tabulación para tres shells: PowerShell, Bash y zsh. En el caso de otros shells, consulte la documentación para saber cómo configurar la finalización con tabulación.
 
-Una vez configurada, para desencadenar la finalización con tabulación para la CLI de .NET Core, escriba un comando `dotnet` en el shell y, después, presione el tabulador. La línea de comandos que se envía al comando `dotnet complete` y los resultados se procesan mediante el shell. Puede probar los resultados sin habilitar la finalización con tabulación si envía algo directamente al comando `dotnet complete`. Por ejemplo:
+Una vez que se ha configurado, para desencadenar la finalización con tabulación para la CLI de .NET, escriba un comando `dotnet` en el shell y, después, presione el tabulador. La línea de comandos que se envía al comando `dotnet complete` y los resultados se procesan mediante el shell. Puede probar los resultados sin habilitar la finalización con tabulación si envía algo directamente al comando `dotnet complete`. Por ejemplo:
 
 ```console
 > dotnet complete "dotnet a"
@@ -45,7 +45,7 @@ Entrada                                | se convierte en                        
 
 ## <a name="powershell"></a>PowerShell
 
-Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET Core, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).
+Para agregar finalización con tabulación a **PowerShell** para la CLI de .NET, cree o edite el perfil almacenado en la variable `$PROFILE`. Para obtener más información, vea [Cómo crear el perfil](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) y [Los perfiles y la directiva de ejecución](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy).
 
 Agregue el código siguiente al perfil:
 
@@ -61,7 +61,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 ## <a name="bash"></a>Bash
 
-Para agregar finalización con tabulación al shell de **bash** para la CLI de .NET Core, agregue el código siguiente al archivo `.bashrc`:
+Para agregar finalización con tabulación al shell de **bash** para la CLI de .NET, agregue el código siguiente al archivo `.bashrc`:
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -84,7 +84,7 @@ complete -f -F _dotnet_bash_complete dotnet
 
 ## <a name="zsh"></a>zsh
 
-Para agregar finalización con tabulación al shell de **zsh** para la CLI de .NET Core, agregue el código siguiente al archivo `.zshrc`:
+Para agregar finalización con tabulación al shell de **zsh** para la CLI de .NET, agregue el código siguiente al archivo `.zshrc`:
 
 ```zsh
 # zsh parameter completion for the dotnet CLI

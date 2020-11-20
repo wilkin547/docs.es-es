@@ -3,12 +3,12 @@ title: Acceso con privilegios elevados para comandos de dotnet
 description: Obtenga información sobre los procedimientos recomendados para los comandos de dotnet que requieren acceso con privilegios elevados.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: b34a4d631ec0e5ef641e1ffbc91e081d25645157
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805789"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634056"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acceso con privilegios elevados para comandos de dotnet
 
@@ -22,11 +22,11 @@ Los siguientes comandos se pueden ejecutar con privilegios elevados:
 
 No se recomienda ejecutar otros comandos con privilegios elevados. En concreto, no se recomienda usar privilegios elevados con los comandos que usa MSBuild, como [dotnet restore](dotnet-restore.md), [dotnet build](dotnet-build.md) y [dotnet run](dotnet-run.md). Los problemas de administración de permisos son el principal problema cuando un usuario cambia varias veces entre una cuenta restringida y otra raíz después de emitir comandos de dotnet. Como usuario restringido, es posible que no tenga acceso al archivo generado por un usuario raíz. Hay maneras de resolver esta situación, pero, para empezar, no es necesario que surjan.
 
-Puede ejecutar comandos como raíz siempre y cuando no cambie repetidas veces entre una cuenta restringida y otra raíz. Por ejemplo, los contenedores de Docker se ejecutan como raíz de forma predeterminada, por lo que tienen esta característica.
+Puede ejecutar comandos como raíz siempre y cuando no cambie repetidas veces entre la raíz y una cuenta restringida. Por ejemplo, los contenedores de Docker se ejecutan como raíz de forma predeterminada, por lo que tienen esta característica.
 
 ## <a name="global-tool-installation"></a>Instalación de herramienta global
 
-Las instrucciones siguientes muestran la manera recomendada para instalar, ejecutar y desinstalar las herramientas de .NET Core que requieren privilegios elevados para ejecutarse.
+En las instrucciones siguientes se muestra la manera recomendada de instalar, ejecutar y desinstalar las herramientas de .NET que necesitan privilegios elevados para ejecutarse.
 
 <!-- markdownlint-disable MD025 -->
 
@@ -108,4 +108,4 @@ Durante el desarrollo, puede que necesite acceso con privilegios elevados para p
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre las herramientas globales de .NET Core](global-tools.md)
+- [Información general sobre las herramientas de .NET](global-tools.md)

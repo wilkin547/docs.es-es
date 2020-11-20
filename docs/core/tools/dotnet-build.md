@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 ms.date: 02/14/2020
-ms.openlocfilehash: 6f33b449301f40949ff5dfe4077564344a9de8ec
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251171"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634486"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -39,7 +39,7 @@ El comando `dotnet build` crea el proyecto y sus dependencias en un conjunto de 
 - Un archivo *.runtimeconfig.json*, que especifica el runtime compartido y su versión de una aplicación.
 - Otras bibliotecas de las que depende el proyecto (a través de referencias de proyecto o referencias de paquetes NuGet).
 
-En el caso de los proyectos ejecutables que tienen como destino versiones anteriores a .NET Core 3.0, las dependencias de biblioteca de NuGet normalmente no se copian en la carpeta de salida.  Se resuelven desde la carpeta de paquetes globales NuGet en tiempo de ejecución. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina para ejecutarse. Para crear una versión de la aplicación que se pueda implementar, se debe publicar (por ejemplo, con el comando [dotnet publish](dotnet-publish.md)). Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../deploying/index.md).
+En el caso de los proyectos ejecutables que tienen como destino versiones anteriores a .NET Core 3.0, las dependencias de biblioteca de NuGet normalmente no se copian en la carpeta de salida.  Se resuelven desde la carpeta de paquetes globales NuGet en tiempo de ejecución. Teniendo eso en cuenta, el producto de `dotnet build` no está listo para transferirse a otra máquina para ejecutarse. Para crear una versión de la aplicación que se pueda implementar, se debe publicar (por ejemplo, con el comando [dotnet publish](dotnet-publish.md)). Para obtener más información, vea [Implementación de aplicaciones de .NET](../deploying/index.md).
 
 En el caso de los proyectos ejecutables que tienen como destino .NET Core 3.0 y versiones posteriores, las dependencias de biblioteca se copian en la carpeta de salida. Esto significa que, si no hay ninguna otra lógica específica de la publicación (como los proyectos web), se debería poder implementar la salida de la compilación.
 
@@ -153,7 +153,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-- Compile el proyecto y use origen del paquete NuGet especificado durante la operación de restauración (SDK de .NET Core 2.0 y versiones posteriores):
+- Compile el proyecto y use el origen del paquete NuGet especificado durante la operación de restauración:
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages

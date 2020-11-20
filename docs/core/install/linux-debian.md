@@ -1,19 +1,19 @@
 ---
-title: 'Instalación de .NET Core en Debian: .NET Core'
-description: En este artículo se muestran las diversas maneras de instalar el SDK de .NET Core y .NET Core Runtime en Debian.
+title: 'Instalación de .NET en Debian: .NET'
+description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en Debian.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: d0f7d4092ec420d031d0874a56b9e2148afdb865
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 11/10/2020
+ms.openlocfilehash: 6dad4e1779600b22b8301e03ffb8fb2c16786ead
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538558"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506994"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en Debian
+# <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>Instalación del SDK y el entorno de ejecución de .NET en Debian
 
-En este artículo se describe cómo instalar .NET Core en Debian. Cuando una versión de Debian no es compatible, .NET Core deja de ser compatible con esa versión. Sin embargo, estas instrucciones pueden ayudarle a conseguir que .NET Core se ejecute en esas versiones, aunque no se admita.
+En este artículo se describe cómo instalar .NET en Debian. Cuando una versión de Debian no es compatible, .NET deja de ser compatible con esa versión. Pero estas instrucciones pueden ayudarle a conseguir que .NET se ejecute en esas versiones, aunque no se admita.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -21,19 +21,19 @@ En este artículo se describe cómo instalar .NET Core en Debian. Cuando una ver
 
 ## <a name="supported-distributions"></a>Distribuciones admitidas
 
-En la tabla siguiente se muestra una lista de versiones de .NET Core actualmente compatibles y las versiones de Debian en las que se admiten. Estas versiones siguen siendo compatibles hasta que la versión de [.NET Core llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o la versión de [Debian llegue al final del ciclo de vida](https://wiki.debian.org/DebianReleases).
+En la tabla siguiente se muestra una lista de versiones de .NET actualmente compatibles y las versiones de Debian en las que se admiten. Estas versiones siguen siendo compatibles hasta que la versión de [.NET llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o la versión de [Debian llegue al final del ciclo de vida](https://wiki.debian.org/DebianReleases).
 
-- Una ✔️ indica que todavía se admite la versión de Debian o de .NET Core.
-- Una ❌ indica que la versión de Debian o de .NET Core no se admite en esa versión de Debian.
-- Cuando una versión de Debian y una versión de .NET Core tienen una ✔️, se admite esa combinación de sistema operativo y .NET.
+- El símbolo ✔️ indica que todavía se admite la versión de Debian o de .NET.
+- El símbolo ❌ indica que la versión de Debian o de .NET no se admite en esa versión de Debian.
+- Si una versión de Debian y una versión de .NET tienen un símbolo ✔️, esa combinación de sistema operativo y .NET se admite.
 
-| Debian                   | .NET Core 2.1 | .NET Core 3.1 | Versión preliminar de .NET 5 (solo instalación manual) |
+| Debian                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
-| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
-| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 (versión preliminar) |
+| ✔️ [10](#debian-10-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [9](#debian-9-)       | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ❌ [8](#debian-8-)       | ✔️ 2.1        | ❌ 3.1        | ❌ 5.0 |
 
-Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
+Las versiones siguientes de .NET ya no se admiten. aunque sus descargas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -52,7 +52,7 @@ wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-9-"></a>Debian 9 ✔️
 
@@ -67,7 +67,7 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-[!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="debian-8-"></a>Debian 8 ❌
 
@@ -88,7 +88,7 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 ## <a name="apt-update-sdk-or-runtime"></a>SDK o entorno de ejecución de actualización de APT
 
-Cuando hay disponible una nueva versión de revisión para .NET Core, basta con que la actualice mediante APT con los siguientes comandos:
+Cuando hay disponible una nueva versión de revisión para .NET, basta con actualizarla mediante APT con los comandos siguientes:
 
 ```bash
 sudo apt-get update
@@ -97,7 +97,7 @@ sudo apt-get upgrade
 
 ## <a name="apt-troubleshooting"></a>Solución de problemas de APT
 
-En esta sección se proporciona información sobre los errores comunes que puede recibir al usar ATP para instalar .NET Core.
+En esta sección se proporciona información sobre los errores comunes que puede recibir al usar APT para instalar .NET.
 
 ### <a name="unable-to-find-package"></a>No se puede encontrar el paquete
 
@@ -162,4 +162,4 @@ En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.D
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Tutorial: Creación de una aplicación de consola con el SDK de .NET Core mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: Creación de una aplicación de consola con el SDK de .NET mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)

@@ -3,12 +3,12 @@ title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8.0. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 9c253d02c287d7a113536ac148b352486d450cc2
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: cb9438db6364b6dc5d34f3a776d3ed7ec2e9978b
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92160885"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440398"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -23,7 +23,7 @@ Una de las novedades de C# 8.0 son los **tipos de referencia que aceptan valores
 
 Esta nueva característica proporciona grandes ventajas sobre el control de variables de referencia con respecto a versiones anteriores de C#, donde la intención del diseño no se puede determinar a partir de la declaración de la variable. El compilador no proporcionaba protección contra excepciones de referencia NULL para los tipos de referencia:
 
-- **Una referencia puede ser NULL**. El compilador no emite ninguna advertencia cuando un tipo de referencia se inicializa con un valor NULL o posteriormente se asigna a un valor NULL. El compilador emite advertencias cuando estas variables se desreferencian sin comprobaciones de valores NULL.
+- **Una referencia puede ser NULL**. El compilador no emite ninguna advertencia cuando una variable de tipo de referencia se inicializa con `null` o posteriormente se le asigna `null`. El compilador emite advertencias cuando estas variables se desreferencian sin comprobaciones de valores NULL.
 - **Se asume que una referencia no es NULL**. Si se desreferencian tipos de referencia, el compilador no emite ninguna advertencia. El compilador emite advertencias si una variable se establece en una expresión que puede ser NULL.
 
 Estas advertencias se emiten en tiempo de compilación. El compilador no agrega comprobaciones de valores NULL ni otras construcciones de tiempo de ejecución en un contexto que admite un valor NULL. En tiempo de ejecución, una referencia que acepta valores NULL y una referencia que no acepta valores NULL son equivalentes.
@@ -116,10 +116,10 @@ En un contexto de anotación que acepta valores NULL, el carácter `?` junto a u
 
 El contexto de advertencia que acepta valores NULL no es igual al contexto de anotación que acepta valores NULL. Se pueden habilitar las advertencias incluso aunque las nuevas anotaciones estén deshabilitadas. El compilador usa el análisis de flujos estático para determinar el **estado NULL** de cualquier referencia. El estado NULL puede ser **no NULL** o **quizás NULL** cuando el *contexto de advertencia que acepta valores NULL* no está **deshabilitado**. Si desreferencia una referencia cuando el compilador ha determinado el estado **quizás NULL**, el compilador emite una advertencia. El estado de una referencia es **quizás NULL** a menos que el compilador pueda determinar una de estas dos condiciones:
 
-1. La variable se ha asignado definitivamente a un valor distinto a NULL.
+1. Es evidente que a la variable se le ha asignado un valor distinto a NULL.
 1. Se ha comprobado que la variable o la expresión no tiene un valor NULL antes de desreferenciarla.
 
-El compilador genera advertencias cuando se desreferencia una variable o expresión que tiene un estado **quizás NULL** en un contexto de advertencia que admite valores NULL. Además, el compilador genera advertencias cuando se asigna una variable o expresión **quizás NULL** a un tipo de referencia que no acepta valores NULL en un contexto de anotación que sí los acepta.
+El compilador genera advertencias cuando se desreferencia una variable o expresión que tiene un estado **quizás NULL** en un contexto de advertencia que admite valores NULL. Además, el compilador genera advertencias cuando se asigna una variable o expresión **quizás NULL** a una variable de tipo de referencia que no acepta valores NULL en un contexto de anotación que sí los acepta.
 
 ## <a name="attributes-describe-apis"></a>Atributos que describen las API
 

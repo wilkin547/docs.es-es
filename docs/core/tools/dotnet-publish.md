@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet publish
-description: El comando dotnet publish publica el proyecto o la solución de .NET Core en un directorio.
-ms.date: 02/24/2020
-ms.openlocfilehash: 2c33f99ce652dadc6e0c1a4c5e9e78fff9f54254
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+description: El comando dotnet publish publica un proyecto o una solución de .NET en un directorio.
+ms.date: 11/11/2020
+ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654899"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634434"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -41,11 +41,11 @@ dotnet publish -h|--help
 - Un archivo *.runtime.config.json* en el que se especifica el tiempo de ejecución compartido que espera la aplicación, así como otras opciones de configuración para el tiempo de ejecución (por ejemplo, el tipo de recolección de elementos no utilizados).
 - Las dependencias de la aplicación, que se copian de la caché de NuGet a la carpeta de salida.
 
-La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución. Es la única manera admitida oficialmente para preparar la aplicación para la implementación. Dependiendo del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de tiempo de ejecución compartido de .NET Core. Para obtener más información, vea [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+La salida del comando `dotnet publish` está lista para la implementación en un sistema de hospedaje (por ejemplo, un servidor, un equipo PC o Mac, un portátil) para la ejecución. Es la única manera admitida oficialmente para preparar la aplicación para la implementación. En función del tipo de implementación que especifique el proyecto, el sistema de hospedaje puede o no tener instalado el entorno de ejecución compartido de .NET. Para obtener más información, vea [Publicación de aplicaciones de .NET con la CLI de .NET](../deploying/deploy-with-cli.md).
 
 ### <a name="implicit-restore"></a>Restauración implícita
 
-[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note](../../../includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -165,7 +165,7 @@ Para obtener más información, vea los siguientes recursos:
 
 - **`--self-contained [true|false]`**
 
-  Publica el tiempo de ejecución de .NET Core con la aplicación para que no sea necesario tener instalado el tiempo de ejecución en la máquina de destino. El valor predeterminado es `true` si se especifica un identificador en tiempo de ejecución y el proyecto es de tipo ejecutable (no un proyecto de biblioteca). Para obtener más información, vea [Publicación de aplicaciones .NET Core](../deploying/index.md) y [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+  Publica el entorno de ejecución de .NET con la aplicación para que no sea necesario instalarlo en el equipo de destino. El valor predeterminado es `true` si se especifica un identificador en tiempo de ejecución y el proyecto es de tipo ejecutable (no un proyecto de biblioteca). Para obtener más información, vea [Publicación de aplicaciones de .NET](../deploying/index.md) y [Publicación de aplicaciones de .NET con la CLI de .NET](../deploying/deploy-with-cli.md).
 
   Si se usa esta opción sin especificar `true` o `false`, el valor predeterminado es `true`. En ese caso, no coloque el argumento de la solución o el proyecto inmediatamente después de `--self-contained`, porque se espera que `true` o `false` estén en esa posición.
 
@@ -175,7 +175,7 @@ Para obtener más información, vea los siguientes recursos:
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Publica la aplicación para un determinado entorno de tiempo de ejecución. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). Para obtener más información, vea [Publicación de aplicaciones .NET Core](../deploying/index.md) y [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md).
+  Publica la aplicación para un determinado entorno de tiempo de ejecución. Para obtener una lista de identificadores de tiempo de ejecución (RID), consulte el [catálogo de RID](../rid-catalog.md). Para obtener más información, vea [Publicación de aplicaciones de .NET](../deploying/index.md) y [Publicación de aplicaciones de .NET con la CLI de .NET](../deploying/deploy-with-cli.md).
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -231,8 +231,8 @@ Para obtener más información, vea los siguientes recursos:
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la publicación de aplicaciones de .NET Core](../deploying/index.md)
-- [Publicación de aplicaciones .NET Core con la CLI de .NET Core](../deploying/deploy-with-cli.md)
+- [Información general sobre la publicación de aplicaciones de .NET](../deploying/index.md)
+- [Publicación de aplicaciones de .NET con la CLI de .NET](../deploying/deploy-with-cli.md)
 - [Marcos de trabajo de destino](../../standard/frameworks.md)
 - [Catálogo de identificadores de tiempo de ejecución (RID)](../rid-catalog.md)
 - [Trabajo con la certificación de macOS Catalina](../install/macos-notarization-issues.md)

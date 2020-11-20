@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 2edb06106283c26573863f230e5e9956728cdfa3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 53cac9ca49502c88f5d3cf63bf113365e7b85d18
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93135683"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94507071"
 ---
 
 ### <a name="install-the-sdk"></a>Instalación del SDK
 
-El SDK de .NET Core permite desarrollar aplicaciones con .NET Core. Si instala el SDK de .NET Core, no necesita instalar el entorno de ejecución correspondiente. Para instalar el SDK de .NET Core, ejecute los siguientes comandos:
+El SDK de .NET Core permite desarrollar aplicaciones con .NET Core. Si instala el SDK de .NET Core, no necesita instalar el entorno de ejecución correspondiente. Para instalar el SDK de .NET Core, ejecute los comandos siguientes:
 
 ```bash
 sudo dnf install dotnet-sdk-3.1
@@ -23,7 +23,7 @@ sudo dnf install dotnet-sdk-3.1
 sudo dnf install aspnetcore-runtime-3.1
 ```
 
-Una alternativa al entorno de ejecución de ASP.NET Core es instalar la instancia del de .NET Core, que no incluye compatibilidad con ASP.NET Core; en el comando anterior, reemplace `aspnetcore-runtime-3.1` por `dotnet-runtime-3.1`.
+Una alternativa al entorno de ejecución de ASP.NET Core es instalar el de .NET Core, que no incluye compatibilidad con ASP.NET Core; en el comando anterior, reemplace `aspnetcore-runtime-3.1` por `dotnet-runtime-3.1`.
 
 ```bash
 sudo dnf install dotnet-runtime-3.1

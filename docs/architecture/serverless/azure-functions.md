@@ -4,12 +4,12 @@ description: Azure Functions proporciona funcionalidades sin servidor mediante v
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/06/2020
-ms.openlocfilehash: 7625b2a0dafb90dc1bf2fb7fe680d53b20764c09
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 08e1aaecdee753dc25cca0d6356caaafae1ad510
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171811"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94557121"
 ---
 # <a name="azure-functions"></a>Comprobación de
 

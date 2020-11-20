@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: a3a753ccea45193c57f31453d7318c14f4898864
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247714"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556847"
 ---
 # <a name="lambda-expressions-c-reference"></a>Expresiones lambda (referencia de C#)
 
@@ -56,7 +56,7 @@ Una expresión lambda con una expresión en el lado derecho del operador `=>` se
 (input-parameters) => expression
 ```
 
-El cuerpo de una expresión lambda puede constar de una llamada al método. Sin embargo, si crea [árboles de expresión](../../programming-guide/concepts/expression-trees/index.md) que se evalúan fuera del contexto de Common Language Runtime de .NET, como en SQL Server, no debe utilizar llamadas a métodos en expresiones lambda. Los métodos no tendrán ningún significado fuera del contexto de .NET Common Language Runtime.
+El cuerpo de una expresión lambda puede constar de una llamada al método. Pero si crea [árboles de expresión](../../programming-guide/concepts/expression-trees/index.md) que se evalúan fuera del contexto de Common Language Runtime (CLR) de .NET, como en SQL Server, no debe usar llamadas a métodos en expresiones lambda. Los métodos no tendrán ningún significado fuera del contexto de Common Language Runtime (CLR) de .NET.
 
 ## <a name="statement-lambdas"></a>Lambdas de instrucción
 

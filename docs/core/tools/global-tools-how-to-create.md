@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: Creación de una herramienta de .NET Core'
-description: Descubra cómo crear una herramienta de .NET Core. La herramienta es una aplicación de consola que se instala mediante la CLI de .NET Core.
+title: 'Tutorial: Creación de una herramienta de .NET'
+description: Obtenga información sobre cómo crear una herramienta de .NET. Una herramienta es una aplicación de consola que se instala mediante la CLI de .NET.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: c1c17368d8efdece73f5312899553bacf884cfb3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062787"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633783"
 ---
-# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>Tutorial: Creación de una herramienta de .NET Core mediante la CLI de .NET Core
+# <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: Creación de una herramienta de .NET mediante la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-En este tutorial se explica cómo crear y empaquetar una herramienta en .NET Core. La CLI de .NET Core permite crear una aplicación de consola como una herramienta, que otros usuarios pueden instalar y ejecutar. Las herramientas de .NET Core son paquetes de NuGet que se instalan desde la CLI de .NET Core. Para obtener más información sobre las herramientas, vea [Información general sobre las herramientas de .NET Core](global-tools.md).
+En este tutorial se explica cómo crear y empaquetar una herramienta de .NET. La CLI de .NET permite crear una aplicación de consola como una herramienta, que otros usuarios pueden instalar y ejecutar. Las herramientas de .NET son paquetes NuGet que se instalan desde la CLI de .NET. Para obtener más información sobre las herramientas, vea [Información general sobre las herramientas de .NET](global-tools.md).
 
 La herramienta que se va a crear es una aplicación de consola que toma un mensaje como entrada y muestra el mensaje junto con líneas de texto que crean la imagen de un robot.
 
@@ -191,7 +191,7 @@ Antes de que pueda empaquetar y distribuir la aplicación como una herramienta, 
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

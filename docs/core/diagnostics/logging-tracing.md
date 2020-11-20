@@ -2,12 +2,12 @@
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 33c78ecc839b552267ad43dd00b7d627e756a939
-ms.sourcegitcommit: e078b7540a8293ca1b604c9c0da1ff1506f0170b
+ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91997703"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94439929"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -53,11 +53,12 @@ Las siguientes API están más orientadas a eventos. En lugar de registrar caden
   - EventSource es la API de seguimiento de .NET Core de raíz principal.
   - Disponible en todas las versiones .NET Standard.
   - Solo permite el seguimiento de objetos serializables.
-  - Escribe en los [clientes de escucha de evento](xref:System.Diagnostics.Tracing.EventListener) adjuntados.
-  - .NET Core proporciona clientes de escucha para:
+  - Se puede consumir durante el proceso por medio de cualquier instancia de [EventListener](xref:System.Diagnostics.Tracing.EventListener) que se haya configurado para consumir el objeto EventSource.
+  - Se puede consumir fuera de proceso mediante lo siguiente:
     - EventPipe de .NET Core en todas las plataformas
     - [Seguimiento de eventos para Windows (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Marco de seguimiento de LTTng para Linux](https://lttng.org/)
+      - Tutorial: [Recopilación de un seguimiento de LTTng con PerfCollect](trace-perfcollect-lttng.md).
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Se incluye en .NET Core y como un [paquete NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) para .NET Framework.

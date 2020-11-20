@@ -1,33 +1,34 @@
 ---
-title: 'Instalación de .NET Core en SLES: .NET Core'
-description: En este artículo se muestran las diversas maneras de instalar el SDK de .NET Core y .NET Core Runtime en SLES.
+title: 'Instalación de .NET en SLES: .NET'
+description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en SLES.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 8f64efcc8206b47855871104e5b6914570c06da0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: 558574116aac2a3c755481069641e81a435a2a43
+ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619421"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94506886"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>Instalación del SDK o de .NET Core Runtime en SLES
+# <a name="install-the-net-sdk-or-the-net-runtime-on-sles"></a>Instalación del SDK y el entorno de ejecución de .NET en SLES
 
-.NET Core es compatible con SLES. En este artículo se describe cómo instalar .NET Core en SLES.
+.NET es compatible con SLES. En este artículo se describe cómo instalar .NET en SLES.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="supported-distributions"></a>Distribuciones admitidas
 
-En la tabla siguiente se muestra una lista de las versiones de .NET Core compatibles actualmente en SLES 12 SP 2 y SLES 15. Estas versiones siguen siendo compatibles hasta que la versión de [.NET Core llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o ya no se admita la versión de SLES.
+En la tabla siguiente se muestra una lista de las versiones de .NET compatibles actualmente en SLES 12 SP2 y SLES 15. Estas versiones siguen siendo compatibles hasta que la versión de [.NET llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o ya no se admita la versión de SLES.
 
-- Una ✔️ indica que todavía se admite la versión de SLES o de .NET Core.
-- Una ❌ indica que la versión de SLES o de .NET Core no se admite en esa versión de SLES.
-- Cuando una versión de SLES y una versión de .NET Core tienen una ✔️, se admite esa combinación de sistema operativo y .NET.
+- El símbolo ✔️ indica que todavía se admite la versión de SLES o de .NET.
+- El símbolo ❌ indica que la versión de SLES o de .NET no se admite en esa versión de SLES.
+- Si una versión de SLES y una versión de .NET tienen un símbolo ✔️, esa combinación de sistema operativo y .NET se admite.
 
-| SLES                   | .NET Core 2.1 | .NET Core 3.1 | Versión preliminar de .NET 5 (solo instalación manual) |
+| SLES                   | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |------------------------|---------------|---------------|----------------|
-| ✔️ [15](#sles-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
-| ✔️ [12 SP2](#sles-12-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ✔️ [15](#sles-15-)     | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [12 SP2](#sles-12-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
 
 Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas siguen estando publicadas:
 
@@ -47,17 +48,17 @@ Las siguientes versiones de .NET Core ya no se admiten. aunque sus descargas sig
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
 ```
 
-Actualmente, el paquete de instalación del repositorio de Microsoft de SLES 15 instala el archivo *microsoft-prod.repo* en el directorio incorrecto, lo que impide que zypper pueda encontrar los paquetes de .NET Core. Para corregir este problema, cree un symlink en el directorio apropiado.
+Actualmente, el paquete de instalación del repositorio de Microsoft de SLES 15 instala el archivo *microsoft-prod.repo* en el directorio incorrecto, lo que impide que zypper pueda encontrar los paquetes de .NET. Para corregir este problema, cree un symlink en el directorio apropiado.
 
 ```bash
 sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="sles-12-"></a>SLES 12 ✔️
 
-.NET Core necesita SP2 como mínimo para la familia SLES 12.
+.NET necesita SP2 como mínimo para la familia SLES 12.
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -65,11 +66,11 @@ sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 ```
 
-[!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
+[!INCLUDE [linux-zyp-install-50](includes/linux-install-50-zyp.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>Solución de problemas del administrador de paquetes
 
-En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET Core.
+En esta sección se proporciona información sobre los errores comunes que puede obtener al usar el administrador de paquetes para instalar .NET.
 
 ### <a name="failed-to-fetch"></a>No se pudo capturar el elemento
 
@@ -77,7 +78,7 @@ En esta sección se proporciona información sobre los errores comunes que puede
 
 ## <a name="dependencies"></a>Dependencias
 
-Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
+Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Pero si instala manualmente .NET o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
 
 - krb5
 - libicu
@@ -87,7 +88,7 @@ Si la versión de OpenSSL del entorno de tiempo de ejecución de destino es 1.1 
 
 Para obtener más información sobre las dependencias, vea [Aplicaciones de Linux independientes](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
-En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.Drawing.Common*, también se necesitará la dependencia siguiente:
+En el caso de las aplicaciones de .NET en las que se usa el ensamblado *System.Drawing.Common*, también se necesitará la dependencia siguiente:
 
 - [libgdiplus (versión 6.0.1 o posterior)](https://www.mono-project.com/docs/gui/libgdiplus/)
 
@@ -104,4 +105,4 @@ En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.D
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Tutorial: Creación de una aplicación de consola con el SDK de .NET Core mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: Creación de una aplicación de consola con el SDK de .NET mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)
