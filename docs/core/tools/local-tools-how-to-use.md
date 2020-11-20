@@ -1,51 +1,51 @@
 ---
-title: 'Tutorial: Instalación y uso de herramientas locales de .NET Core'
+title: 'Tutorial: Instalación y uso de herramientas locales de .NET'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta local.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 555497a71d54713e62e54f8f293afdf74ead1743
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062682"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633886"
 ---
-# <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a><span data-ttu-id="246d4-103">Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core</span><span class="sxs-lookup"><span data-stu-id="246d4-103">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>
+# <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a><span data-ttu-id="de980-103">Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET</span><span class="sxs-lookup"><span data-stu-id="de980-103">Tutorial: Install and use a .NET local tool using the .NET CLI</span></span>
 
-<span data-ttu-id="246d4-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="246d4-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
+<span data-ttu-id="de980-104">**Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="de980-104">**This article applies to:** ✔️ .NET Core 3.0 SDK and later versions</span></span>
 
-<span data-ttu-id="246d4-105">En este tutorial se enseña cómo instalar y usar una herramienta local.</span><span class="sxs-lookup"><span data-stu-id="246d4-105">This tutorial teaches you how to install and use a local tool.</span></span> <span data-ttu-id="246d4-106">Usará una herramienta que ha creado en el [primer tutorial de esta serie](global-tools-how-to-create.md).</span><span class="sxs-lookup"><span data-stu-id="246d4-106">You use a tool that you create in the [first tutorial of this series](global-tools-how-to-create.md).</span></span>
+<span data-ttu-id="de980-105">En este tutorial se enseña cómo instalar y usar una herramienta local.</span><span class="sxs-lookup"><span data-stu-id="de980-105">This tutorial teaches you how to install and use a local tool.</span></span> <span data-ttu-id="de980-106">Usará una herramienta que ha creado en el [primer tutorial de esta serie](global-tools-how-to-create.md).</span><span class="sxs-lookup"><span data-stu-id="de980-106">You use a tool that you create in the [first tutorial of this series](global-tools-how-to-create.md).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="246d4-107">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="246d4-107">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="de980-107">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="de980-107">Prerequisites</span></span>
 
-* <span data-ttu-id="246d4-108">Complete el [primer tutorial de esta serie](global-tools-how-to-create.md).</span><span class="sxs-lookup"><span data-stu-id="246d4-108">Complete the [first tutorial of this series](global-tools-how-to-create.md).</span></span>
-* <span data-ttu-id="246d4-109">Instale el entorno de ejecución de .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="246d4-109">Install the .NET Core 2.1 runtime.</span></span>
+* <span data-ttu-id="de980-108">Complete el [primer tutorial de esta serie](global-tools-how-to-create.md).</span><span class="sxs-lookup"><span data-stu-id="de980-108">Complete the [first tutorial of this series](global-tools-how-to-create.md).</span></span>
+* <span data-ttu-id="de980-109">Instale el entorno de ejecución de .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="de980-109">Install the .NET Core 2.1 runtime.</span></span>
 
-  <span data-ttu-id="246d4-110">En este tutorial, instalará y usará una herramienta que tiene como destino .NET Core 2.1, por lo que debe tener ese entorno de ejecución instalado en el equipo.</span><span class="sxs-lookup"><span data-stu-id="246d4-110">For this tutorial you install and use a tool that targets .NET Core 2.1, so you need to have that runtime installed on your machine.</span></span> <span data-ttu-id="246d4-111">Para instalar la versión 2.1 del entorno de ejecución, vaya a la [página de descarga de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) y busque el vínculo de instalación del entorno de ejecución en la columna **Ejecutar aplicaciones: entorno de ejecución**.</span><span class="sxs-lookup"><span data-stu-id="246d4-111">To install the 2.1 runtime, go to the [.NET Core 2.1 download page](https://dotnet.microsoft.com/download/dotnet-core/2.1) and find the runtime installation link in the **Run apps - Runtime** column.</span></span>
+  <span data-ttu-id="de980-110">En este tutorial, instalará y usará una herramienta que tiene como destino .NET Core 2.1, por lo que debe tener ese entorno de ejecución instalado en el equipo.</span><span class="sxs-lookup"><span data-stu-id="de980-110">For this tutorial you install and use a tool that targets .NET Core 2.1, so you need to have that runtime installed on your machine.</span></span> <span data-ttu-id="de980-111">Para instalar la versión 2.1 del entorno de ejecución, vaya a la [página de descarga de .NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1) y busque el vínculo de instalación del entorno de ejecución en la columna **Ejecutar aplicaciones: entorno de ejecución**.</span><span class="sxs-lookup"><span data-stu-id="de980-111">To install the 2.1 runtime, go to the [.NET Core 2.1 download page](https://dotnet.microsoft.com/download/dotnet-core/2.1) and find the runtime installation link in the **Run apps - Runtime** column.</span></span>
 
-## <a name="create-a-manifest-file"></a><span data-ttu-id="246d4-112">Crear un archivo de manifiesto</span><span class="sxs-lookup"><span data-stu-id="246d4-112">Create a manifest file</span></span>
+## <a name="create-a-manifest-file"></a><span data-ttu-id="de980-112">Crear un archivo de manifiesto</span><span class="sxs-lookup"><span data-stu-id="de980-112">Create a manifest file</span></span>
 
-<span data-ttu-id="246d4-113">Para instalar una herramienta solo para el acceso local (del directorio y los subdirectorios actuales), debe agregarse a un archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="246d4-113">To install a tool for local access only (for the current directory and subdirectories), it has to be added to a manifest file.</span></span>
+<span data-ttu-id="de980-113">Para instalar una herramienta solo para el acceso local (del directorio y los subdirectorios actuales), debe agregarse a un archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="de980-113">To install a tool for local access only (for the current directory and subdirectories), it has to be added to a manifest file.</span></span>
 
-<span data-ttu-id="246d4-114">Desde la carpeta *microsoft.botsay*, suba un nivel hasta la carpeta *repository*:</span><span class="sxs-lookup"><span data-stu-id="246d4-114">From the *microsoft.botsay* folder, navigate up one level to the *repository* folder:</span></span>
+<span data-ttu-id="de980-114">Desde la carpeta *microsoft.botsay*, suba un nivel hasta la carpeta *repository*:</span><span class="sxs-lookup"><span data-stu-id="de980-114">From the *microsoft.botsay* folder, navigate up one level to the *repository* folder:</span></span>
 
 ```console
 cd ..
 ```
 
-<span data-ttu-id="246d4-115">Cree un archivo de manifiesto; para ello, ejecute el comando [dotnet new](dotnet-new.md):</span><span class="sxs-lookup"><span data-stu-id="246d4-115">Create a manifest file by running the [dotnet new](dotnet-new.md) command:</span></span>
+<span data-ttu-id="de980-115">Cree un archivo de manifiesto; para ello, ejecute el comando [dotnet new](dotnet-new.md):</span><span class="sxs-lookup"><span data-stu-id="de980-115">Create a manifest file by running the [dotnet new](dotnet-new.md) command:</span></span>
 
 ```dotnetcli
 dotnet new tool-manifest
 ```
 
-<span data-ttu-id="246d4-116">En la salida se indica que el archivo se ha creado correctamente.</span><span class="sxs-lookup"><span data-stu-id="246d4-116">The output indicates successful creation of the file.</span></span>
+<span data-ttu-id="de980-116">En la salida se indica que el archivo se ha creado correctamente.</span><span class="sxs-lookup"><span data-stu-id="de980-116">The output indicates successful creation of the file.</span></span>
 
 ```console
 The template "Dotnet local tool manifest file" was created successfully.
 ```
 
-<span data-ttu-id="246d4-117">El archivo *.config/dotnet-tools.json* aún no contiene ninguna herramienta:</span><span class="sxs-lookup"><span data-stu-id="246d4-117">The *.config/dotnet-tools.json* file has no tools in it yet:</span></span>
+<span data-ttu-id="de980-117">El archivo *.config/dotnet-tools.json* aún no contiene ninguna herramienta:</span><span class="sxs-lookup"><span data-stu-id="de980-117">The *.config/dotnet-tools.json* file has no tools in it yet:</span></span>
 
 ```json
 {
@@ -55,19 +55,19 @@ The template "Dotnet local tool manifest file" was created successfully.
 }
 ```
 
-<span data-ttu-id="246d4-118">Las herramientas enumeradas en un archivo de manifiesto están disponibles en el directorio y los subdirectorios actuales.</span><span class="sxs-lookup"><span data-stu-id="246d4-118">The tools listed in a manifest file are available to the current directory and subdirectories.</span></span> <span data-ttu-id="246d4-119">El directorio actual es el que contiene el directorio *.config* con el archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="246d4-119">The current directory is the one that contains the *.config* directory with the manifest file.</span></span>
+<span data-ttu-id="de980-118">Las herramientas enumeradas en un archivo de manifiesto están disponibles en el directorio y los subdirectorios actuales.</span><span class="sxs-lookup"><span data-stu-id="de980-118">The tools listed in a manifest file are available to the current directory and subdirectories.</span></span> <span data-ttu-id="de980-119">El directorio actual es el que contiene el directorio *.config* con el archivo de manifiesto.</span><span class="sxs-lookup"><span data-stu-id="de980-119">The current directory is the one that contains the *.config* directory with the manifest file.</span></span>
 
-<span data-ttu-id="246d4-120">Si se usa un comando de la CLI que hace referencia a una herramienta local, el SDK busca un archivo de manifiesto en el directorio actual y los directorios principales.</span><span class="sxs-lookup"><span data-stu-id="246d4-120">When you use a CLI command that refers to a local tool, the SDK searches for a manifest file in the current directory and parent directories.</span></span> <span data-ttu-id="246d4-121">Si encuentra un archivo de manifiesto, pero el archivo no incluye la herramienta a la que se hace referencia, continúa con la búsqueda en los directorios principales.</span><span class="sxs-lookup"><span data-stu-id="246d4-121">If it finds a manifest file, but the file doesn't include the referenced tool, it continues the search up through parent directories.</span></span> <span data-ttu-id="246d4-122">La búsqueda finaliza cuando encuentra la herramienta a la que se hace referencia o un archivo de manifiesto con `isRoot` establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="246d4-122">The search ends when it finds the referenced tool or it finds a manifest file with `isRoot` set to `true`.</span></span>
+<span data-ttu-id="de980-120">Si se usa un comando de la CLI que hace referencia a una herramienta local, el SDK busca un archivo de manifiesto en el directorio actual y los directorios principales.</span><span class="sxs-lookup"><span data-stu-id="de980-120">When you use a CLI command that refers to a local tool, the SDK searches for a manifest file in the current directory and parent directories.</span></span> <span data-ttu-id="de980-121">Si encuentra un archivo de manifiesto, pero el archivo no incluye la herramienta a la que se hace referencia, continúa con la búsqueda en los directorios principales.</span><span class="sxs-lookup"><span data-stu-id="de980-121">If it finds a manifest file, but the file doesn't include the referenced tool, it continues the search up through parent directories.</span></span> <span data-ttu-id="de980-122">La búsqueda finaliza cuando encuentra la herramienta a la que se hace referencia o un archivo de manifiesto con `isRoot` establecido en `true`.</span><span class="sxs-lookup"><span data-stu-id="de980-122">The search ends when it finds the referenced tool or it finds a manifest file with `isRoot` set to `true`.</span></span>
 
-## <a name="install-botsay-as-a-local-tool"></a><span data-ttu-id="246d4-123">Instalación de botsay como una herramienta local</span><span class="sxs-lookup"><span data-stu-id="246d4-123">Install botsay as a local tool</span></span>
+## <a name="install-botsay-as-a-local-tool"></a><span data-ttu-id="de980-123">Instalación de botsay como una herramienta local</span><span class="sxs-lookup"><span data-stu-id="de980-123">Install botsay as a local tool</span></span>
 
-<span data-ttu-id="246d4-124">Instale la herramienta desde el paquete que ha creado en el primer tutorial:</span><span class="sxs-lookup"><span data-stu-id="246d4-124">Install the tool from the package that you created in the first tutorial:</span></span>
+<span data-ttu-id="de980-124">Instale la herramienta desde el paquete que ha creado en el primer tutorial:</span><span class="sxs-lookup"><span data-stu-id="de980-124">Install the tool from the package that you created in the first tutorial:</span></span>
 
 ```dotnetcli
 dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
-<span data-ttu-id="246d4-125">Este comando agrega la herramienta al archivo de manifiesto que ha creado en el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="246d4-125">This command adds the tool to the manifest file that you created in the preceding step.</span></span> <span data-ttu-id="246d4-126">En la salida del comando se muestra el archivo de manifiesto en el que se encuentra la herramienta que acaba de instalar:</span><span class="sxs-lookup"><span data-stu-id="246d4-126">The command output shows which manifest file the newly installed tool is in:</span></span>
+<span data-ttu-id="de980-125">Este comando agrega la herramienta al archivo de manifiesto que ha creado en el paso anterior.</span><span class="sxs-lookup"><span data-stu-id="de980-125">This command adds the tool to the manifest file that you created in the preceding step.</span></span> <span data-ttu-id="de980-126">En la salida del comando se muestra el archivo de manifiesto en el que se encuentra la herramienta que acaba de instalar:</span><span class="sxs-lookup"><span data-stu-id="de980-126">The command output shows which manifest file the newly installed tool is in:</span></span>
 
  ```console
  You can invoke the tool from this directory using the following command:
@@ -76,7 +76,7 @@ dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
-<span data-ttu-id="246d4-127">Ahora, el archivo *.config/dotnet-tools.json* tiene una herramienta:</span><span class="sxs-lookup"><span data-stu-id="246d4-127">The *.config/dotnet-tools.json* file now has one tool:</span></span>
+<span data-ttu-id="de980-127">Ahora, el archivo *.config/dotnet-tools.json* tiene una herramienta:</span><span class="sxs-lookup"><span data-stu-id="de980-127">The *.config/dotnet-tools.json* file now has one tool:</span></span>
 
 ```json
 {
@@ -93,19 +93,19 @@ dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 }
 ```
 
-## <a name="use-the-tool"></a><span data-ttu-id="246d4-128">Usar la herramienta</span><span class="sxs-lookup"><span data-stu-id="246d4-128">Use the tool</span></span>
+## <a name="use-the-tool"></a><span data-ttu-id="de980-128">Usar la herramienta</span><span class="sxs-lookup"><span data-stu-id="de980-128">Use the tool</span></span>
 
-<span data-ttu-id="246d4-129">Para invocar la herramienta, ejecute el comando `dotnet tool run` desde la carpeta *repository*:</span><span class="sxs-lookup"><span data-stu-id="246d4-129">Invoke the tool by running the `dotnet tool run` command from the *repository* folder:</span></span>
+<span data-ttu-id="de980-129">Para invocar la herramienta, ejecute el comando `dotnet tool run` desde la carpeta *repository*:</span><span class="sxs-lookup"><span data-stu-id="de980-129">Invoke the tool by running the `dotnet tool run` command from the *repository* folder:</span></span>
 
 ```dotnetcli
 dotnet tool run botsay hello from the bot
 ```
 
-## <a name="restore-a-local-tool-installed-by-others"></a><span data-ttu-id="246d4-130">Restauración de una herramienta local instalada por otros usuarios</span><span class="sxs-lookup"><span data-stu-id="246d4-130">Restore a local tool installed by others</span></span>
+## <a name="restore-a-local-tool-installed-by-others"></a><span data-ttu-id="de980-130">Restauración de una herramienta local instalada por otros usuarios</span><span class="sxs-lookup"><span data-stu-id="de980-130">Restore a local tool installed by others</span></span>
 
-<span data-ttu-id="246d4-131">Normalmente, una herramienta local se instala en el directorio raíz del repositorio.</span><span class="sxs-lookup"><span data-stu-id="246d4-131">You typically install a local tool in the root directory of the repository.</span></span> <span data-ttu-id="246d4-132">Después de insertar el archivo de manifiesto en el repositorio, otros desarrolladores pueden obtener el archivo de manifiesto más reciente.</span><span class="sxs-lookup"><span data-stu-id="246d4-132">After you check in the manifest file to the repository, other developers can get the latest manifest file.</span></span> <span data-ttu-id="246d4-133">Para instalar todas las herramientas enumeradas en el archivo de manifiesto, pueden ejecutar un único comando `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="246d4-133">To install all of the tools listed in the manifest file, they can run a single `dotnet tool restore` command.</span></span>
+<span data-ttu-id="de980-131">Normalmente, una herramienta local se instala en el directorio raíz del repositorio.</span><span class="sxs-lookup"><span data-stu-id="de980-131">You typically install a local tool in the root directory of the repository.</span></span> <span data-ttu-id="de980-132">Después de insertar el archivo de manifiesto en el repositorio, otros desarrolladores pueden obtener el archivo de manifiesto más reciente.</span><span class="sxs-lookup"><span data-stu-id="de980-132">After you check in the manifest file to the repository, other developers can get the latest manifest file.</span></span> <span data-ttu-id="de980-133">Para instalar todas las herramientas enumeradas en el archivo de manifiesto, pueden ejecutar un único comando `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="de980-133">To install all of the tools listed in the manifest file, they can run a single `dotnet tool restore` command.</span></span>
 
-1. <span data-ttu-id="246d4-134">Abra el archivo *.config/dotnet-tools.json* y reemplace el contenido con el siguiente código JSON:</span><span class="sxs-lookup"><span data-stu-id="246d4-134">Open the *.config/dotnet-tools.json* file, and replace the contents with the following JSON:</span></span>
+1. <span data-ttu-id="de980-134">Abra el archivo *.config/dotnet-tools.json* y reemplace el contenido con el siguiente código JSON:</span><span class="sxs-lookup"><span data-stu-id="de980-134">Open the *.config/dotnet-tools.json* file, and replace the contents with the following JSON:</span></span>
 
    ```json
    {
@@ -128,19 +128,19 @@ dotnet tool run botsay hello from the bot
    }
    ```
 
-1. <span data-ttu-id="246d4-135">Reemplace `<name>` con el nombre que ha usado para crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="246d4-135">Replace `<name>` with the name you used to create the project.</span></span>
+1. <span data-ttu-id="de980-135">Reemplace `<name>` con el nombre que ha usado para crear el proyecto.</span><span class="sxs-lookup"><span data-stu-id="de980-135">Replace `<name>` with the name you used to create the project.</span></span>
 
-1. <span data-ttu-id="246d4-136">Guarde los cambios.</span><span class="sxs-lookup"><span data-stu-id="246d4-136">Save your changes.</span></span>
+1. <span data-ttu-id="de980-136">Guarde los cambios.</span><span class="sxs-lookup"><span data-stu-id="de980-136">Save your changes.</span></span>
 
-   <span data-ttu-id="246d4-137">Cambiar esto tiene el mismo resultado que obtener la versión más reciente del repositorio después de que otra persona haya instalado el paquete `dotnetsay` en el directorio del proyecto.</span><span class="sxs-lookup"><span data-stu-id="246d4-137">Making this change is the same as getting the latest version from the repository after someone else installed the package `dotnetsay` for the project directory.</span></span>
+   <span data-ttu-id="de980-137">Cambiar esto tiene el mismo resultado que obtener la versión más reciente del repositorio después de que otra persona haya instalado el paquete `dotnetsay` en el directorio del proyecto.</span><span class="sxs-lookup"><span data-stu-id="de980-137">Making this change is the same as getting the latest version from the repository after someone else installed the package `dotnetsay` for the project directory.</span></span>
 
-1. <span data-ttu-id="246d4-138">Ejecute el comando `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="246d4-138">Run the `dotnet tool restore` command.</span></span>
+1. <span data-ttu-id="de980-138">Ejecute el comando `dotnet tool restore`.</span><span class="sxs-lookup"><span data-stu-id="de980-138">Run the `dotnet tool restore` command.</span></span>
 
    ```dotnetcli
    dotnet tool restore
    ```
 
-   <span data-ttu-id="246d4-139">El comando genera una salida como la del siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="246d4-139">The command produces output like the following example:</span></span>
+   <span data-ttu-id="de980-139">El comando genera una salida como la del siguiente ejemplo:</span><span class="sxs-lookup"><span data-stu-id="de980-139">The command produces output like the following example:</span></span>
 
    ```console
    Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
@@ -148,13 +148,13 @@ dotnet tool run botsay hello from the bot
    Restore was successful.
    ```
 
-1. <span data-ttu-id="246d4-140">Compruebe que las herramientas están disponibles:</span><span class="sxs-lookup"><span data-stu-id="246d4-140">Verify that the tools are available:</span></span>
+1. <span data-ttu-id="de980-140">Compruebe que las herramientas están disponibles:</span><span class="sxs-lookup"><span data-stu-id="de980-140">Verify that the tools are available:</span></span>
 
    ```dotnetcli
    dotnet tool list
    ```
 
-   <span data-ttu-id="246d4-141">La salida es una lista de paquetes y comandos, similar al ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="246d4-141">The output is a list of packages and commands, similar to the following example:</span></span>
+   <span data-ttu-id="de980-141">La salida es una lista de paquetes y comandos, similar al ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="de980-141">The output is a list of packages and commands, similar to the following example:</span></span>
 
    ```console
    Package Id      Version      Commands       Manifest
@@ -163,33 +163,33 @@ dotnet tool run botsay hello from the bot
    dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
-1. <span data-ttu-id="246d4-142">Pruebe las herramientas:</span><span class="sxs-lookup"><span data-stu-id="246d4-142">Test the tools:</span></span>
+1. <span data-ttu-id="de980-142">Pruebe las herramientas:</span><span class="sxs-lookup"><span data-stu-id="de980-142">Test the tools:</span></span>
 
    ```dotnetcli
    dotnet tool run dotnetsay hello from dotnetsay
    dotnet tool run botsay hello from botsay
    ```
 
-## <a name="update-a-local-tool"></a><span data-ttu-id="246d4-143">Actualización de una herramienta local</span><span class="sxs-lookup"><span data-stu-id="246d4-143">Update a local tool</span></span>
+## <a name="update-a-local-tool"></a><span data-ttu-id="de980-143">Actualización de una herramienta local</span><span class="sxs-lookup"><span data-stu-id="de980-143">Update a local tool</span></span>
 
-<span data-ttu-id="246d4-144">La versión instalada de la herramienta local `dotnetsay` es 2.1.3.</span><span class="sxs-lookup"><span data-stu-id="246d4-144">The installed version of local tool `dotnetsay` is 2.1.3.</span></span>  <span data-ttu-id="246d4-145">La versión más reciente es 2.1.4.</span><span class="sxs-lookup"><span data-stu-id="246d4-145">The latest version is 2.1.4.</span></span> <span data-ttu-id="246d4-146">Use el comando [dotnet tool update](dotnet-tool-update.md) para actualizar la herramienta a la versión más reciente.</span><span class="sxs-lookup"><span data-stu-id="246d4-146">Use the [dotnet tool update](dotnet-tool-update.md) command to update the tool to the latest version.</span></span>
+<span data-ttu-id="de980-144">La versión instalada de la herramienta local `dotnetsay` es 2.1.3.</span><span class="sxs-lookup"><span data-stu-id="de980-144">The installed version of local tool `dotnetsay` is 2.1.3.</span></span>  <span data-ttu-id="de980-145">La versión más reciente es 2.1.4.</span><span class="sxs-lookup"><span data-stu-id="de980-145">The latest version is 2.1.4.</span></span> <span data-ttu-id="de980-146">Use el comando [dotnet tool update](dotnet-tool-update.md) para actualizar la herramienta a la versión más reciente.</span><span class="sxs-lookup"><span data-stu-id="de980-146">Use the [dotnet tool update](dotnet-tool-update.md) command to update the tool to the latest version.</span></span>
 
 ```dotnetcli
 dotnet tool update dotnetsay
 ```
 
-<span data-ttu-id="246d4-147">En la salida se indica el nuevo número de versión:</span><span class="sxs-lookup"><span data-stu-id="246d4-147">The output indicates the new version number:</span></span>
+<span data-ttu-id="de980-147">En la salida se indica el nuevo número de versión:</span><span class="sxs-lookup"><span data-stu-id="de980-147">The output indicates the new version number:</span></span>
 
 ```console
 Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
-<span data-ttu-id="246d4-148">El comando update busca el primer archivo de manifiesto que contiene el identificador del paquete y lo actualiza.</span><span class="sxs-lookup"><span data-stu-id="246d4-148">The update command finds the first manifest file that contains the package ID and updates it.</span></span> <span data-ttu-id="246d4-149">Si no hay ningún identificador del paquete en ningún archivo de manifiesto que esté en el ámbito de la búsqueda, el SDK agrega una nueva entrada al archivo de manifiesto más cercano.</span><span class="sxs-lookup"><span data-stu-id="246d4-149">If there is no such package ID in any manifest file that is in the scope of the search, the SDK adds a new entry to the closest manifest file.</span></span> <span data-ttu-id="246d4-150">El ámbito de búsqueda va hacia los directorios principales hasta que se encuentra un archivo de manifiesto con `isRoot = true`.</span><span class="sxs-lookup"><span data-stu-id="246d4-150">The search scope is up through parent directories until a manifest file with `isRoot = true` is found.</span></span>
+<span data-ttu-id="de980-148">El comando update busca el primer archivo de manifiesto que contiene el identificador del paquete y lo actualiza.</span><span class="sxs-lookup"><span data-stu-id="de980-148">The update command finds the first manifest file that contains the package ID and updates it.</span></span> <span data-ttu-id="de980-149">Si no hay ningún identificador del paquete en ningún archivo de manifiesto que esté en el ámbito de la búsqueda, el SDK agrega una nueva entrada al archivo de manifiesto más cercano.</span><span class="sxs-lookup"><span data-stu-id="de980-149">If there is no such package ID in any manifest file that is in the scope of the search, the SDK adds a new entry to the closest manifest file.</span></span> <span data-ttu-id="de980-150">El ámbito de búsqueda va hacia los directorios principales hasta que se encuentra un archivo de manifiesto con `isRoot = true`.</span><span class="sxs-lookup"><span data-stu-id="de980-150">The search scope is up through parent directories until a manifest file with `isRoot = true` is found.</span></span>
 
-## <a name="remove-local-tools"></a><span data-ttu-id="246d4-151">Eliminación de las herramientas locales</span><span class="sxs-lookup"><span data-stu-id="246d4-151">Remove local tools</span></span>
+## <a name="remove-local-tools"></a><span data-ttu-id="de980-151">Eliminación de las herramientas locales</span><span class="sxs-lookup"><span data-stu-id="de980-151">Remove local tools</span></span>
 
-<span data-ttu-id="246d4-152">Ejecute el comando [dotnet tool uninstall](dotnet-tool-uninstall.md) para quitar las herramientas instaladas:</span><span class="sxs-lookup"><span data-stu-id="246d4-152">Remove the installed tools by running the [dotnet tool uninstall](dotnet-tool-uninstall.md) command:</span></span>
+<span data-ttu-id="de980-152">Ejecute el comando [dotnet tool uninstall](dotnet-tool-uninstall.md) para quitar las herramientas instaladas:</span><span class="sxs-lookup"><span data-stu-id="de980-152">Remove the installed tools by running the [dotnet tool uninstall](dotnet-tool-uninstall.md) command:</span></span>
 
 ```dotnetcli
 dotnet tool uninstall microsoft.botsay
@@ -199,10 +199,10 @@ dotnet tool uninstall microsoft.botsay
 dotnet tool uninstall dotnetsay
 ```
 
-## <a name="troubleshoot"></a><span data-ttu-id="246d4-153">Solucionar problemas</span><span class="sxs-lookup"><span data-stu-id="246d4-153">Troubleshoot</span></span>
+## <a name="troubleshoot"></a><span data-ttu-id="de980-153">Solucionar problemas</span><span class="sxs-lookup"><span data-stu-id="de980-153">Troubleshoot</span></span>
 
-<span data-ttu-id="246d4-154">Si recibe un mensaje de error al seguir el tutorial, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).</span><span class="sxs-lookup"><span data-stu-id="246d4-154">If you get an error message while following the tutorial, see [Troubleshoot .NET Core tool usage issues](troubleshoot-usage-issues.md).</span></span>
+<span data-ttu-id="de980-154">Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).</span><span class="sxs-lookup"><span data-stu-id="de980-154">If you get an error message while following the tutorial, see [Troubleshoot .NET tool usage issues](troubleshoot-usage-issues.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="246d4-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="246d4-155">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="de980-155">Vea también</span><span class="sxs-lookup"><span data-stu-id="de980-155">See also</span></span>
 
-<span data-ttu-id="246d4-156">Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="246d4-156">For more information, see [.NET Core tools](global-tools.md)</span></span>
+<span data-ttu-id="de980-156">Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).</span><span class="sxs-lookup"><span data-stu-id="de980-156">For more information, see [.NET Core tools](global-tools.md)</span></span>
