@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: faeb2c14b9c1d93b558c67a42c223702178407c0
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 79c60c8dbc29d8985f3cfb2ffc2436539155c555
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955595"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94440150"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -64,9 +64,7 @@ El valor REG_DWORD de **Release** del Registro representa la versión de .NET F
 
 ### <a name="minimum-version"></a>Versión mínima
 
-Para determinar si existe una versión *mínima* de .NET Framework, use el valor REG_DWORD más bajo de **Release** para esa versión de la tabla anterior.
-
-Por ejemplo, si la aplicación se ejecuta en .NET Framework 4.8 o en una versión posterior, pruebe un valor de REG_DWORD de **Release** que sea *mayor o igual que* 528040.
+Para determinar si hay una versión *mínima* de .NET Framework, busque un valor REG_DWORD de **Release** mayor o igual que el valor correspondiente que se muestra en la tabla siguiente. Por ejemplo, si la aplicación se ejecuta en .NET Framework 4.8 o en una versión posterior, pruebe un valor REG_DWORD de **Release** que sea *mayor o igual que* 528040.
 
 | Versión de .NET Framework | Valor mínimo |
 | ---------------------- | ------------- |

@@ -1,40 +1,40 @@
 ---
-title: 'Instalación de .NET Core en RHEL: .NET Core'
-description: En este artículo se muestran las diversas maneras de instalar el SDK de .NET Core y .NET Core Runtime en RHEL.
+title: 'Instalación de .NET en RHEL: .NET'
+description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en RHEL.
 author: adegeo
 ms.author: adegeo
-ms.date: 06/04/2020
-ms.openlocfilehash: 9e4d0ab86355329b898a82f135b9eeb839eab1cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.date: 11/10/2020
+ms.openlocfilehash: cb03f84cf84557d467f0a067b8d5629a843ec7e3
+ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619458"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94594581"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-rhel"></a>Instalación del SDK de .NET Core o de .NET Core Runtime en RHEL
+# <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>Instalación del SDK y el entorno de ejecución de .NET en RHEL
 
-.NET Core es compatible con RHEL. En este artículo se describe cómo instalar .NET Core en RHEL.
+.NET es compatible con RHEL. En este artículo se describe cómo instalar .NET en RHEL.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>Registro de la suscripción de Red Hat
 
-Para instalar .NET Core desde Red Hat en RHEL, primero debe registrarse con el administrador de suscripciones de Red Hat. Si esto no se ha realizado en el sistema, o si no tiene certeza de ello, vea la [documentación del producto de Red Hat para .NET Core](https://access.redhat.com/documentation/net_core/).
+Para instalar .NET desde Red Hat en RHEL, primero debe registrarse con el administrador de suscripciones de Red Hat. Si esto no se ha realizado en el sistema, o si no tiene certeza de ello, vea la [documentación del producto de Red Hat para .NET](https://access.redhat.com/documentation/net/5.0/).
 
 ## <a name="supported-distributions"></a>Distribuciones admitidas
 
-En la tabla siguiente se muestra una lista de las versiones de .NET Core compatibles actualmente con RHEL 7 y RHEL 8. Estas versiones siguen siendo compatibles hasta que la versión de [.NET Core llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o ya no se admita la versión de RHEL.
+En la tabla siguiente se muestra una lista de las versiones de .NET compatibles actualmente con RHEL 7 y RHEL 8. Estas versiones siguen siendo compatibles hasta que la versión de [.NET llegue al final del soporte técnico](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) o ya no se admita la versión de RHEL.
 
-- Una ✔️ indica que todavía se admite la versión de RHEL o de .NET Core.
-- Una ❌ indica que la versión de RHEL o de .NET Core no se admite en esa versión de RHEL.
-- Cuando una versión de RHEL y una versión de .NET Core tienen una ✔️, se admite esa combinación de sistema operativo y .NET.
+- El símbolo ✔️ indica que todavía se admite la versión de RHEL o de .NET.
+- El símbolo ❌ indica que la versión de RHEL o de .NET no se admite en esa versión de RHEL.
+- Si una versión de RHEL y una versión de .NET tienen un símbolo ✔️, esa combinación de sistema operativo y .NET se admite.
 
-| RHEL                   | .NET Core 2.1 | .NET Core 3.1 | Versión preliminar de .NET 5 (solo instalación manual) |
+| RHEL                     | .NET Core 2.1 | .NET Core 3.1 | .NET 5.0 |
 |--------------------------|---------------|---------------|----------------|
-| ✔️ [8](#rhel-8-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
-| ✔️ [7](#rhel-7-) | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 (versión preliminar) |
+| ✔️ [8](#rhel-8-)        | ✔️ 2.1        | ✔️ 3.1        | ✔️ 5.0 |
+| ✔️ [7](#rhel-7--net-50) | ✔️ 2.1        | ✔️ [3.1](#rhel-7--net-core-31)        | ✔️ [5.0](#rhel-7--net-50) |
 
-Las siguientes versiones de .NET Core ya no se admiten. Las descargas de estas siguen estando publicadas:
+Las versiones siguientes de .NET ya no se admiten. Las descargas de estas siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -42,15 +42,34 @@ Las siguientes versiones de .NET Core ya no se admiten. Las descargas de estas s
 
 ## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
 
-Consulte la [documentación de Red Hat para .NET Core](https://access.redhat.com/documentation/net_core/) sobre los pasos necesarios para instalar otras versiones de .NET Core.
+Consulte la [documentación de Red Hat para .NET](https://access.redhat.com/documentation/net/5.0/) sobre los pasos necesarios para instalar otras versiones de .NET.
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-.NET Core se incluye en los repositorios de AppStream para RHEL 8.
+> [!TIP]
+> .NET 5.0 todavía no está disponible en los repositorios de AppStream, pero .NET Core 3.1 sí. Para instalar .NET Core 3.1, use el comando `dnf install` con el paquete adecuado, como `aspnetcore-runtime-3.1` o `dotnet-sdk-3.1`. Las siguientes instrucciones son para .NET 5.0.
 
-[!INCLUDE [linux-dnf-install-31](includes/linux-install-31-dnf.md)]
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
-## <a name="rhel-7-"></a>RHEL 7 ✔️
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
+
+## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
+
+[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+
+```bash
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+```
+
+[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+
+## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -112,4 +131,4 @@ Una alternativa al entorno de ejecución de ASP.NET Core es instalar la instanci
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Tutorial: Creación de una aplicación de consola con el SDK de .NET Core mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)
+- [Tutorial: Creación de una aplicación de consola con el SDK de .NET mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)

@@ -1,21 +1,21 @@
 ---
-title: Herramientas de .NET Core
-description: Cómo instalar, usar, actualizar y quitar las herramientas de .NET Core. Abarca las herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales.
+title: Herramientas .NET
+description: Procedimiento para instalar, usar, actualizar y quitar herramientas de .NET. Abarca las herramientas globales, herramientas de ruta de acceso de herramientas y herramientas locales.
 author: KathleenDollard
 ms.topic: how-to
 ms.date: 02/12/2020
-ms.openlocfilehash: 08277ed791036201d1dfa30c21799db1c21a924e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 3669ed17d58542aab0435ccea22700c82ba8ea26
+ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598131"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94556906"
 ---
-# <a name="how-to-manage-net-core-tools"></a>Cómo administrar las herramientas de .NET Core
+# <a name="how-to-manage-net-tools"></a>Procedimiento para administrar herramientas de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
-Una herramienta de .NET Core es un paquete especial de NuGet que contiene una aplicación de consola. Una herramienta se puede instalar en el equipo de las siguientes maneras:
+Una herramienta de .NET es un paquete NuGet especial que contiene una aplicación de consola. Una herramienta se puede instalar en el equipo de las siguientes maneras:
 
 * Como herramienta global.
 
@@ -29,24 +29,25 @@ Una herramienta de .NET Core es un paquete especial de NuGet que contiene una a
 
   Los archivos binarios de la herramienta se instalan en un directorio predeterminado. Puede invocar la herramienta desde el directorio de instalación o con cualquiera de sus subdirectorios. Distintos directorios pueden usar versiones diferentes de la misma herramienta.
   
-  La CLI de .NET usa archivos de manifiesto para realizar un seguimiento de las herramientas que se instalan como locales en un directorio. Cuando el archivo de manifiesto se guarda en el directorio raíz de un repositorio de código fuente, un colaborador puede clonar el repositorio e invocar un solo comando de CLI de .NET Core que instale todas las herramientas enumeradas en los archivos de manifiesto.
+  La CLI de .NET usa archivos de manifiesto para realizar un seguimiento de las herramientas que se instalan como locales en un directorio. Cuando el archivo de manifiesto se guarda en el directorio raíz de un repositorio de código fuente, un colaborador puede clonar el repositorio e invocar un solo comando de la CLI de .NET que instale todas las herramientas enumeradas en los archivos de manifiesto.
 
 > [!IMPORTANT]
-> Las herramientas de .NET Core se ejecutan con plena confianza. No instale una herramienta de .NET Core a menos que confíe en el autor.
+> Las herramientas de .NET se ejecutan con plena confianza. No instale una herramienta de .NET a menos que confíe en el autor.
 
 ## <a name="find-a-tool"></a>Búsqueda de una herramienta
 
-Actualmente, .NET Core no tiene una característica de búsqueda de herramientas. Estas son algunas formas de encontrar herramientas:
+Estas son algunas formas de encontrar herramientas:
 
+* Use el comando [dotnet tool search](dotnet-tool-search.md) para buscar una herramienta que esté publicada en NuGet.org.
 * Busque en el sitio web de [NuGet](https://www.nuget.org) mediante el filtro de tipo de paquete "herramienta .NET". Para más información, vea [Búsqueda y selección de paquetes](/nuget/consume-packages/finding-and-choosing-packages).
 * Consulte la lista de herramientas del repositorio GitHub [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools).
 * Use [ToolGet](https://www.toolget.net/) para buscar herramientas de .NET.
 * Puede ver el código fuente de las herramientas creado por el equipo de ASP.NET Core en el [directorio de herramientas del repositorio de GitHub dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools).
-* Obtenga más información sobre las herramientas de diagnóstico en [herramientas de diagnóstico de dotnet de .NET Core ](../diagnostics/index.md#net-core-diagnostic-global-tools).
+* Obtenga información sobre las herramientas de diagnóstico en [Herramientas de diagnóstico de .NET](../diagnostics/index.md#net-core-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Comprobar el autor y las estadísticas
 
-Dado que las herramientas de .NET Core se ejecutan con plena confianza y las herramientas globales se agregan a la variable de entorno PATH, pueden ser muy eficaces. No descargue herramientas de personas en las que no confíe.
+Como las herramientas de .NET se ejecutan con plena confianza y las herramientas globales se agregan a la variable de entorno PATH, pueden ser muy eficaces. No descargue herramientas de personas en las que no confíe.
 
 Si la herramienta está hospedada en NuGet, busque la herramienta para comprobar el autor y las estadísticas.
 
@@ -92,7 +93,7 @@ En Linux o macOS:
 dotnet tool install dotnetsay --tool-path ~/bin
 ```
 
-El SDK de .NET Core no agrega esta ubicación automáticamente a la variable de entorno PATH. Para [invocar una herramienta de ruta de acceso de herramientas](#invoke-a-tool-path-tool), tiene que asegurarse de que el comando está disponible mediante uno de los métodos siguientes:
+El SDK de .NET no agrega esta ubicación automáticamente a la variable de entorno PATH. Para [invocar una herramienta de ruta de acceso de herramientas](#invoke-a-tool-path-tool), tiene que asegurarse de que el comando está disponible mediante uno de los métodos siguientes:
 
 * Agregue el directorio de instalación a la variable de entorno PATH.
 * Especifique la ruta de acceso completa a la herramienta al invocarla.
@@ -273,10 +274,10 @@ Para obtener instrucciones sobre el uso de la herramienta, escriba uno de los si
 dotnet <command> --help
 ```
 
-Si una herramienta no se puede instalar o ejecutar, consulte [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+Si una herramienta no se puede instalar o ejecutar, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Creación de una herramienta de .NET Core mediante la CLI de .NET Core](global-tools-how-to-create.md)
-- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Tutorial: Creación de una herramienta de .NET mediante la CLI de .NET](global-tools-how-to-create.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET mediante la CLI de .NET](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

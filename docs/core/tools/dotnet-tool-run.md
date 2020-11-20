@@ -2,12 +2,12 @@
 title: Comando dotnet tool run
 description: El comando dotnet tool run invoca una herramienta local.
 ms.date: 02/14/2020
-ms.openlocfilehash: f79c239363e8b3abbd55c54dd1912443e6777fb7
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 116ecb61748a0ca70ed385b279b11b939748f4a8
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463326"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634160"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -49,5 +49,5 @@ El comando `dotnet tool run` busca los archivos de manifiesto de las herramienta
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas de .NET Core](global-tools.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Herramientas de .NET](global-tools.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b70eb44c3d92e03ab4b33f81b87d48c70797cec5
+ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87917025"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441016"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 
@@ -70,7 +70,7 @@ La asignación de memoria desde el montón administrado es más rápida que la a
 
 ### <a name="memory-release"></a>Liberación de memoria
 
-El motor de optimización del recolector de elementos no utilizados determina cuál es el mejor momento para realizar una recolección basándose en las asignaciones realizadas. Cuando el recolector de elementos no utilizados lleva a cabo una recolección, libera la memoria de los objetos que ya no usa la aplicación. Determina qué objetos ya no se usan examinando las *raíces* de la aplicación. Las raíces de una aplicación incluyen campos estáticos, variables locales y parámetros de pila de un subproceso y registros de la CPU. Cada raíz hace referencia a un objeto del montón administrado, o bien se establece en null. El recolector de elementos no utilizados tiene acceso a la lista de raíces activas que el compilador Just-In-Time (JIT) y el runtime mantienen. Con esta lista, el recolector de elementos no utilizados crea un gráfico que contiene todos los objetos que no se pueden alcanzar desde las raíces.
+El motor de optimización del recolector de elementos no utilizados determina cuál es el mejor momento para realizar una recolección basándose en las asignaciones realizadas. Cuando el recolector de elementos no utilizados lleva a cabo una recolección, libera la memoria de los objetos que ya no usa la aplicación. Determina qué objetos ya no se usan examinando las *raíces* de la aplicación. Las raíces de una aplicación incluyen campos estáticos, variables locales en la pila de un subproceso, registros de la CPU, identificadores de recolección de elementos no utilizados y la cola de finalización. Cada raíz hace referencia a un objeto del montón administrado, o bien se establece en null. El recolector de elementos no utilizados puede solicitar estas raíces al resto del entorno de ejecución. Con esta lista, el recolector de elementos no utilizados crea un gráfico que contiene todos los objetos que no se pueden alcanzar desde las raíces.
 
 Los objetos que no están en el gráfico no se pueden alcanzar desde las raíces de la aplicación. El recolector de elementos no utilizados considera elementos no utilizados los objetos inalcanzables y libera la memoria que tienen asignada. Durante una recolección, el recolector de elementos no utilizados examina el montón administrado y busca los bloques de espacio de direcciones que ocupan los objetos que no se pueden alcanzar. Cuando detecta cada uno de los objetos inalcanzables, usa una función de copia de memoria para compactar los objetos alcanzables en la memoria y libera los bloques de espacios de direcciones asignados a los objetos no alcanzables. Una vez que se ha compactado la memoria de los objetos alcanzables, el recolector de elementos no utilizados hace las correcciones de puntero necesarias para que las raíces de la aplicación señalen a los objetos en sus nuevas ubicaciones. También sitúa el puntero del montón administrado después del último objeto alcanzable.
 
@@ -138,7 +138,7 @@ La recolección de elementos no utilizados se produce principalmente con la recl
 
   Los objetos de la generación 2 que sobreviven a una recolección se mantienen en esta generación hasta que en una recolección posterior se determina que no se pueden alcanzar.
   
-  Los objetos del montón de objetos grandes (a veces denominado *generación 3* ) también se recopilan en la generación 2.
+  Los objetos del montón de objetos grandes (a veces denominado *generación 3*) también se recopilan en la generación 2.
 
 Las recolecciones de elementos no utilizados se producen en generaciones concretas según lo permitan las condiciones. La recolección de una generación significa recolectar los objetos de esa generación y de todas las generaciones anteriores. Una recolección de elementos no utilizados de la generación 2 se denomina también recolección de elementos no utilizados completa, porque reclama los objetos de todas las generaciones (es decir, todos los objetos del montón administrado).
 

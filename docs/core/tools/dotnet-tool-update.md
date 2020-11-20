@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet tool update
-description: El comando dotnet tool update actualiza la herramienta de .NET Core en su equipo.
+description: El comando dotnet tool update actualiza la herramienta de .NET en el equipo.
 ms.date: 07/08/2020
-ms.openlocfilehash: a212fbb40af68019c1bc9a63963d960292be6b08
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 18b153e53a6dbcb32e50ae4a7d06a1c2f53d1eb5
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308876"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634082"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -15,7 +15,7 @@ ms.locfileid: "86308876"
 
 ## <a name="name"></a>NOMBRE
 
-`dotnet tool update`: actualiza la [herramienta de .NET Core](global-tools.md) especificada en el equipo.
+`dotnet tool update`: actualiza la [herramienta de .NET](global-tools.md) especificada en el equipo.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -44,7 +44,7 @@ dotnet tool update -h|--help
 
 ## <a name="description"></a>Descripción
 
-El comando `dotnet tool update` permite actualizar las herramientas de .NET Core en su equipo a la versión estable más reciente del paquete. El comando desinstala y vuelve a instalar una herramienta, actualizándola de facto. Para usar el comando, especifique una de las siguientes opciones:
+El comando `dotnet tool update` permite actualizar las herramientas de .NET en el equipo a la versión estable más reciente del paquete. El comando desinstala y vuelve a instalar una herramienta, actualizándola de facto. Para usar el comando, especifique una de las siguientes opciones:
 
 * Para actualizar una herramienta global que se instaló en la ubicación predeterminada, use la opción `--global`.
 * Para actualizar una herramienta global que se instaló en una ubicación personalizada, use la opción `--tool-path`.
@@ -56,7 +56,7 @@ El comando `dotnet tool update` permite actualizar las herramientas de .NET Cor
 
 - **`PACKAGE_ID`**
 
-  Nombre o identificador del paquete de NuGet que contiene la herramienta global de .NET Core que se quiere actualizar. Para conocer el nombre el paquete, use el comando [dotnet tool list](dotnet-tool-list.md).
+  Nombre o identificador del paquete NuGet que contiene la herramienta global de .NET que se va a actualizar. Para conocer el nombre el paquete, use el comando [dotnet tool list](dotnet-tool-list.md).
 
 ## <a name="options"></a>Opciones
 
@@ -144,7 +144,7 @@ El comando `dotnet tool update` permite actualizar las herramientas de .NET Cor
 
 ## <a name="see-also"></a>Vea también
 
-- [Herramientas de .NET Core](global-tools.md)
+- [Herramientas de .NET](global-tools.md)
 - [Versionamiento semántico](https://semver.org)
-- [Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core](global-tools-how-to-use.md)
-- [Tutorial: Instalación y uso de una herramienta local de .NET Core mediante la CLI de .NET Core](local-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta global de .NET mediante la CLI de .NET](global-tools-how-to-use.md)
+- [Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET](local-tools-how-to-use.md)

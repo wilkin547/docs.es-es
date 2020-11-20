@@ -1,19 +1,19 @@
 ---
 title: Scripts de dotnet-install
-description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET Core y el entorno de ejecución compartido.
+description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET y el entorno de ejecución compartido.
 ms.date: 09/22/2020
-ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91078208"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634447"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
 ## <a name="name"></a>NOMBRE
 
-`dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar el SDK de .NET Core y el entorno de ejecución compartido.
+`dotnet-install.ps1` | `dotnet-install.sh`: script usado para instalar el SDK de .NET y el entorno de ejecución compartido.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -48,7 +48,7 @@ El script de bash también lee modificadores de PowerShell, por lo que puede usa
 
 ## <a name="description"></a>Descripción
 
-Los scripts `dotnet-install` realizan una instalación sin derechos administrativos del SDK de .NET Core, que incluye la CLI de .NET Core y el entorno de tiempo de ejecución compartido. Hay dos scripts:
+Los scripts `dotnet-install` realizan una instalación sin derechos administrativos del SDK de .NET, que incluye la CLI de .NET y el entorno de ejecución compartido. Hay dos scripts:
 
 * un script de PowerShell que funciona en Windows;
 * un script de Bash que funciona en Linux y macOS.
@@ -86,13 +86,13 @@ Antes de ejecutar el script, instale las [dependencias](../install/windows.md#de
 
 Puede instalar una versión específica mediante el argumento `-Version|--version`. La versión debe especificarse como un número de versión de tres partes, por ejemplo, `2.1.0`. Si no se especifica la versión, el script instala la versión `latest`.
 
-Los scripts de instalación no actualizan el Registro en Windows. Solo descargan los archivos binarios comprimidos y los copian en una carpeta. Si desea que se actualicen los valores de las claves del Registro, use los instaladores de .NET Core.
+Los scripts de instalación no actualizan el Registro en Windows. Solo descargan los archivos binarios comprimidos y los copian en una carpeta. Si quiere que se actualicen los valores de las claves del Registro, use los instaladores de .NET.
 
 ## <a name="options"></a>Opciones
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  Arquitectura de los archivos binarios de .NET Core para instalar. Los valores posibles son `<auto>`, `amd64`, `x64`, `x86`, `arm64` y `arm`. El valor predeterminado es `<auto>`, que representa la arquitectura de SO que se ejecuta en ese momento.
+  Arquitectura de los archivos binarios de .NET para instalar. Los valores posibles son `<auto>`, `amd64`, `x64`, `x86`, `arm64` y `arm`. El valor predeterminado es `<auto>`, que representa la arquitectura de SO que se ejecuta en ese momento.
 
 - **`-AzureFeed|--azure-feed`**
 
@@ -111,7 +111,7 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 
 - **`-DryRun|--dry-run`**
 
-  Si se establece, el script no realizará la instalación. En su lugar, mostrará qué línea de comandos se va a usar para instalar de manera coherente la versión solicitada actualmente de la CLI de .NET Core. Por ejemplo, si especifica la versión `latest`, se muestra un vínculo con la versión específica, de manera que este comando puede usarse de manera determinista en un script de compilación. También se muestra la ubicación de los archivos binarios si prefiere instalarla o descargarla por su cuenta.
+  Si se establece, el script no realizará la instalación. En su lugar, muestra qué línea de comandos se va a usar para instalar de manera coherente la versión solicitada actualmente de la CLI de .NET. Por ejemplo, si especifica la versión `latest`, se muestra un vínculo con la versión específica, de manera que este comando puede usarse de manera determinista en un script de compilación. También se muestra la ubicación de los archivos binarios si prefiere instalarla o descargarla por su cuenta.
 
 - **`-FeedCredential|--feed-credential`**
 
@@ -135,7 +135,7 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 
 - **`-NoPath|--no-path`**
 
-  Si se establece, la carpeta de instalación no se exporta a la ruta de acceso para la sesión actual. De manera predeterminada, el script modifica la variable de entorno PATH, que hace que la CLI esté disponible inmediatamente después de la instalación.
+  Si se establece, la carpeta de instalación no se exporta a la ruta de acceso para la sesión actual. De manera predeterminada, el script modifica la variable de entorno PATH, que hace que la CLI de .NET esté disponible inmediatamente después de la instalación.
 
 - **`-ProxyAddress`**
 
@@ -240,7 +240,7 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- Obtenga el script e instale ejemplos de una línea para la CLI de .NET Core:
+- Obtenga el script e instale ejemplos de una línea para la CLI de .NET:
 
   Windows:
 
@@ -257,5 +257,5 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
 
 ## <a name="see-also"></a>Vea también
 
-- [Versiones de .NET Core](https://github.com/dotnet/core/releases)
-- [Archivo de descarga del SDK y .NET Core Runtime](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [Versiones de .NET](https://github.com/dotnet/core/releases)
+- [Archivo de descarga del SDK y el entorno de ejecución de .NET](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

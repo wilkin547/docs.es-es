@@ -1,16 +1,16 @@
 ---
-title: 'Tutorial: Instalación y uso de una herramienta global de .NET Core'
+title: 'Tutorial: Instalación y uso de una herramienta global de .NET'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta global.
 ms.topic: tutorial
 ms.date: 02/12/2020
-ms.openlocfilehash: 28e34a4e5a0344e314c5d23228c1af5839db991c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 01b773516da92fb16fb0f67fc6617e0c70d17c9d
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062774"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94633900"
 ---
-# <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>Tutorial: Instalación y uso de una herramienta global de .NET Core mediante la CLI de .NET Core
+# <a name="tutorial-install-and-use-a-net-global-tool-using-the-net-cli"></a>Tutorial: Instalación y uso de una herramienta global de .NET mediante la CLI de .NET
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 2.1 y versiones posteriores
 
@@ -28,9 +28,9 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
    dotnet tool install --global --add-source ./nupkg microsoft.botsay
    ```
 
-   El parámetro `--global` indica a la CLI de .NET Core que instale los archivos binarios de la herramienta en una ubicación predeterminada que se agrega automáticamente a la variable de entorno PATH.
+   El parámetro `--global` indica a la CLI de .NET que instale los archivos binarios de la herramienta en una ubicación predeterminada que se agrega de forma automática a la variable de entorno PATH.
 
-   El parámetro `--add-source` indica a la CLI de .NET Core que use temporalmente el directorio *./nupkg* como una fuente de origen adicional para los paquetes NuGet. Ha asignado un nombre único al paquete para asegurarse de que solo se encontrará en el directorio *./nupkg*, no en el sitio de Nuget.org.
+   El parámetro `--add-source` indica a la CLI de .NET que use temporalmente el directorio *./nupkg* como una fuente de origen adicional para los paquetes NuGet. Ha asignado un nombre único al paquete para asegurarse de que solo se encontrará en el directorio *./nupkg*, no en el sitio de Nuget.org.
 
    En la salida se muestra el comando que se ha usado para llamar a la herramienta y la versión instalada:
 
@@ -70,7 +70,7 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
    dotnet tool install --tool-path ~/bin --add-source ./nupkg microsoft.botsay
    ```
 
-   El parámetro `--tool-path` indica a la CLI de .NET Core que instale los archivos binarios de la herramienta en la ubicación especificada. Si el directorio no existe, se crea. Este directorio no se agrega automáticamente a la variable de entorno PATH.
+   El parámetro `--tool-path` indica a la CLI de .NET que instale los archivos binarios de la herramienta en la ubicación especificada. Si el directorio no existe, se crea. Este directorio no se agrega automáticamente a la variable de entorno PATH.
 
    En la salida se muestra el comando que se ha usado para llamar a la herramienta y la versión instalada:
 
@@ -109,7 +109,7 @@ En este tutorial se enseña cómo instalar y usar una herramienta global. Usará
 
 ## <a name="troubleshoot"></a>Solucionar problemas
 
-Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
+Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas de uso de herramientas de .NET Core](troubleshoot-usage-issues.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

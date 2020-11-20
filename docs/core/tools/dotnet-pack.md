@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet
-description: El comando dotnet pack crea paquetes de NuGet para el proyecto de .NET Core.
+description: El comando dotnet pack crea paquetes NuGet para el proyecto de .NET.
 ms.date: 04/28/2020
-ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
+ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537839"
+ms.lasthandoff: 11/15/2020
+ms.locfileid: "94634238"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -188,4 +188,4 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
   
   - [Empaquetado mediante un archivo .nuspec](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Puntos de extensión avanzados para crear un paquete personalizado](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Propiedades globales](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [Propiedades globales](/visualstudio/msbuild/msbuild-properties#global-properties)
