@@ -2,12 +2,12 @@
 title: Documentación de XML
 description: 'Obtenga información sobre la compatibilidad de F # para generar documentación a partir de comentarios.'
 ms.date: 09/15/2020
-ms.openlocfilehash: a5bec20f27c23caee951cda2dc5d17808f69d384
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679408"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982484"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
@@ -57,10 +57,10 @@ Si usa etiquetas XML, en la tabla siguiente se describen las etiquetas externas 
 |---------------------------------------------|-----------|
 | `<summary>`**_negrita_**`</summary>`           | Especifica que el *texto* es una breve descripción del elemento de programa. La descripción suele ser una o dos oraciones.|
 | `<remarks>`**_negrita_**`</remarks>`           | Especifica que el *texto* contiene información adicional sobre el elemento de programa.|
-| `<param name="`**_nombre_** `">` de ** _Descripción_ de**`</param>` | Especifica el nombre y la descripción de un parámetro de función o método.|
-| `<typeparam name="`**_nombre_** `">` de ** _Descripción_ de**`</typeparam>` | Especifica el nombre y la descripción de un parámetro de tipo.|
+| `<param name="`**_nombre_** `">` de **_Descripción_ de**`</param>` | Especifica el nombre y la descripción de un parámetro de función o método.|
+| `<typeparam name="`**_nombre_** `">` de **_Descripción_ de**`</typeparam>` | Especifica el nombre y la descripción de un parámetro de tipo.|
 | `<returns>`**_negrita_**`</returns>`           | Especifica que el *texto* describe el valor devuelto de una función o un método.|
-| `<exception cref="`**_tipo_** `">` de ** _Descripción_ de**`</exception>` |Especifica el tipo de excepción que se puede generar y las circunstancias en las que se produce.|
+| `<exception cref="`**_tipo_** `">` de **_Descripción_ de**`</exception>` |Especifica el tipo de excepción que se puede generar y las circunstancias en las que se produce.|
 | `<seealso cref="`**_referencia_**`"/>`      | Especifica un vínculo ver también a la documentación de otro tipo. La *referencia* es el nombre tal y como aparece en el archivo de documentación XML. Vea también los vínculos normalmente aparecen en la parte inferior de una página de documentación.|
 
 En la tabla siguiente se describen las etiquetas para su uso dentro de las secciones de Descripción:
@@ -72,7 +72,7 @@ En la tabla siguiente se describen las etiquetas para su uso dentro de las secci
 | `<paramref name="`**_Name_**`"/>`         | Especifica una referencia a un parámetro en el mismo comentario de documentación.|
 | `<typeparamref name="`**_Name_**`"/>`     | Especifica una referencia a un parámetro de tipo en el mismo comentario de documentación.|
 | `<c>`**_negrita_**`</c>`                     | Especifica que el *texto* es código insertado. Los generadores de documentación pueden usar esta etiqueta para mostrar texto en una fuente que sea adecuada para el código.|
-| `<see cref="`**_referencia_** `">` de ** _texto_ de**`</see>` | Especifica un vínculo insertado a otro elemento de programa. La *referencia* es el nombre tal y como aparece en el archivo de documentación XML. El *texto* es el texto que se muestra en el vínculo.|
+| `<see cref="`**_referencia_** `">` de **_texto_ de**`</see>` | Especifica un vínculo insertado a otro elemento de programa. La *referencia* es el nombre tal y como aparece en el archivo de documentación XML. El *texto* es el texto que se muestra en el vínculo.|
 
 ### <a name="user-defined-tags"></a>Etiquetas definidas por el usuario
 
@@ -128,7 +128,7 @@ Se recomienda documentar código por diversos motivos. A continuación se muestr
 
 - El texto de la documentación se debe escribir con frases completas que terminen en punto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comentarios de documentación XML de C# &#40;guía de programación de C&#35;&#41;](../../csharp/programming-guide/xmldoc/index.md).
 - [Referencia del lenguaje F#](index.md)

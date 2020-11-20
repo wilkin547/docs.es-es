@@ -2,12 +2,12 @@
 title: 'Administración del rendimiento de las aplicaciones: gRPC para desarrolladores de WCF'
 description: Registro, métricas y seguimiento de ASP.NET Core aplicaciones gRPC.
 ms.date: 09/02/2019
-ms.openlocfilehash: bccb5ba92e2dc8fa2def4dc192b0ca58b332861a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8a13d1c4df95768e55c90ac491150bfc78ec2bab
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91165915"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982347"
 ---
 # <a name="application-performance-management"></a>Administración del rendimiento de las aplicaciones
 
@@ -67,7 +67,7 @@ La mayoría de las plataformas de métricas admiten los siguientes tipos:
 | Medidor       | Mide la velocidad a la que se produce un evento en varios intervalos de tiempo. |
 | Temporizador       | Realiza un seguimiento de la duración de los eventos y la velocidad a la que se produce, almacenado como histograma. |
 
-Mediante el uso de *métricas*de la aplicación, `IMetrics` se puede obtener una interfaz a través de la inserción de dependencias y se usa para registrar cualquiera de estas métricas para un servicio de gRPC. En el ejemplo siguiente se muestra cómo contar el número de `Get` solicitudes realizadas a lo largo del tiempo:
+Mediante el uso de *métricas* de la aplicación, `IMetrics` se puede obtener una interfaz a través de la inserción de dependencias y se usa para registrar cualquiera de estas métricas para un servicio de gRPC. En el ejemplo siguiente se muestra cómo contar el número de `Get` solicitudes realizadas a lo largo del tiempo:
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -112,7 +112,7 @@ La naturaleza numérica de los datos de métricas significa que es ideal para im
 
 La traza distribuida es un desarrollo relativamente reciente en la supervisión, que ha surgido del creciente uso de microservicios y arquitecturas distribuidas. Una única solicitud desde un explorador cliente, una aplicación o un dispositivo se puede dividir en muchos pasos y subsolicitudes, e implicar el uso de muchos servicios a través de una red. Esto hace que sea difícil correlacionar los mensajes de registro y las métricas con la solicitud específica que los desencadenó. El seguimiento distribuido aplica identificadores a las solicitudes, lo que permite correlacionar los registros y las métricas con una operación determinada. Esto es similar al [seguimiento de un extremo a otro de WCF](../../framework/wcf/diagnostics/tracing/end-to-end-tracing.md), pero se aplica en varias plataformas.
 
-La traza distribuida ha crecido rápidamente en popularidad y está empezando a normalizarse. Cloud Native Computing Foundation creó el [estándar de seguimiento abierto](https://opentracing.io), que intenta proporcionar bibliotecas independientes del proveedor para trabajar con back-ends como [Jaeger](https://www.jaegertracing.io/) y [APM elástico](https://www.elastic.co/products/apm). Al mismo tiempo, Google creó el [proyecto OpenCensus](https://opencensus.io/) para resolver el mismo conjunto de problemas. Estos dos proyectos se combinan en un nuevo proyecto, [OpenTelemetry](https://opentelemetry.io), que pretende ser el estándar del sector del futuro.
+La traza distribuida ha crecido rápidamente en popularidad y está empezando a normalizarse. Cloud Native Computing Foundation crea el [estándar de seguimiento abierto](https://opentracing.io), intentando proporcionar bibliotecas independientes del proveedor para trabajar con back-ends como [Jaeger](https://www.jaegertracing.io/) y [APM elástico](https://www.elastic.co/products/apm). Al mismo tiempo, Google creó el [proyecto OpenCensus](https://opencensus.io/) para resolver el mismo conjunto de problemas. Estos dos proyectos se combinan en un nuevo proyecto, [OpenTelemetry](https://opentelemetry.io), que pretende ser el estándar del sector del futuro.
 
 ### <a name="how-distributed-tracing-works"></a>Cómo funciona el seguimiento distribuido
 
@@ -155,7 +155,7 @@ public class Startup
 
 El paquete OpenTracing es una capa de abstracción y, como tal, requiere una implementación específica para el back-end. Las implementaciones de la API de OpenTracing están disponibles para los siguientes back-ends de código abierto.
 
-| Nombre | Paquete | Sitio web |
+| Nombre | Paquete | El sitio web |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | APM elástica | [Elástico. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

@@ -1,13 +1,13 @@
 ---
 title: Resumen
-description: Un resumen de las conclusiones principales del libro electrónico guía de arquitectura de aplicaciones .NET nativas en la nube para Azure.
+description: Un resumen de las conclusiones principales del libro electrónico de arquitectura de aplicaciones .NET de diseño Cloud-Native para Azure.
 ms.date: 05/13/2020
-ms.openlocfilehash: b1a195c0c081565c57f5aac2e234411bb904ca08
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e0325b1bb6961c865e904779496950031db8db0b
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613660"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982360"
 ---
 # <a name="summary"></a>Resumen
 
@@ -15,9 +15,9 @@ En Resumen, estas son algunas conclusiones importantes de esta guía:
 
 - **Cloud-Native es el** diseño de aplicaciones modernas que adoptan un cambio rápido, gran escala y resistencia, en entornos modernos y dinámicos como nubes públicas, privadas y híbridas.
 
-- ** [Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF)** es un consorcio de código abierto influyente de más de 300 grandes corporaciones. Es responsable de impulsar la adopción de la informática nativa en la nube a través de pilas de tecnología y en la nube.
+- **[Cloud Native Computing Foundation](https://www.cncf.io/) (CNCF)** es un consorcio de código abierto influyente de más de 300 grandes corporaciones. Es responsable de impulsar la adopción de la informática nativa en la nube a través de pilas de tecnología y en la nube.
 
-- Las **instrucciones de CNCF** recomiendan que las aplicaciones nativas de la nube adopten seis pilares importantes, como se muestra en la figura 11-1:
+- Las **instrucciones de CNCF** recomiendan que las aplicaciones nativas de la nube adopten seis pilares importantes, tal como se muestra en la figura 11-1:
 
   ![Pilares básicos de la nube nativos](./media/cloud-native-foundational-pillars.png)
 
