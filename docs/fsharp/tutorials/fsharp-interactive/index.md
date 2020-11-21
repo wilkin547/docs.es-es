@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo se utiliza F# interactivo (dotnet 
 ms.date: 10/31/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 89570a54ecebe625a1612e4b97b01c3693e4707c
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: 6f865483762e92964c8baa51498f07974c109691
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400871"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982510"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -76,7 +76,7 @@ let getOddSquares xs =
     |> List.filter (fun x -> x % 2 <> 0)
     |> List.map (fun x -> x * x)
 
-getOddSquares [1..10]
+printfn "%A" (getOddSquares [1..10])
 ```
 
 Cuando este archivo se crea en el equipo, puede ejecutarlo con `dotnet fsi` y ver la salida directamente en la ventana de terminal:
@@ -237,7 +237,7 @@ Al compilar código en F# interactivo, tanto si se ejecuta de forma interactiva 
 
 Para ejecutar F# Interactive a través de Visual Studio, puede hacer clic en el botón **F# Interactive** de la barra de herramientas o presionar las teclas **Ctrl+Alt+F**. De este modo, se abrirá la ventana interactiva, que es una ventana de herramientas en la que se ejecuta una sesión de F# Interactive. También puede seleccionar el código que quiere ejecutar en la ventana interactiva y presionar la combinación de teclas **Alt+ENTRAR**. F# Interactive se inicia en la ventana de herramientas con la etiqueta **F# Interactive**. Cuando use esta combinación de teclas, asegúrese de que la ventana del editor tiene el foco.
 
-Tanto si usa la consola como si usa Visual Studio, aparece un símbolo del sistema y el intérprete espera una entrada por parte del usuario. Puede escribir código tal y como lo haría en un archivo de código fuente. Para compilar y ejecutar el código, escriba dos signos de punto y coma ( **;;** ) para finalizar una o varias líneas de entrada.
+Tanto si usa la consola como si usa Visual Studio, aparece un símbolo del sistema y el intérprete espera una entrada por parte del usuario. Puede escribir código tal y como lo haría en un archivo de código fuente. Para compilar y ejecutar el código, escriba dos signos de punto y coma (**;;**) para finalizar una o varias líneas de entrada.
 
 F# Interactive intenta compilar el código y, si lo logra, lo ejecuta e imprime en pantalla la signatura de los tipos y valores que compiló. Si se producen errores, el intérprete imprime en pantalla los mensajes de error.
 
@@ -245,7 +245,7 @@ El código escrito en una misma sesión tiene acceso a cualquier construcción e
 
 Cuando F# Interactive se ejecuta en Visual Studio, lo hace de manera independiente del proyecto, de modo que, por ejemplo, no se pueden usar en F# Interactive las construcciones definidas en el proyecto a menos que se copie el código de dichas funciones en la ventana interactiva.
 
-Puede controlar los argumentos (opciones) de la línea de comandos de F# interactivo ajustando la configuración. En el menú **Herramientas** , seleccione **Opciones...** y, después, expanda **Herramientas de F#**. Las dos configuraciones que puede cambiar son las opciones de F# Interactive y la opción **F# Interactive de 64 bits** , que solo es relevante si ejecuta F# Interactive en un equipo de 64 bits. Este valor determina si desea ejecutar la versión de 64 bits dedicada de **fsi.exe** o **fsianycpu.exe** , que usa la arquitectura del equipo para determinar si debe ejecutarse como un proceso de 32 o 64 bits.
+Puede controlar los argumentos (opciones) de la línea de comandos de F# interactivo ajustando la configuración. En el menú **Herramientas**, seleccione **Opciones...** y, después, expanda **Herramientas de F#**. Las dos configuraciones que puede cambiar son las opciones de F# Interactive y la opción **F# Interactive de 64 bits**, que solo es relevante si ejecuta F# Interactive en un equipo de 64 bits. Este valor determina si desea ejecutar la versión de 64 bits dedicada de **fsi.exe** o **fsianycpu.exe**, que usa la arquitectura del equipo para determinar si debe ejecutarse como un proceso de 32 o 64 bits.
 
 ## <a name="related-articles"></a>Artículos relacionados
 
