@@ -2,12 +2,12 @@
 title: Documentación de XML
 description: 'Obtenga información sobre la compatibilidad de F # para generar documentación a partir de comentarios.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 8720d66204333eb21dc998655467f9a5745a33f3
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982484"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099014"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
@@ -33,9 +33,9 @@ Hay dos maneras de escribir comentarios de documentación XML: con y sin etiquet
 
 ## <a name="comments-without-xml-tags"></a>Comentarios sin etiquetas XML
 
-Si un `///` comentario no comienza con un `<` , se toma todo el texto del comentario como la documentación de Resumen de la construcción de código que sigue inmediatamente. Utilice este método cuando desee escribir solo un breve resumen de cada construcción.
+Si un `///` comentario no comienza con `<` , se toma el texto del comentario completo como la documentación de Resumen de la construcción de código que sigue inmediatamente. Utilice este método cuando desee escribir solo un breve resumen de cada construcción.
 
-El comentario se codifica en XML durante la preparación de la documentación, por lo que los caracteres como `<` `>` y `&` no tienen por qué ser de escape. Si no especifica explícitamente una etiqueta de Resumen, no debe especificar otras etiquetas, como **param** o **Return** Tags.
+El comentario se codifica en XML durante la preparación de la documentación, por lo que `<` `>` `&` no es necesario usar caracteres de escape como, y. Si no especifica explícitamente una etiqueta de Resumen, no debe especificar otras etiquetas, como **param** o **Return** Tags.
 
 En el ejemplo siguiente se muestra el método alternativo, sin etiquetas XML. En este ejemplo, todo el texto del comentario se considera un resumen.
 
@@ -86,7 +86,7 @@ Cuando `--warnon:3390` está habilitado, el compilador comprueba la sintaxis del
 
 ## <a name="documenting-f-constructs"></a>Documentar construcciones de F #
 
-Las construcciones de F #, como los módulos, los miembros, los casos de Unión y los campos de registro, se documentan con un `///` Comentario inmediatamente antes de su declaración.
+Las construcciones de F #, como los módulos, los miembros, los casos de Unión y los campos de registro, se documentan mediante un `///` Comentario inmediatamente antes de su declaración.
 Si es necesario, los constructores implícitos de clases se documentan asignando un `///` comentario antes de la lista de argumentos. Por ejemplo:
 
 ```fsharp
@@ -105,7 +105,7 @@ Algunas características de la documentación XML en C# y otros lenguajes .NET n
 
 - En F #, las referencias cruzadas deben usar la firma XML completa del símbolo correspondiente, por ejemplo `cref="T:System.Console"` .
   El compilador de F # no comprueba las referencias cruzadas simples de estilo C#, como, `cref="Console"` que no se han elaborado a firmas XML completas y que estos elementos no se comprueban. Algunas herramientas de documentación pueden permitir el uso de estas referencias cruzadas en el procesamiento posterior, pero se deben usar las firmas completas.
-  
+
 - El `<include>` `<inheritdoc>` compilador de F # no admite las etiquetas. No se produce ningún error si se usan, pero simplemente se copian en el archivo de documentación generado sin afectar de otro modo a la documentación generada.
 
 - El compilador de F # no comprueba las referencias cruzadas, incluso cuando `-warnon:3390` se usa.
@@ -124,11 +124,11 @@ Se recomienda documentar código por diversos motivos. A continuación se muestr
 
 - Por motivos de coherencia, se deben documentar todos los tipos públicamente visibles y sus miembros. Si debe hacerlo, hágalo en todos los elementos.
 
-- Como mínimo, los módulos, los tipos y sus miembros deben tener un `///` comentario o una `<summary>` etiqueta sin formato. Esto se mostrará en una ventana de información sobre herramientas de finalización automática en herramientas de edición de F #.
+- Como mínimo, los módulos, los tipos y sus miembros deben tener una `///` etiqueta o comentario sin formato `<summary>` . Esto se mostrará en una ventana de información sobre herramientas de finalización automática en herramientas de edición de F #.
 
 - El texto de la documentación se debe escribir con frases completas que terminen en punto.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Comentarios de documentación XML de C# &#40;guía de programación de C&#35;&#41;](../../csharp/programming-guide/xmldoc/index.md).
 - [Referencia del lenguaje F#](index.md)

@@ -2,12 +2,12 @@
 title: 'Novedades de F # 5,0-Guía de F #'
 description: 'Obtenga información general sobre las nuevas características disponibles en F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 0b25d48a97792e780515226170151f3bbf2f2301
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: 29b5b110379dec476d7c0aa51540984acb25f26e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982471"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098702"
 ---
 # <a name="whats-new-in-f-50"></a>Novedades de F# 5.0
 
@@ -285,13 +285,13 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-La restricción generada por la `inline` función se conserva en el código qutoation. `negate`Ahora se puede evaluar el formulario quotated de la función.
+La restricción generada por la `inline` función se conserva en la expresión de código delimitada. `negate`Ahora se puede evaluar el formulario entrecomillado de la función.
 
 Esta característica implementa [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).
 
 ## <a name="applicative-computation-expressions"></a>Expresiones de cálculo de procesamiento
 
-Las [expresiones de cálculo (CES)](../language-reference/computation-expressions.md) se usan hoy para modelar "cálculos contextuales", o en una terminología más descriptiva de la programación funcional, cálculos de Monad.
+Las [expresiones de cálculo (CES)](../language-reference/computation-expressions.md) se usan hoy en día para modelar "cálculos contextuales", o en una terminología más descriptiva de la programación funcional, cálculos de Monad.
 
 F # 5 introduce CEs de procesamiento, que ofrecen un modelo de cálculo diferente. Los CEs de la capacidad de proceso permiten cálculos más eficientes siempre y cuando cada cálculo sea independiente, y los resultados se acumulan al final. Cuando los cálculos son independientes entre sí, también son trivialmente pueden paralelizar, lo que permite a los autores de CE escribir bibliotecas más eficaces. Esta ventaja se aplica a una restricción, aunque: no se permiten los cálculos que dependen de valores calculados previamente.
 
@@ -340,7 +340,7 @@ Si es un autor de la biblioteca que expone CEs en su biblioteca hoy, hay algunas
 
 Esta característica implementa [F # RFC FS-1063](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1063-support-letbang-andbang-for-applicative-functors.md).
 
-## <a name="interfaces-can-be-implemeneted-at-different-generic-instantiations"></a>Las interfaces se pueden implemeneted en distintas instancias genéricas
+## <a name="interfaces-can-be-implemented-at-different-generic-instantiations"></a>Las interfaces se pueden implementar en distintas instancias genéricas
 
 Ahora puede implementar la misma interfaz en distintas instancias genéricas:
 

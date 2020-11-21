@@ -1,25 +1,25 @@
 ---
 title: Segmentos
 description: 'Obtenga información sobre cómo usar los segmentos para los tipos de datos de F # existentes y cómo definir sus propios segmentos para otros tipos de datos.'
-ms.date: 12/23/2019
-ms.openlocfilehash: a3920ad9e1b205b506aaee92c4606bcebf94feba
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.date: 11/20/2020
+ms.openlocfilehash: 9c072648ed46ae29871f2be5cc64b493f6a9b857
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557084"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098962"
 ---
 # <a name="slices"></a>Segmentos
 
-En F #, un segmento es un subconjunto de cualquier tipo de datos que tenga un `GetSlice` método en su definición o en una [extensión de tipo](type-extensions.md)en el ámbito. Se usa normalmente con matrices y listas de F #. En este artículo se explica cómo tomar los segmentos de los tipos de F # existentes y cómo definir sus propios segmentos.
+En este artículo se explica cómo tomar los segmentos de los tipos de F # existentes y cómo definir sus propios segmentos.
 
-Los segmentos son similares a los [indizadores](./members/indexed-properties.md), pero en lugar de producir un valor único de la estructura de datos subyacente, producen varios.
+En F #, un segmento es un subconjunto de cualquier tipo de datos.  Los segmentos son similares a los [indizadores](./members/indexed-properties.md), pero en lugar de producir un valor único de la estructura de datos subyacente, producen varios. Los segmentos utilizan la `..` Sintaxis del operador para seleccionar el intervalo de índices especificados en un tipo de datos. Para obtener más información, vea el [artículo referencia de expresiones de bucle](./loops-for-in-expression.md).
 
-F # tiene actualmente compatibilidad intrínseca con la segmentación de cadenas, listas, matrices y matrices 2D.
+F # tiene actualmente compatibilidad intrínseca con la segmentación de cadenas, listas, matrices y matrices multidimensionales (2D, 3D, 4D). La segmentación se usa normalmente con matrices y listas de F #. Puede Agregar la segmentación a los tipos de datos personalizados con el `GetSlice` método en la definición de tipo o en una extensión de [tipo](type-extensions.md)en el ámbito.
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a>Segmentación básica con listas y matrices de F #
+## <a name="slicing-f-lists-and-arrays"></a>Segmentar listas y matrices de F #
 
-Los tipos de datos más comunes que se segmentan son listas y matrices de F #. En el ejemplo siguiente se muestra cómo hacerlo con listas:
+Los tipos de datos más comunes que se segmentan son listas y matrices de F #.  En el ejemplo siguiente se muestra cómo segmentar listas:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -89,8 +89,6 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-La biblioteca básica de F # no define actualmente `GetSlice` para las matrices 3D. Si desea segmentar matrices 3D u otras matrices de más dimensiones, defina el `GetSlice` miembro usted mismo.
-
 ## <a name="defining-slices-for-other-data-structures"></a>Definir segmentos para otras estructuras de datos
 
 La biblioteca básica de F # define los segmentos para un conjunto limitado de tipos. Si desea definir segmentos para más tipos de datos, puede hacerlo en la propia definición de tipo o en una extensión de tipo.
@@ -151,9 +149,9 @@ printfn "%A" xs.[2..5] // Includes the 5th index
 
 ## <a name="built-in-f-empty-slices"></a>Segmentos vacíos de F # integrados
 
-Las listas, matrices, secuencias, cadenas, matrices 2D, matrices 3D y 4D matrices de F # producirán un segmento vacío si la sintaxis podría producir un segmento que no existe.
+Las listas de F #, matrices, secuencias, cadenas, matrices multidimensionales (2D, 3D, 4D) producirán un segmento vacío si la sintaxis podría producir un segmento que no existe.
 
-Tenga en cuenta lo siguiente.
+Considere el ejemplo siguiente:
 
 ```fsharp
 let l = [ 1..10 ]
@@ -165,7 +163,8 @@ let emptyArray = a.[-2..(-1)]
 let emptyString = s.[-2..(-1)]
 ```
 
-Los desarrolladores de C# pueden esperar que se produzca una excepción en lugar de producir un segmento vacío. Se trata de una decisión de diseño que se basa en el hecho de que las colecciones vacías se componen en F #. Una lista vacía de F # puede estar formada por otra lista de F #, una cadena vacía se puede Agregar a una cadena existente, etc. Puede ser común tomar los segmentos en función de los valores pasados como parámetros y ser tolerante de los límites fuera de los límites mediante la generación de una colección vacía que se ajusta a la naturaleza de composición del código de F #.
+> [!IMPORTANT]
+> Los desarrolladores de C# pueden esperar que se produzca una excepción en lugar de producir un segmento vacío. Se trata de una decisión de diseño que se basa en el hecho de que las colecciones vacías se componen en F #. Una lista vacía de F # puede estar formada por otra lista de F #, una cadena vacía se puede Agregar a una cadena existente, etc. Puede ser común tomar los segmentos en función de los valores pasados como parámetros y tolerar los límites fuera de los límites > mediante la generación de una colección vacía se ajusta a la naturaleza de composición del código de F #.
 
 ## <a name="fixed-index-slices-for-3d-and-4d-arrays"></a>Segmentos de índice fijo para matrices 3D y 4D
 
@@ -174,12 +173,14 @@ En el caso de las matrices F # 3D y 4D, puede "corregir" un índice determinado 
 Para ilustrar esto, considere la siguiente matriz 3D:
 
 *z = 0*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 0 | 1 |
 | **1** | 2 | 3 |
 
 *z = 1*
+
 | x\y   | 0 | 1 |
 |-------|---|---|
 | **0** | 4 | 5 |
@@ -203,8 +204,8 @@ for z in 0..dim-1 do
 m.[*, 0, 1]
 ```
 
-La última línea corrige las `y` `z` lenguas y de la matriz 3D y toma el resto de los `x` valores que corresponden a la matriz.
+La última línea corrige los `y` `z` índices e de la matriz 3D y toma el resto de los `x` valores que corresponden a la matriz.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Propiedades indizadas](./members/indexed-properties.md)
