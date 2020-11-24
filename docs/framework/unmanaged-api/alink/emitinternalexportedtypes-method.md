@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 28c8b00d-2c14-40b4-aed5-a1db0e2428eb
 topic_type:
 - apiref
-ms.openlocfilehash: d4b7064b0339825c29e4001bc35c4a604098468a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: faf1438f56cd49b235ffbb18a0154e3e20c202b9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684972"
 ---
-# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="cf3ed-102">EmitInternalExportedTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="cf3ed-102">EmitInternalExportedTypes Method</span></span>
-<span data-ttu-id="cf3ed-103">Emite tipos agregados al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="cf3ed-103">Emits types added to the assembly.</span></span> <span data-ttu-id="cf3ed-104">Llame a este método después de que se hayan agregado los tipos internos conocidos.</span><span class="sxs-lookup"><span data-stu-id="cf3ed-104">Call this method after known internal types have been added.</span></span>  
+# <a name="emitinternalexportedtypes-method"></a><span data-ttu-id="8adeb-102">EmitInternalExportedTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="8adeb-102">EmitInternalExportedTypes Method</span></span>
+
+<span data-ttu-id="8adeb-103">Emite tipos agregados al ensamblado.</span><span class="sxs-lookup"><span data-stu-id="8adeb-103">Emits types added to the assembly.</span></span> <span data-ttu-id="8adeb-104">Llame a este método después de que se hayan agregado los tipos internos conocidos.</span><span class="sxs-lookup"><span data-stu-id="8adeb-104">Call this method after known internal types have been added.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf3ed-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cf3ed-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8adeb-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8adeb-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitInternalExportedTypes(  
@@ -33,18 +34,21 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cf3ed-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cf3ed-106">Parameters</span></span>  
- `AssemblyID`  
- <span data-ttu-id="cf3ed-107">IDENTIFICADOR del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="cf3ed-107">ID of assembly.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="cf3ed-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="cf3ed-108">Return Value</span></span>  
- <span data-ttu-id="cf3ed-109">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="cf3ed-109">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="cf3ed-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cf3ed-110">Requirements</span></span>  
- <span data-ttu-id="cf3ed-111">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="cf3ed-111">Requires alink.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="cf3ed-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="cf3ed-112">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="8adeb-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8adeb-106">Parameters</span></span>  
 
-- [<span data-ttu-id="cf3ed-113">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cf3ed-113">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="cf3ed-114">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cf3ed-114">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="cf3ed-115">API de ALink</span><span class="sxs-lookup"><span data-stu-id="cf3ed-115">ALink API</span></span>](index.md)
+ `AssemblyID`  
+ <span data-ttu-id="8adeb-107">IDENTIFICADOR del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="8adeb-107">ID of assembly.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="8adeb-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="8adeb-108">Return Value</span></span>  
+
+ <span data-ttu-id="8adeb-109">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="8adeb-109">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="8adeb-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8adeb-110">Requirements</span></span>  
+
+ <span data-ttu-id="8adeb-111">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="8adeb-111">Requires alink.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="8adeb-112">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8adeb-112">See also</span></span>
+
+- [<span data-ttu-id="8adeb-113">IALink2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8adeb-113">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="8adeb-114">IALink (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8adeb-114">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="8adeb-115">API de ALink</span><span class="sxs-lookup"><span data-stu-id="8adeb-115">ALink API</span></span>](index.md)
