@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 445c833d10631341ef7ad579eaff8ddd96be3428
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446471"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684855"
 ---
-# <a name="enumcustomattributes-method"></a><span data-ttu-id="059d7-102">EnumCustomAttributes (Método)</span><span class="sxs-lookup"><span data-stu-id="059d7-102">EnumCustomAttributes Method</span></span>
-<span data-ttu-id="059d7-103">Recupera los atributos personalizados de nivel de ensamblado.</span><span class="sxs-lookup"><span data-stu-id="059d7-103">Retrieves assembly-level custom attributes.</span></span>  
+# <a name="enumcustomattributes-method"></a><span data-ttu-id="ef4c6-102">EnumCustomAttributes (Método)</span><span class="sxs-lookup"><span data-stu-id="ef4c6-102">EnumCustomAttributes Method</span></span>
+
+<span data-ttu-id="ef4c6-103">Recupera los atributos personalizados de nivel de ensamblado.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-103">Retrieves assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="059d7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="059d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ef4c6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ef4c6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumCustomAttributes(  
@@ -37,30 +38,33 @@ HRESULT EnumCustomAttributes(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="059d7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="059d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ef4c6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ef4c6-105">Parameters</span></span>  
+
  `hEnum`  
- <span data-ttu-id="059d7-106">Identificador del enumerador.</span><span class="sxs-lookup"><span data-stu-id="059d7-106">Handle of enumerator.</span></span>  
+ <span data-ttu-id="ef4c6-106">Identificador del enumerador.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-106">Handle of enumerator.</span></span>  
   
  `tkType`  
- <span data-ttu-id="059d7-107">Tipo de atributos que se van a enumerar.</span><span class="sxs-lookup"><span data-stu-id="059d7-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="059d7-108">Use `mdTokenNill` para todos los atributos.</span><span class="sxs-lookup"><span data-stu-id="059d7-108">Use `mdTokenNill` for all attributes.</span></span>  
+ <span data-ttu-id="ef4c6-107">Tipo de atributos que se van a enumerar.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-107">Type of attributes to be enumerated.</span></span> <span data-ttu-id="ef4c6-108">Se utiliza `mdTokenNill` para todos los atributos.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-108">Use `mdTokenNill` for all attributes.</span></span>  
   
  `rCustomValues`  
- <span data-ttu-id="059d7-109">Recibe tokens de atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="059d7-109">Receives custom attributes tokens.</span></span>  
+ <span data-ttu-id="ef4c6-109">Recibe tokens de atributos personalizados.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-109">Receives custom attributes tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="059d7-110">Especifica el tamaño de `rCustomValues` matriz.</span><span class="sxs-lookup"><span data-stu-id="059d7-110">Specifies size of `rCustomValues` array.</span></span>  
+ <span data-ttu-id="ef4c6-110">Especifica el tamaño de la `rCustomValues` matriz.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-110">Specifies size of `rCustomValues` array.</span></span>  
   
  `pcCustomValues`  
- <span data-ttu-id="059d7-111">Opcionalmente, recibe el recuento de valores de token.</span><span class="sxs-lookup"><span data-stu-id="059d7-111">Optionally receives count of token values.</span></span>  
+ <span data-ttu-id="ef4c6-111">Opcionalmente, recibe el recuento de valores de token.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-111">Optionally receives count of token values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="059d7-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="059d7-112">Return Value</span></span>  
- <span data-ttu-id="059d7-113">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="059d7-113">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="059d7-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="059d7-114">Requirements</span></span>  
- <span data-ttu-id="059d7-115">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="059d7-115">Requires alink.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="059d7-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="059d7-116">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="ef4c6-112">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="ef4c6-112">Return Value</span></span>  
 
-- [<span data-ttu-id="059d7-117">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="059d7-117">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="059d7-118">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="059d7-118">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="059d7-119">API de ALink</span><span class="sxs-lookup"><span data-stu-id="059d7-119">ALink API</span></span>](index.md)
+ <span data-ttu-id="ef4c6-113">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="ef4c6-113">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="ef4c6-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ef4c6-114">Requirements</span></span>  
+
+ <span data-ttu-id="ef4c6-115">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="ef4c6-115">Requires alink.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ef4c6-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ef4c6-116">See also</span></span>
+
+- [<span data-ttu-id="ef4c6-117">IALink (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef4c6-117">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="ef4c6-118">IALink2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="ef4c6-118">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="ef4c6-119">API de ALink</span><span class="sxs-lookup"><span data-stu-id="ef4c6-119">ALink API</span></span>](index.md)

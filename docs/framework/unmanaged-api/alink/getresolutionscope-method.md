@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: f2b78b35db6306c82e389955c4824875bcf25334
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684685"
 ---
-# <a name="getresolutionscope-method"></a><span data-ttu-id="91724-102">GetResolutionScope (Método)</span><span class="sxs-lookup"><span data-stu-id="91724-102">GetResolutionScope Method</span></span>
-<span data-ttu-id="91724-103">Recupera el ámbito de un tipo determinado.</span><span class="sxs-lookup"><span data-stu-id="91724-103">Retrieves the scope of a given type.</span></span>  
+# <a name="getresolutionscope-method"></a><span data-ttu-id="e362c-102">GetResolutionScope (Método)</span><span class="sxs-lookup"><span data-stu-id="e362c-102">GetResolutionScope Method</span></span>
+
+<span data-ttu-id="e362c-103">Recupera el ámbito de un tipo determinado.</span><span class="sxs-lookup"><span data-stu-id="e362c-103">Retrieves the scope of a given type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91724-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="91724-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e362c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e362c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetResolutionScope(  
@@ -35,27 +36,30 @@ HRESULT GetResolutionScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="91724-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="91724-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e362c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e362c-105">Parameters</span></span>  
+
  `AssemblyID`  
- <span data-ttu-id="91724-106">IDENTIFICADOR del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="91724-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="e362c-106">IDENTIFICADOR del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="e362c-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="91724-107">Archivo que necesita una referencia.</span><span class="sxs-lookup"><span data-stu-id="91724-107">File that is in need of a reference.</span></span>  
+ <span data-ttu-id="e362c-107">Archivo que necesita una referencia.</span><span class="sxs-lookup"><span data-stu-id="e362c-107">File that is in need of a reference.</span></span>  
   
  `TargetFile`  
- <span data-ttu-id="91724-108">Token de archivo en el que se define el tipo, normalmente recuperado con el [método importFile](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="91724-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
+ <span data-ttu-id="e362c-108">Token de archivo en el que se define el tipo, normalmente recuperado con el [método importFile](importfile-method.md).</span><span class="sxs-lookup"><span data-stu-id="e362c-108">Token of file that type is defined in, usually retrieved with [ImportFile Method](importfile-method.md).</span></span>  
   
  `pScope`  
- <span data-ttu-id="91724-109">Recibe la referencia del ensamblado o módulo.</span><span class="sxs-lookup"><span data-stu-id="91724-109">Receives the assembly or module reference.</span></span>  
+ <span data-ttu-id="e362c-109">Recibe la referencia del ensamblado o módulo.</span><span class="sxs-lookup"><span data-stu-id="e362c-109">Receives the assembly or module reference.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="91724-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="91724-110">Return Value</span></span>  
- <span data-ttu-id="91724-111">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="91724-111">Returns S_OK if the method succeeds.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="91724-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="91724-112">Requirements</span></span>  
- <span data-ttu-id="91724-113">Requiere ALink. h.</span><span class="sxs-lookup"><span data-stu-id="91724-113">Requires alink.h.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="91724-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="91724-114">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="e362c-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e362c-110">Return Value</span></span>  
 
-- [<span data-ttu-id="91724-115">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="91724-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="91724-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="91724-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="91724-117">API de ALink</span><span class="sxs-lookup"><span data-stu-id="91724-117">ALink API</span></span>](index.md)
+ <span data-ttu-id="e362c-111">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="e362c-111">Returns S_OK if the method succeeds.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="e362c-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e362c-112">Requirements</span></span>  
+
+ <span data-ttu-id="e362c-113">Requiere ALink. h.</span><span class="sxs-lookup"><span data-stu-id="e362c-113">Requires alink.h.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="e362c-114">Consulte también</span><span class="sxs-lookup"><span data-stu-id="e362c-114">See also</span></span>
+
+- [<span data-ttu-id="e362c-115">IALink (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e362c-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="e362c-116">IALink2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="e362c-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="e362c-117">API de ALink</span><span class="sxs-lookup"><span data-stu-id="e362c-117">ALink API</span></span>](index.md)
