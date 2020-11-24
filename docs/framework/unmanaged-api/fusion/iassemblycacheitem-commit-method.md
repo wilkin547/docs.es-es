@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b7c10e82aca2b2ece7ea4d7209c1f3c9a456434
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176570"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670412"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit (Método)
-Confirma la referencia de ensamblado almacenada en caché a la memoria.  
+
+Confirma la referencia de ensamblado en caché a la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,19 +36,21 @@ HRESULT Commit (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwFlags`  
- [en] Indicadores definidos en Fusion.idl.  
+ de Marcas definidas en Fusion. idl.  
   
  `pulDisposition`  
- [fuera, opcional] Valor que indica el resultado de la operación.  
+ [out, opcional] Valor que indica el resultado de la operación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IAssemblyCacheItem (interfaz)](iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem (Interfaz)](iassemblycacheitem-interface.md)

@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d78b73e53637927ecb877dd69054f75a1f5ac91f
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91437994"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982314"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -62,6 +62,10 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 
 [dotnet-SOS](dotnet-sos.md) se usa para instalar la [extensión de depuración de SOS](../../framework/tools/sos-dll-sos-debugging-extension.md) en Linux o MacOS (o en Windows si se usan herramientas de depuración anteriores).
 
+### <a name="perfcollect"></a>PerfCollect
+
+[PerfCollect](trace-perfcollect-lttng.md) es un script de bash que se puede usar para recopilar seguimientos con `perf` y `LTTng` para un análisis de rendimiento más detallado de las aplicaciones .NET que se ejecutan en distribuciones de Linux.
+
 ## <a name="net-core-diagnostics-tutorials"></a>Tutoriales de diagnóstico de .NET Core
 
 ### <a name="debug-a-memory-leak"></a>Depuración de una fuga de memoria
@@ -75,3 +79,7 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 ### <a name="debug-deadlock"></a>Depuración de interbloqueo
 
 [Tutorial: Depuración de interbloqueo](debug-deadlock.md) muestra cómo usar la herramienta [dotnet-dump](dotnet-dump.md) para investigar los subprocesos y bloqueos.
+
+### <a name="measure-performance-using-eventcounters"></a>Medición del rendimiento mediante EventCounters
+
+[Tutorial: Medición del rendimiento mediante EventCounters en .NET](event-counter-perf.md) muestra cómo usar la API <xref:System.Diagnostics.Tracing.EventCounter> para medir el rendimiento de la aplicación .NET.

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 210a024a8062f5070b2a500384f51b37c9d802c0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1269522b2687b76292f7b796a4ffc8095f23442e
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91157959"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099066"
 ---
 # <a name="c-preprocessor-directives"></a>Directivas de preprocesador de C#
 
@@ -28,6 +28,7 @@ Esta sección contiene información estas directivas de preprocesador de C#:
 - [#warning](./preprocessor-warning.md)
 - [#error](./preprocessor-error.md)
 - [#line](./preprocessor-line.md)
+- [#nullable](./preprocessor-nullable.md)
 - [#region](./preprocessor-region.md)
 - [#endregion](./preprocessor-endregion.md)
 - [#pragma](./preprocessor-pragma.md)

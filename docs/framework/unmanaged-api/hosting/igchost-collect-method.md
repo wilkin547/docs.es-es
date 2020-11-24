@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc7d9448-3186-494d-9f0d-ea39717e9a82
 topic_type:
 - apiref
-ms.openlocfilehash: ac73c462aa210927f0665cae161fd7f3e17a0cdb
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: f32b91f0d47449f80c38542162035999d616813b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670151"
 ---
 # <a name="igchostcollect-method"></a>IGCHost::Collect (Método)
+
 Obliga a que se produzca una colección para la generación dada, independientemente del estado de la recolección de elementos no utilizados actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,15 +35,17 @@ HRESULT Collect (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `Generation`  
  de Generación en la que se va a realizar la recolección de elementos no utilizados. Un valor de-1 indica que todas las generaciones se someterán a una recolección de elementos no utilizados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

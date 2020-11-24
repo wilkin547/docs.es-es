@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ac45f261-03f9-4728-b5d7-dd7cbb05f9e6
 topic_type:
 - apiref
-ms.openlocfilehash: 6dfd72c6864991e6a8436e43b71257fda50df995
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 324e14d38bdb5ad57b3504f4bd2729409d5e1349
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842197"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95669193"
 ---
 # <a name="itypenamegetmodifierlength-method"></a>ITypeName::GetModifierLength (Método)
+
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,14 +35,15 @@ HRESULT GetModifierLength (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)
