@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3529eceb179cc4b08d39f83d97d001a16e716918
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 78cc043953e6288df136b43590831569d112afef
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763064"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674520"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx (Método)
+
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,6 +41,7 @@ HRESULT StrongNameSignatureGenerationEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszFilePath`  
  de La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
   
@@ -67,14 +69,16 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  de Uno o varios de los siguientes valores:  
   
-- `SN_SIGN_ALL_FILES`(0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
+- `SN_SIGN_ALL_FILES` (0x00000001): vuelve a calcular todos los valores hash para los módulos vinculados.  
   
-- `SN_TEST_SIGN`(0x00000002): prueba-firma del ensamblado.  
+- `SN_TEST_SIGN` (0x00000002): prueba-firma del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
+
+ `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
 ## <a name="remarks"></a>Comentarios  
+
  Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
@@ -84,15 +88,16 @@ HRESULT StrongNameSignatureGenerationEx (
  Si `SN_TEST_SIGN` se especifica, el encabezado Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Método StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

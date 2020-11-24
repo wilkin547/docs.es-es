@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-ms.openlocfilehash: 8b6eab8156f72847eb6dd3369950f9b46a3fc877
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 001be0c5e8897bacf76d2a044fb9400768473052
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673546"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind (Enumeración)
+
 Contiene valores que describen un archivo portable ejecutable (PE), tal y como se devuelve de una llamada a [IMetaDataImport2:: getpekind (](imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,9 +52,11 @@ typedef enum CorPEKind {
 |pe32BitPreferred|Indica que este archivo PE es independiente de la plataforma y prefiere que se cargue en un entorno de 32 bits.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Estos valores se pueden usar en combinaciones bit a bit.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

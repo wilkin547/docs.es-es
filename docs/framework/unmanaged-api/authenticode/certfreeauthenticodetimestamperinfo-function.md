@@ -8,15 +8,16 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
-ms.openlocfilehash: 4f0806e0273b111e3398fb8f2884231b96cf1116
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1ef71b14faf66c179030dff2a7d953e27463c1f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099768"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674169"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo (Función)
-Libera los recursos asignados para la estructura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .  
+
+Libera los recursos asignados para la estructura de [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -27,12 +28,14 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pTimestamperInfo`  
  [in, out] Información sobre la marca de tiempo que se va a publicar. Vea la estructura [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  `S_OK` si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Authenticode](index.md)

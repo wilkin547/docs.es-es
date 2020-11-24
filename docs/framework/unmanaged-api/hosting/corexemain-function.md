@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 898f76e2-16f4-4a63-b7d9-dad2d3824d8a
 topic_type:
 - apiref
-ms.openlocfilehash: 935ac478fb966315e81fdcc004761038b28e3178
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: af1d0e2039024a51341e30bec497c581a0bcacb3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616599"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673675"
 ---
 # <a name="_corexemain-function"></a>_CorExeMain (Función)
+
 Inicializa el Common Language Runtime (CLR), busca el punto de entrada administrado en el encabezado CLR del ensamblado ejecutable y comienza la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,7 +34,8 @@ Inicializa el Common Language Runtime (CLR), busca el punto de entrada administr
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El cargador llama a esta función en los procesos creados a partir de ensamblados ejecutables administrados. En el caso de los ensamblados DLL, el cargador llama a la función [_CorDllMain](cordllmain-function.md) en su lugar.  
   
  El cargador del sistema operativo llama a este método independientemente del punto de entrada especificado en el archivo de imagen.  
@@ -43,14 +45,15 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
  Para obtener más información, vea la sección Comentarios del tema [_CorValidateImage](corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones estáticas globales para metadatos](../metadata/metadata-global-static-functions.md)

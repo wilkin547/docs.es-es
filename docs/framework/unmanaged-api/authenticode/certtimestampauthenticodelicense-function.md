@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-ms.openlocfilehash: 3c5e803c874e1254510f75189846d7cb12cb1ee2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc1a99572406a38aee8133d6435134b78a134175
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132472"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674104"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense (Función)
+
 Aplica marcas de hora a una licencia Authenticode XrML.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ HRESULT CertTimestampAuthenticodeLicense (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pSignedLicenseBlob`  
  [in] Licencia Authenticode XrML firmada a la que se va a aplicar la marca de hora. Vea la estructura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
@@ -36,14 +38,16 @@ HRESULT CertTimestampAuthenticodeLicense (
  [in] URI del servidor de marca de hora.  
   
  `pTimestampSignatureBlob`  
- [out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64. Es responsabilidad del autor de la llamada liberar `pTimestampSignatureBlob`->`pbData` con `HepFree()` después del uso. Vea la estructura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
+ [out] Puntero a CRYPT_DATA_BLOB para recibir la firma de marca de hora con codificación base64. Es responsabilidad del autor de la llamada liberar `pTimestampSignatureBlob` -> `pbData` después del `HepFree()` uso. Vea la estructura [CRYPTOAPI_BLOB](/windows/win32/api/dpapi/ns-dpapi-crypt_integer_blob) .  
   
 ## <a name="remarks"></a>Comentarios  
+
  La firma de marca de hora es en realidad un mensaje PKCS #7 SignedData cuyo contenido es el formato binario del SignatureValue de la firma de la licencia. Básicamente, actúa como contrafirma de la licencia.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  `S_OK` si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Authenticode](index.md)

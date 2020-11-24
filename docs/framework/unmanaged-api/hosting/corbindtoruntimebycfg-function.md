@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d319382b577844a804c3e4562676491a15de5f63
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673792"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg (Función)
+
 Carga el Common Language Runtime (CLR) en un proceso utilizando la información de versión que se lee de un archivo XML.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -40,6 +41,7 @@ HRESULT CorBindToRuntimeByCfg (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pCfgStream`  
  de Un puntero a un `IStream` objeto que lee el archivo XML.  
   
@@ -50,27 +52,29 @@ HRESULT CorBindToRuntimeByCfg (
  de Un valor de la enumeración [STARTUP_FLAGS](startup-flags-enumeration.md) que especifica el comportamiento de inicio de CLR.  
   
  `rclsid`  
- de `CLSID`De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
- de `IID`De la `ICorRuntimeHost` `ICLRRuntimeHost` interfaz o. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
+ de `IID` De la `ICorRuntimeHost` `ICLRRuntimeHost` interfaz o. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
   
  `ppv`  
  enuncia Puntero a la dirección de la interfaz devuelta.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El formato del archivo XML se modela después del archivo de configuración de la aplicación estándar. Para obtener más información acerca de los archivos XML, vea [esquema del archivo de configuración](../../configure-apps/file-schema/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [CorBindToCurrentRuntime (Función)](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime (Función)](corbindtoruntime-function.md)

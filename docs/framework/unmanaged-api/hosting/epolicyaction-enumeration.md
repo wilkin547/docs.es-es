@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 72b371d72b2f055f2840da5595d9022ffd7e2507
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674754"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction (Enumeración)
+
 Describe las acciones de directiva que el host puede establecer para las operaciones descritas por [EClrOperation](eclroperation-enumeration.md) y los errores descritos por [eclrfailure (](eclrfailure-enumeration.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -57,18 +58,20 @@ typedef enum {
 |`eUnloadAppDomain`|Especifica que <xref:System.AppDomain> se debe descargar. CLR intenta ejecutar los finalizadores.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El host establece las acciones de Directiva mediante una llamada a los métodos de la interfaz [ICLRPolicyManager](iclrpolicymanager-interface.md) . Para obtener información sobre las anulaciones superficiales y correctas, vea la enumeración [EClrOperation](eclroperation-enumeration.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [ICLRPolicyManager (Interfaz)](iclrpolicymanager-interface.md)

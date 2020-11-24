@@ -2,17 +2,18 @@
 title: Tipos de datos comunes (Referencia de la API no administrada)
 ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-ms.openlocfilehash: 86f3886b96d0156ec2f0431369c7a54954cd4cad
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c00ff6d0947b5d847a9622dce02bd310491818c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132448"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673987"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de datos comunes (Referencia de la API no administrada)
+
 En este tema se enumeran los tipos de datos que usan las API no administradas de .NET Framework y que se definen mediante instrucciones `typedef` de C/C++. Normalmente, estos tipos de datos son alias de tipos de datos primitivos de C/C++. Normalmente, los valores de estos tipos de datos son opacos; es decir, son devueltos por una función o un método determinados para que se puedan pasar a otras funciones o métodos sin modificar.  
   
-|Tipo de datos|de esquema JSON|Definido en|Descripción|  
+|Tipo de datos|Definición|Definido en|Descripción|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Identificador de un dominio de aplicación.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Identificador de un ensamblado.|  
@@ -39,6 +40,6 @@ En este tema se enumeran los tipos de datos que usan las API no administradas de
 |TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Identificador de una instancia de [ICLRTask](./hosting/iclrtask-interface.md) .|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Identificador de un subproceso administrado.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de API no administrada](index.md)

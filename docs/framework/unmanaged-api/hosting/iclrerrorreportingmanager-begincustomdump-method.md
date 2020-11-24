@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-ms.openlocfilehash: 4c83ffaf920abe005ba987e0a744e13aa0d3c016
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 199c130d70cfbf0d383c2e0dc148ffe3dc1242d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615675"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673570"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump (Método)
+
 Especifica la configuración de volcados de montón personalizados para el informe de errores.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT BeginCustomDump (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwFlavor`  
  de Un valor [ecustomdumpflavor (](ecustomdumpflavor-enumeration.md) que indica el tipo de volcado del montón en el que se va a generar el volcado del montón personalizado.  
   
@@ -60,22 +62,24 @@ HRESULT BeginCustomDump (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `BeginCustomDump` método establece la configuración personalizada del volcado del montón. El método [EndCustomDump](iclrerrorreportingmanager-endcustomdump-method.md) borra la configuración de volcado del montón personalizado y libera cualquier estado asociado. Se debe llamar después de que se complete el volcado del montón personalizado.  
   
 > [!IMPORTANT]
 > Si no se llama a `EndCustomDump` , se produce una pérdida de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [CustomDumpItem (Estructura)](customdumpitem-structure.md)
 - [ECustomDumpFlavor (Enumeración)](ecustomdumpflavor-enumeration.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 91fb902aab678e29c6e74380e3576fa5c4ae62d4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0ee2c9ce38272caef4960bfe5949c11083c12dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500906"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674936"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE (Estructura)
+
 Describe un intervalo (es decir, un bloque) de memoria sometida a recopilación de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,9 +46,11 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 |`rangeLengthReserved`|Un puntero a un entero que especifica el tamaño del bloque de memoria (es decir, la cantidad de memoria reservada para el bloque).|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Se `rangeLength` garantiza que el valor es preciso solo si [ICorProfilerInfo2:: Getgenerationbounds (](icorprofilerinfo2-getgenerationbounds-method.md) o [ICorProfilerInfo2:: getobjectgeneration (](icorprofilerinfo2-getobjectgeneration-method.md), ambos usan la `COR_PRF_GC_GENERATION_RANGE` estructura, se llama desde [ICorProfilerCallback2:: Garbagecollectionstarted (](icorprofilercallback2-garbagecollectionstarted-method.md) o el método [ICorProfilerCallback2:: garbagecollectionfinished (](icorprofilercallback2-garbagecollectionfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -56,6 +59,6 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras para generación de perfiles](profiling-structures.md)

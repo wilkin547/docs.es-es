@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d0d6fb7-bc9d-40f0-8163-c0d162eaba7d
 topic_type:
 - apiref
-ms.openlocfilehash: 5c764031f709eefe61022d0662f37bc5d3f3e281
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e8dd9f21803021975f4651ba3e6e5f4d3da0ea82
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501006"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675001"
 ---
 # <a name="cor_prf_ex_clause_info-structure"></a>COR_PRF_EX_CLAUSE_INFO (Estructura)
+
 Almacena información sobre una instancia específica de cláusula de excepción y su marco asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,6 +46,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 |`shadowStackPointer`|Puntero a la pila de la sombra. Este valor es el contenido del registro de BSP y se aplica solo a IA64.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando se recibe una notificación de excepción, se puede usar [ICorProfilerInfo2:: getnotifiedexceptionclauseinfo (](icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md) para obtener la información de la dirección nativa y el marco de la cláusula de excepción ( `catch` / `finally` /Filter) que está a punto de ejecutarse o que se acaba de ejecutar.  
   
  La ejecución de una cláusula de excepción implica estas devoluciones de llamada de Common Language Runtime (CLR):  
@@ -62,6 +64,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
 - [ICorProfilerCallback:: Exceptionsearchfilterleave (](icorprofilercallback-exceptionsearchfilterleave-method.md)  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -70,6 +73,6 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras para generación de perfiles](profiling-structures.md)

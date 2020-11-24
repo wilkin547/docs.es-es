@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4c3e0953d71020ba62ee4ab68aa9e21ea3f0f521
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675040"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps (Método)
+
 Establece o actualiza las características de la firma de metadatos de un conjunto de permisos definido por una llamada anterior a [IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT SetPermissionSetProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `tk`  
  de Token de metadatos que representa el objeto que se va a decorar.  
   
@@ -51,14 +53,15 @@ HRESULT SetPermissionSetProps (
  de Tamaño, en bytes, de `pvPermission` .  
   
  `ppm`  
- enuncia `mdPermission`Token de metadatos que representa los permisos actualizados.  
+ enuncia `mdPermission` Token de metadatos que representa los permisos actualizados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

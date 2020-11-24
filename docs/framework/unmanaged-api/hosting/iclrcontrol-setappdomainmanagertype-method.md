@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ec57828b-2aad-496d-a35a-e45d4bd7fe77
 topic_type:
 - apiref
-ms.openlocfilehash: e62f9fd6b8421ea131eff0e6b36523718589c921
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 28fdd5340aee0fcd9875dd983c8c7649b5491c04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674715"
 ---
 # <a name="iclrcontrolsetappdomainmanagertype-method"></a>ICLRControl::SetAppDomainManagerType (Método)
+
 Establece un tipo derivado de <xref:System.AppDomainManager> como el tipo para los administradores de dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT SetAppDomainManagerType (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwzAppDomainManagerAssembly`  
  de Nombre del ensamblado en el que se implementa el tipo solicitado derivado de <xref:System.AppDomainManager> .  
   
@@ -53,15 +55,16 @@ HRESULT SetAppDomainManagerType (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [IHostControl (Interfaz)](ihostcontrol-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: ae65c60440a90959006cd8db94dda479e80613d4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 939400fcc40edd62532d459d6ed626dbdc4f41fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795813"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675313"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion (Enumeración)
+
 Especifica una interfaz, una versión de .NET Framework, o la versión de .NET Framework en la que se incorporó una interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -130,17 +131,18 @@ typedef enum CorDebugInterfaceVersion {
 } CorDebugInterfaceVersion;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
+
  En la tabla siguiente se incluyen vínculos de cada valor de enumeración a la interfaz correspondiente. Además, la tabla indica la primera versión de .NET Framework en la que se admitía la interfaz.  
   
-|Member|Especifica|Versión de .NET Framework|  
+|Miembro|Especifica|Versión de .NET Framework|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|La versión de .NET Framework no es válida.|-|  
 |`CorDebugVersion_1_0`|La versión de .NET Framework, incluidos todos sus Service Packs, es 1.0.|1.0|  
 |`CorDebugVersion_1_1`|La versión de .NET Framework, incluidos todos los Service Packs, es 1.1.|1.1|  
 |`CorDebugVersion_2_0`|La versión de .NET Framework, incluidos todos los Service Packs, es 2,0.|2.0|  
 |`CorDebugVersion_4_0`|La versión de .NET Framework, incluidos todos los Service Packs, es 4.|4|  
-|`CorDebugVersion_4_5`|La versión de .NET Framework, incluidos todos los Service Packs, es 4,5.|4.5.|  
+|`CorDebugVersion_4_5`|La versión de .NET Framework, incluidos todos los Service Packs, es 4,5.|4,5|  
 |`ver_ICorDebugManagedCallback`|[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebugUnmanagedCallback`|[ICorDebugUnmanagedCallback](icordebugunmanagedcallback-interface.md)|1.0|  
 |`ver_ICorDebug`|[ICorDebug](icordebug-interface.md)|1.0|  
@@ -213,16 +215,18 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugHeapValue3`|[ICorDebugHeapValue3 (Interfaz)](icordebugheapvalue3-interface.md)|4|  
 |`ver_ICorDebugBlockingObjectEnum`|[ICorDebugBlockingObjectEnum (Interfaz)](icordebugblockingobjectenum-interface.md)|4|  
 |`ver_ICorDebugValue3`|[ICorDebugValue3](icordebugvalue3-interface.md)|4|  
-|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4.5.|  
-|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4.5.|  
-|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4.5.|  
-|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4.5.|  
+|`ver_ICorDebugComObjectValue`|[ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)|4,5|  
+|`ver_ICorDebugAppDomain3`|[ICorDebugAppDomain3](icordebugappdomain3-interface.md)|4,5|  
+|`ver_ICorDebugCode3`|[ICorDebugCode3](icordebugcode3-interface.md)|4,5|  
+|`ver_ICorDebugILFrame3`|[ICorDebugILFrame3](icordebugilframe3-interface.md)|4,5|  
 |`CorDebugLatestVersion`|La versión de .NET Framework, incluidos todos sus Service Packs, es la última versión.|-|  
   
 ## <a name="remarks"></a>Comentarios  
- Un depurador puede utilizar `CorDebugInterfaceVersion` la enumeración en la función [CreateDebuggingInterfaceFromVersion (](../hosting/createdebugginginterfacefromversion-function.md) para especificar la versión más alta de los .NET Framework que admite el depurador.  
+
+ Un depurador puede utilizar la `CorDebugInterfaceVersion` enumeración en la función [CreateDebuggingInterfaceFromVersion (](../hosting/createdebugginginterfacefromversion-function.md) para especificar la versión más alta de los .NET Framework que admite el depurador.  
   
 ## <a name="interface-names"></a>Nombres de interfaz  
+
  El número que aparece al final de los nombres de interfaz en la API de depuración (por ejemplo, "3" en `ICorDebugThread3`) especifica la versión de la interfaz, no la versión de .NET Framework. Todos los nombres de interfaz en la API de depuración incluyen números de versión, excepto las interfaces que se incorporaron en .NET Framework versión 1. Cualquier correspondencia entre los números de versión de las interfaces y los números de versión de .NET Framework es pura coincidencia.  
   
 - Las interfaces que se incorporaron en .NET Framework versión 1.0 no incluyen números, porque implícitamente son todas de la versión 1.  
@@ -233,9 +237,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework versión 3.0 y versión 3.5 usa las interfaces de .NET Framework 2.0 existentes y no incorpora ninguna interfaz nueva.  
   
-- El .NET Framework 4 introduce una combinación de versiones de la interfaz. Por ejemplo, tanto `ICorDebugThread3` como `ICorDebugThread4` aparecen como la tercera y cuarta versión de la interfaz `ICorDebugThread`. El .NET Framework 4 también introduce la primera versión de la `ICorDebugStackWalk` interfaz y la segunda versión de la `ICorDebugNativeFrame` interfaz (`ICorDebugNativeFrame2`).  
+- El .NET Framework 4 introduce una combinación de versiones de la interfaz. Por ejemplo, tanto `ICorDebugThread3` como `ICorDebugThread4` aparecen como la tercera y cuarta versión de la interfaz `ICorDebugThread`. El .NET Framework 4 también introduce la primera versión de la `ICorDebugStackWalk` interfaz y la segunda versión de la `ICorDebugNativeFrame` interfaz ( `ICorDebugNativeFrame2` ).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -244,6 +249,6 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

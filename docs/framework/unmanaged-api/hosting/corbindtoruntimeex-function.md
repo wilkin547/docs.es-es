@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aae9fb17-5d01-41da-9773-1b5b5b642d81
 topic_type:
 - apiref
-ms.openlocfilehash: e66b63ffa4ed25e861cff6bd9eb6065f57ff807f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 55fbf0c37861029940422a10bd62f5ecfebf2b9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493505"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673750"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx (Función)
+
 Permite a los hosts no administrados cargar Common Language Runtime (CLR) en un proceso. Las funciones [CorBindToRuntime](corbindtoruntime-function.md) y `CorBindToRuntimeEx` realizan la misma operación, pero la `CorBindToRuntimeEx` función permite establecer marcas para especificar el comportamiento de CLR.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -56,6 +57,7 @@ HRESULT CorBindToRuntimeEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwszVersion`  
  [in] Cadena que describe la versión de CLR que se desea cargar.  
   
@@ -102,7 +104,7 @@ HRESULT CorBindToRuntimeEx (
  Para obtener descripciones de estas marcas, vea la enumeración [STARTUP_FLAGS](startup-flags-enumeration.md) .  
   
  `rclsid`  
- de `CLSID`De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] `IID` de la interfaz solicitada de `rclsid`. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -111,9 +113,11 @@ HRESULT CorBindToRuntimeEx (
  [out] Puntero de interfaz devuelto a `riid`.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si `pwszVersion` especifica una versión del runtime que no existe, `CorBindToRuntimeEx` devuelve un valor HRESULT de CLR_E_SHIM_RUNTIMELOAD.  
   
 ## <a name="execution-context-and-flow-of-windows-identity"></a>Flujo y contexto de ejecución de la identidad de Windows  
+
  En la versión 1 de CLR, el objeto <xref:System.Security.Principal.WindowsIdentity> no fluye por puntos asincrónicos, como nuevos subprocesos, grupos de subprocesos o devoluciones de llamada de temporizador. En la versión 2.0 de CLR, el objeto <xref:System.Threading.ExecutionContext> ajusta cierta información sobre el subproceso en ejecución y hace que fluya por cualquier punto asincrónico, pero no por los límites del dominio de aplicación. De igual forma, el objeto <xref:System.Security.Principal.WindowsIdentity> también fluye por cualquier punto asincrónico. Por consiguiente, también fluye la suplantación actual en el subproceso, si la hubiera.  
   
  El flujo puede modificarse de dos maneras:  
@@ -129,15 +133,16 @@ HRESULT CorBindToRuntimeEx (
      El modo de compatibilidad de la versión 1 se aplica a todo el proceso y a todos los dominios de aplicación del proceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [CorBindToCurrentRuntime (Función)](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime (Función)](corbindtoruntime-function.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: 6b9396d03892f29e3698af90856d0c0023dc628a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 1a883878107569145b97d5793f0628efefb13545
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675248"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint (Método)
+
 Establece un punto de interrupción no administrado en el desplazamiento de imagen nativo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,8 +39,9 @@ HRESULT SetUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `address`  
- de `CORDB_ADDRESS`Objeto que especifica el desplazamiento de la imagen nativa.  
+ de `CORDB_ADDRESS` Objeto que especifica el desplazamiento de la imagen nativa.  
   
  `bufsize`  
  de Tamaño, en bytes, de la `buffer` matriz.  
@@ -50,10 +52,12 @@ HRESULT SetUnmanagedBreakpoint (
  `bufLen`  
  enuncia Puntero al número de bytes devuelto en la `buffer` matriz.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si el desplazamiento de la imagen nativa se encuentra dentro del Common Language Runtime (CLR), se omitirá el punto de interrupción. Esto permite al CLR evitar el envío de un punto de interrupción fuera de banda, cuando el depurador establece el punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

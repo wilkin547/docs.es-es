@@ -2,14 +2,15 @@
 title: AXL_AUTHENTICODE_TIMESTAMPER_INFO (Estructura)
 ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
-ms.openlocfilehash: 036397928703aea6199a59ae9c1e66153c30ec7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b6852519da6cf4e12669aa2efa24862053adbc03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132503"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674247"
 ---
 # <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO (Estructura)
+
 Define la información del autor de la marca de hora de Authenticode.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,6 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`ftTimestamp`|Hora de la marca de hora.|  
 |`pChainContext`|Contexto de cadena del autor de la marca de hora.  Vea la estructura [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) .|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Authenticode](index.md)

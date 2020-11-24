@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228383c3b393fe43f60d39e59cca37af36233f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a713fd006f1e9ad8fe7109651c2cda5025da3566
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673948"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint (Método)
+
 Quita un punto de interrupción establecido previamente en la dirección especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT ClearUnmanagedBreakpoint (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `address`  
- de `CORDB_ADDRESS`Valor que especifica la dirección en la que se estableció el punto de interrupción.  
+ de `CORDB_ADDRESS` Valor que especifica la dirección en la que se estableció el punto de interrupción.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El punto de interrupción especificado se habría establecido previamente mediante una llamada anterior a [ICorDebugProcess2:: SetUnmanagedBreakpoint (](icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
  Se `ClearUnmanagedBreakpoint` puede llamar al método mientras se está ejecutando el proceso que se está depurando.  
@@ -45,6 +48,7 @@ HRESULT ClearUnmanagedBreakpoint (
  El `ClearUnmanagedBreakpoint` método devuelve un código de error si el depurador está asociado en modo de solo administración o si no existe ningún punto de interrupción en la dirección especificada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

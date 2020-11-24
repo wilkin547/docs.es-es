@@ -8,14 +8,15 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
-ms.openlocfilehash: 7cd25a24533b04dc45ee734f9e9639391311405a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 388814d1c63f048c0aa231a1d0058a390cba9493
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674065"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense (Función)
+
 Comprueba la validez de una licencia Authenticode XrML.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -30,6 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pLicenseBlob`  
  [in] Licencia Authenticode XrML que se va a comprobar.  
   
@@ -53,18 +55,19 @@ HRESULT CertVerifyAuthenticodeLicense (
  `pSignerInfo`  
  [out] Para recibir la información del firmante. Si la licencia no estaba firmada, `dwError` se establece en TRUST_E_NOSIGNATURE. Es responsabilidad del autor de la llamada liberar recursos mediante la función [certfreeauthenticodesignerinfo (](certfreeauthenticodesignerinfo-function.md) después del uso.  
   
- Vea [estructura AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md).  
+ Vea [estructura de AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md).  
   
  `pTimestamperInfo`  
  [out] Para recibir la información del autor de la marca de hora, si está disponible. Si la licencia no tenía marca de hora, `dwError` se establece en TRUST_E_NOSIGNATURE. Es responsabilidad del autor de la llamada liberar recursos mediante la función [certfreeauthenticodetimestamperinfo (](certfreeauthenticodetimestamperinfo-function.md) después del uso.  
   
- Vea [estructura AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md).  
+ Vea [estructura de AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Si la operación se realiza correctamente, devuelve `S_OK`. De lo contrario, devuelve un código de error.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Authenticode](index.md)
-- [GetHashFromHandle (método)](../hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

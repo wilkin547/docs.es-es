@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c826ba3-8258-49bc-a417-78807915fcaf
 topic_type:
 - apiref
-ms.openlocfilehash: 9d1c7f4f5b881f7f55539602c152b557a7950472
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7ba35823ccb670ad0201d1950687dc83cc9ba64a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504412"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673753"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost (Función)
+
 Permite a los hosts cargar una versión determinada de Common Language Runtime (CLR) en un proceso.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -42,6 +43,7 @@ HRESULT CorBindToRuntimeHost (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwszVersion`  
  [in] Cadena que describe la versión de CLR que se desea cargar.  
   
@@ -69,7 +71,7 @@ HRESULT CorBindToRuntimeHost (
  [in] Conjunto de marcas que controla la recolección de elementos no utilizados simultánea, el código neutral respecto al dominio y el comportamiento del parámetro `pwszVersion`. Si no se establece ninguna marca, el valor predeterminado es un dominio único. Para obtener una lista de valores admitidos, vea la [enumeración STARTUP_FLAGS](startup-flags-enumeration.md).  
   
  `rclsid`  
- de `CLSID`De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
+ de `CLSID` De la coclase que implementa la interfaz [ICorRuntimeHost](icorruntimehost-interface.md) o [ICLRRuntimeHost](iclrruntimehost-interface.md) . Los valores admitidos son CLSID_CorRuntimeHost o CLSID_CLRRuntimeHost.  
   
  `riid`  
  [in] El `IID` de la interfaz solicitada. Los valores admitidos son IID_ICorRuntimeHost o IID_ICLRRuntimeHost.  
@@ -78,15 +80,16 @@ HRESULT CorBindToRuntimeHost (
  [out] Puntero de interfaz a la versión del runtime que se cargó.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [CorBindToCurrentRuntime (Función)](corbindtocurrentruntime-function.md)
 - [CorBindToRuntime (Función)](corbindtoruntime-function.md)
