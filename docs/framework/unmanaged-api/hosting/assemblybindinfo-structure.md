@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6fc01e98-c2e7-49de-ab9f-95937cc89017
 topic_type:
 - apiref
-ms.openlocfilehash: 615637813b08629aaea74b23fa2737f52d61bafb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d2ba7d8e66472f771a932a2dfb05bb9e1ee96290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616929"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685882"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo (Estructura)
+
 Proporciona información detallada acerca del ensamblado al que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,19 +45,21 @@ typedef struct _AssemblyBindInfo {
 |`lpPostPolicyIdentity`|Identificador del ensamblado al que se hace referencia después de la aplicación de los valores de directiva de enlace.|  
 |`ePolicyLevel`|Uno de los valores de [EPolicyAction](epolicyaction-enumeration.md) que indican qué directivas de control de versiones, si las hay, deben aplicarse al ensamblado al que se hace referencia.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El host proporciona el identificador único `dwAppDomainId` al Common Language Runtime (CLR). Después de una llamada a `IHostAssemblyStore::ProvideAssembly` , el tiempo de ejecución utiliza el identificador para determinar si `IStream` se ha asignado el contenido de. En ese caso, el tiempo de ejecución carga la copia existente en lugar de reasignar la secuencia. El Runtime también utiliza este identificador como clave de búsqueda para las secuencias devueltas por las llamadas a [IHostAssemblyStore::P rovidemodule](ihostassemblystore-providemodule-method.md). Por lo tanto, el identificador debe ser único para las solicitudes de módulo y para las solicitudes de ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)

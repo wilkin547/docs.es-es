@@ -14,18 +14,19 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 78de6f91cc5c9de41426ac2e3c200fe14b32ae96
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617014"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685752"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen (Clase)
+
 Proporciona funcionalidad para crear un archivo ejecutable portable (PE) nativo. Los compiladores usarán normalmente la interfaz para generar su archivo ejecutable de salida compilado.  
   
 > [!NOTE]
-> `ICeeFileGen`admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
+> `ICeeFileGen` admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
   
  Esta interfaz está en desuso y se quitará en una versión futura.  
   
@@ -235,12 +236,13 @@ public:
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ICeeFileGen. h  
   
  **Versión de .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

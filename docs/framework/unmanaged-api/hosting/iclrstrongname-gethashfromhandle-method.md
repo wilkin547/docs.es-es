@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: e2d71f7c61b02273bdcaf182f6f79ca3c2a2c75f
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 68bfdb2f66147b54c75b8f577a01278016e248b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762086"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685739"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>ICLRStrongName::GetHashFromHandle (Método)
+
 Genera un hash sobre el contenido del archivo que tiene el identificador de archivo especificado, utilizando el algoritmo hash especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hFile`  
  de Identificador del archivo al que se va a aplicar un algoritmo hash.  
   
@@ -55,17 +57,19 @@ HRESULT GetHashFromHandle (
  enuncia Tamaño, en bytes, del devuelto `pbHash` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
+
+ `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c89abf5b-1120-4437-8b57-4a99fb3ae7f9
 topic_type:
 - apiref
-ms.openlocfilehash: 1dd5ed4c556a5a4d4425a9c0730cebf22ff1785b
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: d4c9048c89d55ed048a55a771572823905a056df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687143"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free (Método)
+
 Libera la memoria que se asignó mediante la función de [asignación](ihostmalloc-alloc-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT Free (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pMem`  
  de Puntero a la memoria que se va a liberar.  
   
@@ -41,7 +43,7 @@ HRESULT Free (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Free`se devolvió correctamente.|  
+|S_OK|`Free` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -49,15 +51,17 @@ HRESULT Free (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_INVALIDOPERATION|Se intentó liberar memoria que no se asignó a través del host.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si el `pMem` parámetro hace referencia a una región de memoria que no se asignó mediante una llamada a `Alloc` , el host debe devolver HOST_E_INVALIDOPERATION.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

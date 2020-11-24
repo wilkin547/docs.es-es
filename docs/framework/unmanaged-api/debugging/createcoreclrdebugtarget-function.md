@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: 2271611b5cbbfe487e5798be0429ed94c227a67f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f0188facf0b7d33e6e1ecc12921a139165f777a1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860876"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686636"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget (Función)
+
 Crea una conexión a un proxy del depurador que se ejecuta en un equipo remoto y devuelve un objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que se puede usar para consultar los procesos en ejecución y los tiempos de ejecución cargados en el equipo remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT CreateCoreClrDebugTarget (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwAddress`  
  [in] Dirección IPv4 de un equipo de destino remoto.  
   
@@ -43,6 +45,7 @@ HRESULT CreateCoreClrDebugTarget (
  enuncia Puntero a un puntero a un objeto [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md) que se creará.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK  
  Se determinó el número de CLR en el proceso y las matrices de rutas de acceso e identificadores correspondientes se rellenaron correctamente.  
   
@@ -53,10 +56,11 @@ HRESULT CreateCoreClrDebugTarget (
  Otros errores.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86. dll  
+ **Biblioteca:** mscordbi_macx86.dll  
   
  **.NET Framework versiones:** 3,5 SP1

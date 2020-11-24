@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93de56b6-4ae8-4cca-acdc-25a434623509
 topic_type:
 - apiref
-ms.openlocfilehash: 869d7d36ac24bfeee5b2361dd569945ad77eaf7f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93a96a5da3342f4beff611de1d448dc199dd39dd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610072"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687135"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2 (Método)
+
 Establece la interfaz emisora de metadatos a la que se asociará este escritor y establece el nombre del archivo de salida en el que se escribirán los símbolos de depuración. Este método también le permite establecer la ubicación final del archivo de base de datos de programa (PDB).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT Initialize2(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `emitter`  
  de Puntero a la interfaz de emisor de metadatos.  
   
@@ -47,18 +49,20 @@ HRESULT Initialize2(
  de Si se especifica, el escritor de símbolos emite los símbolos en el especificado, en <xref:System.Runtime.InteropServices.ComTypes.IStream> lugar de en el archivo especificado en el `filename` parámetro. El `pIStream` es opcional.  
   
  `fFullBuild`  
- [in] `true` es si se trata de una recompilación completa; `false`es si se trata de una compilación incremental.  
+ [in] `true` es si se trata de una recompilación completa; `false` es si se trata de una compilación incremental.  
   
  `finalfilename`  
  de Un puntero a un `WCHAR` que es la cadena de ruta de acceso a la ubicación final del archivo PDB.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
-- [Método Initialize](isymunmanagedwriter-initialize-method.md)
+- [Initialize (Método)](isymunmanagedwriter-initialize-method.md)

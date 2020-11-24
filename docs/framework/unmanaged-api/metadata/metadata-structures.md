@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], metadata
 - metadata structures [.NET Framework]
 ms.assetid: 3eeaec36-5e1a-4a62-9de3-ea3942f67d04
-ms.openlocfilehash: fbb9727523aa175f10a05b3ba4f54ac64b790f8e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 591699e2d3e58f7efc1c72d2c47f2f956198fcf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489553"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685479"
 ---
 # <a name="metadata-structures"></a>Estructuras de metadatos
+
 En esta sección, se describen las estructuras no administradas que utiliza la API de metadatos.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  ASSEMBLYMETADATA  
  Almacena los metadatos del ensamblado para usarlos más tarde.  
   
@@ -33,6 +35,7 @@ En esta sección, se describen las estructuras no administradas que utiliza la A
  Contiene información sobre el sistema operativo.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Interfaces de metadatos](metadata-interfaces.md)  
   
  [Funciones estáticas globales para metadatos](metadata-global-static-functions.md)  

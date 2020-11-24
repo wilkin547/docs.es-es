@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 48ac09e1862ae58e79707235e891f72920de1251
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 94495ca0ea75bd41996d430159474c707a3e68b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685427"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler (Método)
+
 Asocia el generador de perfiles especificado al proceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -64,6 +65,7 @@ HRESULT AttachProfiler(
   \[in] tamaño, en bytes, de los datos a los que `pvClientData` señala.
 
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los HRESULT siguientes.  
   
 |HRESULT|Descripción|  
@@ -84,9 +86,11 @@ HRESULT AttachProfiler(
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="memory-management"></a>Administración de memoria  
+
  En consonancia con las convenciones de COM, el llamador de `AttachProfiler` (por ejemplo, el código desencadenador creado por el desarrollador del generador de perfiles) es responsable de la asignación y desasignación de la memoria para los datos a los que el parámetro `pvClientData` apunta. Cuando el CLR ejecuta la llamada a `AttachProfiler`, realiza una copia de la memoria a la que `pvClientData` apunta y la transmite al proceso de destino. Cuando el CLR dentro del proceso de destino recibe su propia copia del bloque `pvClientData`, pasa el bloque al generador de perfiles con el método `InitializeForAttach` y, después, desasigna su copia del bloque `pvClientData` del proceso de destino.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -95,7 +99,7 @@ HRESULT AttachProfiler(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)

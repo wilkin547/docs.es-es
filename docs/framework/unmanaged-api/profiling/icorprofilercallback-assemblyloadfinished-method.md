@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: ce4a842bc71ff144e46efb0d6f7068dfca9d207d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fd41463af0acac1bbe1a3d4515350905b6784f79
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500447"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685349"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished (Método)
+
 Notifica al generador de perfiles que un ensamblado ha terminado de cargarse.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,11 +45,13 @@ HRESULT AssemblyLoadFinished(
   \[in] un valor HRESULT que indica si el ensamblado finalizó la carga correctamente.
 
 ## <a name="remarks"></a>Comentarios  
+
  El valor de `assemblyId` no es válido para una solicitud de información hasta que `AssemblyLoadFinished` se llama al método.  
   
  Algunas partes de la carga del ensamblado podrían continuar después de la `AssemblyLoadFinished` devolución de llamada. Un valor HRESULT de error en `hrStatus` indica un error. Sin embargo, un valor HRESULT correcto en `hrStatus` indica solo que la primera parte de la carga del ensamblado se ha realizado correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -57,6 +60,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-ms.openlocfilehash: 826736d2db7aa1e618a2e5fe0655cedad9556b17
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ef8dbd5253c02355f85fba626fa7e68ed62df4bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686462"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 (Interfaz)
+
 Controla las notificaciones del depurador personalizadas.  
   
 ## <a name="methods"></a>Métodos  
@@ -30,13 +31,15 @@ Controla las notificaciones del depurador personalizadas.
 |------------|-----------------|  
 |[Método SetEnableCustomNotification](icordebugprocess3-setenablecustomnotification-method.md)|Habilita y deshabilita las notificaciones del depurador personalizado del tipo especificado.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta interfaz extiende lógicamente las interfaces ICorDebugProcess e ICorDebugProcess2.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

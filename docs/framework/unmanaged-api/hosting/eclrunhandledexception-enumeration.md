@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-ms.openlocfilehash: 63b07dda2293d3e05bd3c8fcdc45f20a498ea54c
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bccd44e1bead4feadf67929dc104557715904577
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686480"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException (Enumeración)
+
 Describe las opciones disponibles para administrar excepciones que no se controlan en el código de usuario.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,19 +41,21 @@ typedef enum {
 |`eRuntimeDeterminedPolicy`|Especifica que se produce el comportamiento predeterminado. El proceso se ha anulado.|  
 |`eHostDeterminedPolicy`|Especifica que el Common Language Runtime (CLR) omite las excepciones no controladas y permite que el host determine cualquier acción más.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Para especificar que el CLR se comporte como versiones anteriores, utilice el `eHostDeterminedPolicy` miembro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)

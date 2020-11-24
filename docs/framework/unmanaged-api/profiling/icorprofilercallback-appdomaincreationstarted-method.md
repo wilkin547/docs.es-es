@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: fcebe65b7f39dd2849946e445a694ad5e9b1a65d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 901546c80c3bee32afddfa8e8cffbd2b679bc43b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500486"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685401"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted (Método)
+
 Notifica al generador de perfiles que se está creando un dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,9 +40,11 @@ HRESULT AppDomainCreationStarted(
   \[en] identifica el dominio que se va a crear.
   
 ## <a name="remarks"></a>Comentarios  
+
  El identificador no es válido para ninguna solicitud de información hasta que se llama al método [ICorProfilerCallback:: AppDomainCreationFinished (](icorprofilercallback-appdomaincreationfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -50,6 +53,6 @@ HRESULT AppDomainCreationStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

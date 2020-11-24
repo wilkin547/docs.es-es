@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0339af16-ee1d-48ec-837d-a79d9a9c89f8
 topic_type:
 - apiref
-ms.openlocfilehash: 256c362ae0aea51fea16ce799db243b105dee81a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ec64f9bec0ee9b63796958b17c7f10b87692f1d0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616247"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686155"
 ---
 # <a name="ehostbindingpolicymodifyflags-enumeration"></a>EHostBindingPolicyModifyFlags (Enumeración)
+
 Permite al host especificar el tipo de redirección que debe realizar el Common Language Runtime (CLR) al aplicar las modificaciones de directiva de un ensamblado de origen a un ensamblado de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,19 +45,21 @@ typedef enum _hostBindingPolicyModifyFlags {
 |`HOST_BINDING_POLICY_MODIFY_MAX`|Especifica que CLR establecerá los valores de directiva del ensamblado de destino en los valores máximos.|  
 |`HOST_BINDING_POLICY_MODIFY_REMOVE`|Especifica que CLR reemplazará los valores de directiva del ensamblado de destino por los del ensamblado de origen.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El método [ICLRHostBindingPolicyManager:: ModifyApplicationPolicy (](iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md) toma un parámetro de tipo `EHostBindingPolicyModifyFlags` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRHostBindingPolicyManager (Interfaz)](iclrhostbindingpolicymanager-interface.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)
