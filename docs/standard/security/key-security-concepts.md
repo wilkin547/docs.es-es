@@ -10,12 +10,12 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: a9f0703217b55c90c4e98503402d3fbf60a45ea7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 73e4d0474810d097c5eee8b99ae30b6096ee1695
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831070"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687552"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 
@@ -49,6 +49,7 @@ Una entidad de seguridad (principal) representa la identidad y el rol de un usua
 Para más información, consulte [Objetos Principal e Identity](principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Authentication  
+
 La autenticación es el proceso de detectar y comprobar la identidad de una entidad de seguridad mediante el análisis de las credenciales del usuario y la validación de esas credenciales en alguna autoridad. Su código puede usar fácilmente la información obtenida durante la autenticación. También puede usar la seguridad basada en roles de .NET para autenticar al usuario actual y determinar si permite que esa entidad de seguridad tenga acceso a su código. Vea las sobrecargas del método <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> para obtener ejemplos de cómo autenticar la entidad de seguridad para roles específicos. Por ejemplo, puede usar la sobrecarga <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> para determinar si el usuario actual es miembro del grupo Administradores.  
   
 Hoy en día se usan diversos mecanismos de autenticación, muchos de los cuales se pueden usar con la seguridad basada en roles de .NET. Algunos de los mecanismos más usados son básico, implícito, Passport, sistema operativo (como NTLM o Kerberos) o los mecanismos definidos por la aplicación.  
@@ -70,10 +71,10 @@ El ejemplo siguiente requiere que la entidad de seguridad activa sea un administ
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Authorization  
+## <a name="authorization"></a>Autorización  
 
 La autorización es el proceso de determinar si una entidad de seguridad puede realizar una acción solicitada. La autorización se produce después de la autenticación y usa información sobre la identidad y los roles de la entidad de seguridad para determinar a qué recursos puede tener acceso la entidad de seguridad. Puede usar la seguridad basada en roles de .NET para implementar la autorización.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Seguridad de ASP.NET Core](/aspnet/core/security/)

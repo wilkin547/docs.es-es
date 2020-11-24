@@ -6,17 +6,19 @@ helpviewer_keywords:
 - fusion global static functions [.NET Framework]
 - global static functions [.NET Framework fusion]
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
-ms.openlocfilehash: ff94ed23f3e39888b4f7e255feece99898f8aa74
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 691fd50e05cadd3f82196fc6ba5df9bb84a66faa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108267"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688749"
 ---
 # <a name="fusion-global-static-functions"></a>Funciones estáticas globales de la fusión
+
 En esta sección se describen las funciones estáticas globales no administradas que utiliza la API de fusión.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [ClearDownloadCache (Función)](cleardownloadcache-function.md)  
  Borra la caché global de ensamblados de los ensamblados descargados.  
   
@@ -24,7 +26,7 @@ En esta sección se describen las funciones estáticas globales no administradas
  Compara dos identidades de ensamblado para determinar si son equivalentes.  
   
  [CreateApplicationContext (Función)](createapplicationcontext-function.md)  
- Solo para uso interno. (Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código).  
+ Solo interno. (Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código).  
   
  [CreateAssemblyCache (Función)](createassemblycache-function.md)  
  Obtiene un puntero a una nueva instancia de [IAssemblyCache](iassemblycache-interface.md) que representa la caché global de ensamblados.  
@@ -45,7 +47,7 @@ En esta sección se describen las funciones estáticas globales no administradas
  Obtiene un puntero a una instancia de [iappidauthority (](iappidauthority-interface.md) que administra las claves de las identidades y referencias de la aplicación.  
   
  [GetAssemblyIdentityFromFile (Función)](getassemblyidentityfromfile-function.md)  
- Obtiene un puntero a un objeto `IUnknown` con el `IID` especificado en el ensamblado en la ruta de acceso de archivo especificada.  
+ Obtiene un puntero a un `IUnknown` objeto con el especificado `IID` en el ensamblado en la ruta de acceso de archivo especificada.  
   
  [GetCachePath (Función)](getcachepath-function.md)  
  Obtiene la ruta de acceso al ensamblado almacenado en memoria caché, usando las marcas especificadas.  
@@ -66,6 +68,7 @@ En esta sección se describen las funciones estáticas globales no administradas
  Obtiene el nombre para mostrar de la Directiva posterior de un ensamblado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Interfaces de Fusion](fusion-interfaces.md)  
   
  [Enumeraciones de fusión](fusion-enumerations.md)  

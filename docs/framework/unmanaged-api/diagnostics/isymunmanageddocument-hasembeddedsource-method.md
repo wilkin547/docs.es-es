@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-ms.openlocfilehash: d654f6d57bd784063fc7f87dd9767bdc27ad2776
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 09bc0f87cd35f12a15566fb525c2ce42990ac69b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615584"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688203"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource (Método)
+
 Devuelve `true` si el documento tiene código fuente incrustado en los símbolos de depuración; de lo contrario, devuelve `false` .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,12 +34,14 @@ HRESULT HasEmbeddedSource(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pRetVal`  
  enuncia Puntero a una variable que indica si el documento tiene código fuente incrustado en los símbolos de depuración.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente.  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

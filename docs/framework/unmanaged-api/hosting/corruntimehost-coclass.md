@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-ms.openlocfilehash: fe378307ce2bda6e1a267e46433ead70a0e2299e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cd4e675b4ba50b47146428d204c28cc943c23c69
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616531"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688008"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost (Coclase)
+
 Proporciona interfaces para administrar las aplicaciones que se ejecutan en el Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,14 +48,15 @@ coclass CorRuntimeHost {
 |IValidator|Proporciona métodos para la validación de imágenes ejecutables portables e informes detallados de errores de validación.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Coclases para el hospedaje](hosting-coclasses.md)

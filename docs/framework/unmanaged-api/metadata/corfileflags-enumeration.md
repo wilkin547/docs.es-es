@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-ms.openlocfilehash: c8c2757e99b80204ad52e69a596d62c55c369965
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70d789f417700734b546cac6ff527ed5aa84fcf9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007421"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688632"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags (Enumeración)
+
 Contiene valores que describen el tipo de archivo definido en una llamada a [IMetaDataAssemblyEmit::D efinefile](imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,6 +44,7 @@ typedef enum CorFileFlags {
 |`ffContainsNoMetaData`|Indica que el archivo, posiblemente un archivo de recursos, no contiene metadatos.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

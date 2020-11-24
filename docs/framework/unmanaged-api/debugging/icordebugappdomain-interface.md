@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be7ae711-1217-4a44-be40-166e29641b77
 topic_type:
 - apiref
-ms.openlocfilehash: 140e67417f4fad552f972a93bc8c620b440b2370
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 98273a5d4602c023863758045bdb2a6a502ba7a7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895174"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687234"
 ---
 # <a name="icordebugappdomain-interface"></a>Interfaz ICorDebugAppDomain
 
@@ -35,17 +35,18 @@ Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una 
 |[Método EnumerateSteppers](icordebugappdomain-enumeratesteppers-method.md)|Obtiene un enumerador para todos los steppers activos en el dominio de aplicación.|  
 |[GetId (método)](icordebugappdomain-getid-method.md)|Obtiene el identificador único del dominio de aplicación.|  
 |[Método GetModuleFromMetaDataInterface](icordebugappdomain-getmodulefrommetadatainterface-method.md)|Obtiene el objeto ICorDebugModule con la interfaz de metadatos especificada.|  
-|[Método GetName](icordebugappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación.|  
+|[GetName (Método)](icordebugappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación.|  
 |[GetObject (Método)](icordebugappdomain-getobject-method.md)|Obtiene un puntero de interfaz al dominio de aplicación de Common Language Runtime (CLR).|  
 |[Método GetProcess](icordebugappdomain-getprocess-method.md)|Obtiene el proceso que contiene el dominio de aplicación.|  
 |[Método IsAttached](icordebugappdomain-isattached-method.md)|Determina si el depurador está asociado al dominio de aplicación.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -54,6 +55,6 @@ Proporciona métodos para depurar dominios de aplicación. Esta interfaz es una 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

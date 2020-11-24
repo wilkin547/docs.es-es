@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687676"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement (Enumeración)
+
 Especifica las notificaciones que se enviarán al cliente de la API de metadatos cuando se produzca una reasignación de token.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -88,9 +89,11 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyResource`|Notificar cuando `mdManifestResource` se mueva un token.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un token puede volver a asignarse (es decir, moverse) durante una fusión mediante combinación de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

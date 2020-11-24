@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5237628-2675-45ed-a39e-65c0731b6a56
 topic_type:
 - apiref
-ms.openlocfilehash: ccf82531eb1f78bcfc6762d10d53ffee59f30ad8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1cd5e34d6afefab2fda7e20d4bf73b373ad42787
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003968"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688606"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>IMetaDataEmit::SaveToMemory (Método)
+
 Guarda todos los metadatos del ámbito actual en el área de memoria especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT SaveToMemory (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pbData`  
  enuncia Dirección en la que se comienzan a escribir los metadatos.  
   
@@ -42,11 +44,12 @@ HRESULT SaveToMemory (
  de Tamaño, en bytes, de la memoria asignada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

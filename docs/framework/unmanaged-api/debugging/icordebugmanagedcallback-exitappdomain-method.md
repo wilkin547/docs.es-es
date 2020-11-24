@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d815486e-b3bd-4fe8-ba28-02abdb4d67ba
 topic_type:
 - apiref
-ms.openlocfilehash: 786582c7118fbed394de7c414a10243616cf4ee1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 51beed47e7187d6fa22e60baed16598a8ad73adb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209804"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688996"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain (Método)
+
 Notifica al depurador que se ha salido de un dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT ExitAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pProcess`  
  de Un puntero a un objeto ICorDebugProcess que representa el proceso que contiene el dominio de aplicación especificado.  
   
@@ -42,6 +44,7 @@ HRESULT ExitAppDomain (
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que ha salido.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

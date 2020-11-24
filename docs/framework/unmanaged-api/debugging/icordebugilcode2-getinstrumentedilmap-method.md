@@ -12,14 +12,15 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: c6fdb7040620bb7a5b6aea6e0dc41e08d6f346d0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 097502f4321531922d6c4385e2eccbf32f66f026
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210363"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688359"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap (Método)
+
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
   
  Devuelve la correspondencia entre los desplazamientos del lenguaje intermedio instrumentado del generador de perfiles y los desplazamientos del IL del método original para esta instancia.  
@@ -35,23 +36,26 @@ HRESULT GetInstrumentedILMap(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  cMap  
- [in] Capacidad de almacenamiento de la matriz `map`. Para obtener más información, vea la sección Comentarios.  
+ [in] Capacidad de almacenamiento de la matriz `map`. Vea la sección Comentarios para obtener más información.  
   
  pcMap  
  [out] Número de valores COR_IL_MAP que se escriben en la matriz de asignaciones.  
   
- map  
+ mapa  
  [out] Matriz de valores COR_IL_MAP que proporcionan información sobre las asignaciones del IL instrumentado del generador de perfiles al IL del método original.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si el generador de perfiles establece la asignación llamando al método [ICorProfilerInfo:: SetILInstrumentedCodeMap (](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , el depurador puede llamar a este método para recuperar la asignación y usar la asignación internamente al calcular los desplazamientos de Il para los seguimientos de la pila y la duración de las variables.  
   
- Si `cMap` es 0 y `pcMap` no es**null**, `pcMap` se establece en el número de valores de COR_IL_MAP disponibles. Si `cMap` no es cero, representa la capacidad de almacenamiento de la matriz `map`. Cuando el método vuelve, `map` contiene un máximo de `cMap` elementos y `pcMap` se establece en el número de valores COR_IL_MAP escritos realmente en la `map` matriz.  
+ Si `cMap` es 0 y `pcMap` no es **null**, `pcMap` se establece en el número de valores de COR_IL_MAP disponibles. Si `cMap` no es cero, representa la capacidad de almacenamiento de la matriz `map`. Cuando el método vuelve, `map` contiene un máximo de `cMap` elementos y `pcMap` se establece en el número de valores COR_IL_MAP escritos realmente en la `map` matriz.  
   
  Si el IL no se ha instrumentado o un generador de perfiles no ha proporcionado la asignación, este método devuelve `S_OK` y establece `pcMap` en 0.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 496c3add-f60b-4073-943f-d1bcf33330cb
 topic_type:
 - apiref
-ms.openlocfilehash: ffa1fa2f5e141728a56f1b598a1aae9602b2ac86
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04b3e73e2166efb2ec0821d21da3da4c53b0ca4b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688658"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty (Método)
+
 Establece el valor de la propiedad a la que hace referencia el identificador de propiedad especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,22 +37,24 @@ HRESULT SetProperty (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `PropertyId`  
  de Identificador único de la propiedad cuyo valor se va a establecer.  
   
  `pvProperty`  
- de Valor al que se va a establecer la propiedad a la que hace referencia `PropertyId`.  
+ de Valor al que se va a establecer la propiedad a la que hace referencia `PropertyId` .  
   
  `cbProperty`  
- de Tamaño, en bytes, de `pvProperty`.  
+ de Tamaño, en bytes, de `pvProperty` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)

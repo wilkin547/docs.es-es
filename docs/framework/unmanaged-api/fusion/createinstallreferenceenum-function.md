@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f62b05ebbd8b27dba160c8281c1d40748c90fc9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108567"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688840"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum (Función)
+
 Obtiene un puntero a una instancia de [IInstallReferenceEnum (](iinstallreferenceenum-interface.md) que representa una lista de referencias de una aplicación al ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,8 +39,9 @@ HRESULT CreateInstallReferenceEnum (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppRefEnum`  
- enuncia Puntero `IInstallReferenceEnum` devuelto.  
+ enuncia Puntero devuelto `IInstallReferenceEnum` .  
   
  `pName`  
  de La [IAssemblyName](iassemblyname-interface.md) que identifica el ensamblado para el que se van a enumerar las referencias.  
@@ -51,16 +53,17 @@ HRESULT CreateInstallReferenceEnum (
  [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Biblioteca:** Fusion. dll y mscorwks. dll. Use Fusion. dll en lugar de mscorwks. dll para asegurarse de que tiene como destino la versión correcta del .NET Framework.  
+ **Biblioteca:** Fusion.dll y Mscorwks.dll. Use Fusion.dll en lugar de Mscorwks.dll para asegurarse de que tiene como destino la versión correcta de la .NET Framework.  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IInstallReferenceEnum (interfaz)](iinstallreferenceenum-interface.md)
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IInstallReferenceEnum (Interfaz)](iinstallreferenceenum-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)
