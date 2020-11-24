@@ -1,17 +1,16 @@
 ---
 title: Acceso a datos XML fuertemente tipados utilizando XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: 61957ff88ef57703aff1861238ee10b23c2f16ff
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291609"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822833"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acceso a datos XML fuertemente tipados utilizando XPathNavigator
 Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.XPathNavigator> puede contener datos fuertemente tipados que se asignen a tipos de Common Language Runtime (CLR). De acuerdo con el modelo de datos XPath 2.0, solo los elementos y los atributos pueden contener datos fuertemente tipados. La clase <xref:System.Xml.XPath.XPathNavigator> proporciona mecanismos para acceder a los datos en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> como datos fuertemente tipados, así como mecanismos para convertir un tipo de datos en otro.  

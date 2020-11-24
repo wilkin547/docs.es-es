@@ -2,19 +2,18 @@
 title: Principios básicos del subprocesamiento administrado
 description: Vea vínculos a otros artículos de subprocesamiento administrado, que tratan temas tales como las excepciones, la sincronización de datos, los subprocesos en primer plano y en segundo plano, el almacenamiento local, etc.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - multiple threads
 - threading [.NET], multiple threads
 - threading [.NET], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-ms.openlocfilehash: ca3073cca9887265b4bacb4f8dfeb01203f82621
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 16785b1c21c5810e55429f6756dcf591c90d8499
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189139"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819674"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
@@ -48,7 +47,7 @@ Los cinco primeros artículos de esta sección están diseñados para ayudarle a
 ## <a name="reference"></a>Referencia
 
  <xref:System.Threading.Thread>  
- Proporciona documentación de referencia para la clase **Thread** , que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
+ Proporciona documentación de referencia para la clase **Thread**, que representa un subproceso administrado, independientemente de que provenga de código no administrado o que se creara en una aplicación administrada.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
  Proporciona una manera segura de implementar multithreading junto con objetos de interfaz de usuario.  

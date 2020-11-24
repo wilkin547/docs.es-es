@@ -2,7 +2,6 @@
 title: Construcciones de agrupamiento en expresiones regulares
 description: Aprenda a usar construcciones de agrupación en .NET. Las construcciones de agrupación definen subexpresiones de una expresión regular y capturan subcadenas de una cadena de entrada.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: de424b4a022a5e2d2f8a9c12b4147383082f019b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888513"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823009"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -62,7 +61,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  Existen cuatro formas de tener acceso a los grupos capturados:  
   
-- Usando la construcción de referencia inversa dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\`*número* , donde *número* es el número ordinal de la subexpresión capturada.  
+- Usando la construcción de referencia inversa dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\`*número*, donde *número* es el número ordinal de la subexpresión capturada.  
   
 - Usando la construcción de referencia inversa con nombre dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\k<`*nombre*`>`, donde *nombre* es el nombre de un grupo de captura, o `\k<`*número*`>`, donde *número* es el número ordinal de un grupo de captura. Un grupo de captura tiene un nombre predeterminado que es idéntico a su número ordinal. Para obtener más información, vea [Subexpresiones coincidentes con nombre](#named_matched_subexpression) más adelante en este tema.  
   
@@ -107,7 +106,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 - Usando la construcción de referencia inversa con nombre dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\k<`*nombre*`>`, donde *nombre* es el nombre de la subexpresión capturada.  
   
-- Usando la construcción de referencia inversa dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\`*número* , donde *número* es el número ordinal de la subexpresión capturada. Las subexpresiones coincidentes con nombre se numeran consecutivamente de izquierda a derecha después de las subexpresiones coincidentes.  
+- Usando la construcción de referencia inversa dentro de la expresión regular. Para hacer referencia a la subexpresión coincidente desde la misma expresión regular, se usa la sintaxis `\`*número*, donde *número* es el número ordinal de la subexpresión capturada. Las subexpresiones coincidentes con nombre se numeran consecutivamente de izquierda a derecha después de las subexpresiones coincidentes.  
   
 - Usando la secuencia de reemplazo `${`*nombre*`}` en una llamada al método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> , donde *nombre* es el nombre de la subexpresión capturada.  
   
@@ -172,7 +171,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
 `(?'name1-name2' subexpression)`
   
- donde *nombre1* es el grupo actual (opcional), *nombre2* es un grupo definido previamente y *subexpresión* es cualquier patrón de expresión regular válido. La definición de grupo de compensación elimina la definición de *nombre2* y almacena el intervalo entre *nombre2* y *nombre1* en *nombre1* . Si no se ha definido el grupo *nombre2* , la búsqueda de coincidencias retrocede. Como al eliminar la última definición de *nombre2* se revela la definición anterior de *nombre2* , esta construcción permite usar la pila de capturas del grupo *nombre2* como contador para realizar el seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre.  
+ donde *nombre1* es el grupo actual (opcional), *nombre2* es un grupo definido previamente y *subexpresión* es cualquier patrón de expresión regular válido. La definición de grupo de compensación elimina la definición de *nombre2* y almacena el intervalo entre *nombre2* y *nombre1* en *nombre1*. Si no se ha definido el grupo *nombre2* , la búsqueda de coincidencias retrocede. Como al eliminar la última definición de *nombre2* se revela la definición anterior de *nombre2*, esta construcción permite usar la pila de capturas del grupo *nombre2* como contador para realizar el seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre.  
   
  La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre2* estará vacío.  
   
@@ -291,7 +290,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  `(?=` *subexpresión* `)`  
   
- donde *subexpresión* es cualquier patrón de expresión regular. Para que se produzca una coincidencia, la cadena de entrada debe coincidir con el patrón de expresión regular de *subexpresión* , aunque la subcadena coincidente no se incluya en el resultado de la coincidencia. Una aserción de búsqueda anticipada positiva de ancho cero no retrocede.  
+ donde *subexpresión* es cualquier patrón de expresión regular. Para que se produzca una coincidencia, la cadena de entrada debe coincidir con el patrón de expresión regular de *subexpresión*, aunque la subcadena coincidente no se incluya en el resultado de la coincidencia. Una aserción de búsqueda anticipada positiva de ancho cero no retrocede.  
   
  Normalmente, una aserción de búsqueda anticipada positiva de ancho cero se encuentra al final de un patrón de expresión regular. Define una subcadena que se debe encontrar al final de una cadena para que se produzca una coincidencia, pero que no debe incluirse en la coincidencia. También resulta útil para evitar un retroceso excesivo. Puede usar una aserción de búsqueda anticipada positiva de ancho cero para asegurarse de que un grupo capturado determinado comienza por un texto que coincide con un subconjunto del patrón definido para dicho grupo capturado. Por ejemplo, si un grupo de captura coincide con caracteres consecutivos que se usan para formar palabras, puede usar una aserción de búsqueda anticipada positiva de ancho cero para requerir que el primero de los caracteres sea alfabético y esté en mayúsculas.  
   
@@ -314,7 +313,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  `(?!` *subexpresión* `)`  
   
- donde *subexpresión* es cualquier patrón de expresión regular. Para que se produzca la coincidencia, la cadena de entrada no debe coincidir con el patrón de expresión regular de *subexpresión* , aunque la cadena coincidente no se incluya en el resultado de la coincidencia.  
+ donde *subexpresión* es cualquier patrón de expresión regular. Para que se produzca la coincidencia, la cadena de entrada no debe coincidir con el patrón de expresión regular de *subexpresión*, aunque la cadena coincidente no se incluya en el resultado de la coincidencia.  
   
  Una aserción de búsqueda anticipada negativa de ancho cero se utiliza normalmente al principio o al final de una expresión regular. Al principio de una expresión regular, puede definir un patrón concreto que no se debería buscar cuando el principio de la expresión regular define un patrón similar pero más general que se desea buscar. En este caso, se usa a menudo para limitar el retroceso. Al final de una expresión regular, puede definir una subexpresión que no se puede producir al final de una coincidencia.  
   

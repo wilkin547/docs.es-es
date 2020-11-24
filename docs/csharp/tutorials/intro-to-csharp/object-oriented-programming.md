@@ -2,12 +2,12 @@
 title: Programación orientada a objetos (C#)
 description: C# proporciona compatibilidad completa para la programación orientada a objetos incluida la abstracción, la encapsulación, la herencia y el polimorfismo.
 ms.date: 09/30/2020
-ms.openlocfilehash: 353edf8fc68f495f3d875fa678aaaf91f1fd6406
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: 4ae31e18fcd88870f511e77bb0c555f35394fd1b
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471600"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687999"
 ---
 # <a name="object-oriented-programming-c"></a>Programación orientada a objetos (C#)
 
@@ -18,7 +18,7 @@ C# es un lenguaje orientado a objetos. Cuatro de las técnicas clave que se usan
 - La *herencia* describe la posibilidad de crear nuevas clases basadas en una clase existente.
 - El *polimorfismo* significa que puede tener múltiples clases que se pueden usar de manera intercambiable, aunque cada clase implementa las mismas propiedades o los mismos métodos de maneras diferentes.
 
-En el tutorial anterior, [Introducción a las clases](introduction-to-classes.md) se trató la *abstracción* y la *encapsulación* . La clase `BankAccount` proporcionó una abstracción para el concepto de una cuenta bancaria. Puede modificar su implementación sin que afecte para nada al código que usó la clase `BankAccount`. Las clases `BankAccount` y `Transaction` proporcionan encapsulación de los componentes necesarios para describir esos conceptos en el código.
+En el tutorial anterior, [Introducción a las clases](introduction-to-classes.md) se trató la *abstracción* y la *encapsulación*. La clase `BankAccount` proporcionó una abstracción para el concepto de una cuenta bancaria. Puede modificar su implementación sin que afecte para nada al código que usó la clase `BankAccount`. Las clases `BankAccount` y `Transaction` proporcionan encapsulación de los componentes necesarios para describir esos conceptos en el código.
 
 En este tutorial, ampliará la aplicación para hacer uso de la *herencia* y el *polimorfismo* para agregar nuevas características. También agregará características a la clase `BankAccount`, aprovechando las técnicas de *abstracción* y *encapsulación* que aprendió en el tutorial anterior.
 
@@ -48,9 +48,9 @@ public class GiftCardAccount : BankAccount
 }
 ```
 
-Cada una de estas clases *hereda* el comportamiento compartido de su *clase base* compartida, la clase `BankAccount`. Escriba las implementaciones para la funcionalidad nueva y diferente en cada una de las *clases derivadas* .  Estas clases derivadas ya tienen todo el comportamiento definido en la clase `BankAccount`.
+Cada una de estas clases *hereda* el comportamiento compartido de su *clase base* compartida, la clase `BankAccount`. Escriba las implementaciones para la funcionalidad nueva y diferente en cada una de las *clases derivadas*.  Estas clases derivadas ya tienen todo el comportamiento definido en la clase `BankAccount`.
 
-Es recomendable crear cada clase nueva en un archivo de código fuente diferente. En [Visual Studio](https://visualstudio.com), puede hacer clic con el botón derecho en el proyecto y seleccionar *Agregar clase* para agregar una clase nueva en un archivo nuevo. En [Visual Studio Code](https://code.visualstudio.com), seleccione *Archivo* y luego *Nuevo* para crear un nuevo archivo de código fuente. En cualquier herramienta, ponga un nombre al archivo que coincida con la clase: *InterestEarningAccount.cs* , *LineOfCreditAccount.cs* y *GiftCardAccount.cs* .
+Es recomendable crear cada clase nueva en un archivo de código fuente diferente. En [Visual Studio](https://visualstudio.com), puede hacer clic con el botón derecho en el proyecto y seleccionar *Agregar clase* para agregar una clase nueva en un archivo nuevo. En [Visual Studio Code](https://code.visualstudio.com), seleccione *Archivo* y luego *Nuevo* para crear un nuevo archivo de código fuente. En cualquier herramienta, ponga un nombre al archivo que coincida con la clase: *InterestEarningAccount.cs*, *LineOfCreditAccount.cs* y *GiftCardAccount.cs*.
 
 Cuando cree las clases como se muestra en el ejemplo anterior, observará que ninguna de las clases derivadas se compila. La inicialización de un objeto es responsabilidad de un constructor. Un constructor de clase derivada debe inicializar la clase derivada y proporcionar instrucciones sobre cómo inicializar el objeto de la clase base incluido en la clase derivada. Normalmente, se produce una inicialización correcta sin ningún código adicional. La clase `BankAccount` declara un constructor público con la siguiente firma:
 
@@ -173,6 +173,8 @@ El reemplazo devuelve una transacción de cuota cuando en la cuenta se produce u
 Ejecute el programa y compruebe los resultados.
 
 ## <a name="summary"></a>Resumen
+
+Si se ha quedado bloqueado, puede consultar el origen de este tutorial [en el repositorio de GitHub](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming).
 
 En este tutorial se han mostrado muchas de las técnicas que se usan en la programación orientada a objetos:
 

@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 16b4d34e4c581da2cd0ba798d87e53ccfc49f0e9
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 1c2c966a4ff50a9d2f6951e20d909c5c20c75bfb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91954898"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688246"
 ---
 # <a name="tutorial-sentiment-analysis-with-net-for-apache-spark-and-mlnet"></a>Tutorial: Análisis de sentimiento con .NET para Apache Spark y ML.NET
 
@@ -198,7 +198,7 @@ dotnet publish
 Después, vaya a la carpeta de publicación de la aplicación de consola y ejecute el siguiente comando: `spark-submit`. Asegúrese de actualizar el comando anterior con la ruta de acceso real al archivo .jar de Microsoft Spark.
 
 ```dotnetcli
-%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2.4.x-0.10.0.jar dotnet MLSparkModelML.ConsoleApp.dll
+%SPARK_HOME%\bin\spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local microsoft-spark-2-4_2.11-1.0.0.jar dotnet MLSparkModelML.ConsoleApp.dll
 ```
 
 ## <a name="get-the-code"></a>Obtención del código

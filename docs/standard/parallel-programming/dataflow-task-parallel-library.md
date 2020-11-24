@@ -2,7 +2,6 @@
 title: Flujo de datos (biblioteca TPL)
 description: Aprenda a usar componentes de flujo de datos en la biblioteca TPL para mejorar la solidez de aplicaciones habilitadas para simultaneidad.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8c6eeab852f30535d721aa44b3c60e4b6febe0fc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662555"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817645"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flujo de datos (biblioteca TPL)
 La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) proporciona componentes de flujo de datos que ayudan a aumentar la solidez de aplicaciones habilitadas para simultaneidad. Se conoce colectivamente a estos componentes de flujo de datos como *biblioteca TDF (biblioteca de TPL Dataflow)* pero nos referiremos descriptivamente a ella como "biblioteca de flujos de datos TPL". Este modelo de flujo de datos promueve una programación basada en actores mediante el paso de mensajes en proceso para tareas de canalización y de flujo de datos de grano grueso. Los componentes de flujo de datos se basan en los tipos y la infraestructura de programación de la biblioteca TPL y se integran con la compatibilidad de los lenguajes C#, Visual Basic y F# para proporcionar programación asincrónica. Estos componentes de flujo de datos son útiles cuando se tienen varias operaciones que deben comunicarse entre sí de forma asincrónica, o cuando se desea procesar datos a medida que estén disponibles. Por ejemplo, piense en una aplicación que procesa datos de imagen de una cámara web. Con el modelo de flujo de datos, la aplicación puede procesar fotogramas de imagen a medida que estén disponibles. Si la aplicación mejora fotogramas de imagen, por ejemplo, corrigiendo la luz o reduciendo ojos rojos, puede crear una *canalización* de los componentes de flujo de datos. Cada fase de la canalización puede utilizar más funcionalidad de paralelismo de grano grueso, como la funcionalidad proporcionada por la biblioteca TPL, para transformar la imagen.  

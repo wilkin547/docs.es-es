@@ -1,7 +1,6 @@
 ---
 title: Compilar y volver a utilizar en expresiones regulares
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - parsing text with regular expressions, compilation
 - searching with regular expressions, compilation
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: fbf10c7f3b4ebf4db97b18b2a2ef165226a48027
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f0da4a226feb6bafc7e17c7333cbc507701311af
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889483"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823113"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilar y volver a utilizar en expresiones regulares
 Puede optimizar el rendimiento de aplicaciones que usan en gran medida las expresiones regulares al comprender cómo compila expresiones el motor de expresiones regulares y cómo se almacenan en caché las expresiones regulares. En este tema, se describen la compilación y el almacenamiento en caché.  

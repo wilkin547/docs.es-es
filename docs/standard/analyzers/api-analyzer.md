@@ -3,13 +3,12 @@ title: Analizador de API en .NET
 description: Obtenga información sobre cómo el analizador de API de .NET puede ayudar a detectar problemas de compatibilidad de plataforma y de API en desuso.
 author: oliag
 ms.date: 02/20/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: a689ae347efbc8c2dd933b2f6920ac6cc06cda7d
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 47ef2368692aee56ebd3db7803cbde7368d38049
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756200"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819609"
 ---
 # <a name="net-api-analyzer"></a>Analizador de API en .NET
 

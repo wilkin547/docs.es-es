@@ -3,13 +3,13 @@ title: Novedades de .NET Standard
 description: En este artículo, se resumen las nuevas características y mejoras que se encuentran en cada nueva versión de .NET Standard.
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
-ms.technology: dotnet-standard
-ms.openlocfilehash: 36bd1f9a0dad06d11110b35e9a66f22140cee5ca
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.prod: dotnet-whatsnew
+ms.openlocfilehash: 299477a7375381fa7f8064562e2a68e221944a05
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557277"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817179"
 ---
 # <a name="whats-new-in-net-standard"></a>Novedades de .NET Standard
 

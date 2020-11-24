@@ -3,17 +3,16 @@ title: Componentes de la arquitectura .NET
 description: Aquí se describen los componentes de la arquitectura .NET, como .NET Standard, las implementaciones de .NET, los entornos de ejecución .NET y las herramientas.
 author: cartermp
 ms.date: 10/05/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 316063dbcfba5c92b4a9c6a17051e0a7fc178a3a
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 00d05ee328087042f7603779438436656c45be48
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224388"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819427"
 ---
 # <a name="net-architectural-components"></a>Componentes de la arquitectura .NET
 
-Una aplicación de .NET se desarrolla y se ejecuta en una o varias *implementaciones de .NET* . Las implementaciones de .NET incluyen .NET Framework, .NET 5 (y .NET Core) y Mono. Hay una especificación de API común a varias implementaciones de .NET que se denomina .NET Standard. En este artículo, se ofrece una breve introducción a cada uno de estos conceptos.
+Una aplicación de .NET se desarrolla y se ejecuta en una o varias *implementaciones de .NET*. Las implementaciones de .NET incluyen .NET Framework, .NET 5 (y .NET Core) y Mono. Hay una especificación de API común a varias implementaciones de .NET que se denomina .NET Standard. En este artículo, se ofrece una breve introducción a cada uno de estos conceptos.
 
 ## <a name="net-standard"></a>.NET Standard
 
@@ -89,7 +88,7 @@ Un entorno de ejecución es el entorno de ejecución de un programa administrado
 Tiene acceso a un amplio conjunto de herramientas y componentes de infraestructura que funcionan con todas las implementaciones de .NET. Estas herramientas y componentes incluyen:
 
 - Los lenguajes .NET y sus compiladores
-- El sistema de proyectos de .NET (basado en archivos *.csproj* , *.vbproj* y *.fsproj* )
+- El sistema de proyectos de .NET (basado en archivos *.csproj*, *.vbproj* y *.fsproj*)
 - [MSBuild](/visualstudio/msbuild/msbuild), el motor de compilación usado para compilar proyectos
 - [NuGet](/nuget/), administrador de paquetes de Microsoft para .NET
 - Herramientas de organización de compilación de código abierto, como [CAKE](https://cakebuild.net/) y [FAKE](https://fake.build/)
@@ -107,14 +106,14 @@ Las revisiones posteriores de los estándares las han desarrollado los grupos de
 Los siguientes documentos oficiales de ECMA están disponibles para [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) y la [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
 - **El estándar del lenguaje C# (versión 5.0)** : [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **Common Language Infrastructure** : disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
-- **Información derivada del archivo XML de la parte IV** : disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
+- **Common Language Infrastructure**: disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip).
+- **Información derivada del archivo XML de la parte IV**: disponible en los formatos [pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) y [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip).
 
 Los documentos ISO/IEC oficiales están disponibles en la página ISO/IEC [Estándares disponibles públicamente](https://standards.iso.org/ittf/PubliclyAvailableStandards/). Estos vínculos son directos de esa página:
 
 - **Tecnología de la información: lenguajes de programación, C#** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **Tecnologías de la información: Common Language Infrastructure (CLI), partes I a VI** : [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **Tecnología de la información: Common Language Infrastructure (CLI); informe técnico sobre la información derivada del archivo XML de la parte IV** : [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **Tecnologías de la información: Common Language Infrastructure (CLI), partes I a VI**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Tecnología de la información: Common Language Infrastructure (CLI); informe técnico sobre la información derivada del archivo XML de la parte IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Vea también
 

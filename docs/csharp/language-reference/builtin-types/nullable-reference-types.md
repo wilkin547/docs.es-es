@@ -2,19 +2,19 @@
 title: 'Tipos de referencia que aceptan valores NULL: referencia de C#'
 description: Información sobre los tipos de referencia que aceptan valores NULL de C# y su uso
 ms.date: 04/06/2020
-ms.openlocfilehash: 274a613a8381a2b7718c9025f51aadb2eb32af36
-ms.sourcegitcommit: 870bc4b4087510f6fba3c7b1c0d391f02bcc1f3e
+ms.openlocfilehash: d961af9ba3b4776e6b4ec3eeea5392fb0d0394ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92471868"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822430"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Tipos de referencia que aceptan valores NULL (referencia de C#)
 
 > [!NOTE]
 > En este artículo se tratan los tipos de referencia que aceptan valores NULL. También puede declarar [tipos de valor que aceptan valores NULL](nullable-value-types.md).
 
-Los tipos de referencia que aceptan valores NULL están disponibles a partir de C# 8.0, en un código que ha participado en un *contexto compatible con valores NULL* . Los tipos de referencia que aceptan valores NULL, las advertencias de análisis estático NULL y el [operador null-forgiving](../operators/null-forgiving.md) son características de lenguaje opcionales. Todas están desactivadas de forma predeterminada. Un *contexto que admite valores NULL* se controla en el nivel de proyecto mediante la configuración de compilación o en el código que usa pragmas.
+Los tipos de referencia que aceptan valores NULL están disponibles a partir de C# 8.0, en un código que ha participado en un *contexto compatible con valores NULL*. Los tipos de referencia que aceptan valores NULL, las advertencias de análisis estático NULL y el [operador null-forgiving](../operators/null-forgiving.md) son características de lenguaje opcionales. Todas están desactivadas de forma predeterminada. Un *contexto que admite valores NULL* se controla en el nivel de proyecto mediante la configuración de compilación o en el código que usa pragmas.
 
  En un contexto compatible con valores NULL:
 
@@ -49,11 +49,11 @@ try
 
 Los ejemplos de la sección anterior muestran la naturaleza de los tipos de referencia que aceptan valores NULL. Los tipos de referencia que aceptan valores NULL no son nuevos tipos de clase, sino anotaciones en tipos de referencia existentes. El compilador utiliza esas anotaciones para ayudarle a encontrar posibles errores de referencia nula en el código. No hay ninguna diferencia en tiempo de ejecución entre un tipo de referencia que no acepta valores NULL y un tipo de referencia que acepta valores NULL. El compilador no agrega ninguna comprobación de tiempo de ejecución para los tipos de referencia que no aceptan valores NULL. Las ventajas radican en el análisis en tiempo de compilación. El compilador genera advertencias que le ayudan a encontrar y corregir posibles errores nulos en el código. Declare su intención y el compilador le advierte cuando el código infringe dicha intención.
 
-En un contexto habilitado para valores NULL, el compilador realiza un análisis estático de las variables de cualquier tipo de referencia, tanto si admiten valores NULL como si no aceptan valores NULL. El compilador realiza un seguimiento del estado NULL de cada variable de referencia como *no NULL* o *quizás NULL* . El estado predeterminado de una referencia que no acepta valores NULL es *no NULL* . El estado predeterminado de una referencia que acepta valores NULL es *quizás NULL* .
+En un contexto habilitado para valores NULL, el compilador realiza un análisis estático de las variables de cualquier tipo de referencia, tanto si admiten valores NULL como si no aceptan valores NULL. El compilador realiza un seguimiento del estado NULL de cada variable de referencia como *no NULL* o *quizás NULL*. El estado predeterminado de una referencia que no acepta valores NULL es *no NULL*. El estado predeterminado de una referencia que acepta valores NULL es *quizás NULL*.
 
-Los tipos de referencia que no aceptan valores NULL siempre deben ser seguros para desreferenciar porque su estado NULL es *no NULL* . Para aplicar esa regla, el compilador emite advertencias si un tipo de referencia que no acepta valores NULL no se inicializa en un valor no NULL. Las variables locales deben asignarse allí donde se declaran. Cada constructor debe asignar todos los campos, ya sea en el cuerpo, en un constructor llamado o con un inicializador de campo. El compilador emite advertencias si una referencia que no acepta valores NULL se asigna a una referencia cuyo estado es *quizás NULL* . Sin embargo, dado que una referencia que no acepta valores NULL es *no NULL* , no se emite ninguna advertencia cuando se desreferencian esas variables.
+Los tipos de referencia que no aceptan valores NULL siempre deben ser seguros para desreferenciar porque su estado NULL es *no NULL*. Para aplicar esa regla, el compilador emite advertencias si un tipo de referencia que no acepta valores NULL no se inicializa en un valor no NULL. Las variables locales deben asignarse allí donde se declaran. Cada constructor debe asignar todos los campos, ya sea en el cuerpo, en un constructor llamado o con un inicializador de campo. El compilador emite advertencias si una referencia que no acepta valores NULL se asigna a una referencia cuyo estado es *quizás NULL*. Sin embargo, dado que una referencia que no acepta valores NULL es *no NULL*, no se emite ninguna advertencia cuando se desreferencian esas variables.
 
-Los tipos de referencia que aceptan valores NULL se pueden inicializar o asignar a `null`. Por lo tanto, el análisis estático debe determinar que una variable es *no NULL* antes de desreferenciarla. Si se determina que una referencia que acepta valores NULL es *quizás NULL* , no se puede asignar a una variable de referencia que no acepte valores NULL. La consulta siguiente muestra ejemplos de estas advertencias:
+Los tipos de referencia que aceptan valores NULL se pueden inicializar o asignar a `null`. Por lo tanto, el análisis estático debe determinar que una variable es *no NULL* antes de desreferenciarla. Si se determina que una referencia que acepta valores NULL es *quizás NULL*, no se puede asignar a una variable de referencia que no acepte valores NULL. La consulta siguiente muestra ejemplos de estas advertencias:
 
 :::code language="csharp" source="snippets/shared/NullableReferenceTypes.cs" id="SnippetClassWithNullable":::
 
@@ -72,7 +72,7 @@ Hay dos formas de controlar el contexto que acepta valores NULL. En el nivel de 
 Para más información, consulte las propuestas siguientes de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md):
 
 - [Tipos de referencia que aceptan valores null](~/_csharplang/proposals/csharp-8.0/nullable-reference-types.md)
-- [Borrador de especificación de tipos de referencia que aceptan valores NULL](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
+- [Borrador de especificación de tipos de referencia que aceptan valores NULL](~/_csharplang/proposals/csharp-9.0/nullable-reference-types-specification.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,16 @@
 ---
 title: Lectura de un documento XML en el DOM
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 02338d72f51d3a7507c0dfa030383399b9e213f6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 40efccba86f1bca8af838961dccdc7f98f8c93c2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282407"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820402"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lectura de un documento XML en el DOM
 La información XML se lee en memoria desde diferentes formatos. Se puede leer desde una cadena, una secuencia, una URL, un sistema de lectura de texto o una clase derivada de <xref:System.Xml.XmlReader>.  

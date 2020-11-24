@@ -2,14 +2,13 @@
 title: Analizador de portabilidad de .NET | .NET
 description: Obtenga información sobre cómo usar la herramienta Analizador de portabilidad de .NET para evaluar la portabilidad de su código entre las diferentes implementaciones de .NET, incluidos .NET Core, .NET Standard, UWP y Xamarin.
 ms.date: 09/13/2019
-ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d61dd9ebe744686885dad41ef700caaea9853f85
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414804"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819713"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 

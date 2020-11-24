@@ -2,7 +2,6 @@
 title: Sustituciones en expresiones regulares
 description: Realice sustituciones para reemplazar el texto coincidente mediante expresiones regulares en .NET. Las sustituciones son elementos del lenguaje que solo se reconocen dentro de patrones de reemplazo.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 935fbf573c00aeaec639884888d7e3e6a83c7056
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 0f2fbe7e8b9c13d811a2fe50db0709405dfa1da7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888937"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818822"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 
@@ -29,7 +28,7 @@ Las sustituciones son elementos del lenguaje que se reconocen solo dentro de pat
   
 |Sustitución|Descripción|  
 |------------------|-----------------|  
-|$ *number*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number* , donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#substituting-a-numbered-group).|  
+|$ *number*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number*, donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#substituting-a-numbered-group).|  
 |${ *name* }|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#substituting-a-named-group).|  
 |$$|Incluye un literal "$" único en la cadena de reemplazo. Para obtener más información, vea [Sustituir un símbolo "$"](#substituting-a--character).|  
 |$&|Incluye una copia de la coincidencia completa en la cadena de reemplazo. Para obtener más información, vea [Sustituir toda la coincidencia](#substituting-the-entire-match).|  

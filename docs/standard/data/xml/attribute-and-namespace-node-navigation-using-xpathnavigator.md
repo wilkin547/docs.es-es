@@ -1,14 +1,13 @@
 ---
 title: Navegación por nodos de espacios de nombres y atributos con XPathNavigator
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-ms.openlocfilehash: 90c8fe7450a6ca853aaea452e30a292dbdcd9d98
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cf29c15463030774b488beed776c9cfe623072d1
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291622"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819414"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navegación por nodos de espacios de nombres y atributos con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de métodos de navegación. El primero, que se encuentra en el tema [Navegación por un conjunto de nodos con XPathNavigator](node-set-navigation-using-xpathnavigator.md), se utiliza para navegar por *conjuntos de nodos* en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>. El segundo, que se describe en este tema, se utiliza para navegar por *nodos de espacios de nombres y atributos* en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  

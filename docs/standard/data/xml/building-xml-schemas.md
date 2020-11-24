@@ -1,18 +1,17 @@
 ---
 title: Compilar esquemas XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-ms.openlocfilehash: adc1a10bb9acb14ee88589c13e28c49773e42100
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bb011a8b81d9808c7517ebc2517529af7c4b975a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291596"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819376"
 ---
 # <a name="building-xml-schemas"></a>Compilar esquemas XML
 Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium) y se pueden utilizar para compilar esquemas XML en memoria.  

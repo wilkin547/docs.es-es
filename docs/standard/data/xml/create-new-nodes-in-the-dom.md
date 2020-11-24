@@ -1,14 +1,13 @@
 ---
 title: Creación de nuevos nodos en el DOM
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-ms.openlocfilehash: d99a3c68c7554ab266d71a4cbf2e676bc6db8cbc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 835d92b972341e67bc163563ec62c24db610a65a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289582"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822755"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>Creación de nuevos nodos en el DOM
 <xref:System.Xml.XmlDocument> tiene un método de creación para todos los tipos de nodos. Para crear el nodo, proporcione el método con un nombre cuando sea preciso, y el contenido y otros parámetros para aquellos nodos que tengan contenido (por ejemplo, los nodos de texto). Los siguientes métodos son los que necesitan que se proporcione un nombre y otros cuantos parámetros para crear un nodo apropiado.  

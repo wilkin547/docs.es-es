@@ -2,7 +2,6 @@
 title: Sistema de tipos comunes
 description: Explore el sistema de tipos en .NET. Obtenga información sobre los tipos en .NET (tipos de valor o tipos de referencia), definición de tipos, miembros de tipos y características de miembros de tipo.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -16,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ad42a77f9c6280211902fc4ffbf25871c537baa5
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889509"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823191"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 
@@ -249,7 +248,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
  [!code-vb[Conceptual.Types.Members.Properties#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.properties/vb/example.vb#1)]  
   
- Además de incluir la propiedad propiamente dicha, el Lenguaje Intermedio de Microsoft (MSIL) de un tipo que contiene una propiedad de lectura incluye un método `get_`*propertyname* y el lenguaje MSIL de un tipo que contiene una propiedad de escritura incluye un método `set_`*propertyname* .  
+ Además de incluir la propiedad propiamente dicha, el Lenguaje Intermedio de Microsoft (MSIL) de un tipo que contiene una propiedad de lectura incluye un método `get_`*propertyname* y el lenguaje MSIL de un tipo que contiene una propiedad de escritura incluye un método `set_`*propertyname*.  
 
 ### <a name="methods"></a>Métodos
 

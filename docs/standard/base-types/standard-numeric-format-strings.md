@@ -2,7 +2,6 @@
 title: Cadenas con formato numérico estándar
 description: En este artículo, aprenderá a usar cadenas de formato numérico estándar para dar formato a los tipos numéricos comunes en representaciones de texto en .NET.
 ms.date: 06/10/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: e5e1aa16d8df3d0cfce6dac00c91ca8e99e16e3d
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: b8537e8dcfdd45ed8da18b8b82aae5e9fc0cd96e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888976"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94818770"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -33,8 +32,8 @@ Las cadenas de formato numérico estándar se utilizan para dar formato a tipos 
 - `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.
 
   Cuando el *especificador de precisión* controla el número de dígitos fraccionarios de la cadena de resultado, esta refleja un número redondeado al resultado representable más cercano al resultado de precisión infinita. En el caso de que haya dos resultados representables igualmente cercanos:
-  - **En .NET Framework y .NET Core hasta la versión 2.0** , el entorno de ejecución selecciona el resultado con el dígito menos significativo mayor (es decir, mediante <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
-  - **En .NET Core 2.1 y versiones posteriores** , el runtime selecciona el resultado con un dígito menos significativo par (es decir, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
+  - **En .NET Framework y .NET Core hasta la versión 2.0**, el entorno de ejecución selecciona el resultado con el dígito menos significativo mayor (es decir, mediante <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+  - **En .NET Core 2.1 y versiones posteriores**, el runtime selecciona el resultado con un dígito menos significativo par (es decir, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
 
   > [!NOTE]
   > El especificador de precisión determina el número de dígitos de la cadena de resultado. Para rellenar una cadena de resultado con espacios iniciales o finales, use la característica [formatos compuestos](composite-formatting.md) y defina un *componente de alineación* en el elemento de formato.
@@ -48,7 +47,7 @@ Las cadenas con formato numérico estándar son compatibles con:
 - [Cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md) en C# y Visual Basic, que proporcionan una sintaxis simplificada cuando se comparan con las cadenas de formato compuesto.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato** , que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico estándar y se muestran los resultados de ejemplo generados por cada especificador de formato. Consulte la sección [Notas](#NotesStandardFormatting) para obtener información adicional sobre cómo usar las cadenas con formato numérico estándar y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.
 

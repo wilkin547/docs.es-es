@@ -3,14 +3,13 @@ title: Formato de archivo de ensamblado .NET
 description: Obtenga información sobre el formato de archivo de ensamblado .NET, que se usa para describir y contiene las bibliotecas y aplicaciones de .NET.
 author: richlander
 ms.date: 08/20/2019
-ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1e98f0beb6756c9a02b2839eb88d6a5b13375786
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288516"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822196"
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 

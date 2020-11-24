@@ -2,19 +2,18 @@
 title: Cancelación en subprocesos administrados
 description: Conozca la cancelación de subprocesos administrados. Descubra los tokens de cancelación en la cancelación cooperativa de operaciones sincrónicas de ejecución prolongada o asincrónicas.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 09c39202f1564ac544fdf30a07952990b309b661
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188476"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819960"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
 
@@ -45,7 +44,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
   
 - El objeto solicitante emite la solicitud de cancelación para todas las copias del token usando simplemente una llamada de método.  
   
-- Si los une en un *token vinculado* , un agente de escucha puede escuchar varios tokens simultáneamente.  
+- Si los une en un *token vinculado*, un agente de escucha puede escuchar varios tokens simultáneamente.  
   
 - El código de usuario puede observar y responder a las solicitudes de cancelación desde código de biblioteca y el código de biblioteca puede observar y responder a las solicitudes de cancelación desde código de usuario.  
   

@@ -7,12 +7,12 @@ author: luisquintanilla
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc, how-to
-ms.openlocfilehash: eb285465fcacc3e7d4ee60765c30497dcefbc737
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: efebaf0a66863eae0f71fbf1158b80260d7469cf
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94441068"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688181"
 ---
 # <a name="use-net-for-apache-spark-in-jupyter-notebooks"></a>Uso de .NET para Apache Spark en cuadernos de Jupyter Notebook
 
@@ -48,7 +48,7 @@ Para trabajar con cuadernos de Jupyter Notebook, necesitará dos cosas.
 
 ## <a name="start-net-for-apache-spark"></a>Inicio de .NET para Apache Spark
 
-Ejecute el comando siguiente para iniciar .NET para Apache Spark en modo de depuración. Este comando `spark-submit` inicia un proceso y espera conexiones de un objeto [SparkSession](xref:Microsoft.Spark.Sql.SparkSession). Asegúrese de proporcionar la ruta de acceso al archivo `microsoft-spark-<version>.jar` de la versión correspondiente de .NET para Apache Spark que use.
+Ejecute el comando siguiente para iniciar .NET para Apache Spark en modo de depuración. Este comando `spark-submit` inicia un proceso y espera conexiones de un objeto [SparkSession](xref:Microsoft.Spark.Sql.SparkSession). Asegúrese de proporcionar la ruta de acceso al archivo `microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar` de la versión correspondiente de .NET para Apache Spark que use.
 
 **Ubuntu**
 

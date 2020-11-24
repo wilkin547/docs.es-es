@@ -1,17 +1,16 @@
 ---
 title: Compilación de esquema XmlSchemaCollection
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 3d517652665d6d0693e141d623483ff8946bbbf4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7e93331d106dc74878e4d211c4dc6458c37088a3
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290245"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819128"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Compilación de esquema XmlSchemaCollection
 **XmlSchemaCollection** es una caché o una biblioteca en la que se pueden almacenar y validar esquemas de esquema reducido de datos XML (XDR) y de lenguaje de definición de esquema XML (XSD). **XmlSchemaCollection** mejora el rendimiento al almacenar en memoria caché los esquemas, en lugar obtener acceso a ellos desde un archivo o dirección URL.  
@@ -23,7 +22,7 @@ ms.locfileid: "84290245"
 > La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>. Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](xmlschemaset-for-schema-compilation.md).  
   
 ## <a name="add-schemas-to-the-collection"></a>Agregar esquemas a la colección  
- Los esquemas se cargan en la colección mediante el método**Add** de **XmlSchemaCollection**. En ese momento, el esquema se asocia con un identificador URI de espacio de nombres. Para los esquemas XML, el URI de espacio de nombres es, por lo general, el espacio de nombres de destino para el esquema. Para los esquemas XDR, es el espacio de nombres especificado cuando el esquema se agregó a la colección.  
+ Los esquemas se cargan en la colección mediante el método **Add** de **XmlSchemaCollection**. En ese momento, el esquema se asocia con un identificador URI de espacio de nombres. Para los esquemas XML, el URI de espacio de nombres es, por lo general, el espacio de nombres de destino para el esquema. Para los esquemas XDR, es el espacio de nombres especificado cuando el esquema se agregó a la colección.  
   
 ## <a name="check-for-a-schema-in-the-collection"></a>Comprobar un esquema en la colección  
  Puede comprobar si un esquema se encuentra en la colección con el método **Contains**, que acepta un objeto **XmlSchema** (solo para esquemas XML) o una cadena que representa el identificador URI del espacio de nombres asociado al esquema (para esquemas XML y XDR).  

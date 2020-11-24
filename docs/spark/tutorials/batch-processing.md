@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 10/09/2020
 ms.topic: tutorial
-ms.openlocfilehash: 666292fa2e9cecbd4e0aacd291f1008810eb257e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c161a0420de9e99478768926e5385dcfda1f9ee7
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955400"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688233"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Tutorial: Procesamiento por lotes con .NET para Apache Spark
 
@@ -158,7 +158,7 @@ El objetivo de esta aplicación es obtener información detallada sobre los dato
 1. Ejecute la aplicación con `spark-submit`. Asegúrese de actualizar el siguiente comando con las rutas de acceso reales a su archivo .jar de Microsoft Spark.
 
    ```console
-   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<version>.jar dotnet /<path>/to/netcoreapp<version>/GitHubProjects.dll
+   spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /<path>/to/microsoft-spark-<spark_majorversion-spark_minorversion>_<scala_majorversion.scala_minorversion>-<spark_dotnet_version>.jar dotnet /<path>/to/netcoreapp<version>/mySparkBatchApp.dll
    ```
 
 ## <a name="get-the-code"></a>Obtención del código

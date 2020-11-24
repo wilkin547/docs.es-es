@@ -2,19 +2,18 @@
 title: Procedimiento para cancelar una tarea y sus elementos secundarios
 description: Vea ejemplos de cómo cancelar una tarea y sus elementos secundarios en .NET. En los ejemplos se incluyen los pasos de la creación de tareas cancelables, hasta el aviso de que se canceló la tarea.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 578544a910127f41dfdfd577316b23d6d5a60bc4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662685"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94817268"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Procedimiento para cancelar una tarea y sus elementos secundarios
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  

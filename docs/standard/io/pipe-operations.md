@@ -2,19 +2,18 @@
 title: Operaciones de canalización en .NET
 description: 'Descubra las operaciones de canalización en .NET. Las canalizaciones ofrecen recursos para la comunicación entre procesos. Hay dos tipos de canalizaciones: canalizaciones anónimas y con nombre.'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - pipes [.NET]
 - pipe operations [.NET]
 - interprocess communication [.NET], pipes
 - I/O [.NET], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-ms.openlocfilehash: 8d954d55e07a7cbb2b09843afe7f45b1ff5abcc7
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3ec4ee61bfd3a0a82eb0a0884b89c19a9300b078
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188866"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819102"
 ---
 # <a name="pipe-operations-in-net"></a>Operaciones de canalización en .NET
 Las canalizaciones ofrecen recursos para la comunicación entre procesos. Hay dos tipos de canalizaciones:  
