@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1edd1670-976a-4fc8-bef7-7c41e60ad989
 topic_type:
 - apiref
-ms.openlocfilehash: e8065a5492884a4b7f5d662737e4beddc6fca5b3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f9cb8db35a1669cead6f9f26c9a89e063628dd8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687676"
 ---
-# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="69ea6-102">CorNotificationForTokenMovement (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="69ea6-102">CorNotificationForTokenMovement Enumeration</span></span>
-<span data-ttu-id="69ea6-103">Especifica las notificaciones que se enviarán al cliente de la API de metadatos cuando se produzca una reasignación de token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
+# <a name="cornotificationfortokenmovement-enumeration"></a><span data-ttu-id="e1322-102">CorNotificationForTokenMovement (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="e1322-102">CorNotificationForTokenMovement Enumeration</span></span>
+
+<span data-ttu-id="e1322-103">Especifica las notificaciones que se enviarán al cliente de la API de metadatos cuando se produzca una reasignación de token.</span><span class="sxs-lookup"><span data-stu-id="e1322-103">Specifies the notifications that will be sent to the metadata API client when a token remap occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69ea6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="69ea6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1322-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e1322-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorNotificationForTokenMovement {  
@@ -59,44 +60,46 @@ typedef enum CorNotificationForTokenMovement {
 } CorNotificationForTokenMovement;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="69ea6-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="69ea6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e1322-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="e1322-105">Members</span></span>  
   
-|<span data-ttu-id="69ea6-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="69ea6-106">Member</span></span>|<span data-ttu-id="69ea6-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="69ea6-107">Description</span></span>|  
+|<span data-ttu-id="e1322-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="e1322-106">Member</span></span>|<span data-ttu-id="e1322-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="e1322-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDNotifyDefault`|<span data-ttu-id="69ea6-108">Notificar cuándo se `mdTypeRef` `mdMethodDef` `mdMemberRef` `mdFieldDef` mueven los tokens,, o.</span><span class="sxs-lookup"><span data-stu-id="69ea6-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
-|`MDNotifyAll`|<span data-ttu-id="69ea6-109">Notificar cuando se mueva cualquier token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-109">Notify when any token moves.</span></span>|  
-|`MDNotifyNone`|<span data-ttu-id="69ea6-110">No notifique cuando se muevan los tokens.</span><span class="sxs-lookup"><span data-stu-id="69ea6-110">Do not notify when tokens move.</span></span>|  
-|`MDNotifyMethodDef`|<span data-ttu-id="69ea6-111">Notificar cuando `mdMethodDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-111">Notify when an `mdMethodDef` token moves.</span></span>|  
-|`MDNotifyMemberRef`|<span data-ttu-id="69ea6-112">Notificar cuando `mdMemberRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-112">Notify when an `mdMemberRef` token moves.</span></span>|  
-|`MDNotifyFieldDef`|<span data-ttu-id="69ea6-113">Notificar cuando `mdFieldDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-113">Notify when an `mdFieldDef` token moves.</span></span>|  
-|`MDNotifyTypeRef`|<span data-ttu-id="69ea6-114">Notificar cuando `mdTypeRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-114">Notify when an `mdTypeRef` token moves.</span></span>|  
-|`MDNotifyTypeDef`|<span data-ttu-id="69ea6-115">Notificar cuando `mdTypeDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-115">Notify when an `mdTypeDef` token moves.</span></span>|  
-|`MDNotifyParamDef`|<span data-ttu-id="69ea6-116">Notificar cuando `mdParamDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-116">Notify when an `mdParamDef` token moves.</span></span>|  
-|`MDNotifyInterfaceImpl`|<span data-ttu-id="69ea6-117">Notificar cuando `mdInterfaceImpl` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
-|`MDNotifyProperty`|<span data-ttu-id="69ea6-118">Notificar cuando `mdProperty` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-118">Notify when an `mdProperty` token moves.</span></span>|  
-|`MDNotifyEvent`|<span data-ttu-id="69ea6-119">Notificar cuando `mdEvent` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-119">Notify when an `mdEvent` token moves.</span></span>|  
-|`MDNotifySignature`|<span data-ttu-id="69ea6-120">Notificar cuando `mdSignature` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-120">Notify when an `mdSignature` token moves.</span></span>|  
-|`MDNotifyTypeSpec`|<span data-ttu-id="69ea6-121">Notificar cuando `mdTypeSpec` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
-|`MDNotifyCustomAttribute`|<span data-ttu-id="69ea6-122">Notificar cuando `mdCustomAttribute` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
-|`MDNotifySecurityValue`|<span data-ttu-id="69ea6-123">Notificar cuando `mdSecurityValue` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
-|`MDNotifyPermission`|<span data-ttu-id="69ea6-124">Notificar cuando `mdPermission` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-124">Notify when an `mdPermission` token moves.</span></span>|  
-|`MDNotifyModuleRef`|<span data-ttu-id="69ea6-125">Notificar cuando `mdModuleRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-125">Notify when an `mdModuleRef` token moves.</span></span>|  
-|`MDNotifyNameSpace`|<span data-ttu-id="69ea6-126">Notificar cuando `mdNameSpace` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-126">Notify when an `mdNameSpace` token moves.</span></span>|  
-|`MDNotifyAssemblyRef`|<span data-ttu-id="69ea6-127">Notificar cuando `mdAssemblyRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
-|`MDNotifyFile`|<span data-ttu-id="69ea6-128">Notificar cuando `mdFile` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-128">Notify when an `mdFile` token moves.</span></span>|  
-|`MDNotifyExportedType`|<span data-ttu-id="69ea6-129">Notificar cuando `mdExportedType` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-129">Notify when an `mdExportedType` token moves.</span></span>|  
-|`MDNotifyResource`|<span data-ttu-id="69ea6-130">Notificar cuando `mdManifestResource` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="69ea6-130">Notify when an `mdManifestResource` token moves.</span></span>|  
+|`MDNotifyDefault`|<span data-ttu-id="e1322-108">Notificar cuándo se `mdTypeRef` `mdMethodDef` `mdMemberRef` `mdFieldDef` mueven los tokens,, o.</span><span class="sxs-lookup"><span data-stu-id="e1322-108">Notify when `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, or `mdFieldDef` tokens move.</span></span>|  
+|`MDNotifyAll`|<span data-ttu-id="e1322-109">Notificar cuando se mueva cualquier token.</span><span class="sxs-lookup"><span data-stu-id="e1322-109">Notify when any token moves.</span></span>|  
+|`MDNotifyNone`|<span data-ttu-id="e1322-110">No notifique cuando se muevan los tokens.</span><span class="sxs-lookup"><span data-stu-id="e1322-110">Do not notify when tokens move.</span></span>|  
+|`MDNotifyMethodDef`|<span data-ttu-id="e1322-111">Notificar cuando `mdMethodDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-111">Notify when an `mdMethodDef` token moves.</span></span>|  
+|`MDNotifyMemberRef`|<span data-ttu-id="e1322-112">Notificar cuando `mdMemberRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-112">Notify when an `mdMemberRef` token moves.</span></span>|  
+|`MDNotifyFieldDef`|<span data-ttu-id="e1322-113">Notificar cuando `mdFieldDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-113">Notify when an `mdFieldDef` token moves.</span></span>|  
+|`MDNotifyTypeRef`|<span data-ttu-id="e1322-114">Notificar cuando `mdTypeRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-114">Notify when an `mdTypeRef` token moves.</span></span>|  
+|`MDNotifyTypeDef`|<span data-ttu-id="e1322-115">Notificar cuando `mdTypeDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-115">Notify when an `mdTypeDef` token moves.</span></span>|  
+|`MDNotifyParamDef`|<span data-ttu-id="e1322-116">Notificar cuando `mdParamDef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-116">Notify when an `mdParamDef` token moves.</span></span>|  
+|`MDNotifyInterfaceImpl`|<span data-ttu-id="e1322-117">Notificar cuando `mdInterfaceImpl` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-117">Notify when an `mdInterfaceImpl` token moves.</span></span>|  
+|`MDNotifyProperty`|<span data-ttu-id="e1322-118">Notificar cuando `mdProperty` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-118">Notify when an `mdProperty` token moves.</span></span>|  
+|`MDNotifyEvent`|<span data-ttu-id="e1322-119">Notificar cuando `mdEvent` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-119">Notify when an `mdEvent` token moves.</span></span>|  
+|`MDNotifySignature`|<span data-ttu-id="e1322-120">Notificar cuando `mdSignature` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-120">Notify when an `mdSignature` token moves.</span></span>|  
+|`MDNotifyTypeSpec`|<span data-ttu-id="e1322-121">Notificar cuando `mdTypeSpec` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-121">Notify when an `mdTypeSpec` token moves.</span></span>|  
+|`MDNotifyCustomAttribute`|<span data-ttu-id="e1322-122">Notificar cuando `mdCustomAttribute` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-122">Notify when an `mdCustomAttribute` token moves.</span></span>|  
+|`MDNotifySecurityValue`|<span data-ttu-id="e1322-123">Notificar cuando `mdSecurityValue` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-123">Notify when an `mdSecurityValue` token moves.</span></span>|  
+|`MDNotifyPermission`|<span data-ttu-id="e1322-124">Notificar cuando `mdPermission` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-124">Notify when an `mdPermission` token moves.</span></span>|  
+|`MDNotifyModuleRef`|<span data-ttu-id="e1322-125">Notificar cuando `mdModuleRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-125">Notify when an `mdModuleRef` token moves.</span></span>|  
+|`MDNotifyNameSpace`|<span data-ttu-id="e1322-126">Notificar cuando `mdNameSpace` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-126">Notify when an `mdNameSpace` token moves.</span></span>|  
+|`MDNotifyAssemblyRef`|<span data-ttu-id="e1322-127">Notificar cuando `mdAssemblyRef` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-127">Notify when an `mdAssemblyRef` token moves.</span></span>|  
+|`MDNotifyFile`|<span data-ttu-id="e1322-128">Notificar cuando `mdFile` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-128">Notify when an `mdFile` token moves.</span></span>|  
+|`MDNotifyExportedType`|<span data-ttu-id="e1322-129">Notificar cuando `mdExportedType` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-129">Notify when an `mdExportedType` token moves.</span></span>|  
+|`MDNotifyResource`|<span data-ttu-id="e1322-130">Notificar cuando `mdManifestResource` se mueva un token.</span><span class="sxs-lookup"><span data-stu-id="e1322-130">Notify when an `mdManifestResource` token moves.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="69ea6-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="69ea6-131">Remarks</span></span>  
- <span data-ttu-id="69ea6-132">Un token puede volver a asignarse (es decir, moverse) durante una fusión mediante combinación de metadatos.</span><span class="sxs-lookup"><span data-stu-id="69ea6-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="69ea6-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="69ea6-133">Requirements</span></span>  
- <span data-ttu-id="69ea6-134">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="69ea6-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="69ea6-135">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="69ea6-135">**Header:** CorHdr.h</span></span>  
-  
- <span data-ttu-id="69ea6-136">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="69ea6-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="69ea6-137">Consulte también</span><span class="sxs-lookup"><span data-stu-id="69ea6-137">See also</span></span>
+## <a name="remarks"></a><span data-ttu-id="e1322-131">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e1322-131">Remarks</span></span>  
 
-- [<span data-ttu-id="69ea6-138">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="69ea6-138">Metadata Enumerations</span></span>](metadata-enumerations.md)
+ <span data-ttu-id="e1322-132">Un token puede volver a asignarse (es decir, moverse) durante una fusión mediante combinación de metadatos.</span><span class="sxs-lookup"><span data-stu-id="e1322-132">A token may be re-mapped (that is, moved) during a metadata merge.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="e1322-133">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1322-133">Requirements</span></span>  
+
+ <span data-ttu-id="e1322-134">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1322-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="e1322-135">**Encabezado:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="e1322-135">**Header:** CorHdr.h</span></span>  
+  
+ <span data-ttu-id="e1322-136">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1322-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="e1322-137">Consulte también</span><span class="sxs-lookup"><span data-stu-id="e1322-137">See also</span></span>
+
+- [<span data-ttu-id="e1322-138">Enumeraciones para metadatos</span><span class="sxs-lookup"><span data-stu-id="e1322-138">Metadata Enumerations</span></span>](metadata-enumerations.md)
