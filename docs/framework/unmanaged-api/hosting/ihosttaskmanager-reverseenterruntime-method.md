@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 163bf3327219f1198c5ed078308096ac3d0325be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672973"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime (Método)
+
 Notifica al host que se está realizando una llamada en el Common Language Runtime (CLR) desde el código no administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +36,7 @@ HRESULT ReverseEnterRuntime ();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`ReverseEnterRuntime`se devolvió correctamente.|  
+|S_OK|`ReverseEnterRuntime` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -44,21 +45,23 @@ HRESULT ReverseEnterRuntime ();
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación de recursos solicitada.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si la llamada a CLR se realiza a partir de una secuencia que se originó en código administrado, cada llamada a `ReverseEnterRuntime` corresponde a una llamada a [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md).  
   
 > [!NOTE]
 > Las llamadas se pueden originar a partir de código no administrado sin anidarse. En este caso, no hay ninguna llamada a [EnterRuntime (](ihosttaskmanager-enterruntime-method.md), [LeaveRuntime (](ihosttaskmanager-leaveruntime-method.md)o `ReverseLeaveRuntime` , y el número de llamadas a no es `ReverseEnterRuntime` igual al número de llamadas a `ReverseLeaveRuntime` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

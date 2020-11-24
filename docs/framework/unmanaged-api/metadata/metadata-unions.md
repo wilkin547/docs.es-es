@@ -6,21 +6,24 @@ helpviewer_keywords:
 - unions [.NET Framework metadata]
 - metadata unions [.NET Framework]
 ms.assetid: 2c7534cf-34fa-470a-b29e-6cf5a7bd03d3
-ms.openlocfilehash: 3da69b86504253f68d59eb729668e7467e5795e1
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c6876d17fba842d9e33e030ef2863b210ba7fd64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489527"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672843"
 ---
 # <a name="metadata-unions"></a>Uniones de metadatos
+
 En esta sección se describen las uniones no administradas que utiliza la API de metadatos.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [CeeSectionRelocExtra (Unión)](ceesectionrelocextra-union.md)  
  Representa un desplazamiento de dirección que se usa en la interfaz [ICeeGen](iceegen-interface.md) para reubicar una sección.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Interfaces de metadatos](metadata-interfaces.md)  
   
  [Funciones estáticas globales para metadatos](metadata-global-static-functions.md)  

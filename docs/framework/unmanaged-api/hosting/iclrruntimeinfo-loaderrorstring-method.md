@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52c543ab-9ef5-4ee7-b836-c0ffc35cd45b
 topic_type:
 - apiref
-ms.openlocfilehash: da6efae38cd70a68feea56b12e86be23fde7f0cb
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0e029aa848a6630ae00c834dd2b924dc4ebce537
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762193"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95671777"
 ---
 # <a name="iclrruntimeinfoloaderrorstring-method"></a>ICLRRuntimeInfo::LoadErrorString (Método)
+
 Convierte un valor HRESULT en un mensaje de error adecuado para la referencia cultural especificada.  
   
  Este método sustituye a las siguientes funciones:  
@@ -42,6 +43,7 @@ HRESULT LoadErrorString(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `iResourceID`  
  de HRESULT que se va a traducir.  
   
@@ -55,6 +57,7 @@ HRESULT LoadErrorString(
  de Identificador de referencia cultural. Para utilizar la referencia cultural predeterminada, debe especificar-1.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -64,15 +67,16 @@ HRESULT LoadErrorString(
 |E_INVALIDARG|`pwzBuffer` es null.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

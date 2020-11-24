@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d101168-b5e3-49ce-90c7-85cf2db83c4c
 topic_type:
 - apiref
-ms.openlocfilehash: 049a0ae6d860c7c431d08af8ba4539656b8e5592
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 5653f874ef7a681f6667b3508b82ac493234cc4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673155"
 ---
 # <a name="ihostmanualeventreset-method"></a>IHostManualEvent::Reset (Método)
+
 Restablece la instancia de [IHostManualEvent](ihostmanualevent-interface.md) actual a un estado no señalado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +36,7 @@ HRESULT Reset ();
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Reset`se devolvió correctamente.|  
+|S_OK|`Reset` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -43,11 +44,12 @@ HRESULT Reset ();
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

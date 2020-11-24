@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 2985c419b25b8bf76df8fee0f0f37ba9ebee3df7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 4acdfd6df410f229a002fa191ef24766748a1262
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007911"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672362"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor (Enumeración)
+
 Especifica los tokens de metadatos en los que se comprobarán los duplicados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -97,6 +98,7 @@ typedef enum CorCheckDuplicatesFor {
 |`MDDupDefault`|Compruebe si hay duplicados de,,, `mdMemberRef` `mdTypeRef` `mdSignature` `mdTypeSpec` y `mdMethodSpec` tokens.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

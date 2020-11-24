@@ -14,14 +14,15 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7f3e4eef4a7e378529c2097a8fe1a753a98c961
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e678aca5baf82c07ec9fc5c85cef22630af5ab0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672336"
 ---
 # <a name="formatfromrawvalue-function"></a>Función FormatFromRawValue
+
 Convierte un valor de datos de rendimiento sin procesar al formato especificado, o bien dos valores de datos de rendimiento sin procesar si la conversión de formato es de duración definida.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -47,7 +48,7 @@ de El tipo de contador. Para obtener una lista de tipos de contadores, vea [tipo
 `dwFormat`\
 de Formato al que se van a convertir los datos de rendimiento sin procesar. Puede ser uno de los siguientes valores:
 
-|Constante  |Valor  |Descripción |
+|Constante  |Value  |Descripción |
 |---------|---------|---------|
 | `PDH_FMT_DOUBLE` |0x00000200 | Devuelve el valor calculado como un valor de punto flotante de precisión doble. |
 | `PDH_FMT_LARGE` | 0x00000400 | Devuelve el valor calculado como un entero de 64 bits. |
@@ -55,7 +56,7 @@ de Formato al que se van a convertir los datos de rendimiento sin procesar. Pued
 
 Uno de los valores anteriores puede ser ORed con una de las siguientes marcas de escalado:
 
-|Constante  |Valor  |Descripción |
+|Constante  |Value  |Descripción |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | No aplique los factores de escala del contador. |
 | `PDH_FMT_1000` | 0x00002000 | Multiplique el valor final por 1.000. |
@@ -76,7 +77,7 @@ enuncia Puntero a una [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh
 
 Esta función devuelve los valores siguientes:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |Descripción  |
 |---------|---------|---------|
 | `ERROR_SUCCESS` | 0 | La llamada de función se realiza correctamente. |
 | `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Falta un argumento necesario o es incorrecto. |
@@ -94,6 +95,6 @@ Esta función contiene una llamada a la función [FormatFromRawValue](/previous-
 
  **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

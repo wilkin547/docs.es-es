@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: 190908c675b96b8ea2d81fb0203aa16a80d6a8b4
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673116"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager (Interfaz)
+
 Proporciona métodos que permiten al Common Language Runtime (CLR) trabajar con tareas a través del host en lugar de usar las funciones de fibra o de subprocesos estándar del sistema operativo.  
   
 ## <a name="methods"></a>Métodos  
@@ -48,18 +49,20 @@ Proporciona métodos que permiten al Common Language Runtime (CLR) trabajar con 
 |[Método SwitchToTask](ihosttaskmanager-switchtotask-method.md)|Notifica al host que debe desactivar la tarea actual.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IHostTaskManager`permite que CLR cree y administre tareas, para proporcionar enlaces para que el host tome medidas cuando el control se transfiere del código administrado al código no administrado y viceversa, y para especificar determinadas acciones que el host puede y no puede realizar durante la ejecución del código.  
+
+ `IHostTaskManager` permite que CLR cree y administre tareas, para proporcionar enlaces para que el host tome medidas cuando el control se transfiere del código administrado al código no administrado y viceversa, y para especificar determinadas acciones que el host puede y no puede realizar durante la ejecución del código.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

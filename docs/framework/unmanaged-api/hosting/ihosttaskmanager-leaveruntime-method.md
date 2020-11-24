@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43689cc4-e48e-46e5-a22d-bafd768b8759
 topic_type:
 - apiref
-ms.openlocfilehash: deaebbce3b9b8a26bf9668b826a6818dba94dcc3
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 855f8a5d3582bbad59301a344d8a51198c40a051
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501387"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673051"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime (Método)
+
 Notifica al host que la tarea que se está ejecutando actualmente está a punto de abandonar el Common Language Runtime (CLR) y especificar código no administrado.  
   
 > [!IMPORTANT]
@@ -37,6 +38,7 @@ HRESULT LeaveRuntime (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `target`  
  de Dirección dentro del archivo ejecutable portable asignado de la función no administrada a la que se va a llamar.  
   
@@ -44,7 +46,7 @@ HRESULT LeaveRuntime (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime`se devolvió correctamente.|  
+|S_OK|`LeaveRuntime` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -53,6 +55,7 @@ HRESULT LeaveRuntime (
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la asignación solicitada.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Las secuencias de llamadas a y desde código no administrado se pueden anidar. Por ejemplo, en la lista siguiente se describe una situación hipotética en la que la secuencia de llamadas a `LeaveRuntime` , [IHostTaskManager:: ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md), y `IHostTaskManager::EnterRuntime` permite al host identificar las capas anidadas.  
   
 |Acción|Llamada al método correspondiente|  
@@ -65,15 +68,16 @@ HRESULT LeaveRuntime (
 |La primera función no administrada devuelve la ejecución al programa Visual Basic.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cba9e4d6-9461-4420-9614-96ff7039ec9c
 topic_type:
 - apiref
-ms.openlocfilehash: 1aea017f17e29544e9288e1f57e6f84f9a2f6dae
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 048010f00f6581a29c6b1a3150bf5ae8822b5664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501110"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95672466"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>IMetaDataTables::GetUserStringHeapSize (Método)
+
 Obtiene el tamaño, en bytes, del montón de cadena de usuario.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,19 +35,21 @@ HRESULT GetUserStringHeapSize (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pcbBlobs`  
  enuncia Puntero al tamaño, en bytes, del montón de cadena de usuario.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
 - [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)
