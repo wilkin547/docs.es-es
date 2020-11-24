@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cf064bac-9a9f-41c5-9e1d-108ff7af3afe
 topic_type:
 - apiref
-ms.openlocfilehash: 7babd0a90b9882acb03b6360753f55c57a399b9e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3c03497f48b8199da545d796637e5f8a5c532362
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675716"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent (Método)
+
 Crea una definición para un evento con la firma de metadatos especificada y obtiene un token para esa definición de evento.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,6 +43,7 @@ HRESULT DefineEvent (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `td`  
  de Token de la clase o interfaz de destino. Este es un `mdTypeDef` token o `mdTypeDefNil` .  
   
@@ -70,11 +72,12 @@ HRESULT DefineEvent (
  enuncia Símbolo (token) de metadatos asignado al evento.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

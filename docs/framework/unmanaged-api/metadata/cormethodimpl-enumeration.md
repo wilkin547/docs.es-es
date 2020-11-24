@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-ms.openlocfilehash: b32e8f0b03ef6d550c384f3d932cc295a7270028
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 40e82997e58292a10f5e960cc9d9785d9ea8946a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676990"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl (Enumeración)
+
 Contiene valores que describen las características de implementación de un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -74,6 +75,7 @@ typedef enum CorMethodImpl {
 |`miMaxMethodImplVal`|Valor máximo válido para `CorMethodImpl` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

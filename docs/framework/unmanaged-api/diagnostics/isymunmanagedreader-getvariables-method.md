@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: 637e1aed003e211654141ab397c9c0b4724753c2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c4341a5ffe557694473ae505590b57d39a27a721
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675898"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables (Método)
+
 Devuelve una variable no local, dados su elemento primario y su nombre.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetVariables (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `parent`  
  de Elemento primario de la variable.  
   
@@ -50,11 +52,13 @@ HRESULT GetVariables (
  enuncia Puntero a la variable que recibe las variables.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

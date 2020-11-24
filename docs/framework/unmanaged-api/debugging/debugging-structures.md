@@ -6,18 +6,19 @@ helpviewer_keywords:
 - debugging structures [.NET Framework]
 - structures [.NET Framework debugging]
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
-ms.openlocfilehash: a18094fb2621478dbdb4bbf672df436234112ed0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bf84f8ddb1e86da3b9d0e4326584e61304640558
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793755"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676275"
 ---
 # <a name="debugging-structures"></a>Estructuras de depuración
 
 En esta sección se describen las estructuras no administradas que utiliza la API de depuración.
 
-## <a name="in-this-section"></a>Esta sección
+## <a name="in-this-section"></a>En esta sección
+
  [Estructura de CLRDATA_ADDRESS_RANGE](clrdata-address-range-structure.md) Define un intervalo de direcciones.
 
  [Estructura de CLRDATA_IL_ADDRESS_MAP](clrdata-il-address-map-structure.md) Define una asignación de IL a dirección
@@ -68,15 +69,15 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
 
  [Estructura DacpReJitData](dacprejitdata-structure.md) Define la información básica sobre un método instrumentado del generador de perfiles determinado.
 
- [Estructura de StackTrace_SimpleContext](stacktrace-simplecontext-structure.md) Proporciona un contexto simple que se puede utilizar en lugar de una estructura de `CONTEXT` completa.
+ [Estructura de StackTrace_SimpleContext](stacktrace-simplecontext-structure.md) Proporciona un contexto simple que se puede utilizar en lugar de una `CONTEXT` estructura completa.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
  [Coclases para la depuración](debugging-coclasses.md)
 
- [Interfaces de depuración](debugging-interfaces.md)
+ [Interfaces para depuración](debugging-interfaces.md)
 
- [Funciones estáticas globales de depuración](debugging-global-static-functions.md)
+ [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)
 
  [Enumeraciones de depuración](debugging-enumerations.md)
 

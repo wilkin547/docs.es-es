@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446509"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676366"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
+
 Llame a para establecer los atributos personalizados de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,6 +41,7 @@ HRESULT EmitAssemblyCustomAttribute(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `AssemblyID`  
  IDENTIFICADOR del ensamblado.  
   
@@ -62,13 +64,15 @@ HRESULT EmitAssemblyCustomAttribute(
  TRUE si se van a emitir varios atributos.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)

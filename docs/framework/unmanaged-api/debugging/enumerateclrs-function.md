@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 1f33fb98712939d1e687798547b784819f164d63
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860724"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676106"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
+
 Proporciona un mecanismo para enumerar los CLR de un proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT EnumerateCLRs (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `debuggeePID`  
  [in] Identificador del proceso desde el que se van a enumerar los CLR cargados.  
   
@@ -51,6 +53,7 @@ HRESULT EnumerateCLRs (
  [out] Puntero a una DWORD que contiene la longitud de `ppHandleArrayOut` y `pdwArrayLengthOut` de igual tamaño.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK  
  Se determinó el número de CLR en el proceso y las matrices de rutas de acceso e identificadores correspondientes se rellenaron correctamente.  
   
@@ -64,6 +67,7 @@ HRESULT EnumerateCLRs (
  No se pueden enumerar los CLR cargados.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Para un proceso de destino identificado por `debuggeePID`, la función devuelve una matriz de rutas de acceso, `ppStringArrayOut`, a los CLR cargados en el proceso; una matriz de identificadores de eventos, `ppHandleArrayOut`, que puede contener un evento de inicio continuo para el CLR en el mismo índice; y el tamaño de las matrices, `pdwArrayLengthOut`, que especifica el número de CLR que hay cargados.  
   
  En el sistema operativo Windows, `debuggeePID` se asigna a un identificador de procesos del sistema operativo.  
@@ -73,10 +77,11 @@ HRESULT EnumerateCLRs (
  Se puede llamar a esta función con ambos parámetros de matriz establecidos en NULL para devolver el número de los CLR en el proceso de destino. A partir de este número, un llamador puede deducir el tamaño del búfer que se creará: `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** dbgshim. h  
   
- **Biblioteca:** dbgshim. dll  
+ **Biblioteca:** dbgshim.dll  
   
  **.NET Framework versiones:** 3,5 SP1

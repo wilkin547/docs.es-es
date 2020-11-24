@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-ms.openlocfilehash: 9211af4726617598f3dd8772383cade6368e6c08
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ef9b177bee0651b6b8ea994610315ce93524e8e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007629"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676938"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags (Enumeración)
+
 Proporciona valores de marca que el vinculador usa al vincular código nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,11 +47,12 @@ typedef enum
 |`nlfMaxValue`|No se usa.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

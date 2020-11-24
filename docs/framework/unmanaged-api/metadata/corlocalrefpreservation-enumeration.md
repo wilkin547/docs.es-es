@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 44757163-1228-4213-a4c4-d4de503cc75d
 topic_type:
 - apiref
-ms.openlocfilehash: 42cb4e76bb77aebcee3b28035635a877513cdc04
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 49b0298f4fa776c93f89ac380ce65568b493379b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677120"
 ---
 # <a name="corlocalrefpreservation-enumeration"></a>CorLocalRefPreservation (Enumeración)
+
 Contiene valores de marca para el tratamiento de referencias locales.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,6 +45,7 @@ typedef enum CorLocalRefPreservation
 |`MDPreserveLocalMemberRef`|Conservar las referencias de miembro local.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

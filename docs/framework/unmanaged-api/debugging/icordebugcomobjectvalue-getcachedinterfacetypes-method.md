@@ -13,14 +13,15 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: f5f0f11683043f1c287dd3ca3071830bcfb46502
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82892835"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677562"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes (Método)
+
 Proporciona un enumerador para los tipos de interfaz en los que se ha convertido el objeto actual o se ha utilizado como.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,15 +33,17 @@ HRESULT GetCachedInterfaceTypes(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `bIInspectableOnly`  
- de Valor que indica si el método devuelve solo Windows Runtime interfaces (`IInspectable` interfaces) o todas las interfaces com almacenadas en caché por el contenedor RCW (Runtime Callable wrapper).  
+ de Valor que indica si el método devuelve solo Windows Runtime interfaces ( `IInspectable` interfaces) o todas las interfaces com almacenadas en caché por el contenedor RCW (Runtime Callable wrapper).  
   
  `ppInterfacesEnum`  
- enuncia Puntero a la dirección de un enumerador ICorDebugTypeEnum que proporciona acceso a los objetos ICorDebugType que representan los tipos de interfaz almacenados en memoria `bIInspectableOnly`caché filtrados según.  
+ enuncia Puntero a la dirección de un enumerador ICorDebugTypeEnum que proporciona acceso a los objetos ICorDebugType que representan los tipos de interfaz almacenados en memoria caché filtrados según `bIInspectableOnly` .  
   
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -49,7 +52,7 @@ HRESULT GetCachedInterfaceTypes(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorDebugComObjectValue](icordebugcomobjectvalue-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

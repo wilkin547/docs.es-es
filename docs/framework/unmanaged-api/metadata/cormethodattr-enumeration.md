@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e0c3521-e54d-43c1-9857-cc76b49b8ffc
 topic_type:
 - apiref
-ms.openlocfilehash: 779a8f88b7521aa4b0a75594552981b41714ee3f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6c3e721c24da217eaf2e8857377359e1c51b7b59
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007681"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677029"
 ---
 # <a name="cormethodattr-enumeration"></a>CorMethodAttr (Enumeración)
+
 Contiene valores que describen las características de un método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -92,6 +93,7 @@ typedef enum CorMethodAttr {
 |`mdRequireSecObject`|Especifica que el método llama a otro método que contiene código de seguridad.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
