@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43416dd5-8892-4106-9f59-f9143b19ddb4
 topic_type:
 - apiref
-ms.openlocfilehash: 8e4f745440936a39e22faf60d10a05a0bb110606
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 6a0c33799b2b2aaa48e3b18b7b4bb37643508bd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975958"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678888"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue (Interfaz)
+
 Extiende la interfaz "ICorDebugObjectValue" para proporcionar información de seguimiento de la pila de un objeto de excepción administrado.  
   
 ## <a name="methods"></a>Métodos  
@@ -30,10 +31,12 @@ Extiende la interfaz "ICorDebugObjectValue" para proporcionar información de se
 |------------|-----------------|  
 |[Método EnumerateExceptionCallStack](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|Obtiene un enumerador para la pila de llamadas incrustada en un objeto de excepción.|  
   
-## <a name="remarks"></a>Observaciones  
- La llamada a `QueryInterface` se realizará correctamente para los objetos administrados que derivan de <xref:System.Exception?displayProperty=nameWithType>.  
+## <a name="remarks"></a>Comentarios  
+
+ La llamada a `QueryInterface` se realizará correctamente para los objetos administrados que derivan de <xref:System.Exception?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

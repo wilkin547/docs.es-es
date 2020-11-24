@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-ms.openlocfilehash: 39b4e7e5123447a36254b55b6168c80e48c8dcab
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 5dfb64d0c440cbd2c8a8a65b2c18d78f02a7615e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205451"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679720"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper (Método)
+
 Obtiene un stepper que permite al depurador realizar operaciones de ejecución de paso en relación con este ICorDebugFrame.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT CreateStepper (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppStepper`  
  enuncia Puntero a la dirección de un objeto ICorDebugStepper que permite al depurador realizar operaciones de ejecución de paso en relación con el marco actual.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si el marco no está activo, el objeto stepper normalmente tendrá que volver al marco antes de que se complete el paso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

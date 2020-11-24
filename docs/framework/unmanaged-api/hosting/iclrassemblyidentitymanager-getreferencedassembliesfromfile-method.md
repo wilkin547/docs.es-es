@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eed63d31-d977-4c7d-9443-f9d37a2a7d81
 topic_type:
 - apiref
-ms.openlocfilehash: 3c4f673d88594e86004c6d51a4d58a0ac4642875
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6b67ba9d022d94f51d7cc6a4645855f6b6ac3e19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679329"
 ---
 # <a name="iclrassemblyidentitymanagergetreferencedassembliesfromfile-method"></a>ICLRAssemblyIdentityManager::GetReferencedAssembliesFromFile (Método)
+
 Obtiene una instancia de [ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md) que contiene una lista de ensamblados a los que hace referencia el ensamblado en la ruta de acceso de archivo especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetReferencedAssembliesFromFile (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwzFilePath`  
  de Ruta de acceso al ensamblado que se va a evaluar.  
   
@@ -60,19 +62,21 @@ HRESULT GetReferencedAssembliesFromFile (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El autor de la llamada puede optar por excluir un conjunto de referencias de ensamblado conocidas de la lista devuelta. Este conjunto lo define el `pExcludeAssembliesList` parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)

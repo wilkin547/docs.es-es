@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-ms.openlocfilehash: 02d1ea1ef12fa158ce7ec94aeca4356ac54d4e5f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0049db66d7a753488388c85e87e1f907db56c7cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503489"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679096"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport (Interfaz)
+
 Proporciona métodos para importar y manipular los metadatos existentes desde un archivo portable ejecutable (PE) u otro origen, como una biblioteca de tipos o un archivo binario de metadatos independiente en tiempo de ejecución.  
   
 ## <a name="methods"></a>Métodos  
@@ -58,7 +59,7 @@ Proporciona métodos para importar y manipular los metadatos existentes desde un
 |[Método FindMethod](imetadataimport-findmethod-method.md)|Obtiene un puntero al token MethodDef para el método definido por el tipo especificado con el nombre y la firma de metadatos especificados.|  
 |[Método FindTypeDefByName](imetadataimport-findtypedefbyname-method.md)|Obtiene un puntero al token de metadatos de TypeDef para el tipo con el nombre especificado.|  
 |[Método FindTypeRef](imetadataimport-findtyperef-method.md)|Obtiene un puntero al token de metadatos de TypeRef que hace referencia al tipo en el ámbito de búsqueda especificado con el nombre especificado.|  
-|[Método GetClassLayout](imetadataimport-getclasslayout-method.md)|Obtiene la información de diseño de la clase a la que hace referencia el token TypeDef especificado.|  
+|[GetClassLayout (Método)](imetadataimport-getclasslayout-method.md)|Obtiene la información de diseño de la clase a la que hace referencia el token TypeDef especificado.|  
 |[Método GetCustomAttributeByName](imetadataimport-getcustomattributebyname-method.md)|Obtiene el valor del atributo personalizado a partir de su nombre.|  
 |[Método GetCustomAttributeProps](imetadataimport-getcustomattributeprops-method.md)|Obtiene el valor del atributo personalizado a partir de su token de metadatos.|  
 |[Método GetEventProps](imetadataimport-geteventprops-method.md)|Obtiene la información de los metadatos (incluidos el tipo declarativo, los métodos de adición y eliminación de delegados y todas las marcas y los demás datos asociados) del evento representado por el token de evento especificado.|  
@@ -67,7 +68,7 @@ Proporciona métodos para importar y manipular los metadatos existentes desde un
 |[Método GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md)|Obtiene un puntero a los tokens de metadatos para el tipo que implementa el método especificado y para la interfaz que declara ese método.|  
 |[Método GetMemberProps](imetadataimport-getmemberprops-method.md)|Obtiene información de metadatos (incluidos el nombre, la firma binaria y la dirección virtual relativa) del miembro de tipo al que hace referencia el token de metadatos especificado.|  
 |[Método GetMemberRefProps](imetadataimport-getmemberrefprops-method.md)|Obtiene los metadatos asociados al miembro al que hace referencia el token especificado.|  
-|[GetMethodProps (Método)](imetadataimport-getmethodprops-method.md)|Obtiene los metadatos asociados al método al que hace referencia el token de MethodDef especificado.|  
+|[Método GetMethodProps](imetadataimport-getmethodprops-method.md)|Obtiene los metadatos asociados al método al que hace referencia el token de MethodDef especificado.|  
 |[Método GetMethodSemantics](imetadataimport-getmethodsemantics-method.md)|Obtiene un puntero a la relación entre el método al que hace referencia el token de MethodDef especificado y la propiedad emparejada y el evento al que hace referencia el token de EventProp especificado.|  
 |[Método GetModuleFromScope](imetadataimport-getmodulefromscope-method.md)|Obtiene un puntero al token de metadatos del módulo al que se hace referencia en el ámbito de metadatos actual.|  
 |[Método GetModuleRefProps](imetadataimport-getmodulerefprops-method.md)|Obtiene el nombre del módulo al que hace referencia el token de metadatos especificado.|  
@@ -92,6 +93,7 @@ Proporciona métodos para importar y manipular los metadatos existentes desde un
 |[Método ResolveTypeRef](imetadataimport-resolvetyperef-method.md)|Obtiene la información de tipo correspondiente al tipo al que hace referencia el token TypeRef especificado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La interfaz de `IMetaDataImport` está diseñada, principalmente, para que la utilicen las herramientas y los servicios que importarán la información de tipo (por ejemplo, las herramientas de desarrollo) o que administrarán los componentes implementados (por ejemplo, los servicios de resolución o activación). Los métodos de `IMetaDataImport` se dividen en las siguientes categorías de tareas:  
   
 - Enumerar colecciones de elementos en el ámbito de metadatos.  
@@ -103,15 +105,16 @@ Proporciona métodos para importar y manipular los metadatos existentes desde un
 - Los métodos Get están diseñados específicamente para devolver propiedades de un solo valor de un elemento de metadatos. Cuando la propiedad es una referencia a otro elemento, se devuelve un token de ese elemento. Cualquier tipo de entrada de puntero puede ser NULL para indicar que no se solicita el valor concreto. Para obtener las propiedades que son esencialmente objetos de colección (por ejemplo, la colección de interfaces que implementa una clase), utilice los métodos de enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de metadatos](metadata-interfaces.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

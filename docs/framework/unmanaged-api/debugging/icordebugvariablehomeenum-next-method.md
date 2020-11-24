@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-ms.openlocfilehash: 980f563d3b11fbfcce48b6d7c05275af520e14f1
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4ef4ed19033b0857b9970ee8103bbd92f383898c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396504"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679538"
 ---
 # <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next (método)
+
 Obtiene el número especificado de instancias de [ICorDebugVariableHome](icordebugvariablehome-interface.md) que contienen información sobre las variables locales y los argumentos de una función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  [in] Número de objetos que se van a recuperar.  
   
@@ -46,6 +48,7 @@ HRESULT Next(
  enuncia Número de instancias devueltas realmente en objetos.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  El método devuelve los valores siguientes.  
   
 |HRESULT|Descripción|  
@@ -54,9 +57,11 @@ HRESULT Next(
 |`S_FALSE`|El número real de instancias recuperadas, como se refleja en `pceltFetched` , es menor que el número de instancias solicitadas.|  
   
 ## <a name="remarks"></a>Comentarios  
- El método [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) recupera un máximo de `celt` objetos a partir de la posición actual del enumerador. Cuando el método vuelve, `pceltFetched` contiene el número real de objetos recuperados.  
+
+ El método [ICorDebugVariableHomeEnum:: Next](icordebugvariablehomeenum-next-method.md) recupera un máximo de  `celt` objetos a partir de la posición actual del enumerador. Cuando el método vuelve, `pceltFetched` contiene el número real de objetos recuperados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -65,7 +70,7 @@ HRESULT Next(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

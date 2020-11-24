@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 36a18d92f05db55957bba55de84490c0da1a1f86
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 8fb0cfc72867653eaff65f3183dacf9191604290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679733"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual (Método)
+
 Obtiene un bloque de memoria contigua que comienza en la dirección especificada y lo devuelve en el búfer proporcionado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT ReadVirtual(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `address`  
  de Dirección de inicio de la memoria solicitada.  
   
@@ -47,12 +49,14 @@ HRESULT ReadVirtual(
  de Número de bytes que se van a obtener de la dirección de destino.  
   
  `pBytesRead`  
- enuncia Número de bytes realmente leídos de la dirección de destino. Puede ser menor que `bytesRequested`.  
+ enuncia Número de bytes realmente leídos de la dirección de destino. Puede ser menor que `bytesRequested` .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si se puede leer el primer byte (en la dirección de inicio especificada), la llamada debe devolver Success (para admitir la lectura eficaz de estructuras de datos con longitud autodescriptiva, como cadenas terminadas en null).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

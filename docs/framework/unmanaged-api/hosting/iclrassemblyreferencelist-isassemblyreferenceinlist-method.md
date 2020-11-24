@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8a570813-21be-407e-92a6-7ae8de3bc728
 topic_type:
 - apiref
-ms.openlocfilehash: 0632a7f5feee87c386d9488a6c989413af68a47f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f74e0f111ff7869d0bfed61d420f3788f65876dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615896"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679161"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList (Método)
+
 Obtiene un valor que indica si el puntero proporcionado hace referencia a un ensamblado de la lista.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pName`  
  de Puntero de interfaz al ensamblado que se va a buscar. Los valores válidos son de tipo `IAssemblyName` o `IReferenceIdentity` .  
   
@@ -46,15 +48,16 @@ HRESULT IsAssemblyReferenceInList (
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelva E_FAIL, el Common Language Runtime ya no se podrá usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)

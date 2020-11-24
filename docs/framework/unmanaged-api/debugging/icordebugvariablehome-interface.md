@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 089e68278113dfdf509ed848f424ad32baa145ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396544"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679551"
 ---
 # <a name="icordebugvariablehome-interface"></a>Interfaz ICorDebugVariableHome
+
 Representa una variable local o un argumento de una función.  
   
 ## <a name="methods"></a>Métodos  
@@ -34,11 +35,12 @@ Representa una variable local o un argumento de una función.
 |[Método GetCode](icordebugvariablehome-getcode-method.md)|Obtiene la instancia de "ICorDebugCode" que contiene este `ICorDebugVariableHome` objeto.|  
 |[Método GetLiveRange](icordebugvariablehome-getliverange-method.md)|Obtiene el intervalo nativo en el que esta variable está activa.|  
 |[Método GetLocationType](icordebugvariablehome-getlocationtype-method.md)|Obtiene el tipo de la ubicación nativa de la variable.|  
-|[Método GetOffset](icordebugvariablehome-getoffset-method.md)|Obtiene el desplazamiento del registro base para una variable.|  
+|[GetOffset (Método)](icordebugvariablehome-getoffset-method.md)|Obtiene el desplazamiento del registro base para una variable.|  
 |[Método GetRegister](icordebugvariablehome-getregister-method.md)|Obtiene el registro que contiene una variable con un tipo de ubicación de `VLT_REGISTER` y el registro base de una variable con un tipo de ubicación de `VLT_REGISTER_RELATIVE` .|  
 |[Método GetSlotIndex](icordebugvariablehome-getslotindex-method.md)|Obtiene el índice de ranura administrado de una variable local.|  
   
 ## <a name="example"></a>Ejemplo  
+
  En el fragmento de código siguiente se usa el objeto [interfaces icordebugcode4](icordebugcode4-interface.md) denominado `pCode4` .  
   
 ```cpp  
@@ -81,6 +83,7 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -89,7 +92,7 @@ for (int i = 0; i < celtFetched; i++)
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Interfaz ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 954bd386-2076-4d00-9d46-38c728aa9cab
 topic_type:
 - apiref
-ms.openlocfilehash: d388f366671f50c3dcb3bd9d387300dd1bbb168f
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9ac3b2ae349a696ba0cea1bad3e3484bb1c113fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615909"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679252"
 ---
 # <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a>ICLRAssemblyIdentityManager::IsStronglyNamed (Método)
+
 Obtiene un valor que indica si el ensamblado especificado tiene un nombre seguro.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ RESULT IsStronglyNamed (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwzAssemblyIdentity`  
  de Datos de identidad del ensamblado canónico opaco del ensamblado que se va a evaluar.  
   
@@ -53,14 +55,15 @@ RESULT IsStronglyNamed (
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)

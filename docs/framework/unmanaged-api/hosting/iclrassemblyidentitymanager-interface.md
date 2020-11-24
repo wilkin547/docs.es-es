@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-ms.openlocfilehash: 3611de471001d31c40984e71d49ce376bb3e4607
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 41d049c931091d2cc0b41bd1e9d74b3c15d7878d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504295"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679265"
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager (Interfaz)
+
 Proporciona métodos que admiten la comunicación entre el host y el Common Language Runtime (CLR) acerca de los ensamblados.  
   
 ## <a name="methods"></a>Métodos  
@@ -37,18 +38,20 @@ Proporciona métodos que admiten la comunicación entre el host y el Common Lang
 |[Método IsStronglyNamed](iclrassemblyidentitymanager-isstronglynamed-method.md)|Obtiene un valor que indica si el ensamblado especificado tiene un nombre seguro.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Utilice `ICLRAssemblyIdentityManager` para obtener instancias de `ICLRAssemblyReferenceList` y para enumerar las identidades de ensamblado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
 - [ICLRProbingAssemblyEnum (Interfaz)](iclrprobingassemblyenum-interface.md)

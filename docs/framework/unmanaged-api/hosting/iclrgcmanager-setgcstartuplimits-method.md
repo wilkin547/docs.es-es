@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c8d9959-95b5-4131-be4a-556d97774014
 topic_type:
 - apiref
-ms.openlocfilehash: 0dce86a12ed3e93983ee62620fa0ddf7dfbc48f5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 169d344975762b97f89e8dc32d72f2b9c95fea11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678186"
 ---
 # <a name="iclrgcmanagersetgcstartuplimits-method"></a>ICLRGCManager::SetGCStartupLimits (Método)
+
 Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.  
   
 > [!IMPORTANT]
@@ -38,6 +39,7 @@ HRESULT SetGCStartupLimits (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `SegmentSize`  
  de Tamaño especificado de un segmento de recolección de elementos no utilizados.  
   
@@ -52,28 +54,30 @@ HRESULT SetGCStartupLimits (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimits`se devolvió correctamente.|  
+|S_OK|`SetGCStartupLimits` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Los valores que `SetGCStartupLimits` establece solo se pueden especificar una vez. Las llamadas posteriores a `SetGCStartupLimits` se omiten.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
-- [Administración de memoria automática](../../../standard/automatic-memory-management.md)
+- [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [ICLRGCManager (Interfaz)](iclrgcmanager-interface.md)

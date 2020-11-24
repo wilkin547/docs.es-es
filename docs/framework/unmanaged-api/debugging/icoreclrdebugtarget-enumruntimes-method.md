@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-ms.openlocfilehash: fc8269d4cc22ab53569edaa48c27b4a01970dcc7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 093f49508e8e96a4003f1aab8eed59e2fd196ba9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397185"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679278"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes (Método)
+
 Enumera los Common Language Runtime(CLR) del proceso especificado que se están ejecutando en un equipo remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT EnumRuntimes (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwInternalProcessID`  
  [in] Identificador de proceso interno del proceso para el que desea enumerar los tiempos de ejecución. Será `m_dwInternalID` de la [coreclrdebugprocinfo (](coreclrdebugprocinfo-structure.md)correspondiente.  
   
@@ -48,6 +50,7 @@ HRESULT EnumRuntimes (
  enuncia Matriz de estructuras [coreclrdebugruntimeinfo (](coreclrdebugruntimeinfo-structure.md) que representan los tiempos de ejecución cargados en el proceso de destino remoto.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK  
  Correcto.  
   
@@ -61,17 +64,19 @@ HRESULT EnumRuntimes (
  Otros errores.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Para liberar la memoria asignada por este método, llame al método [ICoreClrDebugTarget:: FreeMemory (](icoreclrdebugtarget-freememory-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86. dll  
+ **Biblioteca:** mscordbi_macx86.dll  
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICoreClrDebugTarget (Interfaz)](icoreclrdebugtarget-interface.md)

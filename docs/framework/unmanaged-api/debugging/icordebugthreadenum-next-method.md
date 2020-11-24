@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-ms.openlocfilehash: c025afac1b53b23636a6160a475704011999d434
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 226b386c7a38c9a0b28b3bcc0420d14f6f4f4e7c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678439"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next (Método)
+
 Obtiene el número de instancias de ICorDebugThread especificadas de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de El número de `ICorDebugThread` instancias que se van a recuperar.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  enuncia Puntero al número de `ICorDebugThread` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

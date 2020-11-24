@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-ms.openlocfilehash: c60af0ccfb143e68be3b987b0caf92fe3d992b4d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 92b2a7f7f1dd98f0d847119a6431e3816c16d5da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679577"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage (Método)
+
 Notifica al depurador que un subproceso administrado Common Language Runtime (CLR) ha llamado a un método en la <xref:System.Diagnostics.EventLog> clase para registrar un evento.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT LogMessage (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso administrado que registró el evento.  
   
@@ -54,6 +56,7 @@ HRESULT LogMessage (
  de Un puntero al mensaje que se escribió en el registro de eventos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
