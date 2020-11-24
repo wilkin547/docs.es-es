@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-ms.openlocfilehash: ee856dbd398d0fa5e3eee7d9b2b2cfc7c7a57ecf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d5ad3a18c102422e90621c7d1e23b2692c0000
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176596"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683243"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS (Enumeración)
-Especifica los atributos de un [IAssemblyName Interfaz](iassemblyname-interface.md) objeto cuando se construye mediante el [CreateAssemblyNameObject](createassemblynameobject-function.md) función.  
+
+Especifica los atributos de un objeto de [interfaz de IAssemblyName](iassemblyname-interface.md) cuando se construye mediante la función [createassemblynameobject (](createassemblynameobject-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,24 +39,25 @@ typedef enum {
 } CREATE_ASM_NAME_OBJ_FLAGS;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`CANOF_PARSE_DISPLAY_NAME`|Indica que el parámetro pasado es una identidad textual.|  
 |`CANOF_SET_DEFAULT_VALUES`|Establece algunos valores predeterminados.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Comprueba la regla de ensamblado de amigos (solo nombre y clave pública). Este miembro es sólo para uso interno.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Una combinación `CANOF_PARSE_DISPLAY_NAME` `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` de las banderas. Este miembro es sólo para uso interno.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Comprueba la regla de ensamblado de confianza (solo el nombre y la clave pública). Este miembro es solo para uso interno.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Combinación de las `CANOF_PARSE_DISPLAY_NAME` marcas y `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` . Este miembro es solo para uso interno.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [CreateAssemblyNameObject (Función)](createassemblynameobject-function.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)

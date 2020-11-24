@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: 1183f9f6d1ac221b20767f0a1bab15b3e9665a61
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: cf0a87afd1c0057c054205432fea7aa5844afb53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684420"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>Interfaz ICorDebugValueBreakpoint
+
 Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores específicos.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetValue](icordebugvaluebreakpoint-getvalue-method.md)|Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa el valor del objeto en el que se establece el punto de interrupción.|  
+|[GetValue (Método)](icordebugvaluebreakpoint-getvalue-method.md)|Obtiene un puntero de interfaz a un objeto ICorDebugValue que representa el valor del objeto en el que se establece el punto de interrupción.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -36,6 +37,7 @@ Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores espe
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ Extiende la interfaz ICorDebugBreakpoint para proporcionar acceso a valores espe
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

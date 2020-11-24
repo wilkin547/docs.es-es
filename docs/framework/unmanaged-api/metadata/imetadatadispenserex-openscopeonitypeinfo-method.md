@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6056a64b354f69ce39692173da01892870fba9e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682853"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo (Método)
+
 Este método no se implementa. Si se llama, devuelve E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pITI`  
  de Puntero a una interfaz [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) que proporciona la información de tipo en la que se va a abrir el ámbito.  
   
@@ -50,6 +52,7 @@ HRESULT OpenScopeOnITypeInfo (
  enuncia Puntero a un puntero a la interfaz devuelta.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
@@ -58,7 +61,7 @@ HRESULT OpenScopeOnITypeInfo (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)

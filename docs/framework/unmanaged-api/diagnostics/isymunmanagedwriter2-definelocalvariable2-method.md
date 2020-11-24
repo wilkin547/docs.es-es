@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-ms.openlocfilehash: ac7559bd5431f45b266602404ddde9081aa2944d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cdbb09d25f51e479a8a8ddfc23348305ba7c0a71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614700"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683425"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 (Método)
+
 Define una única variable en el ámbito léxico actual. Se puede llamar a este método varias veces para una variable del mismo nombre que tiene varias casas en todo el ámbito. Sin embargo, en este caso, los valores de `startOffset` los `endOffset` parámetros y no deben superponerse.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,6 +42,7 @@ HRESULT DefineLocalVariable2(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `name`  
  de Nombre de la variable local.  
   
@@ -69,12 +71,14 @@ HRESULT DefineLocalVariable2(
  de Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, este parámetro se omite y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter2 (Interfaz)](isymunmanagedwriter2-interface.md)
 - [Método DefineLocalVariable](isymunmanagedwriter-definelocalvariable-method.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-ms.openlocfilehash: 4ba3f31ae6d6b67d7beaa2f709bf6174b721136d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a918b5c2334683348adc6a7382527faedb52d7b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609526"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683542"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange (Método)
+
 Especifica el principio y final reales de un método dentro de un archivo de código fuente. Utilice este método para especificar la extensión de un método independientemente de los puntos de secuencia que existen dentro del método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT SetMethodSourceRange(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `startDoc`  
  de Puntero al documento que contiene la posición inicial.  
   
@@ -57,11 +59,13 @@ HRESULT SetMethodSourceRange(
  de Número de la columna final.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

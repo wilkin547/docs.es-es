@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 88989482-a09f-4bd0-9adb-16f47b0291fd
 topic_type:
 - apiref
-ms.openlocfilehash: 5f95202bd0c8c5045c10378068ae83cad3d93fdd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e3934cbce76df3997fa07d8fa3a99bd8ddab09a2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396467"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684348"
 ---
 # <a name="icordebugvalueenum-interface"></a>Interfaz ICorDebugValueEnum
+
 Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugValue".  
   
 ## <a name="methods"></a>Métodos  
@@ -36,6 +37,7 @@ Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugValue".
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ Implementa los métodos "ICorDebugEnum" y enumera las matrices "ICorDebugValue".
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

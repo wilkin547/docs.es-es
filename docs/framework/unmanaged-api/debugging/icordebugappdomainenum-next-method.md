@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-ms.openlocfilehash: 17bf4c92b1e1347a8fe790c8df5937de0f95df4d
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b315f38dc306727e33b52b84d17951a91ccdc39f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895085"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684479"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next (Método)
+
 Obtiene el número especificado de dominios de aplicación de la colección, comenzando en la posición actual del cursor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de El número de dominios de aplicación que se van a recuperar.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  enuncia Puntero al número de dominios de aplicación devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

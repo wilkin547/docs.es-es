@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0da962a3-ce55-44dd-ab7a-14ad7105af4a
 topic_type:
 - apiref
-ms.openlocfilehash: 22d570711c293dd8c0cc6fefd198dd46d6489bea
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 69b2338e6992c386a3cd34a632d69b73a67f14fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683009"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait (Método)
+
 Hace que la instancia actual de [IHostSemaphore](ihostsemaphore-interface.md) espere hasta que sea propiedad o transcurra el período de tiempo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT Wait (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwMilliseconds`  
  de Número de milisegundos que se va a esperar antes de devolver, si la `IHostSemaphore` instancia actual no es propiedad.  
   
@@ -45,7 +47,7 @@ HRESULT Wait (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`Wait`se devolvió correctamente.|  
+|S_OK|`Wait` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -54,11 +56,12 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|El host detectó un interbloqueo durante el intervalo de espera y eligió la `IHostSemaphore` instancia actual como sujeto del interbloqueo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

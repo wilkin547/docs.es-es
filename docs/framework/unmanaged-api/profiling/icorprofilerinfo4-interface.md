@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 80a5308e-c22f-4201-ba89-31cc8562515b
 topic_type:
 - apiref
-ms.openlocfilehash: 58d11e9084f53c69f2656b4f0ee6bc7d2cc4ae21
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3e623b0b5f8b49e043fe3a1aa8311558e573573
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495871"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682840"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 (Interfaz)
+
 Proporciona métodos que los perfiles de código usan para comunicarse con el Common Language Runtime (CLR) para controlar la supervisión de eventos y la información de la solicitud. . La `ICorProfilerInfo4` interfaz es una extensión de las otras `ICorProfilerInfo` interfaces. Proporciona nuevos métodos para admitir la recompilación Just-in-Time (JIT), agregada en el .NET Framework 4,5.  
   
 ## <a name="methods"></a>Métodos  
@@ -40,9 +41,11 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
 |[Método RequestRevert](icorprofilerinfo4-requestrevert-method.md)|Revierte todas las instancias de las funciones especificadas a sus versiones originales.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El CLR implementa los métodos de la interfaz `ICorProfilerInfo4` usando el modelo de subprocesamiento libre. Cada método devuelve un valor HRESULT para indicar un resultado correcto o erróneo. Para obtener una lista de los posibles códigos devueltos, consulte el archivo CorError.h.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -51,7 +54,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

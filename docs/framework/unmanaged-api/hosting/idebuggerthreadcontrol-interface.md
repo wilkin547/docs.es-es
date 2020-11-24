@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0a270c42-a7d1-45f1-a64d-fa3e84d14532
 topic_type:
 - apiref
-ms.openlocfilehash: 82c6113f4df3334500128df22f7e9ce8d4bf151f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 2268fce5d3ca732d852edfdb6f0edf63117df363
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805286"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684218"
 ---
 # <a name="idebuggerthreadcontrol-interface"></a>IDebuggerThreadControl (Interfaz)
+
 Proporciona métodos para notificar al host el bloqueo y desbloqueo de subprocesos por parte de los servicios de depuración.  
   
 ## <a name="methods"></a>Métodos  
@@ -33,11 +34,12 @@ Proporciona métodos para notificar al host el bloqueo y desbloqueo de subproces
 |[Método StartBlockingForDebugger](idebuggerthreadcontrol-startblockingfordebugger-method.md)|Notifica al host que los servicios de depuración están a punto de iniciar el bloqueo de todos los subprocesos.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-ms.openlocfilehash: 899d6e74902e47f1f41b849bd5c25048baa175f7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3afb89a42d7e26c5e89e6f9458ef3406cc0102ca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617144"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684192"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID (Función)
+
 Obtiene la información de versión de Common Language Runtime (CLR) adecuada para la clase con el especificado `CLSID` .  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -39,8 +40,9 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `rclsid`  
- de  `CLSID`Del componente.  
+ de  `CLSID` Del componente.  
   
  `pVersion`  
  enuncia  Un búfer que contiene la cadena del número de versión cuando se completa correctamente.  
@@ -66,15 +68,16 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 |E_INVALIDARG|Uno de los parámetros tiene un tipo o formato no válido.|  
 |ERROR_INSUFFICIENT_BUFFER|El `pVersion` búfer no es suficientemente grande para contener la cadena de versión completa.|  
 |REGDB_E_CLASSNOTREG|No hay ninguna clase registrada con el especificado `CLSID` .|  
-|E_POINTER|`dwLength`es null, o `cchBuffer` es lo suficientemente grande como para contener la cadena de versión, pero `pVersion` es NULL.|  
+|E_POINTER|`dwLength` es null, o `cchBuffer` es lo suficientemente grande como para contener la cadena de versión, pero `pVersion` es NULL.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5b48ca60-dacd-44b2-9979-4a5122f00812
 topic_type:
 - apiref
-ms.openlocfilehash: f2b78b35db6306c82e389955c4824875bcf25334
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6318890dd6f0259d8d6a7675380684a129c14c8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447225"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684685"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope (Método)
+
 Recupera el ámbito de un tipo determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetResolutionScope(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `AssemblyID`  
  IDENTIFICADOR del ensamblado.  
   
@@ -49,13 +51,15 @@ HRESULT GetResolutionScope(
  Recibe la referencia del ensamblado o módulo.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)

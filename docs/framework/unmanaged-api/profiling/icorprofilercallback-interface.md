@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4bae06f7-94d7-4ba8-b250-648b2da78674
 topic_type:
 - apiref
-ms.openlocfilehash: 6a53b9b1b061c2ca07a469abc78c07ed9e710069
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8451f100f9e1b8d68045050d1b584ae44c29195d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500096"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684076"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback (Interfaz)
+
 Proporciona métodos utilizados por el Common Language Runtime (CLR) para notificar a un generador de perfiles de código cuando se producen los eventos a los que se ha suscrito el generador de perfiles.  
   
 ## <a name="methods"></a>Métodos  
@@ -46,8 +47,8 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 |[Método ExceptionCatcherLeave](icorprofilercallback-exceptioncatcherleave-method.md)|Notifica al generador de perfiles que el control se está pasando fuera del `catch` bloque adecuado.|  
 |[Método ExceptionCLRCatcherExecute](icorprofilercallback-exceptionclrcatcherexecute-method.md)|Obsoleto en la .NET Framework versión 2,0.|  
 |[Método ExceptionCLRCatcherFound](icorprofilercallback-exceptionclrcatcherfound-method.md)|Obsoleto en el .NET Framework 2,0.|  
-|[Método ExceptionOSHandlerEnter](icorprofilercallback-exceptionoshandlerenter-method.md)|No implementado. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.|  
-|[Método ExceptionOSHandlerLeave](icorprofilercallback-exceptionoshandlerleave-method.md)|No implementado. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.|  
+|[Método ExceptionOSHandlerEnter](icorprofilercallback-exceptionoshandlerenter-method.md)|Sin implementar. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.|  
+|[Método ExceptionOSHandlerLeave](icorprofilercallback-exceptionoshandlerleave-method.md)|Sin implementar. Un generador de perfiles que necesita información de excepción no administrada debe obtener esta información a través de otros medios.|  
 |[Método ExceptionSearchCatcherFound](icorprofilercallback-exceptionsearchcatcherfound-method.md)|Notifica al generador de perfiles que la fase de búsqueda del control de excepciones ha encontrado un controlador para la excepción que se produjo.|  
 |[Método ExceptionSearchFilterEnter](icorprofilercallback-exceptionsearchfilterenter-method.md)|Notifica al generador de perfiles que se está ejecutando un filtro de usuario.|  
 |[Método ExceptionSearchFilterLeave](icorprofilercallback-exceptionsearchfilterleave-method.md)|Notifica al generador de perfiles que un filtro de usuario ha terminado de ejecutarse.|  
@@ -59,9 +60,9 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 |[Método ExceptionUnwindFunctionEnter](icorprofilercallback-exceptionunwindfunctionenter-method.md)|Notifica al generador de perfiles que la fase de desenredado del control de excepciones ha entrado en una función.|  
 |[Método ExceptionUnwindFunctionLeave](icorprofilercallback-exceptionunwindfunctionleave-method.md)|Notifica al generador de perfiles que la fase de desenredado del control de excepciones ha terminado de desenredar una función.|  
 |[Método FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md)|Notifica al generador de perfiles que el tiempo de ejecución ha empezado a descargar una función.|  
-|[Método Initialize](icorprofilercallback-initialize-method.md)|Se llama para inicializar el generador de perfiles cada vez que se inicia una nueva aplicación CLR.|  
-|[Método JITCachedFunctionSearchFinished](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Notifica al generador de perfiles que ha finalizado una búsqueda para una función que se compiló previamente mediante NGen. exe.|  
-|[Método JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Notifica al generador de perfiles que se ha iniciado una búsqueda para una función que se compiló previamente mediante NGen. exe.|  
+|[Initialize (Método)](icorprofilercallback-initialize-method.md)|Se llama para inicializar el generador de perfiles cada vez que se inicia una nueva aplicación CLR.|  
+|[Método JITCachedFunctionSearchFinished](icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Notifica al generador de perfiles que ha finalizado una búsqueda para una función que se compiló anteriormente mediante NGen.exe.|  
+|[Método JITCachedFunctionSearchStarted](icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Notifica al generador de perfiles que se ha iniciado una búsqueda para una función que se compiló anteriormente mediante NGen.exe.|  
 |[Método JITCompilationFinished](icorprofilercallback-jitcompilationfinished-method.md)|Notifica al generador de perfiles que el compilador JIT ha terminado de compilar una función.|  
 |[Método JITCompilationStarted](icorprofilercallback-jitcompilationstarted-method.md)|Notifica al generador de perfiles que el compilador Just-in-Time (JIT) ha empezado a compilar una función.|  
 |[Método JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)|Notifica al generador de perfiles que se ha quitado de la memoria una función que se ha compilado con JIT.|  
@@ -99,6 +100,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 |[Método UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)|Notifica al generador de perfiles que se ha producido una transición de código no administrado a código administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  CLR llama a un método de la `ICorProfilerCallback` interfaz (o [ICorProfilerCallback2](icorprofilercallback2-interface.md)) para notificar al generador de perfiles cuando se produce un evento, al que se ha suscrito el generador de perfiles. Esta es la interfaz de devolución de llamada principal a través de la cual el CLR se comunica con el generador de perfiles de código.  
   
  Un generador de perfiles de código debe implementar los métodos de la `ICorProfilerCallback` interfaz. En el .NET Framework versión 2,0 o posterior, el generador de perfiles también debe implementar los `ICorProfilerCallback2` métodos. Cada implementación de método debe devolver un HRESULT que tenga un valor de S_OK si se ejecuta correctamente o E_FAIL en caso de error. Actualmente, CLR omite el valor HRESULT devuelto por cada devolución de llamada excepto [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md).  
@@ -109,6 +111,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 > El generador de perfiles registra un objeto COM único. Si el generador de perfiles tiene como destino la .NET Framework versión 1,0 o 1,1, el objeto COM solo debe implementar los métodos de `ICorProfilerCallback` . Si tiene como destino .NET Framework versión 2,0 o posterior, el objeto COM también debe implementar los métodos de `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -117,7 +120,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

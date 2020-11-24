@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 45adda6551e1cec994f59acbb0e8d2b5c56c4df6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95684816"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder (Método)
+
 Agrega un reenviador de tipos para un tipo anidado a la tabla de tipos del ensamblado especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT ExportNestedTypeForwarder(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `AssemblyID`  
  IDENTIFICADOR del ensamblado del que se va a exportar.  
   
@@ -55,19 +57,21 @@ HRESULT ExportNestedTypeForwarder(
  Nombre completo del tipo que se va a exportar.  
   
  `dwFlags`  
- `ComType` marcas como `tdPublic` o `tdNested`.  
+ `ComType` marcas como `tdPublic` o `tdNested` .  
   
  `pType`  
  Recibe el token del tipo de exportación. Esto solo es necesario para emitir tipos anidados.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)
