@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: 162def0d703ea81efc3df3ea5ee08b58e34822e6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: db65519579104dd01816bb6d7cacaec947f24f53
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501578"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680874"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly (Método)
+
 Obtiene una referencia a un ensamblado al que no hace referencia el [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) que se devuelve desde [IHostAssemblyManager:: GetNonHostStoreAssemblies (](ihostassemblymanager-getnonhoststoreassemblies-method.md). El Common Language Runtime (CLR) llama a `ProvideAssembly` para cada ensamblado que no aparece en la lista.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT ProvideAssembly (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pBindInfo`  
  de Puntero a una instancia de [assemblybindinfo (](assemblybindinfo-structure.md) que el host usa para determinar ciertas características de enlace, incluida la presencia o ausencia de cualquier directiva de control de versiones y el ensamblado al que se va a enlazar.  
   
@@ -45,7 +47,7 @@ HRESULT ProvideAssembly (
  enuncia Un puntero a un identificador único para el ensamblado solicitado para este `IStream` .  
   
  `pHostContext`  
- enuncia Puntero a los datos específicos del host que se usan para determinar la evidencia del ensamblado solicitado sin necesidad de una llamada de invocación de plataforma. `pHostContext`corresponde a la <xref:System.Reflection.Assembly.HostContext%2A> propiedad de la clase administrada <xref:System.Reflection.Assembly> .  
+ enuncia Puntero a los datos específicos del host que se usan para determinar la evidencia del ensamblado solicitado sin necesidad de una llamada de invocación de plataforma. `pHostContext` corresponde a la <xref:System.Reflection.Assembly.HostContext%2A> propiedad de la clase administrada <xref:System.Reflection.Assembly> .  
   
  `ppStmAssemblyImage`  
  enuncia Puntero a la dirección de `IStream` que contiene la imagen ejecutable portable (PE) que se va a cargar, o null si no se pudo encontrar el ensamblado.  
@@ -57,7 +59,7 @@ HRESULT ProvideAssembly (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly`se devolvió correctamente.|  
+|S_OK|`ProvideAssembly` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -67,18 +69,20 @@ HRESULT ProvideAssembly (
 |E_NOT_SUFFICIENT_BUFFER|El tamaño de búfer especificado por `pAssemblyId` no es lo suficientemente grande como para contener el identificador que el host desea devolver.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El valor de identidad devuelto por `pAssemblyId` se especifica mediante el host. Los identificadores deben ser únicos dentro de la duración de un proceso. CLR usa este valor como un identificador único para la secuencia. Comprueba cada valor con los valores `pAssemblyId` devueltos por otras llamadas a `ProvideAssembly` . Si el host devuelve el mismo `pAssemblyId` valor para otro `IStream` , CLR comprueba si ya se ha asignado el contenido de la secuencia. En ese caso, el tiempo de ejecución carga la copia existente de la imagen en lugar de asignar una nueva.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager (Interfaz)](ihostassemblymanager-interface.md)

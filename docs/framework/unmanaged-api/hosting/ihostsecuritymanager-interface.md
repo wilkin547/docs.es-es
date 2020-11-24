@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 37f606a67bef79936c81b2a36f12a00d24bd82f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680539"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager (Interfaz)
+
 Proporciona métodos que permiten el acceso y el control sobre el contexto de seguridad del subproceso que se está ejecutando actualmente.  
   
 ## <a name="methods"></a>Métodos  
@@ -36,7 +37,8 @@ Proporciona métodos que permiten el acceso y el control sobre el contexto de se
 |[Método SetThreadToken](ihostsecuritymanager-setthreadtoken-method.md)|Establece un identificador para el subproceso que se está ejecutando actualmente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un host puede controlar todo el acceso del código a los tokens de subproceso mediante el Common Language Runtime (CLR) y el código de usuario. También puede asegurarse de que se pasa información de contexto de seguridad completa a través de operaciones asincrónicas o puntos de código con acceso restringido al código. `IHostSecurityContext`encapsula esta información de contexto de seguridad, que es opaca para CLR.  
+
+ Un host puede controlar todo el acceso del código a los tokens de subproceso mediante el Common Language Runtime (CLR) y el código de usuario. También puede asegurarse de que se pasa información de contexto de seguridad completa a través de operaciones asincrónicas o puntos de código con acceso restringido al código. `IHostSecurityContext` encapsula esta información de contexto de seguridad, que es opaca para CLR.  
   
  CLR controla internamente el contexto del subproceso administrado. Consulta el específico del proceso `IHostSecurityManager` en las situaciones siguientes:  
   
@@ -49,15 +51,16 @@ Proporciona métodos que permiten el acceso y el control sobre el contexto de se
 - En el servicio de puertos de finalización de e/s.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IHostSecurityContext (Interfaz)](ihostsecuritycontext-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

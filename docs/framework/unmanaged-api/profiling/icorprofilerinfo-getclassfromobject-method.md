@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b97493fb-713e-49d5-a73e-5688b2ad0700
 topic_type:
 - apiref
-ms.openlocfilehash: 613267549329d2f48dcd18ae341e47538e414ac0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5a7edc6045969861679d1b80c0563e99f48932cf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498536"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95680254"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject (Método)
+
 Obtiene el `ClassID` de un objeto, dado su `ObjectID` .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT GetClassFromObject(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `objectId`  
  de IDENTIFICADOR del objeto para el que se va a obtener `ClassID` .  
   
@@ -41,9 +43,11 @@ HRESULT GetClassFromObject(
  enuncia Puntero al devuelto `ClassID` .  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un valor null `pClassId` indica que `objectId` tiene un tipo que se está descargando.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -52,6 +56,6 @@ HRESULT GetClassFromObject(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

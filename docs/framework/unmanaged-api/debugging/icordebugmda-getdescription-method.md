@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-ms.openlocfilehash: 522e992e6d7e9a64f7590bbec0e9106e0e1f8f47
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cb1e0f2bc597b48496dc362c9d7a364421c68a87
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212144"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681852"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription (Método)
+
 Obtiene una cadena que contiene la descripción del Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetDescription (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchName`  
  de Tamaño del búfer de cadena que almacenará la descripción.  
   
@@ -46,10 +48,12 @@ HRESULT GetDescription (
  `szName`  
  enuncia Búfer de cadena que contiene la descripción del MDA.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La longitud de la cadena puede ser cero.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2868dfec-c992-4606-88bb-a8e0b6b18271
 topic_type:
 - apiref
-ms.openlocfilehash: 5ef5d9ae3da4dff13a461162f0ba3466d3d8192c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8823f3cc016072d3f20100c29532459da5e97492
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501266"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682396"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping (Método)
+
 Obtiene la región de memoria del archivo asignado y el tipo de asignación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetFileMapping (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppvData`  
  enuncia Puntero al principio del archivo asignado.  
   
@@ -47,13 +49,14 @@ HRESULT GetFileMapping (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Description|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
 |`S_OK`|Se rellenan todas las salidas.|  
 |`E_INVALIDARG`|Se pasó NULL como un valor de argumento.|  
 |`COR_E_NOTSUPPORTED`|La implementación de CLR no puede proporcionar información sobre la región de memoria. Esto puede deberse a los siguientes motivos:<br /><br /> -El ámbito de metadatos se abrió con la `ofWrite` `ofCopyMemory` marca o.<br />-El ámbito de metadatos se abrió sin la `ofReadOnly` marca.<br />-El método [IMetaDataDispenser:: openscopeonmemory (](imetadatadispenser-openscopeonmemory-method.md) se usó para abrir solo la parte de metadatos del archivo.<br />-El archivo no es un archivo ejecutable portable (PE). **Nota:**  Estas condiciones dependen de la implementación de CLR y es probable que se debiliten en versiones futuras de CLR.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La memoria a la que `ppvData` apunta solo es válida siempre y cuando el ámbito de los metadatos subyacentes sea abierto.  
   
  Para que este método funcione, cuando asigne los metadatos de un archivo en disco a la memoria mediante una llamada al método [IMetaDataDispenser:: OpenScope](imetadatadispenser-openscope-method.md) , debe especificar la `ofReadOnly` marca y no debe especificar la `ofWrite` `ofCopyMemory` marca o.  
@@ -63,15 +66,16 @@ HRESULT GetFileMapping (
  No se admite pasar NULL para ninguno de los tres parámetros. El método devuelve `E_INVALIDARG` y no se rellena ninguna de las salidas. Si se omite el tipo de asignación o el tamaño de la región, se puede producir una terminación anómala del programa.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataInfo (Interfaz)](imetadatainfo-interface.md)
 - [CorFileMapping (Enumeración)](corfilemapping-enumeration.md)

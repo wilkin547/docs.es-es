@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6105c13e-d9cd-44d2-a95a-924e042830c7
 topic_type:
 - apiref
-ms.openlocfilehash: 9c5d83b5f2ffb06c9fb14f715a3ea7ff12319086
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a8ab6e1aeedef5b821fc977387b8039f54edd64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547836"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682502"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime (Función)
+
 Carga el Common Language Runtime (CLR) en un proceso utilizando la información de versión almacenada en un archivo XML. El formato del archivo XML se modela después del archivo de configuración de la aplicación estándar. Para más información sobre los archivos de configuración, vea [Configuration File Schema](../../configure-apps/file-schema/index.md) (Esquema de archivos de configuración).  
   
  Esta función está en desuso en el .NET Framework 4. Vea [cargar Common Language Runtime en un proceso](/previous-versions/dotnet/netframework-4.0/01918c6x(v=vs.100)).  
@@ -39,6 +40,7 @@ HRESULT CorBindToCurrentRuntime (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwszFileName`  
  de Nombre de un archivo de configuración de la aplicación que especifica la versión de CLR que se va a cargar. Si el nombre de archivo no es completo, se supone que está en el mismo directorio que el ejecutable que realiza la llamada.  
   
@@ -56,6 +58,7 @@ HRESULT CorBindToCurrentRuntime (
  enuncia Puntero de interfaz devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
@@ -64,7 +67,7 @@ HRESULT CorBindToCurrentRuntime (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [CorBindToRuntime (Función)](corbindtoruntime-function.md)
 - [CorBindToRuntimeByCfg (Función)](corbindtoruntimebycfg-function.md)

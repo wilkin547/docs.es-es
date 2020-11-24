@@ -3,12 +3,12 @@ title: Rendimiento de Windows Workflow Foundation
 description: En este artículo se explican las características de rendimiento de la revisión principal de Windows Workflow Foundation, que forma parte de .NET Framework 4.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0a68548a8b5e521fccdb544e318c3091315814f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558347"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682346"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 
@@ -20,7 +20,7 @@ ms.locfileid: "90558347"
 
  La versión de [!INCLUDE[wf1](../../../includes/wf1-md.md)] introducida en .NET Framework 4 se denominará WF4 en el resto de este tema. [!INCLUDE[wf1](../../../includes/wf1-md.md)] se presentó en .NET Framework 3,0 y tenía algunas revisiones poco importantes a través de .NET Framework 3,5 SP1. La versión .NET Framework 3,5 de Workflow Foundation se denominará WF3 en el resto de este tema. WF3 se incluye en .NET Framework 4 en paralelo con WF4. Para obtener más información sobre cómo migrar artefactos de WF3 a WF4, vea la [Guía de migración de Windows Workflow Foundation 4](migration-guidance.md).
 
- Windows Communication Foundation (WCF) es el modelo de programación Unificado de Microsoft para la creación de aplicaciones orientadas a servicios. Se presentó por primera vez como parte de .NET 3,0 junto con WF3 y ahora es uno de los componentes clave de la .NET Framework.
+ Windows Communication Foundation (WCF) es el modelo de programación Unificado de Microsoft para la creación de aplicaciones orientadas a servicios. Se presentó por primera vez como parte de .NET Framework 3,0 junto con WF3 y ahora es uno de los componentes clave de la .NET Framework.
 
  Windows Server AppFabric es un conjunto de tecnologías integradas que permiten compilar, escalar y administrar más fácilmente aplicaciones web y aplicaciones compuestas que se ejecutan en IIS. Proporciona herramientas para supervisar y administrar servicios y flujos de trabajo. Para obtener más información, consulte [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -51,7 +51,7 @@ ms.locfileid: "90558347"
  Las aplicaciones tienen normalmente mejores niveles de rendimiento y escalabilidad con la programación asincrónica de operaciones de bloqueo de ejecución prolongada, como las operaciones de computación distribuidas o de E/S. WF4 proporciona compatibilidad asincrónica a través de los tipos de actividad base <xref:System.Activities.AsyncCodeActivity> y <xref:System.Activities.AsyncCodeActivity%601>. El runtime entiende las actividades asincrónicas de forma nativa y, por lo tanto, puede colocar automáticamente la instancia en una zona sin persistencia mientras el trabajo asincrónico está pendiente. Las actividades personalizadas pueden derivar de estos tipos para realizar el trabajo asincrónico sin retener el subproceso de programador de flujo de trabajo ni bloquear las actividades que puedan ejecutarse en paralelo.
 
 ### <a name="messaging"></a>Mensajería
- Inicialmente, WF3 tenía compatibilidad de mensajería muy limitada a través de invocaciones de eventos externos o servicios Web. En .NET 3,5, los flujos de trabajo podrían implementarse como clientes WCF o exponerse como servicios WCF a través <xref:System.Workflow.Activities.SendActivity> de y <xref:System.Workflow.Activities.ReceiveActivity> . En WF4, el concepto de programación de mensajería basada en el flujo de trabajo se ha reforzado aún más a través de la estrecha integración de la lógica de mensajería de WCF en WF.
+ Inicialmente, WF3 tenía compatibilidad de mensajería muy limitada a través de invocaciones de eventos externos o servicios Web. En .NET Framework 3,5, los flujos de trabajo podrían implementarse como clientes WCF o exponerse como servicios WCF a través <xref:System.Workflow.Activities.SendActivity> de y <xref:System.Workflow.Activities.ReceiveActivity> . En WF4, el concepto de programación de mensajería basada en el flujo de trabajo se ha reforzado aún más a través de la estrecha integración de la lógica de mensajería de WCF en WF.
 
  La canalización de procesamiento de mensajes unificada proporcionada en WCF en .NET 4 ayuda a WF4 Services a tener un rendimiento y una escalabilidad significativamente mejores que WF3. WF4 también proporciona una compatibilidad de programación de mensajería más avanzada que puede modelar patrones de intercambio de mensajes (MEP) complejos. Los desarrolladores pueden utilizar contratos de servicio con tipos para conseguir una programación fácil o contratos de servicio sin tipos para lograr un rendimiento mejor sin pagar costos de serialización. La compatibilidad de almacenamiento en caché de canales del lado cliente mediante la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> en WF4 ayuda a los desarrolladores a compilar aplicaciones rápidas con el mínimo esfuerzo. Para obtener más información, consulte [cambiar los niveles de uso compartido de caché para las actividades de envío](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
@@ -285,7 +285,7 @@ En el diagrama siguiente se muestra el flujo de trabajo de compensación básica
 
  Incluso con flujos de trabajo complejos con gran profundidad y un alto número de actividades, los resultados del rendimiento son coherentes con otras cifras mostradas anteriormente en este artículo.  El rendimiento de WF4 es más rápido en órdenes de magnitud y tiene que compararse en una escala logarítmica.
 
-### <a name="memory"></a>Memoria
+### <a name="memory"></a>Memory
  La sobrecarga de la memoria de Windows Workflow Foundation se mide en dos áreas clave: la complejidad del flujo de trabajo y el número de definiciones de flujo de trabajo.  Las mediciones de memoria se tomaron en una estación de trabajo de 64 bits con Windows 7.  Hay muchas maneras de obtener la medición del tamaño del espacio de trabajo, como supervisar los contadores de rendimiento, sondear el entorno. WorkingSet o usar una herramienta como VMMap disponible en [VMMap](/sysinternals/downloads/vmmap). Se utilizó una combinación de métodos para obtener y comprobar los resultados de cada prueba.
 
 ### <a name="workflow-complexity-test"></a>Prueba de complejidad de flujo de trabajo

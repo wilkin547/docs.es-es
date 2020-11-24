@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 4480fefa51eec2f2751bd71910db87b72a1c32cf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496735"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681591"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 (Interfaz)
+
 Proporciona métodos que los perfiles de código usan para comunicarse con el Common Language Runtime (CLR) para controlar la supervisión de eventos y la información de la solicitud. La `ICorProfilerInfo2` interfaz es una extensión de la interfaz [ICorProfilerInfo](icorprofilerinfo-interface.md) . Es decir, proporciona nuevos métodos que se admiten en la .NET Framework versión 2,0 y versiones posteriores.  
   
 ## <a name="methods"></a>Métodos  
@@ -35,7 +36,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
 |[Método GetBoxClassLayout](icorprofilerinfo2-getboxclasslayout-method.md)|Obtiene información sobre el diseño de clase para un tipo de valor especificado al que se aplica la conversión boxing.|  
 |[Método GetClassFromTokenAndTypeArgs](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)|Obtiene el `ClassID` de un tipo mediante el token de metadatos especificado y los `ClassID` valores de cualquier argumento de tipo.|  
 |[Método GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)|Obtiene el módulo primario de la clase genérica especificada, el token de metadatos para la clase, el `ClassID` de su clase primaria y el `ClassID` para cada argumento de tipo, si está presente, de la clase.|  
-|[Método GetClassLayout](icorprofilerinfo2-getclasslayout-method.md)|Obtiene información sobre la distribución, en memoria, de los campos definidos por la clase especificada. Es decir, este método obtiene los desplazamientos de los campos de la clase.|  
+|[GetClassLayout (Método)](icorprofilerinfo2-getclasslayout-method.md)|Obtiene información sobre la distribución, en memoria, de los campos definidos por la clase especificada. Es decir, este método obtiene los desplazamientos de los campos de la clase.|  
 |[Método GetCodeInfo2](icorprofilerinfo2-getcodeinfo2-method.md)|Obtiene las extensiones del código nativo asociado al `FunctionID` especificado.|  
 |[Método GetContextStaticAddress](icorprofilerinfo2-getcontextstaticaddress-method.md)|Obtiene la dirección del campo estático de contexto especificado que está en el ámbito del contexto especificado.|  
 |[Método GetFunctionFromTokenAndTypeArgs](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)|Obtiene el `FunctionID` de una función mediante el token de metadatos especificado, la clase contenedora y `ClassID` los valores de cualquier argumento de tipo.|  
@@ -51,6 +52,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
 |[Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Especifica las funciones implementadas por el generador de perfiles a las que se llamará en los enlaces "Enter", "Leave" y "llamada" de las funciones administradas.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un generador de perfiles llama a un método de la `ICorProfilerInfo2` interfaz para comunicarse con CLR para controlar la supervisión de eventos y solicitar información.  
   
  El CLR implementa los métodos de la `ICorProfilerInfo2` interfaz mediante el modelo de subprocesamiento libre. Cada método devuelve un valor HRESULT para indicar un resultado correcto o erróneo. Para obtener una lista de los posibles códigos devueltos, consulte el archivo CorError.h.  
@@ -58,6 +60,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
  El CLR pasa una `ICorProfilerInfo2` interfaz a cada generador de perfiles de código durante la inicialización, mediante la implementación del generador de perfiles de [ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md). Un generador de perfiles de código puede llamar a los métodos de la `ICorProfilerInfo2` interfaz para obtener información sobre el código administrado que se ejecuta bajo el control de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -66,7 +69,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

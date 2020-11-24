@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-ms.openlocfilehash: 85adf2dbdbb8c02192a9017bc4f664274a08ee24
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 698f6abc872a7e072ae47520386aa9c7ddfb44fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496586"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681475"
 ---
 # <a name="icorprofilerinfo3enummodules-method"></a>ICorProfilerInfo3::EnumModules (Método)
+
 Devuelve un enumerador que proporciona métodos para iterar secuencialmente por una colección de módulos administrados cargados en la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,12 +33,14 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppEnum`  
  enuncia Puntero a una interfaz [ICorProfilerModuleEnum](icorprofilermoduleenum-interface.md) .  
   
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -46,7 +49,7 @@ HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerFunctionEnum (Interfaz)](icorprofilerfunctionenum-interface.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)
