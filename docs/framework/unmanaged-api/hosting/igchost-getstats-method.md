@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c4ae022c-46ac-4f19-9ddd-09b955f19412
 topic_type:
 - apiref
-ms.openlocfilehash: 67668aa7ff9faf035a047e485a8a3c8a451f45b9
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 7e664d88bf9f67e936e693b663f27ca490da13ed
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95670113"
 ---
-# <a name="igchostgetstats-method"></a><span data-ttu-id="2437b-102">IGCHost::GetStats (Método)</span><span class="sxs-lookup"><span data-stu-id="2437b-102">IGCHost::GetStats Method</span></span>
-<span data-ttu-id="2437b-103">Obtiene las estadísticas para el estado actual del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2437b-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
+# <a name="igchostgetstats-method"></a><span data-ttu-id="3b07f-102">IGCHost::GetStats (Método)</span><span class="sxs-lookup"><span data-stu-id="3b07f-102">IGCHost::GetStats Method</span></span>
+
+<span data-ttu-id="3b07f-103">Obtiene las estadísticas para el estado actual del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="3b07f-103">Gets the statistics for the current state of the garbage collection system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2437b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2437b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b07f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3b07f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStats (  
@@ -33,22 +34,25 @@ HRESULT GetStats (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2437b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2437b-105">Parameters</span></span>  
- `pStats`  
- <span data-ttu-id="2437b-106">[in, out] Puntero a una estructura de [COR_GC_STATS](cor-gc-stats-structure.md) que contiene las estadísticas para el estado actual del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2437b-106">[in, out] A pointer to a [COR_GC_STATS](cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="2437b-107">Observaciones</span><span class="sxs-lookup"><span data-stu-id="2437b-107">Remarks</span></span>  
- <span data-ttu-id="2437b-108">Las estadísticas se pueden usar en un sistema de asignación inteligente para ayudar al funcionamiento del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2437b-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="2437b-109">Por ejemplo, el sistema de asignación puede determinar, después de revisar las estadísticas, que necesita agregar más memoria o forzar una colección.</span><span class="sxs-lookup"><span data-stu-id="2437b-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="2437b-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2437b-110">Requirements</span></span>  
- <span data-ttu-id="2437b-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2437b-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="2437b-112">**Encabezado:** GCHost. idl, GCHost. h</span><span class="sxs-lookup"><span data-stu-id="2437b-112">**Header:** GCHost.idl, GCHost.h</span></span>  
-  
- <span data-ttu-id="2437b-113">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="2437b-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="2437b-114">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2437b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2437b-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2437b-115">See also</span></span>
+## <a name="parameters"></a><span data-ttu-id="3b07f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3b07f-105">Parameters</span></span>  
 
-- [<span data-ttu-id="2437b-116">IGCHost (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="2437b-116">IGCHost Interface</span></span>](igchost-interface.md)
+ `pStats`  
+ <span data-ttu-id="3b07f-106">[in, out] Puntero a una estructura de [COR_GC_STATS](cor-gc-stats-structure.md) que contiene las estadísticas para el estado actual del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="3b07f-106">[in, out] A pointer to a [COR_GC_STATS](cor-gc-stats-structure.md) structure that contains the statistics for the current state of the garbage collection system.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="3b07f-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3b07f-107">Remarks</span></span>  
+
+ <span data-ttu-id="3b07f-108">Las estadísticas se pueden usar en un sistema de asignación inteligente para ayudar al funcionamiento del sistema de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="3b07f-108">The statistics can be used by a smart allocation system to help the garbage collection system operate.</span></span> <span data-ttu-id="3b07f-109">Por ejemplo, el sistema de asignación puede determinar, después de revisar las estadísticas, que necesita agregar más memoria o forzar una colección.</span><span class="sxs-lookup"><span data-stu-id="3b07f-109">For example, the allocation system may determine, after reviewing the statistics, that it needs to add more memory or force a collection.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="3b07f-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3b07f-110">Requirements</span></span>  
+
+ <span data-ttu-id="3b07f-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b07f-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="3b07f-112">**Encabezado:** GCHost. idl, GCHost. h</span><span class="sxs-lookup"><span data-stu-id="3b07f-112">**Header:** GCHost.idl, GCHost.h</span></span>  
+  
+ <span data-ttu-id="3b07f-113">**Biblioteca:** Se incluye como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3b07f-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="3b07f-114">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b07f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="3b07f-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="3b07f-115">See also</span></span>
+
+- [<span data-ttu-id="3b07f-116">IGCHost (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="3b07f-116">IGCHost Interface</span></span>](igchost-interface.md)
