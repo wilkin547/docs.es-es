@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-ms.openlocfilehash: cab25738c9f4727fe3970cc1db15c38e68b08de6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d605ac36c17a815bf546819e331830f51142cfcd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212924"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690426"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain (Método)
+
 Obtiene un puntero a la cadena de la que forma parte este marco.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetChain (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppChain`  
  enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena que contiene este marco.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9f8e8e0239f8f8cd149bc6e8b1d7921124731087
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 65013f43aa0075b6de6999741afb448c2a35afb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245952"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689932"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)
 
@@ -46,7 +46,7 @@ La herramienta tiene un tiempo de espera de cinco minutos al recuperar los metad
 
 ### <a name="multi-targeting"></a>Compatibilidad con múltiples versiones
 
-La herramienta no es compatible con múltiples versiones. Si desea generar un artefacto de .NET 4 a partir de *svcutil.exe*, use el *svcutil.exe* desde el SDK de .net 4. Para generar un artefacto de .NET 3.5, use el ejecutable del SDK de .NET 3.5.
+La herramienta no es compatible con múltiples versiones. Si desea generar un artefacto de .NET Framework 4 a partir de *svcutil.exe*, use el *svcutil.exe* del SDK de .NET Framework 4. Para generar un .NET Framework artefacto 3,5, use el archivo ejecutable del SDK de .NET Framework 3,5.
 
 ### <a name="accessing-wsdl-documents"></a>Acceso a documentos WSDL
 
@@ -98,7 +98,7 @@ Para un servicio con un punto de conexión de BasicHttpContextBinding, *Svcutil.
 |/Language\<language>|Especifica el lenguaje de programación a utilizar para la generación de código. Debe proporcionar un nombre de lenguaje registrado en el archivo Machine.config o el nombre completo de una clase que hereda de <xref:System.CodeDom.Compiler.CodeDomProvider> .<br /><br /> Valores: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Valor predeterminado: csharp<br /><br /> Forma abreviada: `/l`|
 |/mergeConfig|Combina la configuración generada en un archivo existente en lugar de sobrescribir el archivo existente.|
 |/messageContract|Genera tipos de contrato de mensaje.<br /><br /> Forma abreviada: `/mc`|
-|/Namespace\<string,string>|Especifica una asignación de un targetNamespace WSDL o esquema XML a un espacio de nombres CLR. El uso \* de ' ' para el targetNamespace asigna todos los targetNamespaces sin una asignación explícita a ese espacio de nombres CLR.<br /><br /> Para asegurarse de que el nombre de contrato de mensaje no produce una colisión con el nombre de la operación, debería calificar la referencia del tipo con `::` o asegurarse de que los nombres son únicos.<br /><br /> Valor predeterminado: Se deriva del espacio de nombres de destino del documento de esquema para contratos de datos. El espacio de nombres predeterminado se utiliza para todos los otros tipos generados.<br /><br /> Forma abreviada: `/n` **Nota:** al generar tipos para usar con XmlSerializer, solo se admite una única asignación de espacio de nombres. Todos los tipos generados estarán en el espacio de nombres predeterminado o en el espacio de nombres especificado por ' * '.|
+|/Namespace\<string,string>|Especifica una asignación de un targetNamespace WSDL o esquema XML a un espacio de nombres CLR. El uso \* de ' ' para el targetNamespace asigna todos los targetNamespaces sin una asignación explícita a ese espacio de nombres CLR.<br /><br /> Para asegurarse de que el nombre de contrato de mensaje no produce una colisión con el nombre de la operación, debería calificar la referencia del tipo con `::` o asegurarse de que los nombres son únicos.<br /><br /> Valor predeterminado: Se deriva del espacio de nombres de destino del documento de esquema para contratos de datos. El espacio de nombres predeterminado se utiliza para todos los otros tipos generados.<br /><br /> Forma abreviada: `/n` **Nota:**  al generar tipos para usar con XmlSerializer, solo se admite una única asignación de espacio de nombres. Todos los tipos generados estarán en el espacio de nombres predeterminado o en el espacio de nombres especificado por ' * '.|
 |/noConfig|No generar archivos de configuración.|
 |/noStdLib|No hacer referencia a las bibliotecas estándar.<br /><br /> Valor predeterminado: Se hace referencia a Mscorlib.dll y a System.servicemodel.dll.|
 |/out\<file>|Especifica el nombre de archivo para el código generado.<br /><br /> Valor predeterminado: Se deriva del nombre de definición de WSDL, nombre de servicio de WSDL o espacio de nombres de destino de uno de los esquemas.<br /><br /> Forma abreviada: `/o`|
@@ -277,7 +277,7 @@ Además, para minimizar la posibilidad de que la seguridad se vea comprometida, 
 
 Finalmente, no debería utilizar la herramienta en el nivel medio de su aplicación, ya que puede producir la denegación de servicio al proceso actual.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

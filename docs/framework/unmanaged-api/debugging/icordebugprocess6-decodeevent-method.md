@@ -2,14 +2,15 @@
 title: Método ICorDebugProcess6::DecodeEvent
 ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
-ms.openlocfilehash: 7c163311f9ce8f3d98ce72f45165a5e517c6c0aa
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ed75b3c5657fed805f187285a576b81598be331c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205511"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690283"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>Método ICorDebugProcess6::DecodeEvent
+
 Descodifica los eventos de depuración administrados encapsulados en la carga de los eventos de depuración de excepción nativos especialmente diseñados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ HRESULT DecodeEvent(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pRecord`  
  [in] Puntero a una matriz de bytes desde un evento de depuración de excepción nativo que incluye información acerca de un evento de depuración administrado.  
   
@@ -44,12 +46,13 @@ HRESULT DecodeEvent(
  `ppEvent`  
  enuncia Puntero a la dirección de un objeto [ICorDebugDebugEvent](icordebugdebugevent-interface.md) que representa un evento de depuración administrada descodificada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

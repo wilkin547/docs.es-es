@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1e492-8014-43ea-80d1-a4743e9b1c17
 topic_type:
 - apiref
-ms.openlocfilehash: d830635b911fa5d80382e432f283c455c41af7a8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: a4590bcd96226a713ff5535a8bc802c2116f862a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762687"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690140"
 ---
 # <a name="icorruntimehostswitchinlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchInLogicalThreadState (Método)
+
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,18 +35,20 @@ HRESULT SwitchInLogicalThreadState(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pFiberCookie`  
  de Cookie que indica la fibra que se va a usar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **Versión de .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 61d81c94e3a9c092b5d45791962635c761e8da8a
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 1dd71dbe0ddb894cb5ed05c32e50429d27c66aa2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008149"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95689334"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile (Método)
+
 Crea una estructura de metadatos `File` que contiene los metadatos para el ensamblado al que se refiere este ensamblado y devuelve el token de metadatos asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT DefineFile (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szName`  
  de Nombre del archivo que se va a consumir.  
   
@@ -54,14 +56,16 @@ HRESULT DefineFile (
  enuncia Puntero al token devuelto `File` .  
   
 ## <a name="remarks"></a>Comentarios  
+
  Se `File` debe definir una estructura de metadatos para cada archivo que formaba parte de este ensamblado en el momento en que se compiló este ensamblado, excluyendo el archivo que contiene los metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
