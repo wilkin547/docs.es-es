@@ -2,7 +2,6 @@
 title: Cadenas con formato de fecha y hora estándar
 description: Aprenda a usar una cadena de formato de fecha y hora estándar para definir la representación de texto de un valor de fecha y hora en .NET.
 ms.date: 11/05/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.custom: contperfq2
-ms.openlocfilehash: dc294322317560344a6e3cdba1dbe2cce4f6a3fd
-ms.sourcegitcommit: 6bef8abde346c59771a35f4f76bf037ff61c5ba3
+ms.openlocfilehash: b6917fa8a012a6fe52db1ea2b79397a0484d9d8f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94329760"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831330"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 
@@ -31,7 +30,7 @@ Una cadena de formato de fecha y hora estándar usa un único carácter como esp
 - Para definir la representación de texto de un valor de fecha y hora que se puede convertir en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante una operación de análisis.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato** , que es una aplicación de Windows Forms de .NET que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de Windows Forms de .NET que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 

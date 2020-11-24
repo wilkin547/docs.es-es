@@ -6,13 +6,15 @@ helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 7e24331d37e8fdbe2bc66a2d9f73a5f6a7242af9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9960ba2c39d58734a04cb7ca892ed321fd09822b
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864350"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099053"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento para usar argumentos opcionales y con nombre en la programación de Office (Guía de programación de C#)
 
@@ -28,7 +30,7 @@ Debe tener Microsoft Office Word instalado en el equipo para completar estos pro
 
 1. Inicie Visual Studio.
 
-2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.
+2. En el menú **Archivo** , elija **Nuevo** y haga clic en **Proyecto**.
 
 3. En el panel **Templates Categories** (Categorías de plantillas), expanda **Visual C#** y haga clic en **Windows**.
 

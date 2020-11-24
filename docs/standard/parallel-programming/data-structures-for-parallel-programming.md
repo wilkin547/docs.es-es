@@ -1,16 +1,15 @@
 ---
 title: Estructuras de datos para la programación paralela
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-ms.openlocfilehash: cea9264a30469881e3ec54fc378af3ddb70bff8e
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: c7f974c5626cf1efc6bf62c423043089d5c32e7c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925329"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829536"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
 
@@ -42,7 +41,7 @@ En .NET se proporcionan varios tipos que son útiles para la programación en pa
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Simplifica los escenarios de bifurcación y combinación proporcionando un mecanismo sencillo de encuentro. Para más información, vea [CountdownEvent](../threading/countdownevent.md).|  
 |<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Un primitivo de sincronización similar a <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> es ligero, pero solo puede utilizarse para la comunicación dentro de un proceso.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Un primitivo de sincronización que limita el número de subprocesos que acceden simultáneamente a un recurso o a un conjunto de recursos. Para más información, vea [Semaphore y SemaphoreSlim](../threading/semaphore-and-semaphoreslim.md).|  
-|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Un primitivo de bloqueo de exclusión mutua genera el subproceso que trata de obtener un bloqueo para esperar en un bucle, o *girar* , durante un período de tiempo antes de producir su cuanto. En escenarios en los que se prevé que la espera del bloqueo sea corta, <xref:System.Threading.SpinLock> ofrece mayor rendimiento que otras formas de bloqueo. Para más información, vea [SpinLock](../threading/spinlock.md).|  
+|<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Un primitivo de bloqueo de exclusión mutua genera el subproceso que trata de obtener un bloqueo para esperar en un bucle, o *girar*, durante un período de tiempo antes de producir su cuanto. En escenarios en los que se prevé que la espera del bloqueo sea corta, <xref:System.Threading.SpinLock> ofrece mayor rendimiento que otras formas de bloqueo. Para más información, vea [SpinLock](../threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Un tipo pequeño y ligero que girará durante un tiempo especificado y, finalmente, colocará el subproceso en un estado de espera si se supera el número de giros.  Para más información, vea [SpinWait](../threading/spinwait.md).|  
   
  Para más información, consulte:  

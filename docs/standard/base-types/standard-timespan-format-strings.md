@@ -2,7 +2,6 @@
 title: Cadenas de formato TimeSpan estándar
 description: Revise las cadenas de formato TimeSpan estándar, que usan un único especificador de formato para definir la representación de texto de un valor TimeSpan en .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 99529d480ca32cb8be1e2013ca4551534e10026b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: ab64b2ef0a87cbad3b3c036d74f4690ff7fdb1f4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888950"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831317"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
 
@@ -50,7 +49,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
 ## <a name="the-constant-c-format-specifier"></a>Especificador de formato constante ("c")  
  El especificador de formato "c" devuelve la representación de cadena de un valor <xref:System.TimeSpan> de la siguiente forma:  
   
- [-][ *d*.] *hh* : *mm* : *ss* [. *fffffff* ]  
+ [-][*d*.]*hh*:*mm*:*ss*[.*fffffff*]  
   
  Los elementos de los corchetes ([ y ]) son opcionales. El punto (.) y los dos puntos (:) son símbolos literales. En la siguiente tabla se describen los elementos restantes.  
   
@@ -76,7 +75,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
 ## <a name="the-general-short-g-format-specifier"></a>Especificador de formato corto general ("g")  
  El especificador de formato <xref:System.TimeSpan> "g" devuelve la representación de cadena de un valor <xref:System.TimeSpan> en una forma compacta, incluyendo únicamente los elementos que sean necesarios. Tiene la forma siguiente:  
   
- [-][ *d* :] *h* : *mm* : *ss* [. *FFFFFFF* ]  
+ [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
@@ -100,7 +99,7 @@ En la tabla siguiente se muestran los especificadores de formato de intervalo de
 ## <a name="the-general-long-g-format-specifier"></a>Especificador de formato largo general ("G")  
  El especificador de formato <xref:System.TimeSpan> "G" devuelve la representación de cadena de un valor <xref:System.TimeSpan> en un formato largo que siempre incluye los días y las fracciones de segundo. La cadena resultante del especificador de formato estándar "G" tiene la forma siguiente:  
   
- [-] *d* : *hh* : *mm* : *ss*. *fffffff*  
+ [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   

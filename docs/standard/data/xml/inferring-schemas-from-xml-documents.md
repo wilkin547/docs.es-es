@@ -1,18 +1,17 @@
 ---
 title: Deducción de esquemas a partir de documentos XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5b0f9bea33346083ce0015fbf3cdfeb0e0ea1181
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287667"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830238"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  

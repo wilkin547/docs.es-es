@@ -2,7 +2,6 @@
 title: Utilizar la clase StringBuilder en .NET
 description: Aprenda a utilizar la clase StringBuilder en .NET. Use esta clase para modificar una cadena sin crear un objeto.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: 1005da650c624b2b8f6616c163082ff95d7dc007
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: c9337df864a01ec0fbdf7068051efea60b6c59aa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888963"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831304"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilizar la clase StringBuilder en .NET
 El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los métodos de la clase <xref:System.String?displayProperty=nameWithType>, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto <xref:System.String> puede ser costosa. La clase <xref:System.Text.StringBuilder?displayProperty=nameWithType> se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase <xref:System.Text.StringBuilder> puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.  
@@ -56,10 +55,10 @@ El objeto <xref:System.String> es inmutable. Cada vez que se usa uno de los mét
   
  El método <xref:System.Text.StringBuilder.EnsureCapacity%2A> se puede usar para comprobar la capacidad del objeto **StringBuilder** actual. Si la capacidad es mayor que el valor transmitido, no se realiza ningún cambio, pero si es menor que este, la capacidad actual se cambia para que coincida con el valor en cuestión.  
   
- También se puede ver o establecer la propiedad <xref:System.Text.StringBuilder.Length%2A>. Si la propiedad **Length** se establece en un valor mayor que el de la propiedad **Capacity** , la propiedad **Capacity** se cambia automáticamente al mismo valor de la propiedad **Length** . Si la propiedad **Length** se establece en un valor menor que la longitud de la cadena de **StringBuilder** actual, se acorta la cadena.  
+ También se puede ver o establecer la propiedad <xref:System.Text.StringBuilder.Length%2A>. Si la propiedad **Length** se establece en un valor mayor que el de la propiedad **Capacity**, la propiedad **Capacity** se cambia automáticamente al mismo valor de la propiedad **Length**. Si la propiedad **Length** se establece en un valor menor que la longitud de la cadena de **StringBuilder** actual, se acorta la cadena.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>Modificar la cadena StringBuilder  
- En la tabla siguiente se enumeran los métodos que se pueden usar para modificar el contenido de **StringBuilder** .  
+ En la tabla siguiente se enumeran los métodos que se pueden usar para modificar el contenido de **StringBuilder**.  
   
 |Nombre del método|Usar|  
 |-----------------|---------|  

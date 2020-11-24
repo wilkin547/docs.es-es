@@ -2,7 +2,6 @@
 title: Escribir atributos personalizados
 description: Diseñe sus propios atributos personalizados en .NET. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de System.Attribute.
 ms.date: 07/17/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 670f34083834b35d26e6018372948022eec17d47
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 4c7051fa45dfc23a09b037b78030ff90af182a7d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889197"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829016"
 ---
 # <a name="writing-custom-attributes"></a>Escribir atributos personalizados
 Para diseñar sus propios atributos personalizados, no necesitará dominar muchos conceptos nuevos. Si está familiarizado con la programación orientada a objetos y sabe cómo diseñar clases, ya tiene la mayoría de los conocimientos necesarios. Los atributos personalizados son esencialmente clases tradicionales que se derivan directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>. Como sucede con las clases tradicionales, los atributos personalizados contienen métodos que almacenan y recuperan datos.  
@@ -104,7 +103,7 @@ Para diseñar sus propios atributos personalizados, no necesitará dominar mucho
   
 - Las clases de atributos se deben declarar como clases públicas.  
   
-- Por convención, el nombre de la clase de atributo termina con la palabra **Attribute** . Aunque no es obligatoria, se recomienda seguir esta convención para mejorar la legibilidad. Cuando se aplica el atributo, la inclusión de la palabra Attribute es opcional.  
+- Por convención, el nombre de la clase de atributo termina con la palabra **Attribute**. Aunque no es obligatoria, se recomienda seguir esta convención para mejorar la legibilidad. Cuando se aplica el atributo, la inclusión de la palabra Attribute es opcional.  
   
 - Todas las clases de atributo deben heredar directa o indirectamente de <xref:System.Attribute?displayProperty=nameWithType>.  
   

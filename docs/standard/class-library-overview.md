@@ -2,7 +2,6 @@
 title: Información general de la biblioteca de clases de .NET
 description: Más información sobre la biblioteca de clases .NET. Las API de .NET incluyen clases, interfaces, delegados y tipos de valor para proporcionar acceso a la funcionalidad del sistema.
 ms.date: 02/08/2018
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET], library overview
 - .NET, library overview
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 95dcbea6e0b3f2cd91bd6955a11ede7c9731caca
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 44a46db4fa7ebf6dd5802cc07e7d18744c72ad68
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687525"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831265"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -69,7 +68,7 @@ Los tipos de .NET son la base sobre la que se compilan aplicaciones, componentes
   
  Este esquema de nomenclatura facilita a los desarrolladores de bibliotecas la tarea de extender .NET para crear grupos jerárquicos de tipos y asignarles nombre de forma coherente e ilustrativa. También permite identificar de forma inequívoca los tipos mediante su nombre completo (es decir, por su espacio de nombres y nombre de tipo), lo que evita que se produzcan conflictos entre los nombres de tipo. Se espera que los programadores de bibliotecas usen la siguiente convención cuando creen nombres para sus propios espacios de nombres:  
   
- *NombreCompañía*. *NombreTecnología*  
+ *NombreCompañía*.*NombreTecnología*  
   
  Por ejemplo, el espacio de nombres `Microsoft.Word` cumple esta directriz.  
   

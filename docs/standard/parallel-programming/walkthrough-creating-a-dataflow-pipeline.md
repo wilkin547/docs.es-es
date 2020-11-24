@@ -2,7 +2,6 @@
 title: 'Tutorial: Creación de una canalización de flujos de datos'
 description: Cree una canalización de flujo de entrada, que consiste en una serie de componentes o bloques de flujo de entrada. Un bloque de flujo de entrada realiza una tarea determinada para contribuir a un objetivo mayor.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 9469bddf381ac33b35234756d4b8538500e55c6b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767876"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829939"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Tutorial: Creación de una canalización de flujos de datos
 Aunque puede usar los métodos <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> para recibir mensajes de los bloques de origen, también puede conectar los bloques de mensajes para formar una *canalización de flujo de datos*. Una canalización de flujo datos es una serie de componentes, o *bloques de flujo de datos*, de los que cada uno realiza una tarea concreta que contribuye a lograr un objetivo mayor. Cada bloque de flujo de datos de una canalización de flujo de datos realiza un determinado trabajo cuando recibe un mensaje de otro bloque de flujo de datos. Se podría establecer una analogía de esto con una cadena de montaje en la fabricación de automóviles. Mientras cada vehículo pasa a través de la línea de montaje, una estación monta el bastidor, la siguiente instala el motor y así sucesivamente. Dado que una cadena de montaje permite montar varios vehículos al mismo tiempo, proporciona un mejor rendimiento que montar de uno en uno los vehículos completos.

@@ -2,23 +2,22 @@
 title: 'Programación asincrónica basada en tareas: .NET'
 description: En este artículo, conocerá la programación asincrónica basada en tareas a través de la biblioteca TPL de .NET.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: d735cb56c5914dd33ba694c95a8e92446ca47088
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: a1abe474628cd88e0c24f4152d83bd8ed7ad7950
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925251"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830030"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 
-La biblioteca TPL se basa en el concepto de *tarea* , que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:
+La biblioteca TPL se basa en el concepto de *tarea*, que representa una operación asincrónica. De cierta forma, una tarea recuerda a un subproceso o elemento de trabajo <xref:System.Threading.ThreadPool>, pero en un nivel más alto de abstracción. El término *paralelismo de tareas* hace referencia a la ejecución simultánea de una o varias tareas independientes. Las tareas proporcionan dos ventajas fundamentales:
 
 - Un uso más eficaz y más escalable de los recursos del sistema.
 
@@ -114,7 +113,7 @@ Esto se muestra en el ejemplo siguiente. Cambia la referencia cultural actual de
 :::code language="vbnet" source="snippets/vb/asyncculture1.vb" id="1":::
 
 > [!NOTE]
-> En las versiones de .NET Framework anteriores a .NET Framework 4.6, la referencia cultural de una tarea viene determinada por la referencia cultural del subproceso en el que se *ejecuta* , no por la del *subproceso que realiza la llamada*. En el caso de las tareas asincrónicas, esto significa que la referencia cultural que usa la tarea podría ser diferente a la del subproceso que realiza la llamada.
+> En las versiones de .NET Framework anteriores a .NET Framework 4.6, la referencia cultural de una tarea viene determinada por la referencia cultural del subproceso en el que se *ejecuta*, no por la del *subproceso que realiza la llamada*. En el caso de las tareas asincrónicas, esto significa que la referencia cultural que usa la tarea podría ser diferente a la del subproceso que realiza la llamada.
 
 Para obtener más información sobre las tareas asincrónicas y la referencia cultural, consulte la sección "Referencia cultural y operaciones asincrónicas basadas en tareas" en el tema <xref:System.Globalization.CultureInfo>.
 

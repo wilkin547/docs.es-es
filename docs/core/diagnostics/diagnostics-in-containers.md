@@ -2,12 +2,12 @@
 title: Recopilación de diagnósticos en contenedores
 description: En este artículo, aprenderá cómo se pueden usar las herramientas de diagnóstico de .NET Core en contenedores de Docker.
 ms.date: 09/01/2020
-ms.openlocfilehash: e57f3696433bbf6f35b2e3e5d1e72ae8b1e3eeb3
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: cf4bbdf75e943f093a2202f91303a2eea7125487
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91450840"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916214"
 ---
 # <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
 
@@ -23,17 +23,17 @@ El único factor que complica el uso de estas herramientas en un contenedor es q
 
 ```dockerfile
 # In build stage
-# Install desired .NET CLI diagnostics tools
-RUN dotnet tool install --tool-path /tools dotnet-trace
-RUN dotnet tool install --tool-path /tools dotnet-counters
-RUN dotnet tool install --tool-path /tools dotnet-dump
+# Install desired .NET CLI diagnostics tools
+RUN dotnet tool install --tool-path /tools dotnet-trace
+RUN dotnet tool install --tool-path /tools dotnet-counters
+RUN dotnet tool install --tool-path /tools dotnet-dump
 
 ...
 
 # In final stage
-# Copy diagnostics tools
-WORKDIR /tools
-COPY --from=build /tools .
+# Copy diagnostics tools
+WORKDIR /tools
+COPY --from=build /tools .
 ```
 
 Como alternativa, el SDK de .NET Core se puede instalar en un contenedor cuando sea necesario para instalar las herramientas de la CLI. Tenga en cuenta que la instalación del SDK de .NET Core tendrá como efecto secundario la reinstalación del entorno de ejecución de .NET Core. Asegúrese de instalar la versión del SDK que coincida con el entorno de ejecución presente en el contenedor.
@@ -49,7 +49,7 @@ Si desea usar las herramientas de diagnóstico de la CLI global de .NET Core pa
 
 **Esta herramienta se aplica a: ✔️** .NET Core 2.1 y versiones posteriores
 
-El script [`PerfCollect`](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/linux-performance-tracing.md) resulta útil para recopilar seguimientos del rendimiento y es la herramienta recomendada para recopilar seguimientos anteriores a .NET Core 3.0. Si utiliza `PerfCollect` en un contenedor, tenga en cuenta los siguientes requisitos:
+El script [`PerfCollect`](./trace-perfcollect-lttng.md) resulta útil para recopilar seguimientos del rendimiento y es la herramienta recomendada para recopilar seguimientos anteriores a .NET Core 3.0. Si utiliza `PerfCollect` en un contenedor, tenga en cuenta los siguientes requisitos:
 
 1. `PerfCollect` requiere la [funcionalidad `SYS_ADMIN`](https://man7.org/linux/man-pages/man7/capabilities.7.html) (para ejecutar la herramienta `perf`), por lo que debe asegurarse de que el contenedor se [inicia con esa capacidad](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities).
 2. `PerfCollect` requiere que se establezcan algunas variables de entorno antes de que se inicie la generación de perfiles de la aplicación. Se pueden establecer en un [Dockerfile](https://docs.docker.com/engine/reference/builder/#env) o cuando [se inicia el contenedor](https://docs.docker.com/engine/reference/run/#env-environment-variables). Dado que estas variables no deben establecerse en entornos de producción normales, es habitual simplemente agregarlas al iniciar un contenedor del que se va a crear un perfil. Las dos variables que requiere PerfCollect son:

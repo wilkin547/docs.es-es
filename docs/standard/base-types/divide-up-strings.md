@@ -2,18 +2,17 @@
 title: Separación de cadenas en subcadenas
 description: Obtenga información sobre las distintas técnicas para extraer partes de una cadena, como String.Split, expresiones regulares y String.Substring.
 ms.date: 10/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - strings [.NET], breaking up
-ms.openlocfilehash: 88947c4576b0496e4b4e45042d665e3ca5857c53
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: b753476b7d8e5808fdcacc6f28bd1de5f8b232bb
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403497"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829654"
 ---
 # <a name="extract-substrings-from-a-string"></a>Extracción de subcadenas de una cadena
 
@@ -44,7 +43,7 @@ Los puntos desaparecen de las subcadenas, pero ahora se han incluido dos subcade
 
 ## <a name="regular-expressions"></a>Expresiones regulares
 
-Si la cadena se ajusta a un patrón fijo, puede usar una expresión regular para extraer y controlar sus elementos. Por ejemplo, si las cadenas adoptan el formato " *número* *operando* *número* ", puede utilizar una [expresión regular](regular-expressions.md) para extraer y administrar los elementos de la cadena. Este es un ejemplo:
+Si la cadena se ajusta a un patrón fijo, puede usar una expresión regular para extraer y controlar sus elementos. Por ejemplo, si las cadenas adoptan el formato "*número* *operando* *número*", puede utilizar una [expresión regular](regular-expressions.md) para extraer y administrar los elementos de la cadena. Este es un ejemplo:
 
 :::code language="csharp" source="snippets/parse-strings/csharp/regex.cs" id="1" interactive="try-dotnet":::
 :::code language="vb" source="snippets/parse-strings/vb/regex.vb" id="1":::

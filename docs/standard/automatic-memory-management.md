@@ -1,7 +1,6 @@
 ---
 title: Automatic Memory Management
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, automatic memory management
 - memory, allocating
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: a9b0e9a02d519eb18debe4249623df010e6f0e6d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: abb3133312893ba8a5584b4daa03faab6cf40974
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276197"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828990"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 La administración de memoria automática es uno de los servicios que proporciona Common Language Runtime durante la [ejecución administrada](managed-execution-process.md). El recolector de elementos no utilizados de Common Language Runtime administra la asignación y liberación de la memoria de una aplicación. Esto significa que los programadores no tienen que escribir código para realizar tareas de administración de memoria al programar aplicaciones administradas. La administración automática de la memoria puede eliminar problemas frecuentes, como olvidar liberar un objeto y causar una pérdida de memoria, o intentar tener acceso a la memoria de un objeto que ya se ha liberado. En esta sección se describe cómo asigna y libera memoria el recolector de elementos no utilizados.  

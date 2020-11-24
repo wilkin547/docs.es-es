@@ -1,7 +1,6 @@
 ---
 title: Utilizar un delegado AsyncCallback para finalizar una operación asincrónica
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - AsyncCallback delegate
 - stopping asynchronous operations
 ms.assetid: 9d97206c-8917-406c-8961-7d0909d84eeb
-ms.openlocfilehash: 8766e64c52688e820d0eb6a259e39926555d97bd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 55cc78bbfdda97a4d5ec8a2028fb3b0d7a9659e5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276354"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829133"
 ---
 # <a name="using-an-asynccallback-delegate-to-end-an-asynchronous-operation"></a>Utilizar un delegado AsyncCallback para finalizar una operación asincrónica
 Las aplicaciones que pueden realizar otro trabajo mientras esperan los resultados de una operación asincrónica no deben bloquear la espera hasta que se complete la operación. Use una de las siguientes opciones para continuar con la ejecución de instrucciones mientras espera a que la operación asincrónica se complete:  

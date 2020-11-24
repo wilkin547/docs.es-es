@@ -2,7 +2,6 @@
 title: cuantificadores en expresiones regulares
 description: Descubra los cuantificadores de expresiones regulares, que especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que coincidan.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -15,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 361286b992180e1d7fdf18d88022780cc3aa53fc
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889431"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831044"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -114,7 +113,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-at-least-n-times-n"></a>Coincidir al menos n veces: {n,}  
- El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n* , donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,}?`.  
+ El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n*, donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,}?`.  
   
  Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta coincidir con un límite de palabra seguido de por lo menos dos dígitos, seguidos de un límite de palabra y de un carácter que no sea un dígito. En el ejemplo siguiente se muestra esta expresión regular. La expresión regular no coincide con la frase `"7 days"` porque solo contiene un dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.  
   

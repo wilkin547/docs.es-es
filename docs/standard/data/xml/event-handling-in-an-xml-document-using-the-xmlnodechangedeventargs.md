@@ -1,17 +1,16 @@
 ---
 title: Controlar eventos en un documento XML mediante XmlNodeChangedEventArgs
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-ms.openlocfilehash: 7bca8600468d3715b1d1cca46049eb07bb8e3d03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 582220f14b5b3800c6e04e2e01795686caace83c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287784"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829562"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Controlar eventos en un documento XML mediante XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** encapsula los argumentos que se pasan a los controladores de eventos registrados en el objeto **XmlDocument** para controlar eventos. En la tabla siguiente se proporcionan los eventos y una descripción de cuándo se activan.  

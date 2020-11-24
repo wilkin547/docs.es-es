@@ -2,7 +2,6 @@
 title: Opciones de expresiones regulares
 description: Aprenda a usar opciones de expresiones regulares en .NET, como la coincidencia sin distinción entre mayúsculas y minúsculas, el modo multilínea y el modo de derecha a izquierda.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 5687d1e5a11e69cc9ecf2bd34067329cc52955d2
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a77409476c8b2c1b32429118edbe6ad6542a7b09
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889002"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828951"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 
@@ -267,7 +266,7 @@ No obstante, en los casos siguientes, los caracteres de espacio de una expresió
 
 - No se admiten espacios en blanco en una secuencia de caracteres que presenta un elemento de lenguaje. Por ejemplo:
 
-  - El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El modelo `(? :`*subexpresión*`)` produce una clase <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el modelo, y el modelo `( ?:`*subexpresión*`)` no coincide con *subexpresión* .
+  - El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El modelo `(? :`*subexpresión*`)` produce una clase <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el modelo, y el modelo `( ?:`*subexpresión*`)` no coincide con *subexpresión*.
 
   - El elemento de lenguaje `\p{`*nombre*`}`, que representa una categoría Unicode o bloque con nombre, no puede incluir espacios insertados en la parte `\p{` del elemento. Si se incluye un espacio en blanco, el elemento produce una <xref:System.ArgumentException> en tiempo de ejecución.
 

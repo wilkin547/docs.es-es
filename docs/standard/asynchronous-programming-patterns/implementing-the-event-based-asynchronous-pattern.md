@@ -2,7 +2,6 @@
 title: Implementar el modelo asincrónico basado en eventos
 description: Aprenda a implementar el modelo asincrónico basado en eventos (EAP) en .NET. EAP es una manera estándar de empaquetar una clase que tiene características asincrónicas.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: ca4b1b3ff1fb7180250de7436db9a4d642e8118c
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 3f48f5d4f03928f8c9a2db2724e542be2b38fc63
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888794"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830355"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementar el modelo asincrónico basado en eventos
 
@@ -75,7 +74,7 @@ Defina un método _MethodName_**Async** que:
 
 - Acepte varias invocaciones.
 
-Opcionalmente, defina una sobrecarga _MethodName_**Async** , idéntica a _MethodName_**Async** , pero con un parámetro con valor de objeto adicional denominado `userState`. Haga esto si está preparado para administrar varias invocaciones simultáneas de su método, en cuyo caso, el valor `userState` se entregará de nuevo a todos los controladores de eventos para diferenciar las invocaciones del método. También puede decidir hacerlo sencillamente como un lugar donde almacenar el estado del usuario para su posterior recuperación.
+Opcionalmente, defina una sobrecarga _MethodName_**Async**, idéntica a _MethodName_**Async**, pero con un parámetro con valor de objeto adicional denominado `userState`. Haga esto si está preparado para administrar varias invocaciones simultáneas de su método, en cuyo caso, el valor `userState` se entregará de nuevo a todos los controladores de eventos para diferenciar las invocaciones del método. También puede decidir hacerlo sencillamente como un lugar donde almacenar el estado del usuario para su posterior recuperación.
 
 Para cada signatura del método _MethodName_**Async** independiente:
 
@@ -149,7 +148,7 @@ La decisión de asignar un nombre a la versión de operación asincrónica únic
 
 No defina varios métodos de la tabla anterior en la misma clase. No tendrá sentido o desordenará la interfaz de clase con una proliferación de métodos.
 
-Normalmente, estos métodos volverán de inmediato y la operación puede cancelarse, o bien puede no hacerlo en realidad. En el controlador de eventos para el evento _MethodName_**Completed** , el objeto _MethodName_**CompletedEventArgs** contiene un campo `Cancelled` que los clientes pueden usar para determinar si se ha producido la cancelación.
+Normalmente, estos métodos volverán de inmediato y la operación puede cancelarse, o bien puede no hacerlo en realidad. En el controlador de eventos para el evento _MethodName_**Completed**, el objeto _MethodName_**CompletedEventArgs** contiene un campo `Cancelled` que los clientes pueden usar para determinar si se ha producido la cancelación.
 
 Cumpla la semántica de cancelación descrita en [Procedimientos recomendados para implementar el modelo asincrónico basado en eventos](best-practices-for-implementing-the-event-based-asynchronous-pattern.md).
 
@@ -199,7 +198,7 @@ Esta solución se aplica de forma específica a una clase de operación asincró
 
 En este caso, la clase admite varios métodos asincrónicos, cada uno capaz de devolver resultados incrementales. Además, todos estos resultados incrementales tienen el mismo tipo de datos.
 
-Siga el modelo descrito anteriormente para las clases de operación única, ya que la misma estructura <xref:System.EventArgs> funcionará para todos los resultados incrementales. Defina un evento `ProgressChanged` en lugar de un evento _MethodName_**ProgressChanged** , ya que se aplica a varios métodos asincrónicos.
+Siga el modelo descrito anteriormente para las clases de operación única, ya que la misma estructura <xref:System.EventArgs> funcionará para todos los resultados incrementales. Defina un evento `ProgressChanged` en lugar de un evento _MethodName_**ProgressChanged**, ya que se aplica a varios métodos asincrónicos.
 
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Clase de varias operaciones con resultados incrementales heterogéneos
 
@@ -215,7 +214,7 @@ Invoque ese controlador de eventos en el subproceso adecuado como se describe en
 
 Aunque en general no se aconseja el uso de `out` y `ref` en .NET, estas son las reglas que se deben seguir cuando estén presentes:
 
-Dado un método sincrónico *MethodName* :
+Dado un método sincrónico *MethodName*:
 
 - Los parámetros `out` de *MethodName* no deben formar parte de _MethodName_**Async**. En su lugar, deben formar parte de _MethodName_**CompletedEventArgs** con el mismo nombre que su parámetro equivalente en *MethodName* (a menos que haya un nombre más adecuado).
 

@@ -2,7 +2,6 @@
 title: Cadenas de formato de enumeración
 description: Cree cadenas de formato de enumeración con el método Enum.ToString en .NET. Asigne formato a los valores numéricos, hexadecimales o de cadena de los miembros de enumeración.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: e4d8ca27d99c211653269b2477be8f5632b78229
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 02a12c36e47a82c15c01e578333e1c4465bab142
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888664"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829627"
 ---
 # <a name="enumeration-format-strings"></a>Cadenas de formato de enumeración
 
@@ -26,7 +25,7 @@ En las secciones siguientes se enumeran las cadenas de formato de enumeración y
 
 ## <a name="g-or-g"></a>G o g
 
-Si es posible, muestra la entrada de enumeración como valor de cadena y, si no, muestra el valor entero de la instancia actual. Si la enumeración se define con el conjunto de atributos **Flags** , los valores de cadena de cada entrada válida se concatenan, separados por comas. Si no se establece el atributo **Flags** , se muestra un valor no válido como entrada numérica. En el siguiente ejemplo se muestra el uso del especificador de formato G.
+Si es posible, muestra la entrada de enumeración como valor de cadena y, si no, muestra el valor entero de la instancia actual. Si la enumeración se define con el conjunto de atributos **Flags**, los valores de cadena de cada entrada válida se concatenan, separados por comas. Si no se establece el atributo **Flags**, se muestra un valor no válido como entrada numérica. En el siguiente ejemplo se muestra el uso del especificador de formato G.
 
 [!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
 [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]

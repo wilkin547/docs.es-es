@@ -2,7 +2,6 @@
 title: Aplicar formato a tipos en .NET
 description: Aprenda a dar formato a los tipos en .NET. Comprenda cómo usar o invalidar el método ToString. Conozca el formato de referencia cultural, el compuesto y el personalizado.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -26,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET]
 - strings [.NET], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: f100c1abcb32e907b92c42f8cfa460d2c1927803
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: a23df3ecfd3042927636813cdb94eecbb71438f0
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888500"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828964"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato en .NET
 

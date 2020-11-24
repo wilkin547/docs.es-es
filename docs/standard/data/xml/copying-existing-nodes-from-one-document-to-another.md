@@ -1,14 +1,13 @@
 ---
 title: Copia de nodos existentes de un documento a otro
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: 8ae7fd04e5c85e59ca9bd629c6957ad470d36b48
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289205"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829614"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia de nodos existentes de un documento a otro
 El método **ImportNode** es el mecanismo por el que un nodo o todo el subárbol de nodos se copia de una clase **XmlDocument** a otra. El nodo que devuelve la llamada es una copia del nodo del documento de origen, incluidos los valores de atributo, el nombre del nodo, el tipo de nodo y todos los atributos relacionados con el espacio de nombres como el prefijo, el nombre local y el identificador de recursos uniformes (URI) del espacio de nombres. El documento de origen no cambia. Una vez importado el nodo, todavía tiene que agregarlo al árbol utilizando uno de los métodos usados para insertar nodos.  

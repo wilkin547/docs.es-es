@@ -1,17 +1,16 @@
 ---
 title: Modos de latencia
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: ee45fe5e8016c7507bc3a873e615fd8379810a8e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2e7b30a50e2513c567abf2116ab5495e717a8e22
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286020"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831200"
 ---
 # <a name="latency-modes"></a>Modos de latencia
 

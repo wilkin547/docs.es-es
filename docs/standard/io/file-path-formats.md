@@ -2,7 +2,6 @@
 title: Formatos de ruta de acceso de archivo en los sistemas Windows
 description: En este artículo, conocerá los formatos de ruta de acceso de archivo en sistemas Windows, como las rutas de acceso de DOS tradicionales, las rutas de acceso de dispositivos DOS y las rutas de acceso de convención de nomenclatura universal (UNC).
 ms.date: 06/06/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: e24772ee9c9d22786c9cfece43017f8526434601
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 378fe56bcd54469bc82d762868636daec6eb286e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188060"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831174"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 

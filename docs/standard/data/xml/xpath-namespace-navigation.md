@@ -1,14 +1,13 @@
 ---
 title: Navegación por el espacio de nombres XPath
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: bad5e1245c7f48c114bd2a1809822cc131dad75a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551964"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94831213"
 ---
 # <a name="xpath-namespace-navigation"></a>Navegación por el espacio de nombres XPath
 Para usar consultas XPath con documentos XML, debe direccionar correctamente los espacios de nombres XML y los elementos que contienen los espacios de nombres. Los espacios de nombres evitan las ambigüedades que pueden producirse cuando los nombres se utilizan en varios contextos; por ejemplo, el nombre `ID` puede referirse a varios identificadores asociados con distintos elementos de un documento XML. La sintaxis de los espacios de nombres especifica los URI, nombres y prefijos que distinguen los elementos de un documento XML.  

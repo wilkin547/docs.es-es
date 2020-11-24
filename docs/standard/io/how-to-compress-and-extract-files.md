@@ -2,7 +2,6 @@
 title: Procedimiento para comprimir y extraer archivos
 description: Comprima y extraiga archivos con System.IO.Compression. Vea ejemplos de uso de ZipFile, ZipArchive, ZipArchiveEntry, DeflateStream y GZipStream.
 ms.date: 01/14/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: ea078099aba3161818844d14af221eb582e7f11b
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: a1077c7277e0aa54e3c8883cfc27d93926485b8e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188294"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830862"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Procedimiento para comprimir y extraer archivos
 
@@ -49,7 +48,7 @@ Para ejecutar el ejemplo, cree una carpeta de *inicio* en su carpeta de programa
 
 ## <a name="example-2-extract-specific-file-extensions"></a>Ejemplo 2: Extraer determinadas extensiones de archivo
 
-El ejemplo siguiente recorre en iteración el contenido de un archivo *.zip* existente y extrae archivos que tienen una extensión *.txt* . Usa la clase <xref:System.IO.Compression.ZipArchive> para tener acceso al archivo zip y la clase <xref:System.IO.Compression.ZipArchiveEntry> para inspeccionar las entradas individuales. El método de extensión <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para el objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponible en la clase <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
+El ejemplo siguiente recorre en iteración el contenido de un archivo *.zip* existente y extrae archivos que tienen una extensión *.txt*. Usa la clase <xref:System.IO.Compression.ZipArchive> para tener acceso al archivo zip y la clase <xref:System.IO.Compression.ZipArchiveEntry> para inspeccionar las entradas individuales. El método de extensión <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> para el objeto <xref:System.IO.Compression.ZipArchiveEntry> está disponible en la clase <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType>.
 
 Para ejecutar el ejemplo, coloque un archivo *.zip* llamado *result.zip* en su carpeta de programa. Cuando se le pida, proporcione un nombre de carpeta al que se va a extraer.
 

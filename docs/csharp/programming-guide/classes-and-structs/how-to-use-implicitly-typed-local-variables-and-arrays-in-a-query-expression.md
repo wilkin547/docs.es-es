@@ -4,13 +4,15 @@ description: Use variables locales con tipo implícito en C# para hacer que el c
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
+ms.topic: how-to
+ms.custom: contperfq2
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: fcfb154f6abd90033ae57bb1543d0c891f6c5999
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0379cf7a172b989a9c686fd2da20ca8bf8da4997
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91174204"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95098870"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedimiento para usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
 

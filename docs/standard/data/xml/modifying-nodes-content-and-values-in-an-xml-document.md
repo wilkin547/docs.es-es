@@ -1,14 +1,13 @@
 ---
 title: Modificación de nodos, contenido y valores en un documento XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-ms.openlocfilehash: f544b7d8472285095af9a71b1c24f94f61f93bc6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 13fb18208831356e34301bc22715b68fda1f671f
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288828"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830186"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modificación de nodos, contenido y valores en un documento XML
 Existen muchas formas de modificar los nodos y el contenido de un documento. Puede realizar lo siguiente:  

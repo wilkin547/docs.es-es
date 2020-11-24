@@ -1,7 +1,6 @@
 ---
 title: 'Cómo: Eliminar archivos y directorios en almacenamiento aislado'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -17,12 +16,12 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting files and directories
 - deleting directories within isolated stage file
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
-ms.openlocfilehash: 7797f319ca3b143bac6a4e68eaf820e966f1560e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 9340796c835d91fe5401e467edd82cab80b2e653
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187949"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94830797"
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Cómo: Eliminar archivos y directorios en almacenamiento aislado
 Puede eliminar directorios y archivos en un archivo de almacenamiento aislado. Dentro de un almacén, los nombres de archivos y directorios dependen del sistema operativo y se especifican con respecto a la raíz del sistema de archivos virtual. No distinguen mayúsculas de minúsculas en sistemas operativos Windows.  
