@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-ms.openlocfilehash: b0b9c0b7d178557806a9ab2893bff2d34dc408ff
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5bfab21a36becf943b1813f266cf70c4b5e5b1d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557741"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690998"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager (Interfaz)
+
 Define métodos que permiten al host obtener información sobre las tareas solicitadas y detectar interbloqueos en su implementación de sincronización.  
   
 ## <a name="methods"></a>Métodos  
@@ -34,6 +35,7 @@ Define métodos que permiten al host obtener información sobre las tareas solic
 |[Método GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md)|Obtiene la siguiente tarea que está esperando en el bloqueo de lector-Writer actual.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
@@ -42,7 +44,7 @@ Define métodos que permiten al host obtener información sobre las tareas solic
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Thread>
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

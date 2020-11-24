@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5c26b366-6e81-467c-9dd0-02dd26fee0a3
 topic_type:
 - apiref
-ms.openlocfilehash: a8ff6d3a925773e58e0713a87b167420c246f85b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 83c683e1f60f13f7cee4ddc6fe5af5a94e36eb93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615571"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692181"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument (Interfaz)
+
 Representa un documento al que hace referencia un almacén de símbolos. Un documento se define mediante un localizador uniforme de recursos (URL) y un GUID de tipo de documento. Puede buscar el documento sin tener en consideración cómo se almacena mediante la dirección URL y el GUID del tipo de documento. Puede almacenar el origen del documento en el almacén de símbolos y recuperarlo a través de esta interfaz.  
   
 ## <a name="methods"></a>Métodos  
@@ -39,6 +40,6 @@ Representa un documento al que hace referencia un almacén de símbolos. Un docu
 |[Método GetURL](isymunmanageddocument-geturl-method.md)|Devuelve la dirección URL de este documento.|  
 |[Método HasEmbeddedSource](isymunmanageddocument-hasembeddedsource-method.md)|Devuelve `true` si el documento tiene código fuente incrustado en los símbolos de depuración; de lo contrario, devuelve `false` .|  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

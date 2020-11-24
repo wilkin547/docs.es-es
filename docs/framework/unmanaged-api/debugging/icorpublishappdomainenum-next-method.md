@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c5ac38005410ae6ed9c2f4160e926987791ad604
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 00aff9ab4edbbebe4b924d335fa12f92e9840737
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421220"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693702"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next (Método)
+
 Obtiene el número especificado de dominios de aplicación que existen actualmente en el proceso, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de Número de elementos que se van a recuperar.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  enuncia Puntero al número de dominios de aplicación devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -55,6 +58,6 @@ HRESULT Next (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorPublishAppDomainEnum (Interfaz)](icorpublishappdomainenum-interface.md)

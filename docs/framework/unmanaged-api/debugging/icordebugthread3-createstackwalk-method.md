@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fb9d07fffd2ec98225ce60b211f525f8dafd9725
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83375848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691074"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk (Método)
+
 Crea un objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,10 +33,12 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppStackWalk`  
  enuncia Puntero a la dirección del objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -45,10 +48,12 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  Si el `CreateStackWalk` método se ejecuta correctamente, el `ICorDebugStackWalk` contexto del objeto devuelto se establece en el contexto actual del subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

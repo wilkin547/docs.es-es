@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-ms.openlocfilehash: 841379702e24428a8092cfd1d2cbd3c5b4e17ba4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f5d7df60a7b9c728b73fe6592226a8b6734b1e66
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615610"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692155"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange (Método)
+
 Devuelve el intervalo especificado del código fuente incrustado en el búfer especificado. El búfer debe ser lo suficientemente grande como para contener el origen.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,6 +41,7 @@ HRESULT GetSourceRange(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `startLine`  
  de Línea inicial del documento actual.  
   
@@ -62,8 +64,9 @@ HRESULT GetSourceRange(
  enuncia Tamaño y longitud del intervalo especificado del documento de origen, en bytes.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente.  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

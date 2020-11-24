@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1680ec06-4ab0-447e-93ad-cdb8693fde5c
 topic_type:
 - apiref
-ms.openlocfilehash: b68a9ec1e8fee4fdecd2114af28c75c4a236cb3a
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 888cc40c194cb86b0f898f5556ea14b8897e08c7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421155"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95693312"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip (Método)
+
 Mueve el cursor hacia delante en la enumeración el número de elementos especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT Skip (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de Número de elementos por los que se va a desplazar el cursor hacia delante.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -46,6 +49,6 @@ HRESULT Skip (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorPublishEnum (Interfaz)](icorpublishenum-interface.md)

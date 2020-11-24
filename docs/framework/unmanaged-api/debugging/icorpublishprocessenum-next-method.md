@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c399f37-1e38-4ca1-b70d-8ae41f7228b7
 topic_type:
 - apiref
-ms.openlocfilehash: b3bb1857075f857f62ec92ac6a2876a49655c70e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9965a468f788efead0477bb7574ef3bf156fd869
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421064"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95692480"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next (Método)
+
 Obtiene el número especificado de procesos de la colección, comenzando en la posición actual del cursor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de El número de procesos que se van a recuperar.  
   
@@ -47,6 +49,7 @@ HRESULT Next (
  enuncia Puntero al número de procesos devueltos realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -55,6 +58,6 @@ HRESULT Next (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorPublishProcessEnum (Interfaz)](icorpublishprocessenum-interface.md)

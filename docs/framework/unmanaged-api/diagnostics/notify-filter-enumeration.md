@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-ms.openlocfilehash: b20e18d5f4314a0ab1442ac7bd5c6514e4db85d5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 365bc0dc73b04d3afd171c40f336432f77552b6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95690959"
 ---
 # <a name="notify_filter-enumeration"></a>NOTIFY_FILTER (Enumeración)
+
 Identifica las devoluciones de llamada para las funciones del depurador. Para obtener más información, vea el método [INotifySource2 (:: SetNotifyFilter (](inotifysource2-setnotifyfilter-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,8 +53,9 @@ enum tagNOTIFY_FILTER
 |`NOTIFY_FILTER_NONE`|Indica que no se debe invocar ningún método de notificación.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de almacén de símbolos de diagnósticos](diagnostics-symbol-store-enumerations.md)
