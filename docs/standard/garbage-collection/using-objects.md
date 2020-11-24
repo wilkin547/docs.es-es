@@ -2,7 +2,6 @@
 title: Uso de objetos que implementan IDisposable
 description: Aprenda a usar objetos que implementan la interfaz IDisposable en .NET. Los tipos que usan recursos no administrados implementan IDisposable para permitir la recuperación de recursos.
 ms.date: 05/13/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-ms.openlocfilehash: 7d5d4080f22aab6870a230d495b4a4b9ebcb3b96
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 50769bdf684f6eb3a51dc2bd00c6a774a02976b7
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599859"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827456"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Uso de objetos que implementan IDisposable
 

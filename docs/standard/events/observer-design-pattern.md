@@ -2,7 +2,6 @@
 title: Modelo de diseño de observador
 description: Descubra el modelo de diseño de observador en .NET. Este modelo permite que un suscriptor se registre con un proveedor y reciba notificaciones de un proveedor.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: e1f8dad2c19d3e11281cda5ef749730c5c6334d7
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 1fda2b692d7bbaeedcf881801eb224f114da41e8
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064072"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828249"
 ---
 # <a name="observer-design-pattern"></a>Modelo de diseño de observador
 
-El modelo de diseño de observador permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. Este modelo es adecuado para cualquier escenario que requiera notificaciones push. El modelo define un *proveedor* (también conocido como un *tema* o una *observable* ) y cero, uno o más *observadores*. Los observadores se registran con el proveedor y siempre que se produce una condición predefinida, un evento o un cambio de estado, el proveedor notifica automáticamente a todos los observadores mediante la llamada a uno de sus métodos. En esta llamada al método, el proveedor puede proporcionar también información sobre el estado actual a los observadores. En .NET, el modelo de diseño de observador se aplica mediante la implementación de las interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> y <xref:System.IObserver%601?displayProperty=nameWithType>. El parámetro de tipo genérico representa el tipo que proporciona información de notificación.
+El modelo de diseño de observador permite que un suscriptor se registre con un proveedor y reciba notificaciones de dicho proveedor. Este modelo es adecuado para cualquier escenario que requiera notificaciones push. El modelo define un *proveedor* (también conocido como un *tema* o una *observable*) y cero, uno o más *observadores*. Los observadores se registran con el proveedor y siempre que se produce una condición predefinida, un evento o un cambio de estado, el proveedor notifica automáticamente a todos los observadores mediante la llamada a uno de sus métodos. En esta llamada al método, el proveedor puede proporcionar también información sobre el estado actual a los observadores. En .NET, el modelo de diseño de observador se aplica mediante la implementación de las interfaces genéricas <xref:System.IObservable%601?displayProperty=nameWithType> y <xref:System.IObserver%601?displayProperty=nameWithType>. El parámetro de tipo genérico representa el tipo que proporciona información de notificación.
 
 ## <a name="applying-the-pattern"></a>Aplicación del modelo
 

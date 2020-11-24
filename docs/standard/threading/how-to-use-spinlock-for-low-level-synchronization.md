@@ -1,19 +1,18 @@
 ---
 title: Utilizar SpinLock para la sincronización de bajo nivel
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
-ms.openlocfilehash: 8f81df527f83183804132ce09ae713fbbcf6f3ce
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 148ef5e9d5c570ef04bc6e716a884db5e688d91a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634251"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826396"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Utilizar SpinLock para la sincronización de bajo nivel
 

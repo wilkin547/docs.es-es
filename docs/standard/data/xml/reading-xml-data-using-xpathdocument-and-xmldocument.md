@@ -1,17 +1,16 @@
 ---
 title: Lectura de datos XML con XPathDocument y XmlDocument
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: da1cb81c819e55f572e9faaabef4dd49ee7397de
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: cd95d2331f9f178b916cf22ec4b1ead7d7c4a116
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288685"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824355"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lectura de datos XML con XPathDocument y XmlDocument
 Existen dos formas de leer un documento XML en el espacio de nombres <xref:System.Xml.XPath?displayProperty=nameWithType>. La primera consiste en leer un documento XML utilizando la clase de solo lectura <xref:System.Xml.XPath.XPathDocument>, y la segunda en leer un documento XML utilizando la clase <xref:System.Xml.XmlDocument> editable en el espacio de nombres <xref:System.Xml?displayProperty=nameWithType>.  

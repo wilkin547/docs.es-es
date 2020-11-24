@@ -3,14 +3,13 @@ title: Bibliotecas de Framework
 description: Obtenga información sobre cómo las bibliotecas proporcionan implementaciones para muchos tipos generales y específicos de las aplicaciones, algoritmos y funcionalidad de la utilidad.
 author: richlander
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159239"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827937"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 

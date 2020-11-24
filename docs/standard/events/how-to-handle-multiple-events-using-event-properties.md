@@ -2,7 +2,6 @@
 title: Procedimiento para controlar varios eventos mediante las propiedades de evento
 description: Aprenda a controlar varios eventos mediante propiedades de eventos. Defina colecciones de delegados, claves de eventos y propiedades de evento. Implemente los métodos de descriptor de acceso Add y Remove.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: fa0bdc26eba872a62cd5f7a773df0d7a53c83975
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: c62073e26ff0831bb582c9e64c16b7ec7c05b26e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93064241"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828380"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  

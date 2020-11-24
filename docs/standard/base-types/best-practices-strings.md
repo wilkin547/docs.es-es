@@ -2,7 +2,6 @@
 title: Procedimientos recomendados para la comparación de cadenas en .NET
 description: Aprenda a comparar cadenas de manera eficaz en aplicaciones .NET.
 ms.date: 05/01/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -18,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 167b9b865fb0f674559e2b87db3ed4d6d5048ffe
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400831"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825083"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Procedimientos recomendados para la comparación de cadenas en .NET
 

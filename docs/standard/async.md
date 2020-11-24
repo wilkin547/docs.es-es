@@ -4,14 +4,13 @@ description: Obtenga información sobre cómo la programación de Async es una t
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 495f225a3732812666dfa2f5c8c07f6f5b849c95
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159733"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824810"
 ---
 # <a name="async-overview"></a>Información general de Async
 
@@ -33,16 +32,16 @@ El código asincrónico tiene las siguientes características:
 - Muchas de las API de .NET más recientes son asincrónicas.
 - Es fácil escribir código asincrónico en .NET.
 
-## <a name="whats-next"></a>Pasos adicionales
+## <a name="whats-next"></a>¿Qué sigue?
 
 Para obtener más información, vea el tema [Async en profundidad](async-in-depth.md).
 
 En el tema [Modelos para la programación asincrónica](asynchronous-programming-patterns/index.md), se proporciona una introducción de los tres modelos de programación asincrónica que se admiten en .NET:  
   
-- [Asynchronous Programming Model (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) [Modelo de programación asincrónica (APM)] (heredado)  
+- [Modelo de programación asincrónica (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (heredado)  
   
 - [Modelo asincrónico basado en eventos (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (heredado)  
   
-- [Task-based Asynchronous Pattern (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) [Modelo asincrónico basado en tareas (TAP)] (recomendado para nuevos desarrollos)  
+- [Modelo asincrónico basado en tareas (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (recomendado para nuevos desarrollos)  
 
 Para obtener más información sobre el modelo de programación basado en tareas recomendado, consulte el tema [Programación asincrónica basada en tareas](parallel-programming/task-based-asynchronous-programming.md).

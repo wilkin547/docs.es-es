@@ -2,17 +2,16 @@
 title: Recolección de elementos no utilizados y rendimiento
 description: Obtenga información sobre los problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Aprenda a minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 7c4a61c1e5e735313a355bcab348fd6ef58a8686
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 15ca3fd06bb607a4f0257b4c5cd62f9c935c6913
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93062976"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827547"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 
@@ -230,7 +229,7 @@ En el procedimiento siguiente se describe cómo establecer un punto de interrupc
 
   Este comando fuerza una interrupción si **RestartEE** se ejecuta una vez recuperados los objetos de generación 2 para la recolección de elementos no utilizados.
 
-  En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE** , por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.
+  En la recolección de elementos no utilizados de servidor, solo un subproceso llama a **RestartEE**, por lo que el punto de interrupción solo se producirá una vez durante una recolección de elementos no utilizados de generación 2.
 
 ## <a name="performance-check-procedures"></a>Procedimientos para comprobar el rendimiento
 
@@ -282,7 +281,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 ### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Para determinar si la excepción de memoria insuficiente está administrada
 
-1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones ( **pe** ):
+1. En WinDbg o en el depurador de Visual Studio con la extensión del depurador de SOS cargada, escriba el comando de impresión de excepciones (**pe**):
 
     **!pe**
 
@@ -330,7 +329,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
   o bien
 
-- Use el comando **vmstat** :
+- Use el comando **vmstat**:
 
   **!vmstat**
 
@@ -352,7 +351,7 @@ En esta sección se describen los procedimientos siguientes para aislar la causa
 
 1. Inicie el Administrador de tareas de Windows.
 
-2. En la pestaña **Rendimiento** , busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema** ).
+2. En la pestaña **Rendimiento**, busque el valor confirmado. (En Windows 7, busque **Asignación (KB)** en el grupo **Sistema**).
 
     Si el **Total** se aproxima al **Límite** hay poca memoria física.
 

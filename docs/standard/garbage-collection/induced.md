@@ -1,16 +1,15 @@
 ---
 title: Colecciones inducidas
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 637ba9b3b73d685ee2263315a08f982d862efb35
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286046"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827729"
 ---
 # <a name="induced-collections"></a>Colecciones inducidas
 En la mayoría de los casos, el recolector de elementos no utilizados puede determinar cuál es el mejor momento para realizar una recolección y se debe permitir su ejecución de forma independiente. Hay ocasiones excepcionales en que una recolección forzada puede mejorar el rendimiento de la aplicación. En estos casos, se puede inducir la recolección de elementos no utilizados utilizando el método <xref:System.GC.Collect%2A?displayProperty=nameWithType> para forzar una recolección de elementos no utilizados.  

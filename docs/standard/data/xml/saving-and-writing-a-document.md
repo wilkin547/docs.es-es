@@ -1,17 +1,16 @@
 ---
 title: Guardar y escribir un documento
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 40d031c06f0b76668a634fac46b8defccce62f01
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289049"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823503"
 ---
 # <a name="saving-and-writing-a-document"></a>Guardar y escribir un documento
 Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado puede ser diferente al original de varias formas:  

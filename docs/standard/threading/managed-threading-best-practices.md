@@ -2,7 +2,6 @@
 title: Procedimientos recomendados para el subprocesamiento administrado
 description: Obtenga información sobre los procedimientos recomendados para el subprocesamiento administrado en .NET. Trabaje con situaciones difíciles, como la coordinación de muchos subprocesos o el control de subprocesos de bloqueo.
 ms.date: 10/15/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - threading [.NET], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: 88e1f34388cd58fef59bc4005bcaf630c59a661e
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: b2a3f2efc12392316f6d90242ef0a9224e7d13a4
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93189009"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826318"
 ---
 # <a name="managed-threading-best-practices"></a>Procedimientos recomendados para el subprocesamiento administrado
 
@@ -62,7 +61,7 @@ else {
 ### <a name="race-conditions"></a>Condiciones de carrera  
  Una condición de carrera es un error que se produce cuando el resultado de un programa depende del primero de dos o más subprocesos que consiga llegar hasta un bloque específico de código. Ejecutar el programa muchas veces genera distintos resultados y no es posible predecir el resultado de una ejecución específica.  
   
- Un ejemplo sencillo de una condición de carrera es el incremento de un campo. Suponga una clase que tiene un campo privado **static** ( **Shared** en Visual Basic) que se incrementa cada vez que se crea una instancia de la clase, mediante código como `objCt++;` (C#) o `objCt += 1` (Visual Basic). Esta operación requiere cargar el valor de `objCt` en un registro, incrementar el valor y almacenarlo en `objCt`.  
+ Un ejemplo sencillo de una condición de carrera es el incremento de un campo. Suponga una clase que tiene un campo privado **static** (**Shared** en Visual Basic) que se incrementa cada vez que se crea una instancia de la clase, mediante código como `objCt++;` (C#) o `objCt += 1` (Visual Basic). Esta operación requiere cargar el valor de `objCt` en un registro, incrementar el valor y almacenarlo en `objCt`.  
   
  En una aplicación multiproceso, un subproceso que realiza los tres pasos puede adelantar al subproceso que ha cargado e incrementado el valor; cuando el primer subproceso reanuda la ejecución y almacena su valor, sobrescribe `objCt` sin tener en cuenta el hecho de que el valor ha cambiado mientras tanto.  
   
@@ -96,7 +95,7 @@ Use la propiedad <xref:System.Environment.ProcessorCount?displayProperty=nameWit
   
 - Tenga cuidado al efectuar bloqueos en instancias, por ejemplo `lock(this)` en C# o `SyncLock(Me)` en Visual Basic. Si otra parte del código de la aplicación, ajeno al tipo, bloquea el objeto, podrían producirse interbloqueos.  
   
-- Asegúrese de que un subproceso que entra en un monitor siempre sale de ese monitor, aun en el caso de que se produzca una excepción mientras el subproceso se encuentra en el monitor. La instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md) de C# y la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) de Visual Basic ofrecen automáticamente este comportamiento mediante un bloque **finally** que garantiza la llamada a <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Si no está seguro de que se llamará a **Exit** , considere la posibilidad de cambiar el diseño con el fin de usar **Mutex**. Una zona de exclusión mutua se libera automáticamente cuando finaliza el subproceso al que pertenece.  
+- Asegúrese de que un subproceso que entra en un monitor siempre sale de ese monitor, aun en el caso de que se produzca una excepción mientras el subproceso se encuentra en el monitor. La instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md) de C# y la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) de Visual Basic ofrecen automáticamente este comportamiento mediante un bloque **finally** que garantiza la llamada a <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Si no está seguro de que se llamará a **Exit**, considere la posibilidad de cambiar el diseño con el fin de usar **Mutex**. Una zona de exclusión mutua se libera automáticamente cuando finaliza el subproceso al que pertenece.  
   
 - Utilice varios subprocesos para tareas que requieren recursos diferentes, y evite asignar varios subprocesos a un solo recurso. Por ejemplo, en tareas que impliquen beneficios de E/S por tener un subproceso propio, ya que ese subproceso se bloquea durante las operaciones de E/S y, de este modo, permite ejecutar otros subprocesos. Los datos proporcionados por el usuario son otro recurso que se beneficia de la utilización de un subproceso dedicado. En un equipo de un solo procesador, una tarea que implica un cálculo intensivo coexiste con los datos proporcionados por el usuario y con tareas que implican la E/S, pero varias tareas de cálculo intensivo compiten entre ellas.  
   

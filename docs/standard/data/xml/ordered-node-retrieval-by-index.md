@@ -1,17 +1,16 @@
 ---
 title: Recuperación de nodos ordenados por índice
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-ms.openlocfilehash: 8ff02a81ab579cc0041074990a76166fcafe6eb5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 73c31c5249262fe9b6624201bc5b9bd6b1374d1e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288724"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823750"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Recuperación de nodos ordenados por índice
 En Document Object Model (DOM) XML del World Wide Web Consortium (W3C) también se describe un objeto NodeList, que tiene la capacidad de controlar una lista de nodos ordenados, en contraposición al conjunto desordenado controlado por **XmlNamedNodeMap**. El objeto NodeList incluido en Microsoft .NET Framework se denomina **XmlNodeList**. Los métodos y las propiedades que devuelve un objeto **XmlNodeList** son los siguientes:  

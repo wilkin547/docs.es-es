@@ -2,7 +2,6 @@
 title: Modelo asincrónico basado en tareas (TAP)
 description: Descubra el modelo asincrónico basado en tareas (TAP). TAP es el modelo asincrónico de diseño recomendado para los nuevos desarrollos en .NET.
 ms.date: 02/26/2019
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET support for
 - .NET, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 2987e7baa52f627d1da41af21d05bfa22a247fbb
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: f194a0bafa0ab7b9606d72f091dbb12e94f31099
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889249"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824023"
 ---
 # <a name="task-based-asynchronous-pattern"></a>Modelo asincrónico basado en tareas
 
@@ -53,7 +52,7 @@ TAP usa un solo método para representar el inicio y la finalización de una ope
  El autor de la llamada al método TAP puede bloquear la espera para que el método de TAP se complete mediante la espera sincrónica en la tarea resultante, o bien puede ejecutar código (de continuación) adicional cuando la operación asincrónica se completa. El creador del código de continuación tiene control sobre lo que ese código ejecuta. Puede crear el código de continuación explícitamente, mediante métodos de la clase <xref:System.Threading.Tasks.Task> (por ejemplo, <xref:System.Threading.Tasks.Task.ContinueWith%2A>) o implícitamente, usando la compatibilidad con lenguaje sobre las continuaciones (por ejemplo, `await` en C#, `Await` en Visual Basic, `AwaitValue` en F#).  
   
 ## <a name="task-status"></a>Estado de la tarea  
- La clase <xref:System.Threading.Tasks.Task> proporciona un ciclo de vida para las operaciones asincrónicas y ese ciclo se representa mediante la enumeración <xref:System.Threading.Tasks.TaskStatus>. Para admitir los casos extremos de tipos que se derivan de <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, y para admitir la separación de la construcción de la programación, la clase <xref:System.Threading.Tasks.Task> expone un método <xref:System.Threading.Tasks.Task.Start%2A>. Las tareas creadas por los constructores públicos <xref:System.Threading.Tasks.Task> se denominan *tareas en frío* , porque inician su ciclo de vida en el estado <xref:System.Threading.Tasks.TaskStatus.Created> no programado y solo se programan cuando se llama a <xref:System.Threading.Tasks.Task.Start%2A> en estas instancias.
+ La clase <xref:System.Threading.Tasks.Task> proporciona un ciclo de vida para las operaciones asincrónicas y ese ciclo se representa mediante la enumeración <xref:System.Threading.Tasks.TaskStatus>. Para admitir los casos extremos de tipos que se derivan de <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>, y para admitir la separación de la construcción de la programación, la clase <xref:System.Threading.Tasks.Task> expone un método <xref:System.Threading.Tasks.Task.Start%2A>. Las tareas creadas por los constructores públicos <xref:System.Threading.Tasks.Task> se denominan *tareas en frío*, porque inician su ciclo de vida en el estado <xref:System.Threading.Tasks.TaskStatus.Created> no programado y solo se programan cuando se llama a <xref:System.Threading.Tasks.Task.Start%2A> en estas instancias.
 
  Todas las demás tareas inician su ciclo de vida en un estado activo, lo que significa que las operaciones asincrónicas que representan ya se han iniciado y su estado de la tarea es un valor de enumeración distinto de <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType>. Todas las tareas que se devuelven de métodos de TAP deben estar activas. **Si un método de TAP usa internamente el constructor de una tarea para crear instancias de la tarea que se va a devolver, el método de TAP debe llamar a <xref:System.Threading.Tasks.Task.Start%2A> en el objeto <xref:System.Threading.Tasks.Task> antes de devolverlo.** Los consumidores de un método de TAP pueden suponer con seguridad que la tarea devuelta está activa y no deben intentar llamar a <xref:System.Threading.Tasks.Task.Start%2A> en ningún <xref:System.Threading.Tasks.Task> que se devuelve de un método de TAP. La llamada a <xref:System.Threading.Tasks.Task.Start%2A> en una tarea activa produce una excepción <xref:System.InvalidOperationException>.  
   

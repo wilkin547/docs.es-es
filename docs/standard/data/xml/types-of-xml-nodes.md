@@ -1,14 +1,13 @@
 ---
 title: Tipos de nodos XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
-ms.openlocfilehash: 5e11d61e16659ac1a8ca1b0b2c0d493ffdad5621
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97458fc26b3c63dd6d7882c180192aef63109e1a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282069"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824602"
 ---
 # <a name="types-of-xml-nodes"></a>Tipos de nodos XML
 Cuando se lee un documento XML en la memoria como un árbol de nodos, el tipo de nodo se decide al crear los nodos. El modelo de objetos de documento (DOM) dispone de varias clases de tipos de nodos, determinados por el World Wide Web Consortium (W3C) y enumerados en la sección 1.1.1 El modelo de estructura DOM. En la tabla siguiente se muestran los tipos de nodo, el objeto asignado a dicho tipo de nodo y una breve descripción de cada uno.  

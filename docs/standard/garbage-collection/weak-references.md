@@ -2,19 +2,18 @@
 title: Referencias parciales
 description: Descubra las referencias débiles, que permiten que el recolector de elementos no utilizados de .NET recopile un objeto al tiempo que permite que la aplicación acceda al objeto.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - weak references, short
 - weak references, using
 - weak references, long
 - garbage collection, weak references
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
-ms.openlocfilehash: 1c18b4fa979058893e0683620ec6cff8e7b15b9b
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 40d17009c98a73b7cb51779663360726c5fc7403
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768188"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827365"
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  

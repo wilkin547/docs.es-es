@@ -2,14 +2,13 @@
 title: Common Type System y Common Language Specification
 description: Obtenga información sobre cómo Common Type System (CTS) y Common Language Specification (CLS) hacen posible que .NET admita varios lenguajes.
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 8983e456b051ace434fda9f6ed9cf9028c2ec2d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e60205450e2f156407deb7be6b9c497d090b6f7b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187675"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822885"
 ---
 # <a name="common-type-system--common-language-specification"></a>Common Type System y Common Language Specification
 

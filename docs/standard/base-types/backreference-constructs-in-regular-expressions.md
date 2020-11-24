@@ -2,7 +2,6 @@
 title: Construcciones de referencia inversa en expresiones regulares de .NET
 description: Obtenga información sobre cómo identificar los elementos de texto repetido mediante el uso de construcciones de referencia inversa en una expresión regular.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - .NET regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: bc0c6d3dcaa084c168a9c3fc0239116ec8899aae
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 79702f266e7233c96fef6b6aa32a7e756589f49c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889158"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825265"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Construcciones de referencia inversa en expresiones regulares
 
@@ -87,7 +86,7 @@ En una referencia inversa con `\k`, *nombre* también puede ser la representaci�
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-Si *nombre* es la representación de cadena de un número y ningún grupo de captura tiene ese nombre, `\k<`*nombre*`>` es igual que la referencia inversa `\`*número* , donde *número* es la posición ordinal de la captura. En el ejemplo siguiente, hay un único grupo de captura denominado `char`. La construcción de referencia inversa hace referencia a él como `\k<1>`. Como muestra la salida del ejemplo, la llamada a <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> se realiza correctamente porque `char` es el primer grupo de captura.
+Si *nombre* es la representación de cadena de un número y ningún grupo de captura tiene ese nombre, `\k<`*nombre*`>` es igual que la referencia inversa `\`*número*, donde *número* es la posición ordinal de la captura. En el ejemplo siguiente, hay un único grupo de captura denominado `char`. La construcción de referencia inversa hace referencia a él como `\k<1>`. Como muestra la salida del ejemplo, la llamada a <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> se realiza correctamente porque `char` es el primer grupo de captura.
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]

@@ -2,19 +2,18 @@
 title: Control de excepciones (biblioteca TPL)
 description: Explore el control de excepciones mediante la biblioteca TPL en .NET. Vea excepciones de agregado anidadas, excepciones internas y excepciones de tareas no observadas, entre otras.
 ms.date: 04/20/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: f1c1a994f4b3a8df0556a0190bc4eacb63f2921e
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: fd16fd4263c092f8678589e1a8dd9544955e798a
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662542"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827339"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Control de excepciones (biblioteca TPL)
 

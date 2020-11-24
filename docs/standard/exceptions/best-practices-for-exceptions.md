@@ -2,7 +2,6 @@
 title: Procedimientos recomendados para excepciones - .NET
 description: Obtenga más información sobre los procedimientos recomendados para las excepciones, como el uso de try/catch/finally, el control de condiciones habituales sin excepciones y el uso de tipos de excepción de .NET predefinidos.
 ms.date: 12/05/2018
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -10,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 815dcc81cf41465bffd1515d366a66ff558304fa
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447100"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94828236"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 

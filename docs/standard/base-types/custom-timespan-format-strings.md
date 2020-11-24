@@ -2,7 +2,6 @@
 title: Cadenas de formato TimeSpan personalizado
 description: Conozca las cadenas de formato TimeSpan personalizado en .NET. Una cadena de formato personalizado contiene uno o varios especificadores de formato TimeSpan, además de cualquier número de caracteres literales.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: b760e7ab7f39d4e4682d5d4c3a6421b9843e1d59
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: e8447e580ac85e1ebbc33f8c8334b7c5cfeb334b
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888690"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824368"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadenas de formato TimeSpan personalizado
 
@@ -66,7 +65,7 @@ Los métodos <xref:System.TimeSpan> y <xref:System.TimeSpan.ParseExact%2A?displa
 |"FFFFF"|Cienmilésimas de segundo de un intervalo de tiempo. No se incluyen los ceros finales fraccionarios.<br /><br /> Más información: [Especificador de formato personalizado "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Millonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Diezmillonésimas de segundo de un intervalo de tiempo. No se muestran los ceros finales fraccionarios ni los dígitos de siete ceros.<br /><br /> Más información: [Especificador de formato personalizado "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|' *cadena* '|Delimitador de cadena literal.<br /><br /> Más información: [Otros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*cadena*'|Delimitador de cadena literal.<br /><br /> Más información: [Otros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |&#92;|El carácter de escape.<br /><br /> Más información: [Otros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Cualquier otro carácter|Cualquier otro carácter sin escape se interpreta como especificador de formato personalizado.<br /><br /> Más información: [Otros caracteres](#other-characters).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 

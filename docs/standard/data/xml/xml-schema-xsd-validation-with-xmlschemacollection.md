@@ -1,17 +1,16 @@
 ---
 title: Validación de esquemas XML (XSD) con XmlSchemaCollection
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-ms.openlocfilehash: 2ff8a8b85c3bfa594bd958a9a3688380885e0426
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 08eeb8440f89e488685e474bed607002f8ab6386
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290310"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824589"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Validación de esquemas XML (XSD) con XmlSchemaCollection
 Puede utilizar <xref:System.Xml.Schema.XmlSchemaCollection> para validar un documento XML con esquemas del lenguaje de definición de esquemas XML (XSD). <xref:System.Xml.Schema.XmlSchemaCollection> mejora el rendimiento al almacenar esquemas en la colección para que no se carguen en memoria cada vez que se produce la validación. Si el esquema está en la colección de esquemas, el atributo `schemaLocation` se utiliza para buscarlo en dicha colección.  

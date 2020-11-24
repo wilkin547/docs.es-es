@@ -1,14 +1,13 @@
 ---
 title: Compatibilidad de tipos en las clases System.Xml
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
-ms.openlocfilehash: 8ceda15cb8463db3e81260529ebb1e3a67a0c1af
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8e4ef15980f488c473129f4f7c02be1778bcafea
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283304"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824628"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Compatibilidad de tipos en las clases System.Xml
 En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales para incluir características de compatibilidad de tipos. Las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.XPath.XPathNavigator> tienen características de compatibilidad de tipos, incluyendo la capacidad de realizar conversiones entre tipos de esquemas XML y tipos de Common Language Runtime (CLR).  

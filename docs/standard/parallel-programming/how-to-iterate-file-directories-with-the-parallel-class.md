@@ -1,19 +1,18 @@
 ---
 title: 'Cómo: Recorrer en iteración directorios con la clase paralela'
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: fa67e3b94bc7b2f9afac749e50204138e9a041f0
-ms.sourcegitcommit: 6d09ae36acba0b0e2ba47999f8f1a725795462a2
+ms.openlocfilehash: e29769a0dc40e88a53b0a3f063f79c8c89edbce6
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92925264"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825707"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Cómo: Recorrer en iteración directorios con la clase paralela
 En muchos casos, la iteración de archivo es una operación que se puede paralelizar fácilmente. El tema [Cómo: Recorrer en iteración directorios con PLINQ](how-to-iterate-file-directories-with-plinq.md) muestra la manera más fácil de realizar esta tarea para muchos escenarios. Sin embargo, pueden surgir complicaciones cuando el código tiene que tratar con los muchos tipos de excepciones que pueden surgir al obtener acceso al sistema de archivos. En el ejemplo siguiente se muestra un enfoque para el problema. Usa una iteración basada en la pila para recorrer todos los archivos y carpetas en un directorio especificado y habilita el código para detectar y controlar diversas excepciones. Por supuesto, la forma de controlar las excepciones depende de usted.  

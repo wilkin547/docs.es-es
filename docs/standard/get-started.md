@@ -3,13 +3,12 @@ title: Tutoriales de introducción a .NET
 description: Elija un tutorial para aprender sobre el desarrollo de aplicaciones .NET o uno de los lenguajes de programación de .NET.
 author: tdykstra
 ms.date: 09/30/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: da98bda4a6a2d637a8a899c9d7315d5cbfcb18fa
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91755881"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827183"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>Tutoriales de introducción a .NET
 

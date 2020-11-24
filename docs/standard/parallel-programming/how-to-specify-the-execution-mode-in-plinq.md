@@ -1,19 +1,18 @@
 ---
 title: Procedimiento para especificar el modo de ejecución en PLINQ
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: 39ccde003b60ac9cbcff7ab824103a9cf37cc453
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d45aaa04e08c0ada77a01d4f67379c9b1b8773e2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288100"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94825551"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>Procedimiento para especificar el modo de ejecución en PLINQ
 

@@ -1,14 +1,13 @@
 ---
 title: Errores XSLT recuperables
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-ms.openlocfilehash: ada0b352cd867417ed3ecf86291df023ca7c579e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8a77600c8cc1baf61ed21cc7a480b75dd2fde2dc
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289101"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827586"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  

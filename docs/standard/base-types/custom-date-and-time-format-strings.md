@@ -2,7 +2,6 @@
 title: Cadenas con formato de fecha y hora personalizado
 description: Aprenda a usar cadenas de formato de fecha y hora personalizado para convertir valores DateTime o DateTimeOffset en representaciones de texto, o bien para analizar cadenas para fechas y horas.
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 ms.topic: reference
 dev_langs:
 - csharp
@@ -16,19 +15,19 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: d58bcc4008c706395aaeee3b5dc9ea3fa96cce9b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92888716"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824459"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
 Una cadena con formato de fecha y hora define la representación de texto de un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> que es el resultado de una operación de formato. También puede definir la representación de un valor de fecha y hora que se necesite en una operación de análisis para convertir correctamente la cadena en una fecha y hora. Una cadena de formato personalizado consta de uno o varios especificadores de formato de fecha y hora personalizado. Una cadena que no sea una [cadena con formato de fecha y hora estándar](standard-date-and-time-format-strings.md) se interpreta como una cadena con formato de fecha y hora personalizado.
 
 > [!TIP]
-> Puede descargar la **Utilidad de formato** , que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
+> Puede descargar la **Utilidad de formato**, que es una aplicación de .NET Core Windows Forms que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado. El código fuente está disponible para [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) y [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb).
 
 Las cadenas con formato de fecha y hora personalizado se pueden utilizar tanto con valores <xref:System.DateTime> como con valores <xref:System.DateTimeOffset>.
 
@@ -92,7 +91,7 @@ En la tabla siguiente se describen los especificadores de formato de fecha y hor
 | "zzz" | Desfase de horas y minutos con respecto a la hora UTC.<br /><br /> Más información: [Especificador de formato personalizado "zzz"](#zzzSpecifier). | 2009-06-15T13:45:30-07:00 -> -07:00 |
 | ":" | El separador de hora.<br /><br /> Más información: [Especificador de formato personalizado ":"](#timeSeparator). | 2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP) |
 | "/" | El separador de fecha.<br /><br /> Más información: [Especificador de formato personalizado "/"](#dateSeparator). | 2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR) |
-| " *cadena* "<br /><br /> ' *cadena* ' | Delimitador de cadena literal.<br /><br /> Más información: [Literales de carácter](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
+| "*cadena*"<br /><br /> '*cadena*' | Delimitador de cadena literal.<br /><br /> Más información: [Literales de carácter](#Literals). | 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P |
 | % | Define el siguiente carácter como un especificador de formato personalizado.<br /><br /> Más información:[Usar especificadores de formato personalizado únicos](#UsingSingleSpecifiers). | 2009-06-15T13:45:30 (%h) -> 1 |
 | &#92; | El carácter de escape.<br /><br /> Más información: [Literales de caracteres](#Literals) y [Usar el carácter de escape](#escape). | 2009-06-15T13:45:30 (h \h) -> 1 h |
 | Cualquier otro carácter | El carácter se copia en la cadena de resultado sin modificar.<br /><br /> Más información: [Literales de carácter](#Literals). | 2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A |

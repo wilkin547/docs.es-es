@@ -1,19 +1,18 @@
 ---
 title: Procedimiento para combinar consultas LINQ paralelas y secuenciales
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel queries, combine parallel and sequential
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
-ms.openlocfilehash: 2bdf074bc2977dc501e0726a52e825c89828565f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e851c6d72a5fd932c065368b893b907d7820c918
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289543"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94827105"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Procedimiento para combinar consultas LINQ paralelas y secuenciales
 

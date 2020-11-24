@@ -2,7 +2,6 @@
 title: Comparaciones y ordenaciones en colecciones
 description: Realice comparaciones y ordenaciones con las clases System.Collections de .NET, que ayudan a buscar un elemento para quitar o devolver el valor de un par de clave y valor.
 ms.date: 04/30/2020
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 40a59809723298ddda21e642098ec8ae74a1828b
-ms.sourcegitcommit: 4a938327bad8b2e20cabd0f46a9dc50882596f13
+ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92889379"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823867"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparaciones y ordenaciones en colecciones
 

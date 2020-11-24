@@ -1,18 +1,17 @@
 ---
 title: Cómo atravesar esquemas XML
 ms.date: 03/30/2017
-ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
-ms.openlocfilehash: 0951e83c3035de751801d194696eb64993260ef8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6371d7e16af45eebf09f95bce2864be3bf44321e
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289842"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94824680"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 
