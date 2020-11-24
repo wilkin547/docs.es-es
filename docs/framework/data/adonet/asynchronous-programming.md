@@ -3,20 +3,20 @@ title: Programación asincrónica
 description: Obtenga información sobre la programación asincrónica en el proveedor de datos de .NET Framework para SQL Server, incluidas las mejoras introducidas en .NET Framework 4,5.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9065aea02dc3f021ed485a4eb6e56cfcece44fac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95677952"
 ---
-# <a name="asynchronous-programming"></a><span data-ttu-id="751c4-103">Programación asincrónica</span><span class="sxs-lookup"><span data-stu-id="751c4-103">Asynchronous Programming</span></span>
+# <a name="asynchronous-programming"></a><span data-ttu-id="b437a-103">Programación asincrónica</span><span class="sxs-lookup"><span data-stu-id="b437a-103">Asynchronous Programming</span></span>
 
-<span data-ttu-id="751c4-104">En este tema se describe la compatibilidad con la programación asincrónica en el proveedor de datos de .NET Framework para SQL Server (SqlClient), incluidas las mejoras realizadas para admitir la funcionalidad de programación asincrónica que se presentó en .NET Framework 4,5.</span><span class="sxs-lookup"><span data-stu-id="751c4-104">This topic discusses support for asynchronous programming in the .NET Framework Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in .NET Framework 4.5.</span></span>
+<span data-ttu-id="b437a-104">En este tema se describe la compatibilidad con la programación asincrónica en el proveedor de datos de .NET Framework para SQL Server (SqlClient), incluidas las mejoras realizadas para admitir la funcionalidad de programación asincrónica que se presentó en .NET Framework 4,5.</span><span class="sxs-lookup"><span data-stu-id="b437a-104">This topic discusses support for asynchronous programming in the .NET Framework Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in .NET Framework 4.5.</span></span>
 
-## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="751c4-105">Programación asincrónica heredada</span><span class="sxs-lookup"><span data-stu-id="751c4-105">Legacy Asynchronous Programming</span></span>
+## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="b437a-105">Programación asincrónica heredada</span><span class="sxs-lookup"><span data-stu-id="b437a-105">Legacy Asynchronous Programming</span></span>
 
-<span data-ttu-id="751c4-106">Antes de .NET Framework 4,5, la programación asincrónica con SqlClient se realizaba con los siguientes métodos y la `Asynchronous Processing=true` propiedad de conexión:</span><span class="sxs-lookup"><span data-stu-id="751c4-106">Prior to .NET Framework 4.5, asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>
+<span data-ttu-id="b437a-106">Antes de .NET Framework 4,5, la programación asincrónica con SqlClient se realizaba con los siguientes métodos y la `Asynchronous Processing=true` propiedad de conexión:</span><span class="sxs-lookup"><span data-stu-id="b437a-106">Prior to .NET Framework 4.5, asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -24,37 +24,37 @@ ms.locfileid: "90558477"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-<span data-ttu-id="751c4-107">Esta funcionalidad permanece en SqlClient en .NET Framework 4,5.</span><span class="sxs-lookup"><span data-stu-id="751c4-107">This functionality remains in SqlClient in .NET Framework 4.5.</span></span>
+<span data-ttu-id="b437a-107">Esta funcionalidad permanece en SqlClient en .NET Framework 4,5.</span><span class="sxs-lookup"><span data-stu-id="b437a-107">This functionality remains in SqlClient in .NET Framework 4.5.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="751c4-108">A partir del .NET Framework 4,5, estos métodos heredados ya no requieren `Asynchronous Processing=true` en la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="751c4-108">Beginning in the .NET Framework 4.5, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>
+> <span data-ttu-id="b437a-108">A partir del .NET Framework 4,5, estos métodos heredados ya no requieren `Asynchronous Processing=true` en la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="b437a-108">Beginning in the .NET Framework 4.5, these legacy methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>
 
-## <a name="asynchronous-programming-features-added-in-net-framework-45"></a><span data-ttu-id="751c4-109">Características de programación asincrónica agregadas en .NET Framework 4,5</span><span class="sxs-lookup"><span data-stu-id="751c4-109">Asynchronous Programming Features Added in .NET Framework 4.5</span></span>
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a><span data-ttu-id="b437a-109">Características de programación asincrónica agregadas en .NET Framework 4,5</span><span class="sxs-lookup"><span data-stu-id="b437a-109">Asynchronous Programming Features Added in .NET Framework 4.5</span></span>
 
-<span data-ttu-id="751c4-110">La nueva característica de programación asincrónica proporciona una técnica sencilla para crear código asincrónico.</span><span class="sxs-lookup"><span data-stu-id="751c4-110">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>
+<span data-ttu-id="b437a-110">La nueva característica de programación asincrónica proporciona una técnica sencilla para crear código asincrónico.</span><span class="sxs-lookup"><span data-stu-id="b437a-110">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>
 
-<span data-ttu-id="751c4-111">Para obtener más información acerca de la característica de programación asincrónica que se presentó en .NET Framework 4,5, consulte:</span><span class="sxs-lookup"><span data-stu-id="751c4-111">For more information about the asynchronous programming feature that was introduced in .NET Framework 4.5, see:</span></span>
+<span data-ttu-id="b437a-111">Para obtener más información acerca de la característica de programación asincrónica que se presentó en .NET Framework 4,5, consulte:</span><span class="sxs-lookup"><span data-stu-id="b437a-111">For more information about the asynchronous programming feature that was introduced in .NET Framework 4.5, see:</span></span>
 
-- [<span data-ttu-id="751c4-112">Programación asincrónica en C#</span><span class="sxs-lookup"><span data-stu-id="751c4-112">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
+- [<span data-ttu-id="b437a-112">Programación asincrónica en C#</span><span class="sxs-lookup"><span data-stu-id="b437a-112">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
 
-- [<span data-ttu-id="751c4-113">Programación asincrónica con Async y Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="751c4-113">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="b437a-113">Programación asincrónica con Async y Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b437a-113">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [<span data-ttu-id="751c4-114">Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 1)</span><span class="sxs-lookup"><span data-stu-id="751c4-114">Using SqlDataReader’s new async methods in .NET 4.5 (Part 1)</span></span>](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [<span data-ttu-id="b437a-114">Usar los nuevos métodos Async de SqlDataReader en .NET Framework 4,5 (parte 1)</span><span class="sxs-lookup"><span data-stu-id="b437a-114">Using SqlDataReader’s new async methods in .NET Framework 4.5 (Part 1)</span></span>](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [<span data-ttu-id="751c4-115">Usar los nuevos métodos Async de SqlDataReader en .NET 4,5 (parte 2)</span><span class="sxs-lookup"><span data-stu-id="751c4-115">Using SqlDataReader’s new async methods in .NET 4.5 (Part 2)</span></span>](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [<span data-ttu-id="b437a-115">Usar los nuevos métodos Async de SqlDataReader en .NET Framework 4,5 (parte 2)</span><span class="sxs-lookup"><span data-stu-id="b437a-115">Using SqlDataReader’s new async methods in .NET Framework 4.5 (Part 2)</span></span>](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
-<span data-ttu-id="751c4-116">Cuando la interfaz de usuario no responde o el servidor no escala, es probable que necesite que el código sea más asincrónico.</span><span class="sxs-lookup"><span data-stu-id="751c4-116">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span> <span data-ttu-id="751c4-117">La escritura de código asincrónico ha implicado tradicionalmente la instalación de una devolución de llamada (también denominada continuación) para expresar la lógica que tiene lugar después de que la operación asincrónica finalice.</span><span class="sxs-lookup"><span data-stu-id="751c4-117">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="751c4-118">Esto complica la estructura del código asincrónico con respecto al código sincrónico.</span><span class="sxs-lookup"><span data-stu-id="751c4-118">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>
+<span data-ttu-id="b437a-116">Cuando la interfaz de usuario no responde o el servidor no escala, es probable que necesite que el código sea más asincrónico.</span><span class="sxs-lookup"><span data-stu-id="b437a-116">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span> <span data-ttu-id="b437a-117">La escritura de código asincrónico ha implicado tradicionalmente la instalación de una devolución de llamada (también denominada continuación) para expresar la lógica que tiene lugar después de que la operación asincrónica finalice.</span><span class="sxs-lookup"><span data-stu-id="b437a-117">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="b437a-118">Esto complica la estructura del código asincrónico con respecto al código sincrónico.</span><span class="sxs-lookup"><span data-stu-id="b437a-118">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>
 
-<span data-ttu-id="751c4-119">Ahora puede llamar a métodos asincrónicos sin usar devoluciones de llamada y sin dividir el código en varios métodos o expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="751c4-119">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>
+<span data-ttu-id="b437a-119">Ahora puede llamar a métodos asincrónicos sin usar devoluciones de llamada y sin dividir el código en varios métodos o expresiones lambda.</span><span class="sxs-lookup"><span data-stu-id="b437a-119">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>
 
-<span data-ttu-id="751c4-120">El modificador `async` especifica que un método es asincrónico.</span><span class="sxs-lookup"><span data-stu-id="751c4-120">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="751c4-121">Al llamar a un método `async`, se devuelve una tarea.</span><span class="sxs-lookup"><span data-stu-id="751c4-121">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="751c4-122">Cuando el `await` operador se aplica a una tarea, el método actual finaliza inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="751c4-122">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="751c4-123">Cuando la tarea finaliza, la ejecución se reanuda en el mismo método.</span><span class="sxs-lookup"><span data-stu-id="751c4-123">When the task finishes, execution resumes in the same method.</span></span>
+<span data-ttu-id="b437a-120">El modificador `async` especifica que un método es asincrónico.</span><span class="sxs-lookup"><span data-stu-id="b437a-120">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="b437a-121">Al llamar a un método `async`, se devuelve una tarea.</span><span class="sxs-lookup"><span data-stu-id="b437a-121">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="b437a-122">Cuando el `await` operador se aplica a una tarea, el método actual finaliza inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="b437a-122">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="b437a-123">Cuando la tarea finaliza, la ejecución se reanuda en el mismo método.</span><span class="sxs-lookup"><span data-stu-id="b437a-123">When the task finishes, execution resumes in the same method.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="751c4-124">Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="751c4-124">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
+> <span data-ttu-id="b437a-124">Las llamadas asincrónicas no se admiten si una aplicación también usa la palabra clave de cadena de conexión `Context Connection`.</span><span class="sxs-lookup"><span data-stu-id="b437a-124">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>
 
-<span data-ttu-id="751c4-125">Al llamar a un método `async` no se asigna ningún subproceso adicional.</span><span class="sxs-lookup"><span data-stu-id="751c4-125">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="751c4-126">Puede usar el subproceso existente de finalización de E/S momentáneamente al final.</span><span class="sxs-lookup"><span data-stu-id="751c4-126">It may use the existing I/O completion thread briefly at the end.</span></span>
+<span data-ttu-id="b437a-125">Al llamar a un método `async` no se asigna ningún subproceso adicional.</span><span class="sxs-lookup"><span data-stu-id="b437a-125">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="b437a-126">Puede usar el subproceso existente de finalización de E/S momentáneamente al final.</span><span class="sxs-lookup"><span data-stu-id="b437a-126">It may use the existing I/O completion thread briefly at the end.</span></span>
 
-<span data-ttu-id="751c4-127">Los métodos siguientes se agregaron en .NET Framework 4,5 para admitir la programación asincrónica:</span><span class="sxs-lookup"><span data-stu-id="751c4-127">The following methods were added in .NET Framework 4.5 to support asynchronous programming:</span></span>
+<span data-ttu-id="b437a-127">Los métodos siguientes se agregaron en .NET Framework 4,5 para admitir la programación asincrónica:</span><span class="sxs-lookup"><span data-stu-id="b437a-127">The following methods were added in .NET Framework 4.5 to support asynchronous programming:</span></span>
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -90,14 +90,14 @@ ms.locfileid: "90558477"
 
 - <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>
 
- <span data-ttu-id="751c4-128">Se agregaron otros miembros asincrónicos para admitir la [compatibilidad con el streaming de SqlClient](sqlclient-streaming-support.md).</span><span class="sxs-lookup"><span data-stu-id="751c4-128">Other asynchronous members were added to support [SqlClient Streaming Support](sqlclient-streaming-support.md).</span></span>
+ <span data-ttu-id="b437a-128">Se agregaron otros miembros asincrónicos para admitir la [compatibilidad con el streaming de SqlClient](sqlclient-streaming-support.md).</span><span class="sxs-lookup"><span data-stu-id="b437a-128">Other asynchronous members were added to support [SqlClient Streaming Support](sqlclient-streaming-support.md).</span></span>
 
 > [!TIP]
-> <span data-ttu-id="751c4-129">Los nuevos métodos asincrónicos no requieren `Asynchronous Processing=true` en la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="751c4-129">The new asynchronous methods don't require `Asynchronous Processing=true` in the connection string.</span></span>
+> <span data-ttu-id="b437a-129">Los nuevos métodos asincrónicos no requieren `Asynchronous Processing=true` en la cadena de conexión.</span><span class="sxs-lookup"><span data-stu-id="b437a-129">The new asynchronous methods don't require `Asynchronous Processing=true` in the connection string.</span></span>
 
-### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="751c4-130">Apertura de conexiones sincrónicas a asincrónicas</span><span class="sxs-lookup"><span data-stu-id="751c4-130">Synchronous to Asynchronous Connection Open</span></span>
+### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="b437a-130">Apertura de conexiones sincrónicas a asincrónicas</span><span class="sxs-lookup"><span data-stu-id="b437a-130">Synchronous to Asynchronous Connection Open</span></span>
 
-<span data-ttu-id="751c4-131">Puede actualizar una aplicación existente para usar la nueva característica asincrónica.</span><span class="sxs-lookup"><span data-stu-id="751c4-131">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="751c4-132">Por ejemplo, suponga que una aplicación tiene un algoritmo de conexión sincrónico y bloquea el subproceso de la interfaz de usuario cada vez que se conecta a la base de datos y, una vez que está conectada, la aplicación llama a un procedimiento almacenado que señala otros usuarios en vez de al que acaba de iniciar sesión.</span><span class="sxs-lookup"><span data-stu-id="751c4-132">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>
+<span data-ttu-id="b437a-131">Puede actualizar una aplicación existente para usar la nueva característica asincrónica.</span><span class="sxs-lookup"><span data-stu-id="b437a-131">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="b437a-132">Por ejemplo, suponga que una aplicación tiene un algoritmo de conexión sincrónico y bloquea el subproceso de la interfaz de usuario cada vez que se conecta a la base de datos y, una vez que está conectada, la aplicación llama a un procedimiento almacenado que señala otros usuarios en vez de al que acaba de iniciar sesión.</span><span class="sxs-lookup"><span data-stu-id="b437a-132">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>
 
 ```csharp
 using SqlConnection conn = new SqlConnection("…");
@@ -110,7 +110,7 @@ using SqlConnection conn = new SqlConnection("…");
 }
 ```
 
-<span data-ttu-id="751c4-133">Cuando se convierte para usar la nueva funcionalidad asincrónica, el programa es así:</span><span class="sxs-lookup"><span data-stu-id="751c4-133">When converted to use the new asynchronous functionality, the program would look like:</span></span>
+<span data-ttu-id="b437a-133">Cuando se convierte para usar la nueva funcionalidad asincrónica, el programa es así:</span><span class="sxs-lookup"><span data-stu-id="b437a-133">When converted to use the new asynchronous functionality, the program would look like:</span></span>
 
 ```csharp
 using System;
@@ -139,9 +139,9 @@ class A {
 }
 ```
 
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="751c4-134">Agregar la nueva característica asincrónica en una aplicación existente (combinación de patrones antiguos y nuevos)</span><span class="sxs-lookup"><span data-stu-id="751c4-134">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="b437a-134">Agregar la nueva característica asincrónica en una aplicación existente (combinación de patrones antiguos y nuevos)</span><span class="sxs-lookup"><span data-stu-id="b437a-134">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>
 
-<span data-ttu-id="751c4-135">También es posible agregar la nueva función asincrónica (SqlConnection::OpenAsync) sin modificar la lógica asincrónica existente.</span><span class="sxs-lookup"><span data-stu-id="751c4-135">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="751c4-136">Por ejemplo, si una aplicación usa actualmente:</span><span class="sxs-lookup"><span data-stu-id="751c4-136">For example, if an application currently uses:</span></span>
+<span data-ttu-id="b437a-135">También es posible agregar la nueva función asincrónica (SqlConnection::OpenAsync) sin modificar la lógica asincrónica existente.</span><span class="sxs-lookup"><span data-stu-id="b437a-135">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="b437a-136">Por ejemplo, si una aplicación usa actualmente:</span><span class="sxs-lookup"><span data-stu-id="b437a-136">For example, if an application currently uses:</span></span>
 
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);
@@ -151,7 +151,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);
 ```
 
-<span data-ttu-id="751c4-137">Puede empezar a usar el nuevo patrón asincrónico sin cambiar sustancialmente el algoritmo existente.</span><span class="sxs-lookup"><span data-stu-id="751c4-137">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>
+<span data-ttu-id="b437a-137">Puede empezar a usar el nuevo patrón asincrónico sin cambiar sustancialmente el algoritmo existente.</span><span class="sxs-lookup"><span data-stu-id="b437a-137">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>
 
 ```csharp
 using System;
@@ -178,11 +178,11 @@ class A {
 }
 ```
 
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="751c4-138">Usar el modelo de proveedor base y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="751c4-138">Using the Base Provider Model and the New Asynchronous Feature</span></span>
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="b437a-138">Usar el modelo de proveedor base y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="b437a-138">Using the Base Provider Model and the New Asynchronous Feature</span></span>
 
-<span data-ttu-id="751c4-139">Puede que tenga que crear una herramienta que pueda conectarse a bases de datos diferentes y ejecutar consultas.</span><span class="sxs-lookup"><span data-stu-id="751c4-139">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="751c4-140">Puede usar el modelo de proveedor base y la nueva característica asincrónica.</span><span class="sxs-lookup"><span data-stu-id="751c4-140">You can use the base provider model and the new asynchronous feature.</span></span>
+<span data-ttu-id="b437a-139">Puede que tenga que crear una herramienta que pueda conectarse a bases de datos diferentes y ejecutar consultas.</span><span class="sxs-lookup"><span data-stu-id="b437a-139">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="b437a-140">Puede usar el modelo de proveedor base y la nueva característica asincrónica.</span><span class="sxs-lookup"><span data-stu-id="b437a-140">You can use the base provider model and the new asynchronous feature.</span></span>
 
-<span data-ttu-id="751c4-141">El Controlador de transacciones distribuidas de Microsoft (MSDTC) debe estar habilitado en el servidor para usar transacciones distribuidas.</span><span class="sxs-lookup"><span data-stu-id="751c4-141">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="751c4-142">Para obtener información sobre cómo habilitar MSDTC, consulte [Cómo habilitar MSDTC en un servidor Web](/previous-versions/commerce-server/dd327979(v=cs.90)).</span><span class="sxs-lookup"><span data-stu-id="751c4-142">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](/previous-versions/commerce-server/dd327979(v=cs.90)).</span></span>
+<span data-ttu-id="b437a-141">El Controlador de transacciones distribuidas de Microsoft (MSDTC) debe estar habilitado en el servidor para usar transacciones distribuidas.</span><span class="sxs-lookup"><span data-stu-id="b437a-141">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="b437a-142">Para obtener información sobre cómo habilitar MSDTC, consulte [Cómo habilitar MSDTC en un servidor Web](/previous-versions/commerce-server/dd327979(v=cs.90)).</span><span class="sxs-lookup"><span data-stu-id="b437a-142">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](/previous-versions/commerce-server/dd327979(v=cs.90)).</span></span>
 
 ```csharp
 using System;
@@ -227,7 +227,7 @@ class A {
 }
 ```
 
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="751c4-143">Usar transacciones SQL y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="751c4-143">Using SQL Transactions and the New Asynchronous Feature</span></span>
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="b437a-143">Usar transacciones SQL y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="b437a-143">Using SQL Transactions and the New Asynchronous Feature</span></span>
 
 ```csharp
 using System;
@@ -293,9 +293,9 @@ class Program {
 }
 ```
 
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="751c4-144">Usar transacciones SQL y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="751c4-144">Using SQL Transactions and the New Asynchronous Feature</span></span>
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="b437a-144">Usar transacciones SQL y la nueva característica asincrónica</span><span class="sxs-lookup"><span data-stu-id="b437a-144">Using SQL Transactions and the New Asynchronous Feature</span></span>
 
-<span data-ttu-id="751c4-145">En una aplicación empresarial, puede que necesite agregar transacciones distribuidas en algunos escenarios, para habilitar transacciones entre varios servidores de bases de datos.</span><span class="sxs-lookup"><span data-stu-id="751c4-145">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="751c4-146">Puede usar el espacio de nombres System.Transactions e inscribir una transacción distribuida, del siguiente modo:</span><span class="sxs-lookup"><span data-stu-id="751c4-146">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>
+<span data-ttu-id="b437a-145">En una aplicación empresarial, puede que necesite agregar transacciones distribuidas en algunos escenarios, para habilitar transacciones entre varios servidores de bases de datos.</span><span class="sxs-lookup"><span data-stu-id="b437a-145">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="b437a-146">Puede usar el espacio de nombres System.Transactions e inscribir una transacción distribuida, del siguiente modo:</span><span class="sxs-lookup"><span data-stu-id="b437a-146">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>
 
 ```csharp
 using System;
@@ -355,9 +355,9 @@ class Program {
 }
 ```
 
-### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="751c4-147">Cancelar una operación asincrónica</span><span class="sxs-lookup"><span data-stu-id="751c4-147">Cancelling an Asynchronous Operation</span></span>
+### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="b437a-147">Cancelar una operación asincrónica</span><span class="sxs-lookup"><span data-stu-id="b437a-147">Cancelling an Asynchronous Operation</span></span>
 
-<span data-ttu-id="751c4-148">Puede cancelar una solicitud asincrónica mediante <xref:System.Threading.CancellationToken>.</span><span class="sxs-lookup"><span data-stu-id="751c4-148">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>
+<span data-ttu-id="b437a-148">Puede cancelar una solicitud asincrónica mediante <xref:System.Threading.CancellationToken>.</span><span class="sxs-lookup"><span data-stu-id="b437a-148">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>
 
 ```csharp
 using System;
@@ -396,9 +396,9 @@ namespace Samples {
 }
 ```
 
-### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="751c4-149">Operaciones asincrónicas con SqlBulkCopy</span><span class="sxs-lookup"><span data-stu-id="751c4-149">Asynchronous Operations with SqlBulkCopy</span></span>
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="b437a-149">Operaciones asincrónicas con SqlBulkCopy</span><span class="sxs-lookup"><span data-stu-id="b437a-149">Asynchronous Operations with SqlBulkCopy</span></span>
 
-<span data-ttu-id="751c4-150">Las capacidades asincrónicas también se agregaron a <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> con <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="751c4-150">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="b437a-150">Las capacidades asincrónicas también se agregaron a <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> con <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="b437a-150">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>
 
 ```csharp
 using System;
@@ -451,7 +451,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          AsyncSqlBulkCopyMARS().Wait();
       }
 
-      // 3.1.1 Synchronous bulk copy in .NET 4.5
+      // 3.1.1 Synchronous bulk copy in .NET Framework 4.5
       private static void SynchronousSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             conn.Open();
@@ -473,7 +473,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 
       }
 
-      // 3.1.2 Asynchronous bulk copy in .NET 4.5
+      // 3.1.2 Asynchronous bulk copy in .NET Framework 4.5
       private static async Task AsyncSqlBulkCopy() {
          using (SqlConnection conn = new SqlConnection(connectionString)) {
             await conn.OpenAsync();
@@ -564,7 +564,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.5 Copying data from SQL Server to SQL Azure in .NET 4.5
+      // 3.5 Copying data from SQL Server to SQL Azure in .NET Framework 4.5
       //private static async Task AsyncSqlBulkCopySqlServerToSqlAzure() {
       //   using (SqlConnection srcConn = new SqlConnection(connectionString))
       //   using (SqlConnection destConn = new SqlConnection(azureConnectionString)) {
@@ -639,12 +639,12 @@ namespace SqlBulkCopyAsyncCodeSample {
 }
 ```
 
-## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="751c4-151">Usar varios comandos de forma asincrónica con MARS</span><span class="sxs-lookup"><span data-stu-id="751c4-151">Asynchronously Using Multiple Commands with MARS</span></span>
+## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="b437a-151">Usar varios comandos de forma asincrónica con MARS</span><span class="sxs-lookup"><span data-stu-id="b437a-151">Asynchronously Using Multiple Commands with MARS</span></span>
 
-<span data-ttu-id="751c4-152">En el ejemplo se abre una única conexión a la base de datos **AdventureWorks**.</span><span class="sxs-lookup"><span data-stu-id="751c4-152">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="751c4-153">Con un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="751c4-153">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="751c4-154">Cuando se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, utilizando los datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada de la cláusula WHERE para el segundo lector.</span><span class="sxs-lookup"><span data-stu-id="751c4-154">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>
+<span data-ttu-id="b437a-152">En el ejemplo se abre una única conexión a la base de datos **AdventureWorks**.</span><span class="sxs-lookup"><span data-stu-id="b437a-152">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="b437a-153">Con un objeto <xref:System.Data.SqlClient.SqlCommand>, se crea <xref:System.Data.SqlClient.SqlDataReader>.</span><span class="sxs-lookup"><span data-stu-id="b437a-153">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="b437a-154">Cuando se utiliza el lector, se abre un segundo <xref:System.Data.SqlClient.SqlDataReader>, utilizando los datos del primer <xref:System.Data.SqlClient.SqlDataReader> como entrada de la cláusula WHERE para el segundo lector.</span><span class="sxs-lookup"><span data-stu-id="b437a-154">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="751c4-155">En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server.</span><span class="sxs-lookup"><span data-stu-id="751c4-155">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="751c4-156">La cadena de conexión proporcionada en el código de ejemplo da por sentado que la base de datos está instalada y disponible en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="751c4-156">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="751c4-157">Modifique la cadena de conexión según sea necesario para el entorno.</span><span class="sxs-lookup"><span data-stu-id="751c4-157">Modify the connection string as necessary for your environment.</span></span>
+> <span data-ttu-id="b437a-155">En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b437a-155">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="b437a-156">La cadena de conexión proporcionada en el código de ejemplo da por sentado que la base de datos está instalada y disponible en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="b437a-156">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="b437a-157">Modifique la cadena de conexión según sea necesario para el entorno.</span><span class="sxs-lookup"><span data-stu-id="b437a-157">Modify the connection string as necessary for your environment.</span></span>
 
 ```csharp
 using System;
@@ -710,14 +710,14 @@ class Class1 {
 }
 ```
 
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="751c4-158">Leer y actualizar datos de forma asincrónica con MARS</span><span class="sxs-lookup"><span data-stu-id="751c4-158">Asynchronously Reading and Updating Data with MARS</span></span>
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="b437a-158">Leer y actualizar datos de forma asincrónica con MARS</span><span class="sxs-lookup"><span data-stu-id="b437a-158">Asynchronously Reading and Updating Data with MARS</span></span>
 
-<span data-ttu-id="751c4-159">MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente.</span><span class="sxs-lookup"><span data-stu-id="751c4-159">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="751c4-160">Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada.</span><span class="sxs-lookup"><span data-stu-id="751c4-160">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="751c4-161">Además, MARS puede reemplazar el usuario de los cursores del lado servidor, que normalmente consumen más recursos.</span><span class="sxs-lookup"><span data-stu-id="751c4-161">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="751c4-162">Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.</span><span class="sxs-lookup"><span data-stu-id="751c4-162">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>
+<span data-ttu-id="b437a-159">MARS permite usar una conexión para operaciones de lectura y de lenguaje de manipulación de datos (DML) con más de una operación pendiente.</span><span class="sxs-lookup"><span data-stu-id="b437a-159">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="b437a-160">Esta característica elimina la necesidad de que una aplicación se ocupe de los errores de conexión ocupada.</span><span class="sxs-lookup"><span data-stu-id="b437a-160">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="b437a-161">Además, MARS puede reemplazar el usuario de los cursores del lado servidor, que normalmente consumen más recursos.</span><span class="sxs-lookup"><span data-stu-id="b437a-161">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="b437a-162">Finalmente, dado que es posible realizar varias operaciones con una sola conexión, pueden compartir el mismo contexto de transacción, lo que elimina la necesidad de usar los procedimientos almacenados del sistema **sp_getbindtoken** y **sp_bindsession**.</span><span class="sxs-lookup"><span data-stu-id="b437a-162">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>
 
-<span data-ttu-id="751c4-163">La siguiente aplicación de consola muestra cómo usar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un único objeto <xref:System.Data.SqlClient.SqlConnection> con MARS habilitado.</span><span class="sxs-lookup"><span data-stu-id="751c4-163">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="751c4-164">El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5.</span><span class="sxs-lookup"><span data-stu-id="751c4-164">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="751c4-165">El segundo objeto de comando utiliza el identificador de proveedor proporcionado a partir de <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular.</span><span class="sxs-lookup"><span data-stu-id="751c4-165">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="751c4-166">El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro del producto.</span><span class="sxs-lookup"><span data-stu-id="751c4-166">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="751c4-167">Para determinar cuál debe ser la nueva **OnOrderQty**, se realiza un cálculo.</span><span class="sxs-lookup"><span data-stu-id="751c4-167">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="751c4-168">Luego, se usa el tercer objeto de comando para actualizar la tabla **ProductVendor** con el nuevo valor.</span><span class="sxs-lookup"><span data-stu-id="751c4-168">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="751c4-169">Este proceso completo tiene lugar dentro de una única transacción, que se revierte al final.</span><span class="sxs-lookup"><span data-stu-id="751c4-169">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>
+<span data-ttu-id="b437a-163">La siguiente aplicación de consola muestra cómo usar dos objetos <xref:System.Data.SqlClient.SqlDataReader> con tres objetos <xref:System.Data.SqlClient.SqlCommand> y un único objeto <xref:System.Data.SqlClient.SqlConnection> con MARS habilitado.</span><span class="sxs-lookup"><span data-stu-id="b437a-163">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="b437a-164">El primer objeto de comando recupera una lista de proveedores cuya clasificación crediticia es 5.</span><span class="sxs-lookup"><span data-stu-id="b437a-164">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="b437a-165">El segundo objeto de comando utiliza el identificador de proveedor proporcionado a partir de <xref:System.Data.SqlClient.SqlDataReader> para cargar el segundo <xref:System.Data.SqlClient.SqlDataReader> con todos los productos de ese proveedor en particular.</span><span class="sxs-lookup"><span data-stu-id="b437a-165">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="b437a-166">El segundo <xref:System.Data.SqlClient.SqlDataReader> visita cada registro del producto.</span><span class="sxs-lookup"><span data-stu-id="b437a-166">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="b437a-167">Para determinar cuál debe ser la nueva **OnOrderQty**, se realiza un cálculo.</span><span class="sxs-lookup"><span data-stu-id="b437a-167">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="b437a-168">Luego, se usa el tercer objeto de comando para actualizar la tabla **ProductVendor** con el nuevo valor.</span><span class="sxs-lookup"><span data-stu-id="b437a-168">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="b437a-169">Este proceso completo tiene lugar dentro de una única transacción, que se revierte al final.</span><span class="sxs-lookup"><span data-stu-id="b437a-169">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="751c4-170">En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server.</span><span class="sxs-lookup"><span data-stu-id="751c4-170">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="751c4-171">La cadena de conexión proporcionada en el código de ejemplo da por sentado que la base de datos está instalada y disponible en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="751c4-171">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="751c4-172">Modifique la cadena de conexión según sea necesario para el entorno.</span><span class="sxs-lookup"><span data-stu-id="751c4-172">Modify the connection string as necessary for your environment.</span></span>
+> <span data-ttu-id="b437a-170">En el siguiente ejemplo se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server.</span><span class="sxs-lookup"><span data-stu-id="b437a-170">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="b437a-171">La cadena de conexión proporcionada en el código de ejemplo da por sentado que la base de datos está instalada y disponible en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="b437a-171">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="b437a-172">Modifique la cadena de conexión según sea necesario para el entorno.</span><span class="sxs-lookup"><span data-stu-id="b437a-172">Modify the connection string as necessary for your environment.</span></span>
 
 ```csharp
 using System;
@@ -827,6 +827,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="751c4-173">Vea también</span><span class="sxs-lookup"><span data-stu-id="751c4-173">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b437a-173">Consulte también</span><span class="sxs-lookup"><span data-stu-id="b437a-173">See also</span></span>
 
-- [<span data-ttu-id="751c4-174">Recuperar y modificar datos en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="751c4-174">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
+- [<span data-ttu-id="b437a-174">Recuperar y modificar datos en ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b437a-174">Retrieving and Modifying Data in ADO.NET</span></span>](retrieving-and-modifying-data.md)
