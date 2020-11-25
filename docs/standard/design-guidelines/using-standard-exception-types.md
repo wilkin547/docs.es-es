@@ -8,17 +8,19 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: d8e75f7104b755476f255563c9c1f7ece14f67db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef420d47e6204aef5e3d9bc12ace31fbf5521ee7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828470"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734366"
 ---
 # <a name="using-standard-exception-types"></a>Usar tipos de excepciones estándar
+
 En esta sección se describen las excepciones estándar proporcionadas por el marco de trabajo y los detalles de su uso. La lista no es exhaustiva. Consulte la documentación de referencia de .NET Framework para ver el uso de otros tipos de excepción de marco de trabajo.
 
 ## <a name="exception-and-systemexception"></a>Excepción y SystemException
+
  ❌ NO Throw <xref:System.Exception?displayProperty=nameWithType> ni <xref:System.SystemException?displayProperty=nameWithType> .
 
  ❌ NO `System.Exception` `System.SystemException` se debe detectar ni en el código del marco, a menos que se pretenda volver a producir.
@@ -26,12 +28,15 @@ En esta sección se describen las excepciones estándar proporcionadas por el ma
  ❌ Evite detectar `System.Exception` o `System.SystemException` , excepto en los controladores de excepciones de nivel superior.
 
 ## <a name="applicationexception"></a>ApplicationException
+
  ❌ NO inicie ni derive de <xref:System.ApplicationException> .
 
 ## <a name="invalidoperationexception"></a>InvalidOperationException
+
  ✔️ iniciar una excepción <xref:System.InvalidOperationException> si el objeto está en un estado inadecuado.
 
 ## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException, ArgumentNullException y ArgumentOutOfRangeException
+
  ✔️ iniciar <xref:System.ArgumentException> o uno de sus subtipos si se pasan argumentos no válidos a un miembro. Prefiere el tipo de excepción más derivado, si procede.
 
  ✔️ establecer la `ParamName` propiedad al iniciar una de las subclases de `ArgumentException` .
@@ -41,11 +46,13 @@ En esta sección se describen las excepciones estándar proporcionadas por el ma
  ✔️ usar `value` para el nombre del parámetro de valor implícito de los establecedores de propiedad.
 
 ## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException, IndexOutOfRangeException y AccessViolationException
+
  ❌ No permita que las API a las que se puede llamar públicamente inicien, o de forma explícita o implícita <xref:System.NullReferenceException> <xref:System.AccessViolationException> <xref:System.IndexOutOfRangeException> . Estas excepciones están reservadas y iniciadas por el motor de ejecución y, en la mayoría de los casos, indican un error.
 
  Realice una comprobación de argumentos para evitar producir estas excepciones. Producir estas excepciones expone los detalles de implementación del método que pueden cambiar con el tiempo.
 
 ## <a name="stackoverflowexception"></a>StackOverflowException
+
  ❌ NO inicie explícitamente <xref:System.StackOverflowException> . La excepción solo debe iniciarse explícitamente en CLR.
 
  ❌ NO se detectan `StackOverflowException` .
@@ -53,9 +60,11 @@ En esta sección se describen las excepciones estándar proporcionadas por el ma
  Es casi imposible escribir código administrado que permanezca coherente en la presencia de desbordamientos de pila arbitrarios. Las partes no administradas de CLR siguen siendo coherentes mediante el uso de sondeos para trasladar desbordamientos de pila a lugares bien definidos en lugar de deshacer la copia de seguridad desde desbordamientos de pila arbitrarios.
 
 ## <a name="outofmemoryexception"></a>OutOfMemoryException
+
  ❌ NO inicie explícitamente <xref:System.OutOfMemoryException> . Esta excepción solo la debe iniciar la infraestructura de CLR.
 
 ## <a name="comexception-sehexception-and-executionengineexception"></a>COMException, SEHException y ExecutionEngineException
+
  ❌ NO inicie explícitamente <xref:System.Runtime.InteropServices.COMException> ,  <xref:System.ExecutionEngineException> y <xref:System.Runtime.InteropServices.SEHException> . Estas excepciones solo se producirán en la infraestructura de CLR.
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*

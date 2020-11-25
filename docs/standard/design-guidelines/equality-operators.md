@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Equals method
 - == operator (equality) [.NET Framework]
 ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
-ms.openlocfilehash: 85a9e81d28995229e6b47d7fe4d0b541265999f8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2331a852adb4dd254af85060a5077f454bcfe0eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821351"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734431"
 ---
 # <a name="equality-operators"></a>Operadores de igualdad
+
 En esta sección se describe la sobrecarga de los operadores de igualdad y se hace referencia a `operator==` y `operator!=` como operadores de igualdad.
 
  ❌ No sobrecargue uno de los operadores de igualdad y no el otro.
@@ -29,11 +30,13 @@ En esta sección se describe la sobrecarga de los operadores de igualdad y se ha
  Por ejemplo, devuelve false si uno de los argumentos es null en lugar de producirse `NullReferenceException` .
 
 ## <a name="equality-operators-on-value-types"></a>Operadores de igualdad en tipos de valor
+
  ✔️ sobrecargan los operadores de igualdad en los tipos de valor, si la igualdad es significativa.
 
  En la mayoría de los lenguajes de programación, no hay ninguna implementación predeterminada de `operator==` para los tipos de valor.
 
 ## <a name="equality-operators-on-reference-types"></a>Operadores de igualdad en tipos de referencia
+
  ❌ Evite sobrecargar los operadores de igualdad en tipos de referencia mutable.
 
  Muchos lenguajes tienen operadores de igualdad integrados para los tipos de referencia. Los operadores integrados normalmente implementan la igualdad de referencia y muchos desarrolladores se sorprenden cuando se cambia el comportamiento predeterminado a la igualdad de valores.
@@ -46,7 +49,7 @@ En esta sección se describe la sobrecarga de los operadores de igualdad y se ha
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de uso](usage-guidelines.md)

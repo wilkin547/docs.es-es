@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-ms.openlocfilehash: 523d9665ffd2637a0e856d74d4d3b3838cb5e83c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 078e5cb03848564b42e30a079101d5a61e0074bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212131"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734028"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification (Método)
+
 Habilita y deshabilita las notificaciones del depurador personalizado del tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,18 +34,21 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pClass`  
  de Tipo que especifica las notificaciones del depurador personalizadas.  
   
  `fEnable`  
- [in] `true` para habilitar las notificaciones del depurador personalizadas; `false`para deshabilitar las notificaciones. El valor predeterminado es `false`.  
+ [in] `true` para habilitar las notificaciones del depurador personalizadas; `false` para deshabilitar las notificaciones. El valor predeterminado es `false`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Cuando `fEnable` se establece en `true` , las llamadas al <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método desencadenan una devolución de llamada [ICorDebugManagedCallback3 (:: customnotification (](icordebugmanagedcallback3-customnotification-method.md) . Las notificaciones están deshabilitadas de forma predeterminada; por consiguiente, el depurador debe especificar los tipos de notificación que conoce y desea controlar. Dado que el ámbito de la clase [ICorDebugClass](icordebug-interface.md) es el dominio de aplicación, el depurador debe llamar a `SetEnableCustomNotification` para cada dominio de aplicación en el proceso si desea recibir la notificación en todo el proceso.  
   
  A partir de la .NET Framework 4, la única notificación admitida es una notificación de dependencia entre subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

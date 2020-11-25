@@ -2,14 +2,15 @@
 title: Métodos de extensión
 ms.date: 10/22/2008
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: d48651e9621beecd3c9a0665ca4be26894b50c45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02a421c9a4b73c779474a392e77104d4ccfbb109
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821143"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734717"
 ---
 # <a name="extension-methods"></a>Métodos de extensión
+
 Los métodos de extensión son una característica de lenguaje que permite llamar a métodos estáticos mediante la sintaxis de llamada al método de instancia. Estos métodos deben tomar al menos un parámetro, que representa la instancia en la que se va a operar el método.
 
  La clase que define estos métodos de extensión se conoce como la clase "patrocinador" y se debe declarar como estática. Para usar métodos de extensión, debe importar el espacio de nombres que define la clase de patrocinador.

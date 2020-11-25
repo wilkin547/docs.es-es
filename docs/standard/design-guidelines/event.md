@@ -9,14 +9,15 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-ms.openlocfilehash: eee4b1a9e72c167b9b1e48a73dbb3f0528744bdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d04ffd2cab21177f1342a13259a81df22b65723a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821338"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734418"
 ---
 # <a name="event-design"></a>Diseño de eventos
+
 Los eventos son la forma de devoluciones de llamada que se usa con más frecuencia (construcciones que permiten al marco de trabajo llamar a código de usuario). Otros mecanismos de devolución de llamada incluyen miembros que toman delegados, miembros virtuales y complementos basados en interfaz. Los datos de los estudios de facilidad de uso indican que la mayoría de los desarrolladores se sienten más cómodos con los eventos que usan los otros mecanismos de devolución de llamada. Los eventos se integran perfectamente con Visual Studio y muchos lenguajes.
 
  Es importante tener en cuenta que hay dos grupos de eventos: los eventos que se generan antes de que cambie un estado del sistema, denominados eventos previos, y eventos generados después de un cambio de estado, denominados eventos posteriores. Un ejemplo de evento anterior sería `Form.Closing` , que se desencadena antes de que se cierre un formulario. Un ejemplo de evento posterior sería `Form.Closed` , que se genera después de cerrar un formulario.
@@ -52,6 +53,7 @@ Los eventos son la forma de devoluciones de llamada que se usa con más frecuenc
  Use <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> o su subclase como argumento de evento para permitir que el usuario final cancele los eventos.
 
 ### <a name="custom-event-handler-design"></a>Diseño de controladores de eventos personalizados
+
  Hay casos en los que `EventHandler<T>` no se puede usar, como cuando el marco de trabajo necesita trabajar con versiones anteriores de CLR, que no admiten genéricos. En tales casos, es posible que tenga que diseñar y desarrollar un delegado de controlador de eventos personalizado.
 
  ✔️ usar un tipo de valor devuelto de void para los controladores de eventos.

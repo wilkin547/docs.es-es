@@ -7,17 +7,19 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-ms.openlocfilehash: 776e559bb1629245c275cb4463531a8dd4b230ae
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28a3e40443c9f1be14243816b347da773705ff02
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821156"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734740"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instrucciones de diseño de excepciones
+
 El control de excepciones tiene muchas ventajas en comparación con los informes de errores basados en valores devueltos. Un buen diseño del marco ayuda al desarrollador de la aplicación a obtener las ventajas de las excepciones. En esta sección se describen las ventajas de las excepciones y se presentan las directrices para usarlas de forma eficaz.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Inicio de excepción](exception-throwing.md)  
  [Usar tipos de excepciones estándar](using-standard-exception-types.md)  
  [Excepciones y rendimiento](exceptions-and-performance.md)  
