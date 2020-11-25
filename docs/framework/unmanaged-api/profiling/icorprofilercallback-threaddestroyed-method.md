@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: c63b91c39ded58ed208f6920c2bfaeba410c093c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0cef868861155d553aba42fe28c3f1f1b86763b0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499862"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731974"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed (Método)
+
 Notifica al generador de perfiles que se ha destruido un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,13 +34,16 @@ HRESULT ThreadDestroyed(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `threadId`  
  de IDENTIFICADOR del subproceso que se ha destruido.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `threadId` valor ya no es válido en el momento de esta llamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -48,7 +52,7 @@ HRESULT ThreadDestroyed(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ThreadCreated](icorprofilercallback-threadcreated-method.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 76b52cedd1e2e64805e2ad47e582d07ca70415cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245627"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731558"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Novedades de Windows Communication Foundation 4.5
 
@@ -79,7 +79,7 @@ WebSockets es una tecnología que proporciona comunicación bidireccional verdad
 
 En la tabla siguiente se describen los valores que han cambiado y dónde encontrar información adicional.
 
-|Propiedad.|Activado|Nuevo valor predeterminado|Para obtener más información, vea|
+|Propiedad|Activado|Nuevo valor predeterminado|Para obtener más información, vea|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 segundos|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * número de procesadores|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
@@ -93,7 +93,7 @@ Para ayudar a los desarrolladores de servicios WCF nuevos y existentes a configu
 
 ## <a name="configuring-wcf-services-in-code"></a>Configurar servicios WCF en el código
 
-Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración. Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy fácil en escenarios autohospedados, la <xref:System.ServiceModel.ServiceHost> clase permitía configurar los extremos y comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código. Para obtener más información, vea [configuración de servicios WCF en el código](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF) permite a los desarrolladores configurar servicios mediante el código o los archivos de configuración. Los archivos de configuración son útiles cuando un servicio se debe configurar después de implementarse. Cuando se usan archivos de configuración, un profesional de TI solo debe actualizar el archivo de configuración; no es necesario que realice ninguna recompilación. Los archivos de configuración, sin embargo, pueden ser complejos y difíciles de mantener. No se admite la depuración de archivos de configuración y se hace referencia a los elementos de configuración por nombre, con lo que la creación de archivos de configuración resulta propensa a errores y difícil. WCF también permite configurar servicios en el código. En versiones anteriores de WCF (4,0 y anteriores), la configuración de servicios en código era muy fácil en escenarios autohospedados, la <xref:System.ServiceModel.ServiceHost> clase permitía configurar los extremos y comportamientos antes de llamar a ServiceHost. Open. En escenarios hospedados en web, sin embargo, no tiene acceso a la clase <xref:System.ServiceModel.ServiceHost>. Para configurar un servicio hospedado en web era necesario crear un `System.ServiceModel.ServiceHostFactory` que creó el <xref:System.ServiceModel.Activation.ServiceHostFactory> y realizar cualquier configuración necesaria. A partir de .NET Framework 4,5, WCF proporciona una manera más fácil de configurar servicios hospedados en Web y autohospedados en el código. Para obtener más información, vea [configuración de servicios WCF en el código](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>Almacenamiento en caché de ChannelFactory
 

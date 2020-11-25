@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-ms.openlocfilehash: 0e9ed8054711297173e880c9eecb12c3f5bd0a68
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cd24e672c65769586dc618c21503dbb344566974
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207132"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731818"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess (Método)
+
 Notifica al depurador cuando un proceso se ha adjuntado o Iniciado por primera vez.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT CreateProcess (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pProcess`  
  de Un puntero a un objeto ICorDebugProcess que representa el proceso que se ha adjuntado o iniciado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  No se llama a este método hasta que se inicializa el Common Language Runtime. La mayoría de los métodos [ICorDebug](icordebug-interface.md) devolverán CORDBG_E_NOTREADY antes de la `CreateProcess` devolución de llamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 560a6adf85fab7f421b86cba52224d5b1bfe1089
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c72e5b9544d1d8ae989405ac9bfdb22050b1aaaf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006264"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731626"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources (Método)
+
 Obtiene un puntero a un enumerador para los recursos a los que se hace referencia en el manifiesto del ensamblado actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT EnumManifestResources (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador. Debe ser un valor NULL cuando `EnumManifestResources` se llama al método por primera vez.  
   
@@ -53,15 +55,16 @@ HRESULT EnumManifestResources (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumManifestResources`se devolvió correctamente.|  
+|`S_OK`|`EnumManifestResources` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En este caso, `pcTokens` se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

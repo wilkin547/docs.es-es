@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-ms.openlocfilehash: 939acc0ad47021d5fdffe7b7b71ea6a4a1635a6d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 90bcf4f37631e0246e58cc14bfcd331d981e4713
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616741"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731727"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal (Coclase)
+
 Proporciona interfaces para administrar el cálculo de referencias de punteros de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,14 +40,15 @@ coclass ComCallUnmarshal {
 |`IMarshal`|Proporciona métodos para crear, inicializar y administrar un proxy en un proceso de cliente.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Coclases para el hospedaje](hosting-coclasses.md)

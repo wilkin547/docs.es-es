@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7fdf25d44bdf630e306cf0f5dcb3387a3b0f7c76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501422"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731688"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask (Método)
+
 Solicita que el host cree una nueva tarea.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT CreateTask (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `stacksize`  
  de Tamaño solicitado, en bytes, de la pila solicitada o 0 (cero) para el tamaño predeterminado.  
   
@@ -53,7 +55,7 @@ HRESULT CreateTask (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`CreateTask`se devolvió correctamente.|  
+|S_OK|`CreateTask` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -62,18 +64,20 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|No había suficiente memoria disponible para crear la tarea solicitada.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  CLR llama `CreateTask` a para solicitar que el host cree una nueva tarea. El host devuelve un puntero de interfaz a una `IHostTask` instancia de. La tarea devuelta debe permanecer suspendida hasta que se inicie explícitamente mediante una llamada a `IHostTask::Start` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)
