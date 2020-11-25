@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f0ba2342e9704ba06dd1d3612f699298c734a5eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859883"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723524"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata (Método)
+
 Lo llama el servicio de acceso a datos de Common Language Runtime (CLR) para recuperar los metadatos de una imagen.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,6 +44,7 @@ HRESULT GetMetadata(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `imagePath`  
  de Cadena que especifica la ruta de acceso del archivo de imagen.  
   
@@ -71,9 +73,11 @@ HRESULT GetMetadata(
  enuncia Tamaño de los metadatos que se devuelven.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: a2a3d58e0631fceab96c32f9d86fef25973fed84
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500668"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722289"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 (Función)
+
 Notifica al generador de perfiles que una función está a punto de volver al autor de la llamada y proporciona información sobre el marco de pila y el valor devuelto de la función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -58,6 +59,7 @@ void __stdcall FunctionLeave2 (
   Para tener acceso a la información de los valores devueltos, `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
 
 ## <a name="remarks"></a>Comentarios  
+
  Los valores de los `func` `retvalRange` parámetros y no son válidos después de que la `FunctionLeave2` función devuelva, ya que los valores pueden cambiar o destruirse.  
   
  La `FunctionLeave2` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
@@ -73,6 +75,7 @@ void __stdcall FunctionLeave2 (
  Además, la `FunctionLeave2` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -81,7 +84,7 @@ void __stdcall FunctionLeave2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionTailcall2 (Función)](functiontailcall2-function.md)

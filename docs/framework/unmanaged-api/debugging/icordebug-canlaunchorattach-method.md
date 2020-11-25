@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 354df02b27e87550ba602fe102352455c227441b
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 195c7e1e7c61fd6ac8a21226b52e3782d2f7e421
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859682"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723498"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach (Método)
+
 Devuelve un valor HRESULT que indica si el inicio de un nuevo proceso o la asociación al proceso existente especificado es posible en el contexto del equipo actual y de la configuración en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,13 +36,15 @@ HRESULT CanLaunchOrAttach (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwProcessId`  
  de IDENTIFICADOR de un proceso existente.  
   
  `win32DebuggingEnabled`  
- de Pase `true` si tiene previsto iniciar con la depuración de Win32 habilitada o para asociarla con la depuración de Win32 habilitada; de lo contrario `false`, pase.  
+ de Pase `true` si tiene previsto iniciar con la depuración de Win32 habilitada o para asociarla con la depuración de Win32 habilitada; de lo contrario, pase `false` .  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si los servicios de depuración determinan que es posible iniciar un nuevo proceso o asociarse al proceso dado, dada la información sobre la configuración del equipo y el tiempo de ejecución actual. Los valores HRESULT posibles son:  
   
 - S_OK  
@@ -53,11 +56,13 @@ HRESULT CanLaunchOrAttach (
 - CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Comentarios  
- Este método es meramente informativo. La interfaz no impedirá que se inicie o se adjunte a un proceso, independientemente del valor devuelto por `CanLaunchOrAttach`.  
+
+ Este método es meramente informativo. La interfaz no impedirá que se inicie o se adjunte a un proceso, independientemente del valor devuelto por `CanLaunchOrAttach` .  
   
- Si planea iniciar con la depuración de Win32 habilitada o asociarla con la depuración de Win32 habilitada, pase `true` para `win32DebuggingEnabled`. El HRESULT devuelto `CanLaunchOrAttach` por puede diferir si se usa esta opción.  
+ Si planea iniciar con la depuración de Win32 habilitada o asociarla con la depuración de Win32 habilitada, pase `true` para `win32DebuggingEnabled` . El HRESULT devuelto por `CanLaunchOrAttach` puede diferir si se usa esta opción.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

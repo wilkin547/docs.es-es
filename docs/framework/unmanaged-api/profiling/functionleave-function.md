@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 836e4843ead940bc9f76ff6bdd0433e21e400afd
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500642"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722263"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (Función)
+
 Notifica al generador de perfiles que una función está a punto de volver al llamador.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionLeave (
   \[in] el identificador de la función que devuelve.
 
 ## <a name="remarks"></a>Comentarios  
+
  La `FunctionLeave` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
@@ -55,6 +57,7 @@ void __stdcall FunctionLeave (
  Además, la `FunctionLeave` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -63,7 +66,7 @@ void __stdcall FunctionLeave (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

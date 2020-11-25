@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e10d1792a8dc0b57ddd121ec09854e8e1824cade
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860805"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723056"
 ---
 # <a name="dacpmoduledata-structure"></a>Estructura DacpModuleData
 
@@ -40,9 +40,9 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
-| Member    | Descripción                                                             |
+| Miembro    | Descripción                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | Dirección del objeto de módulo.                                           |
 | `File`    | Puntero al archivo portable ejecutable (PE).                       |
@@ -54,6 +54,7 @@ struct DacpModuleData
 Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
 ## <a name="requirements"></a>Requisitos
+
 **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  

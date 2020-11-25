@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 277c3344-d0cb-431e-beae-eb1eeeba8eea
 topic_type:
 - apiref
-ms.openlocfilehash: ff4b32185e604611eaaead2847c11bc139d405a6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b511c5abe10ab6c0ec856a5686b082132ed4a5d9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500694"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722872"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo (Función)
+
 Notifica al generador de perfiles que el control se pasa a una función y proporciona un identificador que se puede pasar al [método ICorProfilerInfo3:: GetFunctionEnter3Info (](icorprofilerinfo3-getfunctionenter3info-method.md) para recuperar el marco de pila y los argumentos de la función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,6 +44,7 @@ void __stdcall FunctionEnter3WithInfo(
   \[in] un identificador opaco que representa información sobre un marco de pila determinado. Este identificador es válido solo durante la devolución de llamada a la que se pasa.
 
 ## <a name="remarks"></a>Comentarios  
+
  El `FunctionEnter3WithInfo` método de devolución de llamada notifica al generador de perfiles cuando se llama a las funciones y permite al generador de perfiles usar el [método ICorProfilerInfo3:: GetFunctionEnter3Info (](icorprofilerinfo3-getfunctionenter3info-method.md) para inspeccionar los valores de argumento. Para tener acceso a la información de los argumentos, se debe `COR_PRF_ENABLE_FUNCTION_ARGS` establecer la marca. El generador de perfiles puede utilizar el [método ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento y, a continuación, usar el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo (](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md) para registrar la implementación de esta función.  
   
  La `FunctionEnter3WithInfo` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
@@ -58,6 +60,7 @@ void __stdcall FunctionEnter3WithInfo(
  La `FunctionEnter3WithInfo` función no debe llamar a código administrado ni producir una asignación de memoria administrada de ninguna manera.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -66,7 +69,7 @@ void __stdcall FunctionEnter3WithInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Getfunctionenter3info (](icorprofilerinfo3-getfunctionenter3info-method.md)
 - [FunctionEnter3](functionenter3-function.md)

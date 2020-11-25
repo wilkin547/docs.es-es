@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fab8a58-3883-490f-8b27-64042c90f104
 topic_type:
 - apiref
-ms.openlocfilehash: 5730cdd910257d762230f5e54576d5e0a7ac1adb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b8b9f8e63a0b52dde0e814f53cfc75e6f6d48e78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614830"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723030"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable (Método)
+
 Define una única variable en el ámbito léxico actual. Se puede llamar a este método varias veces para una variable del mismo nombre que tiene varias casas en todo el ámbito. Sin embargo, en este caso, los valores de `startOffset` los `endOffset` parámetros y no deben superponerse.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,6 +43,7 @@ HRESULT DefineLocalVariable(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `name`  
  de Puntero a `WCHAR` que define el nombre de la variable local.  
   
@@ -49,7 +51,7 @@ HRESULT DefineLocalVariable(
  de Atributos de la variable local.  
   
  `cSig`  
- de `ULONG32`Que indica el tamaño, en bytes, del `signature` búfer.  
+ de `ULONG32` Que indica el tamaño, en bytes, del `signature` búfer.  
   
  `signature`  
  de Firma de la variable local.  
@@ -73,12 +75,14 @@ HRESULT DefineLocalVariable(
  de Desplazamiento final de la variable. Este parámetro es opcional. Si es 0, este parámetro se omite y la variable se define en todo el ámbito. Si es un valor distinto de cero, la variable se encuentra dentro de los desplazamientos del ámbito actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
 - [Método DefineGlobalVariable](isymunmanagedwriter-defineglobalvariable-method.md)

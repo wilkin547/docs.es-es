@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-ms.openlocfilehash: 59afc8ae7d66e81e4dca3923f9c6f7ff3a3a6605
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 46c2b444984c5a0062f1cfbc0cd29dbe409b16fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895386"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723446"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess (Método)
+
 Obtiene un puntero a la instancia de "ICorDebugProcess" para el proceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetProcess (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwProcessId`  
  de IDENTIFICADOR del proceso.  
   
@@ -42,6 +44,7 @@ HRESULT GetProcess (
  enuncia Puntero a la dirección de una `ICorDebugProcess` instancia para el proceso especificado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -50,6 +53,6 @@ HRESULT GetProcess (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 21838bdd8ff45f8f74524dc4da52364fb032b396
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723407"
 ---
 # <a name="icordebug-interface"></a>ICorDebug (Interfaz)
+
 Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en el entorno de Common Language Runtime (CLR).  
   
 > [!NOTE]
@@ -36,20 +37,22 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
 |[Método DebugActiveProcess](icordebug-debugactiveprocess-method.md)|Asocia el depurador a un proceso existente.|  
 |[Método EnumerateProcesses](icordebug-enumerateprocesses-method.md)|Obtiene un enumerador para los procesos que se están depurando.|  
 |[Método GetProcess](icordebug-getprocess-method.md)|Devuelve el objeto "ICorDebugProcess" con el identificador de proceso especificado.|  
-|[Método Initialize](icordebug-initialize-method.md)|Inicializa el objeto `ICorDebug`.|  
+|[Initialize (Método)](icordebug-initialize-method.md)|Inicializa el objeto `ICorDebug`.|  
 |[Método SetManagedHandler](icordebug-setmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para los eventos administrados.|  
 |[Método SetUnmanagedHandler](icordebug-setunmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para los eventos no administrados.|  
 |[Terminate (Método)](icordebug-terminate-method.md)|Finaliza el `ICorDebug` objeto.|  
   
-## <a name="remarks"></a>Observaciones  
- `ICorDebug`representa un bucle de procesamiento de eventos para un proceso del depurador. El depurador debe esperar a la devolución de llamada [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) de todos los procesos que se están depurando antes de liberar esta interfaz.  
+## <a name="remarks"></a>Comentarios  
+
+ `ICorDebug` representa un bucle de procesamiento de eventos para un proceso del depurador. El depurador debe esperar a la devolución de llamada [ICorDebugManagedCallback:: ExitProcess](icordebugmanagedcallback-exitprocess-method.md) de todos los procesos que se están depurando antes de liberar esta interfaz.  
   
- El `ICorDebug` objeto es el objeto inicial para controlar toda la depuración administrada. En las versiones 1,0 y 1,1 de .NET Framework, este objeto era `CoClass` un objeto creado a partir de com. En la versión .NET Framework 2,0, este objeto ya no es un `CoClass` objeto. Debe crearse mediante la función [CreateDebuggingInterfaceFromVersion (](../hosting/createdebugginginterfacefromversion-function.md) , que es más compatible con la versión. Esta nueva función de creación permite a los clientes obtener una implementación `ICorDebug`específica de, que también emula una versión específica de la API de depuración.  
+ El `ICorDebug` objeto es el objeto inicial para controlar toda la depuración administrada. En las versiones 1,0 y 1,1 de .NET Framework, este objeto era un `CoClass` objeto creado a partir de com. En la versión .NET Framework 2,0, este objeto ya no es un `CoClass` objeto. Debe crearse mediante la función [CreateDebuggingInterfaceFromVersion (](../hosting/createdebugginginterfacefromversion-function.md) , que es más compatible con la versión. Esta nueva función de creación permite a los clientes obtener una implementación específica de `ICorDebug` , que también emula una versión específica de la API de depuración.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -58,6 +61,6 @@ Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

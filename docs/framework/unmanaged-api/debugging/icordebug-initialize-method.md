@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-ms.openlocfilehash: aeecf19cb85ce5d7781c3dfedca079e97cab76ce
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 5cdd89ebdbb5abb9b001c1489a54bfb867808c5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895355"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723433"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize (Método)
+
 Inicializa el objeto `ICorDebug`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -31,10 +32,12 @@ Inicializa el objeto `ICorDebug`.
 HRESULT Initialize ();  
 ```  
   
-## <a name="remarks"></a>Observaciones  
- El depurador debe `Initialize` llamar a en el momento de la creación para inicializar los servicios de depuración. Se debe llamar a este método antes de llamar a `ICorDebug` cualquier otro método en.  
+## <a name="remarks"></a>Comentarios  
+
+ El depurador debe llamar a `Initialize` en el momento de la creación para inicializar los servicios de depuración. Se debe llamar a este método antes de llamar a cualquier otro método en `ICorDebug` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -43,6 +46,6 @@ HRESULT Initialize ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)

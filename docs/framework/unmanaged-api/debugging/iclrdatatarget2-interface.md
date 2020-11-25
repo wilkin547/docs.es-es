@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b2700b2f12e312f06640a06e5ec82fbc58f2ca9
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dee5108439610b67c3397cebcd8ee5f84d4eacea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860469"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723641"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 (Interfaz)
+
 Una subclase de [ICLRDataTarget](iclrdatatarget-interface.md) utilizada por el nivel de servicios de acceso a datos para manipular regiones de memoria virtual en el proceso de destino.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,9 +33,11 @@ Una subclase de [ICLRDataTarget](iclrdatatarget-interface.md) utilizada por el n
 |[Método FreeVirtual](iclrdatatarget2-freevirtual-method.md)|Libera memoria previamente asignada en el espacio de direcciones del proceso de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

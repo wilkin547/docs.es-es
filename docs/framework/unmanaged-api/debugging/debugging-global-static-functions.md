@@ -6,18 +6,20 @@ helpviewer_keywords:
 - debugging global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], debugging
 ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
-ms.openlocfilehash: c20d8719b63cb40074dc740506ae4a3c0fc3a251
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04906322e311b580abddeca7744cf3e75d471e05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793780"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722991"
 ---
 # <a name="debugging-global-static-functions"></a>Funciones estáticas globales para la depuración
+
 Esta sección describe las funciones estáticas globales no administradas que utiliza la API de depuración.  
   
-## <a name="in-this-section"></a>Esta sección  
- [_EFN_GetManagedExcepStack (función)](efn-getmanagedexcepstack-function.md)  
+## <a name="in-this-section"></a>En esta sección  
+
+ [_EFN_GetManagedExcepStack (Función)](efn-getmanagedexcepstack-function.md)  
  Dada una dirección de objeto de excepción administrado, devuelve una versión de cadena del seguimiento de pila que contiene.  
   
  [_EFN_GetManagedObjectFieldInfo (Función)](efn-getmanagedobjectfieldinfo-function.md)  
@@ -32,13 +34,14 @@ Esta sección describe las funciones estáticas globales no administradas que ut
  [CLRDataCreateInstance (Función)](clrdatacreateinstance-function.md)  
  Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a esta función para crear el objeto de interfaz especificado para el proceso de destino especificado.  
   
- [PFN_CLRDataCreateInstance (puntero de función)](pfn-clrdatacreateinstance-function-pointer.md)  
+ [puntero a la función PFN_CLRDataCreateInstance](pfn-clrdatacreateinstance-function-pointer.md)  
  Señala una función a la que llaman los servicios de acceso a datos de CLR para crear el objeto de interfaz especificado para el proceso de destino especificado.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Coclases para la depuración](debugging-coclasses.md)  
   
- [Interfaces de depuración](debugging-interfaces.md)  
+ [Interfaces para depuración](debugging-interfaces.md)  
   
  [Enumeraciones de depuración](debugging-enumerations.md)  
   

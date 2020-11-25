@@ -15,16 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7235c225-cb6e-49e9-a95b-09a646579841
 topic_type:
 - apiref
-ms.openlocfilehash: f678f98d7b40f5f4c0db8773f7f6a0aa81aa1b91
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6c654cfb2b2680987b2801a37f3d87352968431d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783018"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722965"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a>ICorDebugEditAndContinueSnapshot::SetPEBytes (Método)
+
 `SetPEBytes` está obsoleto. No llame a este método.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Interfaces de depuración](debugging-interfaces.md)
+- [Interfaces para depuración](debugging-interfaces.md)

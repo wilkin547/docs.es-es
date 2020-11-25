@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-ms.openlocfilehash: 92cc6c3ce15d8391a43ff130a82476a4363ff5bd
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: d133cacb611a1c7bd03d7653f46c2e5fb1acc043
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723355"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach (Método)
+
 Asocia el depurador al dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -31,10 +32,12 @@ Asocia el depurador al dominio de aplicación.
 HRESULT Attach ();  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El depurador se debe asociar al dominio de aplicación para recibir eventos y habilitar la depuración del dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 9c22ca47a606da0949529cf55655bbcde19cb5c9
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795669"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722614"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState (Enumeración)
+
 Especifica el estado de un subproceso de depuración.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,19 +34,21 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`THREAD_RUN`|El subproceso se ejecuta libremente, a menos que se produzca un evento de depuración.|  
 |`THREAD_SUSPEND`|No se puede ejecutar el subproceso.|  
   
 ## <a name="remarks"></a>Comentarios  
- El depurador utiliza `CorDebugThreadState` la enumeración para controlar la ejecución de un subproceso. El estado de un subproceso se puede establecer mediante el método [ICorDebugThread:: setdebugstate (](icordebugthread-setdebugstate-method.md) o [ICorDebugController:: setallthreadsdebugstate (](icordebugcontroller-setallthreadsdebugstate-method.md) .  
+
+ El depurador utiliza la `CorDebugThreadState` enumeración para controlar la ejecución de un subproceso. El estado de un subproceso se puede establecer mediante el método [ICorDebugThread:: setdebugstate (](icordebugthread-setdebugstate-method.md) o [ICorDebugController:: setallthreadsdebugstate (](icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
  Una devolución de llamada proporcionada a la [API de hospedaje](../hosting/index.md) permite el suministro de mensajes, por lo que no se necesita un estado interrumpido.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -54,6 +57,6 @@ typedef enum CorDebugThreadState {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

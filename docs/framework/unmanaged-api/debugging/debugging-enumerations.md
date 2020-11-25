@@ -6,22 +6,24 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdd4b60d068677ae2a0874b589294ba220f0d854
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179141"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723004"
 ---
 # <a name="debugging-enumerations"></a>Enumeraciones de depuración
+
 En esta sección se describen las enumeraciones no administradas que utiliza la API de depuración.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [CLR_DEBUGGING_PROCESS_FLAGS (Enumeración)](clr-debugging-process-flags-enumeration.md)  
- Proporciona valores que se usan en el método [ICLRDebugging::OpenVirtualProcess.](iclrdebugging-openvirtualprocess-method.md)  
+ Proporciona valores que usa el método [ICLRDebugging:: openvirtualprocess (](iclrdebugging-openvirtualprocess-method.md) .  
   
  [CLRDataEnumMemoryFlags (Enumeración)](clrdataenummemoryflags-enumeration.md)  
- Indica qué regiones de memoria debe incluir una llamada al método [ICLRDataEnumMemoryRegions::EnumMemoryRegions.](iclrdataenummemoryregions-enummemoryregions-method.md)  
+ Indica qué regiones de memoria debe incluir una llamada al método [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) .  
   
  [COR_PUB_ENUMPROCESS (Enumeración)](cor-pub-enumprocess-enumeration.md)  
  Identifica el tipo de proceso que se va a enumerar.  
@@ -39,16 +41,16 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Explica los motivos por los que una función exportada llama a código administrado.  
   
  CorDebugCreateProcessFlags  
- Proporciona opciones de depuración adicionales que se pueden usar en una llamada a la [ICorDebug::CreateProcess](icordebug-createprocess-method.md) método.  
+ Proporciona opciones de depuración adicionales que se pueden usar en una llamada al método [ICorDebug:: CreateProcess](icordebug-createprocess-method.md) .  
   
  [Enumeración CorDebugDebugEventKind](cordebugdebugeventkind-enumeration.md)  
- Indica el tipo de evento cuya información se descodifica mediante el [DecodeEvent](icordebugprocess6-decodeevent-method.md) método.  
+ Indica el tipo de evento cuya información se descodifica mediante el método [DecodeEvent](icordebugprocess6-decodeevent-method.md) .  
   
  [Enumeración CorDebugDecodeEventFlagsWindows](cordebugdecodeeventflagswindows-enumeration.md)  
  Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
   
  CorDebugExceptionCallbackType  
- Indica el tipo de devolución de llamada que se realiza a partir de un [ICorDebugManagedCallback2::Exception](icordebugmanagedcallback2-exception-method.md) eventos.  
+ Indica el tipo de devolución de llamada que se realiza desde un evento [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) .  
   
  [CorDebugExceptionFlags (Enumeración)](cordebugexceptionflags-enumeration.md)  
  Proporciona información adicional sobre una excepción.  
@@ -56,10 +58,10 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  CorDebugExceptionUnwindCallbackType  
  Indica el evento que la devolución de llamada señala durante la fase de desenredo.  
   
- [CorDebugGCType (enumeración)](cordebuggctype-enumeration.md)  
+ [CorDebugGCType (Enumeración)](cordebuggctype-enumeration.md)  
  Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.  
   
- [CorDebugGenerationTypes (enumeración)](cordebuggenerationtypes-enumeration.md)  
+ [CorDebugGenerationTypes (Enumeración)](cordebuggenerationtypes-enumeration.md)  
  Especifica la generación de una región de memoria en el montón administrado.  
   
  CorDebugHandleType  
@@ -81,7 +83,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Contiene valores que influyen en el comportamiento del compilador Just-In-Time (JIT) administrado.  
   
  [CorDebugJITCompilerFlagsDeprecated (Enumeración)](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Obsoleto. Utilice `CORDEBUG_JIT_DEFAULT` el miembro de la [CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md) enumeración en su lugar.  
+ Obsoleto. `CORDEBUG_JIT_DEFAULT`En su lugar, use el miembro de la enumeración [cordebugjitcompilerflags (](cordebugjitcompilerflags-enumeration.md) .  
   
  CorDebugMappingResult  
  Proporciona información detallada sobre cómo se obtuvo el valor del puntero de instrucción (IP).  
@@ -92,10 +94,10 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  [CorDebugNGenPolicy (Enumeración)](cordebugngenpolicy-enumeration.md)  
  Proporciona un valor que determina si un depurador carga imágenes nativas (NGen) desde la caché de imágenes nativas.  
   
- [CorDebugPlatform (enumeración)](cordebugplatform-enumeration.md)  
- Proporciona valores de plataforma de destino que se usan por el [ICorDebugDataTarget::GetPlatform](icordebugdatatarget-getplatform-method.md) método.  
+ [CorDebugPlatform (Enumeración)](cordebugplatform-enumeration.md)  
+ Proporciona valores de plataforma de destino utilizados por el método [ICorDebugDataTarget:: GetPlatform (](icordebugdatatarget-getplatform-method.md) .  
   
- [CorDebugRecordFormat (enumeración)](cordebugrecordformat-enumeration.md)  
+ [Enumeración CorDebugRecordFormat](cordebugrecordformat-enumeration.md)  
  Describe el formato de los datos de una matriz de bytes que contiene información sobre un evento de depuración de excepción nativo.  
   
  CorDebugRegister  
@@ -113,7 +115,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  CorDebugThreadState  
  Especifica el estado de un subproceso de depuración.  
   
- \>CorDebugUnmappedStop  
+ \>Cordebugunmappedstop (  
  Especifica el tipo de código no asignado que puede hacer que la ejecución paso a paso desencadene una detención de la ejecución del código.  
   
  CorDebugUserState  
@@ -137,12 +139,13 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  [WriteableMetadataUpdateMode (Enumeración)](writeablemetadataupdatemode-enumeration.md)  
  Proporciona valores que especifican si las actualizaciones en memoria de los metadatos son visibles para un depurador.
 
- [ClrDataSourceType (enumeración)](clrdatasourcetype-enumeration.md) Proporciona valores que utilizan la estructura CLRDATA_IL_ADDRESS_MAP.
+ [Enumeración ClrDataSourceType](clrdatasourcetype-enumeration.md) Proporciona valores utilizados por la estructura de CLRDATA_IL_ADDRESS_MAP.
 
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Coclases para la depuración](debugging-coclasses.md)  
   
- [Interfaces de depuración](debugging-interfaces.md)  
+ [Interfaces para depuración](debugging-interfaces.md)  
   
  [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)  
   

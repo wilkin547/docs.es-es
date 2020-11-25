@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3c4f6b54-5ce7-4a2a-83e1-6dec16441f50
 topic_type:
 - apiref
-ms.openlocfilehash: 79af7b5679598ffa82471dcb69adabc2394b13fa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 6fc6cf9b7333dd4caad3c5a4b081fecb060c8f86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009306"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722094"
 ---
 # <a name="imetadataemitdeletepinvokemap-method"></a>IMetaDataEmit::DeletePinvokeMap (Método)
+
 Destruye los metadatos de asignación de PInvoke para el objeto al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,15 +35,17 @@ HRESULT DeletePinvokeMap (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `tk`  
  de Un `mdFieldDef` `mdMethodDef` token o que representa el objeto para el que se van a eliminar los metadatos de asignación de PInvoke.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

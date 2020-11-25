@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: dcf01c00a106c131646a16597dca4092a06c5983
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860820"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723069"
 ---
 # <a name="dacpmethoddescdata-structure"></a>Estructura DacpMethodDescData
 
@@ -52,9 +52,9 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Miembros
 
-| Member                       | Descripción                                                                                     |
+| Miembro                       | Descripción                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | Indica si el tiempo de ejecución tiene código nativo disponible para la creación de instancias dada del método. |
 | `bIsDynamic`                 | Indica si el método se genera dinámicamente a través de la generación de código ligero.           |
@@ -78,6 +78,7 @@ struct DacpMethodDescData
 Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
 ## <a name="requirements"></a>Requisitos
+
 **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
 **Encabezado:** Ninguna  
 **Biblioteca:** Ninguna  

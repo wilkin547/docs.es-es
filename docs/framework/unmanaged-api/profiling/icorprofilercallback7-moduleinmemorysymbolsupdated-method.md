@@ -9,14 +9,15 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-ms.openlocfilehash: c7e53816c2f571fe6ff68b517ed827459a0f1562
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 248d2f749ddcbd772313558af2b2721f4d1c0f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499095"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723095"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated (método)
+
 [Compatible con .NET Framework 4.6.1 y versiones posteriores]  
   
  Notifica al generador de perfiles cada vez que se actualiza la secuencia de símbolos asociada a un módulo en memoria.  
@@ -30,10 +31,12 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  [in] `moduleId`  
  Identificador del módulo en memoria cuya secuencia de símbolos se actualiza.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Esta devolución de llamada se controla estableciendo la marca de máscara de eventos [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](cor-prf-high-monitor-enumeration.md) al llamar al método [ICorProfilerCallback5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
 > [!NOTE]
@@ -42,6 +45,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
  Incluso cuando se proporcionan símbolos por adelantado en una llamada a una de las sobrecargas de los <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> métodos administrados que incluyen un `rawSymbolStore` argumento para especificar los símbolos del ensamblado, es posible que el tiempo de ejecución no asocie realmente los datos simbólicos con el módulo hasta después de que se haya producido la devolución de llamada [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) . Este evento proporciona una oportunidad posterior para recopilar símbolos para estos módulos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -50,7 +54,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Método ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2 (método)](icorprofilerinfo5-seteventmask2-method.md)

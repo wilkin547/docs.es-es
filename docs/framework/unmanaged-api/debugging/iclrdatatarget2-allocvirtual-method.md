@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 20b73549d30fe210e4d44902d2f459ea9c682360
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 6d3985919ea7e766db7d07e4ed81484851156ca5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860485"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723676"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual (Método)
+
 Los servicios de acceso a datos de Common Language Runtime (CLR) llaman a esta función para asignar memoria en el espacio de direcciones de este proceso de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT AllocVirtual(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `addr`  
  de `CLRDATA_ADDRESS` Valor que especifica la dirección de inicio solicitada de la memoria que se va a asignar.  
   
@@ -45,20 +47,22 @@ HRESULT AllocVirtual(
  de Tamaño, en bytes, de la memoria que se va a asignar.  
   
  `typeFlags`  
- de Marcas que controlan la asignación de memoria. Vea la función `VirtualAlloc` Win32.  
+ de Marcas que controlan la asignación de memoria. Vea la `VirtualAlloc` función Win32.  
   
  `protectFlags`  
- de Atributos de protección de la memoria asignada. Vea la función `VirtualAlloc` Win32.  
+ de Atributos de protección de la memoria asignada. Vea la `VirtualAlloc` función Win32.  
   
  `virt`  
  enuncia Un puntero a un `CLRDATA_ADDRESS` valor que especifica la dirección inicial real de la memoria asignada.  
   
 ## <a name="remarks"></a>Comentarios  
- El `AllocVirtual` método actúa como contenedor lógico de la función de `VirtualAlloc` Win32.  
+
+ El `AllocVirtual` método actúa como contenedor lógico de la función de Win32 `VirtualAlloc` .  
   
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

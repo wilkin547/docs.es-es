@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 1cd09fe785bb37c892417ddbf1efaaaa90e121bf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 3a8f369728b8464850259518981bf6690cb17a01
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009241"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722044"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec (Método)
+
 Obtiene un símbolo (token) de metadatos para el tipo con la firma de metadatos especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromTypeSpec (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pvSig`  
  de Firma que se va a definir.  
   
@@ -46,11 +48,12 @@ HRESULT GetTokenFromTypeSpec (
  enuncia El `mdTypeSpec` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

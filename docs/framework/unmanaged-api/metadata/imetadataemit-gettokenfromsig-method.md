@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: 740dad54bc3a79ff546176abdc35487d89ed8f44
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b41891227d94b66bf59128d620eba9da117fe92a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722055"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig (Método)
+
 Obtiene un token para la firma de metadatos especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetTokenFromSig (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pvSig`  
  de Firma que se va a conservar y almacenar.  
   
@@ -46,11 +48,12 @@ HRESULT GetTokenFromSig (
  enuncia El `mdSignature` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

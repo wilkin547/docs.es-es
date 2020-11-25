@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: 42ea497bdcab71518bec08514b827d76f0317d57
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 02bc6f4bbb6754bd160fe2694f27563908f3a759
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500603"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722224"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall (Función)
+
 Notifica al generador de perfiles que la función que se está ejecutando actualmente está a punto de realizar una llamada de cola a otra función.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionTailcall (
   \[in] el identificador de la función que se ejecuta actualmente y que está a punto de realizar una llamada de cola.
 
 ## <a name="remarks"></a>Comentarios  
+
  La función de destino de la llamada de cola usará el marco de pila actual y devolverá directamente al llamador de la función que realizó la llamada de cola. Esto significa que no se emitirá una devolución de llamada de [FunctionLeave (](functionleave-function.md) para una función que sea el destino de una llamada de cola.  
   
  La `FunctionTailcall` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
@@ -57,6 +59,7 @@ void __stdcall FunctionTailcall (
  Además, la `FunctionTailcall` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -65,7 +68,7 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

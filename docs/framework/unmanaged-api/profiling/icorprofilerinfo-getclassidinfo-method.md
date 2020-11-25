@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e93b99e-5aca-415c-8e37-7f33753b612d
 topic_type:
 - apiref
-ms.openlocfilehash: 4fbee938ae86b338f2beb0b48feeee46f144a4a0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 7d19a43048da742e702636faaa46ecf1458556f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498523"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722598"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo (Método)
+
 Obtiene el módulo primario y el token de metadatos para la clase especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetClassIDInfo(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `classId`  
  de IDENTIFICADOR de la clase para la que se va a obtener la información.  
   
@@ -45,11 +47,13 @@ HRESULT GetClassIDInfo(
  enuncia Puntero al símbolo (token) de metadatos para la clase.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El código del generador de perfiles puede llamar a [ICorProfilerInfo:: GetModuleMetaData (](icorprofilerinfo-getmodulemetadata-method.md) para obtener una interfaz de metadatos para un módulo determinado. Después, el token de metadatos que se devuelve a la ubicación a la que `pTypeDefToken` hace referencia puede usarse para acceder a los metadatos de la clase.  
   
  Para obtener más información sobre los tipos genéricos, use [ICorProfilerInfo2:: GetClassIDInfo2 (](icorprofilerinfo2-getclassidinfo2-method.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -58,6 +62,6 @@ HRESULT GetClassIDInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

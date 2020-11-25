@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-ms.openlocfilehash: ed534890fc90d3b8543a1166c85903f10163f0a8
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 9ce3afded5f914ecf970d8db738becc7f5cfff84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008342"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723147"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock (Método)
+
 Obtiene un bloque de sección del código base.  
   
  Este método está obsoleto y no debe usarse.  
@@ -39,6 +40,7 @@ HRESULT GetSectionBlock (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `section`  
  de La sección de la que se va a recuperar un bloque del código base.  
   
@@ -52,14 +54,16 @@ HRESULT GetSectionBlock (
  enuncia Puntero a una ubicación que recibe la dirección del bloque recuperado.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Llame `GetSectionBlock` solo si tiene requisitos de sección especiales que no se controlan mediante otros métodos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

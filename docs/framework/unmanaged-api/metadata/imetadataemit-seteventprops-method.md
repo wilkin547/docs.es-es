@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 720133e64c02aa09c9ff7e43a20630b0d55c1acf
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 5c2880ac07f0317bc36ff4bbde68cd3a25febf52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008760"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721990"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps (Método)
+
 Establece o actualiza la característica especificada de un evento definido por una llamada anterior a [IMetaDataEmit::D efineevent](imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,6 +41,7 @@ HRESULT SetEventProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ev`  
  de El token del evento.  
   
@@ -62,11 +64,12 @@ HRESULT SetEventProps (
  de Matriz de tokens para otros métodos asociados al evento. El último elemento de la matriz debe ser `mdMethodDefNil` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

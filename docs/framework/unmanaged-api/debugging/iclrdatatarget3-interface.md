@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-ms.openlocfilehash: af944a9c2bb04f37b06f27cfbe38e23c9613d768
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 7297bfa5297878dde6867a99029ac88754a05290
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723589"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 (Interfaz)
+
 Subclase de [ICLRDataTarget2](iclrdatatarget2-interface.md) que proporciona acceso a la información de la excepción.  
   
 ## <a name="methods"></a>Métodos  
@@ -29,9 +30,11 @@ Subclase de [ICLRDataTarget2](iclrdatatarget2-interface.md) que proporciona acce
 |[Método GetExceptionThreadID](iclrdatatarget3-getexceptionthreadid-method.md)|Los servicios de acceso a datos de CLR llaman a esta función para obtener el identificador del subproceso que inició la excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El cliente API (es decir, el depurador) debe implementar esta interfaz según corresponda para el proceso de destino concreto. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria. Puede que el destino no admita la modificación de sus áreas de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2267d39-69d1-4de1-bf37-f752cafacc71
 topic_type:
 - apiref
-ms.openlocfilehash: dbbfa77ee76770bcf1d662bc5ae179909eaf3b25
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: bd284bced625de39791377a9248796ca3dd76f5c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008292"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722926"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection (Método)
+
 Obtiene una representación de cadena de la sección de código a la que hace referencia el identificador especificado.  
   
  Este método está obsoleto y no debe usarse.  
@@ -36,15 +37,17 @@ HRESULT GetStringSection (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `section`  
  [in, out] Identificador de la sección de código.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

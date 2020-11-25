@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: ff888d3e2b86efeea3f4e3d33528f731d85886bf
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 13746c4ac6322a401e547c1c7acc99c0eda9accf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723342"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 (Método)
+
 Obtiene el tercer campo de dirección para esta variable. Su significado depende del tipo de dirección.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,16 +34,19 @@ HRESULT GetAddressField3(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pRetVal`  
  enuncia Un puntero a un `ULONG32` que recibe el tercer campo de dirección.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)
 - [Método GetAddressField1](isymunmanagedvariable-getaddressfield1-method.md)

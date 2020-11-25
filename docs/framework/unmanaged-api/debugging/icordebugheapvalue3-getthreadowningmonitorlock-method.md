@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: fef0902aedbcd8572d2dc67fae7927f754af4489
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210415"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723316"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock (Método)
+
 Devuelve el subproceso administrado que posee el bloqueo de monitor en este objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetThreadOwningMonitorLock (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppThread`  
  enuncia Subproceso administrado que posee el bloqueo de monitor en este objeto.  
   
@@ -42,6 +44,7 @@ HRESULT GetThreadOwningMonitorLock (
  enuncia Número de veces que este subproceso tendría que liberar el bloqueo antes de que vuelva a ser propiedad.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -51,7 +54,8 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  Si un subproceso administrado posee el bloqueo de monitor en este objeto:  
   
 - El método devuelve S_OK.  
@@ -65,6 +69,7 @@ HRESULT GetThreadOwningMonitorLock (
  Si se produce un error de modo que no se pueda determinar cuál es el propietario del subproceso, si existe, el bloqueo de monitor en este objeto, el método devuelve un valor HRESULT que indica un error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

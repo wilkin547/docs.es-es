@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-ms.openlocfilehash: eb6efc738b270f8f76d7130a12af4927fb6220ce
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: da3b0acefa68be3506567ad4742784943f4ec5ab
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498367"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722523"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo (Método)
+
 Obtiene la extensión del código nativo asociado al identificador de función especificado.  
   
  Este método está obsoleto. Use en su lugar el método [ICorProfilerInfo2:: GetCodeInfo2 (](icorprofilerinfo2-getcodeinfo2-method.md) .  
@@ -37,6 +38,7 @@ HRESULT GetCodeInfo(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `functionId`  
  [in] Identificador de función con la que está asociado el código nativo.  
   
@@ -47,11 +49,13 @@ HRESULT GetCodeInfo(
  [out] Puntero a un entero que especifica el tamaño, en bytes, del código nativo.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Para optimizar el rendimiento, el tiempo de ejecución en la versión 2.0 de .NET Framework divide el código nativo precompilado de una función en varias regiones. Por consiguiente, el método `GetCodeInfo` está obsoleto en .NET Framework 2.0 porque no puede controlar la cantidad de código nativo de una función. Los generadores de perfiles deben usar en su lugar el método `ICorProfilerInfo2::GetCodeInfo2`, que es más general.  
   
  Esta función usa búferes asignados por el llamador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -60,7 +64,7 @@ HRESULT GetCodeInfo(
   
  **Versiones de .NET Framework:** 1,0  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

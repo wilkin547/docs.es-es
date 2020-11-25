@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b48fd47-7397-4e2c-8bec-8157aa08978c
 topic_type:
 - apiref
-ms.openlocfilehash: a2c2512abc28f0140fc261c5136c7e1255db96de
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f5495c170abf3e991a6e28016687f8ae77f0b423
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009221"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722029"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit (Interfaz)
+
 Proporciona métodos para crear, modificar y guardar metadatos acerca del ensamblado en el ámbito definido actualmente. Los metadatos se pueden almacenar en la memoria o guardar en el disco.  
   
 ## <a name="methods"></a>Métodos  
@@ -31,7 +32,7 @@ Proporciona métodos para crear, modificar y guardar metadatos acerca del ensamb
 |[Método ApplyEditAndContinue](imetadataemit-applyeditandcontinue-method.md)|Actualiza el ámbito del ensamblado actual con los cambios realizados en el especificado `pImport` .|  
 |[Método DefineCustomAttribute](imetadataemit-definecustomattribute-method.md)|Crea una definición para un atributo personalizado con la firma de metadatos especificada, que se va a adjuntar al objeto especificado y obtiene un token para esa definición de atributo personalizado.|  
 |[Método DefineEvent](imetadataemit-defineevent-method.md)|Crea una definición para un evento con la firma de metadatos especificada y obtiene un token para esa definición de evento.|  
-|[Método DefineField](imetadataemit-definefield-method.md)|Crea una definición para un campo con la firma de metadatos especificada y obtiene un token para esa definición de campo.|  
+|[DefineField (Método)](imetadataemit-definefield-method.md)|Crea una definición para un campo con la firma de metadatos especificada y obtiene un token para esa definición de campo.|  
 |[Método DefineImportMember](imetadataemit-defineimportmember-method.md)|Crea una definición para un miembro de un tipo que se define en un módulo fuera del ámbito actual y obtiene un token para esa definición de referencia.|  
 |[Método DefineImportType](imetadataemit-defineimporttype-method.md)|Crea una definición para una referencia a un tipo que se define en un módulo fuera del ámbito actual y obtiene un token para esa definición de referencia.|  
 |[Método DefineMemberRef](imetadataemit-definememberref-method.md)|Crea una definición para una referencia a un miembro de un módulo fuera del ámbito actual y obtiene un token para esa definición de referencia.|  
@@ -79,11 +80,12 @@ Proporciona métodos para crear, modificar y guardar metadatos acerca del ensamb
 |[Método TranslateSigWithScope](imetadataemit-translatesigwithscope-method.md)|Importa un ensamblado en el ámbito actual y obtiene una nueva firma de metadatos para el ámbito combinado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
