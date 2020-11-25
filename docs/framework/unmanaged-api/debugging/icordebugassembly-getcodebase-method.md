@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 48adc154-9058-4fef-9c43-e9aad80e4dbf
 topic_type:
 - apiref
-ms.openlocfilehash: b348f29884eb7d359c5dd6df27af49cd748477c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e01cbc5e01a2f32e834c54b60abb05de65cc112c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734067"
 ---
-# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="f7a9f-102">ICorDebugAssembly::GetCodeBase (Método)</span><span class="sxs-lookup"><span data-stu-id="f7a9f-102">ICorDebugAssembly::GetCodeBase Method</span></span>
-<span data-ttu-id="f7a9f-103">Este método no se implementa en la versión actual de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f7a9f-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugassemblygetcodebase-method"></a><span data-ttu-id="6d58e-102">ICorDebugAssembly::GetCodeBase (Método)</span><span class="sxs-lookup"><span data-stu-id="6d58e-102">ICorDebugAssembly::GetCodeBase Method</span></span>
+
+<span data-ttu-id="6d58e-103">Este método no está implementado en la versión actual del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6d58e-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7a9f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f7a9f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d58e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6d58e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCodeBase (  
