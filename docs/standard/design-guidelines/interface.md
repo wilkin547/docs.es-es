@@ -6,14 +6,15 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-ms.openlocfilehash: 9f8ff38d5825091d4d5d3716ed6025a8d04c592d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6f8cbb757ffb42f63903b212fee33cdcbba7ecb2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821013"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727684"
 ---
 # <a name="interface-design"></a>Diseño de interfaces
+
 Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay casos en los que las interfaces son más adecuadas o son la única opción.
 
  CLR no admite la herencia múltiple (es decir, las clases CLR no pueden heredar de más de una clase base), pero permite que los tipos implementen una o varias interfaces además de heredar de una clase base. Por lo tanto, las interfaces se usan a menudo para lograr el efecto de la herencia múltiple. Por ejemplo, <xref:System.IDisposable> es una interfaz que permite que los tipos admitan la eliminación independientemente de cualquier otra jerarquía de herencia en la que deseen participar.
@@ -46,7 +47,7 @@ Aunque la mayoría de las API se modelan mejor mediante clases y Structs, hay ca
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de tipos](type.md)
 - [Directrices de diseño de marco](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3bf15b0-3250-4bbe-b9b5-c5d695289b6f
 topic_type:
 - apiref
-ms.openlocfilehash: fdcfb0c4f9c21eb516f4196d0c8f682669468219
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6413935df86b85a959fa4f354c6233d18baf99d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615233"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727580"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument (Método)
+
 Define un documento de origen. Se proporcionan GUID para los lenguajes, proveedores y tipos de documento conocidos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT DefineDocument(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `url`  
  de Un puntero a `WCHAR` que define el localizador uniforme de recursos (URL) que identifica el documento.  
   
@@ -53,11 +55,13 @@ HRESULT DefineDocument(
  enuncia Puntero a la interfaz [ISymUnmanagedWriter](isymunmanagedwriter-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

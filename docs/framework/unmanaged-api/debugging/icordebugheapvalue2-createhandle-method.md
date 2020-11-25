@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: cbc056e9a3cc00178b32dee4011da4403dff508a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 278120c6e1bc87a061a3f81f71bdb7b89cd421be
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212781"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726566"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle (Método)
+
 Crea un identificador del tipo especificado para el valor del montón representado por este objeto Icordebugheapvalue2 (.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,18 +36,21 @@ HRESULT CreateHandle (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `type`  
  de Valor de la enumeración CorDebugHandleType (que especifica el tipo de controlador que se va a crear.  
   
  `ppHandle`  
  enuncia Puntero a la dirección de un objeto ICorDebugHandleValue que representa el nuevo identificador para este valor de montón.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El identificador se creará en el dominio de aplicación que está asociado con el valor del montón y dejará de ser válido si se descarga el dominio de aplicación.  
   
  Varias llamadas a esta función para el mismo valor de montón crearán varios identificadores. Dado que los identificadores afectan al rendimiento del recolector de elementos no utilizados, el depurador se debe limitar a un número relativamente pequeño de identificadores (aproximadamente 256) que están activos a la vez.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

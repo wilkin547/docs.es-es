@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-ms.openlocfilehash: 7550caaa7cb4d7ed77dc36ecf0ce0e0cbc541db7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 067e5093cc3b141936eeec43e77e6e1a9475a8a6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727125"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress (Método)
+
 Obtiene la dirección del campo estático de contexto especificado que está en el ámbito del contexto especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetContextStaticAddress(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `classId`  
  de IDENTIFICADOR de la clase que contiene el campo de contexto estático solicitado.  
   
@@ -49,6 +51,7 @@ HRESULT GetContextStaticAddress(
  enuncia Puntero a la dirección del campo estático que está dentro del contexto especificado.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `GetContextStaticAddress` método puede devolver uno de los siguientes:  
   
 - CORPROF_E_DATAINCOMPLETE HRESULT si no se ha asignado una dirección al campo estático dado en el contexto especificado.  
@@ -58,6 +61,7 @@ HRESULT GetContextStaticAddress(
  Antes de que se complete el constructor de clase de una clase, `GetContextStaticAddress` devolverá CORPROF_E_DATAINCOMPLETE de todos sus campos estáticos, aunque es posible que algunos de los campos estáticos ya estén inicializados y contengan objetos de recolección de elementos no utilizados de raíz.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -66,7 +70,7 @@ HRESULT GetContextStaticAddress(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

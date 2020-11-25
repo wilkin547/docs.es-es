@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-ms.openlocfilehash: 37659262695b63a6dd6390c62c4bb7e04fdadca4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5400350e1c489ec4c2ff3cddf83a4f1a8a0c7947
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726605"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO (Estructura)
+
 Proporciona información general sobre el montón de recolección de elementos no utilizados, incluido si es enumerable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,29 +37,31 @@ typedef struct _COR_HEAPINFO {
 } COR_HEAPINFO;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`si las estructuras de recolección de elementos no utilizados son válidas y se puede enumerar el montón; de `false`lo contrario, .|  
-|`pointerSize`|El tamaño, en bytes, de los punteros en la arquitectura de destino.|  
-|`numHeaps`|El número de montones lógicos de recolección de elementos no utilizados en el proceso.|  
-|`concurrent`|`TRUE`si la recolección simultánea (de fondo) de elementos no utilizados está habilitada; de `FALSE`lo contrario, .|  
-|`gcType`|Miembro de la [enumeración CorDebugGCType](cordebuggctype-enumeration.md) que indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.|  
+|`areGCStructuresValid`|`true` Si las estructuras de recolección de elementos no utilizados son válidas y se puede enumerar el montón; en caso contrario, `false` .|  
+|`pointerSize`|Tamaño, en bytes, de los punteros en la arquitectura de destino.|  
+|`numHeaps`|El número de montones de recolección de elementos no utilizados lógicas en el proceso.|  
+|`concurrent`|`TRUE` Si la recolección de elementos no utilizados simultánea (en segundo plano) está habilitada; en caso contrario, `FALSE` .|  
+|`gcType`|Miembro de la enumeración [cordebuggctype (](cordebuggctype-enumeration.md) que indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.|  
   
-## <a name="remarks"></a>Observaciones  
- Se devuelve `COR_HEAPINFO` una instancia de la estructura mediante una llamada a la [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) método.  
+## <a name="remarks"></a>Comentarios  
+
+ Se devuelve una instancia de la `COR_HEAPINFO` estructura llamando al método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Antes de enumerar objetos en el montón `areGCStructuresValid` de recolección de elementos no utilizados, siempre debe comprobar el campo para asegurarse de que el montón está en un estado enumerable. Para obtener más información, vea el [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) método.  
+ Antes de enumerar los objetos en el montón de recolección de elementos no utilizados, debe comprobar siempre el `areGCStructuresValid` campo para asegurarse de que el montón se encuentra en un estado Enumerable. Para obtener más información, vea el método [ICorDebugProcess5:: getgcheapinformation (](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

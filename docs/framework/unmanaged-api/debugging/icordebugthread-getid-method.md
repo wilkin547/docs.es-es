@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-ms.openlocfilehash: d01936481ec139757566d5b96cb95ea887cb8c20
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 85cfd7ba648f21721f1a9689843eac232489cb42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728022"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID (Método)
+
 Obtiene el identificador del sistema operativo actual de la parte activa de esta ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pdwThreadId`  
  enuncia Identificador del subproceso.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El identificador del sistema operativo puede cambiar durante la ejecución de un proceso y puede ser un valor diferente para distintas partes del subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-ms.openlocfilehash: efb3d913e1d8ef0c486d7e5e1d9777ae7d88bc71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54af02b48dabdf2042763954805f0d454323ac89
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726371"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT (Estructura)
+
 Proporciona información sobre un objeto del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,33 +35,35 @@ typedef struct _COR_HEAPOBJECT {
 } COR_HEAPOBJECT;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`address`|La dirección del objeto en la memoria.|  
-|`size`|El tamaño total del objeto, en bytes.|  
-|`type`|Un [token de COR_TYPEID](cor-typeid-structure.md) que representa el tipo del objeto.|  
+|`address`|Dirección del objeto en memoria.|  
+|`size`|Tamaño total del objeto, en bytes.|  
+|`type`|[COR_TYPEID](cor-typeid-structure.md) token que representa el tipo del objeto.|  
   
-## <a name="remarks"></a>Observaciones  
- `COR_HEAPOBJECT`Instancias se pueden recuperar mediante la enumeración de un [ICorDebugHeapEnum](icordebugheapenum-interface.md) objeto de interfaz que se rellena mediante una llamada a la [ICorDebugProcess5::EnumerateHeap](icordebugprocess5-enumerateheap-method.md) método.  
+## <a name="remarks"></a>Comentarios  
+
+ `COR_HEAPOBJECT` las instancias pueden recuperarse mediante la enumeración de un objeto de interfaz [icordebugheapenum (](icordebugheapenum-interface.md) que se rellena llamando al método [ICorDebugProcess5:: enumerateheap (](icordebugprocess5-enumerateheap-method.md) .  
   
- Una `COR_HEAPOBJECT` instancia proporciona información sobre un objeto activo en el montón administrado o sobre un objeto que no está rooteado por ningún objeto pero que aún no ha sido recopilado por el recolector de elementos no utilizados.  
+ Una `COR_HEAPOBJECT` instancia de proporciona información sobre un objeto activo en el montón administrado o sobre un objeto que no está raíz de ningún objeto pero que el recolector de elementos no utilizados aún no ha recopilado.  
   
- Para un mejor `COR_HEAPOBJECT.address` rendimiento, `CORDB_ADDRESS` el campo es un valor en lugar del valor de la interfaz ICorDebugValue utilizado en gran parte de la API de depuración. Para obtener un ICorDebugValue objeto para una dirección `CORDB_ADDRESS` de objeto determinada, puede pasar el valor a la [ICorDebugProcess5::GetObject](icordebugprocess5-getobject-method.md) método.  
+ Para mejorar el rendimiento, el `COR_HEAPOBJECT.address` campo es un `CORDB_ADDRESS` valor en lugar del valor de la interfaz ICorDebugValue usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugValue para una dirección de objeto determinada, puede pasar el `CORDB_ADDRESS` valor al método [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- Para un mejor `COR_HEAPOBJECT.type` rendimiento, `COR_TYPEID` el campo es un valor en lugar del valor de la interfaz ICorDebugType utilizado en gran parte de la API de depuración. Para obtener un ICorDebugType objeto para un identificador `COR_TYPEID` de tipo determinado, puede pasar el valor a la [ICorDebugProcess5::GetTypeForTypeID](icordebugprocess5-gettypefortypeid-method.md) método.  
+ Para mejorar el rendimiento, el `COR_HEAPOBJECT.type` campo es un `COR_TYPEID` valor en lugar del valor de la interfaz ICorDebugType usado en gran parte de la API de depuración. Para obtener un objeto ICorDebugType para un identificador de tipo determinado, puede pasar el `COR_TYPEID` valor al método [ICorDebugProcess5:: gettypefortypeid (](icordebugprocess5-gettypefortypeid-method.md) .  
   
- La `COR_HEAPOBJECT` estructura incluye una interfaz COM con recuento de referencias. Si recupera `COR_HEAPOBJECT` una instancia del enumerador mediante una llamada a la [ICorDebugHeapEnum::Next](icordebugheapenum-next-method.md) método, debe liberar posteriormente la referencia.  
+ La `COR_HEAPOBJECT` estructura incluye una interfaz com con recuento de referencias. Si recupera una `COR_HEAPOBJECT` instancia del enumerador mediante una llamada al método [icordebugheapenum (:: Next](icordebugheapenum-next-method.md) , debe liberar posteriormente la referencia.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

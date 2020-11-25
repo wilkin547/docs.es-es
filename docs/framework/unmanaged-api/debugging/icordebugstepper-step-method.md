@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-ms.openlocfilehash: 39d2fd0163b0e61295187461d5dbdf5742450306
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 234705e4495a1a582f3801ad1e645f923cd6f4b2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727697"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step (Método)
+
 Hace que este objeto ICorDebugStepper tenga un solo paso a través de su subproceso contenedor y, opcionalmente, continúe con el paso a través de las funciones a las que se llama en el subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT Step (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `bStepIn`  
  de Establezca en `true` para entrar en una función a la que se llama en el subproceso. Establezca en `false` para recorrer la función.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El paso se completa cuando el Common Language Runtime realiza la siguiente instrucción administrada en el marco de este stepper. Si `Step` se llama a en un stepper, que no está en el código administrado, el paso se completará cuando el subproceso ejecute la siguiente instrucción de código administrado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

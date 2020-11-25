@@ -6,17 +6,19 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dd6999e9f9e16264bde3cf62ce3a888841347607
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494051"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727476"
 ---
 # <a name="profiling-interfaces"></a>Interfaces para generación de perfiles
+
 En esta sección se describen las interfaces no administradas que permiten generar perfiles para un programa que se ejecuta en Common Language Runtime (CLR).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [ICLRProfiling (Interfaz)](iclrprofiling-interface.md)  
  Proporciona el método [AttachProfiler](iclrprofiling-attachprofiler-method.md) , que permite a un generador de perfiles asociarse a un proceso en ejecución.  
   
@@ -81,7 +83,7 @@ Proporciona un método de devolución de llamada que el Common Language Runtime 
  Proporciona métodos para iterar secuencialmente por una colección de módulos cargados por la aplicación o por el generador de perfiles.  
   
  [ICorProfilerObjectEnum (Interfaz)](icorprofilerobjectenum-interface.md)  
- Proporciona métodos para iterar secuencialmente por una colección de objetos inmovilizados generados por [Ngen. exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
+ Proporciona métodos para iterar secuencialmente por una colección de objetos inmovilizados generados por [Ngen.exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
  [ICorProfilerThreadEnum (Interfaz)](icorprofilerthreadenum-interface.md)  
  Proporciona métodos para iterar secuencialmente por una colección de subprocesos en CLR.  
@@ -90,7 +92,8 @@ Proporciona un método de devolución de llamada que el Common Language Runtime 
  Proporciona el método de [asignación](imethodmalloc-alloc-method.md) para asignar memoria para un nuevo cuerpo de la función del lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información general sobre generación de perfiles](profiling-overview.md)  
+
+ [Información general sobre la generación de perfiles](profiling-overview.md)  
   
  [Funciones estáticas globales para generación de perfiles](profiling-global-static-functions.md)  
   

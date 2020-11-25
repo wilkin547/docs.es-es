@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b22fbe19-b30f-4696-8175-e6b91da9edab
 topic_type:
 - apiref
-ms.openlocfilehash: f4f925282d65cd9cbc8eb1c8825f358602de68ed
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 554e59484f00626726f7f024c69e93a5e6647130
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441700"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727385"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder (Interfaz)
+
 Representa un enlazador de símbolos para código no administrado.  
   
 > [!IMPORTANT]
@@ -35,9 +36,10 @@ Representa un enlazador de símbolos para código no administrado.
 |[Método GetReaderFromStream](isymunmanagedbinder-getreaderfromstream-method.md)|Dada una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración del almacén de símbolos determinado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedBinder2 (Interfaz)](isymunmanagedbinder2-interface.md)

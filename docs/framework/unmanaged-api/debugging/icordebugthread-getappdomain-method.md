@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 415b3d34-8b35-4b60-a318-140646cc83f8
 topic_type:
 - apiref
-ms.openlocfilehash: 52efebf8a2786afaabe87b96b35a13c5fa1eb578
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 882176f381a7c5bc4a0297021b89a96948a1cea8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379778"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728074"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain (Método)
+
 Obtiene un puntero de interfaz al dominio de aplicación en el que se está ejecutando esta expresión ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetAppDomain (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppAppDomain`  
  enuncia Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que se está ejecutando actualmente este subproceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

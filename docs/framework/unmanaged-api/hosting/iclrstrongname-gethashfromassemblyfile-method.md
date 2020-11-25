@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b67ea03-d474-4605-acaa-57455790250c
 topic_type:
 - apiref
-ms.openlocfilehash: 007de0365bf70b1f4a9a9e0f01807e7fdac19f54
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0a15a4d237f63da54615ee1801e6cd39620e8274
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727866"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>ICLRStrongName::GetHashFromAssemblyFile (Método)
+
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT GetHashFromAssemblyFile (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szFilePath`  
  de Ruta de acceso al archivo al que se va a aplicar un algoritmo hash.  
   
@@ -54,18 +56,20 @@ HRESULT GetHashFromAssemblyFile (
  enuncia El tamaño devuelto, en bytes, de `pbHash` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `S_OK`Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
+
+ `S_OK` Si el método se completó correctamente; de lo contrario, un valor HRESULT que indica un error (vea [Valores HRESULT comunes](/windows/win32/seccrypto/common-hresult-values) para una lista).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Método GetHashFromAssemblyFileW](iclrstrongname-gethashfromassemblyfilew-method.md)
 - [ICLRStrongName (Interfaz)](iclrstrongname-interface.md)

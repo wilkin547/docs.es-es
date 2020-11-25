@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 10cc9dedfa34cd5235df721d7010bbd928fbc3ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547828"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727242"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot (Método)
+
 Recorre los marcos administrados de la pila para el subproceso especificado y envía información al generador de perfiles a través de una devolución de llamada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT DoStackSnapshot(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `thread`  
  de IDENTIFICADOR del subproceso de destino.  
   
@@ -65,6 +67,7 @@ HRESULT DoStackSnapshot(
  de Tamaño de la `CONTEXT` estructura, al que hace referencia el `context` parámetro.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si se pasa null para, se `thread` produce una instantánea del subproceso actual. Las instantáneas se pueden tomar de otros subprocesos solo si el subproceso de destino se suspende en el momento.  
   
  Cuando el generador de perfiles desea recorrer la pila, llama a `DoStackSnapshot` . Antes de que el CLR vuelva de esa llamada, llama a la `StackSnapshotCallback` varias veces, una vez por cada fotograma administrado (o la ejecución de marcos no administrados) en la pila. Cuando se encuentren fotogramas no administrados, debe recorrerlos usted mismo.  
@@ -76,11 +79,13 @@ HRESULT DoStackSnapshot(
  Un recorrido de pila puede ser sincrónico o asincrónico, como se explica en las secciones siguientes.  
   
 ## <a name="synchronous-stack-walk"></a>Recorrido de pila sincrónico  
+
  Un recorrido de pila sincrónico implica recorrer la pila del subproceso actual en respuesta a una devolución de llamada. No requiere propagación ni suspensión.  
   
  Realiza una llamada sincrónica cuando, en respuesta a CLR que llama a uno de los métodos [ICorProfilerCallback](icorprofilercallback-interface.md) (o [ICorProfilerCallback2](icorprofilercallback2-interface.md)) del generador de perfiles, llama `DoStackSnapshot` a para recorrer la pila del subproceso actual. Esto resulta útil cuando desea ver el aspecto de la pila en una notificación como [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md). Basta con llamar a `DoStackSnapshot` desde dentro del `ICorProfilerCallback` método, pasando null en `context` los `thread` parámetros y.  
   
 ## <a name="asynchronous-stack-walk"></a>Recorrido de pila asincrónico  
+
  Un recorrido de pila asincrónico conlleva el recorrido de la pila de un subproceso diferente o el recorrido de la pila del subproceso actual, no en respuesta a una devolución de llamada, pero mediante el secuestro del puntero de instrucción del subproceso actual. Un recorrido asincrónico requiere un inicialización si la parte superior de la pila es código no administrado que no forma parte de una invocación de plataforma (PInvoke) o una llamada COM, sino código auxiliar en el propio CLR. Por ejemplo, el código que realiza la compilación Just-in-Time (JIT) o la recolección de elementos no utilizados es código auxiliar.  
   
  Para obtener un SEED, se suspende directamente el subproceso de destino y se recorre su pila, hasta que encuentre el marco administrado de nivel superior. Una vez suspendido el subproceso de destino, obtenga el contexto de registro actual del subproceso de destino. A continuación, determine si el contexto de registro apunta a código no administrado llamando a [ICorProfilerInfo:: getfunctionfromip (](icorprofilerinfo-getfunctionfromip-method.md) ; si devuelve un `FunctionID` valor igual a cero, el marco es código no administrado. Ahora, recorra la pila hasta llegar al primer marco administrado y, a continuación, calcule el contexto de inicialización basándose en el contexto de registro para ese marco.  
@@ -98,6 +103,7 @@ HRESULT DoStackSnapshot(
  También hay un riesgo de interbloqueo si se llama a `DoStackSnapshot` desde un subproceso creado por el generador de perfiles para que pueda recorrer la pila de un subproceso de destino independiente. La primera vez que el subproceso creado entra `ICorProfilerInfo*` en determinados métodos (incluido `DoStackSnapshot` ), CLR realizará la inicialización específica de CLR por subproceso en ese subproceso. Si el generador de perfiles ha suspendido el subproceso de destino cuya pila está intentando recorrer y el subproceso de destino ha tenido que poseer un bloqueo necesario para realizar esta inicialización por subproceso, se producirá un interbloqueo. Para evitar este interbloqueo, realice una llamada inicial a `DoStackSnapshot` desde el subproceso creado por el generador de perfiles para recorrer un subproceso de destino independiente, pero no suspenda el subproceso de destino en primer lugar. Esta llamada inicial garantiza que la inicialización por subproceso se puede completar sin interbloqueo. Si se `DoStackSnapshot` realiza correctamente y notifica al menos un fotograma, después de ese punto, será seguro que el subproceso creado por el generador de perfiles suspenda cualquier subproceso de destino y llame `DoStackSnapshot` a para recorrer la pila de ese subproceso de destino.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -106,7 +112,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

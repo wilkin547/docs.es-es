@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-ms.openlocfilehash: c0bdd9e59f5794dbb0d447dc2cc6cb682bfdf09f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: a3a45a13073cf422064d28554a274e068db6f517
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008487"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727515"
 ---
 # <a name="lpoverlapped_completion_routine-function-pointer"></a>puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE
+
 Apunta a una función que notifica al host cuando se ha completado una e/s superpuesta (es decir, asincrónica) a un dispositivo.  
   
  Este puntero de función ha quedado en desuso en el .NET Framework 4.  
@@ -37,6 +38,7 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwErrorCode`  
  de Un valor que es un código de error si se ha cerrado el dispositivo; de lo contrario, este valor es cero.  
   
@@ -49,14 +51,16 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
  de Puntero a una estructura que contiene información que se va a usar para completar la solicitud de e/s.  
   
 ## <a name="remarks"></a>Comentarios  
+
  La función a la que `LPOVERLAPPED_COMPLETION_ROUTINE` apunta es una función de devolución de llamada y debe ser implementada por el escritor de la aplicación de hospedaje. La función de devolución de llamada permite al host procesar la solicitud de e/s completada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorWks. dll  
+ **Biblioteca:** MSCorWks.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 06f3b504-085f-4142-934a-25381fe23d4c
 topic_type:
 - apiref
-ms.openlocfilehash: 2a36c9808f29c038e3185157078c235959baf13c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 61544d0dfe876f35fdfbe5afa945fad0620c0eb5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132373"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726657"
 ---
 # <a name="cor_debug_il_to_native_map-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP (Estructura)
+
 Contiene los desplazamientos que se usan para asignar código de lenguaje intermedio de Microsoft (MSIL) a código nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,17 +44,18 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
 |`nativeEndOffset`|Desplazamiento del final del código nativo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl, Cordebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [GetILToNativeMapping (método)](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [GetILToNativeMapping (método)](icordebugcode-getiltonativemapping-method.md)
+- [GetILToNativeMapping (Método)](../profiling/icorprofilerinfo-getiltonativemapping-method.md)
+- [GetILToNativeMapping (Método)](icordebugcode-getiltonativemapping-method.md)
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

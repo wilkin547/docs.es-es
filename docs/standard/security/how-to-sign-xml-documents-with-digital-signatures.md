@@ -14,12 +14,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 3265417d806104f9c4de96cb98de2330d62d1e48
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2cb63fd91b1aeb51c762975103ea665e0d8539b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820168"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726683"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Procedimiento para firmar documentos XML con firmas digitales
 
@@ -95,6 +95,7 @@ Para obtener información sobre cómo comprobar una firma digital XML creada con
      [!code-vb[HowToSignXMLDocumentRSA#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#13)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En este ejemplo se supone que un archivo llamado `test.xml` se encuentra en el mismo directorio que el programa compilado.  Puede colocar el siguiente código XML en un archivo llamado `test.xml` y usarlo con este ejemplo.  
   
 ```xml  
@@ -123,7 +124,7 @@ Nunca almacene ni transfiera la clave privada de un par de claves asimétricas e
   
 No inserte nunca una clave privada directamente en el código fuente.  Las claves incrustadas se pueden leer fácilmente desde un ensamblado mediante el [Ildasm.exe (desensamblador de IL)](../../framework/tools/ildasm-exe-il-disassembler.md) o abriendo el ensamblado en un editor de texto como el Bloc de notas.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Modelo de criptografía](cryptography-model.md)
 - [servicios criptográficos](cryptographic-services.md)

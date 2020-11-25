@@ -3,12 +3,12 @@ title: Interfaz ICorProfilerInfo10
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7e483bae9b7898e25c376fa92d0449fc49c6f9ee
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a99fa8410bbd0dedeaeb9e1713107a3dcc9ada6b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727229"
 ---
 # <a name="icorprofilerinfo10-interface"></a>Interfaz ICorProfilerInfo10
 
@@ -26,10 +26,11 @@ Una subclase de [ICorProfilerInfo9](icorprofilerinfo9-interface.md) que proporci
 |[Método ResumeRuntime](icorprofilerinfo10-resumeruntime-method.md)| Reanuda el tiempo de ejecución sin realizar un GC. |
 
 ## <a name="requirements"></a>Requisitos  
+
 **Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).  
 **Encabezado:** CorProf.idl, CorProf.h  
 **Versiones de .net:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

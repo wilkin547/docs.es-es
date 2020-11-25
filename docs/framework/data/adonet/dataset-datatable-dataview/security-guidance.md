@@ -3,12 +3,12 @@ title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: e9973df02ff478eedc932099fb8be0526a97b899
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679460"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726072"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -18,7 +18,7 @@ Este artículo se aplica a:
 * .NET Core y versiones posteriores
 * .NET 5.0 y versiones posteriores
 
-Los tipos [DataSet](/dotnet/api/system.data.dataset) y [DataTable](/dotnet/api/system.data.datatable) son componentes de .net heredados que permiten representar conjuntos de datos como objetos administrados. Estos componentes se introdujeron en .NET 1,0 como parte de la [infraestructura de ADO.net](./index.md)original. Su objetivo era proporcionar una vista administrada a través de un conjunto de datos relacional, extraabstraendo si el origen subyacente de los datos era XML, SQL u otra tecnología.
+Los tipos [DataSet](/dotnet/api/system.data.dataset) y [DataTable](/dotnet/api/system.data.datatable) son componentes de .net heredados que permiten representar conjuntos de datos como objetos administrados. Estos componentes se introdujeron en .NET Framework 1,0 como parte de la [infraestructura de ADO.net](./index.md)original. Su objetivo era proporcionar una vista administrada a través de un conjunto de datos relacional, extraabstraendo si el origen subyacente de los datos era XML, SQL u otra tecnología.
 
 Para obtener más información sobre ADO.NET, incluidos los paradigmas más modernos de la vista de datos, vea [la documentación de ADO.net](../index.md).
 
@@ -34,13 +34,9 @@ En todas las versiones compatibles de .NET Framework, .NET Core y .NET, `DataSet
 
 Si los datos XML entrantes contienen un objeto cuyo tipo no está en esta lista:
 
-* Se produce una excepción con el siguiente mensaje y seguimiento de la pila.  
-Mensaje de error:  
-System. InvalidOperationException: type ' \<Type Name\> , version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' no se permite aquí. Vea [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obtener más detalles.  
-Seguimiento de la pila:  
-en System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter)  
-en System. Data. DataColumn. UpdateColumnType (tipo Type, StorageType typeCode)  
-en System. Data. DataColumn. set_DataType (tipo valor)  
+* Se produce una excepción con el siguiente mensaje y seguimiento de la pila.
+Mensaje de error: System. InvalidOperationException: type ' \<Type Name\> , version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' no se permite aquí. Vea [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obtener más detalles.
+Seguimiento de la pila: en System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter) en System. Data. DataColumn. UpdateColumnType (Type Type, StorageType typeCode) en System.Data.DataColumn.set_DataType (tipo Value)
 
 * Se produce un error en la operación de deserialización.
 
@@ -278,10 +274,10 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 * Un administrador debe configurar el registro.
 * El uso del registro es un cambio en todo el equipo y afectará a _todas las_ aplicaciones que se ejecutan en la máquina.
 
-| Tipo  |  Valor |
+| Tipo  |  Value |
 |---|---|
-| **Clave del registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
-| **Nombre de valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
+| **Clave del Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
+| **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
 | **Datos del valor** | `true` |
 
@@ -293,7 +289,7 @@ Para obtener más información sobre el uso del registro para configurar `AppCon
 
 ## <a name="safety-with-regard-to-untrusted-input"></a>Seguridad con respecto a la entrada que no es de confianza
 
-While `DataSet` y `DataTable` imponen limitaciones predeterminadas en los tipos que se pueden encontrar durante la deserialización de cargas XML __ `DataSet` y `DataTable` no suelen ser seguras cuando se rellenan con una entrada que no es de confianza.__ A continuación se muestra una lista no exhaustiva de formas en que `DataSet` una `DataTable` instancia de o podría leer una entrada que no es de confianza.
+While `DataSet` y `DataTable` imponen limitaciones predeterminadas en los tipos que se pueden encontrar durante la deserialización de cargas XML __`DataSet` y `DataTable` no suelen ser seguras cuando se rellenan con una entrada que no es de confianza.__ A continuación se muestra una lista no exhaustiva de formas en que `DataSet` una `DataTable` instancia de o podría leer una entrada que no es de confianza.
 
 * Un `DataAdapter` hace referencia a una base de datos de y el `DataAdapter.Fill` método se utiliza para rellenar `DataSet` con el contenido de una consulta de base de datos.
 * El `DataSet.ReadXml` `DataTable.ReadXml` método o se utiliza para leer un archivo XML que contiene información de columnas y filas.
@@ -479,9 +475,9 @@ La deserialización de un `DataSet` `DataTable` objeto o de este modo desde un B
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserializar un conjunto de DataSet o DataTable a través de BinaryFormatter
 
-Los desarrolladores nunca deben usar `BinaryFormatter` , `NetDataContractSerializer` , `SoapFormatter` o formateadores ***no seguros*** relacionados para deserializar una `DataSet` `DataTable` instancia de o de una carga que no sea de confianza:
+Los desarrolladores nunca deben usar `BinaryFormatter` , `NetDataContractSerializer` , o los `SoapFormatter` formateadores ***Unsafe** _ relacionados para deserializar `DataSet` una `DataTable` instancia de o de una carga que no sea de confianza:
 
-* Esto es susceptible a un ataque de ejecución de código remoto completo.
+_ Esto es susceptible a un ataque de ejecución de código remoto completo.
 * El uso de un personalizado `SerializationBinder` no es suficiente para evitar este tipo de ataque.
 
 ## <a name="safe-replacements"></a>Reemplazos seguros

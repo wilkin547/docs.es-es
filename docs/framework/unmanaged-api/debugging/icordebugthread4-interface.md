@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6f3e109f92ad44eeeb1b1dec05e53015992a6
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 5c108420772be9e6d0932f3759f18da9446f99d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378360"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727944"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 (Interfaz)
+
 Proporciona información de bloqueo de subprocesos.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,13 +33,15 @@ Proporciona información de bloqueo de subprocesos.
 |[Método HadUnhandledException](icordebugthread4-hadunhandledexception-method.md)|Indica si el subproceso ha tenido alguna vez una excepción no controlada.|  
 |[Método GetCurrentCustomDebuggerNotification](icordebugthread4-getcurrentcustomdebuggernotification-method.md)|Obtiene el objeto [ICorDebugManagedCallback3 (:: customnotification (](icordebugmanagedcallback3-customnotification-method.md) actual en el subproceso actual.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta interfaz es una extensión lógica de las interfaces ICorDebugThread, ICorDebugThread2 y [ICorDebugThread3](icordebugthread3-interface.md) .  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

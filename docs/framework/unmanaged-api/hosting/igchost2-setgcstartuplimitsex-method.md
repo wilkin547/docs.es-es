@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: bba941c2-1c57-46d3-bbf5-5fb92700c490
 topic_type:
 - apiref
-ms.openlocfilehash: ca9566168b8aae361af8d61539066624697a2d04
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 4dca62903a123765ceb8bb251b79455ad0e4730a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805156"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726813"
 ---
 # <a name="igchost2setgcstartuplimitsex-method"></a>IGCHost2::SetGCStartupLimitsEx (Método)
+
 Establece el tamaño del segmento y el tamaño máximo de la generación 0.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,21 +36,24 @@ HRESULT SetGCStartupLimitsEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `SegmentSize`  
  de Tamaño del segmento utilizado por el sistema de recolección de elementos no utilizados.  
   
  `MaxGen0Size`  
  de Tamaño máximo de la generación 0.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Los valores que `SetGCStartupLimitsEx` establece se pueden especificar solo antes de que se inicie el host. Estos valores no se pueden cambiar más adelante.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** GCHost. idl, GCHost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

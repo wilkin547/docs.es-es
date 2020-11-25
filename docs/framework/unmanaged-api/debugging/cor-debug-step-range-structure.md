@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8809d00e-beaa-4dcf-b4e8-e89d0a5406b7
 topic_type:
 - apiref
-ms.openlocfilehash: 206e4fb232f4786a76525d24aa379b25d6d2f71d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd85ba2e6a907ff9546614e02b4da5f45e74b924
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099346"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726644"
 ---
 # <a name="cor_debug_step_range-structure"></a>COR_DEBUG_STEP_RANGE (Estructura)
+
 Contiene información de desplazamiento para un intervalo de código.  
   
  Esta estructura la usa el método [ICorDebugStepper:: steprange (](icordebugstepper-steprange-method.md) .  
@@ -43,16 +44,17 @@ typedef struct {
 |`endOffset`|Desplazamiento del final del intervalo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StepRange (método)](icordebugstepper-steprange-method.md)
+- [Método StepRange](icordebugstepper-steprange-method.md)
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

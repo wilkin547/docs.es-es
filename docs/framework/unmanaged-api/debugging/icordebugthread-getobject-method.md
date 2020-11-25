@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-ms.openlocfilehash: 624469ca1ae4c96b4143f8768b4c5ff9c2601a2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2c13ead228296525b57245be8b3bdbcdf38ae173
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378880"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728009"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject (Método)
+
 Obtiene un puntero de interfaz al subproceso de Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetObject (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppObject`  
  enuncia Puntero a la dirección de un objeto de interfaz ICorDebugValue que representa el subproceso de CLR.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

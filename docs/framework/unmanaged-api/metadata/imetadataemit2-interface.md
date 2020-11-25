@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 866dc96b-bbfc-4c0f-80c2-38ce93072106
 topic_type:
 - apiref
-ms.openlocfilehash: 5a232f30da8812c6f3bd94647d74151312a8593b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b8ad159dace734c343297b256092162f17ab829b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493050"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726488"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2 (Interfaz)
+
 Extiende la interfaz [IMetaDataEmit](imetadataemit-interface.md) principalmente para proporcionar la capacidad de trabajar con tipos genéricos.  
   
 ## <a name="methods"></a>Métodos  
@@ -38,15 +39,16 @@ Extiende la interfaz [IMetaDataEmit](imetadataemit-interface.md) principalmente 
 |[Método SetGenericParamProps](imetadataemit2-setgenericparamprops-method.md)|Establece los valores de propiedad para la definición de parámetro genérico a la que hace referencia el token especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de metadatos](metadata-interfaces.md)
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

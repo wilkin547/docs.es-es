@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: f6155eb777b5071ff522af4f27d5fb2d73aa25ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c5a43f6c277f582f9f14cefe5bfba6f5300c09d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727359"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 (Interfaz)
+
 Representa un enlazador de símbolos para código no administrado y extiende la interfaz [ISymUnmanagedBinder](isymunmanagedbinder-interface.md) .  
   
 > [!IMPORTANT]
@@ -34,9 +35,10 @@ Representa un enlazador de símbolos para código no administrado y extiende la 
 |[Método GetReaderForFile2](isymunmanagedbinder2-getreaderforfile2-method.md)|Dada una interfaz de metadatos y un nombre de archivo, devuelve la interfaz [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración asociados al módulo. Proporciona una búsqueda más extensa que el método [ISymUnmanagedBinder:: GetReaderForFile (](isymunmanagedbinder-getreaderforfile-method.md) .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedBinder (Interfaz)](isymunmanagedbinder-interface.md)

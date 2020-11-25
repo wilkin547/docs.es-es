@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9a26547a-9a34-4284-a463-78a7d4b496cf
 topic_type:
 - apiref
-ms.openlocfilehash: 5dbb5dc483bc5a08c59606654d55b5a62266e509
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 13d71a9da2539c45076e5eb92e153e37c1df4b47
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727918"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName (Método)
+
 Obtiene el nombre legible del ensamblado al que hace referencia este objeto [IAssemblyName](iassemblyname-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetDisplayName (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szDisplayName`  
  enuncia Búfer de cadena que contiene el nombre del ensamblado al que se hace referencia.  
   
@@ -43,16 +45,17 @@ HRESULT GetDisplayName (
  [in, out] Tamaño de `szDisplayName` en caracteres anchos, incluido un carácter de terminador nulo.  
   
  `dwDisplayFlags`  
- de Combinación bit a bit de los valores de [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) que influyen en las características de `szDisplayName`.  
+ de Combinación bit a bit de valores de [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) que influyen en las características de `szDisplayName` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)

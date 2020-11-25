@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 163816e7-0739-4566-b3df-cd256be8b8a4
 topic_type:
 - apiref
-ms.openlocfilehash: 76dfc10b9d9069f6d53cd292f241ae3080c6443a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d3697bd8a3f32c802ab2e335f89c84efaf3e4db0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379809"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727996"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess (Método)
+
 Obtiene un puntero de interfaz al proceso del que esta expresión forma una parte.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetProcess (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppProcess`  
  enuncia Puntero a la dirección de un objeto de interfaz ICorDebugProcess que representa el proceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

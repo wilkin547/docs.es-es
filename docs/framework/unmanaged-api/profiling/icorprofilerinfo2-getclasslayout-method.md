@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: ac35b18ce8c45c95bb2fb8e820423470ca1b75bf
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a2bac05e7471a0df8d624bf5dfbe2aa58c25cf4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497158"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727177"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout (Método)
+
 Obtiene información sobre la distribución, en memoria, de los campos definidos por la clase especificada. Es decir, este método obtiene los desplazamientos de los campos de la clase.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetClassLayout(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `classID`  
  [in] Identificador de la clase para la cual se recuperará la distribución.  
   
@@ -53,6 +55,7 @@ HRESULT GetClassLayout(
  [out] Puntero a una ubicación que contiene el tamaño, en bytes, de la clase.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El método `GetClassLayout` solo devuelve los campos definidos por la propia clase. Si la clase primaria de la clase también tiene campos definidos, el generador de perfiles debe llamar a `GetClassLayout` en la clase primaria para obtener dichos campos.  
   
  Si usa `GetClassLayout` con clases de cadena, el método producirá un error con el código E_INVALIDARG. Use [ICorProfilerInfo2:: GetStringLayout (](icorprofilerinfo2-getstringlayout-method.md) para obtener información sobre el diseño de una cadena. `GetClassLayout` también producirá un error cuando se le llama con una clase de matriz.  
@@ -62,6 +65,7 @@ HRESULT GetClassLayout(
  También tiene la opción de llamar primero a `GetClassLayout` con un búfer `rFieldOffset` de longitud de cero para obtener el tamaño de búfer correcto. Después, puede establecer el tamaño del búfer en el valor devuelto en `pcFieldOffset` y volver a llamar a `GetClassLayout`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -70,7 +74,7 @@ HRESULT GetClassLayout(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

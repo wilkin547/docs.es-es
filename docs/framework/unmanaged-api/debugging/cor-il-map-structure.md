@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-ms.openlocfilehash: 4c79d0e4e37f3f884651e49c8fff6db72fac4f50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb6b5d43e60b52c867535c42d59a098ef3c959bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179292"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726392"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP (Estructura)
+
 Especifica los cambios en el desplazamiento relativo de una función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,59 +35,61 @@ typedef struct _COR_IL_MAP {
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`oldOffset`|El antiguo desplazamiento del lenguaje intermedio de Microsoft (MSIL) en relación con el principio de la función.|  
-|`newOffset`|El nuevo desplazamiento MSIL en relación con el principio de la función.|  
-|`fAccurate`|`true`si se sabe que la asignación es precisa; de `false`lo contrario, .|  
+|`oldOffset`|El desplazamiento anterior del lenguaje intermedio de Microsoft (MSIL) con respecto al principio de la función.|  
+|`newOffset`|Nuevo desplazamiento de MSIL relativo al principio de la función.|  
+|`fAccurate`|`true` Si se sabe que la asignación es precisa; en caso contrario, `false` .|  
   
-## <a name="remarks"></a>Observaciones  
- El formato de la asignación es el `oldOffset` siguiente: el depurador asumirá que hace referencia a un desplazamiento MSIL dentro del código MSIL original sin modificar. El `newOffset` parámetro hace referencia al desplazamiento MSIL correspondiente dentro del nuevo código instrumentado.  
+## <a name="remarks"></a>Comentarios  
+
+ El formato del mapa es el siguiente: el depurador asumirá que `oldOffset` hace referencia a un desplazamiento de MSIL en el código MSIL original y sin modificar. El `newOffset` parámetro hace referencia al desplazamiento de MSIL correspondiente en el nuevo código instrumentado.  
   
- Para que el paso a paso funcione correctamente, se deben cumplir los siguientes requisitos:  
+ Para que funcione correctamente, deben cumplirse los siguientes requisitos:  
   
-- El mapa debe ordenarse en orden ascendente.  
+- El mapa se debe ordenar en orden ascendente.  
   
-- El código MSIL instrumentado no se debe reordenar.  
+- No se debe reordenar el código MSIL instrumentado.  
   
-- No se debe quitar el código MSIL original.  
+- El código MSIL original no se debe quitar.  
   
-- El mapa debe incluir entradas para asignar todos los puntos de secuencia del archivo de base de datos de programa (PDB).  
+- La asignación debe incluir entradas para asignar todos los puntos de secuencia del archivo de base de datos de programa (PDB).  
   
- El mapa no interpola las entradas que faltan. En el ejemplo siguiente se muestra un mapa y sus resultados.  
+ La asignación no interpola las entradas que faltan. En el ejemplo siguiente se muestra una asignación y sus resultados.  
   
- Mapa:  
+ Conectarse  
   
-- 0 desplazamiento antiguo, 0 nuevo desplazamiento  
+- 0 desplazamiento anterior, 0 nuevo desplazamiento  
   
-- 5 desplazamiento antiguo, 10 nuevo desplazamiento  
+- 5 desplazamiento anterior, 10 nuevo desplazamiento  
   
-- 9 decompensación antigua, 20 nuevos desplazamientos  
+- 9 desplazamiento anterior, 20 nuevo desplazamiento  
   
  Resultados:  
   
-- Un desplazamiento antiguo de 0, 1, 2, 3 o 4 se asignará a un nuevo desplazamiento de 0.  
+- Un desplazamiento anterior de 0, 1, 2, 3 o 4 se asignará a un nuevo desplazamiento de 0.  
   
-- Un desplazamiento antiguo de 5, 6, 7 u 8 se asignará al nuevo desplazamiento 10.  
+- Un desplazamiento anterior de 5, 6, 7 u 8 se asignará al nuevo desplazamiento 10.  
   
-- Un desplazamiento antiguo de 9 o superior se asignará al nuevo desplazamiento 20.  
+- Un desplazamiento anterior de 9 o superior se asignará al nuevo desplazamiento 20.  
   
-- Un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 se asignará al desplazamiento antiguo 0.  
+- Un nuevo desplazamiento de 0, 1, 2, 3, 4, 5, 6, 7, 8 o 9 se asignará al desplazamiento anterior 0.  
   
-- Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al desplazamiento antiguo 5.  
+- Un nuevo desplazamiento de 10, 11, 12, 13, 14, 15, 16, 17, 18 o 19 se asignará al anterior desplazamiento 5.  
   
-- Un nuevo desplazamiento de 20 o superior se asignará al desplazamiento anterior 9.  
+- Un nuevo desplazamiento de 20 o superior se asignará al anterior desplazamiento 9.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** CorDebug.idl, CorProf.idl  
+ **Encabezado:** Cordebug. idl, Corprof. idl  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

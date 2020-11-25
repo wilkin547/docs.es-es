@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: f2a85bafc3e2f25b2ed6116a46a9938d869dbaae
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007473"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726085"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope (Método)
+
 Abre un archivo en disco existente y asigna sus metadatos a la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT OpenScope (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szScope`  
  de Nombre del archivo que se va a abrir. El archivo debe contener metadatos de Common Language Runtime (CLR).  
   
@@ -52,6 +54,7 @@ HRESULT OpenScope (
  enuncia Puntero a la interfaz devuelta.  
   
 ## <a name="remarks"></a>Comentarios  
+
  La copia en memoria de los metadatos se puede consultar utilizando métodos de una de las interfaces de "importación" o se pueden agregar al uso de métodos de una de las interfaces de "emisión".  
   
  Si el archivo de destino no contiene metadatos de CLR, `OpenScope` se producirá un error en el método.  
@@ -61,11 +64,12 @@ HRESULT OpenScope (
  En la versión 2,0 de .NET Framework, los ámbitos abiertos con `dwOpenFlags` establecido en he leído ya no se comparten. Use el valor ofReadOnly para permitir que se comparta el ámbito. Cuando se comparte un ámbito, se producirá un error en las consultas que usan interfaces de metadatos de "lectura/escritura".  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

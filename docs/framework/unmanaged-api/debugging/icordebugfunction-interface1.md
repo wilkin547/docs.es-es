@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 6b7b6969c1f207decbf47217e98b7fee3aa9ce54
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213249"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726306"
 ---
 # <a name="icordebugfunction-interface"></a>Interfaz ICorDebugFunction
 
@@ -38,7 +38,8 @@ Representa una función o un método administrado.
 |[Método GetNativeCode](icordebugfunction-getnativecode-method.md)|Obtiene el código nativo de esta función.|  
 |[GetToken (Método)](icordebugfunction-gettoken-method.md)|Obtiene el símbolo (token) de metadatos de esta función.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La `ICorDebugFunction` interfaz no representa una función con parámetros de tipo genérico. Por ejemplo, una `ICorDebugFunction` instancia de representaría `Func<T>` pero no `Func<string>` . Llame a [ICorDebugILFrame2:: EnumerateTypeParameters (](icordebugilframe2-enumeratetypeparameters-method.md) para obtener los parámetros de tipo genérico.  
   
  La relación entre el token de metadatos de un método, `mdMethodDef` , y el objeto de un método `ICorDebugFunction` depende de si se permite editar y continuar en la función:  
@@ -51,6 +52,7 @@ Representa una función o un método administrado.
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

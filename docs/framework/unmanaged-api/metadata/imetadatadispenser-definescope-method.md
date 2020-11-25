@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87a39350986cb7bb62f76b0d9a6a9aae8f82e2f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501370"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726098"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope (Método)
+
 Crea un nuevo área en la memoria en la que se pueden crear nuevos metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT DefineScope (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `rclsid`  
  de CLSID de la versión de las estructuras de metadatos que se van a crear. Este valor se debe CLSID_CorMetaDataRuntime para la versión de .NET Framework 2,0.  
   
@@ -52,20 +54,22 @@ HRESULT DefineScope (
  enuncia Puntero a la interfaz devuelta.  
   
 ## <a name="remarks"></a>Comentarios  
- `DefineScope`crea un conjunto de tablas de metadatos en memoria, genera un GUID único (identificador de versión de módulo o MVID) para los metadatos y crea una entrada en la tabla de módulos para la unidad de compilación que se emite.  
+
+ `DefineScope` crea un conjunto de tablas de metadatos en memoria, genera un GUID único (identificador de versión de módulo o MVID) para los metadatos y crea una entrada en la tabla de módulos para la unidad de compilación que se emite.  
   
  Puede adjuntar atributos al ámbito de metadatos en su totalidad mediante el método [IMetaDataEmit:: SetModuleProps (](imetadataemit-setmoduleprops-method.md) o [IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md) , según corresponda.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataforma:** Consulte [requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataDispenser (Interfaz)](imetadatadispenser-interface.md)
 - [IMetaDataDispenserEx (Interfaz)](imetadatadispenserex-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e986986-2223-4d5f-b040-85d716146924
 topic_type:
 - apiref
-ms.openlocfilehash: 200e68abb3f176c267045bf2a5e7e35d18400519
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7c4589c3371d2c66279684a365cde102bef58c6e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610098"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727593"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant (Método)
+
 Define un nombre para un valor constante.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT DefineConstant(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `name`  
  de Puntero a `WCHAR` que define el nombre de la constante.  
   
@@ -49,12 +51,14 @@ HRESULT DefineConstant(
  de Firma de tipo de la constante.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
 - [Método DefineConstant2](isymunmanagedwriter2-defineconstant2-method.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: eedf1ef0-9d4a-4847-a201-4e99572dfe5e
 topic_type:
 - apiref
-ms.openlocfilehash: b48d131fa99b65d38856d2b635bf59145db9157e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f9da3ca8684da3bbc87146b3b52effdc4f91393d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615246"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726891"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName (Método)
+
 Obtiene el nombre de esta variable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchName`  
  de Longitud del búfer al que apunta el `pcchName` parámetro.  
   
@@ -46,11 +48,13 @@ HRESULT GetName(
  enuncia Búfer que almacena el nombre.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)

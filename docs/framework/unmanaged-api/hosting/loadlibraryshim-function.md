@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 4b270c36bdbea9c8d81915eba424cae1054ce7d7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d5e9ba0023b6516eb6190f32bc65b2b8b6af79f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008539"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727567"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim (Función)
+
 Carga una versión especificada de una DLL incluida en el paquete redistribuible de .NET Framework.  
   
  Esta función está en desuso en el .NET Framework 4. Use en su lugar el método [ICLRRuntimeInfo:: LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) .  
@@ -39,6 +40,7 @@ HRESULT LoadLibraryShim (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szDllName`  
  de Cadena terminada en cero que representa el nombre del archivo DLL que se va a cargar desde la biblioteca de .NET Framework.  
   
@@ -46,26 +48,29 @@ HRESULT LoadLibraryShim (
  de Cadena terminada en cero que representa la versión de la DLL que se va a cargar. Si `szVersion` es null, la versión seleccionada para cargar es la versión más reciente del archivo dll especificado que es anterior a la versión 4. Es decir, todas las versiones iguales o posteriores a la versión 4 se omiten si `szVersion` es null, y si no hay instalada ninguna versión anterior a la versión 4, la dll no se carga. Esto se hace para asegurarse de que la instalación de .NET Framework 4 no afecte a las aplicaciones o componentes preexistentes. Vea la entrada [en proceso SxS y inicio rápido de migración](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/) en el blog del equipo de CLR.  
   
  `pvReserved`  
- Reservado para uso futuro.  
+ Reservado para un uso futuro.  
   
  `phModDll`  
  enuncia Puntero al identificador del módulo.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los valores siguientes.  
   
-|Código de retorno|Descripción|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |CLR_E_SHIM_RUNTIMELOAD|`szDllName`La carga requiere cargar el Common Language Runtime (CLR) y no se puede cargar la versión necesaria de CLR.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Esta función se usa para cargar los archivos DLL que se incluyen en el paquete redistribuible de .NET Framework. No carga los archivos dll generados por el usuario.  
   
 > [!NOTE]
-> A partir de la versión .NET Framework 2,0, la carga de Fusion. dll hace que se cargue el CLR. Esto se debe a que las funciones de Fusion. dll son ahora contenedores cuyas implementaciones son proporcionadas por el tiempo de ejecución.  
+> A partir de la versión .NET Framework 2,0, la carga de Fusion.dll hace que se cargue el CLR. Esto se debe a que las funciones de Fusion.dll son ahora contenedores cuyas implementaciones son proporcionadas por el tiempo de ejecución.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  

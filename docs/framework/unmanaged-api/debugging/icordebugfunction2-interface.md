@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: 611091d39da6d7f646457457f20ce1eaf37db361
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213210"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726280"
 ---
 # <a name="icordebugfunction2-interface"></a>Interfaz ICorDebugFunction2
 
@@ -34,12 +34,13 @@ Extiende lógicamente la interfaz ICorDebugFunction para proporcionar compatibil
 |[GetVersionNumber (Método)](icordebugfunction2-getversionnumber-method.md)|Obtiene la versión de edición y continuación de esta función.|  
 |[SetJMCStatus (Método)](icordebugfunction2-setjmcstatus-method.md)|Marca esta función para Solo mi código la ejecución paso a paso.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

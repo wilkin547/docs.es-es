@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37527a84-4b03-4f08-8135-94d898599089
 topic_type:
 - apiref
-ms.openlocfilehash: 5a26de2a8f5439b7c81560927c991d449e57b76c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0cb0b91f2dca8203c37599400b3b61f84eb7d282
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441596"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727320"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>ISymUnmanagedBinder3 (Interfaz)
+
 Extiende la interfaz de enlazador de símbolos. Obtenga esta interfaz llamando a `QueryInterface` en un objeto que implementa la `ISymUnmanagedBinder` interfaz.  
   
 > [!IMPORTANT]
@@ -34,9 +35,10 @@ Extiende la interfaz de enlazador de símbolos. Obtenga esta interfaz llamando a
 |[Método GetReaderFromCallback](isymunmanagedbinder3-getreaderfromcallback-method.md)|Permite al usuario implementar o proporcionar a través `IID_IDiaReadExeAtRVACallback` `IID_IDiaReadExeAtOffsetCallback` de la devolución de llamada o para obtener la información del directorio de depuración de la memoria.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedBinder (Interfaz)](isymunmanagedbinder-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d6d3a1a-fef6-4f2f-a22c-3bdd30d70e07
 topic_type:
 - apiref
-ms.openlocfilehash: 843c6df1ef41fdd3227b92275182432ad4cc43b1
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 6ca4c1ad5ef575db075a5066146bacb6d1e59ea2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379725"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728087"
 ---
 # <a name="icordebugthreadgetactiveframe-method"></a>ICorDebugThread::GetActiveFrame (Método)
+
 Obtiene un puntero de interfaz al marco activo (más reciente) en este objeto ICorDebugThread.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT GetActiveFrame (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppFrame`  
  enuncia Puntero a la dirección de un objeto de interfaz ICorDebugFrame que representa un marco.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `ppFrame` parámetro es NULL si no hay ningún marco activo actualmente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

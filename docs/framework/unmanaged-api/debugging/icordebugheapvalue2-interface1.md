@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: bf9b0b7a9bcd09d6e4b3a2cecac1f1b1e711b6bb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c959856e8c019f95d38cac9bc4d8d03bc31ef195
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213782"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726553"
 ---
 # <a name="icordebugheapvalue2-interface"></a>Interfaz ICorDebugHeapValue2
 
@@ -31,12 +31,13 @@ Extensión de ICorDebugHeapValue que proporciona compatibilidad con los identifi
 |------------|-----------------|  
 |[Método CreateHandle](icordebugheapvalue2-createhandle-method.md)|Crea un identificador del tipo especificado para este `ICorDebugHeapValue2` objeto.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

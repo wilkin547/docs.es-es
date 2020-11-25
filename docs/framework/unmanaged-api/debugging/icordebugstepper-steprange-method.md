@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9776112-6e6d-4708-892a-8873db02e16f
 topic_type:
 - apiref
-ms.openlocfilehash: b040d9454a5a3a0d550bb645953c783357419f73
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9698afa2723a5d772ecf5a055f09c5ee3bc13f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379492"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727658"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange (Método)
+
 Hace que este objeto ICorDebugStepper tenga un solo paso a través de su subproceso contenedor y que devuelva cuando llegue al código que se encuentra más allá del último de los intervalos especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT StepRange (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `bStepIn`  
  de Establezca en `true` para entrar en una función a la que se llama en el subproceso. Establezca en `false` para recorrer la función.  
   
@@ -45,7 +47,8 @@ HRESULT StepRange (
  `cRangeCount`  
  [in] Tamaño de la matriz `ranges`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `StepRange` método funciona como el método [ICorDebugStepper:: Step](icordebugstepper-step-method.md) , con la salvedad de que no se completa hasta que se alcanza el código fuera del intervalo especificado.  
   
  Esto puede ser más eficaz que ejecutar una instrucción cada vez. Los intervalos se especifican como una lista de pares de desplazamiento desde el inicio del marco del stepper.  
@@ -53,6 +56,7 @@ HRESULT StepRange (
  Los intervalos son relativos al código del lenguaje intermedio de Microsoft (MSIL) de un método. Llame a [ICorDebugStepper:: SetRangeIL (](icordebugstepper-setrangeil-method.md) con `false` para que los intervalos sean relativos al código nativo de un método.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

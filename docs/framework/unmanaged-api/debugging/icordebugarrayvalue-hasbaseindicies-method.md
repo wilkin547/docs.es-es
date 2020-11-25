@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa26df07-e0a6-4608-bdef-d4afafec89aa
 topic_type:
 - apiref
-ms.openlocfilehash: e6e8eb91bbc41faf0dcea010da9aa54995058653
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a9d1faf5a834cb5d9be19f995aaa3eee1202171b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727450"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>ICorDebugArrayValue::HasBaseIndicies (Método)
+
 Obtiene un valor que indica si alguna dimensión de esta matriz tiene un índice base distinto de cero.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT HasBaseIndicies (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pbHasBaseIndicies`  
- enuncia Un puntero a un valor booleano que es `true` si una o más dimensiones de este `ICorDebugArrayValue` objeto tienen un índice base distinto de cero; de lo contrario, el valor `false`booleano es.  
+ enuncia Un puntero a un valor booleano que es `true` si una o más dimensiones de este `ICorDebugArrayValue` objeto tienen un índice base distinto de cero; de lo contrario, el valor booleano es `false` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

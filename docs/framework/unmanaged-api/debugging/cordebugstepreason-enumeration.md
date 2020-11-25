@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 50903b3737c0fc63eda2b1190e4c3d961ce3ae7b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726046"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason (Enumeración)
+
 Indica el resultado de un paso individual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,9 +39,9 @@ typedef enum CorDebugStepReason {
 } CorDebugStepReason;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`STEP_NORMAL`|La ejecución paso a paso se completó normalmente, dentro de la misma función.|  
 |`STEP_RETURN`|La ejecución continuará normalmente, después de que se devuelva la función.|  
@@ -51,6 +52,7 @@ typedef enum CorDebugStepReason {
 |`STEP_EXIT`|El subproceso se cerró antes de que se completara el paso.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -59,7 +61,7 @@ typedef enum CorDebugStepReason {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Método StepComplete](icordebugmanagedcallback-stepcomplete-method.md)
 - [Enumeraciones de depuración](debugging-enumerations.md)

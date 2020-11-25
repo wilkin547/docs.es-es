@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 923e9b0821788143fff59eafe10d1802583df7a6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 21bf0122039a720ff8a1d38d62e77c2560dcc435
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210428"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726540"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList (Método)
+
 Proporciona una lista ordenada de subprocesos que se ponen en cola en el evento que está asociado a un bloqueo de monitor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetMonitorEventWaitList (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppThreadEnum`  
  enuncia El enumerador ICorDebugThreadEnum (que proporciona la lista ordenada de subprocesos.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -47,7 +50,8 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  El primer subproceso de la lista es el primer subproceso publicado por la siguiente llamada a <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType> . El siguiente subproceso de la lista se libera en la llamada siguiente, y así sucesivamente.  
   
  Si la lista no está vacía, este método devuelve S_OK. Si la lista está vacía, el método devuelve S_FALSE; en este caso, la enumeración sigue siendo válida, aunque está vacía.  
@@ -59,6 +63,7 @@ HRESULT GetMonitorEventWaitList (
  Si se produce un error de modo que no se pueda determinar qué subprocesos están esperando, si hay alguno, el monitor, el método devuelve un valor HRESULT que indica un error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

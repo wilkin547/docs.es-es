@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c48f764-3c64-4602-b2f4-4ffc60eb2c65
 topic_type:
 - apiref
-ms.openlocfilehash: 9c2771d1338943406921447d96dd9a8748153a36
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: bdc17e2c6c63deae1420fe738eac51153f6b368e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95726345"
 ---
 # <a name="icordebugframe-interface"></a>Interfaz ICorDebugFrame
 
@@ -38,12 +38,13 @@ Representa un marco en la pila actual.
 |[Método GetFunctionToken](icordebugframe-getfunctiontoken-method.md)|Obtiene el símbolo (token) de metadatos para la función que contiene el código asociado a este marco de pila.|  
 |[GetStackRange (Método)](icordebugframe-getstackrange-method.md)|Obtiene el intervalo de direcciones absolutas del marco de pila representado por este `ICorDebugFrame` .|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
