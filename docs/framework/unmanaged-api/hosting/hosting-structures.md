@@ -6,17 +6,19 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-ms.openlocfilehash: fb117352299a93aface6e58837307284ec4b8340
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 9d0349e4801c550731b6d126197003917c4a46e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721795"
 ---
 # <a name="hosting-structures"></a>Estructuras de hospedaje
+
 En esta sección se describen las estructuras no administradas que utiliza la API de hospedaje.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [AssemblyBindInfo (Estructura)](assemblybindinfo-structure.md)  
  Proporciona información detallada acerca del ensamblado al que se hace referencia.  
   
@@ -42,6 +44,7 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
  Almacena el tipo de desbordamiento que se ha producido y la información sobre la excepción que se produjo debido al desbordamiento.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Coclases para el hospedaje](hosting-coclasses.md)  
   
  [Interfaces de hospedaje](hosting-interfaces.md)  

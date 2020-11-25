@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-ms.openlocfilehash: aae03b0dc76639c50f4615d41eef73990226b5f7
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 64dd653bb0d4e383075a999e0803e4acfd0fae3d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442129"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720105"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach (Método)
+
 Realiza la Asociación automática del depurador invocado por el servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT AutoAttach
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `guidPort`  
  de Siempre se establece en `GUID_NULL` .  
   
@@ -55,11 +57,13 @@ HRESULT AutoAttach
  de Cadena pasada por el verbo DEBUG.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** DbgAutoAttach. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [IDebugAutoAttach (Interfaz)](idebugautoattach-interface.md)

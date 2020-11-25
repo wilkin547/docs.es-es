@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e17a6fc-f335-4aae-9bb0-c3e1271a9426
 topic_type:
 - apiref
-ms.openlocfilehash: a23083777d0cd5965511f3689578a60220008420
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 673c32c86c808c36db6454b8a9f0d8e68f9b1258
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762235"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720638"
 ---
 # <a name="icorruntimehostgetdefaultdomain-method"></a>ICorRuntimeHost::GetDefaultDomain (Método)
+
 Obtiene un puntero de interfaz de tipo <xref:System._AppDomain?displayProperty=nameWithType> que representa el dominio predeterminado para el proceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT GetDefaultDomain (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  enuncia Puntero de interfaz de tipo <xref:System._AppDomain?displayProperty=nameWithType> a la <xref:System.AppDomain> instancia de que representa el dominio de aplicación predeterminado para el proceso.  
   
@@ -49,15 +51,16 @@ HRESULT GetDefaultDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

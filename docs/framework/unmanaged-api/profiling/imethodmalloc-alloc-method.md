@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: a82a2150f32b1b335da083ca235ed9d2966a0b6e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 58809f12e4dd4419b754caafc3f8b883b8bc5089
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721171"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc (Método)
 
@@ -46,6 +46,7 @@ de Número de bytes que se van a asignar para el cuerpo del método.
  El `Alloc` método se debe usar junto con el método [ICorProfilerInfo:: SetILFunctionBody (](icorprofilerinfo-setilfunctionbody-method.md) .
 
 ## <a name="requirements"></a>Requisitos
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).
 
  **Encabezado:** CorProf.idl, CorProf.h
@@ -54,6 +55,6 @@ de Número de bytes que se van a asignar para el cuerpo del método.
 
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMethodMalloc (Interfaz)](imethodmalloc-interface.md)

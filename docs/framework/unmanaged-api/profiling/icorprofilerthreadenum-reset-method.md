@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 81d7c86f-d062-4eed-8df3-448091ce8c49
 topic_type:
 - apiref
-ms.openlocfilehash: 19f3a4ecb6680d9951cd09525ec079b85fc5839c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 59285ad106b975ded63c43c78dfa081fdbdb3327
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721197"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset (Método)
+
 Mueve el cursor del enumerador a la posición inicial de la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,6 +33,7 @@ HRESULT Reset();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -40,7 +42,7 @@ HRESULT Reset();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerThreadEnum (Interfaz)](icorprofilerthreadenum-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

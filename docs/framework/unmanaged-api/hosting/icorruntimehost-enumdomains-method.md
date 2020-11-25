@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96b74995-0cde-4876-b6df-7fc164e6a5d1
 topic_type:
 - apiref
-ms.openlocfilehash: a97471e1c257902633b7eb363c3cc51288c70917
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f4338429dc24bf5196b92d3f18e73c98442f61e7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762258"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720667"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains (Método)
+
 Obtiene un enumerador para los dominios en el proceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT EnumDomains (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hEnum`  
  enuncia Un enumerador para los dominios.  
   
@@ -47,14 +49,15 @@ HRESULT EnumDomains (
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **Versión de .NET Framework:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorRuntimeHost (Interfaz)](icorruntimehost-interface.md)

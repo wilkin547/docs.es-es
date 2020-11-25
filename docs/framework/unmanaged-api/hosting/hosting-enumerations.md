@@ -6,17 +6,19 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 907b1343ddbfa28b97ac2210e28b99cd38aa6fd4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504308"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721834"
 ---
 # <a name="hosting-enumerations"></a>Enumeraciones para hosts
+
 En esta sección se describen las enumeraciones no administradas que utiliza la API de hospedaje.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [CLSID_RESOLUTION_FLAGS (Enumeración)](clsid-resolution-flags-enumeration.md)  
  Contiene valores que indican cómo debe resolver el Common Language Runtime (CLR) `CLSID` .  
   
@@ -108,6 +110,7 @@ En esta sección se describen las enumeraciones no administradas que utiliza la 
  Indica la acción que debe realizar un host si se bloquea una operación solicitada por CLR.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Coclases para el hospedaje](hosting-coclasses.md)  
   
  [Interfaces de hospedaje](hosting-interfaces.md)  

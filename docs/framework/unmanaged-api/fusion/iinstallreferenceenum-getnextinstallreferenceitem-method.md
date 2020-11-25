@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce969c9d-6538-4c34-8784-148ffd99fe7a
 topic_type:
 - apiref
-ms.openlocfilehash: 0dad50f1acac38f8cdc505026e88d42882deb580
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e093de7d2c2388274cbe9ebbe46084ee6ae3ff8c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131719"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721106"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem (Método)
+
 Obtiene un puntero al siguiente objeto [IInstallReferenceItem (](iinstallreferenceitem-interface.md) incluido en este objeto [IInstallReferenceEnum (](iinstallreferenceenum-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT GetNextInstallReferenceItem (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppRefItem`  
- enuncia Puntero `IInstallReferenceItem` devuelto.  
+ enuncia Puntero devuelto `IInstallReferenceItem` .  
   
  `dwFlags`  
  [in] Reservado para extensibilidad futura. `dwFlags` debe ser 0 (cero).  
@@ -46,13 +48,14 @@ HRESULT GetNextInstallReferenceItem (
  [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IInstallReferenceItem (interfaz)](iinstallreferenceitem-interface.md)
-- [IInstallReferenceEnum (interfaz)](iinstallreferenceenum-interface.md)
+- [IInstallReferenceItem (Interfaz)](iinstallreferenceitem-interface.md)
+- [IInstallReferenceEnum (Interfaz)](iinstallreferenceenum-interface.md)

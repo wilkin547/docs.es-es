@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-ms.openlocfilehash: 37d1acfa70a1a2b2c18fb34fb5d6024f3b61e2ab
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: dc8e85c5a6047ad5dd99520b57789605333d5bf2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494350"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721210"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next (Método)
+
 Obtiene el número especificado de subprocesos contiguos de una colección secuencial de subprocesos, comenzando en la posición actual del enumerador en la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  [in] Número de subprocesos para recuperar.  
   
@@ -46,6 +48,7 @@ HRESULT Next (    [in]  ULONG      celt,
  [out] Puntero al número de subprocesos realmente devueltos en la matriz `ids`.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -54,6 +57,7 @@ HRESULT Next (    [in]  ULONG      celt,
 |S_FALSE|Se devolvieron menos de `celt` elementos, lo que indica que la enumeración está completa.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -62,7 +66,7 @@ HRESULT Next (    [in]  ULONG      celt,
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerThreadEnum (Interfaz)](icorprofilerthreadenum-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

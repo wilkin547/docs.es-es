@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 11e18095-e444-47bc-aff6-b887ac5dc01e
 topic_type:
 - apiref
-ms.openlocfilehash: 9d30c8fe71a0dfff7de9bb2f43b325cbb8016a23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0127b6894f1095521f1b24fc8c0424dc7db824b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721054"
 ---
 # <a name="guid_managedname-attribute"></a>GUID_ManagedName (Atributo)
+
 Define un atributo de interfaz personalizada que especifica el nombre de espacio de nombres administrado para una biblioteca COM (modelo de objetos componentes).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,10 +34,12 @@ Define un atributo de interfaz personalizada que especifica el nombre de espacio
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `value`  
  Nombre del espacio de nombres administrado de la biblioteca.  
   
-## <a name="definition"></a>de esquema JSON  
+## <a name="definition"></a>Definición  
+
  `GUID_ManagedName` se define en Cor. h de la siguiente manera:  
   
 ```cpp
@@ -45,14 +48,16 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un atributo de interfaz personalizada define los metadatos de un objeto en la biblioteca de tipos.  
   
- Utilice <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado del atributo.  
+ Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado del atributo.  
   
- Para obtener más información, vea [atributos de interfaz](/cpp/windows/attributes/interface-attributes) en C++ la documentación de referencia visual.  
+ Para obtener más información, vea [atributos de interfaz](/cpp/windows/attributes/interface-attributes) en la documentación de referencia de Visual C++.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una definición de biblioteca mediante el atributo `GUID_ManagedName`.  
+
+ En el ejemplo siguiente se muestra una definición de biblioteca mediante el `GUID_ManagedName` atributo.  
   
 ```idl
 [  
@@ -66,4 +71,5 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** Cor. h

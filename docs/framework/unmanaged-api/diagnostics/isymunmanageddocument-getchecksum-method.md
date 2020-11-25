@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 543bd208e5492460435663c32f276472a763f613
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441102"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721093"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum (Método)
+
 Obtiene la suma de comprobación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetCheckSum(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cData`  
  de Longitud del búfer proporcionado por el parámetro. `data`  
   
@@ -45,8 +47,9 @@ HRESULT GetCheckSum(
  enuncia Búfer que recibe la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

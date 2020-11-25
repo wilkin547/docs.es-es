@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 456d9a0e8236948ac69ed069495b1999ebf7e80a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8eaf36579bb82d66ff356aa68afc38c70d7eaca3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500616"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720391"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 (Función)
+
 Notifica al generador de perfiles que el control se devuelve desde una función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   \[in] identificador de la función de la que se devuelve el control.
   
 ## <a name="remarks"></a>Comentarios  
+
  La `FunctionLeave3` función de devolución de llamada notifica al generador de perfiles cuando se llama a las funciones, pero no admite la inspección del valor devuelto. Use el [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 (](icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar su implementación de esta función.  
   
  La `FunctionLeave3` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec(naked)` atributo de clase de almacenamiento.  
@@ -52,6 +54,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
  La `FunctionLeave3` función no debe llamar a código administrado ni producir una asignación de memoria administrada de ninguna manera.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -60,7 +63,7 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter3](functionenter3-function.md)
 - [FunctionTailcall3](functiontailcall3-function.md)

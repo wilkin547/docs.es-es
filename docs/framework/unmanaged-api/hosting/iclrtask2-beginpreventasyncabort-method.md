@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 75754c2f-38c7-4707-85fe-559db4542729
 topic_type:
 - apiref
-ms.openlocfilehash: 0da18c6850f393808d05dff8b1f19ac12b05bb86
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: daf211fcc496f63ef71575abf6a28655004db264
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762895"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720248"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>ICLRTask2::BeginPreventAsyncAbort (Método)
+
 Retrasa las nuevas solicitudes de anulación de subprocesos para que resulten anulaciones de subprocesos en el subproceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,6 +33,7 @@ HRESULT BeginPreventAsyncAbort();
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -40,6 +42,7 @@ HRESULT BeginPreventAsyncAbort();
 |HOST_E_INVALIDOPERATION|Se llamó al método en un subproceso que no es el subproceso actual.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Al llamar a este método, se incrementa el contador Delay-Thread-Abort del subproceso actual en uno.  
   
  Las llamadas a `BeginPreventAsyncAbort` y [ICLRTask2:: EndPreventAsyncAbort (](iclrtask2-endpreventasyncabort-method.md) se pueden anidar. Siempre que el contador sea mayor que cero, se retrasarán las anulaciones de subproceso para el subproceso actual. Si esta llamada no se empareja con una llamada al `EndPreventAsyncAbort` método, es posible llegar a un estado en el que no se puedan entregar las anulaciones de subprocesos al subproceso actual.  
@@ -49,15 +52,16 @@ HRESULT BeginPreventAsyncAbort();
  La funcionalidad que expone esta característica se usa internamente en la máquina virtual (VM). El uso incorrecto de estos métodos puede provocar un comportamiento no especificado en la máquina virtual. Por ejemplo, llamar a `EndPreventAsyncAbort` sin la primera llamada `BeginPreventAsyncAbort` podría establecer el contador en cero cuando la máquina virtual lo ha incrementado anteriormente. Del mismo modo, no se comprueba el desbordamiento del contador interno. Si supera su límite entero porque lo incrementa el host y la máquina virtual, el comportamiento resultante no se especifica.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Método EndPreventAsyncAbort](iclrtask2-endpreventasyncabort-method.md)
 - [ICLRTask2 (Interfaz)](iclrtask2-interface.md)

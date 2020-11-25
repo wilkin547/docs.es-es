@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ea451bdd645d2d4dea4c5dd00408e0bc51804803
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 35b82c33e54619eb9bebd5e5749ae202e905357a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492075"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721002"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName (Método)
+
 Enumera los tokens de MemberDef que representan a miembros del tipo especificado con el nombre especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT EnumMembersWithName (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador.  
   
@@ -58,25 +60,27 @@ HRESULT EnumMembersWithName (
  enuncia Número real de tokens de MemberDef devueltos en `rMembers` .  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este método enumera los campos y métodos, pero no las propiedades o los eventos. A diferencia de [IMetaDataImport:: EnumMembers (](imetadataimport-enummembers-method.md), `EnumMembersWithName` descarta todos los tokens de campo y miembro que no tienen el nombre especificado.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Description|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs`se devolvió correctamente.|  
+|`S_OK`|`EnumTypeDefs` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens de MemberDef que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

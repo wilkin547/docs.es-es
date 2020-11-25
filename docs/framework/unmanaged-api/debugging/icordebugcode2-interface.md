@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 39767ea2603018d088aaefc5da32879aaf49fee6
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 1e5b92d99d8ae52c88f1517f9c3d7db8e70598ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893482"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720807"
 ---
 # <a name="icordebugcode2-interface"></a>Interfaz ICorDebugCode2
 
@@ -32,12 +32,13 @@ Proporciona métodos que amplían las capacidades de "ICorDebugCode".
 |[Método GetCodeChunks](icordebugcode2-getcodechunks-method.md)|Obtiene los fragmentos de código de los que está compuesto este objeto de código.|  
 |[Método GetCompilerFlags](icordebugcode2-getcompilerflags-method.md)|Obtiene las marcas que especifican las condiciones bajo las que este objeto de código se compiló Just-In-Time (JIT) o se generó usando el generador de imágenes nativas (Ngen.exe).|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -46,7 +47,7 @@ Proporciona métodos que amplían las capacidades de "ICorDebugCode".
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

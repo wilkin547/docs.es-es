@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-ms.openlocfilehash: 20a841006d51671a491e11c4e40287baf739d191
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 6c59ede004ce02ee3d14a448fc61d1c092bd0d61
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209830"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721275"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException (Método)
+
 Notifica al depurador que una evaluación ha finalizado con una excepción no controlada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT EvalException (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación en el que finalizó la evaluación.  
   
@@ -46,6 +48,7 @@ HRESULT EvalException (
  de Un puntero a un objeto ICorDebugEval que representa el código que llevó a cabo la evaluación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

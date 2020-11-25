@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f56a9049cd4b503124abe9dd4866dc91779e268e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721070"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum (Interfaz)
+
 Representa un enumerador para los ensamblados a los que se hace referencia instalados en la caché global de ensamblados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,16 +41,17 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem (método)](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtiene un puntero al `IInstallReferenceItem` siguiente contenido en esta `IInstallReferenceEnum`.|  
+|[Método GetNextInstallReferenceItem](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Obtiene un puntero al siguiente `IInstallReferenceItem` contenido en este `IInstallReferenceEnum` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de Fusion](fusion-interfaces.md)
-- [IInstallReferenceItem (interfaz)](iinstallreferenceitem-interface.md)
+- [IInstallReferenceItem (Interfaz)](iinstallreferenceitem-interface.md)

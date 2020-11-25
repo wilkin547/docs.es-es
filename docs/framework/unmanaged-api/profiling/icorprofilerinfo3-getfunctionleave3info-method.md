@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-ms.openlocfilehash: bab52d9179d7454cab4a47e1a2bfe80a49b00c2a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f365a95b0859f4f97dab96ec85af6d7dfb96d8e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502839"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721626"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info (Método)
+
 Proporciona el marco de pila y el valor devuelto de la función que se está informando al generador de perfiles mediante la función de [función FunctionLeave3WithInfo](functionleave3withinfo-function.md) . Solo se puede llamar a este método durante la devolución de llamada `FunctionLeave3WithInfo`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT GetFunctionLeave3Info(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `functionId`  
- de `FunctionID`De la función que devuelve.  
+ de `FunctionID` De la función que devuelve.  
   
  `eltInfo`  
  [in] Controlador opaco que representa información sobre un marco de pila determinado. El generador de perfiles debe proporcionar el mismo que proporcionó el `eltInfo` generador de perfiles mediante la función [FunctionLeave3WithInfo](functionleave3withinfo-function.md) .  
@@ -51,6 +53,7 @@ HRESULT GetFunctionLeave3Info(
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -59,7 +62,7 @@ HRESULT GetFunctionLeave3Info(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](functionleave3withinfo-function.md)

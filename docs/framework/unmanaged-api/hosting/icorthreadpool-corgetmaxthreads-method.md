@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2861533a-cda0-47b3-b716-0d363505289b
 topic_type:
 - apiref
-ms.openlocfilehash: 46ffdb21c1f3b501cc28afffc224349887af5644
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 511b6e463bcd0d975cf7be96f870baefe27fc77b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762757"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720521"
 ---
 # <a name="icorthreadpoolcorgetmaxthreads-method"></a>ICorThreadpool::CorGetMaxThreads (Método)
+
 Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,14 +36,15 @@ HRESULT CorGetMaxThreads (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorThreadpool (Interfaz)](icorthreadpool-interface.md)

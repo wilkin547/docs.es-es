@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-ms.openlocfilehash: fd3c941d89fbd93f30fc1af235f6310b23758973
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8a5fc42191634a2e5a441baecc4b78212ffad687
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501461"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720503"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager (Interfaz)
+
 Proporciona métodos que permiten al Common Language Runtime (CLR) crear primitivas de sincronización llamando al host en lugar de usar las funciones de sincronización de Win32.  
   
 ## <a name="methods"></a>Métodos  
@@ -39,18 +40,20 @@ Proporciona métodos que permiten al Common Language Runtime (CLR) crear primiti
 |[Método SetCLRSyncManager](ihostsyncmanager-setclrsyncmanager-method.md)|Establece la instancia de [ICLRSyncManager](iclrsyncmanager-interface.md) que se va a asociar a la `IHostSyncManager` instancia actual.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  CLR detecta la implementación del host de llamando al `IHostSyncManager` método [IHostControl:: GetHostManager (](ihostcontrol-gethostmanager-method.md) con una `IID` de IID_IHostSyncManager.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

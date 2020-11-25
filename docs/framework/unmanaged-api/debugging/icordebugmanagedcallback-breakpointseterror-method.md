@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa25dd33223ad2a9521aed0917ce35a2a33fa2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cac8393408de626efe2360999e259780eac29f38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213392"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721340"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError (Método)
+
 Notifica al depurador que el Common Language Runtime no pudo enlazar con precisión un punto de interrupción establecido antes de que una función se compilara Just-in-Time (JIT).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT BreakpointSetError (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el punto de interrupción sin enlazar.  
   
@@ -49,10 +51,12 @@ HRESULT BreakpointSetError (
  `dwError`  
  de Entero que indica el error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Nunca se alcanzará el punto de interrupción dado. El depurador debe desactivarlo y volver a enlazarlo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

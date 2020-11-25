@@ -1,5 +1,5 @@
 ---
-title: Función ResetSecurity (Referencia de API no administrada)
+title: Función ResetSecurity (referencia de la API no administrada)
 description: La función ResetSecurity asigna un token de suplantación al subproceso actual.
 ms.date: 11/06/2017
 api_name:
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: ce74494455c6cc7fe382a4ea4ef2ff0c4e98c61b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 259bef74356f16221f1453dd4086e2fbb26faa83
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721119"
 ---
 # <a name="resetsecurity-function"></a>Función ResetSecurity
+
 Asigna el token de suplantación proporcionado para el subproceso actual.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -37,20 +38,21 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parámetros
 
 `token`  
-[en] El token de suplantación que se va a asociar al subproceso actual. Este valor puede ser `null`.
+de El token de suplantación que se va a asociar al subproceso actual. Este valor puede ser `null`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza `S_OK` correctamente, el valor devuelto es (0).
+Si la función se ejecuta correctamente, el valor devuelto es `S_OK` (0).
 
-Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la [función GetErrorInfo.](geterrorinfo.md)
+Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la función [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

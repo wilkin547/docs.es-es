@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2fc6c715-646f-41fd-9c12-c59b40575269
 topic_type:
 - apiref
-ms.openlocfilehash: 9d0fcdcd4fe1561f7565586e3327c6d3d7e0fe0a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 90220c2bfea683ff0472473e180c9e11ea568672
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442051"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720040"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource (Método)
+
 Quita un objeto de origen de notificación especificado de la conexión.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,16 +36,19 @@ HRESULT UnregisterNotifySource
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `in_pNotifySource`  
  de Objeto de notificación cuya registro se va a anular.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [INotifyConnection2 (Interfaz)](inotifyconnection2-interface.md)
 - [INotifySource2 (Interfaz)](inotifysource2-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa3bafd35912a7729833896f7e6f0bb2ff9b121
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 56ec7c56b167c29c9951638c5eee159e1d3c7ffb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212391"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721301"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread (Método)
+
 Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,16 +36,19 @@ HRESULT CreateThread (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el subproceso.  
   
  `thread`  
  de Un puntero a un objeto ICorDebugThread que representa el subproceso.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El subproceso se colocará en la primera instrucción de código administrado que se va a ejecutar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b5a22ebc-0582-49de-91f9-97a3d9789290
 topic_type:
 - apiref
-ms.openlocfilehash: b067ca72e030bce24a7efde5e3488a00024e9613
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 9332b3462ba389783a113d173e32850d40427ce2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762874"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720235"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 (Interfaz)
+
 Proporciona toda la funcionalidad de la interfaz [ICLRTask](iclrtask-interface.md) ; Además, proporciona métodos que permiten que las anulaciones de subprocesos se retrasen en el subproceso actual.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,6 +33,7 @@ Proporciona toda la funcionalidad de la interfaz [ICLRTask](iclrtask-interface.m
 |[Método EndPreventAsyncAbort](iclrtask2-endpreventasyncabort-method.md)|Permite que las solicitudes de anulación de subprocesos nuevas o pendientes produzcan anulaciones de subprocesos en el subproceso actual.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La `ICLRTask2` interfaz hereda la `ICLRTask` interfaz y agrega métodos que permiten al host retrasar las anulaciones de subprocesos, para proteger una región de código que no se debe producir un error. La llamada a `BeginPreventAsyncAbort` incrementa el contador Delay-Thread-Abort para el subproceso actual y la llamada a `EndPreventAsyncAbort` lo reduce. Las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` se pueden anidar. Siempre que el contador sea mayor que cero, se retrasarán las anulaciones de subproceso para el subproceso actual.  
   
  Si las llamadas a `BeginPreventAsyncAbort` y `EndPreventAsyncAbort` no están emparejadas, es posible llegar a un estado en el que las anulaciones de subprocesos no se puedan entregar al subproceso actual.  
@@ -43,15 +45,16 @@ Proporciona toda la funcionalidad de la interfaz [ICLRTask](iclrtask-interface.m
  Para obtener información sobre los miembros heredados de `ICLRTask` y sobre los otros usos de esta interfaz, vea la interfaz [ICLRTask](iclrtask-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

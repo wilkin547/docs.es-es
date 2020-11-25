@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 796b63f3-c809-47f1-89cc-b23ad8eb5e79
 topic_type:
 - apiref
-ms.openlocfilehash: 8a042e71690b5ae77c1e4cda7be394a163ab2774
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 22b9970556dd9d8b5070f38a7712462aa5a4aae2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503268"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720170"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>ICorProfilerCallback::RemotingClientInvocationStarted (Método)
+
 Notifica al generador de perfiles que se ha iniciado una llamada de comunicación remota.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,11 +33,12 @@ HRESULT RemotingClientInvocationStarted();
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este evento es el mismo para las llamadas sincrónicas y asincrónicas.  
   
  Cada uno de los siguientes pares de devoluciones de llamada se producirá en el mismo subproceso:  
   
-- `RemotingClientInvocationStarted`y [ICorProfilerCallback:: remotingclientsendingmessage (](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` y [ICorProfilerCallback:: remotingclientsendingmessage (](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 - [ICorProfilerCallback:: remotingclientreceivingreply (](icorprofilercallback-remotingclientreceivingreply-method.md) e [ICorProfilerCallback:: remotingclientinvocationfinished (](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -49,6 +51,7 @@ HRESULT RemotingClientInvocationStarted();
 - El generador de perfiles no recibe notificaciones precisas para eventos de comunicación remota asincrónica.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -57,6 +60,6 @@ HRESULT RemotingClientInvocationStarted();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

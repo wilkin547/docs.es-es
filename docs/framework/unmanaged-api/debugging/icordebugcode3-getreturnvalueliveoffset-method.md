@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 2cb4c79601061ab8473d6d7ca50c4ed2f92b01c4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 6153ebf24ae939a50d71cad2d4323090aa905851
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82893428"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720820"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset (Método)
+
 Para un desplazamiento de IL especificado, obtiene los desplazamientos nativos donde se debe colocar un punto de interrupción de modo que el depurador pueda obtener el valor devuelto de una función.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT GetReturnValueLiveOffset(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ILoffset`  
  Desplazamiento IL. Debe ser un sitio de la llamada de función o la llamada de función generará un error.  
   
@@ -51,7 +53,8 @@ HRESULT GetReturnValueLiveOffset(
  `pOffsets`  
  Matriz de desplazamientos nativos. Normalmente, `pOffsets` contiene un único desplazamiento, aunque una sola instrucción IL puede asociar varios mapas a varias instrucciones de ensamblado `CALL`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Este método se usa junto con el método [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) para obtener el valor devuelto de un método que devuelve un tipo de referencia. Pasar un desplazamiento IL a un sitio de la llamada de función a este método devuelve uno o varios desplazamientos nativos. El depurador puede establecer puntos de interrupción en estos desplazamientos nativos en la función. Cuando el depurador llega a uno de los puntos de interrupción, puede pasar el mismo desplazamiento IL que pasó a este método al método [ICorDebugILFrame3:: GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md) para obtener el valor devuelto. A continuación, el depurador debe borrar todos los puntos de interrupción que estableció.  
   
 > [!WARNING]
@@ -59,7 +62,7 @@ HRESULT GetReturnValueLiveOffset(
   
  La función devuelve los valores `HRESULT` mostrados en la tabla siguiente.  
   
-|Valor de`HRESULT`|Descripción|  
+|Valor de `HRESULT`|Descripción|  
 |---------------------|-----------------|  
 |`S_OK`|Correcto.|  
 |`CORDBG_E_INVALID_OPCODE`|El sitio de desplazamiento IL dado no es una instrucción de llamada o la función devuelve `void`.|  
@@ -68,6 +71,7 @@ HRESULT GetReturnValueLiveOffset(
  El método `ICorDebugCode3::GetReturnValueLiveOffset` solo está disponible en los sistemas basados en x86 y AMD64.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -76,7 +80,7 @@ HRESULT GetReturnValueLiveOffset(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Método GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)
 - [ICorDebugCode3 (Interfaz)](icordebugcode3-interface.md)

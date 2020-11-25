@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8960332f-c98a-405a-ba92-7003de0c1187
 topic_type:
 - apiref
-ms.openlocfilehash: 014bd4f2b12c84790065f76a67765aaf35e8b2d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 14286970a4f7093d72b47b780ea880f5ccb1bca5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131676"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721080"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference (Método)
+
 Obtiene un puntero a la estructura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) representada por este objeto [IInstallReferenceItem (](iinstallreferenceitem-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT GetReference (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppRefData`  
- enuncia Puntero `FUSION_INSTALL_REFERENCE` devuelto.  
+ enuncia Puntero devuelto `FUSION_INSTALL_REFERENCE` .  
   
  `dwFlags`  
  [in] Reservado para extensibilidad futura. `dwFlags` debe ser 0 (cero).  
@@ -46,13 +48,14 @@ HRESULT GetReference (
  [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IInstallReferenceItem (interfaz)](iinstallreferenceitem-interface.md)
-- [FUSION_INSTALL_REFERENCE (estructura)](fusion-install-reference-structure.md)
+- [IInstallReferenceItem (Interfaz)](iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE (Estructura)](fusion-install-reference-structure.md)

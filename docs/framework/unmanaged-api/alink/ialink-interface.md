@@ -1,80 +1,82 @@
 ---
-title: IALink (interfaz)
+title: IALink (Interfaz)
 ms.date: 03/30/2017
 f1_keywords:
 - IALink
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-ms.openlocfilehash: 73b6bb9eac3f706df5cb1fd63b2f67c9791c8ed2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 657c16f6e96633e568903ca4a55b4c68c1a49fa5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441819"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720326"
 ---
-# <a name="ialink-interface"></a>IALink (interfaz)
+# <a name="ialink-interface"></a>IALink (Interfaz)
+
 Ayuda a crear ensamblados de .NET Framework. Entre otras cosas, la interfaz contiene métodos que ayudan a escribir manifiestos de ensamblado para los ensamblados de varios módulos, firmar ensamblados con nombres seguros y crear netmodule.  
   
-## <a name="in-this-section"></a>Esta sección  
- [AddFile (método)](addfile-method.md)  
+## <a name="in-this-section"></a>En esta sección  
+
+ [Método AddFile](addfile-method.md)  
   
- [Método addImport (](addimport-method.md)  
+ [Método AddImport](addimport-method.md)  
   
- [CloseAssembly (método)](closeassembly-method.md)  
+ [CloseAssembly (Método)](closeassembly-method.md)  
   
- [CloseEnum (método)](closeenum-method.md)  
+ [CloseEnum (Método)](closeenum-method.md)  
   
- [EmbedResource (método)](embedresource-method.md)  
+ [EmbedResource (Método)](embedresource-method.md)  
   
- [EmitAssemblyCustomAttribute (método)](emitassemblycustomattribute-method.md)  
+ [EmitAssemblyCustomAttribute (Método)](emitassemblycustomattribute-method.md)  
   
- [EmitManifest (método)](emitmanifest-method.md)  
+ [EmitManifest (Método)](emitmanifest-method.md)  
   
- [EndMerge (método)](endmerge-method.md)  
+ [EndMerge (Método)](endmerge-method.md)  
   
- [EnumCustomAttributes (método)](enumcustomattributes-method.md)  
+ [EnumCustomAttributes (Método)](enumcustomattributes-method.md)  
   
- [EnumImportTypes (método)](enumimporttypes-method.md)  
+ [EnumImportTypes (Método)](enumimporttypes-method.md)  
   
- [ExportNestedType (método)](exportnestedtype-method.md)  
+ [ExportNestedType (Método)](exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder (método)](exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder (Método)](exportnestedtypeforwarder-method.md)  
   
- [ExportType (método)](exporttype-method.md)  
+ [ExportType (Método)](exporttype-method.md)  
   
- [ExportTypeForwarder (método)](exporttypeforwarder-method.md)  
+ [ExportTypeForwarder (Método)](exporttypeforwarder-method.md)  
   
- [FreeWin32ResBlob (método)](freewin32resblob-method.md)  
+ [FreeWin32ResBlob (Método)](freewin32resblob-method.md)  
   
- [GetAssemblyRefHash (método)](getassemblyrefhash-method.md)  
+ [GetAssemblyRefHash (Método)](getassemblyrefhash-method.md)  
   
- [GetResolutionScope (método)](getresolutionscope-method.md)  
+ [GetResolutionScope (Método)](getresolutionscope-method.md)  
   
- [Método Getscope (](getscope-method.md)  
+ [Método GetScope](getscope-method.md)  
   
- [GetWin32ResBlob (método)](getwin32resblob-method.md)  
+ [GetWin32ResBlob (Método)](getwin32resblob-method.md)  
   
- [ImportFile (método)](importfile-method.md)  
+ [ImportFile (Método)](importfile-method.md)  
   
- [ImportFile2 (método)](importfile2-method.md)  
+ [ImportFile2 (Método)](importfile2-method.md)  
   
- [ImportTypes (método)](importtypes-method.md)  
+ [ImportTypes (Método)](importtypes-method.md)  
   
  "Init (método)"  
   
- [LinkResource (método)](linkresource-method.md)  
+ [LinkResource (Método)](linkresource-method.md)  
   
- [PreCloseAssembly (método)](precloseassembly-method.md)  
+ [PreCloseAssembly (Método)](precloseassembly-method.md)  
   
- [SetAssemblyFile (método)](setassemblyfile-method.md)  
+ [SetAssemblyFile (Método)](setassemblyfile-method.md)  
   
- [SetAssemblyProps (método)](setassemblyprops-method.md)  
+ [SetAssemblyProps (Método)](setassemblyprops-method.md)  
   
- [SetNonAssemblyFlags (método)](setnonassemblyflags-method.md)  
+ [SetNonAssemblyFlags (Método)](setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [API de ALink](index.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)
