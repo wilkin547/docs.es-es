@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733703"
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="cc7aa-102">ETaskType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="cc7aa-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="cc7aa-103">Contiene valores que indican el tipo de tarea que está representada por una interfaz [ICLRTask](iclrtask-interface.md) o [IHostTask](ihosttask-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="cc7aa-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](iclrtask-interface.md) or an [IHostTask](ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="ffa4c-102">ETaskType (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="ffa4c-102">ETaskType Enumeration</span></span>
+
+<span data-ttu-id="ffa4c-103">Contiene valores que indican el tipo de tarea que está representada por una interfaz [ICLRTask](iclrtask-interface.md) o [IHostTask](ihosttask-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="ffa4c-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](iclrtask-interface.md) or an [IHostTask](ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cc7aa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cc7aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffa4c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ffa4c-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum ETaskType {  
@@ -42,31 +43,32 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cc7aa-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="cc7aa-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ffa4c-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="ffa4c-105">Members</span></span>  
   
-|<span data-ttu-id="cc7aa-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="cc7aa-106">Member</span></span>|<span data-ttu-id="cc7aa-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="cc7aa-107">Description</span></span>|  
+|<span data-ttu-id="ffa4c-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="ffa4c-106">Member</span></span>|<span data-ttu-id="ffa4c-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="ffa4c-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="cc7aa-108">La interfaz representa una tarea de descarga de dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="cc7aa-109">La interfaz representa una tarea auxiliar del depurador.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="cc7aa-110">La interfaz representa una tarea de finalizador.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="cc7aa-111">La interfaz representa una tarea de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="cc7aa-112">La interfaz representa una tarea de subproceso de puerta.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="cc7aa-113">La interfaz representa una tarea de subproceso de e/s o una tarea de subproceso de puerto de finalización.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="cc7aa-114">La interfaz representa una tarea de subproceso de temporizador.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="cc7aa-115">La interfaz representa una tarea de subproceso de espera.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="cc7aa-116">La interfaz representa una tarea de subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="cc7aa-117">La tarea es desconocida.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="cc7aa-118">La interfaz representa una tarea de usuario.</span><span class="sxs-lookup"><span data-stu-id="cc7aa-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="ffa4c-108">La interfaz representa una tarea de descarga de dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="ffa4c-109">La interfaz representa una tarea auxiliar del depurador.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="ffa4c-110">La interfaz representa una tarea de finalizador.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="ffa4c-111">La interfaz representa una tarea de recolección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="ffa4c-112">La interfaz representa una tarea de subproceso de puerta.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="ffa4c-113">La interfaz representa una tarea de subproceso de e/s o una tarea de subproceso de puerto de finalización.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="ffa4c-114">La interfaz representa una tarea de subproceso de temporizador.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="ffa4c-115">La interfaz representa una tarea de subproceso de espera.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="ffa4c-116">La interfaz representa una tarea de subproceso de trabajo.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="ffa4c-117">La tarea es desconocida.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="ffa4c-118">La interfaz representa una tarea de usuario.</span><span class="sxs-lookup"><span data-stu-id="ffa4c-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cc7aa-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cc7aa-119">Requirements</span></span>  
- <span data-ttu-id="cc7aa-120">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cc7aa-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="cc7aa-121">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="cc7aa-121">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="cc7aa-122">**Biblioteca:** MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="cc7aa-122">**Library:** MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="cc7aa-123">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cc7aa-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="cc7aa-124">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="cc7aa-124">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="ffa4c-119">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ffa4c-119">Requirements</span></span>  
 
-- [<span data-ttu-id="cc7aa-125">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="cc7aa-125">Hosting Enumerations</span></span>](hosting-enumerations.md)
+ <span data-ttu-id="ffa4c-120">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffa4c-120">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="ffa4c-121">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="ffa4c-121">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="ffa4c-122">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ffa4c-122">**Library:** MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="ffa4c-123">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffa4c-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ffa4c-124">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ffa4c-124">See also</span></span>
+
+- [<span data-ttu-id="ffa4c-125">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="ffa4c-125">Hosting Enumerations</span></span>](hosting-enumerations.md)

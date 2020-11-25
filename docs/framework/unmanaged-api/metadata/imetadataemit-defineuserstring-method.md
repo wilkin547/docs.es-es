@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: def77bb64e21b1421983cf263d488ecc1ddb9452
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: ed3c20fe8272ca3205079d26df0b7bde12e58307
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009330"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732702"
 ---
-# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="8c981-102">IMetaDataEmit::DefineUserString (Método)</span><span class="sxs-lookup"><span data-stu-id="8c981-102">IMetaDataEmit::DefineUserString Method</span></span>
-<span data-ttu-id="8c981-103">Obtiene un símbolo (token) de metadatos para la cadena literal especificada.</span><span class="sxs-lookup"><span data-stu-id="8c981-103">Gets a metadata token for the specified literal string.</span></span>  
+# <a name="imetadataemitdefineuserstring-method"></a><span data-ttu-id="fa0a4-102">IMetaDataEmit::DefineUserString (Método)</span><span class="sxs-lookup"><span data-stu-id="fa0a4-102">IMetaDataEmit::DefineUserString Method</span></span>
+
+<span data-ttu-id="fa0a4-103">Obtiene un símbolo (token) de metadatos para la cadena literal especificada.</span><span class="sxs-lookup"><span data-stu-id="fa0a4-103">Gets a metadata token for the specified literal string.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c981-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8c981-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa0a4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="fa0a4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineUserString (
@@ -35,26 +36,28 @@ HRESULT DefineUserString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8c981-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8c981-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa0a4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="fa0a4-105">Parameters</span></span>  
+
  `szString`  
- <span data-ttu-id="8c981-106">de Cadena de usuario que se va a almacenar.</span><span class="sxs-lookup"><span data-stu-id="8c981-106">[in] The user string to store.</span></span>  
+ <span data-ttu-id="fa0a4-106">de Cadena de usuario que se va a almacenar.</span><span class="sxs-lookup"><span data-stu-id="fa0a4-106">[in] The user string to store.</span></span>  
   
  `cchString`  
- <span data-ttu-id="8c981-107">de Recuento de caracteres anchos en `szString` .</span><span class="sxs-lookup"><span data-stu-id="8c981-107">[in] The count of wide characters in `szString`.</span></span>  
+ <span data-ttu-id="fa0a4-107">de Recuento de caracteres anchos en `szString` .</span><span class="sxs-lookup"><span data-stu-id="fa0a4-107">[in] The count of wide characters in `szString`.</span></span>  
   
  `pstk`  
- <span data-ttu-id="8c981-108">enuncia El token de cadena asignado.</span><span class="sxs-lookup"><span data-stu-id="8c981-108">[out] The string token assigned.</span></span>  
+ <span data-ttu-id="fa0a4-108">enuncia El token de cadena asignado.</span><span class="sxs-lookup"><span data-stu-id="fa0a4-108">[out] The string token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c981-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8c981-109">Requirements</span></span>  
- <span data-ttu-id="8c981-110">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c981-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="8c981-111">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="8c981-111">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="8c981-112">**Biblioteca:** Se utiliza como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="8c981-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="8c981-113">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c981-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8c981-114">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8c981-114">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="fa0a4-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fa0a4-109">Requirements</span></span>  
 
-- [<span data-ttu-id="8c981-115">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8c981-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="8c981-116">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8c981-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+ <span data-ttu-id="fa0a4-110">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa0a4-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="fa0a4-111">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="fa0a4-111">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="fa0a4-112">**Biblioteca:** Se usa como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fa0a4-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="fa0a4-113">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa0a4-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fa0a4-114">Consulte también</span><span class="sxs-lookup"><span data-stu-id="fa0a4-114">See also</span></span>
+
+- [<span data-ttu-id="fa0a4-115">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fa0a4-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="fa0a4-116">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="fa0a4-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
