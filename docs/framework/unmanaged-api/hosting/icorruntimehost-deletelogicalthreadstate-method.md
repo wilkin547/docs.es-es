@@ -15,31 +15,33 @@ helpviewer_keywords:
 ms.assetid: 34ffc4a6-6553-43df-9b43-779effb67e2c
 topic_type:
 - apiref
-ms.openlocfilehash: 13b0cdb5f1bd90d04ff52042de892e3defc5ff84
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 113931b44ebddfde37b0fb747b3df4e0e089cbf1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762284"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720690"
 ---
-# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="0f532-102">ICorRuntimeHost::DeleteLogicalThreadState (Método)</span><span class="sxs-lookup"><span data-stu-id="0f532-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
-<span data-ttu-id="0f532-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="0f532-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="0e8f6-102">ICorRuntimeHost::DeleteLogicalThreadState (Método)</span><span class="sxs-lookup"><span data-stu-id="0e8f6-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
+
+<span data-ttu-id="0e8f6-103">Este método es compatible con la infraestructura de .NET Framework y no está diseñado para utilizarse directamente desde el código.</span><span class="sxs-lookup"><span data-stu-id="0e8f6-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f532-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0f532-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0e8f6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0e8f6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="0f532-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0f532-105">Requirements</span></span>  
- <span data-ttu-id="0f532-106">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f532-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="0f532-107">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="0f532-107">**Header:** MSCorEE.h</span></span>  
-  
- <span data-ttu-id="0f532-108">**Biblioteca:** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="0f532-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="0f532-109">**.NET Framework versiones:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="0f532-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="0f532-110">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="0f532-110">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="0e8f6-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0e8f6-105">Requirements</span></span>  
 
-- [<span data-ttu-id="0f532-111">ICorRuntimeHost (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="0f532-111">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)
+ <span data-ttu-id="0e8f6-106">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e8f6-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="0e8f6-107">**Encabezado:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="0e8f6-107">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="0e8f6-108">**Biblioteca:** Se incluye como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0e8f6-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="0e8f6-109">**.NET Framework versiones:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="0e8f6-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="0e8f6-110">Consulte también</span><span class="sxs-lookup"><span data-stu-id="0e8f6-110">See also</span></span>
+
+- [<span data-ttu-id="0e8f6-111">ICorRuntimeHost (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="0e8f6-111">ICorRuntimeHost Interface</span></span>](icorruntimehost-interface.md)
