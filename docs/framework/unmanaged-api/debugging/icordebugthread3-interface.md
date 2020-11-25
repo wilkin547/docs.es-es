@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-ms.openlocfilehash: dc556dfb59e999ed9b7fc5f35c603dc26c35f314
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 015d0061e5be5bbc212243ca06f1d165abe4496a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378705"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729309"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 (Interfaz)
+
 Proporciona el punto de entrada a [ICorDebugStackWalk](icordebugstackwalk-interface.md) y las interfaces correspondientes.  
   
 ## <a name="methods"></a>Métodos  
@@ -31,13 +32,15 @@ Proporciona el punto de entrada a [ICorDebugStackWalk](icordebugstackwalk-interf
 |[Método CreateStackWalk](icordebugthread3-createstackwalk-method.md)|Crea un objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.|  
 |[Método GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)|Devuelve una matriz de Marcos internos (objetos[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) ) en la pila.|  
   
-## <a name="remarks"></a>Observaciones  
- `ICorDebugThread3`es una extensión lógica de la interfaz ICorDebugThread.  
+## <a name="remarks"></a>Comentarios  
+
+ `ICorDebugThread3` es una extensión lógica de la interfaz ICorDebugThread.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

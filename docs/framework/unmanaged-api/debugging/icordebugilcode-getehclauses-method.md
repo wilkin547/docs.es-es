@@ -12,14 +12,15 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: e1fd68cd079b381d941d416831133c54e49ac48a
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 38936a57944e9a0920c374f473c4cbe8e8d70abb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210389"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728672"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses (Método)
+
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
   
  Devuelve un puntero a una lista de cláusulas de control de excepciones (EH) definidas para este lenguaje intermedio (IL).  
@@ -34,8 +35,9 @@ HRESULT GetEHClauses(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cClauses`  
- [in] Capacidad de almacenamiento de la matriz `clauses`. Para obtener más información, vea la sección Comentarios.  
+ [in] Capacidad de almacenamiento de la matriz `clauses`. Vea la sección Comentarios para obtener más información.  
   
  `pcClauses`  
  [out] Número de cláusulas para las cuales se escribe información en la matriz `clauses`.  
@@ -43,10 +45,12 @@ HRESULT GetEHClauses(
  cláusulas  
  enuncia Matriz de objetos [cordebugehclause (](cordebugehclause-structure.md) que contienen información sobre las cláusulas de control de excepciones definidas para este Il.  
   
-## <a name="remarks"></a>Observaciones  
- Si `cClauses` es 0 y `pcClauses` no es**null**, `pcClauses` se establece en el número de cláusulas de control de excepciones disponibles. Si `cClauses` no es cero, representa la capacidad de almacenamiento de la matriz `clauses`. Cuando el método vuelve, `clauses` contiene un máximo de elementos `cClauses` y `pcClauses` se establece en el número de cláusulas escritas realmente en la matriz `clauses`.  
+## <a name="remarks"></a>Comentarios  
+
+ Si `cClauses` es 0 y `pcClauses` no es **null**, `pcClauses` se establece en el número de cláusulas de control de excepciones disponibles. Si `cClauses` no es cero, representa la capacidad de almacenamiento de la matriz `clauses`. Cuando el método vuelve, `clauses` contiene un máximo de elementos `cClauses` y `pcClauses` se establece en el número de cláusulas escritas realmente en la matriz `clauses`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

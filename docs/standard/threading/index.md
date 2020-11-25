@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: 568b93fbfb6f757719d44a07b99ac18375ed539a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 28ba05c345d22b14512d280f3855934d727b3142
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826344"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728451"
 ---
 # <a name="managed-threading"></a>Subprocesamiento administrado
 
@@ -21,6 +21,7 @@ Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadore
 > A partir de .NET Framework 4, la programación multiproceso se ha simplificado significativamente con las clases <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md), clases de colecciones simultáneas en el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType> y un modelo de programación basado en el concepto de tareas en lugar de subprocesos. Para más información, consulte [Programación en paralelo](../parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Principios básicos del subprocesamiento administrado](managed-threading-basics.md)  
  Proporciona información general sobre el subprocesamiento administrado y describe cuándo usar varios subprocesos.  
   
@@ -34,6 +35,7 @@ Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadore
  Describe las clases administradas que puede usar para sincronizar las actividades de subprocesamientos y los datos de objetos accedidos en distintos subprocesos, y proporciona información general sobre los subprocesos de grupos de subprocesos.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Threading>  
  Contiene clases para usar y sincronizar subprocesos administrados.  
   
@@ -44,6 +46,7 @@ Tanto si va a desarrollar aplicaciones para equipos con uno o varios procesadore
  Contiene clases para crear y programar tareas de procesamiento simultáneo.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Dominios de aplicación](../../framework/app-domains/application-domains.md)  
  Proporciona información genera sobre los dominios de aplicación y de su uso en Common Language Infrastructure.  
   

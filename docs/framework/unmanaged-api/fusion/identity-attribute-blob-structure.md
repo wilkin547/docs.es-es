@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a59e70257064220e8138f9d267a815fcdbf3929
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176557"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729036"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB (Estructura)
-Contiene información sobre un único atributo en `DWORD`un ensamblado y consta de tres s. Cada `DWORD` uno es un desplazamiento en `CurrentIntoBuffer` un búfer de caracteres producido por el método de la interfaz [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+
+Contiene información sobre un solo atributo en un ensamblado y consta de tres `DWORD` . Cada `DWORD` es un desplazamiento en un búfer de caracteres generado por el `CurrentIntoBuffer` método de la interfaz [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,24 +37,25 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`ofsNamespace`|El primer desplazamiento en el búfer de caracteres. Este desplazamiento no va seguido del espacio de nombres del atributo, sino de una serie de caracteres nulos. Por lo tanto, no se utiliza.|  
-|`ofsName`|El segundo desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del nombre del atributo.|  
-|`ofsValue`|El tercer desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del valor del atributo.|  
+|`ofsNamespace`|Primer desplazamiento en el búfer de caracteres. Este desplazamiento no va seguido del espacio de nombres del atributo, sino de una serie de caracteres null. Por lo tanto, no se utiliza.|  
+|`ofsName`|Segundo desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del nombre del atributo.|  
+|`ofsValue`|Tercer desplazamiento en el búfer de caracteres. Esta ubicación marca el inicio del valor del atributo.|  
   
 ## <a name="sample"></a>Muestra  
- En el ejemplo siguiente se muestran varios pasos `IDENTITY_ATTRIBUTE_BLOB` básicos, que finalmente dan como resultado una estructura rellenada:  
+
+ En el ejemplo siguiente se muestran varios pasos básicos, que finalmente dan como resultado una estructura rellenada `IDENTITY_ATTRIBUTE_BLOB` :  
   
 1. Obtenga un [IReferenceIdentity](ireferenceidentity-interface.md) para el ensamblado.  
   
-2. Llame `IReferenceIdentity::EnumAttributes` al método y obtenga una [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
+2. Llame al `IReferenceIdentity::EnumAttributes` método y obtenga un [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Cree un búfer de caracteres `IDENTITY_ATTRIBUTE_BLOB` y conselle como una estructura.  
+3. Cree un búfer de caracteres y conviértalo en una `IDENTITY_ATTRIBUTE_BLOB` estructura.  
   
-4. Llame `CurrentIntoBuffer` al método `IEnumIDENTITY_ATTRIBUTE` de la interfaz. Este método copia `Namespace` `Name`los `Value` atributos , y en el búfer de caracteres. Los tres desplazamientos a esas cadenas `IDENTITY_ATTRIBUTE_BLOB` estarán disponibles en la estructura.  
+4. Llame al `CurrentIntoBuffer` método de la `IEnumIDENTITY_ATTRIBUTE` interfaz. Este método copia los atributos `Namespace` , `Name` y `Value` en el búfer de caracteres. Los tres desplazamientos de esas cadenas estarán disponibles en la `IDENTITY_ATTRIBUTE_BLOB` estructura.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -220,29 +222,32 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Para ejecutar el ejemplo  
- C:\\> EnumAssemblyAttributes.exe C:-WINDOWS-Microsoft.NET-Framework-v2.0.50727-System.dll  
+
+ C: \\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Salida de ejemplo  
- Cultura - neutral  
+
+ Culture = neutral  
   
- nombre : Sistema  
+ nombre = sistema  
   
- processorArchitecture - MSIL  
+ processorArchitecture = MSIL  
   
- PublicKeyToken á b77a5c561934e089  
+ PublicKeyToken = b77a5c561934e089  
   
- Versión 2.0.0.0  
+ Versión = 2.0.0.0  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Isolation.h  
+ **Encabezado:** Isolation. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IReferenceIdentity (interfaz)](ireferenceidentity-interface.md)
+- [IReferenceIdentity (Interfaz)](ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE (Interfaz)](ienumidentity-attribute-interface.md)
 - [IDENTITY_ATTRIBUTE (Estructura)](identity-attribute-structure.md)
 - [Estructuras de fusión](fusion-structures.md)

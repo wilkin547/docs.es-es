@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4a261dba-450d-4f1f-8d98-865b58bfc992
 topic_type:
 - apiref
-ms.openlocfilehash: 3b0e60602d2f36552c3e0e85ec51205b4128486b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 597a3dfecd42e206c98974093fa2417eba570f6a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499771"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729470"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 (Interfaz)
+
 Proporciona métodos utilizados por el Common Language Runtime (CLR) para notificar a un generador de perfiles de código cuando se producen los eventos a los que se ha suscrito el generador de perfiles. La `ICorProfilerCallback2` interfaz es una extensión de la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) . Es decir, proporciona nuevas devoluciones de llamada introducidas en la .NET Framework versión 2,0.  
   
 > [!NOTE]
@@ -41,6 +42,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 |[Método ThreadNameChanged](icorprofilercallback2-threadnamechanged-method.md)|Notifica al generador de perfiles de código que el nombre de un subproceso ha cambiado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  CLR llama a un método en la `ICorProfilerCallback` interfaz (o `ICorProfilerCallback2` ) para notificar al generador de perfiles cuando se produce un evento, al que se ha suscrito el generador de perfiles. Esta es la interfaz de devolución de llamada principal a través de la cual el CLR se comunica con el generador de perfiles de código.  
   
  Un generador de perfiles de código debe implementar los métodos de la `ICorProfilerCallback` interfaz. En el caso del .NET Framework 2,0 y versiones posteriores, el generador de perfiles también debe implementar los `ICorProfilerCallback2` métodos. Cada implementación de método debe devolver un valor HRESULT que tenga un valor de S_OK si se ejecuta correctamente o E_FAIL en caso de error. Actualmente, CLR omite el valor HRESULT devuelto por cada devolución de llamada excepto [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md).  
@@ -51,6 +53,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
 > El generador de perfiles registra un objeto COM único. Si el generador de perfiles tiene como destino .NET Framework versión 1,0 o 1,1, ese objeto COM solo necesita implementar los métodos de `ICorProfilerCallback` . Si tiene como destino .NET Framework versión 2,0 y versiones posteriores, el objeto COM también debe implementar los métodos de `ICorProfilerCallback2` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -59,7 +62,7 @@ Proporciona métodos utilizados por el Common Language Runtime (CLR) para notifi
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

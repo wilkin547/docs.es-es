@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 828c7660d6c006e700302d119ce4caf7d76e5d84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123067"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95728568"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly (Función)
+
 Obtiene un valor que indica si el ensamblado especificado está administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT IsFrameworkAssembly (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwzAssemblyReference`  
  de Nombre del ensamblado que se va a comprobar.  
   
@@ -49,15 +51,17 @@ HRESULT IsFrameworkAssembly (
  [in] Tamaño de `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Comentarios  
- El parámetro `pwzAssemblyReference` es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
+
+ El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
   
- Si este ensamblado forma parte del .NET Framework, el parámetro `pbIsFrameworkAssembly` contendrá un valor booleano de `true`.  
+ Si este ensamblado forma parte del .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true` .  
   
- Si el ensamblado con nombre no forma parte de la .NET Framework, o si el parámetro `pwzAssemblyReference` no tiene un nombre de ensamblado, `pbIsFrameworkAssembly` contendrá un valor booleano de `false`.  
+ Si el ensamblado con nombre no forma parte de la .NET Framework, o si el parámetro no es `pwzAssemblyReference` un ensamblado, contendrá `pbIsFrameworkAssembly` un valor booleano de `false` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

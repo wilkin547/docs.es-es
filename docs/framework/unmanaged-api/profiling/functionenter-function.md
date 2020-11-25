@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bf4ffa50-4506-4dd4-aa13-a0457b47ca74
 topic_type:
 - apiref
-ms.openlocfilehash: 52870c7446987817ff00b90db26c3265bccdd096
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9bc88d7dd5b00213da634dc9f511cfe0d39b42f1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729842"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
+
 Notifica al generador de perfiles que el control se pasa a una función.  
   
 > [!NOTE]
@@ -42,6 +43,7 @@ void __stdcall FunctionEnter (
   \[in] el identificador de la función a la que se pasa el control.
 
 ## <a name="remarks"></a>Comentarios  
+
  La `FunctionEnter` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
@@ -55,6 +57,7 @@ void __stdcall FunctionEnter (
  Además, la `FunctionEnter` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Corprof. idl  
@@ -63,7 +66,7 @@ void __stdcall FunctionEnter (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

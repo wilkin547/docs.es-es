@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 80d509ca-b5e3-4c46-9c14-800db73d9bf7
 topic_type:
 - apiref
-ms.openlocfilehash: d41216eb7da57d29d67ce17372f746328204649e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: bb27ec755fb83dc71af7dd48b5ed6e7699436335
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976179"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729734"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor (Método)
+
 Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar a un método de constructor.  
   
  Este método está obsoleto en la .NET Framework versión 2,0. Use [ICorDebugEval2:: newparameterizedobjectnoconstructor (](icordebugeval2-newparameterizedobjectnoconstructor-method.md) en su lugar.  
@@ -36,10 +37,12 @@ HRESULT NewObjectNoConstructor (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pClass`  
  de Puntero a un objeto ICorDebugClass que representa el tipo de objeto del que se va a crear una instancia.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
