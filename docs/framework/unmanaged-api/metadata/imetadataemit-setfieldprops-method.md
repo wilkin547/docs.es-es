@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: 220556ec130c7bff7c413405820c4fee0582b051
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 0f98fb64b43822c437c39df2f3c51a222ef386b9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008019"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730401"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps (Método)
+
 Establece o actualiza el valor predeterminado para el campo al que hace referencia el token de campo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT SetFieldProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `fd`  
  de El token para el campo de destino.  
   
@@ -54,11 +56,12 @@ HRESULT SetFieldProps (
  de Tamaño, en caracteres Unicode, de `pValue` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

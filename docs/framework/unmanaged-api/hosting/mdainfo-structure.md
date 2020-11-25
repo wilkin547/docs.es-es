@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-ms.openlocfilehash: 517e0ae7fb5d5151f94f82d9146ebbf40bad2ef9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8e88d90e3291d21888fae7aa162f84b6377658c5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503866"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730024"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo (Estructura)
+
 Proporciona detalles sobre el `Event_MDAFired` evento, que desencadena la creación de un asistente para la depuración administrada (MDA).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,6 +42,7 @@ typedef struct _MDAInfo {
 |`lpMDAMessage`|Mensaje de salida proporcionado por el MDA actual.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los asistentes para la depuración administrada (MDA) son ayudas para la depuración que funcionan junto con el Common Language Runtime (CLR) para realizar tareas como la identificación de condiciones no válidas en el motor de ejecución en tiempo de ejecución o el volcado de información adicional sobre el estado del motor. Los MDA generan mensajes XML sobre eventos que, de otro modo, son difíciles de interceptar. Son especialmente útiles para depurar las transiciones entre el código administrado y no administrado.  
   
  El tiempo de ejecución sigue los pasos siguientes cuando se activa un evento que desencadena la creación de un MDA:  
@@ -52,15 +54,16 @@ typedef struct _MDAInfo {
  El host puede optar por activar los MDA y recibir una notificación cuando se activa un MDA. Esto proporciona al host una oportunidad para invalidar el comportamiento predeterminado y anular el subproceso administrado que provocó el evento, para evitar que dañe el estado del proceso. Para obtener más información sobre el uso de MDA, vea [diagnosticar errores con asistentes para la depuración administrada](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. idl  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras de hospedaje](hosting-structures.md)
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

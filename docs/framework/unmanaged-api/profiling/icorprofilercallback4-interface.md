@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 665f3cfc-cd6f-4880-906c-ea65ad384783
 topic_type:
 - apiref
-ms.openlocfilehash: 295d3d440529623f4569fd6c5f4debe7e4558990
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 942ee8234b79c6579acc009960f4571801fc3185
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730297"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 (Interfaz)
+
 Proporciona métodos de devolución de llamada que el Common Language Runtime (CLR) utiliza para comunicar información al generador de perfiles.  
   
 ## <a name="methods"></a>Métodos  
@@ -38,6 +39,7 @@ Proporciona métodos de devolución de llamada que el Common Language Runtime (C
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -46,7 +48,7 @@ Proporciona métodos de devolución de llamada que el Common Language Runtime (C
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

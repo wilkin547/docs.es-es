@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-ms.openlocfilehash: af90886390b59932d3ae146a70fc2901ec1c378d
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 14c89e808ea8e41bbee46a59a60bc1876f3800d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894665"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730193"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next (Método)
+
 Obtiene el número especificado de instancias de ICorDebugBreakpoint de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,16 +38,18 @@ HRESULT Next (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de El número de `ICorDebugBreakpoint` instancias que se van a recuperar.  
   
  `breakpoints`  
- enuncia Matriz de punteros, cada uno de los cuales apunta a `ICorDebugBreakpoint` un objeto que representa un punto de interrupción.  
+ enuncia Matriz de punteros, cada uno de los cuales apunta a un `ICorDebugBreakpoint` objeto que representa un punto de interrupción.  
   
  `pceltFetched`  
  enuncia Puntero al número de `ICorDebugBreakpoint` instancias devueltas realmente. Este valor puede ser null si `celt` es uno.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

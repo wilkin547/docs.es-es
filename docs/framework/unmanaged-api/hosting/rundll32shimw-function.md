@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-ms.openlocfilehash: 90304eb94e6f53d3132c97f5ababdc45f6053d7c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd053134792b80a006849e465bc0025cf77a9ad8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006576"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729959"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW (Función)
+
 Ejecuta el comando especificado.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -38,6 +39,7 @@ HRESULT RunDll32ShimW (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hwnd`  
  de Identificador de una ventana en la que se mostrará el resultado del comando.  
   
@@ -51,11 +53,12 @@ HRESULT RunDll32ShimW (
  de Un entero que especifica el modo de presentación de la ventana de salida.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

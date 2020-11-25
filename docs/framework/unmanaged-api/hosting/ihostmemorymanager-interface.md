@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0f71e4c45e43c2027b12998532f2b04401a51951
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501513"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731337"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager (Interfaz)
+
 Proporciona métodos que permiten que el Common Language Runtime (CLR) realice solicitudes de memoria virtual a través del host, en lugar de usar las funciones estándar de memoria virtual de Win32.  
   
 ## <a name="methods"></a>Métodos  
@@ -40,18 +41,20 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
 |[Método VirtualQuery](ihostmemorymanager-virtualquery-method.md)|Actúa como contenedor lógico de la función de Win32 correspondiente, que recupera información sobre un intervalo de páginas en el espacio de direcciones virtuales del proceso de llamada.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IHostMemoryManager`también proporciona métodos para que CLR obtenga un puntero a través del cual se van a realizar solicitudes de memoria en el montón y para obtener el nivel de presión de memoria en el proceso, tal y como lo indica el host.  
+
+ `IHostMemoryManager` también proporciona métodos para que CLR obtenga un puntero a través del cual se van a realizar solicitudes de memoria en el montón y para obtener el nivel de presión de memoria en el proceso, tal y como lo indica el host.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IHostMalloc (Interfaz)](ihostmalloc-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

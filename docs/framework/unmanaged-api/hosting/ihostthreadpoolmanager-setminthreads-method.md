@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10409db9-9fd2-4e4d-b8cd-cf6fec0afaa2
 topic_type:
 - apiref
-ms.openlocfilehash: c5b150b161acba3820ced367049f08153dd091aa
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: d6f56f689a35fa025a924be0db67c893f160fc7f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730739"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads (Método)
+
 Establece el número mínimo de subprocesos inactivos que el host debe mantener en previsión de las solicitudes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT SetMinThreads (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `MinThreads`  
  de Nuevo número mínimo de subprocesos que debe mantener el host.  
   
@@ -41,7 +43,7 @@ HRESULT SetMinThreads (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetMinThreads`se devolvió correctamente.|  
+|S_OK|`SetMinThreads` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -49,19 +51,21 @@ HRESULT SetMinThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `SetMinThreads` .|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
+
  No es necesario que un host proporcione una implementación de `SetMinThreads` . En este caso, debe devolver un valor HRESULT de E_NOTIMPL.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.ThreadPool.SetMinThreads%2A>
 - <xref:System.Threading.ThreadPool>

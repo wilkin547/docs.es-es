@@ -7,14 +7,15 @@ helpviewer_keywords:
 - preventing customization
 - sealed classes
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
-ms.openlocfilehash: 29023ad431f9d05caf44e59f66eccee24bfa0433
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf8aad5d79e659ad9a767c2b0992eb9ee05fd531
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730947"
 ---
 # <a name="sealing"></a>Sellar
+
 Una de las características de los marcos de trabajo orientados a objetos es que los desarrolladores pueden ampliarlas y personalizarlas de maneras inesperadas por los diseñadores de Marcos. Esta es la eficacia y el peligro del diseño extensible. Al diseñar el marco de trabajo, es, por lo tanto, muy importante diseñar cuidadosamente la extensibilidad para que se desee y limitar la extensibilidad cuando sea peligrosa.
 
  Un mecanismo eficaz que evita la extensibilidad es el sellado. Puede sellar la clase o los miembros individuales. Sellar una clase impide que los usuarios hereden de la clase. El sellado de un miembro impide que los usuarios invaliden un miembro determinado.
@@ -45,7 +46,7 @@ Una de las características de los marcos de trabajo orientados a objetos es que
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Diseñar extensibilidad](designing-for-extensibility.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: a3cd62384ad87d072cd715d23d0e9ee9dac23270
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 06f403f0b653866428a41240f99833ec1180eb86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731090"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType (Método)
+
 Obtiene el tipo primitivo de este objeto "ICorDebugValue".  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,15 +35,18 @@ HRESULT GetType (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pType`  
  enuncia Un puntero a un valor de la enumeración "CorElementType" que indica el tipo del valor.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si el objeto es un tipo complejo en tiempo de ejecución, ese tipo se puede examinar en las subclases adecuadas de la `ICorDebugValue` interfaz. Por ejemplo, "ICorDebugObjectValue", que hereda de `ICorDebugValue` , representa un tipo complejo.  
   
  Los `GetType` métodos y [ICorDebugObjectValue:: GetClass](icordebugobjectvalue-getclass-method.md) devuelven información sobre el tipo de un valor. Ambos se sustituyen por el método [ICorDebugValue2:: GetExactType (](icordebugvalue2-getexacttype-method.md) compatible con genéricos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -51,4 +55,4 @@ HRESULT GetType (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también

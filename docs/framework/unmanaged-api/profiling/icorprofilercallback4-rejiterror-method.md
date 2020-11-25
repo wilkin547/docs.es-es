@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 488069f3ea16352cb7bb5e81b9a726637a7a65f8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 46312aaf530e69f0e6a90e35515f1373d01b4340
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84499368"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730245"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError (Método)
+
 Notifica al generador de perfiles que el compilador Just-in-Time (JIT) encontró un error en el proceso de recompilación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,11 +37,12 @@ HRESULT ReJITError(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `moduleID`  
- de `ModuleID`En el que se realizó el intento de recompilación con errores.  
+ de `ModuleID` En el que se realizó el intento de recompilación con errores.  
   
  `methodId`  
- de `MethodDef`Del método en el que se realizó el intento de recompilación con errores.  
+ de `MethodDef` Del método en el que se realizó el intento de recompilación con errores.  
   
  `functionId`  
  de Instancia de la función que se va a compilar o marcar para volver a compilar. Este valor puede ser `NULL` si el error se produjo por método en lugar de por cada instancia (por ejemplo, si el generador de perfiles especificó un token de metadatos no válido para el método que se va a volver a compilar).  
@@ -49,11 +51,12 @@ HRESULT ReJITError(
  de HRESULT que indica la naturaleza del error. Vea la sección Estados HRESULTs para obtener una lista de valores.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Los valores devueltos de esta devolución de llamada se pasan por alto.  
   
 ## <a name="status-hresults"></a>HRESULT de estado  
   
-|HRESULT de la matriz de estados|Description|  
+|HRESULT de la matriz de estados|Descripción|  
 |--------------------------|-----------------|  
 |E_INVALIDARG|El `moduleID` `methodDef` token o es `NULL` .|  
 |CORPROF_E_DATAINCOMPLETE|El módulo no está totalmente cargado aún o está en proceso de descarga.|  
@@ -63,6 +66,7 @@ HRESULT ReJITError(
 |Otros|El sistema operativo devolvió un error fuera del control del CLR. Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se muestra el error del sistema operativo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -71,7 +75,7 @@ HRESULT ReJITError(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerCallback4 (Interfaz)](icorprofilercallback4-interface.md)

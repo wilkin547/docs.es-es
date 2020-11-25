@@ -2,14 +2,15 @@
 title: ICorDebugSymbolProvider::GetObjectSize (método)
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: 64324df49ad0b5dfa3c25455950bddc3d687b178
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4937ff1be7736f98be9efb9b01bdb322bf33e037
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379554"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730813"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize (método)
+
 Devuelve el tamaño del objeto para un objeto basado en su firma Typespec.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,6 +24,7 @@ HRESULT GetObjectSize(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cbSignature`  
  [in] Número de bytes de la firma Typespec.  
   
@@ -32,12 +34,13 @@ HRESULT GetObjectSize(
  `pObjectSize`  
  [out] Puntero al tamaño del objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0863f644-58e8-45a0-b0c3-a28e99b20938
 topic_type:
 - apiref
-ms.openlocfilehash: c0381cf924e44e581c8b275c9750cacba045cf1b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 1615d00a9a25cd2f4aa7d9b84de54b5e7670a3fc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730590"
 ---
 # <a name="icordebugmanagedcallbackupdatemodulesymbols-method"></a>ICorDebugManagedCallback::UpdateModuleSymbols (Método)
+
 Notifica al depurador que los símbolos para un módulo de Common Language Runtime han cambiado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT UpdateModuleSymbols (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene el módulo en el que los símbolos han cambiado.  
   
@@ -46,6 +48,7 @@ HRESULT UpdateModuleSymbols (
  de Un puntero a un objeto COM Win32 `IStream` que contiene los símbolos modificados.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este método proporciona una oportunidad para actualizar la vista del depurador de los símbolos de un módulo llamando a [ISymUnmanagedReader:: UpdateSymbolStore (](../diagnostics/isymunmanagedreader-updatesymbolstore-method.md) o [ISymUnmanagedReader:: replacesymbolstore (](../diagnostics/isymunmanagedreader-replacesymbolstore-method.md).  
   
  Esta devolución de llamada puede producirse varias veces para el mismo módulo.  
@@ -53,6 +56,7 @@ HRESULT UpdateModuleSymbols (
  Un depurador debe intentar enlazar puntos de interrupción sin enlazar en el nivel de origen.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -61,6 +65,6 @@ HRESULT UpdateModuleSymbols (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

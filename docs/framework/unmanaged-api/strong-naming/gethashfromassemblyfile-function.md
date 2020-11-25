@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 751ed69f-b7ab-4e07-80de-e17ca9319b0c
 topic_type:
 - apiref
-ms.openlocfilehash: 866b34acae333f043d8e13f4d0ebd55f32046334
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: caefc9773b0d208f8b20847b664f7bc017d2c076
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730999"
 ---
 # <a name="gethashfromassemblyfile-function"></a>GetHashFromAssemblyFile (Función)
+
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: gethashfromassemblyfile (](../hosting/iclrstrongname-gethashfromassemblyfile-method.md) en su lugar.  
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFile (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szFilePath`  
  de Ruta de acceso al archivo al que se va a aplicar un algoritmo hash.  
   
@@ -49,22 +51,23 @@ HRESULT GetHashFromAssemblyFile (
  enuncia Búfer hash devuelto.  
   
  `cchHash`  
- de Tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash` .  
   
  `pchHash`  
- enuncia El tamaño devuelto, en bytes, de `pbHash`.  
+ enuncia El tamaño devuelto, en bytes, de `pbHash` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [GetHashFromAssemblyFile (método)](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [GetHashFromAssemblyFileW (método)](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [Método GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

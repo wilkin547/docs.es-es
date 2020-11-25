@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-ms.openlocfilehash: 1b40ed8e107d30c22b4ade25d29376b1b74583d1
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: fc74b84bccceb1772bf3642e51ec88c562ce5dce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730724"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity (Método)
+
 Obtiene la identidad de este objeto administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetObjectIdentity (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pBSTRGUID`  
  enuncia Puntero al GUID del proceso en el que reside el objeto.  
   
@@ -45,18 +47,20 @@ HRESULT GetObjectIdentity (
  `pCCW`  
  enuncia Puntero al índice de un objeto en la tabla v clásica de COM.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
+
  La identidad de un objeto administrado incluye el GUID del proceso, el identificador del dominio de aplicación y el índice del objeto en la tabla v clásica de COM.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [IManagedObject (Interfaz)](imanagedobject-interface.md)

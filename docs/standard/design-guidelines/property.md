@@ -5,14 +5,15 @@ helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-ms.openlocfilehash: 1cf41a08c641e9251084e5dcac6c46bc54857717
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ed287b98c012622caa5f8f1cc90fced90dda3e62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828743"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730973"
 ---
 # <a name="property-design"></a>Diseño de propiedades
+
 Aunque las propiedades son técnicamente muy similares a los métodos, son bastante diferentes en cuanto a sus escenarios de uso. Deberían aparecer como campos inteligentes. Tienen la sintaxis de llamada de los campos y la flexibilidad de los métodos.
 
  ✔️ crear propiedades Get-only Si el autor de la llamada no debe ser capaz de cambiar el valor de la propiedad.
@@ -38,6 +39,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
  Los captadores de propiedad deben ser operaciones simples y no deben tener ninguna condición previa. Si un captador puede producir una excepción, probablemente se debe volver a diseñar para que sea un método. Tenga en cuenta que esta regla no se aplica a los indexadores, donde se esperan excepciones como resultado de la validación de los argumentos.
 
 ### <a name="indexed-property-design"></a>Diseño de propiedades indizadas
+
  Una propiedad indizada es una propiedad especial que puede tener parámetros y se puede llamar con una sintaxis especial similar a la indización de matrices.
 
  Las propiedades indizadas se conocen normalmente como indexadores. Los indizadores deben usarse solo en las API que proporcionan acceso a los elementos de una colección lógica. Por ejemplo, una cadena es una colección de caracteres y se ha agregado el indizador en <xref:System.String?displayProperty=nameWithType> para tener acceso a sus caracteres.
@@ -69,6 +71,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
  Esto lo exige el compilador de C#.
 
 ### <a name="property-change-notification-events"></a>Eventos de notificación de cambio de propiedad
+
  A veces resulta útil proporcionar un evento que notifique al usuario los cambios en un valor de propiedad. Por ejemplo, `System.Windows.Forms.Control` genera un `TextChanged` evento después de que el valor de su `Text` propiedad haya cambiado.
 
  ✔️ considere la posibilidad de generar eventos de notificación de cambios cuando se modifiquen los valores de propiedad en las API de alto nivel (normalmente los componentes del diseñador).
@@ -85,7 +88,7 @@ Aunque las propiedades son técnicamente muy similares a los métodos, son basta
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 8615deb2e42b039120d97b3eb5af23beb31b0808
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5cc3436716bcfc2ed0f9fd7ff7982bac7a48de9a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502852"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731207"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule (Método)
+
 Obtiene los identificadores de los dominios de la aplicación en la que se cargó el módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetAppDomainsContainingModule(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `moduleId`  
  [in] Identificador del módulo cargado.  
   
@@ -50,9 +52,11 @@ HRESULT GetAppDomainsContainingModule(
  [out] Matriz de valores de identificador de dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El método usa búferes asignados al llamador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -61,7 +65,7 @@ HRESULT GetAppDomainsContainingModule(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerFunctionEnum (Interfaz)](icorprofilerfunctionenum-interface.md)
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)

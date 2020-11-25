@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c4aa124-5e00-46d9-b1e8-57ba6574bb0d
 topic_type:
 - apiref
-ms.openlocfilehash: d6b34403a45cc40863d79b59396041e496989045
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3c85bcbe8aee453b19217ebd1f48feea113e3bb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503944"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731227"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager (Interfaz)
+
 Proporciona métodos que envían una notificación al host de las acciones que realiza el Common Language Runtime (CLR) en caso de anulaciones, tiempos de espera o errores.  
   
 ## <a name="methods"></a>Métodos  
@@ -33,15 +34,16 @@ Proporciona métodos que envían una notificación al host de las acciones que r
 |[Método OnTimeout](ihostpolicymanager-ontimeout-method.md)|Notifica al host que el CLR está a punto de realizar la acción especificada por una llamada a [ICLRPolicyManager:: SetActionOnTimeout (](iclrpolicymanager-setactionontimeout-method.md) en respuesta a un tiempo de espera.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [EClrFailure (Enumeración)](eclrfailure-enumeration.md)
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)

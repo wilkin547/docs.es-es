@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b895c77850c0457fd2a152c1128c016093599f76
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140699"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730986"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW (Función)
+
 Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto. La ruta de acceso al archivo de ensamblado debe especificarse como una cadena Unicode.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: gethashfromassemblyfilew (](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md) en su lugar.  
@@ -39,6 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszFilePath`  
  de Ruta de acceso al archivo al que se va a aplicar un algoritmo hash. Este parámetro debe ser una cadena Unicode.  
   
@@ -49,22 +51,23 @@ HRESULT GetHashFromAssemblyFileW (
  enuncia Búfer hash devuelto.  
   
  `cchHash`  
- de Tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash` .  
   
  `pchHash`  
- enuncia El tamaño devuelto, en bytes, de `pbHash`.  
+ enuncia El tamaño devuelto, en bytes, de `pbHash` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [GetHashFromAssemblyFileW (método)](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [GetHashFromAssemblyFile (método)](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método GetHashFromAssemblyFileW](../hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [Método GetHashFromAssemblyFile](../hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

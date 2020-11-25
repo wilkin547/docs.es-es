@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-ms.openlocfilehash: f399d33dbe05cb5768aa45533ef30d28409e18e2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: bbdc68721378e6bbb09f5e4eade08e2e6e03b097
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84006485"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729920"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType (Enumeración)
+
 Contiene valores que indican la causa subyacente de un evento de desbordamiento de pila.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,14 +44,16 @@ typedef enum {
 |`SO_Other`|El desbordamiento de pila se debe a un código no administrado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Esta información se pasa al host a través de una llamada al método [IActionOnCLREvent:: onEvent](iactiononclrevent-onevent-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

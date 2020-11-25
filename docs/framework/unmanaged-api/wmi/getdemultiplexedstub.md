@@ -1,6 +1,6 @@
 ---
-title: Función GetDemultiplexedStub (Referencia de API no administrada)
-description: La función GetDemultiplexedStub crea un receptor de reenviador de objetos para ayudar a un cliente a recibir llamadas asincrónicas de administración de Windows.
+title: Función GetDemultiplexedStub (referencia de la API no administrada)
+description: La función GetDemultiplexedStub crea un receptor de reenviador de objetos para ayudar a un cliente a recibir llamadas asincrónicas de la administración de Windows.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -14,14 +14,15 @@ helpviewer_keywords:
 - GetDemultiplexedStub function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: d15fed261db2ca2cda6dbf824dc9cb0d5c56eed3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f8f9b56268168bb16c476a9366facd17e8ac44e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174971"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730635"
 ---
 # <a name="getdemultiplexedstub-function"></a>Función GetDemultiplexedStub
+
 Crea un receptor de reenvío de objetos para ayudar a un cliente a recibir llamadas asincrónicas desde la administración de Windows.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,26 +40,27 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Parámetros
 
 `pObject`  
-[en] Un puntero a la implementación en proceso del cliente de [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).
+de Un puntero a la implementación en proceso del cliente de [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).
 
 `isLocal`  
-[en] Un indicador que indica si el`true`evento es local ( ); de `false`lo contrario, .
+de Marca que indica si el evento es local ( `true` ); en caso contrario, `false` .
 
 `ppObject`  
-[fuera] Un receptor de reenviador de objetos para ayudar a un cliente a recibir llamadas asincrónicas de administración de Windows.
+enuncia Un receptor de reenviador de objetos para ayudar a un cliente a recibir llamadas asincrónicas de la administración de Windows.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza `S_OK` correctamente, el valor devuelto es (0).
+Si la función se ejecuta correctamente, el valor devuelto es `S_OK` (0).
 
-Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la [función GetErrorInfo.](geterrorinfo.md)
+Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la función [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

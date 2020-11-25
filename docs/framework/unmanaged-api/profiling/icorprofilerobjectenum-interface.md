@@ -14,32 +14,35 @@ helpviewer_keywords:
 ms.assetid: 13e1651c-9523-40ef-bfd7-87fb94519f8b
 topic_type:
 - apiref
-ms.openlocfilehash: 5ebe99dd8d1d7ec73cd140991a4b13dfa381791d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 73c9f07ff9a7bffc2fb01c0dde390ca8364500b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494649"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731181"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum (Interfaz)
-Proporciona métodos para iterar secuencialmente por una colección de objetos inmovilizados generados por [Ngen. exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
+
+Proporciona métodos para iterar secuencialmente por una colección de objetos inmovilizados generados por el [Ngen.exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Clone](icorprofilerobjectenum-clone-method.md)|Obtiene un puntero de interfaz a una copia de esta interfaz `ICorProfilerObjectEnum`.|  
-|[Método GetCount](icorprofilerobjectenum-getcount-method.md)|Obtiene el número total de objetos inmovilizados de la colección.|  
+|[Clone (Método)](icorprofilerobjectenum-clone-method.md)|Obtiene un puntero de interfaz a una copia de esta interfaz `ICorProfilerObjectEnum`.|  
+|[GetCount (Método)](icorprofilerobjectenum-getcount-method.md)|Obtiene el número total de objetos inmovilizados de la colección.|  
 |[Next (Método)](icorprofilerobjectenum-next-method.md)|Obtiene el número especificado de objetos contiguos de una colección secuencial de objetos, empezando en la posición actual del enumerador en la secuencia.|  
 |[Reset (Método)](icorprofilerobjectenum-reset-method.md)|Mueve el cursor de este enumerador a la posición inicial de la secuencia.|  
-|[Método Skip](icorprofilerobjectenum-skip-method.md)|Hace avanzar el cursor de este enumerador desde su posición actual para que se omita el número especificado de elementos.|  
+|[Skip (Método)](icorprofilerobjectenum-skip-method.md)|Hace avanzar el cursor de este enumerador desde su posición actual para que se omita el número especificado de elementos.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La interfaz `ICorProfilerObjectEnum` es un enumerador. Permite al receptor de una matriz incorporar los cambios de los elementos del remitente a una velocidad que sea adecuada para el receptor. En otras palabras, el receptor puede controlar explícitamente el flujo de elementos de la matriz, evitando así los problemas relacionados con el paso de matrices grandes como parámetros de método.  
   
  Use [ICorProfilerInfo2:: enummodulefrozenobjects (](icorprofilerinfo2-enummodulefrozenobjects-method.md) para obtener un puntero a la `ICorProfilerObjectEnum` interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -48,7 +51,7 @@ Proporciona métodos para iterar secuencialmente por una colección de objetos i
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [Método EnumModuleFrozenObjects](icorprofilerinfo2-enummodulefrozenobjects-method.md)
