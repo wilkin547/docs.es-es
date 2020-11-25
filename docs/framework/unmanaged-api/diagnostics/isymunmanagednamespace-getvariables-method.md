@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707703"
 ---
-# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="5df2f-102">ISymUnmanagedNamespace::GetVariables (Método)</span><span class="sxs-lookup"><span data-stu-id="5df2f-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
-<span data-ttu-id="5df2f-103">Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="5df2f-103">Returns all variables defined at global scope within this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetvariables-method"></a><span data-ttu-id="492ab-102">ISymUnmanagedNamespace::GetVariables (Método)</span><span class="sxs-lookup"><span data-stu-id="492ab-102">ISymUnmanagedNamespace::GetVariables Method</span></span>
+
+<span data-ttu-id="492ab-103">Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="492ab-103">Returns all variables defined at global scope within this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5df2f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5df2f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="492ab-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="492ab-104">Syntax</span></span>  
   
 ```cpp
 HRESULT GetVariables(  
@@ -35,22 +36,25 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5df2f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5df2f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="492ab-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="492ab-105">Parameters</span></span>  
+
  `cVars`  
- <span data-ttu-id="5df2f-106">de `ULONG32`Que indica el tamaño de la `pVars` matriz.</span><span class="sxs-lookup"><span data-stu-id="5df2f-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
+ <span data-ttu-id="492ab-106">de `ULONG32` Que indica el tamaño de la `pVars` matriz.</span><span class="sxs-lookup"><span data-stu-id="492ab-106">[in] A `ULONG32` that indicates the size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="5df2f-107">enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="5df2f-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="492ab-107">enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="492ab-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `pVars`  
- <span data-ttu-id="5df2f-108">enuncia Un puntero a un búfer que contiene los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="5df2f-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
+ <span data-ttu-id="492ab-108">enuncia Un puntero a un búfer que contiene los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="492ab-108">[out] A pointer to a buffer that contains the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5df2f-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5df2f-109">Return Value</span></span>  
- <span data-ttu-id="5df2f-110">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="5df2f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="5df2f-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5df2f-111">Requirements</span></span>  
- <span data-ttu-id="5df2f-112">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5df2f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="5df2f-113">Consulta también</span><span class="sxs-lookup"><span data-stu-id="5df2f-113">See also</span></span>
+## <a name="return-value"></a><span data-ttu-id="492ab-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="492ab-109">Return Value</span></span>  
 
-- [<span data-ttu-id="5df2f-114">ISymUnmanagedNamespace (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="5df2f-114">ISymUnmanagedNamespace Interface</span></span>](isymunmanagednamespace-interface.md)
+ <span data-ttu-id="492ab-110">S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="492ab-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+  
+## <a name="requirements"></a><span data-ttu-id="492ab-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="492ab-111">Requirements</span></span>  
+
+ <span data-ttu-id="492ab-112">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="492ab-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="492ab-113">Consulte también</span><span class="sxs-lookup"><span data-stu-id="492ab-113">See also</span></span>
+
+- [<span data-ttu-id="492ab-114">ISymUnmanagedNamespace (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="492ab-114">ISymUnmanagedNamespace Interface</span></span>](isymunmanagednamespace-interface.md)

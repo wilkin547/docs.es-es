@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 68f548705213da7d715ae569116abae0cd24129d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705662"
 ---
-# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="1d9a2-102">ICorDebugGuidToTypeEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="1d9a2-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
-<span data-ttu-id="1d9a2-103">Obtiene el número especificado de instancias de [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asignan los GUID a la información de tipo.</span><span class="sxs-lookup"><span data-stu-id="1d9a2-103">Gets the specified number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
+# <a name="icordebugguidtotypeenumnext-method"></a><span data-ttu-id="9dce4-102">ICorDebugGuidToTypeEnum::Next (Método)</span><span class="sxs-lookup"><span data-stu-id="9dce4-102">ICorDebugGuidToTypeEnum::Next Method</span></span>
+
+<span data-ttu-id="9dce4-103">Obtiene el número especificado de instancias de [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asignan los GUID a la información de tipo.</span><span class="sxs-lookup"><span data-stu-id="9dce4-103">Gets the specified number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) instances that map GUIDs to type information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d9a2-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1d9a2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9dce4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9dce4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Next(  
@@ -35,28 +36,30 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1d9a2-105">Parameters</span><span class="sxs-lookup"><span data-stu-id="1d9a2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9dce4-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="9dce4-105">Parameters</span></span>  
+
  `celt`  
- <span data-ttu-id="1d9a2-106">de El número de objetos de asignación de GUID a tipo que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="1d9a2-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
+ <span data-ttu-id="9dce4-106">de El número de objetos de asignación de GUID a tipo que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="9dce4-106">[in] The number of GUID-to-type mapping objects to be retrieved.</span></span>  
   
  `values`  
- <span data-ttu-id="1d9a2-107">enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asigna un GUID Windows Runtime a su objeto ICorDebugType correspondiente.</span><span class="sxs-lookup"><span data-stu-id="1d9a2-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
+ <span data-ttu-id="9dce4-107">enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asigna un GUID Windows Runtime a su objeto ICorDebugType correspondiente.</span><span class="sxs-lookup"><span data-stu-id="9dce4-107">[out] An array of pointers, each of which points to a [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) object that maps a Windows Runtime GUID to its corresponding ICorDebugType object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="1d9a2-108">enuncia Puntero al número de objetos [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) realmente devueltos en `values`.</span><span class="sxs-lookup"><span data-stu-id="1d9a2-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
+ <span data-ttu-id="9dce4-108">enuncia Un puntero al número de objetos [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) realmente devueltos en `values` .</span><span class="sxs-lookup"><span data-stu-id="9dce4-108">[out] A pointer to the number of [CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md) objects actually returned in `values`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1d9a2-109">Notas</span><span class="sxs-lookup"><span data-stu-id="1d9a2-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9dce4-109">Observaciones</span><span class="sxs-lookup"><span data-stu-id="9dce4-109">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d9a2-110">Requisitos de</span><span class="sxs-lookup"><span data-stu-id="1d9a2-110">Requirements</span></span>  
- <span data-ttu-id="1d9a2-111">**Plataformas:** Windows Runtime</span><span class="sxs-lookup"><span data-stu-id="1d9a2-111">**Platforms:** Windows Runtime</span></span>  
-  
- <span data-ttu-id="1d9a2-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1d9a2-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="1d9a2-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d9a2-113">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="1d9a2-114">**.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d9a2-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="1d9a2-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d9a2-115">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="9dce4-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9dce4-110">Requirements</span></span>  
 
-- [<span data-ttu-id="1d9a2-116">ICorDebugGuidToTypeEnum (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1d9a2-116">ICorDebugGuidToTypeEnum Interface</span></span>](icordebugguidtotypeenum-interface.md)
-- [<span data-ttu-id="1d9a2-117">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="1d9a2-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+ <span data-ttu-id="9dce4-111">**Plataformas:** Windows Runtime</span><span class="sxs-lookup"><span data-stu-id="9dce4-111">**Platforms:** Windows Runtime</span></span>  
+  
+ <span data-ttu-id="9dce4-112">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9dce4-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+  
+ <span data-ttu-id="9dce4-113">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9dce4-113">**Library:** CorGuids.lib</span></span>  
+  
+ <span data-ttu-id="9dce4-114">**.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9dce4-114">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="9dce4-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="9dce4-115">See also</span></span>
+
+- [<span data-ttu-id="9dce4-116">ICorDebugGuidToTypeEnum (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9dce4-116">ICorDebugGuidToTypeEnum Interface</span></span>](icordebugguidtotypeenum-interface.md)
+- [<span data-ttu-id="9dce4-117">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="9dce4-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
