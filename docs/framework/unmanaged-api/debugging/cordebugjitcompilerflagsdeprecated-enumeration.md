@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: af15e2ca-6be1-472b-bd36-03644a1e3ddd
 topic_type:
 - apiref
-ms.openlocfilehash: 7b8a726cffcc00d7371675192a209b2d8e9db94d
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8797f77388bf4992dfb69191ce8a844a9b7fdb8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696445"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated (Enumeración)
-Esta enumeración está obsoleta. En su `CORDEBUG_JIT_DEFAULT` lugar, use el miembro de la enumeración [cordebugjitcompilerflags (](cordebugjitcompilerflags-enumeration.md) .  
+
+Esta enumeración está obsoleta. `CORDEBUG_JIT_DEFAULT`En su lugar, use el miembro de la enumeración [cordebugjitcompilerflags (](cordebugjitcompilerflags-enumeration.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,13 +33,14 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
 } CorDebugJITCompilerFlagsDeprecated;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|En su lugar, use `CORDEBUG_JIT_DEFAULT`.|  
+|`CORDEBUG_JIT_TRACK_DEBUG_INFO`|Utilice `CORDEBUG_JIT_DEFAULT` en su lugar.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -47,6 +49,6 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c0c92fe-8bd2-477f-b307-aca0143732ca
 topic_type:
 - apiref
-ms.openlocfilehash: e024500ea66dcb42e712e07e976a709401160a27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1bb99503481d917d41ae00a5ef73c8fa59e2a999
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696458"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags (Enumeración)
+
 Especifica el estado del subproceso en el que se activa el asistente para la depuración administrada (MDA).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,16 +33,18 @@ typedef enum CorDebugMDAFlags {
 } CorDebugMDAFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`MDA_FLAG_SLIP`|El subproceso en el que se ha desencadenado el MDA se ha retrasado desde que se activó el MDA.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando la pila de llamadas ya no describe dónde se generó originalmente el MDA, se considera que el subproceso se ha *retrasado*. Se trata de una circunstancia inusual realizada por la ejecución del subproceso de una operación no válida al salir.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -50,6 +53,6 @@ typedef enum CorDebugMDAFlags {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

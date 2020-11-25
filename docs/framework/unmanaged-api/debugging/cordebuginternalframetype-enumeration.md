@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 4a65a98ee04c3870dae2f49b3da2a8e72b1ffae4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795838"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696601"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType (Enumeración)
+
 Identifica el tipo de marco de pila. Esta enumeración la usa el método [ICorDebugInternalFrame (:: GetFrameType (](icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,11 +44,11 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Un valor null. El `ICorDebugInternalFrame::GetFrameType` método nunca devuelve este valor.|  
+|`STUBFRAME_NONE`|Un valor cero. El `ICorDebugInternalFrame::GetFrameType` método nunca devuelve este valor.|  
 |`STUBFRAME_M2U`|Marco de código auxiliar administrado a no administrado.|  
 |`STUBFRAME_U2M`|Marco de código auxiliar no administrado que se administra.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Una transición entre dominios de aplicación.|  
@@ -60,6 +61,7 @@ typedef enum CorDebugInternalFrameType {
 |`STUBFRAME_JIT_COMPILATION`|El tiempo de ejecución es una compilación JIT de un método.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -68,6 +70,6 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

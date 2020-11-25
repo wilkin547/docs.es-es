@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: fdbcbb2da8f449b9275d820763c2a94cca86cd1e
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: f7d76c72ed5db95425f5b1fa2db5e4346983daa4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500759"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696687"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON (Enumeración)
+
 Indica la razón por la que se suspende el tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -52,9 +53,11 @@ typedef enum {
 |`COR_PRF_SUSPEND_FOR_REJIT`|El tiempo de ejecución se suspende para la recompilación JIT.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Todos los subprocesos en tiempo de ejecución que se encuentran en código no administrado pueden continuar ejecutándose hasta que intenten volver a entrar en el tiempo de ejecución, momento en el que también se suspenderán hasta que se reanude el tiempo de ejecución. Esto también se aplica a los nuevos subprocesos que entran en el tiempo de ejecución. Todos los subprocesos del tiempo de ejecución se suspenden inmediatamente si están en código interrumpido o se le piden que se suspendan cuando llegan a código interrumpido.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -63,6 +66,6 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)

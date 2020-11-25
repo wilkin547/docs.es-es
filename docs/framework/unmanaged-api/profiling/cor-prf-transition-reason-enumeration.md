@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-ms.openlocfilehash: e890c62a54654e86bb4a825613807efe142c8d5a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 747313f217092652d5a9404fbf81383fa0828ee9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500746"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696666"
 ---
 # <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON (Enumeración)
+
 Indica el motivo para una transición desde código administrado a no administrado, y o viceversa.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,9 +42,11 @@ typedef enum {
 |`COR_PRF_TRANSITION_RETURN`|La transición se debe a un valor devuelto de una función.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando se produce una transición, el generador de perfiles recibe una devolución de llamada [ICorProfilerCallback:: ManagedToUnmanagedTransition (](icorprofilercallback-managedtounmanagedtransition-method.md) o [ICorProfilerCallback:: UnmanagedToManagedTransition (](icorprofilercallback-unmanagedtomanagedtransition-method.md) , que proporciona un valor de la `COR_PRF_TRANSITION_REASON` enumeración para indicar el motivo de la transición.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
