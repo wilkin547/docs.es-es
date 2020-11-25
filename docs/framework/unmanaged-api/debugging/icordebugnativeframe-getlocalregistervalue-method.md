@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ccb74f3-f891-430c-b70a-e370624edde2
 topic_type:
 - apiref
-ms.openlocfilehash: 97d79f70097bef7768316907887cea2c38dd81e1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a90bba4a4dc9ca92ccdc4af1636d194f92fd7373
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695730"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue (Método)
+
 Obtiene el valor de un argumento o una variable local que se almacena en el registro especificado para este marco nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetLocalRegisterValue (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `reg`  
  de Un valor de la enumeración "CorDebugRegister (" que especifica el registro que contiene el valor.  
   
@@ -44,15 +46,17 @@ HRESULT GetLocalRegisterValue (
  de Un entero que especifica el tamaño de la firma de metadatos binarios a la que hace referencia el `pvSigBlob` parámetro.  
   
  `pvSigBlob`  
- de `PCCOR_SIGNATURE`Valor que apunta a la firma de metadatos binarios del tipo del valor.  
+ de `PCCOR_SIGNATURE` Valor que apunta a la firma de metadatos binarios del tipo del valor.  
   
  `ppValue`  
  enuncia Puntero a la dirección de un objeto "ICorDebugValue" que representa el valor recuperado que se almacena en el registro especificado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `GetLocalRegisterValue` método se puede utilizar en un marco nativo o en un marco compilado Just-in-Time (JIT).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

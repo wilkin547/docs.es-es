@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 759ba7bd46f8231143e743aa5ffcabffeb99c3b6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 0d65849aba08c7d143a6977e7dfb8cff85274a64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205111"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695574"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild (Método)
+
 Determina si el marco actual es un marco secundario.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,10 +33,12 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pIsChild`  
  enuncia Valor booleano que especifica si el marco actual es un marco secundario.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -46,10 +49,12 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  El `IsChild` método devuelve `true` si el objeto de marco en el que se llama al método es un elemento secundario de otro marco. Si este es el caso, use el método [ismatchingparentframe (](icordebugnativeframe2-ismatchingparentframe-method.md) para comprobar si un marco es su elemento primario.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

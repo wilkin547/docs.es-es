@@ -10,14 +10,15 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 17eda7470e5f2e4b41d1f2ed164843eaeeedea93
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546977"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95695875"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 (Interfaz)
+
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
   
  Extiende la interfaz ICorDebugFunction de manera lógica para proporcionar acceso al código desde una solicitud ReJIT.  
@@ -31,6 +32,7 @@ ms.locfileid: "90546977"
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -39,8 +41,8 @@ ms.locfileid: "90546977"
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)
-- [ReJIT: Guía de procedimientos](/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: Guía de How-To](/archive/blogs/davbr/rejit-a-how-to-guide)

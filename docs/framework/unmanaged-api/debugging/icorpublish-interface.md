@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87c4fcb2-7703-4a2e-afb6-42973381b960
 topic_type:
 - apiref
-ms.openlocfilehash: 1bd2f537cfa6a27c24ba91ea7caa29dc9e71a74e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ff4efe8b3e2932da7f65246bf4ad614a4dd86cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694417"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish (Interfaz)
+
 Actúa como la interfaz general para publicar información sobre procesos e información sobre los dominios de aplicación en esos procesos.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,6 +33,7 @@ Actúa como la interfaz general para publicar información sobre procesos e info
 |[Método GetProcess](icorpublish-getprocess-method.md)|Obtiene una instancia de [ICorPublishProcess](icorpublishprocess-interface.md) que representa el proceso con el identificador especificado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -40,7 +42,7 @@ Actúa como la interfaz general para publicar información sobre procesos e info
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [CorpubPublish (coclase)](corpubpublish-coclass.md)

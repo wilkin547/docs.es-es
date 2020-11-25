@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a0abc7168ff7bffdbb835c1c1bc93de9df6e381c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210480"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694872"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory (Método)
+
 Lee un área especificada de memoria para este proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT ReadMemory(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `address`  
- de `CORDB_ADDRESS`Valor que especifica la dirección base de la memoria que se va a leer.  
+ de `CORDB_ADDRESS` Valor que especifica la dirección base de la memoria que se va a leer.  
   
  `size`  
  de Número de bytes que se van a leer de la memoria.  
@@ -48,7 +50,8 @@ HRESULT ReadMemory(
  `read`  
  enuncia Puntero al número de bytes transferidos al búfer especificado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `ReadMemory` método está pensado principalmente para que lo use la depuración de interoperabilidad para inspeccionar las regiones de memoria que usa la parte no administrada del código que se está depurando. Este método también se puede usar para leer el código del lenguaje intermedio de Microsoft (MSIL) y el código compilado JIT nativo.  
   
  Los puntos de interrupción administrados se quitarán de los datos que se devuelven en el `buffer` parámetro. No se realizarán ajustes para los puntos de interrupción nativos establecidos por [ICorDebugProcess2:: SetUnmanagedBreakpoint (](icordebugprocess2-setunmanagedbreakpoint-method.md).  
@@ -56,6 +59,7 @@ HRESULT ReadMemory(
  No se realiza ningún almacenamiento en caché de la memoria del proceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

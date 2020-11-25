@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-ms.openlocfilehash: 89952a93d5652fcb0c3755e52fb18a1a9f2f9894
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 62e3286c5f0c70d283e78dbb1e502dccd73a5a3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397060"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95694274"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain (Interfaz)
+
 Representa y proporciona información sobre un dominio de aplicación.  
   
 ## <a name="methods"></a>Métodos  
@@ -29,9 +30,10 @@ Representa y proporciona información sobre un dominio de aplicación.
 |Método|Descripción|  
 |------------|-----------------|  
 |[Método GetID](icorpublishappdomain-getid-method.md)|Obtiene el identificador único para este `ICorPublishAppDomain` .|  
-|[Método GetName](icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación al que hace referencia este `ICorPublishAppDomain` .|  
+|[GetName (Método)](icorpublishappdomain-getname-method.md)|Obtiene el nombre del dominio de aplicación al que hace referencia este `ICorPublishAppDomain` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -40,7 +42,7 @@ Representa y proporciona información sobre un dominio de aplicación.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [CorpubPublish (coclase)](corpubpublish-coclass.md)
