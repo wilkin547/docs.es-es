@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 995f1064c2f40005c4a19ef034d7edfd668b5d51
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108716"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704167"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject (Función)
+
 Obtiene un puntero de interfaz a una instancia de [IAssemblyName](iassemblyname-interface.md) que representa la identidad única del ensamblado con el nombre especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,11 +39,12 @@ HRESULT CreateAssemblyNameObject (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppAssemblyNameObj`  
- enuncia El `IAssemblyName`devuelto.  
+ enuncia Devuelto `IAssemblyName` .  
   
  `szAssemblyName`  
- de Nombre del ensamblado para el que se va a crear la nueva instancia de `IAssemblyName`.  
+ de Nombre del ensamblado para el que se va a crear la nueva `IAssemblyName` instancia.  
   
  `dwFlags`  
  de Marcas que se van a pasar al constructor de objetos.  
@@ -51,15 +53,16 @@ HRESULT CreateAssemblyNameObject (
  [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

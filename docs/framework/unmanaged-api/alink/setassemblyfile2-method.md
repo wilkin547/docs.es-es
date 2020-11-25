@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445589"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703686"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 (Método)
+
 Establece el nombre y las opciones de un nuevo ensamblado. No llame a este método cuando genere módulos sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT SetAssemblyFile2(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pszFilename`  
  Nombre del archivo de manifiesto.  
   
@@ -49,13 +51,15 @@ HRESULT SetAssemblyFile2(
  Recibe el identificador único para el ensamblado que se está construyendo.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink2 (interfaz)](ialink2-interface.md)
-- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
 - [API de ALink](index.md)

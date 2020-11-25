@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: 1c9d9647084aa729817eeeb17ee3f5cd320c0d29
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e81816ce2194c2c1862cb997ad2c6e5baf301231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491254"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704011"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps (Método)
+
 Obtiene un puntero a los tokens de metadatos para el <xref:System.Type> que implementa el método especificado y para la interfaz que declara ese método.
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetInterfaceImplProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `iiImpl`  
  de Token de metadatos que representa el método para el que se van a devolver los tokens de la clase y la interfaz.  
   
@@ -57,7 +59,7 @@ HRESULT GetInterfaceImplProps (
 
 Conceptualmente, esta información se almacena en una tabla de implementación de interfaz como:
 
-| Número de fila | Token de clase | Token de interfaz |
+| Número de fila. | Token de clase | Token de interfaz |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -70,18 +72,19 @@ Recuerde que el token es un valor de 4 bytes:
 - Los 3 bytes inferiores contienen el número de fila o RID.
 - El byte superior contiene el tipo de token – 0x09 para `mdtInterfaceImpl` .
 
-`GetInterfaceImplProps`Devuelve la información contenida en la fila cuyo token se proporciona en el `iImpl` argumento.
+`GetInterfaceImplProps` Devuelve la información contenida en la fila cuyo token se proporciona en el `iImpl` argumento.
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

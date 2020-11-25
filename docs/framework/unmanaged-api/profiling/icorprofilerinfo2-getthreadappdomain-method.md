@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a11b264-8540-4732-aa35-bc2d95b95b8e
 topic_type:
 - apiref
-ms.openlocfilehash: 70535f8bcee95c2596c43617eb5893e2d92a355b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 010b2dff27ac17906e16fe58729facc7a217b43f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496786"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703764"
 ---
 # <a name="icorprofilerinfo2getthreadappdomain-method"></a>ICorProfilerInfo2::GetThreadAppDomain (Método)
+
 Obtiene el identificador del dominio de aplicación en el que el subproceso especificado está ejecutando código actualmente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT GetThreadAppDomain(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `threadId`  
  de IDENTIFICADOR que especifica el subproceso.  
   
@@ -41,6 +43,7 @@ HRESULT GetThreadAppDomain(
  enuncia Puntero al identificador del dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -49,7 +52,7 @@ HRESULT GetThreadAppDomain(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)
