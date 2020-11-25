@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-ms.openlocfilehash: cdbffe71540b51ff539a45861546efd761761892
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 75d5638a6f01ba9569a03e5255a7217371c9d177
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615376"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725942"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod (Método)
+
 Obtiene el método que contiene este ámbito.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,15 +34,18 @@ HRESULT GetMethod(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pRetVal`  
  enuncia Puntero a la interfaz [ISymUnmanagedMethod](isymunmanagedmethod-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedScope (Interfaz)](isymunmanagedscope-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6dcc4a4b-3a78-4369-bcc7-c0be6dde57d4
 topic_type:
 - apiref
-ms.openlocfilehash: afdcb21c755cb3ffbe9f273ff40361d8f8dff631
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: a78e38dd687e169d05cd262752bff64f5a7a01d7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841443"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724252"
 ---
 # <a name="ihosttaskmanagersetstackguarantee-method"></a>IHostTaskManager::SetStackGuarantee (Método)
+
 Reservado para uso interno.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,15 +35,16 @@ HRESULT SetStackGuarantee(
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Método GetStackGuarantee](ihosttaskmanager-getstackguarantee-method.md)
 - [IHostTaskManager (Interfaz)](ihosttaskmanager-interface.md)

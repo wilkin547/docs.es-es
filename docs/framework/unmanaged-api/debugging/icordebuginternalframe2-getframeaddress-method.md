@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ee8d058-ffc8-4967-9133-a5adfef4e518
 topic_type:
 - apiref
-ms.openlocfilehash: 51c8f9a2b66d7b2553949056f7cdbedcf5ea37d6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 05a9ab58acb3bf5829fd231ae6d8bcc96ae06da6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209921"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724876"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress (Método)
+
 Devuelve la dirección de la pila del marco interno.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,10 +33,12 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAddress`  
  enuncia Puntero a `CORDB_ADDRESS` para el marco interno.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -44,10 +47,12 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |E_FAIL|No se pudo devolver la dirección del marco interno.|  
 |E_INVALIDARG|`pAddress` es `null`.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El valor devuelto en `pAddress` se puede utilizar para determinar la ubicación del marco interno con respecto a otros marcos de la pila. Incluso en equipos basados en IA-64, el marco interno solo vive en la pila y no hay ningún puntero correspondiente a la memoria auxiliar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

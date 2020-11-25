@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-ms.openlocfilehash: cd2a2821128ad9265e8a831f7b02792e6453b1ee
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ddf5af0bc0a5e5e21d837d8b2f3f76185ed7e2b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213795"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724720"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 (Interfaz)
+
 Proporciona métodos que comprueban las relaciones entre marcos primarios y secundarios.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,13 +33,15 @@ Proporciona métodos que comprueban las relaciones entre marcos primarios y secu
 |[Método IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md)|Determina si el marco especificado es el elemento primario del marco actual.|  
 |[Método GetStackParameterSize](icordebugnativeframe2-getstackparametersize-method.md)|Devuelve el tamaño acumulado de los parámetros de la pila en los sistemas operativos x86.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta interfaz extiende lógicamente la interfaz "ICorDebugNativeFrame".  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

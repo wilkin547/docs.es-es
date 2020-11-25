@@ -9,17 +9,19 @@ helpviewer_keywords:
 - debugging interfaces [.NET Framework]
 - interfaces [.NET Framework debugging]
 ms.assetid: f96987d5-e6a5-478b-ac5e-302e16545cce
-ms.openlocfilehash: 34eee8c05e1c356d4c431245c6837bd2b3a89b32
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e376544a9d428ce5110a7e38b92a8e830f574664
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504477"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725188"
 ---
 # <a name="diagnostics-symbol-store-interfaces"></a>Interfaces de almacén de símbolos de diagnósticos
+
 En este tema se describen las interfaces no administradas que permiten a un compilador generar información de símbolos para su uso por parte de un depurador.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [IBindingDisplay (Interfaz)](ibindingdisplay-interface.md)  
  Proporciona métodos que muestran información de enlace actual sobre la aplicación en ejecución.  
   
@@ -114,6 +116,7 @@ En este tema se describen las interfaces no administradas que permiten a un comp
  Interfaz ISymUnmanagedWriter5.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Enumeraciones de almacén de símbolos de diagnósticos](diagnostics-symbol-store-enumerations.md)  
   
  [Estructuras de almacén de símbolos de diagnósticos](diagnostics-symbol-store-structures.md)  

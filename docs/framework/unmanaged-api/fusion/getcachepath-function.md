@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c22f0701cfda4523f595366a97435ef8da08b0cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132691"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724473"
 ---
 # <a name="getcachepath-function"></a>GetCachePath (Función)
+
 Obtiene la ruta de acceso al ensamblado almacenado en memoria caché, usando las marcas especificadas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,23 +38,25 @@ HRESULT GetCachePath (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwCacheFlags`  
- de Valor de [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) que indica el origen del ensamblado almacenado en memoria caché.  
+ de [ASM_CACHE_FLAGS](asm-cache-flags-enumeration.md) valor que indica el origen del ensamblado almacenado en memoria caché.  
   
  `pwzCachePath`  
  enuncia Puntero devuelto a la ruta de acceso.  
   
  `pcchPath`  
- [in, out] La longitud máxima solicitada de `pwzCachePath`y, cuando se devuelve, la longitud real de `pwzCachePath`.  
+ [in, out] La longitud máxima solicitada de `pwzCachePath` y, cuando se devuelve, la longitud real de `pwzCachePath` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ASM_CACHE_FLAGS (enumeración)](asm-cache-flags-enumeration.md)
+- [ASM_CACHE_FLAGS (Enumeración)](asm-cache-flags-enumeration.md)
 - [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

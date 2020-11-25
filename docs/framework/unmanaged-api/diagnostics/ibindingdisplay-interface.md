@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-ms.openlocfilehash: e1b8cf3e8d78c8ef4715467760805cc50975d014
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: d3bbdea3b2f23ddd2207ff2a036f32978cd837e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442142"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725136"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay (Interfaz)
+
 Proporciona métodos que muestran información de enlace actual sobre la aplicación en ejecución.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,6 +33,7 @@ Proporciona métodos que muestran información de enlace actual sobre la aplicac
 |[Método InitializeForProcess](ibindingdisplay-initializeforprocess-method.md)|Inicializa el objeto `IBindingDisplay`.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** BindingDisplay. h  
@@ -40,6 +42,6 @@ Proporciona métodos que muestran información de enlace actual sobre la aplicac
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

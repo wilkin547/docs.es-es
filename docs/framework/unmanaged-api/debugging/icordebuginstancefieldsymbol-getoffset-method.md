@@ -2,14 +2,15 @@
 title: Método ICorDebugInstanceFieldSymbol::GetOffset
 ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
-ms.openlocfilehash: 7d553c1a446e06f34c20da18c0edfe6773cfb597
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2d73de46bbb1023f20dd9023076630611c74be5d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209986"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724928"
 ---
 # <a name="icordebuginstancefieldsymbolgetoffset-method"></a>Método ICorDebugInstanceFieldSymbol::GetOffset
+
 Obtiene el desplazamiento en bytes de este campo de instancia en su clase primaria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -21,15 +22,17 @@ HRESULT GetOffset(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pcbOffset`  
  Puntero al número de bytes que este campo de instancia compensa en su clase primaria.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

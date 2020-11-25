@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-ms.openlocfilehash: 6f11a69671864ba4627c2bb8c86e0c9beb27eeb1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 026ba35044bc7573dc54617dcade9cf3918a76ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83611125"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725929"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces (Método)
+
 Obtiene los espacios de nombres que se usan dentro de este ámbito.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetNamespaces(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cNameSpaces`  
  [in] Tamaño de la matriz `namespaces`.  
   
@@ -47,11 +49,13 @@ HRESULT GetNamespaces(
  enuncia Matriz que recibe los espacios de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedScope (Interfaz)](isymunmanagedscope-interface.md)

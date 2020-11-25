@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-ms.openlocfilehash: c9375854b45432eafb6cc706a1a62f5424e0fee8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3ac1b3606131f534195df9b6b59bf72b1bff27fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210493"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724538"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch (Método)
+
 Establece el nivel de gravedad del modificador de registro especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,16 +35,19 @@ HRESULT ModifyLogSwitch(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pLogSwitchName`  
  de Puntero a una cadena que especifica el nombre del modificador de registro.  
   
  `lLevel`  
  de Nivel de gravedad que se va a establecer para el modificador de registro especificado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Este método es válido solo después de que se haya producido la devolución de llamada [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

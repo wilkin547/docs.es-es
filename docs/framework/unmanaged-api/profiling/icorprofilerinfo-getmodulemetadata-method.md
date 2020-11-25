@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
 topic_type:
 - apiref
-ms.openlocfilehash: 62b34128be99ce7750d45e6c19e26bef7fcc98c5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 74df0fb412e7fb3d9f779391ec84f07a0379a2cc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502956"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95724122"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData (Método)
+
 Obtiene una instancia de la interfaz de metadatos que se asigna al módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetModuleMetaData(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `moduleId`  
  de IDENTIFICADOR del módulo al que se asignará la instancia de interfaz.  
   
@@ -49,11 +51,13 @@ HRESULT GetModuleMetaData(
  enuncia Puntero a la dirección de la instancia de la interfaz de metadatos.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Puede solicitar que los metadatos se abran en modo de lectura/escritura, pero esto hará que la ejecución del programa sea más lenta, ya que los cambios realizados en los metadatos no se pueden optimizar tal como estaban del compilador.  
   
  Algunos módulos (como los módulos de recursos) no tienen metadatos. En esos casos, `GetModuleMetaData` devolverá un valor HRESULT de S_FALSE y un valor null en * `ppOut` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -62,6 +66,6 @@ HRESULT GetModuleMetaData(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

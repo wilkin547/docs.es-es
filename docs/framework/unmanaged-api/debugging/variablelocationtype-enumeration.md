@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 455fd06dbdbfd5d9753f3d7270647a742751d804
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1c65efa006a8b2f4fb4db257b4ad2cde99c4e75e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420661"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725266"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumeración VariableLocationType
+
 Indica el tipo de ubicación nativa de una variable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,10 +44,12 @@ typedef enum VariableLocationType
 |`VLT_REGISTER_RELATIVE`|La variable está en una ubicación de memoria relativa de registro.|  
 |`VLT_INVALID`|La variable no se almacena en un registro o en una ubicación de memoria relativa al registro.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  `VariableLocationType`El método [ICorDebugVariableHome:: GetLocationType](icordebugvariablehome-getlocationtype-method.md) devuelve un miembro de la enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -55,6 +58,6 @@ typedef enum VariableLocationType
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

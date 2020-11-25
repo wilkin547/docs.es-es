@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f241b620-9ec5-42fd-92ef-3b22329db72a
 topic_type:
 - apiref
-ms.openlocfilehash: f558d209d13fae93bd3a6f5e0e653afb91371a6a
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: df42e58a9bb3bf00b3fa4df45086dc2219658e25
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725851"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants (Método)
+
 Obtiene las constantes locales definidas dentro de este ámbito.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetConstants(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cConstants`  
  de Longitud del búfer al que apunta el `pcConstants` parámetro.  
   
@@ -47,11 +49,13 @@ HRESULT GetConstants(
  enuncia Búfer que almacena las constantes.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedScope2 (Interfaz)](isymunmanagedscope2-interface.md)

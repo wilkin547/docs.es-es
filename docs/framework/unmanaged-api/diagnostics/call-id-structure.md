@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bfd46324-afec-4782-9c18-586d81fb4740
 topic_type:
 - apiref
-ms.openlocfilehash: 1c795ee536483a7def9c0339efae66a013898a77
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 3f41dd969e25f7a42308ff0b7b2d617344284b38
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725253"
 ---
 # <a name="call_id-structure"></a>CALL_ID (Estructura)
+
 Proporciona información a un depurador sobre una función a la que se está llamando. Vea la interfaz [INotifySink2](inotifysink2-interface.md) para obtener más información.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -50,9 +51,10 @@ typedef struct tagCALL_ID
 |`szDestinationMachine`|Identifica el equipo que ejecutará la llamada.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [INotifySink2 (Interfaz)](inotifysink2-interface.md)
 - [Estructuras de almacén de símbolos de diagnósticos](diagnostics-symbol-store-structures.md)
