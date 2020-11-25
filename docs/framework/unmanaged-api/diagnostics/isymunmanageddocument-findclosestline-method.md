@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 628f2a04-e529-407d-841e-3b3da219a9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 9e6134d39096c4ab157aa545646d83339f92a0b8
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5ec67758e3174493cbd5cec1de0dcce30013ac43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441037"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698590"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine (Método)
+
 Devuelve la línea más cercana que es un punto de secuencia, dada una línea de este documento que puede ser o no un punto de secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT FindClosestLine(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `line`  
  de Una línea en este documento.  
   
@@ -41,8 +43,9 @@ HRESULT FindClosestLine(
  enuncia Puntero a una variable que recibe la línea.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

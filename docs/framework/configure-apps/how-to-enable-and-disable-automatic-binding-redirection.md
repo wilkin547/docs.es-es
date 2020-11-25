@@ -1,17 +1,17 @@
 ---
 title: Habilitar o deshabilitar las redirecciones de enlace generadas automáticamente
-description: Lea cómo habilitar o deshabilitar la redirección de enlace automática. Esta característica afecta a las aplicaciones de escritorio y Web Apps que tienen como destino .NET 4.5.1 o posterior.
+description: Lea cómo habilitar o deshabilitar la redirección de enlace automática. Esta característica afecta a las aplicaciones de escritorio y Web Apps que tienen como destino .NET Framework 4.5.1 o posterior.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: b099ab4958b1cf41b76884243e252e19a7a951b7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105388"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698837"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedimiento para habilitar y deshabilitar redireccionamiento de enlaces automático
 
@@ -35,7 +35,7 @@ Si tiene Visual Studio 2017 versión 15,7 o posterior, puede deshabilitar fácil
 
 1. Abra el archivo de proyecto para editarlo con uno de los métodos siguientes:
 
-   - En Visual Studio, seleccione el proyecto en **Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
+   - En Visual Studio, seleccione el proyecto en **Explorador de soluciones** y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
    - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]**.
 
 2. En el archivo de proyecto, busque la siguiente entrada de propiedad:
@@ -56,7 +56,7 @@ Puede habilitar las redirecciones de enlace automáticas en las aplicaciones exi
 
 1. Abra el archivo de proyecto para editarlo con uno de los métodos siguientes:
 
-   - En Visual Studio, seleccione el proyecto en **Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
+   - En Visual Studio, seleccione el proyecto en **Explorador de soluciones** y, a continuación, elija **Abrir carpeta en el explorador de archivos** en el menú contextual. En el explorador de archivos, busque el archivo de proyecto (. csproj o. vbproj) y ábralo en el Bloc de notas.
    - En Visual Studio, en **Explorador de soluciones**, haga clic con el botón derecho en el proyecto y elija **descargar el proyecto**. Vuelva a hacer clic con el botón derecho en el proyecto descargado y, a continuación, elija **Editar [nombreDeProyecto. csproj]**.
 
 2. Agregue el siguiente elemento al primer grupo de propiedades de configuración (bajo la \<PropertyGroup> etiqueta):

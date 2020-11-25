@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: d7417e8dc193172c77d23fe3fa72c8298d802b5c
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 4f488741f4233f06c128e0a262ce798ef27af3ff
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699643"
 ---
 # <a name="icordebugclass-interface"></a>Interfaz ICorDebugClass
 
@@ -33,15 +33,17 @@ Representa un tipo, que puede ser básico o complejo (es decir, definido por el 
 |[Método GetStaticFieldValue](icordebugclass-getstaticfieldvalue-method.md)|Obtiene el valor del campo estático especificado.|  
 |[GetToken (Método)](icordebugclass-gettoken-method.md)|Obtiene el `TypeDef` símbolo (token) de metadatos de esta clase.|  
   
-## <a name="remarks"></a>Observaciones  
- La `ICorDebugClass` interfaz representa un tipo genérico sin instancias. La interfaz ICorDebugType representa un tipo genérico con instancias. Por ejemplo, `Hashtable<K, V>` se representará `ICorDebugClass`mediante, `Hashtable<Int32, String>` mientras que se representaría mediante `ICorDebugType`.  
+## <a name="remarks"></a>Comentarios  
+
+ La `ICorDebugClass` interfaz representa un tipo genérico sin instancias. La interfaz ICorDebugType representa un tipo genérico con instancias. Por ejemplo, `Hashtable<K, V>` se representará mediante `ICorDebugClass` , mientras que `Hashtable<Int32, String>` se representaría mediante `ICorDebugType` .  
   
- Los `ICorDebugClass` tipos no genéricos están representados `ICorDebugType`por y. La última interfaz se presentó en la .NET Framework versión 2,0 para tratar con la creación de instancias de tipo.  
+ Los tipos no genéricos están representados por `ICorDebugClass` y `ICorDebugType` . La última interfaz se presentó en la .NET Framework versión 2,0 para tratar con la creación de instancias de tipo.  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -50,6 +52,6 @@ Representa un tipo, que puede ser básico o complejo (es decir, definido por el 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

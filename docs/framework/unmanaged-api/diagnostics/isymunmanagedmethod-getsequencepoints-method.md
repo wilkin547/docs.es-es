@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-ms.openlocfilehash: 451cfecde7e14fad9d3fed3367112e1fb59796e5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 38763e687c66dcb038a874c9c17cb0d67e547816
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615150"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699357"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints (Método)
+
 Obtiene todos los puntos de secuencia de este método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,8 +41,9 @@ HRESULT GetSequencePoints(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cPoints`  
- de `ULONG32`Que recibe el tamaño de las `offsets` matrices, `documents` , `lines` , `columns` , `endLines` y `endColumns` .  
+ de `ULONG32` Que recibe el tamaño de las `offsets` matrices, `documents` , `lines` , `columns` , `endLines` y `endColumns` .  
   
  `pcPoints`  
  enuncia Un puntero a un `ULONG32` que recibe la longitud del búfer necesario para contener los puntos de secuencia.  
@@ -65,11 +67,13 @@ HRESULT GetSequencePoints(
  de Matriz de columnas de los documentos en las que finalizan los puntos de secuencia.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a8074f1-facc-4a3f-bb9b-d6574fc2fc74
 topic_type:
 - apiref
-ms.openlocfilehash: 031e9d9434bc655ba8947a2bb6aba56a150e9002
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: c66fd810ae4976bc0b5e04572b899465cebe4bbb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699513"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters (Método)
+
 Obtiene los parámetros de este método. Los parámetros se devuelven en el orden en el que se definen dentro de la firma del método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetParameters(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cParams`  
  [in] Tamaño de la matriz `params`.  
   
@@ -46,11 +48,13 @@ HRESULT GetParameters(
  enuncia Puntero al búfer que recibe los parámetros.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

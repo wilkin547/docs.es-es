@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: 7575be3f5074243b251c80b8dd5bdbb12e5d50fd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976335"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95698798"
 ---
 # <a name="icordebugenum-interface"></a>Interfaz ICorDebugEnum
 
@@ -29,13 +29,14 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método Clone](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
-|[Método GetCount](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
+|[Clone (Método)](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
+|[GetCount (Método)](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
 |[Reset (Método)](icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
-|[Método Skip](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
+|[Skip (Método)](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
   
-## <a name="remarks"></a>Observaciones  
- Los enumeradores siguientes derivan `ICorDebugEnum`de:  
+## <a name="remarks"></a>Comentarios  
+
+ Los enumeradores siguientes derivan de `ICorDebugEnum` :  
   
 - ICorDebugAppDomainEnum (  
   
@@ -83,6 +84,7 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
