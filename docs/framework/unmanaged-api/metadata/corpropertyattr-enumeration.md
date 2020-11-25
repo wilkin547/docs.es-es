@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: b6651f30e0df3a5ffc29d310b9067e76761dcf01
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d76de80f87a8e5a63eac9f6a413f2efb0e394b0a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007538"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706130"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr (Enumeración)
+
 Contiene valores que describen los metadatos de una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -49,6 +50,7 @@ typedef enum CorPropertyAttr {
 |`prUnused`|Sin usar.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

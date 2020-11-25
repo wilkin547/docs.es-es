@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1542811-0a7f-4235-bcfd-b24370d6f24b
 topic_type:
 - apiref
-ms.openlocfilehash: ff24ec418f4cd106fb35a61a134a69e5d60519b9
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: dc24afd8f78a900ea52539bf9dcb522287223c4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212183"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705636"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose (Método)
+
 Libera el identificador al que hace referencia este objeto ICorDebugHandleValue sin liberar explícitamente el puntero de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,6 +33,7 @@ HRESULT Dispose ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

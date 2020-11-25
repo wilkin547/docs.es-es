@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-ms.openlocfilehash: 20be3114908ef78966eead05ae8ba6333a491404
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89556cf0e1ef65c35278a526e10fc791063ea2c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708353"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey (Función)
+
 Obtiene un token que representa una clave pública. Un token de nombre seguro es la forma abreviada de una clave pública.  
   
- Esta función ha quedado en desuso. Utilice el método [ICLRStrongName::StrongNameTokenFromPublicKey](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameTokenFromPublicKey (](../hosting/iclrstrongname-strongnametokenfrompublickey-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,34 +43,38 @@ BOOLEANStrongNameTokenFromPublicKey (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pbPublicKeyBlob`  
- [en] Estructura de tipo [PublicKeyBlob](publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
+ de Estructura de tipo [PublicKeyBlob](publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
   
  `cbPublicKeyBlob`  
- [en] El tamaño, en `pbPublicKeyBlob`bytes, de .  
+ de Tamaño, en bytes, de `pbPublicKeyBlob` .  
   
  `ppbStrongNameToken`  
- [fuera] El token de nombre seguro `pbPublicKeyBlob`correspondiente a la clave que se pasa en . Common Language Runtime asigna la memoria en la que se va a devolver el token. El llamador debe liberar esta memoria mediante el uso de la [StrongNameFreeBuffer](strongnamefreebuffer-function.md) función.  
+ enuncia El token de nombre seguro correspondiente a la clave pasada `pbPublicKeyBlob` . El Common Language Runtime asigna la memoria en la que se va a devolver el token. El autor de la llamada debe liberar esta memoria mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
  `pcbStrongNameToken`  
- [fuera] El tamaño, en bytes, del token de nombre seguro devuelto.  
+ enuncia Tamaño, en bytes, del token de nombre seguro devuelto.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`una finalización exitosa; de `false`lo contrario, .  
+
+ `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Observaciones  
- Un token de nombre seguro es la forma abreviada de una clave pública que se usa para ahorrar espacio al almacenar información de clave en metadatos. En concreto, los tokens de nombre seguro se usan en las referencias de ensamblado para hacer referencia al ensamblado dependiente.  
+## <a name="remarks"></a>Comentarios  
+
+ Un token de nombre seguro es la forma abreviada de una clave pública que se usa para ahorrar espacio al almacenar información de clave en los metadatos. En concreto, se usan tokens de nombre seguro en las referencias de ensamblado para hacer referencia al ensamblado dependiente.  
   
- Si `StrongNameTokenFromPublicKey` la función no se completa correctamente, llame a la [StrongNameErrorInfo](strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameTokenFromPublicKey` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** StrongName.h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca:** Incluido como recurso en mscoree.dll  
+ **Biblioteca:** Se incluye como un recurso en mscoree.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

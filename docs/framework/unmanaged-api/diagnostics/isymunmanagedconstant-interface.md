@@ -14,27 +14,29 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 58d81fd150684f254333c17374d06f7dd5b95823
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706871"
 ---
 # <a name="isymunmanagedconstant-interface"></a>ISymUnmanagedConstant (Interfaz)
+
 Proporciona acceso a las constantes no administradas.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetName](isymunmanagedconstant-getname-method.md)|Obtiene el nombre de la constante.|  
+|[GetName (Método)](isymunmanagedconstant-getname-method.md)|Obtiene el nombre de la constante.|  
 |[GetSignature (Método)](isymunmanagedconstant-getsignature-method.md)|Obtiene la firma de la constante.|  
-|[Método GetValue](isymunmanagedconstant-getvalue-method.md)| Obtiene el valor de la constante.|  
+|[GetValue (Método)](isymunmanagedconstant-getvalue-method.md)| Obtiene el valor de la constante.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

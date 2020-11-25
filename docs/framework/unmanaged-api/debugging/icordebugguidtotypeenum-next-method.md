@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 68f548705213da7d715ae569116abae0cd24129d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777640"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705662"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next (Método)
+
 Obtiene el número especificado de instancias de [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asignan los GUID a la información de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +36,8 @@ HRESULT Next(
 );  
 ```  
   
-## <a name="parameters"></a>Parameters  
+## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de El número de objetos de asignación de GUID a tipo que se van a recuperar.  
   
@@ -43,20 +45,21 @@ HRESULT Next(
  enuncia Una matriz de punteros, cada uno de los cuales apunta a un objeto [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) que asigna un GUID Windows Runtime a su objeto ICorDebugType correspondiente.  
   
  `pceltFetched`  
- enuncia Puntero al número de objetos [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) realmente devueltos en `values`.  
+ enuncia Un puntero al número de objetos [cordebugguidtotypemapping (](cordebugguidtotypemapping-structure.md) realmente devueltos en `values` .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="requirements"></a>Requisitos de  
+## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Windows Runtime  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework versiones:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICorDebugGuidToTypeEnum (interfaz)](icordebugguidtotypeenum-interface.md)
-- [Interfaces de depuración](debugging-interfaces.md)
+- [ICorDebugGuidToTypeEnum (Interfaz)](icordebugguidtotypeenum-interface.md)
+- [Interfaces para depuración](debugging-interfaces.md)

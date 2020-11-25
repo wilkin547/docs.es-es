@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: da3ee54b1c3361149c11a9cfad8bdb07a5007ecf
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007551"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706149"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap (Enumeración)
+
 Especifica las opciones de una llamada PInvoke.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -78,9 +79,9 @@ typedef enum  CorPinvokeMap {
 |`pmThrowOnUnmappableCharUseAssem`|Reservado.|  
 |`pmThrowOnUnmappableCharEnabled`|Produce una excepción cuando el serializador de interoperabilidad encuentra un carácter que no se pudo asignar.|  
 |`pmThrowOnUnmappableCharDisabled`|No inicie una excepción cuando el serializador de interoperabilidad encuentre un carácter no asignable.|  
-|`pmThrowOnUnmappableCharMask`|Reserved|  
+|`pmThrowOnUnmappableCharMask`|Reservada|  
 |`pmSupportsLastError`|Permita que el destinatario llame a la `SetLastError` función de Win32 antes de volver del método con atributos.|  
-|`pmCallConvMask`|Reserved|  
+|`pmCallConvMask`|Reservada|  
 |`pmCallConvWinapi`|Usar la Convención de llamada de plataforma predeterminada. Por ejemplo, en Windows el valor predeterminado es `StdCall` y en Windows CE .net es `Cdecl` .|  
 |`pmCallConvCdecl`|Utilice la `Cdecl` Convención de llamada. En este caso, el autor de la llamada limpia la pila. Esto permite llamar a funciones con `varargs` (es decir, funciones que aceptan un número variable de parámetros).|  
 |`pmCallConvStdcall`|Utilice la `StdCall` Convención de llamada. En este caso, el destinatario limpia la pila. Esta es la convención predeterminada para la llamada a funciones no administradas con invocación de plataforma.|  
@@ -89,6 +90,7 @@ typedef enum  CorPinvokeMap {
 |`pmMaxValue`|Reservado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

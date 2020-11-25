@@ -9,14 +9,15 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-ms.openlocfilehash: c01e041edbf30813c477e579867abb9099ce0528
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 08046fb78638546b3dcab856674424c92c03fe83
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820857"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706416"
 ---
 # <a name="naming-resources"></a>Asignar nombres a recursos
+
 Dado que se puede hacer referencia a los recursos localizables a través de ciertos objetos como si fueran propiedades, las directrices de nomenclatura para los recursos son similares a las directrices de propiedad.
 
  ✔️ usar PascalCasing en las claves de recursos.
@@ -38,7 +39,7 @@ Dado que se puede hacer referencia a los recursos localizables a través de cier
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de nomenclatura](naming-guidelines.md)

@@ -14,18 +14,19 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-ms.openlocfilehash: ff9efd40b630e8e25963b3d69b026feea2823ece
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 60832e823ed2f51fdd13c467dbbef4378de27885
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821104"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706715"
 ---
 # <a name="general-naming-conventions"></a>Convenciones generales de nomenclatura
 
 En esta sección se describen las convenciones de nomenclatura generales relacionadas con la elección de palabras, las instrucciones sobre el uso de abreviaturas y acrónimos, y recomendaciones sobre cómo evitar el uso de nombres específicos del idioma.
 
 ## <a name="word-choice"></a>Elección de palabra
+
  ✔️ Elija nombres de identificador fácilmente legibles.
 
  Por ejemplo, una propiedad denominada `HorizontalAlignment` es más legible en inglés que `AlignmentHorizontal` .
@@ -43,6 +44,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
  Según la regla 4 del Common Language Specification (CLS), todos los lenguajes compatibles deben proporcionar un mecanismo que permita el acceso a los elementos con nombre que utilizan una palabra clave de ese lenguaje como identificador. C#, por ejemplo, usa el signo @ como mecanismo de escape en este caso. Sin embargo, sigue siendo una buena idea evitar palabras clave comunes, ya que es mucho más difícil usar un método con la secuencia de escape que una sin ella.
 
 ## <a name="using-abbreviations-and-acronyms"></a>Usar abreviaturas y acrónimos
+
  ❌ No utilice abreviaturas ni contracciones como parte de los nombres de identificadores.
 
  Por ejemplo, use `GetWindow` en lugar de `GetWin` .
@@ -50,6 +52,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
  ❌ No use ningún acrónimo que no se acepte ampliamente y, incluso si es así, solo cuando sea necesario.
 
 ## <a name="avoiding-language-specific-names"></a>Evitar nombres de Language-Specific
+
  ✔️ utilizar nombres semánticamente interesantes en lugar de palabras clave específicas del lenguaje para los nombres de tipo.
 
  Por ejemplo, `GetLength` es un nombre mejor que `GetInt` .
@@ -78,6 +81,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
  ✔️ usar un nombre común, como `value` o `item` , en lugar de repetir el nombre de tipo, en los casos excepcionales en los que un identificador no tiene ningún significado semántico y el tipo del parámetro no es importante.
 
 ## <a name="naming-new-versions-of-existing-apis"></a>Asignar nombres a las nuevas versiones de las API existentes
+
  ✔️ usar un nombre similar a la API anterior al crear nuevas versiones de una API existente.
 
  Esto ayuda a resaltar la relación entre las API.
@@ -98,7 +102,7 @@ En esta sección se describen las convenciones de nomenclatura generales relacio
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de los marcos](index.md)
 - [Directrices de nomenclatura](naming-guidelines.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc09bad2-fb34-4d13-a521-6ec7b1a1d915
 topic_type:
 - apiref
-ms.openlocfilehash: d9a7b18e90a3038c1ffb634ccc7315143875c809
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 196993df9058d3eb8167e0144255c5fe366c54f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441921"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707365"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset (Método)
+
 Obtiene la información de línea asociada a un desplazamiento. Si el parámetro de desplazamiento ( `dwOffset` ) no es un punto de secuencia, este método obtiene la información de línea asociada al desplazamiento anterior.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT GetLineFromOffset(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwOffset`  
  de Un `ULONG32` que contiene el desplazamiento.  
   
@@ -57,11 +59,13 @@ HRESULT GetLineFromOffset(
  enuncia Puntero a un objeto `ULONG32` que recibe el punto de secuencia asociado.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

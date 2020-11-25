@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: faebf594-67d5-4abf-b9c1-547fd3a1ff87
 topic_type:
 - apiref
-ms.openlocfilehash: 54c8c7f5c3ba6b4afd4ff352a8afb947a92e2d61
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: acb8d48ed6314756e2c1a10fff314a303799fb24
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441882"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707287"
 ---
 # <a name="isymencunmanagedmethod-interface"></a>ISymENCUnmanagedMethod (Interfaz)
+
 Proporciona información para la característica editar y continuar.  
   
 ## <a name="methods"></a>Métodos  
@@ -35,8 +36,9 @@ Proporciona información para la característica editar y continuar.
 |[Método GetSourceExtentInDocument](isymencunmanagedmethod-getsourceextentindocument-method.md)|Obtiene la línea de inicio más pequeña y la línea de finalización más grande para el método en un documento específico.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - read-only fields
 - member design guidelines, fields
 ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
-ms.openlocfilehash: 6e58274f32ea129d3271c11e321bdbd454d2406a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4329ca9e74fa02411bd39755a432fc7d4858597d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821117"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706702"
 ---
 # <a name="field-design"></a>Diseño de campos
+
 El principio de encapsulación es una de las nociones más importantes del diseño orientado a objetos. Este principio indica que los datos almacenados dentro de un objeto solo deben ser accesibles para ese objeto.
 
  Una manera útil de interpretar el principio es decir que se debe diseñar un tipo para que los cambios en los campos de ese tipo (nombre o tipo cambie) sin interrumpir el código que no sea para los miembros del tipo. Esta interpretación implica inmediatamente que todos los campos deben ser privados.
@@ -40,7 +41,7 @@ El principio de encapsulación es una de las nociones más importantes del dise�
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

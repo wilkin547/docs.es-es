@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6497dd3e720874e47de9dfda74e483a642cbb181
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540510"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708236"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver (Función)
+
 Carga una biblioteca de tipos y usa la [interfaz ITypeLibResolver (](itypelibresolver-interface.md) proporcionada para resolver cualquier biblioteca de tipos a la que se hace referencia internamente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT LoadTypeLibWithResolver(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szFile`  
  de Ruta de acceso del archivo de la biblioteca de tipos.  
   
@@ -54,6 +56,7 @@ HRESULT LoadTypeLibWithResolver(
  enuncia Referencia a la biblioteca de tipos que se está cargando.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Uno de los valores HRESULT que se muestran en la tabla siguiente.  
   
 |Valor devuelto|Significado|  
@@ -68,6 +71,7 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|No se pudo cargar la biblioteca de tipos o DLL.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El [Tlbexp.exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) llama a la `LoadTypeLibWithResolver` función durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
  Esta función carga la biblioteca de tipos especificada con acceso mínimo al registro. A continuación, la función examina la biblioteca de tipos para las bibliotecas de tipos a las que se hace referencia internamente, cada una de las cuales se debe cargar y agregar a la biblioteca de tipos primaria.  
@@ -83,6 +87,7 @@ HRESULT LoadTypeLibWithResolver(
  Si llama `LoadTypeLibWithResolver` directamente a, debe proporcionar su propia implementación de la [interfaz ITypeLibResolver (](itypelibresolver-interface.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** TlbRef. h  
@@ -91,7 +96,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **.NET Framework versión:** 3,5, 3,0, 2,0  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones del asistente Tlbexp](index.md)
 - [LoadTypeLibEx función)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

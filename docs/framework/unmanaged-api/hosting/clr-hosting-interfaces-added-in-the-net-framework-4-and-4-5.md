@@ -6,14 +6,15 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: a524c0b0e01fbde95ce2341874511960b3e5738e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 6ee3b8cdf348a5eade3903e2d26b4f9b93886305
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616858"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706819"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5
+
 En esta sección se describen las interfaces que los hosts no administrados pueden utilizar para integrar el Common Language Runtime (CLR) en el .NET Framework 4, .NET Framework 4,5 y versiones posteriores en sus aplicaciones. Estas interfaces proporcionan métodos para que un host configure y cargue el tiempo de ejecución en un proceso.  
   
  A partir de la .NET Framework 4, todas las interfaces de hospedaje tienen las siguientes características:  
@@ -25,7 +26,8 @@ En esta sección se describen las interfaces que los hosts no administrados pued
 - No hay ningún modelo de apartamento, agregación o activación del registro que use la [función CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [ICLRAppDomainResourceMonitor (Interfaz)](iclrappdomainresourcemonitor-interface.md)  
+
+ [ICLRAppDomainResourceMonitor (interfaz)](iclrappdomainresourcemonitor-interface.md)  
  Proporciona métodos que inspeccionan el uso de la CPU y la memoria de un dominio de aplicación.  
   
  [ICLRDomainManager (Interfaz)](iclrdomainmanager-interface.md)  
@@ -53,6 +55,7 @@ En esta sección se describen las interfaces que los hosts no administrados pued
  Proporciona toda la funcionalidad de la [interfaz ICLRTask](iclrtask-interface.md); Además, proporciona métodos que permiten que las anulaciones de subprocesos se retrasen en el subproceso actual.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Coclases e interfaces de hospedaje de CLR en desuso](deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Describe las interfaces de hospedaje proporcionadas con las versiones .NET Framework 1,0 y 1,1.  
   

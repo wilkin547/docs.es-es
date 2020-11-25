@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-ms.openlocfilehash: 7c5359ddf2c021f77ad1ea0a8579316c3c773fd5
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa0950ca2ef4e969258c147b762fa95e52a82e5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209791"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705827"
 ---
 # <a name="icordebuggenericvalue-interface"></a>Interfaz ICorDebugGenericValue
 
@@ -29,11 +29,12 @@ Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfa
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetValue](icordebuggenericvalue-getvalue-method.md)|Copia el valor en el búfer especificado.|  
+|[GetValue (Método)](icordebuggenericvalue-getvalue-method.md)|Copia el valor en el búfer especificado.|  
 |[Método SetValue](icordebuggenericvalue-setvalue-method.md)|Copia un nuevo valor del búfer especificado.|  
   
-## <a name="remarks"></a>Observaciones  
- `ICorDebugGenericValue`es una subinterfaz porque no es remota.  
+## <a name="remarks"></a>Comentarios  
+
+ `ICorDebugGenericValue` es una subinterfaz porque no es remota.  
   
  En el caso de los tipos de referencia, el valor es la referencia en lugar del contenido de la referencia.  
   
@@ -43,6 +44,7 @@ Una subclase de "ICorDebugValue" que se aplica a todos los valores. Esta interfa
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

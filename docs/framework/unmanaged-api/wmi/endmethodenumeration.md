@@ -1,5 +1,5 @@
 ---
-title: Función EndMethodEnumeration (Referencia de API no administrada)
+title: Función EndMethodEnumeration (referencia de la API no administrada)
 description: La función EndMethodEnumeration finaliza una secuencia de enumeración de método.
 ms.date: 11/06/2017
 api_name:
@@ -14,15 +14,16 @@ helpviewer_keywords:
 - EndMethodEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 63667d0668f905ded2aedd961be0d1831faf838c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 82f50530967699427d8a00b1c9f518b639273626
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175010"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708067"
 ---
 # <a name="endmethodenumeration-function"></a>Función EndMethodEnumeration
-Termina una secuencia de enumeración iniciada con una llamada a la [función BeginMethodEnumeration](beginmethodenumeration.md).  
+
+Finaliza una secuencia de enumeración iniciada con una llamada a la [función BeginMethodEnumeration](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -38,32 +39,33 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[en] Este parámetro no se utiliza.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[en] Puntero a una instancia de [IWbemClassObject.](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli.h,* o puede definirlos como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Value  |Descripción  |
 |---------|---------|---------|
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Error interno. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Esta función ajusta una llamada a la [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) método.
+Esta función contiene una llamada al método [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) .
 
-El llamador comienza la secuencia de enumeración mediante [beginMethodEnumeration función](beginmethodenumeration.md)y, a continuación, llama a la [NextMethod función](nextmethod.md )hasta que el método devuelve `WBEM_S_NO_MORE_DATA`. El autor de la llamada `EndMethodEnumeration`finaliza opcionalmente la secuencia llamando a . El llamador puede terminar `EndMethodEnumeration` la enumeración antes de tiempo llamando en cualquier momento.
+El autor de la llamada comienza la secuencia de enumeración mediante la [función BeginMethodEnumeration](beginmethodenumeration.md)y, a continuación, llama a la [función NextMethod](nextmethod.md )hasta que el método devuelve `WBEM_S_NO_MORE_DATA` . Opcionalmente, el llamador finaliza la secuencia mediante una llamada a `EndMethodEnumeration` . El autor de la llamada puede finalizar la enumeración al principio llamando `EndMethodEnumeration` a en cualquier momento.
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** WMINet_Utils.idl  
+ **Encabezado:** WMINet_Utils. idl  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Consulte también
 

@@ -2,14 +2,15 @@
 title: Instrucciones para colecciones
 ms.date: 10/22/2008
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-ms.openlocfilehash: 2306462d933e71d0d23021a0e036e8cc23100c68
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a143e88be01bf2c8f45e25f26498d2d3ccbd98da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821091"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706676"
 ---
 # <a name="guidelines-for-collections"></a>Instrucciones para colecciones
+
 Cualquier tipo diseñado específicamente para manipular un grupo de objetos que tienen alguna característica común se puede considerar una colección. Casi siempre es adecuado para estos tipos de implementación <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> , por lo que en esta sección solo se tienen en cuenta los tipos que implementan una o ambas interfaces para ser colecciones.
 
  ❌ No use colecciones débilmente tipadas en las API públicas.
@@ -31,6 +32,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  ❌ No implemente `IEnumerator<T>` y `IEnumerable<T>` en el mismo tipo. Lo mismo se aplica a las interfaces no genéricas `IEnumerator` y `IEnumerable` .
 
 ## <a name="collection-parameters"></a>Parámetros de colección
+
  ✔️ usar el tipo menos especializado posible como tipo de parámetro. La mayoría de los miembros que toman colecciones como parámetros usan la `IEnumerable<T>` interfaz.
 
  ❌ Evite usar <xref:System.Collections.Generic.ICollection%601> o <xref:System.Collections.ICollection> como parámetro solo para tener acceso a la `Count` propiedad.
@@ -38,6 +40,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  En su lugar, considere `IEnumerable<T>` el uso de o `IEnumerable` y la comprobación dinámica de si el objeto implementa `ICollection<T>` o `ICollection` .
 
 ## <a name="collection-properties-and-return-values"></a>Propiedades de colección y valores devueltos
+
  ❌ NO proporcione propiedades de colección que se puedan establecer.
 
  Los usuarios pueden reemplazar el contenido de la colección borrando primero la colección y, a continuación, agregando el nuevo contenido. Si reemplazar toda la colección es un escenario común, considere la posibilidad `AddRange` de proporcionar el método en la colección.
@@ -69,6 +72,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  La regla general es que las colecciones o matrices vacías (0 elementos) se deben tratar de la misma forma.
 
 ### <a name="snapshots-versus-live-collections"></a>Instantáneas frente a colecciones dinámicas
+
  Las colecciones que representan un estado en un momento dado se denominan colecciones de instantáneas. Por ejemplo, una colección que contiene filas devueltas por una consulta de base de datos sería una instantánea. Las colecciones que siempre representan el estado actual se denominan colecciones activas. Por ejemplo, una colección de `ComboBox` elementos es una colección dinámica.
 
  ❌ NO devuelva colecciones de instantáneas de propiedades. Las propiedades deben devolver colecciones dinámicas.
@@ -80,6 +84,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  En general, todas las colecciones que representan un recurso compartido (por ejemplo, los archivos de un directorio) son volátiles. Estas colecciones son muy difíciles o imposibles de implementar como colecciones en directo a menos que la implementación sea simplemente un enumerador de solo avance.
 
 ## <a name="choosing-between-arrays-and-collections"></a>Elegir entre matrices y colecciones
+
  ✔️ prefiere colecciones sobre matrices.
 
  Las colecciones proporcionan más control sobre el contenido, pueden evolucionar con el tiempo y son más fáciles de usar. Además, no se recomienda el uso de matrices para escenarios de solo lectura porque el costo de clonación de la matriz es prohibitivo. Los estudios de uso han demostrado que algunos desarrolladores se sienten más cómodos con las API basadas en colecciones.
@@ -93,6 +98,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  ❌ No utilice matrices para propiedades si la propiedad tendría que devolver una nueva matriz (por ejemplo, una copia de una matriz interna) cada vez que se llama al captador de propiedad.
 
 ## <a name="implementing-custom-collections"></a>Implementar colecciones personalizadas
+
  ✔️ considere la posibilidad de heredar de `Collection<T>` , `ReadOnlyCollection<T>` o `KeyedCollection<TKey,TItem>` al diseñar nuevas colecciones.
 
  ✔️ implementar `IEnumerable<T>` al diseñar nuevas colecciones. Considere la posibilidad `ICollection<T>` de implementar o incluso `IList<T>` dónde tenga sentido.
@@ -106,6 +112,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
  ❌ NO herede de colecciones base no genéricas como `CollectionBase` . `Collection<T>` `ReadOnlyCollection<T>` En su lugar, use, y `KeyedCollection<TKey,TItem>` .
 
 ### <a name="naming-custom-collections"></a>Asignar nombres a colecciones personalizadas
+
  Las colecciones (tipos que implementan `IEnumerable` ) se crean principalmente por dos motivos: (1) para crear una nueva estructura de datos con operaciones específicas de la estructura y, a menudo, distintas características de rendimiento que las estructuras de datos existentes (por ejemplo,,,  <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.LinkedList%601> , <xref:System.Collections.Generic.Stack%601> ) y (2) para crear una colección especializada para contener un conjunto específico de elementos (por ejemplo,  <xref:System.Collections.Specialized.StringCollection> ). Las estructuras de datos se usan con mayor frecuencia en la implementación interna de aplicaciones y bibliotecas. Las colecciones especializadas se exponen principalmente en las API (como tipos de propiedades y parámetros).
 
  ✔️ usar el sufijo "Dictionary" en los nombres de las abstracciones que implementan `IDictionary` o `IDictionary<TKey,TValue>` .
@@ -126,7 +133,7 @@ Cualquier tipo diseñado específicamente para manipular un grupo de objetos que
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de uso](usage-guidelines.md)

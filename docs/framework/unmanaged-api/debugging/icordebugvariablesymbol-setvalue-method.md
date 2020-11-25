@@ -2,14 +2,15 @@
 title: ICorDebugVariableSymbol::SetValue (método)
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
-ms.openlocfilehash: 38afd355938ec1beb1dbfd33de36116d25b07b4e
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 3ef9b9b9a095d6d6026ffc38873661355d660488
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397072"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707846"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue (método)
+
 Asigna el valor de una matriz de bytes a una variable.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -26,6 +27,7 @@ HRESULT SetValue(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `offset`  
  [in] Desplazamiento inicial de la variable en la que se va a establecer el valor. Este parámetro se utiliza cuando se escribe en campos de miembro de un objeto.  
   
@@ -50,6 +52,7 @@ HRESULT SetValue(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -58,7 +61,7 @@ HRESULT SetValue(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

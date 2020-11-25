@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-ms.openlocfilehash: 512fc3b7fde93279995a67be2fc0b285ba235f16
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5070f45beccd89d6f051f1b1d8345390e915d471
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706598"
 ---
 # <a name="member-design-guidelines"></a>Instrucciones de diseño de miembros
+
 Los métodos, propiedades, eventos, constructores y campos se conocen colectivamente como miembros. Los miembros son en última instancia los medios por los que se expone la funcionalidad del marco de trabajo a los usuarios finales de un marco de trabajo.  
   
  Los miembros pueden ser virtuales o no virtuales, concretos o abstractos, estáticos o de instancia, y pueden tener distintos ámbitos de accesibilidad. Toda esta variedad proporciona una expresividad increíble, pero al mismo tiempo requiere atención en la parte del diseñador de Framework.  
@@ -23,6 +24,7 @@ Los métodos, propiedades, eventos, constructores y campos se conocen colectivam
  En este capítulo se ofrecen instrucciones básicas que deben seguirse al diseñar miembros de cualquier tipo.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Sobrecarga de miembros](member-overloading.md)  
  [Diseño de propiedades](property.md)  
  [Diseño del constructor](constructor.md)  

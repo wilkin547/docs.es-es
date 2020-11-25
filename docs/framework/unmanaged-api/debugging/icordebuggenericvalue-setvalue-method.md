@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-ms.openlocfilehash: 972a981188c36236b81f3da17c09abeeb1e32857
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 493793c45e7d13511e4c36fe76e472a856b50d72
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705753"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue (Método)
+
 Copia un nuevo valor del búfer especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT SetValue (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pFrom`  
  de Puntero al búfer desde el que se va a copiar el valor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  En el caso de los tipos de referencia, el valor es la referencia, no el contenido.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

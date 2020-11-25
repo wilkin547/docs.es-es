@@ -8,14 +8,15 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 9dc764492e1ac565c51d49d07e6566295bb76bc1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 03fa44c1fed219b50cf1a8d22b2c9f79947f4976
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821039"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706663"
 ---
 # <a name="framework-design-guidelines"></a>Instrucciones de diseño de .NET Framework
+
 En esta sección se proporcionan instrucciones para diseñar bibliotecas que extienden e interactúan con el .NET Framework. El objetivo es ayudar a los diseñadores de bibliotecas a garantizar la coherencia de la API y la facilidad de uso, ya que proporciona un modelo de programación unificado que es independiente del lenguaje de programación usado para el desarrollo. Se recomienda seguir estas directrices de diseño al desarrollar clases y componentes que extienden el .NET Framework. El diseño incoherente de la biblioteca afecta negativamente a la productividad del desarrollador y desaconseja la adopción.  
   
  Las instrucciones se organizan como recomendaciones sencillas precedidas de los términos `Do` ,, `Consider` `Avoid` y `Do not` . Estas instrucciones están diseñadas para ayudar a los diseñadores de biblioteca de clases a comprender las ventajas e inconvenientes entre las distintas soluciones. Puede haber situaciones en las que el diseño de la biblioteca sea adecuado, ya que se infringen estas directrices de diseño. Estos casos deben ser raros y es importante que tenga una razón clara y convincente para su decisión.  
@@ -23,6 +24,7 @@ En esta sección se proporcionan instrucciones para diseñar bibliotecas que ext
  Estas instrucciones se exforman de las *directrices de diseño de marcos de libros: convenciones, expresiones y patrones para bibliotecas de .net reutilizables, 2ª edición*, por Krzysztof Cwalina y Brad Abrams.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Instrucciones de nomenclatura](naming-guidelines.md)  
  Proporciona instrucciones para asignar nombres a los ensamblados, espacios de nombres, tipos y miembros de las bibliotecas de clases.  
   

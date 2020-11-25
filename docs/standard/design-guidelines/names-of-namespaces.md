@@ -9,14 +9,15 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 561a6e4ed1abf82fc1412123a4558a63e7176b2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290206"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706494"
 ---
 # <a name="names-of-namespaces"></a>Nombres de espacios de nombres
+
 Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombres a los espacios de nombres es crear una claridad suficiente para que el programador use el marco de trabajo para saber inmediatamente cuál es el contenido del espacio de nombres. La plantilla siguiente especifica la regla general para asignar nombres a los espacios de nombres:
 
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`
@@ -29,7 +30,7 @@ Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombre
 
  ✔️ usar un nombre de producto estable y independiente de la versión en el segundo nivel de un nombre de espacio de nombres.
 
- ❌No utilice jerarquías organizativas como base para los nombres de las jerarquías de espacio de nombres, ya que los nombres de grupo dentro de las organizaciones tienden a ser de corta duración. Organice la jerarquía de espacios de nombres en torno a grupos de tecnologías relacionadas.
+ ❌ No utilice jerarquías organizativas como base para los nombres de las jerarquías de espacio de nombres, ya que los nombres de grupo dentro de las organizaciones tienden a ser de corta duración. Organice la jerarquía de espacios de nombres en torno a grupos de tecnologías relacionadas.
 
  ✔️ usar PascalCasing y separar los componentes de los espacios de nombres con puntos (por ejemplo, `Microsoft.Office.PowerPoint` ). Si la marca emplea una grafía no tradicional, debe seguir las mayúsculas y minúsculas definidas por la marca, incluso si se desvía de la grafía normal del espacio de nombres.
 
@@ -37,12 +38,13 @@ Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombre
 
  Por ejemplo, use `System.Collections` en lugar de `System.Collection`. Sin embargo, los nombres de marca y los acrónimos son excepciones a esta regla. Por ejemplo, use `System.IO` en lugar de `System.IOs`.
 
- ❌No use el mismo nombre para un espacio de nombres y un tipo en dicho espacio de nombres.
+ ❌ No use el mismo nombre para un espacio de nombres y un tipo en dicho espacio de nombres.
 
  Por ejemplo, no use `Debug` como nombre de espacio de nombres y, a continuación, proporcione también una clase denominada `Debug` en el mismo espacio de nombres. Varios compiladores requieren que estos tipos sean completos.
 
 ### <a name="namespaces-and-type-name-conflicts"></a>Conflictos de nombres de tipos y espacios de nombres
- ❌No introduzca nombres de tipo genéricos como `Element` , `Node` , `Log` y `Message` .
+
+ ❌ No introduzca nombres de tipo genéricos como `Element` , `Node` , `Log` y `Message` .
 
  Existe una probabilidad muy alta de que esto provocará conflictos de nombres de tipo en escenarios comunes. Debe calificar los nombres de tipos genéricos ( `FormElement` , `XmlNode` , `EventLog` , `SoapMessage` ).
 
@@ -54,7 +56,7 @@ Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombre
 
      `System.Windows*` `System.Web.UI*`
 
-     ❌NO asigne el mismo nombre a los tipos de los espacios de nombres dentro de un único modelo de aplicación.
+     ❌ NO asigne el mismo nombre a los tipos de los espacios de nombres dentro de un único modelo de aplicación.
 
      Por ejemplo, no agregue un tipo denominado `Page` al espacio de <xref:System.Web.UI.Adapters?displayProperty=nameWithType> nombres, ya que el <xref:System.Web.UI?displayProperty=nameWithType> espacio de nombres ya contiene un tipo denominado `Page` .
 
@@ -66,7 +68,7 @@ Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombre
 
      Los espacios de nombres principales incluyen todos los `System` espacios de nombres, excluidos los espacios de nombres de los modelos de aplicación y los espacios de nombres de la infraestructura. Los espacios de nombres principales incluyen, entre otros, `System` ,, `System.IO` `System.Xml` y `System.Net` .
 
-     ❌NO proporcione nombres de tipos que entren en conflicto con cualquier tipo de los espacios de nombres principales.
+     ❌ NO proporcione nombres de tipos que entren en conflicto con cualquier tipo de los espacios de nombres principales.
 
      Por ejemplo, nunca use `Stream` como nombre de tipo. Entraría en conflicto con <xref:System.IO.Stream?displayProperty=nameWithType> , un tipo de uso muy común.
 
@@ -74,9 +76,9 @@ Como ocurre con otras directrices de nomenclatura, el objetivo de asignar nombre
 
      Esta categoría incluye todos los espacios de nombres con los mismos dos primeros nodos de espacio `(<Company>.<Technology>*` de nombres), como `Microsoft.Build.Utilities` y `Microsoft.Build.Tasks` . Es importante que los tipos que pertenecen a una sola tecnología no entren en conflicto entre sí.
 
-     ❌NO asigne nombres de tipo que entren en conflicto con otros tipos dentro de una sola tecnología.
+     ❌ NO asigne nombres de tipo que entren en conflicto con otros tipos dentro de una sola tecnología.
 
-     ❌No introduzca conflictos de nombres de tipo entre los tipos de los espacios de nombres de tecnología y un espacio de nombres del modelo de aplicación (a menos que la tecnología no esté pensada para usarse con el modelo de aplicación).
+     ❌ No introduzca conflictos de nombres de tipo entre los tipos de los espacios de nombres de tecnología y un espacio de nombres del modelo de aplicación (a menos que la tecnología no esté pensada para usarse con el modelo de aplicación).
 
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*
 

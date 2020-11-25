@@ -9,14 +9,15 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-ms.openlocfilehash: 1ac2f9f5e10149027b79cd67e5077ec6bc17f9c9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bc0aee32b5cc1d40afdd9cce8260d5b5341a687d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820818"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706403"
 ---
 # <a name="nested-types"></a>Tipos anidados
+
 Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se denomina tipo envolvente. Un tipo anidado tiene acceso a todos los miembros de su tipo envolvente. Por ejemplo, tiene acceso a los campos privados definidos en el tipo envolvente y a los campos protegidos definidos en todos los antecesores del tipo envolvente.
 
  En general, los tipos anidados deben usarse con moderación. Hay varias razones para ello. Algunos desarrolladores no están totalmente familiarizados con el concepto. Por ejemplo, estos desarrolladores pueden tener problemas con la sintaxis de declarar variables de tipos anidados. Los tipos anidados también están estrechamente acoplados a sus tipos envolventes y, por lo tanto, no son adecuados para ser tipos de uso general.
@@ -43,7 +44,7 @@ Un tipo anidado es un tipo definido dentro del ámbito de otro tipo, que se deno
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones de diseño de tipos](type.md)
 - [Directrices de diseño de marco](index.md)

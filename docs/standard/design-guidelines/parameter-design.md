@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 707ae48be3f45d82ed3819f943dc5ba3743172f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 815075198f34c0c045603b9d377b9d5fbdf1a91d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828808"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707885"
 ---
 # <a name="parameter-design"></a>Diseño de parámetros
 
@@ -40,6 +40,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
  Esto comunica mejor la relación entre los métodos.
 
 ### <a name="choosing-between-enum-and-boolean-parameters"></a>Elección entre parámetros booleanos y de enumeración  
+
  ✔️ utilizar enumeraciones si, de lo contrario, un miembro tendría dos o más parámetros booleanos.
 
  ❌ No use valores booleanos a menos que esté absolutamente seguro de que nunca habrá una necesidad de más de dos valores.
@@ -49,6 +50,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
  ✔️ considere la posibilidad de usar valores booleanos para los parámetros de constructor que son realmente de dos Estados y que simplemente se utilizan para inicializar las propiedades booleanas.
 
 ### <a name="validating-arguments"></a>Validar argumentos
+
  ✔️ validar los argumentos pasados a miembros públicos, protegidos o implementados explícitamente. Produce <xref:System.ArgumentException?displayProperty=nameWithType> una excepción o una de sus subclases si se produce un error en la validación.
 
  Tenga en cuenta que no es necesario que la validación real se produzca en el propio miembro público o protegido. Podría producirse en un nivel inferior en algunas rutinas internas o privadas. El punto principal es que todo el área expuesta que se expone a los usuarios finales comprueba los argumentos.
@@ -66,6 +68,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
  Si el miembro es sensible a la seguridad, se recomienda hacer una copia y, a continuación, validar y procesar el argumento.
 
 ### <a name="parameter-passing"></a>Paso de parámetros
+
  Desde la perspectiva de un diseñador de .NET Framework, hay tres grupos principales de parámetros: por valor, parámetros `ref` y parámetros `out` .
 
  Cuando un argumento se pasa a través de un parámetro por valor, el miembro recibe una copia del argumento real pasado. Si el argumento es un tipo de valor, se coloca una copia del argumento en la pila. Si el argumento es un tipo de referencia, se coloca una copia de la referencia en la pila. Los lenguajes CLR más populares, como C#, VB.NET y C++, pasan de forma predeterminada los parámetros por valor.
@@ -83,6 +86,7 @@ En esta sección se proporcionan instrucciones generales sobre el diseño de par
  Hay algunas excepciones limitadas a la regla, como un método que se puede utilizar para intercambiar referencias.
 
 ### <a name="members-with-variable-number-of-parameters"></a>Miembros con número variable de parámetros
+
  Los miembros que pueden tomar un número variable de argumentos se expresan proporcionando un parámetro de matriz. Por ejemplo, <xref:System.String> proporciona el método siguiente:
 
 ```csharp
@@ -140,6 +144,7 @@ public class String {
  Algunos lenguajes CLR, como C++, admiten una Convención alternativa para pasar listas de parámetros de variables llamadas `varargs` métodos. La Convención no debe usarse en marcos de trabajo, ya que no es conforme a CLS.
 
 ### <a name="pointer-parameters"></a>Parámetros de puntero
+
  En general, los punteros no deberían aparecer en el área expuesta pública de un marco de código administrado bien diseñado. La mayoría de las veces, se deben encapsular los punteros. Sin embargo, en algunos casos, se requieren punteros por motivos de interoperabilidad y el uso de punteros en estos casos es adecuado.
 
  ✔️ proporcionan una alternativa para cualquier miembro que toma un argumento de puntero, ya que los punteros no son conformes a CLS.
@@ -154,7 +159,7 @@ public class String {
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

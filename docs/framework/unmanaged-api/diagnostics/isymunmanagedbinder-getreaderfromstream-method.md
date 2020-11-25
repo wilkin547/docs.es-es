@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa38efd4-de7e-4482-a5d3-adc152093460
 topic_type:
 - apiref
-ms.openlocfilehash: 351bb2a1eb03684a0498fba35270e1bda44a93c0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 2d927b02b7deebecb53a2218e2ec0275a07307b4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441752"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706962"
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream (Método)
+
 Dada una interfaz de metadatos y una secuencia que contiene el almacén de símbolos, devuelve la estructura [ISymUnmanagedReader](isymunmanagedreader-interface.md) correcta que leerá los símbolos de depuración del almacén de símbolos determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetReaderFromStream(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `importer`  
  de Puntero a la interfaz de importación de metadatos.  
   
@@ -45,11 +47,13 @@ HRESULT GetReaderFromStream(
  enuncia Puntero que se establece en la interfaz [ISymUnmanagedReader](isymunmanagedreader-interface.md) devuelta.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedBinder (Interfaz)](isymunmanagedbinder-interface.md)

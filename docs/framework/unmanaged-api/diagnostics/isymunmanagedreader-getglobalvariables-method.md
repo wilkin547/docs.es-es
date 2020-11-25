@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2dd5098-3e58-4be5-b7a2-e4160b3b505a
 topic_type:
 - apiref
-ms.openlocfilehash: 20bfb3e48f411524bd4d9798f17dd935595a12bb
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 299787ea4eb8a5c25bdab64ad08445839c9f24d6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615025"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707547"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables (Método)
+
 Devuelve todas las variables globales.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetGlobalVariables(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cVars`  
  de Longitud del búfer al que apunta `pcVars` .  
   
@@ -46,11 +48,13 @@ HRESULT GetGlobalVariables(
  enuncia Búfer que contiene las variables.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

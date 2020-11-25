@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 57f6de1f7edf7c75a3f96cb2bf9fb98fdbd6f65e
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c461582cc22f7185ee2707db91be83bc1aa0ba4c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007863"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706851"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps (Método)
+
 Establece o actualiza la característica, almacenada en la dirección virtual relativa especificada, de un método definido por una llamada anterior a [IMetaDataEmit::D efinemethod](imetadataemit-definemethod-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT SetMethodProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `md`  
  de Token para el método que se va a cambiar.  
   
@@ -50,11 +52,12 @@ HRESULT SetMethodProps (
  de Marcas de implementación para el método.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

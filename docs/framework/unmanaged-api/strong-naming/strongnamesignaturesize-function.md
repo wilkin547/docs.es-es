@@ -14,17 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4fde4cd0-f53e-4411-a2fe-fc5c54472f95
 topic_type:
 - apiref
-ms.openlocfilehash: a19d875b8fb81f2af3821e69452f0f0ed591cd22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2b3afe66f1eaa358c5f80de50f14ceb730048b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176895"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708483"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize (Función)
-Devuelve el tamaño de la firma de nombre seguro. `StrongNameSignatureSize`Normalmente, los compiladores se usan para determinar cuánto espacio se debe reservar en el archivo al crear un ensamblado firmado con retraso.  
+
+Devuelve el tamaño de la firma de nombre seguro. `StrongNameSignatureSize` los compiladores utilizan normalmente para determinar la cantidad de espacio que se reserva en el archivo al crear un ensamblado con firma retrasada.  
   
- Esta función ha quedado en desuso. Utilice el [método ICLRStrongName::StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md) en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: strongnamesignaturesize (](../hosting/iclrstrongname-strongnamesignaturesize-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,31 +38,35 @@ BOOLEAN StrongNameSignatureSize (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pbPublicKeyBlob`  
- [en] Estructura de tipo [PublicKeyBlob](publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
+ de Estructura de tipo [PublicKeyBlob](publickeyblob-structure.md) que contiene la parte pública del par de claves utilizado para generar la firma de nombre seguro.  
   
  `cbPublicKeyBlob`  
- [en] El tamaño, en `pbPublicKeyBlob`bytes, de .  
+ de Tamaño, en bytes, de `pbPublicKeyBlob` .  
   
  `pcbSize`  
- [en] El número de bytes necesarios para almacenar la firma de nombre seguro.  
+ de Número de bytes necesarios para almacenar la firma de nombre seguro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true`una finalización exitosa; de `false`lo contrario, .  
+
+ `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Observaciones  
- Si `StrongNameSignatureSize` la función no se completa correctamente, llame a la [StrongNameErrorInfo](strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+## <a name="remarks"></a>Comentarios  
+
+ Si la `StrongNameSignatureSize` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** StrongName.h  
+ **Encabezado:** StrongName. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
 - [Método StrongNameSignatureSize](../hosting/iclrstrongname-strongnamesignaturesize-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

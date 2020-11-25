@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-ms.openlocfilehash: 332d60418c744a9391c7c0afc20248c2239b090c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 4436e4528c1dc486eb5c443c5a9467ac69a26c7d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706936"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature (Método)
+
 Obtiene la firma de la constante.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetSignature(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cSig`  
  de Longitud del búfer al que apunta el `pcSig` parámetro.  
   
@@ -46,13 +48,15 @@ HRESULT GetSignature(
  enuncia Búfer que almacena la firma.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedConstant (Interfaz)](isymunmanagedconstant-interface.md)
-- [Método GetName](isymunmanagedconstant-getname-method.md)
-- [Método GetValue](isymunmanagedconstant-getvalue-method.md)
+- [GetName (Método)](isymunmanagedconstant-getname-method.md)
+- [GetValue (Método)](isymunmanagedconstant-getvalue-method.md)

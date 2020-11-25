@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: 93a194ea72ab894544927cf96304397b7211b5ac
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009163"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705993"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC (Enumeración)
+
 Contiene valores que se usan para influir en el comportamiento durante la generación de metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,6 +57,7 @@ typedef enum CorSetENC {
 |`MDUpdateMask`|Incluye `MDUpdateENC` , `MDUpdateFull` y `MDUpdateIncremental` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: 4c630f5f7e3dc66ce44f10cd69fcd108226b0250
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e9f6ae9a0fcd6651395c54c2e44973e53668c1ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708327"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo (Función)
+
 Devuelve información sobre la biblioteca de tipos especificada examinando su estructura [TLIBATTR](/windows/win32/api/oaidl/ns-oaidl-tlibattr) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT GetTypeLibInfo(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szFile`  
  de Nombre de archivo de la biblioteca de tipos.  
   
@@ -57,11 +59,13 @@ HRESULT GetTypeLibInfo(
  enuncia Número de versión secundaria de la biblioteca de tipos. Por ejemplo, para la versión *x. y*, el número de versión secundaria es *y*.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `GetTypeLibInfo` [Tlbexp.exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md)llama a la función. Esta herramienta genera una biblioteca de tipos que describe los tipos de un ensamblado de Common Language Runtime (CLR).  
   
  Si un parámetro es null, la función devuelve un `HRESULT` de `E_POINTER` . En caso contrario, devuelve `S_OK`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** TlbRef. h  
@@ -70,7 +74,7 @@ HRESULT GetTypeLibInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones del asistente Tlbexp](index.md)
 - [LoadTypeLibEx función)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

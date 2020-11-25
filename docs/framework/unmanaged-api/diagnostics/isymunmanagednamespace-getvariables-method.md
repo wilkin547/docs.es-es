@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-ms.openlocfilehash: 091f497024b48589953456e1ea6daf6635738240
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f554fa95f552285ad92d9f780a8d77f53e6890b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615090"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95707703"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables (Método)
+
 Devuelve todas las variables definidas en el ámbito global dentro de este espacio de nombres.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT GetVariables(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cVars`  
- de `ULONG32`Que indica el tamaño de la `pVars` matriz.  
+ de `ULONG32` Que indica el tamaño de la `pVars` matriz.  
   
  `pcVars`  
  enuncia Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.  
@@ -46,11 +48,13 @@ HRESULT GetVariables(
  enuncia Un puntero a un búfer que contiene los espacios de nombres.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedNamespace (Interfaz)](isymunmanagednamespace-interface.md)
