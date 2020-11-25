@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9e373f133830a5bc1f3cf7bdc8034cb67725d797
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446951"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705207"
 ---
 # <a name="importfileex-method"></a>ImportFileEx (Método)
+
 Importa el ensamblado indicado o el módulo sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT ImportFileEx(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pszFilename`  
  Nombre completo del archivo desde el que se va a importar.  
   
@@ -61,13 +63,15 @@ HRESULT ImportFileEx(
  Recibe el recuento de archivos y/o ámbitos importados.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink2 (interfaz)](ialink2-interface.md)
-- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
 - [API de ALink](index.md)

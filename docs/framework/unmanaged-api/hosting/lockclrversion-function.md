@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-ms.openlocfilehash: 09bcebfdcfea3d5728d404cdb6b5fb170a5432c3
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2ff08ec8f194ccc9e968b3a7ee017afe788f4b03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008500"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704947"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion (Función)
+
 Permite al host determinar qué versión de Common Language Runtime (CLR) se utilizará en el proceso antes de inicializar explícitamente CLR.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -38,6 +39,7 @@ HRESULT LockClrVersion (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hostCallback`  
  de Función a la que llamará CLR al inicializarse.  
   
@@ -48,15 +50,17 @@ HRESULT LockClrVersion (
  de Función a la que llamará el host para informar al CLR de que la inicialización se ha completado.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los códigos de error COM estándar, tal y como se define en WinError. h, además de los valores siguientes.  
   
-|Código de retorno|Descripción|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|Uno o varios argumentos son NULL.|  
   
 ## <a name="remarks"></a>Comentarios  
- El host llama a `LockClrVersion` antes de inicializar el CLR. `LockClrVersion`toma tres parámetros, todos ellos son devoluciones de llamada de tipo [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md). Este tipo se define como se indica a continuación.  
+
+ El host llama a `LockClrVersion` antes de inicializar el CLR. `LockClrVersion` toma tres parámetros, todos ellos son devoluciones de llamada de tipo [FLockClrVersionCallback](flockclrversioncallback-function-pointer.md). Este tipo se define como se indica a continuación.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -72,7 +76,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     - Función especificada por el `pBeginHostSetup` parámetro.  
   
-    - `CorBindToRuntimeEx`(u otra función de inicialización en tiempo de ejecución).  
+    - `CorBindToRuntimeEx` (u otra función de inicialización en tiempo de ejecución).  
   
     - [ICLRRuntimeHost:: SetHostControl](iclrruntimehost-sethostcontrol-method.md).  
   
@@ -83,11 +87,12 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
  Todas las llamadas de `pBeginHostSetup` a `pEndHostSetup` deben producirse en un único subproceso o fibra, con la misma pila lógica. Este subproceso puede ser diferente del subproceso en el que `hostCallback` se llama a.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

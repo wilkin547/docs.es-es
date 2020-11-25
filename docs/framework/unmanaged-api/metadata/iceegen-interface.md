@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 383d20b0-efe9-4e71-8fb8-1186b2e7d0c0
 topic_type:
 - apiref
-ms.openlocfilehash: e6cf0aa6f731d0a417e1a2be0ca1d0f8c9299379
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2c180a135608350b0feec3f419be98f4f428b186
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008279"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704518"
 ---
 # <a name="iceegen-interface"></a>ICeeGen (Interfaz)
+
 Proporciona métodos para la compilación de código dinámico.  
   
  Esta interfaz está obsoleta y no debe usarse.  
@@ -47,11 +48,12 @@ Proporciona métodos para la compilación de código dinámico.
 |[Método TruncateSection](iceegen-truncatesection-method.md)|Obsoleto. Trunca la sección de código especificada según la longitud especificada.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

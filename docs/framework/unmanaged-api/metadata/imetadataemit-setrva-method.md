@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d69fb6d-ee35-4318-8224-5eea2bd16818
 topic_type:
 - apiref
-ms.openlocfilehash: 3059d30f3969b4e19cee5a8d7a34c606f3849c05
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: df9dc1a36a9adcef3f93a9929565cef117e84d75
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008747"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704232"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA (Método)
+
 Establece la dirección virtual relativa del método especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT SetRVA (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `md`  
  de Token para la implementación del método o método de destino.  
   
@@ -42,11 +44,12 @@ HRESULT SetRVA (
  de Dirección del código o área de datos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

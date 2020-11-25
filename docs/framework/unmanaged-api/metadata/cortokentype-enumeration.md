@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 93c9a369-225f-4eff-9b78-3fbee4902cf1
 topic_type:
 - apiref
-ms.openlocfilehash: 629e18b6cd2fd7910804ecc608a45d2406dddea1
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70b28ab0ca73988093eadb9628142fecd9442948
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705480"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType (Enumeración)
+
 Indica el tipo de un token de metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -91,9 +92,11 @@ typedef enum CorTokenType {
 |`mdtBaseType`|No se usa.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cada valor es igual al valor del byte superior en el token de metadatos correspondiente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

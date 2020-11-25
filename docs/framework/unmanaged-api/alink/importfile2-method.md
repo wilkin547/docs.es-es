@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02bc53676dd5afb0222a1ea366a8f2bd1f94f62
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446982"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705233"
 ---
 # <a name="importfile2-method"></a>ImportFile2 (Método)
+
 Importa ensamblados y módulos sin enlazar. Este método es como el [método importFile](importfile-method.md), pero funciona incluso si el archivo que se va a importar no existe en el disco.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT ImportFile2(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pszFilename`  
  Nombre del archivo que se va a importar.  
   
@@ -61,13 +63,15 @@ HRESULT ImportFile2(
  Recibe el encontrado de archivos y/o ámbitos importados.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)

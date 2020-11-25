@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: b5af877c26c20bf64a27618bf24a7bce5b410419
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 553a82475f241fac3a56c1fb009e3ed56b2c14f8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007785"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704258"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps (Método)
+
 Establece las características almacenadas en los metadatos de una propiedad definida por una llamada anterior al [método DefineProperty](imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,6 +42,7 @@ HRESULT SetPropertyProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pr`  
  de Token para la propiedad que se va a cambiar.  
   
@@ -66,11 +68,12 @@ HRESULT SetPropertyProps (
  de Matriz de otros métodos asociados a la propiedad. Termine esta matriz con un `mdTokenNil` token.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

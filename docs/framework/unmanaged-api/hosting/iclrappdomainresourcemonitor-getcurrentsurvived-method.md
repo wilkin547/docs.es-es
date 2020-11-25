@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-ms.openlocfilehash: a73c0731c79dea3a0c411fe27a864ec9ac4e20b2
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: eba9caece91e369cd46aed652b559ace49c77725
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616026"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704913"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived (Método)
+
 Obtiene el número de bytes que sobrevivieron a la última recolección completa de elementos no utilizados bloqueada y a la que hace referencia el dominio de aplicación actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwAppDomainId`  
  de IDENTIFICADOR del dominio de aplicación solicitado.  
   
@@ -45,6 +47,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
  enuncia Puntero al número total de bytes que sobrevivieron de la última recolección de elementos no utilizados. Después de una recolección completa, este número representa el número de bytes que se encuentran en montones administrados. Después de una recolección efímera, este número representa el número de bytes que se mantienen activos en generaciones efímeras. Este parámetro puede ser `null`.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -52,23 +55,25 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |S_OK|El método se completó correctamente.|  
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Las estadísticas se actualizan solo después de una recolección completa de elementos no utilizados de bloqueo; es decir, una colección que incluye todas las generaciones y que detiene la aplicación mientras se produce la recolección. Por ejemplo, la <xref:System.GC.Collect?displayProperty=nameWithType> sobrecarga del método realiza una colección completa de bloqueos. La recolección de elementos no utilizados simultánea se produce en segundo plano y no bloquea la aplicación.  
   
  El `GetCurrentSurvived` método es el equivalente no administrado de la propiedad administrada <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
-- [ICLRAppDomainResourceMonitor (Interfaz)](iclrappdomainresourcemonitor-interface.md)
+- [ICLRAppDomainResourceMonitor (interfaz)](iclrappdomainresourcemonitor-interface.md)
 - [Supervisión de recursos del dominio de aplicación](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)
 - [Hospedar aplicaciones de WPF](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 6398fa2962b347a260e23e4fed8cf272a2916a9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704622"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next (Método)
+
 Obtiene el número especificado de instancias de [COR_SEGMENT](cor-segment-structure.md) que contienen información sobre las regiones de memoria del montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT Next(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  celt  
  de Número de segmentos que se van a recuperar.  
   
@@ -47,6 +49,7 @@ HRESULT Next(
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

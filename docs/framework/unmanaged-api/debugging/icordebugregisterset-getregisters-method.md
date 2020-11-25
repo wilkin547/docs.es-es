@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 315e4cc3b93fc78e11a4fb399bbe6f8a9f55ac84
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379154"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705012"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters (Método)
+
 Obtiene el valor de cada registro (en el equipo que está ejecutando código actualmente) especificado por la máscara de bits.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetRegisters (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `mask`  
  de Máscara de bits que especifica los valores de registro que se van a recuperar. Cada bit corresponde a un registro. Si un bit se establece en uno, se recupera el valor del registro; de lo contrario, no se recupera el valor del registro.  
   
@@ -46,12 +48,14 @@ HRESULT GetRegisters (
  `regBuffer`  
  enuncia Matriz de `CORDB_REGISTER` objetos, cada uno de los cuales recibe un valor de un registro.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El tamaño de la matriz debe ser igual al número de bits establecido en uno en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirán los valores de registro. Si el `regCount` valor es demasiado pequeño para el número de registros indicados por la máscara, los registros con mayor número se truncarán del conjunto. Si el `regCount` valor es demasiado grande, los elementos no utilizados no se `regBuffer` modificarán.  
   
  Si la máscara de bits especifica un registro que no está disponible, `GetRegisters` devuelve un valor indeterminado para ese registro.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

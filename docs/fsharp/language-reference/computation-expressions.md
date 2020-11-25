@@ -4,18 +4,18 @@ description: 'Aprenda a crear una sintaxis adecuada para escribir cálculos en F
 ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: bc3842b6f1075d68d1997e78c8bd8485731fca52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812164"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705311"
 ---
 # <a name="computation-expressions"></a>Expresiones de cálculo
 
 Las expresiones de cálculo de F # proporcionan una sintaxis adecuada para escribir cálculos que se pueden secuenciar y combinar mediante construcciones y enlaces de flujo de control. En función del tipo de expresión de cálculo, se pueden considerar como una manera de expresar las funciones de Monoids, los transformadores de Monad y los procesos de ejecución. Sin embargo, a diferencia de otros lenguajes (como *la notación* de realización en Haskell), no están asociados a una abstracción única y no se basan en macros u otras formas de metaprogramaciones para lograr una sintaxis adecuada y sensible al contexto.
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Los cálculos pueden adoptar muchas formas. La forma más común de cálculo es la ejecución de un solo subproceso, que es fácil de entender y modificar. Sin embargo, no todas las formas de cálculo son tan sencillas como la ejecución de un solo subproceso. Estos son algunos ejemplos:
 
@@ -181,7 +181,7 @@ A diferencia `yield` de, `yield!` se debe especificar explícitamente. Su compor
 La `return` palabra clave ajusta un valor en el tipo correspondiente a la expresión de cálculo. Además de las expresiones de cálculo mediante `yield` , se usa para "completar" una expresión de cálculo:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         let! data = fetch url
         return data
@@ -198,7 +198,7 @@ let result = Async.RunSynchronously req
 La `return!` palabra clave obtiene el valor de una expresión de cálculo y ajusta el resultado en el tipo correspondiente a la expresión de cálculo:
 
 ```fsharp
-let req = // 'req' is of type is 'Async<data>'
+let req = // 'req' is of type 'Async<data>'
     async {
         return! fetch url
     }

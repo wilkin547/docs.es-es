@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5396c4c3-4ec3-4e3a-a38d-d65b21f0a2fc
 topic_type:
 - apiref
-ms.openlocfilehash: d49992b1f4b25586f6171a51b351a25d453560f2
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 7eb7fb55a5077d2914eb85a67ca62163a1aa8cc0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212157"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704609"
 ---
 # <a name="icordebugmanagedcallback2functionremapcomplete-method"></a>ICorDebugManagedCallback2::FunctionRemapComplete (Método)
+
 Notifica al depurador que la ejecución del código ha cambiado a una nueva versión de una función editada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT FunctionRemapComplete (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  de Un puntero a un objeto ICorDebugAppDomain que representa el dominio de aplicación que contiene la función editada.  
   
@@ -45,10 +47,12 @@ HRESULT FunctionRemapComplete (
  `pFunction`  
  de Un puntero a un objeto ICorDebugFunction que representa la versión de la función que se está ejecutando actualmente en el subproceso.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta devolución de llamada proporciona al depurador una oportunidad para volver a crear los steppers que ya existían.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

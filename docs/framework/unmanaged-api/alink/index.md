@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
-ms.openlocfilehash: f44482d0be70a8c5651bf440a264468a4446f009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d018ae41bd9bf0360bd3a0e492a88e911699ef27
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74445652"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705025"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>API de ALink (Referencia de la API no administrada)
+
 Admite la creación de módulos no enlazados y ensamblados de .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [AssemblyAttributesGoHere](assemblyattributesgohere.md)  
   
  [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)  
@@ -25,18 +27,18 @@ Admite la creación de módulos no enlazados y ensamblados de .NET Framework.
   
  [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)  
   
- [AssemblyOptions (enumeración)](assemblyoptions-enumeration.md)  
+ [AssemblyOptions (Enumeración)](assemblyoptions-enumeration.md)  
   
- [CreateALink (función)](createalink-function.md)  
+ [CreateALink (Función)](createalink-function.md)  
   
  [GetALinkMessageDll (Función)](getalinkmessagedll-function.md)  
   
- [IALink (interfaz)](ialink-interface.md)  
+ [IALink (Interfaz)](ialink-interface.md)  
   
- [IALink2 (interfaz)](ialink2-interface.md)  
+ [IALink2 (Interfaz)](ialink2-interface.md)  
   
- [IALink3 (interfaz)](ialink3-interface.md)  
+ [IALink3 (Interfaz)](ialink3-interface.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de API no administrada](../index.md)

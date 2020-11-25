@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: a7a450e85f7eaa765766ffa985d7c01538e2669c
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 0e7afa386af1bd2eebc2b58592d01b764660248f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795799"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704700"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult (Enumeración)
+
 Proporciona información detallada sobre cómo se obtuvo el valor del puntero de instrucción (IP).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,9 +38,9 @@ typedef enum CorDebugMappingResult {
 } CorDebugMappingResult;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`MAPPING_PROLOG`|El código nativo está en el prólogo, por lo que el valor de la dirección IP es 0.|  
 |`MAPPING_EPILOG`|El código nativo está en un epílogo, por lo que el valor de la dirección IP es la dirección de la última instrucción del método.|  
@@ -49,9 +50,11 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_APPROXIMATE`|El método se ha asignado correctamente, pero el valor de la dirección IP puede ser aproximado.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Puede usar el método [ICorDebugILFrame:: GetIP](icordebugilframe-getip-method.md) para obtener el valor del puntero de instrucción.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -60,6 +63,6 @@ typedef enum CorDebugMappingResult {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

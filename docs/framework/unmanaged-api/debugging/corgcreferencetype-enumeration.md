@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: e2903637faa11a3c0a62080cc6fafcf1fc668a56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860916"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704999"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType (Enumeración)
+
 Identifica el origen de un objeto que se va a recolectar como elemento no utilizado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,7 +47,7 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
@@ -65,6 +66,7 @@ typedef enum {
 |`CorHandleAll`|Devuelve todas las referencias de la tabla de identificadores. Este valor solo lo usa el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La `CorGCReferenceType` enumeración se usa como se indica a continuación:  
   
 - Como valor del `type` campo de la estructura [COR_GC_REFERENCE](cor-gc-reference-structure.md) , indica el origen de una referencia o un identificador.  
@@ -72,6 +74,7 @@ typedef enum {
 - Como `types` argumento para el método [ICorDebugProcess5:: enumeratehandles (](icordebugprocess5-enumeratehandles-method.md) , especifica los tipos de identificadores que se van a incluir en la enumeración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
