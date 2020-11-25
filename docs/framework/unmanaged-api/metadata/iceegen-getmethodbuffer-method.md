@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-ms.openlocfilehash: 99eef11c294dbb17b30b2ef28e65999d4d60f817
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: e9c2dab9f30be6e5eea8f6570b297f8df11b6fe6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715338"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer (Método)
+
 Obtiene un búfer del tamaño adecuado para el método en la dirección virtual relativa especificada.  
   
  Este método está obsoleto y no debe usarse.  
@@ -37,6 +38,7 @@ HRESULT GetMethodBuffer (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `RVA`  
  de Dirección virtual relativa del método para el que se va a devolver un búfer.  
   
@@ -44,14 +46,15 @@ HRESULT GetMethodBuffer (
  enuncia Puntero al búfer devuelto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

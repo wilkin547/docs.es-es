@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-ms.openlocfilehash: 71e2c7f6790f29872c051bb5cea50755068057e9
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 9f485728ddb050abf815bf8ba26c69be9c909785
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504048"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714983"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo (Interfaz)
+
 Proporciona métodos que devuelven información sobre un Common Language Runtime específico (CLR), incluidos la versión, el directorio y el estado de carga. Esta interfaz también proporciona funcionalidad específica en tiempo de ejecución sin inicializar el tiempo de ejecución. Incluye el método [LoadLibrary](iclrruntimeinfo-loadlibrary-method.md) relativo en tiempo de ejecución, el método [GetProcAddress](iclrruntimeinfo-getprocaddress-method.md) específico del módulo en tiempo de ejecución y las interfaces proporcionadas por el tiempo de ejecución mediante el método [GetInterface](iclrruntimeinfo-getinterface-method.md) .  
   
 ## <a name="methods"></a>Métodos  
@@ -33,7 +34,7 @@ Proporciona métodos que devuelven información sobre un Common Language Runtime
 |[Método GetInterface](iclrruntimeinfo-getinterface-method.md)|Carga el CLR en el proceso actual y devuelve punteros de interfaz en tiempo de ejecución, como [ICLRRuntimeHost](iclrruntimehost-interface.md), [ICLRStrongName](iclrstrongname-interface.md) e [IMetaDataDispenser](../metadata/imetadatadispenser-interface.md). Este método sustituye todas las `CorBindTo*` funciones.|  
 |[Método GetProcAddress](iclrruntimeinfo-getprocaddress-method.md)|Obtiene la dirección de una función especificada que se exportó desde el CLR asociado a esta interfaz. Este método reemplaza el método [GetRealProcAddress (](getrealprocaddress-function.md) .|  
 |[Método GetRuntimeDirectory](iclrruntimeinfo-getruntimedirectory-method.md)|Obtiene el directorio de instalación de CLR asociado a esta interfaz. Este método reemplaza el método [GetCORSystemDirectory (](getcorsystemdirectory-function.md) .|  
-|[GetVersionString (Método)](iclrruntimeinfo-getversionstring-method.md)|Obtiene la información de versión de Common Language Runtime (CLR) asociada a una interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) especificada. Este método sustituye a los métodos [GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md) y [GetRequestedRuntimeVersion (](getrequestedruntimeversion-function.md) .|  
+|[Método GetVersionString](iclrruntimeinfo-getversionstring-method.md)|Obtiene la información de versión de Common Language Runtime (CLR) asociada a una interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) especificada. Este método sustituye a los métodos [GetRequestedRuntimeInfo](getrequestedruntimeinfo-function.md) y [GetRequestedRuntimeVersion (](getrequestedruntimeversion-function.md) .|  
 |[Método IsLoadable](iclrruntimeinfo-isloadable-method.md)|Indica si el tiempo de ejecución asociado a esta interfaz se puede cargar en el proceso actual, teniendo en cuenta otros tiempos de ejecución que podrían haberse cargado en el proceso.|  
 |[Método IsLoaded](iclrruntimeinfo-isloaded-method.md)|Indica si el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) se carga en un proceso.|  
 |[Método IsStarted](iclrruntimeinfo-isstarted-method.md)|Indica si se ha iniciado el CLR asociado a la interfaz [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) .|  
@@ -42,15 +43,16 @@ Proporciona métodos que devuelven información sobre un Common Language Runtime
 |[Método SetDefaultStartupFlags](iclrruntimeinfo-setdefaultstartupflags-method.md)|Establece las marcas de inicio y el archivo de configuración de host de CLR.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)
 - [Hospedar aplicaciones de WPF](index.md)

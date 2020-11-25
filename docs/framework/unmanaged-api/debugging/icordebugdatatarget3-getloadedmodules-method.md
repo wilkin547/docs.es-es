@@ -2,14 +2,15 @@
 title: Método de ICorDebugDataTarget3::GetLoadedModules
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: c3565f4f9284bc121b0e2d3b0885cbea927acfdd
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976426"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713758"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Método de ICorDebugDataTarget3::GetLoadedModules
+
 Obtiene una lista de los módulos que se han cargado hasta ahora.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,6 +24,7 @@ HRESULT GetLoadedModules(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cRequestedModules`  
  [in] Número de módulos para los que se solicita información.  
   
@@ -32,12 +34,13 @@ HRESULT GetLoadedModules(
  `pLoadedModules`  
  enuncia Puntero a una matriz de objetos [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) que proporcionan información sobre los módulos cargados.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

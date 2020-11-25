@@ -2,14 +2,15 @@
 title: Método ICorDebugDataTarget2::GetImageLocation
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: 185b6a4979491a323f6eb15ab08a06f87fabc8d3
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: c909b46a9bb70d23d1cd3a769ac24fcf58479308
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976465"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713800"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>Método ICorDebugDataTarget2::GetImageLocation
+
 Devuelve la ruta de acceso de un módulo a partir de la dirección base del módulo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -23,6 +24,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `baseAddress`  
  de [CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md) valor que representa la dirección base del módulo.  
   
@@ -35,12 +37,13 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
  `szName`  
  [out] Ruta de acceso del módulo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

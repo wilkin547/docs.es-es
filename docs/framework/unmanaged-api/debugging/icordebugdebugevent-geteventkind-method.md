@@ -2,14 +2,15 @@
 title: Método ICorDebugDebugEvent::GetEventKind
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-ms.openlocfilehash: 6e3ebdcb5b3e85f6f5a329ed249aa58be903e30f
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 7876dc6ec5ecee52b64e54e1c42533f8348e4dc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976400"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713683"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Método ICorDebugDebugEvent::GetEventKind
+
 Indica el tipo de evento que este objeto `ICorDebugDebugEvent` representa.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -21,16 +22,19 @@ HRESULT GetEventKind(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  pDebugEventKind  
  Un puntero a un miembro de la enumeración [CorDebugDebugEventKind](cordebugdebugeventkind-enumeration.md) que indica el tipo de evento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Según el valor de `pDebugEventKind`, se puede llamar a `QueryInterface` para obtener una interfaz de evento de depuración más precisa con datos adicionales.  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

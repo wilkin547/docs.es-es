@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 49de0398dd32970bd8ceb0fd24178e75df5d14b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713501"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc (Método)
+
 Solicita que el host asigne la cantidad de memoria especificada del montón y, además, realiza un seguimiento del lugar en el que se asignó la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT DebugAlloc (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cbSize`  
  de Tamaño, en bytes, de la solicitud de asignación de memoria actual.  
   
@@ -57,7 +59,7 @@ HRESULT DebugAlloc (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc`se devolvió correctamente.|  
+|S_OK|`DebugAlloc` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -66,18 +68,20 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|No había suficiente memoria disponible para completar la solicitud de asignación.|  
   
 ## <a name="remarks"></a>Comentarios  
- CLR obtiene un puntero de interfaz a una instancia de [IHostMAlloc](ihostmalloc-interface.md) llamando al método [IHostMemoryManager:: CreateMAlloc (](ihostmemorymanager-createmalloc-method.md) . `DebugAlloc`permite al motor en tiempo de ejecución obtener información del archivo de código para su uso durante la depuración.  
+
+ CLR obtiene un puntero de interfaz a una instancia de [IHostMAlloc](ihostmalloc-interface.md) llamando al método [IHostMemoryManager:: CreateMAlloc (](ihostmemorymanager-createmalloc-method.md) . `DebugAlloc` permite al motor en tiempo de ejecución obtener información del archivo de código para su uso durante la depuración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)
 - [IHostMalloc (Interfaz)](ihostmalloc-interface.md)

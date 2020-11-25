@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: ff2913399e1dbeb33bbfb697058db3caf2a8d1fb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207292"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713111"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject (Método)
+
 Convierte una dirección de objeto en un objeto "ICorDebugObjectValue".  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,16 +36,19 @@ HRESULT GetObject(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `addr`  
  de Dirección del objeto.  
   
  `ppObject`  
  enuncia Puntero a la dirección de un objeto "ICorDebugObjectValue".  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si no `addr` señala a un objeto administrado válido, el `GetObject` método devuelve `E_FAIL` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
