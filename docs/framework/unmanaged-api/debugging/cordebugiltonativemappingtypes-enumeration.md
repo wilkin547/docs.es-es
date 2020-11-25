@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-ms.openlocfilehash: 808fc70a308eff1b05aa49ea2bb89fe53377c973
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: ecb88195e3ecc7c540679a683005798247afe57f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795851"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712435"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes (Enumeración)
+
 Indica si un determinado intervalo de instrucciones nativas, representado por una instancia de la estructura COR_DEBUG_IL_TO_NATIVE_MAP, corresponde a una región de código especial.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,15 +35,16 @@ typedef enum CorDebugIlToNativeMappingTypes {
 } CorDebugIlToNativeMappingTypes;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`NO_MAPPING`|El intervalo de instrucciones nativas no se corresponde con ninguna región de código especial.|  
 |`PROLOG`|El intervalo de instrucciones nativas corresponde al prólogo.|  
 |`EPILOG`|El intervalo de instrucciones nativas corresponde al epílogo.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -51,7 +53,7 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Método GetILToNativeMapping](icordebugcode-getiltonativemapping-method.md)
+- [GetILToNativeMapping (Método)](icordebugcode-getiltonativemapping-method.md)
 - [Enumeraciones de depuración](debugging-enumerations.md)

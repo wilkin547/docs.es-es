@@ -6,68 +6,72 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 59e34a39bada1dcf5e66a0c5b92a7fcbfb41d884
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108195"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711694"
 ---
 # <a name="fusion-interfaces"></a>Interfaces de Fusion
+
 En esta sección se describen las interfaces no administradas que utiliza la API de fusión para tener acceso a las propiedades de los recursos de una aplicación y para buscar las versiones correctas de los recursos de la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [IAppIdAuthority (interfaz)](iappidauthority-interface.md)  
+
+ [IAppIdAuthority (Interfaz)](iappidauthority-interface.md)  
  Proporciona métodos que generan y comparan las claves de las identidades y referencias de la aplicación.  
   
- [IAssemblyCache (interfaz)](iassemblycache-interface.md)  
+ [IAssemblyCache (Interfaz)](iassemblycache-interface.md)  
  Proporciona una representación de la caché global de ensamblados.  
   
- [IAssemblyCacheItem (interfaz)](iassemblycacheitem-interface.md)  
+ [IAssemblyCacheItem (Interfaz)](iassemblycacheitem-interface.md)  
  Representa un ensamblado único en la caché global de ensamblados.  
   
- [IAssemblyEnum (interfaz)](iassemblyenum-interface.md)  
- Representa un enumerador para una matriz de objetos `IAssemblyName`.  
+ [IAssemblyEnum (Interfaz)](iassemblyenum-interface.md)  
+ Representa un enumerador para una matriz de `IAssemblyName` objetos.  
   
- [IAssemblyName (interfaz)](iassemblyname-interface.md)  
+ [IAssemblyName (Interfaz)](iassemblyname-interface.md)  
  Proporciona métodos para describir y trabajar con la identidad única de un ensamblado.  
   
- [IDefinitionAppId (interfaz)](idefinitionappid-interface.md)  
+ [IDefinitionAppId (Interfaz)](idefinitionappid-interface.md)  
  Representa un identificador único para el código que define la aplicación en el ámbito actual.  
   
- [IDefinitionIdentity (interfaz)](idefinitionidentity-interface.md)  
+ [IDefinitionIdentity (Interfaz)](idefinitionidentity-interface.md)  
  Representa la firma única del código que define la aplicación en el ámbito actual.  
   
- [IEnumDefinitionIdentity (interfaz)](ienumdefinitionidentity-interface.md)  
- Actúa como enumerador para una colección de objetos `IDefinitionIdentity`.  
+ [IEnumDefinitionIdentity (Interfaz)](ienumdefinitionidentity-interface.md)  
+ Actúa como enumerador para una colección de `IDefinitionIdentity` objetos.  
   
- [IEnumIDENTITY_ATTRIBUTE (interfaz)](ienumidentity-attribute-interface.md)  
+ [IEnumIDENTITY_ATTRIBUTE (Interfaz)](ienumidentity-attribute-interface.md)  
  Actúa como un enumerador para los atributos del objeto de código en el ámbito actual.  
   
- [IEnumReferenceIdentity (interfaz)](ienumreferenceidentity-interface.md)  
- Actúa como un enumerador para una colección de objetos `IReferenceIdentity`.  
+ [IEnumReferenceIdentity (Interfaz)](ienumreferenceidentity-interface.md)  
+ Actúa como un enumerador para una colección de `IReferenceIdentity` objetos.  
   
- [IIdentityAuthority (interfaz)](iidentityauthority-interface.md)  
+ [IIdentityAuthority (Interfaz)](iidentityauthority-interface.md)  
  Administra claves de identidad para objetos de código.  
   
- [IInstallReferenceEnum (interfaz)](iinstallreferenceenum-interface.md)  
+ [IInstallReferenceEnum (Interfaz)](iinstallreferenceenum-interface.md)  
  Representa un enumerador para los ensamblados a los que se hace referencia instalados en la caché global de ensamblados.  
   
- [IInstallReferenceItem (interfaz)](iinstallreferenceitem-interface.md)  
+ [IInstallReferenceItem (Interfaz)](iinstallreferenceitem-interface.md)  
  Representa un elemento instalado en la caché global de ensamblados.  
   
- [IReferenceAppId (interfaz)](ireferenceappid-interface.md)  
+ [IReferenceAppId (Interfaz)](ireferenceappid-interface.md)  
  Representa una referencia al identificador único de la aplicación en el ámbito actual.  
   
- [IReferenceIdentity (interfaz)](ireferenceidentity-interface.md)  
+ [IReferenceIdentity (Interfaz)](ireferenceidentity-interface.md)  
  Representa una referencia a la firma única de un objeto de código.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)  
   
  [Enumeraciones de fusión](fusion-enumerations.md)  

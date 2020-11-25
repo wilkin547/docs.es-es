@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c9847fd6122aa32c95aecd5643a62a6775ae38d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379062"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712123"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx (Método)
+
 Inicia un proceso en un equipo remoto en el depurador.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT DebugActiveProcessEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pRemoteTarget`  
  de Puntero a una [interfaz ICorDebugRemoteTarget](icordebugremotetarget-interface.md). Este parámetro se usa para determinar el equipo en el que se está ejecutando el proceso.  
   
@@ -50,16 +52,19 @@ HRESULT DebugActiveProcessEx (
  enuncia Puntero a la dirección de un objeto "ICorDebugProcess" que representa el proceso al que se ha adjuntado el depurador.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK  
  Se adjuntó correctamente al proceso en el equipo remoto.  
   
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede asociar al proceso en el equipo remoto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  En Silverlight no se admite la depuración en modo mixto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 743b0c8016ca5c0401046166a770d857215429a3
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 927f2077b4bb71177c24816774d06643ebdaa922
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379222"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711967"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext (Método)
+
 Devuelve el contexto del marco actual del objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `contextFlags`  
  de Marcas que indican el contenido solicitado del búfer de contexto (definido en Winnt. h).  
   
@@ -48,6 +50,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
  enuncia Búfer de contexto.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -59,10 +62,12 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  Dado que el desenredado solo restaura un subconjunto de los registros, como los registros no volátiles, es posible que el contexto no coincida exactamente con el estado del registro en el momento de la llamada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

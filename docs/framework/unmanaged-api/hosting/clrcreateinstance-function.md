@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5de13327-96c6-4697-a89e-b8bf40717855
 topic_type:
 - apiref
-ms.openlocfilehash: 4aeacc718632c133550ed8de6649716c5d8b7423
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 3c7a14f828e55310435a99693c1195f2f0dd40c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504464"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711681"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance (Función)
+
 Proporciona una de las tres interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)o [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT CLRCreateInstance(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `clsid`  
  de Uno de los tres identificadores de clase: CLSID_CLRMetaHost, CLSID_CLRMetaHostPolicy o CLSID_CLRDebugging.  
   
@@ -46,6 +48,7 @@ HRESULT CLRCreateInstance(
  enuncia Una de las tres interfaces: [ICLRMetaHost](iclrmetahost-interface.md), [ICLRMetaHostPolicy](iclrmetahostpolicy-interface.md)o [ICLRDebugging](../debugging/iclrdebugging-interface.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -54,6 +57,7 @@ HRESULT CLRCreateInstance(
 |E_POINTER|`ppInterface` es null.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  En la tabla siguiente se muestran las combinaciones admitidas para `clsid` y `riid` .  
   
 |`clsid`|`riid`|  
@@ -81,14 +85,15 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Hospedar aplicaciones de WPF](index.md)

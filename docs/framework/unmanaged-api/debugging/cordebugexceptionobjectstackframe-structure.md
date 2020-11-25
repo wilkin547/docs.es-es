@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-ms.openlocfilehash: 7eccaf984b187e463195bb3804f87bbb2c7ad47b
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 9b904596ed1cce4c4cf2676676508dfb3851e8ce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795929"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712682"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame (Estructura)
+
 Representa información del marco de pila de un objeto de excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,9 +36,9 @@ typedef struct CorDebugExceptionObjectStackFrame {
 } CorDebugExceptionObjectStackFrame;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`pModule`|Puntero al objeto ICorDebugModule para el marco actual.|  
 |`ip`|El valor del puntero de instrucción (EIP/RIP) para el marco actual.|  
@@ -45,9 +46,11 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`isLastForeignExceptionFrame`|Valor que indica si el marco es el último fotograma en una excepción externa.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El llamador debe liberar el puntero al objeto ICorDebugModule una vez que ya no esté en uso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -56,7 +59,7 @@ typedef struct CorDebugExceptionObjectStackFrame {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Estructuras de depuración](debugging-structures.md)
 - [Depuración](index.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4b071bd8e9d96084848c1553385eec5f8beca624
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396552"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711733"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome:: Getslotindex ((método)
+
 Obtiene el índice de ranura administrado de una variable local.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,21 +35,25 @@ HRESULT GetSlotIndex(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pSlotIndex`  
  enuncia Puntero al índice de ranura de una variable local.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  El método devuelve los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |`S_OK`|La llamada al método devolvió un valor de índice de ranura en `pSlotIndex` .|  
 |`E_FAIL`|La instancia de [ICorDebugVariableHome](icordebugvariablehome-interface.md) actual representa un argumento de función.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Se puede usar el índice de ranura para recuperar los metadatos de esta variable local.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -57,6 +62,6 @@ HRESULT GetSlotIndex(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaz ICorDebugVariableHome](icordebugvariablehome-interface.md)

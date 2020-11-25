@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff2dd64dc4797bc485550c30f7204644a3adb47
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 74035e9551cb1d622b326e511c3884e1eadf057f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492283"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711603"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields (Método)
+
 Enumera los tokens de FieldDef del tipo al que hace referencia el token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT EnumFields (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador.  
   
@@ -55,21 +57,22 @@ HRESULT EnumFields (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Description|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields`se devolvió correctamente.|  
+|`S_OK`|`EnumFields` se devolvió correctamente.|  
 |`S_FALSE`|No hay campos que enumerar. En ese caso, `pcTokens` es cero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

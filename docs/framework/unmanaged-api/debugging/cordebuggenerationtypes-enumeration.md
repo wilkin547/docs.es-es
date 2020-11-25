@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9f25b64f-eedd-4ae5-8b0e-cfdfb9b6c5d8
 topic_type:
 - apiref
-ms.openlocfilehash: 0443f58b79e60111756308cc4843daf86d1fc823
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 189a276b4228038ab1d70620ce3a4a0f4342b245
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795873"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712526"
 ---
 # <a name="cordebuggenerationtypes-enumeration"></a>CorDebugGenerationTypes (Enumeración)
+
 Especifica la generación de una región de memoria en el montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,7 +36,7 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
 |Nombre del miembro|Descripción|  
 |-----------------|-----------------|  
@@ -47,6 +48,7 @@ typedef enum CorDebugGenerationTypes {
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -55,6 +57,6 @@ typedef enum CorDebugGenerationTypes {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

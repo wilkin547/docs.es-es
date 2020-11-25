@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 5f80125a67e634dda05b9427b5f46db8f21b29f8
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 452635764794e01858baab10464a03c966a55271
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379202"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711943"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame (Método)
+
 Obtiene el marco actual del objeto [ICorDebugStackWalk](icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,10 +33,12 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pFrame`  
  de Puntero a la dirección del objeto de marco creado que representa el marco actual en la pila.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -48,10 +51,12 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
- `ICorDebugStackWalk`Devuelve solo los marcos de pila reales. Use el método [ICorDebugThread3:: GetActiveInternalFrames (](icordebugthread3-getactiveinternalframes-method.md) para devolver Marcos internos. (Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales).  
+## <a name="remarks"></a>Notas  
+
+ `ICorDebugStackWalk` Devuelve solo los marcos de pila reales. Use el método [ICorDebugThread3:: GetActiveInternalFrames (](icordebugthread3-getactiveinternalframes-method.md) para devolver Marcos internos. (Los marcos internos son estructuras de datos insertadas en la pila por el motor en tiempo de ejecución para almacenar datos temporales).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

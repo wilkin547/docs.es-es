@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 94e02e31-67ea-4b00-8148-a46740a4571d
 topic_type:
 - apiref
-ms.openlocfilehash: 5e88652ff75223e30e6abc454f1e1af91494c7b2
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9407dda7aab337f667cd5043b562d0eac94f0f04
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396701"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711928"
 ---
 # <a name="icordebugtype-interface"></a>Interfaz ICorDebugType
+
 Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario). Si el tipo es genérico, `ICorDebugType` representa el tipo genérico con instancias.  
   
 ## <a name="methods"></a>Métodos  
@@ -37,7 +38,8 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
 |[Método GetType](icordebugtype-gettype-method.md)|Obtiene un valor de CorElementType que describe el tipo nativo del Common Language Runtime <xref:System.Type> al que hace referencia este `ICorDebugType` .|  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancia. La `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, la tabla hash \< K, V> sería representada por `ICorDebugClass` , mientras que la tabla hash \< Int32, String> se representaría mediante `ICorDebugType` .  
+
+ Si el tipo es genérico, `ICorDebugClass` representa el tipo sin instancia. La `ICorDebugType` interfaz representa un tipo genérico con instancias. Por ejemplo, la tabla hash \<K, V> se representará mediante `ICorDebugClass` , mientras que la tabla hash \<Int32, String> se representará mediante `ICorDebugType` .  
   
  Los tipos no genéricos están representados por `ICorDebugClass` y `ICorDebugType` . La última interfaz se presentó en la .NET Framework versión 2,0 para tratar con la creación de instancias de tipo.  
   
@@ -45,6 +47,7 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -53,6 +56,6 @@ Representa un tipo, ya sea básico o complejo (es decir, definido por el usuario
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)

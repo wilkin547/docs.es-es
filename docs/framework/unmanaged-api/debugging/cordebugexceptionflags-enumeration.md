@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b22687a8-e9cf-4e65-a1b0-f92a81bc524e
 topic_type:
 - apiref
-ms.openlocfilehash: 45de821dd52f7e153fc79ffde056ed959c654fce
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a50272bce2e27963a1d684fef40bac30cf44e1f0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795968"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712721"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags (Enumeración)
+
 Proporciona información adicional sobre una excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,17 +34,19 @@ typedef enum CorDebugExceptionFlags {
 } CorDebugExceptionFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_NONE`|No hay ninguna excepción.|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|La excepción se puede interceptar.<br /><br /> Sin embargo, la temporización de la excepción podría hacer que el depurador no la intercepte. Por ejemplo, si no hay ningún código administrado debajo de la devolución de llamada actual o el evento de excepción se produjo por una asociación Just-In-Time (JIT), la excepción no se puede interceptar.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Se pueden agregar nuevos valores a esta enumeración en versiones posteriores, por lo que debe preparar el código que usa `CorDebugExceptionFlags` para valores no esperados.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -52,6 +55,6 @@ typedef enum CorDebugExceptionFlags {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

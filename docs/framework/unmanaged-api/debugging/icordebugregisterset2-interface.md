@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: f989f1c1f29c63af54ff125f4ad1aaa2bcee6757
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: c04bb3a7584fcb783af929e87713dbec67ad705f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378199"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712331"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 (Interfaz)
+
 Extiende las capacidades de la interfaz [ICorDebugRegisterSet](icordebugregisterset-interface.md) para plataformas de hardware que tienen más de 64 registros.  
   
 ## <a name="methods"></a>Métodos  
@@ -32,12 +33,13 @@ Extiende las capacidades de la interfaz [ICorDebugRegisterSet](icordebugregister
 |[GetRegistersAvailable (Método)](icordebugregisterset2-getregistersavailable-method.md)|Obtiene una matriz de bytes que proporciona un mapa de bits de los registros disponibles.|  
 |[Método SetRegisters](icordebugregisterset2-setregisters-method.md)|No se implementa en la versión .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

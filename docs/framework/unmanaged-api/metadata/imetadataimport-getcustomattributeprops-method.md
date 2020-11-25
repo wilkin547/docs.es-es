@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-ms.openlocfilehash: 320cfae93f8aae94f9315e8e20ed6cf7f9cced7c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b92e9ab714e2d8d2c66ed5546deba16352e8e390
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84491321"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95711148"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps (Método)
+
 Obtiene el valor del atributo personalizado a partir de su token de metadatos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT GetCustomAttributeProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cv`  
  [in] Token de metadatos que representa el atributo personalizado que se va a recuperar.  
   
@@ -54,18 +56,20 @@ HRESULT GetCustomAttributeProps (
  [out, optional] Tamaño en bytes de los datos devueltos en *`ppBlob`.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un atributo personalizado se almacena como una matriz de datos, que es el formato que reconoce el motor de metadatos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

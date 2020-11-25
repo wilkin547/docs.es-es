@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: d5cdb8c6740970f6a7469be8c763961bf76d6ecc
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cddcf66939a2ae7ab9e7f63a6fd61b72c56f6c7a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795948"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712734"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType (Enumeración)
+
 Indica el tipo de devolución de llamada que se realiza desde un evento [ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,16 +36,17 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Se ha producido una excepción.|  
 |`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|El proceso Windup de la excepción entró en el código de usuario.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|El proceso Windup de excepción encontró `catch` un bloque en el código de usuario.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|El proceso Windup de excepción encontró un `catch` bloque en el código de usuario.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|No se controló la excepción.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -53,6 +55,6 @@ typedef enum CorDebugExceptionCallbackType {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

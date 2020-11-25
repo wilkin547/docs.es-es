@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: 020724c422af7cba0165e6f37d0eacb7742153ec
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3e946d8a27ec6b568b2f3c3633695c9f6795c938
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379271"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95712058"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName (Método)
+
 Devuelve el nombre de dominio completo o la dirección IPv4 del equipo de destino de depuración remota. IPV6 no se admite en este momento.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetHostName (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchHostName`  
  [in] Tamaño, en caracteres, del búfer de `szHostName`. Si este parámetros es 0 (cero), `szHostName` debe ser NULL.  
   
@@ -46,16 +48,19 @@ HRESULT GetHostName (
  [out] Búfer que contiene el nombre de host o la dirección IP.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK  
  El nombre de host o la dirección IP se devolvieron correctamente.  
   
  E_FAIL (u otros códigos devueltos de E_)  
  No se puede devolver el nombre de host o la dirección IP.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Este método lo implementa el programador del depurador. Debe seguir el paradigma de llamada múltiple: en la primera llamada, el llamador pasa null a `cchHostName` y `szHostName` , y `pcchHostName` devuelve el tamaño del búfer necesario. En la segunda llamada, el tamaño devuelto previamente se pasa en `cchHostName`, y un búfer del tamaño adecuado se pasa en `szHostName`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl  
