@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: a1ebfc69-46a6-4225-8788-b7cfb2f15e1d
 topic_type:
 - apiref
-ms.openlocfilehash: 945e4ac88634c9103a722a180a4fe92a554ca53b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 74a4b42be09c577cc80f1a73e077694e5a4a8d5f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697121"
 ---
-# <a name="icordebugstringvaluegetlength-method"></a><span data-ttu-id="f9cda-102">ICorDebugStringValue::GetLength (Método)</span><span class="sxs-lookup"><span data-stu-id="f9cda-102">ICorDebugStringValue::GetLength Method</span></span>
-<span data-ttu-id="f9cda-103">Obtiene el número de caracteres de la cadena a la que hace referencia este ICorDebugStringValue.</span><span class="sxs-lookup"><span data-stu-id="f9cda-103">Gets the number of characters in the string referenced by this ICorDebugStringValue.</span></span>  
+# <a name="icordebugstringvaluegetlength-method"></a><span data-ttu-id="ca3c9-102">ICorDebugStringValue::GetLength (Método)</span><span class="sxs-lookup"><span data-stu-id="ca3c9-102">ICorDebugStringValue::GetLength Method</span></span>
+
+<span data-ttu-id="ca3c9-103">Obtiene el número de caracteres de la cadena a la que hace referencia este ICorDebugStringValue.</span><span class="sxs-lookup"><span data-stu-id="ca3c9-103">Gets the number of characters in the string referenced by this ICorDebugStringValue.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9cda-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f9cda-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ca3c9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ca3c9-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLength (  
@@ -33,15 +34,17 @@ HRESULT GetLength (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f9cda-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f9cda-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ca3c9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="ca3c9-105">Parameters</span></span>  
+
  `pcchString`  
- <span data-ttu-id="f9cda-106">enuncia Un puntero a un valor que especifica la longitud de la cadena a la que hace referencia este `ICorDebugStringValue` objeto.</span><span class="sxs-lookup"><span data-stu-id="f9cda-106">[out] A pointer to a value that specifies the length of the string referenced by this `ICorDebugStringValue` object.</span></span>  
+ <span data-ttu-id="ca3c9-106">enuncia Un puntero a un valor que especifica la longitud de la cadena a la que hace referencia este `ICorDebugStringValue` objeto.</span><span class="sxs-lookup"><span data-stu-id="ca3c9-106">[out] A pointer to a value that specifies the length of the string referenced by this `ICorDebugStringValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9cda-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f9cda-107">Requirements</span></span>  
- <span data-ttu-id="f9cda-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f9cda-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ca3c9-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ca3c9-107">Requirements</span></span>  
+
+ <span data-ttu-id="ca3c9-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca3c9-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f9cda-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f9cda-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ca3c9-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ca3c9-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f9cda-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f9cda-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ca3c9-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca3c9-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f9cda-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f9cda-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ca3c9-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca3c9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
