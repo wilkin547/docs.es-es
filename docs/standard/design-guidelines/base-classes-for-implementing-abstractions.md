@@ -5,14 +5,15 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-ms.openlocfilehash: 314fcd0e1e91d1fc869453dd442ecaa72f91955d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e49b79609a2d16a79a80727295d53bb36ec5943
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821598"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701320"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Clases base para implementar abstracciones
+
 En realidad, una clase se convierte en una clase base cuando se deriva otra clase de ella. En esta sección, sin embargo, una clase base es una clase diseñada principalmente para proporcionar una abstracción común o para que otras clases reutilicen alguna implementación predeterminada a través de la herencia. Las clases base normalmente se encuentran en medio de las jerarquías de herencia, entre una abstracción en la raíz de una jerarquía y varias implementaciones personalizadas en la parte inferior.
 
  Sirven como aplicaciones auxiliares de implementación para implementar abstracciones. Por ejemplo, una de las abstracciones del marco de trabajo para colecciones ordenadas de elementos es la <xref:System.Collections.Generic.IList%601> interfaz. La implementación de <xref:System.Collections.Generic.IList%601> no es trivial y, por tanto, el marco de trabajo proporciona varias clases base, como <xref:System.Collections.ObjectModel.Collection%601> y <xref:System.Collections.ObjectModel.KeyedCollection%602> , que sirven de ayuda para implementar colecciones personalizadas.
@@ -31,7 +32,7 @@ En realidad, una clase se convierte en una clase base cuando se deriva otra clas
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Diseñar extensibilidad](designing-for-extensibility.md)

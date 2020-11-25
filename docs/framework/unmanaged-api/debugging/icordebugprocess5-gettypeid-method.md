@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 499e1fd859a66bb6992c6d02a46e38c514503bd8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3a9ef06f312126319875544caf272903b9f7c716
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205585"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701034"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID (Método)
+
 Convierte una dirección de objeto en un identificador de [COR_TYPEID](cor-typeid-structure.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetTypeID(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `obj`  
  de Dirección del objeto.  
   
@@ -46,6 +48,7 @@ HRESULT GetTypeID(
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

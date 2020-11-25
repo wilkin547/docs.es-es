@@ -7,14 +7,15 @@ helpviewer_keywords:
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-ms.openlocfilehash: 6acefa2d4a2aed8fca5d0b7db634d393baac6b58
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5169cf730dc987526765c9538978901d424814b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821637"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701411"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstracciones (Tipos e interfaces abstractos)
+
 Una abstracción es un tipo que describe un contrato pero no proporciona una implementación completa del contrato. Las abstracciones se suelen implementar como clases abstractas o interfaces, y incluyen un conjunto bien definido de documentación de referencia que describe la semántica necesaria de los tipos que implementan el contrato. Algunas de las abstracciones más importantes del .NET Framework incluyen <xref:System.IO.Stream> , <xref:System.Collections.Generic.IEnumerable%601> y <xref:System.Object> .
 
  Puede extender los marcos implementando un tipo concreto que admita el contrato de una abstracción y usando este tipo concreto con las API de marco de trabajo que consumen (funcionando en) la abstracción.
@@ -35,7 +36,7 @@ Una abstracción es un tipo que describe un contrato pero no proporciona una imp
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Diseñar extensibilidad](designing-for-extensibility.md)

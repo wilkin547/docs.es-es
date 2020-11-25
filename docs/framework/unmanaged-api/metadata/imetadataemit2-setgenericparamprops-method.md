@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8858e692d66f7b34a66334bd4e8b906dd12962ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84492748"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701996"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps (Método)
+
 Establece los valores de propiedad para la definición de parámetro genérico a la que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT SetGenericParamProps (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `gp`  
  de Token de la definición de parámetro genérico para el que se van a establecer valores.  
   
@@ -54,15 +56,16 @@ HRESULT SetGenericParamProps (
  [in] Opcional. Matriz terminada en cero de restricciones de tipo. Los miembros de la matriz deben ser un `mdTypeDef` `mdTypeRef` `mdTypeSpec` token de metadatos, o.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)

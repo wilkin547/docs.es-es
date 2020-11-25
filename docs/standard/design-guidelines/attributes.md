@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: cc4752066124a0ea8081390bfb5f3791d21ec96d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c02c41244fa74b686277c2f3c3940405fe2d95ba
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821624"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701372"
 ---
 # <a name="attributes"></a>Atributos
+
 <xref:System.Attribute?displayProperty=nameWithType> es una clase base que se usa para definir atributos personalizados.
 
  Los atributos son anotaciones que se pueden agregar a elementos de programación como ensamblados, tipos, miembros y parámetros. Se almacenan en los metadatos del ensamblado y se puede tener acceso a ellos en tiempo de ejecución mediante las API de reflexión. Por ejemplo, el marco de trabajo define <xref:System.ObsoleteAttribute> , que se puede aplicar a un tipo o un miembro para indicar que el tipo o miembro está en desuso.
@@ -47,7 +48,7 @@ ms.locfileid: "94821624"
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Directrices de diseño de marco](index.md)
 - [Instrucciones de uso](usage-guidelines.md)

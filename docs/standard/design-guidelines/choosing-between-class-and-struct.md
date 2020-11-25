@@ -12,14 +12,15 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: b1f3d36f4a9b6e44451a8534ca79fb674071a955
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 05ba9abbc9495d927b7f58ebb06f152c0c15772f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821481"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701255"
 ---
 # <a name="choosing-between-class-and-struct"></a>Elegir entre clases y structs
+
 Una de las decisiones de diseño básicas a las que se enfrenta cada diseñador de Marcos es si se debe diseñar un tipo como una clase (un tipo de referencia) o como un struct (un tipo de valor). Es fundamental comprender mejor las diferencias en el comportamiento de los tipos de referencia y los tipos de valor para tomar esta decisión.
 
  La primera diferencia entre los tipos de referencia y los tipos de valor que se deben tener en cuenta es que los tipos de referencia se asignan en el montón y se recolectan como elementos no utilizados, mientras que los tipos de valor se asignan en la pila o en línea en los tipos contenedores y se desasignan cuando se desenreda la pila o cuando se cancela la asignación del tipo contenedor. Por lo tanto, las asignaciones y desasignaciones de tipos de valor son en general más barata que las asignaciones y desasignaciones de tipos de referencia.

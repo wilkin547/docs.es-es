@@ -6,17 +6,19 @@ helpviewer_keywords:
 - design patterns in class libraries
 - class library design guidelines [.NET Framework], design patterns
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
-ms.openlocfilehash: ed580365f7d7bb3c91f1aa4065413f64e0e965db
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 06c12352d50bf8091071b41c974618320ce0b2b1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821468"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701230"
 ---
 # <a name="common-design-patterns"></a>Patrones de diseño comunes
+
 Hay numerosos libros sobre patrones de software, lenguajes de patrón y antipatrones que abordan el asunto muy amplio de patrones. Por lo tanto, en este capítulo se proporcionan instrucciones y debate relacionados con un conjunto muy limitado de patrones que se usan con frecuencia en el diseño de las API de .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Propiedades de dependencia](dependency-properties.md)  
  [Patrón de Dispose](../garbage-collection/implementing-dispose.md)  
  *Partes © 2005, 2009 Microsoft Corporation. Todos los derechos reservados.*  
