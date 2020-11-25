@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: df172edb97a82ae3bf2d46c8be6ea05d5445a09a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c2fbc0ae8cdeb79b65cbad9a055a8051acf67e50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500434"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700423"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted (Método)
+
 Notifica al generador de perfiles que se está cargando un ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,9 +40,11 @@ HRESULT AssemblyLoadStarted(
   \[in] identifica el ensamblado que se está cargando.
 
 ## <a name="remarks"></a>Comentarios  
+
  El valor de `assemblyId` no es válido para una solicitud de información hasta que se llama al método [ICorProfilerCallback:: AssemblyLoadFinished (](icorprofilercallback-assemblyloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -50,6 +53,6 @@ HRESULT AssemblyLoadStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)

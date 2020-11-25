@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e5422ac-afa1-403d-a894-2d7348673e38
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4620e591cc80efb5c0fd53b0edf3a35849c421
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f30c9b6746d0e1594994870a96e94eb8105e4c94
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209765"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700839"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification (Método)
+
 Indica que se ha generado una notificación del depurador personalizado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,6 +34,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pThread`  
  de Puntero al subproceso que provocó la notificación.  
   
@@ -40,6 +42,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
  de Puntero al dominio de aplicación que contiene el subproceso que provocó la notificación.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -48,12 +51,14 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
   
 ## <a name="exceptions"></a>Excepciones  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
+
  Una llamada subsiguiente al método [ICorDebugThread4:: getcurrentcustomdebuggernotification (](icordebugthread4-getcurrentcustomdebuggernotification-method.md) recupera el objeto de subproceso que se pasó al <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> método. El tipo del objeto de subproceso debe haberse habilitado previamente mediante una llamada al método [ICorDebugProcess3 (:: SetEnableCustomNotification (](icordebugprocess3-setenablecustomnotification-method.md) . El depurador puede leer parámetros específicos del tipo de los campos del objeto de subproceso y puede almacenar las respuestas en los campos.  
   
  La interfaz [ICorDebug](icordebug-interface.md) no impone ninguna directiva en los tipos de notificaciones ni su contenido, y la semántica de las notificaciones es estrictamente un contrato entre los depuradores, las aplicaciones y el .NET Framework.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: 9a9fdc80c8f63dd5b004953266a5d7399655bc71
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: fbdc9345c8364f33ac69da452dd91155fd5eede9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500371"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95700280"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted (Método)
+
 Notifica al generador de perfiles que se está cargando una clase.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,9 +40,11 @@ HRESULT ClassLoadStarted(
   \[in] identifica la clase que se está cargando.
 
 ## <a name="remarks"></a>Comentarios  
+
  El valor de `classId` no es válido para una solicitud de información hasta que se llama al método [ICorProfilerCallback:: classloadfinished (](icorprofilercallback-classloadfinished-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -50,6 +53,6 @@ HRESULT ClassLoadStarted(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
