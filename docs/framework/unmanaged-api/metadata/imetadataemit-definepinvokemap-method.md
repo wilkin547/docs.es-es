@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: b46d39ab3958227c1fca24ceb3a9934f2778aa2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008032"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719507"
 ---
-# <a name="imetadataemitdefinepinvokemap-method"></a><span data-ttu-id="c6dd6-102">IMetaDataEmit::DefinePinvokeMap (Método)</span><span class="sxs-lookup"><span data-stu-id="c6dd6-102">IMetaDataEmit::DefinePinvokeMap Method</span></span>
-<span data-ttu-id="c6dd6-103">Establece las características de la firma PInvoke del método al que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="c6dd6-103">Sets features of the PInvoke signature of the method referenced by the specified token.</span></span>  
+# <a name="imetadataemitdefinepinvokemap-method"></a><span data-ttu-id="c0a6c-102">IMetaDataEmit::DefinePinvokeMap (Método)</span><span class="sxs-lookup"><span data-stu-id="c0a6c-102">IMetaDataEmit::DefinePinvokeMap Method</span></span>
+
+<span data-ttu-id="c0a6c-103">Establece las características de la firma PInvoke del método al que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="c0a6c-103">Sets features of the PInvoke signature of the method referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6dd6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c6dd6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0a6c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c0a6c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefinePinvokeMap (
@@ -36,29 +37,31 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c6dd6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c6dd6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c0a6c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c0a6c-105">Parameters</span></span>  
+
  `tk`  
- <span data-ttu-id="c6dd6-106">de Token del método de destino.</span><span class="sxs-lookup"><span data-stu-id="c6dd6-106">[in] The token for the target method.</span></span>  
+ <span data-ttu-id="c0a6c-106">de Token del método de destino.</span><span class="sxs-lookup"><span data-stu-id="c0a6c-106">[in] The token for the target method.</span></span>  
   
  `dwMappingFlags`  
- <span data-ttu-id="c6dd6-107">de Marcas usadas por PInvoke para realizar la asignación.</span><span class="sxs-lookup"><span data-stu-id="c6dd6-107">[in] Flags used by PInvoke to do the mapping.</span></span>  
+ <span data-ttu-id="c0a6c-107">de Marcas usadas por PInvoke para realizar la asignación.</span><span class="sxs-lookup"><span data-stu-id="c0a6c-107">[in] Flags used by PInvoke to do the mapping.</span></span>  
   
  `szImportName`  
- <span data-ttu-id="c6dd6-108">de Nombre del método de exportación de destino en un archivo DLL no administrado.</span><span class="sxs-lookup"><span data-stu-id="c6dd6-108">[in] The name of the target export method in an unmanaged DLL.</span></span>  
+ <span data-ttu-id="c0a6c-108">de Nombre del método de exportación de destino en un archivo DLL no administrado.</span><span class="sxs-lookup"><span data-stu-id="c0a6c-108">[in] The name of the target export method in an unmanaged DLL.</span></span>  
   
  `mrImportDLL`  
- <span data-ttu-id="c6dd6-109">de El token para la DLL nativa de destino.</span><span class="sxs-lookup"><span data-stu-id="c6dd6-109">[in] The token for the target native DLL.</span></span>  
+ <span data-ttu-id="c0a6c-109">de El token para la DLL nativa de destino.</span><span class="sxs-lookup"><span data-stu-id="c0a6c-109">[in] The token for the target native DLL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6dd6-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c6dd6-110">Requirements</span></span>  
- <span data-ttu-id="c6dd6-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6dd6-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="c6dd6-112">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c6dd6-112">**Header:** Cor.h</span></span>  
-  
- <span data-ttu-id="c6dd6-113">**Biblioteca:** Se utiliza como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c6dd6-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
-  
- <span data-ttu-id="c6dd6-114">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6dd6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c6dd6-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="c6dd6-115">See also</span></span>
+## <a name="requirements"></a><span data-ttu-id="c0a6c-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c0a6c-110">Requirements</span></span>  
 
-- [<span data-ttu-id="c6dd6-116">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c6dd6-116">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="c6dd6-117">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c6dd6-117">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+ <span data-ttu-id="c0a6c-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0a6c-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="c0a6c-112">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="c0a6c-112">**Header:** Cor.h</span></span>  
+  
+ <span data-ttu-id="c0a6c-113">**Biblioteca:** Se usa como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c0a6c-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="c0a6c-114">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0a6c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c0a6c-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="c0a6c-115">See also</span></span>
+
+- [<span data-ttu-id="c0a6c-116">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c0a6c-116">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="c0a6c-117">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="c0a6c-117">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
