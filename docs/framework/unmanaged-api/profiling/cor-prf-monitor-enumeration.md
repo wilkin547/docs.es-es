@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: 1ff167121a5bb752c70edd2c5901133503326bea
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84500811"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696874"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR (Enumeración)
+
 Contiene valores que se usan para especificar el comportamiento, las funcionalidades o los eventos a los que el generador de perfiles quiere suscribirse.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -98,6 +99,7 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>Miembros  
+
  En las secciones siguientes se enumeran `COR_PRF_MONITOR` los miembros de enumeración por categoría. Las categorías son:  
   
 - [No se ha establecido ninguna marca](#None)  
@@ -111,6 +113,7 @@ typedef enum {
 - [Marcas compuestas](#Composite)  
   
 <a name="None"></a>
+
 ### <a name="no-flags-set"></a>No se ha establecido ninguna marca  
   
 |Miembro|Descripción|  
@@ -118,6 +121,7 @@ typedef enum {
 |`COR_PRF_MONITOR_NONE`|No se establecen marcas.|  
   
 <a name="Callback"></a>
+
 ### <a name="callback-flags"></a>Marcas de devolución de llamada  
   
 |Miembro|Descripción|  
@@ -133,17 +137,18 @@ typedef enum {
 |`COR_PRF_MONITOR_ENTERLEAVE`|Controla las `FunctionEnter*` `FunctionLeave*` `FunctionTailCall*` [funciones estáticas globales de generación de perfiles](profiling-global-static-functions.md), y.|  
 |`COR_PRF_MONITOR_EXCEPTIONS`|Controla la devolución de llamada de [exceptionthrown (](icorprofilercallback-exceptionthrown-method.md) y las `ExceptionSearch*` `ExceptionOSHandler*` `ExceptionUnwind*` `ExceptionCatcher*` devoluciones de llamada,, y en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Controla la devolución de llamada [functionunloadstarted (](icorprofilercallback-functionunloadstarted-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
-|`COR_PRF_MONITOR_GC`|Controla las devoluciones de llamada [garbagecollectionstarted (](icorprofilercallback2-garbagecollectionstarted-method.md), [garbagecollectionfinished (](icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences](icorprofilercallback-movedreferences-method.md), [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md), [SurvivingReferences (](icorprofilercallback2-survivingreferences-method.md), [survivingreferences2 (](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass (](icorprofilercallback-objectsallocatedbyclass-method.md), [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2 (](icorprofilercallback2-rootreferences2-method.md), [HandleCreated](icorprofilercallback2-handlecreated-method.md), [handledestroyed (](icorprofilercallback2-handledestroyed-method.md)y [finalizeableobjectqueued (](icorprofilercallback2-finalizeableobjectqueued-method.md) en las `ICorProfilerCallback*` interfaces. Cuando `COR_PRF_MONITOR_GC` se asigna, se desactiva la recolección de elementos no utilizados simultánea.|  
+|`COR_PRF_MONITOR_GC`|Controla las devoluciones de llamada [garbagecollectionstarted (](icorprofilercallback2-garbagecollectionstarted-method.md),   [garbagecollectionfinished (](icorprofilercallback2-garbagecollectionfinished-method.md),  [MovedReferences](icorprofilercallback-movedreferences-method.md), [movedreferences2 (](icorprofilercallback4-movedreferences2-method.md),    [SurvivingReferences (](icorprofilercallback2-survivingreferences-method.md),  [survivingreferences2 (](icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md),   [ObjectsAllocatedByClass (](icorprofilercallback-objectsallocatedbyclass-method.md),  [RootReferences](icorprofilercallback-rootreferences-method.md), [RootReferences2 (](icorprofilercallback2-rootreferences2-method.md), [HandleCreated](icorprofilercallback2-handlecreated-method.md),  [handledestroyed (](icorprofilercallback2-handledestroyed-method.md)y [finalizeableobjectqueued (](icorprofilercallback2-finalizeableobjectqueued-method.md) en las `ICorProfilerCallback*` interfaces. Cuando `COR_PRF_MONITOR_GC` se asigna, se desactiva la recolección de elementos no utilizados simultánea.|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|Controla las `JITCompilation*` devoluciones de llamada, [Jitfunctionpitched (](icorprofilercallback-jitfunctionpitched-method.md)y [Jitinlining (](icorprofilercallback-jitinlining-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|Controla las `ModuleLoad*` `ModuleUnload*` devoluciones de llamada, y [moduleattachedtoassembly (](icorprofilercallback-moduleattachedtoassembly-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|Controla las `ModuleLoad*`  `ModuleUnload*` devoluciones de llamada, y [moduleattachedtoassembly (](icorprofilercallback-moduleattachedtoassembly-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
 |`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Controla la devolución de llamada [ObjectAllocated](icorprofilercallback-objectallocated-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
 |`COR_PRF_MONITOR_REMOTING`|Controla las `Remoting*` devoluciones de llamada en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|Controla si las devoluciones de llamada `Remoting*` supervisarán eventos asincrónicos.|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|Controla si se pasa una cookie a las devoluciones de llamada `Remoting*`.|  
 |`COR_PRF_MONITOR_SUSPENDS`|Controla las `RuntimeSuspend*` `RuntimeResume*` devoluciones de llamada,, [RuntimeThreadSuspended (](icorprofilercallback-runtimethreadsuspended-method.md)y [RuntimeThreadResumed (](icorprofilercallback-runtimethreadresumed-method.md) en la interfaz [ICorProfilerCallback](icorprofilercallback-interface.md) .|  
-|`COR_PRF_MONITOR_THREADS`|Controla las devoluciones de llamada [ThreadCreated (](icorprofilercallback-threadcreated-method.md), [ThreadDestroyed (](icorprofilercallback-threaddestroyed-method.md), [threadassignedtoosthread (](icorprofilercallback-threadassignedtoosthread-method.md)y [threadnamechanged (](icorprofilercallback2-threadnamechanged-method.md) en las interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2](icorprofilercallback2-interface.md) .|  
+|`COR_PRF_MONITOR_THREADS`|Controla las devoluciones de llamada [ThreadCreated (](icorprofilercallback-threadcreated-method.md),  [ThreadDestroyed (](icorprofilercallback-threaddestroyed-method.md),  [threadassignedtoosthread (](icorprofilercallback-threadassignedtoosthread-method.md)y [threadnamechanged (](icorprofilercallback2-threadnamechanged-method.md) en las interfaces [ICorProfilerCallback](icorprofilercallback-interface.md) e [ICorProfilerCallback2](icorprofilercallback2-interface.md) .|  
   
 <a name="Feature"></a>
+
 ### <a name="feature-enabling-flags"></a>Marcas para habilitar características  
   
 |Miembro|Descripción|  
@@ -151,13 +156,14 @@ typedef enum {
 |`COR_PRF_ENABLE_FRAME_INFO`|Habilita la recuperación de un exacto `ClassID` para una función genérica llamando al método [getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) con un `COR_PRF_FRAME_INFO` valor devuelto por la devolución de llamada [FunctionEnter2](functionenter2-function.md) .|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Habilita el seguimiento de argumentos mediante la devolución de llamada [FunctionEnter2](functionenter2-function.md) o la devolución de llamada [FunctionEnter3WithInfo](functionenter3withinfo-function.md) y el método [GetFunctionEnter3Info (](icorprofilerinfo3-getfunctionenter3info-method.md) .|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|Habilita el seguimiento de valores devueltos mediante la devolución de llamada [FunctionLeave2](functionleave2-function.md) o la devolución de llamada [FunctionLeave3WithInfo](functionleave3withinfo-function.md) y el método [GetFunctionLeave3Info (](icorprofilerinfo3-getfunctionleave3info-method.md) .|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|En desuso.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|En desuso.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|Desusado.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
+|`COR_PRF_ENABLE_JIT_MAPS`|Desusado.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
 |`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informa al tiempo de ejecución que puede que el generador de perfiles quiera notificaciones de asignación de objetos. Esta marca se debe establecer durante la inicialización. Permite al generador de perfiles utilizar posteriormente la `COR_PRF_MONITOR_OBJECT_ALLOCATED` marca para recibir devoluciones de llamada de [ObjectAllocated](icorprofilercallback-objectallocated-method.md) .|  
 |`COR_PRF_ENABLE_REJIT`|Habilita las llamadas a los métodos [requestrejit (](icorprofilerinfo4-requestrejit-method.md) y [requestrevert (](icorprofilerinfo4-requestrevert-method.md) . El generador de perfiles debe establecer esta marca en el inicio.  Si el generador de perfiles especifica esta marca, también debe especificar `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|Habilita las llamadas al método [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .|  
   
 <a name="Config"></a>
+
 ### <a name="configuration-flags"></a>Marcas de configuración  
   
 |Miembro|Descripción|  
@@ -169,6 +175,7 @@ typedef enum {
 |`COR_PRF_USE_PROFILE_IMAGES`|Hace que la búsqueda de imágenes nativas busque imágenes mejoradas por el generador de perfiles. Si no se encuentra ninguna imagen mejorada por el generador de perfiles para un ensamblado determinado, Common Language Runtime vuelve a JIT para ese ensamblado. Si se especifican esta marca y la marca `COR_PRF_DISABLE_ALL_NGEN_IMAGES`, se usa `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
   
 <a name="Composite"></a>
+
 ### <a name="composite-flags"></a>Marcas compuestas  
   
 |Miembro|Descripción|  
@@ -180,9 +187,11 @@ typedef enum {
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|Representa todas las marcas `COR_PRF_MONITOR` que requieren imágenes mejoradas para el perfil.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  `COR_PRF_MONITOR`Se usa un valor con los métodos [ICorProfilerInfo:: GetEventMask (](icorprofilerinfo-geteventmask-method.md) y [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir las notificaciones de eventos que el Common Language Runtime realiza al generador de perfiles.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -191,7 +200,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)
 - [Método GetEventMask](icorprofilerinfo-geteventmask-method.md)

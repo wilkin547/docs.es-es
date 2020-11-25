@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a9608861-ae64-4467-8a73-be05ad34beac
 topic_type:
 - apiref
-ms.openlocfilehash: a27e7ca156ca138078215a65486ac4b965c6a93d
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d8f2788d63f27aac30cf239b410eecea31f09212
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84496339"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697888"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 (Método)
+
 Obtiene la dirección del campo estático de subproceso especificado que está en el ámbito del subproceso y del dominio de aplicación especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetThreadStaticAddress2(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `classId`  
  de IDENTIFICADOR de la clase que contiene el campo estático de subproceso solicitado.  
   
@@ -53,6 +55,7 @@ HRESULT GetThreadStaticAddress2(
  enuncia Puntero a la dirección del campo estático que está dentro del subproceso especificado.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `GetThreadStaticAddress2` método puede devolver uno de los siguientes:  
   
 - CORPROF_E_DATAINCOMPLETE HRESULT si no se ha asignado una dirección al campo estático dado en el contexto especificado.  
@@ -64,6 +67,7 @@ HRESULT GetThreadStaticAddress2(
  El método [ICorProfilerInfo2:: getthreadstaticaddress (](icorprofilerinfo2-getthreadstaticaddress-method.md) es similar al `GetThreadStaticAddress2` método, pero no acepta un argumento de dominio de aplicación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -72,7 +76,7 @@ HRESULT GetThreadStaticAddress2(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo3 (Interfaz)](icorprofilerinfo3-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

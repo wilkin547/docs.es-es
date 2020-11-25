@@ -1,21 +1,21 @@
 ---
-title: Novedades de Windows Workflow Foundation en .NET 4.5
+title: Novedades de Windows Workflow Foundation en .NET Framework 4,5
 description: Windows Workflow Foundation en .NET Framework 4,5 presenta muchas características nuevas, como nuevas actividades, capacidades del diseñador y modelos de desarrollo de flujos de trabajo.
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: b115a0a5bb5e425e808270d3daf8bb0aeb942b3c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0d7086fd5ff9bfa410568a74092be3e29f732e23
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697914"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novedades de Windows Workflow Foundation en .NET 4.5
+# <a name="whats-new-in-windows-workflow-foundation-in-net-framework-45"></a>Novedades de Windows Workflow Foundation en .NET Framework 4,5
 
-Windows Workflow Foundation (WF) en .NET Framework 4,5 presenta muchas características nuevas, como nuevas actividades, capacidades del diseñador y modelos de desarrollo de flujos de trabajo. En el diseñador de flujo de trabajo rehospedado se admiten muchas, pero no todas, las nuevas características de flujo de trabajo introducidas en .NET Framework 4,5. Para obtener más información acerca de las nuevas características que se admiten, consulte [compatibilidad con las nuevas características de Workflow Foundation 4,5 en el diseñador de flujo de trabajo hospedado en otro host](wf-features-in-the-rehosted-workflow-designer.md). Para obtener más información sobre cómo migrar las aplicaciones de flujo de trabajo de .net 3,0 y .NET 3,5 para usar la versión más reciente, consulte la [Guía de migración](migration-guidance.md). En este tema se proporciona información general sobre las nuevas características de flujo de trabajo introducidas en .NET Framework 4,5.
+Windows Workflow Foundation (WF) en .NET Framework 4,5 presenta muchas características nuevas, como nuevas actividades, capacidades del diseñador y modelos de desarrollo de flujos de trabajo. En el diseñador de flujo de trabajo rehospedado se admiten muchas, pero no todas, las nuevas características de flujo de trabajo introducidas en .NET Framework 4,5. Para obtener más información acerca de las nuevas características que se admiten, consulte [compatibilidad con las nuevas características de Workflow Foundation 4,5 en el diseñador de flujo de trabajo hospedado en otro host](wf-features-in-the-rehosted-workflow-designer.md). Para obtener más información sobre cómo migrar las aplicaciones de flujo de trabajo .NET Framework 3,0 y .NET Framework 3,5 para usar la versión más reciente, consulte la [Guía de migración](migration-guidance.md). En este artículo se proporciona información general sobre las nuevas características de flujo de trabajo introducidas en .NET Framework 4,5.
 
 > [!WARNING]
-> Las nuevas características de Windows Workflow Foundation introducidas en .NET Framework 4,5 no están disponibles para los proyectos que tienen como destino versiones anteriores de Framework. Si un proyecto destinado a .NET Framework 4,5 se vuelve a destinar a una versión anterior del marco, pueden producirse varios problemas.
+> Las nuevas características de Windows Workflow Foundation introducidas en .NET Framework 4,5 no están disponibles para los proyectos que tienen como destino versiones anteriores de Framework. Si un proyecto destinado a .NET Framework 4,5 se redestina a una versión anterior del marco, pueden producirse varios problemas.
 >
 > - Las expresiones de C# se reemplazarán en el diseñador con el valor del mensaje **establecido en XAML**.
 > - Aparecerán muchos errores de compilación, incluido el siguiente.
@@ -101,7 +101,7 @@ Las palabras clave buscadas en los flujos de trabajo coincidirán con los elemen
 
 - Propiedades de los objetos <xref:System.Activities.Activity>, <xref:System.Activities.Statements.FlowNode>, <xref:System.Activities.Statements.State> y <xref:System.Activities.Statements.Transition>, así como otros elementos de control de flujo personalizados.
 
-- variables
+- Variables
 
 - Argumentos
 
@@ -151,7 +151,7 @@ Asimismo, se pueden arrastrar y colocar en el diseñador selecciones múltiples 
 
 ### <a name="outline-view-of-workflow-items"></a><a name="BKMK_DocumentOutline"></a> vista Esquema de elementos de flujo de trabajo
 
-Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista de esquema se muestra en la vista **esquema del documento** . Para abrir esta vista, en el menú superior, seleccione **vista**, **otras ventanas**, **esquema del documento**o presione Ctrl W, u. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador.
+Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los componentes de un flujo de trabajo se muestran en una vista de esquema de árbol. La vista de esquema se muestra en la vista **esquema del documento** . Para abrir esta vista, en el menú superior, seleccione **vista**, **otras ventanas**, **esquema del documento** o presione Ctrl W, u. Al hacer clic en un nodo en la vista de esquema navegará a la actividad correspondiente en el diseñador de flujo de trabajo, y la vista de esquema se actualizará para mostrar las actividades seleccionadas en el diseñador.
 
 La captura de pantalla siguiente del flujo de trabajo completado en el [Introducción tutorial](getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.
 

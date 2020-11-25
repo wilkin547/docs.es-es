@@ -2,14 +2,15 @@
 title: ICorDebugExceptionDebugEvent::GetNativeIP (método)
 ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
-ms.openlocfilehash: 82dc892f3081c9f33ff7a2f363c326091f7cf039
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: f3b29b3ceda521afe9543588af332531aa03e84e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82976036"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697420"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP (método)
+
 Obtiene el puntero de instrucción nativo para este evento de depuración de la excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -21,10 +22,12 @@ HRESULT GetNativeIP(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pIP`  
- [out] Puntero al puntero de instrucción para este evento de depuración de la excepción. Para obtener más información, vea la sección Comentarios.  
+ [out] Puntero al puntero de instrucción para este evento de depuración de la excepción. Vea la sección Comentarios para obtener más información.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El significado de este puntero de instrucción depende del tipo de evento, como se muestra en la tabla siguiente.  
   
 |Tipo de evento|Significado del valor `pStackPointer`|  
@@ -40,6 +43,7 @@ HRESULT GetNativeIP(
 > Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

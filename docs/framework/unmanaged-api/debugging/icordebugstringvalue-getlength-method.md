@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a1ebfc69-46a6-4225-8788-b7cfb2f15e1d
 topic_type:
 - apiref
-ms.openlocfilehash: 945e4ac88634c9103a722a180a4fe92a554ca53b
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 74a4b42be09c577cc80f1a73e077694e5a4a8d5f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378894"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697121"
 ---
 # <a name="icordebugstringvaluegetlength-method"></a>ICorDebugStringValue::GetLength (Método)
+
 Obtiene el número de caracteres de la cadena a la que hace referencia este ICorDebugStringValue.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetLength (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pcchString`  
  enuncia Un puntero a un valor que especifica la longitud de la cadena a la que hace referencia este `ICorDebugStringValue` objeto.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa227704-0ab1-4b08-aee2-1f439762162e
 topic_type:
 - apiref
-ms.openlocfilehash: 2206499cad9be2a29f485ee66d468accbe00b5f5
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 122536877b2fd5f0e5c64118bd978b54c4a8b3df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616689"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696822"
 ---
 # <a name="cor_gc_thread_stats_types-enumeration"></a>COR_GC_THREAD_STATS_TYPES (enumeración)
+
 Indica las estadísticas de recolección de elementos no utilizados de un subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,12 +40,13 @@ typedef enum {
 |`COR_GC_THREAD_HAS_PROMOTED_BYTES`|El subproceso tiene bytes que se promovieron en la recolección de elementos no utilizados más reciente.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** GCHost. idl, GCHost. h  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

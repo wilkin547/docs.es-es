@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 33c1d269-c85e-4cb1-b0e6-1c510c8fb5fa
 topic_type:
 - apiref
-ms.openlocfilehash: ec08c786992996ec6f44038ff3c1596cada88484
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 230b904dd1cca1a1289713e3df7a709bd1c3a22b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127080"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95696913"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly (Método)
+
 Instala el ensamblado especificado en la caché global de ensamblados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,8 +37,9 @@ HRESULT InstallAssembly (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwFlags`  
- de Marcas definidas en Fusion. idl. Se admiten los siguientes valores:  
+ de Marcas definidas en Fusion. idl. Se admiten los valores siguientes:  
   
 - IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
@@ -47,15 +49,16 @@ HRESULT InstallAssembly (
  de Ruta de acceso al manifiesto del ensamblado que se va a instalar.  
   
  `pRefData`  
- de Estructura [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) que contiene los datos de la instalación.  
+ de [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) estructura que contiene los datos de la instalación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IAssemblyCache (interfaz)](iassemblycache-interface.md)
+- [IAssemblyCache (Interfaz)](iassemblycache-interface.md)
