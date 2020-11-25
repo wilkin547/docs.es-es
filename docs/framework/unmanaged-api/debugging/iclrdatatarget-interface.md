@@ -14,21 +14,22 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 30806394a8895084068acaec6f7d03c6b67bb14b
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860569"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703426"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget (Interfaz)
+
 Proporciona métodos para la interacción con un elemento de destino del Common Language Runtime (CLR).  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Método GetCurrentThreadID](iclrdatatarget-getcurrentthreadid-method.md)|Obtiene el identificador del sistema operativo para el subproceso actual.|  
+|[GetCurrentThreadID (Método)](iclrdatatarget-getcurrentthreadid-method.md)|Obtiene el identificador del sistema operativo para el subproceso actual.|  
 |[Método GetImageBase](iclrdatatarget-getimagebase-method.md)|Obtiene la dirección de memoria base para la imagen especificada.|  
 |[Método GetMachineType](iclrdatatarget-getmachinetype-method.md)|Obtiene un identificador para el tipo de conjunto de instrucciones que está usando el proceso de destino.|  
 |[Método GetPointerSize](iclrdatatarget-getpointersize-method.md)|Obtiene el tamaño, en bytes, de un puntero al destino actual.|  
@@ -41,9 +42,11 @@ Proporciona métodos para la interacción con un elemento de destino del Common 
 |[Método WriteVirtual](iclrdatatarget-writevirtual-method.md)|Escribe datos del búfer especificado en la dirección de memoria virtual especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El cliente de API (es decir, el depurador) debe implementar esta interfaz según corresponda para el elemento de destino determinado. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

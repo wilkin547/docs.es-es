@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-ms.openlocfilehash: d477976952d2c1875a620d1397fd43e5c5e2836f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0d76abf8a9c923089f367ab4e1786ac8cc92622d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503476"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702984"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal (Método)
+
 Obtiene un valor que indica si el campo, el método o el tipo representado por el token de metadatos especificado es de ámbito global.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT IsGlobal (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pd`  
  de Token de metadatos que representa un tipo, campo o método.  
   
@@ -42,15 +44,16 @@ HRESULT IsGlobal (
  [out] 1 si el objeto tiene ámbito global; de lo contrario, 0 (cero).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

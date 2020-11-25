@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-ms.openlocfilehash: 24c316ea6bab11fb55e8e0fc1dc9832a312dbc6a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 75341b1af034972c861b75f29a06eaa2c4e33c3a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397192"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703045"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent (Método)
+
 Notifica al depurador que se ha desencadenado un evento nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT DebugEvent (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pDebugEvent`  
  de Puntero al evento nativo.  
   
@@ -42,6 +44,7 @@ HRESULT DebugEvent (
  [in] `true` , si la interacción con el estado de proceso administrado no es posible después de que se produzca un evento no administrado, hasta que el depurador llama a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md); de lo contrario, `false` .  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si el subproceso que se está depurando es un subproceso de Win32, no use ningún miembro de la interfaz de depuración de Win32. Solo se puede llamar a `ICorDebugController::Continue` en un subproceso de Win32 y solo al continuar después de un evento fuera de banda.  
   
  La `DebugEvent` devolución de llamada no sigue las reglas estándar para las devoluciones de llamada. Cuando llame a `DebugEvent` , el proceso estará en el estado sin procesar y depuración de sistema operativo detenido. El proceso no se sincronizará. Se especificará automáticamente el estado Synchronized cuando sea necesario para satisfacer las solicitudes de información sobre el código administrado, lo que puede dar lugar a otras `DebugEvent` devoluciones de llamada anidadas.  
@@ -51,6 +54,7 @@ HRESULT DebugEvent (
  En el .NET Framework versión 2,0, el depurador debe continuar inmediatamente después de un evento de punto de interrupción fuera de banda. El depurador debe utilizar los métodos [ICorDebugProcess2:: SetUnmanagedBreakpoint (](icordebugprocess2-setunmanagedbreakpoint-method.md) y [ICorDebugProcess2:: ClearUnmanagedBreakpoint (](icordebugprocess2-clearunmanagedbreakpoint-method.md) para agregar y quitar puntos de interrupción. Estos métodos omitirán automáticamente los puntos de interrupción fuera de banda. Por lo tanto, los únicos puntos de interrupción fuera de banda que se envían deben ser puntos de interrupción sin formato que ya estén en el flujo de instrucciones, como una llamada a la `DebugBreak` función de Win32. No intente usar `ICorDebugProcess::ClearCurrentException` , [ICorDebugProcess:: GetThreadContext](icordebugprocess-getthreadcontext-method.md), [ICorDebugProcess:: SetThreadContext](icordebugprocess-setthreadcontext-method.md)o cualquier otro miembro de la [API de depuración](index.md).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -59,6 +63,6 @@ HRESULT DebugEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebugUnmanagedCallback (Interfaz)](icordebugunmanagedcallback-interface.md)

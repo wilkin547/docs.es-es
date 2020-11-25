@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: d39b2b87-ba53-4771-ae53-952a68452511
 topic_type:
 - apiref
-ms.openlocfilehash: fe9e87618291218a41e52f80198ce9068c9c56e2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a845ecfde6583d625d2a8f165443344ff9e40d05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490404"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702557"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2 (Interfaz)
+
 Extiende la interfaz [IMetaDataImport](imetadataimport-interface.md) para proporcionar la capacidad de trabajar con tipos genéricos.  
   
 ## <a name="methods"></a>Métodos  
@@ -35,18 +36,19 @@ Extiende la interfaz [IMetaDataImport](imetadataimport-interface.md) para propor
 |[Método GetGenericParamProps](imetadataimport2-getgenericparamprops-method.md)|Obtiene los metadatos asociados al parámetro genérico representado por el token especificado.|  
 |[Método GetMethodSpecProps](imetadataimport2-getmethodspecprops-method.md)|Obtiene la firma de metadatos del método al que hace referencia el token MethodSpec especificado.|  
 |[Método GetPEKind](imetadataimport2-getpekind-method.md)|Obtiene un valor que identifica la naturaleza del código en un archivo portable ejecutable (PE), normalmente un archivo DLL o EXE, definido en el ámbito de metadatos actual.|  
-|[GetVersionString (Método)](imetadataimport2-getversionstring-method.md)|Obtiene el número de versión del motor en tiempo de ejecución que se usó para compilar el ensamblado.|  
+|[Método GetVersionString](imetadataimport2-getversionstring-method.md)|Obtiene el número de versión del motor en tiempo de ejecución que se usó para compilar el ensamblado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Reflection.PortableExecutableKinds>
 - [Interfaces de metadatos](metadata-interfaces.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: 35b7bff5d4d778a429ddc1dcd0206e6e8970ee4f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82860612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703504"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext (Método)
+
 Obtiene el contexto de ejecución actual para el subproceso dado en el proceso de destino. El servicio de acceso a datos de Common Language Runtime llama a este método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT GetThreadContext (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `threadID`  
  de Identificador del sistema operativo de un subproceso en el proceso de destino.  
   
@@ -50,12 +52,14 @@ HRESULT GetThreadContext (
  `context`  
  enuncia Puntero a un búfer en el que se va a colocar el contexto.  
   
- Los datos del `context` búfer deben tener el formato de la estructura de Win32 `CONTEXT` . El contexto especifica los datos de registro específicos del procesador, por lo que la `CONTEXT` definición de la estructura de Win32 depende de la arquitectura del procesador. Consulte el archivo de encabezado Winnt. h para ver la definición de `CONTEXT` la estructura de Win32.  
+ Los datos del `context` búfer deben tener el formato de la estructura de Win32 `CONTEXT` . El contexto especifica los datos de registro específicos del procesador, por lo que la definición de la estructura de Win32 `CONTEXT` depende de la arquitectura del procesador. Consulte el archivo de encabezado Winnt. h para ver la definición de la estructura de Win32 `CONTEXT` .  
   
 ## <a name="remarks"></a>Comentarios  
+
  Este método lo implementa el escritor de la aplicación de depuración.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** ClrData. idl, ClrData. h  

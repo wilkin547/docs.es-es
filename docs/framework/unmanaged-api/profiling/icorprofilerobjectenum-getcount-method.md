@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-ms.openlocfilehash: 4c867a9e263f022fc6f8d90a883562e2560ad1b2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: a0777797870a707c0d0f00bc0b4c986448118231
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84494662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702399"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount (Método)
+
 Obtiene el número total de objetos inmovilizados de la colección.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,12 +35,14 @@ HRESULT GetCount (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pcelt`  
  enuncia Puntero al número de objetos inmovilizados de la colección.  
   
  Este método siempre devolverá cero en la .NET Framework versión 3,5 Service Pack 1 (SP1) y versiones posteriores.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -48,6 +51,6 @@ HRESULT GetCount (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerObjectEnum (Interfaz)](icorprofilerobjectenum-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: 093e3edf0a3c06222ebc56a4876fca08d1b7578f
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6b1a8e66eea6caec9dfc8d99e343c987cefa1b0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84490736"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95702763"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams (Método)
+
 Obtiene un enumerador para una matriz de tokens de parámetro genéricos asociados al token de TypeDef o MethodDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,6 +39,7 @@ HRESULT EnumGenericParams (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador.  
   
@@ -55,21 +57,22 @@ HRESULT EnumGenericParams (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Description|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams`se devolvió correctamente.|  
-|`S_FALSE`|`phEnum`no tiene elementos de miembro. En este caso, `pcGenericParams` se establece en 0 (cero).|  
+|`S_OK`|`EnumGenericParams` se devolvió correctamente.|  
+|`S_FALSE`|`phEnum` no tiene elementos de miembro. En este caso, `pcGenericParams` se establece en 0 (cero).|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)

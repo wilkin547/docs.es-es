@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16caf02f-c71e-486c-90b0-f0e54357d8f0
 topic_type:
 - apiref
-ms.openlocfilehash: 2bd4ab4a080461c56b0287d24aa288847445d803
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 99c80fba594e9eaf69a3cc9a025509aa4c3c26a4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210324"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703309"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP (Método)
+
 Obtiene un valor HRESULT que indica si es seguro establecer el puntero de instrucción en la ubicación de desplazamiento especificada en el código del lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT CanSetIP (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `nOffset`  
  de La configuración deseada para el puntero de instrucción.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Use el `CanSetIP` método antes de llamar al método [ICorDebugILFrame:: setip](icordebugilframe-setip-method.md) . Si `CanSetIP` devuelve un valor HRESULT distinto de S_OK, todavía puede invocar `ICorDebugILFrame::SetIP` , pero no hay ninguna garantía de que el depurador siga la ejecución segura y correcta del código que se está depurando.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cordebug. idl, Cordebug, h  

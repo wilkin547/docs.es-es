@@ -10,14 +10,15 @@ api_type:
 ms.assetid: f9dc2afd-df8a-464d-bdbf-5af0a1d4bf85
 topic_type:
 - apiref
-ms.openlocfilehash: 65995e8386b3bc686178b79d4fbb21a7c71bed3e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b9289b5afc88c926ce585a4e620364cf2dc979d5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210337"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703335"
 ---
 # <a name="icordebugilcode2-interface"></a>ICorDebugILCode2 (Interfaz)
+
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
   
  Extiende lógicamente la interfaz [ICorDebugILCode](icordebugilcode-interface.md) para proporcionar métodos que devuelven el token de la firma de variable local de una función y que asignan los desplazamientos del lenguaje intermedio INSTRUMENTADO (IL) del generador de perfiles a los desplazamientos de Il del método original.  
@@ -30,6 +31,7 @@ ms.locfileid: "83210337"
 |[GetLocalVarSigToken (Método)](icordebugilcode2-getlocalvarsigtoken-method.md)|Obtiene el token de metadatos de la firma de variable local para la función que esta instancia representa.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

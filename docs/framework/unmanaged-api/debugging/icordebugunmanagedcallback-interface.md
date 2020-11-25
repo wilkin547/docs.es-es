@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: dd5baa282d15d121b62b4dc4dd41bcf9ff393570
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 73722c9fbc1571496159c32b0106f25bc05dbe65
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395880"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95703023"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback (Interfaz)
+
 Proporciona la notificación de eventos nativos que no están directamente relacionados con el Common Language Runtime (CLR).  
   
 ## <a name="methods"></a>Métodos  
@@ -36,6 +37,7 @@ Proporciona la notificación de eventos nativos que no están directamente relac
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -44,6 +46,6 @@ Proporciona la notificación de eventos nativos que no están directamente relac
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para depuración](debugging-interfaces.md)
