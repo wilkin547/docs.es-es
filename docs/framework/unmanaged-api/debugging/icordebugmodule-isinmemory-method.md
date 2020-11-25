@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 89940711-98e7-4aa6-bffc-5e39e91e1b7d
 topic_type:
 - apiref
-ms.openlocfilehash: c5fa55a84ed8907a5072f6099c3bf02cd6d78683
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 637cac67e73d38aca0fdc5eaeae5405c4a859aa3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709822"
 ---
 # <a name="icordebugmoduleisinmemory-method"></a>ICorDebugModule::IsInMemory (Método)
+
 Obtiene un valor que indica si este módulo solo existe en la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT IsInMemory(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pInMemory`  
  [out] `true` Si este módulo solo existe en la memoria; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El Common Language Runtime (CLR) admite la carga de módulos desde secuencias sin formato de bytes. Estos módulos se denominan *módulos en memoria* y no existen en el disco.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

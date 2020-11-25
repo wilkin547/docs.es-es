@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-ms.openlocfilehash: 219aa27296dffa525bf3e2b836825437a8ce77b0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 9a088c7e4e9c72c8247ccdd384bc724587210c37
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207654"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710875"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML (Método)
+
 Obtiene la secuencia XML completa asociada al Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetXML (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchName`  
  [in] Tamaño de la matriz `szName`.  
   
@@ -46,10 +48,12 @@ HRESULT GetXML (
  `szName`  
  enuncia Matriz en la que se va a almacenar la secuencia XML. La matriz puede estar vacía.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El `GetXML` método puede afectar al rendimiento, dependiendo del tamaño de la secuencia XML asociada.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

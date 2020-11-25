@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 7026d135b02563b6c718be4096d2c5cad9d33cec
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 14f2b6822744070e649cf9a6722272992c0bf1c8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212287"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709523"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>Interfaz ICorDebugModuleBreakpoint
 
@@ -31,12 +31,13 @@ Proporciona acceso a módulos específicos. Esta interfaz es una subclase de la 
 |------------|-----------------|  
 |[GetModule (Método)](icordebugmodulebreakpoint-getmodule-method.md)|Obtiene un puntero de interfaz a una ICorDebugModule que hace referencia al módulo donde se establece este punto de interrupción.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-ms.openlocfilehash: 99824e9a7fd759fb30bfa377156fc28eb934a2b4
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a6b1a7c9be821890a3f15d8c3297273607f5bedd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212235"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709705"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges (Método)
+
 Aplica los cambios en los metadatos y los cambios en el código del lenguaje intermedio de Microsoft (MSIL) al proceso en ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT ApplyChanges (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cbMetadata`  
  de Tamaño, en bytes, de los metadatos Delta.  
   
@@ -51,8 +53,9 @@ HRESULT ApplyChanges (
  `pbIL`  
  de Búfer que contiene el código MSIL actualizado.  
   
-## <a name="remarks"></a>Observaciones  
- El `pbMetadata` parámetro está en un formato de metadatos Delta especial (como el resultado de [IMetaDataEmit2:: SaveDeltaToMemory (](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata`toma los metadatos anteriores como base y describe los cambios individuales que se aplican a esa base.  
+## <a name="remarks"></a>Comentarios  
+
+ El `pbMetadata` parámetro está en un formato de metadatos Delta especial (como el resultado de [IMetaDataEmit2:: SaveDeltaToMemory (](../metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` toma los metadatos anteriores como base y describe los cambios individuales que se aplican a esa base.  
   
  Por el contrario, el `pbIL[` parámetro] contiene el nuevo MSIL para el método actualizado y está pensado para reemplazar por completo el MSIL anterior para ese método  
   
@@ -63,6 +66,7 @@ HRESULT ApplyChanges (
  Si se `ApplyChanges` produce un error en el método, la sesión de depuración se encuentra en un estado no válido y debe reiniciarse.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

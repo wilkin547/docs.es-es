@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ffd5d9ec-4564-4200-b625-b306eec0ebd7
 topic_type:
 - apiref
-ms.openlocfilehash: 714819504099ea978ed31d471b4ceb9fc17a6552
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b6363ef901d5297862ca46e685bb783aaaeb4123
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212300"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709627"
 ---
 # <a name="icordebugmodulebreakpointgetmodule-method"></a>ICorDebugModuleBreakpoint::GetModule (Método)
+
 Obtiene un puntero de interfaz a un "ICorDebugModule" que hace referencia al módulo en el que se establece este punto de interrupción.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetModule (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppModule`  
  enuncia Puntero a la dirección de una `ICorDebugModule` interfaz que hace referencia al módulo en el que se establece el punto de interrupción.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

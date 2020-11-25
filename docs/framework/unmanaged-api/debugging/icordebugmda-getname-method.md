@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 6a6769265a2e140f1fa001bb8240bc5d4bd76018
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 516fcf8a97b92eac8dfff9eae34199caa97c2d2f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95710940"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName (Método)
+
 Obtiene una cadena que contiene el nombre del Asistente para la depuración administrada (MDA) representado por [ICorDebugMDA](icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetName (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchName`  
  [in] Tamaño de la matriz `szName`.  
   
@@ -46,10 +48,12 @@ HRESULT GetName (
  `szName`  
  enuncia Matriz en la que se va a almacenar el nombre.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Los nombres de MDA son valores únicos. El `GetName` método es una alternativa de rendimiento adecuada para obtener la secuencia XML y extraer el nombre de la secuencia basada en el esquema.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

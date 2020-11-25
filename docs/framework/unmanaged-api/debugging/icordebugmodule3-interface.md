@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0b69f945-263a-4e11-8512-89d27f6ea296
 topic_type:
 - apiref
-ms.openlocfilehash: 69fd3e2df4a4eafe91cc025f28e1387cc443ea04
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 543a1a3c79b6cf3eb799da5844f35286dfa91940
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212313"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709562"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 (Interfaz)
+
 Crea un lector de símbolos para un módulo dinámico.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,13 +44,15 @@ interface ICorDebugModule3 : IUnknown
 |------------|-----------------|  
 |[ICorDebugModule3::CreateReaderForInMemorySymbols (Método)](icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crea un lector de símbolos (normalmente la [interfaz ISymUnmanagedReader](../diagnostics/isymunmanagedreader-interface.md)) para un módulo dinámico.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta interfaz extiende lógicamente las interfaces "ICorDebugModule" y "ICorDebugModule2".  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

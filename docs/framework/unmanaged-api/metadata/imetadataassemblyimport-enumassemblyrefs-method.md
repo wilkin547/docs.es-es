@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-ms.openlocfilehash: 1b9700455da82fc7f4a39d4c208ac0b18ef79722
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 18cd9dd14e615a7e76bfff30c9ae584305bd1907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009124"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708948"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs (Método)
+
 Enumera las `mdAssemblyRef` instancias de definidas en el manifiesto del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT EnumAssemblyRefs (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador. Debe ser un valor NULL cuando `EnumAssemblyRefs` se llama al método por primera vez.  
   
@@ -53,15 +55,16 @@ HRESULT EnumAssemblyRefs (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs`se devolvió correctamente.|  
+|`S_OK`|`EnumAssemblyRefs` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En este caso, `pcTokens` se establece en cero.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

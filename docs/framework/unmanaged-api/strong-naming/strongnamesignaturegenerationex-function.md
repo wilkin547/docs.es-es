@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-ms.openlocfilehash: e8f63a6379af8f2b7b88c511840622d49d65d587
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 96dae519d73505a30c8593e9883da7338525ea2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141574"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708528"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx (Función)
+
 Genera una firma de nombre seguro para el ensamblado especificado, según las marcas especificadas.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameSignatureGenerationEx (](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) en su lugar.  
@@ -41,6 +42,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszFilePath`  
  de La ruta de acceso al archivo que contiene el manifiesto del ensamblado para el que se generará la firma de nombre seguro.  
   
@@ -52,13 +54,13 @@ BOOLEAN StrongNameSignatureGenerationEx (
  Si `pbKeyBlob` no es null, se supone que el par de claves está incluido en el objeto binario grande (BLOB) de clave.  
   
  `pbKeyBlob`  
- de Puntero al par de claves pública y privada. Este par está en el formato creado por la función `CryptExportKey` de Win32. Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
+ de Puntero al par de claves pública y privada. Este par está en el formato creado por la función de Win32 `CryptExportKey` . Si `pbKeyBlob` es null, se supone que el contenedor de claves especificado por `wszKeyContainer` contiene el par de claves.  
   
  `cbKeyBlob`  
- de Tamaño, en bytes, de `pbKeyBlob`.  
+ de Tamaño, en bytes, de `pbKeyBlob` .  
   
  `ppbSignatureBlob`  
- enuncia Puntero a la ubicación en la que el Common Language Runtime devuelve la firma. Si `ppbSignatureBlob` es null, el Runtime almacena la firma en el archivo especificado por `wszFilePath`.  
+ enuncia Puntero a la ubicación en la que el Common Language Runtime devuelve la firma. Si `ppbSignatureBlob` es null, el Runtime almacena la firma en el archivo especificado por `wszFilePath` .  
   
  Si `ppbSignatureBlob` no es null, el Common Language Runtime asigna espacio en el que se va a devolver la firma. El autor de la llamada debe liberar este espacio mediante la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) .  
   
@@ -73,30 +75,33 @@ BOOLEAN StrongNameSignatureGenerationEx (
 - `SN_TEST_SIGN` (0x00000002): prueba-firma del ensamblado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` cuando se complete correctamente; de lo contrario, `false`.  
+
+ `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
 ## <a name="remarks"></a>Comentarios  
- Especifique NULL en `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
+
+ Especifique NULL para `wszFilePath` para calcular el tamaño de la firma sin crear la firma.  
   
  La firma puede almacenarse directamente en el archivo o devolverse al autor de la llamada.  
   
- Si se especifica `SN_SIGN_ALL_FILES` pero no se incluye una clave pública (tanto `pbKeyBlob` como `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
+ Si `SN_SIGN_ALL_FILES` se especifica, pero no se incluye una clave pública ( `pbKeyBlob` y `wszFilePath` son NULL), se vuelven a calcular los valores hash de los módulos vinculados, pero no se vuelve a firmar el ensamblado.  
   
- Si se especifica `SN_TEST_SIGN`, el encabezado de Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
+ Si `SN_TEST_SIGN` se especifica, el encabezado Common Language Runtime no se modifica para indicar que el ensamblado está firmado con un nombre seguro.  
   
- Si la función `StrongNameSignatureGenerationEx` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la `StrongNameSignatureGenerationEx` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameSignatureGenerationEx (método)](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [StrongNameSignatureGeneration (método)](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método StrongNameSignatureGenerationEx](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [Método StrongNameSignatureGeneration](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

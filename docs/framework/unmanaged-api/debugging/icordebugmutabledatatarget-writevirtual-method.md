@@ -2,14 +2,15 @@
 title: ICorDebugMutableDataTarget::WriteVirtual (método)
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 6325dba99fba0ab5e2f752a0635fdd428d3065eb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 453ab23e292c5eab4a8300c32bf76743b787750d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206741"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709341"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual (método)
+
 Escribe la memoria en el espacio de direcciones de procesos de destino.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -22,6 +23,7 @@ HRESULT WriteVirtual(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `address`  
  [in] Dirección a la que se va a escribir el contenido de `pBuffer`.  
   
@@ -32,12 +34,15 @@ HRESULT WriteVirtual(
  [in] Número de bytes en `pBuffer`.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  `S_OK`, si la operación se realiza correctamente o cualquier otro `HRESULT`, en caso de error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si no se puede escribir bytes, la llamada al método produce un error sin cambiar los bytes en el espacio de la dirección de destino (de lo contrario, el destino estaría en un estado incoherente que haría que las futuras depuraciones resultasen poco fiables).  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

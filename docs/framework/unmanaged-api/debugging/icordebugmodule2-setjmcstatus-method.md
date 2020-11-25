@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6d2089-4dbb-4715-b9e9-2a4491c8c9ce
 topic_type:
 - apiref
-ms.openlocfilehash: d5109043a8601d7997f52e88ea472644f1b9ca03
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cfa6df7a812559f05a4c57381a5007c9c90238e1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208790"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709666"
 ---
 # <a name="icordebugmodule2setjmcstatus-method"></a>ICorDebugModule2::SetJMCStatus (Método)
+
 Establece el Estado Solo mi código (JMC) de todos los métodos de todas las clases de este ICorDebugModule2 en el valor especificado, excepto los de la `pTokens` matriz, que se establece en el valor opuesto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT SetJMCStatus (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `bIsJustMycode`  
  de Se establece en `true` si se va a depurar el código; de lo contrario, se establece en `false` .  
   
@@ -45,7 +47,8 @@ HRESULT SetJMCStatus (
  `pTokens`  
  de Una matriz de `mdToken` valores, cada uno de los cuales hace referencia a un método que tendrá su estado JMC establecido en! `bIsJustMycode` .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El estado de JMC de cada método que se especifica en la `pTokens` matriz se establece en el opuesto del `bIsJustMycode` valor. El estado de todos los demás métodos de este módulo se establece en el `bIsJustMycode` valor.  
   
  El `SetJMCStatus` método borra todas las configuraciones de JMC anteriores de este módulo.  
@@ -53,6 +56,7 @@ HRESULT SetJMCStatus (
  El `SetJMCStatus` método devuelve un S_OK HRESULT si todas las funciones se establecieron correctamente. Devuelve un CORDBG_E_FUNCTION_NOT_DEBUGGABLE HRESULT si algunas funciones marcadas `true` no se pueden depurar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

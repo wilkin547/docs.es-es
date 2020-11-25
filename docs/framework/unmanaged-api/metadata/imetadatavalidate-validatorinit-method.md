@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6bafd75a-e2d0-4aea-aed1-074374d5dff6
 topic_type:
 - apiref
-ms.openlocfilehash: 687f33c364f9730a554a41ade1ca2b78e33ffdc5
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: e2f54e11906cd4ba1440e220530f2ca5b9de769f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708561"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit (Método)
+
 Establece una marca que especifica el tipo del módulo en el ámbito de metadatos actual y registra el método de devolución de llamada especificado para los errores de validación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT ValidatorInit (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwModule`  
  de Un valor de la enumeración [corvalidatormoduletype (](corvalidatormoduletype-enumeration.md) que especifica el tipo del módulo en el ámbito de metadatos actual.  
   
@@ -42,14 +44,15 @@ HRESULT ValidatorInit (
  de Puntero a una instancia de [IUnknown](/cpp/atl/iunknown) que actúa como devolución de llamada de función para los errores de validación.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataValidate (Interfaz)](imetadatavalidate-interface.md)

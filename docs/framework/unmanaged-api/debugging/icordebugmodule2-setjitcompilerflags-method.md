@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea574c84-c622-4589-9a14-b55771af5e06
 topic_type:
 - apiref
-ms.openlocfilehash: f73919634ba15dfd16694676d1389875fc2d79bc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 11ff430c426c93f1c2a5c0582495e089a33995fa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210194"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709809"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags (Método)
+
 Establece las marcas que controlan la compilación Just-in-Time (JIT) de este ICorDebugModule2.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT SetJITCompilerFlags (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `dwFlags`  
  de Combinación bit a bit de los valores de la enumeración [cordebugjitcompilerflags (](cordebugjitcompilerflags-enumeration.md) .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Si el `dwFlags` valor no es válido, `SetJITCompilerFlags` se producirá un error en el método.  
   
  `SetJITCompilerFlags`Solo se puede llamar al método desde dentro de la devolución de llamada [ICorDebugManagedCallback:: LoadModule](icordebugmanagedcallback-loadmodule-method.md) para este módulo. Se producirá un error al intentar llamarlo después de que se haya `ICorDebugManagedCallback::LoadModule` entregado la devolución de llamada.  
@@ -45,6 +48,7 @@ HRESULT SetJITCompilerFlags (
  No se admite editar y continuar en plataformas de 64 bits o Win9x. Por consiguiente, si se llama al `SetJITCompilerFlags` método en cualquiera de estas dos plataformas con la marca CORDEBUG_JIT_ENABLE_ENC establecida en `dwFlags` , el `SetJITCompilerFlags` método y todos los métodos específicos para editar y continuar, como [ICorDebugModule2:: ApplyChanges](icordebugmodule2-applychanges-method.md), producirán un error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

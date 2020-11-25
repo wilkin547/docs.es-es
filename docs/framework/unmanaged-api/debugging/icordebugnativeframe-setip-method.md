@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 57784a51-c76d-48f8-9392-584d0e1946d9
 topic_type:
 - apiref
-ms.openlocfilehash: 786c0e7b38c74fd02dd6f7536af1899f295b0305
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 65de42a0b86e4b4593b7880e9dc290ce00007a40
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206440"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709263"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP (Método)
+
 Establece el puntero de instrucción en la ubicación de desplazamiento especificada en código nativo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT SetIP (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `nOffset`  
  de Ubicación de desplazamiento en el código nativo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Llama a para `SetIP` invalidar inmediatamente todos los marcos y cadenas del subproceso actual. Si el depurador necesita información de fotogramas después de una llamada a `SetIP` , debe realizar un nuevo seguimiento de la pila.  
   
  [ICorDebug](icordebug-interface.md) intentará mantener el marco de pila en un estado válido. Sin embargo, aunque el marco esté en un estado válido, en lo que se refiere al tiempo de ejecución, todavía puede haber problemas, como variables locales sin inicializar, etc. El autor de la llamada es responsable de garantizar la coherencia del programa en ejecución.  
@@ -45,6 +48,7 @@ HRESULT SetIP (
  En las plataformas de 64 bits, el puntero de instrucción no se puede sacar de un `catch` `finally` bloque o. Si `SetIP` se llama a para hacer este tipo de movimiento en una plataforma de 64 bits, devolverá un valor HRESULT que indica un error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

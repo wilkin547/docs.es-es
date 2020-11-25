@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5ceed11-0f54-4097-8302-883284dddbc1
 topic_type:
 - apiref
-ms.openlocfilehash: 7f606a12022368183316f985a44693667e38a029
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 4fd0cf5cdd8d56564c40321336373ac1fd277783
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84489734"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95708665"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a>IMetaDataValidate::ValidateMetaData (Método)
+
 Valida las firmas de metadatos de los objetos en el ámbito de metadatos actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,14 +33,15 @@ HRESULT ValidateMetaData ();
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MsCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataValidate (Interfaz)](imetadatavalidate-interface.md)

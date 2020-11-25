@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-ms.openlocfilehash: e2055098c85c5a2e4619b9b0ddc8d602256bd16b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 945a398d32b50efc81ba45e705ed9d4161ed1524
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209726"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95709276"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet (Método)
+
 Obtiene el conjunto de registros para este marco de pila.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,10 +35,12 @@ HRESULT GetRegisterSet (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppRegisters`  
  enuncia Puntero a la dirección de un objeto [ICorDebugRegisterSet](icordebugregisterset-interface.md) que representa el conjunto de registros para este marco de pila.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
