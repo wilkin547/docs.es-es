@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5df01ac929874d00a5fddda83f532927dc46d67b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504243"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719845"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks (Método)
+
 Asocia una lista de instancias de [ICLRTask](iclrtask-interface.md) con un identificador y un nombre descriptivo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT SetConnectionTasks (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `id`  
  de Identificador específico del host para la conexión a la que se va a asociar la `ppCLRTask` matriz.  
   
@@ -49,7 +51,7 @@ HRESULT SetConnectionTasks (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetConnectionTasks`se devolvió correctamente.|  
+|S_OK|`SetConnectionTasks` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -58,21 +60,23 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|No se ha llamado a [BeginConnection](iclrdebugmanager-beginconnection-method.md) con este valor de `id` , o `dwCount` o `id` es cero, o uno de los elementos de `ppCLRTask` es NULL.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  [ICLRDebugManager](iclrdebugmanager-interface.md) proporciona tres métodos, `BeginConnection` , `SetConnectionTasks` y [EndConnection](iclrdebugmanager-endconnection-method.md), para asociar listas de tareas con identificadores y nombres descriptivos.  
   
 > [!IMPORTANT]
-> Se debe llamar a estos tres métodos en un orden específico para cada conjunto de tareas. `BeginConnection`se llama primero a para establecer una nueva conexión. `SetConnectionTasks`se llama a junto a para proporcionar el conjunto de tareas que se van a asociar a esa conexión. `EndConnection`se llama a Last para quitar la asociación entre la lista de tareas y el identificador y el nombre descriptivo. Sin embargo, se pueden anidar las llamadas para las distintas conexiones.  
+> Se debe llamar a estos tres métodos en un orden específico para cada conjunto de tareas. `BeginConnection` se llama primero a para establecer una nueva conexión. `SetConnectionTasks` se llama a junto a para proporcionar el conjunto de tareas que se van a asociar a esa conexión. `EndConnection` se llama a Last para quitar la asociación entre la lista de tareas y el identificador y el nombre descriptivo. Sin embargo, se pueden anidar las llamadas para las distintas conexiones.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)
 - [ICLRDebugManager (Interfaz)](iclrdebugmanager-interface.md)

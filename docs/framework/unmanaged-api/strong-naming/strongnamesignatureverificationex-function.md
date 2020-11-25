@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 27417c379411e242c48d6d9b0c99de833f7ede8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121145"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719273"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx (Función)
+
 Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: strongnamesignatureverificationex (](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md) en su lugar.  
@@ -38,32 +39,36 @@ BOOLEAN StrongNameSignatureVerificationEx (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszFilePath`  
  de Ruta de acceso al archivo portable ejecutable (. exe o. dll) del ensamblado que se va a comprobar.  
   
  `fForceVerification`  
- [in] `true` para realizar la comprobación, incluso si es necesario invalidar la configuración del registro; de lo contrario, `false`.  
+ [in] `true` para realizar la comprobación, incluso si es necesario invalidar la configuración del registro; en caso contrario, `false` .  
   
  `pfWasVerified`  
- [out] `true` si se ha comprobado la firma de nombre seguro; de lo contrario, `false`. `pfWasVerified` también se establece en `false` si la comprobación se realizó correctamente debido a la configuración del registro.  
+ [out] `true` Si se ha comprobado la firma de nombre seguro; en caso contrario, `false` . `pfWasVerified` también se establece en `false` si la comprobación se realizó correctamente debido a la configuración del registro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` si la comprobación se realizó correctamente; de lo contrario, `false`.  
+
+ `true` Si la comprobación se realizó correctamente; en caso contrario, `false` .  
   
 ## <a name="remarks"></a>Comentarios  
- `StrongNameSignatureVerificationEx` proporciona una funcionalidad similar a la función [strongnamesignatureverification (](strongnamesignatureverification-function.md) . Sin embargo, el segundo parámetro de entrada y el parámetro de salida para `StrongNameSignatureVerificationEx` son del tipo `BOOLEAN` en lugar de `DWORD`.  
+
+ `StrongNameSignatureVerificationEx` proporciona una funcionalidad similar a la función [strongnamesignatureverification (](strongnamesignatureverification-function.md) . Sin embargo, el segundo parámetro de entrada y el parámetro de salida para `StrongNameSignatureVerificationEx` son de tipo `BOOLEAN` en lugar de `DWORD` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en Mscoree. dll  
+ **Biblioteca:** Se incluye como un recurso en mscoree.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameSignatureVerificationEx (método)](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [StrongNameSignatureVerification (método)](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [Método StrongNameSignatureVerification](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

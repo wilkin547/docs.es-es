@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: ed8364eb-f01b-46f6-b5e3-5dda9cae2dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 622fdfa37c93e406950e73941775828ae4b112fa
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 8b5bbb65034e5b715532397c9ecc650da9aee912
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379419"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718298"
 ---
 # <a name="icordebugstepper-interface"></a>Interfaz ICorDebugStepper
+
 Representa un paso en la ejecución del código realizado por un depurador, actúa como identificador entre la emisión y la finalización de un comando, y proporciona un modo de cancelar un paso.  
   
 ## <a name="methods"></a>Métodos  
@@ -37,7 +38,8 @@ Representa un paso en la ejecución del código realizado por un depurador, act�
 |[Método StepOut](icordebugstepper-stepout-method.md)|Hace que esto `ICorDebugStepper` se lleve a cabo de un solo paso a través de su subproceso contenedor y que se complete cuando el fotograma actual devuelva el control al marco que realiza la llamada.|  
 |[Método StepRange](icordebugstepper-steprange-method.md)|Hace que esto `ICorDebugStepper` pase de un solo paso a través de su subproceso contenedor y que devuelva cuando llegue al código más allá del último de los intervalos especificados.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  La `ICorDebugStepper` interfaz sirve para los siguientes fines:  
   
 - Actúa como un identificador entre un comando Step que se emite y la finalización de ese comando.  
@@ -54,6 +56,7 @@ Representa un paso en la ejecución del código realizado por un depurador, act�
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

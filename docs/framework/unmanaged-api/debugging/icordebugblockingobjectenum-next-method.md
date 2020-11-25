@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 0ef49d2d833841eac62b2b964a0fdc902b4fb6a9
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 232068a5fee8f7bd3dfbddf4d9452e80d6fd6170
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82894773"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719195"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next (Método)
+
 Obtiene el número especificado de objetos [CorDebugBlockingObject](cordebugblockingobject-structure.md) de la enumeración, comenzando en la posición actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT Next([in] ULONG  celt,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `celt`  
  de Número de objetos que se van a recuperar.  
   
@@ -45,6 +47,7 @@ HRESULT Next([in] ULONG  celt,
  enuncia Puntero al número de objetos recuperados.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT concretos.  
   
 |HRESULT|Descripción|  
@@ -52,15 +55,17 @@ HRESULT Next([in] ULONG  celt,
 |S_OK|El método se completó correctamente.|  
 |S_FALSE|`pceltFetched` no es igual a `celt`.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Este método funciona como un enumerador COM típico.  
   
- Los valores de la matriz de entrada deben tener al `celt`menos el tamaño. La matriz se rellenará con los siguientes `celt` valores de la enumeración o con todos los valores restantes si `celt` no quedan menos. Cuando este método devuelve un `pceltFetched` valor, se rellenará con el número de valores recuperados. Si `values` contiene punteros no válidos o apunta a un búfer menor que `celt`, o si `pceltFetched` es un puntero no válido, el resultado es indefinido.  
+ Los valores de la matriz de entrada deben tener al menos el tamaño `celt` . La matriz se rellenará con los siguientes `celt` valores de la enumeración o con todos los valores restantes si no `celt` quedan menos. Cuando este método devuelve `pceltFetched` un valor, se rellenará con el número de valores recuperados. Si `values` contiene punteros no válidos o apunta a un búfer menor que `celt` , o si `pceltFetched` es un puntero no válido, el resultado es indefinido.  
   
 > [!NOTE]
 > Aunque no es necesario liberar la estructura [CorDebugBlockingObject](cordebugblockingobject-structure.md) , es necesario liberar la interfaz "ICorDebugValue" dentro de ella.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -69,7 +74,7 @@ HRESULT Next([in] ULONG  celt,
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebugDataTarget (Interfaz)](icordebugdatatarget-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

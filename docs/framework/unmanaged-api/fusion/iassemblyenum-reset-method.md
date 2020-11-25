@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08308d2-7397-4616-b7a6-f81b7686fed6
 topic_type:
 - apiref
-ms.openlocfilehash: 528a385657721298772693809dd696531c6a4e8f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7114ab301c1c5eeb517a7658dc1035650e0ca150
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719871"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset (Método)
+
 Restablece este objeto [IAssemblyEnum](iassemblyenum-interface.md) a su posición inicial.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,12 +35,13 @@ HRESULT Reset (
 ```  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IAssemblyEnum (interfaz)](iassemblyenum-interface.md)
+- [IAssemblyEnum (Interfaz)](iassemblyenum-interface.md)

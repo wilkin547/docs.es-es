@@ -14,32 +14,34 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22fcdb834f84bb3a9304e22a4b45ebb340f3590f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134418"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719884"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum (Interfaz)
-Representa un enumerador para una matriz de objetos `IAssemblyName`.  
+
+Representa un enumerador para una matriz de `IAssemblyName` objetos.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Clone (método)](iassemblyenum-clone-method.md)|Crea una copia superficial de este objeto `IAssemblyEnum`.|  
-|[GetNextAssembly (método)](iassemblyenum-getnextassembly-method.md)|Obtiene un puntero al `IAssemblyName` siguiente contenido en este objeto `IAssemblyEnum`.|  
-|[Reset (método)](iassemblyenum-reset-method.md)|Restablece este objeto `IAssemblyEnum` a su posición inicial.|  
+|[Clone (Método)](iassemblyenum-clone-method.md)|Crea una copia superficial de este `IAssemblyEnum` objeto.|  
+|[Método GetNextAssembly](iassemblyenum-getnextassembly-method.md)|Obtiene un puntero al siguiente `IAssemblyName` contenido en este `IAssemblyEnum` objeto.|  
+|[Reset (Método)](iassemblyenum-reset-method.md)|Restablece el `IAssemblyEnum` objeto a su posición inicial.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Fusion. h  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de Fusion](fusion-interfaces.md)
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)

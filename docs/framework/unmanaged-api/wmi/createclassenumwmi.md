@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CreateClassEnumWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1d637479bd140e635ee647a1e30d03343d8b0dcd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b80954e288f6720c75d0af0b8af083fa4856754
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107532"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719741"
 ---
-# <a name="createclassenumwmi-function"></a>CreateClassEnumWmi función)
+# <a name="createclassenumwmi-function"></a>Función CreateClassEnumWmi
+
 Devuelve un enumerador para todas las clases que cumplan los criterios de selección especificados.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -46,12 +47,12 @@ HRESULT CreateClassEnumWmi (
 ## <a name="parameters"></a>Parámetros
 
 `strSuperclass`\
-de Si no se `null` o está en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si está `null` o en blanco y `lFlags` es WBEM_FLAG_SHALLOW, solo devuelve clases de nivel superior (clases sin clase primaria). Si está `null` o en blanco y `lFlags` es `WBEM_FLAG_DEEP`, devuelve todas las clases del espacio de nombres.
+de Si no es `null` o está en blanco, especifica el nombre de una clase primaria; el enumerador devuelve solo las subclases de esta clase. Si está `null` en blanco y `lFlags` está WBEM_FLAG_SHALLOW, solo devuelve clases de nivel superior (clases sin clase primaria). Si es `null` o está en blanco y `lFlags` es `WBEM_FLAG_DEEP` , devuelve todas las clases del espacio de nombres.
 
 `lFlags`\
 de Combinación de marcas que afectan al comportamiento de esta función. Los siguientes valores se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |Descripción  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Si se establece, la función recupera los calificadores modificados almacenados en el espacio de nombres localizado de la configuración regional de la conexión actual. <br/> Si no se establece, la función solo recupera los calificadores almacenados en el espacio de nombres inmediato. |
 | `WBEM_FLAG_DEEP` | 0 | La enumeración incluye todas las subclases de la jerarquía, pero no esta clase. |
@@ -63,7 +64,7 @@ de Combinación de marcas que afectan al comportamiento de esta función. Los si
 Las marcas recomendadas son `WBEM_FLAG_RETURN_IMMEDIATELY` y `WBEM_FLAG_FORWARD_ONLY` para obtener el mejor rendimiento.
 
 `pCtx`\
-de Normalmente, este valor es `null`. De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las clases solicitadas.
+de Normalmente, este valor es `null` . De lo contrario, es un puntero a una instancia de [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) que puede ser utilizada por el proveedor que proporciona las clases solicitadas.
 
 `ppEnum`\
 enuncia Recibe el puntero al enumerador.
@@ -90,13 +91,13 @@ de El nombre de dominio del usuario. Vea la función [ConnectServerWmi](connects
 
 Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |Descripción  |
 |---------|---------|---------|
 | `WBEM_E_ACCESS_DENIED` | 0x80041003 | El usuario no tiene permiso para ver una o varias de las clases que la función puede devolver. |
-| `WBEM_E_FAILED` | 0x80041001 | Se ha producido un error no especificado. |
+| `WBEM_E_FAILED` | 0x80041001 | Error no especificado. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | `strSuperClass` no existe. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Memoria insuficiente para completar la operación. |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | Es posible que WMI se haya detenido y reiniciado. Vuelva a llamar a [ConnectServerWmi](connectserverwmi.md) . |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Error en el vínculo de llamada a procedimiento remoto (RPC) entre el proceso actual y WMI. |
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
@@ -113,8 +114,8 @@ Si se produce un error en la llamada de función, puede obtener información de 
 
 **Encabezado:** WMINet_Utils. idl
 
-**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)

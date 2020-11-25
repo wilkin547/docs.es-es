@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-ms.openlocfilehash: ffbc9a10ff48b3dfd59b95c0f6b9ecab80b6a49c
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: dd599ce8c63fa94e1a18b4e2d18fa334238728bd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007889"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718883"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity (Enumeración)
+
 Especifica las acciones de seguridad que se pueden realizar mediante la seguridad declarativa.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -81,6 +82,7 @@ typedef enum CorDeclSecurity {
 |`dclMaximumValue`|Reservado.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  

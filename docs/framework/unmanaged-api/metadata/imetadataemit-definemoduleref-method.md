@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: efff491d92ac7910f43f76965ef98d1d0e4ba0aa
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 96d24705d80dabcda691edec497a4a30b6d37dc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004444"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719559"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef (Método)
+
 Crea la firma de metadatos para un módulo con el nombre especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT DefineModuleRef (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szName`  
  de Nombre del otro archivo de metadatos, normalmente un archivo DLL. Este es el nombre de archivo únicamente. No use un nombre de ruta de acceso completa.  
   
@@ -42,11 +44,12 @@ HRESULT DefineModuleRef (
  enuncia El `mdModuleRef` token asignado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se utiliza como recurso en MSCorEE. dll  
+ **Biblioteca:** Se usa como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

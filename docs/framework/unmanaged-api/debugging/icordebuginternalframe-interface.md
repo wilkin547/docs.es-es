@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: 332bc99795c0a4c896b60c61941a5a24b3f4accc
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: b7e738f06f9a9a06caedec2bdd0de4ab57f6d9b3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209962"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719728"
 ---
 # <a name="icordebuginternalframe-interface"></a>Interfaz ICorDebugInternalFrame
 
@@ -31,12 +31,13 @@ Representa un marco interno en tiempo de ejecución en la pila. Esta interfaz es
 |------------|-----------------|  
 |[Método GetFrameType](icordebuginternalframe-getframetype-method.md)|Obtiene el tipo de este marco interno.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

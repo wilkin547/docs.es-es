@@ -2,14 +2,15 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo (Método)
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-ms.openlocfilehash: 5a501cca16f06e7ccd5da9f65a213c6b24c1092c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f8c77e44183fd92704aa91ca1cfd7e3fa68aa27f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441791"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719624"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo (Método)
+
 Defina un grupo de operaciones de espera asincrónica en el método actual.  
   
  Cada desplazamiento yield coincide con una instrucción return de Await, que identifica un posible rendimiento. Cada `breakpointMethod` / `breakpointOffset` par nos indica dónde se reanudará la operación asincrónica, que podría estar en un método diferente.  
@@ -30,11 +31,13 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
 |`breakpointMethod`||  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve `HRESULT`.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedAsyncMethodPropertiesWriter (Interfaz)](isymunmanagedasyncmethodpropertieswriter-interface.md)

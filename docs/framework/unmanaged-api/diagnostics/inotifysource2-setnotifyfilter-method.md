@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6351fc92-b126-4af6-9bf3-0a8ce92845fc
 topic_type:
 - apiref
-ms.openlocfilehash: 7ba9f68e102696da107b5cb782c76cb55ed95ee6
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 99bce831405d722f1f1ca0ae56e60f95f2d905e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441973"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719936"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter (Método)
+
 Asigna un filtro de notificación para su uso con este origen.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT SetNotifyFilter
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `in_NotifyFilter`  
  de Combinación bit a bit de los valores de enumeración de [NOTIFY_FILTER](notify-filter-enumeration.md) que identifican las devoluciones de llamada de la API del depurador.  
   
@@ -43,12 +45,14 @@ HRESULT SetNotifyFilter
  de Puntero a una estructura de [USER_THREAD](user-thread-structure.md) que identifica los subprocesos de la API del depurador.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** ProtocolNotify2. idl  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [INotifySource2 (Interfaz)](inotifysource2-interface.md)
 - [INotifyConnection2 (Interfaz)](inotifyconnection2-interface.md)

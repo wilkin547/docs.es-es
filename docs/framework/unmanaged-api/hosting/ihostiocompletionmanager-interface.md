@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 75ad8670008242008aa344835143ff9b2add0a6c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501545"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95719598"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager (Interfaz)
+
 Proporciona métodos que permiten que el Common Language Runtime (CLR) interactúe con los puertos de finalización de e/s proporcionados por el host.  
   
 ## <a name="methods"></a>Métodos  
@@ -41,17 +42,19 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) interact�
 |[Método SetMinThreads](ihostiocompletionmanager-setminthreads-method.md)|Establece el número mínimo de subprocesos que el host debe asignar a la finalización de e/s.|  
   
 ## <a name="remarks"></a>Comentarios  
- `IHostIoCompletionManager`corresponde a la `ICLRIoCompletionManager` interfaz implementada por CLR. CLR llama a los métodos de `IHostIoCompletionManager` para enlazar los identificadores a los puertos proporcionados por el host y el host llama a los métodos de `ICLRIoCompletionManager` para informar de la finalización de las solicitudes de e/s.  
+
+ `IHostIoCompletionManager` corresponde a la `ICLRIoCompletionManager` interfaz implementada por CLR. CLR llama a los métodos de `IHostIoCompletionManager` para enlazar los identificadores a los puertos proporcionados por el host y el host llama a los métodos de `ICLRIoCompletionManager` para informar de la finalización de las solicitudes de e/s.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)

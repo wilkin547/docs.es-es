@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-ms.openlocfilehash: 310319e8fefe80017c58706e2beaee5eb1e78422
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c9b20500a4a9e4649a938e00e3b059d1395da1d3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007915"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95718935"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention (Enumeración)
+
 Contiene valores que describen los tipos de convenciones de llamada que se realizan en código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -67,6 +68,7 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica una firma de método genérico con un número explícito de argumentos de tipo. Esto precede a un recuento de parámetros ordinarios.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorHdr. h  
