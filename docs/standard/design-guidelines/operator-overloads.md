@@ -7,14 +7,15 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-ms.openlocfilehash: 40e1c6a4a65bfc20c94223e4012e34928b25a2ab
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7757e6cfdb9ae31f6e94c26a2684f8176174499a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830043"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734821"
 ---
 # <a name="operator-overloads"></a>Sobrecargas de operador
+
 Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fueran primitivos de lenguaje integrados.
 
  Aunque se permite y útil en algunas situaciones, las sobrecargas de operador deben usarse con precaución. Hay muchos casos en los que la sobrecarga de operadores se ha desusado, por ejemplo, cuando los diseñadores de Marcos empezaron a usar operadores para las operaciones que deberían ser métodos simples. Las instrucciones siguientes le ayudarán a decidir cuándo y cómo usar la sobrecarga de operadores.
@@ -85,9 +86,11 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 |`~`|`op_OnesComplement`|`OnesComplement`|
 
 ### <a name="overloading-operator-"></a>Sobrecargar operador = =
+
  La sobrecarga `operator ==` es bastante complicada. La semántica del operador debe ser compatible con otros miembros, como <xref:System.Object.Equals%2A?displayProperty=nameWithType> .
 
 ### <a name="conversion-operators"></a>Operadores de conversión
+
  Los operadores de conversión son operadores unarios que permiten la conversión de un tipo a otro. Los operadores deben definirse como miembros estáticos en el operando o en el tipo de valor devuelto. Hay dos tipos de operadores de conversión: implícito y explícito.
 
  ❌ NO proporcione un operador de conversión si los usuarios finales no esperan claramente esa conversión.
@@ -110,7 +113,7 @@ Las sobrecargas de operador permiten que los tipos de marco aparezcan como si fu
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instrucciones para el diseño de miembros](member.md)
 - [Directrices de diseño de marco](index.md)

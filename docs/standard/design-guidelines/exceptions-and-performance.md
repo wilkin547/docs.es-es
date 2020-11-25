@@ -8,14 +8,15 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: 1d9e4ff3cfb02b1db358c19786322622621329fe
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: babe378e0d61357709006e08f71ff578492f116c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821208"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734756"
 ---
 # <a name="exceptions-and-performance"></a>Excepciones y rendimiento
+
 Un problema común relacionado con las excepciones es que si se usan excepciones para el código que genera un error de forma rutinaria, el rendimiento de la implementación será inaceptable. Tiene sentido que exista esta preocupación. Cuando un miembro produce una excepción, su rendimiento puede ser un orden de magnitud más lento. Sin embargo, es posible lograr un buen rendimiento al tiempo que se respetan estrictamente las instrucciones de excepción que no permiten el uso de códigos de error. Dos patrones que se describen en esta sección sugieren maneras de hacerlo.
 
  ❌ No utilice códigos de error debido a las preocupaciones de que las excepciones podrían afectar negativamente al rendimiento.
@@ -23,6 +24,7 @@ Un problema común relacionado con las excepciones es que si se usan excepciones
  Para mejorar el rendimiento, es posible usar el patrón Tester-Doer o el patrón Try-Parse, que se describe en las dos secciones siguientes.
 
 ## <a name="tester-doer-pattern"></a>Patrón de Tester-Doer
+
  A veces, el rendimiento de un miembro de generación de excepciones se puede mejorar dividiendo el miembro en dos. Echemos un vistazo al <xref:System.Collections.Generic.ICollection%601.Add%2A> método de la <xref:System.Collections.Generic.ICollection%601> interfaz.
 
 ```csharp
@@ -46,6 +48,7 @@ if (!numbers.IsReadOnly)
  ✔️ CONSIDERE el patrón de Tester-Doer de los miembros que pueden producir excepciones en escenarios comunes para evitar problemas de rendimiento relacionados con las excepciones.
 
 ## <a name="try-parse-pattern"></a>Patrón de Try-Parse
+
  En el caso de las API extremadamente sensibles al rendimiento, se debe usar un patrón aún más rápido que el patrón de Tester-Doer descrito en la sección anterior. El patrón llama a para ajustar el nombre del miembro con el fin de convertir un caso de prueba bien definido en una parte de la semántica de los miembros. Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si se produce un error en el análisis de una cadena. También define un método correspondiente <xref:System.DateTime.TryParse%2A> que intenta analizar, pero devuelve false si el análisis no se realiza correctamente y devuelve el resultado de un análisis correcto mediante un `out` parámetro.
 
 ```csharp

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: 82c1df01197e04d14436b6e5b3b2c6aaa249add2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c63a88cb4e500504f993352a03478f40cad58400
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821234"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734742"
 ---
 # <a name="events-and-callbacks"></a>Eventos y devoluciones de llamada
+
 Las devoluciones de llamada son puntos de extensibilidad que permiten a un marco volver a llamar al código de usuario a través de un delegado. Estos delegados se pasan normalmente al marco de trabajo a través de un parámetro de un método.
 
  Los eventos son un caso especial de devoluciones de llamada que admite una sintaxis adecuada y coherente para proporcionar el delegado (un controlador de eventos). Además, los diseñadores y la finalización de instrucciones de Visual Studio proporcionan ayuda para el uso de API basadas en eventos. (Consulte [diseño de eventos](event.md)).
@@ -41,7 +42,7 @@ Las devoluciones de llamada son puntos de extensibilidad que permiten a un marco
 
  *Material reimpreso con el consentimiento de Pearson Education, Inc. y extraído de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) (Instrucciones de diseño de .NET Framework: convenciones, expresiones y patrones para bibliotecas .NET reutilizables, 2.ª edición), de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie Microsoft Windows Development.*
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Diseñar extensibilidad](designing-for-extensibility.md)
 - [Directrices de diseño de marco](index.md)

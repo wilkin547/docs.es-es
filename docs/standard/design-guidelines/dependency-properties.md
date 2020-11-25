@@ -2,14 +2,15 @@
 title: Propiedades de dependencia
 ms.date: 10/22/2008
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-ms.openlocfilehash: c6cebd7c6c630af6a1a439b48faccad2aea74a91
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ab30da59670c146874defe86b1d048f97eebf449
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821377"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734769"
 ---
 # <a name="dependency-properties"></a>Propiedades de dependencia
+
 Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor en un almacén de propiedades en lugar de almacenarlo en una variable de tipo (campo), por ejemplo.
 
  Una propiedad de dependencia asociada es un tipo de propiedad de dependencia modelada como métodos estáticos get y set que representan "propiedades" que describen las relaciones entre los objetos y sus contenedores (por ejemplo, la posición de un `Button` objeto en un `Panel` contenedor).
@@ -17,6 +18,7 @@ Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor 
  ✔️ proporcionan las propiedades de dependencia, si necesita que las propiedades admitan características de WPF como el estilo, los desencadenadores, el enlace de datos, las animaciones, los recursos dinámicos y la herencia.
 
 ## <a name="dependency-property-design"></a>Diseño de propiedades de dependencia
+
  ✔️ heredan de <xref:System.Windows.DependencyObject> , o uno de sus subtipos, al implementar las propiedades de dependencia. El tipo proporciona una implementación muy eficaz de un almacén de propiedades y admite automáticamente el enlace de datos de WPF.
 
  ✔️ proporcionan una propiedad CLR normal y un campo estático público de solo lectura que almacena una instancia de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> para cada propiedad de dependencia.
@@ -36,6 +38,7 @@ Una propiedad de dependencia (DP) es una propiedad normal que almacena su valor 
  ❌ No use propiedades de dependencia para almacenar datos seguros. Incluso se puede tener acceso a las propiedades de dependencia privadas públicamente.
 
 ## <a name="attached-dependency-property-design"></a>Diseño de propiedad de dependencia adjunta
+
  Las propiedades de dependencia descritas en la sección anterior representan propiedades intrínsecas del tipo declarativo; por ejemplo, la `Text` propiedad es una propiedad de `TextButton` , que la declara. Un tipo especial de propiedad de dependencia es la propiedad de dependencia asociada.
 
  Un ejemplo clásico de una propiedad adjunta es la <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> propiedad. La propiedad representa la posición de la columna del botón (no de la cuadrícula), pero solo es relevante si el botón está contenido en una cuadrícula, por lo que está "adjunto" a los botones por cuadrículas.
@@ -75,6 +78,7 @@ public class Grid {
 ```
 
 ## <a name="dependency-property-validation"></a>Validación de propiedades de dependencia
+
  A menudo, las propiedades implementan lo que se denomina validación. La lógica de validación se ejecuta cuando se realiza un intento de cambiar el valor de una propiedad.
 
  Desafortunadamente, los descriptores de acceso de propiedad de dependencia no pueden contener código de validación arbitrario. En su lugar, se debe especificar la lógica de validación de la propiedad de dependencia durante el registro de la propiedad.
@@ -82,9 +86,11 @@ public class Grid {
  ❌ No coloque la lógica de validación de propiedades de dependencia en los descriptores de acceso de la propiedad. En su lugar, pase una devolución de llamada de validación al `DependencyProperty.Register` método.
 
 ## <a name="dependency-property-change-notifications"></a>Notificaciones de cambio de propiedad de dependencia
+
  ❌ No implemente la lógica de notificación de cambios en los descriptores de acceso de propiedad de dependencia. Las propiedades de dependencia tienen una característica de notificaciones de cambio integrada que se debe usar proporcionando una devolución de llamada de notificación de cambios al <xref:System.Windows.PropertyMetadata> .
 
 ## <a name="dependency-property-value-coercion"></a>Coerción de valores de propiedad de dependencia
+
  La conversión de propiedad tiene lugar cuando el valor dado a un establecedor de propiedad lo modifica el establecedor antes de que se modifique realmente el almacén de propiedades.
 
  ❌ No implemente la lógica de coerción en los descriptores de acceso de propiedad de dependencia.
