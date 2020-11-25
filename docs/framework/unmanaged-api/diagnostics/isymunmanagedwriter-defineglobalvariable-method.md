@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 843c904a-8176-4d8f-bd47-b4d4c29f4c5c
 topic_type:
 - apiref
-ms.openlocfilehash: 674089f8a1076342a2479c64e253b7dda53ade87
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bc389b7247a6b1d6ce16cb3cf350f1672213b2e2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615207"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716426"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable (Método)
+
 Define una única variable global.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,6 +41,7 @@ HRESULT DefineGlobalVariable(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `name`  
  de Puntero a `WCHAR` que define el nombre de la variable global.  
   
@@ -47,7 +49,7 @@ HRESULT DefineGlobalVariable(
  de Atributos de la variable global.  
   
  `cSig`  
- de `ULONG32`Que indica el tamaño, en caracteres, del `signature` búfer.  
+ de `ULONG32` Que indica el tamaño, en caracteres, del `signature` búfer.  
   
  `signature`  
  de Firma de la variable global.  
@@ -65,12 +67,14 @@ HRESULT DefineGlobalVariable(
  de Tercera dirección de la especificación de parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
 - [Método DefineLocalVariable](isymunmanagedwriter-definelocalvariable-method.md)

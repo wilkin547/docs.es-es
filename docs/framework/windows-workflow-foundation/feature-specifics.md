@@ -3,12 +3,12 @@ title: Detalles de las características de Windows Workflow Foundation
 description: En este artículo se describen las nuevas características que .NET Framework 4 agrega a Windows Workflow Foundation y escenarios en los que las características pueden ser útiles.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6c508e184aee0e4aa0634d128de94ac45ef78f45
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554611"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716296"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Detalles de las características de Windows Workflow Foundation
 
@@ -114,7 +114,7 @@ El esquema de configuración de WCF es complejo y ofrece a los usuarios muchas c
 
 ## <a name="data-contract-resolver"></a>Resolución del contrato de datos
 
-En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
+En .NET Framework 3,5, hubo algunas limitaciones en el diseño de tipos conocidos:
 
 - No era posible agregar tipos conocidos dinámicamente durante la serialización o la deserialización.
 
@@ -122,7 +122,7 @@ En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
 
 - No era posible que los usuarios especificasen qué xsi:type preferirían que apareciese en la conexión para, por ejemplo, reducir el tamaño de una instancia de serialización en la conexión.
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md) resuelve estos problemas en .net 4,5.
+[DataContractResolver](../wcf/samples/datacontractresolver.md) resuelve estos problemas en .NET Framework 4,5.
 
 ### <a name="getting-started"></a>Introducción
 
@@ -144,7 +144,7 @@ En .NET 3.5, había unas cuantas limitaciones en el diseño de tipos conocidos:
 
 ## <a name="flowchart"></a>Diagrama de flujo
 
-El diagrama de flujo es un paradigma conocido para representar visualmente los problemas de dominio. Es un nuevo estilo de flujo de control que estamos introduciendo en .NET 4. Una característica básica de diagrama de flujo es que solo se ejecuta una actividad en un momento dado. Los diagramas de flujo pueden expresar bucles y resultados alternativos, pero no pueden expresar de forma nativa la ejecución simultánea de varios nodos.
+El diagrama de flujo es un paradigma conocido para representar visualmente los problemas de dominio. Es un nuevo estilo de flujo de control que estamos introduciendo en .NET Framework 4. Una característica básica de diagrama de flujo es que solo se ejecuta una actividad en un momento dado. Los diagramas de flujo pueden expresar bucles y resultados alternativos, pero no pueden expresar de forma nativa la ejecución simultánea de varios nodos.
 
 ### <a name="getting-started"></a>Introducción
 
@@ -264,7 +264,7 @@ Se necesita solicitar una entrada a un usuario. En circunstancias normales, el d
 
 ## <a name="wcf-routing-service"></a>Servicio de enrutamiento de WCF
 
-El servicio de enrutamiento está diseñado para ser un enrutador de software genérico que le permite controlar cómo fluyen los mensajes de WCF entre sus clientes y servicios. El servicio de enrutamiento le permite desacoplar los clientes de los servicios, lo que le ofrece una mayor libertad en cuanto a las configuraciones que puede admitir y la flexibilidad que tiene al considerar cómo hospedar sus servicios. En .NET 3,5, los clientes y servicios estaban estrechamente acoplados; un cliente tenía que conocer todos los servicios a los que necesitaba hablar y dónde se encontraban. Además, WCF en .NET Framework 3,5 tenía las siguientes limitaciones:
+El servicio de enrutamiento está diseñado para ser un enrutador de software genérico que le permite controlar cómo fluyen los mensajes de WCF entre sus clientes y servicios. El servicio de enrutamiento le permite desacoplar los clientes de los servicios, lo que le ofrece una mayor libertad en cuanto a las configuraciones que puede admitir y la flexibilidad que tiene al considerar cómo hospedar sus servicios. En .NET Framework 3,5, los clientes y servicios estaban estrechamente acoplados; un cliente tenía que conocer todos los servicios a los que necesitaba hablar y dónde se encontraban. Además, WCF en .NET Framework 3,5 tenía las siguientes limitaciones:
 
 - El control de errores era complejo, ya que esta lógica tenía que codificarse de forma rígida en el cliente.
 

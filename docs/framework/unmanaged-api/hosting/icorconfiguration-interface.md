@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aaf96116-372b-4538-afb1-9e0fcdac1f98
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8c9421dea4040a9f183b886f1ad8575cace780
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fa8d15bc8e504a57d5cc87c170a3a5b022798add
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762440"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715789"
 ---
 # <a name="icorconfiguration-interface"></a>ICorConfiguration (Interfaz)
+
 Proporciona métodos para configurar el Common Language Runtime (CLR).  
   
 ## <a name="methods"></a>Métodos  
@@ -34,15 +35,16 @@ Proporciona métodos para configurar el Common Language Runtime (CLR).
 |[Método SetGCThreadControl](icorconfiguration-setgcthreadcontrol-method.md)|Establece la interfaz de devolución de llamada para programar subprocesos para tareas no en tiempo de ejecución que, de lo contrario, se bloquearían para una recolección de elementos no utilizados.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)
 - [CorRuntimeHost (Coclase)](corruntimehost-coclass.md)

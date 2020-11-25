@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cb5ffae5-287b-4a87-9ca8-7ce3ae0601b7
 topic_type:
 - apiref
-ms.openlocfilehash: 7f09cb2264b21fdfbc892069f2c2f0a963b131f8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: cfc384a71ac7e91181bdec09f0d385bacbe31753
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615974"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716673"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList (Método)
+
 Obtiene un puntero de interfaz a una instancia de [ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md) a partir de la lista proporcionada de identidades de ensamblado parciales.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT  GetCLRAssemblyReferenceList (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppwzAssemblyReferences`  
  de Una matriz de cadenas terminadas en NULL con el formato "Name, Property = Value..." que especifica una lista de identidades de ensamblado parciales.  
   
@@ -57,15 +59,16 @@ HRESULT  GetCLRAssemblyReferenceList (
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229437e3-1465-4bd8-8846-9804b2488133
 topic_type:
 - apiref
-ms.openlocfilehash: 36c5c674f3cdf867107b9ee85a5befadc9246d78
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: ab331145a8147e8830cb9b158a1975bc748c7cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396305"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716868"
 ---
 # <a name="icorpublishappdomaingetid-method"></a>ICorPublishAppDomain::GetID (Método)
+
 Obtiene el identificador único para este [ICorPublishAppDomain](icorpublishappdomain-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT GetID (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `puId`  
  enuncia Puntero al identificador del dominio de aplicación.  
   
 ## <a name="remarks"></a>Comentarios  
+
  El identificador es único solo en el ámbito del proceso contenedor.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -49,6 +53,6 @@ HRESULT GetID (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorPublishAppDomain (Interfaz)](icorpublishappdomain-interface.md)

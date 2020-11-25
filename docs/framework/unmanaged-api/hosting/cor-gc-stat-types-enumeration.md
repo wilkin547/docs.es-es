@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: fc51d6db-f7f8-408b-b93d-c166fc712c99
 topic_type:
 - apiref
-ms.openlocfilehash: d7e78dfc4beba67cc376b221d0cd49f7200f5d23
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c14e27b67fc600e2684f8c967af30bb9a5cee126
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501708"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716749"
 ---
 # <a name="cor_gc_stat_types-enumeration"></a>COR_GC_STAT_TYPES (enumeración)
+
 Especifica las estadísticas que se van a registrar para una recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Comentarios  
+
  Esta enumeración especifica qué estadísticas de la estructura de [COR_GC_STATS](cor-gc-stats-structure.md) se van a establecer mediante el método [ICLRGCManager:: getstats (](iclrgcmanager-getstats-method.md) .  
   
 ## <a name="members"></a>Miembros  
@@ -44,13 +46,14 @@ typedef enum {
 |`COR_GC_MEMORYUSAGE`|Registra las estadísticas de uso de memoria y de tamaño de recolección de elementos no utilizados.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** GCHost. idl, GCHost. h  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [COR_GC_STATS (Estructura)](cor-gc-stats-structure.md)
 - [Enumeraciones para hosts](hosting-enumerations.md)

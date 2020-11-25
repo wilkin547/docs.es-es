@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 206069c5-25cb-4794-9d69-67c5aa7ed0af
 topic_type:
 - apiref
-ms.openlocfilehash: bb994ae32c9e0e61c06c60521361a5c6c78d12fa
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 20c8a1987e48a88a3b8c92cf9f36fb58166cda9e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715991"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints (Método)
+
 Obtiene un enumerador para todos los puntos de interrupción activos en el dominio de aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,13 +35,16 @@ HRESULT EnumerateBreakpoints (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `ppBreakpoints`  
  enuncia Puntero a la dirección de un objeto ICorDebugBreakpointEnum (que es el enumerador de todos los puntos de interrupción activos en el dominio de aplicación.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El enumerador incluye todos los tipos de puntos de interrupción, incluidos los puntos de interrupción de función y los puntos de interrupción de datos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

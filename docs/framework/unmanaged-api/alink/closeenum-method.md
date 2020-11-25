@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: aa4a091e-13fe-4264-91de-e12f1c767c87
 topic_type:
 - apiref
-ms.openlocfilehash: 018af6929ad4023c70bfb975b9be010912415dd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 59b1ec3f9ca382ef13680e3aad4d0c0c0e175f1c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446562"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716972"
 ---
 # <a name="closeenum-method"></a>CloseEnum (Método)
+
 Cierra la enumeración indicada y libera los recursos asociados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,17 +35,20 @@ HRESULT CloseEnum(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hEnum`  
  Identificador de la enumeración que se va a cerrar.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Requiere ALink. h  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)

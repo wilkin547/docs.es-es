@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-ms.openlocfilehash: 38042876cf4397418d2e6e6ed2bfbeb2df2d62d8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 33d56354a560949b2f451df9ef82d4f433951195
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762297"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95715568"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain (Método)
+
 Obtiene un puntero de interfaz de tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa el dominio cargado en el subproceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,6 +35,7 @@ HRESULT CurrentDomain (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pAppDomain`  
  enuncia Puntero de tipo <xref:System.AppDomain?displayProperty=nameWithType> que representa el dominio de aplicación actual del subproceso. Este puntero tiene tipo `IUnknown` , por lo que los llamadores generalmente deben llamar `QueryInterface` a para obtener un puntero de tipo <xref:System._AppDomain> .  
   
@@ -47,15 +49,16 @@ HRESULT CurrentDomain (
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:** 1,0, 1,1  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6185c5dda69a0cf7e9847ddc021448612a426b19
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132274"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716062"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason (Enumeración)
+
 Indica el motivo o los motivos para que se inicie una cadena de llamadas.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -63,17 +64,19 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|Una evaluación de función inició la cadena.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Use el método [ICorDebugChain:: GetReason (](icordebugchain-getreason-method.md) para averiguar los motivos de inicio de una cadena de llamadas.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 40123b30-a589-46b3-95d3-af7b2b0baa05
 topic_type:
 - apiref
-ms.openlocfilehash: abba19600616cad8ba3377ae2ebb23459449d2a0
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f1e6a47c0838782ae0610d49ca7fce3eb8554458
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615987"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716713"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream (Método)
+
 Obtiene los datos de identidad del ensamblado canónico para el ensamblado en la secuencia especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetBindingIdentityFromStream (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pStream`  
  de Secuencia de ensamblado que se va a evaluar.  
   
@@ -63,15 +65,16 @@ HRESULT GetBindingIdentityFromStream (
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)

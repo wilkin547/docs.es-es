@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a75b51b57bdf2923ca6386f42c19c0b2f44fd39
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555554"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717479"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE (HRESULT)
 
@@ -72,6 +72,7 @@ Estos dos escenarios se describen en las secciones siguientes.
  Para obtener más información, vea la entrada [por la que hemos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) en el blog de la API de generación de perfiles de CLR.  
   
 ## <a name="triggering-garbage-collections"></a>Desencadenar recolecciones de elementos no utilizados  
+
  Este escenario implica un generador de perfiles que se ejecuta dentro de un método de devolución de llamada (por ejemplo, uno de los `ICorProfilerCallback` métodos) que prohíbe la recolección de elementos no utilizados. Si el generador de perfiles intenta llamar a un método informativo (por ejemplo, un método en la `ICorProfilerInfo` interfaz) que podría desencadenar una recolección de elementos no utilizados, el método informativo produce un error con un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
  En la tabla siguiente se muestran los métodos de devolución de llamada que prohíben las recolecciones de elementos no utilizados y los métodos informativos que pueden desencadenar las recolecciones Si el generador de perfiles se ejecuta dentro de uno de los métodos de devolución de llamada enumerados y llama a uno de los métodos informativos enumerados, se produce un error en el método informativo con un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
@@ -80,7 +81,7 @@ Estos dos escenarios se describen en las secciones siguientes.
 |------------------------------------------------------|------------------------------------------------------------|  
 |[Threadassignedtoosthread (](icorprofilercallback-threadassignedtoosthread-method.md)<br /><br /> [Exceptionunwindfunctionenter (](icorprofilercallback-exceptionunwindfunctionenter-method.md)<br /><br /> [ExceptionUnwindFunctionLeave (](icorprofilercallback-exceptionunwindfunctionleave-method.md)<br /><br /> [Exceptionunwindfinallyenter (](icorprofilercallback-exceptionunwindfinallyenter-method.md)<br /><br /> [ExceptionUnwindFinallyLeave (](icorprofilercallback-exceptionunwindfinallyleave-method.md)<br /><br /> [Exceptioncatcherenter (](icorprofilercallback-exceptioncatcherenter-method.md)<br /><br /> [Runtimesuspendstarted (](icorprofilercallback-runtimesuspendstarted-method.md)<br /><br /> [RuntimeSuspendFinished (](icorprofilercallback-runtimesuspendfinished-method.md)<br /><br /> [RuntimeSuspendAborted (](icorprofilercallback-runtimesuspendaborted-method.md)<br /><br /> [RuntimeThreadSuspended (](icorprofilercallback-runtimethreadsuspended-method.md)<br /><br /> [RuntimeThreadResumed (](icorprofilercallback-runtimethreadresumed-method.md)<br /><br /> [MovedReferences (](icorprofilercallback-movedreferences-method.md)<br /><br /> [ObjectReferences](icorprofilercallback-objectreferences-method.md)<br /><br /> [ObjectsAllocatedByClass (](icorprofilercallback-objectsallocatedbyclass-method.md)<br /><br /> [Rootreferences2 (](icorprofilercallback-rootreferences-method.md)<br /><br /> [HandleCreated (](icorprofilercallback2-handlecreated-method.md)<br /><br /> [Handledestroyed (](icorprofilercallback2-handledestroyed-method.md)<br /><br /> [Garbagecollectionstarted (](icorprofilercallback2-garbagecollectionstarted-method.md)<br /><br /> [Garbagecollectionfinished (](icorprofilercallback2-garbagecollectionfinished-method.md)|[Getilfunctionbodyallocator (](icorprofilerinfo-getilfunctionbodyallocator-method.md)<br /><br /> [SetILFunctionBody (](icorprofilerinfo-setilfunctionbody-method.md)<br /><br /> [SetILInstrumentedCodeMap (](icorprofilerinfo-setilinstrumentedcodemap-method.md)<br /><br /> [Forcegc (](icorprofilerinfo-forcegc-method.md)<br /><br /> [GetClassFromToken (](icorprofilerinfo-getclassfromtoken-method.md)<br /><br /> [GetClassFromTokenAndTypeArgs (](icorprofilerinfo2-getclassfromtokenandtypeargs-method.md)<br /><br /> [GetFunctionFromTokenAndTypeArgs (](icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)<br /><br /> [Getappdomaininfo (](icorprofilerinfo-getappdomaininfo-method.md)<br /><br /> [EnumModules](icorprofilerinfo3-enummodules-method.md)<br /><br /> [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)<br /><br /> [GetAppDomainsContainingModule (](icorprofilerinfo3-getappdomainscontainingmodule-method.md)|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [ICorProfilerCallback2 (Interfaz)](icorprofilercallback2-interface.md)

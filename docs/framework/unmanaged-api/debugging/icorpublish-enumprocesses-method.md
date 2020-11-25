@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 70255a89cee13abfe63b01351f8ffba51e54665a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 297f672097dd6561a971608f368369c623532907
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396405"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716920"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses (Método)
+
 Obtiene un enumerador para los procesos administrados que se ejecutan en este equipo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT EnumProcesses (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `Type`  
  Valor de la enumeración [COR_PUB_ENUMPROCESS](cor-pub-enumprocess-enumeration.md) que especifica el tipo de proceso que se va a recuperar. En la versión actual, solo COR_PUB_MANAGEDONLY es válido.  
   
@@ -42,11 +44,13 @@ HRESULT EnumProcesses (
  Puntero a la dirección de una instancia de [ICorPublishProcessEnum (](icorpublishprocessenum-interface.md) que es el enumerador de los procesos.  
   
 ## <a name="remarks"></a>Comentarios  
+
  La colección de procesos del enumerador se basa en una instantánea de los procesos que se ejecutan cuando `EnumProcesses` se llama al método. El enumerador no incluirá los procesos que finalicen antes o después de que `EnumProcesses` se llame a.  
   
  `EnumProcesses`Se puede llamar al método más de una vez en esta instancia de [ICorPublish](icorpublish-interface.md) para crear una nueva colección de procesos actualizada. Las llamadas subsiguientes del método no afectarán a las colecciones existentes `EnumProcesses` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorPub. idl, CorPub. h  
@@ -55,6 +59,6 @@ HRESULT EnumProcesses (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorPublish (Interfaz)](icorpublish-interface.md)

@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-ms.openlocfilehash: cd164008098c053e7d6506a6eef7d3bc8e4274b6
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c7dcc740dcf9b228713693a57dc8ef96d215ebad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84503710"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716569"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings (Método)
+
 Enumera los tokens de String que representan las cadenas codificadas de forma rígida en el ámbito de metadatos actual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT EnumUserStrings (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `phEnum`  
  [in, out] Puntero al enumerador. Debe ser NULL para la primera llamada de este método.  
   
@@ -51,24 +53,26 @@ HRESULT EnumUserStrings (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Description|  
+|HRESULT|Descripción|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings`se devolvió correctamente.|  
+|`S_OK`|`EnumUserStrings` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens que enumerar. En ese caso, `pcStrings` es cero.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los tokens de cadena se crean mediante el método [IMetaDataEmit::D efineuserstring](imetadataemit-defineuserstring-method.md) . Este método está diseñado para que lo use un explorador de metadatos en lugar de un compilador.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Cor. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)

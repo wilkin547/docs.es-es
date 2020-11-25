@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: cef69ac7e3572b67dd676ce8408e4210d93accf0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205517"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95717583"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 (Interfaz)
+
 Extiende la interfaz ICorDebugProcess para admitir el acceso al montón administrado, para proporcionar información sobre la recolección de elementos no utilizados de objetos administrados y para determinar si un depurador carga imágenes desde la memoria caché de imágenes nativas local de la aplicación.  
   
 ## <a name="methods"></a>Métodos  
@@ -41,13 +42,15 @@ Extiende la interfaz ICorDebugProcess para admitir el acceso al montón administ
 |[Método GetTypeID](icordebugprocess5-gettypeid-method.md)|Obtiene el identificador de tipo para el objeto en una dirección especificada.|  
 |[Método GetTypeLayout](icordebugprocess5-gettypelayout-method.md)|Obtiene información sobre el diseño de un objeto en memoria basándose en su identificador de tipo.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  Esta interfaz extiende lógicamente las interfaces ICorDebugProcess, ICorDebugProcess2 y [ICorDebugProcess3 (](icordebugprocess3-interface.md) .  
   
 > [!NOTE]
 > Esta interfaz no admite la llamada remota, ya sea desde otro equipo o desde otro proceso.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

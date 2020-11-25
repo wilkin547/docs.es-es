@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-ms.openlocfilehash: 5b537d59014afa783d3f8c5046cc02dad7ea7740
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 443acfa77dc8103008263f19bed116d02e7ea676
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616000"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716751"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile (Método)
+
 Obtiene los datos de enlace de identidad del ensamblado en la ruta de acceso de archivo especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,6 +38,7 @@ HRESULT GetBindingIdentityFromFile(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwzFilePath`  
  de Ruta de acceso al archivo que se va a evaluar.  
   
@@ -62,19 +64,21 @@ HRESULT GetBindingIdentityFromFile(
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Observaciones  
- `GetBindingIdentityFromFile`normalmente se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer` y el método devuelve el tamaño adecuado en `pcchBufferSize` . La segunda llamada proporciona un búfer asignado adecuadamente y el método devuelve con los datos de búfer reales al finalizar.  
+## <a name="remarks"></a>Comentarios  
+
+ `GetBindingIdentityFromFile` normalmente se llama dos veces. La primera llamada proporciona un valor null para `pwzBuffer` y el método devuelve el tamaño adecuado en `pcchBufferSize` . La segunda llamada proporciona un búfer asignado adecuadamente y el método devuelve con los datos de búfer reales al finalizar.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ICLRAssemblyIdentityManager (Interfaz)](iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)

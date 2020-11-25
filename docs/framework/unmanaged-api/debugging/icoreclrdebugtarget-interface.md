@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-ms.openlocfilehash: c44a12ef377d29e0b33b8be86aa1d8f0aa9d26bd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 791bd2754a96b97a38e2509c0c61a644324857cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397158"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95716959"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget (Interfaz)
+
 Proporciona métodos que controlan los recuentos de referencias, enumeran los procesos y liberan la memoria asociada a un depurador que está asociado a un destino de Silverlight de Macintosh remoto.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -56,18 +57,20 @@ class ICoreClrDebugTarget {
 |[ICoreClrDebugTarget::FreeMemory (Método)](icoreclrdebugtarget-freememory-method.md)|Libera la memoria asignada por los métodos de enumeración de esta clase.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Actualmente, esta funcionalidad solo se admite para depurar un destino de aplicación basado en Silverlight que se ejecute en un equipo remoto de Macintosh.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Biblioteca:** mscordbi_macx86. dll  
+ **Biblioteca:** mscordbi_macx86.dll  
   
  **.NET Framework versiones:** 3,5 SP1  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ICorDebugRemoteTarget (Interfaz)](icordebugremotetarget-interface.md)
 - [ICorDebug (Interfaz)](icordebug-interface.md)
