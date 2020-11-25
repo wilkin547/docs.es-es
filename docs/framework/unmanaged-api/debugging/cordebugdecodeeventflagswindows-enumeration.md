@@ -10,14 +10,15 @@ api_type:
 ms.assetid: aa6cf962-30ae-4cfd-8895-826deeb46a54
 topic_type:
 - apiref
-ms.openlocfilehash: a90ddd27834e7614c1827d606a9955b4d6c53127
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 60eab923aac5dea927105e8ca9fa77eb5708f5ac
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795981"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733365"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>Enumeración CorDebugDecodeEventFlagsWindows
+
 Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -28,19 +29,21 @@ typedef enum CorDebugDecodeEventFlagsWindows {
 } CorDebugDecodeEventFlagsWindows;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|Indica que el evento de depuración es una primera excepción.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El método [método icordebugprocess6::D ecodeevent](icordebugprocess6-decodeevent-method.md) incluye un `dwFlags` parámetro que proporciona información adicional sobre un evento de depuración y cuyo valor depende de la arquitectura de destino. La enumeración `CorDebugDecodeEventFlagsWindows` se puede usar con eventos de depuración en la plataforma Windows.  
   
 > [!NOTE]
 > Esta enumeración está pensada solo para su uso en escenarios de depuración .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -49,6 +52,6 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

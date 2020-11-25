@@ -8,14 +8,15 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 2391ad854b17ec117940a3d3568c40d6cf7f4725
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 0e6fe3430696c16405d4ae414436bb12882c08a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84498978"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732353"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::D método ynamicMethodUnloaded
+
 [Se admite en el .NET Framework 4.7.2 y versiones posteriores]  
   
 Notifica al generador de perfiles cada vez que un método dinámico se recolecta como elemento no utilizado y, posteriormente, se descarga.  
@@ -29,10 +30,12 @@ HRESULT DynamicMethodUnloaded(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
 [in] `functionId`  
 El identificador de la función en memoria que se ha recolectado y descargado.
 
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -41,7 +44,7 @@ El identificador de la función en memoria que se ha recolectado y descargado.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerCallback8. DynamicMethodJITCompilationStarted, método](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8. DynamicMethodJITCompilationFinished, método](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

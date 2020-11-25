@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: f1f2fab1-400b-488f-95f2-d49c4fca3556
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbf8366054c58543444a4b710a687198f365e6e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: d48106fca6008955409581ad9ac202aebe785cb4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617209"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733235"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress (Función)
+
 Obtiene la dirección de la función especificada que se exporta de la última versión instalada del Common Language Runtime (CLR).  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -36,6 +37,7 @@ HRESULT GetRealProcAddress (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `pwszProcName`  
  de Nombre de la función.  
   
@@ -43,23 +45,25 @@ HRESULT GetRealProcAddress (
  enuncia La ubicación que recibe un puntero a la dirección de la función.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los códigos de error del modelo de objetos componentes (COM) estándar, tal y como se define en WinError. h, además de los siguientes valores definidos en CorError. h.  
   
-|Código de retorno|Descripción|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppv` no es válido.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La función no se exporta desde el tiempo de ejecución.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

@@ -10,14 +10,15 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-ms.openlocfilehash: b7db7c9e17d87b91e09d5d010d40431cba5385df
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: e348e0070a5ce619f95dad9ebe4085d17f7ade6d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795994"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733378"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>Enumeración CorDebugDebugEventKind
+
 Indica el tipo de evento cuya información se descodifica mediante el método [DecodeEvent](icordebugprocess6-decodeevent-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,9 +34,9 @@ typedef enum CorDebugDebugEventKind {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>Miembros  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|Evento load del módulo.|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Evento unload del módulo.|  
@@ -45,12 +46,14 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|Excepción sin controlar.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Un miembro de la `CorDebugDebugEventKind` enumeración se devuelve mediante una llamada al método [ICorDebugDebugEvent:: GetEventKind](icordebugdebugevent-geteventkind-method.md) .  
   
 > [!NOTE]
 > Esta enumeración está pensada solo para su uso en escenarios de depuración .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
@@ -59,6 +62,6 @@ typedef enum CorDebugDebugEventKind {
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: adde52dddb63b83dcd7ff10703a43928d9601c92
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140621"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732312"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies (Función)
+
 Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameCompareAssemblies (](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) en su lugar.  
@@ -37,6 +38,7 @@ BOOLEAN StrongNameCompareAssemblies (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszAssembly1`  
  de Ruta de acceso al primer ensamblado.  
   
@@ -50,26 +52,29 @@ BOOLEAN StrongNameCompareAssemblies (
   
 - `SN_CMP_IDENTICAL` (1): especifica que los ensamblados son exactamente iguales, incluidas sus firmas y suma de comprobación.  
   
-- `SN_CMP_SIGONLY` (2): especifica que los ensamblados difieren solo en la firma y la suma de comprobación.  
+- `SN_CMP_SIGONLY` (2): especifica que los ensamblados solo se diferencian en la firma y la suma de comprobación.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` cuando se complete correctamente; de lo contrario, `false`.  
+
+ `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Comentarios  
+
  La firma de nombre seguro de un ensamblado consta del nombre de texto, la versión, la referencia cultural y el token de clave pública del ensamblado.  
   
- Si la función `StrongNameCompareAssemblies` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+ Si la `StrongNameCompareAssemblies` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameCompareAssemblies (método)](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

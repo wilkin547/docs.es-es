@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-ms.openlocfilehash: 0fa72568df77c4916a3c6676e1dcca7c0c616c4a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 332488fee4c982fdbaecceeaa2a6a3876f1602a5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84493323"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733703"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType (Enumeración)
+
 Contiene valores que indican el tipo de tarea que está representada por una interfaz [ICLRTask](iclrtask-interface.md) o [IHostTask](ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -59,14 +60,15 @@ typedef enum ETaskType {
 |`TT_USER`|La interfaz representa una tarea de usuario.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** MSCorEE. dll  
+ **Biblioteca:** MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Enumeraciones para hosts](hosting-enumerations.md)

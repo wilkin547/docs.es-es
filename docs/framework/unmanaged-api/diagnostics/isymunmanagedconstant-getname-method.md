@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: cbaca4e1-4473-459b-ba34-f1f59ce7c0ba
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd70693528904459a34689dbad944c65c971254
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fca7b11a83b5a695feae82fe5f25218f87afbce2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441648"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732897"
 ---
 # <a name="isymunmanagedconstantgetname-method"></a>ISymUnmanagedConstant::GetName (Método)
+
 Obtiene el nombre de la constante.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT GetName(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cchName`  
  de Longitud del búfer al que apunta el `szName` parámetro.  
   
@@ -46,13 +48,15 @@ HRESULT GetName(
  enuncia Búfer que almacena el nombre.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedConstant (Interfaz)](isymunmanagedconstant-interface.md)
 - [GetSignature (Método)](isymunmanagedconstant-getsignature-method.md)
-- [Método GetValue](isymunmanagedconstant-getvalue-method.md)
+- [GetValue (Método)](isymunmanagedconstant-getvalue-method.md)

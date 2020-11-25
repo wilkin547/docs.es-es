@@ -7,17 +7,19 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: 0153279608e2359747f1be6b9542d6906c1b3995
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 16b18f4fede11e776e5656843ed9a408dff370eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559309"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732754"
 ---
 # <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
+
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Tipos de datos comunes](common-data-types-unmanaged-api-reference.md)  
  Enumera los tipos de datos comunes que se usan, especialmente en las API de depuración y de generación de perfiles no administradas.  
   
@@ -61,4 +63,5 @@ En esta sección se incluye información acerca de las API no administradas que 
  Describe las dos funciones del asistente y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Guía de desarrollo para .NET Framework](../development-guide.md)

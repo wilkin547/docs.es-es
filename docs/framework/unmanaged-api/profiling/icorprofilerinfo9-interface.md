@@ -3,12 +3,12 @@ title: Interfaz ICorProfilerInfo9
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: f38195b1a7983e23c7f5c20055ea8c2a8bfcb7d8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d1cdfa56e6bb20f08370aa76b87d516f7b51cda
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556855"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732962"
 ---
 # <a name="icorprofilerinfo9-interface"></a>Interfaz ICorProfilerInfo9
 
@@ -23,10 +23,11 @@ Una subclase de [ICorProfilerInfo8](icorprofilerinfo8-interface.md) que proporci
 |[Método GetCodeInfo4](icorprofilerinfo9-getcodeinfo4-method.md)| Dada la dirección de inicio del código nativo, devuelve los bloques de memoria virtual que almacenan este código. |
 
 ## <a name="requirements"></a>Requisitos  
+
 **Plataformas:** Consulte [sistemas operativos compatibles con .net Core](../../../core/install/windows.md?pivots=os-windows).  
 **Encabezado:** CorProf.idl, CorProf.h  
 **Versiones de .net:**[!INCLUDE[net_core](../../../../includes/net-core-22-md.md)]  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

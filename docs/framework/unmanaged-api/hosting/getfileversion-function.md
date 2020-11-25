@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 57b30824c7849127f48d4da61872945366e7141e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617205"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733248"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion (Función)
+
 Obtiene la información de la versión de Common Language Runtime (CLR) del archivo especificado, utilizando el búfer especificado.  
   
  Esta función está en desuso en el .NET Framework 4.  
@@ -38,6 +39,7 @@ HRESULT GetFileVersion (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `szFilename`  
  de Ruta de acceso del archivo que se va a examinar.  
   
@@ -51,12 +53,13 @@ HRESULT GetFileVersion (
  enuncia Tamaño, en bytes, del devuelto `szBuffer` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

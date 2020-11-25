@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-ms.openlocfilehash: d05d4451e8fb75829b22e0a1b9c9afcb0607eb8b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 93e1f8eb17f06e42ddb243f88c593979fcb28030
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83610176"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733287"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable (Interfaz)
+
 Representa una variable, como un parámetro, una variable local o un campo.  
   
 ## <a name="methods"></a>Métodos  
@@ -34,13 +35,14 @@ Representa una variable, como un parámetro, una variable local o un campo.
 |[Método GetAddressKind](isymunmanagedvariable-getaddresskind-method.md)|Obtiene el tipo de dirección de esta variable.|  
 |[Método GetAttributes](isymunmanagedvariable-getattributes-method.md)|Obtiene las marcas de atributo para esta variable.|  
 |[GetEndOffset (Método)](isymunmanagedvariable-getendoffset-method.md)|Obtiene el desplazamiento final de esta variable dentro de su elemento primario.|  
-|[Método GetName](isymunmanagedvariable-getname-method.md)|Obtiene el nombre de esta variable.|  
+|[GetName (Método)](isymunmanagedvariable-getname-method.md)|Obtiene el nombre de esta variable.|  
 |[GetSignature (Método)](isymunmanagedvariable-getsignature-method.md)|Obtiene la firma de esta variable.|  
 |[Método GetStartOffset](isymunmanagedvariable-getstartoffset-method.md)|Obtiene el desplazamiento inicial de esta variable dentro de su elemento primario.|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

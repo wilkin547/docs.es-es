@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b85a7893cf5271c65bc842bb6ea598c825225376
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495728"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733820"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert (Método)
+
 Revierte todas las instancias de las funciones especificadas a sus versiones originales.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,6 +37,7 @@ HRESULT RequestRevert (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `cFunctions`  
  [in] Número de funciones que se va a revertir.  
   
@@ -49,6 +51,7 @@ HRESULT RequestRevert (
  [out] Matriz de valores HRESULT enumerados en la sección "HRESULT de estado" más adelante en este tema. Cada HRESULT indica el intento correcto o erróneo de revertir cada función especificada en las matrices paralelas `moduleIds` y `methodIds`.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
 |HRESULT|Descripción|  
@@ -71,9 +74,11 @@ HRESULT RequestRevert (
 |Otros|El sistema operativo devolvió un error fuera del control del CLR. Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se mostrará el error del sistema operativo.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  La próxima vez que se llame a cualquiera de las instancias de la función revertida, se ejecutarán las versiones originales de las funciones. Si ya se está ejecutando una función, finalizará la ejecución de la versión que se está ejecutando.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorProf.idl, CorProf.h  
@@ -82,7 +87,7 @@ HRESULT RequestRevert (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

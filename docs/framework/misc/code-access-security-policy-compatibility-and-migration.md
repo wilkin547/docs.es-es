@@ -1,17 +1,17 @@
 ---
 title: Compatibilidad con la directiva de seguridad de acceso del código y migración
-description: Lea un resumen y vea los vínculos sobre compatibilidad y migración de la Directiva de seguridad de acceso del código en .NET 4.
+description: Lea un resumen y vea los vínculos sobre compatibilidad y migración de la Directiva de seguridad de acceso del código en .NET Framework 4.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR policy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-ms.openlocfilehash: e5affd9d16635fa28342b5b7390a083185975f2b
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 389976556175c0b6b300e75d01327d91f94f0db9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281737"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733391"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidad con la directiva de seguridad de acceso del código y migración
 
@@ -73,7 +73,7 @@ Por ejemplo:
 
 Cuando varios ensamblados cargan sobrecargas se producen errores debido a su uso implícito de la directiva CAS. Estas sobrecargas toman un parámetro <xref:System.Security.Policy.Evidence> que se usa para resolver la directiva CAS y proporcionar un conjunto de permisos concedidos a un ensamblado.
 
-Estos son algunos ejemplos. Las sobrecargas obsoletas son las que toman <xref:System.Security.Policy.Evidence> como parámetro:
+A continuación se muestran algunos ejemplos. Las sobrecargas obsoletas son las que toman <xref:System.Security.Policy.Evidence> como parámetro:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-ms.openlocfilehash: ebaab57b647250823443b48d9e45921036372d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1eefd1ee5597ded269c56c05eec118b11294dd8a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176609"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732143"
 ---
 # <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS (Enumeración)
-Indica la versión, compilación, referencia cultural, firma, etc., del ensamblado cuyo nombre para mostrar se recuperará mediante el método [IAssemblyName::GetDisplayName](iassemblyname-getdisplayname-method.md) .  
+
+Indica la versión, la compilación, la referencia cultural, la firma, etc., del ensamblado cuyo nombre para mostrar se recuperará mediante el método [IAssemblyName:: getDisplayName](iassemblyname-getdisplayname-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,19 +50,21 @@ typedef enum {
 } ASM_DISPLAY_FLAGS;  
 ```  
   
-## <a name="remarks"></a>Observaciones  
- `ASM_DISPLAYF_FULL`refleja los cambios realizados en la versión del objeto [IAssemblyName.](iassemblyname-interface.md) No suponga que el valor devuelto es inmutable.  
+## <a name="remarks"></a>Comentarios  
+
+ `ASM_DISPLAYF_FULL` refleja todos los cambios realizados en la versión del objeto [IAssemblyName](iassemblyname-interface.md) . No suponga que el valor devuelto es inmutable.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
- **Encabezado:** Fusion.h  
+ **Encabezado:** Fusion. h  
   
- **Biblioteca:** Incluido como recurso en MsCorEE.dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte también
 
-- [IAssemblyName (interfaz)](iassemblyname-interface.md)
+- [IAssemblyName (Interfaz)](iassemblyname-interface.md)
 - [Enumeraciones de fusión](fusion-enumerations.md)

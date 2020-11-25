@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 954404fd-d52d-4e68-b582-8692f3a5f608
 topic_type:
 - apiref
-ms.openlocfilehash: b3e66a1e04ca3f3031adf1f0f7f71d689ee76b04
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 459c5bc0699487b62d5dcf76f1044faf53ebab8b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703409"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732468"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout (Método)
+
 Establece un valor de tiempo de espera para la operación especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,6 +36,7 @@ HRESULT SetTimeout (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `operation`  
  de Uno de los valores de [EClrOperation](eclroperation-enumeration.md) , que indica la operación de Common Language Runtime (CLR) para la que se va a establecer un tiempo de espera. Se admiten los valores siguientes:  
   
@@ -53,7 +55,7 @@ HRESULT SetTimeout (
   
 |HRESULT|Descripción|  
 |-------------|-----------------|  
-|S_OK|`SetTimeout`se devolvió correctamente.|  
+|S_OK|`SetTimeout` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|CLR no se ha cargado en un proceso o CLR está en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
 |HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
 |HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
@@ -62,15 +64,16 @@ HRESULT SetTimeout (
 |E_INVALIDARG|No se puede establecer un tiempo de espera para el especificado `operation` o se proporcionó un valor no válido para `operation` .|  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MSCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [EClrOperation (Enumeración)](eclroperation-enumeration.md)
 - [ICLRControl (Interfaz)](iclrcontrol-interface.md)

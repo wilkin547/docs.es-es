@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 40f9bd9e-16ec-447e-81b0-168c875e9866
 topic_type:
 - apiref
-ms.openlocfilehash: 1cb84b94b37a2e9e8dd4d20d09cbca82db290c0f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 561b4d68a574a2859286fb5f2e2d950518a9d29d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009462"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732787"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags (Enumeración)
+
 Contiene valores que describen las características de tiempo de ejecución de un ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,14 +48,16 @@ typedef enum {
 |`afNonSideBySideMachine`|Especifica que el ensamblado no se puede ejecutar con otras versiones si se ejecutan en el mismo equipo.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Los valores entre 0x0010 y 0x0070, ambos incluidos, se usan para describir las características de compatibilidad en paralelo del ensamblado al que se hace referencia. Si no se establece ninguno de estos valores, se supone que el ensamblado es compatible en paralelo.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** MsCorEE. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

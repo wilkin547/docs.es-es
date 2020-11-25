@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: a85283d8-379c-417a-9736-ddeeef9bcf50
 topic_type:
 - apiref
-ms.openlocfilehash: cd5d1f2d59d3e55ba454f23d2e5dd4b1316c0df4
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8ed492b573215736c82ab6c231cc5f2e188ea013
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615181"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732156"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges (Método)
+
 Dada una posición en un documento, devuelve una matriz de pares de desplazamiento inicial y final que corresponden a los intervalos del lenguaje intermedio de Microsoft (MSIL) que cubre la posición dentro de este método. La matriz es una matriz de enteros y tiene el formato [Inicio, fin, Inicio, fin]. El número de pares de intervalo es la longitud de la matriz dividida entre 2.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,6 +40,7 @@ HRESULT GetRanges(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `document`  
  de Documento para el que se solicita el desplazamiento.  
   
@@ -58,11 +60,13 @@ HRESULT GetRanges(
  enuncia Puntero al búfer que recibe los intervalos.  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 - [ISymUnmanagedMethod (Interfaz)](isymunmanagedmethod-interface.md)

@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-ms.openlocfilehash: e99346ecca651346b46c220a5e427cbc7f4c4697
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f5cb89294004dfb1f020627ceb1edb58735f72c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095007"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732286"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob (Función)
+
 Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: strongnamegetblob (](../hosting/iclrstrongname-strongnamegetblob-method.md) en su lugar.  
@@ -37,6 +38,7 @@ BOOLEAN StrongNameGetBlob (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `wszFilePath`  
  de Ruta de acceso válida al archivo ejecutable que se va a cargar.  
   
@@ -44,25 +46,28 @@ BOOLEAN StrongNameGetBlob (
  de Búfer en el que se va a cargar el archivo ejecutable.  
   
  `pcbBlob`  
- [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob`. Cuando se devuelve, el tamaño real, en bytes, de `pbBlob`.  
+ [in, out] Tamaño máximo solicitado, en bytes, de `pbBlob` . Después de la devolución, el tamaño real, en bytes, de `pbBlob` .  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` cuando se complete correctamente; de lo contrario, `false`.  
+
+ `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
 ## <a name="remarks"></a>Comentarios  
- Si la función `StrongNameGetBlob` no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
+
+ Si la `StrongNameGetBlob` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [StrongNameGetBlob (método)](../hosting/iclrstrongname-strongnamegetblob-method.md)
-- [StrongNameGetBlobFromImage (método)](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método StrongNameGetBlob](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [Método StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

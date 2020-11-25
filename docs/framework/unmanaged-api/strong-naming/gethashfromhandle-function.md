@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 904dcb707e704cfec2dba4e6587f7e3acaf7b538
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140664"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732338"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle (Función)
+
 Genera un hash a partir del contenido del archivo con el identificador de archivos especificado mediante un algoritmo hash concreto.  
   
  Esta función está en desuso. Use el método [ICLRStrongName:: gethashfromhandle (](../hosting/iclrstrongname-gethashfromhandle-method.md) en su lugar.  
@@ -39,6 +40,7 @@ HRESULT GetHashFromHandle (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `hFile`  
  de Identificador del archivo al que se va a aplicar un algoritmo hash.  
   
@@ -49,21 +51,22 @@ HRESULT GetHashFromHandle (
  enuncia Búfer hash devuelto.  
   
  `cchHash`  
- de Tamaño máximo solicitado de `pbHash`.  
+ de Tamaño máximo solicitado de `pbHash` .  
   
  `pchHash`  
- enuncia Tamaño, en bytes, del `pbHash`devuelto.  
+ enuncia Tamaño, en bytes, del devuelto `pbHash` .  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** StrongName. h  
   
- **Biblioteca:** Se incluye como recurso en MsCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MsCorEE.dll  
   
- **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [GetHashFromHandle (método)](../hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Método GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

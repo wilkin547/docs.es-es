@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3b92f3aa8c21cc3d171e14100db190d88f2c0284
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7400d460c4d1ebf5c02d8313f33a5a63de1734d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823854"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733521"
 ---
 # <a name="collections-and-data-structures"></a>Colecciones y estructuras de datos
 
@@ -26,6 +26,7 @@ Hay dos tipos principales de colecciones: las colecciones genéricas y las colec
 A partir de .NET Framework 4, las colecciones del espacio de nombres <xref:System.Collections.Concurrent> proporcionan operaciones eficaces y seguras para subprocesos para acceder a los elementos de la colección desde varios subprocesos. Las clases de colección inmutables en el espacio de nombres <xref:System.Collections.Immutable> ([paquete de NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) son intrínsecamente seguras para los subprocesos, ya que las operaciones se realizan en una copia de la colección original, mientras que la colección original no se puede modificar.
 
 <a name="BKMK_Commoncollectionfeatures"></a>
+
 ## <a name="common-collection-features"></a>Características comunes de las colecciones
 
 Todas las colecciones ofrecen métodos para agregar, quitar o buscar elementos en la colección. Además, todas las colecciones que implementan directa o indirectamente las interfaces <xref:System.Collections.ICollection> o <xref:System.Collections.Generic.ICollection%601> comparten estas características:
@@ -57,6 +58,7 @@ Además, muchas clases de colecciones contienen las siguientes características:
     Los tipos de colecciones no genéricas del espacio de nombres <xref:System.Collections> proporcionan una seguridad de subprocesos con sincronización; normalmente se exponen a través de los miembros <xref:System.Collections.ICollection.SyncRoot%2A> y <xref:System.Collections.ICollection.IsSynchronized%2A>. Estas colecciones no son seguras para subprocesos de forma predeterminada. Si necesita un acceso multiproceso escalable y eficaz a una colección, utilice una de las clases del espacio de nombres <xref:System.Collections.Concurrent> o considere el uso de una colección inmutable. Para obtener más información, consulte [Colecciones seguras para subprocesos](thread-safe/index.md).
 
 <a name="BKMK_Choosingacollection"></a>
+
 ## <a name="choose-a-collection"></a>Elija una colección.
 
 En general, debería utilizar colecciones genéricas. En la tabla siguiente se describen algunos escenarios habituales de las colecciones y las clases de colección que puede utilizar en esos escenarios. Si es la primera vez que usa colecciones genéricas, con esta tabla le será más fácil elegir la colección genérica que funciona mejor para su tarea.
@@ -94,6 +96,7 @@ Un objeto `List<T>` se puede enumerar eficientemente utilizando un bucle `for` o
 Además, `SortedSet<T>` tiene la misma complejidad que `ImmutableSortedSet<T>`. Esto es porque ambos usan árboles binarios. La diferencia significativa, por supuesto, es que `ImmutableSortedSet<T>` usa un árbol binario inmutable. Dado que `ImmutableSortedSet<T>` también ofrece una clase <xref:System.Collections.Immutable.ImmutableSortedSet%601.Builder?displayProperty=nameWithType> que permite la mutación, puede obtener tanto inmutabilidad como rendimiento.
 
 <a name="BKMK_RelatedTopics"></a>
+
 ## <a name="related-topics"></a>Temas relacionados
 
 |Title|Descripción|
@@ -108,7 +111,9 @@ Además, `SortedSet<T>` tiene la misma complejidad que `ImmutableSortedSet<T>`. 
 |System.Collections.Immutable|Presenta las colecciones inalterables y proporciona vínculos a los tipos de colección.|
 
 <a name="BKMK_Reference"></a>
+
 ## <a name="reference"></a>Referencia
+
 <xref:System.Array?displayProperty=nameWithType>
 <xref:System.Collections?displayProperty=nameWithType>
 <xref:System.Collections.Concurrent?displayProperty=nameWithType>

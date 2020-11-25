@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 691cc3cf4ec8d036a4de04247f243d99daa887d4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501656"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733638"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName (Interfaz)
+
 Proporciona funciones estáticas globales básicas para firmar ensamblados con nombres seguros. Todos los `ICLRStrongName` métodos devuelven valores HRESULT de com estándar.  
   
 ## <a name="methods"></a>Métodos  
@@ -55,18 +56,20 @@ Proporciona funciones estáticas globales básicas para firmar ensamblados con n
 |[Método StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)|Obtiene un token que representa una clave pública.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Puede obtener una instancia de llamando al `ICLRStrongName` método [ICLRRuntimeInfo:: GetInterface](iclrruntimeinfo-getinterface-method.md) usando `CLSID_CLRStrongName` y `IID_ICLRStrongName` como parámetros.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** Metahost. h  
   
- **Biblioteca:** Se incluye como recurso en MSCorEE. dll  
+ **Biblioteca:** Se incluye como un recurso en MSCorEE.dll  
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 - [Interfaces de hospedaje](hosting-interfaces.md)
 - [Hospedar aplicaciones de WPF](index.md)

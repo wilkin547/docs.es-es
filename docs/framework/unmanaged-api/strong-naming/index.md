@@ -6,14 +6,15 @@ helpviewer_keywords:
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e431f3a41fadb7247f20d7ab9bb9120e827b0cd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140638"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732299"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
+
 La API de nombres seguros permite a los clientes administrar la firma de ensamblados con nombre seguro.  
   
  Al firmar un ensamblado con un nombre seguro, se agrega un cifrado mediante clave pública al archivo que contiene el manifiesto del ensamblado. La firma con nombre seguro ayuda a comprobar la unicidad del nombre, impide la suplantación de nombres y proporciona a los llamadores una identidad única cuando se resuelve una referencia. Sin embargo, no hay ningún nivel de confianza asociado a un nombre seguro.  
@@ -101,10 +102,10 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
  [StrongNameTokenFromPublicKey (Función)](strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [PublicKeyBlob (estructura)](publickeyblob-structure.md)  
+ [PublicKeyBlob (Estructura)](publickeyblob-structure.md)  
  Representa la clave pública de un par de claves pública y privada en formato binario.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)
 - [Referencia de API no administrada](../index.md)

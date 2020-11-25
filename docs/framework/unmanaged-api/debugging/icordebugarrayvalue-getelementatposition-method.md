@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-ms.openlocfilehash: 5644c20ec5df2606c7258131573691997f424e50
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: a6e5ecee9a89da98a73dfb20935c5ec594d5958f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895016"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732936"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition (Método)
+
 Obtiene el elemento en la posición especificada y trata la matriz como una matriz unidimensional de base cero.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -35,16 +36,19 @@ HRESULT GetElementAtPosition (
 ```  
   
 ## <a name="parameters"></a>Parámetros  
+
  `nPosition`  
  de Posición del elemento que se va a recuperar.  
   
  `ppValue`  
  enuncia Puntero a la dirección de un objeto ICorDebugValue que representa el valor del elemento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
+
  El diseño de una matriz de varias dimensiones sigue el estilo de C++ del diseño de la matriz.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  

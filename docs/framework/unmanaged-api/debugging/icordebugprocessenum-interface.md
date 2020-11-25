@@ -14,14 +14,15 @@ helpviewer_keywords:
 ms.assetid: b63a507a-ca97-4be0-8e4f-401cce2125f6
 topic_type:
 - apiref
-ms.openlocfilehash: 3a820381f1c4605d620d74a5915c3e08de69d9fb
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 31f26a40294857701b151cd2fce35b061da28238
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210129"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732533"
 ---
 # <a name="icordebugprocessenum-interface"></a>Interfaz ICorDebugProcessEnum
+
 Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugProcess.  
   
 ## <a name="methods"></a>Métodos  
@@ -30,12 +31,13 @@ Implementa los métodos ICorDebugEnum y enumera las matrices ICorDebugProcess.
 |------------|-----------------|  
 |[Next (Método)](icordebugprocessenum-next-method.md)|Obtiene el número especificado de `ICorDebugProcess` instancias de la enumeración, comenzando en la posición actual.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
+
  **Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).  
   
  **Encabezado:** CorDebug.idl, CorDebug.h  
