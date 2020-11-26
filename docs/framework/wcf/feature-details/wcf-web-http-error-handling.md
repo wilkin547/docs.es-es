@@ -2,17 +2,19 @@
 title: Controlar errores de web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: b1d41bebafa2795d390b120ad84475417389479b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfbf98c69370764a9526c32459d43521177476e3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598650"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239034"
 ---
 # <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF
+
 El control de errores HTTP Web de Windows Communication Foundation (WCF) permite devolver errores de los servicios Web HTTP de WCF que especifican un código de Estado HTTP y devuelven detalles de error con el mismo formato que la operación (por ejemplo, XML o JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Controlar errores de web HTTP de WCF  
+
  La clase <xref:System.ServiceModel.Web.WebFaultException> define un constructor que le permite especificar un código de estado HTTP. A continuación, este código de estado se devuelve al cliente. Una versión genérica de la clase <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> le permite devolver un tipo definido por el usuario que contiene información sobre el error que se ha producido. Este objeto personalizado se serializa mediante el formato especificado por la operación y se devuelve al cliente. En el siguiente ejemplo, se muestra cómo devolver un código de estado HTTP.  
   
 ```csharp

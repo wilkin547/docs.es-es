@@ -2,14 +2,15 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: 9123167e0f97592592765f7b4a4aa768064fc173
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e095221e1f17cdf4a63c2fe86d5ba050e354e471
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596609"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240698"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
+
 El `CustomChannelsTester` es una herramienta que se utiliza para probar las implementaciones del canal personalizadas contra un conjunto de contratos de servicios predefinidos. Puede seleccionar el conjunto de contratos de servicios y pasarlo a la herramienta utilizando un archivo XML. La herramienta genera a continuación el servicio y el cliente que ejerce sus implementaciones del canal personalizadas durante el intercambio de mensajes.  
   
 ### <a name="to-build-the-tool"></a>Para compilar la herramienta  
@@ -28,7 +29,7 @@ El `CustomChannelsTester` es una herramienta que se utiliza para probar las impl
   
      Se requiere utilizar la opción `/binding`.  
   
-     `/dll`es necesario si "Binding" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
+     `/dll` es necesario si "Binding" no es un enlace proporcionado por el sistema proporcionado por Windows Communication Foundation (WCF).  
   
      `/testspec` es opcional.  
   

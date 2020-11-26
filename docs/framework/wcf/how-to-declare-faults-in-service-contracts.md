@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-ms.openlocfilehash: 2de14a76fd2ce8ad656c2b64f5f9e5b17d81eebc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 06262d5f698f8898e162e92dad272a7188897af0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216866"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240061"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Procedimiento para declarar errores en contratos de servicios
 
@@ -18,7 +18,7 @@ En código administrado, las excepciones se inician al producirse condiciones de
 
 ## <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>Crear un contrato de servicio que especifica un error de SOAP
 
-1. Crear un contrato de servicio que contiene al menos una operación. Como ejemplo, vea [Cómo: Defina un contrato](how-to-define-a-wcf-service-contract.md)de servicio.
+1. Crear un contrato de servicio que contiene al menos una operación. Para obtener un ejemplo, consulte [Cómo: definir un contrato de servicio](how-to-define-a-wcf-service-contract.md).
 
 2. Seleccione una operación capaz de especificar una condición de error sobre la que los clientes esperan ser informados. Para decidir qué condiciones de error justifican la devolución de errores SOAP a los clientes, consulte [especificación y control de errores en contratos y servicios](specifying-and-handling-faults-in-contracts-and-services.md).
 
@@ -30,6 +30,7 @@ En código administrado, las excepciones se inician al producirse condiciones de
 4. Repita los pasos 2 y 3 en todas las operaciones del contrato que comunican las condiciones de error a los clientes.
 
 ## <a name="implementing-an-operation-to-return-a-specified-soap-fault"></a>Implementar una operación para devolver un error de SOAP especificado
+
  Cuando una operación especifica que un error de SOAP concreto puede devolverse (como en el procedimiento anterior) para comunicar una condición de error a la aplicación que realiza la llamada, el siguiente paso es implementar esa especificación.
 
 ### <a name="throw-the-specified-soap-fault-in-the-operation"></a>Iniciar el error de SOAP especificado en la operación

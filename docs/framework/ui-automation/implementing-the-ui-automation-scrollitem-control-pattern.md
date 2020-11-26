@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: a548eb25280d9a8feddc4633a1ba3e7dc022af36
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 3274f75af0ca055547a75fd8db6384ddb0f59483
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239242"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implementar el patrón de control ScrollItem de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,13 +24,17 @@ ms.locfileid: "87163571"
  El patrón de control <xref:System.Windows.Automation.ScrollItemPattern> se usa para admitir controles secundarios individuales de contenedores que implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Este patrón de control actúa como canal de comunicación entre un control secundario y su contenedor para garantizar que el contenedor puede cambiar el contenido (o región) visible en ese momento dentro de su ventanilla para mostrar el control secundario. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Scroll Item, tenga en cuenta las siguientes directrices y convenciones:  
   
 - Los elementos que se incluye en un control Window o Canvas no tienen que implementar la interfaz de IScrollItemProvider. Sin embargo, como alternativa, deben exponer una ubicación válida para <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Esto permitirá que una aplicación cliente de UI Automation use los métodos de patrón de control <xref:System.Windows.Automation.ScrollPattern> en el contenedor para que muestre el elemento secundario.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>
+
 ## <a name="required-members-for-iscrollitemprovider"></a>Miembros requeridos para IScrollItemProvider  
+
  El siguiente método es necesario para implementar la interfaz de IScrollProvider.  
   
 |Miembros requeridos|Tipo de miembro|Notas|  
@@ -39,14 +44,16 @@ ms.locfileid: "87163571"
  Este patrón de control no tiene eventos o propiedades asociados.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
 |<xref:System.InvalidOperationException>|Si no se puede desplazar un elemento en la vista:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)

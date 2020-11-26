@@ -2,14 +2,15 @@
 title: Creación de servicios AJAX WCF sin ASP.NET
 ms.date: 03/30/2017
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-ms.openlocfilehash: b5f0f730f90227dcccc7e5ebf533d80a28f6e6eb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 37a442f85ddf5c0a1687c05e26f140d052eaa94f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599300"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239099"
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>Creación de servicios AJAX WCF sin ASP.NET
+
 Se puede tener acceso a los servicios AJAX de Windows Communication Foundation (WCF) desde cualquier página web habilitada para JavaScript, sin necesidad de ASP.NET AJAX. En este tema se describe cómo crear un servicio WCF de este tipo.  
   
  Para obtener instrucciones sobre el uso de WCF con ASP.NET AJAX, consulte [creación de servicios WCF para ASP.NET AJAX](creating-wcf-services-for-aspnet-ajax.md).  
@@ -23,6 +24,7 @@ Se puede tener acceso a los servicios AJAX de Windows Communication Foundation (
 - Acceso a servicios de AJAX de WCF.  
   
 ## <a name="creating-an-ajax-endpoint"></a>Creación de un extremo de AJAX  
+
  La forma más básica de habilitar la compatibilidad de AJAX en un servicio WCF es usar el <xref:System.ServiceModel.Activation.WebServiceHostFactory> en el archivo. SVC asociado al servicio, como en el ejemplo siguiente.  
   
 ```text
@@ -62,6 +64,7 @@ Se puede tener acceso a los servicios AJAX de Windows Communication Foundation (
  Para obtener un ejemplo práctico, vea el [servicio AJAX con JSON y XML](../samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="creating-an-ajax-compatible-service-contract"></a>Creación de un contrato de servicios compatible con AJAX  
+
  De forma predeterminada, los contratos de servicios expuestos sobre un extremo de AJAX devuelven los datos en formato XML. Asimismo, de forma predeterminada, se obtiene acceso a las operaciones de servicio a través de solicitudes HTTP POST a direcciones URL que incluyen la dirección del punto de conexión seguidas por el nombre de operación, como se muestra en el siguiente ejemplo.  
   
 ```csharp
@@ -102,6 +105,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>Acceso a servicios de AJAX  
+
  Los puntos de conexión de AJAX de WCF siempre aceptan solicitudes JSON y XML.  
   
  Las solicitudes HTTP POST con un tipo de contenido de "Application/JSON" se tratan como JSON y las que tienen el tipo de contenido que indica XML (por ejemplo, "text/xml") se tratan como XML.  

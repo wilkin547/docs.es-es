@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: ccb6aeb5f8451975d7e2e9649bbb82c0c3ae23d5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9b5bfd571b078b7aeab149f5371004ac832fadcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164082"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239567"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementar el patrón de control RangeValue de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87164082"
  El patrón de control <xref:System.Windows.Automation.RangeValuePattern> se utiliza para admitir controles que se pueden establecer en un valor dentro de un intervalo. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Range Value, tenga en cuenta las siguientes directrices y convenciones:  
   
 - Los controles permiten la recalibración de sus propiedades compatibles según las preferencias de usuario o la configuración regional. Un ejemplo de esto es un control de termómetro que puede establecerse para mostrar la temperatura en grados Fahrenheit o Celsius.  
@@ -34,6 +37,7 @@ ms.locfileid: "87164082"
 Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores de propiedad mínimo y máximo se normalizan en 0 y 100, respectivamente  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>
+
 ## <a name="required-members-for-irangevalueprovider"></a>Miembros requeridos para IRangeValueProvider  
   
 |Miembro requerido|Tipo de miembro|Notas|  
@@ -49,7 +53,9 @@ Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores 
  Este patrón de control no tiene eventos asociados.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  

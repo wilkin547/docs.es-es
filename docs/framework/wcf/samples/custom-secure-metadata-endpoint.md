@@ -2,20 +2,22 @@
 title: Extremo personalizado de metadatos seguros
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: 75f271fdbb5db34dc59918da16d014daf32a368f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d699c8dedfec3068bf0fc1504b47d78fde1988dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555567"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240906"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Extremo personalizado de metadatos seguros
+
 Este ejemplo muestra cómo implementar un servicio con un extremo de metadatos seguro que utiliza uno de los enlaces de intercambio que no son de metadatos y cómo configurar la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) o clientes para capturar los metadatos de este extremo de metadatos. Hay dos enlaces proporcionados por el sistema disponibles para exponer extremos de metadatos: mexHttpBinding y mexHttpsBinding. mexHttpBinding se usa para exponer un extremo de metadatos sobre HTTP de una manera no segura. mexHttpsBinding se usa para exponer un extremo de metadatos sobre HTTPS de una manera no segura. En este ejemplo se muestra cómo exponer un extremo de metadatos seguro mediante el objeto <xref:System.ServiceModel.WSHttpBinding>. Desearía hacer esto cuando desee cambiar la configuración de seguridad en el enlace, pero no desee usar HTTPS. Si utiliza mexHttpsBinding, su extremo de metadatos será seguro, pero no hay ninguna manera de modificar la configuración del enlace.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 ## <a name="service"></a>Servicio  
+
  El servicio en este ejemplo tiene dos extremos. El punto de conexión de la aplicación sirve el contrato `ICalculator` en `WSHttpBinding` con `ReliableSession` habilitados y seguridad `Message` utilizando certificados. El punto de conexión de metadatos también utiliza `WSHttpBinding`, con la misma configuración de seguridad pero sin `ReliableSession`. Aquí está la configuración pertinente:  
   
 ```xml  
@@ -57,6 +59,7 @@ Este ejemplo muestra cómo implementar un servicio con un extremo de metadatos s
  El segundo cliente utiliza `MetadataResolver` para capturar dinámicamente los metadatos para un contrato conocido y a continuación, invocar las operaciones en el cliente generado dinámicamente.  
   
 ## <a name="svcutil-client"></a>Cliente de Svcutil  
+
  Al utilizar el enlace predeterminado para hospedar su punto de conexión `IMetadataExchange`, puede ejecutar Svcutil.exe con la dirección de ese punto de conexión:  
   
 ```console  
@@ -92,6 +95,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
  El ". \\ " inicial garantiza que se ejecuta la copia de Svcutil.exe en este directorio (el que tiene un Svcutil.exe.config correspondiente).  
   
 ## <a name="metadataresolver-client"></a>Cliente de MetadataResolver  
+
  Si el cliente conoce el contrato y cómo hablar en tiempo de diseño con los metadatos, el cliente puede averiguar dinámicamente el enlace y dirección de los extremos de la aplicación utilizando `MetadataResolver`. Este cliente de ejemplo demuestra esto mostrando cómo configurar el enlace y las credenciales utilizadas por `MetadataResolver` creando y configurando `MetadataExchangeClient`.  
   
  El mismo enlace e información del certificado que aparecieron en Svcutil.exe.config se pueden especificar imperiosamente en `MetadataExchangeClient`:  

@@ -2,17 +2,19 @@
 title: Ataques por repetición
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: 47a4726859605415b4e3e1b4d523f2f8059a3989
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4325b3747074f13cf02752f99b25fa02e4117b4c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586304"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239086"
 ---
 # <a name="replay-attacks"></a>Ataques por repetición
+
 Un *ataque de reproducción* se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más entidades. A menos que se mitigue, el equipo objeto del ataque procesa la secuencia como mensajes legítimos, produciendo una gama de malas consecuencias, como pedidos redundantes de un elemento.  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>Los enlaces pueden estar sujetos a ataques de reflexión  
+
  Los *ataques de reflexión* se reproducen de vuelta a un remitente como si provinieran del receptor como respuesta. La *detección de reproducción* estándar en el mecanismo de Windows Communication Foundation (WCF) no controla automáticamente esto.  
   
  Los ataques de reflexión se mitigan de forma predeterminada porque el modelo de servicio de WCF agrega un identificador de mensaje firmado a los mensajes de solicitud y espera un `relates-to` encabezado firmado en los mensajes de respuesta. Por consiguiente, el mensaje de solicitud no se puede volver a reproducir como una respuesta. En los escenarios de mensaje confiables (RM) seguros, los ataques de reflexión se mitigan porque:  
@@ -28,6 +30,7 @@ Un *ataque de reproducción* se produce cuando un atacante copia una secuencia d
  La mitigación para los enlaces personalizados consiste no establecer el contexto de seguridad o requerir encabezados WS-Addressing.  
   
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Batería de servidores web: El atacante vuelve a reproducir la solicitud en varios nodos  
+
  Un cliente utiliza un servicio que se implementa en una batería de servidores web. Un atacante vuelve a reproducir una solicitud que se envió de un nodo de la batería a otro nodo de la batería. Además, si se reinicia un servicio, se vacía la caché de repetición, lo que capacita a un atacante para volver a realizar la solicitud. (La caché contiene valores de firmas de mensajes utilizados y vistos con anterioridad y evita las repeticiones de modo que esas firmas solo se puedan utilizar una vez. Las memorias caché de repetición no se comparten en una batería de servidores web).  
   
  Las mitigaciones incluyen:  
@@ -42,5 +45,5 @@ Un *ataque de reproducción* se produce cuando un atacante copia una secuencia d
 - [Divulgación de información](information-disclosure.md)
 - [Elevación de privilegios](elevation-of-privilege.md)
 - [Denegación de servicio](denial-of-service.md)
-- [Alteración de datos](tampering.md)
+- [Manipulación](tampering.md)
 - [Escenarios no admitidos](unsupported-scenarios.md)

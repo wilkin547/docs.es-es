@@ -2,14 +2,15 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: b9a517d0f8ada3680d49cd5ab0b13fa9e4d85402
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a3362ee33e6d3813d6715646ecb7d066f1930c76
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600067"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240919"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
+
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
   
  En este ejemplo, el cliente y el servicio son programas de consola (.exe). El cliente y el servicio hacen uso de una biblioteca común (.dll) que contiene el elemento de enlace personalizado y sus objetos en tiempo de ejecución asociados.  
@@ -37,9 +38,11 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
 4. Agregue una sección de extensión de elemento de enlace para exponer el nuevo elemento de enlace al sistema de configuración.  
   
 ## <a name="channel-shapes"></a>Formas del canal  
+
  El primer paso para escribir un canal superpuesto personalizado es decidir qué formas son necesarias para el canal. Para nuestro inspector de mensajes, admitimos cualquier forma que admita el nivel debajo de nosotros (por ejemplo, si la capa debajo de nosotros puede compilar <xref:System.ServiceModel.Channels.IOutputChannel> y <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, también exponemos <xref:System.ServiceModel.Channels.IOutputChannel> y <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
   
 ## <a name="channel-factory-and-listener-factory"></a>Generador de canales y de agentes de escucha  
+
  El paso siguiente para escribir un canal superpuesto personalizado es crear una implementación de <xref:System.ServiceModel.Channels.IChannelFactory> para los canales de cliente y de <xref:System.ServiceModel.Channels.IChannelListener> para los canales de servicio.  
   
  Estas clases escogen un generador y un agente de escucha internos y delegan todas las llamadas excepto `OnCreateChannel` y `OnAcceptChannel` al generador y agente de escucha internos.  
@@ -57,7 +60,8 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adición de un elemento de enlace  
- El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement`toma un `ChannelMessageInterceptor` como una entrada y lo utiliza `ChannelMessageInterceptor` para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
+
+ El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` toma un `ChannelMessageInterceptor` como una entrada y lo utiliza `ChannelMessageInterceptor` para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -66,6 +70,7 @@ public class InterceptingBindingElement : BindingElement
 ```  
   
 ## <a name="adding-configuration-support"></a>Agregación de la compatibilidad de configuración  
+
  Para integrar con la configuración de enlace, la biblioteca define un controlador de la sección de configuración como una sección de extensión de elemento de enlace. Los archivos de configuración del servidor y el cliente deben registrar la extensión del elemento de enlace con el sistema de configuración. Los implementadores que desean exponer su elemento de enlace al sistema de configuración pueden derivar de esta clase.  
   
 ```csharp
@@ -76,9 +81,11 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>Adición de directivas  
+
  Para integrar con nuestro sistema de directivas, `InterceptingBindingElement` implementa IPolicyExportExtension para señalar que deberíamos participar en la generación de directivas. Para permitir importar la directiva en un cliente generado, el usuario puede registrar una clase derivada de `InterceptingBindingElementImporter` e invalidar `CreateMessageInterceptor`() para generar su clase `ChannelMessageInterceptor` habilitada por la directiva.  
   
 ## <a name="example-droppable-message-inspector"></a>Ejemplo: inspector de mensajes que pueden quitarse  
+
  En este ejemplo se incluye una implementación de ejemplo de `ChannelMessageInspector` que quita mensajes.  
   
 ```csharp

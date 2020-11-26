@@ -2,14 +2,15 @@
 title: Información general del modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 34d7945b8a7898955794e2ad5813bc66f52b60c7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 713dd05daa5071f253afd70e735475e49a986aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594938"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239021"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Información general del modelo de programación web HTTP de WCF
+
 El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) proporciona los elementos básicos necesarios para crear servicios WEB HTTP con WCF. Los servicios WEB HTTP de WCF están diseñados para tener acceso a la gama más amplia de clientes posibles, incluidos los exploradores Web, y tienen los siguientes requisitos únicos:  
   
 - Uri **y procesamiento de URI** Los URI desempeñan un papel fundamental en el diseño de servicios WEB HTTP. El modelo de programación WEB HTTP de WCF utiliza las <xref:System.UriTemplate> <xref:System.UriTemplateTable> clases y para proporcionar capacidades de procesamiento de URI.  
@@ -29,6 +30,7 @@ El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) pr
 > Si se instala la extensión WebDAV para IIS, se puede provocar que los servicios web HTTP devuelvan un error 405 HTTP cuando la extensión WebDAV intente administrar todas las solicitudes PUT. Para evitar este problema puede desinstalar la extensión WebDAV o deshabilitarla para su sitio web. Para obtener más información, vea [IIS y WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>Procesamiento de URI con UriTemplate y UriTemplateTable  
+
  Las plantillas URI proporcionan una sintaxis eficaz para expresar grandes conjuntos de URI similares estructuralmente. Por ejemplo, la siguiente plantilla expresa el conjunto de todos los URI de tres segmentos que comienzan en "a" y acaban en "c" sin tener en cuenta el valor del segmento intermedio: a/{segmento}/c  
   
  Esta plantilla describe los URI de la siguiente manera:  
@@ -56,6 +58,7 @@ El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) pr
  El modelo de servicio WCF hace uso de <xref:System.UriTemplate> y <xref:System.UriTemplateTable> para asociar las operaciones del servicio a un conjunto de URI descrito mediante una <xref:System.UriTemplate>. Una operación de servicio está asociada a una <xref:System.UriTemplate>, utilizando <xref:System.ServiceModel.Web.WebGetAttribute> o <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información sobre <xref:System.UriTemplate> y <xref:System.UriTemplateTable> , consulte [UriTemplate y UriTemplateTable](uritemplate-and-uritemplatetable.md)  
   
 ## <a name="webget-and-webinvoke-attributes"></a>Atributos WebGet y WebInvoke  
+
  Los servicios WEB HTTP de WCF hacen uso de verbos de recuperación (por ejemplo, HTTP GET), además de varios verbos de invocación (por ejemplo, HTTP POST, PUT y DELETE). El modelo de programación WEB HTTP de WCF permite a los desarrolladores de servicios controlar la plantilla URI y el verbo asociado con sus operaciones de servicio con <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> . <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute> le permiten controlar cómo las operaciones individuales se enlazan a los URI y los métodos HTTP asociados a esos URI. Por ejemplo, agregando en el siguiente código, <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>.  
   
 ```csharp
@@ -99,6 +102,7 @@ interface ICustomer
  Para ver un ejemplo completo de un servicio WCF que usa el modelo de programación WEB HTTP de WCF, consulte [Cómo: crear un servicio básico de http Web de WCF.](how-to-create-a-basic-wcf-web-http-service.md)  
   
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>Parámetros de cadena de consulta y direcciones URL de UriTemplate  
+
  Se puede llamar a los servicios de tipo web desde un explorador web escribiendo una URL que está asociada a una operación del servicio. Estas operaciones del servicio pueden tomar parámetros de cadena de consulta que se deben especificar en forma de cadena dentro de la dirección URL. La siguiente tabla muestra los tipos que se pueden pasar dentro de una dirección URL y el formato utilizado.  
   
 |Tipo|Formato|  
@@ -125,6 +129,7 @@ interface ICustomer
 |Tipos que tienen `TypeConverterAttribute` que puede convertir el tipo en una representación de cadena y viceversa.|Según el convertidor de tipos.|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>Los formatos y el modelo de programación WEB HTTP de WCF  
+
  El modelo de programación WEB HTTP de WCF tiene nuevas características que funcionan con muchos formatos de datos diferentes. En la capa de enlace, <xref:System.ServiceModel.WebHttpBinding> puede leer y escribir los siguientes tipos diferentes de datos:  
   
 - XML  
@@ -142,9 +147,10 @@ interface ICustomer
 Dado que el modelo de programación WEB HTTP de WCF no admite los protocolos WS-*, la única manera de proteger un servicio WEB HTTP de WCF es exponer el servicio a través de HTTPS mediante SSL. Para obtener más información acerca de cómo configurar SSL con IIS 7,0, vea [cómo implementar SSL en IIS](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis).
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>Solución de problemas relacionados con el modelo de programación WEB HTTP de WCF  
+
  Al llamar a los servicios WEB HTTP de WCF mediante un objeto <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> para crear un canal, <xref:System.ServiceModel.Description.WebHttpBehavior> usa la clase <xref:System.ServiceModel.EndpointAddress> establecida en el archivo de configuración, aunque se pase una <xref:System.ServiceModel.EndpointAddress> diferente al <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Sindicación en WCF](wcf-syndication.md)
 - [Modelo de objetos de programación web HTTP de WCF](wcf-web-http-programming-object-model.md)

@@ -7,18 +7,19 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 84b176e53f16ba0676e933efe9ed679bf425abc0
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 50c811a4b9b3b191abc35c5b3eb1220fec4ba3bd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240503"
 ---
 # <a name="ui-automation-overview"></a>Información general sobre UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]es el nuevo marco de accesibilidad de Microsoft Windows, disponible en todos los sistemas operativos compatibles con [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] .  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] es el nuevo marco de accesibilidad de Microsoft Windows, disponible en todos los sistemas operativos compatibles con [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] .  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ofrece acceso mediante programación a la mayoría de los elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] del escritorio y permite productos de tecnología de asistencia como lectores de pantalla para ofrecer información sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] a los usuarios finales y manipular [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] por otros medios distintos de la entrada estándar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] también permite que scripts de pruebas automatizadas interactúen con [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -32,7 +33,9 @@ La automatización de la interfaz de usuario proporciona una funcionalidad compl
  Los proveedores de automatización de la interfaz de usuario ofrecen compatibilidad con las aplicaciones cliente de Microsoft Active Accessibility a través de un servicio de puente integrado.  
   
 <a name="Providers_and_Clients"></a>
+
 ## <a name="providers-and-clients"></a>Proveedores y clientes  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tiene cuatro componentes principales, como se muestra en la tabla siguiente.  
   
 |Componente|Descripción|  
@@ -63,7 +66,9 @@ La automatización de la interfaz de usuario proporciona una funcionalidad compl
 |<xref:System.Windows.Automation.Peers>|PresentationFramework|Desarrolladores de los proveedores de la automatización de la interfaz de usuario para [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].|  
   
 <a name="UI_Automation_Model"></a>
+
 ## <a name="ui-automation-model"></a>Modelo de la automatización de la interfaz de usuario  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] expone cada parte de la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] a las aplicaciones cliente como un <xref:System.Windows.Automation.AutomationElement>. Los elementos se encuentran en una estructura de árbol, con el escritorio como el elemento raíz. Los clientes pueden filtrar la vista sin formato del árbol como una vista de control o una vista de contenido. Las aplicaciones también pueden crear vistas personalizadas.  
   
  Los objetos<xref:System.Windows.Automation.AutomationElement> exponen propiedades comunes de los elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] que representan. Una de estas propiedades es el tipo de control, que define su funcionalidad y aspecto básico como una única entidad reconocible: por ejemplo, un botón o una casilla.  

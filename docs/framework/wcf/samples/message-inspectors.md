@@ -3,14 +3,15 @@ title: Inspectores de mensaje
 description: Obtenga información sobre cómo implementar y configurar los inspectores de mensajes de servicio y de cliente de WCF, que proporcionan un mecanismo de validación de mensajes.
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 20abb655a58f9dce4a967ade9b51db90eed2375b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 4b2f7b97d0895e3cb7550217f64a2b0b14545abf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240711"
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
+
 Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
   
  Un inspector del mensaje es un objeto de extensibilidad que se puede utilizar en el cliente del modelo del servicio en tiempo de ejecución y enviarse mediante programación en tiempo de ejecución o a través de configuración, y que puede inspeccionar y modificar los mensajes una vez recibidos o antes de enviarse.  
@@ -18,6 +19,7 @@ Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje d
  Este ejemplo implementa un cliente básico y un mecanismo de validación de mensaje de servicio que valida los mensajes entrantes contra un conjunto de documentos de esquema XML configurables. Tenga en cuenta que este ejemplo no valida los mensajes para cada operación. Esta es una simplificación intencional.  
   
 ## <a name="message-inspector"></a>Inspector de mensajes  
+
  Los inspectores de mensaje de cliente implementan la interfaz <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> y los inspectores de mensaje de servicio implementan la interfaz <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Las implementaciones se pueden combinar en una clase única para formar un inspector de mensaje que trabaja para ambas partes. Este ejemplo implementa este tipo de inspector de mensaje combinado. El inspector se construye transmitiendo un conjunto de esquemas sobre la base de qué mensajes entrantes y salientes se validan, y permite al programador especificar si se validan los mensajes entrantes o salientes y si el inspector está en modo cliente o envío, el cual afecta al control de errores tal y como se analiza después en este tema.  
   
 ```csharp
@@ -203,6 +205,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Comportamiento  
+
  Los inspectores de mensaje son extensiones del tiempo de ejecución del cliente o de la distribución. Dichas extensiones se configuran mediante *comportamientos*. Un comportamiento es una clase que cambia el comportamiento de tiempo de ejecución del modelo del servicio cambiando la configuración predeterminada o agregando extensiones (como inspectores de mensaje) a él.  
   
  La clase `SchemaValidationBehavior` siguiente es el comportamiento utilizado para agregar el inspector de mensaje de este ejemplo al tiempo de ejecución del cliente o la distribución. La implementación es bastante básica en ambos casos. En <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> y <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, se crea el inspector de mensaje y se agrega a la colección <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> del tiempo de ejecución respectivo.  
@@ -260,6 +263,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > Este comportamiento determinado no se duplica como un atributo y por consiguiente no se puede agregar mediante declaración a un tipo de contrato de un tipo de servicio. Ésta es una decisión realizada por diseño porque la colección de esquemas no se puede cargar en una declaración de atributos y hacer referencia a una ubicación de configuración adicional (por ejemplo a los valores de la aplicación) en este atributo significa crear un elemento de configuración que no es coherente con el resto de la configuración del modelo de servicio. Por consiguiente, este comportamiento solo se puede agregar imperiosamente a través de código y a través de una extensión de la configuración del modelo de servicio.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Agregar el Inspector de Mensaje a través de Configuración  
+
  Para configurar un comportamiento personalizado en un punto de conexión en el archivo de configuración de la aplicación, el modelo de servicio exige a los implementadores que creen un *elemento de extensión* de configuración representado por una clase derivada de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> . Esta extensión se debe agregar a continuación a la sección de configuración del modelo del servicio para extensiones, tal y como se muestra para la siguiente extensión discutida en esta sección.  
   
 ```xml  
@@ -368,6 +372,7 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>Agregar imperiosamente inspectores de mensaje  
+
  Excepto a través de atributos (lo cual no se contempla en este ejemplo por la razón citada previamente) y configuración, los comportamientos se pueden agregar con cierta facilidad a un tiempo de ejecución de cliente y de servicio utilizando el código imperativo. En este ejemplo, esto se hace en la aplicación cliente para probar el inspector de mensaje de cliente. La clase `GenericClient` se deriva de <xref:System.ServiceModel.ClientBase%601>, que expone la configuración del punto de conexión al código de usuario. Antes de que se abra el cliente implícitamente se puede cambiar la configuración del punto de conexión, por ejemplo agregando comportamientos, como se muestra en el código siguiente. Agregar el comportamiento al servicio es principalmente el equivalente a la técnica de cliente mostrada aquí y se debe realizar antes de que el host del servicio se abra.  
   
 ```csharp  

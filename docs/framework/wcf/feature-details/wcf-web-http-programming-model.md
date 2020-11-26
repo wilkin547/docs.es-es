@@ -6,17 +6,19 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 644bcba9f8ced965ff962962bd83e1ae170159a7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239008"
 ---
 # <a name="wcf-web-http-programming-model"></a>Modelo de programación de web HTTP de WCF
+
 El modelo de programación web HTTP de Windows Communication Foundation (WCF) permite a los desarrolladores exponer las operaciones del servicio WCF a extremos que no son SOAP. Los temas de esta sección examinan en detalle esta característica.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general del modelo de programación web HTTP de WCF](wcf-web-http-programming-model-overview.md)  
  Proporciona información general sobre el modelo de programación web HTTP de Windows Communication Foundation (WCF).  
   

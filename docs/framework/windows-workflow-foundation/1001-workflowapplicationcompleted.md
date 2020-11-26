@@ -2,14 +2,15 @@
 title: 1001 - WorkflowApplicationCompleted
 ms.date: 03/30/2017
 ms.assetid: 7a2ab59a-cf66-437a-b01e-f8f7268a3f7a
-ms.openlocfilehash: 430174b96a499fff7e0156327bb15e066ce2ca36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be97991be9b61908a23486da0ef255ebfbdc5485
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239957"
 ---
 # <a name="1001---workflowapplicationcompleted"></a>1001 - WorkflowApplicationCompleted
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62008647"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que una aplicación de flujo de trabajo se ha completado en el estado Closed.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  WorkflowInstance Id: '%1' se completó en el estado Closed.  
   
 ## <a name="details"></a>Detalles  

@@ -2,14 +2,15 @@
 title: 1010 - ActivityCompleted
 ms.date: 03/30/2017
 ms.assetid: d256284e-3fd2-4c33-82f4-abb617575706
-ms.openlocfilehash: 355281e6aa8f621bd2f9c0862e641fafec872750
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0ebf32ec1d5fe5b34ffe650d5547891be0eb665
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008376"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239918"
 ---
 # <a name="1010---activitycompleted"></a>1010 - ActivityCompleted
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62008376"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que una actividad ha completado su ejecución.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Actividad “%1", DisplayName: “%2 ", InstanceId: “%3 " se ha completado en el estado “%4".  
   
 ## <a name="details"></a>Detalles  
@@ -32,5 +35,5 @@ ms.locfileid: "62008376"
 |Actividad|xs:string|El nombre de tipo de la actividad.|  
 |DisplayName|xs:string|El nombre para mostrar de la actividad.|  
 |InstanceId|xs:string|La identificación de instancia de la actividad.|  
-|Estado|xs:string|Estado de la actividad.|  
+|State|xs:string|Estado de la actividad.|  
 |AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

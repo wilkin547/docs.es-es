@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 17d780c059530be8c91890302ea4066de2d4aa73
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 95729c1d26a9ae7fdec4fa4215f9478251612242
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163215"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240399"
 ---
 # <a name="ui-automation-properties-overview"></a>Información general acerca de las propiedades de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -26,7 +27,9 @@ ms.locfileid: "87163215"
 - [Implementación del proveedor de UI Automation en el servidor](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>
+
 ## <a name="property-identifiers"></a>Identificadores de propiedad  
+
  Cada propiedad se identifica mediante un número y un nombre. Los nombres de las propiedades se utilizan únicamente para la depuración y el diagnóstico. Los proveedores usan los identificadores numéricos para identificar las solicitudes de propiedad entrantes. Las aplicaciones cliente, sin embargo, solo utilizan <xref:System.Windows.Automation.AutomationProperty>, que encapsula el número y el nombre, para identificar las propiedades que quieren recuperar.  
   
  Los objetos<xref:System.Windows.Automation.AutomationProperty> que representan propiedades determinadas están disponibles como campos en diversas clases. Por motivos de seguridad, los proveedores de Automatización de la interfaz de usuario obtienen estos objetos de un conjunto independiente de clases que están incluidas en Uiautomationtypes.dll.  
@@ -53,7 +56,9 @@ ms.locfileid: "87163215"
 |Capacidades y estado de una ventana|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
 <a name="Properties_by_Category"></a>
+
 ## <a name="properties-by-category"></a>Propiedades por categoría  
+
  En las siguientes tablas se clasifican las propiedades cuyos identificadores se encuentran en <xref:System.Windows.Automation.AutomationElement> y <xref:System.Windows.Automation.AutomationElementIdentifiers> . Estas propiedades son comunes para todos los controles. Salvo algunas de ellas, todas suelen ser estáticas a lo largo de la duración de la aplicación de proveedor; la mayoría de propiedades dinámicas están asociadas con patrones de control.  
   
  En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](ui-automation-properties-for-clients.md).  
@@ -137,7 +142,9 @@ ms.locfileid: "87163215"
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
 <a name="Localization"></a>
+
 ## <a name="localization"></a>Localización  
+
  Los proveedores[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben presentar las siguientes propiedades en el idioma del sistema operativo:  
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
@@ -151,7 +158,9 @@ ms.locfileid: "87163215"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>
+
 ## <a name="properties-and-events"></a>Propiedades y eventos  
+
  El concepto de eventos de cambio de propiedad está estrechamente relacionado con las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Para las propiedades dinámicas, la aplicación cliente necesita una manera de saber que un valor de propiedad ha cambiado, por lo que puede actualizar su caché de información o reaccionar a la nueva información de alguna otra manera.  
   
  Los proveedores generan eventos cuando cambia algo en la [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] . Por ejemplo, si se selecciona o se desactiva una casilla, la implementación del proveedor del patrón Toggle genera un evento de cambio de propiedad. Los proveedores pueden generar eventos de forma selectiva, dependiendo de si hay clientes en escucha de eventos o en escucha de eventos específicos.  

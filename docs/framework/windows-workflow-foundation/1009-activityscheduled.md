@@ -2,14 +2,15 @@
 title: 1009 - ActivityScheduled
 ms.date: 03/30/2017
 ms.assetid: 307e38b6-d47e-47a4-9708-e74d8314b1a1
-ms.openlocfilehash: 0e3ea53a7b0509fcb8b73b61193742d615ac7e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 812531d4206dfee20f183b9461330e71263b0bf8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924662"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239775"
 ---
 # <a name="1009---activityscheduled"></a>1009 - ActivityScheduled
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61924662"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que una actividad se está programando para ejecutarse.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Parent Activity '%1', DisplayName: '%2', InstanceId: '%3' scheduled child Activity '%4', DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Detalles  

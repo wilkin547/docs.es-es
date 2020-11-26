@@ -6,19 +6,21 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 8220e8e773409be76bc7522d57551f1bddb90e5d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7de4ad48ae275b4119f05a5269e9819c201027fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240594"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de cargador
+
 Estos eventos recopilan información relativa a la carga y descarga de dominios de aplicación, ensamblados y módulos.  
   
  Todos los eventos de cargador se generan bajo la palabra clave `LoaderKeyword` (0x8). Los eventos `DCStart` y `DCEnd` se generan bajo `LoaderRundownKeyword` (0x8) con `StartRundown`/`EndRundown` habilitado. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
 
 ## <a name="application-domain-events"></a>Eventos de dominio de aplicación
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Evento|Nivel|  
@@ -47,6 +49,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
 
 ## <a name="clr-loader-assembly-events"></a>Eventos de ensamblado de cargador CLR  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Evento|Nivel|  
@@ -76,6 +79,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|
 
 ## <a name="module-events"></a>Eventos de módulo
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Evento|Nivel|  
@@ -112,7 +116,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |NativePdbAge|win:UInt32|Número de antigüedad escrito en la PDB de NGen que coincide con este módulo, en su caso. (Vea la sección Comentarios).|  
 |NativePdbBuildPath|win:UnicodeString|Ruta de acceso a la ubicación donde se creó la PDB de NGen que coincide con este módulo, en su caso. En algunos casos, puede tratarse simplemente de un nombre de archivo. (Vea la sección Comentarios).|  
   
-### <a name="remarks"></a>Observaciones  
+### <a name="remarks"></a>Comentarios  
   
 - Los campos que tienen “Pdb” en sus nombres pueden ser usados por herramientas de generación de perfiles con el objetivo de buscar las PDB que coincidan con los módulos que se cargaron durante la sesión de generación de perfiles. Los valores de estos campos se corresponden a los datos escritos en las secciones IMAGE_DIRECTORY_ENTRY_DEBUG del módulo usadas normalmente en los depuradores para ayudar a localizar las PDB que coinciden con los módulos cargados.  
   
@@ -121,6 +125,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 - Los nombres de campo que empiezan por “NativePdb” hacen referencia a la PDB de NGen generada al llamar a `NGEN createPDB`. Esta PDB usa el formato de PDB nativa y describe el modo en que los elementos del código fuente administrado original —como archivos, números de línea y nombres de símbolos— se asignan a los elementos nativos que se compilan en el módulo NGen.  
 
 ## <a name="clr-domain-module-events"></a>Eventos del módulo de dominio CLR
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Evento|Nivel|  
@@ -151,6 +156,7 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
 
 ## <a name="module-range-events"></a>Eventos de intervalo de módulo
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Evento|Nivel|  
@@ -179,13 +185,14 @@ Estos eventos recopilan información relativa a la carga y descarga de dominios 
 |RangeSize1|win:UInt32|0 indica que los datos son incorrectos.|  
 |RangeBegin2|win:UnicodeString||  
   
-### <a name="remarks"></a>Observaciones  
+### <a name="remarks"></a>Comentarios  
+
  Si una imagen de NGen cargada en un proceso de .NET Framework se optimiza con IBC, el evento `ModuleRange` que contiene los intervalos calientes en la imagen de NGen se registra junto con su `moduleID` y `ClrInstanceID`.  Si la imagen de NGen no está optimizada con IBC, este evento no se registra. Para determinar el nombre del módulo, el evento debe estar intercalado con los eventos ETW de carga de módulo.  
   
  El tamaño de carga para este evento es variable; el campo `Count` indica el número de desplazamientos de intervalo contenido en el evento.  Este evento debe estar intercalado con el evento `IStart` de Windows para determinar los intervalos reales. El evento de carga de imagen de Windows se registra siempre que se carga una imagen y contiene la dirección virtual de la imagen cargada.  
   
  Los eventos del intervalo de módulo se desencadenan en cualquier nivel ETW mayor o igual que 4 y se clasifican como eventos informativos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

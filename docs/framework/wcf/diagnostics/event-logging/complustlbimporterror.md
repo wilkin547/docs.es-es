@@ -2,21 +2,23 @@
 title: ComPlusTLBImportError
 ms.date: 03/30/2017
 ms.assetid: fe087e97-efbb-4006-8465-ec2ff7860c7b
-ms.openlocfilehash: 760097157699b5a5e2265a03daf663146e84792d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a10c94c8c697211bf85aabc78c5437e074eaf3de
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797997"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240152"
 ---
 # <a name="complustlbimporterror"></a>ComPlusTLBImportError
-Id.: 132  
+
+Id: 132  
   
- Gravedad Error  
+ Gravedad: error  
   
- Categoría ServiceModel  
+ Categoría: ServiceModel  
   
-## <a name="description"></a>DESCRIPCIÓN  
+## <a name="description"></a>Descripción  
+
  Este evento indica que se produjo un error al importar la biblioteca de tipos. El evento enumera el IID, el id. de la biblioteca de tipos, la excepción, el nombre del proceso y el id. de proceso.  
   
 ## <a name="see-also"></a>Vea también

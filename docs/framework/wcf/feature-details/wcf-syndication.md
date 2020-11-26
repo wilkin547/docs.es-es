@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: 677e8a4b00b36c2f11b27eb65d57be8abf75d6d2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 825990c6c1690281af65d53c76dcca0f3e2ffb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239047"
 ---
 # <a name="wcf-syndication"></a>Sindicación en WCF
+
 Windows Communication Foundation (WCF) proporciona compatibilidad para trabajar fácilmente con fuentes de distribución en Atom, RSS u otros formatos personalizados, lo que permite leerlas y crearlas, así como exponerlas en un punto de conexión de servicio. Los temas de esta sección describen en detalle este modelo de programación para la sindicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general de distribución de WCF](wcf-syndication-overview.md)  
  Proporciona información general sobre la compatibilidad con la distribución proporcionada por WCF.  
   
