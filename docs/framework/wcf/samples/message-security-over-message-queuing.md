@@ -2,14 +2,15 @@
 title: Seguridad de mensajes mediante Message Queuing
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 1733cea17c82f85751b810f4a6033caefd828e29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1b262a5f4343e07aecf5eebda32cc995f86ec77b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558646"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248947"
 ---
 # <a name="message-security-over-message-queuing"></a>Seguridad de mensajes mediante Message Queuing
+
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor sobre MSMQ. En ocasiones es más apropiado utilizar la seguridad del mensaje para garantizar que los mensajes en el almacén de MSMQ permanezcan cifrados y la aplicación pueda realizar su propia autenticación del mensaje.
 
  Este ejemplo se basa en el ejemplo de [enlace de MSMQ de transacciones](transacted-msmq-binding.md) . Los mensajes se cifran y firman.
@@ -24,7 +25,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
 
     2. Expanda la pestaña **características** .
 
-    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas** y seleccione **nuevo**, **cola privada**.
 
     4. Active la casilla **transaccional** .
 
@@ -83,9 +84,11 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
     > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="requirements"></a>Requisitos
+
  Este ejemplo exige que MSMQ se instale y se ejecute.
 
 ## <a name="demonstrates"></a>Muestra
+
  El cliente cifra el mensaje mediante la clave pública del servicio y firma el mensaje con su propio certificado. El servicio que lee el mensaje de la cola autentica el certificado de cliente con el certificado en su almacén de personas de confianza. Después descifra el mensaje y lo envía a la operación de servicio.
 
  Dado que el mensaje de Windows Communication Foundation (WCF) se lleva como una carga en el cuerpo del mensaje de MSMQ, el cuerpo permanece cifrado en el almacén de MSMQ. Esto protege el mensaje de la divulgación no deseada del mensaje. Tenga en cuenta que el propio MSMQ no sabe si el mensaje que transporta está cifrado.
@@ -93,6 +96,7 @@ Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security c
  El ejemplo muestra cómo se puede utilizar la autenticación mutua en el nivel de mensaje con MSMQ. Los certificados se intercambian fuera de banda. Siempre es el caso de la aplicación con cola porque el servicio y el cliente no tienen que estar al mismo tiempo conectados y ejecutándose.
 
 ## <a name="description"></a>Descripción
+
  El cliente de ejemplo y el código de servicio son los mismos que el ejemplo de [enlace de MSMQ de transacción](transacted-msmq-binding.md) con una diferencia. En el contrato de operación se anota el nivel de protección, que sugiere que el mensaje se debe firmar y cifrar.
 
 ```csharp

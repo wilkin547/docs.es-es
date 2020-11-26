@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 8a9342c07c15d65df0310c0cb35b4b2c6f2ba686
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9df911779422ca2710686963a040a95258db8891
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419660"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248924"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedimiento para crear un flujo de trabajo de máquina de estados
+
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas, como la <xref:System.Activities.Statements.StateMachine> actividad, y las actividades personalizadas del tema [Cómo: crear una actividad](how-to-create-an-activity.md) anterior. El flujo de trabajo modela un juego de adivinanzas de números.  
   
 > [!NOTE]
@@ -111,7 +112,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
 12. Arrastre una actividad **FinalState** desde la sección **máquina de Estados** del **cuadro de herramientas**, mantenga el mouse sobre el estado **Enter Guess** y colóquela en el triángulo que aparece a la derecha del estado **Enter Guess** para que se cree una transición entre **Enter Guess** y **FinalState**.  
   
-13. El nombre predeterminado de la transición es **T2**. Haga clic en la transición en el diseñador de flujo de trabajo para seleccionarla y establezca su **displayName** en **Guess correct**. Después, haga clic en el **FinalState**y selecciónelo y arrástrelo hacia la derecha para que haya espacio para que se muestre el nombre completo de la transición sin superposición de ninguno de los dos Estados. Así resultará más fácil completar los pasos restantes del tutorial.  
+13. El nombre predeterminado de la transición es **T2**. Haga clic en la transición en el diseñador de flujo de trabajo para seleccionarla y establezca su **displayName** en **Guess correct**. Después, haga clic en el **FinalState** y selecciónelo y arrástrelo hacia la derecha para que haya espacio para que se muestre el nombre completo de la transición sin superposición de ninguno de los dos Estados. Así resultará más fácil completar los pasos restantes del tutorial.  
   
 14. Haga doble clic en la transición **Guess correct** con el nuevo nombre en el diseñador de flujo de trabajo para expandirla.  
   
@@ -188,12 +189,12 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
   
      Para obtener instrucciones sobre cómo ejecutar el flujo de trabajo, vea el tema siguiente, [Cómo: ejecutar un flujo de trabajo](how-to-run-a-workflow.md). Si ya ha completado el paso [Cómo: ejecutar un flujo de trabajo](how-to-run-a-workflow.md) con un estilo diferente de flujo de trabajo y desea ejecutarlo mediante el flujo de trabajo de máquina de Estados desde este paso, vaya a la sección [para compilar y ejecutar la aplicación](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) de [Cómo: ejecutar un flujo de trabajo](how-to-run-a-workflow.md).  
   
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Diseñar flujos de trabajo](designing-workflows.md)
-- [Tutorial de Introducción](getting-started-tutorial.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
 - [Procedimiento para crear una actividad](how-to-create-an-activity.md)
 - [Procedimiento para ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

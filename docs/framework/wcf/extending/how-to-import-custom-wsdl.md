@@ -1,15 +1,16 @@
 ---
-title: Cómo importar WSDL personalizado
+title: Procedimiento para importar el WSDL personalizado
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5aa554394743314a91afd6a5cdf86f9974e81f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185547"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249090"
 ---
-# <a name="how-to-import-custom-wsdl"></a>Cómo importar WSDL personalizado
+# <a name="how-to-import-custom-wsdl"></a>Procedimiento para importar el WSDL personalizado
+
 En este tema se describe cómo importar WSDL personalizado. Para administrar el WSDL personalizado, debe implementar la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension>.  
   
 ### <a name="to-import-custom-wsdl"></a>Para importar el WSDL personalizado  
@@ -78,8 +79,8 @@ En este tema se describe cómo importar WSDL personalizado. Para administrar el 
     System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Metadatos](../feature-details/metadata.md)
+- [Metadata](../feature-details/metadata.md)
 - [Exportación e importación de metadatos](../feature-details/exporting-and-importing-metadata.md)
 - [Publicación de WSDL personalizada](../samples/custom-wsdl-publication.md)

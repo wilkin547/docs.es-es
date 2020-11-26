@@ -5,25 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
-ms.openlocfilehash: 1356983361c483170d9d7365932b788f2421bf09
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8d1ce6ef00462adb38e3d59c3d9bd35694c4dbe9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795604"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249064"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>Procedimiento para inspeccionar y modificar mensajes en el servicio
-Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente Windows Communication Foundation (WCF <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> ) implementando e insertando en el tiempo de ejecución del servicio. Para obtener más información, consulte [extensión de distribuidores](extending-dispatchers.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
+
+Puede inspeccionar o modificar los mensajes entrantes o salientes a través de un cliente Windows Communication Foundation (WCF) implementando <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> e insertando en el tiempo de ejecución del servicio. Para obtener más información, consulte [extensión de distribuidores](extending-dispatchers.md). La característica equivalente del servicio es <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Inspeccionar o modificar los mensajes  
   
-1. Implementar la interfaz <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.  
+1. Implemente la interfaz <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>.  
   
 2. Implemente una interfaz <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> dependiendo del ámbito en el que desee insertar fácilmente su inspector de mensajes de servicio.  
   
 3. Inserte su comportamiento antes de llamar al método <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>. Para obtener más información, consulte [configuración y extensión del tiempo de ejecución con comportamientos](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  Los siguientes ejemplos de código muestran, en orden:  
   
 - Una implementación de inspector de servicio.  

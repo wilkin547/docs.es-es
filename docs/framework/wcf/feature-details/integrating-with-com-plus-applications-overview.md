@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 57a1537e1bde1efcd3586d032efee063561efcca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b9b7e57760c2aba0a8e9eadd53ca8e72529b787
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586499"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248973"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
+
 Windows Communication Foundation (WCF) proporciona un entorno completo para crear aplicaciones distribuidas. Si ya usa la lógica de aplicación basada en componentes hospedada en COM+, puede usar WCF para ampliar la lógica existente en lugar de tener que volver a escribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
   
  Cuando una interfaz en un componente COM+ se expone como un servicio web, la especificación y contrato de estos servicios se determina por una asignación automática realizada cuando se inicia la aplicación. La lista siguiente muestra el modelo conceptual para esta asignación:  
@@ -40,11 +41,12 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
   
 2. Seleccione un modo de alojamiento adecuado.  
   
-3. Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información acerca de cómo usar ComSvcConfig. exe, consulte [Cómo: usar la herramienta de configuración del modelo de servicio com+](how-to-use-the-com-service-model-configuration-tool.md).  
+3. Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información sobre cómo usar ComSvcConfig.exe, consulte [Cómo: usar la herramienta de configuración del modelo de servicio com+](how-to-use-the-com-service-model-configuration-tool.md).  
   
 4. Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información acerca de cómo configurar un componente, consulte [Cómo: configurar el servicio com+](how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Interfaces admitidas  
+
  Hay algunas restricciones en el tipo de interfaces que se pueden exponer como un servicio web. No se admiten los siguientes tipos de interfaz:  
   
 - Interfaces que pasan referencias de objeto como parámetros: el siguiente enfoque de referencia de objeto limitado se describe en la sección Compatibilidad de referencia de objeto limitado.  
@@ -62,9 +64,10 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
 - Interfaces de los componentes de Enterprise Services no agregados a la caché global de ensamblados.  
   
 ### <a name="limited-object-reference-support"></a>Compatibilidad limitada de referencia de objeto  
+
  Dado que varios componentes implementados de COM+ utilizan objetos por parámetros de referencia, como devolver un objeto ADO Recordset, la integración de COM+ incluye compatibilidad limitada para los parámetros de referencia de objeto. La compatibilidad se limita a los objetos que implementan la interfaz COM `IPersistStream`. Esto incluye los objetos ADO Recordset y se puede implementar para objetos COM específicos de la aplicación.  
   
- Para habilitar esta compatibilidad, la herramienta ComSvcConfig. exe proporciona el modificador **allowreferences** que deshabilita el parámetro de firma de método normal y comprueba que la herramienta se ejecuta para asegurarse de que no se utilizan parámetros de referencia de objeto. Además, los tipos de objeto que se pasan como parámetros se deben denominar e identificar en el <`persistableTypes`> elemento de configuración que es un elemento secundario del `comContract` elemento de> <.  
+ Para habilitar esta compatibilidad, la herramienta ComSvcConfig.exe proporciona el modificador **allowreferences** que deshabilita el parámetro de firma de método normal y comprueba que la herramienta se ejecuta para asegurarse de que no se utilizan parámetros de referencia de objeto. Además, los tipos de objeto que se pasan como parámetros se deben denominar e identificar en el <`persistableTypes`> elemento de configuración que es un elemento secundario del `comContract` elemento de> <.  
   
  Cuando se usa esta característica, el servicio de integración de COM+ utiliza la interfaz `IPersistStream` para serializar o deserializar la instancia de objeto. Si la instancia de objeto no es compatible con `IPersistStream`, se producirá una excepción.  
   
@@ -74,6 +77,7 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
 > Debido a la naturaleza personalizada y específica de la plataforma del enfoque de serialización, es más adecuado para su uso entre clientes de WCF y servicios WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Seleccionar el modo de hospedaje  
+
  COM+ expone servicios web en uno de los modos de hospedaje siguientes:  
   
 - Hospedaje en COM  
@@ -88,7 +92,8 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
   
      La lógica del servicio web y de la aplicación COM+ se hospedan dentro del proceso de trabajo del servidor web. Esto proporciona la activación automática del modo de hospedaje en web sin producir un salto del proceso para las solicitudes del servicio web. El inconveniente es que no se puede tener acceso a la aplicación de servidor a través de DCOM.  
   
-### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
+### <a name="security-considerations"></a>Consideraciones de seguridad  
+
  Al igual que otros servicios de WCF, la configuración de seguridad para el servicio expuesto se administra a través de los valores de configuración del canal de WCF. No se exige la configuración de seguridad de DCOM tradicional, como los valores de permisos de  equipo de DCOM. Para exigir las funciones de aplicación COM+, la autorización de “comprobaciones de acceso de nivel de componente” ha de estar habilitada para el componente.  
   
  El uso de un enlace no seguro hace vulnerable la comunicación a manipulaciones o a divulgación de información. Para evitar esto, se recomienda que utilice un enlace seguro.  

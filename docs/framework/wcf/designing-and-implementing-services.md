@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 9ddb3fe637cd0402f0ce850bc523ae8cb0c5dc37
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ea32855a3a512b8e96b8d6d72f101523b5d16107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801975"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248778"
 ---
 # <a name="designing-and-implementing-services"></a>Diseño e implementación de servicios
+
 En esta sección se muestra cómo definir e implementar contratos WCF. Un contrato de servicio especifica lo que un punto de conexión comunica al mundo exterior. En un nivel más concreto, es una instrucción sobre un conjunto de mensajes concretos organizada en patrones de intercambio de mensajes básicos (MEP), como solicitud/respuesta, unidireccional y dúplex. Si un contrato de servicio es un conjunto relacionado de forma lógica de intercambios de mensajes, una operación de servicio es un intercambio único de mensajes. Por ejemplo, una operación `Hello` debe aceptar obviamente un mensaje (de manera que el autor de la llamada pueda anunciar el saludo) y puede o no devolver un mensaje (dependiendo de la cortesía de la operación).  
   
  Para obtener más información sobre los contratos y otros conceptos principales de Windows Communication Foundation (WCF), vea [conceptos básicos de Windows Communication Foundation](fundamental-concepts.md). Este tema se centra en describir los contratos de servicio. Para obtener más información sobre cómo crear clientes que usen contratos de servicio para conectarse a los servicios, consulte [información general del cliente de WCF](wcf-client-overview.md).  
   
-## <a name="overview"></a>Información general del  
+## <a name="overview"></a>Información general  
+
  En este tema se proporciona una orientación conceptual de alto nivel para diseñar e implementar servicios WCF. Los subtemas proporcionan más información detallada sobre las características de diseño e implementación. Antes de diseñar e implementar la aplicación WCF, se recomienda que:  
   
 - Entender lo que es un contrato de servicio, cómo funciona, y cómo crear uno.  
@@ -24,6 +26,7 @@ En esta sección se muestra cómo definir e implementar contratos WCF. Un contra
 - Comprender que los contratos especifican requisitos mínimos que la configuración en tiempo de ejecución o el entorno de hospedaje pueden no admitir.  
   
 ## <a name="service-contracts"></a>Contratos de servicio  
+
  Un contrato de servicio especifica lo siguiente:  
   
 - Las operaciones que el contrato expone.  
@@ -55,11 +58,13 @@ En esta sección se muestra cómo definir e implementar contratos WCF. Un contra
  Para obtener más información sobre el diseño de contratos, consulte [diseño de contratos de servicio](designing-service-contracts.md). Para obtener más información sobre la implementación de contratos, vea [implementación de contratos de servicio](implementing-service-contracts.md).  
   
 ### <a name="messages-up-front-and-center"></a>Mensajes arriba y al centro  
- Utilizar interfaces, clases y métodos administrados para modelar las operaciones de servicio es sencillo cuando está acostumbrado a firmas de método de estilo de llamada a procedimiento remoto (RPC), en las que pasar parámetros a un método y recibir valores de devolución es la forma normal de solicitar funcionalidad desde un objeto u otro tipo de código. Por ejemplo, los programadores que usan lenguajes administrados C++ como Visual Basic y com pueden aplicar sus conocimientos del enfoque de estilo RPC (ya sea mediante objetos o interfaces) a la creación de contratos de servicio WCF sin experimentar los problemas inherentes a los sistemas de objetos distribuidos de estilo RPC. La orientación del servicio proporciona las ventajas de la programación acoplada y orientada a mensajes mientras mantiene la facilidad y familiaridad de la experiencia de programación de RPC.  
+
+ Utilizar interfaces, clases y métodos administrados para modelar las operaciones de servicio es sencillo cuando está acostumbrado a firmas de método de estilo de llamada a procedimiento remoto (RPC), en las que pasar parámetros a un método y recibir valores de devolución es la forma normal de solicitar funcionalidad desde un objeto u otro tipo de código. Por ejemplo, los programadores que usan lenguajes administrados como Visual Basic y C++ COM pueden aplicar sus conocimientos del enfoque de estilo RPC (ya sea mediante objetos o interfaces) a la creación de contratos de servicio WCF sin experimentar los problemas inherentes a los sistemas de objetos distribuidos de estilo RPC. La orientación del servicio proporciona las ventajas de la programación acoplada y orientada a mensajes mientras mantiene la facilidad y familiaridad de la experiencia de programación de RPC.  
   
- Muchos programadores se sienten más cómodos con las interfaces de programación de aplicaciones orientadas a mensajes, como las colas de mensajes como Microsoft MSMQ, los espacios de nombres <xref:System.Messaging> en .NET Framework o el envío de XML no estructurado en solicitudes HTTP, por nombrar algunos. Para obtener más información sobre la programación en el nivel de mensaje, vea [uso de contratos de mensaje](./feature-details/using-message-contracts.md), [programación de nivel de canal de servicio](./extending/service-channel-level-programming.md)e [interoperabilidad con aplicaciones POX](./feature-details/interoperability-with-pox-applications.md).  
+ Muchos programadores se sienten más cómodos con las interfaces de programación de aplicaciones orientadas a mensajes, como las colas de mensajes como Microsoft MSMQ, los espacios de nombres <xref:System.Messaging> en .NET Framework o el envío de XML no estructurado en solicitudes HTTP, por nombrar algunos. Para obtener más información sobre la programación en el nivel de mensaje, vea [uso de contratos de mensaje](./feature-details/using-message-contracts.md), programación de Channel-Level de [servicio](./extending/service-channel-level-programming.md)e [interoperabilidad con aplicaciones POX](./feature-details/interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Introducción a la jerarquía de los requisitos  
+
  Un contrato de servicio agrupa operaciones; especifica el patrón de intercambio de mensajes, tipos de mensaje y tipos de datos que llevan esos mensajes e indica categorías de comportamiento de tiempo de ejecución que una implementación debe tener para admitir el contrato (por ejemplo, puede requerir que los mensajes se cifren y firmen). El contrato de servicio en sí mismo no especifica precisamente cómo se cumplen estos requisitos, solo que son obligatorios. El tipo de cifrado o la manera en la que se firma un mensaje depende de la implementación y configuración de un servicio conforme.  
   
  Observe la manera en que el contrato requiere algunas cosas de la implementación del contrato de servicio y la configuración del tiempo de ejecución para agregar comportamiento. El conjunto de requisitos que se deben cumplir para exponer un servicio para usar compilaciones en el conjunto anterior de requisitos. Si un contrato realiza requisitos de la implementación, una implementación puede requerir todavía más de la configuración y enlaces que permiten al servicio ejecutarse. Finalmente, la aplicación host también debe admitir cualquier requisito que la configuración de servicio y los enlaces agreguen.  
@@ -68,5 +73,5 @@ En esta sección se muestra cómo definir e implementar contratos WCF. Un contra
   
 ## <a name="see-also"></a>Vea también
 
-- [Diseño de contratos de servicio](designing-service-contracts.md)
+- [Diseño de contratos de servicios](designing-service-contracts.md)
 - [Implementación de contratos de servicio](implementing-service-contracts.md)

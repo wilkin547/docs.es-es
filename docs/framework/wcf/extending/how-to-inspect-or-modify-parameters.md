@@ -5,25 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: b4a673f97f06e8d489d9acc85d84e1ecea4656e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e8b2674d8efc0ef3ac2f1dd6ab0df559195c274c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795587"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249038"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Procedimiento para inspeccionar o modificar parámetros
-Puede inspeccionar o modificar los mensajes entrantes o salientes para una única operación en un objeto de cliente Windows Communication Foundation (WCF) o un servicio WCF <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> implementando la interfaz e insértela en el tiempo de ejecución del cliente o servicio. Normalmente se utiliza un comportamiento de operación para agregar inspectores de parámetro en una sola operación; se pueden utilizar otros comportamientos para proporcionar acceso fácil al tiempo de ejecución en un ámbito mayor. Para obtener más información, consulte [extensión de clientes](extending-clients.md) y extensión de [distribuidores](extending-dispatchers.md).  
+
+Puede inspeccionar o modificar los mensajes entrantes o salientes para una única operación en un objeto de cliente Windows Communication Foundation (WCF) o un servicio WCF implementando la <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfaz e insértela en el tiempo de ejecución del cliente o servicio. Normalmente se utiliza un comportamiento de operación para agregar inspectores de parámetro en una sola operación; se pueden utilizar otros comportamientos para proporcionar acceso fácil al tiempo de ejecución en un ámbito mayor. Para obtener más información, consulte [extensión de clientes](extending-clients.md) y extensión de [distribuidores](extending-dispatchers.md).  
   
 ### <a name="inspecting-or-modifying-parameters"></a>Inspeccionando o modificando parámetros  
   
-1. Implementar la interfaz <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>.  
+1. Implemente la interfaz <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>.  
   
 2. Implemente <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType> o <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> (dependiendo del ámbito requerido) para agregar su inspector de parámetro a <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A?displayProperty=nameWithType> o las propiedades <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A?displayProperty=nameWithType>.  
   
 3. Inserte su comportamiento antes de llamar <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> o el método <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Para obtener más información, consulte [configuración y extensión del tiempo de ejecución con comportamientos](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  Los siguientes ejemplos de código muestran, en orden:  
   
 - Una implementación de inspector de parámetro.  

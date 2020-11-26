@@ -1,5 +1,5 @@
 ---
-title: Cómo crear un servicio que emplee un validador de certificado personalizado
+title: Procedimiento para crear un servicio que emplee un validador de certificado personalizado
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,17 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: af1bb9b2ff793f6e6854c1b253dd445a35a5076f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31918ca2d96b63911130d22476a6e5a6d48999ee
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185574"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249246"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Cómo crear un servicio que emplee un validador de certificado personalizado
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Procedimiento para crear un servicio que emplee un validador de certificado personalizado
+
 En este tema se muestra cómo implementar un validador del certificado personalizado y cómo configurar el cliente o credenciales del servicio para reemplazar la lógica de validación de certificado predeterminada por el validador del certificado personalizado.  
   
- Si el certificado X.509 se usa para autenticar un cliente o servicio, Windows Communication Foundation (WCF) usa de forma predeterminada el almacén de certificados de Windows y la API de cifrado para validar el certificado y para asegurarse de que es de confianza. La funcionalidad integrada de validación del certificado no es suficiente y a veces se debe cambiar. WCF proporciona una manera fácil de cambiar la lógica de validación al permitir a los usuarios agregar un validador de certificado personalizado. Si se especifica un validador de certificado personalizado, WCF no usa la lógica de validación de certificados integrada, pero se basa en el validador personalizado en su lugar.  
+ Si el certificado X. 509 se usa para autenticar un cliente o servicio, Windows Communication Foundation (WCF) utiliza de forma predeterminada el almacén de certificados de Windows y la API de cifrado para validar el certificado y para asegurarse de que es de confianza. La funcionalidad integrada de validación del certificado no es suficiente y a veces se debe cambiar. WCF proporciona una manera fácil de cambiar la lógica de validación, ya que permite a los usuarios agregar un validador de certificado personalizado. Si se especifica un validador de certificado personalizado, WCF no utiliza la lógica de validación de certificado integrada, sino que se basa en el validador personalizado en su lugar.  
   
 ## <a name="procedures"></a>Procedimientos  
   
@@ -35,15 +36,15 @@ En este tema se muestra cómo implementar un validador del certificado personali
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>Especificar un validador de certificado personalizado en configuración de servicio  
   
-1. Agregue un [ \<elemento>comportamientos](../../configure-apps/file-schema/wcf/behaviors.md) y un [ \<>serviceBehaviors](../../configure-apps/file-schema/wcf/servicebehaviors.md) al [ \<elemento>system.serviceModel.](../../configure-apps/file-schema/wcf/system-servicemodel.md)  
+1. Agregue un [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elemento y un [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) al [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
   
-2. Agregue [ \<](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) un comportamiento>`name` y establezca el atributo en un valor adecuado.  
+2. Agregue [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) y establezca el `name` atributo en un valor adecuado.  
   
-3. Agregue un [ \<>serviceCredentials](../../configure-apps/file-schema/wcf/servicecredentials.md) al `<behavior>` elemento.  
+3. Agregue un [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) al `<behavior>` elemento.  
   
 4. Agregue un elemento `<clientCertificate>` al elemento `<serviceCredentials>`.  
   
-5. Agregue [ \<](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) un>`<clientCertificate>` de autenticación al elemento.  
+5. Agregue un [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) al `<clientCertificate>` elemento.  
   
 6. Defina el atributo `customCertificateValidatorType` en el tipo de validador. El ejemplo siguiente define el atributo en el espacio de nombres y nombre del tipo.  
   
@@ -69,17 +70,17 @@ En este tema se muestra cómo implementar un validador del certificado personali
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>Especificar un validador de certificado personalizado mediante la configuración del cliente  
   
-1. Agregue un [ \<elemento>comportamientos](../../configure-apps/file-schema/wcf/behaviors.md) y un [ \<>serviceBehaviors](../../configure-apps/file-schema/wcf/servicebehaviors.md) al [ \<elemento>system.serviceModel.](../../configure-apps/file-schema/wcf/system-servicemodel.md)  
+1. Agregue un [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elemento y un [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) al [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) elemento.  
   
-2. Agregue [ \<un elemento endpointBehaviors>.](../../configure-apps/file-schema/wcf/endpointbehaviors.md)  
+2. Agregue un [\<endpointBehaviors>](../../configure-apps/file-schema/wcf/endpointbehaviors.md) elemento.  
   
 3. Agregue un elemento  y establezca el atributo  en un valor adecuado.  
   
-4. Agregue un [ \<elemento de>clientCredentials.](../../configure-apps/file-schema/wcf/clientcredentials.md)  
+4. Agregue un [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) elemento.  
   
-5. Agregue un [ \<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md).  
+5. Agregue un [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
   
-6. Agregue [ \<](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) una>de autenticación como se muestra en el ejemplo siguiente.  
+6. Agregue [\<authentication>](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) como se muestra en el ejemplo siguiente.  
   
 7. Defina el atributo `customCertificateValidatorType` en el tipo de validador.  
   
@@ -116,16 +117,18 @@ En este tema se muestra cómo implementar un validador del certificado personali
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>Especificar un validador de certificado personalizado mediante el código en el cliente  
   
-1. Especifique el validador de certificado personalizado mediante la propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Puede obtener acceso a las credenciales de cliente mediante la propiedad <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (La clase de cliente generada por [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) siempre deriva de la <xref:System.ServiceModel.ClientBase%601> clase.)  
+1. Especifique el validador de certificado personalizado mediante la propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A>. Puede obtener acceso a las credenciales de cliente mediante la propiedad <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>. (La clase de cliente generada por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) siempre se deriva de la <xref:System.ServiceModel.ClientBase%601> clase).  
   
 2. Establezca la propiedad <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> en <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
+
  El ejemplo siguiente muestra una implementación de un validador de certificado personalizado y su uso en el servicio.  
   
 ### <a name="code"></a>Código  
+
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
