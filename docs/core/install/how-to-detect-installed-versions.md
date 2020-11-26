@@ -6,30 +6,30 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507222"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687447"
 ---
-# <a name="how-to-check-that-net-is-already-installed"></a><span data-ttu-id="981e8-104">Cómo comprobar que .NET Core ya está instalado</span><span class="sxs-lookup"><span data-stu-id="981e8-104">How to check that .NET is already installed</span></span>
+# <a name="how-to-check-that-net-is-already-installed"></a><span data-ttu-id="47121-104">Cómo comprobar que .NET Core ya está instalado</span><span class="sxs-lookup"><span data-stu-id="47121-104">How to check that .NET is already installed</span></span>
 
-<span data-ttu-id="981e8-105">En este artículo se explica cómo comprobar las versiones del entorno de ejecución y el SDK de .NET que están instaladas en el equipo.</span><span class="sxs-lookup"><span data-stu-id="981e8-105">This article teaches you how to check which versions of the .NET runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="981e8-106">Es posible que .NET ya se haya instalado si tiene un entorno de desarrollo integrado, como Visual Studio o Visual Studio para Mac.</span><span class="sxs-lookup"><span data-stu-id="981e8-106">.NET may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
+<span data-ttu-id="47121-105">En este artículo se explica cómo comprobar las versiones del entorno de ejecución y el SDK de .NET que están instaladas en el equipo.</span><span class="sxs-lookup"><span data-stu-id="47121-105">This article teaches you how to check which versions of the .NET runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="47121-106">Es posible que .NET ya se haya instalado si tiene un entorno de desarrollo integrado, como Visual Studio o Visual Studio para Mac.</span><span class="sxs-lookup"><span data-stu-id="47121-106">.NET may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
 
-<span data-ttu-id="981e8-107">Al instalar un SDK, se instala el entorno de ejecución correspondiente.</span><span class="sxs-lookup"><span data-stu-id="981e8-107">Installing an SDK installs the corresponding runtime.</span></span>
+<span data-ttu-id="47121-107">Al instalar un SDK, se instala el entorno de ejecución correspondiente.</span><span class="sxs-lookup"><span data-stu-id="47121-107">Installing an SDK installs the corresponding runtime.</span></span>
 
-<span data-ttu-id="981e8-108">Si se produce un error en alguno de los comandos de este artículo, no tendrá instalado el entorno de ejecución o el SDK.</span><span class="sxs-lookup"><span data-stu-id="981e8-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="981e8-109">Para obtener más información, consulte los artículos de instalación para [Windows](windows.md), [macOS](macos.md) o [Linux](linux.md).</span><span class="sxs-lookup"><span data-stu-id="981e8-109">For more information, see the install articles for [Windows](windows.md), [macOS](macos.md), or [Linux](linux.md).</span></span>
+<span data-ttu-id="47121-108">Si se produce un error en alguno de los comandos de este artículo, no tendrá instalado el entorno de ejecución o el SDK.</span><span class="sxs-lookup"><span data-stu-id="47121-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="47121-109">Para obtener más información, consulte los artículos de instalación para [Windows](windows.md), [macOS](macos.md) o [Linux](linux.md).</span><span class="sxs-lookup"><span data-stu-id="47121-109">For more information, see the install articles for [Windows](windows.md), [macOS](macos.md), or [Linux](linux.md).</span></span>
 
-## <a name="check-sdk-versions"></a><span data-ttu-id="981e8-110">Comprobación de las versiones del SDK</span><span class="sxs-lookup"><span data-stu-id="981e8-110">Check SDK versions</span></span>
+## <a name="check-sdk-versions"></a><span data-ttu-id="47121-110">Comprobación de las versiones del SDK</span><span class="sxs-lookup"><span data-stu-id="47121-110">Check SDK versions</span></span>
 
-<span data-ttu-id="981e8-111">Se pueden ver las versiones del SDK de .NET que están instaladas actualmente con un terminal.</span><span class="sxs-lookup"><span data-stu-id="981e8-111">You can see which versions of the .NET SDK are currently installed with a terminal.</span></span> <span data-ttu-id="981e8-112">Abra un terminal y ejecute el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="981e8-112">Open a terminal and run the following command.</span></span>
+<span data-ttu-id="47121-111">Se pueden ver las versiones del SDK de .NET que están instaladas actualmente con un terminal.</span><span class="sxs-lookup"><span data-stu-id="47121-111">You can see which versions of the .NET SDK are currently installed with a terminal.</span></span> <span data-ttu-id="47121-112">Abra un terminal y ejecute el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="47121-112">Open a terminal and run the following command.</span></span>
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-<span data-ttu-id="981e8-113">Verá un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="981e8-113">You get output similar to the following.</span></span>
+<span data-ttu-id="47121-113">Verá un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="47121-113">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -73,15 +73,15 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a><span data-ttu-id="981e8-114">Comprobación de las versiones del entorno de ejecución</span><span class="sxs-lookup"><span data-stu-id="981e8-114">Check runtime versions</span></span>
+## <a name="check-runtime-versions"></a><span data-ttu-id="47121-114">Comprobación de las versiones del entorno de ejecución</span><span class="sxs-lookup"><span data-stu-id="47121-114">Check runtime versions</span></span>
 
-<span data-ttu-id="981e8-115">Se pueden ver las versiones del entorno de ejecución de .NET que están instaladas actualmente con el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="981e8-115">You can see which versions of the .NET runtime are currently installed with the following command.</span></span>
+<span data-ttu-id="47121-115">Se pueden ver las versiones del entorno de ejecución de .NET que están instaladas actualmente con el comando siguiente.</span><span class="sxs-lookup"><span data-stu-id="47121-115">You can see which versions of the .NET runtime are currently installed with the following command.</span></span>
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-<span data-ttu-id="981e8-116">Verá un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="981e8-116">You get output similar to the following.</span></span>
+<span data-ttu-id="47121-116">Verá un resultado similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="47121-116">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -137,57 +137,57 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="check-for-install-folders"></a><span data-ttu-id="981e8-117">Buscar carpetas de instalación</span><span class="sxs-lookup"><span data-stu-id="981e8-117">Check for install folders</span></span>
+## <a name="check-for-install-folders"></a><span data-ttu-id="47121-117">Buscar carpetas de instalación</span><span class="sxs-lookup"><span data-stu-id="47121-117">Check for install folders</span></span>
 
-<span data-ttu-id="981e8-118">Es posible que .NET esté instalado, pero no se haya agregado a la variable `PATH` del sistema operativo o el perfil de usuario.</span><span class="sxs-lookup"><span data-stu-id="981e8-118">It's possible that .NET is installed but not added to the `PATH` variable for your operating system or user profile.</span></span> <span data-ttu-id="981e8-119">Es posible que no funcione la ejecución de los comandos de las secciones anteriores.</span><span class="sxs-lookup"><span data-stu-id="981e8-119">Running the commands from the previous sections may not work.</span></span> <span data-ttu-id="981e8-120">Como alternativa, puede comprobar que existen las carpetas de instalación de .NET.</span><span class="sxs-lookup"><span data-stu-id="981e8-120">As an alternative, you can check that the .NET install folders exist.</span></span>
+<span data-ttu-id="47121-118">Es posible que .NET esté instalado, pero no se haya agregado a la variable `PATH` del sistema operativo o el perfil de usuario.</span><span class="sxs-lookup"><span data-stu-id="47121-118">It's possible that .NET is installed but not added to the `PATH` variable for your operating system or user profile.</span></span> <span data-ttu-id="47121-119">Es posible que no funcione la ejecución de los comandos de las secciones anteriores.</span><span class="sxs-lookup"><span data-stu-id="47121-119">Running the commands from the previous sections may not work.</span></span> <span data-ttu-id="47121-120">Como alternativa, puede comprobar que existen las carpetas de instalación de .NET.</span><span class="sxs-lookup"><span data-stu-id="47121-120">As an alternative, you can check that the .NET install folders exist.</span></span>
 
-<span data-ttu-id="981e8-121">Al instalar .NET desde un instalador o un script, la instalación se efectúa en una carpeta estándar.</span><span class="sxs-lookup"><span data-stu-id="981e8-121">When you install .NET from an installer or script, it's installed to a standard folder.</span></span> <span data-ttu-id="981e8-122">La mayor parte del tiempo, el instalador o el script que usa para instalar .NET le ofrece la opción de realizar la instalación en otra carpeta.</span><span class="sxs-lookup"><span data-stu-id="981e8-122">Much of the time the installer or script you're using to install .NET gives you an option to install to a different folder.</span></span> <span data-ttu-id="981e8-123">Si decide instalar en una carpeta diferente, ajuste el inicio de la ruta de acceso de la carpeta.</span><span class="sxs-lookup"><span data-stu-id="981e8-123">If you choose to install to a different folder, adjust the start of the folder path.</span></span>
+<span data-ttu-id="47121-121">Al instalar .NET desde un instalador o un script, la instalación se efectúa en una carpeta estándar.</span><span class="sxs-lookup"><span data-stu-id="47121-121">When you install .NET from an installer or script, it's installed to a standard folder.</span></span> <span data-ttu-id="47121-122">La mayor parte del tiempo, el instalador o el script que usa para instalar .NET le ofrece la opción de realizar la instalación en otra carpeta.</span><span class="sxs-lookup"><span data-stu-id="47121-122">Much of the time the installer or script you're using to install .NET gives you an option to install to a different folder.</span></span> <span data-ttu-id="47121-123">Si decide instalar en una carpeta diferente, ajuste el inicio de la ruta de acceso de la carpeta.</span><span class="sxs-lookup"><span data-stu-id="47121-123">If you choose to install to a different folder, adjust the start of the folder path.</span></span>
 
 ::: zone pivot="os-windows"
 
-- <span data-ttu-id="981e8-124">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="981e8-124">**dotnet executable**</span></span>\
-<span data-ttu-id="981e8-125">_C:\\archivos de programa\\dotnet\\dotnet.exe_</span><span class="sxs-lookup"><span data-stu-id="981e8-125">_C:\\program files\\dotnet\\dotnet.exe_</span></span>
+- <span data-ttu-id="47121-124">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="47121-124">**dotnet executable**</span></span>\
+<span data-ttu-id="47121-125">_C:\\archivos de programa\\dotnet\\dotnet.exe_</span><span class="sxs-lookup"><span data-stu-id="47121-125">_C:\\program files\\dotnet\\dotnet.exe_</span></span>
 
-- <span data-ttu-id="981e8-126">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="981e8-126">**.NET SDK**</span></span>\
-<span data-ttu-id="981e8-127">_C:\\archivos de programa\\dotnet\\sdk\\{versión}\\_</span><span class="sxs-lookup"><span data-stu-id="981e8-127">_C:\\program files\\dotnet\\sdk\\{version}\\_</span></span>
+- <span data-ttu-id="47121-126">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="47121-126">**.NET SDK**</span></span>\
+<span data-ttu-id="47121-127">_C:\\archivos de programa\\dotnet\\sdk\\{versión}\\_</span><span class="sxs-lookup"><span data-stu-id="47121-127">_C:\\program files\\dotnet\\sdk\\{version}\\_</span></span>
 
-- <span data-ttu-id="981e8-128">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="981e8-128">**.NET Runtime**</span></span>\
-<span data-ttu-id="981e8-129">_C:\\archivos de programa\\dotnet\\shared\\{tipo de runtime}\\{versión}\\_</span><span class="sxs-lookup"><span data-stu-id="981e8-129">_C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\_</span></span>
+- <span data-ttu-id="47121-128">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="47121-128">**.NET Runtime**</span></span>\
+<span data-ttu-id="47121-129">_C:\\archivos de programa\\dotnet\\shared\\{tipo de runtime}\\{versión}\\_</span><span class="sxs-lookup"><span data-stu-id="47121-129">_C:\\program files\\dotnet\\shared\\{runtime-type}\\{version}\\_</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- <span data-ttu-id="981e8-130">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="981e8-130">**dotnet executable**</span></span>\
-<span data-ttu-id="981e8-131">_/home/user/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="981e8-131">_/home/user/share/dotnet/dotnet_</span></span>
+- <span data-ttu-id="47121-130">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="47121-130">**dotnet executable**</span></span>\
+<span data-ttu-id="47121-131">_/home/user/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="47121-131">_/home/user/share/dotnet/dotnet_</span></span>
 
-- <span data-ttu-id="981e8-132">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="981e8-132">**.NET SDK**</span></span>\
-<span data-ttu-id="981e8-133">_/home/user/share/dotnet/sdk/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="981e8-133">_/home/user/share/dotnet/sdk/{version}/_</span></span>
+- <span data-ttu-id="47121-132">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="47121-132">**.NET SDK**</span></span>\
+<span data-ttu-id="47121-133">_/home/user/share/dotnet/sdk/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="47121-133">_/home/user/share/dotnet/sdk/{version}/_</span></span>
 
-- <span data-ttu-id="981e8-134">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="981e8-134">**.NET Runtime**</span></span>\
-<span data-ttu-id="981e8-135">_/home/user/share/dotnet/shared/{tipo de runtime}/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="981e8-135">_/home/user/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
+- <span data-ttu-id="47121-134">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="47121-134">**.NET Runtime**</span></span>\
+<span data-ttu-id="47121-135">_/home/user/share/dotnet/shared/{tipo de runtime}/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="47121-135">_/home/user/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- <span data-ttu-id="981e8-136">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="981e8-136">**dotnet executable**</span></span>\
-<span data-ttu-id="981e8-137">_/usr/local/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="981e8-137">_/usr/local/share/dotnet/dotnet_</span></span>
+- <span data-ttu-id="47121-136">**archivo ejecutable de dotnet**</span><span class="sxs-lookup"><span data-stu-id="47121-136">**dotnet executable**</span></span>\
+<span data-ttu-id="47121-137">_/usr/local/share/dotnet/dotnet_</span><span class="sxs-lookup"><span data-stu-id="47121-137">_/usr/local/share/dotnet/dotnet_</span></span>
 
-- <span data-ttu-id="981e8-138">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="981e8-138">**.NET SDK**</span></span>\
-<span data-ttu-id="981e8-139">_/usr/local/share/dotnet/sdk/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="981e8-139">_/usr/local/share/dotnet/sdk/{version}/_</span></span>
+- <span data-ttu-id="47121-138">**.NET SDK**</span><span class="sxs-lookup"><span data-stu-id="47121-138">**.NET SDK**</span></span>\
+<span data-ttu-id="47121-139">_/usr/local/share/dotnet/sdk/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="47121-139">_/usr/local/share/dotnet/sdk/{version}/_</span></span>
 
-- <span data-ttu-id="981e8-140">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="981e8-140">**.NET Runtime**</span></span>\
-<span data-ttu-id="981e8-141">_/usr/local/share/dotnet/shared/{tipo de runtime}/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="981e8-141">_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
+- <span data-ttu-id="47121-140">**Runtime de .NET**</span><span class="sxs-lookup"><span data-stu-id="47121-140">**.NET Runtime**</span></span>\
+<span data-ttu-id="47121-141">_/usr/local/share/dotnet/shared/{tipo de runtime}/{versión}/_</span><span class="sxs-lookup"><span data-stu-id="47121-141">_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_</span></span>
 
 ::: zone-end
 
-## <a name="more-information"></a><span data-ttu-id="981e8-142">Más información</span><span class="sxs-lookup"><span data-stu-id="981e8-142">More information</span></span>
+## <a name="more-information"></a><span data-ttu-id="47121-142">Más información</span><span class="sxs-lookup"><span data-stu-id="47121-142">More information</span></span>
 
-<span data-ttu-id="981e8-143">Se pueden ver las versiones del SDK y del entorno de ejecución con el comando `dotnet --info`.</span><span class="sxs-lookup"><span data-stu-id="981e8-143">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="981e8-144">También obtendrá otra información relacionada con el entorno, como la versión del sistema operativo y el identificador del entorno de ejecución (RID).</span><span class="sxs-lookup"><span data-stu-id="981e8-144">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
+<span data-ttu-id="47121-143">Se pueden ver las versiones del SDK y del entorno de ejecución con el comando `dotnet --info`.</span><span class="sxs-lookup"><span data-stu-id="47121-143">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="47121-144">También obtendrá otra información relacionada con el entorno, como la versión del sistema operativo y el identificador del entorno de ejecución (RID).</span><span class="sxs-lookup"><span data-stu-id="47121-144">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="981e8-145">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="981e8-145">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="47121-145">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="47121-145">Next steps</span></span>
 
-- <span data-ttu-id="981e8-146">[Instalación del SDK y el entorno de ejecución de .NET para Windows](windows.md).</span><span class="sxs-lookup"><span data-stu-id="981e8-146">[Install the .NET Runtime and SDK for Windows](windows.md).</span></span>
-- <span data-ttu-id="981e8-147">[Instalación del SDK y el entorno de ejecución de .NET para MacOS](linux.md).</span><span class="sxs-lookup"><span data-stu-id="981e8-147">[Install the .NET Runtime and SDK for MacOS](linux.md).</span></span>
-- <span data-ttu-id="981e8-148">[Instalación del SDK y el entorno de ejecución de .NET para Linux](macos.md).</span><span class="sxs-lookup"><span data-stu-id="981e8-148">[Install the .NET Runtime and SDK for Linux](macos.md).</span></span>
+- <span data-ttu-id="47121-146">[Instalación del SDK y el entorno de ejecución de .NET para Windows](windows.md).</span><span class="sxs-lookup"><span data-stu-id="47121-146">[Install the .NET Runtime and SDK for Windows](windows.md).</span></span>
+- <span data-ttu-id="47121-147">[Instalación del SDK y el entorno de ejecución de .NET para macOS](macos.md).</span><span class="sxs-lookup"><span data-stu-id="47121-147">[Install the .NET Runtime and SDK for macOS](macos.md).</span></span>
+- <span data-ttu-id="47121-148">[Instalación del SDK y el entorno de ejecución de .NET para Linux](linux.md).</span><span class="sxs-lookup"><span data-stu-id="47121-148">[Install the .NET Runtime and SDK for Linux](linux.md).</span></span>
