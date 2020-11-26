@@ -9,17 +9,19 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), failed QueryInterface
 - managed debugging assistants (MDAs), failed QueryInterface
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
-ms.openlocfilehash: 2d7f14c67d47e58bcb88eab4621df63d7c598a7a
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+ms.openlocfilehash: bbd8d5644f8620444d80845b9920b925b6891176
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415945"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244332"
 ---
 # <a name="failedqi-mda"></a>MDA de failedQI
+
 El asistente para la depuración administrada (MDA) `failedQI` se activa cuando Runtime llama a `QueryInterface` en un puntero de interfaz COM en nombre de un contenedor al que se puede llamar en tiempo de ejecución (RCW) y la llamada `QueryInterface` falla.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  No se puede realizar una conversión en un contenedor RCW o se produce un error inesperado en una llamada a COM desde un contenedor RCW  
   
 ## <a name="cause"></a>Causa  
@@ -31,12 +33,15 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
 - Un servidor proxy propiedad de OLE devolvió un valor HRESULT de error.   
   
 ## <a name="resolution"></a>Solución  
+
  Consulte la documentación sobre reglas COM recogida en el sitio de MSDN.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Si no se puede realizar la llamada `QueryInterface`, el contexto cambia y es necesario volver a intentar realizar la llamada `QueryInterface` para ver si el motivo del error era un contexto incorrecto.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  El nombre administrado de la interfaz, el GUID de la interfaz y el valor HRESULT del error.   
   
 ## <a name="configuration"></a>Configuración  
@@ -49,7 +54,7 @@ El asistente para la depuración administrada (MDA) `failedQI` se activa cuando 
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnóstico de errores con asistentes de depuraciones administradas](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: d1fee4fdde18563ec6ccce4f0675d8581184be08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d63b03e519484ad6ec90b4267a49b77738593e45
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596739"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244657"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Colas en Windows Communication Foundation
+
 En los temas de esta sección se describe la compatibilidad de Windows Communication Foundation (WCF) con las colas de. WCF proporciona compatibilidad para la puesta en cola aprovechando Microsoft Message Queuing (conocido anteriormente como MSMQ) como transporte y habilita los siguientes escenarios:  
   
 - Aplicaciones acopladas débilmente Las aplicaciones emisoras pueden enviar mensajes a colas sin necesidad de conocer si la aplicación receptora está disponible para procesar el mensaje. La cola proporciona independencia de procesamiento que permite a una aplicación emisora enviar mensajes a la cola a una tasa que no depende de cómo de rápido las aplicaciones receptoras puedan procesar los mensajes. La disponibilidad del sistema total aumenta al enviar los mensajes a una cola que no está fuertemente acoplada al procesamiento de mensajes.  
@@ -25,6 +26,7 @@ En los temas de esta sección se describe la compatibilidad de Windows Communica
  Para usar la característica de colas en una aplicación WCF, puede usar uno de los enlaces estándar o puede crear un enlace personalizado si uno de los enlaces estándar no satisface sus requisitos. Para obtener más información sobre los enlaces estándar pertinentes y cómo elegir uno, consulte [Cómo: intercambiar mensajes con extremos de WCF y aplicaciones de Message Queue Server](how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Para obtener más información sobre cómo crear enlaces personalizados, vea [Enlaces personalizados](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general de colas](queues-overview.md)  
  Una información general de conceptos de colas de mensajes.  
   

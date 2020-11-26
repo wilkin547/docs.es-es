@@ -2,14 +2,15 @@
 title: Hospedaje en una aplicación de servicios de Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9f5c78adad34b5fed53a50e85f0361eef469de99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555853"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243077"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hospedaje en una aplicación de servicios de Windows
+
 Los servicios de Windows (anteriormente conocidos como servicios de Windows NT) proporcionan un modelo de procesamiento particularmente apropiado para las aplicaciones que deben vivir en una aplicación ejecutable de larga duración y que no deben mostrar ninguna forma de interfaz de usuario. La duración de un proceso de una aplicación de servicios de Windows es administrada mediante el Administrador de control de servicios (SCM) que le permite iniciar, detener y pausar aplicaciones de servicios de Windows. Puede configurar un proceso de servicio de Windows para que se inicie automáticamente cuando se inicie el equipo, convirtiéndolo en un entorno de hospedaje adecuado para aplicaciones "AlwaysOn". Para obtener más información acerca de las aplicaciones de servicios de Windows, vea [aplicaciones de servicios de Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
   
  Las aplicaciones que hospedan servicios de Windows Communication Foundation de larga duración (WCF) comparten muchas características con los servicios de Windows. En concreto, los servicios WCF son ejecutables de servidor de larga duración que no interactúan directamente con el usuario y, por tanto, no implementan ninguna forma de interfaz de usuario. Como tal, el hospedaje de servicios WCF dentro de una aplicación de servicio de Windows es una opción para compilar aplicaciones WCF sólidas y de larga ejecución.  

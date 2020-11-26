@@ -2,19 +2,21 @@
 title: Seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: fc8fc448bdcf94ab25349f6b34961a34e5ed2a5a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a8c06b9e4f70321e6ef3756863390dc62c659557
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598585"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243955"
 ---
 # <a name="end-to-end-tracing"></a>Seguimiento de traza de un extremo a otro
+
 El seguimiento de un extremo a otro (E2E) permite a los desarrolladores seguir la ejecución de código en la infraestructura de Windows Communication Foundation (WCF) para investigar por qué se ha producido un error en una ruta de acceso del código o para proporcionar un seguimiento detallado de la planificación de la capacidad y el análisis del rendimiento. Windows Communication Foundation (WCF) proporciona tres mecanismos de correlación para ayudar a diagnosticar la causa de un error: actividades, transferencias y propagación.  
   
  Vea [escenarios de seguimiento de un extremo a otro](end-to-end-tracing-scenarios.md) para obtener una lista de escenarios de seguimiento de un extremo a otro, así como su actividad y diseño de seguimiento respectivos.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Actividad](activity.md): describe los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF).  
   
  [Transfer](transfer.md): describe la transferencia en el modelo de seguimiento de Windows Communication Foundation (WCF) y el uso de la transferencia para poner en correlación las actividades dentro de los extremos.  

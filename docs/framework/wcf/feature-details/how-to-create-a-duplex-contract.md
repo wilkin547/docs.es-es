@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 9320e5b36b8faba3602fbe1df1b95c05dcc7fa7e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: cce1784865a1599e69c3f604c288ef62c9c43652
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247096"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243721"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Procedimiento para crear un contrato dúplex
+
 En este tema se muestran los pasos básicos para crear métodos que utilicen un contrato dúplex (bidireccional). Un contrato dúplex permite a los clientes y servidores comunicarse entre sí independientemente de manera que cada uno puede iniciar llamadas al otro. El contrato dúplex es uno de tres patrones de mensajes disponibles para los servicios Windows Communication Foundation (WCF). Los otros dos patrones de mensaje son unidireccionales y de solicitud-respuesta. Un contrato dúplex consta de dos contratos unidireccionales entre el cliente y el servidor y no requiere que se pongan en correlación las llamadas al método. Use este tipo de contrato cuando el servicio debe consultar al cliente para obtener más información o provocar explícitamente eventos en el cliente. Para obtener más información sobre cómo crear una aplicación cliente para un contrato dúplex, consulte [Cómo: obtener acceso a los servicios con un contrato dúplex](how-to-access-services-with-a-duplex-contract.md). Para obtener un ejemplo funcional, vea el ejemplo [dúplex](../samples/duplex.md) .  
   
 ### <a name="to-create-a-duplex-contract"></a>Creación de un contrato dúplex  
@@ -57,6 +58,7 @@ En este tema se muestran los pasos básicos para crear métodos que utilicen un 
 3. Llame a los métodos definidos por la interfaz de devolución de llamadas.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente código de ejemplo muestra la comunicación dúplex. El contrato del servicio contiene las operaciones del servicio para avanzar o retroceder. El contrato del cliente contiene una operación del servicio para informar sobre su posición.  
   
  [!code-csharp[S_WS_DualHttp#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#5)]
@@ -76,4 +78,4 @@ En este tema se muestran los pasos básicos para crear métodos que utilicen un 
 - [Dúplex](../samples/duplex.md)
 - [Diseño e implementación de servicios](../designing-and-implementing-services.md)
 - [Cómo definir un contrato de servicios](../how-to-define-a-wcf-service-contract.md)
-- [Sesión](../samples/session.md)
+- [De sesión](../samples/session.md)

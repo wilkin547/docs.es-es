@@ -2,30 +2,31 @@
 title: Instrucciones de configuración del directorio virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 2d9443431601ffc712da40bd1c085f595471336b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dba6547888935ccf36ec0924fd3c95e8fbda5688
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602367"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243656"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrucciones de configuración del directorio virtual
+
 Los ejemplos de Windows Communication Foundation (WCF) están diseñados para compartir un directorio virtual común denominado servicemodelsamples que se asigna a la carpeta%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
 > [!NOTE]
 > %SystemDrive% acostumbra a ser C: o D:, según la ubicación de la unidad en que está instalado Internet Information Services (IIS).  
   
- Puede ejecutar los archivos Setupvroot. bat y Cleanupvroot. bat desde el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md) para crear el directorio virtual. Si prefiere crear manualmente el directorio virtual, utilice los procedimientos siguientes.  
+ Puede ejecutar los archivos Setupvroot.bat y Cleanupvroot.bat desde el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md) para crear el directorio virtual. Si prefiere crear manualmente el directorio virtual, utilice los procedimientos siguientes.  
   
 ## <a name="procedures"></a>Procedimientos  
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>Para crear un directorio virtual en IIS 7,0 o 7,5  
   
-1. En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
+1. En el menú **Inicio** , haga clic en **Ejecutar** y, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
   
 2. En el panel izquierdo, expanda el nodo con el nombre del equipo y, a continuación, expanda el nodo **sitios** .  
   
-3. Haga clic con el botón secundario en **sitio web predeterminado**y, a continuación, seleccione **Agregar aplicación** para abrir la **ventana Agregar aplicación**.  
+3. Haga clic con el botón secundario en **sitio web predeterminado** y, a continuación, seleccione **Agregar aplicación** para abrir la **ventana Agregar aplicación**.  
   
 4. En la ventana de, escriba `servicemodelsamples` como el alias del directorio virtual que va a crear.  
   
@@ -41,7 +42,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
     > [!NOTE]
     > En esta documentación, el término `virtual directory` es sinónimo de `Web application`.  
   
-     Además de crear el directorio virtual, también debe establecer sus propiedades para permitir la ejecución de los servicios WCF. A continuación, encontrarás más información.  
+     Además de crear el directorio virtual, también debe establecer sus propiedades para permitir la ejecución de los servicios WCF. Consulte a continuación para más información.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Para crear un directorio virtual en IIS 5.1 o 6.0  
   
@@ -63,7 +64,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
     - **Ejecutar scripts (como ASP)**  
   
-8. Haga clic en **siguiente**y, a continuación, haga clic en **Finalizar** para completar el asistente.  
+8. Haga clic en **siguiente** y, a continuación, haga clic en **Finalizar** para completar el asistente.  
   
     > [!NOTE]
     > Esta tarea solo se debe realizar una vez porque todos los ejemplos de WCF usan el mismo directorio virtual servicemodelsamples.  
@@ -76,7 +77,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 3. En el panel acciones, seleccione la opción **Habilitar** . Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
   
- Finalmente, debe establecer las propiedades de seguridad de la carpeta servicemodelsamples para permitir que otros puedan obtener acceso a ella. A continuación, encontrarás más información.  
+ Finalmente, debe establecer las propiedades de seguridad de la carpeta servicemodelsamples para permitir que otros puedan obtener acceso a ella. Consulte a continuación para más información.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Para establecer propiedades de directorio virtual adicionales en IIS 5.1 o 6.0  
   
@@ -102,9 +103,9 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 4. Seleccione la entrada **Buscar** . Se abre la ventana **Seleccionar usuarios o grupos** .  
   
-5. Haga clic en **Avanzado**.  
+5. Haga clic en **Avanzadas**.  
   
-6. Haga clic en **ubicaciones**. La ventana **ubicaciones** ahora está abierta.  
+6. Haga clic en **Ubicaciones**. La ventana **ubicaciones** ahora está abierta.  
   
 7. Seleccione la entrada para el equipo que se está utilizando. Es importante seleccionar el equipo local y no una entrada para cualquier dominio o red de la lista. Después de haber seleccionado el equipo, haga clic en **Aceptar**.  
   
@@ -124,7 +125,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
 2. Haga clic con el botón secundario en la carpeta **servicemodelsamples** y, a continuación, haga clic en **compartir y seguridad.**  
   
-3. Haga clic en la pestaña **Seguridad**.  
+3. Haga clic en la pestaña **Security** (Seguridad).  
   
 4. Si usa IIS 6,0, en el cuadro **nombres de grupos o usuarios** , compruebe si aparece la **cuenta de invitado para Internet** .  
   
@@ -140,7 +141,7 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
     5. En el cuadro de diálogo **cuentas de usuario** , haga clic en la pestaña **Opciones avanzadas** .  
   
-    6. Haga clic en **Avanzado**.  
+    6. Haga clic en **Avanzadas**.  
   
     7. En el cuadro de diálogo **usuarios y grupos locales** , haga clic para expandir la carpeta **usuarios** .  
   

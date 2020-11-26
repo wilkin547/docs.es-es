@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3c0549d93d7898b1d49b31c1a5fde4af71c4d5a9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555827"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243012"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hospedaje en Servicio de activación de procesos de Windows
+
 El Servicio de activación de procesos de Windows (WAS) administra la activación y la duración de los procesos de trabajo que contienen aplicaciones que hospedan los servicios de Windows Communication Foundation (WCF). El modelo de proceso de WAS generaliza el proceso IIS 6.0 para el servidor HTTP mediante la eliminación de la dependencia en HTTP. Esto permite a los servicios WCF usar protocolos HTTP y que no sean HTTP, como net. TCP, en un entorno de hospedaje que admita la activación basada en mensaje y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
  Para obtener más información acerca de la creación de un servicio WCF que se ejecuta en el entorno de hospedaje WAS, consulte [Cómo: hospedar un servicio WCF en was](how-to-host-a-wcf-service-in-was.md).  
@@ -29,6 +30,7 @@ El Servicio de activación de procesos de Windows (WAS) administra la activació
 [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) funciona con IIS 7,0 y el servicio de activación de procesos de Windows (was) para proporcionar un entorno de hospedaje de aplicaciones enriquecido para los servicios net4 WCF y WF. Estas ventajas incluyen la administración del ciclo de vida de los procesos, el reciclaje de procesos, el hospedaje compartido, la protección rápida ante los errores, los procesos huérfanos, la activación a petición y la supervisión del estado de mantenimiento. Para obtener información detallada, vea [características de hospedaje de AppFabric](/previous-versions/appfabric/ee677189(v=azure.10)) y conceptos de hospedaje de [AppFabric](/previous-versions/appfabric/ee677371(v=azure.10)).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>Elementos del modelo de direccionamiento de WAS  
+
  Las aplicaciones tienen direcciones de Identificador uniforme de recursos (URI), que son las unidades del código cuya duración y entorno de ejecución son administrados por el servidor. Una instancia de servidor WAS única puede ser el inicio de muchas aplicaciones diferentes. Los servidores organizan las aplicaciones en grupos denominados *sitios*. Dentro de un sitio, las aplicaciones se organizan de manera jerárquica que refleja la estructura de los URI que sirven como sus direcciones externas.  
   
  Las direcciones de las aplicaciones tienen dos partes: un prefijo de URI base y una dirección relativa específica de la aplicación (ruta), que proporcionan la dirección externa para una aplicación cuando se unen. El prefijo de URI base se construye desde el enlace del sitio y se utiliza para todas las aplicaciones bajo el sitio. A continuación, las direcciones de la aplicación se construyen tomando fragmentos de la ruta de acceso específica de la aplicación (como "/applicationOne") y agregándolos al prefijo de URI base (por ejemplo, "net. TCP: psico") para llegar al URI completo de la aplicación.  
@@ -47,6 +49,7 @@ El Servicio de activación de procesos de Windows (WAS) administra la activació
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>El tiempo de ejecución de WAS  
+
  Las aplicaciones se organizan en sitios para propósitos de direccionamiento y administración. En tiempo de ejecución, las aplicaciones también se agrupan en grupos de aplicaciones. Un grupo de aplicaciones puede alojar muchas aplicaciones diferentes desde muchos sitios diferentes. Todas las aplicaciones dentro de un grupo de aplicaciones comparten un conjunto común de características de tiempo de ejecución. Por ejemplo, todas se ejecutan bajo la misma versión de Common Language Runtime (CLR) y comparten una identidad de proceso común. Cada grupo de aplicaciones corresponde a una instancia de un proceso de trabajo (w3wp.exe). Cada aplicación administrada que se ejecuta dentro de un grupo de aplicaciones compartido se aísla de otras aplicaciones por medio de un AppDomain de CLR.  
   
 ## <a name="see-also"></a>Vea también

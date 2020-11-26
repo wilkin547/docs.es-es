@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4ffbf6a05abd3ed9ebcea4b2e85f0dc305a4f2db
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535903"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244774"
 ---
 # <a name="programming-wcf-security"></a>Programación de la seguridad de WCF
+
 En este tema se describen las tareas de programación fundamentales que se usan para crear una aplicación Secure Windows Communication Foundation (WCF). En este tema solo se trata la autenticación, la confidencialidad y la integridad, que se conocen colectivamente como *seguridad de transferencia*. En este tema no se trata la autorización (el control de acceso a los recursos o servicios). para obtener información sobre la autorización, vea [autorización](authorization-in-wcf.md).  
   
 > [!NOTE]
@@ -24,6 +25,7 @@ En este tema se describen las tareas de programación fundamentales que se usan 
  La programación de la seguridad de WCF se basa en tres pasos que establecen lo siguiente: el modo de seguridad, un tipo de credencial de cliente y los valores de credenciales. Puede realizar estos pasos mediante código o configuración.  
   
 ## <a name="setting-the-security-mode"></a>Establecimiento del modo de seguridad  
+
  A continuación se explican los pasos generales para programar con el modo de seguridad en WCF:  
   
 1. Seleccione uno de los enlaces predefinidos adecuado a sus requisitos de aplicación. Para obtener una lista de las opciones de enlace, vea [enlaces proporcionados](../system-provided-bindings.md)por el sistema. De forma predeterminada, prácticamente todos los enlaces tienen la seguridad habilitada. La única excepción es la <xref:System.ServiceModel.BasicHttpBinding> clase (mediante la configuración, [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) ).  
@@ -55,6 +57,7 @@ En este tema se describen las tareas de programación fundamentales que se usan 
      Una sesión segura se produce cuando un cliente y servicio crean un canal mediante una clave simétrica (tanto el cliente como el servidor usan la misma clave durante la duración de una conversación, hasta que se cierre el diálogo).  
   
 ## <a name="setting-the-client-credential-type"></a>Establecimiento del tipo de credencial de cliente  
+
  Seleccione según corresponda un tipo de credencial de cliente. Para obtener más información, consulte [seleccionar un tipo de credencial](selecting-a-credential-type.md). Los siguientes tipos de credencial de cliente están disponibles:  
   
 - `Windows`  
@@ -92,12 +95,14 @@ En este tema se describen las tareas de programación fundamentales que se usan 
  [!code-vb[c_WsHttpService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#1)]  
   
 ## <a name="setting-service-credential-values"></a>Establecimiento de valores de credenciales de servicio  
+
  Cuando selecciona un tipo de credencial de cliente, debe establecer las credenciales reales que el servicio y el cliente han de utilizar. En el servicio, las credenciales se establecen utilizando la clase <xref:System.ServiceModel.Description.ServiceCredentials> y se devuelven mediante la propiedad <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> de la clase <xref:System.ServiceModel.ServiceHostBase>. El enlace en uso implica el tipo de credencial de servicio, el modo de seguridad elegido y el tipo de la credencial de cliente. El código siguiente establece un certificado para una credencial de servicio.  
   
  [!code-csharp[c_tcpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#3)]
  [!code-vb[c_tcpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#3)]  
   
 ## <a name="setting-client-credential-values"></a>Establecimiento de los valores de credencial de cliente  
+
  En el cliente, establezca valores de credencial de cliente mediante la clase <xref:System.ServiceModel.Description.ClientCredentials> y devueltos por la propiedad <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> de la clase <xref:System.ServiceModel.ClientBase%601>. El código siguiente establece un certificado como una credencial en un cliente utilizando el protocolo TCP.  
   
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]

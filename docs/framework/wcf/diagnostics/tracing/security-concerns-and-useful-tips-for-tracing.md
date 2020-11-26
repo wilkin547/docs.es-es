@@ -2,22 +2,25 @@
 title: Riesgos de seguridad y sugerencias útiles para el seguimiento
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 415b27f5ac40d097c5bdf7b09d63ce901003f83f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555047"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243882"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Riesgos de seguridad y sugerencias útiles para el seguimiento
+
 Este tema describe cómo puede proteger información confidencial de ser expuesta, así como sugerencias útiles al utilizar WebHost.  
   
 ## <a name="using-a-custom-trace-listener-with-webhost"></a>Utilizar un agente de escucha de traza personalizado con WebHost  
+
  Si está escribiendo su propio agente de escucha de traza, debe ser consciente de la posibilidad de que las trazas se puedan perder en el caso de un servicio hospedado en web. Cuando WebHost recicla, cierra el proceso activo mientras es sustituido por un duplicado. Sin embargo, los dos procesos todavía deben tener acceso al mismo recurso durante algún tiempo, lo que depende del tipo de escucha. En este caso, `XmlWriterTraceListener` crea un nuevo archivo de seguimiento para el segundo proceso; mientras la traza de eventos de Windows administra varios procesos dentro de la misma sesión y da el acceso al mismo archivo. Si su propia escucha no proporciona funcionalidades similares, se pueden perder las trazas cuando el archivo es bloqueado por los dos procesos.  
   
  También debe ser consciente de que un agente de escucha de traza personalizado puede enviar trazas y mensajes a través de la conexión, por ejemplo, a una base de datos remota. Como un implementador de la aplicación, debería configurar las escuchas personalizadas con control de acceso adecuado. También debería aplicar el control de seguridad en cualquier información personal que se pueda exponer en la ubicación remota.  
   
 ## <a name="logging-sensitive-information"></a>Registrar información confidencial  
+
  Las trazas contienen los encabezados del mensaje cuando un mensaje está en ámbito. Cuando las trazas están habilitadas, la información personal en encabezados específicos de la aplicación, como, una cadena de consulta; e información del cuerpo, como, un número de tarjeta de crédito, se puede volver visible en los registros. El implementador de la aplicación es responsable para exigir el control de acceso en los archivos de seguimiento y configuración. Si no desea que este tipo de información sea visible, debería deshabilitar la traza o filtrar parte de los datos si desea compartir los registros de seguimiento.  
   
  Las sugerencias siguientes pueden ayudarle a evitar que se exponga el contenido de un archivo de seguimiento involuntariamente:  

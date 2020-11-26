@@ -2,14 +2,15 @@
 title: Ejemplo de serialización JSON débilmente tipada
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: a503878f1cbb60090b648da8dfec741edbf02d1b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 65330e77622920f02b12bd69348aa635529e030e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602328"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244436"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Ejemplo de serialización JSON débilmente tipada
+
 Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica al trabajar con los objetos JSON (JavaScript Object Notation), tal y como se describe en el tema [How to: Serialize and Deserialize JSON Data](../feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  En algunos escenarios, un servicio o cliente Windows Communication Foundation (WCF) debe tener acceso a los objetos JSON generados por un servicio o cliente que está fuera del control del desarrollador. A medida que más servicios web exponen públicamente las API JSON, puede resultar poco práctico para que el desarrollador de WCF construya tipos locales definidos por el usuario en los que deserializar objetos JSON arbitrarios. Este ejemplo proporciona un mecanismo que permite a los desarrolladores de WCF trabajar con objetos JSON deserializados e arbitrarios sin crear tipos definidos por el usuario. Esto se conoce como *serialización débilmente tipada* de objetos JSON, porque no se conoce el tipo en el que un objeto JSON se deserializa en el momento de la compilación.  
@@ -58,7 +59,7 @@ Al serializar un tipo definido por el usuario en un formato de conexión determi
   
  Esto puede ser embarazoso, sobre todo si el cliente tiene que administrar más de un tipo de objeto JSON.  
   
- El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject`se basa en la asignación natural entre los objetos JSON y .NET Framework diccionarios, y la asignación entre las matrices JSON y .NET Framework matrices. En el código siguiente se muestra el tipo `JsonObject` :  
+ El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject` se basa en la asignación natural entre los objetos JSON y .NET Framework diccionarios, y la asignación entre las matrices JSON y .NET Framework matrices. En el código siguiente se muestra el tipo `JsonObject` :  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  

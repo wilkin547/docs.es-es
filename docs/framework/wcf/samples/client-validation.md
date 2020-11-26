@@ -2,14 +2,15 @@
 title: Validación de cliente
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: 6678ef7232b115f2bcb80b5f64621866f82b1f29
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: dee57e039d4510673b7205fd44fa300b24ac1df5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553537"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96243318"
 ---
 # <a name="client-validation"></a>Validación de cliente
+
 Los servicios publican frecuentemente los metadatos para habilitar la generación automática y la configuración de tipos de proxy de cliente. Cuando no se confía en el servicio, las aplicaciones cliente deberían comprobar y validar que los metadatos cumplen con la directiva de la aplicación cliente con respecto a la seguridad, transacciones, el tipo de contrato de servicios etc. El siguiente ejemplo muestra cómo escribir un comportamiento de punto de conexión de cliente que valide el punto de conexión de servicio para asegurarse de que el punto de conexión de servicio puede utilizarse con seguridad.  
   
  El servicio expone cuatro puntos de conexión de servicio. El primer punto de conexión utiliza WSDualHttpBinding, el segundo punto de conexión utiliza la autenticación NTLM, el tercer punto de conexión habilita el flujo de la transacción y el cuarto punto de conexión utiliza la autenticación basada en certificados.  
