@@ -2,17 +2,18 @@
 title: WSDL y directivas
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 123a878e90ee9099b009985a5e79155e8b1cd097
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600106"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238345"
 ---
 # <a name="wsdl-and-policy"></a>WSDL y directivas
-En este tema se tratan los detalles de implementación de Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy y WS-PolicyAttachment, así como las aserciones de WS-Policy adicionales y las extensiones WSDL 1,1 introducidas por WCF.  
+
+En este tema se tratan los detalles de la implementación de Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy y WS-PolicyAttachment, así como las aserciones WS-Policy adicionales y las extensiones WSDL 1,1 introducidas por WCF.  
   
- WCF implementa las especificaciones WS-Policy y WS-PolicyAttachment enviadas a W3C con restricciones y aclaraciones que se describen en este documento.  
+ WCF implementa WS-Policy y WS-PolicyAttachment especificaciones enviadas a W3C con restricciones y aclaraciones que se describen en este documento.  
   
  En este documento se utilizan los prefijos y espacios de nombres mostrados en la tabla siguiente.  
   
@@ -28,6 +29,7 @@ En este tema se tratan los detalles de implementación de Windows Communication 
 |cdp|`http://schemas.microsoft.com/net/2006/06/duplex`|  
   
 ## <a name="wcf-wsdl11-extensions"></a>Extensiones WCF WSDL1.1   
+
  WCF usa las siguientes extensiones WSDL 1.1 para describir los requisitos de la sesión de contrato.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
@@ -40,9 +42,10 @@ En este tema se tratan los detalles de implementación de Windows Communication 
  xs:boolean, indica que este contrato requiere establecer la sesión.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTPTransporte de enlace URIs  
+
  WCF usa los siguientes URI para indicar los transportes que se van a usar para los elementos de extensión de enlace de WSDL 1,1, SOAP 1,1 y SOAP 1,2.  
   
-|Transporte|Identificador URI|  
+|Transporte|URI|  
 |---------------|---------|  
 |HTTP|`http://schemas.xmlsoap.org/soap/http`|  
 |TCP|`http://schemas.microsoft.com/soap/tcp`|  
@@ -50,6 +53,7 @@ En este tema se tratan los detalles de implementación de Windows Communication 
 |Canalizaciones con nombre|`http://schemas.microsoft.com/soap/named-pipe`|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Aserciones de directivas implementadas por WCF  
+
  Además de las aserciones de directiva introducidas en las especificaciones de servicios web (WS-*) y mencionadas en otras secciones de este documento, WCF implementa las siguientes aserciones de directiva.  
   
 |Aserción de directiva|Asunto de directiva|Descripción|  

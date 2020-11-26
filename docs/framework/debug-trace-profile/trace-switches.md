@@ -13,14 +13,15 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: 29de46afa2a96dd7011cec40f4f76e7bfb8ee454
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: dfbff0a78b3c6c1318224ccc9608c1b816f9d5f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238059"
 ---
 # <a name="trace-switches"></a>Modificadores de seguimiento
+
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento. Son objetos que existen en el código y que se pueden configurar externamente mediante el archivo config. Hay tres tipos de modificadores de seguimiento en .NET Framework: la clase <xref:System.Diagnostics.BooleanSwitch> , la clase <xref:System.Diagnostics.TraceSwitch> y la clase <xref:System.Diagnostics.SourceSwitch> . La clase <xref:System.Diagnostics.BooleanSwitch> actúa como modificador para alternar que habilita o deshabilita una serie de instrucciones de seguimiento. Las clases <xref:System.Diagnostics.TraceSwitch> y <xref:System.Diagnostics.SourceSwitch> permiten habilitar un modificador de seguimiento para un nivel de seguimiento determinado para que aparezcan los mensajes de <xref:System.Diagnostics.Trace> o <xref:System.Diagnostics.TraceSource> especificados para ese nivel y todos sus niveles inferiores. Si deshabilita el modificador, los mensajes de seguimiento no aparecerán. Todas estas clases derivan de la clase abstracta (**MustInherit**) **Switch**, igual que deberían todos los modificadores desarrollados por el usuario.  
   
  Los modificadores de seguimiento pueden ser útiles para filtrar información. Por ejemplo, quizás quiera ver todos los mensajes de seguimiento de un módulo de acceso a datos, pero solo los mensajes de error del resto de la aplicación. En ese caso, usaría un modificador de seguimiento para el módulo de acceso a datos y otro para el resto de la aplicación. Se puede usar el archivo .config para configurar las opciones apropiadas de los modificadores con el fin de controlar qué tipos de mensajes de seguimiento recibe. Para más información, vea [Cómo: Crear, inicializar y configurar modificadores de seguimiento](how-to-create-initialize-and-configure-trace-switches.md).  
@@ -30,7 +31,8 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
  Para usar un modificador primero debe crear un objeto modificador a partir de una clase **BooleanSwitch** , una clase **TraceSwitch** o una clase de modificador definida por el desarrollador. Para más información sobre cómo crear modificadores definidos por el desarrollador, consulte la clase <xref:System.Diagnostics.Switch> en la referencia de .NET Framework. Después, establezca un valor de configuración que especifique cuándo se va a usar el objeto modificador. A continuación, pruebe el valor del objeto modificador en varios métodos de seguimiento **Trace** (o **Debug**).  
   
 ## <a name="trace-levels"></a>Niveles de seguimiento  
- Al usar **TraceSwitch**hay que tener en cuenta algunas consideraciones adicionales. Un objeto **TraceSwitch** tiene cuatro propiedades que devuelven valores **Boolean** que indican si el modificador está establecido al menos en un nivel determinado:  
+
+ Al usar **TraceSwitch** hay que tener en cuenta algunas consideraciones adicionales. Un objeto **TraceSwitch** tiene cuatro propiedades que devuelven valores **Boolean** que indican si el modificador está establecido al menos en un nivel determinado:  
   
 - <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
@@ -80,10 +82,11 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ```  
   
 ## <a name="developer-defined-switches"></a>Modificadores definidos por el desarrollador  
+
  Además de proporcionar **BooleanSwitch** y **TraceSwitch**, puede definir sus propios modificadores heredando de la clase **Switch** y reemplazando los métodos de la clase base por métodos personalizados. Para más información sobre cómo crear modificadores definidos por el desarrollador, consulte la clase <xref:System.Diagnostics.Switch> en la referencia de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Agentes de escucha de seguimiento](trace-listeners.md)
-- [Procedimiento para agregar instrucciones de seguimiento al código de una aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
 - [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)

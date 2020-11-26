@@ -2,17 +2,19 @@
 title: Registros de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 498d62fb1d3cc1386ea3bf57de431c57b18b7dda
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0344c802ef779d1f13f58c35c2f0e4fa67a37578
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551306"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238111"
 ---
 # <a name="tracking-records"></a>Registros de seguimiento
+
 El tiempo de ejecución del flujo de trabajo sirve para emitir los registros de seguimiento con el fin de seguir la ejecución de una instancia de flujo de trabajo.  
   
 ## <a name="tracking-records"></a>Registros de seguimiento  
+
  En la siguiente tabla se detallan los registros de seguimiento que emite el tiempo de ejecución del flujo de trabajo.  
   
 |Registro de seguimiento|Descripción|  

@@ -5,19 +5,21 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 185be9f6e33fcf107226e98d96d6be5c562384d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238332"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Trabajar con NAT y firewalls
+
 Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta de acceso directa y abierta para la comunicación. Los paquetes se filtran, enrutan, analizan y transforman tanto en los equipos de extremo como en equipos intermedios de la red. Las traducciones de direcciones de red (NATs) y los firewalls son ejemplos comunes de aplicaciones intermedias que pueden participar en la comunicación de redes.  
   
  Los transportes de Windows Communication Foundation (WCF) y los patrones de intercambio de mensajes (MEP) reaccionan de forma diferente a la presencia de NAT y firewalls. En este tema se describe cómo las NAT y los firewalls funcionan en topologías de redes comunes. Se proporcionan recomendaciones para combinaciones específicas de transportes y MEP de WCF que ayudan a hacer que sus aplicaciones sean más sólidas para NAT y firewalls en la red.  
   
 ## <a name="how-nats-affect-communication"></a>Cómo afectan las NAT a la comunicación  
+
  NAT se creó para permitir a varios equipos compartir una dirección IP externa única. Una NAT de reasignación de puertos asigna una dirección IP interna y un puerto para una conexión a una dirección IP externa con un nuevo número de puerto. El nuevo número de puerto le permite a la NAT correlacionar el tráfico del retorno con la comunicación original. Muchos usuarios domésticos tienen una dirección IP que solo es enrutable de manera privada y confían en una NAT para que proporcione el enrutamiento global de paquetes.  
   
  Una NAT no proporciona un límite de seguridad. Sin embargo, las configuraciones NAT comunes evitan que se direccionen los equipos internos directamente. Esto protege los equipos internos de algunas conexiones no deseadas y dificulta la escritura de aplicaciones de servidor que deben devolver de forma asincrónica datos al cliente. La NAT reescribe las direcciones en paquetes para hacer parecer que se están originando conexiones en el equipo NAT. Esto hace que el servidor obtenga un error al intentar abrir una conexión de vuelta al cliente. Si el servidor utiliza la dirección percibida del cliente, se produce un error porque no se puede enrutar la dirección del cliente públicamente. Si el servidor utiliza la dirección NAT, no puede conectarse porque ninguna aplicación está realizando escuchas en ese equipo.  
@@ -25,6 +27,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Algunas NAT admiten la configuración de reglas de reenvío para permitir a los equipos externos que se conecten a un equipo interno determinado. Las instrucciones para configurar las reglas de reenvío varían entre NAT diferentes y no se recomienda para la mayoría de las aplicaciones el pedir a los usuarios finales que cambien su configuración NAT. Muchos usuarios finales no pueden o no quieren cambiar su configuración de NAT para una aplicación determinada.  
   
 ## <a name="how-firewalls-affect-communication"></a>Cómo afectan los firewalls a la comunicación  
+
  Un *firewall* es un software o dispositivo de hardware que aplica reglas al tráfico que pasa a través de para decidir si permitir o denegar el paso. Puede configurar los firewalls para examinar secuencias de tráfico entrantes o salientes. El firewall proporciona un límite de seguridad para la red en el borde de la red o en el host del extremo. Los usuarios de empresas han mantenido tradicionalmente sus servidores tras un firewall para evitar ataques malintencionados. Desde la introducción de Personal Firewall en Windows XP SP2, el número de usuarios domésticos detrás de un firewall ha aumentado enormemente. Esto hace probable que uno o ambos extremos de una conexión tengan un firewall que examine los paquetes.  
   
  Los firewalls varían en gran medida en cuanto a su complejidad y capacidad para examinar los paquetes. Los firewalls simples aplican reglas basadas en las direcciones de origen y destino y los puertos en los paquetes. Los firewalls inteligentes también pueden examinar el contenido de paquetes para tomar decisiones. Estos firewalls vienen en muchas configuraciones diferentes y se utilizan a menudo para aplicaciones especializadas.  
@@ -36,6 +39,7 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
  Teredo es una tecnología de transición de IPv6 que habilita la direccionabilidad directa de equipos detrás de una NAT. Teredo se basa en el uso de un servidor que se puede enrutar de manera pública y global para anunciar conexiones potenciales. El servidor de Teredo da al servidor y cliente de la aplicación un punto de reunión común en el que pueden intercambiar información de conexión. Los equipos solicitan a continuación una dirección Teredo temporal y los paquetes se pasan mediante túneles a través de la red existente. La compatibilidad con Teredo en WCF requiere la habilitación de la compatibilidad con IPv6 y Teredo en el sistema operativo. Los sistemas operativos Windows XP y versiones posteriores admiten Teredo. Los sistemas operativos Windows Vista y versiones posteriores admiten IPv6 de forma predeterminada y solo requieren que el usuario habilite Teredo. Windows XP SP2 y Windows Server 2003 requieren que el usuario habilite IPv6 y Teredo. Para obtener más información, vea [información general sobre Teredo](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes y transporte  
+
  La selección de un transporte y MEP es un proceso de tres pasos:  
   
 1. Analice la direccionabilidad de los equipos de extremo. Los servidores de empresas tienen normalmente direccionabilidad directa, mientras que los usuarios finales tienen normalmente la direccionabilidad bloqueada mediante NAT. Si ambos puntos de conexión están detrás de una NAT, como en escenarios punto a punto entre usuarios finales, podría necesitar una tecnología como Teredo para proporcionar direccionabilidad.  
@@ -56,14 +60,14 @@ Frecuentemente, el cliente y servidor de una conexión de red no tienen una ruta
   
 |Direccionabilidad|Servidor directo|Servidor directo con transversal NAT|Servidor NAT|Servidor NAT con transversal NAT|  
 |--------------------|-------------------|--------------------------------------|----------------|-----------------------------------|  
-|Cliente directo|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No se admite.|No se admite.|  
-|Cliente directo con transversal NAT|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No se admite.|TCP con Teredo y cualquier MEP. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|  
-|NAT cliente|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|No se admite.|No se admite.|  
-|NAT cliente con transversal NAT|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Todos menos HTTP dual y cualquier MEP. Un MEP dúplex requiere transporte TCP. El transporte TCP dual necesita Teredo. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|No se admite.|TCP con Teredo y cualquier MEP. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|  
+|Cliente directo|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No compatible.|No se admite.|  
+|Cliente directo con transversal NAT|Cualquier transporte y MEP.|Cualquier transporte y MEP.|No compatible.|TCP con Teredo y cualquier MEP. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|  
+|NAT cliente|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|No compatible.|No se admite.|  
+|NAT cliente con transversal NAT|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Todos menos HTTP dual y cualquier MEP. Un MEP dúplex requiere transporte TCP. El transporte TCP dual necesita Teredo. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|No compatible.|TCP con Teredo y cualquier MEP. Windows Vista tiene una opción de configuración de todo el equipo para admitir HTTP con Teredo.|  
   
 |Restricciones del firewall|Servidor abierto|Servidor con firewall administrado|Servidor con firewall solo HTTP|Servidor con firewall solo de salida|  
 |---------------------------|-----------------|----------------------------------|-------------------------------------|-----------------------------------------|  
-|Cliente abierto|Cualquier transporte y MEP.|Cualquier transporte y MEP.|Cualquier transporte HTTP y MEP.|No se admite.|  
-|Cliente con firewall administrado|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte HTTP y MEP.|No se admite.|  
-|Cliente con firewall solo HTTP|Cualquier transporte HTTP y MEP.|Cualquier transporte HTTP y MEP.|Cualquier transporte HTTP y MEP.|No se admite.|  
+|Cliente abierto|Cualquier transporte y MEP.|Cualquier transporte y MEP.|Cualquier transporte HTTP y MEP.|No compatible.|  
+|Cliente con firewall administrado|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte HTTP y MEP.|No compatible.|  
+|Cliente con firewall solo HTTP|Cualquier transporte HTTP y MEP.|Cualquier transporte HTTP y MEP.|Cualquier transporte HTTP y MEP.|No compatible.|  
 |Cliente con firewall solo de salida|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte no dual y MEP. Un MEP dúplex requiere transporte TCP.|Cualquier transporte HTTP y cualquier MEP no dúplex.|No se admite.|

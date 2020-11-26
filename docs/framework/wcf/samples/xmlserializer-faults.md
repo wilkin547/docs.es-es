@@ -2,14 +2,15 @@
 title: Errores de XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: ce5aa6d2c579d4776f9505ae694768203e48eecf
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1eefa37d6d11e232bd4d0914eedab3ebb66b92ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584069"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237656"
 ---
 # <a name="xmlserializer-faults"></a>Errores de XmlSerializer
+
 El ejemplo de contrato de error <xref:System.Xml.Serialization.XmlSerializer> muestra cómo comunicar información de error de un servicio a un cliente mediante <xref:System.Xml.Serialization.XmlSerializer>. El ejemplo se basa en el [Introducción](getting-started-sample.md), con algún código adicional agregado al servicio para convertir una excepción interna en un error. El cliente intenta realizar la división por cero para forzar una condición de error en el servicio.  
   
 > [!NOTE]
@@ -37,7 +38,7 @@ public interface ICalculator
 }  
 ```  
   
- Al generar código para el proxy de cliente, debe aplicar la marca **/UseSerializerForFaults** a la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Al generar código para el proxy de cliente, debe aplicar la marca **/UseSerializerForFaults** a la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

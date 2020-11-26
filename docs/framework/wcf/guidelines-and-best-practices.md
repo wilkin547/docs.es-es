@@ -8,18 +8,20 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: eeca4ee47db2aef139567e37cba60cab863e6d53
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238137"
 ---
 # <a name="guidelines-and-best-practices"></a>Instrucciones y procedimientos recomendados
+
 Esta sección contiene temas que proporcionan instrucciones para crear aplicaciones de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Procedimientos recomendados: creación de versiones de contratos de datos](best-practices-data-contract-versioning.md)  
+
+ [Procedimientos recomendados: Versiones de contratos de datos](best-practices-data-contract-versioning.md)  
  Explica cómo y cuándo crear contratos de datos que no interrumpen al crearse las versiones futuras.  
   
  [Control de versiones del servicio](service-versioning.md)  
@@ -35,12 +37,14 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
  Describe las consideraciones que se han de tener en cuenta al utilizar la característica ClickOnce.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Información conceptual](conceptual-overview.md)  
+
+ [Información general conceptual](conceptual-overview.md)  
   
  [Programación básica de WCF](basic-wcf-programming.md)  
   
@@ -48,5 +52,5 @@ Esta sección contiene temas que proporcionan instrucciones para crear aplicacio
 
 - [¿Qué es Windows Communication Foundation?](whats-wcf.md)
 - [Ejemplos de Windows Communication Foundation (WCF)](./samples/index.md)
-- [Información conceptual](conceptual-overview.md)
+- [Información general conceptual](conceptual-overview.md)
 - [Creación de clientes](building-clients.md)

@@ -2,14 +2,15 @@
 title: Protocolo de intercambio de contexto
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ba613a2d12843ad00034057f8bbf08d5357d7f04
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597441"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237825"
 ---
 # <a name="context-exchange-protocol"></a>Protocolo de intercambio de contexto
+
 En esta sección se describe el protocolo de intercambio de contexto incluido en Windows Communication Foundation (WCF) versión .NET Framework versión 3,5. Este protocolo permite al canal de cliente que acepte un contexto proporcionado por un servicio y que lo aplique a todas las solicitudes posteriores a ese servicio enviado sobre la misma instancia del canal de cliente. La implementación del protocolo de intercambio de contexto puede utilizar uno de los dos mecanismos siguientes para propagar el contexto entre el servidor y el cliente: cookies de HTTP o un encabezado SOAP.  
   
  El protocolo de intercambio de contexto se implementa en una capa de canal personalizada. El canal comunica el contexto a y desde el nivel de aplicación utilizando una propiedad <xref:System.ServiceModel.Channels.ContextMessageProperty>. Para la transmisión entre extremos, el valor del contexto se serializa como un encabezado SOAP en la capa de canal o convertido a o desde las propiedades de mensaje que representan una solicitud y respuesta HTTP. En el último caso, se espera que una de las capas del canal subyacentes convierta las propiedades de mensajes de solicitud y respuesta HTTP a y desde cookies HTTP, respectivamente. La opción del mecanismo utilizado para intercambiar el contexto se realiza mediante la propiedad <xref:System.ServiceModel.Channels.ContextExchangeMechanism> en el <xref:System.ServiceModel.Channels.ContextBindingElement>. Los valores válidos son `HttpCookie` y `SoapHeader`.  
@@ -17,6 +18,7 @@ En esta sección se describe el protocolo de intercambio de contexto incluido en
  En el cliente, una instancia de un canal puede funcionar de dos modos en función de los valores de la propiedad de canal, <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.  
   
 ## <a name="mode-1-channel-context-management"></a>Modo 1: administración del contexto del canal  
+
  Éste es el modo predeterminado donde <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> está establecido en `true`. En este modo, el canal del contexto administra el contexto y lo almacena en memoria caché durante su duración. El contexto se puede recuperar desde el canal mediante la propiedad de canal `IContextManager` llamando al método `GetContext`. El canal también se puede preinicializar con contexto concreto antes de abrirse llamando al método `SetContext` en la propiedad de canal. Una vez inicializado el canal con contexto no se puede restablecer.  
   
  A continuación, se muestra una lista de invariables en este modo:  
@@ -33,6 +35,7 @@ En esta sección se describe el protocolo de intercambio de contexto incluido en
 - <xref:System.ServiceModel.Channels.ContextMessageProperty> en un mensaje entrante siempre es null.  
   
 ## <a name="mode-2-application-context-management"></a>Modo 2: administración de contexto de aplicación  
+
  Éste es el modo cuando <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> se establece en `false`. En este modo el canal de contexto no administra contexto. Es responsabilidad de la aplicación el recuperar, administrar y aplicar el contexto utilizando la <xref:System.ServiceModel.Channels.ContextMessageProperty>. Cualquier intento de llamar al método `GetContext` o `SetContext` produce una <xref:System.InvalidOperationException>.  
   
  Independientemente del modo elegido, el generador de canales de cliente admite patrones de intercambio de mensajes <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>y <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  

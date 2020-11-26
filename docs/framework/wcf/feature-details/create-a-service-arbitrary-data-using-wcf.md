@@ -2,14 +2,15 @@
 title: Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c9899705861cc1cf2cda2559c30a0a60d8cc635
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601340"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96237838"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Procedimiento para crear un servicio que acepte datos arbitrarios mediante el modelo de programación REST de WCF
+
 A veces los programadores deben tener un control absoluto de la forma en que se devuelven los datos desde una operación de un servicio. Este es el caso cuando una operación de servicio debe devolver datos en un formato no admitido byWCF. En este tema se describe el uso del modelo de programación REST de WCF para crear un servicio que recibe datos arbitrarios.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar el contrato de servicios  
@@ -124,6 +125,7 @@ A veces los programadores deben tener un control absoluto de la forma en que se 
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra la lista completa del código de este ejemplo.  
   
 ```csharp  
