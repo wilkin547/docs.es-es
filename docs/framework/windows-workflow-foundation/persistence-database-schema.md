@@ -2,17 +2,19 @@
 title: Esquema de base de datos de persistencia
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 04b57789e7c1ab6bfebd9c9b345ee0fb7dfb3e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f0ee076aa327f298007dfb18af324fb81c309067
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558243"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246100"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de datos de persistencia
+
 En este tema se describen las vistas públicas admitidas por el almacén de instancias de flujo de trabajo de SQL.  
   
 ## <a name="instances-view"></a>Vista Instances  
+
  La vista de **instancias** contiene información general sobre todas las instancias de flujo de trabajo en la base de datos.  
   
 |Nombre de columna|Tipo de columna|Descripción|  
@@ -28,9 +30,9 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |CurrentMachine|Nvarchar(128)|Indica el nombre del equipo que tiene la instancia de flujo de trabajo actualmente cargada en memoria.|  
 |LastMachine|Nvarchar(450)|Indica el último equipo que cargó la instancia de flujo de trabajo.|  
 |ExecutionStatus|Nvarchar(450)|Indica el estado de ejecución actual del flujo de trabajo. Entre los Estados posibles se incluyen la **ejecución**, **inactividad**, **cerrada**.|  
-|IsInitialized|bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
-|IsSuspended|bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
-|IsCompleted|bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:**  IIF la propiedad **InstanceCompletionAction** se establece en **DeleteAll**, las instancias se quitan de la vista al completarse.|  
+|IsInitialized|Bit|Indica si se ha inicializado la instancia de flujo de trabajo. Una instancia de flujo de trabajo inicializada es una instancia de flujo de trabajo que se ha guardado al menos una vez.|  
+|IsSuspended|Bit|Indica si se ha suspendido la instancia de flujo de trabajo.|  
+|IsCompleted|Bit|Indica si la instancia de flujo de trabajo ha completado la ejecución. **Nota:**  IIF la propiedad **InstanceCompletionAction** se establece en **DeleteAll**, las instancias se quitan de la vista al completarse.|  
 |EncodingOption|TinyInt|Describe la codificación utilizada para serializar las propiedades de datos.<br /><br /> -0: sin codificación<br />-1: GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|Contiene propiedades de datos de instancia serializada que no se proporcionarán al motor en tiempo de ejecución de flujo de trabajo cuando se cargue la instancia.<br /><br /> Cada propiedad primitiva es un tipo CLR nativo, lo que significa que no se necesita ningún ensamblado especial para deserializar el objeto binario.|  
@@ -47,6 +49,7 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 > La vista de **instancias** también contiene un desencadenador DELETE. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el punto de conexión de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
   
 ## <a name="servicedeployments-view"></a>Vista ServiceDeployments  
+
  La vista **ServiceDeployments** contiene información de implementación para todos los servicios de flujo de trabajo hospedados en Web (IIS/was). Cada instancia de flujo de trabajo hospedada en Web contendrá un **ServiceDeploymentId** que hace referencia a una fila de esta vista.  
   
 |Nombre de columna|Tipo de columna|Descripción|  
@@ -65,6 +68,7 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 2. Cualquier intento de eliminar una fila ServiceDeployment a la que hacen referencia las entradas en la vista de **instancias** dará como resultado una operación no operativa. Solo puede eliminar las filas de ServiceDeployment con cero referencias.  
   
 ## <a name="instancepromotedproperties-view"></a>Vista InstancePromotedProperties  
+
  La vista **InstancePromotedProperties** contiene información de todas las propiedades promocionadas especificadas por el usuario. Una propiedad promovida funciona como una propiedad de primera clase, que un usuario puede utilizar en consultas para recuperar instancias.  Por ejemplo, un usuario podría agregar una promoción PurchaseOrder que siempre almacena el costo de un pedido en la columna **Value1** . Esto permitiría a un usuario consultar todos los pedidos cuyo costo supera un determinado valor.  
   
 |Tipo de columna|Tipo de columna|Descripción|  

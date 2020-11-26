@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 0775de90903aed27a8d0006614a4b6f2d857eee3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8f8baf345059c01b0fef3b61ef85556151269118
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597103"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246425"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Procedimiento para intercambiar mensajes con puntos de conexión de WCF y aplicaciones de Message Queue Server
+
 Puede integrar aplicaciones de Message Queuing (MSMQ) existentes con aplicaciones Windows Communication Foundation (WCF) mediante el enlace de integración de MSMQ para convertir mensajes de MSMQ a y desde mensajes de WCF. Esto le permite llamar a aplicaciones de receptor de MSMQ desde clientes de WCF, así como llamar a servicios WCF desde aplicaciones de remitente MSMQ.  
   
  En esta sección, se explica cómo usar <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> para la comunicación en cola entre (1) un cliente WCF y un servicio de aplicación MSMQ escrito con System. Messaging y (2) un cliente de aplicación MSMQ y un servicio WCF.  

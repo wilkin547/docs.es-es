@@ -3,20 +3,22 @@ title: Soportar múltiples enlaces de sitios de IIS
 description: Obtenga información acerca de cómo proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio al hospedar un servicio WCF en IIS.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: 6af4d885c7fc3d4dcc12ffb4bf6670f1a9b3d78c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7b9118a7a507939aab6276716722be8d6d02628c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90546203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246295"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Soportar múltiples enlaces de sitios de IIS
+
 Al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) 7,0, puede que desee proporcionar varias direcciones base que usen el mismo protocolo en el mismo sitio. Esto permite que el mismo servicio responda a varios URI diferentes. Esto resulta útil si desea hospedar un servicio que escucha en `http://www.contoso.com` y `http://contoso.com` . También es útil crear un servicio que tenga una dirección base para los usuarios internos y una dirección base independiente para los usuarios externos. Por ejemplo, `http://internal.contoso.com` y `http://www.contoso.com`.  
   
 > [!NOTE]
 > Esta funcionalidad solo está disponible mediante el protocolo HTTP.  
   
 ## <a name="multiple-base-addresses"></a>Múltiples direcciones base  
+
  Esta característica solo está disponible para los servicios WCF que se hospedan en IIS. Esta característica no está habilitada de manera predeterminada. Para habilitarla, debe agregar el `multipleSiteBindingsEnabled` atributo al elemento <`serviceHostingEnvironment`> en el archivo Web.config y establecerlo en `true` , como se muestra en el ejemplo siguiente.  
   
 ```xml  

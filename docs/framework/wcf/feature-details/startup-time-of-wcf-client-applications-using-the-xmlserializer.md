@@ -2,20 +2,21 @@
 title: Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: 91712963908ecc56ff17fbac028389207544b82f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ac54a766161db146331a3e072b97822b609344c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600262"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246386"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Procedimiento para mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer
+
 Los servicios y las aplicaciones cliente que utilizan tipos de datos que son serializables utilizando <xref:System.Xml.Serialization.XmlSerializer> generan y compilan el código de la serialización para esos tipos de datos en el tiempo de ejecución, lo que se puede traducir en un rendimiento de inicio lento.  
   
 > [!NOTE]
 > El código de serialización generado previamente solo puede usarse en aplicaciones cliente y no en servicios.  
   
- La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Svcutil.exe genera el código de serialización para todos los tipos de datos utilizados en contratos de servicios en el ensamblado de aplicación de compilación que se puede serializar utilizando <xref:System.Xml.Serialization.XmlSerializer>. Los contratos de operación y servicio que utiliza el <xref:System.Xml.Serialization.XmlSerializer> se marcan con <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Svcutil.exe genera el código de serialización para todos los tipos de datos utilizados en contratos de servicios en el ensamblado de aplicación de compilación que se puede serializar utilizando <xref:System.Xml.Serialization.XmlSerializer>. Los contratos de operación y servicio que utiliza el <xref:System.Xml.Serialization.XmlSerializer> se marcan con <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>Para generar el código de serialización de XmlSerializer  
   
@@ -37,7 +38,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
 4. Haga que el código de serialización generado esté disponible para su aplicación utilizando una de las opciones siguientes:  
   
-    1. Compile el código de serialización generado en un ensamblado independiente con el nombre [*ensamblado original*]. XmlSerializers. dll (por ejemplo, MyApp. XmlSerializers. dll). Su aplicación debe poder cargar el ensamblado, que se debe firmar con la misma clave como el ensamblado original. Si vuelve a compilar el ensamblado original, debe volver a generar el ensamblado de serialización.  
+    1. Compile el código de serialización generado en un ensamblado independiente con el nombre [*ensamblado original*] .XmlSerializers.dll (por ejemplo, MyApp.XmlSerializers.dll). Su aplicación debe poder cargar el ensamblado, que se debe firmar con la misma clave como el ensamblado original. Si vuelve a compilar el ensamblado original, debe volver a generar el ensamblado de serialización.  
   
     2. Compile el código de serialización generado en un ensamblado independiente y utilice <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> en el contrato de servicios que utiliza <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Establezca las propiedades <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> o <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> para señalar al ensamblado de serialización compilado.  
   
@@ -51,7 +52,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
   
 3. Compile la aplicación cliente.  
   
-4. Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un archivo serializador *. CS* generado previamente con el comando:  
+4. Use la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para crear un archivo *. CS* de serializador generado previamente mediante el comando:  
   
     ```console  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
@@ -65,7 +66,7 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
-     Se generará el archivo *WCFClient.xmlSerializers.dll.CS* .  
+     Se generará el archivo *WCFClient.XmlSerializers.dll. CS* .  
   
 5. Compile el ensamblado de serialización generado previamente.  
   
@@ -75,11 +76,12 @@ Los servicios y las aplicaciones cliente que utilizan tipos de datos que son ser
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
-     Asegúrese de que el *archivo WCFClient. xmlSerializers. dll* generado está en el mismo directorio que la aplicación cliente, que en este caso es *WCFClient. exe* .  
+     Asegúrese de que el *WCFClient.XmlSerializers.dll* generado se encuentra en el mismo directorio que la aplicación cliente, que se *WCFClient.exe* en este caso.  
   
 6. Ejecute la aplicación cliente como de costumbre. Se utilizará el ensamblado de serialización generado previamente.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente comando genera los tipos de serialización para los tipos de `XmlSerializer` utilizados por cualquier contrato de servicios en el ensamblado.  
   
 ```console  

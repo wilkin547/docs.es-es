@@ -2,17 +2,19 @@
 title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: 4eb62306f52b8ff890d5a5333c3789bd84ad7f60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 452285b1f5b73ecf75fc50f59365aa2633f26e42
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142945"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245879"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
+
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
   
 ## <a name="using-required-arguments"></a>Usar argumentos necesarios  
+
  Para usar el atributo `RequiredArgument` en una actividad, indique los argumentos que desee mediante <xref:System.Activities.RequiredArgumentAttribute>. En este ejemplo, una actividad `Add` se define con dos argumentos necesarios.  
   
 ```csharp  
@@ -63,11 +65,11 @@ public sealed class Add : CodeActivity<int>
   
  **No se proporcionó el valor para un argumento de actividad necesario 'Operand1'.**  
 > [!NOTE]
-> Para obtener más información sobre cómo comprobar y controlar errores y advertencias de validación, vea [Invocar validación](invoking-activity-validation.md)de actividad .  
+> Para obtener más información sobre la comprobación y el control de errores y advertencias de validación, consulte [invocar la validación de actividad](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Usar grupos de sobrecargas
 
-Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le asigna <xref:System.Activities.OverloadGroupAttribute>un nombre especificado por el archivo . La actividad es válida cuando solo se enlaza un conjunto de argumentos en un grupo de sobrecarga. En el ejemplo siguiente, se define una clase `CreateLocation`.  
+Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le asigna un nombre especificado por <xref:System.Activities.OverloadGroupAttribute> . La actividad es válida cuando solo se enlaza un conjunto de argumentos de un grupo de sobrecargas. En el ejemplo siguiente, se define una clase `CreateLocation`.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,7 +108,7 @@ class CreateLocation: Activity
   
  El objetivo de esta actividad es especificar una ubicación en los EE. UU. Para ello, el usuario de la actividad puede especificar la ubicación con uno de los tres grupos de argumentos. Para especificar las combinaciones válidas de argumentos, se definen tres grupos de sobrecargas. `G1` contiene los argumentos `Latitude` y `Longitude`. `G2` contiene `Street`, `City` y `State`. `G3` contiene `Street` y `Zip`. `Name` también es un argumento necesario, pero no forma parte de un grupo de sobrecargas. Para que esta actividad sea válida, `Name` tendría que estar enlazado con todos los argumentos de uno y solo un grupo de sobrecargas.  
   
- En el ejemplo siguiente, tomado del ejemplo Actividades de `ConnectionString` acceso `ConfigFileSectionName`a [la base](./samples/database-access-activities.md) de datos, hay dos grupos de sobrecarga: y . Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
+ En el ejemplo siguiente, tomado del ejemplo de [actividades de acceso a bases de datos](./samples/database-access-activities.md) , hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName` . Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
   
 ```csharp  
 public class DbUpdate: AsyncCodeActivity  

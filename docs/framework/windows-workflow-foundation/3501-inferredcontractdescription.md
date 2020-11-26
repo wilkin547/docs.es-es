@@ -2,14 +2,15 @@
 title: 3501 - InferredContractDescription
 ms.date: 03/30/2017
 ms.assetid: 21a70849-4fc0-41d2-b9a4-db5aa2acdf1a
-ms.openlocfilehash: 47a5d98f4510e8c6092e8533a98366141d4b24db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88a04c0eb6d12876592702ad4dba3a17aa8da122
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755901"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245294"
 ---
 # <a name="3501---inferredcontractdescription"></a>3501 - InferredContractDescription
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,15 +21,17 @@ ms.locfileid: "61755901"
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que un ContractDescription se ha inferido de WorkflowService.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  ContractDescription con Name='%1' y Namespace='%2' se ha inferido de WorkflowService.  
   
 ## <a name="details"></a>Detalles  
   
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
 |--------------------|--------------------|-----------------|  
-|Name|xs:string|Nombre de ContractDescription.|  
+|NOMBRE|xs:string|Nombre de ContractDescription.|  
 |Espacio de nombres|xs:string|Espacio de nombres ContractDescription.|  
 |AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

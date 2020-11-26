@@ -2,17 +2,19 @@
 title: Compatibilidad con JSON y otros formatos de transferencia de datos
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
-ms.openlocfilehash: 168bd9a76b0ff6ff8e6625acc93a5409d43a817c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5f625c4ac6f2fa65df4d5a046b747c58f7a725b0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594769"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246308"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>Compatibilidad con JSON y otros formatos de transferencia de datos
+
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX habilitado (JavaScript asincrónico y XML).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Serialización independiente de JSON](stand-alone-json-serialization.md)  
  Describe la serialización independiente de JSON  
   

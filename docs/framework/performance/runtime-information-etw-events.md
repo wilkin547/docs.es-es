@@ -6,14 +6,15 @@ helpviewer_keywords:
 - runtime information events [.NET Framework]
 - ETW, runtime information events
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
-ms.openlocfilehash: 385519229bdb76841cdf592d95e96d2288ec5e1a
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 354740b36ccab742022058288da84b22d460edc5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474233"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245619"
 ---
 # <a name="runtime-information-etw-events"></a>Eventos ETW de información en tiempo de ejecución
+
 Estos eventos ETW registran información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante. Si se están ejecutando varios tiempos de ejecución dentro de un proceso, la información proporcionada por estos eventos (ClrInstanceID) ayuda a eliminar la ambigüedad de los tiempos de ejecución.  
   
  En la tabla siguiente se muestran los dos eventos de información en tiempo de ejecución. Los eventos se pueden generar bajo cualquier palabra clave o máscara. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
@@ -43,6 +44,6 @@ Estos eventos ETW registran información sobre el tiempo de ejecución, lo que i
 |ComObjectGUID|win:GUID|Distinto de NULL únicamente si StartupMode=0x08.|  
 |RuntimeDLLPath|win:UnicodeString|Ruta de acceso al archivo .dll de CLR que se ha cargado en el proceso.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 376ec2b840bc17c79ed1f27c17a8ddd22c37a0f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420765"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245359"
 ---
 # <a name="ixclrdataprocess-interface"></a>Interfaz IXCLRDataProcess
 
@@ -32,6 +32,7 @@ Proporciona métodos para consultar información sobre un proceso.
 
 | Método                                                                                                                                               | Descripción                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [GetRuntimeNameByAddress](ixclrdataprocess-getruntimenamebyaddress-method.md)                     | Obtiene un nombre para la dirección especificada.                                                               |
 | [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | Obtiene un `AppDomain` en un proceso por su identificador único.                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | Proporciona un identificador para enumerar los módulos de un proceso.                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | Enumera los módulos de este proceso.                                                         |
@@ -40,7 +41,7 @@ Proporciona métodos para consultar información sobre un proceso.
 | [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | Enumera las instancias de método de este proceso a partir de un desplazamiento de dirección.                  |
 | [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | Libera los recursos utilizados por los iteradores internos utilizados durante la enumeración de la instancia.             |
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Sin embargo, es una interfaz COM que se deriva de `IUnknown` con `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` el GUID que se puede obtener a través de los mecanismos com habituales.
 
@@ -51,7 +52,7 @@ Esta interfaz reside dentro del tiempo de ejecución y no se expone a través de
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Interfaces para depuración](debugging-interfaces.md)

@@ -2,14 +2,15 @@
 title: Contrato de error
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5081284075ffa31c947a0e63f915a721ea5983c0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 898692119e3e71b1c5aeedcd65674a49842ef110
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600508"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96245216"
 ---
 # <a name="fault-contract"></a>Contrato de error
+
 El ejemplo de Contrato de error muestra cómo comunicar información de error de un servicio a un cliente. El ejemplo se basa en el [Introducción](getting-started-sample.md), con algún código adicional agregado al servicio para convertir una excepción interna en un error. El cliente intenta realizar la división por cero para forzar una condición de error en el servicio.  
   
 > [!NOTE]
