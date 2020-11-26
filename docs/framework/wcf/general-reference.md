@@ -6,12 +6,13 @@ helpviewer_keywords:
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-ms.openlocfilehash: 2cf80d9ac9c09057e2a3339161f7629d63e259ba
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e7b6c2fb2f39c6ee322db2cf52b62a2cf7de87dc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319837"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238312"
 ---
-# <a name="general-reference"></a><span data-ttu-id="92191-102">Referencia general</span><span class="sxs-lookup"><span data-stu-id="92191-102">General Reference</span></span>
-<span data-ttu-id="92191-103">La sección [\<System. serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) describe los elementos que se usan para configurar los clientes y servicios de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="92191-103">The section [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) describes the elements that are used to configure Windows Communication Foundation (WCF) clients and services.</span></span>
+# <a name="general-reference"></a><span data-ttu-id="3b6ef-102">Referencia general</span><span class="sxs-lookup"><span data-stu-id="3b6ef-102">General Reference</span></span>
+
+<span data-ttu-id="3b6ef-103">En la sección [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) se describen los elementos que se usan para configurar clientes y servicios de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="3b6ef-103">The section [\<system.serviceModel>](../configure-apps/file-schema/wcf/system-servicemodel.md) describes the elements that are used to configure Windows Communication Foundation (WCF) clients and services.</span></span>
