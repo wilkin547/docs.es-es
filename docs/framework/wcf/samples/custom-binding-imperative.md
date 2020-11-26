@@ -2,14 +2,15 @@
 title: Imperativo en enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: f7ba5c21b35d556be2c8d0817c37d98ad7d7dfcb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6be5105831fa3845db9a55a14a7ed8821dc1cbc4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594743"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241920"
 ---
 # <a name="custom-binding-imperative"></a>Imperativo en enlace personalizado
+
 En el ejemplo se muestra cómo escribir código imperativo para definir y utilizar los enlaces personalizados sin utilizar un archivo de configuración o un cliente generado por Windows Communication Foundation (WCF). Este ejemplo combina las características proporcionadas por el transporte HTTP y el canal de sesión confiable para crear un enlace basado en HTTP confiable. Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora.  
   
 > [!NOTE]

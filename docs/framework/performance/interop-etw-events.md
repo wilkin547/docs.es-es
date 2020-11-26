@@ -6,14 +6,15 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-ms.openlocfilehash: 9dac9bc70cd070eb3e94969ce47ce24325a6f89d
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 8e92a1492d0295fb71473843752cb4c6184d3604
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242193"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
+
 Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
 
 ## <a name="ilstubgenerated-event"></a>Evento ILStubGenerated
@@ -32,7 +33,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Identificador del módulo.|  
 |StubMethodID|win:UInt64|Identificador del método de código auxiliar.|  
@@ -62,7 +63,7 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
   
  En la siguiente tabla se muestran los datos del evento.  
   
-|Nombre de campo|Tipo de datos|Descripción|  
+|Nombre del campo|Tipo de datos|Descripción|  
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Identificador del módulo.|  
 |StubMethodID|win:UInt64|Identificador del método de código auxiliar.|  
@@ -72,6 +73,6 @@ En la tabla siguiente se muestra la palabra clave y el nivel.
 |ManagedInteropMethodSignature|win:UnicodeString|Firma del método de interoperabilidad administrado.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

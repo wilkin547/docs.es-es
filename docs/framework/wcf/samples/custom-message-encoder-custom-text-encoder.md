@@ -3,12 +3,12 @@ title: 'Codificador de mensajes personalizado: codificador de texto personalizad
 description: Use este ejemplo para implementar un codificador de mensajes de texto personalizado mediante WCF. Este codificador admite todas las codificaciones de caracteres compatibles con la plataforma para la interoperabilidad.
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 88ddc79e6cc1df654aea851cedb0e60c6fbcd017
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 89f0bf09ba6408e24f642a67f2e7ac8243608dcb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246277"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96240971"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificador de mensajes personalizado: codificador de texto personalizado
 
@@ -218,6 +218,7 @@ Cualquier tipo que deriva de <xref:System.ServiceModel.Channels.MessageEncodingB
 Para este ejemplo, la configuración del cliente se hace manualmente. No puede utilizar Svcutil.exe para generar la configuración del cliente porque `CustomTextMessageBindingElement` no exporta una aserción de directiva para describir su comportamiento. Generalmente debería implementar la interfaz <xref:System.ServiceModel.Description.IPolicyExportExtension> en un elemento de enlace personalizado para exportar una aserción de directiva personalizada que describa el comportamiento o la función implementada por el elemento de enlace. Para obtener un ejemplo de cómo exportar una aserción de directiva para un elemento de enlace personalizado, vea el ejemplo [Transport: UDP](transport-udp.md) .
 
 ## <a name="message-encoding-binding-configuration-handler"></a>Controlador de configuración de enlace de codificación de mensajes
+
 La sección anterior muestra cómo utilizar mediante programación el codificador de mensajes de texto personalizado. `CustomTextMessageEncodingBindingSection` implementa un controlador de configuración que le permite especificar el uso de un codificador de mensajes de texto personalizado dentro de un archivo de configuración. La clase `CustomTextMessageEncodingBindingSection` se deriva de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . La propiedad `BindingElementType` informa al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección.
 
 Todos los valores definidos por `CustomTextMessageBindingElement` se exponen como propiedades en `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> ayuda en la asignación de atributos de elemento de configuración para las propiedades y en la definición de valores predeterminados si el atributo no está definido. Después de cargar y aplicar los valores de la configuración a las propiedades del tipo, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, que convierte las propiedades en una instancia concreta de un elemento de enlace.

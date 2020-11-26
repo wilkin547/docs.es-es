@@ -2,17 +2,19 @@
 title: Compuesto personalizado utilizando la actividad Native
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: bf2b8123619df8977b0687c72663c6b482e35654
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 82cfd8605d66e2cb489326c40f6ae3e960123788
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200875"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242245"
 ---
 # <a name="custom-composite-using-native-activity"></a>Compuesto personalizado utilizando la actividad Native
+
 En este ejemplo se muestra cómo escribir un objeto <xref:System.Activities.NativeActivity> que programa otros objetos <xref:System.Activities.Activity> para controlar el flujo de ejecución de un flujo de trabajo. En este ejemplo se utilizan dos flujos de control comunes, Sequence y While, para mostrar cómo hacerlo.
 
 ## <a name="sample-details"></a>Detalles del ejemplo
+
  A partir de `MySequence`, lo primero que debe observar es que deriva de <xref:System.Activities.NativeActivity>. <xref:System.Activities.NativeActivity> es el objeto <xref:System.Activities.Activity> que expone todo el tiempo de ejecución de flujo de trabajo mediante el <xref:System.Activities.NativeActivityContext> pasado al método `Execute`.
 
  `MySequence` expone una colección pública de objetos <xref:System.Activities.Activity> que rellena el autor del flujo de trabajo. Antes de que se ejecute el flujo de trabajo, el tiempo de ejecución del flujo de trabajo llama al método <xref:System.Activities.Activity.CacheMetadata%2A> en cada actividad de un flujo de trabajo. Durante este proceso, el tiempo de ejecución establece relaciones primarias-secundarias para administrar la duración y el ámbito de los datos. La implementación predeterminada del <xref:System.Activities.Activity.CacheMetadata%2A> método utiliza la <xref:System.ComponentModel.TypeDescriptor> clase de instancia de la `MySequence` actividad para agregar cualquier propiedad pública de tipo <xref:System.Activities.Activity> o <xref:System.Collections.IEnumerable> \<<xref:System.Activities.Activity>> como elementos secundarios de la `MySequence` actividad.
@@ -25,7 +27,7 @@ En este ejemplo se muestra cómo escribir un objeto <xref:System.Activities.Nati
 
  Cuando la actividad secundaria se completa, se ejecuta <xref:System.Activities.CompletionCallback>. El bucle continúa desde el principio. Al igual que `Execute`, <xref:System.Activities.CompletionCallback> toma un objeto <xref:System.Activities.NativeActivityContext>, otorgando al implementador acceso al tiempo de ejecución.
 
- `MyWhile`difiere de `MySequence` en que programa un solo objeto de forma <xref:System.Activities.Activity> repetida y en que utiliza un <xref:System.Activities.Activity%601><bool \> denominado `Condition` para determinar si se debe realizar esta programación. Al igual que `MySequence`, `MyWhile` utiliza un método `InternalExecute` para centralizar su lógica de programación. Programa el `Condition` <xref:System.Activities.Activity><bool \> con un <xref:System.Activities.CompletionCallback%601> \<bool> denominado `OnEvaluationCompleted` . Cuando se completa la ejecución de `Condition` , su resultado pasa a estar disponible a través <xref:System.Activities.CompletionCallback> de este en un parámetro fuertemente tipado denominado `result` . If `true`, `MyWhile` llama a  <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, pasando el objeto `Body`<xref:System.Activities.Activity> y `InternalExecute` como <xref:System.Activities.CompletionCallback>. Cuando la ejecución de `Body` se completa, `Condition` se vuelve a programar en `InternalExecute`, lo que inicia de nuevo el bucle. Cuando `Condition` devuelve `false`, una instancia de `MyWhile` devuelve el control al tiempo de ejecución sin programar el objeto `Body` y el tiempo de ejecución pasa al estado <xref:System.Activities.ActivityInstanceState.Closed>.
+ `MyWhile` difiere de `MySequence` en que programa un solo objeto de forma <xref:System.Activities.Activity> repetida y en que utiliza un <xref:System.Activities.Activity%601><bool \> denominado `Condition` para determinar si se debe realizar esta programación. Al igual que `MySequence`, `MyWhile` utiliza un método `InternalExecute` para centralizar su lógica de programación. Programa el `Condition` <xref:System.Activities.Activity><bool \> con un <xref:System.Activities.CompletionCallback%601> \<bool> denominado `OnEvaluationCompleted` . Cuando se completa la ejecución de `Condition` , su resultado pasa a estar disponible a través <xref:System.Activities.CompletionCallback> de este en un parámetro fuertemente tipado denominado `result` . If `true`, `MyWhile` llama a  <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, pasando el objeto `Body`<xref:System.Activities.Activity> y `InternalExecute` como <xref:System.Activities.CompletionCallback>. Cuando la ejecución de `Body` se completa, `Condition` se vuelve a programar en `InternalExecute`, lo que inicia de nuevo el bucle. Cuando `Condition` devuelve `false`, una instancia de `MyWhile` devuelve el control al tiempo de ejecución sin programar el objeto `Body` y el tiempo de ejecución pasa al estado <xref:System.Activities.ActivityInstanceState.Closed>.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 

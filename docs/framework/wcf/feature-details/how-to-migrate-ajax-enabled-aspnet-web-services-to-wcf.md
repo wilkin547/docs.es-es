@@ -2,14 +2,15 @@
 title: Procedimiento para migrar servicios web de ASP.NET con AJAX habilitado a WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 6f356f47922945218e02271371d9ddea36ecc5a2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 89c9601ba6afcef9733d7653564a98664a1ed70f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597012"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241907"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Procedimiento para migrar servicios web de ASP.NET con AJAX habilitado a WCF
+
 En este tema se describen los procedimientos para migrar un servicio básico de AJAX de ASP.NET a un servicio equivalente compatible con AJAX Windows Communication Foundation (WCF). Muestra cómo crear una versión de WCF funcionalmente equivalente de un servicio de AJAX de ASP.NET. Los dos servicios se pueden usar en paralelo, o el servicio WCF se puede usar para reemplazar el servicio ASP.NET AJAX.
 
  La migración de un servicio de ASP.NET AJAX existente a un servicio de AJAX de WCF proporciona las siguientes ventajas:
@@ -28,7 +29,7 @@ En este tema se describen los procedimientos para migrar un servicio básico de 
 
 1. Abra Visual Studio 2012.
 
-2. En el menú **archivo** , seleccione **nuevo**, **proyecto**, **Web**y, a continuación, seleccione **aplicación de servicio Web ASP.net**.
+2. En el menú **archivo** , seleccione **nuevo**, **proyecto**, **Web** y, a continuación, seleccione **aplicación de servicio Web ASP.net**.
 
 3. Asigne un nombre al proyecto `ASPHello` y haga clic en **Aceptar**.
 
@@ -36,7 +37,7 @@ En este tema se describen los procedimientos para migrar un servicio básico de 
 
 5. En el menú **compilar** , seleccione **compilar solución**.
 
-6. En el menú **Depurar**, seleccione **Iniciar sin depurar**.
+6. En el menú **Depurar**, seleccione **Iniciar sin depuración**.
 
 7. En la página web generada, seleccione la operación `HelloWorld`.
 
@@ -53,7 +54,7 @@ En este tema se describen los procedimientos para migrar un servicio básico de 
 
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>Para crear una aplicación de servicio de AJAX de WCF equivalente.
 
-1. Haga clic con el botón derecho en el proyecto **ASPHello** y seleccione **Agregar**, **nuevo elemento**y, a continuación, **servicio WCF habilitado para Ajax**.
+1. Haga clic con el botón derecho en el proyecto **ASPHello** y seleccione **Agregar**, **nuevo elemento** y, a continuación, **servicio WCF habilitado para Ajax**.
 
 2. Asigne un nombre al servicio `WCFHello` y haga clic en **Agregar**.
 
@@ -111,6 +112,7 @@ En este tema se describen los procedimientos para migrar un servicio básico de 
 11. Los `WCFHello.svc/HelloWorld` extremos y `Service1.aspx/HelloWorld` son funcionalmente equivalentes.
 
 ## <a name="example"></a>Ejemplo
+
  El código resultado del procedimiento descrito en este tema se proporciona en el ejemplo siguiente.
 
 ```csharp
@@ -195,7 +197,7 @@ d.Add("two", 2);
 
 - [{"Clave":"uno","Valor":1}, {"Clave":"dos","Valor":2}] por <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
-- {"uno": 1, "dos": 2} por ASP.NET AJAX<xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"uno": 1, "dos": 2} por ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> es más eficaz en el sentido de que puede controlar los diccionarios cuyo tipo de clave no es de cadena, mientras que <xref:System.Web.Script.Serialization.JavaScriptSerializer> no puede. Pero el último es más compatible con JSON.
 
@@ -204,7 +206,7 @@ d.Add("two", 2);
 |Categoría de diferencias|DataContractJsonSerializer|JavaScriptSerializer de AJAX de ASP.NET|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Deserializar el búfer vacío (nuevo byte [0]) en <xref:System.Object> (o <xref:System.Uri> o algunas otras clases).|SerializationException|null|
-|Serialización de <xref:System.DBNull.Value>|{}(o {"__type": "#System"})|Null|
+|Serialización de <xref:System.DBNull.Value>|{} (o {"__type": "#System"})|Null|
 |Serialización de los miembros privados de tipos [Serializable].|serialized|not serialized|
 |Serialización de las propiedades públicas de los tipos <xref:System.Runtime.Serialization.ISerializable>.|not serialized|serialized|
 |"Extensiones" de JSON|Conforme con la especificación de JSON, que requiere comillas en los nombres de miembro de objetos ({"a":"hola"}).|Admite los nombres de miembros de objeto sin comillas ({a:"hola"}).|

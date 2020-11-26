@@ -8,14 +8,15 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: f8231acade6821c95a76a608633fe443f4add8ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8dd38f3d07773a4be67648b9c1830206438200d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586922"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242882"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>Procedimiento para establecer un sesgo de reloj máximo
+
 Las funciones críticas en el tiempo se pueden desbaratar si los ajustes del reloj en dos equipos son diferentes. Para mitigar esta posibilidad, puede establecer la propiedad `MaxClockSkew` en <xref:System.TimeSpan>. Esta propiedad está disponible en dos clases:  
   
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  

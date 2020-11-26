@@ -2,17 +2,19 @@
 title: Hospedar información general de servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 19f3704f-06bf-4eeb-8724-5224e02d7ead
-ms.openlocfilehash: 10ea35fc1988e1b3e6ceb44aca098e63bfc7d7e4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 150cb98ab3cef8231489219a16709344cbd19bd5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597298"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242973"
 ---
 # <a name="hosting-workflow-services-overview"></a>Hospedar información general de servicios de flujo de trabajo
+
 Los servicios de flujo de trabajo deben estar hospedados para ejecutarse. La clase <xref:System.ServiceModel.WorkflowServiceHost> es el host de flujo de trabajo que hospeda varias instancias, la configuración y la mensajería WCF (aunque no es necesario que los flujos de trabajo usen la mensajería para ser hospedados).  También se integra con la persistencia, el seguimiento y el control de instancias a través de un conjunto de comportamientos de servicio.  Al igual que el <xref:System.ServiceModel.ServiceHost> de WCF, el <xref:System.ServiceModel.WorkflowServiceHost> puede ser autohospedado por cualquier aplicación .NET administrada u hospedada en web (como un archivo .xamlx) en IIS o WAS.  Los temas de esta sección describen cómo hospedar un servicio de flujo de trabajo.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Hospedar servicios de flujo de trabajo](hosting-workflow-services.md)  
  Describe los servicios de hospedaje de flujos de trabajo.  
   
@@ -32,6 +34,7 @@ Los servicios de flujo de trabajo deben estar hospedados para ejecutarse. La cla
  Describe cómo controlar la persistencia, el seguimiento, la inactividad y el comportamiento de las excepciones no controladas.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
  <xref:System.ServiceModel.Activities.WorkflowService>  
@@ -43,4 +46,5 @@ Los servicios de flujo de trabajo deben estar hospedados para ejecutarse. La cla
  <xref:System.ServiceModel.Activation.WorkflowServiceHostFactory>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Servicios de flujo de trabajo](workflow-services.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 867293c00d0724e27f5163f3ae8be43aca30cfe8
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: a2903df0722a931ec2fe37a5b2f3581611965567
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164392"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241673"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el cliente
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -31,11 +32,15 @@ ms.locfileid: "87164392"
  Las aplicaciones también pueden registrar otros proveedores del lado cliente.  
   
 <a name="Distributing_Client-Side_Providers"></a>
+
 ## <a name="distributing-client-side-providers"></a>Distribución de proveedores del cliente  
+
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] espera encontrar proveedores del lado cliente en un ensamblado de código administrado. El espacio de nombres de este ensamblado debería tener el mismo nombre que el ensamblado. Por ejemplo, un ensamblado denominado ContosoProxies.dll contendría el espacio de nombres ContosoProxies. En el espacio de nombres, cree una clase <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> . En la implementación del campo <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> estático, cree una matriz de estructuras <xref:System.Windows.Automation.ClientSideProviderDescription> que describan los proveedores.  
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>
+
 ## <a name="registering-and-configuring-client-side-providers"></a>Registro y configuración de proveedores de lado de cliente  
+
  Los proveedores del lado cliente de una biblioteca de vínculos dinámicos (DLL) se cargan llamando a <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A> . No es necesario realizar ninguna acción por una aplicación cliente para usar los proveedores.  
   
  Los proveedores implementados en el propio código del cliente se registran mediante <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Este método toma como argumento una matriz de estructuras <xref:System.Windows.Automation.ClientSideProviderDescription> y cada una de ellas especifica las siguientes propiedades:  
