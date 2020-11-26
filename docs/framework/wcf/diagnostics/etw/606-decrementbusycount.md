@@ -2,27 +2,30 @@
 title: 606 - DecrementBusyCount
 ms.date: 03/30/2017
 ms.assetid: 3dd6c6ae-1010-415c-82e4-51eaa897f1fa
-ms.openlocfilehash: b4142caded06282cf3406b3dbaa0fc9646897346
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b2560445bd05ced32be2ee5cd7e8c1b0321031d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61952937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96246893"
 ---
 # <a name="606---decrementbusycount"></a>606 - DecrementBusyCount
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|606|  
 |Palabras clave|WebHost|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Este evento se genera cuando se llama a DecrementBusyCount.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Llamado a DecrementBusyCount. Origen: %1  
   
 ## <a name="details"></a>Detalles

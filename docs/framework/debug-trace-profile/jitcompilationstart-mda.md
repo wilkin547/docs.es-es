@@ -8,30 +8,35 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 13e20c1a940b7bfa777245ba35f3cc1b003d15b2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 228226d90e70d296681e48ffe85dada8eb18209a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325532"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247374"
 ---
 # <a name="jitcompilationstart-mda"></a>MDA de jitCompilationStart
 
 El Asistente para la depuración administrada (MDA) `jitCompilationStart` se activa para informar del momento en el que el compilador Just-In-Time (JIT) empieza a compilar una función.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  El tamaño del espacio de trabajo aumenta para un programa que ya está en formato de imagen nativa, porque mscorjit.dll se carga en el proceso.  
   
 ## <a name="cause"></a>Causa  
+
 No todos los ensamblados de los que depende el programa se han generado en formato nativo o un ensamblado no se ha registrado correctamente.  
 
 ## <a name="resolution"></a>Solución  
+
  La habilitación de este MDA le permite identificar la función que se va a compilar con JIT. Asegúrese de que el ensamblado que contiene la función se genera en formato nativo y se registra correctamente.
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el tiempo de ejecución  
+
  Este MDA registra un mensaje justo antes de que un método se compile con JIT, por lo que habilitar este MDA tiene un impacto significativo en el rendimiento. Si un método está alineado, este MDA no generará un mensaje independiente.  
   
 ## <a name="output"></a>Resultados  
+
  En el ejemplo de código siguiente se muestran los resultados del ejemplo. En este caso, el resultado muestra que, en la prueba del ensamblado, el método "m" de la clase "ns2.CO" se compiló JIT.  
   
 ```output
@@ -39,6 +44,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Configuración  
+
  En el archivo de configuración siguiente se muestra una variedad de filtros que se pueden emplear para filtrar qué métodos se notifican cuando se compilan con JIT por primera vez. Puede especificar que se notifiquen todos los métodos estableciendo el valor del atributo name en \* .  
   
 ```xml  
@@ -60,6 +66,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El ejemplo de código siguiente está pensado para usarse con el archivo de configuración anterior.  
   
 ```csharp

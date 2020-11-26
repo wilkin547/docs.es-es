@@ -2,17 +2,19 @@
 title: Aplicaciones cliente de nivel intermedio
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c50223a55765f211dae710f96bffa7716ce36b32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5019215567f4c9127f2e53fd4cdf0d4a67b84d17
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248258"
 ---
 # <a name="middle-tier-client-applications"></a>Aplicaciones cliente de nivel intermedio
+
 En este tema se describen varios problemas específicos de las aplicaciones cliente de nivel intermedio que usan Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Aumentar el rendimiento del cliente de nivel intermedio  
+
  En comparación con las tecnologías de comunicaciones anteriores, como los servicios web que usan ASP.NET, la creación de una instancia de cliente de WCF puede ser más compleja debido al amplio conjunto de características de WCF. Por ejemplo, cuando se abre un objeto <xref:System.ServiceModel.ChannelFactory%601>, éste puede establecer una sesión segura con el servicio, un procedimiento que aumenta el tiempo de inicio de la instancia del cliente. Normalmente, estas funciones de características adicionales no afectan a las aplicaciones cliente en gran medida, ya que el cliente de WCF realiza varias llamadas y, a continuación, se cierra.  
   
  Sin embargo, las aplicaciones cliente de nivel intermedio pueden crear muchos objetos de cliente de WCF rápidamente y, como resultado, experimentar un aumento de los requisitos de inicialización. Existen dos enfoques principales para aumentar el rendimiento de aplicaciones de nivel intermedio durante la llamada a los servicios:  
@@ -33,7 +35,7 @@ En este tema se describen varios problemas específicos de las aplicaciones clie
   
  Para ver un ejemplo en el que se muestran los procedimientos recomendados para reutilizar un cliente para varias solicitudes, consulte [enlace de datos en un cliente de ASP.net](../samples/data-binding-in-an-aspnet-client.md).  
   
- Además, puede aumentar el rendimiento de inicio de los clientes que utilizan tipos de datos que se serializan utilizando <xref:System.Xml.Serialization.XmlSerializer> para generar y compilar código de serialización de esos tipos de datos en el tiempo de ejecución, lo que puede dar lugar a un rendimiento de inicio lento. La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Para obtener más información, vea [Cómo: mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
+ Además, puede aumentar el rendimiento de inicio de los clientes que utilizan tipos de datos que se serializan utilizando <xref:System.Xml.Serialization.XmlSerializer> para generar y compilar código de serialización de esos tipos de datos en el tiempo de ejecución, lo que puede dar lugar a un rendimiento de inicio lento. La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) puede mejorar el rendimiento de inicio de estas aplicaciones mediante la generación del código de serialización necesario a partir de los ensamblados compilados para la aplicación. Para obtener más información, vea [Cómo: mejorar el tiempo de inicio de las aplicaciones cliente WCF mediante XmlSerializer](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Vea también
 

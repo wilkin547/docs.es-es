@@ -2,14 +2,15 @@
 title: Servicios de WCF y seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 38e26c369d17f4aa9ccb39d2ae649facffe65418
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5fcfb34843d1168511141b4ce2b4f956559290a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247842"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Servicios de WCF y seguimiento de eventos para Windows
+
 En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communication Foundation (WCF) para emitir eventos en seguimiento de eventos para Windows (ETW). Los seguimientos analíticos son eventos emitidos en los puntos clave de la pila de WCF que permiten solucionar problemas de los servicios WCF en el entorno de producción.
 
  El seguimiento analítico en los servicios WCF es un seguimiento que se puede activar en un entorno de producción con un impacto mínimo en el rendimiento. Estos seguimientos se emiten como eventos para una sesión de ETW.
@@ -32,7 +33,7 @@ En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communi
 
      El cliente de prueba de WCF (WcfTestClient.exe) se encuentra en `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe` .  El directorio de instalación predeterminado de Visual Studio 2012 es `C:\Program Files\Microsoft Visual Studio 10.0` .
 
-5. En el cliente de prueba de WCF, agregue el servicio seleccionando **archivo**y, a continuación, **Agregar servicio**.
+5. En el cliente de prueba de WCF, agregue el servicio seleccionando **archivo** y, a continuación, **Agregar servicio**.
 
      Agregue la dirección del punto de conexión en el cuadro de entrada. De manera predeterminada, es `http://localhost:1378/Calculator.svc`.
 
@@ -40,15 +41,15 @@ En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communi
 
      Antes de invocar el servicio, inicie Visor de eventos y asegúrese de que el registro de eventos está escuchando los eventos de seguimiento emitidos por el servicio WCF.
 
-7. En el menú **Inicio** , seleccione **herramientas administrativas**y, a continuación, **visor de eventos**.  Habilitar los registros **analíticos** y de **depuración** .
+7. En el menú **Inicio** , seleccione **herramientas administrativas** y, a continuación, **visor de eventos**.  Habilitar los registros **analíticos** y de **depuración** .
 
-8. En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón derecho en **servidor de aplicaciones-aplicaciones**, seleccione **Ver**y, a continuación, **muestre los registros analíticos y de depuración**.
+8. En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** y, a continuación, **aplicaciones de servidor de** aplicaciones. Haga clic con el botón derecho en **servidor de aplicaciones-aplicaciones**, seleccione **Ver** y, a continuación, **muestre los registros analíticos y de depuración**.
 
      Asegúrese de que la opción **Mostrar registros analíticos y de depuración** está activada.
 
 9. Habilitación del registro **analítico** .
 
-     En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**.
+     En la vista de árbol de Visor de eventos, vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** y, a continuación, **aplicaciones de servidor de** aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**.
 
 #### <a name="to-test-the-service"></a>Para probar el servicio
 
@@ -58,7 +59,7 @@ En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communi
 
 2. Observe los eventos emitidos desde el servicio.
 
-     Vuelva a Visor de eventos y navegue a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Actualizar**.
+     Vuelva a Visor de eventos y navegue a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** y, a continuación, **aplicaciones de servidor de** aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Actualizar**.
 
      Los eventos de seguimiento analítico de WCF se muestran en el visor de eventos. Observe que dado que el servicio inició un error, se muestra un evento de seguimiento del error en el visor de eventos.
 
@@ -72,9 +73,9 @@ En este ejemplo se muestra cómo utilizar la traza analítica en Windows Communi
 
 1. Abra el Visor de eventos.
 
-2. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **deshabilitar registro**.
+2. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** y, a continuación, **aplicaciones de servidor de** aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **deshabilitar registro**.
 
-3. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows**y, a continuación, **aplicaciones de servidor de**aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Borrar registro**.
+3. Vaya a **visor de eventos**, **registros de aplicaciones y servicios**, **Microsoft**, **Windows** y, a continuación, **aplicaciones de servidor de** aplicaciones. Haga clic con el botón secundario en **analítico** y seleccione **Borrar registro**.
 
 4. Elija la opción **Borrar** para borrar los eventos.
 

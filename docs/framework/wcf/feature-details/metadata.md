@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF]
 ms.assetid: 66a61bd0-18d3-4e7e-bf8b-177a10ac2f60
-ms.openlocfilehash: 7cb70e00bfd2558c3949bfd3d3597f7156572620
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c7f681de9b4485d9963eab2b27fbdea74b8832f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598832"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96248284"
 ---
 # <a name="metadata"></a>Metadatos
-El Windows Communication Foundation (WCF) proporciona una infraestructura para exportar, publicar, recuperar e importar metadatos de servicio. Los servicios WCF usan metadatos para describir cómo interactuar con los extremos del servicio de forma que las herramientas, como SvcUtil. exe, puedan generar automáticamente el código de cliente para tener acceso al servicio.  
+
+El Windows Communication Foundation (WCF) proporciona una infraestructura para exportar, publicar, recuperar e importar metadatos de servicio. Los servicios WCF usan metadatos para describir cómo interactuar con los extremos del servicio de forma que las herramientas, como Svcutil.exe, puedan generar automáticamente el código de cliente para tener acceso al servicio.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general de la arquitectura de metadatos](metadata-architecture-overview.md)  
  Una información general de alto nivel de la arquitectura de metadatos.  
   
@@ -27,7 +29,7 @@ El Windows Communication Foundation (WCF) proporciona una infraestructura para e
  [Publicación de metadatos](publishing-metadata.md)  
  Describe cómo WCF publica los metadatos.  
   
- [Recuperar metadatos](retrieving-metadata.md)  
+ [Recuperación de metadatos](retrieving-metadata.md)  
  Describe las diferentes maneras de recuperar metadatos.  
   
  [Utilización de los metadatos](using-metadata.md)  

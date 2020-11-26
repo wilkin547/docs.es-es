@@ -5,17 +5,19 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556263"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247491"
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
+
 La autorización es el proceso para controlar el acceso y los derechos a los recursos, como servicios o archivos. En los temas de esta sección se muestra cómo realizar esta tarea básica en Windows Communication Foundation (WCF) de varias maneras.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Mecanismos de control de acceso](access-control-mechanisms.md)  
  Proporciona una breve descripción de los mecanismos de autorización en WCF y los usos sugeridos.  
   
@@ -35,6 +37,7 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
  Explica la diferencia entre la delegación y la suplantación.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel.Security>  
   
  <xref:System.ServiceModel.Description.PrincipalPermissionMode>  
@@ -44,6 +47,7 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Autenticación](authentication-in-wcf.md)  
   
 ## <a name="see-also"></a>Vea también

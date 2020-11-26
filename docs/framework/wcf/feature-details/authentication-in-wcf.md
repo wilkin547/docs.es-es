@@ -6,17 +6,19 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: 414353b360992abea69d47de9efb22c3c77f4bf6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e2334a8c024238f38e1c927a278a4e25e7dabd9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558282"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247543"
 ---
 # <a name="authentication-in-wcf"></a>Autenticación en WCF
+
 En los temas siguientes se muestran una serie de mecanismos diferentes en Windows Communication Foundation (WCF) que proporcionan autenticación, por ejemplo, la autenticación de Windows, los certificados X. 509 y el nombre de usuario y contraseñas.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Procedimiento para usar el proveedor de pertenencia de ASP.NET](how-to-use-the-aspnet-membership-provider.md)  
  Las características de ASP.NET incluyen una pertenencia y proveedor de funciones, una base de datos para almacenar pares de nombre de usuario/contraseña para la autenticación y funciones de usuario para la autorización. En este tema se explica cómo los servicios WCF pueden usar la misma base de datos para autenticar y autorizar a los usuarios.  
   
@@ -33,9 +35,11 @@ En los temas siguientes se muestran una serie de mecanismos diferentes en Window
  Se centra en los problemas comunes que se producen cuando se usa la autenticación de Windows.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Escenarios de seguridad comunes](common-security-scenarios.md)  
   
 ## <a name="see-also"></a>Vea también
