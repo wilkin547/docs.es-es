@@ -133,7 +133,7 @@ items:
             href: ../core/tutorials/index.md
   - name: Novedades
     items:
-      - name: "Novedades de .NET\_5"
+      - name: "Novedades de .NET\_5.0"
         href: ../core/dotnet-five.md
       - name: "Novedades de .NET\_Core 3.1"
         href: ../core/whats-new/dotnet-core-3-1.md
