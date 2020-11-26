@@ -2,14 +2,15 @@
 title: Arquitectura de distribución
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 718778993a953ae819a2bee5a4a050a81d3a4b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587526"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234809"
 ---
 # <a name="architecture-of-syndication"></a>Arquitectura de distribución
+
 La API de distribución está diseñada para proporcionar un modelo de programación neutral en cuanto al formato que permita escribir contenido distribuido en la conexión en una variedad de formatos. El modelo de datos abstracto está compuesto por las siguientes clases:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
@@ -36,11 +37,12 @@ La API de distribución está diseñada para proporcionar un modelo de programac
 > La especificación Atom 1.0 permite especificar segundos fraccionarios en cualquiera de sus estructuras de fechas. Al serializar y deserializar la implementación de WCF, se omiten las fracciones de segundo.  
   
 ## <a name="object-model"></a>Modelo de objetos  
+
  El modelo de objetos para la distribución está compuesto de grupos de clases de las tablas siguientes.  
   
  Dar formato a las clases:  
   
-|Class|Descripción|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Una clase que serializa una instancia de <xref:System.ServiceModel.Syndication.SyndicationFeed> al formato Atom 1.0.|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Una clase que serializa las clases derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeed> al formato Atom 1.0.|  
@@ -53,12 +55,12 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
  Clases de modelo de objetos:  
   
-|Class|Descripción|  
+|Clase|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|Una clase que representa la categoría de una fuente de distribución.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Una clase base que representa el contenido de distribución.|  
 |<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Una clase que representa una extensión de elemento de distribución.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Colección de objetos <xref:System.ServiceModel.Syndication.SyndicationElementExtension>.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Una colección de objetos <xref:System.ServiceModel.Syndication.SyndicationElementExtension>.|  
 |<xref:System.ServiceModel.Syndication.SyndicationFeed>|Una clase que representa un objeto de fuente de nivel superior.|  
 |<xref:System.ServiceModel.Syndication.SyndicationItem>|Una clase que representa un elemento de fuente.|  
 |<xref:System.ServiceModel.Syndication.SyndicationLink>|Una clase que representa un vínculo dentro de una fuente o elemento de distribución.|  

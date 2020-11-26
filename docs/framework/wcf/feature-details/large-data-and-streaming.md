@@ -3,21 +3,23 @@ title: Datos de gran tamaño y secuencias
 description: Obtenga información sobre las consideraciones para la comunicación basada en XML de WCF, codificadores y datos de streaming, incluida la transferencia de datos binarios.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 58ef2ea1fd4f9aa800a91edbaabeb80f989b38f4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 09e020801486c09c027883fca3d67a6c2e2fe8d7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555034"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234705"
 ---
 # <a name="large-data-and-streaming"></a>Datos de gran tamaño y secuencias
 
 Windows Communication Foundation (WCF) es una infraestructura de comunicaciones basada en XML. Dado que los datos XML se codifican normalmente en el formato de texto estándar definido en la [especificación de xml 1,0](https://www.w3.org/TR/REC-xml/), los desarrolladores y arquitectos de sistemas conectados suelen preocuparse por la superficie de conexión (o el tamaño) de los mensajes enviados a través de la red, y la codificación basada en texto de XML plantea desafíos especiales para la transferencia eficaz de datos binarios.  
   
 ## <a name="basic-considerations"></a>Consideraciones básicas  
+
  Para proporcionar información general acerca de la siguiente información para WCF, en esta sección se destacan algunos aspectos generales y consideraciones sobre las codificaciones, los datos binarios y la transmisión por secuencias que generalmente se aplican a las infraestructuras de sistemas conectados.  
   
 ### <a name="encoding-data-text-vs-binary"></a>Codificar datos: Texto y Binario  
+
  Entre las preocupaciones que suelen expresar los programadores se incluyen la percepción de que XML supone un exceso de trabajo significativo en comparación con los formatos binarios debido a la naturaleza repetitiva de las etiquetas de inicio y de cierre, que la codificación de los valores numéricos es significativamente más larga porque se expresan en valores de texto y que esos datos binarios no se pueden expresar eficazmente porque deben codificarse de forma especial para incrustarse en un formato de texto.  
   
  Aunque muchos de estos aspectos y otros similares son válidos, la diferencia real entre los mensajes codificados en texto XML en un entorno de servicios Web XML y los mensajes con codificación binaria en un entorno de llamada a procedimiento remoto (RPC) heredado es, a menudo, mucho menos significativa que la consideración inicial podría sugerir.  
@@ -33,6 +35,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  Una ventaja clara de los mensajes de texto XML es que están basados en estándares y proporcionan la opción más completa en cuanto a interoperabilidad y compatibilidad de plataforma. Para obtener más información, vea la sección "codificaciones" más adelante en este tema.  
   
 ### <a name="binary-content"></a>Contenido binario  
+
  Un área en la cual las codificaciones binarias son superiores a las codificaciones basadas en texto con respecto al tamaño del mensaje resultante es elementos de datos binarios de gran tamaño como imágenes, vídeos, secuencias de sonido o cualquier otra forma de datos opacos y binarios que se deben intercambiar entre los servicios y sus consumidores. Para ajustar estos tipos de datos en el texto XML, el enfoque común es codificarlos utilizando la codificación de Base64.  
   
  En una cadena codificada con Base64, cada carácter representa 6 bits de los datos originales de 8 bits, que producen una proporción de sobrecarga de codificación de 4:3 para Base64, sin contar caracteres de formato adicionales (retorno de carro/salto de línea) que se agregan normalmente por convención. Aunque la trascendencia de las diferencias entre la codificación XML y binaria depende normalmente del escenario, un aumento de tamaño superior al 33% cuando se transmite una carga útil de 500 MB no suele ser aceptable.  
@@ -44,6 +47,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  No obstante, como con Base64, MTOM viene también con alguna sobrecarga necesaria para el formato MIME, para que solamente se vean las ventajas de utilizar MTOM cuando el tamaño de un elemento de datos binarios supera aproximadamente 1 KB. Debido a la sobrecarga, los mensajes codificados por MTOM podrían ser mayores que los mensajes que usan la codificación Base64 para datos binarios, si la carga binaria permanece bajo ese umbral. Para obtener más información, vea la sección "codificaciones" más adelante en este tema.  
   
 ### <a name="large-data-content"></a>Contenido de datos de gran tamaño  
+
  Superficie de la conexión a parte, la carga útil de 500 MB previamente mencionada también supone un gran desafío local para el servicio y para el cliente. De forma predeterminada, WCF procesa los mensajes en *modo almacenado en búfer*. Esto significa que todo el contenido de un mensaje está presente en la memoria antes de enviarse o una vez recibido. Aunque es una estrategia acertada para la mayoría de los escenarios y necesaria para el uso de características de mensajería tales como las firmas digitales y la entrega confiable, los mensajes grandes podrían agotar los recursos del sistema.  
   
  La estrategia para tratar con cargas útiles de gran tamaño es usar secuencias. Aunque se suele considerar que los mensajes, en especial aquellos que se expresan en XML, son paquetes de datos relativamente compactos, un mensaje podría tener un tamaño de varios gigabytes y parecerse más a un flujo de datos continuo que a un paquete de datos. Cuando los datos se transfieren en modo de transmisión por secuencias en lugar de en modo de almacenamiento en búfer, el remitente hace que el contenido del cuerpo del mensaje esté disponible para el destinatario en forma de secuencia y la infraestructura del mensaje reenvía continuamente los datos del remitente al receptor a medida que están disponibles.  
@@ -61,6 +65,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  Cuando envíe grandes cantidades de datos, tendrá que establecer la `maxAllowedContentLength` configuración de IIS (para obtener más información, consulte Configuración de los [límites de solicitudes de IIS](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) y la `maxReceivedMessageSize` configuración de enlace (por ejemplo, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) o <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). La `maxAllowedContentLength` propiedad tiene como valor predeterminado 28,6 MB y el `maxReceivedMessageSize` valor predeterminado de la propiedad es 64 KB.  
   
 ## <a name="encodings"></a>Codificaciones  
+
  Una *codificación* define un conjunto de reglas sobre cómo presentar los mensajes en la conexión. Un *codificador* implementa este tipo de codificación y es responsable, en el lado del remitente, de convertir una en memoria en <xref:System.ServiceModel.Channels.Message> una secuencia de bytes o en un búfer de bytes que se puede enviar a través de la red. En el lado del receptor, el codificador convierte una secuencia de bytes en un mensaje en memoria.  
   
  WCF incluye tres codificadores y permite escribir y conectar sus propios codificadores, si es necesario.  
@@ -78,6 +83,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  Si su solución no requiere interoperabilidad, pero todavía quiere utilizar el transporte HTTP, puede crear <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> en un enlace personalizado que utiliza la clase <xref:System.ServiceModel.Channels.HttpTransportBindingElement> para el transporte. Si varios clientes en su servicio requieren interoperabilidad, se recomienda que exponga puntos de conexión paralelos que tengan el transporte adecuado y las opciones de codificación para los respectivos clientes habilitadas.  
   
 ### <a name="enabling-mtom"></a>Habilitar MTOM  
+
  Cuando la interoperabilidad es un requisito y se deben enviar datos binarios de gran tamaño, a continuación, la codificación de mensajes MTOM es la estrategia alternativa de codificación que puede habilitar en los <xref:System.ServiceModel.BasicHttpBinding> estándar o enlaces <xref:System.ServiceModel.WSHttpBinding> estableciendo la propiedad `MessageEncoding` respectiva a <xref:System.ServiceModel.WSMessageEncoding.Mtom> o creando <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> en <xref:System.ServiceModel.Channels.CustomBinding>. En el ejemplo de código siguiente, extraído del ejemplo de [codificación MTOM](../samples/mtom-encoding.md) , se muestra cómo habilitar MTOM en la configuración.  
   
 ```xml  
@@ -99,6 +105,7 @@ Windows Communication Foundation (WCF) es una infraestructura de comunicaciones 
  El codificador MTOM se ajusta a todas las demás características de WCF. Tenga en cuenta que tal vez no sea posible respetar esta regla en todos los casos, por ejemplo, cuando se requiere la compatibilidad de la sesión.  
   
 ### <a name="programming-model"></a>Modelo de programación  
+
  Independientemente de cuál de los tres codificadores integrados utiliza en su aplicación, la experiencia de programación es idéntica con respecto a la transferencia de datos binarios. La diferencia radica en cómo WCF controla los datos en función de sus tipos de datos.  
   
 ```csharp
@@ -124,11 +131,13 @@ class MyData
 > No debería estar utilizando tipos derivados <xref:System.IO.Stream?displayProperty=nameWithType> dentro de los contratos de datos. Los datos de la secuencia se deberían comunicar utilizando el modelo de secuencias, explicado en la sección "Transmisión por secuencias de datos".  
   
 ## <a name="streaming-data"></a>Transmisión por secuencias de datos  
+
  Si tiene una gran cantidad de datos para transferir, el modo de transferencia de streaming en WCF es una alternativa factible al comportamiento predeterminado de almacenar en búfer y procesar los mensajes en memoria en su totalidad.  
   
  Como se ha mencionado anteriormente, habilite la transmisión por secuencias solo para los mensajes de gran tamaño (con contenido de texto o binario) si no se pueden segmentar los datos, si el mensaje debe entregarse puntualmente o si los datos no están todavía totalmente disponibles cuando se inicia la transferencia.  
   
 ### <a name="restrictions"></a>Restricciones  
+
  No se puede usar un número significativo de características de WCF cuando está habilitada la transmisión por secuencias:  
   
 - No se pueden utilizar firmas digitales para el cuerpo del mensaje porque requieren calcular un hash sobre el contenido completo del mensaje. Con transmisión por secuencias, el contenido no está totalmente disponible cuando los encabezados del mensaje se construyen y envían y, por consiguiente, no se puede calcular una firma digital.  
@@ -154,12 +163,14 @@ class MyData
  La transmisión por secuencias no está tampoco disponible al utilizar el transporte del canal del mismo nivel, por lo que no está disponible con <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
 #### <a name="streaming-and-sessions"></a>Transmisión por secuencias y sesiones  
+
  Puede obtener un comportamiento inesperado al transmitir mediante secuencias las llamadas con un enlace basado en sesión. Todas las llamadas de transferencias por secuencias se realizan a través de un canal único (el canal del datagrama) que no admite sesiones incluso si el enlace utilizado esté configurado para utilizar sesiones. Si varios clientes realizan llamadas de transferencia por secuencias al mismo objeto de servicio sobre un enlace basado en sesión y el modo de simultaneidad del objeto de servicio se establece en Single y su modo de contexto de instancia está establecido en PerSession, todas las llamadas deben pasar por el canal de datagramas y solo se procesará una llamada al mismo tiempo. Uno o más clientes pueden agotar el tiempo de espera. Para solucionar este problema, puede establecer el modo de contexto de instancia del objeto de servicio en percall o Concurrency en Multiple.  
   
 > [!NOTE]
 > MaxConcurrentSessions no influye en este caso porque solo hay una "sesión" disponible.  
   
 ### <a name="enabling-streaming"></a>Habilitar la transmisión por secuencias  
+
  Puede habilitar la transmisión por secuencias de las siguientes maneras:  
   
 - Envíe y acepte las solicitudes en modo de transmisión y acepte y devuelva las respuestas en modo almacenado en búfer (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
@@ -187,9 +198,11 @@ class MyData
  Puede activar transmisiones por secuencias para las solicitudes y respuestas o para ambas direcciones independientemente en cualquier lado de las partes en comunicación sin afectar a la funcionalidad. Sin embargo, siempre debería suponer que el tamaño de datos transferido es tan significativo que habilitar la transmisión por secuencias se justifica en ambos puntos de conexión de un enlace de comunicación. Para la comunicación multiplataforma donde uno de los puntos de conexión no se implementa con WCF, la capacidad de usar la transmisión por secuencias depende de las capacidades de transmisión por secuencias de la plataforma. Otra excepción poco frecuente podría ser un escenario conducido por consumo de memoria donde un cliente o servicio debe minimizar su espacio de trabajo y permitir solo los tamaños de búfer pequeños.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Habilitar la transmisión de datos asincrónica  
+
  Para habilitar el streaming asincrónico, agregue el comportamiento de punto de conexión <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> al host de servicio y establezca la propiedad <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> en `true`. También hemos agregado la capacidad de transmisión de datos asincrónica verdadera en el lado de envío. Esto mejora la escalabilidad del servicio en escenarios donde transmite por secuencias mensajes para varios clientes, algunos de los cuales son lentos en la lectura; posiblemente debido a la congestión de red o que no leen en absoluto. En estos escenarios ahora no bloqueamos subprocesos individuales en el servicio por cliente. Esto garantiza que el servicio pueda procesar muchos más clientes, mejorando así la escalabilidad del servicio.  
   
 ### <a name="programming-model-for-streamed-transfers"></a>Modelo de programación para las transferencias de transmisión  
+
  El modelo de programación para transmisión es sencillo. Para recibir los datos transmitidos, especifique un contrato de operación que tiene un parámetro de entrada único de tipo <xref:System.IO.Stream>. Para devolver los datos transmitidos, devuelva una referencia <xref:System.IO.Stream>.  
   
 ```csharp
@@ -229,6 +242,7 @@ public class UploadStreamMessage
  La transmisión por secuencias del nivel de transporte también funciona con cualquier otro tipo de contrato de mensaje (listas de parámetros, argumentos de contrato de datos y el contrato del mensaje explícito), pero como la serialización y deserialización de estos mensajes con tipo definido requieren el almacenado en búfer por el serializador, no se recomienda utilizar estas variantes de contrato.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Consideraciones de seguridad específicas para datos de gran tamaño  
+
  Todos los enlaces le permiten restringir el tamaño de los mensajes entrantes para evitar los ataques por denegación de servicio. <xref:System.ServiceModel.BasicHttpBinding>Por ejemplo, expone una propiedad [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) que limita el tamaño del mensaje entrante y, por tanto, también limita la cantidad máxima de memoria a la que se tiene acceso al procesar el mensaje. Esta unidad se establece en bytes con un valor predeterminado de 65.536 bytes.  
   
  Una amenaza de seguridad específica del escenario de transmisión por flujos de datos grandes provoca una denegación de servicio haciendo que se almacenen en búfer los datos cuando el receptor espera que se transmitan. Por ejemplo, WCF siempre almacena en búfer los encabezados SOAP de un mensaje y, de este modo, un atacante puede construir un mensaje malintencionado de gran tamaño que conste exclusivamente de encabezados para forzar el almacenamiento en búfer de los datos. Cuando está habilitada la transmisión por secuencias, `MaxReceivedMessageSize` puede estar establecido en un valor sumamente grande, porque el receptor nunca espera que el mensaje completo esté almacenado en búfer en memoria a la vez. Si se fuerza a WCF a almacenar en búfer el mensaje, se produce un desbordamiento de memoria.  

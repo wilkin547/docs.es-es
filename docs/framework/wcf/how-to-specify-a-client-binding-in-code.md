@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: e5e1dff98121985a598579d83043de838e21e5f1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f9a56c631d841fe60923c05a19bdec9db989ac60
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244509"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236577"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Procedimiento para especificar un enlace de cliente en el código
+
 En este ejemplo, se crea un cliente para utilizar un servicio de la calculadora y el enlace para ese cliente se especifica en código de manera imperativa. El cliente obtiene acceso al `CalculatorService`, que implementa la interfaz `ICalculator`, y el servicio y el cliente utilizan la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Este procedimiento asume que el servicio de la calculadora se está ejecutando. Para obtener información sobre cómo crear el servicio, vea [Cómo: especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md). También usa la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) proporciona para generar automáticamente los componentes de cliente. La herramienta genera el código de cliente para tener acceso al servicio.  

@@ -3,14 +3,15 @@ title: Procedimiento para especificar un enlace de cliente en la configuración
 description: Obtenga información sobre cómo especificar el enlace para un cliente WCF mediante declaración en un archivo de configuración. El cliente tiene acceso a un servicio en este ejemplo.
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 28778b6ae853199c5d7943f329bb087760f4bb11
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e8a552211b28c1323b2afd595c5b060db6b2824a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244496"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236512"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Procedimiento para especificar un enlace de cliente en la configuración
+
 En este ejemplo, se crea una aplicación de consola de cliente para utilizar un servicio de calculadora y el enlace para ese cliente se especifica de manera declarativa en la configuración. El cliente obtiene acceso al `CalculatorService`, que implementa la interfaz `ICalculator`, y el servicio y el cliente utilizan la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  El procedimiento descrito asume que el servicio de calculadora se está ejecutando. Para obtener información sobre cómo crear el servicio, vea [Cómo: especificar un enlace de servicio en la configuración](how-to-specify-a-service-binding-in-configuration.md). También usa la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) que Windows Communication Foundation (WCF) proporciona para generar automáticamente los componentes de cliente. La herramienta genera el código de cliente y la configuración para obtener acceso al servicio.  

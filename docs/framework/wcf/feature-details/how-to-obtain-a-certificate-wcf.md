@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: b1fea1a7357b937bd15517b313948ead6aab894d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 20e936feb5839a7e71f6579583d558abfc2fd9cf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557858"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234497"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Cómo obtener un certificado (WCF)
+
 Para usar cualquiera de las características de Windows Communication Foundation (WCF) de que usan certificados X. 509, primero tiene que obtener certificados.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Para obtener un certificado X.509.  

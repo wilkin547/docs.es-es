@@ -2,14 +2,15 @@
 title: 501 - CompilationStart
 ms.date: 03/30/2017
 ms.assetid: 5d4a214f-e242-4475-8bc9-02409190dc2c
-ms.openlocfilehash: 0b3fb07da3fa3350503541fe442e333055326b73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 532e3a4eb62d8f97ff7ac544091e526a32a2fe22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235498"
 ---
 # <a name="501---compilationstart"></a>501 - CompilationStart
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62048821"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Este evento se genera cuando comienza la compilación de servicehost.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Comenzar compilación.  
   
 ## <a name="details"></a>Detalles

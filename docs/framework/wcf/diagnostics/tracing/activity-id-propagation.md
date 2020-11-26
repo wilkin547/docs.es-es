@@ -2,36 +2,42 @@
 title: Propagación de ID de actividad
 ms.date: 03/30/2017
 ms.assetid: cd1c1ae5-cc8a-4f51-90c9-f7b476bcfe70
-ms.openlocfilehash: 642d4da49f90d3fc6f2b0dfc9896d724acb075b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0f0478b16bf2ca0975ae0290a8855756ecfc383e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651817"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236109"
 ---
 # <a name="activity-id-propagation"></a>Propagación de ID de actividad
+
 La propagación se produce cuando el seguimiento de la actividad ServiceModel está habilitada (propagación de ServiceModel) o deshabilitada (propagación de actividad entre usuarios).  
   
 ## <a name="servicemodel-activity-tracing-is-enabled"></a>Seguimiento de actividad ServiceModel está habilitado  
+
  Si ServiceModel ActivityTracing está habilitado, se produce la propagación entre las actividades ProcessAction.  
   
-### <a name="server"></a>Servidor  
- Cuando el `propagateActivity` atributo está establecido en `true` en el cliente y el servidor, el identificador de la `ProcessAction` actividad en el servidor es idéntica al identificador propagado `ActivityId` encabezado del mensaje.  
+### <a name="server"></a>Server  
+
+ Cuando el `propagateActivity` atributo se establece en `true` tanto en el cliente como en el servidor, el identificador de la `ProcessAction` actividad en el servidor es idéntico al identificador del encabezado del mensaje propagado `ActivityId` .  
   
- Cuando no hay ninguna `ActivityId` encabezado está presente en el mensaje (es decir, `propagateActivity` = `false` en el cliente), o cuando `propagateActivity` = `false` en el servidor, el servidor genera un nuevo identificador de actividad.  
+ Cuando no hay ningún `ActivityId` encabezado en el mensaje (es decir, `propagateActivity` = `false` en el cliente) o cuando se encuentra `propagateActivity` = `false` en el servidor, el servidor genera un nuevo ID. de actividad.  
   
 ### <a name="client"></a>Cliente  
- Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor. En su lugar, la respuesta se administra en la actividad de solicitud. Si el cliente es asincrónico o sincrónico multiproceso, `propagateActivity` = `true` en el cliente y hay un encabezado de Id. de actividad en el mensaje enviado por el servidor, el cliente recupera el identificador de actividad del mensaje y se transfiere a la Actividad de acción de proceso que contiene el identificador de actividad propagado. De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos. Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia. Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta. Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.  
+
+ Si el cliente es un subproceso único de forma sincrónica, el cliente no tiene en cuenta los valores de `propagateActivity` del cliente o servidor. En su lugar, la respuesta se administra en la actividad de solicitud. Si el cliente es un multiproceso asincrónico o sincrónico, `propagateActivity` = `true` en el cliente, y hay un encabezado de ID. de actividad en el mensaje enviado por el servidor, el cliente recupera el ID. de actividad del mensaje y transfiere a la actividad procesar acción que contiene el identificador de actividad propagado. De lo contrario, el cliente se transfiere de la actividad de procesamiento de mensajes a una nueva actividad de acción de procesos. Se realiza esta transferencia adicional a una nueva actividad de procesamiento de acción por coherencia. Dentro de esta actividad, el cliente recupera el id. de actividad de la actividad BeginCall del contexto del subproceso local, cuando se asigna el subproceso para procesamiento del mensaje de respuesta. Se transfiere, a continuación, a la actividad inicial de procesamiento de acción.  
   
  Si el cliente es dúplex, el cliente actúa como servidor al recibir el mensaje.  
   
 ### <a name="propagation-in-fault-messages"></a>Propagación en mensajes de error  
- No hay ninguna diferencia a la hora de administrar mensajes válidos y mensajes de error. Si `propagateActivity` = `true`, el identificador de actividad que se agregan a los encabezados del mensaje de error SOAP es idéntico a la actividad ambiente.  
+
+ No hay ninguna diferencia a la hora de administrar mensajes válidos y mensajes de error. Si `propagateActivity` = `true` es, el ID. de actividad agregado a los encabezados de mensaje de error de SOAP es idéntico a la actividad de ambiente.  
   
 ## <a name="servicemodel-activity-tracing-is-disabled"></a>El seguimiento de actividad ServiceModel está deshabilitad  
+
  Si ServiceModel ActivityTracing está deshabilitado, la propagación se produce directamente entre las actividades de código de usuario sin pasar por las actividades ServiceModel. Un id. de actividad definido por el usuario también se propaga a través del encabezado de id. de actividad de mensaje.   
   
- Si `propagateActivity` = `true` y `ActivityTracing` = `off` para un agente de escucha de seguimiento de ServiceModel (independientemente de si se habilita el seguimiento en ServiceModel), lo siguiente ocurre en el cliente o el servidor:  
+ Si `propagateActivity` = `true` y `ActivityTracing` = `off` para un agente de escucha de seguimiento de ServiceModel (independientemente de si el seguimiento está habilitado en ServiceModel), ocurre lo siguiente en el cliente o el servidor:  
   
 - En la solicitud de operación o respuesta de envío, el id. de actividad en TLS se propaga fuera del código de usuario hasta que se forma un mensaje. También se inserta en el mensaje un encabezado de id. de actividad antes de enviarse.  
   

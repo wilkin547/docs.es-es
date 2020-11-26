@@ -1,18 +1,19 @@
 ---
-title: 'Cómo: Especificar un enlace de servicio en el código'
+title: Procedimiento para especificar un enlace de servicio en el código
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: 3c6cfd084055d59d3292b49897ff710f14f92737
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7cf54754661182dca1e91c75b158d9b0a34a1f5e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320874"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236486"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>Cómo: Especificar un enlace de servicio en el código
+# <a name="how-to-specify-a-service-binding-in-code"></a>Procedimiento para especificar un enlace de servicio en el código
+
 En este ejemplo, se define un contrato de `ICalculator` para un servicio de la calculadora, el servicio se implementa en la clase `CalculatorService` y a continuación, su extremo se define mediante código, donde se especifica que el servicio debe utilizar la clase <xref:System.ServiceModel.BasicHttpBinding>.  
   
  Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  

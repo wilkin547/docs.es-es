@@ -6,14 +6,15 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 8b00c20e82ee1b1efa6a8a123e66a4cfc239143b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236174"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de grupo de subprocesos
+
 Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.  
   
  Hay dos grupos de eventos de grupo de subprocesos:  
@@ -23,9 +24,11 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 - [Eventos de grupo de subprocesos de E/S](#io-thread-events), que proporcionan información sobre los subprocesos de E/S que se crean, se retiran, se anula su retirada o finalizan en el grupo de subprocesos.  
 
 ## <a name="worker-thread-pool-events"></a>Eventos de grupo de subprocesos de trabajo
+
  Estos eventos se relacionan con el grupo de subprocesos de trabajo de runtime y proporcionan notificaciones de eventos de subproceso (por ejemplo, cuando se crea o se detiene un subproceso). El grupo de subprocesos de trabajo usa un algoritmo adaptable para el control de simultaneidad, en el que el número de subprocesos se calcula en función del rendimiento medido. Los eventos de grupo de subprocesos de trabajo pueden usarse para saber cómo una aplicación utiliza el grupo de subprocesos y el efecto que ciertas cargas de trabajo pueden tener en el control de simultaneidad.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart y ThreadPoolWorkerThreadStop  
+
  En la tabla siguiente se muestra la palabra clave y el nivel correspondientes a estos eventos. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -50,9 +53,11 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="threadpoolworkerthreadadjustment"></a>ThreadPoolWorkerThreadAdjustment  
+
  Estos eventos de grupo de subprocesos proporcionan información para entender y depurar el comportamiento del algoritmo de inserción de subprocesos (control de simultaneidad). El grupo de subprocesos de trabajo usa la información internamente.  
   
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -73,6 +78,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -95,6 +101,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -124,9 +131,11 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
 
 ## <a name="io-thread-events"></a>Eventos de subprocesos de E/S  
+
  Estos eventos de grupo de subprocesos se producen para los subprocesos del grupo de subprocesos de E/S (puertos de finalización), que es asincrónico.  
   
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -148,6 +157,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -169,6 +179,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -190,6 +201,7 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -210,6 +222,6 @@ Estos eventos recopilan información sobre los subprocesos de E/S y de trabajo.
 |NumRetired|win:UInt64|Número de subprocesos de E/S retirados.|  
 |ClrInstanceID|Win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

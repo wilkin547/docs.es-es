@@ -2,14 +2,15 @@
 title: Ejemplo de uso compartido de puertos Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6c196380951d0da912cd937e3ebc38a03f80489c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fa62734ed6a4a016011c9f29b3665dae05a000c6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96235394"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Ejemplo de uso compartido de puertos Net.TCP
+
 El protocolo TCP/IP utiliza un número de 16 bits, llamado "puerto", para diferenciar las conexiones en varias aplicaciones de red que se ejecutan en el mismo equipo. Si una aplicación está realizando escuchas en un puerto, todo el tráfico TCP para ese puerto se dirige a esa aplicación. Otras aplicaciones no pueden realizar escuchas en ese puerto al mismo tiempo.  
   
 > [!IMPORTANT]
@@ -34,6 +35,7 @@ Unhandled Exception: System.ServiceModel.CommunicationException: The TransportMa
  El uso compartido del puerto se habilita en el servidor estableciendo la propiedad <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> del enlace <xref:System.ServiceModel.NetTcpBinding> o el elemento de enlace <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. El cliente no tiene que saber cómo se ha configurado el uso compartido de puerto para usarlo en el servidor.  
   
 ## <a name="enabling-port-sharing"></a>Cómo habilitar el uso compartido del puerto  
+
  El código siguiente muestra cómo habilitar el uso compartido del puerto en el servidor. Inicia una instancia del servicio `ICalculator` en un puerto fijo con una ruta de acceso del URI aleatoria. Aunque dos servicios pueden compartir el mismo puerto, sus direcciones de punto de conexión totales deben seguir siendo únicas de manera que el servicio de uso compartido de puertos de NetTcp puede enrutar los mensajes a la aplicación correcta.  
 
 ```csharp
@@ -56,6 +58,7 @@ Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is 
 ```  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
+
  Puede utilizar el cliente de pruebas para comprobar que los mensajes se enrutan correctamente a los servicios que comparten el puerto.  
 
 ```csharp

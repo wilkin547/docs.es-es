@@ -2,17 +2,19 @@
 title: Seguimiento personalizado
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 87f72359e16b4268d77148ec16a626c2bac5751c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d125c59196cb2a7d33961e0f271aab8c5663a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96234576"
 ---
 # <a name="custom-tracking"></a>Seguimiento personalizado
+
 En este ejemplo se muestra cómo crear un participante de seguimiento personalizado y cómo escribir en la consola el contenido de los datos de seguimiento. Además, el ejemplo muestra cómo emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> rellenados con datos definidos por el usuario. El participante de seguimiento basado en consola filtra los objetos <xref:System.Activities.Tracking.TrackingRecord> que emite el flujo de trabajo utilizando un objeto de perfil de seguimiento creado en código.
 
 ## <a name="sample-details"></a>Detalles del ejemplo
+
  Windows Workflow Foundation (WF) proporciona una infraestructura de seguimiento para realizar un seguimiento de la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento implementa una instancia de flujo de trabajo para emitir eventos relacionados con el ciclo de vida de flujo de trabajo, eventos procedentes de actividades de flujo de trabajo y eventos de seguimiento personalizados. En la siguiente tabla se detallan los componentes primarios de la infraestructura de seguimiento.
 
 |Componente|Descripción|
@@ -33,6 +35,7 @@ En este ejemplo se muestra cómo crear un participante de seguimiento personaliz
  El participante de seguimiento se suscribe a un subconjunto de los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos utilizando perfiles de seguimiento. Un perfil de seguimiento contiene consultas de seguimiento que permiten suscribirse a un tipo de registro de seguimiento concreto. Los perfiles de seguimiento se pueden especificar mediante código o en la configuración.
 
 ### <a name="custom-tracking-participant"></a>Participante de seguimiento personalizado
+
  La API de participante de seguimiento permite la ampliación del tiempo de ejecución de seguimiento mediante un participante de seguimiento proporcionado por el usuario que puede incluir una lógica personalizada para controlar los objetos <xref:System.Activities.Tracking.TrackingRecord> emitidos por el tiempo de ejecución de flujo de trabajo.
 
  Para escribir un participante de seguimiento, el usuario debe implementar <xref:System.Activities.Tracking.TrackingParticipant>. Concretamente, el participante personalizado debe implementar el método <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. Se llama a este método cuando el tiempo de ejecución de flujo de trabajo emite un registro <xref:System.Activities.Tracking.TrackingRecord>.
@@ -108,6 +111,7 @@ invoker.Extensions.Add(customTrackingParticipant);
 ```
 
 ### <a name="emitting-custom-tracking-records"></a>Emitir registros de seguimiento personalizados
+
  En este ejemplo también se muestra la capacidad de emitir objetos <xref:System.Activities.Tracking.CustomTrackingRecord> desde una actividad de flujo de trabajo personalizada:
 
 - Los objetos <xref:System.Activities.Tracking.CustomTrackingRecord> se crean y rellenan con datos definidos por el usuario que se desean emitir con el registro.

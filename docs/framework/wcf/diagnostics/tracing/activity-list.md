@@ -2,30 +2,32 @@
 title: Lista de actividades
 ms.date: 03/30/2017
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-ms.openlocfilehash: 8d43cc878d54efbd4908f92c3405bef2c7956f94
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d28ae2e4750c718c35105d090aff8d085025b9d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602172"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96236096"
 ---
 # <a name="activity-list"></a>Lista de actividades
+
 En este tema se enumeran todas las actividades definidas por Windows Communication Foundation (WCF).  
   
 > [!NOTE]
-> También puede definir las actividades mediante programación para agrupar los seguimientos del usuario. Para obtener más información, vea [emitir seguimientos de código de usuario](emitting-user-code-traces.md).  
+> También puede definir las actividades mediante programación para agrupar los seguimientos del usuario. Para obtener más información, consulte [emitir seguimientos de User-Code](emitting-user-code-traces.md).  
   
 ## <a name="servicemodel-activities"></a>Actividades ServiceModel  
+
  La siguiente tabla muestra una lista de todas las actividades para los escenarios de uso principales.  
   
-|Label|Nombre de actividad|Tipo de actividad|Descripción|  
+|Etiqueta|Nombre de actividad|Tipo de actividad|Descripción|  
 |-----------|-------------------|-------------------|-----------------|  
 |A, M|Actividad de ambiente|N/A (ServiceModel no lo controla)|La actividad cuyo id. se establece en TLS antes de que se realice ninguna llamada al código de ServiceModel (del lado de cliente o servidor).<br /><br /> Ejemplo: una actividad en la que se llama a Open en el cliente WCF o se llama a serviceHost. Open.|  
 |B|Construcción<br /><br /> ChannelFactory. ContractType : ‘[Type]’.|Construcción||  
 |C|Abrir<br /><br /> [ClientBase&#124;ChannelFactory]. ContractType : ‘[Type]’.|Abrir||  
 |I|Cierre [ClientBase&#124;ChannelFactory]. ContractType : ‘[Type]’.|Cerrar||  
 |M|Construir ServiceHost. ServiceType: ‘[Type]’.|Construcción||  
-|No|Abrir ServiceHost. ServiceType: ‘[Type]’.|Abrir||  
+|N|Abrir ServiceHost. ServiceType: ‘[Type]’.|Abrir||  
 |Z|Cerrar ServiceHost. ServiceType: ‘[Type]’.|Cerrar||  
 |O|Escuchar en ‘[address]’.|ListenAt|Esta actividad y la siguiente son específicas del transporte. La actividad ListenAt representa el contenido que asigna a la dirección donde el agente de escucha realiza escuchas. En el caso de MSMQ, es la propia cola puesto que la cola asigna a una dirección. Esta actividad realiza escuchas para las conexiones entrantes en el caso de transportes orientados a conexiones, para los mensajes de MSMQ en el caso de MSMQ. Esta actividad se crea durante ServiceHost.Open () y contiene las trazas relacionadas con la creación y disposición del agente de escucha, así como la transferencia de salida a todas las actividades ReceiveBytes.|  
 |P|Recibir los bytes en la conexión ‘[address]’. Recibir mensaje MSMQ.|ReceiveBytes|En esta actividad, se procesan los datos que finalmente recibirán un mensaje de WCF. Los bytes de entrada se esperan en el caso de http o transporte orientado a conexiones. Para TCP/canalización con nombre, la duración de esta actividad es igual a la vida la conexión, puesto que se crea al mismo tiempo que la conexión. Para http, es de la duración de una solicitud de mensaje y se crea cuando se envía el mensaje. Esta actividad contiene las trazas relacionadas con la creación y disposición de la conexión si fuese pertinente, así como las transferencias hacia fuera a todas las actividades de procesamiento de mensajes (objetos).<br /><br /> En el caso de MSMQ, es la actividad donde se recupera el mensaje MSMQ.|  
@@ -34,6 +36,7 @@ En este tema se enumeran todas las actividades definidas por Windows Communicati
 |T|Ejecute ‘[IContract.Operation]’.|ExecuteUserCode|Ejecute el código de usuario tras el envío en el lado de servicio. Esta actividad proporciona un límite para delinear el código de ServiceHost del código proporcionado por el usuario.|  
   
 ## <a name="security-activities"></a>Actividades de seguridad  
+
  La tabla siguiente muestra todas las actividades relacionadas con la seguridad.  
   
 |Nombre de actividad|Tipo de actividad|Descripción|  
@@ -46,9 +49,10 @@ En este tema se enumeran todas las actividades definidas por Windows Communicati
 |Nombre de actividad|Tipo de actividad|Descripción|  
 |-------------------|-------------------|-----------------|  
 |Cree una instancia COM+.|TransferToCOMPlus|1 instancia de actividad para cada llamada COM+ desde código WCF|  
-|Ejecutar COM+\<operation>|TransferToCOMPlus|1 instancia de actividad para cada llamada COM+ desde código WCF|  
+|Ejecutar COM+ \<operation>|TransferToCOMPlus|1 instancia de actividad para cada llamada COM+ desde código WCF|  
   
 ## <a name="wmi-activities"></a>Actividades WMI  
+
  La tabla siguiente muestra una lista de todas las actividades relacionadas con WMI.  
   
 |Nombre de actividad|Tipo de actividad|Descripción|  
