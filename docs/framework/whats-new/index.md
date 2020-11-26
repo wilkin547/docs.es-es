@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c99f7c0778b1160c926d5ed62a6a2d295f5c50c5
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 3421afee304125413f4fcade6b20df990e922f58
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557251"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704804"
 ---
 # <a name="whats-new-in-net-framework"></a>Novedades de .NET Framework
 
@@ -1585,9 +1585,9 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     Es conveniente usar un formato coherente para los modificadores porque son un contrato formal que expone una biblioteca. Las siguientes son dos formatos obvios.
 
-    - *Modificador*. *espacio de nombres*. *nombre del modificador*
+    - *Modificador*.*espacio de nombres*.*nombre del modificador*
 
-    - *Modificador*. *biblioteca*. *nombre del modificador*
+    - *Modificador*.*biblioteca*.*nombre del modificador*
 
   - **Cambios en el modelo asincrónico basado en tareas (TAP)**
 
@@ -1623,7 +1623,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
   - **Mejoras en el HDPI**
 
-    Se mejoró la compatibilidad con HDPI en WPF en .NET Framework 4.6. Se han hecho cambios en el redondeo del diseño para reducir las instancias de recorte en los controles que contienen bordes. De forma predeterminada, esta característica solo está habilitada si se establece <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en .NET 4.6.  Las aplicaciones que tienen como destino versiones anteriores de .NET Framework y que se ejecutan en .NET Framework 4.6 pueden participar en el nuevo comportamiento si agregan la siguiente línea a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:
+    Se mejoró la compatibilidad con HDPI en WPF en .NET Framework 4.6. Se han hecho cambios en el redondeo del diseño para reducir las instancias de recorte en los controles que contienen bordes. De forma predeterminada, esta característica solo está habilitada si se establece <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en .NET Framework 4.6.  Las aplicaciones que tienen como destino versiones anteriores de .NET Framework y que se ejecutan en .NET Framework 4.6 pueden participar en el nuevo comportamiento si agregan la siguiente línea a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:
 
     ```xml
     <AppContextSwitchOverrides
@@ -1843,7 +1843,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 ## <a name="whats-new-in-net-framework-451"></a>Novedades de .NET Framework 4.5.1
 
-**Actualizaciones de abril de 2014** :
+**Actualizaciones de abril de 2014**:
 
 - [Visual Studio 2013 Update 2](https://go.microsoft.com/fwlink/p/?LinkId=393658) incluye actualizaciones para las plantillas de la Biblioteca de clases portable para garantizar la compatibilidad en los escenarios siguientes:
 
@@ -1967,7 +1967,7 @@ La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el
 
 ### <a name="parallel-computing"></a>Informática en paralelo
 
-.NET Framework 4.5 cuenta con varias características y mejoras nuevas para el procesamiento informático en paralelo. Entre estas se incluyen un rendimiento mejorado, mayor control, mejor compatibilidad con la programación asincrónica, una nueva biblioteca de flujo de datos y mejor compatibilidad para la depuración y el análisis de rendimiento en paralelo. Vea la entrada [What’s New for Parallelism in .NET 4.5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) (Novedades de paralelismo en .NET 4.5) de la sección sobre Programación en paralelo del blog sobre .NET.
+.NET Framework 4.5 cuenta con varias características y mejoras nuevas para el procesamiento informático en paralelo. Entre estas se incluyen un rendimiento mejorado, mayor control, mejor compatibilidad con la programación asincrónica, una nueva biblioteca de flujo de datos y mejor compatibilidad para la depuración y el análisis de rendimiento en paralelo. Vea la entrada [What’s New for Parallelism in .NET Framework 4.5](https://devblogs.microsoft.com/pfxteam/whats-new-for-parallelism-in-net-4-5/) (Novedades de paralelismo en .NET Framework 4.5) de la sección sobre Programación en paralelo del blog sobre .NET.
 
 <a name="web"></a>
 
@@ -2087,7 +2087,7 @@ Se han agregado varias características nuevas a Windows Workflow Foundation (W
 
   - Compatibilidad con el movimiento panorámico, que permite cambiar la parte visible de un flujo de trabajo sin usar las barras de desplazamiento.
 
-  - Una nueva vista **Esquema del documento** , en la que se muestran los componentes de un flujo de trabajo en una vista de esquema con forma de árbol y que le permite seleccionar un componente en la vista **Esquema del documento**.
+  - Una nueva vista **Esquema del documento**, en la que se muestran los componentes de un flujo de trabajo en una vista de esquema con forma de árbol y que le permite seleccionar un componente en la vista **Esquema del documento**.
 
   - Capacidad de agregar anotaciones a las actividades.
 

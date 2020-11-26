@@ -2,24 +2,20 @@
 title: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (segunda edición)
 description: Obtenga información sobre cómo elevar, desplazar y modernizar las aplicaciones existentes en la nube de Azure y en los contenedores con este e-book.
 ms.date: 04/28/2018
-ms.openlocfilehash: 74359b526bead85788a6ddc8039ef05b4c475d5e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172272"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95705337"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (segunda edición)
 
 ![Imagen de portada de la guía Modernización de las aplicaciones .NET](./media/index/web-application-guide-cover-image.png)
 
-PUBLICADO POR  
-Microsoft Press y Microsoft DevDiv  
-Divisiones de Microsoft Corporation  
-One Microsoft Way  
-Redmond, Washington 98052-6399  
+PUBLICADO POR las divisiones Microsoft Press y Microsoft DevDiv de Microsoft Corporation, One Microsoft Way, Redmond Washington, 98052-6399
 
-Copyright © 2020 de Microsoft Corporation  
+Copyright © 2020 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -37,12 +33,7 @@ Autor:
 > **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
 
 Participantes y revisores:
-> **Scott Hunter**, director asociado de administración de programas del equipo de .NET, Microsoft  
-> **Paul Yuknewicz**, director principal de administración de programas del equipo de Visual Studio Tools, Microsoft  
-> **Lisa Guthrie**, administradora de programas del equipo de Visual Studio Tools, Microsoft  
-> **Ankit Asthana**, director principal de administración de programas del equipo de .NET, Microsoft  
-> **Unai Zorrilla**, responsable de desarrollo de Plain Concepts  
-> **Javier Valero**, director de operaciones de Grupo Solutio  
+> **Scott Hunter**, director asociado de administrador de programas del equipo de .NET, Microsoft **Paul Yuknewicz**, director principal de administración de programas del equipo de Visual Studio Tools, Microsoft **Lisa Guthrie**, administradora de programas del equipo de Visual Studio Tools, Microsoft **Ankit Asthana**, director principal de administración de programas del equipo de .NET, Microsoft **Unai Zorrilla**, responsable de desarrollo de Plain Concepts **Javier Valero**, director de operaciones de Grupo Solutio
 
 ## <a name="introduction"></a>Introducción
 
@@ -70,7 +61,7 @@ Para aplicaciones modernas con la mejor agilidad y el mejor valor a largo plazo 
 
 En la figura 1-1 se muestran las posibles rutas de acceso que puede usar para migrar las aplicaciones .NET existentes a la nube en fases incrementales.
 
- ![Rutas de acceso de modernización de servicios y aplicaciones .NET existentes](./media/image1-1.png)
+ ![Rutas de acceso de modernización de servicios y aplicaciones .NET existentes](./media/image1-1.png)
 
 **Figura 1-1**. Rutas de acceso de modernización de servicios y aplicaciones .NET existentes
 
@@ -103,7 +94,7 @@ En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Arquitecturas y tecnologías clave por nivel de madurez
 
-Las aplicaciones .NET Framework se iniciaron por primera vez con .NET Framework 1.0, que se publicó a finales de 2001. Después, las empresas cambian a nuevas versiones (como 2.0, 3.5 y .NET 4.x). La mayoría de esas aplicaciones se ejecutaron en Windows Server y Internet Information Server (IIS) y usaron una base de datos relacional, como SQL Server, Oracle, MySQL o cualquier otra instancia de RDBMS.
+Las aplicaciones .NET Framework se iniciaron por primera vez con .NET Framework 1.0, que se publicó a finales de 2001. Después, las empresas cambian a nuevas versiones (como 2.0, 3.5 y .NET Framework 4.x). La mayoría de esas aplicaciones se ejecutaron en Windows Server y Internet Information Server (IIS) y usaron una base de datos relacional, como SQL Server, Oracle, MySQL o cualquier otra instancia de RDBMS.
 
 La mayoría de las aplicaciones .NET existentes pueden basarse actualmente en .NET Framework 4.x o incluso en .NET Framework 3.5 y usar marcos de trabajo web, como ASP.NET MVC, Formularios web ASP.NET, ASP.NET Web API, Windows Communication Foundation (WCF), ASP.NET SignalR y ASP.NET Web Pages. Estas tecnologías de .NET Framework establecidas dependen de Windows. Es importante tener en cuenta esa dependencia si solo se van a migrar aplicaciones heredadas y solo se desea realizar cambios mínimos en la infraestructura de las aplicaciones.
 
