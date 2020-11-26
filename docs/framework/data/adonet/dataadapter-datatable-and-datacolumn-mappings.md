@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: b979431836b55b23ac9ba6ec4535f33765dce555
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91177740"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Correspondencias de DataTable y DataColumn en un objeto DataAdapter
@@ -96,7 +96,7 @@ adapter.Fill(customersDataSet, "Customers")
 adapter.Fill(customersDataSet, "Customers");  
 ```  
 
- Se crean dos tablas en el **conjunto de DataSet**: **Customers** y **Customers1**. Puede usar asignaciones de tabla para asegurarse de que la segunda tabla se denomina **Orders** en lugar de **Customers1**. Para ello, asigne la tabla de origen de **Customers1** a los **pedidos**de la tabla del **conjunto** de elementos, tal como se muestra en el ejemplo siguiente.  
+ Se crean dos tablas en el **conjunto de DataSet**: **Customers** y **Customers1**. Puede usar asignaciones de tabla para asegurarse de que la segunda tabla se denomina **Orders** en lugar de **Customers1**. Para ello, asigne la tabla de origen de **Customers1** a los **pedidos** de la tabla del **conjunto** de elementos, tal como se muestra en el ejemplo siguiente.  
   
 ```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
