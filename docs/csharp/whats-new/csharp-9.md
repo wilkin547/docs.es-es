@@ -2,12 +2,12 @@
 title: 'Novedades de C# 9.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 9.0.
 ms.date: 09/04/2020
-ms.openlocfilehash: 5b3695dee8fc26f69e713d1d6811acdf0cfa9764
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: dbc104cb0bbfc965b0cc055429713538f62ed0e8
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557225"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687365"
 ---
 # <a name="whats-new-in-c-90"></a>Novedades de C# 9.0
 
@@ -104,9 +104,13 @@ Por último, los registros admiten [expresiones `with`](../language-reference/op
 
 :::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="Wither":::
 
-La línea anterior crea un registro `Person` en el que la propiedad `LastName` es una copia de `person` y el valor `FirstName` es `"Paul"`. Puede establecer cualquier número de propiedades en una expresión `with`.
+La línea anterior crea un nuevo registro `Person` en el que la propiedad `LastName` es una copia de `person` y `FirstName` es `"Paul"`. Puede establecer cualquier número de propiedades en una expresión `with`. También puede usar expresiones `with` para crear una copia exacta. Especifique el conjunto vacío de las propiedades que se van a modificar:
+
+:::code language="csharp" source="snippets/whats-new-csharp9/PositionalRecords.cs" ID="WithCopy":::
 
 El usuario puede escribir cualquiera de los miembros sintetizados excepto el método "clone". Si un tipo de registro tiene un método que coincide con la signatura de cualquier método sintetizado, el compilador no sintetiza ese método. El ejemplo de registro `Dog` anterior contiene un método <xref:System.String.ToString> codificado a mano como ejemplo.
+
+Obtenga más información sobre los tipos de registros en este tutorial sobre [exploración de registros](../tutorials/exploration/records.md).
 
 ## <a name="init-only-setters"></a>Establecedores de solo inicialización
 

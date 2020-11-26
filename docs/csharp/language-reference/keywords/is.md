@@ -8,25 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 3508f08857f88fd34478f968a71bae0121d54d1c
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d30ebfa2dc47265185a96514efbddc3e4937438c
+ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89134515"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94982399"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
-El operador `is` comprueba si el resultado de una expresión es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón. Para obtener información sobre el operador de prueba de tipos `is`, consulte la sección [operador is](../operators/type-testing-and-cast.md#is-operator) del artículo [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md).
+El operador `is` comprueba si el resultado de una expresión es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón. Para obtener información sobre el operador de prueba de tipos `is`, vea la sección [operador is](../operators/type-testing-and-cast.md#is-operator) del artículo [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md).
 
 ## <a name="pattern-matching-with-is"></a>Coincidencia de patrones con `is`
 
 A partir de C# 7.0, las instrucciones `is` y [switch](switch.md) admiten la coincidencia de patrones. La palabra clave `is` admite los patrones siguientes:
 
-- [Patrón de tipo](#type-pattern), que comprueba si una expresión se puede convertir en un tipo especificado y, en caso afirmativo, la convierte en una variable de ese tipo.
-
+- [Patrón de tipo](#type-pattern), que comprueba si una expresión se puede convertir en un tipo especificado y, en caso afirmativo, convierte la variable en una variable de ese tipo.
 - [Patrón de constante](#constant-pattern), que comprueba si una expresión se evalúa como un valor constante especificado.
-
 - [Patrón var](#var-pattern), una coincidencia que siempre se realiza correctamente y enlaza el valor de una expresión a una variable local nueva.
 
 ### <a name="type-pattern"></a>Patrón de tipo
@@ -39,19 +37,16 @@ Cuando se usa el patrón de tipo para realizar la coincidencia de patrones, `is`
 
 Donde *expr* es una expresión que se evalúa como una instancia de un tipo, *type* es el nombre del tipo al que se va a convertir el resultado de *expr* y *varname* es el objeto al que se va a convertir el resultado de *expr* si la prueba `is` es `true`.
 
-La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las siguientes condiciones:
+La expresión `is` es `true` si *expr* no es `null` y se cumple alguna de las condiciones siguientes:
 
 - *expr* es una instancia del mismo tipo que *type*.
-
 - *expr* es una instancia de un tipo que deriva de *type*. En otras palabras, el resultado de *expr* puede convertirse en una instancia de *type*.
-
 - *expr* tiene un tipo en tiempo de compilación que es una clase base de *type* y *expr* tiene un tipo en tiempo de ejecución que es *type* o se deriva de *type*. El *tipo en tiempo de compilación* de una variable es el tipo de la variable tal como se define en su declaración. El *tipo en tiempo de ejecución* de una variable es el tipo de la instancia que se asigna a esa variable.
-
 - *type* es una instancia de un tipo que implementa la interfaz *type*.
 
 A partir de C# 7.1, *expr* puede tener un tipo de tiempo de compilación definido por un parámetro y sus restricciones.
 
-Si *expr* es `true` y `is` se usa con una instrucción `if`, solo se asigna *varname* dentro de la instrucción `if`. El ámbito de *varname* abarca de la expresión `is` al final del bloque que incluye la instrucción `if`. El uso de *varname* en cualquier otra ubicación genera un error en tiempo de compilación por el uso de una variable que no se ha asignado.
+Si *expr* es `true` y `is` se usa con una instrucción `if`, solo se asigna *varname* dentro de la instrucción `if`. El ámbito de *varname* abarca de la expresión `is` al final del bloque que incluye la instrucción `if`. El uso de *varname* en cualquier otra ubicación genera un error en tiempo de compilación por utilizar una variable que no se ha asignado.
 
 En el ejemplo siguiente se usa el patrón de tipo `is` para proporcionar la implementación de un método <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> de tipo.
 
@@ -104,6 +99,8 @@ La búsqueda de `null` puede realizarse con el patrón de constante. La palabra 
 En el ejemplo siguiente se muestra una comparación de comprobaciones `null`:
 
 [!code-csharp[is#11](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern11.cs#11)]
+
+La expresión `x is null` se calcula de otra forma para los tipos de referencia y los tipos de valor que admiten un valor NULL. Para los tipos de valor que admiten un valor NULL, usa <xref:System.Nullable%601.HasValue?displayProperty=nameWithType>. Para los tipos de referencia, usa `(object)x == null`.
 
 ### <a name="var-pattern"></a>Patrón var
 

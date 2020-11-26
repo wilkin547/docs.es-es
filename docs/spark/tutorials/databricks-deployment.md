@@ -4,12 +4,12 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 10/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1f705878a577a7fa375346cae18010d8c8cc77e1
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: d17fd5002d47dcde804cb43fc27edb2c2c9be595
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955452"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688155"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: Implementación de una aplicación de .NET para Apache Spark en Databricks
 
@@ -85,7 +85,7 @@ Puede usar la **CLI de Databricks** para conectarse a los clústeres de Azure D
 
 Ahora que tiene la CLI de Databricks instalada, debe configurar los detalles de autenticación.
 
-1. Ejecute el comando `databricks configure --token` de la CLI de Databricks.
+1. Ejecute el comando `databricks configure --token` de la CLI de Databricks.
 
 2. Después de ejecutar el comando de configuración, se le pedirá que escriba un host. La dirección URL del host usa el formato: `https://<Location>.azuredatabricks.net`. Por ejemplo, si ha seleccionado **eastus2** durante la creación del Servicio de Azure Databricks, el host sería `https://eastus2.azuredatabricks.net`.
 
@@ -105,7 +105,10 @@ Ahora debería poder acceder a cualquier clúster de Azure Databricks que cree y
 
 ## <a name="download-worker-dependencies"></a>Descarga de las dependencias de trabajo
 
-1. Microsoft.Spark.Worker ayuda a Apache Spark a ejecutar la aplicación, como cualquier función definida por el usuario (UDF) que se haya escrito. Descargue [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
+> [!Note]
+> Azure y AWS Databricks se basan en Linux. Por lo tanto, si está interesado en implementar la aplicación en Databricks, asegúrese de que la aplicación es compatible con .NET Standard y, asimismo, de que usa el compilador de .NET Core para compilar la aplicación.
+
+1. Microsoft.Spark.Worker ayuda a Apache Spark a ejecutar la aplicación, como cualquier función definida por el usuario (UDF) que se haya escrito. Descargue [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz).
 
 2. *install-worker.sh* es un script que permite copiar archivos dependientes de .NET para Apache Spark en los nodos del clúster.
 
@@ -115,7 +118,7 @@ Ahora debería poder acceder a cualquier clúster de Azure Databricks que cree y
 
    Cree un nuevo archivo llamado **db-init.sh** en el equipo local y pegue el [contenido de db-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) que se encuentra en GitHub.
 
-   En el archivo que se acaba de crear, establezca la variable `DOTNET_SPARK_RELEASE` en `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Deje el resto del archivo *db-init.sh* tal cual.
+   En el archivo que se acaba de crear, establezca la variable `DOTNET_SPARK_RELEASE` en `https://github.com/dotnet/spark/releases/download/v1.0.0/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz`. Deje el resto del archivo *db-init.sh* tal cual.
 
 > [!Note]
 > Si usa Windows, compruebe que los fines de línea de los scripts *install-worker.sh* y *db-init.sh* son de estilo Unix (LF). Se pueden cambiar los fines de línea a través de los editores de texto como Notepad++ y Atom.
@@ -152,10 +155,10 @@ En esta sección, se cargan varios archivos en el DBFS con el fin de que el clú
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-1.0.0.tar.gz
    ```
 
-2. Ejecute los comandos siguientes para cargar los archivos restantes que el clúster necesitará para ejecutar la aplicación: la carpeta de publicación comprimida, *Input.txt* y *microsoft-spark-2.4.x-0.3.1.jar*.
+2. Ejecute los comandos siguientes para cargar los archivos restantes que el clúster necesitará para ejecutar la aplicación: la carpeta de publicación comprimida, *input.txt* y *microsoft-spark-2-4_2.11-1.0.0.jar*.
 
    ```console
    cd mySparkApp
@@ -163,7 +166,7 @@ En esta sección, se cargan varios archivos en el DBFS con el fin de que el clú
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
    databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
-   databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
+   databricks fs cp microsoft-spark-2-4_2.11-1.0.0.jar dbfs:/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar
    ```
 
 ## <a name="create-a-job"></a>Creación de un trabajo
@@ -181,7 +184,7 @@ La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecu
 3. Pegue los parámetros siguientes en la configuración del trabajo. Después, seleccione **Confirmar**.
 
    ```
-   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2-4_2.11-1.0.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>Crear un clúster
@@ -206,7 +209,7 @@ La aplicación se ejecuta en Azure Databricks a través de un trabajo que ejecu
 
    ![Tabla de salida del trabajo de Azure Databricks](./media/databricks-deployment/table-output.png)
 
-   Enhorabuena, ha ejecutado su primera aplicación de .NET para Apache Spark en la nube.
+   Enhorabuena, ha ejecutado la primera aplicación de .NET para Apache Spark en Azure Databricks.
 
 ## <a name="clean-up-resources"></a>Limpiar los recursos
 

@@ -1,24 +1,26 @@
 ---
-title: Creación de una biblioteca de clases .NET Standard mediante Visual Studio Code
-description: Obtenga información sobre cómo crear una biblioteca de clases de .NET Standard mediante Visual Studio Code.
-ms.date: 06/08/2020
-ms.openlocfilehash: 966b9b0b48f67809e82d9133c523995cd97b6015
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+title: Creación de una biblioteca de clases de .NET con Visual Studio Code
+description: Obtenga información sobre cómo crear una biblioteca de clases de .NET mediante Visual Studio Code.
+ms.date: 11/18/2020
+ms.openlocfilehash: 4daa077fc54da3de2f808d831e06ee5f9bb3bde7
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495517"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916096"
 ---
-# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Tutorial: Creación de una biblioteca .NET Standard mediante Visual Studio Code
+# <a name="tutorial-create-a-net-class-library-using-visual-studio-code"></a>Tutorial: Creación de una biblioteca de clases de .NET con Visual Studio Code
 
-En este tutorial, creará una sencilla biblioteca de utilidades que contiene un único método de control de cadenas. Lo implementará como un [método de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md) de modo que se pueda llamar como si fuera un miembro de la clase <xref:System.String>.
+En este tutorial, creará una sencilla biblioteca de utilidades que contiene un único método de control de cadenas.
 
-Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Una biblioteca de clases que tiene como destino .NET Standard 2.0, lo que permite que cualquier implementación .NET que admita esa versión de .NET Standard pueda llamar a su biblioteca. Cuando termine la biblioteca de clases, puede distribuirla como un componente de terceros o como un componente empaquetado con una o varias aplicaciones.
+Una *biblioteca de clases* define los tipos y los métodos que se llaman desde una aplicación. Si la biblioteca tiene como destino .NET Standard 2.0, se puede llamar mediante cualquier implementación de .NET (incluido .NET Framework) que admita .NET Standard 2.0. Si la biblioteca tiene como destino .NET 5, la puede llamar cualquier aplicación que tenga como destino .NET 5. En este tutorial se muestra cómo seleccionar .NET 5 como destino.
+
+Al crear una biblioteca de clases, puede distribuirla como un componente de terceros o como un componente empaquetado con una o varias aplicaciones.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 1. [Visual Studio Code](https://code.visualstudio.com/) con la [extensión de C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) instalada. Para saber cómo instalar extensiones en Visual Studio Code, vea el [Marketplace de extensiones de VS Code](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [SDK de .NET Core 3.1 o posterior](https://dotnet.microsoft.com/download)
+2. [SDK de .NET 5.0 o posterior](https://dotnet.microsoft.com/download)
 
 ## <a name="create-a-solution"></a>Crear una solución
 
@@ -48,7 +50,7 @@ Empiece por crear una solución en blanco para colocar el proyecto de biblioteca
 
 ## <a name="create-a-class-library-project"></a>Crear un proyecto de biblioteca de clases
 
-Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "StringLibrary" a la solución.
+Agregue un nuevo proyecto de biblioteca de clases de .NET denominado "StringLibrary" a la solución.
 
 1. En el terminal, ejecute el siguiente comando para crear un proyecto de biblioteca:
 
@@ -81,15 +83,15 @@ Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "S
    Project `StringLibrary\StringLibrary.csproj` added to the solution.
    ```
 
-1. Asegúrese de que la biblioteca tiene como destino la versión correcta de .NET Standard. En **Explorer**, abra el archivo *StringLibrary/StringLibrary.csproj*.
+1. Asegúrese de que la biblioteca tiene como destino .NET 5. En **Explorer**, abra el archivo *StringLibrary/StringLibrary.csproj*.
 
-   En el elemento `TargetFramework` se muestra que el proyecto tiene como destino .NET Standard 2.0.
+   En el elemento `TargetFramework` se muestra que el proyecto tiene como destino .NET 5.0.
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
 
      <PropertyGroup>
-       <TargetFramework>netstandard2.0</TargetFramework>
+       <TargetFramework>net5.0</TargetFramework>
      </PropertyGroup>
 
    </Project>
@@ -116,7 +118,7 @@ Agregue un nuevo proyecto de biblioteca de clases de .NET Standard denominado "S
    Copyright (C) Microsoft Corporation. All rights reserved.
      Determining projects to restore...
      All projects are up-to-date for restore.
-     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\netstandard2.0\StringLibrary.dll
+     StringLibrary -> C:\Projects\ClassLibraryProjects\StringLibrary\bin\Debug\net5.0\StringLibrary.dll
    Build succeeded.
        0 Warning(s)
        0 Error(s)
@@ -208,12 +210,11 @@ En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a l
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Desarrollo de bibliotecas con la CLI de .NET Core](libraries.md)
-* [Versiones de .NET Standard y las plataformas que admiten](../../standard/net-standard.md).
+* [Desarrollo de bibliotecas con la CLI de .NET](libraries.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 En este tutorial, ha creado una solución, ha agregado un proyecto de biblioteca y ha agregado un proyecto de aplicación de consola que usa la biblioteca. En el siguiente tutorial, agregará un proyecto de prueba unitaria a la solución.
 
 > [!div class="nextstepaction"]
-> [Prueba de una biblioteca .NET Standard con .NET Core mediante Visual Studio Code](testing-library-with-visual-studio-code.md)
+> [Prueba de una biblioteca de clases de .NET con .NET mediante Visual Studio Code](testing-library-with-visual-studio-code.md)

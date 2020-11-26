@@ -1,25 +1,39 @@
 ---
-title: 'dotnet-gcdump: .NET Core'
-description: Instalación y uso de la herramienta de línea de comandos dotnet-gcdump.
-ms.date: 07/26/2020
-ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+title: 'Herramienta de diagnóstico dotnet-gcdump: CLI de .NET'
+description: Aprenda a instalar y usar la herramienta de la CLI dotnet-gcdump para recopilar volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET en vivo mediante EventPipe de .NET.
+ms.date: 11/17/2020
+ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656656"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94826045"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Herramienta de análisis del montón (dotnet-gcdump)
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.1 y versiones posteriores
 
-## <a name="install-dotnet-gcdump"></a>Instalación de dotnet-gcdump
+## <a name="install"></a>Instalar
 
-Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-gcdump) de `dotnet-gcdump`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+Hay dos maneras de descargar e instalar `dotnet-gcdump`:
 
-```dotnetcli
-dotnet tool install -g dotnet-gcdump
-```
+- **Herramienta global dotnet:**
+
+  Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-gcdump) de `dotnet-gcdump`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-gcdump
+  ```
+
+- **Descarga directa:**
+
+  Descargue el archivo ejecutable de la herramienta que coincida con la plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -29,7 +43,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descripción
 
-La herramienta global `dotnet-gcdump` permite recopilar volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET dinámicos. Usa la tecnología EventPipe, que es una alternativa multiplataforma a ETW en Windows. Los volcados de memoria de GC se crean desencadenando un GC en el proceso de destino, activando eventos especiales y regenerando el gráfico de raíces de objeto a partir del flujo de eventos. Este proceso permite recopilar volcados de memoria de GC mientras el proceso se está ejecutando y con una sobrecarga mínima. Estos volcados de memoria son útiles para varios escenarios:
+La herramienta global `dotnet-gcdump` recopila volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET en vivo mediante [EventPipe](./eventpipe.md). Los volcados de memoria de GC se crean desencadenando un GC en el proceso de destino, activando eventos especiales y regenerando el gráfico de raíces de objeto a partir del flujo de eventos. Este proceso permite recopilar volcados de memoria de GC mientras el proceso se está ejecutando y con una sobrecarga mínima. Estos volcados de memoria son útiles para varios escenarios:
 
 - Comparar el número de objetos del montón en varios puntos en el tiempo.
 - Analizar raíces de objetos (responder a preguntas como "¿qué sigue teniendo una referencia a este tipo?").

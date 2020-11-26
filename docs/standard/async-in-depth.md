@@ -4,14 +4,13 @@ description: Obtenga información sobre cómo es sencillo escribir código asinc
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fcc41c4ea5037d643402fc722e8f16f28d560ee
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70169108"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823334"
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 

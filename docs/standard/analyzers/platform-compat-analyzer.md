@@ -3,18 +3,19 @@ title: Analizador de compatibilidad de plataformas
 description: Un analizador de Roslyn que puede ayudar a detectar problemas de compatibilidad de plataformas en aplicaciones y bibliotecas multiplataforma.
 author: buyaa-n
 ms.date: 09/17/2020
-ms.openlocfilehash: 44c2c2d9674b13f314a057f847df2d4d474cc2be
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 808e89df49a82e091862a052e62a367e6860fe47
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805303"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94819492"
 ---
 # <a name="platform-compatibility-analyzer"></a>Analizador de compatibilidad de plataformas
 
 Probablemente ha oído hablar del lema de "One .NET": una única plataforma unificada para crear cualquier tipo de aplicación. El SDK de .NET 5.0 incluye ASP.NET Core, Entity Framework Core, WinForms, WPF, Xamarin y ML.NET, y agregará compatibilidad con más plataformas a lo largo del tiempo. .NET 5.0 se esfuerza por proporcionar una experiencia en la que no tenga que preocuparse de los distintos tipos de .NET, pero no intenta abstraer completamente el sistema operativo (SO) subyacente. Podrá seguir llamando a las API específicas de la plataforma, por ejemplo, P/Invokes, WinRT o los enlaces de Xamarin para iOS y Android.
 
-Pero el uso de API específicas de la plataforma en un componente significa que el código deje de funcionar en todas las plataformas. Necesitábamos una manera de detectar esto en tiempo de diseño para que los desarrolladores obtuvieran diagnósticos al utilizar accidentalmente API específicas de la plataforma. Para lograr este objetivo, .NET 5.0 presenta el [analizador de compatibilidad de plataformas](/visualstudio/code-quality/ca1416) y API complementarias para ayudar a los desarrolladores a identificar y usar las API específicas de la plataforma cuando sea necesario.
+Pero el uso de API específicas de la plataforma en un componente significa que el código deje de funcionar en todas las plataformas. Necesitábamos una manera de detectar esto en tiempo de diseño para que los desarrolladores obtuvieran diagnósticos al utilizar accidentalmente API específicas de la plataforma. Para lograr este objetivo, .NET 5.0 presenta el [analizador de compatibilidad de plataformas](../../fundamentals/code-analysis/quality-rules/ca1416.md) y API complementarias para ayudar a los desarrolladores a identificar y usar las API específicas de la plataforma cuando sea necesario.
+
 Entre las nuevas API se incluyen:
 
 - <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> para anotar las API como específicas de la plataforma y <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> para anotar las API como no compatibles en un sistema operativo determinado. Estos atributos pueden incluir opcionalmente el número de versión y ya se han aplicado a algunas API específicas de la plataforma en las bibliotecas .NET básicas.
@@ -25,7 +26,7 @@ Entre las nuevas API se incluyen:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-El analizador de compatibilidad de plataformas es uno de los analizadores de calidad de código de Roslyn. A partir de .NET 5.0, estos analizadores se [incluyen con el SDK de .NET](../../fundamentals/code-analysis/overview.md). El analizador de compatibilidad de plataformas está habilitado de forma predeterminada solo para los proyectos que tienen como destino `net5.0` o una versión posterior. Sin embargo, puede [habilitar](/visualstudio/code-quality/ca1416.md#configurability) para los proyectos que tienen como destino otras plataformas.
+El analizador de compatibilidad de plataformas es uno de los analizadores de calidad de código de Roslyn. A partir de .NET 5.0, estos analizadores se [incluyen con el SDK de .NET](../../fundamentals/code-analysis/overview.md). El analizador de compatibilidad de plataformas está habilitado de forma predeterminada solo para los proyectos que tienen como destino `net5.0` o una versión posterior. Pero puede [habilitarlo](../../fundamentals/code-analysis/quality-rules/ca1416.md#configurability) para proyectos destinados a otros marcos.
 
 ## <a name="how-the-analyzer-determines-platform-dependency"></a>Cómo determina el analizador la dependencia de plataformas
 

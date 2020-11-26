@@ -1,21 +1,21 @@
 ---
-title: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
-description: Aprenda a depurar una aplicación de consola de .NET Core con Visual Studio Code.
+title: Depuración de una aplicación de consola de .NET con Visual Studio Code
+description: Aprenda a depurar una aplicación de consola de .NET con Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89118304"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916234"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET con Visual Studio Code
 
-En este tutorial se presentan las herramientas de depuración disponibles en Visual Studio Code para trabajar con aplicaciones de .NET Core.
+En este tutorial se presentan las herramientas de depuración disponibles en Visual Studio Code para trabajar con aplicaciones de .NET.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core con Visual Studio Code](with-visual-studio-code.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET con Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="use-debug-build-configuration"></a>Uso de la configuración de compilación de depuración
 
@@ -27,7 +27,7 @@ De forma predeterminada, la configuración de lanzamiento de Visual Studio Cod
 
 1. Inicie Visual Studio Code.
 
-1. Abra la carpeta del proyecto que ha creado en [Creación de una aplicación de consola de .NET Core con Visual Studio Code](with-visual-studio-code.md).
+1. Abra la carpeta del proyecto que ha creado en [Creación de una aplicación de consola de .NET con Visual Studio Code](with-visual-studio-code.md).
 
 ## <a name="set-a-breakpoint"></a>Establecer un punto de interrupción
 
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 En este tutorial, ha usado las herramientas de depuración de Visual Studio Code. En el siguiente tutorial, publicará una versión de la aplicación que se puede implementar.
 
 > [!div class="nextstepaction"]
-> [Publicación de una aplicación de consola de .NET Core con Visual Studio Code](publishing-with-visual-studio-code.md)
+> [Publicación de una aplicación de consola de .NET con Visual Studio Code](publishing-with-visual-studio-code.md)

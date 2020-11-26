@@ -1,25 +1,39 @@
 ---
-title: 'La herramienta dotnet-trace: .NET Core'
-description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
-ms.date: 11/21/2019
-ms.openlocfilehash: d4175ccad785b21f860044a4fd5d691624ec495e
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+title: 'Herramienta de diagnóstico dotnet-trace: CLI de .NET'
+description: Aprenda a instalar y usar la herramienta dotnet-trace de la CLI para recopilar seguimientos de .NET de un proceso en ejecución sin el generador de perfiles nativo, mediante EventPipe de .NET.
+ms.date: 11/17/2020
+ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507233"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94829315"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
 
-## <a name="install-dotnet-trace"></a>Instalación de dotnet-trace
+## <a name="install"></a>Instalar
 
-Instale el [paquete NuGet](https://www.nuget.org/packages/dotnet-trace) `dotnet-trace` con el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+Hay dos maneras de descargar e instalar `dotnet-trace`:
 
-```dotnetcli
-dotnet tool install --global dotnet-trace
-```
+- **Herramienta global dotnet:**
+
+  Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-trace) de `dotnet-trace`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-trace
+  ```
+
+- **Descarga directa:**
+
+  descargue el archivo ejecutable de la herramienta que coincida con la plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -33,7 +47,7 @@ La herramienta `dotnet-trace`:
 
 * Es una herramienta de .NET Core para varias plataformas.
 * Habilita la recolección de seguimientos de .NET Core de un proceso en ejecución sin un generador de perfiles nativo.
-* Se basa en la tecnología `EventPipe` multiplataforma del entorno de ejecución de .NET Core.
+* Se basa en [`EventPipe`](./eventpipe.md) del entorno de ejecución de .NET Core.
 * Ofrece la misma experiencia en Windows, Linux o macOS.
 
 ## <a name="options"></a>Opciones
@@ -196,7 +210,8 @@ Para recopilar seguimientos mediante `dotnet-trace`:
 
 ## <a name="launch-a-child-application-and-collect-a-trace-from-its-startup-using-dotnet-trace"></a>Inicio de una aplicación secundaria y recopilación de un seguimiento de su inicio mediante dotnet-trace
 
-NOTA: Esto solo funciona para las aplicaciones que ejecutan .NET 5.0 o una versión posterior.
+> [!IMPORTANT]
+> Esto solo funciona para las aplicaciones que ejecutan .NET 5.0 o una versión posterior.
 
 A veces puede resultar útil recopilar un seguimiento de un proceso desde su inicio. En el caso de las aplicaciones que ejecutan .NET 5.0 o versiones posteriores, es posible hacerlo mediante dotnet-trace.
 

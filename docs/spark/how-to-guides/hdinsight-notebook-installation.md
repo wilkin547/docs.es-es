@@ -4,12 +4,12 @@ description: Aprenda a instalar .NET para Apache Spark en cuadernos de Jupyter d
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: b5689c9ccdd13209fec33674ad8fc80dcc369660
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955054"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688285"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalación de .NET para Apache Spark en cuadernos de Jupyter en clústeres de Azure HDInsight Spark
 
@@ -73,7 +73,7 @@ En Azure Portal, seleccione el **clúster de HDInsight Spark** que creó en el p
    | NOMBRE | *Instalación de la experiencia interactiva de cuadernos de .NET para Apache Spark* |
    | URI de script de Bash | El URI en el que cargó `install-interactive-notebook.sh`. |
    | Tipos de nodo| Principal y de trabajo |
-   | Parámetros | Versión de .NET para Apache Spark. Puede comprobar las [versiones de .NET para Apache Spark](https://github.com/dotnet/spark/releases). Por ejemplo, si quiere instalar la versión 0.6.0 de Sparkdotnet, sería entonces `0.6.0`.
+   | Parámetros | Versión de .NET para Apache Spark. Puede comprobar las [versiones de .NET para Apache Spark](https://github.com/dotnet/spark/releases). Por ejemplo, si quiere instalar la versión 1.0.0 de Sparkdotnet, sería `1.0.0`.
 
    Cuando aparezcan marcas de verificación verdes junto al estado de la acción de script, vaya al siguiente paso.
 
@@ -101,7 +101,7 @@ Siga las instrucciones de la sección [Detención del servidor de Livy](#stop-th
 
    * **Propiedad 2** Use la versión de .NET para Apache Spark que se había incluido en la acción de script anterior.
        * Clave:&ensp;&ensp;`spark.dotnet.packages`
-       * Valor: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * Valor: `["nuget: Microsoft.Spark, 1.0.0", "nuget: Microsoft.Spark.Extensions.Delta, 1.0.0"]`
 
    * **Propiedad 3**
        * Clave:&ensp;&ensp;`spark.dotnet.interpreter`

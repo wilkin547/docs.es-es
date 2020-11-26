@@ -1,28 +1,42 @@
 ---
-title: 'dotnet-dump: .NET Core'
-description: Instalación y uso de la herramienta de línea de comandos dotnet-trace.
-ms.date: 10/14/2019
-ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+title: 'Herramienta de diagnóstico dotnet-dump: CLI de .NET'
+description: Obtenga información sobre cómo instalar y usar la herramienta dotnet-dump de la CLI para recopilar y analizar volcados de Windows y Linux sin ningún depurador nativo.
+ms.date: 11/17/2020
+ms.openlocfilehash: ea9a70c4dc47b5006339e9a197712092eb66b241
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598115"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94822209"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado de memoria (dotnet-dump)
 
 **Este artículo se aplica a:** ✔️ SDK de .NET Core 3.0 y versiones posteriores
 
 > [!NOTE]
-> `dotnet-dump` no se admite en macOS.
+> `dotnet-dump` para macOS solo se admite con .NET 5.0 y versiones posteriores.
 
-## <a name="install-dotnet-dump"></a>Instalación de dotnet-dump
+## <a name="install"></a>Instalar
 
-Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-dump) de `dotnet-dump`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+Hay dos maneras de descargar e instalar `dotnet-dump`:
 
-```dotnetcli
-dotnet tool install -g dotnet-dump
-```
+- **Herramienta global dotnet:**
+
+  Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-dump) de `dotnet-dump`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+
+  ```dotnetcli
+  dotnet tool install --global dotnet-dump
+  ```
+
+- **Descarga directa:**
+
+  descargue el archivo ejecutable de la herramienta que coincida con la plataforma:
+
+  | SO  | Plataforma |
+  | --- | -------- |
+  | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
+  | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
+  | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -58,7 +72,7 @@ Captura un volcado de un proceso.
 ### <a name="synopsis"></a>Sinopsis
 
 ```console
-dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
+dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--output] [--diag]
 ```
 
 ### <a name="options"></a>Opciones
@@ -69,7 +83,11 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`-p|--process-id <PID>`**
 
-  Especifica el número de id. de proceso del que se va a recopilar un volcado de memoria.
+  Especifica el número de id. de proceso del que se va a recopilar un volcado.
+
+- **`-n|--name <name>`**
+
+  Especifica el nombre del proceso del que se va a recopilar un volcado.
 
 - **`--type <Full|Heap|Mini>`**
 

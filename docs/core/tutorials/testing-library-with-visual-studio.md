@@ -1,25 +1,25 @@
 ---
-title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio
-description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
-ms.date: 06/08/2020
+title: Prueba de una biblioteca de clases de .NET con Visual Studio
+description: Obtenga información sobre cómo usar Visual Studio para crear y ejecutar un proyecto de prueba unitaria para una biblioteca de clases de .NET.
+ms.date: 11/18/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 04d0120622697d1e0c84fc169dfc50951cb8aa3c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3d56627b937fa0ad5f8002f396ce617e09ce9d2c
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177298"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916131"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Tutorial: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio
+# <a name="tutorial-test-a-net-class-library-with-net-using-visual-studio"></a>Tutorial: Prueba de una biblioteca de clases de .NET con .NET mediante Visual Studio
 
 En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la adición de un proyecto de prueba a una solución.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de .NET Standard con Visual Studio](library-with-visual-studio.md).
+- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de clases de .NET con Visual Studio](library-with-visual-studio.md).
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
@@ -27,7 +27,7 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 1. Inicie Visual Studio.
 
-1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca de .NET Standard con Visual Studio](library-with-visual-studio.md).
+1. Abra la solución `ClassLibraryProjects` que ha creado en [Creación de una biblioteca de clases de .NET con Visual Studio](library-with-visual-studio.md).
 
 1. Agregue un nuevo proyecto de prueba unitaria denominado "StringLibraryTest" a la solución.
 
@@ -35,9 +35,11 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
    1. En el cuadro de búsqueda de la página **Agregar un nuevo proyecto**, escriba **mstest**. En la lista de lenguajes, elija **C#** o **Visual Basic** y, luego, en la lista de plataformas, elija **Todas las plataformas**.
 
-   1. Elija la plantilla **MSTest Test Project (.NET Core)** [Proyecto de prueba de MSTest (.NET Core)] y, luego, elija **Siguiente**.
+   1. Seleccione la plantilla **Proyecto de prueba unitaria**  y luego **Siguiente**.
 
-   1. En la página **Configurar el nuevo proyecto**, escriba **StringLibraryTest** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
+   1. En la página **Configurar el nuevo proyecto**, escriba **StringLibraryTest** en el cuadro **Nombre del proyecto**. Después, haga clic en **Siguiente**.
+
+   1. En la página **Información adicional**, seleccione **.NET 5.0 (actual)** en el cuadro **Plataforma de destino**. Luego, elija **Crear**.
 
 1. Visual Studio crea el proyecto y abre el archivo de clase en la ventana de código con el siguiente código. Si no se muestra el idioma que quiere usar, cambie el selector de idioma en la parte superior de la página.
 
@@ -122,21 +124,21 @@ Para crear los métodos de prueba:
 1. En la barra de menús, seleccione **Archivo** > **Guardar UnitTest1.cs como** o **Archivo** > **Guardar UnitTest1.vb como**. En el cuadro de diálogo **Guardar archivo como**, seleccione la flecha junto al botón **Guardar** y seleccione **Guardar con codificación**.
 
    > [!div class="mx-imgBorder"]
-   > ![Cuadro de diálogo Guardar archivo como de Visual Studio](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/save-file-as-dialog.png" alt-text="Cuadro de diálogo Guardar archivo como de Visual Studio":::
 
 1. En el cuadro de diálogo **Confirmar guardar como**, seleccione el botón **Sí** para guardar el archivo.
 
 1. En el cuadro de diálogo **Opciones avanzadas para guardar**, seleccione **Unicode (UTF-8 con firma) - Página de códigos 65001** desde la lista desplegable **Codificación** y seleccione **Aceptar**.
 
    > [!div class="mx-imgBorder"]
-   > ![Cuadro de diálogo Opciones avanzadas para guardar de Visual Studio](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/advanced-save-options.png" alt-text="Cuadro de diálogo Opciones avanzadas para guardar de Visual Studio":::
 
    Si obtiene un error al guardar el código fuente en un archivo con codificación UTF-8, Visual Studio puede guardarlo como un archivo ASCII. Cuando eso suceda, el tiempo de ejecución no descodifica correctamente los caracteres UTF-8 del rango ASCII, y los resultados de la prueba no serán correctos.
 
 1. En la barra de menús, seleccione **Prueba** > **Ejecutar todas las pruebas**. Si no se abre la ventana **Explorador de pruebas**, ábrala mediante **Prueba** > **Explorador de pruebas**. Las tres pruebas se muestran en la sección **Pruebas superadas** y en la sección **Resumen** se informa del resultado de la serie de pruebas.
 
    > [!div class="mx-imgBorder"]
-   > ![Ventana Explorador de pruebas con pruebas superadas](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/test-explorer-window.png" alt-text="Ventana Explorador de pruebas con pruebas superadas":::
 
 ## <a name="handle-test-failures"></a>Administración de errores de prueba
 
@@ -158,14 +160,14 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
 1. Ejecute la prueba seleccionando **Prueba** > **Ejecutar todas las pruebas** de la barra de menús. En la ventana **Explorador de pruebas** se indica que dos pruebas se han realizado correctamente y que una ha finalizado con errores.
 
    > [!div class="mx-imgBorder"]
-   > ![Ventana Explorador de pruebas con pruebas no superadas](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-window.png" alt-text="Ventana Explorador de pruebas con pruebas no superadas":::
 
 1. Seleccione la prueba con errores, `TestDoesNotStartWith`.
 
    En la ventana **Explorador de pruebas** se muestra el mensaje generado por la instrucción Assert: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
    > [!div class="mx-imgBorder"]
-   > ![Ventana del Explorador de pruebas que muestra el error de aserción IsFalse](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/failed-test-detail.png" alt-text="Ventana del Explorador de pruebas que muestra el error de aserción IsFalse":::
 
 1. Quite la cadena "Error" que agregó en el paso 1. Vuelva a ejecutar la prueba y se superarán las pruebas.
 
@@ -178,25 +180,25 @@ Para probar la compilación de versión:
 1. En la barra de herramientas de Visual Studio, cambie la configuración de compilación de **Depurar** a **Versión**.
 
    > [!div class="mx-imgBorder"]
-   > ![Barra de herramientas de Visual Studio con la compilación de versión resaltada](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Barra de herramientas de Visual Studio con la compilación de versión resaltada":::
 
 1. En el  **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **StringLibrary** y seleccione **Compilar** desde el menú contextual para volver a compilar la biblioteca.
 
    > [!div class="mx-imgBorder"]
-   > ![Menú contextual de StringLibrary con el comando Compilar](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > :::image type="content" source="./media/testing-library-with-visual-studio/build-library-context-menu.png" alt-text="Menú contextual de StringLibrary con el comando Compilar":::
 
 1. Ejecute las pruebas unitarias mediante **Ejecutar prueba** > **Todas las pruebas** de la barra de menús. Las pruebas se superan.
 
 ## <a name="debug-tests"></a>Depuración de pruebas
 
-Si usa Visual Studio como IDE, puede emplear el mismo proceso que se muestra en [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio](debugging-with-visual-studio.md) para depurar el código mediante el proyecto de prueba unitaria. En lugar de iniciar el proyecto de aplicación *ShowCase*, haga clic con el botón derecho en el proyecto **StringLibraryTests** y seleccione **Depurar pruebas** en el menú contextual.
+Si usa Visual Studio como IDE, puede emplear el mismo proceso que se muestra en [Tutorial: Depuración de una aplicación de consola de .NET con Visual Studio](debugging-with-visual-studio.md) para depurar el código mediante el proyecto de prueba unitaria. En lugar de iniciar el proyecto de aplicación *ShowCase*, haga clic con el botón derecho en el proyecto **StringLibraryTests** y seleccione **Depurar pruebas** en el menú contextual.
 
 Visual Studio inicia el proyecto de prueba con el depurador asociado. La ejecución se detendrá en cualquier punto de interrupción que haya agregado al proyecto de prueba o al código de la biblioteca subyacente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [Conceptos básicos de las pruebas unitarias en Visual Studio](/visualstudio/test/unit-test-basics)
-* [Pruebas unitarias en .NET Core y .NET Standard](../testing/index.md)
+* [Pruebas unitarias en .NET](../testing/index.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -213,4 +215,4 @@ Si publica una biblioteca como un paquete NuGet, otros usuarios pueden instalarl
 No es necesario distribuir una biblioteca como un paquete. Se puede agrupar con una aplicación de consola que la use. Para aprender a publicar una aplicación de consola, vea el tutorial anterior de esta serie:
 
 > [!div class="nextstepaction"]
-> [Publicación de una aplicación de consola de .NET Core con Visual Studio](publishing-with-visual-studio.md)
+> [Publicación de una aplicación de consola de .NET con Visual Studio](publishing-with-visual-studio.md)

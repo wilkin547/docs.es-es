@@ -1,26 +1,26 @@
 ---
-title: Creación de una aplicación de consola de .NET Core con Visual Studio Code
-description: Aprenda a crear una aplicación de consola de .NET Core con Visual Studio Code y la CLI de .NET Core.
-ms.date: 05/22/2020
-ms.openlocfilehash: e936c23d8525e42a9d2781cc680067c9da2ce42f
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+title: Creación de una aplicación de consola de .NET con Visual Studio Code
+description: Aprenda a crear una aplicación de consola de .NET con Visual Studio Code y la CLI de .NET.
+ms.date: 11/17/2020
+ms.openlocfilehash: dbbdf88b0c84089249eb7e446c25eddc11543c1a
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811931"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915874"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code
+# <a name="tutorial-create-a-net-console-application-using-visual-studio-code"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio Code
 
-En este tutorial se explica cómo crear y ejecutar una aplicación de consola de .NET Core mediante Visual Studio Code y la CLI de .NET Core. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET Core. Puede seguir este tutorial con un editor de código diferente y ejecutar comandos en un terminal si lo prefiere.
+En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de .NET mediante Visual Studio Code y la CLI de .NET. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET. Puede seguir este tutorial con un editor de código diferente y ejecutar comandos en un terminal si lo prefiere.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 1. [Visual Studio Code](https://code.visualstudio.com/) con la [extensión de C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) instalada. Para saber cómo instalar extensiones en Visual Studio Code, vea el [Marketplace de extensiones de VS Code](https://code.visualstudio.com/docs/editor/extension-gallery).
-2. [SDK de .NET Core 3.1 o posterior](https://dotnet.microsoft.com/download)
+2. [SDK de .NET 5.0 o posterior](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>Creación de la aplicación
 
-Cree un proyecto de aplicación de consola de .NET Core denominado "HelloWorld".
+Cree un proyecto de aplicación de consola de .NET denominado "HelloWorld".
 
 1. Inicie Visual Studio Code.
 
@@ -120,7 +120,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, ha creado una aplicación de consola de .NET Core. En el siguiente tutorial, depurará la aplicación.
+En este tutorial, ha creado una aplicación de consola de .NET. En el siguiente tutorial, depurará la aplicación.
 
 > [!div class="nextstepaction"]
-> [Depuración de una aplicación de consola de .NET Core con Visual Studio Code](debugging-with-visual-studio-code.md)
+> [Depuración de una aplicación de consola de .NET con Visual Studio Code](debugging-with-visual-studio-code.md)

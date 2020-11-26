@@ -4,16 +4,16 @@ description: Obtenga información sobre .NET para Apache Spark, un marco de aná
 author: mamccrea
 ms.topic: overview
 ms.date: 10/09/2020
-ms.openlocfilehash: 2c743cf7f88d857fb87aed123bd687c353fd8b84
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: 533a4d3b497ad499edcf3accf250477c03f98714
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955361"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94688038"
 ---
 # <a name="what-is-net-for-apache-spark"></a>¿Qué es .NET para Apache Spark?
 
-[Apache Spark](what-is-spark.md) es un motor de procesamiento distribuido de uso general para realizar análisis de grandes conjuntos de datos (normalmente, terabytes o petabytes de datos). Con .NET para Apache Spark, la compatibilidad de .NET gratuita, de código abierto y multiplataforma para el conocido marco de análisis de macrodatos de código abierto, ahora puede agregar la capacidad de Apache Spark a las aplicaciones de macrodatos con lenguajes que ya conoce.
+[Apache Spark](what-is-spark.md) es un motor de procesamiento distribuido de uso general para realizar análisis de grandes conjuntos de datos (normalmente, terabytes o petabytes de datos). Con .NET para Apache Spark, la compatibilidad de .NET gratuita, [de código abierto](https://github.com/dotnet/spark) y multiplataforma para el conocido marco de análisis de macrodatos de código abierto, ahora puede agregar la capacidad de Apache Spark a las aplicaciones de macrodatos con lenguajes que ya conoce.
 
 ## <a name="why-choose-net-for-apache-spark"></a>¿Por qué elegir .NET para Apache Spark?
 

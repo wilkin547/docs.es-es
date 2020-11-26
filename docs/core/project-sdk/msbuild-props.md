@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 463e2a163e6a20f5631b0ab82462614834156ae3
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: ecd1cf405f661d0025553974f92fa1401b13220d
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063233"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687476"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -123,7 +123,7 @@ El siguiente código XML excluye del recorte el ensamblado `System.Security`.
 
 ### <a name="useapphost"></a>UseAppHost
 
-La propiedad `UseAppHost` se presentó en la versión 2.1.400 del SDK de .NET. Controla si se crea o no un archivo ejecutable nativo para una implementación. Un archivo ejecutable nativo es obligatorio para las implementaciones independientes.
+La propiedad `UseAppHost` controla si se crea o no un archivo ejecutable nativo para una implementación. Un archivo ejecutable nativo es obligatorio para las implementaciones independientes.
 
 En .NET Core 3.0 y versiones posteriores, se crea de forma predeterminada un ejecutable dependiente del marco de trabajo. Establezca la propiedad `UseAppHost` en `false` para deshabilitar la generación del archivo ejecutable.
 
@@ -142,7 +142,7 @@ Para más información sobre la implementación, consulte [Implementación de ap
 
 ### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
 
-La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres del archivo de manifiesto del recurso se generan a partir de la información de tipo de los archivos de código fuente que se ubican conjuntamente con archivos de recursos. Por ejemplo, si *Form1.resx* está en la misma carpera que *Form1.cs* , y `EmbeddedResourceUseDependentUponConvention` se establece en `true`, el archivo *.resources* generado toma su nombre del primer tipo que se define en *Form1.cs*. Por ejemplo, si `MyNamespace.Form1` es el primer tipo definido en *Form1.cs* , el nombre de archivo generado es *myNameSpace.Form1.Resources*.
+La propiedad `EmbeddedResourceUseDependentUponConvention` define si los nombres del archivo de manifiesto del recurso se generan a partir de la información de tipo de los archivos de código fuente que se ubican conjuntamente con archivos de recursos. Por ejemplo, si *Form1.resx* está en la misma carpera que *Form1.cs*, y `EmbeddedResourceUseDependentUponConvention` se establece en `true`, el archivo *.resources* generado toma su nombre del primer tipo que se define en *Form1.cs*. Por ejemplo, si `MyNamespace.Form1` es el primer tipo definido en *Form1.cs*, el nombre de archivo generado es *myNameSpace.Form1.Resources*.
 
 > [!NOTE]
 > Si se especifican los metadatos `LogicalName`, `ManifestResourceName` o `DependentUpon` para un elemento `EmbeddedResource`, el nombre del archivo de manifiesto generado para ese archivo de recurso se basa en esos metadatos.
@@ -270,7 +270,7 @@ La propiedad `ConcurrentGarbageCollection` configura si está habilitada la [rec
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
 
-La propiedad `InvariantGlobalization` configura si la aplicación se ejecuta en modo *invariable de globalización* , lo que significa que no tiene acceso a datos específicos de la referencia cultural. Establezca el valor en `true` para ejecutar en el modo invariable de globalización. Para obtener más información, consulte [Modo invariable](../run-time-config/globalization.md#invariant-mode).
+La propiedad `InvariantGlobalization` configura si la aplicación se ejecuta en modo *invariable de globalización*, lo que significa que no tiene acceso a datos específicos de la referencia cultural. Establezca el valor en `true` para ejecutar en el modo invariable de globalización. Para obtener más información, consulte [Modo invariable](../run-time-config/globalization.md#invariant-mode).
 
 ```xml
 <PropertyGroup>
@@ -354,7 +354,7 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [Referencia](#reference)
-- [Restaurar las propiedades](#restore-properties)
+- [Propiedades relacionadas con la restauración](#restore-related-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
@@ -412,13 +412,44 @@ El atributo `Include` especifica el nombre del archivo y los metadatos `HintPath
 </ItemGroup>
 ```
 
-### <a name="restore-properties"></a>Restaurar las propiedades
+### <a name="restore-related-properties"></a>Propiedades relacionadas con la restauración
 
 La restauración de un paquete al que se hace referencia instala todas sus dependencias directas y todas las dependencias de esas dependencias. Puede personalizar la restauración de paquetes especificando propiedades como `RestorePackagesPath` y `RestoreIgnoreFailedSources`. Para más información sobre estas y otras propiedades, vea [Destino de restore](/nuget/reference/msbuild-targets#restore-target).
 
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="hosting-properties-and-items"></a>Propiedades y elementos de hospedaje
+
+- [EnableComHosting](#enablecomhosting)
+- [EnableDynamicLoading](#enabledynamicloading)
+
+### <a name="enablecomhosting"></a>EnableComHosting
+
+La propiedad `EnableComHosting` indica que un ensamblado proporciona un servidor COM. Al establecer `EnableComHosting` en `true` también implica que [EnableDynamicLoading](#enabledynamicloading) es `true`.
+
+```xml
+<PropertyGroup>
+  <EnableComHosting>True</EnableComHosting>
+</PropertyGroup>
+```
+
+Para obtener más información, vea [Exposición de componentes de .NET en COM](../native-interop/expose-components-to-com.md).
+
+### <a name="enabledynamicloading"></a>EnableDynamicLoading
+
+La propiedad `EnableDynamicLoading` indica que un ensamblado es un componente cargado dinámicamente. El componente podría ser una [biblioteca de COM](/windows/win32/com/the-component-object-model) o una biblioteca que no es de COM que se puede [usar desde un host nativo](../tutorials/netcore-hosting.md). Establecer esta propiedad en `true` tiene los efectos siguientes:
+
+- Se genera un archivo *runtimeconfig.json*.
+- La [puesta al día](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward) se establece en `LatestMinor`.
+- Las referencias de NuGet se copian localmente.
+
+```xml
+<PropertyGroup>
+  <EnableDynamicLoading>true</EnableDynamicLoading>
 </PropertyGroup>
 ```
 

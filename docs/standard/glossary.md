@@ -1,14 +1,13 @@
 ---
 title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
-ms.date: 10/13/2020
-ms.technology: dotnet-standard
-ms.openlocfilehash: 3de9e0aea253b42d65199dc3d66f026dd023f4c7
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.date: 11/16/2020
+ms.openlocfilehash: 143657b4ec360640c0a43099ca5c1c0d9c863453
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224409"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687784"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -52,15 +51,22 @@ Vea la [documentación de ASP.NET Core](/aspnet/#pivot=core).
 
 Un archivo *.dll*/ *.exe* que puede contener una colección de API a la que puede llamarse mediante aplicaciones u otros ensamblados.
 
-Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios* . Vea también [biblioteca](#library).
+Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
 
 ## <a name="bcl"></a>BCL
 
-Biblioteca de clases base. También se conoce como *biblioteca de marco* .
+Biblioteca de clases base.
 
 Un conjunto de bibliotecas que conforman los espacios de nombres de System.\* (y hasta cierto punto Microsoft.\*). BCL es un marco de nivel inferior de uso general donde se compilan marcos de trabajo de la aplicación de nivel superior, como ASP.NET Core.
 
-El código fuente de la BCL para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions) se encuentra en el [repositorio del entorno de ejecución de .NET](https://github.com/dotnet/runtime). La mayoría de las API de BCL para esta implementación más reciente de .NET también están disponibles en .NET Framework, por lo que puede considerar este código fuente como una bifurcación del código fuente de la BCL de .NET Framework.
+El código fuente de la BCL para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions) se encuentra en el [repositorio del entorno de ejecución de .NET](https://github.com/dotnet/runtime). La mayoría de estas API de BCL también están disponibles en .NET Framework, por lo que puede considerar este código fuente como una bifurcación del de la BCL de .NET Framework.
+
+Los siguientes términos a menudo hacen referencia a la misma colección de API a las que se refiere BCL:
+
+- [bibliotecas de .NET básicas](../core/compatibility/3.1-5.0.md#core-net-libraries)
+- [bibliotecas de marco](#framework-libraries)
+- [bibliotecas en tiempo de ejecución](#runtime)
+- [marco compartido](#shared-framework)
 
 ## <a name="clr"></a>CLR
 
@@ -106,12 +112,18 @@ En general, una colección completa de API que facilita el desarrollo y la imple
 
 Los siguientes términos tienen un significado diferente:
 
+- [bibliotecas de marco](#framework-libraries)
 - [.NET Framework](#net-framework)
+- [marco compartido](#shared-framework)
 - [Plataforma de destino](#target-framework)
 - [TFM (moniker de la plataforma de destino)](#tfm)
 - [Aplicación dependiente de la plataforma](../core/deploying/index.md#publish-framework-dependent)
 
-En la documentación de .NET heredada, "marco de trabajo" a veces hace referencia a una [implementación de .NET](#implementation-of-net). Por ejemplo, un artículo puede llamar marco de trabajo a .NET 5.
+En ocasiones, "marco" hace referencia a una [implementación de .NET](#implementation-of-net). Por ejemplo, un artículo puede llamar marco de trabajo a .NET 5.
+
+## <a name="framework-libraries"></a>Bibliotecas de marco
+
+El significado depende del contexto. Puede hacer referencia a las bibliotecas de marco para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions), en cuyo caso hace referencia a las mismas bibliotecas a las que hace referencia [BCL](#bcl). También puede hacer referencia a las bibliotecas de marco de ASP.NET Core, que se basan en la BCL y proporcionan API adicionales para las aplicaciones web.
 
 ## <a name="gc"></a>GC
 
@@ -145,7 +157,7 @@ Una implementación de .NET incluye lo siguiente:
 Ejemplos de implementaciones de .NET:
 
 - [.NET Framework](#net-framework)
-- [.NET 5 y versiones posteriores (incluido .NET Core 2.1-3.1](#net-5-and-later-versions)
+- [.NET 5 y versiones posteriores (incluido .NET Core 2.1-3.1)](#net-5-and-later-versions)
 - [Plataforma universal de Windows (UWP)](#uwp)
 - [Mono](#mono)
 
@@ -213,7 +225,7 @@ Vea [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/mast
 
 Conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions). También se conoce como el SDK de .NET Core.
 
-Incluye la [CLI de .NET](#net-cli) para compilar aplicaciones, el entorno de ejecución, y las bibliotecas de .NET para compilar y ejecutar aplicaciones, y el ejecutable dotnet ( *dotnet.exe* ) que ejecuta comandos de la CLI y ejecuta aplicaciones.
+Incluye la [CLI de .NET](#net-cli) para compilar aplicaciones, el entorno de ejecución, y las bibliotecas de .NET para compilar y ejecutar aplicaciones, y el ejecutable dotnet (*dotnet.exe*) que ejecuta comandos de la CLI y ejecuta aplicaciones.
 
 Vea [Información general sobre el SDK de .NET](../core/sdk.md).
 
@@ -235,7 +247,7 @@ Esta tecnología se puede considerar como un compilador [JIT](#jit) persistente.
 
 Un paquete de NuGet &mdash; o simplemente un paquete &mdash; es un archivo *.zip* con uno o varios ensamblados del mismo nombre junto con metadatos adicionales, como el nombre del autor.
 
-El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml* ) para usar con varios marcos de destino y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib* .
+El archivo *.zip* tiene una extensión *.nupkg* y puede contener recursos (como archivos *.dll* y *.xml*) para usar con varios marcos de destino y versiones. Cuando se instala en una aplicación o biblioteca, se seleccionan los recursos adecuados en función de la plataforma de destino especificada por la aplicación o biblioteca. Los recursos que definen la interfaz se encuentran en la carpeta *ref* y los recursos que definen la implementación se encuentran en la carpeta *lib*.
 
 ## <a name="platform"></a>platform
 
@@ -258,21 +270,34 @@ En términos generales, el entorno de ejecución de un programa administrado. El
 - .NET Native (para UWP)
 - Entorno de ejecución Mono
 
-El término "entorno de ejecución" tiene un significado diferente en los siguientes contextos:
+El término "entorno de ejecución" tiene un significado diferente en algunos contextos:
 
-* [Página de descarga de .NET](https://dotnet.microsoft.com/download).
+* *Entorno de ejecución de .NET* en la [página de descarga de .NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0).
 
-  Aquí, "entorno de ejecución" se refiere a [CLR](#clr) y a [BCL](#bcl) (las bibliotecas de marco), que puede descargar e instalar en una máquina para ejecutar aplicaciones [dependientes de la plataforma](../core/deploying/index.md#publish-framework-dependent) en la máquina.
+  Puede descargar el *entorno de ejecución de .NET* u otros, como el *entorno de ejecución de ASP.NET Core*. En este caso, un *entorno de ejecución* es el conjunto de componentes que se deben instalar en un equipo para ejecutar una aplicación [dependiente del marco](../core/deploying/index.md#publish-framework-dependent) en el equipo. El entorno de ejecución de .NET incluye el [CLR](#clr) y el [marco compartido](#shared-framework) de .NET, que proporciona la [BCL](#bcl).
 
-* [Identificador de entorno de ejecución (RID)](../core/rid-catalog.md) para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions).
+* *Bibliotecas en tiempo de ejecución de .NET*
 
-  Aquí, "entorno de ejecución" hace referencia a la plataforma del sistema operativo y a la arquitectura de la CPU en la que se ejecuta una aplicación .NET, por ejemplo, `linux-x64`.
+  Hace referencia a las mismas bibliotecas a las que hace referencia [BCL](#bcl). Pero otros entornos de ejecución, como el de ASP.NET Core, tienen otros [marcos compartidos](#shared-framework), con bibliotecas adicionales que se basan en la BCL.
 
-A veces, la documentación heredada de .NET usa "entorno de ejecución" para indicar una [implementación de .NET](#implementation-of-net), como en los siguientes ejemplos:
+* [Identificador en tiempo de ejecución (RID)](../core/rid-catalog.md).
 
-- "Los diversos entornos de ejecución .NET implementan versiones concretas de .NET Standard".
-- "Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo". (Hace referencia a .NET Standard).
-- "Los diversos entornos de ejecución .NET implementan versiones concretas de .NET Standard. … Cada versión del entorno de ejecución de .NET anuncia la última versión de .NET Standard que admite...".
+  Aquí, *tiempo de ejecución* hace referencia a la plataforma del sistema operativo y a la arquitectura de la CPU en la que se ejecuta una aplicación de .NET, por ejemplo, `linux-x64`.
+
+* En ocasiones, se usa "entorno de ejecución" para indicar una [implementación de .NET](#implementation-of-net), como en los ejemplos siguientes:
+
+  - "Los diversos entornos de ejecución .NET implementan versiones concretas de .NET Standard. … Cada versión del entorno de ejecución de .NET anuncia la última versión de .NET Standard que admite...".
+  - "Las bibliotecas diseñadas para ejecutarse en varios entornos de ejecución deben tener como destino este marco de trabajo". (Hace referencia a .NET Standard).
+
+## <a name="shared-framework"></a>marco compartido
+
+El significado depende del contexto. El *marco compartido de .NET* hace referencia a las bibliotecas incluidas en el [entorno de ejecución de .NET](#runtime). En este caso, el *marco compartido* para [.NET 5 (y .NET Core) y versiones posteriores](#net-5-and-later-versions) hace referencia a las mismas bibliotecas a las que hace referencia [BCL](#bcl).
+
+Hay otros marcos compartidos. El *marco compartido de ASP.NET Core* hace referencia a las bibliotecas incluidas en el [entorno de ejecución de ASP.NET Core](#runtime), que incluye la BCL y API adicionales para su uso por parte de aplicaciones web.
+
+En el caso de las [aplicaciones dependientes del marco](../core/deploying/index.md#publish-framework-dependent), el marco compartido consta de bibliotecas que se encuentran en los ensamblados instalados en una carpeta en el equipo que ejecuta la aplicación. En el caso de las [aplicaciones independientes](../core/deploying/index.md#publish-self-contained), los ensamblados de marco compartido se incluyen con la aplicación.
+
+Para obtener más información, vea [Profundización en los primitivos de .NET Core, parte 2: el marco compartido](https://natemcmaster.com/blog/2018/08/29/netcore-primitives-2/).
 
 ## <a name="stack"></a>pila
 
@@ -306,7 +331,7 @@ Una implementación de .NET que se usa para compilar aplicaciones Windows modern
 
 ## <a name="workload"></a>carga de trabajo
 
-Un tipo de aplicación que alguien compila. Más genérico que [modelo de aplicación](#app-model). Por ejemplo, en la parte superior de todas las páginas de documentación de .NET, incluida esta, hay una lista desplegable para **Cargas de trabajo** , que permite cambiar a la documentación de **Web** , **Dispositivos móviles** , **Nube** , **Escritorio** y **Machine Learning y datos** .
+Un tipo de aplicación que alguien compila. Más genérico que [modelo de aplicación](#app-model). Por ejemplo, en la parte superior de todas las páginas de documentación de .NET, incluida esta, hay una lista desplegable para **Cargas de trabajo**, que permite cambiar a la documentación de **Web**, **Dispositivos móviles**, **Nube**, **Escritorio** y **Machine Learning y datos**.
 
 En algunos contextos, *carga de trabajo* hace referencia a una colección de características de Visual Studio que puede elegir instalar para admitir un tipo determinado de aplicación. Para obtener un ejemplo, vea [Selección de una carga de trabajo](../core/install/windows.md#select-a-workload).
 

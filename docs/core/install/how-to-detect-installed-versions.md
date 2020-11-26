@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d924e5bc58052cd760f367e906666d68ab79b764
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507222"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687447"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>Cómo comprobar que .NET Core ya está instalado
 
@@ -189,5 +189,5 @@ Se pueden ver las versiones del SDK y del entorno de ejecución con el comando `
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Instalación del SDK y el entorno de ejecución de .NET para Windows](windows.md).
-- [Instalación del SDK y el entorno de ejecución de .NET para MacOS](linux.md).
-- [Instalación del SDK y el entorno de ejecución de .NET para Linux](macos.md).
+- [Instalación del SDK y el entorno de ejecución de .NET para macOS](macos.md).
+- [Instalación del SDK y el entorno de ejecución de .NET para Linux](linux.md).

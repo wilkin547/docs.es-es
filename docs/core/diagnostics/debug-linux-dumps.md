@@ -2,12 +2,12 @@
 title: Depuración de volcados de memoria de Linux
 description: En este artículo, aprenderá a recopilar y analizar volcados de memoria desde entornos de Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: d62295e165f56e32ef73ab628ca9ebd77a4435d1
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
+ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598318"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95099151"
 ---
 # <a name="debug-linux-dumps"></a>Depuración de volcados de memoria de Linux
 
@@ -19,13 +19,13 @@ Las dos formas recomendadas de recopilar volcados en Linux es mediante las herra
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Volcados administrados con `dotnet-dump`
 
-La herramienta [`dotnet-dump`](dotnet-dump.md) es fácil de usar y no depende de ningún depurador nativo. `dotnet-dump` funciona en una amplia variedad de plataformas Linux (como Alpine o ARM32/ARM64) donde las herramientas tradicionales de depuración pueden no estar disponibles. Pero `dotnet-dump` solo captura el estado administrado, por lo que no se puede usar para la depuración de problemas en código nativo. Los volcados de memoria recopilados por `dotnet-dump` se analizan en un entorno con el mismo sistema operativo y la misma arquitectura en la que se creó el volcado de memoria. La herramienta [`dotnet-gcdump`](dotnet-gcdump.md) se puede usar como alternativa, ya que solo captura información del montón de recolección de elementos no utilizados (GC), pero genera volcados que se puedan analizar en Windows.
+La herramienta [`dotnet-dump`](dotnet-dump.md) es fácil de usar y no depende de ningún depurador nativo. `dotnet-dump` funciona en una amplia variedad de plataformas Linux (como Alpine o ARM32/ARM64) donde las herramientas tradicionales de depuración pueden no estar disponibles. Pero `dotnet-dump` solo captura el estado administrado, por lo que no se puede usar para la depuración de problemas en código nativo. Los volcados de memoria recopilados por `dotnet-dump` se analizan en un entorno con el mismo sistema operativo y la misma arquitectura con los que se ha creado el volcado de memoria. La herramienta [`dotnet-gcdump`](dotnet-gcdump.md) se puede usar como alternativa, ya que solo captura información del montón de recolección de elementos no utilizados (GC), pero genera volcados que se puedan analizar en Windows.
 
 ### <a name="core-dumps-with-createdump"></a>Volcados de núcleo con `createdump`
 
 Como alternativa a `dotnet-dump`, que crea volcados solo de información administrada, [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) es la herramienta recomendada para crear volcados de núcleo en Linux que contienen tanto información nativa como administrada. También se pueden usar otras herramientas como gdb o gcore para crear volcados de núcleo, pero puede omitir el estado necesario para la depuración administrada, lo que puede dar lugar a nombres de función o de tipo desconocidos durante el análisis.
 
-La herramienta `createdump` se instala con el entorno de ejecución de .NET Core y se puede encontrar junto a libcoreclr.so (normalmente en "/usr/share/dotnet/shared/Microsoft.NETCore.App/[versión]"). Esta herramienta toma un identificador de proceso para recopilar un volcado de su argumento principal, y también puede tomar parámetros opcionales que especifican el tipo de volcado que se va a recopilar (el valor predeterminado es un minivolcado con montón). Las opciones son:
+La herramienta `createdump` se instala con el entorno de ejecución de .NET y se puede encontrar junto a libcoreclr.so (normalmente en "/usr/share/dotnet/shared/Microsoft.NETCore.App/[versión]"). Esta herramienta toma un identificador de proceso para recopilar un volcado de su argumento principal, y también puede tomar parámetros opcionales que especifican el tipo de volcado que se va a recopilar (el valor predeterminado es un minivolcado con montón). Las opciones son:
 
 - **`<input-filename>`**
 
@@ -57,13 +57,13 @@ La herramienta `createdump` se instala con el entorno de ejecución de .NET Core
 
   Habilitación de mensajes de diagnóstico.
 
-Tenga en cuenta que la recopilación de volcados de núcleo requiere la funcionalidad `SYS_PTRACE` o la ejecución de `createdump` con sudo o su.
+La recopilación de volcados de núcleo requiere la capacidad `SYS_PTRACE` o la ejecución de `createdump` con sudo o su.
 
 ## <a name="analyze-dumps-on-linux"></a>Análisis de volcados de memoria en Linux
 
 Los volcados de memoria recopilados con `dotnet-dump` y los volcados de núcleo recopilados con `createdump` se pueden analizar con la herramienta `dotnet-dump` mediante el comando `dotnet-dump analyze`. `dotnet dump` requiere que el entorno que analiza el volcado tenga el mismo sistema operativo y la misma arquitectura que el entorno en el que se capturó el volcado.
 
-Como alternativa, se puede usar [LLDB](https://lldb.llvm.org/) para analizar los volcados de núcleo en Linux, ya que permite el análisis de marcos administrados y nativos. LLDB usa la extensión SOS para depurar el código administrado. La herramienta [`dotnet-sos`](dotnet-sos.md) CLI se puede usar para instalar SOS, que tiene [muchos comandos útiles](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) para depurar código administrado. Para poder analizar los volcados de .NET Core, LLDB y SOS requieren los siguientes archivos binarios de .NET Core del entorno en el que se creó el volcado:
+Como alternativa, se puede usar [LLDB](https://lldb.llvm.org/) para analizar los volcados de núcleo en Linux, ya que permite el análisis de marcos administrados y nativos. LLDB usa la extensión SOS para depurar el código administrado. La herramienta de la CLI [`dotnet-sos`](dotnet-sos.md) se puede usar para instalar SOS, que tiene [muchos comandos útiles](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) para depurar código administrado. Para poder analizar los volcados de .NET Core, LLDB y SOS requieren los siguientes archivos binarios de .NET Core del entorno en el que se creó el volcado:
 
 1. libmscordaccore.so
 2. libcoreclr.so

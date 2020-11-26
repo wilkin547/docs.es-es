@@ -1,48 +1,58 @@
 ---
-title: Creación de una aplicación de consola de .NET Core con Visual Studio
-description: Obtenga información sobre cómo crear una aplicación de consola de .NET Core con C# o Visual Basic mediante Visual Studio.
+title: Creación de una aplicación de consola de .NET con Visual Studio
+description: Obtenga información sobre cómo crear una aplicación de consola de .NET con C# o Visual Basic mediante Visual Studio.
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: d543a05eb00a59c5c08ada28fc8392875385aa8a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537540"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94915950"
 ---
-# <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio
+# <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio
 
-En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de .NET Core en Visual Studio 2019.
+En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de .NET en Visual Studio 2019.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio 2019, versión 16.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo **Desarrollo multiplataforma de .NET Core** instalada. El SDK de .NET Core 3.1 se instala automáticamente al seleccionar esta carga de trabajo.
+- [Visual Studio 2019, versión 16.8 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo **Desarrollo multiplataforma de .NET Core** instalada. El SDK de .NET 5.0 se instala automáticamente al seleccionar esta carga de trabajo.
 
-  Para más información, consulte [Instalación del SDK de .NET Core con Visual Studio](../install/windows.md#install-with-visual-studio).
+  Para obtener más información, vea [Instalación del SDK de .NET con Visual Studio](../install/windows.md#install-with-visual-studio).
 
 ## <a name="create-the-app"></a>Creación de la aplicación
 
-Cree un proyecto de aplicación de consola de .NET Core denominado "HelloWorld".
+Cree un proyecto de aplicación de consola de .NET denominado "HelloWorld".
 
 1. Inicie Visual Studio 2019.
 
+1. Seleccione **Herramientas** > **Opciones** > **Entorno** > **Características de vista previa** y después **Mostrar todas las plantillas de .NET Core en el nuevo proyecto (requiere reinicio)** .
+
+   :::image type="content" source="media/with-visual-studio/dotnet-options.png" alt-text="Opción Mostrar todas las plantillas de .NET":::
+
+1. Cierre y vuelva a abrir Visual Studio.
+
 1. En la página de inicio, elija **Crear un proyecto nuevo**.
 
-   ![Botón Crear un proyecto nuevo seleccionado en la página de inicio de Visual Studio](./media/with-visual-studio/start-window.png)
+   :::image type="content" source="./media/with-visual-studio/start-window.png" alt-text="Botón Crear un proyecto nuevo seleccionado en la página de inicio de Visual Studio":::
 
-1. En la página **Crear un proyecto**, escriba **consola** en el cuadro de búsqueda. Después, elija **C#** o **Visual Basic** en la lista de lenguajes y luego elija **Todas las plataformas** en la lista de plataformas. Elija la plantilla **Aplicación de consola (.NET Core)** y haga clic en **Siguiente**.
+1. En la página **Crear un proyecto**, escriba **consola** en el cuadro de búsqueda. Después, elija **C#** o **Visual Basic** en la lista de lenguajes y luego elija **Todas las plataformas** en la lista de plataformas. Elija la plantilla **Aplicación de consola** y, después, seleccione **Siguiente**.
 
-   ![Creación de una nueva ventana de proyecto con filtros seleccionados](./media/with-visual-studio/create-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/create-new-project.png" alt-text="Creación de una nueva ventana de proyecto con filtros seleccionados":::
 
    > [!TIP]
-   > Si no ve las plantillas de .NET Core, es probable que falte la carga de trabajo necesaria. En el mensaje **¿No encuentra lo que busca?** , elija el vínculo **Instalar más herramientas y características**. Se abre el Instalador de Visual Studio. Asegúrese de que tiene instalada la carga de trabajo **Desarrollo multiplataforma de .NET Core**.
+   > Si no ve las plantillas de .NET, es probable que falte la carga de trabajo necesaria. En el mensaje **¿No encuentra lo que busca?** , elija el vínculo **Instalar más herramientas y características**. Se abre el Instalador de Visual Studio. Asegúrese de que tiene instalada la carga de trabajo **Desarrollo multiplataforma de .NET Core**.
 
 1. En el cuadro de diálogo **Configurar el nuevo proyecto**, escriba **HelloWorld** en el cuadro **Nombre del proyecto**. Luego, elija **Crear**.
 
-   ![Configuración de la ventana de nuevo proyecto con los campos de nombre de proyecto, ubicación y nombre de la solución](./media/with-visual-studio/configure-new-project.png)
+   :::image type="content" source="./media/with-visual-studio/configure-new-project.png" alt-text="Configuración de la ventana de nuevo proyecto con los campos de nombre de proyecto, ubicación y nombre de la solución":::
+
+1. En el cuadro de diálogo **Información adicional**, seleccione **.NET 5.0 (actual)** y después **Crear**.
+
+   :::image type="content" source="media/with-visual-studio/additional-info.png" alt-text="Cuadro de diálogo Información adicional":::
 
 La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar "Hola mundo" en la ventana de la consola.
 
@@ -81,9 +91,9 @@ Si no se muestra el idioma que quiere usar, cambie el selector de idioma en la p
 
 1. Presione <kbd>Ctrl</kbd>+<kbd>F5</kbd> para ejecutar el programa sin depurar.
 
-   Se abre la ventana de la consola con el texto "Hello World" impreso en la pantalla y parte de la información de depuración de Visual Studio.
+   Se abre la ventana de la consola con el texto "Hello World" impreso en la pantalla.
 
-   ![Ventana de la consola que muestra Hola mundo Presione cualquier tecla para continuar](./media/with-visual-studio/hello-world-console.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-console.png" alt-text="Ventana de la consola que muestra Hola mundo Presione cualquier tecla para continuar":::
 
 1. Presione cualquier tecla para cerrar la ventana de consola.
 
@@ -106,13 +116,17 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
 1. Responda a la solicitud escribiendo un nombre y presionando la tecla <kbd>Entrar</kbd>.
 
-   ![Ventana de la consola con el resultado del programa modificado](./media/with-visual-studio/hello-world-update.png)
+   :::image type="content" source="./media/with-visual-studio/hello-world-update.png" alt-text="Ventana de la consola con el resultado del programa modificado":::
 
 1. Presione cualquier tecla para cerrar la ventana de consola.
 
+## <a name="additional-resources"></a>Recursos adicionales
+
+- [Versiones actuales y versiones de compatibilidad a largo plazo](../releases-and-support.md#net-core-and-net-5-version-lifecycles)
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, ha creado una aplicación de consola de .NET Core. En el siguiente tutorial, depurará la aplicación.
+En este tutorial, ha creado una aplicación de consola de .NET. En el siguiente tutorial, depurará la aplicación.
 
 > [!div class="nextstepaction"]
-> [Depuración de una aplicación de consola de .NET Core con Visual Studio](debugging-with-visual-studio.md)
+> [Depuración de una aplicación de consola de .NET con Visual Studio](debugging-with-visual-studio.md)

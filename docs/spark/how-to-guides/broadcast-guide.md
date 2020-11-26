@@ -6,12 +6,12 @@ author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 55a52754439020bd2a925aa3e987fb4ad99c9c3d
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ca6dab01cbd639594da0b51f145272a9a150e93c
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224006"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687758"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Uso de variables de difusión en .NET para Apache Spark
 
@@ -96,6 +96,11 @@ Func<Column, Column> udf2 = Udf<string, string>(
 // Calling udf2 works fine as expected
 df.Select(udf2(df["_1"])).Show();
 ```
+
+## <a name="faqs"></a>Preguntas más frecuentes
+
+**¿Por qué no funcionan las variables de difusión con .NET Interactive?**  
+Las variables de difusión no funcionan con escenarios interactivos debido al diseño interactivo de .NET de anexar cada objeto definido en una celda con su clase de envío de celda; al no estar marcada como serializable, se inicia la misma excepción que se ha mostrado antes. Para obtener más información, consulte [este artículo](dotnet-interactive-udf-issue.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

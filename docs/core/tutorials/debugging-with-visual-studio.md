@@ -1,25 +1,25 @@
 ---
-title: Depuración de una aplicación de consola de .NET Core con Visual Studio
-description: Aprenda a depurar una aplicación de consola de .NET Core con Visual Studio.
+title: Depuración de una aplicación de consola de .NET con Visual Studio
+description: Aprenda a depurar una aplicación de consola de .NET con Visual Studio.
 ms.date: 06/08/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 8a914dc6cf069c011ea5b077ada514bf8cec331d
+ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957230"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94916199"
 ---
-# <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio
+# <a name="tutorial-debug-a-net-console-application-using-visual-studio"></a>Tutorial: Depuración de una aplicación de consola de .NET con Visual Studio
 
 En este tutorial se presentan las herramientas de depuración que hay disponibles en Visual Studio.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
+- Este tutorial funciona con la aplicación de consola que se crea en [Creación de una aplicación de consola de .NET con Visual Studio](with-visual-studio.md).
 
 ## <a name="use-debug-build-configuration"></a>Uso de la configuración de compilación de depuración
 
@@ -31,11 +31,11 @@ En la configuración de depuración, el programa se compila sin optimizar y con 
 
 1. Inicie Visual Studio.
 
-1. Abra el proyecto que ha creado en [Creación de una aplicación de consola de .NET Core con Visual Studio](with-visual-studio.md).
+1. Abra el proyecto que ha creado en [Creación de una aplicación de consola de .NET con Visual Studio](with-visual-studio.md).
 
    La configuración de compilación actual se muestra en la barra de herramientas. En la siguiente imagen de la barra de herramientas se muestra que Visual Studio está configurado para compilar la versión de depuración de la aplicación:
 
-   ![Barra de herramientas de Visual Studio con Depuración resaltado](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png" alt-text="Barra de herramientas de Visual Studio con Depuración resaltado":::
 
 ## <a name="set-a-breakpoint"></a>Establecer un punto de interrupción
 
@@ -45,7 +45,7 @@ Un *punto de interrupción* interrumpe temporalmente la ejecución de la aplicac
 
    En esta imagen vemos que, para indicar la línea en la que se establece el punto de interrupción, Visual Studio lo resalta y muestra un punto rojo en el margen izquierdo.
 
-   ![Ventana del programa Visual Studio con el punto de interrupción establecido](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/set-breakpoint-in-editor.png" alt-text="Ventana del programa Visual Studio con el punto de interrupción establecido":::
 
 1. Presione <kbd>F5</kbd> para ejecutar el programa en modo de depuración. Otra manera de iniciar la depuración es elegir **Depuración** > **Iniciar depuración** en el menú.
 
@@ -53,7 +53,7 @@ Un *punto de interrupción* interrumpe temporalmente la ejecución de la aplicac
 
 1. La ejecución del programa se detiene cuando llega al punto de interrupción y antes de que se ejecute el método `Console.WriteLine`. La ventana **Variables locales** muestra los valores de las variables definidas en el método que se ejecuta actualmente.
 
-   ![Captura de pantalla de un punto de interrupción en Visual Studio](./media/debugging-with-visual-studio/breakpoint-hit.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-hit.png" alt-text="Captura de pantalla de un punto de interrupción en Visual Studio":::
 
 ## <a name="use-the-immediate-window"></a>Uso de la ventana Inmediato
 
@@ -67,13 +67,13 @@ La ventana **Inmediato** le permite interactuar con la aplicación que está dep
 
    La ventana **Inmediato** muestra el valor de la variable de cadena y las propiedades del valor <xref:System.DateTime>. Además, los valores de las variables se actualizan en la ventana **Variables locales**.
 
-   ![Ventanas Variables locales e Inmediato en Visual Studio 2019](./media/debugging-with-visual-studio/locals-immediate-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/locals-immediate-window.png" alt-text="Ventanas Variables locales e Inmediato en Visual Studio 2019":::
 
 1. Presione <kbd>F5</kbd> para que continúe la ejecución del programa. Otra manera de hacerlo es elegir **Depuración** > **Continuar** en el menú.
 
    Los valores mostrados en la ventana de la consola corresponden a los cambios realizados en la ventana **Inmediato**.
 
-   ![Ventana de consola que muestra los valores especificados](./media/debugging-with-visual-studio/console-window.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/console-window.png" alt-text="Ventana de consola que muestra los valores especificados":::
 
 1. Presione cualquier tecla para salir de la aplicación y detenga la depuración.
 
@@ -83,7 +83,7 @@ El programa muestra la cadena que escribe el usuario. ¿Qué sucede si el usuari
 
 1. Haga clic con el botón derecho en el punto rojo que representa al punto de interrupción. En el menú contextual, seleccione **Condiciones** para abrir el cuadro de diálogo **Configuración del punto de interrupción**. Active la casilla **Condiciones** si aún no está seleccionada.
 
-   ![Editor con el panel de configuración de puntos de interrupción: C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/breakpoint-settings.png" alt-text="Editor con el panel de configuración de puntos de interrupción: C#":::
 
 1. En **Expresión condicional**, escriba el código siguiente en el campo que muestra el código de ejemplo que comprueba si `x` es 5. Si no se muestra el idioma que quiere usar, cambie el selector de idioma en la parte superior de la página.
 
@@ -121,7 +121,7 @@ El programa muestra la cadena que escribe el usuario. ¿Qué sucede si el usuari
 
    El signo de interrogación dirige la ventana Inmediato para [evaluar una expresión](/visualstudio/ide/reference/immediate-window#enter-commands).
 
-   ![Ventana Inmediato en la que se devuelve un valor de True después de que se ejecute la instrucción: C#](./media/debugging-with-visual-studio/immediate-window-output.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/immediate-window-output.png" alt-text="Ventana Inmediato en la que se devuelve un valor de True después de que se ejecute la instrucción: C#":::
 
 1. Presione <kbd>F5</kbd> para que continúe la ejecución del programa.
 
@@ -139,11 +139,11 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 
    C#
 
-   ![Método Paso a paso por instrucciones de Visual Studio: C#](./media/debugging-with-visual-studio/step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-method.png" alt-text="Método Paso a paso por instrucciones de Visual Studio: C#":::
 
    Visual Basic
 
-   ![Método Paso a paso por instrucciones de Visual Studio: Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-method.png" alt-text="Método Paso a paso por instrucciones de Visual Studio: Visual Basic":::
 
    En este punto, la ventana **Variables locales** muestra que la matriz `args` está vacía, y `name` y `date` tienen valores predeterminados. Además, Visual Studio ha abierto una ventana de consola en blanco.
 
@@ -151,11 +151,11 @@ Visual Studio también le permite recorrer línea a línea un programa y supervi
 
    C#
 
-   ![Origen del método Paso a paso por instrucciones de Visual Studio: C#](./media/debugging-with-visual-studio/step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/step-into-source-method.png" alt-text="Origen del método Paso a paso por instrucciones de Visual Studio: C#":::
 
    Visual Basic
 
-   ![Origen del método Paso a paso por instrucciones de Visual Studio: Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
+   :::image type="content" source="./media/debugging-with-visual-studio/vb-step-into-source-method.png" alt-text="Origen del método Paso a paso por instrucciones de Visual Studio: Visual Basic":::
 
 1. Presione <kbd>F11</kbd>. Visual Studio resalta la instrucción que incluye la asignación de variables `name`. La ventana **Variables locales** muestra que `name` es `null`, y la ventana de consola muestra la cadena "What is your name?".
 
@@ -179,7 +179,7 @@ Una vez que ha probado la versión de depuración de la aplicación, también de
 
 Para compilar y probar la versión de lanzamiento de la aplicación de la consola, cambie la configuración de compilación en la barra de herramientas de **Depurar** a **Versión**.
 
-![Barra de herramientas predeterminada de Visual Studio con Depuración resaltado](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
+:::image type="content" source="./media/debugging-with-visual-studio/visual-studio-toolbar-release.png" alt-text="Barra de herramientas predeterminada de Visual Studio con Versión resaltado":::
 
 Cuando presiona <kbd>F5</kbd> o elije **Compilar solución** en el menú **Compilar**, Visual Studio compila la versión de lanzamiento de la aplicación. Puede probarla como hizo con la versión de depuración.
 
@@ -188,4 +188,4 @@ Cuando presiona <kbd>F5</kbd> o elije **Compilar solución** en el menú **Compi
 En este tutorial, ha usado las herramientas de depuración de Visual Studio. En el siguiente tutorial, publicará una versión de la aplicación que se puede implementar.
 
 > [!div class="nextstepaction"]
-> [Publicación de una aplicación de consola de .NET Core con Visual Studio](publishing-with-visual-studio.md)
+> [Publicación de una aplicación de consola de .NET con Visual Studio](publishing-with-visual-studio.md)

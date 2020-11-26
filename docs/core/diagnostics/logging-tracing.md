@@ -2,12 +2,12 @@
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: e3f809dab64d66d8b4ba16ca55fc426309614715
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94439929"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94820584"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -55,7 +55,7 @@ Las siguientes API están más orientadas a eventos. En lugar de registrar caden
   - Solo permite el seguimiento de objetos serializables.
   - Se puede consumir durante el proceso por medio de cualquier instancia de [EventListener](xref:System.Diagnostics.Tracing.EventListener) que se haya configurado para consumir el objeto EventSource.
   - Se puede consumir fuera de proceso mediante lo siguiente:
-    - EventPipe de .NET Core en todas las plataformas
+    - [EventPipe de .NET Core](./eventpipe.md) en todas las plataformas
     - [Seguimiento de eventos para Windows (ETW)](/windows/win32/etw/event-tracing-portal)
     - [Marco de seguimiento de LTTng para Linux](https://lttng.org/)
       - Tutorial: [Recopilación de un seguimiento de LTTng con PerfCollect](trace-perfcollect-lttng.md).
@@ -93,6 +93,8 @@ Por ejemplo, para que pueda elegir la mejor opción para la aplicación, .NET of
 - El [registro de .NET](../extensions/logging.md) proporciona información general sobre las técnicas de registro que admite.
 
 - La [interpolación de cadenas de C#](../../csharp/language-reference/tokens/interpolated.md) puede simplificar la escritura de código de registro.
+
+- [Lista de eventos del proveedor en tiempo de ejecución](../../fundamentals/diagnostics/runtime-events.md)
 
 - La propiedad <xref:System.Exception.Message?displayProperty=nameWithType> es útil para las excepciones de registro.
 

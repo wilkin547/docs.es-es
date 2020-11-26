@@ -2,14 +2,14 @@
 title: Introducción e información general de .NET
 description: Obtenga información sobre .NET, una plataforma de desarrollo gratuita de código abierto para compilar muchos tipos de aplicaciones.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: c3626ed223f66622b65cca888b1b043de275f950
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
+ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506745"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94687522"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -264,9 +264,9 @@ Para obtener más información, vea [Información general sobre la publicación 
 
 ## <a name="runtime-libraries"></a>Bibliotecas en tiempo de ejecución
 
-.NET tiene un amplio conjunto estándar de bibliotecas de clases. El conjunto principal se conoce como la biblioteca de clases base (BCL). El conjunto completo se conoce como bibliotecas en tiempo de ejecución o bibliotecas de marco. Estas bibliotecas proporcionan implementaciones para muchos tipos de propósito general y específicos de la carga de trabajo, y funcionalidad de la utilidad.
+.NET tiene un amplio conjunto estándar de bibliotecas de clases, conocidas como [bibliotecas en tiempo de ejecución](../standard/glossary.md#runtime), [bibliotecas de marco](../standard/glossary.md#framework-libraries) o la [biblioteca de clases base (BCL)](../standard/glossary.md#bcl). Estas bibliotecas proporcionan implementaciones para muchos tipos de propósito general y específicos de la carga de trabajo, y funcionalidad de la utilidad.
 
-Estos son algunos ejemplos de los tipos definidos en las bibliotecas en tiempo de ejecución:
+Estos son algunos ejemplos de los tipos definidos en las bibliotecas en tiempo de ejecución de .NET:
 
 * Tipos primitivos, como <xref:System.Boolean?displayProperty=nameWithType> y <xref:System.Int32?displayProperty=nameWithType>.
 * Colecciones, como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
@@ -276,9 +276,9 @@ Estos son algunos ejemplos de los tipos definidos en las bibliotecas en tiempo d
 * Tipos de utilidad de [serialización](../standard/serialization/index.md), como <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> y <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 * Tipos de alto rendimiento, como <xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Numerics.Vector?displayProperty=nameWithType> y [Canalizaciones](../standard/io/pipelines.md).
 
-Para obtener más información, vea [Bibliotecas de marco](../standard/framework-libraries.md) y [el código fuente de las bibliotecas](https://github.com/dotnet/runtime/tree/master/src/libraries).
+Para obtener más información, vea [Introducción a las bibliotecas en tiempo de ejecución](../standard/runtime-libraries-overview.md). El código fuente de las bibliotecas está en [el repositorio dotnet/runtime de GitHub](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
-## <a name="microsoftextensions-libraries"></a>Bibliotecas Microsoft.Extensions
+### <a name="extensions-to-the-runtime-libraries"></a>Extensiones de las bibliotecas en tiempo de ejecución
 
 Las bibliotecas de algunas funcionalidades de aplicación de uso común no se incluyen en las bibliotecas en tiempo de ejecución, sino que están disponibles en paquetes NuGet como los siguientes:
 
@@ -344,6 +344,7 @@ Parte de la terminología de .NET puede resultar confusa porque la misma palabra
   | versión de .NET Framework de destino | La colección de API de las que depende una aplicación o biblioteca de .NET. Ejemplos: .NET Core 3.1, .NET Standard 2.0 |
   | Moniker de la plataforma de destino (TFM)  | TFM es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET. Ejemplo: `net462` para .NET Framework 4.6.2. |
   | Aplicación dependiente de la plataforma | Una aplicación que solo se puede ejecutar en un equipo en el que se ha instalado el tiempo de ejecución desde la [página de descargas de .NET](https://dotnet.microsoft.com/download/dotnet-core). En este caso, "marco" es lo mismo que el "tiempo de ejecución" que se descarga de la página de descargas de .NET. |
+  | Bibliotecas de marco | A veces se usa como sinónimo de las [bibliotecas en tiempo de ejecución](#runtime-libraries). |
 
 * **SDK**
 

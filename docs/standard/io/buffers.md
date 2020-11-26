@@ -1,18 +1,17 @@
 ---
 title: 'System.Buffers: .NET'
 ms.date: 12/05/2019
-ms.technology: dotnet-standard
 helpviewer_keywords:
 - buffers [.NET]
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: afcd6976e6220349fbec370c47b11596a35a81a2
+ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739623"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94823529"
 ---
 # <a name="work-with-buffers-in-net"></a>Trabajo con búferes en .NET
 
@@ -138,7 +137,7 @@ El código anterior crea una estructura `ReadOnlySequence<byte>` con segmentos v
 - `ReadOnlySequence<T>.Slice` con un valor entero omite los segmentos vacíos.
 - Al enumerar `ReadOnlySequence<T>`, se enumeran los segmentos vacíos.
 
-### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>Posibles problemas con ReadOnlySequence\<T > y SequencePosition
+### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>Posibles problemas con ReadOnlySequence\<T> y SequencePosition
 
 Hay varios resultados inusuales cuando se trabaja con `ReadOnlySequence<T>`/`SequencePosition` frente a una representación `ReadOnlySpan<T>`normal /`ReadOnlyMemory<T>`/`T[]`/`int`:
 
