@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 3274b72363a3df1dbe1bb29492eedcb134a4f9f2
-ms.sourcegitcommit: 6d1ae17e60384f3b5953ca7b45ac859ec6d4c3a0
+ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94982314"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031922"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -27,6 +27,10 @@ El [registro y seguimiento](logging-tracing.md) son técnicas relacionadas. Hace
 ## <a name="unit-testing"></a>Pruebas unitarias
 
 Las [pruebas unitarias](../testing/index.md) son un componente clave de la integración continua y la implementación de software de alta calidad. Las pruebas unitarias están diseñadas para brindarle una advertencia temprana cuando se daña algo.
+
+## <a name="dumps"></a>Volcados
+
+Un [volcado](./dumps.md) es un archivo que contiene una instantánea del proceso en el momento de la creación. Pueden ser útiles para examinar el estado de la aplicación con fines de depuración.
 
 ## <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
 
