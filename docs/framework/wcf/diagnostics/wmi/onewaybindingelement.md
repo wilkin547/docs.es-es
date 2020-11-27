@@ -2,17 +2,18 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: 016ff823eb2c84a9f54c0763edadef1224e31517
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 806066a8845068413d2a52c78878f76b5f5fa34f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040058"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250377"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
+
 OneWayBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class OneWayBindingElement : BindingElement  
@@ -24,29 +25,34 @@ class OneWayBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase OneWayBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase OneWayBindingElement tiene las propiedades siguientes:  
   
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
+
  Tipo de datos: ChannelPoolSettings  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  La configuración del grupo de canales.  
   
 ### <a name="maxacceptedchannels"></a>MaxAcceptedChannels  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  El número máximo de canales aceptados.  
   
 ### <a name="packetroutable"></a>PacketRoutable  
+
  Tipo de datos: booleano  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Valor que indica si el paquete se puede enrutar.  
   

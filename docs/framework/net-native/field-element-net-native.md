@@ -1,15 +1,16 @@
 ---
-title: <Field>Elemento (.NET Native)
+title: <Field> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
-ms.openlocfilehash: 2a63b88c399a999cd00750dee1614352cea10e80
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e63dc293c42aa620b7f7ac15fc0454bc603b9dde
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128420"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251053"
 ---
-# <a name="field-element-net-native"></a>\<Field>Elemento (.NET Native)
+# <a name="field-element-net-native"></a>\<Field> Elemento (.NET Native)
+
 Aplica la directiva de reflexión en tiempo de ejecución a un campo.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -22,6 +23,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -35,17 +37,18 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_name*|Nombre de campo. El tipo del campo está definido por el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|La configuración que se aplica a este tipo de política para el campo. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -56,9 +59,10 @@ Aplica la directiva de reflexión en tiempo de ejecución a un campo.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si la directiva de un campo no se define explícitamente, entonces hereda la directiva de tiempo de ejecución de su elemento primario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

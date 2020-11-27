@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e33a487c03bbf87666d517040e00131f5482be6f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797199"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251521"
 ---
 # <a name="data-contract-surrogates"></a>Suplentes de contratos de datos
+
 El *suplente* del contrato de datos es una característica avanzada que se basa en el modelo del contrato de datos. Esta característica está diseñada para ser utilizada para la personalización de tipo y substitución en situaciones donde los usuarios desean cambiar cómo un tipo se serializa, deserializa o se proyecta en metadatos. Algunos escenarios donde se puede utilizar un suplente es cuando un contrato de datos no se ha especificado para el tipo, los campos y las propiedades no están marcados con el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> o los usuarios desean crear dinámicamente las variaciones del esquema.  
   
  La serialización y deserialización se logran con el suplente del contrato de datos al utilizar <xref:System.Runtime.Serialization.DataContractSerializer> para convertir de .NET Framework en un formato conveniente, como XML. El suplente del contrato de datos también se puede utilizar para modificar los metadatos exportados para los tipos, al generar representaciones de metadatos como documentos de esquema XML (XSD). En la importación, el código se crea a partir de los metadatos y el suplente se puede utilizar en este caso también para personalizar el código generado.  
   
 ## <a name="how-the-surrogate-works"></a>Cómo funciona el suplente  
+
  Un suplente funciona asignando un tipo (el tipo "original") a otro tipo (el tipo “suplente”). El ejemplo siguiente muestra el tipo original `Inventory` y un nuevo tipo suplente `InventorySurrogated`. El tipo `Inventory` no se puede serializar pero el tipo `InventorySurrogated` es:  
   
  [!code-csharp[C_IDataContractSurrogate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#1)]  
@@ -26,11 +28,13 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  [!code-csharp[C_IDataContractSurrogate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#2)]  
   
 ## <a name="implementing-the-idatacontractsurrogate"></a>Implementar IDataContractSurrogate  
+
  Para utilizar el suplente del contrato de datos, implemente la interfaz <xref:System.Runtime.Serialization.IDataContractSurrogate>.  
   
  A continuación, se muestra una información general de cada método de <xref:System.Runtime.Serialization.IDataContractSurrogate> con una posible implementación.  
   
 ### <a name="getdatacontracttype"></a>GetDataContractType  
+
  El método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> asigna un tipo a otro. Este método se requiere para la serialización, deserialización, importación y exportación.  
   
  La primera tarea está definiendo qué tipos se asignarán a otros tipos. Por ejemplo:  
@@ -52,6 +56,7 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  En el ejemplo anterior, el método comprueba si el parámetro `type` y `Inventory` son comparables. En tal caso, el método lo asigna a `InventorySurrogated`. Cuando se llama una serialización, deserialización, esquema de importación o esquema de exportación, se llama primero a esta función para determinar la asignación entre los tipos.  
   
 ### <a name="getobjecttoserialize-method"></a>Método GetObjectToSerialize  
+
  El método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> convierte la instancia de tipo original en la instancia de tipo suplente. El método se requiere para la serialización.  
   
  El paso siguiente es definir la manera en que los datos físicos se asignarán de la instancia original a la instancia suplente implementando el método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A>. Por ejemplo:  
@@ -62,13 +67,14 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
   
  El parámetro `targetType` hace referencia al tipo declarado del miembro. Este parámetro es el tipo suplente devuelto por el método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A>. El serializador no exige que el objeto devuelto se pueda asignar a este tipo. El `obj` parámetro es el objeto que se va a serializar y se convertirá en su suplente si es necesario. Este método debe devolver el objeto de entrada si el suplente no controla el objeto. De lo contrario, se devolverá el nuevo objeto suplente. No se llama al suplente si el objeto es NULL. Las numerosas asignaciones del suplente para las diferentes instancias se pueden definir dentro de este método.  
   
- Al crear <xref:System.Runtime.Serialization.DataContractSerializer>, puede indicarle que conserve las referencias a objeto. (Para obtener más información, vea [serialización y deserialización](../feature-details/serialization-and-deserialization.md)). Esto se hace estableciendo el parámetro `preserveObjectReferences` en su constructor en `true`. En tal caso, se llama al suplente solo una vez para un objeto puesto que todas las serializaciones subsiguientes simplemente escriben la referencia en la secuencia. Si `preserveObjectReferences` está establecido en `false`, se llama al suplente cada vez que se encuentra una instancia.  
+ Al crear <xref:System.Runtime.Serialization.DataContractSerializer>, puede indicarle que conserve las referencias a objeto. (Para obtener más información, vea [serialización y deserialización](../feature-details/serialization-and-deserialization.md)). Esto se hace estableciendo el `preserveObjectReferences` parámetro en su constructor en `true` . En tal caso, se llama al suplente solo una vez para un objeto puesto que todas las serializaciones subsiguientes simplemente escriben la referencia en la secuencia. Si `preserveObjectReferences` está establecido en `false`, se llama al suplente cada vez que se encuentra una instancia.  
   
  Si el tipo de la instancia serializada difiere del tipo declarado, la información de tipo se escribe en la secuencia, por ejemplo, `xsi:type` para permitir deserializar la instancia en el otro extremo. Este proceso se produce tanto si el objeto es suplente como si no.  
   
  El ejemplo anterior convierte los datos de la instancia `Inventory` en `InventorySurrogated`. Comprueba el tipo del objeto y realiza las manipulaciones necesarias para convertirlo al tipo suplente. En este caso, los campos de la clase `Inventory` se copian directamente encima de los campos de la clase `InventorySurrogated`.  
   
 ### <a name="getdeserializedobject-method"></a>Método GetDeserializedObject  
+
  El método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> convierte la instancia de tipo suplente en la instancia de tipo original. Se requiere para la deserialización.  
   
  La tarea siguiente es definir la manera en que los datos físicos se asignarán de la instancia suplente a la instancia original. Por ejemplo:  
@@ -84,6 +90,7 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  El ejemplo anterior vuelve a convertir objetos de tipo `InventorySurrogated` en el tipo `Inventory`inicial. En este caso, los datos se transfieren directamente desde `InventorySurrogated` a sus campos correspondiendo en `Inventory`. Puesto que no hay manipulaciones de datos, el cada uno de los campos de miembro contendrá los mismos valores como antes de la serialización.  
   
 ### <a name="getcustomdatatoexport-method"></a>Método GetCustomDataToExport  
+
  Al exportar un esquema, el método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> es opcional. Se utiliza para insertar datos adicionales o sugerencias en el esquema exportado. Los datos adicionales se pueden insertar en el nivel de miembro o el nivel de tipo. Por ejemplo:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
@@ -95,14 +102,17 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  Cualquiera de estas sobrecargas debe devolver `null` o un objeto serializable. Un objeto no NULL se serializará como anotación en el esquema exportado. Para la sobrecarga `Type`, cada tipo que se exporta al esquema se envía a este método en el primer parámetro junto con el tipo suplente como el parámetro `dataContractType`. Para la sobrecarga `MemberInfo`, cada miembro que se exporta al esquema envía su información como el parámetro `memberInfo` con el tipo suplente en el segundo parámetro.  
   
 #### <a name="getcustomdatatoexport-method-type-type"></a>Método GetCustomDataToExport (Tipo, Tipo)  
+
  Se llama al método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> durante la exportación de esquema para cada definición de tipo. El método agrega información a los tipos dentro del esquema al exportar. Cada tipo definido se envía a este método para determinar si hay datos adicionales que deban incluirse en el esquema.  
   
 #### <a name="getcustomdatatoexport-method-memberinfo-type"></a>Método GetCustomDataToExport (MemberInfo, Tipo)  
+
  Se llama a <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Reflection.MemberInfo%2CSystem.Type%29?displayProperty=nameWithType> durante la exportación para cada miembro en los tipos que se exportan. Esta función le permite personalizar cualquier comentario para los miembros que se incluirán en el esquema durante la exportación. La información para cada miembro dentro de la clase se envía a este método para comprobar si deben agregarse datos adicionales en el esquema.  
   
  El ejemplo anterior realiza búsquedas a través de `dataContractType` para cada miembro del suplente. Después devuelve el modificador de acceso adecuado para cada campo. Sin esta personalización, el valor predeterminado para los modificadores de acceso es público. Por consiguiente, todos los miembros se definirían como públicos en el código generado utilizando el esquema exportado sin importar cuáles sean sus restricciones de acceso. Si no se utilizara esta implementación, el miembro `numpens` sería público en el esquema exportado aunque se hubiera definido en el suplente como privado. A través del uso de este método, en el esquema exportado, el modificador de acceso se puede generar como privado.  
   
 ### <a name="getreferencedtypeonimport-method"></a>Método GetReferencedTypeOnImport  
+
  Este método asigna <xref:System.Type> del suplente al tipo original. Este método es opcional para la importación del esquema.  
   
  Al crear un suplente que importa un esquema y genera el código para él, la tarea siguiente es definir el tipo de una instancia suplente en relación a su tipo original.  
@@ -114,6 +124,7 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  El parámetro `customData` es originalmente el objeto devuelto de <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>. Se utiliza `customData` cuando los autores suplentes desean insertar datos adicionales/sugerencias en los metadatos para utilizar durante importación para generar código.  
   
 ### <a name="processimportedtype-method"></a>Método ProcessImportedType  
+
  El método <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> personaliza cualquier tipo creado a partir de la importación del esquema. Este método es opcional.  
   
  Al importar un esquema, este método permite la personalización de cualquiera tipo importado e información de compilación. Por ejemplo:  
@@ -129,14 +140,17 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
  El ejemplo anterior realiza algunos cambios en el esquema importado. El código conserva los miembros privados del tipo original utilizando un suplente. El modificador de acceso predeterminado al importar un esquema es `public`. Por consiguiente, todos los miembros del esquema suplente serán públicos a menos que se hayan modificado, como en este ejemplo. Durante la exportación, los datos personalizados se insertan en los metadatos sobre qué miembros son privados. El ejemplo consulta los datos personalizados, comprueba si el modificador de acceso es privado y, a continuación, modifica el miembro adecuado para que sea privado estableciendo sus atributos. Sin esta personalización, el miembro `numpens` se definiría como público en lugar de privado.  
   
 ### <a name="getknowncustomdatatypes-method"></a>Método GetKnownCustomDataTypes  
+
  Este método obtiene tipos de datos personalizados definidos a partir del esquema. Este método es opcional para la importación del esquema.  
   
  Se llama al método al principio de la exportación e importación del esquema. El método devuelve los tipos de datos personalizados utilizados en el esquema exportado o importado. El método se pasa a <xref:System.Collections.ObjectModel.Collection%601> (el parámetro `customDataTypes`), que es una colección de tipos. El método debería agregar los tipos conocidos adicionales a esta colección. Los tipos de datos personalizados conocidos son necesarios para habilitar la serialización y deserialización de datos personalizados utilizando <xref:System.Runtime.Serialization.DataContractSerializer>. Para obtener más información, vea [tipos conocidos de contratos de datos](../feature-details/data-contract-known-types.md).  
   
 ## <a name="implementing-a-surrogate"></a>Implementar un suplente  
+
  Para utilizar el suplente del contrato de datos en WCF, debe seguir algunos procedimientos especiales.  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Para utilizar un suplente para la serialización y deserialización  
+
  Utilice <xref:System.Runtime.Serialization.DataContractSerializer> para realizar la serialización y deserialización de datos con el suplente. <xref:System.Runtime.Serialization.DataContractSerializer> es creado por <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. También se debe especificar el suplente.  
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Para implementar serialización y deserialización  
@@ -154,6 +168,7 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-import"></a>Para utilizar un suplente para importar metadatos  
+
  Al importar los metadatos como WSDL y XSD para generar el código del lado del cliente, el suplente debe ser agregado al componente responsable para generar código del esquema XSD, <xref:System.Runtime.Serialization.XsdDataContractImporter>. Para ello, directamente modifique <xref:System.ServiceModel.Description.WsdlImporter> utilizado para importar los metadatos.  
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Para implementar un suplente para la importación de metadatos  
@@ -175,6 +190,7 @@ El *suplente* del contrato de datos es una característica avanzada que se basa 
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>Para utilizar un suplente para exportar metadatos  
+
  De forma predeterminada, cuando se exportan metadatos de WCF para un servicio, es necesario generar el esquema de WSDL y XSD. El suplente necesita ser agregado al componente responsable para generar el esquema XSD para los tipos de contrato de datos, <xref:System.Runtime.Serialization.XsdDataContractExporter>. Para ello, utilice un comportamiento que implemente <xref:System.ServiceModel.Description.IWsdlExportExtension> para modificar <xref:System.ServiceModel.Description.WsdlExporter>o directamente modifique <xref:System.ServiceModel.Description.WsdlExporter> utilizado para exportar los metadatos.  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Para utilizar un suplente para exportar metadatos  

@@ -2,14 +2,15 @@
 title: Elementos de directivas en tiempo de ejecución
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: c900516382c8e526a6b0021bb2b681486283f3ab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250806"
 ---
 # <a name="runtime-directive-elements"></a>Elementos de directivas en tiempo de ejecución
+
 El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compatible con los siguientes elementos de directiva de tiempo de ejecución. Vea [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)) para obtener una representación jerárquica.  
   
  [\<Application>](application-element-net-native.md)  
@@ -66,6 +67,6 @@ El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compati
  [\<TypeParameter>](typeparameter-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución al tipo representado por un argumento <xref:System.Type> que se pasa a un método.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia del archivo de configuración rd.xml](runtime-directives-rd-xml-configuration-file-reference.md)

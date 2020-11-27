@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52ae1eb4b6210403ce9c5aa96479809f885b0eba
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555723"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251222"
 ---
 # <a name="securing-method-access"></a>Proteger acceso a métodos
 
@@ -40,7 +40,7 @@ ms.locfileid: "90555723"
   
 - Requerir que las clases derivadas que invalidan métodos específicos tengan una identidad o un permiso específicos.  
   
- En el ejemplo siguiente se muestra cómo requerir que los llamadores estén firmados con un nombre seguro específico para ayudar a proteger una clase pública limitando el acceso a ella. En este ejemplo se utiliza <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con una **petición** para el nombre seguro. Para obtener información basada en tareas sobre cómo firmar un ensamblado con un nombre seguro, vea [crear y utilizar ensamblados con nombre seguro](../../standard/assembly/create-use-strong-named.md).  
+ En el ejemplo siguiente se muestra cómo requerir que los llamadores estén firmados con un nombre seguro específico para ayudar a proteger una clase pública limitando el acceso a ella. En este ejemplo se utiliza <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> con una **petición** para el nombre seguro. Para obtener información basada en tareas sobre cómo firmar un ensamblado con un nombre seguro, vea [crear y usar ensamblados de Strong-Named](../../standard/assembly/create-use-strong-named.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -57,6 +57,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Excluir clases y miembros del uso por parte de código que no sea de confianza  
+
  Use las declaraciones que se muestran en esta sección para evitar que código de confianza parcial use clases y métodos específicos, así como propiedades y eventos. Al aplicar estas declaraciones a una clase, se aplica la protección a todos sus métodos, propiedades y eventos. Sin embargo, el acceso a los campos no se ve afectado por la seguridad declarativa. Tenga en cuenta también que las peticiones de vínculo protegen solo frente a los llamadores inmediatos y que aún podrían sufrir ataques por señuelo.  
   
 > [!NOTE]

@@ -2,14 +2,15 @@
 title: Direccionamiento
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 3221a12a21aebe20e0f6822554937623dc3fbb8d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77a1321f2babb93ab39eeac944de06fc8c2634c3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249701"
 ---
 # <a name="addressing"></a>Direccionamiento
+
 El ejemplo de direccionamiento muestra varios aspectos y características de direcciones del extremo. El ejemplo se basa en el [Introducción](getting-started-sample.md). En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola. El servicio define varios puntos de conexión mediante una combinación de direcciones del punto de conexión absolutas y relativas.  
   
 > [!NOTE]

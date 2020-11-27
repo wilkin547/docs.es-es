@@ -5,19 +5,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 0622ff9b990dd9d8fe14c4a4c1d48cc8530d5a61
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 1ecefdfe88426afa8e2d3d8eea758e7decf19ed8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91609478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249831"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Procedimiento para recuperar la huella digital de un certificado
+
 Al escribir una aplicación Windows Communication Foundation (WCF) que usa un certificado X. 509 para la autenticación, a menudo es necesario especificar las notificaciones que se encuentran en el certificado. Por ejemplo, debe proporcionar una demanda de huella digital al utilizar la enumeración <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> en el método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Se requieren dos pasos a la hora de buscar un valor de demanda. Primero, abra el complemento de Microsoft Management Console (MMC) para certificados. (Vea [Cómo: ver certificados con el complemento MMC](how-to-view-certificates-with-the-mmc-snap-in.md)). En segundo lugar, como se describe aquí, busque un certificado adecuado y copie su huella digital (u otros valores de notificaciones).  
   
  Si usa un certificado para la autenticación del servicio, es importante apuntar el valor de la columna **Emitido para** (la primera columna en la consola). Al utilizar Capa de sockets seguros (SSL) como seguridad de transporte, una de las primeras comprobaciones es la comparación de la dirección base Identificador uniforme de recursos (URI) de un servicio con el valor **Emitido para** . Los valores deben coincidir o se detiene el proceso de autenticación.  
   
- También puede usar el cmdlet New-SelfSignedCertificate de PowerShell para crear certificados temporales para su uso durante el desarrollo. Sin embargo, de forma predeterminada, este tipo de certificado no lo emite una entidad de certificación y no se puede usar para fines de producción. Para obtener más información, consulte [Cómo: crear certificados temporales para su uso durante el desarrollo](how-to-create-temporary-certificates-for-use-during-development.md).  
+ También puede usar el cmdlet de New-SelfSignedCertificate de PowerShell para crear certificados temporales para su uso durante el desarrollo. Sin embargo, de forma predeterminada, este tipo de certificado no lo emite una entidad de certificación y no se puede usar para fines de producción. Para obtener más información, consulte [Cómo: crear certificados temporales para su uso durante el desarrollo](how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Para recuperar una huella digital de un certificado  
   

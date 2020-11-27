@@ -2,17 +2,18 @@
 title: MustUnderstandBehavior
 ms.date: 03/30/2017
 ms.assetid: 911ed04a-c4b8-4c72-a5c3-fc7b4e3b4348
-ms.openlocfilehash: 7e6a96c217b038e870b4e865315766afa3b3c757
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cac7192d5c34de55fe0bd6a4921a41387e985f8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250442"
 ---
 # <a name="mustunderstandbehavior"></a>MustUnderstandBehavior
+
 MustUnderstandBehavior  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class MustUnderstandBehavior : Behavior  
@@ -22,15 +23,18 @@ class MustUnderstandBehavior : Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase MustUnderstandBehavior no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase MustUnderstandBehavior tiene la propiedad siguiente:  
   
 ### <a name="validatemustunderstand"></a>ValidateMustUnderstand  
+
  Tipo de datos: booleano  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Cuando `true`, todos los encabezados SOAP con el atributo `MustUnderstand` que no se administran provocan que el comportamiento produzca una excepción.  
   

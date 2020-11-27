@@ -2,14 +2,15 @@
 title: Medir la mejora del inicio con .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6d89edaff184692eabb11e928f5211f664ff5afa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250975"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Medir la mejora del inicio con .NET Native
+
 .NET Native mejora significativamente el tiempo de inicio de las aplicaciones. Esta mejora es especialmente palpable en los dispositivos portátiles de baja potencia y con aplicaciones complejas. Este tema sirve de introducción a la instrumentación básica necesaria para medir esta mejora de inicio.  
   
  Para facilitar las investigaciones de rendimiento, .NET Framework y Windows usan un marco de trabajo de eventos llamado Seguimiento de eventos para Windows (ETW), que permite que la aplicación avise a las herramientas cuando se produzcan eventos. Luego, puede usar una herramienta denominada PerfView para ver y analizar los eventos ETW fácilmente. En este tema se explican los procedimientos para:  
@@ -21,6 +22,7 @@ ms.locfileid: "90540893"
 - Usar PerfView para mostrar esos eventos.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Usar EventSource para emitir eventos  
+
  <xref:System.Diagnostics.Tracing.EventSource> proporciona una clase base desde la que se puede crear un proveedor de eventos personalizado. Generalmente, se crea una subclase de <xref:System.Diagnostics.Tracing.EventSource> y se ajustan los métodos `Write*` con los métodos de evento propios. Se suele usar un patrón singleton para cada <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Por ejemplo, la clase en el siguiente ejemplo se puede usar para medir dos características de rendimiento:  
@@ -52,6 +54,7 @@ ms.locfileid: "90540893"
  Cuando la aplicación esté instrumentada, estará listo para recopilar eventos.  
   
 ## <a name="gathering-events-with-perfview"></a>Recopilación de eventos con PerfView  
+
  PerfView usa eventos ETW para ayudarle a realizar todo tipo de investigaciones de rendimiento en la aplicación. También incluye una GUI de configuración que permite activar o desactivar el registro de diferentes tipos de eventos. PerfView es una herramienta gratuita y se puede descargar desde el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=28567). Para obtener más información, vea los [vídeos tutoriales de PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
@@ -85,6 +88,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  Cuando haya ejecutado la aplicación para que PerfView pueda recopilar los eventos emitidos, seleccione el botón **Detener colección**. En general, la colección se debe detener antes de cerrar la aplicación para, así, no obtener eventos extraños. Sin embargo, si se mide el rendimiento de suspensión o de apagado, conviene continuar con la colección.  
   
 ## <a name="displaying-the-events"></a>Visualización de eventos  
+
  Para ver los eventos que ya se han recopilado, use PerfView para abrir el archivo .etl o .etl.zip que ha creado y seleccione **Eventos**. ETW habrá recopilado información acerca de un gran número de eventos, incluidos los eventos de otros procesos. Para acotar la investigación, rellene los siguientes cuadros de texto en la vista de eventos:  
   
 - En el cuadro **Process Filter** (Filtro de proceso), escriba el nombre de la aplicación (sin ".exe").  

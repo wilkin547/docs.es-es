@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3f2a10bb6b355e82f94b8cc793c93ce4634c7d2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545225"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251833"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Seguridad del transporte con autenticación de certificados
 
@@ -27,12 +27,13 @@ En este artículo se describe el uso de certificados X. 509 para la autenticaci�
 |Modo de seguridad|Transporte|  
 |Interoperabilidad|Con clientes y servicios de servicios Web existentes|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (mediante un certificado SSL)<br /><br /> Sí (mediante un certificado X.509)|  
-|Integridad de datos|Sí|  
+|Integridad de datos|Yes|  
 |Confidencialidad de los datos|Sí|  
 |Transporte|HTTPS|  
-|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Configurar el servicio  
+
  Puesto que el servicio de este escenario se hospeda bajo IIS, se configura con un archivo web.config. El siguiente archivo web.config muestra cómo configurar la clase <xref:System.ServiceModel.WSHttpBinding> para usar la seguridad de transporte y las credenciales de cliente de X.509.  
   
 ```xml  
@@ -64,6 +65,7 @@ En este artículo se describe el uso de certificados X. 509 para la autenticaci�
 ```  
   
 ## <a name="configure-the-client"></a>Configurar el cliente  
+
  El cliente se puede configurar en código o en un archivo app.config. En el ejemplo siguiente se muestra cómo configurar el cliente en código.  
   
 ```csharp

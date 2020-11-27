@@ -2,16 +2,19 @@
 title: Cambiar el nombre de un servicio WCF
 ms.date: 03/30/2017
 ms.assetid: 14235a65-b1c5-409d-b6cc-a979acd54bbd
-ms.openlocfilehash: 1179e7b235130e1967c79843b7a11f55622a01fb
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 25f9201253f02f368ccf95ddf1f7a7d78d2e1b2f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052057"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96249727"
 ---
 # <a name="renaming-a-wcf-service"></a>Cambiar el nombre de un servicio WCF
+
 En este tema se describe cómo se puede cambiar el nombre de un servicio de Windows Communication Foundation (WCF).  
   
 ## <a name="renaming-a-wcf-service"></a>Cambiar el nombre de un servicio WCF  
+
  Realice los pasos siguientes para cambiar el nombre de un servicio en una plantilla Windows Communication Foundation (WCF).  
   
 - Cambie el nombre de la clase que implementa el servicio.  
@@ -27,7 +30,7 @@ En este tema se describe cómo se puede cambiar el nombre de un servicio de Wind
 </system.servicemodel>  
 ```  
   
-- Si el servicio es webhosted, usa un archivo * \* . SVC* . Abra el archivo svc y modifique el nombre de su servicio tal y como se indica en el siguiente ejemplo. Este paso no es necesario para aplicaciones autohospedadas, puesto que no hay ningún archivo svc.  
+- Si el servicio es webhosted, usa un archivo *\* . SVC* . Abra el archivo svc y modifique el nombre de su servicio tal y como se indica en el siguiente ejemplo. Este paso no es necesario para aplicaciones autohospedadas, puesto que no hay ningún archivo svc.  
   
 ```aspx-csharp
 <%@ ServiceHost Service="WcfService.NewName">  

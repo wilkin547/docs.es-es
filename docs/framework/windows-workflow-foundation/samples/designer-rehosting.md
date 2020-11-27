@@ -2,14 +2,15 @@
 title: Rehospedaje del diseñador
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: b72e3450799db40988c8b99e4db3707de330d8ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce81f41764aa35b3173cca89cdb219ae9b21436d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182818"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251677"
 ---
 # <a name="designer-rehosting"></a>Rehospedaje del diseñador
+
 El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada. La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  
   
 - Aplicaciones de supervisión (que permiten a un usuario final visualizar el proceso, así como datos en tiempo de ejecución sobre el proceso, como el estado activo actual, los datos de tiempo de ejecución agregados o información de otro tipo sobre una instancia del flujo de trabajo).  
@@ -23,6 +24,7 @@ El rehospedaje del diseñador es un escenario común que hace referencia al hosp
 - Utilizar el cuadro de herramientas y la cuadrícula de propiedad hospedados en otro host.  
   
 ## <a name="rehosting-the-designer"></a>Rehospedar el diseñador  
+
  En este ejemplo se muestra cómo crear el diseño de WPF para contener el diseñador, que se ve en el siguiente diseño de cuadrícula (el código del cuadro de herramientas se omite por problemas de espacio). Tenga en cuenta la denominación de los bordes que contienen el diseñador y la cuadrícula de propiedad.  
   
 ```xaml  
@@ -58,6 +60,7 @@ protected override void OnInitialized(EventArgs e)
 ```  
   
 ## <a name="using-the-rehosted-toolbox"></a>Utilizar el cuadro de herramientas hospedado en otro host  
+
  Este ejemplo utiliza el control del cuadro de herramientas hospedado en otro host mediante declaración en XAML. Observe que en el código, se puede pasar un tipo al constructor <xref:System.Activities.Presentation.Toolbox.ToolboxItemWrapper>.  
   
 ```xaml  
@@ -114,7 +117,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Utilizar el ejemplo  
   
-1. Abra la solución DesignerRehosting.sln en Visual Studio 2010.  
+1. Abra la solución DesignerRehosting. sln en Visual Studio 2010.  
   
 2. Presione F5 para compilar y ejecutar la aplicación.  
   
@@ -125,6 +128,6 @@ protected override void OnInitialized(EventArgs e)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\DesignerRehosting\Basic`

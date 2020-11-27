@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 9b81f2f2fb6352af254146951ed35ad4fdca8caa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 47f5a2a3b2c8815e2ccb0cc4d4bf3c408f4992e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545212"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251742"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Seguridad del transporte con la autenticación de Windows
+
 En el siguiente escenario se muestra un servicio y un cliente de Windows Communication Foundation (WCF) protegidos por la seguridad de Windows. Para obtener más información acerca de la programación, consulte [Cómo: proteger un servicio con credenciales de Windows](../how-to-secure-a-service-with-windows-credentials.md).  
   
  Un Servicio Web de la intranet muestra la información de recursos humanos. El cliente es una aplicación de Windows Form. La aplicación se implementa en un dominio con un controlador Kerberos que protege el dominio.  
@@ -25,25 +26,28 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 |Modo de seguridad|Transporte|  
 |Interoperabilidad|Solo WCF|  
 |Autenticación (servidor)<br /><br /> Autenticación (cliente)|Sí (al utilizar la autenticación integrada de Windows)<br /><br /> Sí (al utilizar la autenticación integrada de Windows)|  
-|Integridad|Sí|  
+|Integridad|Yes|  
 |Confidencialidad|Sí|  
 |Transporte|NET.TCP|  
-|Enlace|<xref:System.ServiceModel.NetTcpBinding>|  
+|Enlaces|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
 - Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
+
  El código siguiente muestra cómo crear un extremo de servicio que utilice la seguridad de Windows.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
 ### <a name="configuration"></a>Configuración  
+
  Se puede usar la configuración siguiente en lugar del código para configurar el punto de conexión de servicio:  
   
 ```xml  
@@ -75,7 +79,8 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -85,12 +90,14 @@ En el siguiente escenario se muestra un servicio y un cliente de Windows Communi
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
+
  El siguiente código crea el cliente. El enlace se configura para utilizar la seguridad del modo de transporte, con el transporte TCP, con el tipo de credencial de cliente establecido en Windows.  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
 ### <a name="configuration"></a>Configuración  
+
  La configuración siguiente se puede utilizar en lugar del código para crear el cliente.  
   
 ```xml  

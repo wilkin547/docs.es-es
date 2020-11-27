@@ -2,14 +2,15 @@
 title: Conceptos de seguridad empleados en WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c62b8d39f1a1dc87289ac27022d44ffa3acfc58d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2c7bc01ba45c02be4a1d40c2600fde62e94afe32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554057"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251391"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Conceptos de seguridad empleados en WCF
+
 La seguridad de Windows Communication Foundation (WCF) se basa en los conceptos que ya están en uso y se implementan en diversas infraestructuras de seguridad.  
   
  WCF admite algunas de esas infraestructuras, como Capa de sockets seguros (SSL) sobre HTTP (HTTPS). Sin embargo, WCF va más allá de la compatibilidad con infraestructuras de seguridad existentes mediante la implementación de estándares de seguridad interoperables más recientes (como WS-Security) en mensajes codificados con SOAP. Tanto si usa los mecanismos existentes como los nuevos estándares interoperables, los conceptos de seguridad subyacentes a ambos son los mismos. Entender los conceptos subyacentes de las infraestructuras existentes y los más nuevos estándares es crucial para implementar el mejor modelo de seguridad para una aplicación.  
@@ -25,15 +26,19 @@ El grupo Microsoft Patterns and Practices escribió una nota del producto detall
 La infraestructura de clave pública (PKI) es un sistema de certificados digitales, entidades de certificación y otras autoridades de registro que comprueban y autentican cada parte implicada en una transacción electrónica mediante el uso de criptografía de clave pública.
   
 ### <a name="kerberos-protocol"></a>Protocolo Kerberos  
+
  El *protocolo Kerberos* es una especificación para crear un mecanismo de seguridad que autentica a los usuarios en un dominio de Windows. Le permite a un usuario establecer un contexto seguro con otras entidades de un dominio. Windows 2000 y las plataformas posteriores usan el protocolo Kerberos de forma predeterminada. Entender los mecanismos del sistema es útil a la hora de crear un servicio que interactuará con clientes de la intranet. Además, puesto que el *enlace de kerberos seguridad de servicios web* está ampliamente publicado, puede usar el protocolo Kerberos para comunicarse con clientes de Internet (es decir, el protocolo Kerberos es interoperable). Para obtener más información sobre cómo se implementa el protocolo Kerberos en Windows, vea  [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).  
   
 ### <a name="x509-certificates"></a>Certificados X.509  
+
  Los certificados X.509 son formularios de credenciales primarias usados en aplicaciones de seguridad. Para obtener más información sobre los certificados X. 509, vea [certificados de clave pública x. 509](/windows/win32/seccertenroll/about-x-509-public-key-certificates). Los certificados X.509 se almacenan en un almacén de certificados. Un equipo que ejecuta Windows tiene varios tipos de almacenes de certificados, cada uno con un propósito diferente. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Especificaciones de Seguridad de Servicios Web  
- Los enlaces definidos por el sistema admiten muchas especificaciones de seguridad de los servicios Web que se usan habitualmente. Para obtener una lista completa de los enlaces proporcionados por el sistema y las especificaciones de los servicios web que admiten, vea: [protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](web-services-protocols-supported-by-system-provided-interoperability-bindings.md) .  
+
+ Los enlaces definidos por el sistema admiten muchas especificaciones de seguridad de los servicios Web que se usan habitualmente. Para obtener una lista completa de los enlaces proporcionados por el sistema y las especificaciones de los servicios web que admiten, vea: [protocolos de servicios Web compatibles con los enlaces de interoperabilidad de System-Provided](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Mecanismos de control de acceso  
+
  WCF proporciona muchas formas de controlar el acceso a un servicio o a una operación. Entre ellos cabe destacar los siguientes:  
   
 1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  

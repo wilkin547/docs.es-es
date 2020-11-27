@@ -2,17 +2,19 @@
 title: Compatibilidad transaccional en System.ServiceModel
 ms.date: 03/30/2017
 ms.assetid: e7e54ed3-d1e5-4aa7-a653-1300c6b304eb
-ms.openlocfilehash: 9e9a16df52901cced67f135538d3724700140073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5c7e6fc8c5e116764c6dd9813d7cccf600af8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586044"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251794"
 ---
 # <a name="transactional-support-in-systemservicemodel"></a>Compatibilidad transaccional en System.ServiceModel
+
 En los temas de esta sección se describen las funcionalidades transaccionales Windows Communication Foundation (WCF) proporciona.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Atributos de transacción de ServiceModel](servicemodel-transaction-attributes.md)  
  Describe los dos <xref:System.ServiceModel> atributos estándar que permiten configurar el comportamiento de las transacciones para un servicio WCF.  
   

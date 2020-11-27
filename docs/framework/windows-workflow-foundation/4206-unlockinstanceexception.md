@@ -2,14 +2,15 @@
 title: 4206 - UnlockInstanceException
 ms.date: 03/30/2017
 ms.assetid: 5a46dc5f-d517-4135-8905-25a42f01206b
-ms.openlocfilehash: 3c981888b491f2797a431c2103ba3f5f0bd17046
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48182d7c5fe8f29842a17f28c0ea296f93b31089
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774327"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96251261"
 ---
 # <a name="4206---unlockinstanceexception"></a>4206 - UnlockInstanceException
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61774327"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que se encontró una excepción al intentar desbloquear una instancia.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Excepción %1 al intentar desbloquear la instancia.  
   
 ## <a name="details"></a>Detalles  
