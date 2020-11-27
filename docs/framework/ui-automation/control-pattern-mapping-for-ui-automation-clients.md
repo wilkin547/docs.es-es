@@ -6,14 +6,15 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: aaab4639a7573dd090af2e6d9bb06f896c4728f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164180"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276560"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Asignación de patrones de controles para clientes de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -31,12 +32,13 @@ ms.locfileid: "87164180"
 > Algunos controles tienen compatibilidad condicional con varios patrones de control, en función de la funcionalidad del control. Por ejemplo, el control de elemento de menú tiene compatibilidad condicional con el patrón de control <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>o <xref:System.Windows.Automation.SelectionItemPattern> , en función de su función en el control de menú.  
   
 <a name="control_mapping_clients"></a>
+
 ## <a name="ui-automation-control-patterns-for-clients"></a>Patrones de controles de UI Automation para clientes  
   
-|Tipo de control|Compatible.|Compatibilidad condicional|No compatible|  
+|Tipo de control|Compatible|Compatibilidad condicional|No compatible|  
 |------------------|---------------|-------------------------|-------------------|  
 |Botón|None|Invoke, Toggle, Expand Collapse|None|  
-|Calendario|Grid, Table|Selection, Scroll|Value|  
+|Calendario|Grid, Table|Selection, Scroll|Valor|  
 |Casilla|Alternancia|None|None|  
 |Cuadro combinado|Expandir o contraer|Selection, Value|Scroll|  
 |Cuadrícula de datos|Cuadrícula|Scroll, Selection, Table|None|  
@@ -46,7 +48,7 @@ ms.locfileid: "87164180"
 |Grupo|None|Expandir o contraer|None|  
 |Encabezado|None|Transformación|None|  
 |Header Item|None|Transform, Invoke|None|  
-|Hyperlink|Invocar|Value|None|  
+|Hyperlink|Invocar|Valor|None|  
 |Imagen|None|Grid Item, Table Item|Invoke, Selection Item|  
 |List|None|Grid, Multiple View, Scroll, Selection|Tabla|  
 |List Item|Selection Item|Expand Collapse, Grid Item, Invoke, Scroll Item, Toggle, Value|None|  
@@ -65,7 +67,7 @@ ms.locfileid: "87164180"
 |Pestaña|Selección|Scroll|None|  
 |Tab Item|Selection Item|None|Invocar|  
 |Tabla|Grid, Grid Item, Table, Table Item|None|None|  
-|Texto|None|Grid Item, Table Item, Text|Value|  
+|Texto|None|Grid Item, Table Item, Text|Valor|  
 |Thumb|Transformación|None|None|  
 |Barra de título|None|None|None|  
 |Tool Bar|None|Dock, Expand Collapse, Transform|None|  
