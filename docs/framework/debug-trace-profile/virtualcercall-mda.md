@@ -10,29 +10,34 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
-ms.openlocfilehash: fab0686b1c7d2fbb1485f6e4b82d008495a553cd
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: c3e8060702239c6f87659f48658160e46491542f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803565"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257098"
 ---
 # <a name="virtualcercall-mda"></a>MDA de virtualCERCall
+
 El Asistente para la depuración administrada (MDA) `virtualCERCall` se activa como una advertencia que indica que un sitio de llamada dentro de un gráfico de llamadas de región de ejecución restringida (CER) hace referencia a un destino virtual, es decir, una llamada virtual a un método virtual no final o una llamada mediante una interfaz. El Common Language Runtime (CLR) no puede predecir el método de destino de estas llamadas solo con el lenguaje intermedio y el análisis de metadatos. Como resultado, el árbol de llamadas no se puede preparar como parte del gráfico de CER y las anulaciones de subprocesos de ese subárbol no se pueden bloquear automáticamente. Este MDA advierte de los casos en los que es posible que se tenga que ampliar una CER mediante llamadas explícitas al método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> una vez que la información adicional necesaria para calcular el destino de la llamada se conoce en tiempo de ejecución.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Las CER que no se ejecutan cuando se anula un subproceso o se descarga un dominio de aplicación.  
   
 ## <a name="cause"></a>Causa  
+
  Una CER contiene una llamada a un método virtual que no se puede preparar automáticamente.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Llame a <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> para el método virtual.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
   
 ```output
 Method 'MethodWithCer', while executing within a constrained execution region, makes a call  

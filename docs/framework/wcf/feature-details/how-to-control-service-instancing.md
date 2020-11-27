@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 8a73dd90d268c61e0df974861753119e205a870f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b028e062acd47118314c9fafd18dd698d04ec244
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599079"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257267"
 ---
 # <a name="how-to-control-service-instancing"></a>Procedimiento para controlar la creación de instancias de servicio
+
 Establecer el modo de instancia de un servicio le permite especificar cuándo se crea (y su objeto de servicio  asociado definido por el usuario) <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType>. Vea la enumeración de <xref:System.ServiceModel.InstanceContextMode> para los posibles modos. Para obtener más información sobre los comportamientos, vea [configuración y extensión del tiempo de ejecución con comportamientos](../extending/configuring-and-extending-the-runtime-with-behaviors.md). Para obtener ejemplos prácticos, vea [Behaviors](../samples/behaviors.md).  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>Para controlar la duración de instancia de servicio mediante el código  
@@ -25,6 +26,7 @@ Establecer el modo de instancia de un servicio le permite especificar cuándo se
      [!code-vb[C_ControlServiceInstancing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#1)]  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo de código establece la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> del atributo <xref:System.ServiceModel.ServiceBehaviorAttribute> en <xref:System.ServiceModel.InstanceContextMode.PerCall>.  
   
  [!code-csharp[c_ControlServiceInstancing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_controlserviceinstancing/cs/source.cs#2)]

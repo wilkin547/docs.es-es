@@ -2,14 +2,15 @@
 title: Ejemplo de suministros de transmisión por secuencias
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: 551a97f3cc54915a831fc28eca6ae0ff23101e0b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 735a72cba3c953ea4774d89751dad3216aa44400
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589791"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257189"
 ---
 # <a name="streaming-feeds-sample"></a>Ejemplo de suministros de transmisión por secuencias
+
 Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen grandes cantidades de elementos. En el servidor, el ejemplo muestra cómo retrasar la creación de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuales dentro de la fuente hasta justo antes de que el elemento se escriba en el flujo de red.  
   
  En el cliente, el ejemplo muestra cómo se puede utilizar el formateador de fuente de distribución personalizado para leer los elementos individuales de la secuencia de red para que la fuente que se está leyendo nunca se almacene completamente en el búfer en la memoria.  
@@ -18,7 +19,8 @@ Este ejemplo muestra cómo administrar las fuentes de sindicación que contienen
   
  La demostración hace uso de iteradores de Visual C# (mediante la `yield return` construcción de palabras clave). Para obtener más información sobre los iteradores, vea el tema sobre el uso de iteradores en MSDN.  
   
-## <a name="service"></a>web de Office  
+## <a name="service"></a>Servicio  
+
  El servicio implementa un contrato <xref:System.ServiceModel.Web.WebGetAttribute> básico que está compuesto de una operación, tal y como se muestra en el código siguiente.  
   
 ```csharp  
@@ -68,6 +70,7 @@ public Atom10FeedFormatter StreamedFeed()
  Como resultado, la secuencia del elemento nunca se almacena totalmente en búfer en la memoria. Puede observar este comportamiento estableciendo un punto de interrupción en la `yield return` instrucción dentro del `ItemGenerator.GenerateItems()` método y teniendo en cuenta que este punto de interrupción se encuentra por primera vez después de que el servicio devuelva el resultado del `StreamedFeed()` método.  
   
 ## <a name="client"></a>Cliente  
+
  El cliente en este ejemplo utiliza una implementación <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada que retrasa la materialización de elementos individuales en la fuente en lugar de almacenarlos en búfer en la memoria. La instancia `StreamedAtom10FeedFormatter` personalizada se usa de la manera siguiente.  
   
 ```csharp  

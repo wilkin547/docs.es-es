@@ -4,20 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 3fb4b31038845d223248e72d32b3e7413f2aef63
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b75f5c2a64b7184959e929439893b33193aa7bae
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257475"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Procedimiento para configurar los parámetros de los servicios COM+
-Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación. En el modo hospedado de COM+, el archivo Application. config se coloca en el directorio raíz de la aplicación (%ProgramFiles%\ComPlus Applications Applications \\ {AppID} es el valor predeterminado). En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
+
+Cuando se agrega o quita una interfaz de aplicaciones mediante la herramienta de configuración de servicio de COM+, la configuración del servicio web se actualiza en el archivo de configuración de la aplicación. En el modo hospedado de COM+, el archivo de Application.config se coloca en el directorio raíz de la aplicación (%ProgramFiles%\ComPlus Applications Applications \\ {AppID} es el valor predeterminado). En cualquiera de los modos hospedados en la web, el archivo Web.config se encuentra en el directorio vroot especificado.  
   
 > [!NOTE]
 > La utilización de la firma de los mensajes protege de la alteración de los mensajes entre el cliente y un servidor. Además, la utilización del cifrado en el nivel del mensaje o del transporte protege contra la divulgación de información de los mensajes entre un cliente y un servidor. Al igual que con los servicios de Windows Communication Foundation (WCF), debe usar la limitación para limitar el número de llamadas simultáneas, conexiones, instancias y operaciones pendientes. Así se contribuye a evitar el consumo excesivo de recursos. El comportamiento del límite de peticiones se especifica mediante los valores del archivo de configuración del servicio.  
   
 ## <a name="example"></a>Ejemplo  
+
  Considere un componente que implementa la siguiente interfaz:  
   
 ```csharp
