@@ -2,15 +2,16 @@
 title: 'Comunicaciones básicas: marco de conexión'
 ms.date: 03/30/2017
 ms.assetid: 61ee00e1-896d-47c8-942f-1db28ac89cdc
-ms.openlocfilehash: a3f52ac82c2bf09ded504e412d7f216dd0b39959
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd90bf75370776382b584388330e59a0701ed772
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998691"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277509"
 ---
 # <a name="core-communications-connection-framework"></a>Comunicaciones básicas: marco de conexión
-En este tema se enumera todas las excepciones generadas por el marco de conexión de Windows Communication Foundation (WCF).  
+
+En este tema se enumeran todas las excepciones generadas por el marco de conexión de Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Lista de excepciones  
   

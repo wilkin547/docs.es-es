@@ -6,19 +6,21 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: fd1fae8731ea927ab64d0c0df83b90d29289a0a0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474467"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277973"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de traza JIT
+
 Estos eventos recopilan información relativa a si la inclusión Just-In-Time (JIT) y las llamadas de cola JIT se realizan correctamente o no. 
 
 ## <a name="jit-inlining-events"></a>Eventos de inclusión JIT
 
 ### <a name="methodjitinliningfailed-event"></a>Evento MethodJitInliningFailed
+
  En la tabla siguiente se muestra la palabra clave y el nivel. (Para obtener más información, vea [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)).  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -49,6 +51,7 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 |ClrInstanceID|win:UnicodeString|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="methodjitinliningsucceeded-event"></a>Evento MethodJitInliningSucceeded  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -79,6 +82,7 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 ## <a name="jit-tail-call-events"></a>Eventos de llamada de cola JIT  
   
 ### <a name="methodjittailcallfailed-event"></a>Evento MethodJITTailCallFailed  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -109,6 +113,7 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
 ### <a name="methodjittailcallsucceeded-event"></a>Evento MethodJITTailCallSucceeded  
+
  En la tabla siguiente se muestra la palabra clave y el nivel.  
   
 |Palabra clave para generar el evento|Nivel|  
@@ -138,6 +143,6 @@ Estos eventos recopilan información relativa a si la inclusión Just-In-Time (J
 |TailCallType|win:UnicodeString|Tipo de llamada de cola.|  
 |ClrInstanceID|win:UInt16|Identificador único para la instancia de CLR o CoreCLR.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

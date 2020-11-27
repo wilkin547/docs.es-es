@@ -2,14 +2,15 @@
 title: 'Comunicaciones básicas: canales de transporte de canalización con nombre'
 ms.date: 03/30/2017
 ms.assetid: 14ab8f84-ab3e-47cd-8ac5-dd68af940175
-ms.openlocfilehash: 0b27329989fd1a2a69027da5693bbd546317c624
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c4f381750296b78a7ce9bd160bfe094337270cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998704"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277353"
 ---
 # <a name="core-communications-named-pipe-transport-channels"></a>Comunicaciones básicas: canales de transporte de canalización con nombre
+
 En este tema se enumeran las excepciones generadas por los canales de transporte de canalización con nombre.  
   
 ## <a name="exception-list"></a>Lista de excepciones  

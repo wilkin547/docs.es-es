@@ -1,16 +1,17 @@
 ---
-title: 'Comunicaciones básicas: Los canales de transporte HTTP-HTTPS'
+title: 'Comunicaciones básicas: canales de transporte HTTP-HTTPS'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d33d153c6c527398b035ad9d027593a0fefd0e8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998756"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277418"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Comunicaciones básicas: canales de transporte HTTP/HTTPS
-En este tema se enumera todas las excepciones generadas por los canales de transporte HTTP/HTTPS de Windows Communication Foundation (WCF).  
+
+En este tema se enumeran todas las excepciones generadas por los canales HTTP/HTTPS de transporte Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Lista de excepciones  
   
@@ -21,7 +22,7 @@ En este tema se enumera todas las excepciones generadas por los canales de trans
 |Hosting_SslSettingsMisconfigured|Los valores de Secure Sockets Layer para el servicio especificado no coinciden con los de Internet Information Services.|  
 |HttpAuthSchemeAndClientCert|El generador de agentes de escucha de HTTPS se configuró para que requiera un certificado de cliente y el esquema de autenticación especificado. Sin embargo, solo se puede requerir una forma de autenticación de cliente al mismo tiempo.|  
 |HttpReceiveFailure|Un error ocurrido al recibir la respuesta HTTP en lo especificado. El enlace del extremo de servicio puede que no use el protocolo HTTP. Otra posibilidad es que el servidor terminase un contexto de solicitud HTTP debido a un cierre del servicio. Vea los registros del servidor para obtener más detalles.|  
-|HttpRegistrationAccessDenied|HTTP no puede registrar la Dirección URL especificada. El proceso no tiene derechos de acceso a este espacio de nombres (consulte [Namespace reservas, registros y enrutamiento](/windows/desktop/http/namespace-reservations-registrations-and-routing) para obtener más información).|  
+|HttpRegistrationAccessDenied|HTTP no puede registrar la Dirección URL especificada. El proceso no tiene derechos de acceso a este espacio de nombres (consulte [reservas de espacio de nombres, registros y enrutamiento](/windows/desktop/http/namespace-reservations-registrations-and-routing) para obtener detalles).|  
 |HttpRegistrationAlreadyExists|HTTP no puede registrar la Dirección URL especificada. Otra aplicación ya registró esta dirección URL con HTTP.SYS.|  
 |HttpRegistrationPortInUse|HTTP no puede registrar la dirección URL especificada porque otra aplicación está utilizando el puerto TCP especificado.|  
 |HttpSendFailure|Un error producido al realizar la solicitud HTTP a los especificados. Asegúrese de que la causa no es la no coincidencia de los enlaces de seguridad. Asegúrese también de que el servicio no se configura para Secure Sockets Layer.|  

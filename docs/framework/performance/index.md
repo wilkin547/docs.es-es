@@ -6,17 +6,19 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: e24d3bc07c7292625813828d598ed43952155e4f
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f15cd9b38285e88dac727bcfe51c8dc542a735f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822365"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96277990"
 ---
 # <a name="net-framework-performance"></a>Rendimiento de .NET Framework
+
 Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y planear ese rendimiento al igual que hace con cualquier otra característica de la aplicación. Puede usar las herramientas proporcionadas por Microsoft para medir el rendimiento de su aplicación y, en caso necesario, realizar mejoras en el uso de la memoria, el rendimiento del código y la respuesta. En este tema se enumeran las herramientas de análisis de rendimiento ofrecidas por Microsoft, y se proporcionan vínculos a otros temas que abordan el rendimiento en áreas específicas del desarrollo de aplicaciones.  
   
 ## <a name="designing-and-planning-for-performance"></a>Diseñar y planear el rendimiento  
+
  Si desea que su aplicación tenga un gran rendimiento, diséñelo en la aplicación como haría con cualquier otra característica. Determine los escenarios críticos de rendimiento de la aplicación, establezca objetivos y, desde un principio, mida frecuentemente el rendimiento en estos escenarios de la aplicación. Dado que cada aplicación es diferente y tiene distintas rutas de ejecución críticas para el rendimiento, determinar esas rutas desde un inicio y centrar los esfuerzos permite maximizar la productividad.  
   
  No hace falta estar totalmente familiarizado con la plataforma de destino para crear una aplicación de alto rendimiento. Sin embargo, es necesario entender las partes de la plataforma de destino que suponen un mayor coste en términos de rendimiento. Esto se puede hacer si se mide el rendimiento desde el principio del proceso de desarrollo.  
@@ -24,9 +26,11 @@ Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y pla
  Para determinar las áreas que son cruciales para el rendimiento y establecer los objetivos correspondientes, tenga siempre en cuenta la experiencia de usuario. El tiempo de inicio y la respuesta son dos áreas clave que influirán en la percepción que el usuario tendrá de su aplicación. Si su aplicación usa mucha memoria, puede parecer lenta para el usuario o afectar al resto de aplicaciones que se ejecutan en el sistema; en algunos casos, podría no aprobar el proceso de envío de la Tienda Windows o de la Tienda de Windows Phone. Además, si determina las partes del código que se ejecutan con mayor frecuencia, podrá asegurarse de que esas partes estén bien optimizadas.  
   
 ## <a name="analyzing-performance"></a>Analizar el rendimiento  
+
  Como parte del plan de desarrollo general, establezca momentos del desarrollo en los que mida el rendimiento de la aplicación y compare los resultados con los objetivos definidos previamente. Mida la aplicación en el entorno y el hardware que espera que tengan los usuarios. Un análisis temprano y frecuente del rendimiento de la aplicación puede influir en las decisiones sobre arquitectura que podrían resultar caras de corregir en un momento posterior del ciclo de desarrollo. En las secciones siguientes se describen las herramientas de rendimiento que se pueden usar para analizar las aplicaciones y se aborda el seguimiento de eventos utilizado por estas herramientas.  
   
 ### <a name="performance-tools"></a>Herramientas de rendimiento  
+
  Estas son algunas de las herramientas de rendimiento que puede usar con sus aplicaciones de .NET Framework.  
   
 |Herramienta|Descripción|  
@@ -37,9 +41,11 @@ Si desea crear aplicaciones que exhiban un gran rendimiento, debe diseñar y pla
 |[Windows Performance Analyzer](https://www.microsoft.com/p/windows-performance-analyzer/9n0w1b2bxgnz?activetab=pivot:overviewtab)|Sirve para determinar el rendimiento general del sistema; por ejemplo, el uso de memoria y almacenamiento de la aplicación cuando se ejecutan varias aplicaciones en el mismo equipo. Esta herramienta está disponible en el centro de descarga como parte de Windows Assessment and Deployment Kit (ADK) para Windows 8. Para obtener más información, vea [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer).|
   
 ### <a name="event-tracing-for-windows-etw"></a>Seguimiento de eventos para Windows (ETW)  
+
  ETW es una técnica que permite obtener información de diagnóstico sobre el código que se ejecuta y es esencial para muchas de las herramientas de rendimiento mencionadas anteriormente. ETW crea registros cuando se generan determinados eventos en las aplicaciones de .NET Framework y Windows. Con ETW, puede habilitar y deshabilitar el registro dinámicamente, de modo que puede realizar un seguimiento detallado en un entorno de producción sin necesidad de reiniciar la aplicación. .NET Framework admite eventos de ETW y ETW es utilizado por muchas herramientas de rendimiento y generación de perfiles para crear datos sobre rendimiento. A menudo, estas herramientas habilitan y deshabilitan eventos de ETW, por lo que resulta útil estar familiarizado con ellas. Puede usar eventos de ETW específicos para recopilar información de rendimiento sobre componentes concretos de la aplicación. Para obtener más información sobre la compatibilidad ETW en .NET Framework, vea [Eventos ETW en Common Language Runtime](etw-events-in-the-common-language-runtime.md) y [Eventos ETW en la biblioteca TPL y PLINQ](etw-events-in-task-parallel-library-and-plinq.md).  
   
 ## <a name="performance-by-app-type"></a>Rendimiento por tipo de aplicación  
+
  Cada tipo de aplicación de .NET Framework tiene sus propios procedimientos recomendados, consideraciones y herramientas para evaluar el rendimiento. En la tabla siguiente se ofrecen los vínculos a temas sobre rendimiento para tipos de aplicación de .NET Framework.  
   
 |Tipo de aplicación|Vea|  

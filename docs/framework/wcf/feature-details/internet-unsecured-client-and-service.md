@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 32c08daaacb482aa98a58d7f8882da2c9389293d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535363"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276677"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Cliente y servicio de Internet no protegidos
+
 En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio de Windows Communication Foundation (WCF) públicos y no seguros:  
   
  ![Captura de pantalla que muestra un escenario de Internet no seguro](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
@@ -21,26 +22,29 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 |--------------------|-----------------|  
 |Modo de seguridad|None|  
 |Transporte|HTTP|  
-|Enlace|<xref:System.ServiceModel.BasicHttpBinding> en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
+|Enlaces|<xref:System.ServiceModel.BasicHttpBinding> en el código o [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) en el elemento de configuración.|  
 |Interoperabilidad|Con clientes de servicios Web existentes y servicios|  
-|Authentication|None|  
+|Authentication|Ninguno|  
 |Integridad|None|  
 |Confidencialidad|None|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
 - Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
+
  El siguiente código muestra cómo crear punto de conexión sin seguridad. De forma predeterminada, <xref:System.ServiceModel.BasicHttpBinding> tiene el modo de seguridad establecido en <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
   
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
 ### <a name="service-configuration"></a>Configuración de servicio  
+
  El código siguiente configura el mismo extremo mediante la configuración.  
   
 ```xml  
@@ -68,7 +72,8 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
 ```  
   
 ## <a name="client"></a>Cliente  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un cliente independiente mediante el código (y el código de cliente).  
   
@@ -78,12 +83,14 @@ En la ilustración siguiente se muestra un ejemplo de un cliente y un servicio d
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
+
  En el código siguiente se muestra un cliente de WCF básico que tiene acceso a un punto de conexión no seguro.  
   
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
   
 ### <a name="client-configuration"></a>Configuración del cliente  
+
  El siguiente código configura el cliente.  
   
 ```xml  
