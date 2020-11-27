@@ -2,14 +2,15 @@
 title: Varios puntos de conexión en un ListenUri único
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 91220c6631db2f283b6571fbc32af2211feeaa35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 09696ec8170915f29dae7510f8953565bcc67436
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602497"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260193"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Varios puntos de conexión en un ListenUri único
+
 Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `ListenUri`único. Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora.  
   
 > [!NOTE]
@@ -19,7 +20,8 @@ Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `L
   
  `EndpointAddress` es la dirección lógica de un servicio. Es la dirección a la que se direccionan los mensajes SOAP. `ListenUri` es la dirección física del servicio. Tiene el puerto y direcciona la información hacia donde el punto de conexión del servicio realmente realiza escuchas para los mensajes en el equipo actual. En la mayoría de los casos, no es necesario que estas direcciones difieran; cuando no se especifica `ListenUri` explícitamente, tiene como valor predeterminado el URI de `EndpointAddress` del punto de conexión. En unos casos, es útil para distinguirlos, como al configurar un enrutador, que podría aceptar los mensajes enviado a varios servicios diferentes.  
   
-## <a name="service"></a>web de Office  
+## <a name="service"></a>Servicio  
+
  El servicio en este ejemplo tiene dos contratos, `ICalculator` e `IEcho`. Además del punto de conexión `IMetadataExchange` de costumbre, hay tres puntos de conexión de la aplicación, tal y como se muestra en el código siguiente.  
   
 ```xml  
@@ -44,6 +46,7 @@ Este ejemplo muestra un servicio que hospeda varios puntos de conexión en un `L
  Así la combinación de filtro de la dirección y filtro del contrato permite enrutar cada mensaje que llega al`ListenUri` de este servicio al extremo correcto. El tercer punto de conexión se diferencia de los otros dos porque aceptan mensajes enviados a una dirección diferente de los otros puntos de conexión. Los primeros y segundos puntos de conexión se diferencian entre sí basándose en sus contratos (la acción del mensaje entrante).  
   
 ## <a name="client"></a>Cliente  
+
  Así como los puntos de conexión en el servidor tienen dos direcciones diferentes, los puntos de conexión del cliente también tienen dos direcciones. En el servidor y el cliente, la dirección lógica se denomina `EndpointAddress`. Pero mientras que la dirección física se denomina `ListenUri` en el servidor, en el cliente, la dirección física se denomina `Via`.  
   
  Como en el servidor, de forma predeterminada, estas dos direcciones son las mismas. Para especificar una`Via` en el cliente que sea diferente de la dirección del extremo, `ClientViaBehavior` se utiliza:  

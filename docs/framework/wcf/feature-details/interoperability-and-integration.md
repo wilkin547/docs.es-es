@@ -2,17 +2,19 @@
 title: Interoperabilidad e integración
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 97244ce44a67d653b820d7e14bcb50555e5cbb60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23d87cd98f42ee713f741057d2d60cea8513cc87
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260297"
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilidad e integración
+
 En esta sección se trata la interoperabilidad y la integración con Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Guía de interoperabilidad de los protocolos de servicios web](web-services-protocols-interoperability-guide.md)  
  WCF está diseñado para interoperar con servicios web que admiten un conjunto de especificaciones conocidas como especificaciones de servicios Web. En este tema se enumeran las especificaciones compatibles y los enlaces que las admiten.  
   
@@ -47,7 +49,9 @@ En esta sección se trata la interoperabilidad y la integración con Windows Com
  Describe cómo WCF proporciona servicios y clientes que usan mensajes "XML sin formato" (POX).  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Extensión de WCF](../extending/index.md)

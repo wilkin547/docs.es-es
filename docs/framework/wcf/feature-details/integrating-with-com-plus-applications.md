@@ -9,22 +9,24 @@ helpviewer_keywords:
 - COM+ [WCF]
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
-ms.openlocfilehash: 40778cf0dea4406160e20c74f17921673993bec2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 96a1f1cc68d28665a1b5dea1a106abfd793a4d1f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96260336"
 ---
 # <a name="integrating-with-com-applications"></a>Integración en aplicaciones COM+
+
 Windows Communication Foundation (WCF) proporciona un entorno completo para crear aplicaciones distribuidas. Si tiene una inversión sustancial en lógica de aplicación basada en componentes hospedada en COM+, puede usar WCF para ampliar su lógica existente en lugar de tener que volver a escribirla. En los temas de esta sección se describe cómo usar COM+ con WCF.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general de la integración con aplicaciones COM+](integrating-with-com-plus-applications-overview.md)  
  Proporciona una información general de cuándo y cómo integrar los componentes COM+.  
   
  [Procedimiento para usar la herramienta configuración de modelos de servicio COM+](how-to-use-the-com-service-model-configuration-tool.md)  
- Explica cómo usar la herramienta de línea de comandos de configuración del modelo de servicio COM+ (ComSvcConfig. exe) para configurar las interfaces de aplicación que desea que se expongan como servicios WCF.  
+ Explica cómo usar la herramienta de línea de comandos de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicación que desea que se expongan como servicios WCF.  
   
  [Procedimiento para configurar los parámetros de los servicios COM+](how-to-configure-com-service-settings.md)  
  Explica cómo configurar un objeto COM+ como un servicio WCF.  
@@ -33,6 +35,7 @@ Windows Communication Foundation (WCF) proporciona un entorno completo para crea
  Explica cómo mover una aplicación de integración de COM+.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>Vea también
