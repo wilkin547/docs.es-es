@@ -9,21 +9,23 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-ms.openlocfilehash: 5b88127aa88544e77b1516d776bdce2d9f9a9fef
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 531dff4db6fe30ee4cdff2c0b9c482e7d3536583
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163153"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261090"
 ---
-# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="b20e9-103">Proveedores de UI Automation para código administrado</span><span class="sxs-lookup"><span data-stu-id="b20e9-103">UI Automation Providers for Managed Code</span></span>
+# <a name="ui-automation-providers-for-managed-code"></a><span data-ttu-id="ae5c1-103">Proveedores de UI Automation para código administrado</span><span class="sxs-lookup"><span data-stu-id="ae5c1-103">UI Automation Providers for Managed Code</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="b20e9-104">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="b20e9-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="b20e9-105">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="b20e9-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
+> <span data-ttu-id="ae5c1-104">Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>.</span><span class="sxs-lookup"><span data-stu-id="ae5c1-104">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="ae5c1-105">Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).</span><span class="sxs-lookup"><span data-stu-id="ae5c1-105">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>  
   
- <span data-ttu-id="b20e9-106">Esta sección contiene información general y temas de procedimientos que describen cómo escribir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] proveedores para [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] los elementos personalizados.</span><span class="sxs-lookup"><span data-stu-id="b20e9-106">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
+ <span data-ttu-id="ae5c1-106">Esta sección contiene información general y temas de procedimientos que describen cómo escribir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] proveedores para [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] los elementos personalizados.</span><span class="sxs-lookup"><span data-stu-id="ae5c1-106">This section contains overviews and how-to topics that describe how to write [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] providers for custom [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] elements.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b20e9-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="b20e9-107">In This Section</span></span>  
- [<span data-ttu-id="b20e9-108">Implementación del proveedor de UI Automation en el servidor</span><span class="sxs-lookup"><span data-stu-id="b20e9-108">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="b20e9-109">Información general sobre proveedores de UI Automation</span><span class="sxs-lookup"><span data-stu-id="b20e9-109">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)  
- [<span data-ttu-id="b20e9-110">Implementación del proveedor de UI Automation en el cliente</span><span class="sxs-lookup"><span data-stu-id="b20e9-110">Client-Side UI Automation Provider Implementation</span></span>](client-side-ui-automation-provider-implementation.md)  
- [<span data-ttu-id="b20e9-111">Temas "Cómo..."</span><span class="sxs-lookup"><span data-stu-id="b20e9-111">How-to Topics</span></span>](ui-automation-providers-for-managed-code-how-to-topics.md)
+## <a name="in-this-section"></a><span data-ttu-id="ae5c1-107">En esta sección</span><span class="sxs-lookup"><span data-stu-id="ae5c1-107">In This Section</span></span>  
+
+ [<span data-ttu-id="ae5c1-108">Implementación del proveedor de UI Automation en el servidor</span><span class="sxs-lookup"><span data-stu-id="ae5c1-108">Server-Side UI Automation Provider Implementation</span></span>](server-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="ae5c1-109">Información general sobre proveedores de UI Automation</span><span class="sxs-lookup"><span data-stu-id="ae5c1-109">UI Automation Providers Overview</span></span>](ui-automation-providers-overview.md)  
+ [<span data-ttu-id="ae5c1-110">Implementación del proveedor de UI Automation en el cliente</span><span class="sxs-lookup"><span data-stu-id="ae5c1-110">Client-Side UI Automation Provider Implementation</span></span>](client-side-ui-automation-provider-implementation.md)  
+ [<span data-ttu-id="ae5c1-111">Temas de procedimientos</span><span class="sxs-lookup"><span data-stu-id="ae5c1-111">How-to Topics</span></span>](ui-automation-providers-for-managed-code-how-to-topics.md)

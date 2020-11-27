@@ -2,21 +2,23 @@
 title: System.ServiceModel.Security.SecurityTokenProviderClosed
 ms.date: 03/30/2017
 ms.assetid: 978c76b9-a9c8-435f-847d-0503e78dde50
-ms.openlocfilehash: 51a7fc8587e9a291ef772c80015997bff80e3c84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ee6efe427642ae23f4888196145210c34cb4cee0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597922"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262429"
 ---
-# <a name="systemservicemodelsecuritysecuritytokenproviderclosed"></a><span data-ttu-id="46ae4-102">System.ServiceModel.Security.SecurityTokenProviderClosed</span><span class="sxs-lookup"><span data-stu-id="46ae4-102">System.ServiceModel.Security.SecurityTokenProviderClosed</span></span>
-<span data-ttu-id="46ae4-103">System.ServiceModel.Security.SecurityTokenProviderClosed</span><span class="sxs-lookup"><span data-stu-id="46ae4-103">System.ServiceModel.Security.SecurityTokenProviderClosed</span></span>  
-  
-## <a name="description"></a><span data-ttu-id="46ae4-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="46ae4-104">Description</span></span>  
- <span data-ttu-id="46ae4-105">Se cerró el proveedor de tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="46ae4-105">The Security Token Provider was closed.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="46ae4-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="46ae4-106">See also</span></span>
+# <a name="systemservicemodelsecuritysecuritytokenproviderclosed"></a><span data-ttu-id="a62dc-102">System.ServiceModel.Security.SecurityTokenProviderClosed</span><span class="sxs-lookup"><span data-stu-id="a62dc-102">System.ServiceModel.Security.SecurityTokenProviderClosed</span></span>
 
-- [<span data-ttu-id="46ae4-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="46ae4-107">Tracing</span></span>](index.md)
-- [<span data-ttu-id="46ae4-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="46ae4-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="46ae4-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="46ae4-109">Administration and Diagnostics</span></span>](../index.md)
+<span data-ttu-id="a62dc-103">System.ServiceModel.Security.SecurityTokenProviderClosed</span><span class="sxs-lookup"><span data-stu-id="a62dc-103">System.ServiceModel.Security.SecurityTokenProviderClosed</span></span>  
+  
+## <a name="description"></a><span data-ttu-id="a62dc-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="a62dc-104">Description</span></span>  
+
+ <span data-ttu-id="a62dc-105">Se cerró el proveedor de tokens de seguridad.</span><span class="sxs-lookup"><span data-stu-id="a62dc-105">The Security Token Provider was closed.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="a62dc-106">Vea también</span><span class="sxs-lookup"><span data-stu-id="a62dc-106">See also</span></span>
+
+- [<span data-ttu-id="a62dc-107">Seguimiento</span><span class="sxs-lookup"><span data-stu-id="a62dc-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="a62dc-108">Uso del seguimiento para solucionar problemas de su aplicación</span><span class="sxs-lookup"><span data-stu-id="a62dc-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="a62dc-109">Administración y diagnóstico</span><span class="sxs-lookup"><span data-stu-id="a62dc-109">Administration and Diagnostics</span></span>](../index.md)
