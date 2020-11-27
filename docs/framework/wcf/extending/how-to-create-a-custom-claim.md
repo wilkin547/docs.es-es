@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea3bc7384ca10538ca5ab1d3bb05da6a2757fb67
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247551"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256019"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Procedimiento para crear una notificación personalizada
+
 La infraestructura del modelo de identidad de Windows Communication Foundation (WCF) proporciona un conjunto de tipos y derechos de notificaciones integrados con las funciones auxiliares para crear <xref:System.IdentityModel.Claims.Claim> instancias con esos tipos y derechos. Estas notificaciones integradas están diseñadas para modelar la información que se encuentra en los tipos de credenciales de cliente que WCF admite de forma predeterminada. En muchos casos, las demandas integradas son suficientes; sin embargo, algunas aplicaciones pueden exigir demandas personalizadas. Una demanda está compuesta por el tipo de demanda, el recurso para el que la demanda se aplica y el derecho que se impone sobre ese recurso. En este tema se describe cómo crear una demanda personalizada.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Para crear una demanda personalizada que está basada en un tipo de datos primitivo  
@@ -70,6 +71,7 @@ La infraestructura del modelo de identidad de Windows Communication Foundation (
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]
   
 ## <a name="example"></a>Ejemplo  
+
  El ejemplo de código siguiente muestra cómo crear una demanda personalizada con un tipo de recurso primitivo y una demanda personalizada con un tipo de recurso no primitivo.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]

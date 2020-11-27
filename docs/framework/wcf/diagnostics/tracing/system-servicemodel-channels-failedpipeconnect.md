@@ -2,17 +2,19 @@
 title: System.ServiceModel.Channels.FailedPipeConnect
 ms.date: 03/30/2017
 ms.assetid: 9a827e0f-fb91-46bb-bd54-926d4b74d8a6
-ms.openlocfilehash: 790a15e5401850f2767cb06f5f321ad80c674f2b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b3b34b2f4ab2987360030d614c8e65cd878d4d14
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84582418"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256253"
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a>System.ServiceModel.Channels.FailedPipeConnect
+
 Se produjo un error al intentar conectar al punto de conexión de la canalización con nombre. Se realiza otro intento dentro del período de tiempo de espera especificado.  
   
 ## <a name="description"></a>Descripción  
+
  Este seguimiento de traza de información indica un error en la conexión con un punto de conexión de canalización con nombre. Esto podría ocurrir si el punto de conexión de canalización con nombre no se encuentra o está ocupado. Se realizan intentos adicionales, cada uno separado por un espacio de tiempo, hasta que uno se realiza correctamente o finaliza OpenTimeout.  
   
 ## <a name="see-also"></a>Vea también

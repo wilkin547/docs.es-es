@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 5d5268cd2171bdccc3885cd599fdc8c277e61aa4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fef7aa531c946ecacef30bb79f2362bad4d375ed
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256032"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Procedimiento para crear una directiva de autorización personalizada
+
 La infraestructura del modelo de identidad de Windows Communication Foundation (WCF) admite un modelo de autorización basado en notificaciones. Las notificaciones se extraen de los tokens, procesados opcionalmente por la directiva de autorización personalizada. Después se colocan en un <xref:System.IdentityModel.Policy.AuthorizationContext> que se puede examinar a continuación para tomar las decisiones de autorización. Se puede utilizar una directiva personalizada para transformar las notificaciones de tokens entrantes en notificaciones esperadas por la aplicación. De esta manera, el nivel de aplicación se puede aislar de los detalles de las distintas notificaciones servidas por los diferentes tipos de token que admite WCF. En este tema se muestra cómo implementar una directiva de autorización personalizada y cómo agregarla a la colección de directivas utilizada por un servicio.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Para implementar una directiva de autorización personalizada  
@@ -29,7 +30,7 @@ La infraestructura del modelo de identidad de Windows Communication Foundation (
   
 1. Dos parámetros se pasan a este método: una instancia de la clase <xref:System.IdentityModel.Policy.EvaluationContext> y una referencia de objeto.  
   
-2. Si la directiva <xref:System.IdentityModel.Policy.EvaluationContext>de autorización personalizada <xref:System.IdentityModel.Claims.ClaimSet> agrega instancias sin tener en cuenta el contenido actual de, agregue cada `ClaimSet` una de ellas <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> llamando al método `true` y devolviendo desde el <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método. Devolver `true` indica a la infraestructura de la autorización que la directiva de autorización ha realizado su trabajo y no necesita ser llamada de nuevo.  
+2. Si la Directiva de autorización personalizada agrega <xref:System.IdentityModel.Claims.ClaimSet> instancias sin tener en cuenta el contenido actual de <xref:System.IdentityModel.Policy.EvaluationContext> , agregue cada `ClaimSet` una de ellas llamando al <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> método y devolviendo `true` desde el <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> método. Devolver `true` indica a la infraestructura de la autorización que la directiva de autorización ha realizado su trabajo y no necesita ser llamada de nuevo.  
   
 3. Si la directiva de autorización personalizada agrega conjuntos de notificaciones solo si algunas notificaciones están presentes en `EvaluationContext`, después búsquelas examinando las instancias `ClaimSet` devueltas por la propiedad <xref:System.IdentityModel.Policy.EvaluationContext.ClaimSets%2A>. Si las notificaciones están presentes, añada los nuevos conjuntos de notificaciones llamando al método <xref:System.IdentityModel.Policy.EvaluationContext.AddClaimSet%28System.IdentityModel.Policy.IAuthorizationPolicy%2CSystem.IdentityModel.Claims.ClaimSet%29> y, si no se van a agregar más conjuntos de notificaciones, devuelva `true`, indicando a la infraestructura de autorización que la directiva de autorización ha completado su trabajo. Si las notificaciones no están presentes, devuelva `false`, indicando que se debería llamar a la directiva de autorización de nuevo si otras directivas de autorización agregan más conjuntos de notificaciones a `EvaluationContext`.  
   
@@ -70,6 +71,7 @@ La infraestructura del modelo de identidad de Windows Communication Foundation (
      [!code-vb[c_CustomAuthPol#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#8)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra una implementación de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> completa.  
   
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
@@ -78,6 +80,6 @@ La infraestructura del modelo de identidad de Windows Communication Foundation (
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Procedimientos: Comparar notificaciones](how-to-compare-claims.md)
-- [Cómo: Crear un administrador de autorización personalizado para un servicio](how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Procedimiento para comparar notificaciones](how-to-compare-claims.md)
+- [Procedimiento para crear un administrador de autorización personalizado para un servicio](how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Directiva de autorización](../samples/authorization-policy.md)

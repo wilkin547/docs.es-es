@@ -2,18 +2,20 @@
 title: Actividad
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 41de6b9458feb4e1898eeac6635b74c4617885d6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 96d89a69071a90a81ead7d594eb495c5d0cdfc63
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602146"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254459"
 ---
 # <a name="activity"></a>Actividad
+
 En este tema se describen los seguimientos de actividad en el modelo de seguimiento de Windows Communication Foundation (WCF). Las actividades procesan unidades que ayudan al usuario a reducir el ámbito de un error. Los errores que se producen en la misma actividad están directamente relacionados. Por ejemplo, se produce un error en una operación porque se ha producido un error en el descifrado del mensaje. Los seguimientos para el error de descifrado del mensaje y la operación aparecen en la misma actividad, mostrando una correlación directa entre el error del descifrado y el error de la solicitud.  
   
 ## <a name="configuring-activity-tracing"></a>Configuración del seguimiento de actividades  
- WCF proporciona actividades predefinidas para el procesamiento de aplicaciones (consulte la [lista de actividades](activity-list.md)). También puede definir las actividades mediante programación para agrupar los seguimientos del usuario. Para obtener más información, vea [emitir seguimientos de código de usuario](emitting-user-code-traces.md).  
+
+ WCF proporciona actividades predefinidas para el procesamiento de aplicaciones (consulte la [lista de actividades](activity-list.md)). También puede definir las actividades mediante programación para agrupar los seguimientos del usuario. Para obtener más información, consulte [emitir seguimientos de User-Code](emitting-user-code-traces.md).  
   
  Para emitir seguimientos de actividad en tiempo de ejecución, use la `ActivityTracing` configuración del `System.ServiceModel` origen de seguimiento u otros orígenes de seguimiento WCF o Custom, como se muestra en el código de configuración siguiente.  
   
@@ -24,18 +26,21 @@ En este tema se describen los seguimientos de actividad en el modelo de seguimie
  Para obtener más información sobre el elemento de configuración y los atributos que se usan, vea el tema [configuración del seguimiento](configuring-tracing.md) .  
   
 ## <a name="viewing-activities"></a>Visualización de actividades  
- Puede ver las actividades y su utilidad en la [herramienta Service Trace Viewer (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md). Cuando ActivityTracing está habilitado, esta herramienta toma los seguimientos y los ordena en función de la actividad. También puede ver las transferencias de seguimientos. Una transferencia de seguimiento indica cómo se relacionan a entre sí actividades diferentes. Puede ver que una actividad determinada hizo que se iniciara otra. Por ejemplo, una solicitud del mensaje inició un protocolo de enlace de seguridad para obtener un Token de conversación segura.  
+
+ Puede ver las actividades y su utilidad en la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md). Cuando ActivityTracing está habilitado, esta herramienta toma los seguimientos y los ordena en función de la actividad. También puede ver las transferencias de seguimientos. Una transferencia de seguimiento indica cómo se relacionan a entre sí actividades diferentes. Puede ver que una actividad determinada hizo que se iniciara otra. Por ejemplo, una solicitud del mensaje inició un protocolo de enlace de seguridad para obtener un Token de conversación segura.  
   
 ### <a name="correlating-activities-in-service-trace-viewer"></a>Correlación de actividades en Service Trace Viewer  
+
  La herramienta Service Trace Viewer proporciona dos vistas de actividades:  
   
 - Vista de **lista** , donde el ID. de actividad se usa para correlacionar directamente los seguimientos entre los procesos. Los seguimientos de diferentes procesos, por ejemplo, cliente y servicio, pero con el mismo id. de actividad se agrupan en la misma actividad. Por consiguiente, un error que se produce en el servicio que, a continuación, produce un error en el cliente, se mostrarán ambos en la misma vista de actividades en la herramienta.  
   
 - Vista de **gráfico** , donde las actividades se agrupan por procesos. En esta vista, un cliente y un servicio con el mismo identificador de actividad tienen sus seguimientos en actividades diferentes. Para correlacionar actividades con el mismo id. de actividad en procesos diferentes, la herramienta muestra flujos de mensajes en las actividades relacionadas.  
   
- Para obtener más información y para ver una vista gráfica de la herramienta Service Trace Viewer, consulte la [herramienta Service Trace Viewer (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md) y el [uso del visor de seguimiento de servicios para ver los seguimientos correlacionados y la solución de problemas](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
+ Para obtener más información y ver una vista gráfica de la herramienta Service Trace Viewer, vea la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md) y el [uso del visor de seguimiento de servicio para ver los seguimientos correlacionados y la solución de problemas](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).  
   
 ## <a name="defining-the-scope-of-an-activity"></a>Definición del ámbito de una actividad  
+
  Una actividad se define durante el diseño y denota una unidad lógica de trabajo. Los seguimientos emitidos con el mismo identificador de actividad están directamente relacionados, forman parte de la misma actividad. Debido a que una actividad puede cruzar los límites de extremos (una solicitud), se definen dos ámbitos para una actividad.  
   
 - Ámbito `Global`, por aplicación. En este ámbito, la actividad se identifica por su identificador de actividad único globalmente de 128 bits, el gAId. El gAId es lo que se propaga por los puntos de conexión.  
@@ -43,9 +48,10 @@ En este tema se describen los seguimientos de actividad en el modelo de seguimie
 - Ámbito `Local`, por extremo. En este ámbito, la actividad se identifica mediante su gAId, junto con el nombre del origen de seguimiento que emite los seguimientos de actividad y el identificador de proceso. Este tríptico constituye el ID. de actividad local, que se establece. El lAId se utiliza para definir los límites (locales) de una actividad.  
   
 ## <a name="trace-schema"></a>Esquema de seguimiento  
+
  Los seguimientos se pueden emitir utilizando cualquier esquema y entre plataformas de Microsoft. "E2E" (para "extremo a extremo") es un esquema de uso frecuente. Este esquema incluye un identificador de 128 bits (gAId), el nombre del origen de seguimiento y el identificador de proceso. En código administrado, <xref:System.Diagnostics.XmlWriterTraceListener> emite seguimientos en el esquema E2E.  
   
- Los programadores pueden establecer el AID que se emite con un seguimiento estableciendo la propiedad <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un Guid en Almacenamiento local para el subproceso (TLS). El ejemplo siguiente demuestra este patrón.  
+ Los programadores pueden establecer el AID que se emite con un seguimiento estableciendo la propiedad <xref:System.Diagnostics.CorrelationManager.ActivityId%2A> con un Guid en Almacenamiento local para el subproceso (TLS). En el siguiente ejemplo se muestra cómo hacerlo.  
   
 ```csharp
 // set the current Activity ID to a new GUID.  
@@ -62,6 +68,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
  El seguimiento emitido contendrá actualmente el gAId en TLS, el nombre del origen de seguimiento pasado como parámetro al constructor del origen de seguimiento y el identificador de proceso actual.  
   
 ## <a name="activity-lifetime"></a>Duración de una actividad  
+
  En términos estrictos, la evidencia de una actividad se inicia la primera vez que se utiliza el identificador de actividad en un seguimiento emitido y finaliza la última vez que se utiliza en un seguimiento emitido. <xref:System.Diagnostics> proporciona un conjunto predefinido de tipos de seguimiento, incluyendo Iniciar y Detener, para marcar explícitamente los límites de duración de la actividad.  
   
 - Iniciar: indica el principio de una actividad. Un seguimiento de "Inicio" proporciona un registro de inicio de un nuevo hito de procesamiento. Contiene un nuevo id. de actividad para un origen de seguimiento determinado en un proceso determinado, excepto cuando el id. de actividad se propaga por los extremos, en cuyo caso vemos un "Iniciar" por extremo. Ejemplos de comienzo de una nueva actividad incluyen la creación de un nuevo subproceso para el procesamiento o la entrada en un nuevo método público.  
@@ -83,6 +90,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
  El seguimiento Detener también es particularmente útil para validar el ámbito de las actividades implementadas. Si algunos seguimientos del procesamiento aparecen después del seguimiento Detener en lugar de dentro de una actividad determinada, esto puede sugerir un defecto en el código.  
   
 ## <a name="guidelines-for-using-activity-tracing"></a>Instrucciones para el uso de seguimiento de actividades  
+
  A continuación se muestra una guía sobre el uso de seguimientos ActivityTracing (Iniciar, Detener, Suspender, Reanudar y Transferir).  
   
 - El seguimiento es un gráfico cíclico dirigido, no un árbol. Puede devolver el control a una actividad que generó una actividad.  

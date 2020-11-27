@@ -2,14 +2,15 @@
 title: Metadatos del marco de trabajo del servicio
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 4133e758cde79294432ca501a10ed7ff20821954
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255772"
 ---
 # <a name="service-framework-metadata"></a>Metadatos del marco de trabajo del servicio
+
 En este tema se enumeran las excepciones generadas por Service Framework Metadata.  
   
 ## <a name="exception-list"></a>Lista de excepciones  

@@ -2,14 +2,15 @@
 title: Datos del marco de servicio
 ms.date: 03/30/2017
 ms.assetid: 2a2c8ddc-4e82-4e7f-a79f-97085c469517
-ms.openlocfilehash: 5c65e9d473b5fe3f2b1c29824dcc1151abb0c3f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bb6e9df6a77eda5875981a0bf7783f50671a589
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255785"
 ---
 # <a name="service-framework-data"></a>Datos del marco de servicio
+
 En este tema se enumeran las excepciones generadas por Service Framework Data.  
   
 ## <a name="exception-list"></a>Lista de excepciones  

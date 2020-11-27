@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 5fc29432bdd55daff2d60d641a4cea4925278032
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5d262c3e0443503ccbf49a1a468c82843799a61
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543022"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255057"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Creación de servicios interoperables de WS-I Basic Profile 1.1
+
 Para configurar un extremo de servicio WCF para que sea interoperable con clientes de servicios Web de ASP.NET:  
   
 - Utilice el tipo <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> como tipo de enlace para su extremo de servicio.  
@@ -34,9 +35,11 @@ Para que los metadatos de un servicio WCF estén disponibles para ASP.NET, use l
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
+
  En el código de ejemplo siguiente se muestra cómo agregar un punto de conexión de WCF que es compatible con los clientes del servicio Web ASP.NET en el código y, como alternativa, en un archivo de configuración.  
   
 ### <a name="code"></a>Código  
+
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  

@@ -2,20 +2,23 @@
 title: Formateador de suministro (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 7b535a5090d3c7df59b7faada35fc324a77b5651
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b79adcc37037c3ba497946e8a6fb1a74f2e1e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594678"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255538"
 ---
 # <a name="feed-formatter-json"></a>Formateador de suministro (JSON)
+
 Este ejemplo muestra cómo serializar una instancia de una clase <xref:System.ServiceModel.Syndication.SyndicationFeed> en el formato de la Notación de objeto JavaScript (JSON) utilizando un <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizado y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
 ## <a name="architecture-of-the-sample"></a>Arquitectura del ejemplo  
+
  El ejemplo implementa una clase denominada `JsonFeedFormatter` que se hereda desde <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. La clase `JsonFeedFormatter` confía en que <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> lea y escriba los datos en formato de JSON. Internamente, el formateador utiliza un conjunto personalizado de tipos de contrato de datos denominado `JsonSyndicationFeed` y `JsonSyndicationItem` para controlar el formato de los datos de JSON generado por el serializador. Estos detalles de implementación se ocultan del usuario final, permitiendo realizar las llamadas contra los <xref:System.ServiceModel.Syndication.SyndicationFeed> estándar y las clases <xref:System.ServiceModel.Syndication.SyndicationItem>.  
   
 ## <a name="writing-json-feeds"></a>Escribir las fuentes de JSON  
+
  Escribir una fuente de JSON se puede lograr utilizando `JsonFeedFormatter` (se implementa en este ejemplo) con <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> como se muestra en el código muestra siguiente.  
   
 ```csharp  
@@ -34,6 +37,7 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 ```  
   
 ## <a name="reading-a-json-feed"></a>Leer una fuente de JSON  
+
  Obtener una <xref:System.ServiceModel.Syndication.SyndicationFeed> de una secuencia de datos dados formateados por JSON se puede lograr con `JsonFeedFormatter` como presentación en el código siguiente.  
   
  `//Read in the feed using the DataContractJsonSerializer`  

@@ -2,17 +2,19 @@
 title: Extensibilidad
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 757783536ac25dd30e96748b9d9791e06c08b091
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb939814fe30bd8e28d42cac4e4945a83b1b3158
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600495"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255441"
 ---
 # <a name="extensibility"></a>Extensibilidad
+
 Esta sección contiene ejemplos que abordan la extensibilidad personalizada y otras características de Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Extensibilidad de los canales](channels-extensibility.md)  
  Muestra los canales personalizados.  
   

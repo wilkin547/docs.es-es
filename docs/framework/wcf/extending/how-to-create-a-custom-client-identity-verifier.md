@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 86e7869efdba50d72cc61a1aebb767cf43927546
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 84982aca06bacb5718855602872fe4dab2376a9d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256071"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Procedimiento para crear un comprobador de identidad de cliente personalizado
+
 La característica de *identidad* de Windows Communication Foundation (WCF) permite a un cliente especificar de antemano la identidad esperada del servicio. Siempre que un servidor se autentica al cliente, se comprueba la identidad frente a la identidad prevista. (Para obtener una explicación de la identidad y cómo funciona, consulte [identidad de servicio y autenticación](../feature-details/service-identity-and-authentication.md)).  
   
  En caso necesario, la comprobación puede personalizarse mediante un comprobador de identidad personalizado. Por ejemplo, puede realizar controles adicionales de comprobación de identidad del servicio. En este ejemplo, el comprobador de identidad personalizado controla las notificaciones adicionales del certificado X.509 devueltas desde el servidor. Para obtener una aplicación de ejemplo, consulte [ejemplo de identidad de servicio](../samples/service-identity-sample.md).  
@@ -33,7 +34,7 @@ La característica de *identidad* de Windows Communication Foundation (WCF) perm
      [!code-csharp[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#7)]
      [!code-vb[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#7)]  
   
-2. Invalide el método <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A> . El método determina si la comprobación de la identidad tuvo éxito o fue fallida.  
+2. Invalide el método <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A>. El método determina si la comprobación de la identidad tuvo éxito o fue fallida.  
   
 3. El método `CheckAccess` posee dos parámetros. El primero es una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. El segundo es una instancia de la clase <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
@@ -44,7 +45,7 @@ La característica de *identidad* de Windows Communication Foundation (WCF) perm
   
 ### <a name="to-implement-the-trygetidentity-method"></a>Para implementar el método TryGetIdentity  
   
-1. Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura de WCF llama primero a la `TryGetIdentity` implementación del método para recuperar la identidad del servicio del mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
+1. Implemente el método <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A>, que determina si el cliente puede devolver una instancia de la clase <xref:System.ServiceModel.EndpointIdentity>. La infraestructura de WCF llama primero a la implementación del `TryGetIdentity` método para recuperar la identidad del servicio del mensaje. Después, la infraestructura llama a la implementación `CheckAccess` con la `EndpointIdentity` devuelta y a <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 2. En el método `TryGetIdentity`, agregue el siguiente código:  
   
@@ -70,12 +71,14 @@ La característica de *identidad* de Windows Communication Foundation (WCF) perm
      [!code-vb[c_HowToSetCustomClientIdentity#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#4)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra una implementación de la clase <xref:System.ServiceModel.Security.IdentityVerifier> completa.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#5)]
  [!code-vb[c_HowToSetCustomClientIdentity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#5)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra una implementación de la clase <xref:System.ServiceModel.EndpointIdentity> completa.  
   
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]

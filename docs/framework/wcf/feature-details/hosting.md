@@ -2,19 +2,21 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 0a502093ff40f1a702f5d4d9046d4627eae39e01
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a83cc0d12b1099bc77d62f108741de1dbf387686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555788"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255993"
 ---
-# <a name="hosting"></a>Hosting
+# <a name="hosting"></a>Hospedaje
+
 Los temas de esta sección describen el hospedaje de servicios. Un servicio se puede hospedar en Internet Information Services (IIS), el servicio de activación de procesos de Windows (WAS), Windows Server AppFabric, un servicio de Windows o una aplicación administrada; a menudo, esta opción se conoce como *autohospedaje*.  
   
  Es importante tener en cuenta que ejecutar un servicio o cualquier extensión desde un host que no sea de confianza pone en peligro la seguridad.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Hospedaje en Internet Information Services](hosting-in-internet-information-services.md)  
  Describe cómo un servicio de Windows Communication Foundation (WCF) se hospeda en Internet Information Services o en [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)).  
   

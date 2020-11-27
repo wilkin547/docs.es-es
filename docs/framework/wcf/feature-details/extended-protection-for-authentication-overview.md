@@ -2,14 +2,15 @@
 title: Información general sobre la protección extendida para la autenticación
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: fdc42228077bbc703e2e7557c8d7fdb3ff57a150
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0537e6147a7b43dabcb4c3612fc58da11dfd4d6d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559270"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255551"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Información general sobre la protección extendida para la autenticación
+
 La protección extendida para la autenticación ayuda a protegerse de los ataques de tipo "man-in-the-middle" (MITM), en los que un atacante intercepta las credenciales de un cliente y las reenvía a un servidor.  
   
  Considere un escenario con tres participantes: un cliente, un servidor y un atacante. El servidor tiene la dirección URL `https://server`, mientras que el atacante tiene la dirección URL `https://attacker`. El atacante engaña al cliente para que este tenga acceso a él como si fuese el servidor. A continuación, el atacante envía una solicitud al servidor. Si el atacante intenta tener acceso a un recurso seguro, el servidor le responde con un encabezado WWW-Authenticate. El atacante no dispone de la información de autenticación, por lo que envía el encabezado WWW-Authenticate al cliente. El cliente envía el encabezado de autorización al atacante, y este lo envía a su vez al servidor, obteniendo así acceso a los recursos seguros mediante las credenciales del cliente.  

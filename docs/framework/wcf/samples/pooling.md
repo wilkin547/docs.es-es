@@ -2,14 +2,15 @@
 title: Agrupación
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 82b81637deb0715d19109794348d2a2bcda7f0d9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b266dafa945fa44d6c857810df42eb5439f157d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594626"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255447"
 ---
 # <a name="pooling"></a>Agrupación
+
 Este ejemplo muestra cómo extender Windows Communication Foundation (WCF) para admitir la agrupación de objetos. El ejemplo muestra cómo crear un atributo que es sintáctica y semánticamente similar a la funcionalidad del atributo `ObjectPoolingAttribute` de Enterprise Services. La agrupación de objetos puede aumentar de manera considerable el rendimiento de una aplicación. Sin embargo, puede tener el efecto contrario si no se utiliza correctamente. La agrupación de objetos ayuda a reducir la sobrecarga que supone volver a crear objetos usados con frecuencia que requieren inicialización extensa. Sin embargo, si una llamada a un método en un objeto agrupado necesita una cantidad considerable de tiempo para completarse, la agrupación de objetos pone en la cola solicitudes adicionales en cuanto se alcance el tamaño máximo del grupo. Así, puede ser que no se preste servicio a algunas solicitudes de creación de objetos produciendo una excepción de tiempo de espera agotado.  
   
 > [!NOTE]
@@ -22,6 +23,7 @@ Este ejemplo muestra cómo extender Windows Communication Foundation (WCF) para 
  Los distribuidores de extremos y canales proporcionan extensibilidad para canales y contratos exponiendo varias propiedades que controlan el comportamiento del distribuidor. La propiedad <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> también le permite inspeccionar, modificar o personalizar el proceso de distribución. Este ejemplo se centra en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> que señala al objeto que proporciona las instancias de la clase de servicio.  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
+
  En WCF, el distribuidor crea instancias de la clase de servicio mediante <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> , que implementa la <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaz. Esta interfaz tiene tres métodos:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>: cuando un mensaje llega, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llegue, por lo que se llama a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> siempre que llegue un mensaje.  
@@ -31,6 +33,7 @@ Este ejemplo muestra cómo extender Windows Communication Foundation (WCF) para 
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>: cuando ha transcurrido la duración de una instancia de servicio, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%28System.ServiceModel.InstanceContext%2CSystem.Object%29>. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Agrupación de objetos  
+
  Una implementación <xref:System.ServiceModel.Dispatcher.IInstanceProvider> personalizada proporciona la semántica de la agrupación de objetos necesaria para un servicio. Por consiguiente, este ejemplo tiene un tipo `ObjectPoolingInstanceProvider` que proporciona implementación personalizada de <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para la agrupación. Cuando `Dispatcher` llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>, en lugar de crear una nueva instancia, la implementación personalizada busca un objeto existente en un grupo en memoria. Si hay uno disponible, se devuelve. De lo contrario, se crea un nuevo objeto. Se muestra la implementación para `GetInstance` en el código de ejemplo siguiente.  
   
 ```csharp  
@@ -83,6 +86,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
  El `ReleaseInstance` método proporciona una característica de "inicialización de limpieza". Normalmente el grupo mantiene un número mínimo de objetos para la duración del grupo. Sin embargo, puede haber períodos de uso excesivo que requieren la creación de objetos adicionales en el grupo para alcanzar el límite máximo especificado en la configuración. Finalmente, cuando el grupo se vuelve menos activo, esos objetos adicionales pueden suponer una sobrecarga adicional. Por consiguiente, cuando `activeObjectsCount` llega a cero, se inicia un temporizador inactivo que activa y realiza un ciclo de limpieza.  
   
 ## <a name="adding-the-behavior"></a>Adición del comportamiento  
+
  Las extensiones de nivel de distribuidor se enlazan utilizando los comportamientos siguientes:  
   
 - Comportamientos de servicio. Permiten la personalización de todo el tiempo de ejecución del servicio.  
@@ -186,6 +190,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo  
+
  El ejemplo muestra la mejora en el rendimiento que puede obtenerse usando la agrupación de objetos en algunos escenarios.  
   
  La aplicación de servicio implementa dos servicios: `WorkService` y `ObjectPooledWorkService`. Ambos servicios comparten la misma implementación: requieren una inicialización cara y después exponen un método `DoWork()` que es relativamente barato. La única diferencia es que `ObjectPooledWorkService` tiene la agrupación de objetos configurada:  

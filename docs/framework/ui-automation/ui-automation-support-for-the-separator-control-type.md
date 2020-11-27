@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-ms.openlocfilehash: 9e5ebfa693bf638a96b8ea6768ecc9553976ce45
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: a24e3788e9416f85cbcf36962768b3d0b2739517
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166929"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255824"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Compatibilidad de UI Automation para el tipo de control Separator
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -25,7 +26,9 @@ ms.locfileid: "87166929"
  En las secciones siguientes se define la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necesaria, las propiedades, los patrones de control y los eventos para el tipo de control Separator. Los [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requisitos de se aplican a todos los controles de lista, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] , Win32 o Windows Forms.  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>
+
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de Automatización de la interfaz de usuario necesaria  
+
  En la tabla siguiente se describe la vista de control y la vista de contenido del árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de separador y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](ui-automation-tree-overview.md).  
   
 |Vista de control|Vista de contenido|  
@@ -33,10 +36,12 @@ ms.locfileid: "87166929"
 |Separador|-El control de separador nunca tiene contenido.|  
   
 <a name="Required_UI_Automation_Properties"></a>
+
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
+
  En la tabla siguiente se muestran las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cuyo valor o definición es especialmente relevante para los controles de separador. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] las propiedades, vea [UI Automation Properties for clients](ui-automation-properties-for-clients.md).  
   
-|Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|Notas|  
+|Propiedad[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Notas|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas|El rectángulo exterior que contiene el control completo.|  
@@ -50,11 +55,15 @@ ms.locfileid: "87166929"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|El control de separador siempre debe ser un control.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>
+
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control de Automatización de la interfaz de usuario necesarios  
+
  El control de separador no debe admitir ningún patrón de control.  
   
 <a name="Required_UI_Automation_Events"></a>
+
 ## <a name="required-ui-automation-events"></a>Eventos de Automatización de la interfaz de usuario necesarios  
+
  En la tabla siguiente se muestran los eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que se deben admitir por todos los controles de separador. Para más información sobre eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 |o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  

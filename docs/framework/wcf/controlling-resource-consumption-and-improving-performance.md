@@ -2,17 +2,19 @@
 title: Control del consumo de recursos y mejora del rendimiento
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 7210f71287a2ec763b67dfa033cd9f4dadf6bd34
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f06dd0b7e66ae783b2f268551f15c5e6e8369b7f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543074"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255070"
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Control del consumo de recursos y mejora del rendimiento
+
 En este tema se describen las distintas propiedades de las distintas áreas de la arquitectura Windows Communication Foundation (WCF) que funcionan para controlar el consumo de recursos y afectar a las métricas de rendimiento.
 
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>Propiedades que restringen el consumo de recursos en WCF
+
  Windows Communication Foundation (WCF) aplica restricciones en determinados tipos de procesos, ya sea con fines de seguridad o de rendimiento. Estas restricciones adquieren dos formas básicas: cuotas y aceleradores. Las *cuotas* son límites cuando se alcanza o se supera el desencadenamiento de una excepción inmediata en algún punto del sistema. Las *limitaciones* son límites que no provocan inmediatamente que se produzca una excepción. En su lugar, cuando se alcanza el límite del acelerador, el procesamiento continúa pero dentro de los límites establecidos por ese valor. Este procesamiento limitado puede activar una excepción en otra parte, pero esto depende de la aplicación.
 
  Además de la distinción entre cuotas y aceleradores, algunas propiedades de restricción se encuentran en el nivel de serialización, algunas en el nivel de transporte y algunas en el nivel de aplicación. Por ejemplo, la cuota <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType>, que implementan todos los elementos de enlace de transporte proporcionados por el sistema, está establecida de forma predeterminada en 65.536 bytes para impedir que los clientes malintencionados emprendan ataques de denegación de servicio contra un servicio provocando el consumo excesivo de memoria. (Normalmente, puede aumentar el rendimiento bajando este valor.)
@@ -27,6 +29,7 @@ En este tema se describen las distintas propiedades de las distintas áreas de l
  Las propiedades que restringen los procesos de serialización se enumeran en [consideraciones de seguridad para los datos](./feature-details/security-considerations-for-data.md). Las propiedades que restringen el consumo de recursos relacionados con los transportes se enumeran en [cuotas de transporte](./feature-details/transport-quotas.md). Las propiedades que restringen el consumo de recursos en el nivel de aplicación son los miembros de la clase <xref:System.ServiceModel.Dispatcher.ServiceThrottle>.
 
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>Detectar la aplicación y los problemas de rendimiento relacionados con los valores de cuota
+
  Los valores predeterminados de los valores anteriores se han elegido para habilitar la funcionalidad de la aplicación básica en una amplia gama de tipos de aplicación proporcionando al mismo tiempo protección básica contra los problemas de seguridad comunes. Sin embargo, los diseños de las diferentes aplicaciones pueden superar uno o más valores de acelerador aunque por otro lado la aplicación sea segura y funcione como se ha diseñado. En estos casos, debe identificar qué valores de acelerador se superan y en qué nivel, y decidir la acción adecuada para aumentar el rendimiento de la aplicación.
 
  Normalmente, al escribir la aplicación y depurarla, establece la propiedad <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> en `true` en el archivo de configuración o mediante programación. Esto indica a WCF que devuelva los seguimientos de la pila de excepciones de servicio a la aplicación cliente para su visualización. Esta característica crea informes de la mayoría de las excepciones en el nivel de aplicación de manera que se muestran qué valores de cuota podrían estar implicados, si ése es el problema.
@@ -36,6 +39,7 @@ En este tema se describen las distintas propiedades de las distintas áreas de l
  Independientemente de las capacidades del entorno de desarrollo, puede usar las capacidades del seguimiento de WCF y del registro de mensajes para depurar todas las excepciones y optimizar el rendimiento de las aplicaciones. Para obtener más información, consulte [uso del seguimiento para solucionar problemas de la aplicación](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="performance-issues-and-xmlserializer"></a>Problemas de rendimiento y XmlSerializer
+
  Los servicios y las aplicaciones cliente que usan tipos de datos que son serializables mediante <xref:System.Xml.Serialization.XmlSerializer> generan y compilan el código de serialización de los tipos de datos en tiempo de ejecución, lo que se puede traducir en un rendimiento de inicio lento.
 
 > [!NOTE]

@@ -1,15 +1,16 @@
 ---
-title: 'Cómo: Escribir una extensión para ServiceContractGenerator'
+title: Procedimiento para escribir una extensión para ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 68b380a40448f21ba770aa47c7188b818fa8f9e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3a81204ca470b9b94d9e8f048ecccbade74b2e10
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254641"
 ---
-# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Cómo: Escribir una extensión para ServiceContractGenerator
+# <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Procedimiento para escribir una extensión para ServiceContractGenerator
+
 En este tema se describe cómo escribir una extensión para <xref:System.ServiceModel.Description.ServiceContractGenerator>. Esto se puede hacer implementando la interfaz <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> en un comportamiento de la operación o implementando la interfaz <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> en un comportamiento del contrato. En este tema se muestra cómo implementar la interfaz <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> en un comportamiento de contrato.  
   
  <xref:System.ServiceModel.Description.ServiceContractGenerator> genera contratos de servicio, tipos de cliente y configuraciones de cliente a partir de instancias de <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> y <xref:System.ServiceModel.Channels.Binding>. Normalmente, importa <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription>, y <xref:System.ServiceModel.Channels.Binding> crea instancias a partir de los metadatos del servicio y, a continuación, utiliza estas instancias para generar el código para llamar al servicio. En este ejemplo, se usa una implementación <xref:System.ServiceModel.Description.IWsdlImportExtension> para procesar las anotaciones WSDL y después agregar las extensiones de generación de código a los contratos importados para generar comentarios en el código generado.  
@@ -101,5 +102,5 @@ En este tema se describe cómo escribir una extensión para <xref:System.Service
   
 ## <a name="see-also"></a>Vea también
 
-- [Metadatos](../feature-details/metadata.md)
-- [Importación de WSDL personalizado](how-to-import-custom-wsdl.md)
+- [Metadata](../feature-details/metadata.md)
+- [Procedimiento para importar el WSDL personalizado](how-to-import-custom-wsdl.md)

@@ -2,14 +2,15 @@
 title: Recuperación de metadatos
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 4763686485dfe97844fad78cf0bb279113c0ce08
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a7a30fee36b14d0414f2f5bed513c21a694f3484
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594613"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255408"
 ---
 # <a name="retrieve-metadata"></a>Recuperación de metadatos
+
 Este ejemplo muestra cómo implementar un cliente que dinámicamente recupere los metadatos de un servicio para elegir un punto de conexión con el que comunicarse. Este ejemplo se basa en el [Introducción](getting-started-sample.md). El servicio se ha modificado para exponer dos puntos de conexión: un punto de conexión en la dirección base utilizando el `basicHttpBinding` enlace y un punto de conexión seguro en {*BaseAddress*}/Secure utilizando el `wsHttpBinding` enlace. En lugar de configurar el cliente con el extremo direcciones y enlaces, el cliente recupera dinámicamente los metadatos para el servicio utilizando la clase <xref:System.ServiceModel.Description.MetadataExchangeClient> y, a continuación, importa los metadatos como <xref:System.ServiceModel.Description.ServiceEndpointCollection> utilizando la clase <xref:System.ServiceModel.Description.WsdlImporter>.  
   
 > [!NOTE]

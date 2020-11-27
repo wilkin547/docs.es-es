@@ -2,18 +2,19 @@
 title: Solución de problemas de instalación
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: fb687e9975ab9ac763030f10d54c7744dc02c9e0
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: 596aae345061796535895a091c59d50a5bffe0d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720457"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255122"
 ---
 # <a name="troubleshoot-setup-issues"></a>Solucionar problemas de configuración
 
 En este artículo se describe cómo solucionar problemas de configuración de Windows Communication Foundation (WCF).  
   
 ## <a name="some-windows-communication-foundation-registry-keys-are-not-repaired-by-performing-an-msi-repair-operation-on-the-net-framework-30"></a>Algunas claves del Registro de Windows Communication Foundation no se reparan mediante una operación de reparación de MSI en .NET Framework 3.0  
+
  Si elimina cualquiera de las claves del Registro siguientes:  
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ServiceModelService 3.0.0.0  
@@ -42,11 +43,11 @@ En este artículo se describe cómo solucionar problemas de configuración de Wi
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Resultado inesperado 3 al ejecutar E:\WINDOWS\system32\wbem\mofcomp.exe con "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
-     o:  
+     O bien  
   
      ServiceModelReg [07:19:33:843]: System.TypeInitializationException: El inicializador de tipo para 'System.Management.ManagementPath' produjo una excepción. ---> System. Runtime. InteropServices. COMException (0x80040154): no se pudo recuperar el generador de clases COM para el componente con CLSID {CF4CC405-E2C5-4DDD-B3CE-5E7582D8C9FA} debido al siguiente error: 80040154.  
   
-     o:  
+     O bien  
   
      ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: No pudo cargar el archivo ni ensamblado 'C:\WINDOWS\system32\wbem\mofcomp.exe' o uno de sus dependencias. El sistema no encuentra el archivo especificado.  
   
@@ -65,6 +66,7 @@ En este artículo se describe cómo solucionar problemas de configuración de Wi
  La [herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configurar IIS correctamente para Webhost de WCF/WF después de instalar .NET Framework 3.5  
+
  Cuando .NET Framework instalación 3,5 no puede configurar otras opciones de configuración de IIS relacionadas con WCF, registra un error en el registro de instalación y continúa. Cualquier intento de ejecutar las aplicaciones de WorkflowServices será en vano ya que faltan los valores de configuración necesarios. Por ejemplo, puede fallar la carga de los archivos .xoml o .rules.  
   
  Para solucionar este problema, use la [herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) con el `/c` modificador para configurar correctamente las asignaciones de script de IIS en la máquina. La [herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)](workflow-service-registration-tool-wfservicesreg-exe.md) se puede encontrar en%WINDIR%\Microsoft.NET\framework\v3.5\ o%WINDIR%\Microsoft.NET\framework64\v3.5\  

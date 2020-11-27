@@ -2,14 +2,15 @@
 title: Referencia de excepciones
 ms.date: 03/30/2017
 ms.assetid: adc19950-5f79-4045-8403-bf6310118ee3
-ms.openlocfilehash: 5e61f395cb107202a7c435648f53ad40fce318b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 233586c3a4fdda4cfbea2c3370d447c7bfa41b94
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797335"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254810"
 ---
 # <a name="exceptions-reference"></a>Referencia de excepciones
+
 En esta sección se enumeran todas las excepciones de las siguientes áreas generadas por Windows Communication Foundation (WCF):  
   
  [IdentityModel](identitymodel-exceptions.md)  
@@ -18,23 +19,23 @@ En esta sección se enumeran todas las excepciones de las siguientes áreas gene
   
  [Configuración](configuration.md)  
   
- [Comunicaciones básicas: Marco de canal](core-communications-channel-framework.md)  
+ [Comunicaciones básicas: marco de canales](core-communications-channel-framework.md)  
   
- [Comunicaciones básicas: Marco de conexión](core-communications-connection-framework.md)  
+ [Comunicaciones básicas: marco de conexión](core-communications-connection-framework.md)  
   
  Comunicaciones básicas: canales de transporte HTTP/HTTPS  
   
- [Comunicaciones básicas: Canales de transporte dúplex internos](core-communications-internal-duplex-transport-channels.md)  
+ [Comunicaciones básicas: canales de transporte de dúplex internos](core-communications-internal-duplex-transport-channels.md)  
   
- [Comunicaciones básicas: Canales de transporte de canalización con nombre](core-communications-named-pipe-transport-channels.md)  
+ [Comunicaciones básicas: canales de transporte de canalización con nombre](core-communications-named-pipe-transport-channels.md)  
   
- [Comunicaciones básicas: Canales de transporte TCP](core-communications-tcp-transport-channels.md)  
+ [Comunicaciones básicas: canales de transporte TCP](core-communications-tcp-transport-channels.md)  
   
- [Comunicaciones básicas: Marco de transporte](core-communications-transport-framework.md)  
+ [Comunicaciones básicas: marco de transporte](core-communications-transport-framework.md)  
   
- [Comunicaciones básicas: Utilidad](core-communications-utilities.md)  
+ [Comunicaciones básicas: Utilidades](core-communications-utilities.md)  
   
- [Comunicaciones básicas: Compatibilidad con webhost](core-communications-webhost-support.md)  
+ [Comunicaciones básicas: compatibilidad de Webhost](core-communications-webhost-support.md)  
   
  [Transacción](transaction-exceptions.md)  
   

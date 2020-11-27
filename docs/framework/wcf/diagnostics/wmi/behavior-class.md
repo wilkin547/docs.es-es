@@ -2,15 +2,16 @@
 title: Clase de comportamiento
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 7c7c25e63677ca2b48a5df18892d2e8ab946ad08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73edea45ccd1d1684604a571fbc0615da52f5686
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255707"
 ---
 # <a name="behavior-class"></a>Clase de comportamiento
-## <a name="syntax"></a>Sintaxis  
+
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class Behavior  
@@ -20,15 +21,18 @@ class Behavior
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase Behavior no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase Behavior tiene la propiedad siguiente:  
   
 ### <a name="type"></a>Tipo  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  El tipo del comportamiento.  
   

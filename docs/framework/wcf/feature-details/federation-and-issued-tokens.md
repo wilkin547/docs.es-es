@@ -6,17 +6,19 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0ab3d6bad717e71901b4d94c99f1c48f99d8675e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96255525"
 ---
 # <a name="federation-and-issued-tokens"></a>Federación y tokens emitidos
+
 Con Windows Communication Foundation (WCF), puede crear clientes que se comuniquen de forma segura con servicios que implementan las especificaciones de WS-Federation y WS-Trust. Las especificaciones utilizan XML, SOAP y lenguaje de descripción de servicios Web (WSDL) para proporcionar mecanismos que habilitan la autenticación y autorización en los diferentes dominios de confianza.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Federación](federation.md)  
  Proporciona información general sobre la federación.  
   
@@ -45,6 +47,7 @@ Con Windows Communication Foundation (WCF), puede crear clientes que se comuniqu
  Describe cómo deshabilitar las sesiones seguras en un `WSFederationHttpBinding`. La deshabilitación de las sesiones seguras es necesaria al crear una granja de servidores web que requiere una sesión para cada cliente.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.IdentityModel.Claims>  
   
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

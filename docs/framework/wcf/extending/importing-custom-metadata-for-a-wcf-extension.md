@@ -2,21 +2,23 @@
 title: Importación de  metadatos personalizados para una extensión de WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: f6f858cbe86bd2965decf42be5daa7b3f7d3c8c2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b231ff676ffc81666713987a24605b8ae98bb6d6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796928"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254628"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importación de  metadatos personalizados para una extensión de WCF
-En Windows Communication Foundation (WCF), la importación de metadatos es el proceso de generar una representación abstracta de un servicio o sus componentes a partir de sus metadatos. Por ejemplo, WCF puede importar <xref:System.ServiceModel.Description.ServiceEndpoint> instancias, <xref:System.ServiceModel.Channels.Binding> instancias o <xref:System.ServiceModel.Description.ContractDescription> instancias de un documento WSDL para un servicio. Para importar metadatos de servicio en WCF, use una implementación <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> de la clase abstracta. Los tipos que derivan <xref:System.ServiceModel.Description.MetadataImporter> de la clase implementan la compatibilidad para importar formatos de metadatos que aprovechan la lógica de importación de WS-Policy en WCF.  
+
+En Windows Communication Foundation (WCF), la importación de metadatos es el proceso de generar una representación abstracta de un servicio o sus componentes a partir de sus metadatos. Por ejemplo, WCF puede importar <xref:System.ServiceModel.Description.ServiceEndpoint> instancias, <xref:System.ServiceModel.Channels.Binding> instancias o <xref:System.ServiceModel.Description.ContractDescription> instancias de un documento WSDL para un servicio. Para importar metadatos de servicio en WCF, use una implementación de la <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> clase abstracta. Los tipos que derivan de la <xref:System.ServiceModel.Description.MetadataImporter> clase implementan la compatibilidad para importar formatos de metadatos que aprovechan la lógica de importación de WS-Policy en WCF.  
   
  Los metadatos personalizados están compuestos de elementos XML que los importadores de metadatos proporcionados por el sistema no pueden importar. Normalmente, esto incluye extensiones WSDL personalizadas y aserciones de directivas personalizadas.  
   
  En esta sección se describe cómo importar extensiones WSDL personalizadas y aserciones de directivas. No se centra en el proceso de importación en sí. Para obtener más información sobre cómo usar los tipos que exportan e importan metadatos independientemente de si los metadatos son personalizados o compatibles con el sistema, vea [exportar e importar metadatos](../feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Información general  
+
  El <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo es la implementación de la <xref:System.ServiceModel.Description.MetadataImporter> clase abstracta incluida con WCF. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos del WSDL con directivas adjuntas que se empaquetan en un objeto <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>. Las aserciones de directivas y las extensiones WSDL que los importadores predeterminados no reconocen se pasan a cualquier directiva personalizada registrada e importadores del WSDL para su importación. Normalmente, los importadores se implementan para admitir los elementos de enlace definidos por el usuario o para modificar el contrato importado.  
   
  En esta sección se describe:  
@@ -28,14 +30,16 @@ En Windows Communication Foundation (WCF), la importación de metadatos es el pr
  Para obtener más información acerca de cómo exportar WSDL y aserciones de directivas personalizadas, vea [exportación de metadatos personalizados para una extensión WCF](exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="importing-custom-wsdl-extensions"></a>Importación de las extensiones WSDL personalizadas  
+
  Para agregar la compatibilidad para la importación de extensiones WSDL, implemente la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension> y, a continuación, agregue su implementación a la propiedad <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A>. <xref:System.ServiceModel.Description.WsdlImporter> también puede cargar las implementaciones de la interfaz <xref:System.ServiceModel.Description.IWsdlImportExtension> registradas en su archivo de configuración de la aplicación. Observe que se registran varios importadores de WSDL de forma predeterminada y el orden de los importadores de WSDL registrados es significativo.  
   
  Cuando <xref:System.ServiceModel.Description.WsdlImporter> carga y utiliza el importador de WSDL personalizado, primero se llama al método <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> para habilitar la modificación de metadatos antes del proceso de importación. Después, se importan los contratos después de que el método <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> se llame para habilitar la modificación de los contratos importados desde los metadatos. Finalmente, se llama al método <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> para habilitar la modificación de puntos de conexión importados.  
   
- Para obtener más información, vea [Cómo: Importe WSDL](how-to-import-custom-wsdl.md)personalizado.  
+ Para obtener más información, consulte [Cómo: importar WSDL personalizado](how-to-import-custom-wsdl.md).  
   
 ### <a name="importing-custom-policy-assertions"></a>Importación de aserciones de directivas personalizadas  
- El <xref:System.ServiceModel.Description.WsdlImporter> tipo y la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) administran automáticamente el procesamiento de una variedad de tipos de aserción de directiva en expresiones de directiva adjuntas a documentos WSDL. Estas herramientas recogen, normalizan y combinan expresiones de directivas adjuntas a los enlaces de WSDL y puertos WSDL.  
+
+ El <xref:System.ServiceModel.Description.WsdlImporter> tipo y la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) controlan automáticamente el procesamiento de una variedad de tipos de aserción de directiva en expresiones de directiva adjuntas a documentos WSDL. Estas herramientas recogen, normalizan y combinan expresiones de directivas adjuntas a los enlaces de WSDL y puertos WSDL.  
   
  Para agregar compatibilidad para la importación de aserciones de directivas personalizadas, implemente la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension> y, a continuación, agregue su implementación a la propiedad <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A>. <xref:System.ServiceModel.Description.MetadataImporter> también puede cargar las implementaciones de la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension> registradas en su archivo de configuración de la aplicación. Observe que se registran varios importadores de directivas de forma predeterminada y el orden de los importadores de directivas registradas es significativo.  
   
@@ -50,6 +54,6 @@ En Windows Communication Foundation (WCF), la importación de metadatos es el pr
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Importar WSDL personalizado](how-to-import-custom-wsdl.md)
-- [Cómo: Importar aserciones de directivas personalizadas](how-to-import-custom-policy-assertions.md)
-- [Procedimientos: Escribir una extensión para ServiceContractGenerator](how-to-write-an-extension-for-the-servicecontractgenerator.md)
+- [Procedimiento para importar el WSDL personalizado](how-to-import-custom-wsdl.md)
+- [Procedimiento para importar aserciones de directivas personalizadas](how-to-import-custom-policy-assertions.md)
+- [Procedimiento para escribir una extensión para ServiceContractGenerator](how-to-write-an-extension-for-the-servicecontractgenerator.md)

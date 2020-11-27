@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 35ac2dded5b3c727391fcad3ca950c2de4dbea64
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558906"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254446"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
+
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
   
  Para ver las recomendaciones de configuración de seguimiento en el entorno de producción o depuración, consulte la [configuración recomendada para el seguimiento y el registro de mensajes](recommended-settings-for-tracing-and-message-logging.md).  
@@ -21,6 +22,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 > En Windows 8 debe ejecutar la aplicación elevada (ejecutar como administrador) para que la aplicación genere los registros de seguimiento.  
   
 ## <a name="enabling-tracing"></a>La habilitación del seguimiento  
+
  Windows Communication Foundation (WCF) genera los datos siguientes para el seguimiento de diagnóstico:  
   
 - Realiza un seguimiento de los hitos del proceso en todos los componentes de las aplicaciones, como llamadas de operación, excepciones de código, advertencias y otros eventos de procesamiento significativos.  
@@ -57,6 +59,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 > Para editar el archivo de configuración de un proyecto de servicio de WCF en Visual Studio, haga clic con el botón derecho en el archivo de configuración de la aplicación, ya sea Web.config para aplicaciones hospedadas en web o Appname.exe.config para la aplicación autohospedada en **Explorador de soluciones**. A continuación, elija el elemento de menú contextual **Editar configuración de WCF** . Esto inicia la [herramienta editor de configuración (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md), que le permite modificar la configuración de los servicios WCF mediante una interfaz gráfica de usuario.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configurar los orígenes de seguimiento para emitir trazas  
+
  WCF define un origen de seguimiento para cada ensamblado. Las escuchas definidas para ese origen tienen acceso a las trazas generadas dentro de un ensamblado. Se definen los orígenes de seguimiento siguientes:  
   
 - System. ServiceModel: registra todas las fases del procesamiento de WCF, cada vez que se lee la configuración, se procesa un mensaje en el transporte, el procesamiento de seguridad, se envía un mensaje en el código de usuario, etc.  
@@ -137,6 +140,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  Para obtener más información sobre cómo crear orígenes de seguimiento definidos por el usuario, vea [extender el seguimiento](../../samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configurar las escuchas para consumir trazas  
+
  En tiempo de ejecución, WCF suministra datos de seguimiento a los agentes de escucha, que procesan los datos. WCF proporciona varios agentes de escucha predefinidos para <xref:System.Diagnostics> , que difieren en el formato que usan para la salida. También puede agregar tipos de escucha personalizados.  
   
  Puede utilizar `add` para especificar el nombre y tipo de agente de escucha de seguimiento que desea utilizar. En nuestra configuración de ejemplo, hemos llamado `traceListener` al agente de escucha y hemos agregado el agente de escucha de seguimiento estándar de .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) como el tipo que deseamos utilizar. Puede agregar cualquier número de escuchas de seguimiento para cada origen. Si la escucha de seguimiento emite el seguimiento a un archivo, debe especificar la ubicación del archivo de salida y el nombre en el archivo de configuración. Esto se hace estableciendo `initializeData` en el nombre del archivo para esa escucha. Si no especifica un nombre de archivo, se genera un nombre de archivo aleatorio basado en el tipo de escucha utilizado. Si se utiliza <xref:System.Diagnostics.XmlWriterTraceListener>, se genera un nombre de archivo sin extensión. Si implementa una escucha personalizada, también puede utilizar este atributo para recibir datos de inicialización distintos de un nombre de archivo. Por ejemplo, puede especificar un identificador de la base de datos para este atributo.  
@@ -149,6 +153,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 > Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
   
 ## <a name="trace-level"></a>Nivel de seguimiento  
+
  El nivel de seguimiento está controlado por el valor `switchValue` del origen de seguimiento. En la siguiente tabla se describen los niveles de seguimiento disponibles.  
   
 |Nivel de seguimiento|Naturaleza de los eventos seguidos|Contenido de los eventos seguidos|Eventos de los que se realiza un seguimiento|Destino del usuario|  
@@ -168,6 +173,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 > Los niveles de Información, Detallado, y ActivityTracing generan muchas trazas, lo que puede afectar negativamente al rendimiento de los mensajes si ha agotado todos los recursos disponibles en el equipo.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurar el seguimiento de actividad y la propagación para la correlación  
+
  El valor `activityTracing` especificado para el atributo `switchValue` se utiliza para habilitar el seguimiento de actividad, que emite las trazas para los límites de actividad y las transferencias dentro de los puntos de conexión.  
   
 > [!NOTE]

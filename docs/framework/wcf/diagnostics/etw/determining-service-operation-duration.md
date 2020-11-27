@@ -2,19 +2,20 @@
 title: Determinar la duración de la operación de servicio
 ms.date: 03/30/2017
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-ms.openlocfilehash: 06a4c2da7b702fa4fbc1469576c118b790803339
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2607efe0d469f1235ee3d43d62f5e9781681668d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291426"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254836"
 ---
 # <a name="determining-service-operation-duration"></a>Determinar la duración de la operación de servicio
+
 Si la traza analítica está habilitada en una aplicación Windows Communication Foundation (WCF), la duración de la ejecución de una operación de servicio se puede determinar fácilmente mediante el examen del registro de eventos.  En este tema se muestra cómo determinar la cantidad de tiempo que una operación de servicio tarda en completarse.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Determinar la duración de la ejecución de la operación de servicio  
   
-1. Para abrir Visor de eventos, haga clic en **Inicio**, **ejecutar**y escriba `eventvwr.exe`.  
+1. Para abrir Visor de eventos, haga clic en **Inicio**, **Ejecutar** y escriba `eventvwr.exe` .  
   
 2. Si no ha habilitado el seguimiento analítico, expanda **registros de aplicaciones y servicios**, **Microsoft**, **Windows**, **servidor de aplicaciones-aplicaciones**. Seleccione **Ver**, **Mostrar registros analíticos y de depuración**. Haga clic con el botón secundario en **analítico** y seleccione **Habilitar registro**. Deje abierto el Visor de eventos para que los seguimientos se puedan ver cuando se ejecute la operación de servicio.  
   
