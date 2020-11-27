@@ -3,14 +3,15 @@ title: Generación de un cliente WCF a partir de los metadatos de servicio
 description: Descubra los distintos modificadores de Svcutil.exe utilizados para generar clientes WFC desde documentos de metadatos de servicio basados en WSDL o un archivo de directivas del servicio.
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: f755a092fb3596349a6878c61fe414f4e0a9f9d1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e4363ac94a79dedf6d8a80adcaf738df179252b8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247278"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290080"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generación de un cliente WCF a partir de los metadatos de servicio
+
 En este tema se describe cómo utilizar los diversos modificadores de Svcutil.exe para generar los clientes a partir de documentos de metadatos.  
   
  Los documentos de metadatos pueden estar en un almacenamiento duradero o recuperarse en línea. La recuperación en línea sigue el protocolo WS-MetadataExchange o el protocolo Microsoft Discovery (DISCO). Svcutil.exe emite simultáneamente las siguientes solicitudes de metadatos para recuperar los metadatos:  

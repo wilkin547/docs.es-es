@@ -2,17 +2,19 @@
 title: Diagnóstico de aplicaciones transaccionales
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: fb3a83083e876cf697621ba70dcf7dd67636f83a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696ebe7249a8388eaaf38a678581e28d472e821a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290249"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnóstico de aplicaciones transaccionales
+
 En este tema se describe cómo usar la característica de diagnóstico y administración de Windows Communication Foundation (WCF) para solucionar problemas de una aplicación transaccional.  
   
 ## <a name="performance-counters"></a>Contadores de rendimiento  
+
  WCF proporciona un conjunto estándar de contadores de rendimiento para medir el rendimiento de la aplicación transaccional. Para más información, consulte [Performance Counters](../diagnostics/performance-counters/index.md).  
   
  Los contadores de rendimiento tienen tres niveles de alcance diferentes: servicio, punto de conexión y operación, tal y como se describe en las tablas siguientes.  
@@ -45,6 +47,7 @@ En este tema se describe cómo usar la característica de diagnóstico y adminis
 |Flujo de transacciones por segundo|El número de transacciones que fluyeron a operaciones en este punto de conexión en cada segundo. Este contador se incrementa siempre que se encuentra una transacción en el mensaje enviado al punto de conexión.|  
   
 ## <a name="windows-management-instrumentation"></a>Instrumental de administración de Windows  
+
  WCF expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de WCF Instrumental de administración de Windows (WMI). Para obtener más información sobre el acceso a los datos de WMI, vea [uso de instrumental de administración de Windows para diagnósticos](../diagnostics/wmi/index.md).  
   
  Varias propiedades WMI de solo lectura indican los valores de transacción aplicados para un servicio. Las tablas siguientes hacen una lista de todos estos valores.  
@@ -84,7 +87,8 @@ En este tema se describe cómo usar la característica de diagnóstico y adminis
 |----------|----------|-----------------|  
 |TransactionFlowOption|Una cadena que contiene un valor válido de la enumeración <xref:System.ServiceModel.TransactionFlowOption>.|Especifica hasta qué punto se requiere el flujo de la transacción.|  
   
-## <a name="tracing"></a>Traza  
+## <a name="tracing"></a>Seguimiento  
+
  Las trazas le permiten supervisar y analizar los errores de sus aplicaciones transaccionales. Puede habilitar el seguimiento mediante las maneras siguientes:  
   
 - Seguimiento de WCF estándar  
@@ -93,7 +97,7 @@ En este tema se describe cómo usar la característica de diagnóstico y adminis
   
 - Trazado de WS-AtomicTransaction  
   
-     El seguimiento de WS-AtomicTransaction se puede habilitar mediante la [utilidad de configuración de WS-AtomicTransaction (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes de la misma manera que otras aplicaciones WCF.  
+     WS-AtomicTransaction el seguimiento se puede habilitar mediante la [utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Tal seguimiento proporciona una visión sobre el estado de las transacciones y participantes de un sistema. Para también permitir el seguimiento de Service Model, puede establecer la clave del Registro`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` en un valor válido de la enumeración <xref:System.Diagnostics.SourceLevels>. Puede habilitar el registro de mensajes de la misma manera que otras aplicaciones WCF.  
   
 - Seguimiento de `System.Transactions`  
   
