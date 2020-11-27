@@ -2,17 +2,18 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: e0551e7b4b05151490625912742aa6b26ef0216e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb174d12731d7f1bc78f4d709cf043daf2346bd2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964104"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269800"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
+
 BinaryMessageEncodingBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
 class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -25,36 +26,42 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase BinaryMessageEncodingBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase BinaryMessageEncodingBindingElement tiene las propiedades siguientes.  
   
 ## <a name="maxreadpoolsize"></a>MaxReadPoolSize  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.  
   
 ## <a name="maxsessionsize"></a>maxSessionSize  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Valor que especifica el tamaño, en bytes, del búfer usado para codificar.  
   
 ## <a name="maxwritepoolsize"></a>MaxWritePoolSize  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.  
   
 ## <a name="readerquotas"></a>ReaderQuotas  
+
  Tipo de datos: XmlDictionaryReaderQuotas  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Las cuotas de los lectores.  
   

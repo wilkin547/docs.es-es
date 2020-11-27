@@ -1,5 +1,5 @@
 ---
-title: Cómo restringir el acceso con la clase PrincipalPermissionAttribute
+title: Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 93268be4b04ec6824ed7ecab070f28ddf40f8831
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 92d27548c510a19bf36ffaffb532f48461146d99
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320938"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269618"
 ---
-# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Cómo restringir el acceso con la clase PrincipalPermissionAttribute
+# <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute
+
 Controlar el acceso a los recursos en un equipo del dominio de Windows es una tarea de seguridad básica. Por ejemplo, solo ciertos usuarios deberían poder ver los datos confidenciales, como la información de la nómina. Este tema explica cómo restringir el acceso a un método exigiendo que el usuario pertenezca a un grupo predefinido. Para obtener un ejemplo de trabajo, vea el apartado sobre cómo [autorizar el acceso a las operaciones de servicio](./samples/authorizing-access-to-service-operations.md).  
   
  La tarea está compuesta de dos procedimientos independientes. El primero crea el grupo y lo rellena con usuarios. El segundo aplica la clase <xref:System.Security.Permissions.PrincipalPermissionAttribute> para especificar el grupo.  
@@ -27,7 +28,7 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
   
 2. En el panel izquierdo, haga clic en **usuarios y grupos locales**.  
   
-3. Haga clic con el botón secundario en **grupos**y haga clic en **nuevo grupo**.  
+3. Haga clic con el botón secundario en **grupos** y haga clic en **nuevo grupo**.  
   
 4. En el cuadro **nombre de grupo** , escriba un nombre para el nuevo grupo.  
   
@@ -50,6 +51,7 @@ Controlar el acceso a los recursos en un equipo del dominio de Windows es una ta
     > Si se aplica el atributo a un contrato <xref:System.Security.Permissions.PrincipalPermissionAttribute>, se iniciará una <xref:System.Security.SecurityException>. El atributo solo puede aplicarse en el nivel del método.  
   
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Uso de un certificado para controlar el acceso a un método  
+
  También puede utilizar la clase `PrincipalPermissionAttribute` para controlar el acceso a un método si el tipo de credencial de cliente es un certificado. Para hacerlo, debe tener el asunto y la huella digital del certificado.  
   
  Para examinar un certificado para sus propiedades, consulte [Cómo: ver certificados con el complemento MMC](./feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Para buscar el valor de huella digital, consulte [Cómo: recuperar la huella digital de un certificado](./feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
