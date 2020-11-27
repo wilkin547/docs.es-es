@@ -2,14 +2,15 @@
 title: 39457 - TrackingRecordRaised
 ms.date: 03/30/2017
 ms.assetid: 5a2731d1-c731-4b79-bb69-016cb69ef481
-ms.openlocfilehash: 104d3fb4b544172001051be7bccc3721cf8d6d1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5bf343f29528bdb3941e253b2fd5b39799d94c2a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774444"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275910"
 ---
 # <a name="39457---trackingrecordraised"></a>39457 - TrackingRecordRaised
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61774444"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que un TrackingRecord se ha iniciado en un TrackingParticipant.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Registro de seguimiento %1 desencadenado para %2.  
   
 ## <a name="details"></a>Detalles  

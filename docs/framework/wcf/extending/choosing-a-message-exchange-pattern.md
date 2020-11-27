@@ -2,17 +2,19 @@
 title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 22c720beaa8dc70d2916a5b1d38819ad3d333a0f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797293"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275663"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
+
 El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Esta es la primera tarea en la lista de tareas de desarrollo de canales que se describe en [desarrollar canales](developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Seis patrones de intercambio de mensajes  
+
  Hay tres MEP entre los que elegir:  
   
 - Datagrama (<xref:System.ServiceModel.Channels.IInputChannel> y <xref:System.ServiceModel.Channels.IOutputChannel>)  
@@ -48,6 +50,7 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
 > En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo desencadenar y omitir.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sesiones y canales con sesiones  
+
  En el mundo de red, hay protocolos orientado a la conexión (por ejemplo, TCP) y protocolos sin conexión (por ejemplo, UDP). WCF usa el término sesión para indicar una abstracción lógica similar a la de una conexión. Los protocolos WCF con sesión son similares a los protocolos de red orientados a la conexión y los protocolos WCF sin sesión son similares a los protocolos de red sin sesión.  
   
  En el modelo de objetos de canal, cada sesión lógica se manifiesta como una instancia de un canal con sesión. Por consiguiente, cada nueva sesión creada por el cliente y aceptada en el servicio se corresponde con un nuevo canal con sesión en cada lado. El siguiente diagrama muestra, en la parte superior, la estructura de los canales sin sesión y, en la parte inferior, la estructura de los canales con sesión.  
@@ -61,6 +64,7 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
  Sin las sesiones, no hay ninguna correlación entre los canales y ellas. Por consiguiente, un agente de escucha del canal crea solo un canal a través del cual se entregarán los mensajes recibidos a la aplicación. Tampoco hay un orden de mensajes porque no hay sesión dentro de la cual mantener el orden de los mensajes. La parte superior del gráfico anterior muestra un intercambio de mensajes sin sesión.  
   
 ## <a name="starting-and-terminating-sessions"></a>Inicio y finalización de sesiones  
+
  Para iniciar las sesiones en el cliente basta con crear un canal con sesión nuevo. Se inician en el servicio cuando recibe un mensaje que se envió en una nueva sesión. Igualmente, las sesiones se finalizan cerrando o anulando un canal con sesión.  
   
  La excepción a esto es <xref:System.ServiceModel.Channels.IDuplexSessionChannel> que se utiliza para enviar y recibir los mensajes en un patrón de comunicación con sesión dúplex. Es posible que un lado desee dejar de enviar los mensajes pero continuar recibiéndolos. Por tanto, cuando se use <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, habrá un mecanismo que le permitirá cerrar la sesión de salida que indicará que no enviará más mensajes pero que mantendrá la sesión de entrada abierta lo que le permitirá continuar recibiendo mensajes.  
@@ -70,6 +74,7 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
  Sin embargo, los canales de entrada con sesión no deberían estar cerrados a menos que <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Channels.IDuplexSessionChannel> devuelva el valor null, indicando que la sesión ya está cerrada. Si <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> en <xref:System.ServiceModel.Channels.IDuplexSessionChannel> no ha devuelto el valor null, cerrar un canal de entrada con sesión puede producir una excepción porque puede recibir mensajes inesperados al cerrarse. Si un receptor desea finalizar una sesión antes de que el remitente lo haga, debería llamar a <xref:System.ServiceModel.ICommunicationObject.Abort%2A> en el canal de entrada, lo que terminaría la sesión bruscamente.  
   
 ## <a name="writing-sessionful-channels"></a>Creación de canales con sesión  
+
  Como autor del canal con sesión, hay algunas cosas que el canal deberá hacer para proporcionar sesiones. En el lado del envío, el canal tendrá que:  
   
 - Para cada canal nuevo, crear una sesión nueva y asociarla a un identificador de sesión nuevo que sea una cadena única. U obtener una nueva sesión a partir del canal con sesión debajo de usted en la pila.  

@@ -2,18 +2,19 @@
 title: Clase base NativeActivity
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 604535e39937a75c6d268cf1abbc90dbcd506a16
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: d875f62dacadb2baf6b5d7e93ddb2933aed9cdb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274964"
 ---
 # <a name="nativeactivity-base-class"></a>Clase base NativeActivity
 
 <xref:System.Activities.NativeActivity> es una clase abstracta con un constructor protegido. Al igual que ocurre con <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> se usa para escribir el comportamiento imperativo al implementar un método <xref:System.Activities.NativeActivity.Execute%2A>. A diferencia de <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> tiene acceso a todas las características expuestas del tiempo de ejecución del flujo de trabajo a través del objeto <xref:System.Activities.NativeActivityContext> pasado al método <xref:System.Activities.NativeActivity.Execute%2A>.
 
 ## <a name="using-nativeactivitycontext"></a>Usar NativeActivityContext
+
  Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.NativeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.NativeActivityContext>. Las características disponibles mediante <xref:System.Activities.NativeActivityContext> incluyen lo siguiente:
 
 - Obtener y definir los argumentos y variables.
@@ -36,11 +37,11 @@ ms.locfileid: "70989560"
 
 1. OpenVisual Studio 2010.
 
-2. Seleccione **archivo**, **nuevo**y **proyecto**. Seleccione **flujo de trabajo 4,0** en  **C# visual** en la ventana **tipos de proyecto** y seleccione el nodo **V2010** . Seleccione **biblioteca de actividades** en la ventana **plantillas** . Dé al nuevo proyecto el nombre "HelloActivity".
+2. Seleccione **archivo**, **nuevo** y **proyecto**. Seleccione **flujo de trabajo 4,0** en **Visual C#** en la ventana **tipos de proyecto** y seleccione el nodo **V2010** . Seleccione **biblioteca de actividades** en la ventana **plantillas** . Dé al nuevo proyecto el nombre "HelloActivity".
 
 3. Haga clic con el botón secundario en Activity1. XAML en el proyecto HelloActivity y seleccione **eliminar**.
 
-4. Haga clic con el botón derecho en el proyecto HelloActivity, seleccione **Agregar**y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
+4. Haga clic con el botón derecho en el proyecto HelloActivity, seleccione **Agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
 
 5. En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
 

@@ -2,27 +2,30 @@
 title: 1016 - CompleteCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 246929fb-6f14-440a-814b-cd8349350644
-ms.openlocfilehash: 3f0904a561a242cd3be528c9707a409b6f98e0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a192ffe19777ca3e2e9784f6506a0c2929ced000
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275536"
 ---
 # <a name="1016---completecompletionworkitem"></a>1016 - CompleteCompletionWorkItem
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|1016|  
 |Palabras clave|WFRuntime|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que se ha completado un CompletionWorkItem.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Un CompletionWorkItem se ha completado para la actividad primaria '%1', DisplayName: '%2', InstanceId: '%3'. Actividad completada '%4', DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Detalles  

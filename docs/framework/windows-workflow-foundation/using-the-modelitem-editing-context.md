@@ -2,17 +2,19 @@
 title: Utilizar el contexto de edición de ModelItem
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: e1481d96e39f837d72834222d2839c520e880cc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ab002f902833d3b1a69ea0b03b5ca589f4492d1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142519"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275975"
 ---
 # <a name="using-the-modelitem-editing-context"></a>Utilizar el contexto de edición de ModelItem
+
 El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem> es el objeto que la aplicación host usa para comunicarse con el diseñador. <xref:System.Activities.Presentation.EditingContext> expone dos métodos, <xref:System.Activities.Presentation.EditingContext.Items%2A> y <xref:System.Activities.Presentation.EditingContext.Services%2A>, que se pueden usar.  
   
 ## <a name="the-items-collection"></a>La colección Items  
+
  La colección <xref:System.Activities.Presentation.EditingContext.Items%2A> se utiliza para tener acceso a los datos que se comparten entre el host y el diseñador, o a los datos disponibles para todos los diseñadores. Esta colección tiene las siguientes capacidades, cuyo acceso se obtiene a través de la clase <xref:System.Activities.Presentation.ContextItemManager>:  
   
 1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
@@ -24,6 +26,7 @@ El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem>
 4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>La colección Services  
+
  La colección <xref:System.Activities.Presentation.EditingContext.Services%2A> se utiliza para tener acceso a los servicios que el diseñador utiliza para interactuar con el host, o a los servicios que todos los diseñadores utilizan. Esta colección tiene los siguientes métodos reseñables:  
   
 1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
@@ -35,6 +38,7 @@ El contexto de edición de <xref:System.Activities.Presentation.Model.ModelItem>
 4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>Asignar una actividad a un diseñador  
+
  Para especificar qué diseñador utiliza una actividad, se usa el atributo Designer.  
   
 ```csharp  
@@ -45,6 +49,7 @@ public sealed class MyClass : CodeActivity
 ```  
   
 ## <a name="creating-a-service"></a>Crear un servicio  
+
  Para crear un servicio que actúa como conducto de información entre el diseñador y el host, se deben crear una interfaz y una implementación. La interfaz la utiliza el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A> para definir los miembros del servicio y la implementación contiene la lógica para el servicio. En el ejemplo de código siguiente, se crean una interfaz y una implementación de servicio.  
   
 ```csharp  
@@ -67,6 +72,7 @@ public interface IMyService
 ```  
   
 ## <a name="publishing-a-service"></a>Publicar un servicio  
+
  Para que un diseñador utilice un servicio, primero debe ser publicado por el host mediante el método <xref:System.Activities.Presentation.ServiceManager.Publish%2A>.  
   
 ```csharp  
@@ -74,6 +80,7 @@ this.Context.Services.Publish<IMyService>(new MyServiceImpl);
 ```  
   
 ## <a name="subscribing-to-a-service"></a>Suscribirse a un servicio  
+
  El diseñador obtiene acceso al servicio utilizando el método <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A> en el método <xref:System.Activities.Presentation.WorkflowViewElement.OnModelItemChanged%2A>. El fragmento de código siguiente muestra cómo suscribirse a un servicio.  
   
 ```csharp  
@@ -93,10 +100,12 @@ protected override void OnModelItemChanged(object newItem)
 ```  
   
 ## <a name="sharing-data-using-the-items-collection"></a>Compartir datos utilizando la colección Items  
+
  El uso de la colección Items es similar al de la colección Services, salvo que se usa <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A> en lugar de Publish. Esta colección es más adecuada para compartir datos simples entre los diseñadores y el host, en lugar de una funcionalidad compleja.  
   
 ## <a name="editingcontext-host-items-and-services"></a>Servicios y elementos host de EditingContext  
- .NET Framework proporciona una serie de elementos y servicios integrados a los que se tiene acceso a través del contexto de edición.  
+
+ En el .NET Framework se proporciona una serie de elementos y servicios integrados a los que se tiene acceso a través del contexto de edición.  
   
  Elementos:  
   
@@ -128,7 +137,7 @@ protected override void OnModelItemChanged(object newItem)
   
 - <xref:System.Activities.Presentation.Validation.IValidationErrorService>: proporciona acceso a los errores de validación utilizando <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>.  
   
-- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: proporciona un servicio interno para almacenar y recuperar datos. Este servicio lo usa internamente .NET Framework y no está pensado para uso externo.  
+- <xref:System.Activities.Presentation.IWorkflowDesignerStorageService>: proporciona un servicio interno para almacenar y recuperar datos. Este servicio lo usa internamente el .NET Framework y no está diseñado para uso externo.  
   
 - <xref:System.Activities.Presentation.IXamlLoadErrorService>: proporciona acceso a la colección de errores de carga de XAML utilizando <xref:System.Activities.Presentation.IXamlLoadErrorService.ShowXamlLoadErrors%2A>.  
   

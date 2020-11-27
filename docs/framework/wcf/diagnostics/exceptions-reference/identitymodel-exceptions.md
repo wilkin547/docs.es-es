@@ -2,14 +2,15 @@
 title: Excepciones de IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 08d81f4eb35d0f4bda3997d6ab4dfd0ec10407e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486668"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275042"
 ---
 # <a name="identitymodel-exceptions"></a>Excepciones de IdentityModel
+
 En este tema se enumeran todas las excepciones generadas por IdentityModel.  
   
 ## <a name="exception-list"></a>Lista de excepciones  
@@ -23,7 +24,7 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |SAMLAttributeMissingNameAttributeOnRead|El 'Nombre' para el SamlAttribute que se está leyendo falta o es de longitud 0.|  
 |UnknownICryptoType|No se admite la implementación de ICrypto.|  
 |TraceCodeSecurityTokenProviderClosed|Se cerró el proveedor de tokens de seguridad.|  
-|SAMLUnableToLoadAdvice|No se pudo cargar el \<SAML: advice > elemento.|  
+|SAMLUnableToLoadAdvice|No se pudo cargar el \<saml:advice> elemento.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|El atributo 'AuthenticationMethod' que se lee para una SamlAuthenticationStatement falta o es de longitud 0.|  
 |UnsupportedTransformAlgorithm|Algoritmo de canonización o transformación no compatible.|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|Una SamlAudienceRestrictionCondition debe contener por lo menos una Audiencia (URI).|  
@@ -80,15 +81,15 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |SAMLSignatureAlreadyRead|La firma ya se lee en la aserción del SAML.|  
 |AlgorithmAndPrivateKeyMisMatch|El algoritmo especificado y la clave privada no coinciden.|  
 |EmptyTransformChainNotSupported|No se admite la cadena de la transformación vacía.|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' está fuera del intervalo.|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' está fuera del intervalo. El administrador de tokens de seguridad de SecurityTokenManagerCannotCreateAuthenticatorForRequirement=El administrador de tokens de seguridad no puede crear un autenticador para el requisito concreto.|  
+|SspiWrapperEncryptDecryptAssert1|SSPIWrapper:: EncryptDecryptHelper&#124; ' offset ' está fuera del intervalo.|  
+|SspiWrapperEncryptDecryptAssert2|SSPIWrapper:: EncryptDecryptHelper&#124; ' size ' está fuera del intervalo. El administrador de tokens de seguridad de SecurityTokenManagerCannotCreateAuthenticatorForRequirement=El administrador de tokens de seguridad no puede crear un autenticador para el requisito concreto.|  
 |UnableToCreateKeyedHashAlgorithm|No se puede crear KeyedHashAlgorithm a partir del valor concreto para el algoritmo de firma concreto.|  
-|SAMLUnableToLoadAssertion|El \<SAML: Assertion > no se pudo cargar el elemento.|  
+|SAMLUnableToLoadAssertion|\<saml:assertion>No se pudo cargar el elemento.|  
 |X509FindValueMismatchMulti|El X509FindType concreto requiere que el tipo del argumento findValue sea uno de los 2 valores. El argumento findValue es de otro tipo.|  
 |TraceCodeSecurityIdentityDeterminationSuccess|Se determinó la identidad para una EndpointAddress.|  
 |UndefinedUseOfPrefixAtElement|El prefijo concreto que se usa en el elemento no tiene ningún espacio de nombres definido.|  
 |TraceCodeSecuritySessionResponderOperationFailure|Error de la operación de la sesión de seguridad en el servidor.|  
-|CannotFindCert|No se puede encontrar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCert|No se puede buscar el certificado X.509 mediante el criterio de búsqueda concreto: StoreName, StoreLocation, FindType, FindValue.|  
 |X509InvalidUsageTime|La hora concreta de uso del certificado X.509 no es válida. El tiempo de uso no se encuentra entre el tiempo NotBefore y NotAfter requerido.|  
 |TraceCodeSecurityIdentityDeterminationFailure|No se puede determinar la identidad para una EndpointAddress.|  
 |AsyncObjectAlreadyEnded|Ya se ha llamado al método End en este objeto de resultado asincrónico.|  
@@ -100,11 +101,11 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |SAMLAssertionMissingMajorVersionAttributeOnRead|La MajorVersion para la SamlAssertion que se está leyendo falta o es de longitud 0.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Este constructor SamlAttribute requiere que el derecho de la demanda tenga el valor System.IdentityModel.Claims.Rights.PossessProperty.|  
 |AuthorizationPolicyEvaluated|Se evalúa la directiva con el id. concreto.|  
-|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|El \<SAML: Conditions > no se pudo cargar el elemento.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<saml:conditions>No se pudo cargar el elemento.|  
 |AESKeyLengthNotSupported|La clave de bits concreta no se admite. Solo se admiten claves de 128, 192 y 256 bits.|  
 |UserNameCannotBeEmpty|El nombre de usuario no puede estar vacío.|  
 |AlgorithmAndPublicKeyMisMatch|El algoritmo especificado y la clave pública no coinciden.|  
-|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|El \<SAML: Conditions > no se pudo cargar el elemento.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<saml:conditions>No se pudo cargar el elemento.|  
 |SamlAssertionMissingSigningCredentials|Las SigningCredentials no se han establecido en la SamlAssertion. Se deben firmar las SamlAssertions, establezca un SigningCredentials válido en la SamlAssertion para continuar.|  
 |SspiPayloadNotEncrypted|Los datos binarios no se cifraron con el contexto de seguridad de SSPI.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|La SamlAuthorizationDecisionStatement que se lee no contiene ninguna SamlAction.|  
@@ -164,7 +165,7 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |LengthOfArrayToConvertMustGreaterThanZero|La longitud de la matriz para convertir en un entero debe ser mayor de 0.|  
 |InvalidAsyncResult|AsyncResult no válido.|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|IssuanceTokenProvider quitó el token de servicio caducado.|  
-|IncorrectUserNameFormat|El formato del nombre de usuario no es válido. El formato de nombre de usuario debe ser en forma de "nombre de usuario ' o ' dominio\\\username'.|  
+|IncorrectUserNameFormat|El formato del nombre de usuario no es válido. El formato del nombre de usuario debe tener el formato "nombre de usuario" o "dominio \\ \username.".|  
 |TraceCodeExportSecurityChannelBindingEntry|Inicio de ExportChannelBinding de seguridad.|  
 |UnsupportedInputTypeForTransform|El tipo de entrada especificado no se admite para la transformación.|  
 |CannotFindDocumentRoot|No puede encontrar la raíz del documento.|  
@@ -227,7 +228,7 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|No se pudo crear un desformateador de firmas para el algoritmo especificado a partir de la clave criptográfica asimétrica especificada.|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|Una devolución de llamada asincrónica produjo una excepción.|  
 |LengthMustBeGreaterThanZero|La longitud de este argumento debe ser mayor de 0.|  
-|FoundMultipleCerts|Se encontró varios certificados X.509 con los criterios de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
+|FoundMultipleCerts|Se encontraron varios certificados X.509 mediante el criterio de búsqueda especificado: StoreName, StoreLocation, FindType, FindValue. Proporcione un valor de búsqueda más concreto.|  
 |AtLeastOneTransformRequired|El elemento Transforms debe contener por lo menos una transformación.|  
 |SAMLTokenNotSerialized|La SamlAssertion no se pudo serializar a XML. Vea la excepción interna para obtener detalles.|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|El protocolo de seguridad protegió el mensaje saliente.|  
@@ -294,5 +295,5 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |UnableToCreateKeyedHashAlgorithmFromSymmetricCrypto|No se puede crear un keyedHashAlgorithm para el algoritmo especificado a partir de la clave criptográfica simétrica especificada.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethod|El 'AuthenticationMethod' especificado para una SamlAuthenticationStatement no puede ser nulo ni de longitud 0.|  
 |TraceCodeSecurityImpersonationFailure|Error en la suplantación de seguridad en el servidor.|  
-|Default|(Predeterminado)|  
+|Valor predeterminado|(Es el valor predeterminado).|  
 |UnsupportedNodeTypeInReader|No se admite el tipo de nodo especificado con el nombre especificado.|

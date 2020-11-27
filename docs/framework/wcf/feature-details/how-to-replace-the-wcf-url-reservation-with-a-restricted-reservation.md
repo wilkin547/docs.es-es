@@ -2,12 +2,12 @@
 title: Procedimiento para reemplazar la reserva de direcciones URL de WCF por una reserva restringida
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: a7025636bb1ca2ef250d7d25634bda961f2db09d
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 52dc74ea1f8e86d6a92a2894b888b8d150ebf47c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276066"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Procedimiento para reemplazar la reserva de direcciones URL de WCF por una reserva restringida
 
@@ -36,6 +36,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3. Si la reserva se elimina correctamente, se muestra el mensaje siguiente: **La reserva de dirección URL se eliminó correctamente.**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>Crear un nuevo grupo de seguridad y una nueva reserva de direcciones URL restringida  
+
  Para reemplazar la reserva de direcciones URL de WCF por una reserva restringida, primero debe crear un nuevo grupo de seguridad. Hay dos maneras de hacerlo: desde un símbolo del sistema o desde la consola de administración del equipo. Opte por una de ellas.  
   
 ### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>Para crear un nuevo grupo de seguridad desde un símbolo del sistema  
@@ -48,9 +49,9 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 ### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>Para crear un nuevo grupo de seguridad desde la consola de administración del equipo  
   
-1. Haga clic en **Inicio**, en **Panel de control**, en **herramientas administrativas**y en **Administración de equipos** para abrir la consola administración de equipos. Haga clic en **continuar** en la ventana control de cuentas de usuario (UAC), que podría pedir permisos para continuar.  
+1. Haga clic en **Inicio**, en **Panel de control**, en **herramientas administrativas** y en **Administración de equipos** para abrir la consola administración de equipos. Haga clic en **continuar** en la ventana control de cuentas de usuario (UAC), que podría pedir permisos para continuar.  
   
-2. Haga clic en **herramientas del sistema**, en **usuarios y grupos locales**, haga clic con el botón secundario en carpeta **grupos** y haga clic en **nuevo grupo** en el menú contextual que aparece. Escriba el nombre de **Grupo**deseado, la **Descripción** y otros detalles de este nuevo grupo de seguridad y haga clic en el botón **crear** para crear el grupo de seguridad.  
+2. Haga clic en **herramientas del sistema**, en **usuarios y grupos locales**, haga clic con el botón secundario en carpeta **grupos** y haga clic en **nuevo grupo** en el menú contextual que aparece. Escriba el nombre de **Grupo** deseado, la **Descripción** y otros detalles de este nuevo grupo de seguridad y haga clic en el botón **crear** para crear el grupo de seguridad.  
   
 ### <a name="to-create-the-restricted-url-reservation"></a>Para crear la reserva de direcciones URL restringida  
   

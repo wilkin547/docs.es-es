@@ -2,28 +2,31 @@
 title: 1014 - ScheduleCompletionWorkItem
 ms.date: 03/30/2017
 ms.assetid: 84203735-478d-42d8-a320-c175dbddcb38
-ms.openlocfilehash: 50b00a49ea73dcbe09e8f4c4195cbce8c1cbf615
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fd93683851c5a8c4ab253272c3f2129b3f0bb49
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275562"
 ---
 # <a name="1014---schedulecompletionworkitem"></a>1014 - ScheduleCompletionWorkItem
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|1014|  
 |Palabras clave|WFRuntime|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que se ha programado un CompletionWorkItem.  
   
-## <a name="message"></a>Mensaje  
- Se ha programado un CompletionWorkItem para la actividad primaria '%1', DisplayName: '%2', InstanceId: '%3'.  Actividad completada '%4', DisplayName: '%5', InstanceId: '%6'.  
+## <a name="message"></a>Message  
+
+ Se ha programado un CompletionWorkItem para la actividad primaria ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '.  Actividad completada '%4', DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Detalles  
   
