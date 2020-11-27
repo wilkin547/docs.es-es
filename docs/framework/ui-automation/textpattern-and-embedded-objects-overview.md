@@ -8,14 +8,15 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 0a06fb72b280fc61faeb12f6f2c3a05d957ec7b9
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9d348b130ef26dfd27b27ecd93755919615afb68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163556"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252470"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Información general sobre TextPattern y objetos incrustados
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -24,7 +25,9 @@ ms.locfileid: "87163556"
  En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] un objeto incrustado es cualquier elemento que tenga límites no textuales; por ejemplo, una imagen, un hipervínculo, una tabla o un tipo de documento, como una hoja de cálculo de Microsoft Excel o un archivo de Microsoft Windows Media. Esto difiere de la definición estándar, según la cual se crea un elemento en una aplicación y se incrusta o vincula en otra. Si el objeto se puede editar en la aplicación original, es irrelevante en el contexto de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>
+
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Objetos incrustados y el árbol de automatización de la interfaz de usuario  
+
  Los objetos incrustados se tratan como elementos individuales en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Se exponen como elementos secundarios del contenedor de texto para que resulten accesibles con el mismo modelo que otros controles en [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
  ![Tabla incrustada con imagen en un contenedor de texto](./media/uia-textpattern-embedded-objects-overview-example1.png "UIA_TextPattern_Embedded_Objects_Overview_Example1")  
@@ -34,7 +37,9 @@ Ejemplo de un contenedor de texto con objetos incrustados de tabla, imagen e hip
 Ejemplo de la vista de contenido de una parte del contenedor de texto anterior  
   
 <a name="Expose_Embedded_Objects_Using_TextPattern_and"></a>
+
 ## <a name="expose-embedded-objects-using-textpattern-and-textpatternrange"></a>Exponer objetos incrustados con TextPattern y TextPatternRange  
+
  Si se usan de forma conjunta, la clase de patrón de control de <xref:System.Windows.Automation.TextPattern> y la clase <xref:System.Windows.Automation.Text.TextPatternRange> exponen métodos y propiedades que facilitan la navegación y la consulta de los objetos incrustados.  
   
  El contenido textual (o texto interno) de un contenedor de texto y un objeto incrustado, como un hipervínculo o una celda de tabla, se expone como una secuencia de texto continua única en las vistas de control y contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Los límites del objeto se ignoran. Si un cliente de Automatización de la interfaz de usuario recupera el texto con el objetivo de realizar alguna declaración, interpretarlo o analizarlo de alguna manera, el intervalo de texto se debe comprobar en los casos especiales (por ejemplo, una tabla con contenido textual u otros objetos incrustados). Para ello, puede llamar a <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> para obtener un <xref:System.Windows.Automation.AutomationElement> para cada objeto incrustado y, a continuación, llamar a <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> para obtener un intervalo de texto para cada elemento. Esto se realiza recursivamente hasta que se recupera todo el contenido textual.  
@@ -56,7 +61,9 @@ Ejemplo de una secuencia de texto con objetos incrustados y sus intervalos
 Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosingUnit()  
   
 <a name="Common_Scenarios"></a>
+
 ## <a name="common-scenarios"></a>Escenarios comunes  
+
  Las secciones siguientes muestran ejemplos de los escenarios más comunes que incluyen objetos incrustados.  
   
  Leyenda para los ejemplos que se muestran:  
@@ -99,7 +106,9 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> con parámetros de (TextUnit.Word, 1).|Mueve el intervalo de texto a "http", ya que el texto del hipervínculo se compone de palabras individuales. En este caso, el hipervínculo no se considera un único objeto.<br /><br /> La dirección URL {[http]} está incrustada en el texto.|  
   
 <a name="Image"></a>
+
 ### <a name="image"></a>Imagen  
+
  **Ejemplo 1: intervalo de texto que contiene una imagen incrustada**  
   
  {El ejemplo de imagen ![incrustada](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") de imagen está incrustado en el texto}.  
@@ -122,6 +131,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> con parámetros de (TextUnit.Word, 1).|Mueve el intervalo de texto a "está". Dado que solo se consideran parte de la secuencia de texto los objetos incrustados basados en texto, la imagen de este ejemplo no afecta a Move ni al valor que devuelve (en este caso, 1).|  
   
 <a name="Table"></a>
+
 ### <a name="table"></a>Tabla  
   
 ### <a name="table-used-for-examples"></a>Tabla que se ha usado en los ejemplos:  
@@ -129,7 +139,7 @@ Ejemplos de cómo se ajusta un intervalo de texto para Move() y ExpandToEnclosin
 |Celda con imagen|Celda con texto|  
 |---------------------|--------------------|  
 |![Ejemplo de imagen incrustada](./media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Ejemplo de imagen incrustada 2](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|esté|  
+|![Ejemplo de imagen incrustada 2](./media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
 |![Ejemplo de imagen incrustada 3](./media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Imagen para Z|Z|  
   
  **Ejemplo 1: obtener el contenedor de texto del contenido de una celda.**  

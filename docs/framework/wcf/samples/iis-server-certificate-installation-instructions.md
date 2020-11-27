@@ -2,24 +2,27 @@
 title: Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 301a10c615a13a42e1a6e1b89d2724476ca4fbae
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 597af9873b4a5c042aec817ac0d26a86bac9ea82
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594665"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253796"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instrucciones de instalación del certificado de servidor de Internet Information Services (IIS)
+
 Para ejecutar los ejemplos que se comunican de forma segura con Internet Information Services (IIS), debe crear e instalar un certificado de servidor.  
   
 ## <a name="step-1-creating-certificates"></a>Paso 1. Crear certificados  
- Para crear un certificado para el equipo, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecute el archivo Setup. bat que se incluye en cada uno de los ejemplos que utilizan la comunicación segura con IIS. Asegúrese de que la ruta de acceso incluye la carpeta que contiene makecert.exe antes de ejecutar este archivo por lotes. El siguiente comando se utiliza para crear el certificado en Setup.bat.  
+
+ Para crear un certificado para el equipo, abra una Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecute el Setup.bat que se incluye en cada uno de los ejemplos que utilizan la comunicación segura con IIS. Asegúrese de que la ruta de acceso incluye la carpeta que contiene makecert.exe antes de ejecutar este archivo por lotes. El siguiente comando se utiliza para crear el certificado en Setup.bat.  
   
 ```console  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
 ```  
   
 ## <a name="step-2-installing-certificates"></a>Paso 2. Instalar certificados  
+
  Los pasos requeridos para instalar los certificados que acaba de crear dependen de la versión de IIS que está utilizando.  
   
 #### <a name="to-install-iis-on-iis-51-windows-xp-and-iis-60-windows-server-2003"></a>Para instalar IIS en IIS 5.1 (Windows XP) e IIS 6.0 (Windows Server 2003)  
@@ -55,7 +58,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 #### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Para instalar IIS en IIS 7.0 (Windows Vista y Windows Server 2008)  
   
-1. En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
+1. En el menú **Inicio** , haga clic en **Ejecutar** y, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
   
 2. Haga clic con el botón secundario en el **sitio web predeterminado** y seleccione **Editar enlaces..** .  
   

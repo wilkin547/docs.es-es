@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: a5fe0cabb1a6be7f93bf5f4d753e9bb08a39cea3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141585"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253341"
 ---
 # <a name="configuring-wcf-services"></a>Configuración de servicios WCF
 
@@ -18,16 +18,17 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
  La configuración tal y como se utiliza aquí incluye todas las maneras, imperativamente en código o utilizando un archivo de configuración, en el que puede definir y personalizar los diferentes aspectos de un servicio, como especificar sus direcciones de extremo, los transportes utilizados y sus esquemas de seguridad. En la práctica, escribir la configuración es una parte importante de la programación de aplicaciones WCF.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Configuración simplificada](simplified-configuration.md)  
  A partir de .NET Framework 4, WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio determinado, el tiempo de ejecución configura automáticamente el servicio con los extremos, enlaces y comportamientos predeterminados.  
   
  [Configuración de servicios mediante archivos de configuración](configuring-services-using-configuration-files.md)  
- Un servicio Windows Communication Foundation (WCF) se puede configurar mediante la tecnología de configuración de .NET Framework. Normalmente, los elementos XML se agregan al archivo Web. config para un sitio Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
+ Un servicio Windows Communication Foundation (WCF) se puede configurar mediante la tecnología de configuración de .NET Framework. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
   
  [Enlaces](bindings.md)  
  Además, WCF incluye varias configuraciones comunes proporcionadas por el sistema en forma de enlaces que permiten seleccionar rápidamente las características más básicas sobre cómo se comunica un cliente y un servicio, como los transportes, la seguridad y las codificaciones de mensajes que se usan.  
   
- [Puntos de conexión](endpoints.md)  
+ [Extremos](endpoints.md)  
  Todas las comunicaciones con un servicio WCF se producen a través de los *puntos de conexión* del servicio. Los puntos de conexión contienen el contrato, la información de configuración que se especifica en los enlaces, y las direcciones que indican dónde encontrar el servicio o dónde obtener información sobre el servicio.  
   
  [Seguridad de servicios](securing-services.md)  
@@ -37,6 +38,7 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
  Los requisitos para implementar un servicio interoperable con servicios y clientes en cualquier otra plataforma o sistema operativo se describen en la especificación WS-I Basic Profile 1.1.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -44,6 +46,7 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Ciclo de vida de programación básica](basic-programming-lifecycle.md)  
   
  [Diseño e implementación de servicios](designing-and-implementing-services.md)  
@@ -59,5 +62,5 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
 ## <a name="see-also"></a>Vea también
 
 - [Programación básica de WCF](basic-wcf-programming.md)
-- [Información conceptual](conceptual-overview.md)
+- [Información general conceptual](conceptual-overview.md)
 - [Detalles de las características de WCF](./feature-details/index.md)

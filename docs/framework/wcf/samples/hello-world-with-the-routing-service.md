@@ -2,14 +2,15 @@
 title: "\"Hola mundo\" con el Servicio de enrutamiento"
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 63cfb32a5f5d0cae7635d39d5df594a5bb07e411
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3d91634d72481427f04e958f6dc2734829b6158b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554793"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253861"
 ---
 # <a name="hello-world-with-the-routing-service"></a>"Hola mundo" con el Servicio de enrutamiento
+
 Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente de WCF que facilita la inclusión de un enrutador basado en contenido en la aplicación. En este ejemplo se adapta el ejemplo de calculadora WCF estándar para comunicarse mediante el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un extremo que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un punto de conexión que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.
 
 ### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
@@ -27,7 +28,7 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
 
 3. Presione Entrar para iniciar el cliente.
 
-     Debería ver la salida siguiente:
+     Debería ver la siguiente salida:
 
     ```console
      Add(100,15.99) = 115.99
@@ -40,12 +41,15 @@ Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundatio
     ```
 
 ## <a name="configurable-via-code-or-appconfig"></a>Configurable a través de código o de un archivo de configuración
+
  El ejemplo viene configurado para utilizar un archivo App.config que define el comportamiento del enrutador. También puede cambiar el nombre del archivo de configuración por otro de modo que no se reconozca y quitar el comentario de la llamada al método ConfigureRouterViaCode(). Cualquier método provoca el mismo comportamiento del enrutador.
 
 ### <a name="scenario"></a>Escenario
+
  En este ejemplo se muestra el enrutador que actúa como suministro de mensajes básico. El servicio de enrutamiento actúa como un nodo de proxy transparente configurado para pasar los mensajes a un conjunto preconfigurado de puntos de conexión de destino directamente.
 
 ### <a name="real-world-scenario"></a>Escenario real
+
  Contoso desea aumentar la flexibilidad que tiene en la denominación, tratamiento, configuración y seguridad de sus servicios. Para ello, coloca un suministro de mensajes básico delante de sus servicios de modo que actúen como punto de conexión expuesto al público. Esto les permite implantar seguridad adicional delante de sus servicios reales y facilitar la implementación de soluciones escaladas horizontalmente o de versiones del servicio más adelante.
 
 > [!IMPORTANT]

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 1fbde53289c147d8ea273b9c86e65cbb8e262b30
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7fd4968bbe4e1a3dafbfc35cc0617cef7083d291
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596415"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252406"
 ---
 # <a name="ws-transaction-flow"></a>Flujo de la transacción WS
+
 Este ejemplo muestra el uso de una transacción coordinada por cliente y las opciones de servidor y cliente para el flujo de la transacción utilizando la Transacción atómica del WS o el protocolo OleTransactions. Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora, pero las operaciones se atribuyen para mostrar el uso de `TransactionFlowAttribute` con la enumeración **TransactionFlowOption** para determinar en qué grado se habilita el flujo de transacciones. Dentro del ámbito de la transacción fluida, un registro de las operaciones solicitadas se escribe a una base de datos y se conserva hasta que la transacción coordinada por el cliente se ha completado - si la transacción del cliente no se completa, la transacción del Servicio Web se asegura de que no se confirmen las actualizaciones adecuadas a la base de datos.  
   
 > [!NOTE]
@@ -230,15 +231,15 @@ Press <ENTER> to terminate the service.
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](running-the-samples.md).  
   
     > [!NOTE]
-    > Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF. Para obtener información sobre cómo configurar WsatConfig. exe, consulte [configuración de la compatibilidad con transacciones WS-Atomic](../feature-details/configuring-ws-atomic-transaction-support.md).  
+    > Para una configuración de varios equipos, habilite el Coordinador de transacciones distribuidas mediante las instrucciones siguientes, y utilice la herramienta WsatConfig.exe de Windows SDK con el fin de habilitar la compatibilidad para red de las transacciones WCF. Para obtener información sobre la configuración de WsatConfig.exe, consulte Configuración de la [compatibilidad con transacciones de WS-Atomic](../feature-details/configuring-ws-atomic-transaction-support.md).  
   
- Tanto si ejecuta el ejemplo en el mismo equipo como en equipos diferentes, debe configurar Microsoft Coordinador de transacciones distribuidas (MSDTC) para habilitar el flujo de transacciones de red y usar la herramienta WsatConfig. exe para habilitar la compatibilidad de red de las transacciones de WCF.  
+ Tanto si ejecuta el ejemplo en el mismo equipo como en equipos diferentes, debe configurar Microsoft Coordinador de transacciones distribuidas (MSDTC) para habilitar el flujo de transacciones de red y utilizar la herramienta de WsatConfig.exe para habilitar la compatibilidad de red de las transacciones de WCF.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>Para configurar el Coordinador de transacciones distribuidas (MSDTC) con el fin de permitir la ejecución del ejemplo  
   
 1. En un equipo de servicio que ejecute Windows Server 2003 o Windows XP, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
-    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas**y servicios de **componentes**.  
+    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas** y servicios de **componentes**.  
   
     2. Expanda **servicios de componentes**. Abra la carpeta **equipos** .  
   
@@ -248,13 +249,13 @@ Press <ENTER> to terminate the service.
   
     5. Compruebe el **acceso a DTC desde la red** y **permita la entrada**.  
   
-    6. Haga clic en **Aceptar**y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
+    6. Haga clic en **Aceptar** y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
   
     7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 2. En un equipo de servicio que ejecute Windows Server 2008 o Windows Vista, configure MSDTC para permitir las transacciones de red de entrada según estas instrucciones.  
   
-    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas**y servicios de **componentes**.  
+    1. En el menú **Inicio** , vaya a **Panel de control**, **herramientas administrativas** y servicios de **componentes**.  
   
     2. Expanda **servicios de componentes**. Abra la carpeta **equipos** . Seleccione **Coordinador de transacciones distribuidas**.  
   
@@ -262,13 +263,13 @@ Press <ENTER> to terminate the service.
   
     4. En la pestaña **seguridad** , Active **acceso a DTC desde la red** y **permitir entrantes**.  
   
-    5. Haga clic en **Aceptar**y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
+    5. Haga clic en **Aceptar** y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
   
     6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 3. En el equipo cliente, configure MSDTC para permitir las transacciones de red salientes:  
   
-    1. En el menú **Inicio** , vaya a `Control Panel` , a continuación **herramientas administrativas**y a **servicios de componentes**.  
+    1. En el menú **Inicio** , vaya a `Control Panel` , a continuación **herramientas administrativas** y a **servicios de componentes**.  
   
     2. Haga clic con el botón derecho en **mi PC** y seleccione **propiedades**.  
   
@@ -276,7 +277,7 @@ Press <ENTER> to terminate the service.
   
     4. Compruebe el **acceso a DTC desde la red** y **permita el tráfico saliente**.  
   
-    5. Haga clic en **Aceptar**y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
+    5. Haga clic en **Aceptar** y, a continuación, en **sí** para reiniciar el servicio MSDTC.  
   
     6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

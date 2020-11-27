@@ -2,14 +2,15 @@
 title: Transporte WS con credencial de mensaje
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 0082a9df5c112b66315236aad91bc891b80d27c7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 673eb864bd21a2092f30a9f3ad6f6e6c368eea00
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96252314"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transporte WS con credencial de mensaje
+
 Este ejemplo muestra el uso de la seguridad de transporte de SSL en combinación con la credencial del cliente que se lleva en el mensaje. El ejemplo usa el enlace `wsHttpBinding`.  
   
  De forma predeterminada, el enlace `wsHttpBinding` proporciona la comunicación HTTP. Cuando se configura para la seguridad del transporte, el enlace admite la comunicación de HTTPS. HTTPS proporciona confidencialidad y protección de integridad para los mensajes que se transmiten a través de la conexión. Sin embargo, el conjunto de mecanismos de autenticación que se pueden usar para autenticar el cliente en el servicio está limitado a lo que admite el transporte HTTPS. Windows Communication Foundation (WCF) ofrece un `TransportWithMessageCredential` modo de seguridad que está diseñado para superar esta limitación. Cuando se configura este modo de seguridad, la seguridad de transporte se utiliza para proporcionar confidencialidad e integridad para los mensajes transmitidos y realizar la autenticación del servicio. Sin embargo, la autenticación del cliente se realiza colocando la credencial del cliente directamente en el mensaje. Esto le permite usar cualquier tipo de credencial compatible con el modo de seguridad de mensajes para la autenticación del cliente, al mismo tiempo que mantiene la ventaja de rendimiento del modo de seguridad de transporte.  
@@ -61,7 +62,7 @@ public string GetCallerIdentity()
   
  La dirección especificada usa el `https://` esquema. La configuración de enlace establece el modo de seguridad en `TransportWithMessageCredential`. Debe especificarse el mismo modo de seguridad en el archivo Web.config del servicio.  
   
- Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert. exe, aparecerá una alerta de seguridad al intentar obtener acceso a una dirección https:, como `https://localhost/servicemodelsamples/service.svc` , desde el explorador. Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
+ Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con Makecert.exe, aparece una alerta de seguridad al intentar obtener acceso a una dirección https:, como  `https://localhost/servicemodelsamples/service.svc` , desde el explorador. Para permitir que el cliente WCF funcione con un certificado de prueba en contexto, se ha agregado código adicional al cliente para suprimir la alerta de seguridad. Este código, y la clase que lo acompaña, no son necesarios cuando se usan certificados de producción.  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is

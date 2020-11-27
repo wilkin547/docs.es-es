@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6ec20a0d9512b1f80da1fd423282fc1538c750ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599209"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254277"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Diferencias en las características de cola en Windows Vista, Windows Server 2003 y Windows XP
+
 En este tema se resumen las diferencias en la característica de colas de Windows Communication Foundation (WCF) entre Windows Vista, Windows Server 2003 y Windows XP.  
   
 ## <a name="application-specific-dead-letter-queue"></a>Cola de mensajes no enviados específica de la aplicación  
+
  Los mensajes en cola pueden permanecer indefinidamente en la cola si la aplicación receptora no los lee en un modo oportuno. Este comportamiento no es aconsejable si los mensajes son dependientes del tiempo. Los mensajes dependientes del tiempo tienen una propiedad `TimeToLive` establecida en el enlace en cola. Esta propiedad indica cuánto tiempo pueden estar los mensajes en la cola antes de expirar. Los mensajes caducados se envían a la cola especial llamada cola de mensajes no enviados. Un mensaje también puede terminar en una cola de mensajes no enviados por otras razones, como superar una cuota de la cola o experimentar un error de autenticación.  
   
  Normalmente, existe una cola de mensajes no enviados única para todo el sistema para todas las aplicaciones en cola que comparten un administrador de cola. Una cola de mensajes no enviados para cada aplicación permite un mejor aislamiento entre las aplicaciones en cola que comparten un administrador de cola, de modo que permiten que estas aplicaciones especifiquen su propia cola de mensajes no enviados específica de la aplicación. Una aplicación que comparte una cola de mensajes no enviados con otras aplicaciones tiene que examinar la cola para encontrar mensajes que son aplicables. Con una cola de mensajes con problemas de entrega específica de la aplicación, la aplicación puede estar segura de que todos los mensajes de su cola de mensajes con problemas de entrega le corresponden.  
@@ -22,6 +24,7 @@ En este tema se resumen las diferencias en la característica de colas de Window
  Windows Vista proporciona colas de mensajes no enviados específicos de la aplicación. Las colas de mensajes no enviados específicas de la aplicación no están disponibles en Windows Server 2003 y Windows XP, y las aplicaciones deben usar la cola de mensajes no enviados en todo el sistema.  
   
 ## <a name="poison-message-handling"></a>Administración de mensajes dudosos  
+
  Un mensaje dudoso es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación receptora. Esta situación se puede presentar cuando una aplicación que lee un mensaje de una cola transaccional no puede procesar inmediatamente el mensaje debido a los errores. Si la aplicación anula la transacción en la que se recibió el mensaje en cola, devuelve el mensaje a la cola. La aplicación intenta a continuación recuperar de nuevo el mensaje en una nueva transacción. Si no se corrige el problema que produce el error, la aplicación receptora puede entrar en un bucle recibiendo y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y ello provoca un mensaje dudoso.  
   
  Entre las principales diferencias entre Message Queue Server (MSMQ) en Windows Vista, Windows Server 2003 y Windows XP que son relevantes para la administración de mensajes dudosos se incluyen las siguientes:  
@@ -33,6 +36,7 @@ En este tema se resumen las diferencias en la característica de colas de Window
 - MSMQ en Windows Vista admite una propiedad de mensaje que mantiene el recuento del número de veces que se intenta la entrega del mensaje. Esta propiedad de recuento de anulación no está disponible en Windows Server 2003 y Windows XP. WCF mantiene el recuento de anulación en memoria, por lo que es posible que esta propiedad no contenga un valor preciso cuando el mismo mensaje es leído por más de un servicio WCF en una granja de servidores Web.  
   
 ## <a name="remote-transactional-read"></a>Lectura transaccional remota  
+
  MSMQ en Windows Vista admite lecturas transaccionales remotas. Esto permite que una aplicación que lea de una cola se hospede en un equipo diferente de aquel en el que se hospeda la cola. Así se garantiza la posibilidad de que un conjunto de servicios lea en una cola central, lo que aumenta el rendimiento total del sistema. También se garantiza que, si se produce un error al leer y procesar el mensaje, la transacción se revierte y el mensaje permanece en la cola para su posterior procesamiento.  
   
 ## <a name="see-also"></a>Vea también

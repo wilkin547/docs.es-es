@@ -2,19 +2,21 @@
 title: Tipos serializables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4ba5fb80b3a7f4149eb49aa838826f2792147dd1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586109"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253965"
 ---
 # <a name="serializable-types"></a>Tipos serializables
+
 De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> serializa todos los tipos públicamente visibles. Se serializan todas las propiedades de lectura y escritura públicas y campos del tipo.  
   
  Puede cambiar el comportamiento predeterminado aplicando los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> a los tipos y miembros. Esta característica puede ser útil en situaciones en las que hay tipos que no están bajo su control y no se pueden modificar para agregar atributos. <xref:System.Runtime.Serialization.DataContractSerializer> reconoce tales tipos "sin marcar".  
   
 ## <a name="serialization-defaults"></a>Valores predeterminados de la serialización  
+
  Puede aplicar los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> para controlar explícitamente o personalizar la serialización de tipos y miembros. Además, puede aplicar estos atributos a campos privados. Sin embargo, incluso los tipos que no se marcan con estos atributos se serializan y deserializan. Se aplican las reglas y excepciones siguientes:  
   
 - <xref:System.Runtime.Serialization.DataContractSerializer> deduce un contrato de datos a partir de los tipos sin atributos usando las propiedades predeterminadas de los tipos creados recientemente.  
@@ -36,6 +38,7 @@ De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializ
 - Para descartar la serialización de miembros públicos, propiedades o campos, aplique el atributo <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> a ese miembro.  
   
 ## <a name="inheritance"></a>Herencia  
+
  Los tipos no marcados (tipos sin el atributo <xref:System.Runtime.Serialization.DataContractAttribute>) pueden heredar de los tipos que tienen este atributo; sin embargo, no es posible el caso inverso: los tipos con el atributo no pueden heredar de los tipos no marcados. Esta regla se aplica principalmente para garantizar la compatibilidad con el código escrito en versiones anteriores de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también

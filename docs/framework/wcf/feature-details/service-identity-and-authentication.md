@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f1c1d41f3d2ebc4482fa7e5f28fcbefe88bb9a02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253913"
 ---
 # <a name="service-identity-and-authentication"></a>Identidad del servicio y autenticación
+
 La identidad del *extremo* de un servicio es un valor generado a partir del lenguaje de descripción de servicios web (WSDL) del servicio. Este valor, propagado a cualquier cliente, se utiliza para autenticar el servicio. Después de que el cliente inicie una comunicación con un punto de conexión y el servicio se autentique a sí mismo ante el cliente, el cliente compara el valor de identidad del punto de conexión con el valor real devuelto por el proceso de autenticación del punto de conexión. Si coinciden, se asegura al cliente que se ha puesto en contacto con el punto de conexión de servicio esperado. Esto funciona como una protección contra la *suplantación de identidad (phishing)* al impedir que un cliente se redirija a un punto de conexión hospedado por un servicio malintencionado.  
   
  Para obtener una aplicación de ejemplo que muestra la configuración de identidad, vea [ejemplo de identidad de servicio](../samples/service-identity-sample.md). Para obtener más información sobre los extremos y las direcciones de punto de conexión, vea [Addresses](endpoint-addresses.md).  
@@ -39,6 +40,7 @@ La identidad del *extremo* de un servicio es un valor generado a partir del leng
 > Los metadatos contienen la identidad esperada del servicio, por lo que se recomienda que exponga los metadatos del servicio a través de medios seguros, como, por ejemplo, creando un extremo HTTPS para el servicio. Para obtener más información, consulte [Cómo: proteger los extremos de metadatos](how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Tipos de identidad  
+
  Un servicio puede proporcionar seis tipos de identidades. Cada tipo de identidad corresponde a un elemento que se puede contener dentro del elemento `<identity>` mediante configuración. El tipo utilizado depende del escenario y de los requisitos de seguridad del servicio. La tabla siguiente describe cada tipo de identidad.  
   
 |Tipo de identidad|Descripción|Escenario típico|  
@@ -51,28 +53,34 @@ La identidad del *extremo* de un servicio es un valor generado a partir del leng
 |Nombre de entidad de seguridad de servicio (SPN). El valor predeterminado cuando `ClientCredentialType` está establecido en Windows y el proceso del servicio no se está ejecutando bajo una de las cuentas del sistema: LocalService, LocalSystem o NetworkService.|Este elemento especifica el SPN asociado a la cuenta del servicio. Vea la sección sobre el protocolo Kerberos y la identidad de [invalidación de la identidad de un servicio para la autenticación](../extending/overriding-the-identity-of-a-service-for-authentication.md).|Esto asegurar que el SPN y la cuenta de Windows concreta asociada al SPN identifican el servicio.<br /><br /> Puede utilizar la herramienta Setspn.exe para asociar una cuenta de equipo a la cuenta de usuario del servicio.<br /><br /> Este valor se beneficia de la seguridad de de Windows Kerberos si el servicio se está ejecutando bajo una de las cuentas del sistema o bajo una cuenta de dominio que tiene asociado un nombre SPN a ella y el equipo es un miembro de un dominio dentro de un entorno de Active Directory.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Especificación de la identidad en el servicio  
+
  Normalmente, no tiene que establecer la identidad en un servicio porque la selección de un tipo de credencial de cliente dicta el tipo de identidad expuesto en los metadatos del servicio. Para obtener más información sobre cómo invalidar o especificar la identidad del servicio, consulte [invalidación de la identidad de un servicio para la autenticación](../extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
 ## <a name="using-the-identity-element-in-configuration"></a>Usar el \<identity> elemento en la configuración  
+
  Si cambia el tipo de credencial de cliente en el enlace mostrado anteriormente a `Certificate,`, entonces el WSDL generado contiene un certificado X.509 serializado con Base64 para el valor de identidad en el código siguiente. Éste es el valor predeterminado para todos los tipos de credencial de cliente excepto Windows.  
 
  Puede cambiar el valor de la identidad de servicio predeterminada o cambiar el tipo de la identidad mediante el `<identity>` elemento de la configuración o estableciendo la identidad en el código. El código de configuración siguiente establece una identidad del sistema de nombres de dominio (DNS) con el valor `contoso.com`.  
 
 ## <a name="setting-identity-programmatically"></a>Establecimiento mediante programación de la identidad  
+
  El servicio no tiene que especificar explícitamente una identidad, ya que WCF la determina automáticamente. Sin embargo, WCF le permite especificar una identidad en un punto de conexión, si es necesario. El código siguiente agrega un nuevo punto de conexión de servicio con una identidad de DNS concreta.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Especificación de la identidad en el cliente  
+
  En tiempo de diseño, un desarrollador de cliente suele usar la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para generar la configuración de cliente. El archivo de configuración generado (pensado para que lo utilice el cliente) contiene la identidad del servidor. Por ejemplo, el código siguiente se genera a partir de un servicio que especifica una identidad de DNS, tal y como se muestra en el ejemplo anterior. Observe que el valor de identidad de extremo del cliente coincide con el del servicio. En este caso, cuando el cliente recibe las credenciales de Windows (Kerberos) para el servicio, espera que el valor sea `contoso.com`.  
 
  Si, en lugar de Windows, el servicio especifica un certificado como el tipo de credencial de cliente, se espera que la propiedad DNS del certificado sea el valor `contoso.com`. (O si la propiedad DNS es `null`, el nombre de sujeto del certificado debe ser `contoso.com`.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Uso de un valor específico de identidad  
+
  El siguiente archivo de configuración del cliente muestra cómo se espera que la identidad del servicio sea un valor concreto. En el ejemplo siguiente, el cliente puede comunicarse con dos puntos de conexión. El primero se identifica con una huella digital del certificado y el segundo con una clave RSA certificada. Es decir, un certificado que contiene solo un par de clave pública/clave privada, pero que no es emitido por una autoridad de confianza.  
 
 ## <a name="identity-checking-at-run-time"></a>Comprobación de identidad en tiempo de ejecución  
+
  En la fase de diseño, un programador de cliente determina la identidad del servidor mediante sus metadatos. En tiempo de ejecución, la comprobación de identidad se realiza antes de llamar a ningún punto de conexión del servicio.  
   
  El valor de identidad está ligado al tipo de autenticación especificado mediante metadatos; en otras palabras, el tipo de credenciales utilizadas para el servicio.  
@@ -98,12 +106,13 @@ La identidad del *extremo* de un servicio es un valor generado a partir del leng
  Especificar la identidad mediante programación es opcional (utilizando la propiedad <xref:System.ServiceModel.EndpointAddress.Identity%2A>). Si no se especifica ninguna identidad, y el tipo de credencial de cliente es Windows, el valor predeterminado es SPN con el valor establecido en la parte del nombre del host de la dirección del punto de conexión de servicio prefijada con el literal "host/". Si no se especifica ninguna identidad y el tipo de credencial de cliente es un certificado, el valor predeterminado es `Certificate`. Esto se aplica a la seguridad de nivel de mensaje y transporte.  
   
 ## <a name="identity-and-custom-bindings"></a>Identidad y enlaces personalizados  
+
  Dado que la identidad de un servicio depende del tipo de enlace utilizado, asegúrese de que se expone una identidad adecuada al crear un enlace personalizado. Por ejemplo, en el siguiente ejemplo de código, la identidad expuesta no es compatible con el tipo de seguridad, porque la identidad del enlace de arranque de conversación segura no coincide con la identidad del enlace en el extremo. El enlace de conversación segura establece la identidad DNS, mientras que <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> establece la identidad UPN o SPN.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- Para obtener más información sobre cómo apilar elementos de enlace correctamente para un enlace personalizado, vea [crear enlaces definidos por el usuario](../extending/creating-user-defined-bindings.md). Para obtener más información sobre cómo crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement> , consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Para obtener más información sobre cómo apilar elementos de enlace correctamente para un enlace personalizado, vea [crear enlaces de User-Defined](../extending/creating-user-defined-bindings.md). Para obtener más información sobre cómo crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement> , consulte [Cómo: crear un SecurityBindingElement para un modo de autenticación especificado](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Vea también
 

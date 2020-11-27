@@ -10,14 +10,15 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: a45fde58795947c3e46fa45750ae1a3faddd8849
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5634eb3d3ec18d95fd7d6b3c89b572ab4f5b8eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254043"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Procedimiento para crear un contrato de datos básico para una clase o estructura
+
 En este tema se muestran los pasos básicos para crear un contrato de datos usando una clase o estructura. Para obtener más información sobre los contratos de datos y cómo se usan, consulte [uso de contratos de datos](using-data-contracts.md).  
   
  Para ver un tutorial que le guía por los pasos necesarios para crear un servicio y un cliente de Windows Communication Foundation básico (WCF), consulte el [tutorial de introducción](../getting-started-tutorial.md). Para obtener una aplicación de ejemplo funcional formada por un servicio y un cliente básicos, vea [contrato de datos básico](../samples/basic-data-contract.md).  
@@ -32,6 +33,7 @@ En este tema se muestran los pasos básicos para crear un contrato de datos usan
     > Puede aplicar el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los campos privados y, de este modo, se expondrán los datos a otros. Asegúrese de que el miembro no contiene información confidencial.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente, se muestra cómo crear un contrato de datos para el tipo `Person` mediante la aplicación de los atributos <xref:System.Runtime.Serialization.DataContractAttribute> y <xref:System.Runtime.Serialization.DataMemberAttribute> a la clase y sus miembros.  
   
  [!code-csharp[DataContractAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#2)]
@@ -42,5 +44,5 @@ En este tema se muestran los pasos básicos para crear un contrato de datos usan
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Utilización de contratos de datos](using-data-contracts.md)
-- [Tutorial de Introducción](../getting-started-tutorial.md)
+- [Tutorial de introducción](../getting-started-tutorial.md)
 - [Introducción](../samples/getting-started-sample.md)
