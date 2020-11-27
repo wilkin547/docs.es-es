@@ -3,14 +3,15 @@ title: Procedimiento para publicar metadatos para un servicio mediante un archiv
 description: Obtenga información sobre cómo publicar metadatos para un servicio WCF mediante un archivo de configuración. La publicación permite a los clientes obtener esos metadatos mediante una solicitud GET o HTTP/GET.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: eb7aeb4275e367bfc4463a7289d4bc3ff77ff9f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295553"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Procedimiento para publicar metadatos para un servicio mediante un archivo de configuración
+
 Este es uno de los dos temas de procedimientos que muestran los metadatos de publicación para un servicio Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante un archivo de configuración.  
   
 > [!CAUTION]
@@ -183,6 +184,7 @@ namespace Metadata.Samples
      Dado que el servicio tiene un <xref:System.ServiceModel.Description.ServiceMetadataBehavior> con `httpGetEnabled` establecido en `true`, el servicio tiene metadatos de publicación habilitados y como no se agregó ningún punto de conexión explícitamente, el tiempo de ejecución agrega los puntos de conexión predeterminados. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](../simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](../samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo de código siguiente se muestra la implementación de un servicio WCF básico y el archivo de configuración que publica los metadatos para el servicio.  
   
 ```csharp  

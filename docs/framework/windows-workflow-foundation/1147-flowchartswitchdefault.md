@@ -2,14 +2,15 @@
 title: 1147 - FlowchartSwitchDefault
 ms.date: 03/30/2017
 ms.assetid: 03bb91f4-bfa4-4420-97fe-8443ee9b03e5
-ms.openlocfilehash: f16291fd57465796d8d8f7f74bbc553c834e9957
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 197618ec2feb04d346521705d935321104ebcf20
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923882"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295696"
 ---
 # <a name="1147---flowchartswitchdefault"></a>1147 - FlowchartSwitchDefault
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61923882"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que el caso predeterminado se ha seleccionado en un modificador de diagrama de flujo.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Flowchart '%1'/FlowSwitch - Se seleccionó el caso predeterminado.  
   
 ## <a name="details"></a>Detalles  

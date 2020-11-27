@@ -2,17 +2,19 @@
 title: 'Transporte: transacciones personalizadas sobre ejemplo UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1a5b6afd7dc078b0e6e270888973b34a91bfdb9f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596544"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295670"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: transacciones personalizadas sobre ejemplo UDP
+
 Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) en la[extensibilidad de transporte](transport-extensibility.md)Windows Communication Foundation (WCF). Extiende el ejemplo de transporte UDP para admitir el flujo de transacciones personalizado y muestra el uso de la propiedad <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>Cambios de código en el ejemplo de transporte de UDP  
+
  Para mostrar el flujo de transacciones, el ejemplo cambia el contrato de servicio para `ICalculatorContract` con objeto de exigir un ámbito de transacción para `CalculatorService.Add()`. El ejemplo también agrega un parámetro `System.Guid` adicional al contrato de la operación `Add`. Este parámetro se utiliza para pasar el identificador de la transacción del cliente al servicio.  
   
 ```csharp  
@@ -178,7 +180,7 @@ if (transaction != null)
   
 1. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](building-the-samples.md).  
   
-2. El ejemplo actual se debe ejecutar de forma similar al ejemplo [Transport: UDP](transport-udp.md) . Para ejecutarlo, inicie el servicio con UdpTestService.exe. Si está ejecutando Windows Vista, debe iniciar el servicio con privilegios elevados. Para ello, haga clic con el botón secundario en UdpTestService. exe en el explorador de archivos y haga clic en **Ejecutar como administrador**.  
+2. El ejemplo actual se debe ejecutar de forma similar al ejemplo [Transport: UDP](transport-udp.md) . Para ejecutarlo, inicie el servicio con UdpTestService.exe. Si está ejecutando Windows Vista, debe iniciar el servicio con privilegios elevados. Para ello, haga clic con el botón derecho en UdpTestService.exe en el explorador de archivos y haga clic en **Ejecutar como administrador**.  
   
 3. Esto produce el siguiente resultado.  
   

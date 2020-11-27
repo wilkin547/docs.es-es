@@ -2,14 +2,15 @@
 title: Información interna de extensiones del host de servicio de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 23ee0533d5386164dc95cb7fe2c61a626ea3f96e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594886"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295748"
 ---
 # <a name="workflow-service-host-internals"></a>Información interna de extensiones del host de servicio de flujo de trabajo
+
 La clase <xref:System.ServiceModel.WorkflowServiceHost> proporciona un host para los servicios de flujo de trabajo. Es responsable de escuchar los mensajes entrantes y enrutarlos a la instancia del servicio de flujo de trabajo adecuada, controlar la descarga y persistencia de los flujos de trabajo inactivos, etc. En este tema se describe cómo procesa la clase WorkflowServiceHost los mensajes entrantes.  
   
 ## <a name="workflowservicehost-overview"></a>Información general de WorkflowServiceHost  
@@ -23,6 +24,7 @@ La clase <xref:System.ServiceModel.WorkflowServiceHost> se usa para hospedar los
  La clase <xref:System.ServiceModel.WorkflowServiceHost> también expone los extremos de la aplicación que escuchan los mensajes de aplicación entrantes. Cuando un mensaje entrante llega, se envía a la instancia de servicio de flujo de trabajo adecuada, si está cargada actualmente. Si es necesario se crea una nueva instancia de flujo de trabajo. O bien, si se ha conservado una instancia existente, se carga desde el almacén de persistencia.  
   
 ## <a name="workflowservicehost-details"></a>Detalles de WorkflowServiceHost  
+
  En el diagrama siguiente se muestra cómo <xref:System.ServiceModel.WorkflowServiceHost> controla los mensajes en un poco más detalle:  
   
  ![Diagrama que muestra el flujo de mensajes del host de servicio de flujo de trabajo.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  

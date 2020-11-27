@@ -2,17 +2,19 @@
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
 ms.date: 03/30/2017
 ms.assetid: 6cf60298-dccf-4587-b92c-ae3edb75c331
-ms.openlocfilehash: b66f7810dfe13f8b74431755d6652ab05e0148fb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 374f77f85a50cb68ecf75a04ab0e6afa33b89d48
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595640"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295722"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactedtransport"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactedTransport
+
 La transacción especificada se recibió para la operación especificada desde un transporte por transacciones, como MSMQ.  
   
 ## <a name="description"></a>Descripción  
+
  Seguido si la transacción puesta a disposición del código de usuario fue creada por el propio transporte.  
   
 ## <a name="see-also"></a>Vea también

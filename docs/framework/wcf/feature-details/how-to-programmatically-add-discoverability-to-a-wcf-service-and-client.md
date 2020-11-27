@@ -2,19 +2,20 @@
 title: Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1226f02dd96b8ab1502869cb319c6efe1ad09d4f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557832"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295566"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procedimiento para agregar detectabilidad mediante programación a un cliente y un servicio de WCF
+
 En este tema se explica cómo hacer que un servicio de Windows Communication Foundation (WCF) sea reconocible. Se basa en el ejemplo de [host propio](../samples/self-host.md) .  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Para configurar el ejemplo de servicio de host automático existente repara para la detección  
   
-1. Abra la solución de autohospedaje en Visual Studio 2012. El ejemplo se encuentra en el directorio TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Abra la solución Self-Host en Visual Studio 2012. El ejemplo se encuentra en el directorio TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
 2. Agregue una referencia a `System.ServiceModel.Discovery.dll` al proyecto de servicio. Es posible que vea un mensaje de error que indica "System. ServiceModel.Discovery.dll o una de sus dependencias requiere una versión posterior del .NET Framework que la especificada en el proyecto... " Si ve este mensaje, haga clic con el botón derecho en el proyecto en el Explorador de soluciones y elija **propiedades**. En la ventana **propiedades del proyecto** , asegúrese de que la versión de **.NET Framework de destino** sea [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
@@ -60,7 +61,7 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
   
 2. Agregue una referencia a `System.ServiceModel.dll` y `System.ServiceModel.Discovery.dll`.  
   
-3. Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic con el botón derecho en los archivos del **Explorador de soluciones**, seleccione **copiar**y, a continuación, seleccione el proyecto **DiscoveryClientApp** , haga clic con el botón derecho y seleccione **pegar**.  
+3. Copie los archivos GeneratedClient.cs y App.config del proyecto de cliente existente en el nuevo proyecto DiscoveryClientApp. Para ello, haga clic con el botón derecho en los archivos del **Explorador de soluciones**, seleccione **copiar** y, a continuación, seleccione el proyecto **DiscoveryClientApp** , haga clic con el botón derecho y seleccione **pegar**.  
   
 4. Abra Program.cs.  
   
@@ -220,7 +221,8 @@ En este tema se explica cómo hacer que un servicio de Windows Communication Fou
     ```  
   
 ## <a name="example"></a>Ejemplo  
- A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el ejemplo de [host propio](../samples/self-host.md) , solo se muestran los archivos que se han modificado. Para obtener más información sobre el ejemplo de host propio, vea [instrucciones de configuración](../samples/set-up-instructions.md).  
+
+ A continuación, se muestra una lista completa del código de este ejemplo. Dado que este código se basa en el ejemplo de [host propio](../samples/self-host.md) , solo se muestran los archivos que se han modificado. Para obtener más información sobre el ejemplo de Self-Host, vea [instrucciones de configuración](../samples/set-up-instructions.md).  
   
 ```csharp  
 // Service.cs  
