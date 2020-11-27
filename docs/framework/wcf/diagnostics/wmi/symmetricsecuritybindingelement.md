@@ -2,17 +2,18 @@
 title: SymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
-ms.openlocfilehash: f6effd533a205d0e8fd1421119e325f06b340dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c618b5b41790b04a84b4c50fe47baa2c0cb05ab2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956720"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274106"
 ---
 # <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
+
 SymmetricSecurityBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class SymmetricSecurityBindingElement : SecurityBindingElement  
@@ -23,22 +24,26 @@ class SymmetricSecurityBindingElement : SecurityBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase SymmetricSecurityBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase SymmetricSecurityBindingElement tiene las propiedades siguientes:  
   
 ### <a name="messageprotectionorder"></a>MessageProtectionOrder  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  El orden de cifrado de mensajes y firma para este enlace.  
   
 ### <a name="requiresignatureconfirmation"></a>RequireSignatureConfirmation  
+
  Tipo de datos: booleano  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Si el enlace requiere la confirmación de la firma.  
   

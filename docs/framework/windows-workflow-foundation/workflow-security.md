@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: d2d8556b1ed2ac0a2b030a88d6bfc0ad48ed6f5c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6253a0d76d8b1db938e789f19d2cdd5abba9b700
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273898"
 ---
 # <a name="workflow-security"></a>Seguridad del flujo de trabajo
+
 Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, como Microsoft SQL Server y Windows Communication Foundation (WCF). Al interactuar con estas tecnologías, se pueden introducir problemas de seguridad en su flujo de trabajo si no se hace de manera correcta.
 
 ## <a name="persistence-security-concerns"></a>Problemas de seguridad de persistencia
@@ -45,6 +46,7 @@ Windows Workflow Foundation (WF) se integra con varias tecnologías diferentes, 
 - El ServiceSecurityContext para el mensaje entrante también está disponible desde el flujo de trabajo mediante el acceso a OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>CTP del paquete de seguridad de WF
+
  Microsoft WF Security Pack Community Technology Preview (CTP) 1 es un conjunto de actividades y su implementación basada en [Windows Workflow Foundation](index.md) en [.NET Framework 4](/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) y [Windows Identity Foundation (WIF)](/previous-versions/dotnet/framework/security/index). El CTP 1 del paquete de seguridad de Microsoft WF contiene ambas actividades y sus diseñadores que muestran cómo habilitar fácilmente diferentes escenarios relacionados con la seguridad usando el flujo de trabajo, incluidas:
 
 1. Suplantar una identidad del cliente en el flujo de trabajo

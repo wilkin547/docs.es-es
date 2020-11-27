@@ -2,17 +2,19 @@
 title: Traza del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: fc27be295cbf0a83b65ff03e36f2aeffeda12db9
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b5a8f650edfdade4a18999c5e7af38ca72112122
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557507"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273885"
 ---
 # <a name="workflow-tracing"></a>Traza del flujo de trabajo
+
 La traza del flujo de trabajo ofrece una forma de capturar la información de diagnóstico con los agentes de escucha de seguimiento de .NET Framework. Se puede habilitar la traza si se detecta un problema con la aplicación y se deshabilita de nuevo una vez resuelto el problema. Hay dos maneras de poder habilitar la traza de depuración para los flujos de trabajo. Puede configurarlo con el visor del seguimiento de eventos o puede usar <xref:System.Diagnostics> para enviar los eventos de seguimiento a un archivo.  
   
 ## <a name="enabling-debug-tracing-in-etw"></a>Habilitar la traza de depuración en ETW  
+
  Para habilitar la traza mediante ETW, habilite el canal de depuración en el visor de eventos:  
   
 1. Desplácese hasta el nodo de registros analíticos y de depuración en el visor de eventos.  
@@ -41,6 +43,7 @@ La traza del flujo de trabajo ofrece una forma de capturar la información de di
 > Si usa el perfil de cliente de .NET Framework 4, primero debe registrar el manifiesto ETW ejecutando el siguiente comando desde el directorio .NET Framework 4: `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>Habilitar el seguimiento de depuración con System.Diagnostics  
+
  Se pueden configurar estos agentes de escucha en el archivo App.config de la aplicación de flujo de trabajo o Web.config para un servicio del flujo de trabajo. En este ejemplo, <xref:System.Diagnostics.TextWriterTraceListener> se configura un para guardar información de seguimiento en el archivo de MyTraceLog.txt en el directorio actual.  
   
 ```xml  
