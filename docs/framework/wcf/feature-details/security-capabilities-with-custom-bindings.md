@@ -2,17 +2,19 @@
 title: Capacidades de seguridad con enlaces personalizados
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 48d17543f2b133c74bcfa82cfe1a2a0de28b1d01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b12907481ccb3f3c5f4b8aaba6ede8ebfa6228a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595198"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288312"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Capacidades de seguridad con enlaces personalizados
+
 Puede realizar las tareas de seguridad más habituales utilizando uno de los enlaces proporcionados por el sistema. Si necesita más control, sin embargo, puede crear un enlace personalizado con <xref:System.ServiceModel.Channels.SecurityBindingElement>, como se explica en estos temas. Para obtener más información sobre los enlaces personalizados, vea [enlaces personalizados](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Modos de autenticación de SecurityBindingElement](securitybindingelement-authentication-modes.md)  
  Describe los modos de autenticación que son posibles con un enlace personalizado.  
   
@@ -41,11 +43,13 @@ Puede realizar las tareas de seguridad más habituales utilizando uno de los enl
  Describe cómo deshabilitar el cifrado de firmas digitales puede suponer una ventaja de rendimiento.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
  [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Descripción de los niveles de protección](../understanding-protection-level.md)  
   
  [Protección de servicios y clientes](securing-services-and-clients.md)  

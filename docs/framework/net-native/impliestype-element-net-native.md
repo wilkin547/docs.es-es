@@ -1,15 +1,16 @@
 ---
-title: <ImpliesType>Elemento (.NET Native)
+title: <ImpliesType> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 04c3a9498a5c9c24d67dedd02fb4c9d68d9efbdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181017"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287961"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType>Elemento (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType> Elemento (.NET Native)
+
 Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo contenedor o al método.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,17 +51,18 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|*type_name*|Nombre de tipo. Si el tipo representado por este elemento `<ImpliesType>` se encuentra en el mismo espacio de nombres que su elemento contenedor `<Type>`, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|  
+|*type_name*|Nombre del tipo. Si el tipo representado por este elemento `<ImpliesType>` se encuentra en el mismo espacio de nombres que su elemento contenedor `<Type>`, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -71,6 +74,7 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión a un método.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El elemento `<ImpliesType>` sirve principalmente para que lo utilicen las bibliotecas. Está pensado para el siguiente escenario:  
   
 - Si una rutina debe reflejarse en un determinado tipo, necesariamente debe reflejarse en un segundo tipo.  
@@ -108,7 +112,7 @@ Aplica una directiva a un tipo, si dicha directiva se ha aplicado al tipo conten
 </Type>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

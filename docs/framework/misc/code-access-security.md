@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 528824e2d1b5d854f9eef816d3f7b20ba0f2b7db
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 1119965f971e00b1b795378d9af3977074a696f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224337"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288325"
 ---
 # <a name="code-access-security"></a>Seguridad de acceso del código
 
@@ -44,7 +44,9 @@ ms.locfileid: "92224337"
  Todo el código administrado que tiene como destino el Common Language Runtime se beneficia de la seguridad de acceso del código, aunque ese código no haga ni una sola llamada de seguridad de acceso del código. Para obtener más información, vea [Conceptos básicos sobre la seguridad de acceso del código](code-access-security-basics.md).  
   
 <a name="key_functions"></a>
+
 ## <a name="key-functions-of-code-access-security"></a>Funciones clave de la seguridad de acceso del código  
+
  La seguridad de acceso del código contribuye a limitar el acceso que tiene el código a operaciones y recursos protegidos. En .NET Framework, la seguridad de acceso del código realiza las funciones siguientes:  
   
 - Define permisos y conjuntos de permisos que representan el derecho de acceso a varios recursos del sistema.  
@@ -56,7 +58,9 @@ ms.locfileid: "92224337"
 - Impone restricciones en el código en tiempo de ejecución mediante la comparación de los permisos concedidos a cada llamador en la pila de llamadas con los permisos que deben poseer.  
   
 <a name="walking_the_call_stack"></a>
+
 ## <a name="walking-the-call-stack"></a>Recorrido de la pila de llamadas  
+
  Para averiguar si el código tiene autorización para acceder a un recurso o para ejecutar una operación, el sistema de seguridad en tiempo de ejecución recorre la pila de llamadas y compara los permisos concedidos a cada llamador con el permiso que se pide. Si algún llamador de la pila de llamadas no tiene el permiso solicitado, se iniciará una excepción de seguridad y se rechazará el acceso. El recorrido de la pila está diseñado para evitar los ataques por señuelo, en los que el código de menor confianza llama a código de confianza alta y lo utiliza para realizar acciones no autorizadas. La solicitud de permisos a todos los llamadores en tiempo de ejecución afecta al rendimiento, pero es esencial para proteger el código de los ataques por señuelo del código de menor confianza. Para optimizar el rendimiento, puede hacer que el código Realice menos recorridos de pila. Sin embargo, asegúrese de no exponer un punto débil de seguridad cada vez que lo haga.  
   
  La siguiente ilustración muestra el recorrido de la pila que se produce cuando un método del ensamblado A4 solicita que sus llamadores tengan el permiso P.  
@@ -64,6 +68,7 @@ ms.locfileid: "92224337"
  ![Recorrido de la pila de seguridad de acceso del código](media/slide-10a.gif "slide_10a")
   
 <a name="related_topics"></a>
+
 ## <a name="related-articles"></a>Artículos relacionados
   
 |Title|Descripción|  

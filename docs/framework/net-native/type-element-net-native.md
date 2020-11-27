@@ -1,15 +1,15 @@
 ---
-title: <Type>Elemento (.NET Native)
+title: <Type> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
-ms.openlocfilehash: 4e88b49b82513079ddcf6f0bafe02d44235a406a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e71df41c4a37206910d835ee85dc3d68b4cbad4a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73091854"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287714"
 ---
-# <a name="type-element-net-native"></a>\<Type>Elemento (.NET Native)
+# <a name="type-element-net-native"></a>\<Type> Elemento (.NET Native)
 
 Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clase o estructura.
 
@@ -51,13 +51,13 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="name-attribute"></a>Name (atributo)
 
-|Value|Descripción|
+|Valor|Descripción|
 |-----------|-----------------|
-|*type_name*|Nombre de tipo. Si este `<Type>` elemento es el elemento secundario de un [\<Namespace>](namespace-element-net-native.md) elemento u otro `<Type>` elemento, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|
+|*type_name*|Nombre del tipo. Si este `<Type>` elemento es el elemento secundario de un [\<Namespace>](namespace-element-net-native.md) elemento u otro `<Type>` elemento, *type_name* puede incluir el nombre del tipo sin su espacio de nombres. De lo contrario, *type_name* debe incluir el nombre de tipo completo.|
 
 ## <a name="all-other-attributes"></a>Resto de atributos
 
-|Value|Descripción|
+|Valor|Descripción|
 |-----------|-----------------|
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|
 
@@ -118,6 +118,7 @@ En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre
 ```
 
 ## <a name="example"></a>Ejemplo
+
  En el ejemplo siguiente se utiliza la reflexión para recuperar un objeto <xref:System.Reflection.PropertyInfo> que representa a la propiedad <xref:System.String.Chars%2A?displayProperty=nameWithType>. A continuación, se utiliza el método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> para recuperar el valor del séptimo carácter de una cadena y para mostrar todos los caracteres de la cadena. La variable del `b` ejemplo es un <xref:Windows.UI.Xaml.Controls.TextBlock> control.
 
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]
@@ -133,7 +134,7 @@ En el ejemplo siguiente se utiliza la reflexión para mostrar información sobre
 </Directives>
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

@@ -2,18 +2,20 @@
 title: Usar múltiples esquemas de autenticación con WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3aae9bff4300af97f7b179d9d8115340a26e715a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600223"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289430"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Usar múltiples esquemas de autenticación con WCF
+
 WCF permite ahora especificar varios esquemas de autenticación en un único extremo. Además los servicios hospedados en web pueden heredar sus valores de autenticación directamente de IIS. Los servicios autohospedados pueden especificar los esquemas de autenticación que se pueden usar. Para obtener más información sobre cómo establecer la configuración de autenticación en IIS, vea [autenticación de IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Servicios hospedados en IIS  
- Para los servicios hospedados en IIS, establezca los esquemas de autenticación que desea usa en IIS. Después, en el archivo Web. config del servicio, en la configuración de enlace especifique el tipo de clientCredential como "InheritedFromHost" como se muestra en el siguiente fragmento de código XML:  
+
+ Para los servicios hospedados en IIS, establezca los esquemas de autenticación que desea usa en IIS. Después, en el archivo de web.config del servicio, en la configuración de enlace especifique el tipo de clientCredential como "InheritedFromHost" como se muestra en el siguiente fragmento de código XML:  
   
 ```xml  
 <bindings>  
@@ -63,6 +65,7 @@ else
  Esto garantizará que solo se considere un subconjunto de los esquemas de autenticación enumerados aquí para aplicar en el punto de conexión de servicio, según cuál se haya seleccionado en IIS. Esto significa que un desarrollador puede excluir la autenticación básica de la lista omitiéndola de la lista de serviceAuthenticationManager e incluso si está habilitada en IIS, no se aplicará en el punto de conexión de servicio.  
   
 ## <a name="self-hosted-services"></a>Servicios WCF autohospedados  
+
  Los servicios autohospedados se configuran de manera ligeramente diferente puesto que no hay configuración de IIS para heredar. Aquí se usa el \<serviceAuthenticationManager> elemento o ServiceAuthenticationBehavior para especificar la configuración de autenticación que se va a heredar. En el código tiene el siguiente aspecto:  
   
 ```csharp  

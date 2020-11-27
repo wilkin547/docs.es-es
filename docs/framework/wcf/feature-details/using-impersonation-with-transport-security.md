@@ -2,17 +2,19 @@
 title: Utilización de la suplantación con la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 1d33bfbbb74266aefa538166b4e1aca7d7e315ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594977"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289508"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
+
 La *suplantación* es la capacidad de una aplicación de servidor de asumir la identidad del cliente. Es común que los servicios utilicen la suplantación al validar el acceso a los recursos. La aplicación de servidor se ejecuta utilizando una cuenta de servicio, pero cuando el servidor acepta una conexión de cliente, suplanta al cliente para que se realicen comprobaciones de acceso utilizando las credenciales del cliente. La seguridad de transporte es un mecanismo para pasar credenciales y proteger la comunicación mediante esas credenciales. En este tema se describe el uso de la seguridad de transporte en Windows Communication Foundation (WCF) con la característica de suplantación. Para obtener más información sobre la suplantación mediante la seguridad de mensajes, vea [delegación y suplantación](delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="five-impersonation-levels"></a>Cinco niveles de suplantación  
+
  La seguridad de transporte utiliza cinco niveles de suplantación, como se describe en la siguiente tabla.  
   
 |Nivel de suplantación|Descripción|  
@@ -28,9 +30,11 @@ La *suplantación* es la capacidad de una aplicación de servidor de asumir la i
  El uso de la suplantación en los niveles `Impersonate` o `Delegate` exige que la aplicación de servidor tenga el privilegio `SeImpersonatePrivilege`. Una aplicación tiene de forma predeterminada este privilegio si se está ejecutando en una cuenta del grupo Administradores o en una cuenta con un SID de Servicio (servicio de red, servicio local o sistema local). La suplantación no requiere autenticación mutua del cliente y el servidor. Algunos esquemas de autenticación que admiten la suplantación, como NTLM, no se pueden utilizar con autenticación mutua.  
   
 ## <a name="transport-specific-issues-with-impersonation"></a>Problemas específicos del transporte con suplantación  
+
  La elección de un transporte en WCF afecta a las posibles opciones de suplantación. En esta sección se describen los problemas que afectan a los transportes HTTP y de canalización con nombre estándar en WCF. Los transportes personalizados tienen sus propias restricciones sobre la compatibilidad con la suplantación.  
   
 ### <a name="named-pipe-transport"></a>Transporte de canalización con nombre  
+
  Los elementos siguientes se utilizan con el transporte de canalización con nombre:  
   
 - El transporte de canalización con nombre solo está pensado para su uso en el equipo local. El transporte de canalización con nombre de WCF no permite explícitamente las conexiones entre equipos.  
@@ -40,6 +44,7 @@ La *suplantación* es la capacidad de una aplicación de servidor de asumir la i
  Para obtener más información acerca de las canalizaciones con nombre, vea [elegir un transporte](choosing-a-transport.md).  
   
 ### <a name="http-transport"></a>Transporte HTTP  
+
  Los enlaces que utilizan el transporte HTTP ( <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.BasicHttpBinding> ) admiten varios esquemas de autenticación, como se explica en [Understanding http Authentication](understanding-http-authentication.md). El nivel de suplantación admitido depende del esquema de autenticación. Los elementos siguientes se utilizan con el transporte HTTP:  
   
 - El esquema de autenticación `Anonymous` omite la suplantación.  

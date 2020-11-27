@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 942ade69d92d8a213f65a3a2e463b6924e2f986e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 52a9e1bf4c9442bd42beb55b133a185c4a42148d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288572"
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
+
 Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer> . `DataContractSerializer`Traduce entre .NET Framework objetos y XML (en ambas direcciones). Además del propio serializador, WCF incluye mecanismos de importación y exportación de esquemas asociados. El *esquema* es una descripción formal, precisa y legible por el equipo de la forma de XML que el serializador genera o a la que puede tener acceso el deserializador. WCF usa el lenguaje de definición de esquemas XML (XSD) de World Wide Web Consortium (W3C) como su representación de esquema, que es ampliamente interoperable con numerosas plataformas de terceros.  
   
  El componente de importación de esquema, <xref:System.Runtime.Serialization.XsdDataContractImporter> , toma un documento de esquema XSD y genera .NET Framework clases (normalmente clases de contrato de datos) de forma que los formularios serializados se correspondan con el esquema especificado.  
@@ -42,9 +43,11 @@ Windows Communication Foundation (WCF) incluye un nuevo motor de serialización,
  <xref:System.Runtime.Serialization.XsdDataContractExporter> le permite hacer lo contrario: tomar los tipos que son serializables con `DataContractSerializer` y generar un documento de esquema XSD.  
   
 ## <a name="fidelity-is-not-guaranteed"></a>La fidelidad no está garantizada  
+
  No se garantiza que el esquema o los tipos realicen un viaje de ida y vuelta (round trip) con fidelidad total. (Un *recorrido* de ida y vuelta significa importar un esquema para crear un conjunto de clases y exportar el resultado para crear un esquema de nuevo). No se puede devolver el mismo esquema. Invertir el proceso no garantiza tampoco conservar la fidelidad. (Exporte un tipo para generar su esquema y, a continuación, importe el tipo de nuevo. Es improbable que se devuelva el mismo tipo.)  
   
 ## <a name="supported-types"></a>Tipos admitidos  
+
  El modelo del contrato de datos solo admite un subconjunto limitado del esquema de WC3. Cualquier esquema que no se ajusta a este subconjunto producirá una excepción durante el proceso de importación. Por ejemplo, no hay ninguna manera de especificar que un miembro de datos de un contrato de datos deba serializarse como un atributo XML. Así, los esquemas que requieren el uso de atributos XML no se admiten y producirán excepciones durante la importación ya que es imposible generar un contrato de datos con la proyección de XML correcta.  
   
  Por ejemplo, el fragmento del esquema siguiente no se puede importar utilizando los valores de importación predeterminados.  

@@ -1,15 +1,16 @@
 ---
-title: <Event>Elemento (.NET Native)
+title: <Event> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b1cf2239e58839c5026bc375ba04568227881bdd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79181039"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288104"
 ---
-# <a name="event-element-net-native"></a>\<Event>Elemento (.NET Native)
+# <a name="event-element-net-native"></a>\<Event> Elemento (.NET Native)
+
 Aplica la directiva de reflexión en tiempo de ejecución a un evento.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -21,6 +22,7 @@ Aplica la directiva de reflexión en tiempo de ejecución a un evento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -33,17 +35,18 @@ Aplica la directiva de reflexión en tiempo de ejecución a un evento.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*method_name*|Nombre del evento. El tipo del evento se define mediante el elemento primario [\<Type>](type-element-net-native.md) o [\<TypeInstantiation>](typeinstantiation-element-net-native.md) .|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva para el evento. Los valores posibles son `Auto`, `Excluded`, `Included` y `Required`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -54,9 +57,10 @@ Aplica la directiva de reflexión en tiempo de ejecución a un evento.
 |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Aplica la directiva de reflexión a un tipo genérico construido y a todos sus miembros.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Si la directiva de un evento no se define explícitamente, heredará la directiva en tiempo de ejecución de su elemento primario.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

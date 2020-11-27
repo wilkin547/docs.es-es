@@ -2,14 +2,15 @@
 title: Sesiones seguras
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-ms.openlocfilehash: cb02adc7514e27175088e7664b12e45bc8ca5cd9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fd8406af0c37981b2ddc7ab8ddb0c82c63cbc0b1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288558"
 ---
 # <a name="secure-sessions"></a>Sesiones seguras
+
 Una característica de Windows Communication Foundation (WCF) son las sesiones confiables que garantizan que los mensajes se reciben en el orden en que se enviaron. Los temas de esta sección discuten las implicaciones de seguridad a tener en cuenta a la hora de crear una sesión confiable. Para obtener más información acerca de las sesiones confiables, vea [uso de sesiones](../using-sessions.md).  
   
 > [!NOTE]
@@ -25,11 +26,13 @@ Una característica de Windows Communication Foundation (WCF) son las sesiones c
 |[Consideraciones de seguridad para sesiones seguras](security-considerations-for-secure-sessions.md)|Describe consideraciones especiales de las sesiones seguras.|  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Sesiones, creación de instancias y simultaneidad](sessions-instancing-and-concurrency.md)  
   
  [Diseño e implementación de servicios](../designing-and-implementing-services.md)  

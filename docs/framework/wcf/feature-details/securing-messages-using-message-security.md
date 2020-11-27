@@ -2,14 +2,15 @@
 title: Protección de mensajes mediante la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: b5f7679d5e5ec82e63b588cebd90ce873c055088
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6aae16b766889f402f774451338ae2cd30162437
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558308"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288610"
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
+
 En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
@@ -28,6 +29,7 @@ En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref
  La seguridad de mensajes de WCF agrega encabezados de seguridad al mensaje de WCF que se integran con las infraestructuras de seguridad existentes, como un certificado o el protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial de mensaje  
+
  Utilizando la seguridad de mensajes, el servicio y cliente pueden presentar las credenciales para autenticarse entre sí. Puede seleccionar la seguridad de mensajes estableciendo el modo <xref:System.ServiceModel.NetMsmqBinding.Security%2A> en `Message` o `Both` (es decir, utilizar la seguridad de transporte y la seguridad de mensajes).  
   
  El servicio puede utilizar la propiedad <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> para inspeccionar la credencial utilizada para autenticar el cliente. Esto también se puede utilizar para comprobaciones de autorización que el servicio decida implementar.  
@@ -35,6 +37,7 @@ En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref
  Esta sección explica los diferentes tipos de credenciales y cómo utilizarlos con colas.  
   
 ### <a name="certificate"></a>Certificado  
+
  El tipo de credencial de certificado utiliza un certificado X.509 para identificar el servicio y el cliente.  
   
  En un escenario típico, una entidad de certificación de confianza emite un certificado válido para el cliente y el servicio. A continuación, se establece la conexión, el cliente autentica la validez del servicio utilizando el certificado del servicio para decidir si puede confiar en el servicio. De forma similar, el servicio utiliza el certificado del cliente para validar la confianza del cliente.  
@@ -44,6 +47,7 @@ En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref
  En un equipo que ejecuta Windows, los certificados se conservan en varias clases de almacenes. Para obtener más información sobre los diferentes almacenes, vea [almacenes de certificados](/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ### <a name="windows"></a>Windows  
+
  El tipo de credencial de mensaje de Windows utiliza el protocolo Kerberos.  
   
  El protocolo Kerberos es un mecanismo de seguridad que autentica a los usuarios en un dominio y permite a los usuarios autenticados establecer contextos seguros con otras entidades en un dominio.  
@@ -55,12 +59,15 @@ En esta sección se describe la seguridad de mensajes de WCF cuando se usa <xref
  Se utiliza el protocolo Kerberos de forma predeterminada al elegir la credencial del mensaje.
   
 ### <a name="username-password"></a>Nombre de usuario/contraseña  
+
  Con esta propiedad, el cliente puede autenticar al servidor utilizando una contraseña y nombre de usuario en el encabezado de seguridad del mensaje.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
+
  El cliente puede utilizar el servicio de token de seguridad para emitir un token que se pueda adjuntar al mensaje para el servicio para autenticar el cliente.  
   
 ## <a name="using-transport-and-message-security"></a>Utilizar la seguridad de transporte y de mensajes  
+
  Al utilizar la seguridad de transporte y la seguridad de mensajes, el certificado utilizado para proteger el mensaje tanto en el nivel de transporte como en el nivel de mensaje SOAP debe ser el mismo.  
   
 ## <a name="see-also"></a>Vea también

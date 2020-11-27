@@ -1,15 +1,16 @@
 ---
-title: <GenericParameter>Elemento (.NET Native)
+title: <GenericParameter> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
-ms.openlocfilehash: d0b18211206a8f9d4365ab3affe6d1c376003348
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1400fb7029df533d54e87a1c534f4ac3b0a5fc68
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128431"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288026"
 ---
-# <a name="genericparameter-element-net-native"></a>\<GenericParameter>Elemento (.NET Native)
+# <a name="genericparameter-element-net-native"></a>\<GenericParameter> Elemento (.NET Native)
+
 Aplica la directiva al tipo de parámetro de un método o tipo genérico.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,6 +30,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -49,17 +51,18 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Atributo necesario. Nombre del parámetro de tipo genérico. Por ejemplo, en el delegado genérico <xref:System.Func%603>, un valor *generic_parameter_name* de "TResult" aplica la directiva en tiempo de ejecución al valor devuelto del delegado.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -70,6 +73,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un tipo determinado, como una clase o una estructura.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El `<GenericParameter>` elemento es un elemento secundario del [\<Method>](method-element-net-native.md) elemento o [\<Type>](type-element-net-native.md) y se utiliza para aplicar la Directiva a un parámetro de tipo genérico determinado, que se especifica mediante su nombre en el tipo genérico o en la firma del método.  
   
  El elemento `<GenericParameter>` es de mayor utilidad cuando se usa con serializadores. En el ejemplo siguiente se usa el `<GenericParameter>` elemento para aplicar la Directiva al tipo `T` en las llamadas a las sobrecargas del método [JsonConvert. DeserializeObject \<T> (String)](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm) del serializador JSON de NewtonSoft.  
@@ -84,10 +88,10 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 </Directives>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [\<Method>Element](method-element-net-native.md)
-- [\<Type>Element](type-element-net-native.md)
+- [Elemento \<Method>](method-element-net-native.md)
+- [Elemento \<Type>](type-element-net-native.md)
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Configuración de directiva de la directiva en tiempo de ejecución](runtime-directive-policy-settings.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)

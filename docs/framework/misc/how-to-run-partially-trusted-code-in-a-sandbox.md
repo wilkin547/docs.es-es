@@ -9,12 +9,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: baa04a3c55728590b8aa502648a8ab42bf62f903
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855808"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288286"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Cómo: Ejecutar código de confianza parcial en un recinto
 
@@ -178,6 +178,7 @@ AppDomain.CreateDomain( string friendlyName,
      La aserción de plena confianza se usa para obtener la información ampliada de <xref:System.Security.SecurityException>. Sin <xref:System.Security.PermissionSet.Assert%2A>, el método <xref:System.Security.SecurityException.ToString%2A> de <xref:System.Security.SecurityException> detectará que hay código de confianza parcial en la pila y restringirá la información devuelta. Esto podría provocar problemas de seguridad si el código de confianza parcial llega a leer esa información, pero el riesgo se mitiga al no conceder <xref:System.Security.Permissions.UIPermission>. La aserción de plena confianza debe usarse con moderación y solo cuando si se está seguro de que no se permite al código de confianza parcial elevarse a plena confianza. Como norma general, no llame a un código en el que no confía en la misma función y tras invocar una aserción de plena confianza. Le recomendamos que revierta siempre la aserción cuando acabe de usarla.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se implementa el procedimiento de la sección anterior. En el ejemplo, un proyecto denominado `Sandboxer` en una solución de Visual Studio también contiene un proyecto denominado `UntrustedCode` que implementa la clase `UntrustedClass`. En este escenario se supone que ha descargado un ensamblado de biblioteca que contiene un método que debe devolver `true` o `false` para indicar si el número proporcionado es un número de Fibonacci. En su lugar, el método intenta leer un archivo de su equipo. En el ejemplo siguiente se muestra el código no confiable.  
   
 ```csharp
@@ -273,6 +274,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

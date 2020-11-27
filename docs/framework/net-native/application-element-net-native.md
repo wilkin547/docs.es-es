@@ -1,19 +1,20 @@
 ---
-title: <Application>Elemento (.NET Native)
+title: <Application> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
-ms.openlocfilehash: e26826b3d8674b536ab0897182da58bc02cfd00b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a7f2eca5a5bb5cfb7b9827f2463454a17fc128cb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128520"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288143"
 ---
-# <a name="application-element-net-native"></a>\<Application>Elemento (.NET Native)
+# <a name="application-element-net-native"></a>\<Application> Elemento (.NET Native)
+
 Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos metadatos están disponibles para la reflexión en tiempo de ejecución y aplica la directiva de reflexión en tiempo de ejecución a todos los elementos de programa en una aplicación.  
   
  \<Directives> (Elemento)  
-\<Application>Elemento (Rd. xml)  
+\<Application> Elemento (rd.xml)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,6 +32,7 @@ Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos meta
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios. En la tabla de elementos secundarios, la directiva hace referencia al tipo de metadatos que hay disponible para determinados elementos de programa en tiempo de ejecución.  
   
 ### <a name="attributes"></a>Atributos  
@@ -50,7 +52,7 @@ Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos meta
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración de esta directiva que se aplica a los tipos en la aplicación. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -75,6 +77,7 @@ Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos meta
 |[\<Directives>](directives-element-net-native.md)|Elemento raíz de un archivo de directivas en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  El [\<Directives>](directives-element-net-native.md) elemento puede contener cero o un `<Application>` elemento. No se admiten varios elementos `<Application>` en un único archivo de directivas de reflexión.  
   
  El elemento `<Application>` se puede usar de dos maneras:  
@@ -83,9 +86,9 @@ Sirve de contenedor de los tipos y miembros de tipo de la aplicación cuyos meta
   
 - Como un elemento que establece la directiva de la aplicación para la reflexión, serialización e interoperabilidad. Los atributos del `<Application>` elemento definen la Directiva de toda la aplicación, que pueden ser reemplazados por los elementos secundarios definidos por `<Application>` el [\<Library>](library-element-net-native.md) elemento o.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [\<Library>Element](library-element-net-native.md)
-- [\<Directives>Element](directives-element-net-native.md)
+- [Elemento \<Library>](library-element-net-native.md)
+- [Elemento \<Directives>](directives-element-net-native.md)
 - [Elementos de directivas en tiempo de ejecución](runtime-directive-elements.md)
 - [Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)

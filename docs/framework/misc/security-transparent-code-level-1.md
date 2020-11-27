@@ -10,12 +10,12 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: 55cf6b937d4bb12c44aae2022921c8adb8180df4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 97acccdc1dcab11e42d116f4743e1182029e2dd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556426"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96288195"
 ---
 # <a name="security-transparent-code-level-1"></a>Código transparente en seguridad, nivel 1
 
@@ -35,7 +35,9 @@ ms.locfileid: "90556426"
 - [Ejemplos de transparencia de seguridad](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>
+
 ## <a name="the-level-1-transparency-model"></a>Modelo de transparencia de nivel 1  
+
  Cuando usa la transparencia de nivel 1, está empleando un modelo de seguridad que separa el código en métodos transparentes en seguridad, críticos para la seguridad y disponibles desde código transparente, y críticos para la seguridad.  
   
  Puede marcar un ensamblado entero, algunas clases de un ensamblado o algunos métodos de una clase como transparentes en seguridad. El código transparente en seguridad no puede elevar privilegios. Esta restricción tiene tres consecuencias:  
@@ -58,7 +60,9 @@ ms.locfileid: "90556426"
  Para mantener la compatibilidad con versiones anteriores de .NET Framework, todos los miembros no anotados con atributos de transparencia se consideran críticos para la seguridad y disponibles desde código transparente. Todos los tipos que no están anotados se consideran transparentes. No existen reglas de análisis estático para validar la transparencia. Por lo tanto, puede que necesite depurar errores de transparencia en tiempo de ejecución.  
   
 <a name="transparency_attributes"></a>
+
 ## <a name="transparency-attributes"></a>Atributos de transparencia  
+
  En la tabla siguiente se describen los tres atributos que se usan para anotar el código para la transparencia.  
   
 |Atributo|Descripción|  
@@ -70,6 +74,7 @@ ms.locfileid: "90556426"
  El atributo <xref:System.Security.SecuritySafeCriticalAttribute> permite que el código transparente en seguridad acceda a los miembros críticos para la seguridad del mismo ensamblado. Considere el código transparente en seguridad y crítico para la seguridad de su ensamblado como si estuviera separado en dos ensamblados. El código transparente en seguridad no sería capaz de ver los miembros privados o internos del código crítico para la seguridad. Además, el código crítico para la seguridad suele auditarse para tener acceso a su interfaz pública. No se espera que un estado privado o interno sea accesible fuera del ensamblado; lo mejor es mantener aislado el estado. El atributo <xref:System.Security.SecuritySafeCriticalAttribute> mantiene el aislamiento del estado entre el código transparente en seguridad y el código crítico para la seguridad, al mismo tiempo que ofrece la capacidad de invalidar el aislamiento si es necesario. El código transparente en seguridad no puede acceder al código crítico para la seguridad privado o interno, a menos que esos miembros se hayan marcado con <xref:System.Security.SecuritySafeCriticalAttribute>. Antes de aplicar <xref:System.Security.SecuritySafeCriticalAttribute>, audite ese miembro como si estuviera expuesto públicamente.  
   
 ### <a name="assembly-wide-annotation"></a>Anotación de todo el ensamblado  
+
  En la siguiente tabla se describen los efectos del uso de atributos de seguridad en el nivel de ensamblado.  
   
 |Atributo de ensamblado|Estado del ensamblado|  
@@ -81,7 +86,9 @@ ms.locfileid: "90556426"
 |`SecurityCritical`|El valor predeterminado de todo el código es transparente. Sin embargo, los miembros y tipos individuales pueden tener otros atributos.|  
   
 <a name="security_transparency_examples"></a>
+
 ## <a name="security-transparency-examples"></a>Ejemplos de transparencia de seguridad  
+
  Para usar las reglas de transparencia de .NET Framework 2.0 (transparencia de nivel 1), use la siguiente anotación de ensamblado:  
   
 ```csharp
