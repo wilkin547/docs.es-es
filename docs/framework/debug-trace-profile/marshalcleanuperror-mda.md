@@ -11,28 +11,35 @@ helpviewer_keywords:
 - MarshalCleanupError MDA
 - memory, cleanup errors
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
-ms.openlocfilehash: 3c7498d6f51484de3a2e84d611a2634f53724ab6
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: e65136f022caa7b1e18a27f7b97a4ef4c27f42d3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051617"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96271200"
 ---
 # <a name="marshalcleanuperror-mda"></a>MDA de marshalCleanupError
+
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `marshalCleanupError` se activa cuando Common Language Runtime (CLR) detecta un error al intentar limpiar la memoria y las estructuras temporales que se usan para serializar tipos de datos entre los límites del código nativo y administrado.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Se produce una fuga de memoria al realizar transiciones de código nativo y administrado, cuando no se restaura un estado de runtime (por ejemplo, una referencia cultural de subproceso) o si la limpieza de <xref:System.Runtime.InteropServices.SafeHandle> tiene errores.  
   
 ## <a name="cause"></a>Causa  
+
  Se produjo un error inesperado al limpiar las estructuras temporales.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Revise todas las implementaciones de destructor, finalizador y cálculo de referencias de <xref:System.Runtime.InteropServices.SafeHandle> para comprobar si hay errores.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  Un mensaje que indica que se produjo un error en la operación durante la limpieza.  
   
 ## <a name="configuration"></a>Configuración  

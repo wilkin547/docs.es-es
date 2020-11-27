@@ -2,15 +2,16 @@
 title: Mallas del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
-ms.openlocfilehash: 9113fab13da8503e6ce0335e5bb19a2634973dad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62feb237dd4a8a471175e32363887376f7d86212
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654490"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272103"
 ---
 # <a name="peer-meshes"></a>Mallas del mismo nivel
-Un *malla* es una colección con nombre (un gráfico interconectado) de los nodos del mismo nivel que pueden comunicarse entre sí y que se identifican mediante un identificador de malla único. Cada nodo se conecta a varios nodos. En una malla correctamente conectada, siempre hay una ruta entre dos nodos dados, a una distancia en saltos relativamente corta entre los nodos de los bordes más lejanos, y la malla permanece conectada aun cuando se quitan algunos nodos o conexiones. Los nodos activos en la malla publican la información de su extremo con el Id. de malla pertinente para que otros pares puedan buscarlos.  
+
+Una *malla* es una colección con nombre (un gráfico interconectado) de nodos del mismo nivel que pueden comunicarse entre ellos y que se identifican mediante un identificador de malla único. Cada nodo se conecta a varios nodos. En una malla bien conectada, hay una ruta de acceso entre dos nodos cualesquiera, con relativamente pocos saltos entre los nodos de los bordes más alejados de la malla, y la malla permanecerá conectada incluso si se quitan algunos nodos o conexiones. Los nodos activos en la malla publican su información de punto de conexión con el identificador de malla correspondiente para que otros elementos del mismo nivel puedan encontrarlos.  
   
 ## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a>Características de una malla creada mediante el canal del mismo nivel  
   
@@ -27,8 +28,9 @@ Un *malla* es una colección con nombre (un gráfico interconectado) de los nodo
 - Una malla de canal del mismo nivel se ajusta automáticamente a medida que los nodos se conectan y desconectan, garantizando que todos los nodos tengan una buena conectividad, con poca probabilidad de que se generen particiones (grupos de nodos aislados entre sí). Las conexiones en la malla también se optimizan dinámicamente según los patrones de tráfico actuales, para que así la latencia de mensaje del remitente al receptor sea lo más pequeña posible.  
   
 #### <a name="popular-network-features-that-peer-channel-does-not-provide"></a>Características de red conocidas que el canal del mismo nivel no proporciona  
+
  Es importante tener en cuenta que hay características de red populares que el canal del mismo nivel no proporciona. Estas características, que se pueden compilar sobre el canal del mismo nivel, son:  
   
-- **Orden de los mensajes:** Los mensajes que se origina en un único origen no pueden llegar en todas las demás partes en el mismo orden o en el orden en que envía el origen. Las aplicaciones que requieren que los mensajes se entreguen en un cierto orden deben integrarlo en sus aplicaciones (por ejemplo, incluyendo un id. que aumente monotónicamente con todos los mensajes).  
+- **Ordenación de mensajes:** Los mensajes que se originan en un solo origen pueden no llegar a las demás partes en el mismo orden o en el orden en el que se envió el origen. Las aplicaciones que requieren que los mensajes se entreguen en un cierto orden deben integrarlo en sus aplicaciones (por ejemplo, incluyendo un id. que aumente monotónicamente con todos los mensajes).  
   
-- **Mensajería confiable:** Canal del mismo nivel no incluye un mecanismo para garantizar la recepción de mensajes por todos los elementos del mismo nivel. Para garantizar la entrega del mensaje, debe escribir una capa de confiabilidad sobre el canal del mismo nivel.
+- **Mensajería de confianza:** El canal del mismo nivel no incluye un mecanismo para garantizar la recepción de mensajes por parte de todos los elementos del mismo nivel. Para garantizar la entrega del mensaje, debe escribir una capa de confiabilidad sobre el canal del mismo nivel.
