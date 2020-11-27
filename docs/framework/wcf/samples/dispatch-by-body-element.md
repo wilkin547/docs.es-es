@@ -2,14 +2,15 @@
 title: Distribución mediante el elemento del cuerpo
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 19913cdaa47d766f62a313e216a653ac69633a99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ddff361179c2ef071ca4df076e78b238de9041a1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594704"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292602"
 ---
 # <a name="dispatch-by-body-element"></a>Distribución mediante el elemento del cuerpo
+
 Este ejemplo muestra cómo implementar un algoritmo alternativo para asignar mensajes entrantes a las operaciones.  
   
  De forma predeterminada, el servicio del distribuidor ejemplar selecciona el método de control adecuado para un mensaje entrante basado en el encabezamiento “Acción” del direccionamiento del WS del mensaje o la información equivalente en la solicitud SOAP del Http.  
@@ -70,6 +71,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>Agregar un selector de operación a un servicio  
+
  Los selectores de la operación de envío de servicio son extensiones del distribuidor de Windows Communication Foundation (WCF). Para seleccionar los métodos en el canal de devolución de llamada de contratos dúplex, hay también selectores de operación de cliente que trabajan de manera muy similar a los selectores de operación de expedición aquí, pero que no se cubren explícitamente en este ejemplo.  
   
  Como la mayoría de las extensiones ejemplares de los servicios, los selectores de la operación de expedición se agregan al distribuidor utilizando los comportamientos. Un *comportamiento* es un objeto de configuración que agrega una o más extensiones al tiempo de ejecución de envío (o al tiempo de ejecución del cliente) o cambia su configuración.  
@@ -118,6 +120,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ```  
   
 ## <a name="implementing-the-service"></a>Implementar el servicio  
+
  El comportamiento implementado directamente en este ejemplo afecta a cómo se interpretan los mensajes de la conexión y los envían, lo cual es una función del contrato de servicios. Por consiguiente, el comportamiento se debería declarar en el nivel del contrato de servicios en cualquier implementación del servicio que decida utilizarlo.  
   
  El servicio de proyecto de ejemplo aplica el `DispatchByBodyElementBehaviorAttribute` comportamiento del contrato al `IDispatchedByBody` contrato de servicio y etiqueta cada una de las dos operaciones `OperationForBodyA()` y `OperationForBodyB()` con un comportamiento de la `DispatchBodyElementAttribute` operación. Cuando se abre un host del servicio para un servicio que implementa este contrato, este metadato lo escoge previamente el generador del distribuidor, tal y como se ha descrito previamente.  
@@ -143,6 +146,7 @@ public interface IDispatchedByBody
  La implementación de servicio de ejemplo es sencilla. Cada método ajusta el mensaje recibido en un mensaje de respuesta y lo devuelve al cliente.  
   
 ## <a name="running-and-building-the-sample"></a>Ejecutar y compilar el ejemplo  
+
  Al ejecutar el ejemplo, el contenido del cuerpo de las respuestas de la operación se muestra en la ventana de la consola del cliente de una manera parecida al resultado siguiente (formateado).  
   
  El cliente envía tres mensajes al servicio cuyo elemento de contenido de cuerpo se denomina `bodyA`, `bodyB`y `bodyX`, respectivamente. Como se puede diferir de la descripción anterior y el contrato de servicios mostrado, el mensaje entrante con el elemento `bodyA` se envía al método `OperationForBodyA()`. Dado que no hay ningún destino de la expedición explícito para el mensaje con el cuerpo del elemento `bodyX`, el mensaje se envía a `DefaultOperation()`. Cada una de las operaciones de servicio contiene el cuerpo del mensaje recibido en un elemento concreto al método y vuelve a él, lo cual se hace para poner en correlación claramente los mensajes de entrada y salida para obtener este ejemplo:  
