@@ -2,27 +2,30 @@
 title: 3423 - WebSocketAsyncWriteStop
 ms.date: 03/30/2017
 ms.assetid: b2074414-abad-4643-ba38-f94b331def93
-ms.openlocfilehash: b6450398f05477f44a9058d9b1ecd4bb9b407c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c619d82412e6864af25519fcb2a5750fcafd1438
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760095"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266316"
 ---
 # <a name="3423---websocketasyncwritestop"></a>3423 - WebSocketAsyncWriteStop
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|3423|  
 |Palabras clave|HTTP|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Se genera este evento cuando la escritura asincrónica de WebSocket se ha detenido.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  WebSocketId:%1 detención de escritura asincrónica.  
   
 ## <a name="details"></a>Detalles

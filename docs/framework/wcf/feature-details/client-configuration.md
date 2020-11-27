@@ -3,19 +3,21 @@ title: Configuración del cliente
 description: Obtenga información sobre cómo usar la configuración de cliente de WCF para especificar la dirección, el enlace, el comportamiento y el contrato de un extremo, que se utiliza para conectarse a un servicio.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: af9101be0067311fb1a3c0e6e575f186e8ccf161
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265978"
 ---
 # <a name="client-configuration"></a>Configuración del cliente
+
 Puede usar la configuración de cliente de Windows Communication Foundation (WCF) para especificar la dirección, el enlace, el comportamiento y el contrato, las propiedades "ABC" del punto de conexión del cliente, que los clientes utilizan para conectarse a los puntos de conexión de servicio. El [\<client>](../../configure-apps/file-schema/wcf/client.md) elemento tiene un [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento cuyos atributos se usan para configurar los ABC del extremo. Estos atributos se describen en la sección [configuración de puntos de conexión](#configuring-endpoints) .  
   
  El [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento también contiene un [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) elemento que se usa para especificar la configuración para importar y exportar metadatos, un [\<headers>](../../configure-apps/file-schema/wcf/headers.md) elemento que contiene una colección de encabezados de dirección personalizados y un [\<identity>](../../configure-apps/file-schema/wcf/identity.md) elemento que habilita la autenticación de un extremo por otros extremos que intercambian mensajes con él. Los [\<headers>](../../configure-apps/file-schema/wcf/headers.md) [\<identity>](../../configure-apps/file-schema/wcf/identity.md) elementos y forman parte del <xref:System.ServiceModel.EndpointAddress> y se describen en el artículo [direcciones](endpoint-addresses.md) . Los vínculos a temas que explican el uso de las extensiones de metadatos se proporcionan en la sección [configuración de metadatos](#configuring-metadata) .  
   
 ## <a name="configuring-endpoints"></a>Configuración de puntos de conexión  
+
  La configuración del cliente está diseñada para permitir que el cliente especifique uno o más puntos de conexión, cada uno con su propio nombre, dirección y contrato, donde cada uno hace referencia a los [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) elementos y de la configuración del cliente que se va a usar para configurar ese extremo. El archivo de configuración del cliente debe tener el nombre "App.config", ya que este es el nombre que espera el tiempo de ejecución de WCF. El siguiente ejemplo muestra un archivo de configuración de cliente.  
   
 ```xml  
@@ -92,6 +94,7 @@ Puede usar la configuración de cliente de Windows Communication Foundation (WCF
  El atributo `contract` especifica qué contrato expone este punto de conexión. Este valor se asigna al <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> del <xref:System.ServiceModel.ServiceContractAttribute>. El valor predeterminado es el nombre de tipo completo de la clase que implementa el servicio.  
   
 ### <a name="configuring-metadata"></a>Configuración de metadatos  
+
  El [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) elemento se usa para especificar la configuración que se usa para registrar las extensiones de importación de metadatos. Para obtener más información sobre cómo extender el sistema de metadatos, vea [extender el sistema de metadatos](../extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Vea también

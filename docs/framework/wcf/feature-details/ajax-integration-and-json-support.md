@@ -4,19 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
-ms.openlocfilehash: f1748372af520955c139dffb2e6e80ae066c9397
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c895a6dedc22a42adb7104927d39090ab6587f37
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536072"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266030"
 ---
 # <a name="ajax-integration-and-json-support"></a>Integración de AJAX y compatibilidad de JSON
+
 La compatibilidad de Windows Communication Foundation (WCF) para JavaScript asincrónico y XML (AJAX) de ASP.NET y el formato de datos de notación de objetos JavaScript (JSON) permiten que los servicios WCF expongan las operaciones a los clientes AJAX. Los clientes AJAX son páginas web que ejecutan código JavaScript y obtienen acceso a estos servicios WCF mediante solicitudes HTTP. Los temas de esta sección proporcionan información sobre esta compatibilidad y sobre cómo implementarla.  
   
  Para obtener más información acerca de ASP.NET AJAX y su integración con ASP.NET 2,0, consulte [información general sobre la ASP.NET AJAX](/previous-versions/aspnet/bb398874(v=vs.100)).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Creación de servicios WCF para AJAX de ASP.NET](creating-wcf-services-for-aspnet-ajax.md)  
  Describe cómo se puede exponer un servicio WCF a los clientes AJAX agregando el punto de conexión de AJAX adecuado bien mediante configuración o mediante un generador de host de servicio personalizado para generar un host de servicio que configure el extremo de AJAX automáticamente.  
   
