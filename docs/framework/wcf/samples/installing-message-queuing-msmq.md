@@ -3,14 +3,15 @@ title: Instalar Message Queuing (MSMQ)
 description: Obtenga información acerca de cómo instalar Message Queue Server 4,0 y Message Queue Server 3,0 para usarlos con los ejemplos de WFC como parte de un procedimiento de instalación único.
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 0d0cb87b40b1cb11eb7692c2fa1e890ec815b13d
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: bf33a5cd899bf2d7ef4947c51ac1723c8eb80c29
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244470"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281877"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
+
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
   
 > [!NOTE]
@@ -28,7 +29,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 5. Haga clic en **integración de servicios de directorio** (para equipos Unidos a un dominio) y, a continuación, haga clic en **compatibilidad con http**.  
   
-6. Haga clic en **siguiente**y, a continuación, en **instalar**.  
+6. Haga clic en **siguiente** y, a continuación, en **instalar**.  
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Para instalar Message Queuing 4.0 en Windows 7 o Windows Vista  
   
@@ -59,7 +60,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
   
 4. Asegúrese de que la opción de compatibilidad HTTP con MSMQ está seleccionada en la página de detalles.  
   
-5. Haga clic en **Aceptar** para salir de la página de detalles y, a continuación, haga clic en **siguiente**. Complete la instalación.  
+5. Haga clic en **Aceptar** para salir de la página de detalles y, a continuación, haga clic en **siguiente**. Finalice la instalación.  
   
 6. Si se le pide que reinicie el equipo, haga clic en **Aceptar** para completar la instalación.  
   

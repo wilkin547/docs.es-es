@@ -2,28 +2,31 @@
 title: 1030 - StartFaultWorkItem
 ms.date: 03/30/2017
 ms.assetid: e1601fb9-0bc6-4dbe-816f-f24914063d34
-ms.openlocfilehash: 3848d644e77041a62a52eb2eae5eeef286dfe334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52034f7cc7c6f6749fbbbf06db9267ecb6279ee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61924324"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281864"
 ---
 # <a name="1030---startfaultworkitem"></a>1030 - StartFaultWorkItem
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|1030|  
 |Palabras clave|WFRuntime|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que un FaultWorkItem está iniciando la ejecución.  
   
-## <a name="message"></a>Mensaje  
- Iniciando la ejecución de un FaultWorkItem para la actividad '%1', DisplayName: '%2', InstanceId: '%3'.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.  
+## <a name="message"></a>Message  
+
+ Iniciando la ejecución de un FaultWorkItem para la actividad ' %1 ', DisplayName: ' %2 ', InstanceId: ' %3 '.  La excepción se propagó desde la actividad '%4', DisplayName: '%5', InstanceId: '%6'.  
   
 ## <a name="details"></a>Detalles  
   

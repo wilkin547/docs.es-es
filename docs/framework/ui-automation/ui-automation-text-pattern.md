@@ -9,25 +9,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-ms.openlocfilehash: 8d0328f22222d2eefad4f663736c2fb675792b3f
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 3a666388b2a62c9e5582eec50196d9bda75ac0f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281189"
 ---
 # <a name="ui-automation-text-pattern"></a>Modelo de texto de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  Este tema contiene información general y temas de procedimientos que le ayudarán a empezar a programar para los elementos de texto en [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general sobre el modelo de texto de UI Automation](ui-automation-textpattern-overview.md)  
  [Información general sobre TextPattern y objetos incrustados](textpattern-and-embedded-objects-overview.md)  
- [Temas "Cómo..."](ui-automation-text-pattern-how-to-topics.md)  
+ [Temas de procedimientos](ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Windows.Automation.Text>  
   
 ## <a name="see-also"></a>Vea también

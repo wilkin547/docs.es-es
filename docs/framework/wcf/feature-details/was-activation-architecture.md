@@ -2,17 +2,19 @@
 title: Arquitectura de activación de WAS
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 46f9f9b0e951d363200cf41b5119b13ca921a3b5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545987"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281643"
 ---
 # <a name="was-activation-architecture"></a>Arquitectura de activación de WAS
+
 Este tema detalla y discute los componentes de Windows Process Activation Service (también conocido como WAS).  
   
 ## <a name="activation-components"></a>Componentes de activación  
+
  WAS está compuesto por varios componentes arquitectónicos:  
   
 - Adaptadores de escucha. Servicios de Windows que reciben mensajes en protocolos de red concretos y se comunican con WAS para enrutar los mensajes entrantes hasta el proceso de trabajo correcto.  
@@ -30,6 +32,7 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
  ![Captura de pantalla que muestra la arquitectura WAS.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>Adaptadores de escucha  
+
  Los adaptadores de escucha son servicios de Windows individuales que implementan la lógica de comunicación de red utilizada para recibir mensajes mediante el protocolo de red en el que realizan escuchas. En la tabla siguiente se enumeran los adaptadores de agente de escucha para los protocolos Windows Communication Foundation (WCF).  
   
 |Nombre de servicio de adaptador de escucha|Protocolo|Notas|  
@@ -59,6 +62,7 @@ Este tema detalla y discute los componentes de Windows Process Activation Servic
 ```  
   
 ### <a name="protocol-handlers"></a>Controladores de protocolo  
+
  Los controladores de protocolo de proceso y AppDomain se registran en el archivo Web.config de nivel de equipo.  
   
 ```xml  

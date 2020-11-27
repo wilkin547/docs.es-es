@@ -6,14 +6,15 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 8941350e46680c4ecaeb9b89fe9e6910c5830bcb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 70dde7ab30d542ecc9f85d027a86b466eb13e4f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553296"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281322"
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
+
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
   
  Para obtener más información sobre los términos usados en la documentación de Windows Communication Foundation (WCF), vea [conceptos básicos de Windows Communication Foundation](../fundamental-concepts.md).  

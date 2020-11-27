@@ -9,28 +9,35 @@ helpviewer_keywords:
 - invalid VARIANT types
 - managed debugging assistants (MDAs), invalid variant
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
-ms.openlocfilehash: ab1233d9faa86ef1508fa8fe2b5af46cb37bd523
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: f0667a54e950ead27000eb6b93ebd547dea1cfb0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96281305"
 ---
 # <a name="invalidvariant-mda"></a>MDA de invalidVariant
+
 El asistente para la depuración administrada (MDA) de `invalidVariant` se activa cuando se encuentra una estructura `VARIANT` no válida durante una llamada de código nativo o no administrado a un código administrado.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Comportamiento inesperado durante una transición entre código nativo y administrado que implica la serialización de `VARIANT` a un objeto.  
   
 ## <a name="cause"></a>Causa  
+
  El código nativo está pasando una estructura `VARIANT` incorrecta al código administrado.   El motor en tiempo de ejecución intenta calcular las referencias de `VARIANT` a un objeto y activa el MDA si `VARIANT` no es válido. Los ejemplos de `VARIANT` no válidas incluyen `VARIANT` con `VARTYPE` VT_EMPTY &#124; VT_BYREF o `VARIANT` con `VARTYPE` VT_VARIANT.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  El paso de `VARIANT` por parte del código nativo o no administrado debe garantizar que `VARIANT` se forme e inicialice correctamente.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el comportamiento del tiempo de ejecución.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  Un mensaje de MDA que indica que el motor en tiempo de ejecución detectó una `VARIANT` no válida pasada a código administrado mediante un módulo no administrado.  
   
 ## <a name="configuration"></a>Configuración  
