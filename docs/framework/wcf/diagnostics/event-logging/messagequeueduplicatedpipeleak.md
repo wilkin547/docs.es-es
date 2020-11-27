@@ -2,21 +2,23 @@
 title: MessageQueueDuplicatedPipeLeak
 ms.date: 03/30/2017
 ms.assetid: 743db7f1-32cc-4a3b-8d1a-5d1cf25e439c
-ms.openlocfilehash: f657a54d5e18077e6174a0c3bd785b2adf81d226
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8cd72c9b8e20e65fcc1e795ed0f06af0b49e21a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797712"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262455"
 ---
 # <a name="messagequeueduplicatedpipeleak"></a>MessageQueueDuplicatedPipeLeak
-Id.: 166  
+
+ID.: 166  
   
- Gravedad Error  
+ Gravedad: error  
   
- Categoría SMSvcHost  
+ Categoría: SMSvcHost  
   
-## <a name="description"></a>DESCRIPCIÓN  
+## <a name="description"></a>Descripción  
+
  Este evento indica que se produjo un error al enviar un nombre de canalización duplicado. Este identificador se perdió en el proceso. El evento enumera el origen, la excepción, el nombre del proceso y el id. de proceso.  
   
 ## <a name="see-also"></a>Vea también

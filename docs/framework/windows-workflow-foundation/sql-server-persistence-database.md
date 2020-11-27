@@ -2,14 +2,15 @@
 title: Base de datos de persistencia de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-ms.openlocfilehash: 059fc3695a4da15c82cacdd5360112ca58a7b297
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 536ab2c90dc67e30a8fb7c83f9da5b55d1aab9d1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540250"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261740"
 ---
 # <a name="sql-server-persistence-database"></a>Base de datos de persistencia de SQL Server
+
 En esta sección se proporcionan detalles sobre las vistas de base de datos públicas admitidas por el almacén de instancias de flujo de trabajo de SQL y se muestra cómo deserializar propiedades de datos de instancias primitivas y cómo consultar las instancias no persistentes.  
   
 ## <a name="in-this-section"></a>En esta sección  

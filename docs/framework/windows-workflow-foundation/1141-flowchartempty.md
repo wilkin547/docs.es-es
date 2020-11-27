@@ -2,14 +2,15 @@
 title: 1141 - FlowchartEmpty
 ms.date: 03/30/2017
 ms.assetid: a5361db9-c3b5-40fc-96d5-4879953c4cd9
-ms.openlocfilehash: fea80158e8f61dd62e9eb9376fa4e5214ade03df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05be3b85015546de8394c9a527eb7282c236465
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261766"
 ---
 # <a name="1141---flowchartempty"></a>1141 - FlowchartEmpty
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "62009934"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Indica que se ejecutó un diagrama de flujo sin nodos.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Flowchart '%1' se ejecutó sin nodos.  
   
 ## <a name="details"></a>Detalles  

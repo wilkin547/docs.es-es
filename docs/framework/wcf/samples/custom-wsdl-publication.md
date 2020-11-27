@@ -2,14 +2,15 @@
 title: Publicación de WSDL personalizada
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83377e1c72ef5774c909729abd1312cce5364ab0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262871"
 ---
 # <a name="custom-wsdl-publication"></a>Publicación de WSDL personalizada
+
 En este ejemplo se muestra cómo:  
   
 - Implementar <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> en un atributo <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizado para exportar las propiedades de atributo como anotaciones de WSDL.  
@@ -23,7 +24,8 @@ En este ejemplo se muestra cómo:
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
-## <a name="service"></a>web de Office  
+## <a name="service"></a>Servicio  
+
  El servicio en este ejemplo se marca con dos atributos personalizados. El primero, `WsdlDocumentationAttribute`, acepta una cadena en el constructor y se aplica para proporcionar una interfaz u operación de contrato con una cadena que describe su uso. El segundo, `WsdlParamOrReturnDocumentationAttribute`, se puede aplicar para devolver valores o parámetros a fin de describir esos valores en la operación. El ejemplo siguiente muestra un contrato de servicios, `ICalculator`, descrito utilizando estos atributos.  
   
 ```csharp  
@@ -170,9 +172,11 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Cliente de Svcutil  
+
  Este ejemplo no utiliza Svcutil.exe. El contrato se proporciona en el archivo generatedClient.cs para que después de que el ejemplo muestre la importación de WSDL y la generación de código personalizadas, se pueda invocar el servicio. Para utilizar al importador del WSDL personalizado siguiente para obtener este ejemplo, puede ejecutar Svcutil.exe y especificar la opción `/svcutilConfig`, dando la ruta de acceso al archivo de configuración del cliente utilizado en este ejemplo, que hace referencia a la biblioteca `WsdlDocumentation.dll`. Para cargar `WsdlDocumentationImporter`, sin embargo, Svuctil.exe debe poder buscar y cargar la biblioteca `WsdlDocumentation.dll`, que significa que se registra en la memoria caché global de ensamblados, en la ruta de acceso o está en el mismo directorio que Svcutil.exe. Para obtener un ejemplo básico como este, lo más fácil es copiar Svcutil.exe y el archivo de configuración del cliente en el mismo directorio que `WsdlDocumentation.dll` y ejecutarlo desde allí.  
   
 ## <a name="the-custom-wsdl-importer"></a>Importador de WSDL personalizado  
+
  El objeto <xref:System.ServiceModel.Description.IWsdlImportExtension> personalizado `WsdlDocumentationImporter` también implementa <xref:System.ServiceModel.Description.IContractBehavior> y <xref:System.ServiceModel.Description.IOperationBehavior> para que se agreguen al ServiceEndpoints importado y <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> y <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> para que se invoquen con objeto de modificar la generación de código cuando se cree el contrato o el código de operación.  
   
  Primero, en el método <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>, el ejemplo determina si la anotación de WSDL está en el contrato o nivel de la operación, y se agrega como un comportamiento en el ámbito adecuado, pasando el texto de la anotación importado a su constructor.  
@@ -219,6 +223,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 ```  
   
 ## <a name="the-client-application"></a>Aplicación cliente  
+
  La aplicación cliente carga al importador de WSDL personalizado especificándolo en el archivo de configuración de la aplicación.  
   
 ```xml  

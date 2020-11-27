@@ -1,15 +1,16 @@
 ---
-title: Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
+title: Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 763b617a99c98383b5b873e4fb8646884f9b5253
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921227"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261883"
 ---
-# <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro del servicio de flujo de trabajo (WFServicesReg.exe)
+# <a name="workflow-service-registration-tool-wfservicesregexe"></a>Herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe)
+
 El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramienta independiente que puede utilizarse para agregar, quitar o reparar los elementos de configuración de los servicios de Windows Workflow Foundation (WF).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -18,7 +19,8 @@ El registro de servicio de flujo de trabajo (WFServicesReg.exe) es una herramien
 WFServicesReg.exe [-c | -r | -v | -m | -i]  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
+
  La herramienta se puede encontrar en la ubicación de instalación de .NET Framework 3,5, específicamente,%windir%\Microsoft.NET\Framework\v3.5 o en%windir%\Microsoft.NET\Framework64\v3.5 en máquinas de 64 bits.  
   
  Las tablas siguientes describen las opciones que pueden utilizarse con la herramienta de registro de servicio de flujo de trabajo (WFServicesReg.exe).  
@@ -32,6 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 |`/i`|Minimiza la ventana cuando se ejecuta la aplicación.|  
   
 ## <a name="registration"></a>Registro  
+
  La herramienta inspecciona el archivo Web.config y registra lo siguiente:  
   
 - Ensamblados de referencia de .NET Framework 3,5.  
@@ -70,6 +73,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Escenarios de uso  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Instalar IIS una vez instalado .NET Framework 3.5  
+
  En un equipo con Windows Server 2003, .NET Framework 3,5 se instala antes de la instalación de IIS. Debido a la falta de disponibilidad de la metabase de IIS, la instalación de .NET Framework 3,5 se realiza correctamente sin instalar las asignaciones de scripts. xoml y. rules.  
   
  Una vez instalado IIS, puede utilizar la herramienta WFServicesReg.exe con el modificador `/c` para instalar estas asignaciones de secuencias de comandos concretas.  
@@ -77,12 +81,15 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ### <a name="repairing-the-scriptmaps"></a>Reparar asignaciones de secuencias de comandos  
   
 #### <a name="scriptmap-deleted-under-web-sites-node"></a>Asignación de secuencias de comandos eliminada en el nodo de sitios web  
+
  En un equipo con Windows Server 2003,. xoml o. rules se eliminan accidentalmente del nodo sitios Web. Esto puede repararse ejecutando la herramienta WFServicesReg.exe con el modificador `/c`.  
   
 #### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Asignación de secuencias de comandos eliminada en un sitio web determinado  
+
  En un equipo con Windows Server 2003,. xoml o. rules se eliminan accidentalmente de un sitio Web determinado (por ejemplo, el sitio web predeterminado) en lugar de hacerlo del nodo sitios Web.  
   
- Para reparar los controladores eliminados de un sitio Web determinado, debe ejecutar "WFServicesReg. exe/r" para quitar los controladores de todos los sitios web y, a continuación, ejecutar "WFServicesReg. exe/c" para crear los controladores adecuados para todos los sitios Web.  
+ Para reparar los controladores eliminados de un sitio Web determinado, debe ejecutar "WFServicesReg.exe/r" para quitar los controladores de todos los sitios web y, a continuación, ejecutar "WFServicesReg.exe/c" para crear los controladores adecuados para todos los sitios Web.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>Configurar los controladores después de cambiar al modo de IIS  
- Cuando IIS está en modo de configuración compartida y .NET Framework está instalado 3,5, la metabase de IIS se configura en una ubicación compartida. Si pasa IIS al modo de configuración no compartido, la metabase local no contendrá los controladores necesarios. Para configurar la metabase local correctamente, puede importar la metabase compartida a local o ejecutar "WFServicesReg. exe/c", que configura la metabase local.
+
+ Cuando IIS está en modo de configuración compartida y .NET Framework está instalado 3,5, la metabase de IIS se configura en una ubicación compartida. Si pasa IIS al modo de configuración no compartido, la metabase local no contendrá los controladores necesarios. Para configurar la metabase local correctamente, puede importar la metabase compartida a local o ejecutar "WFServicesReg.exe/c", que configura la metabase local.

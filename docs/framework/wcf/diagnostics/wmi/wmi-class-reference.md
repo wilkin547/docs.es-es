@@ -2,20 +2,23 @@
 title: Referencia de clases WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 226e4dedecd152f3a3d4143280529c7823339932
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795872"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262260"
 ---
 # <a name="wmi-class-reference"></a>Referencia de clases WMI
+
 En esta sección se enumeran todas las clases WMI expuestas por el proveedor WMI de Windows Communication Foundation (WCF).  
   
 ## <a name="accessing-wmi-instances"></a>Tener acceso a las instancias de WMI  
+
  No se puede crear directamente una instancia de todas las clases enumeradas en la Referencia de objeto WMI, excepto para Service, AppDomain, Contrat, ServiceAppDomain, ServiceToEndpointAssociation y Endpoint. Para tener acceso a otras instancias, puede tener acceso a las propiedades de las clases de nivel superior mencionadas anteriormente. Por ejemplo, puede tener acceso a la instancia de TransportBindingElement desde la instancia del punto de conexión-> Binding-> BindingElements.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [ActivityTransfer](activitytransfer.md)  
   
  [AppDomainInfo](appdomaininfo.md)  
@@ -46,7 +49,7 @@ En esta sección se enumeran todas las clases WMI expuestas por el proveedor WMI
   
  [ConnectionOrientedTransportBindingElement](connectionorientedtransportbindingelement.md)  
   
- [Contrato](contract.md)  
+ [DataContract](contract.md)  
   
  [CustomBindingElement](custombindingelement.md)  
   

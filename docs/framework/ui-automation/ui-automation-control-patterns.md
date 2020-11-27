@@ -8,20 +8,22 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: eb2bf13a22af1555e68b415eec52bd259baa2df3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 850affa26a821ddd8da62c8fe910768ff061c1c1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87163834"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261207"
 ---
 # <a name="ui-automation-control-patterns"></a>Patrones de control de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  En esta sección se proporciona información detallada sobre cómo usar los [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] patrones de control.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Implementar el patrón de control Dock de UI Automation](implementing-the-ui-automation-dock-control-pattern.md)  
  [Implementar el patrón de control ExpandCollapse de UI Automation](implementing-the-ui-automation-expandcollapse-control-pattern.md)  
  [Implementar el patrón de control Grid de UI Automation](implementing-the-ui-automation-grid-control-pattern.md)  
@@ -39,4 +41,4 @@ ms.locfileid: "87163834"
  [Implementación del patrón de control Transform de UI Automation](implementing-the-ui-automation-transform-control-pattern.md)  
  [Implementar el patrón de control Value de UI Automation](implementing-the-ui-automation-value-control-pattern.md)  
  [Implementar el patrón de control Window de UI Automation](implementing-the-ui-automation-window-control-pattern.md)  
- [Temas "Cómo..."](ui-automation-control-patterns-how-to-topics.md)
+ [Temas de procedimientos](ui-automation-control-patterns-how-to-topics.md)

@@ -2,17 +2,19 @@
 title: Servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-ms.openlocfilehash: c7a5c6245702497fcd75341b3ff7ba08dc190fa5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ff73055d41531ef8188681d0b95748f62fde8011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263248"
 ---
 # <a name="workflow-services"></a>Servicios de flujo de trabajo
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] le permite describir totalmente un servicio basado en flujo de trabajo mediante declaración en XAML. Puede definir un flujo de trabajo que implemente el servicio y describir los puntos de conexión que expone el servicio, todos completamente en XAML. Los temas de esta sección describen con detalle el modelo de programación que permite escribir servicios mediante declaración.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general sobre los servicios de flujo de trabajo](workflow-services-overview.md)  
  Describe los componentes implicados en la creación y hospedaje de un servicio de flujo de trabajo.  
   
@@ -25,7 +27,7 @@ ms.locfileid: "84600132"
  [Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo](how-to-access-a-service-from-a-workflow-application.md)  
  Describe cómo llamar a un servicio desde una aplicación de flujo de trabajo.  
   
- [Relación](correlation.md)  
+ [Correlación](correlation.md)  
  Describe cómo la correlación asigna los mensajes entre sí y a las instancias.  
   
  [Procesar un mensaje sin orden](out-of-order-message-processing.md)  

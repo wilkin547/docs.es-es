@@ -8,17 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 5c192d3bda65a7364345df4310dccd96cbe04056
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1cb63569c1789b1577588caf63fb0a0259e530ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247369"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262169"
 ---
 # <a name="data-member-order"></a>Orden de los miembros de datos
+
 En algunas aplicaciones, es útil conocer el orden en el que se envían los datos de los distintos miembros de datos o en el que se espera recibir (como el orden en el que los datos aparecen en el XML serializado). A veces puede ser necesario cambiar este orden. En este tema se explican las reglas de la clasificación.  
   
 ## <a name="basic-rules"></a>Reglas básicas  
+
  Las reglas básicas sobre el orden de los datos incluyen:  
   
 - Si un tipo de contrato de datos forma parte de una jerarquía de herencia, los miembros de datos de sus tipos base siempre aparecerán en primer lugar.  
@@ -30,6 +32,7 @@ En algunas aplicaciones, es útil conocer el orden en el que se envían los dato
  El orden alfabético se establece llamando al método <xref:System.String.CompareOrdinal%2A>.  
   
 ## <a name="examples"></a>Ejemplos  
+
  Observe el código siguiente.  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]

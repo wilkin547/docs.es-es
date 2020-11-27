@@ -7,14 +7,15 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: b63ce62cd39ef7961db1c0ac86c8cbd6ca871dbd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261896"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
+
 Windows Communication Foundation (WCF) es un marco para la creación de aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un punto de conexión de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:
 
 - Un servicio seguro para procesar transacciones comerciales.
@@ -65,13 +66,13 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Mensajes confiables y en cola**
 
-     WCF admite el intercambio de mensajes confiable mediante sesiones confiables implementadas a través de la mensajería de confianza de WS y el uso de MSMQ. Para obtener más información acerca de la compatibilidad con mensajería confiable y en cola en WCF, vea [colas y sesiones confiables](./feature-details/queues-and-reliable-sessions.md).
+     WCF admite el intercambio de mensajes confiable usando sesiones confiables implementadas en WS-Reliable mensajería y usando MSMQ. Para obtener más información acerca de la compatibilidad con mensajería confiable y en cola en WCF, vea [colas y sesiones confiables](./feature-details/queues-and-reliable-sessions.md).
 
 - **Mensajes duraderos**
 
      Un mensaje duradero es aquel que nunca se pierde debido a una interrupción de la comunicación. Los mensajes que forman parte de un patrón de mensajes duraderos siempre se guardan en una base de datos. Si se produce una interrupción, la base de datos le permite reanudar el intercambio de mensajes cuando se restablezca la conexión. También puede crear un mensaje duradero mediante el Windows Workflow Foundation (WF). Para obtener más información, vea [Workflow Services](./feature-details/workflow-services.md).
 
-- **Transactions**
+- **Transacciones**
 
      WCF también admite transacciones que usan uno de los tres modelos de transacción: WS-AtomicTransactions, las API del <xref:System.Transactions> espacio de nombres y Microsoft Coordinador de transacciones distribuidas. Para obtener más información acerca de la compatibilidad con transacciones en WCF, vea [transacciones](./feature-details/transactions-in-wcf.md).
 
@@ -101,7 +102,7 @@ Las características de hospedaje del servidor de aplicaciones AppFabric de Wind
 - [Conceptos básicos de Windows Communication Foundation](fundamental-concepts.md)
 - [Arquitectura de Windows Communication Foundation](architecture.md)
 - [Instrucciones y procedimientos recomendados](guidelines-and-best-practices.md)
-- [Tutorial de Introducción](getting-started-tutorial.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
 - [Guía de la documentación](guide-to-the-documentation.md)
 - [Programación básica de WCF](basic-wcf-programming.md)
 - [Ejemplos de Windows Communication Foundation](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

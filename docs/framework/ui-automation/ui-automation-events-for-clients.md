@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: fd27443fba3722c6cd2d00d6c2ca9cfc9c151b6e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903745"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261116"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventos de UI Automation para clientes
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -29,7 +30,9 @@ ms.locfileid: "84903745"
  Para obtener una vista más amplia de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los eventos, vea [UI Automation Events Overview](ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>
+
 ## <a name="subscribing-to-events"></a>Suscripción a eventos  
+
  Las aplicaciones cliente se suscriben a eventos de un tipo determinado mediante el registro de un controlador de eventos, con uno de los métodos siguientes.  
   
 |Método|Tipo de evento|Tipo de argumentos de evento|Tipo delegado|  
@@ -58,7 +61,7 @@ ms.locfileid: "84903745"
   
  Para ver un ejemplo de código, vea [suscribirse a eventos de UI Automation](subscribe-to-ui-automation-events.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Suscribirse a eventos de UI Automation](subscribe-to-ui-automation-events.md)
 - [Información general sobre eventos de UI Automation](ui-automation-events-overview.md)

@@ -2,17 +2,18 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0409277821a7cca3f97fcec1bb383aba9583a1f6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923414"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262221"
 ---
-# <a name="wsattracerecord"></a>WSAT_TraceRecord
+# <a name="wsat_tracerecord"></a>WSAT_TraceRecord
+
 WSAT_TraceRecord  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
@@ -24,26 +25,31 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase WSAT_TraceRecord no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase WSAT_TraceRecord tiene las propiedades siguientes:  
   
-### <a name="activityid"></a>ActivityID  
+### <a name="activityid"></a>Identificador de actividad  
+
  Tipo de datos: objeto  
-Tipo de acceso: De sólo lectura  
+Tipo de acceso: solo lectura  
   
  El id. de actividad del registro de seguimiento.  
   
-### <a name="eventid"></a>Id. de evento  
+### <a name="eventid"></a>EventId  
+
  Tipo de datos: sint32  
-Tipo de acceso: De sólo lectura  
+Tipo de acceso: solo lectura  
   
  El id. de evento del registro de seguimiento.  
   
 ### <a name="tracerecord"></a>TraceRecord  
- Tipo de datos: cadena  
-Tipo de acceso: De sólo lectura  
+
+ Tipo de datos: cadena  
+Tipo de acceso: solo lectura  
   
  Registro de seguimiento  
   

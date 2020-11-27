@@ -2,17 +2,19 @@
 title: Extensibilidad de la seguridad
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-ms.openlocfilehash: f3fc9a482271b904ccf56f1a911d3a44172bb40e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 967fde21f599835a06af4c502f3b8a4c8555b77c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602393"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262637"
 ---
 # <a name="security-extensibility"></a>Extensibilidad de la seguridad
+
 Esta sección contiene ejemplos que muestran la seguridad personalizada en Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Proveedor de token emitido duradero](durable-issued-token-provider.md)  
  Muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: a8e3306612e016568ad7cfd5138ab538af771a17
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1486290241fdb40d415278c4a01738aa711e2182
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585836"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261480"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Información general sobre las transacciones de Windows Communication Foundation
+
 Las transacciones proporcionan una manera de agrupar un conjunto de acciones u operaciones en una unidad indivisible única de ejecución. Una transacción es una colección de operaciones con las propiedades siguientes:  
   
 - Atomicidad. Esto garantiza que todas las actualizaciones completadas en una transacción concreta se confirmadas y sean duraderas o que sean anuladas y reviertan a su estado anterior.  
@@ -40,7 +41,7 @@ Las transacciones proporcionan una manera de agrupar un conjunto de acciones u o
   
  Para obtener más información, vea [atributos de transacción de ServiceModel](servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Atributos de transacción de ServiceModel](servicemodel-transaction-attributes.md)
 - [Habilitar el flujo de transacciones](enabling-transaction-flow.md)

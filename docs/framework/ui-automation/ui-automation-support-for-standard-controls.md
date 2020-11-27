@@ -6,25 +6,30 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0a5a0b61a6492d9efb62799fa610859b247cf26e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166126"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261077"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Compatibilidad de UI Automation con controles estándar
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
  Este tema contiene información sobre [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] la compatibilidad con los controles estándar de las aplicaciones desarrolladas para los [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] marcos de trabajo, Win32 y Windows Forms.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
+
 ## <a name="windows-presentation-foundation-controls"></a>Controles de Windows Presentation Foundation  
+
  Todos los elementos de control [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] que ofrecen información o compatibilidad para la interacción del usuario tienen compatibilidad nativa completa con [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Otros elementos, como paneles, no son visibles para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Win32_Controls"></a>
+
 ## <a name="win32-controls"></a>Controles de Win32  
+
  La mayoría de los controles Win32 se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
  Solo se proporciona compatibilidad completa con los controles de la versión 6 de *ComCtrl32.dll*.  
@@ -45,9 +50,9 @@ ms.locfileid: "87166126"
 |Editar|Documento|  
 |Editar|Editar|  
 |SysLink|Hyperlink|  
-|estática|Texto|  
-|estática|Imagen|  
-|SysIPAddress32|Personalizada|  
+|Estático|Texto|  
+|Estático|Imagen|  
+|SysIPAddress32|Personalizados|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|List|  
@@ -86,15 +91,17 @@ ms.locfileid: "87166126"
 |----------------|------------------|  
 |SysAnimate32|Imagen|  
 |SysPager|Spinner|  
-|SysDateTimePick32|Personalizada|  
+|SysDateTimePick32|Personalizados|  
 |SysMonthCal32|Calendario|  
 |MS_WINNOTE|Información sobre herramientas|  
 |VBBubble|Información sobre herramientas|  
 |ScrollBar (cuando se usa como control independiente)|Control deslizante|  
-|SuperGrid|Personalizada|  
+|SuperGrid|Personalizados|  
   
 <a name="Windows_Forms_Controls"></a>
+
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
+
  Windows Forms controles se exponen a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] a través de los proveedores del lado cliente en UIAutomationClientsideProviders.dll. Este ensamblado se registra automáticamente para su uso con aplicaciones de cliente de automatización de la interfaz de usuario.  
   
  Normalmente, se admiten Windows Forms controles que son contenedores administrados para controles comunes Win32 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Se admiten los siguientes controles.  
@@ -129,7 +136,7 @@ ms.locfileid: "87166126"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|Timer|  
+|Temporizador|  
 |Barra de herramientas|  
 |Información sobre herramientas|  
 |Trackbar|  

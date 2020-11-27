@@ -2,17 +2,19 @@
 title: Contratos de servicio
 ms.date: 03/30/2017
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-ms.openlocfilehash: f4487ac693b93a27b11fb69b1c663285ebcdc107
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b2acdd10c5f5e7280ef8caef537112c083ce52d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262559"
 ---
 # <a name="service-contracts"></a>Contratos de servicio
+
 Esta sección contiene ejemplos que muestran los contratos de servicio en Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Dúplex](duplex.md)  
  Muestra cómo definir e implementar un contrato dúplex.  
   
@@ -22,7 +24,7 @@ Esta sección contiene ejemplos que muestran los contratos de servicio en Window
  [Unidireccional](one-way.md)  
  Muestra un contacto del servicio con operaciones de servicio unidireccionales.  
   
- [Sesión](session.md)  
+ [De sesión](session.md)  
  Muestra cómo implementar un contrato que requiere una sesión.  
   
  [Stream](stream.md)  

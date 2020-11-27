@@ -5,17 +5,19 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 0e743cd14d2a601f52baaf6769e96503dcd3701d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29dc73c642642acb778a1f56e79185cbcec9ad3e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600703"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261493"
 ---
 # <a name="transactions-in-wcf"></a>Transacciones en WCF
+
 La característica de transacciones de Windows Communication Foundation (WCF) permite que varios componentes participen simultáneamente en una operación de datos. Los temas de esta sección examinan en detalle esta característica.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general sobre las transacciones de Windows Communication Foundation](transactions-overview.md)  
  Información general de la característica de transacciones proporcionada por WCF.  
   
@@ -31,6 +33,7 @@ La característica de transacciones de Windows Communication Foundation (WCF) pe
 ## <a name="reference"></a>Referencia  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Programación básica de WCF](../basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Vea también
