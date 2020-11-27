@@ -384,6 +384,8 @@ items:
             href: ../core/diagnostics/index.md
           - name: Depuradores administrados
             href: ../core/diagnostics/managed-debuggers.md
+          - name: Volcados
+            href: ../core/diagnostics/dumps.md
           - name: Depuración de volcados de memoria de Linux
             href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
