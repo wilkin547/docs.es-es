@@ -12,13 +12,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - COM apartment states
 ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
-ms.openlocfilehash: c6f7b6a5e450d4167946d22b2ada268ea2b0135f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: db55e3ac2d6862d008013abef0f09f67213d9faa
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051832"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272753"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>MDA de invalidApartmentStateChange
+
 El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange` se activa por cualquiera de estos dos problemas:  
   
 - Se realiza un intento de cambiar el estado de contenedor COM de un subproceso que ya se ha inicializado por COM a un estado de contenedor diferente.  
@@ -37,15 +39,18 @@ El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange
   
 - El método `CoUninitialize` (o el método `CoInitializeEx`) con un modelo de simultaneidad diferente se llama en el subproceso.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Establecer el estado de contenedor del subproceso antes de que empiece a ejecutarse, o aplicar el atributo <xref:System.STAThreadAttribute> o <xref:System.MTAThreadAttribute> al método principal de la aplicación.  
   
  Para la segunda causa, idealmente el código que llama al método `CoUninitialize` debe modificarse para retrasar la llamada hasta que el subproceso esté a punto de terminar y no haya ningún RCW, y sus componentes COM subyacentes sigan en uso en el subproceso. Pero si no es posible modificar el código que llama al método `CoUninitialize`, entonces no deben usarse contenedores RCW desde los subprocesos sin inicializar de esta manera.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  El estado de contenedor COM del subproceso actual y el estado que el código intentaba aplicar.  
   
 ## <a name="configuration"></a>Configuración  
@@ -59,6 +64,7 @@ El Asistente para la depuración administrada (MDS) `invalidApartmentStateChange
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo de código siguiente se muestra una situación que puede activar este MDA.  
   
 ```csharp

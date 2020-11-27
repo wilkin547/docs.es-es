@@ -2,17 +2,18 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 1d367d0c5d14e6e75539dd2b20cdffcf2b34963d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61eae75de04f75b6ad6e78d16569595732b3d28f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962791"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273313"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
+
 SecurityBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class SecurityBindingElement : BindingElement  
@@ -27,50 +28,58 @@ class SecurityBindingElement : BindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase SecurityBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase SecurityBindingElement posee las siguientes propiedades:  
   
 ### <a name="defaultalgorithmsuite"></a>DefaultAlgorithmSuite  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Especifica los algoritmos que se van a utilizar con la clase.  
   
 ### <a name="includetimestamp"></a>IncludeTimestamp  
+
  Tipo de datos: booleano  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Valor booleano que especifica si cada mensaje contiene una marca de tiempo.  
   
 ### <a name="keyentropymode"></a>KeyEntropyMode  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Origen de la entropía utilizada para crear claves.  
   
 ### <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings  
+
  Tipo de datos: LocalServiceSecuritySettings  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Las propiedades de seguridad específicas del enlace del servicio local.  
   
 ### <a name="messagesecurityversion"></a>MessageSecurityVersion  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Versión utilizada para la seguridad del mensaje.  
   
 ### <a name="securityheaderlayout"></a>SecurityHeaderLayout  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Orden de los elementos en el encabezado de seguridad de este enlace.  
   

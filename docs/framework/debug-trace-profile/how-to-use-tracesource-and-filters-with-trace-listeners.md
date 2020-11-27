@@ -15,13 +15,15 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 432c866f7c3ca1fd59f8f3d36acd61740b6584c0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 94af872e0417941f17c043710688c7b723cd4004
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051264"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272805"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Procedimiento para usar TraceSource y filtros con agentes de escucha de seguimiento
+
 Una de las nuevas características de la versión 2.0 de .NET Framework es un sistema de seguimiento mejorado. La idea básica no se ha modificado: se envían mensajes de seguimiento a través de conmutadores a agentes de escucha, que notifican los datos a un medio de salida asociado. Una diferencia principal de la versión 2.0 es que los seguimientos se pueden iniciar a través de instancias de la clase <xref:System.Diagnostics.TraceSource>. <xref:System.Diagnostics.TraceSource> está pensada para funcionar como un sistema de seguimiento mejorado y se puede usar en lugar de los métodos estáticos de las clases anteriores de seguimiento <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug>. Las clases <xref:System.Diagnostics.Trace> y <xref:System.Diagnostics.Debug> conocidas siguen existiendo, pero la práctica recomendada es usar la clase <xref:System.Diagnostics.TraceSource> para realizar el seguimiento.  
   
  En este tema se describe el uso de <xref:System.Diagnostics.TraceSource> junto con un archivo de configuración de aplicación.  Es posible, aunque no aconsejable, realizar el seguimiento mediante <xref:System.Diagnostics.TraceSource> sin el uso de un archivo de configuración. Para obtener información sobre el seguimiento sin un archivo de configuración, vea [Cómo: Crear e inicializar orígenes de seguimiento](how-to-create-and-initialize-trace-sources.md).  

@@ -12,28 +12,35 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 8072d35a45cb1e0590aa5533210d0e0f86913164
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051745"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272623"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>MDA de invalidFunctionPointerInDelegate
+
 El asistente para la depuración administrada (MDA, por sus siglas en inglés) `invalidFunctionPointerInDelegate` se activa cuando un puntero de función no válido se pasa para construir un delegado sobre un puntero de función nativo.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Infracciones de acceso o deterioro inesperado de la memoria al usar un delegado sobre un puntero de función.  
   
 ## <a name="cause"></a>Causa  
+
  El puntero de función que se especificó no es válido.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Especifique un puntero de función válido.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  El puntero de función no válido.  
   
 ## <a name="configuration"></a>Configuración  

@@ -4,21 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: fa9d5c40c2ae813493b3643048fa7eaba00c431d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795749"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273235"
 ---
 # <a name="extending-dispatchers"></a>Extensión de distribuidores
+
 Los distribuidores son los responsables de extraer los mensajes entrantes de los canales subyacentes, de modo que los traducen en código de aplicación en las invocaciones de método y devuelven los resultados al autor de la llamada. Las extensiones de distribuidores le permiten modificar este procesamiento.  Puede implementar inspectores de parámetro o de mensaje que inspeccionen o modifiquen el contenido de los mensajes o los parámetros.  Puede cambiar la manera en la que se enrutan los mensajes a las operaciones o proporcionar otras funcionalidades.
 
-En este tema se describe cómo utilizar <xref:System.ServiceModel.Dispatcher.DispatchRuntime> las <xref:System.ServiceModel.Dispatcher.DispatchOperation> clases y en una aplicación de servicio de Windows Communication Foundation (WCF) para modificar el comportamiento de ejecución predeterminado de un distribuidor o para interceptar o modificar mensajes, parámetros o valores devueltos. valores anteriores o posteriores a enviarlos o recuperarlos de la capa del canal. Para obtener más información sobre el procesamiento de mensajes en tiempo de ejecución de cliente equivalente, consulte [Extending](extending-clients.md)clients. Para comprender el rol que <xref:System.ServiceModel.IExtensibleObject%601> los tipos desempeñan en el acceso al estado compartido entre varios objetos de personalización en tiempo de ejecución, vea [objetos extensibles](extensible-objects.md).
+En este tema se describe cómo utilizar <xref:System.ServiceModel.Dispatcher.DispatchRuntime> las <xref:System.ServiceModel.Dispatcher.DispatchOperation> clases y en una aplicación de servicio de Windows Communication Foundation (WCF) para modificar el comportamiento de ejecución predeterminado de un distribuidor o para interceptar o modificar mensajes, parámetros o valores devueltos antes o después de enviarlos o recuperarlos de la capa del canal. Para obtener más información sobre el procesamiento de mensajes en tiempo de ejecución de cliente equivalente, consulte [Extending](extending-clients.md)clients. Para comprender el rol que los <xref:System.ServiceModel.IExtensibleObject%601> tipos desempeñan en el acceso al estado compartido entre varios objetos de personalización en tiempo de ejecución, vea [objetos extensibles](extensible-objects.md).
 
 ## <a name="dispatchers"></a>Distribuidores
 
-El nivel del modelo de servicios realiza la conversión entre el modelo de programación del programador y el intercambio de mensajes subyacentes, comúnmente denominado el nivel de canal. En WCF, los distribuidores de canal y punto de<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> conexión <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>(y, respectivamente) son los componentes de servicio responsables de aceptar nuevos canales, recibir mensajes, operaciones de envío e invocación de operaciones y procesamiento de respuestas. Los objetos de distribuidor son objetos de receptor, pero las implementaciones de contratos de devolución de llamadas en servicios dúplex también exponen sus objetos de distribuidor para la inspección, modificación o extensión.
+El nivel del modelo de servicios realiza la conversión entre el modelo de programación del programador y el intercambio de mensajes subyacentes, comúnmente denominado el nivel de canal. En WCF, los distribuidores de canal y punto de conexión ( <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> y <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> , respectivamente) son los componentes de servicio responsables de aceptar nuevos canales, recibir mensajes, operaciones de envío e invocación de operaciones y procesamiento de respuestas. Los objetos de distribuidor son objetos de receptor, pero las implementaciones de contratos de devolución de llamadas en servicios dúplex también exponen sus objetos de distribuidor para la inspección, modificación o extensión.
 
 El distribuidor de canales (y <xref:System.ServiceModel.Channels.IChannelListener> complementario) extrae los mensajes del canal del subordinado y pasa los mensajes a sus distribuidores de extremos respectivos. Cada distribuidor de extremos tiene un <xref:System.ServiceModel.Dispatcher.DispatchRuntime> que enruta los mensajes a la <xref:System.ServiceModel.Dispatcher.DispatchOperation> adecuada, que es responsable de llamar al método que implementa la operación. Durante el proceso, se invocan varias clases de extensiones opcionales y obligatorias. En este tema se explica cómo encajan estas piezas, y cómo podría modificar las propiedades e introducir su propio código para extender la funcionalidad básica.
 
@@ -26,7 +27,7 @@ Las propiedades del distribuidor y los objetos de personalización modificados s
 
 El siguiente gráfico proporciona una vista de alto nivel de los elementos arquitectónicos de un servicio.
 
-![Arquitectura en tiempo de ejecución de envío](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![La arquitectura para este tiempo de ejecución de envío.](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>Distribuidores de canal
 
@@ -50,7 +51,7 @@ Hay varias razones para extender el distribuidor:
 
 - Transformaciones personalizadas del mensaje. Los usuarios pueden aplicar ciertas transformaciones al mensaje en el runtime (por ejemplo, para el control de versiones). Esto también se puede lograr, de nuevo, con las interfaces del interceptor de mensajes.
 
-- Modelo de datos personalizado. Los usuarios pueden tener un modelo de serialización de datos distinto de los que se admiten de forma <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>predeterminada <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>en WCF (es decir, los mensajes, y sin formato). Esto se puede hacer implementando las interfaces del formateador de mensajes. Para obtener un ejemplo, vea [formateador de operaciones y selector de operaciones](../samples/operation-formatter-and-operation-selector.md).
+- Modelo de datos personalizado. Los usuarios pueden tener un modelo de serialización de datos distinto de los que se admiten de forma predeterminada en WCF (es decir, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> los mensajes, y sin formato). Esto se puede hacer implementando las interfaces del formateador de mensajes. Para obtener un ejemplo, vea [formateador de operaciones y selector de operaciones](../samples/operation-formatter-and-operation-selector.md).
 
 - Validación personalizada de parámetros. Los usuarios pueden exigir que los parámetros con tipo sean válidos (por oposición a XML). Esto puede hacerse mediante las interfaces del inspector de parámetros.
 
@@ -67,7 +68,7 @@ Hay varias razones para extender el distribuidor:
   > [!CAUTION]
   > Dado que la modificación de las propiedades de seguridad tiene la posibilidad de poner en peligro la seguridad de las aplicaciones WCF, se recomienda encarecidamente realizar modificaciones relacionadas con la seguridad con cuidado y realizar pruebas exhaustivas antes de la implementación.
 
-- Validadores personalizados de WCF en tiempo de ejecución. Puede instalar validadores personalizados que examinen servicios, contratos y enlaces para aplicar directivas de nivel empresarial con respecto a las aplicaciones WCF. (Por ejemplo, consulte [cómo: Bloquee los puntos de conexión en](how-to-lock-down-endpoints-in-the-enterprise.md)la empresa).
+- Validadores personalizados de WCF en tiempo de ejecución. Puede instalar validadores personalizados que examinen servicios, contratos y enlaces para aplicar directivas de nivel empresarial con respecto a las aplicaciones WCF. (Por ejemplo, consulte [Cómo: bloquear puntos de conexión en la empresa](how-to-lock-down-endpoints-in-the-enterprise.md)).
 
 ### <a name="using-the-dispatchruntime-class"></a>Uso de la clase DispatchRuntime
 
@@ -137,6 +138,6 @@ Las siguientes propiedades controlan la ejecución en tiempo de ejecución en el
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Cómo: Inspeccionar y modificar mensajes en el servicio](how-to-inspect-and-modify-messages-on-the-service.md)
-- [Cómo: Inspeccionar o modificar parámetros](how-to-inspect-or-modify-parameters.md)
-- [Cómo: Bloquear puntos de conexión en la empresa](how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Procedimiento para inspeccionar y modificar mensajes en el servicio](how-to-inspect-and-modify-messages-on-the-service.md)
+- [Procedimiento para inspeccionar o modificar parámetros](how-to-inspect-or-modify-parameters.md)
+- [Procedimiento para bloquear puntos de conexión en la empresa](how-to-lock-down-endpoints-in-the-enterprise.md)

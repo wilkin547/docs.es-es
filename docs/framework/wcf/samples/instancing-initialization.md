@@ -2,25 +2,28 @@
 title: Creación de instancias de inicialización
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 06a8dfe571b652ded236df3097b37861c03a858d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9681c091fe2a69024b000c5b93d003ec4d127a7b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596661"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273365"
 ---
 # <a name="instancing-initialization"></a>Creación de instancias de inicialización
+
 Este ejemplo extiende el ejemplo de [agrupación](pooling.md) definiendo una interfaz, `IObjectControl` , que personaliza la inicialización de un objeto mediante su activación y desactivación. El cliente invoca métodos que devuelven el objeto al grupo y que no devuelven el objeto al grupo.  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 ## <a name="extensibility-points"></a>Puntos de extensibilidad  
+
  El primer paso para crear una extensión de Windows Communication Foundation (WCF) es decidir el punto de extensibilidad que se va a usar. En WCF, el término *EndpointDispatcher* hace referencia a un componente de tiempo de ejecución responsable de convertir los mensajes entrantes en invocaciones de método en el servicio del usuario y de convertir los valores devueltos de ese método en un mensaje saliente. Un servicio WCF crea un EndpointDispatcher para cada punto de conexión.  
   
  EndpointDispatcher proporciona la extensibilidad (para todos los mensajes recibidos o enviados por el servicio) del ámbito del extremo mediante la clase <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Esta clase le permite personalizar varias propiedades que controlan el comportamiento de EndpointDispatcher. Este ejemplo se centra en la propiedad <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> que señala al objeto que proporciona las instancias de la clase de servicio.  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
+
  En WCF, EndpointDispatcher crea instancias de una clase de servicio mediante un proveedor de instancias que implementa la <xref:System.ServiceModel.Dispatcher.IInstanceProvider> interfaz. Esta interfaz tiene solo dos métodos:  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>: cuando un mensaje llega, el distribuidor llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> para crear una instancia de la clase de servicio para procesar el mensaje. La propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> determina la frecuencia de las llamadas a este método. Por ejemplo, si la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> está establecida en <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>, se crea una nueva instancia de la clase de servicio para procesar cada mensaje que llega, por lo que se llamará a <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> siempre que llegue un mensaje.  
@@ -28,6 +31,7 @@ Este ejemplo extiende el ejemplo de [agrupación](pooling.md) definiendo una int
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>: cuando la instancia del servicio termina de procesar el mensaje, EndpointDispatcher llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>. Tal y como ocurre en el método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, la frecuencia de las llamadas a este método está determinada por la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>.  
   
 ## <a name="the-object-pool"></a>Agrupación de objetos  
+
  La clase `ObjectPoolInstanceProvider` contiene la implementación para el grupo de objetos. Esta clase implementa la interfaz <xref:System.ServiceModel.Dispatcher.IInstanceProvider> para interactuar con el nivel de modelo de servicio. Cuando EndpointDispatcher llama al método <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>, en lugar de crear una nueva instancia, la implementación personalizada busca un objeto existente en un grupo en memoria. Si hay uno disponible, se devuelve. De lo contrario, `ObjectPoolInstanceProvider` comprueba si la propiedad `ActiveObjectsCount` (número de objetos devueltos desde el grupo) ha alcanzado el tamaño máximo del grupo. Si no, se crea una nueva instancia y se devuelve al autor de la llamada y, como consecuencia, se incrementa `ActiveObjectsCount`. De lo contrario, se pone en la cola una solicitud de creación de objetos para un período configurado de tiempo. Se muestra la implementación para `GetObjectFromThePool` en el código de ejemplo siguiente.  
   
 ```csharp
@@ -201,6 +205,7 @@ public class PoolService : IPoolService
 ```  
   
 ## <a name="hooking-activation-and-deactivation"></a>Activación y desactivación de enlace  
+
  El objetivo principal de la agrupación de objetos es optimizar los objetos de corta duración con una creación e inicialización relativamente cara. Por consiguiente, puede aumentar considerablemente el rendimiento de una aplicación si se utiliza correctamente. Dado que el objeto se devuelve desde el grupo, al constructor se llama solo una vez. Sin embargo, algunas aplicaciones requieren cierto nivel de control para que puedan inicializar y limpiar los recursos utilizados durante un contexto único. Por ejemplo, un objeto que está siendo utilizado por un conjunto de cálculos puede restablecer los campos privados antes de procesar el cálculo siguiente. Enterprise Services habilitó este tipo de inicialización específica del contexto permitiendo al desarrollador de objetos invalidar los métodos `Activate` y `Deactivate` de la clase base <xref:System.EnterpriseServices.ServicedComponent>.  
   
  El conjunto de objetos llama al método `Activate` justo antes de devolver el objeto. Se llama a `Deactivate` cuando el objeto vuelve al conjunto. La clase base <xref:System.EnterpriseServices.ServicedComponent> también tiene una propiedad `boolean` llamada `CanBePooled`, que se puede utilizar para notificar al grupo si el objeto puede agruparse más adelante.  

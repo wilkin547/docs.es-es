@@ -10,19 +10,23 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-ms.openlocfilehash: dec32a81929d72274757b75cb03d6615d9fa948b
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 6f0d9d8e3059729098975080224999d0c0fac46e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051797"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272662"
 ---
 # <a name="invalidcercall-mda"></a>MDA de invalidCERCall
+
 El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa cuando hay una llamada desde el gráfico de región de ejecución restringida (CER) a un método que no tiene ningún contrato de confiabilidad o un contrato excesivamente débil. Un contrato débil es el que declara que el peor caso de daño de estado tiene un ámbito mayor que la instancia que se pasa a la llamada, es decir, el estado de <xref:System.AppDomain> o del proceso puede resultar dañado o su resultado no siempre se puede calcular de forma determinista cuando se llama desde dentro de una CER.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Resultados inesperados cuando se ejecuta código en una CER. Los síntomas no son específicos. Podría ser una excepción <xref:System.OutOfMemoryException>, <xref:System.Threading.ThreadAbortException> inesperada o de otro tipo en la llamada al método no confiable porque el tiempo de ejecución no lo preparó por adelantado ni lo protegió de excepciones <xref:System.Threading.ThreadAbortException> en tiempo de ejecución. Una amenaza mayor es que cualquier excepción resultante del método en tiempo de ejecución podría dejar al <xref:System.AppDomain> o al proceso en un estado inestable, lo que contradice el objetivo de una CER. El motivo por el que se crea una CER es para evitar este tipo de daños de estado. Los síntomas de estado dañado son específicos de la aplicación porque la definición de estado coherente es diferente entre aplicaciones.  
   
 ## <a name="cause"></a>Causa  
+
  El código dentro de una CER llama a una función sin <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> o con un <xref:System.Runtime.ConstrainedExecution.ReliabilityContractAttribute> débil que no es compatible con la ejecución en una CER.  
   
  En cuanto a la sintaxis de contratos de confiabilidad, un contrato débil es el que no especifica un valor de enumeración <xref:System.Runtime.ConstrainedExecution.Consistency> o especifica un valor <xref:System.Runtime.ConstrainedExecution.Consistency> de <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>, o <xref:System.Runtime.ConstrainedExecution.Cer.None>. Cualquiera de estas condiciones indica que el código que se llama puede impedir los esfuerzos del otro código de la CER para mantener un estado coherente.  Las CER permiten al código tratar los errores de una manera muy determinista, manteniendo invariables internas que son importantes para la aplicación y permitiendo que se siga ejecutando en presencia de errores transitorios como excepciones de memoria insuficiente.  
@@ -31,13 +35,16 @@ El Asistente para la depuración administrada (MDA) `invalidCERCall` se activa c
   
  Dado que cualquier método con un contrato débil o inexistente puede producir errores de muchas maneras impredecibles, el tiempo de ejecución no intenta eliminar del método ninguno de sus propios errores impredecibles que se introducen mediante la compilación JIT lenta, la especificación de diccionarios genéricos o la anulación de subprocesos, por ejemplo. Es decir, cuando se activa este MDA, indica que el tiempo de ejecución no incluyó el método llamado en la CER que se está definiendo; el gráfico de llamadas se terminó en este nodo porque continuar la preparación de este subárbol ayudaría a ocultar el posible error.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Agregar un contrato de confiabilidad válido a la función o evitar usar esa llamada de función.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  El efecto de llamar a un contrato débil desde una CER podría ser que la CER no pueda completar sus operaciones. Esto podría provocar daños en el estado de proceso del <xref:System.AppDomain>.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  A continuación puede ver un resultado de ejemplo de este MDA.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  

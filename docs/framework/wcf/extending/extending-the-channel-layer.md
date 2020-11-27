@@ -4,17 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8d051ff84ea0562b3d7c810b2c884f4d8b787952
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797138"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96273027"
 ---
 # <a name="extending-the-channel-layer"></a>Extensión de la capa de canales
+
 La capa de canales es responsable del intercambio de mensajes entre clientes y servicios. Las extensiones de canal pueden implementar nueva funcionalidad de protocolo, como seguridad o funcionalidad de transporte, como implementar un nuevo transporte de red para llevar los mensajes SOAP.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Información general del modelo de canales](channel-model-overview.md)  
  Proporciona una información general de alto nivel de qué canales son, las características que proporcionan y cómo funcionan tanto en una aplicación de servicio como de cliente.  
   

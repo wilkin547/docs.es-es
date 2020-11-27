@@ -12,17 +12,21 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 4e8c076645f19e197ea820c052b20d5dde5e7565
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051329"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272259"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento para crear, inicializar y configurar modificadores de seguimiento
+
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
   
 <a name="create"></a>
+
 ## <a name="creating-and-initializing-a-trace-switch"></a>Crear e inicializar modificadores de seguimiento  
+
  Para poder usar los modificadores de seguimiento, primero debe crearlos y colocarlos en el código. Existen dos clases predefinidas desde las que puede crear objetos modificadores: la clase <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> y la clase <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>. Debe usar <xref:System.Diagnostics.BooleanSwitch> si solo le preocupa si aparece o no un mensaje de seguimiento, y <xref:System.Diagnostics.TraceSwitch> para distinguir entre los niveles de seguimiento. Si utiliza <xref:System.Diagnostics.TraceSwitch>, puede definir sus propios mensajes de depuración y asociarlos a diferentes niveles de seguimiento. Puede utilizar ambos tipos de modificadores con el seguimiento o la depuración. De forma predeterminada, <xref:System.Diagnostics.BooleanSwitch> está deshabilitado y <xref:System.Diagnostics.TraceSwitch> está establecido en el nivel <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>. Los modificadores de seguimiento pueden crearse y colocarse en cualquier parte del código que pueda utilizarlos.  
   
  Aunque puede establecer niveles de seguimiento y otras opciones de configuración en el código, le recomendamos que utilice el archivo de configuración para administrar el estado de los modificadores. El motivo es que administrar la configuración de los modificadores en el sistema de configuración le proporciona mayor flexibilidad: puede activar y desactivar los diversos modificadores y cambiar los niveles sin volver a compilar la aplicación.  
@@ -49,7 +53,9 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
     ```  
   
 <a name="configure"></a>
+
 ## <a name="configuring-trace-switches"></a>Configuración de modificadores de seguimiento  
+
  Después de que se distribuya la aplicación, puede habilitar o deshabilitar el resultado del seguimiento configurando los modificadores de seguimiento de la aplicación. Configurar un modificador consiste en cambiar su valor desde un origen externo después de que se inicialice. Puede cambiar los valores de los objetos modificadores con el archivo de configuración. Puede configurar un modificador de seguimiento para activarlo y desactivarlo, o para establecer su nivel y determinar la cantidad y el tipo de mensajes que pasa a los agentes de escucha.  
   
  Los modificadores se configuran con el archivo .config. En una aplicación web, es el archivo Web.config asociado al proyecto. En una aplicación de Windows, este archivo se denomina (nombre de la aplicación) .exe.config. En una aplicación implementada, este archivo debe residir en la misma carpeta que el ejecutable.  
@@ -126,6 +132,6 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="see-also"></a>Vea también
 
 - [Seguimiento e instrumentación de aplicaciones](tracing-and-instrumenting-applications.md)
-- [Procedimiento para agregar instrucciones de seguimiento al código de una aplicación](how-to-add-trace-statements-to-application-code.md)
+- [Adición de instrucciones de seguimiento al código de la aplicación](how-to-add-trace-statements-to-application-code.md)
 - [Modificadores de seguimiento](trace-switches.md)
-- [Esquema de la configuración de seguimiento y depuración](../configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de configuración de seguimiento y depuración](../configure-apps/file-schema/trace-debug/index.md)

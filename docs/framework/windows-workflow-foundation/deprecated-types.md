@@ -2,17 +2,19 @@
 title: Tipos obsoletos en Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 011f13a56695efdd9e964ef1e6c1099b0acc2710
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713345"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272877"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Tipos obsoletos en Windows Workflow Foundation
+
 En .NET 4 el equipo de Workflow presentó nuevo motor de Workflow en el espacio de nombres <xref:System.Activities> . Con el lanzamiento de .NET Framework beta 4,5, estamos marcando la mayoría de los tipos de los espacios de nombres "WF 3" <xref:System.Workflow.Activities> , <xref:System.Workflow.ComponentModel> y  <xref:System.Workflow.Runtime> como obsoletos.
 
 ## <a name="obsolete-namespaces-and-tools"></a>Espacios de nombres y herramientas obsoletos
+
  Los ensamblados siguientes tienen uno o varios tipos públicos que están en desuso:
 
 - System.Workflow.Activities.dll
