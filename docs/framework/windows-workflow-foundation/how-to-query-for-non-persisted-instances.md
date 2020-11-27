@@ -2,12 +2,12 @@
 title: Procedimiento para consultar instancias no guardadas
 ms.date: 03/30/2017
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-ms.openlocfilehash: 87b29ce6a5858872929cea4408d0d7bcc1b378d1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 54a442dab6700dda33cf05df1fb5c60a96bcbd56
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280005"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Procedimiento para consultar instancias no guardadas
 
@@ -21,11 +21,11 @@ Las instancias de servicio duraderas que todavía no se han guardado permanecen 
 
 - La instancia experimenta una excepción no controlada antes de ser guardada por primera vez. Se producen los siguientes escenarios:
 
-  - Si el valor de la **UnhandledExceptionAction** propiedad está establecida en **abandonar**, la información de implementación de servicio se escribe en el almacén de instancias y la instancia se descarga de la memoria. La instancia permanece en un estado no conservado en la base de datos de persistencia.
+  - Si el valor de la propiedad **UnhandledExceptionAction** se establece en **Abandon**, la información de implementación del servicio se escribe en el almacén de instancias y la instancia se descarga de la memoria. La instancia permanece en un estado no conservado en la base de datos de persistencia.
 
-  - Si el valor de la **UnhandledExceptionAction** propiedad está establecida en **AbandonAndSuspend**, se escribe la información de implementación de servicio en la base de datos de persistencia y estado de la instancia está establecido en  **Suspende**. La instancia no se puede reanudar, cancelar ni finalizar. El host del servicio no puede cargar la instancia porque esta todavía no se ha guardado y, por lo tanto, la entrada de base de datos para la instancia no está completa.
+  - Si el valor de la propiedad **UnhandledExceptionAction** se establece en **AbandonAndSuspend**, la información de implementación del servicio se escribe en la base de datos de persistencia y el estado de la instancia se establece en **Suspended**. La instancia no se puede reanudar, cancelar ni finalizar. El host del servicio no puede cargar la instancia porque esta todavía no se ha guardado y, por lo tanto, la entrada de base de datos para la instancia no está completa.
 
-  - Si el valor de la **UnhandledExceptionAction** propiedad está establecida en **cancelar** o **Terminate**, la información de implementación de servicio se escribe en el almacén de instancias y el estado de la instancia está establecido en **completado**.
+  - Si el valor de la propiedad **UnhandledExceptionAction** está establecido en **Cancelar** o **Finalizar**, la información de implementación del servicio se escribe en el almacén de instancias y el estado de la instancia se establece en **completado**.
 
 En las siguientes secciones se proporcionan consultas de ejemplo para localizar instancias no conservadas en la base de datos de persistencia de SQL y para eliminar estas instancias de la base de datos.
 
@@ -38,6 +38,7 @@ select InstanceId, CreationTime from [System.Activities.DurableInstancing].[Inst
 ```
 
 ## <a name="to-find-all-instances-not-persisted-yet-and-also-not-loaded"></a>Para localizar todas las instancias que todavía y no se han guardado ni cargado
+
  La siguiente consulta SQL devuelve el identificador y la hora de creación de todas las instancias que no se han guardado ni tampoco cargado.
 
 ```sql
@@ -56,7 +57,7 @@ select InstanceId, CreationTime, SuspensionReason, SuspensionExceptionName from 
 
 Debe comprobar periódicamente en el almacén de instancias la existencia de instancias no conservadas y quitarlas si está seguro de que la instancia no recibirá ningún mensaje correlacionado. Por ejemplo, si la instancia ha estado en la base de datos durante varios meses y sabe que por lo general el flujo de trabajo tiene una duración de unos días, se podría suponer que se trata de una instancia no inicializada que se ha bloqueado.
 
-En general, resulta seguro eliminar instancias no conservadas que no están suspendidas ni se han cargado. No debe eliminar **todas** las instancias no conservadas porque este conjunto de instancias incluye instancias que se acaba de crear, pero no están todavía se han guardado. Solamente debe eliminar las instancias no conservadas que quedan porque se produjo una excepción en el host del servicio de flujo de trabajo que tenía la instancia cargada o porque se produjo una excepción en la propia instancia.
+En general, resulta seguro eliminar instancias no conservadas que no están suspendidas ni se han cargado. No debe eliminar **todas** las instancias no persistentes porque este conjunto de instancias incluye instancias que se acaban de crear pero que todavía no se han guardado. Solamente debe eliminar las instancias no conservadas que quedan porque se produjo una excepción en el host del servicio de flujo de trabajo que tenía la instancia cargada o porque se produjo una excepción en la propia instancia.
 
 > [!WARNING]
 > La eliminación de instancias no conservadas del almacén de instancias reduce el tamaño del almacén y puede mejorar el rendimiento de las operaciones del almacén.

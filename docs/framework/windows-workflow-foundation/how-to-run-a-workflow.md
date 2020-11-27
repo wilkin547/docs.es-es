@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 86062dd5147e6e354833928fd98bd1f6b5de9114
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 7f76ed5ad1a76a155489339a9febf12eefd64ae8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421506"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279992"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedimiento para ejecutar un flujo de trabajo
+
 Este tema es una continuación del tutorial introductorio de Windows Workflow Foundation y explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el tema [How to: Create a Workflow](how-to-create-a-workflow.md) anterior.
 
 > [!NOTE]
@@ -38,9 +39,9 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
 
      Asegúrese de que **.NET Framework 4.5** está seleccionado en la lista desplegable de versiones de .NET Framework. Seleccione **Aplicación de consola de flujos de trabajo** en la lista **Flujo de trabajo** . Escriba `NumberGuessWorkflowHost` en el cuadro **Nombre** y haga clic en **Aceptar**. Así se crea una aplicación de flujo de trabajo de inicio con soporte básico de hospedaje de flujo de trabajo. Este código de hospedaje básico se modifica y se usa para ejecutar la aplicación de flujo de trabajo.
 
-4. Haga clic con el botón secundario en el proyecto **NumberGuessWorkflowHost** recién agregado en el **Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **Solución** en la lista **Agregar referencia** , marque la casilla junto **NumberGuessWorkflowActivities**y, a continuación, haga clic en **Aceptar**.
+4. Haga clic con el botón secundario en el proyecto **NumberGuessWorkflowHost** recién agregado en el **Explorador de soluciones** y seleccione **Agregar referencia**. Seleccione **Solución** en la lista **Agregar referencia** , marque la casilla junto **NumberGuessWorkflowActivities** y, a continuación, haga clic en **Aceptar**.
 
-5. Haga clic con el botón secundario en **Workflow1.xaml** en el **Explorador de soluciones** y elija **Eliminar**. Haga clic en **Aceptar** para confirmar la operación.
+5. Haga clic con el botón secundario en **Workflow1.xaml** en el **Explorador de soluciones** y elija **Eliminar**. Haga clic en **ACEPTAR** para continuar.
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>Para modificar el código de hospedaje de flujo de trabajo
 
@@ -138,7 +139,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
      [!code-csharp[CFX_WF_GettingStarted#11](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#11)]
      [!code-vb[CFX_WF_GettingStarted#11](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#11)]
 
-## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a>Para compilar y ejecutar la aplicación
+## <a name="to-build-and-run-the-application"></a><a name="BKMK_ToRunTheApplication"></a> Para compilar y ejecutar la aplicación
 
 1. Haga clic con el botón secundario en **NumberGuessWorkflowHost** en el **Explorador de soluciones** y seleccione **Establecer como proyecto de inicio**.
 
@@ -152,6 +153,7 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
      Para obtener instrucciones sobre cómo agregar la persistencia a una aplicación de flujo de trabajo, consulte el siguiente tema: [How to: Create and Run a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md).
 
 ## <a name="example"></a>Ejemplo
+
  En el ejemplo siguiente se muestra la lista de código completa del método `Main` .
 
 > [!NOTE]
@@ -160,12 +162,12 @@ Este tema es una continuación del tutorial introductorio de Windows Workflow Fo
  [!code-csharp[CFX_WF_GettingStarted#12](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#12)]
  [!code-vb[CFX_WF_GettingStarted#12](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#12)]
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Programación de Windows Workflow Foundation](programming.md)
-- [Tutorial de Introducción](getting-started-tutorial.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
 - [Procedimiento para crear un flujo de trabajo](how-to-create-a-workflow.md)
 - [Procedimiento para crear y ejecutar un flujo de trabajo de larga duración](how-to-create-and-run-a-long-running-workflow.md)
 - [Esperar entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)

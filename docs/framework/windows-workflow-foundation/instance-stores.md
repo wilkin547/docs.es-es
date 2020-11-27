@@ -2,14 +2,15 @@
 title: Almacenes de instancias
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 26e0c28fe3061306a00e75b0498ef0781b7013c6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e3cc0c6c635d9c42b4242581ce039b186116113
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555801"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279875"
 ---
 # <a name="instance-stores"></a>Almacenes de instancias
+
 Un almacén de instancias es un contenedor lógico de instancias. Es el lugar donde se almacenan los metadatos y los datos de las instancias. Un almacén de instancias no tiene que ser necesariamente un almacenamiento físico dedicado. Un almacén de instancias puede contener información duradera de una base de datos de SQL Server o información de estado no duradera de una memoria. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] distribuye con el Almacén de instancias de flujos de trabajo de SQL, que es una implementación concreta de un almacén de instancias que permite a los flujos de trabajo conservar metadatos y datos de instancia en una base de datos de SQL Server 2005 o SQL Server 2008. Además, Windows Server App Fabric también proporciona una implementación concreta de un almacén de instancias. Para obtener más información, consulte [proveedores de control, consulta y almacén de instancias de Windows Server App fabric](/previous-versions/appfabric/ff383417(v=azure.10)).  
   
  La API de persistencia es la interfaz entre un host y un almacén de instancias que permite al host enviar las solicitudes de comando al almacén de instancias (por ejemplo, <xref:System.Activities.DurableInstancing.LoadWorkflowCommand> y <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>). La implementación concreta de esta API se denomina proveedor de persistencia. El proveedor de persistencia recibe solicitudes de un host y modifica el almacén de instancias.  

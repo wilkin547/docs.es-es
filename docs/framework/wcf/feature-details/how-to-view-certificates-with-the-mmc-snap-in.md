@@ -5,14 +5,15 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: e63034e48ae836f67f89b454829f7196c94610cd
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 1f20384f16b3b5b898f926258d76a6a2773eaaa1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246680"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280629"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Cómo: ver certificados con el complemento MMC
+
 Al crear un cliente o servicio seguro, puede usar un [certificado](working-with-certificates.md) como credencial. Por ejemplo, un tipo común de credencial es el certificado X. 509, que se crea con el <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> método.
 
 Existen tres tipos diferentes de almacenes de certificados que se pueden examinar con Microsoft Management Console (MMC) en los sistemas de Windows:
@@ -35,11 +36,11 @@ El siguiente procedimiento muestra cómo examinar los almacenes en el dispositiv
 
     Aparece la ventana **Agregar o quitar complementos** .
   
-3. En la lista **complementos disponibles** , seleccione **certificados**y, a continuación, seleccione **Agregar**.  
+3. En la lista **complementos disponibles** , seleccione **certificados** y, a continuación, seleccione **Agregar**.  
 
     ![Agregar complemento de certificado](./media/mmc-add-certificate-snap-in.png)
   
-4. En la ventana del **complemento certificados** , seleccione **cuenta de equipo**y, a continuación, seleccione **siguiente**.
+4. En la ventana del **complemento certificados** , seleccione **cuenta de equipo** y, a continuación, seleccione **siguiente**.
   
     Opcionalmente, puede seleccionar **mi cuenta de usuario** para el usuario actual o la **cuenta de servicio** para un servicio determinado.
 

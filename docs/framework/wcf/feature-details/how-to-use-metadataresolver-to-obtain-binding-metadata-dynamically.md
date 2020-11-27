@@ -2,14 +2,15 @@
 title: Procedimiento para usar MetadataResolver para obtener dinámicamente metadatos de enlace
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-ms.openlocfilehash: 98fe4977f270b008c51039af19261ca86b8d6642
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc64e11271c6901a8d4598c0efa563a06a92decf
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601132"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280720"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>Procedimiento para usar MetadataResolver para obtener dinámicamente metadatos de enlace
+
 En este tema se muestra cómo utilizar la clase <xref:System.ServiceModel.Description.MetadataResolver> para obtener dinámicamente los metadatos del enlace.  
   
 ### <a name="to-dynamically-obtain-binding-metadata"></a>Para obtener dinámicamente los metadatos del enlace  

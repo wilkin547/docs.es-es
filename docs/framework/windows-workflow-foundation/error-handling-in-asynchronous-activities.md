@@ -2,17 +2,19 @@
 title: Control de errores en actividades asincrónicas
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c214ce1d0f435cda79deb6976ca9196a5d7aee1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182948"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280265"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>Control de errores en actividades asincrónicas
+
 Proporcionar control de errores en una <xref:System.Activities.AsyncCodeActivity> implica el enrutamiento del error a través del sistema de devolución de llamada de la actividad. Este tema describe cómo obtener un error que se produce en una operación asincrónica de nuevo al host, mediante el ejemplo de la actividad SendMail.  
   
 ## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>Devolviendo un error que se produce en una actividad asincrónica de nuevo al host  
+
  Enrutar un error en una operación asincrónica de nuevo al host en el ejemplo de la actividad SendMail implica los pasos siguientes:  
   
 - Agregue una propiedad Exception a la clase `SendMailAsyncResult`.  

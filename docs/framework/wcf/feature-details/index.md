@@ -7,17 +7,19 @@ helpviewer_keywords:
 - WCF, features
 - Windows Communication Foundation, features
 ms.assetid: 9b4368ca-0bd3-40dc-a539-bcd5779cee5f
-ms.openlocfilehash: 308a32c73d33a4da2fd841ca7c330a42deb7d324
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 30b8acb3b89b8c28be0b8d0b4ce5a1d1d734b055
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246641"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96280434"
 ---
 # <a name="wcf-feature-details"></a>Detalles de las características de WCF
+
 Windows Communication Foundation (WCF) permite un amplio control sobre las funciones de mensajería de una aplicación. Los temas de esta sección incluyen detalles sobre las características disponibles. Para obtener más información sobre la programación básica, vea [programación básica de WCF](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Servicios de flujo de trabajo](workflow-services.md)  
  Describe cómo crear y configurar servicios de flujo de trabajo.  
   
@@ -36,7 +38,7 @@ Windows Communication Foundation (WCF) permite un amplio control sobre las funci
  [Colas y sesiones de confianza](queues-and-reliable-sessions.md)  
  Describe las colas que almacenan mensajes de una aplicación emisora en nombre de una aplicación receptora y, a continuación, reenvían estos mensajes a la aplicación receptora.  
   
- [Transactions](transactions-in-wcf.md)  
+ [Transacciones](transactions-in-wcf.md)  
  Explica cómo crear operaciones de transacción que se puedan revertir de ser necesario.  
   
  [Seguridad](security.md)  
@@ -73,6 +75,7 @@ Windows Communication Foundation (WCF) permite un amplio control sobre las funci
  Describe el servicio de enrutamiento.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -82,4 +85,5 @@ Windows Communication Foundation (WCF) permite un amplio control sobre las funci
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Programación básica de WCF](../basic-wcf-programming.md)
