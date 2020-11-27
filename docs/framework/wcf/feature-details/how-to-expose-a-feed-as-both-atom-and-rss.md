@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1b03434e4f9552b714b40d54ba36c8468d0e2ccd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593151"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265367"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Procedimiento para exponer una fuente como Atom y RSS
+
 Windows Communication Foundation (WCF) le permite crear un servicio que exponga una fuente de distribución. En este tema se explica cómo crear un servicio de distribución que exponga una fuente de distribución mediante Atom 1.0 y RSS 2.0. Este servicio expone un punto de conexión que puede devolver cualquiera de los dos formatos de distribución. Para simplificar, el servicio usado en este ejemplo tiene host propio. En un entorno de producción un servicio de este tipo estaría hospedado en IIS o WAS. Para obtener más información acerca de las distintas opciones de hospedaje de WCF, vea [hospedaje](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
@@ -88,11 +89,13 @@ Windows Communication Foundation (WCF) le permite crear un servicio que exponga 
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra una lista de código completa para este ejemplo.  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Al compilar el código anterior, haga referencia a System.ServiceModel.dll y System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Vea también

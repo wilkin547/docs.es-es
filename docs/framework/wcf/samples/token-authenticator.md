@@ -2,14 +2,15 @@
 title: Autenticador de tokens
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a493ea48d9d339c0bc1a4b191b084374ad5f2dc4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab3f8486229416465d7eca0b9413475d81318d32
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548597"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264639"
 ---
 # <a name="token-authenticator"></a>Autenticador de tokens
+
 Este ejemplo muestra cómo implementar un autenticador de tokens personalizado. Un autenticador de tokens en Windows Communication Foundation (WCF) se usa para validar el token utilizado con el mensaje, comprobar que es autocoherente y autenticar la identidad asociada con el token.
 
  Los autenticadores de tokens personalizados son útiles en diversos casos, como:
@@ -119,6 +120,7 @@ static void Main()
 ```
 
 ## <a name="custom-token-authenticator"></a>autenticador de tokens personalizado
+
  Siga los siguientes pasos para crear un autenticador de tokens personalizado:
 
 1. Escriba un autenticador de tokens personalizado.
@@ -293,6 +295,7 @@ static void DisplayIdentityInformation()
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
+
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
 
  A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.

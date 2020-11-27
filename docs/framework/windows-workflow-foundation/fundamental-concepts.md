@@ -3,29 +3,33 @@ title: Conceptos fundamentales de Windows Workflow
 description: En este artículo se describen algunos de los conceptos del desarrollo de flujos de trabajo en el .NET Framework 4.6.1 que pueden ser desconocidos para algunos desarrolladores.
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 07498241280191fb62a35a559a3391f7148c05b9
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: a7683791c7aed54beed9256ab08010dfeebe9936
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419898"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265302"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Conceptos fundamentales de Windows Workflow
+
 El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] usa conceptos que pueden ser nuevos para algunos desarrolladores de software. En este tema se describen algunos de ellos y la forma en que se implementan.  
   
 ## <a name="workflows-and-activities"></a>Flujos de trabajo y actividades  
+
  Un flujo de trabajo es una colección estructurada de acciones que modela un proceso y cada acción en el flujo de trabajo se modela como una actividad. Un host interactúa con un flujo de trabajo mediante <xref:System.Activities.WorkflowInvoker> para invocar un flujo de trabajo como si fuera un método, <xref:System.Activities.WorkflowApplication> para el control explícito sobre la ejecución de una instancia de flujo de trabajo y <xref:System.ServiceModel.WorkflowServiceHost> para las interacciones basadas en mensajes en escenarios de varias instancias. Dado que los pasos del flujo de trabajo se definen como una jerarquía de actividades, se puede decir que la actividad de nivel superior en la jerarquía define el propio flujo de trabajo. Este modelo de jerarquía ocupa el lugar de las clases `SequentialWorkflow` y `StateMachineWorkflow` explícitas de versiones anteriores. Las actividades se desarrollan como colecciones de otras actividades (con la clase <xref:System.Activities.Activity> como base, normalmente definida con XAML) o se crean de manera personalizada mediante la clase <xref:System.Activities.CodeActivity> (que puede usar el tiempo de ejecución para tener acceso a los datos) o usando la clase <xref:System.Activities.NativeActivity>, que expone todo el tiempo de ejecución del flujo de trabajo a disposición del autor de la actividad. Las actividades desarrolladas con las clases <xref:System.Activities.CodeActivity> y <xref:System.Activities.NativeActivity> se crean con lenguajes conformes a CLR como, por ejemplo, C#.  
   
 ## <a name="activity-data-model"></a>Modelo de datos de actividad  
+
  Las actividades se almacenan y comparten datos con los tipos mostrados en la siguiente tabla.  
   
 |||  
 |-|-|  
 |Variable|Almacena los datos en una actividad.|  
 |Argumento|Mueve los datos dentro y fuera de una de una actividad.|  
-|Expresión|Una actividad con un valor devuelto elevado usado en enlaces de argumento.|  
+|Expression|Una actividad con un valor devuelto elevado usado en enlaces de argumento.|  
   
 ## <a name="workflow-runtime"></a>Tiempo de ejecución de flujo de trabajo  
+
  El tiempo de ejecución de flujo de trabajo es el entorno en el que los flujos de trabajo se ejecutan. <xref:System.Activities.WorkflowInvoker> es la manera más sencilla de ejecutar un flujo de trabajo. El host usa <xref:System.Activities.WorkflowInvoker> para lo siguiente:  
   
 - Para invocar un flujo de trabajo de forma sincrónica.  
@@ -53,9 +57,11 @@ El desarrollo del flujo de trabajo en [!INCLUDE[netfx_current_long](../../../inc
  Las actividades tienen acceso al entorno de tiempo de ejecución de flujo de trabajo mediante la clase derivada de <xref:System.Activities.ActivityContext> adecuada, como <xref:System.Activities.NativeActivityContext> o <xref:System.Activities.CodeActivityContext>. Usan esto para resolver argumentos y variables, para programar las actividades secundarias, y para muchos otros objetivos.  
   
 ## <a name="services"></a>Servicios  
+
  Los flujos de trabajo proporcionan una manera natural de implementar y tener acceso a servicios flojamente acoplados usando actividades de mensajería. Las actividades de mensajería se basan en WCF y son el mecanismo principal que se usa para obtener datos dentro y fuera de un flujo de trabajo. Puede componer actividades de mensajería para modelar cualquier tipo de patrón de intercambio de mensajes que desee. Para obtener más información, consulte [actividades de mensajería](../wcf/feature-details/messaging-activities.md). Los servicios de flujo de trabajo se hospedan mediante la clase <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Para obtener más información, vea [Introducción a los servicios de flujo de trabajo de hospedaje](../wcf/feature-details/hosting-workflow-services-overview.md). Para obtener más información sobre los servicios de flujo de trabajo, vea [servicios de flujo de trabajo](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistencia, descarga y flujos de trabajo de ejecución prolongada  
+
  El flujo de trabajo de Windows simplifica la creación de programas reactivos de ejecución prolongada al proporcionar:  
   
 - Actividades que tienen acceso a datos externos.  

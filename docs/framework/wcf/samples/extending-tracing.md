@@ -2,12 +2,12 @@
 title: Extensión del seguimiento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5e3329238998f11467511960f32b177953036ab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556517"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265341"
 ---
 # <a name="extend-tracing"></a>Extender seguimiento
 
@@ -28,9 +28,11 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>Propagación de seguimiento y de actividad  
+
  El seguimiento de la actividad definida por el usuario permite al usuario crear sus propias actividades de seguimiento para agrupar los seguimientos en unidades lógicas de trabajo, poner en correlación las actividades a través de las transferencias y la propagación, y reducir el costo de rendimiento del seguimiento de WCF (por ejemplo, el costo de espacio en disco de un archivo de registro).  
   
 ### <a name="add-custom-sources"></a>Agregar orígenes personalizados  
+
  Los seguimientos definidos por el usuario pueden añadirse tanto al código de cliente como de servicio. La adición de orígenes de seguimiento al cliente o los archivos de configuración de servicio permite que estos seguimientos personalizados se registren y se muestren en la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). El código siguiente muestra cómo agregar un origen de seguimiento definido por el usuario denominado `ServerCalculatorTraceSource` al archivo de configuración.  
   
 ```xml  
@@ -69,6 +71,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ```  
   
 ### <a name="correlate-activities"></a>Correlación de actividades  
+
  Para poner en correlación directamente las actividades con los extremos, el atributo `propagateActivity` debe estar establecido en `true` en el origen de seguimiento `System.ServiceModel`. Además, para propagar los seguimientos sin pasar por las actividades de WCF, el seguimiento de la actividad de ServiceModel debe estar desactivado. Esto puede verse en el siguiente ejemplo de código:  
   
 > [!NOTE]
@@ -87,6 +90,7 @@ Este ejemplo muestra cómo extender la característica de seguimiento de Windows
 ```  
   
 ### <a name="lessen-performance-cost"></a>Reducir el costo de rendimiento  
+
  Al establecer `ActivityTracing` en desactivado en el origen de seguimiento de `System.ServiceModel`, se genera un archivo de seguimiento que contiene solo seguimientos de actividad definidos por el usuario sin ninguno de los seguimientos de actividad de ServiceModel incluidos. La exclusión de los seguimientos de actividad de ServiceModel da como resultado un archivo de registro mucho más pequeño. Sin embargo, se pierde la oportunidad de correlacionar los seguimientos de procesamiento de WCF.  
   
 ## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  

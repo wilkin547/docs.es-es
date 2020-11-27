@@ -3,14 +3,15 @@ title: Cliente de prueba de WCF (WcfTestClient.exe)
 description: Obtenga información sobre el cliente de prueba de WCF, que proporciona pruebas de servicio sin problemas cuando se combina con el host de servicio WCF. Enviar valores de prueba del cliente y ver las respuestas del servicio.
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 4f636698c538809f89ee356159839a37b73adb57
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: f583d20edf7eeea87ae1dbf63a3cadef05912833
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245666"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264132"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de prueba de WCF (WcfTestClient.exe)
+
 El cliente de prueba de Windows Communication Foundation (WCF) (WcfTestClient.exe) es una herramienta de interfaz gráfica de usuario que permite a los usuarios introducir parámetros de prueba, enviar esa entrada al servicio y ver la respuesta que devuelve el servicio. Proporciona una experiencia de pruebas de servicio sin problemas cuando se combina con el host de servicio de WCF.
 
 Normalmente, puede encontrar el cliente de prueba de WCF (WcfTestClient.exe) en la siguiente ubicación: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -Community puede ser "Enterprise", "Professional" o "Community" en función del nivel de Visual Studio instalado.
@@ -33,7 +34,7 @@ También puede usar el cliente de prueba de WCF para ayudar a depurar un proyect
 
 También puede invocar el cliente de prueba de WCF (WcfTestClient.exe) fuera de Visual Studio para probar un servicio arbitrario en Internet. Para encontrar la herramienta, vaya a la ubicación siguiente:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(donde Community puede ser "Enterprise", "Professional" o "Community", según el nivel de Visual Studio instalado en el equipo)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (donde Community puede ser "Enterprise", "Professional" o "Community", según el nivel de Visual Studio instalado en el equipo)
 
 Para usar la herramienta, haga doble clic en el nombre de archivo para abrirlo desde esta ubicación o iníciela desde una línea de comandos.
 
@@ -41,13 +42,13 @@ El cliente de prueba de WCF toma un número arbitrario de URI como argumentos de
 
 `wcfTestClient.exe URI1 URI2 …`
 
-Una vez abierta la ventana del cliente de prueba WCF, haga clic en **archivo** -> **Agregar servicio**y escriba la dirección del extremo del servicio que desea abrir.
+Una vez abierta la ventana del cliente de prueba WCF, haga clic en **archivo** -> **Agregar servicio** y escriba la dirección del extremo del servicio que desea abrir.
 
 ## <a name="wcf-test-client-user-interface"></a>Interfaz de usuario del cliente de prueba de WCF
 
 Puede usar el cliente de prueba de WCF con un solo servicio o con varios servicios.
 
-### <a name="service-operations"></a>Operaciones del servicio
+### <a name="service-operations"></a>Operaciones de servicio
 
 En el panel izquierdo de la ventana principal del cliente de prueba de WCF se enumeran todos los servicios disponibles, junto con sus respectivos extremos y operaciones.
 
@@ -104,7 +105,7 @@ Durante la generación de proxy, la compilación binaria o la invocación de ser
 
 #### <a name="persist-client-configuration"></a>Conservación de la configuración del cliente
 
-La **Tools** -> **Options** -> pestaña Configuración del**cliente** opciones de herramientas contiene una opción volver a generar siempre la configuración **al iniciar servicios** , que está habilitada de forma predeterminada. Esta opción especifica que cada vez que el cliente de prueba de WCF carga un servicio, regenera un archivo de configuración basado en el contrato de servicio y los archivos de App.config de servicio más recientes.
+La **Tools** -> **Options** -> pestaña Configuración del **cliente** opciones de herramientas contiene una opción volver a generar siempre la configuración **al iniciar servicios** , que está habilitada de forma predeterminada. Esta opción especifica que cada vez que el cliente de prueba de WCF carga un servicio, regenera un archivo de configuración basado en el contrato de servicio y los archivos de App.config de servicio más recientes.
 
 Si ha editado la configuración de cliente para el servicio WCF y desea usar siempre este archivo actualizado para depurar el servicio, puede desactivar la opción **regenerar** . Al hacerlo, incluso cuando se actualiza el servicio y se vuelve a abrir el cliente de prueba de WCF, el archivo Client.dll.config es el que se actualizó anteriormente en lugar de volver a generarlo en función del servicio actualizado.
 
@@ -125,7 +126,7 @@ Haga clic en **archivo** -> **Agregar servicio** para agregar un servicio al cli
 
 También puede encontrar una lista de los 10 puntos de conexión de los servicios agregados recientemente en el submenú **servicios recientes** . Si selecciona uno de ellos, se agrega el servicio especificado al cliente de prueba de WCF.
 
-También puede hacer clic con el botón secundario en la raíz del árbol de servicio **mis proyectos de servicio**y seleccionar **Agregar servicio** para lograr el mismo resultado.
+También puede hacer clic con el botón secundario en la raíz del árbol de servicio **mis proyectos de servicio** y seleccionar **Agregar servicio** para lograr el mismo resultado.
 
 Durante la generación de proxies, la compilación de binarios o la invocación de servicios, los elementos de menú que permiten agregar un servicio están deshabilitados. La invocación de servicios también está deshabilitada.
 

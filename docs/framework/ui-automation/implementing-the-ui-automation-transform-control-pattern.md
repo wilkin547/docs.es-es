@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: fc47170a08ff08f6cd8f67996ef8fbf19c40f819
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265653"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementación del patrón de control Transform de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168220"
  El patrón de control <xref:System.Windows.Automation.TransformPattern> se utsa para admitir controles que se pueden mover, cambiar de tamaño o girar dentro de un espacio bidimensional. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Transform, tenga en cuenta las siguientes directrices y convenciones:  
   
 - La compatibilidad con este patrón de control no se limita a los objetos del escritorio. Este patrón de control también lo admite los elementos secundarios de un objeto contenedor si los elementos secundarios se pueden mover, cambiar de tamaño o girar libremente dentro de los límites del contenedor.  
@@ -35,7 +38,9 @@ ms.locfileid: "87168220"
 - Todos los parámetros y los valores de propiedad son absolutos e independientes de la configuración regional.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-itransformprovider"></a>Miembros requeridos para ITransformProvider  
+
  Para implementar <xref:System.Windows.Automation.Provider.ITransformProvider>, se requieren las siguientes propiedades y métodos.  
   
 |Miembros requeridos|Tipo de miembro|Notas|  
@@ -50,7 +55,9 @@ ms.locfileid: "87168220"
  Este patrón de control no tiene eventos asociados.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  

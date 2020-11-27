@@ -2,14 +2,15 @@
 title: Ejemplo de extensiones débilmente tipadas
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 0a08ca19e5e6bff7223d45726617d2c2163ca3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 94e01970502223febd3ff03e30be7b17d9019d93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264900"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Ejemplo de extensiones débilmente tipadas
+
 El modelo de objetos de sindicación proporciona compatibilidad enriquecida para trabajar con datos de extensión (información que está presente en una representación XML de una fuente de sindicación pero no explícitamente expuesta por clases como <xref:System.ServiceModel.Syndication.SyndicationFeed> y <xref:System.ServiceModel.Syndication.SyndicationItem>. Este ejemplo muestra las técnicas básicas para trabajar con datos de extensión.  
   
  El ejemplo utiliza la clase <xref:System.ServiceModel.Syndication.SyndicationFeed> para el ejemplo. Sin embargo, los modelos mostrados en este ejemplo se pueden utilizar con todas las clases de sindicación que admiten datos de extensión:  
@@ -25,6 +26,7 @@ El modelo de objetos de sindicación proporciona compatibilidad enriquecida para
  <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
 ## <a name="sample-xml"></a>XML de ejemplo  
+
  Como referencia, el siguiente documento XML se usa en este ejemplo:  
   
 ```xml  
@@ -65,6 +67,7 @@ w.w3.org/2001/XMLSchema" xmlns="">
 - Elemento `<xElementExtension>`.  
   
 ## <a name="writing-extension-data"></a>Cómo escribir datos de extensión  
+
  Las extensiones de atributo se crean agregando entradas a la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> tal y como se muestra en el código de ejemplo siguiente.  
   
 ```csharp  
@@ -102,6 +105,7 @@ feed.ElementExtensions.Add(new XElement("xElementExtension",
 ```  
   
 ## <a name="reading-extension-data"></a>Lectura de datos de la extensión  
+
  Los valores para las extensiones de atributo se pueden obtener buscando el atributo en la colección <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> por su <xref:System.Xml.XmlQualifiedName> tal y como se muestra en el código de ejemplo siguiente.  
   
 ```csharp  

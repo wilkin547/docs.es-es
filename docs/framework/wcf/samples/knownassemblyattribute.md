@@ -2,17 +2,19 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2faeeaab98a4adeec38ed9c03dc9e01ec2a3aaea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555411"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264951"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
+
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
+
  Este ejemplo consta de cuatro proyectos. Uno de ellos corresponde al servicio, que va a ser hospedado por IIS, que define el siguiente contrato de servicios.  
   
 ```csharp
@@ -348,11 +350,11 @@ Lists combined:
   
 1. Haga clic con el botón secundario en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
   
-2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **proyectos de inicio múltiples**.  
+2. En **propiedades comunes**, seleccione **proyecto de inicio** y, a continuación, haga clic en **proyectos de inicio múltiples**.  
   
 3. Agregue la acción de **Inicio** al **servicio** y a los proyectos de **cliente** .  
   
-4. Haga clic en **Aceptar**y presione **F5** para ejecutar el ejemplo.  
+4. Haga clic en **Aceptar** y presione **F5** para ejecutar el ejemplo.  
   
 5. Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
   

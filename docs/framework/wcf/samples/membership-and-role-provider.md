@@ -2,14 +2,15 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: e532f35a2c4cd9f53006c088956eadff616d2005
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fa2a813c2dc1a891119e922c86f045e7f2df7125
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543594"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264717"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
+
 El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio puede usar la pertenencia a ASP.NET y los proveedores de roles para autenticar y autorizar a los clientes.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
@@ -170,6 +171,7 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
 > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Archivo de instalación por lotes  
+
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.  
   
  A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.  

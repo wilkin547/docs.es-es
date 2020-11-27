@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 7da7ba1b680bae2b29eeff8fe669e097ea8eda32
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f69286a2b4d4ec55f18931f9156c20a38da9c34
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595380"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265432"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Procedimiento para intercambiar mensajes en cola con puntos de conexión de WCF
+
 Las colas garantizan que se pueda producir mensajería de confianza entre un cliente y un servicio de Windows Communication Foundation (WCF), incluso si el servicio no está disponible en el momento de la comunicación. Los procedimientos siguientes muestran cómo garantizar la comunicación duradera entre un cliente y un servicio mediante el enlace en cola estándar al implementar el servicio WCF.  
   
  En esta sección se explica cómo usar <xref:System.ServiceModel.NetMsmqBinding> para la comunicación en cola entre un cliente WCF y un servicio WCF.  
@@ -50,7 +51,7 @@ Las colas garantizan que se pueda producir mensajería de confianza entre un cli
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>Para crear un cliente para el servicio en cola  
   
-1. En el ejemplo siguiente se muestra cómo ejecutar la aplicación de hospedaje y usar la herramienta SvcUtil. exe para crear el cliente de WCF.  
+1. En el ejemplo siguiente se muestra cómo ejecutar la aplicación de hospedaje y utilizar la herramienta de Svcutil.exe para crear el cliente de WCF.  
   
     ```console
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -64,6 +65,7 @@ Las colas garantizan que se pueda producir mensajería de confianza entre un cli
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  
   
 ## <a name="example"></a>Ejemplo  
+
  Los ejemplos siguientes muestran el código de servicio, la aplicación de hospedaje, el archivo App.config y el código de cliente incluidos en este ejemplo.  
   
  [!code-csharp[S_Msmq_Transacted#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#9)]

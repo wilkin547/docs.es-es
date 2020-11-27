@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: a15c0b50996e2c0dfdc937bc9565d5f9ba20c992
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b4fea39088064751ff559bd236554255d43ba2a2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265666"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementar el patrón de control Value de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168202"
  El patrón de control <xref:System.Windows.Automation.ValuePattern> se utiliza para admitir controles que tienen un valor intrínseco que no abarca un intervalo y que se puede representar como una cadena. Esta cadena puede ser editable, dependiendo del control y su configuración. Para obtener ejemplos de controles que implementan este patrón, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Value, tenga en cuenta las siguientes directrices y convenciones:  
   
 - Los controles como <xref:System.Windows.Automation.ControlType.ListItem> y <xref:System.Windows.Automation.ControlType.TreeItem> deben admitir <xref:System.Windows.Automation.ValuePattern> si el valor de cualquiera de los elementos es modificable, sin tener en cuenta el modo de edición actual del control. El control primario también debe admitir <xref:System.Windows.Automation.ValuePattern> si los elementos secundarios son modificables.  
@@ -37,7 +40,7 @@ Ejemplo de un elemento de lista modificable
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> no admite la recuperación de la información de formato ni los valores de subcadenas. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> en estos escenarios.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider>debe implementarse mediante controles, como el control de selección del **selector de colores** de Microsoft Word (se muestra a continuación), que admite la asignación de cadenas entre un valor de color (por ejemplo, "Yellow") y una estructura RGB interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> debe implementarse mediante controles, como el control de selección del **selector de colores** de Microsoft Word (se muestra a continuación), que admite la asignación de cadenas entre un valor de color (por ejemplo, "Yellow") y una estructura RGB interna equivalente.  
   
  ![Selector de color con amarillo resaltado.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Ejemplo de asignación de cadena de muestrario de colores  
@@ -45,7 +48,9 @@ Ejemplo de asignación de cadena de muestrario de colores
 - Un control debe tener el valor de su <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> establecido en `true` y el valor de <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> establecido en `false` antes de permitir una llamada a <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
+
 ## <a name="required-members-for-ivalueprovider"></a>Miembros requeridos para IValueProvider  
+
  Para implementar <xref:System.Windows.Automation.Provider.IValueProvider>, se requieren las siguientes propiedades y métodos.  
   
 |Miembros requeridos|Tipo de miembro|Notas|  
@@ -55,7 +60,9 @@ Ejemplo de asignación de cadena de muestrario de colores
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Método|None|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  

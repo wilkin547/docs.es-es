@@ -7,14 +7,15 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: e88ddee04ba887daf1929d855526cd0d062f78d5
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9c1d57e46aed9ec2441a95544d26244d2dfa9496
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265757"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementar el patrón de control Table de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168246"
  El patrón de control <xref:System.Windows.Automation.TablePattern> se usa para admitir controles que actúen como contenedores para una colección de elementos secundarios. Los elementos secundarios de este elemento deben implementar <xref:System.Windows.Automation.Provider.ITableItemProvider> y organizarse en un sistema de coordenadas lógico bidimensional que se pueda recorrer por filas y columnas. Este patrón de control es análogo a <xref:System.Windows.Automation.Provider.IGridProvider>, con la diferencia de que cualquier control que implemente <xref:System.Windows.Automation.Provider.ITableProvider> también debe exponer una relación de encabezado de columna o fila para cada elemento secundario. Para obtener ejemplos de controles que implementan este patrón de control, vea [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Table, tenga en cuenta las siguientes directrices y convenciones:  
   
 - El acceso al contenido de celdas individuales se realiza a través de un sistema de coordenadas lógico bidimensional o la matriz ofrecida por la implementación simultánea necesaria de <xref:System.Windows.Automation.Provider.IGridProvider>.  
@@ -44,22 +47,26 @@ Ejemplo de una tabla con encabezados de columna compleja
 Ejemplo de una tabla con propiedad RowOrColumnMajor ambigua  
   
 <a name="Required_Members_for_ITableProvider"></a>
+
 ## <a name="required-members-for-itableprovider"></a>Miembros requeridos para ITableProvider  
+
  Se requieren los siguientes métodos y propiedades para la interfaz de ITableProvider.  
   
 |Miembros requeridos|Tipo de miembro|Notas|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad.|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|Propiedad|None|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|Método|None|  
 |<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|Método|None|  
   
  Este patrón de control no tiene eventos asociados.  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Este patrón de control no tiene excepciones asociadas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general acerca de los patrones de control de UI Automation](ui-automation-control-patterns-overview.md)
 - [Patrones de control compatibles en un proveedor de UI Automation](support-control-patterns-in-a-ui-automation-provider.md)

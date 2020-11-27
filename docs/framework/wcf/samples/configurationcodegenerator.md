@@ -2,14 +2,15 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: d64be95f71f840e08ede63e1c1f14ee08e52ce97
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b8496992c7b0694a07ac047ba8537c67fc363c02
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592481"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264236"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
+
 ConfigurationCodeGenerator es una herramienta que puede utilizar para exponer sus implementaciones de canales personalizadas en el sistema de configuración. Esto permite a los usuarios de su canal personalizado configurar el canal utilizando un archivo .config tal y como lo haría si configuraran un enlace proporcionado por el sistema como `NetTcpBinding` o un enlace personalizado usando `TcpTransportBindingElement`.  
   
  Al escribir un canal personalizado y exponerlo en el modelo de programación usando un nuevo `BindingElement` o `Binding`, debe crear un conjunto de clases para convertir en configurable `BindingElement` o `Binding` utilizando un archivo .config. Puede utilizar la herramienta ConfigurationCodeGenerator para generar estas clases y mejorar la experiencia de su cliente.  

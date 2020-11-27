@@ -2,14 +2,15 @@
 title: Tipos conocidos
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: dae271384905df890b2f42196d6e0aadad66be6f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e3f1365d69e218042e3a7c8f1c7f023d9ed7bafb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591844"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263820"
 ---
 # <a name="known-types"></a>Tipos conocidos
+
 Este ejemplo muestra cómo especificar la información sobre los tipos derivados en un contrato de datos. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. En la programación orientada a objetos, un tipo que hereda de otro tipo se puede utilizar en lugar del tipo original. En la programación orientada a servicios, se comunican esquemas en lugar los tipos y por consiguiente, no se conserva la relación entre los tipos. El atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> permite información sobre los tipos derivados que deben incluirse en el contrato de datos. Si no se utiliza este mecanismo, un tipo derivado no se puede enviar o recibir donde se espera un tipo base.  
   
 > [!NOTE]
@@ -114,7 +115,7 @@ public class DataContractCalculatorService : IDataContractCalculator
 }  
 ```  
   
- En el cliente, el contrato de servicio y el contrato de datos se definen en el archivo de código fuente generatedClient.cs, generado por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de los metadatos del servicio. Dado que el atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> se especifica en el contrato de datos del servicio, el cliente puede recibir `ComplexNumber` y las clases `ComplexNumberWithMagnitude` al utilizar el servicio. El cliente detecta si obtuvo `ComplexNumberWithMagnitude` y generó el resultado adecuado:  
+ En el cliente, el contrato de servicio y el contrato de datos se definen en el archivo de código fuente generatedClient.cs, generado por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) a partir de los metadatos del servicio. Dado que el atributo <xref:System.Runtime.Serialization.KnownTypeAttribute> se especifica en el contrato de datos del servicio, el cliente puede recibir `ComplexNumber` y las clases `ComplexNumberWithMagnitude` al utilizar el servicio. El cliente detecta si obtuvo `ComplexNumberWithMagnitude` y generó el resultado adecuado:  
   
 ```csharp
 // Create a client  

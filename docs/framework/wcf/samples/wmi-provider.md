@@ -2,14 +2,15 @@
 title: Proveedor WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 3fc982bcec563d5e4b90ba3b25989859d7d86281
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9d654527c6897e071f914d4015ba9a225974b0f1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263800"
 ---
 # <a name="wmi-provider"></a>Proveedor WMI
+
 Este ejemplo muestra cómo recopilar datos de servicios de Windows Communication Foundation (WCF) en tiempo de ejecución mediante el proveedor de Instrumental de administración de Windows (WMI) integrado en WCF. Asimismo, este ejemplo muestra cómo agregar un objeto WMI definido por el usuario a un servicio. El ejemplo activa el proveedor WMI para la [Introducción](getting-started-sample.md) y muestra cómo recopilar datos del `ICalculator` servicio en tiempo de ejecución.  
   
  WMI es la implementación de Microsoft del estándar Web-Based Enterprise Management (WBEM). Para obtener más información sobre el SDK de WMI, vea [instrumental de administración de Windows](/windows/desktop/WmiSdk/wmi-start-page). WBEM es un estándar de la industria para saber cómo exponen las aplicaciones la instrumentación de administración a las herramientas de administración externas.  
@@ -29,6 +30,7 @@ Este ejemplo muestra cómo recopilar datos de servicios de Windows Communication
  Esta entrada de configuración expone una interfaz WMI. Ahora, las aplicaciones de administración pueden establecer la conexión a través de esta interfaz y obtener acceso a la instrumentación de administración de la aplicación.  
   
 ## <a name="custom-wmi-object"></a>Objeto WMI personalizado  
+
  Agregar objetos WMI a un servicio permite revelar la información definida por el usuario junto con la información de proveedor WMI integrada. Esto se logra publicando el esquema del servicio en WMI mediante la aplicación Installutil.exe. Las instrucciones para conseguirlo, además de más información, se pueden encontrar en las instrucciones de configuración al final del tema.  
   
 ## <a name="accessing-wmi-information"></a>Acceso a la información de WMI  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: c99500a3d4dc0bd8abe7062f23e064d395cadf36
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4a4d304a1316fe534e09f02ac1cd2900bf798011
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557884"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265536"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Procedimiento para habilitar la detección de repetición de mensajes
+
 Un ataque de reproducción se produce cuando un atacante copia una secuencia de mensajes entre dos partes y reproduce la secuencia a una o más partes. A menos que se mitigue, los equipos sujetos al ataque procesarán el flujo como mensajes legítimos, generando un intervalo de consecuencias erróneas, como las órdenes redundantes de un elemento.  
   
  Para obtener más información acerca de la detección de reproducción de mensajes, vea [detección de reproducción de mensajes](/previous-versions/msp-n-p/ff649371(v=pandp.10)).  
@@ -75,15 +76,18 @@ Un ataque de reproducción se produce cuando un atacante copia una secuencia de 
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El ejemplo siguiente crea <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mediante el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> y establece las propiedades de reproducción del enlace.  
   
  [!code-csharp[c_ReplayDetection#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_replaydetection/cs/source.cs#1)]
  [!code-vb[c_ReplayDetection#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_replaydetection/vb/source.vb#1)]  
   
 ## <a name="scope-of-replay-message-security-only"></a>Ámbito de reproducción: Solo seguridad del mensaje  
+
  Observe que los procedimientos siguientes solo se aplican al modo de seguridad de los mensajes. Para Transporte y Transporte con modos de credencial de mensaje, los mecanismos de transporte detectan las reproducciones.  
   
 ## <a name="secure-conversation-notes"></a>Notas de conversación seguras  
+
  Para los enlaces que habilitan las conversaciones seguras, puede ajustar estos valores tanto para la aplicación como para el enlace de arranque de conversación segura. Por ejemplo, se pueden desactivar las reproducciones para el canal de la aplicación pero habilitarlas para el canal de arranque que establece la conversación segura.  
   
  Si no utiliza las sesiones de conversación seguras, la detección de reproducción no garantiza la detección de reproducciones en escenarios de granja de servidores y cuando se recicla el proceso. Esto se aplica a los enlaces siguientes proporcionados por el sistema:  
