@@ -2,14 +2,15 @@
 title: Validador de contraseña de nombre de usuario
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4ad365061e6a0f3178650699febd6c18cdd14205
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: bf20c9baaec44ebdfed351b35c54ab14448c7644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553124"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294929"
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
+
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.
 
 > [!IMPORTANT]
@@ -251,6 +252,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. El cliente debería llamar correctamente a todos los métodos. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
+
  El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en los equipos o en un caso no autohospedado.
 
  A continuación, se proporciona una breve descripción de las diferentes secciones de los archivos por lotes de manera que se puedan modificar para ejecutarse con la configuración adecuada.

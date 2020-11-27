@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bf498ee373f2d637a7a93fbc36225a38ff7744c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596973"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293902"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Procedimiento para proteger un servicio con un certificado X.509
+
 La protección de un servicio con un certificado X. 509 es una técnica básica que utilizan la mayoría de los enlaces de Windows Communication Foundation (WCF). En este tema se describen los pasos necesarios para configurar un servicio autoalojado con un certificado X.509.  
   
  Un requisito previo es un certificado válido que se puede utilizar para autenticar el servidor. Una entidad emisora de certificados de confianza debe emitir el certificado. Si el certificado no es válido, cualquier cliente que intente usar el servicio no confiará en el servicio y, por tanto, no se realizará ninguna conexión. Para obtener más información sobre el uso de certificados, consulte [trabajar con certificados](working-with-certificates.md).  
@@ -62,12 +63,14 @@ La protección de un servicio con un certificado X. 509 es una técnica básica 
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
 ## <a name="example"></a>Ejemplo  
+
  El ejemplo siguiente utiliza el método <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> para configurar un servicio con un certificado X.509.  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
+
  Los espacios de nombres siguientes son necesarios para compilar el código:  
   
 - <xref:System>  

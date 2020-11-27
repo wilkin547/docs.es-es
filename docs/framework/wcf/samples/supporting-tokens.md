@@ -2,17 +2,19 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: ff46a2f5289bc72244ea586f01ea05504d628f69
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d7e2a824060f4be05e0b0e9d1765fcf271eacbd3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555203"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293668"
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
+
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
 
 ## <a name="demonstrates"></a>Muestra
+
  El ejemplo explica:
 
 - Cómo un cliente puede pasar los tokens de seguridad adicionales a un servicio.
@@ -25,6 +27,7 @@ El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a u
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>El cliente se autentica con el token del nombre de usuario y el token de seguridad X.509 compatible
+
  El servicio expone un punto de conexión único para comunicarse que se crea mediante programación usando las clases `BindingHelper` y `EchoServiceHost`. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace personalizado utilizando `SymmetricSecurityBindingElement` y `HttpTransportBindingElement`. Este ejemplo establece `SymmetricSecurityBindingElement` para utilizar un certificado X.509 de servicio para proteger la clave simétrica durante la transmisión y pasar `UserNameToken` junto con el `X509SecurityToken` compatible en un encabezado de mensaje de WS-Security. La clave simétrica se utiliza para cifrar el cuerpo del mensaje y el token de seguridad del nombre de usuario. El token auxiliar se pasa como un token de seguridad binario adicional en el encabezado de mensaje de WS-Security. La autenticidad del token auxiliar se demuestra firmando parte del mensaje con la clave privada asociada con el token de seguridad X.509 compatible.
 
 ```csharp
@@ -282,6 +285,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Visualización de la información de los autores de la llamada
+
  Para mostrar la información del autor de la llamada, puede usar `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. Windows Communication Foundation (WCF) suministra automáticamente esas notificaciones para cada token recibido en el mensaje.
 
 ```csharp
@@ -345,14 +349,17 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo
+
  Al ejecutar el ejemplo, el cliente le pide primero que proporcione el nombre de usuario y la contraseña para el token del nombre de usuario. Asegúrese de proporcionar los valores correctos para la cuenta del sistema, porque WCF en el servicio asigna los valores proporcionados en el token de nombre de usuario a la identidad proporcionada por el sistema. Después de esto, el cliente muestra la respuesta del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
+
  El archivo por lotes Setup.bat incluido con este ejemplo le permite configurar el servidor con certificados pertinentes para ejecutar la aplicación hospedada por Internet Information Services (IIS) que necesita la seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione a través de los equipos o en un caso no hospedado.
 
  A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.
 
 ### <a name="creating-the-client-certificate"></a>Crear el certificado del cliente
+
  Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de cliente que se va a usar. La variable `%CLIENT_NAME%` especifica el asunto del certificado de cliente. Este ejemplo utiliza "client.com" como el nombre del asunto.
 
  El certificado está almacenado en Mi almacén (Personal) en la ubicación de almacén `CurrentUser`.
@@ -365,6 +372,7 @@ makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -p
 ```
 
 ### <a name="installing-the-client-certificate-into-the-servers-trusted-store"></a>Instalar el certificado del cliente en el almacén de confianza del servidor
+
  La línea siguiente del archivo por lotes Setup.bat copia el certificado de cliente en el almacén de confianza del servidor. Este paso es necesario porque el sistema del servidor no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
 ```console
@@ -375,6 +383,7 @@ certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s Tru
 ```
 
 ### <a name="creating-the-server-certificate"></a>Crear el certificado de servidor
+
  Las líneas siguientes del archivo por lotes Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. El valor predeterminado en este archivo por lotes es el host local.
 
  El certificado se almacena en el almacén My (Personal), en la ubicación de almacenamiento LocalMachine. El certificado está almacenado en el almacén LocalMachine para los servicios hospedados por IIS. En el caso de servicios autohospedados, debería modificar el archivo por lotes para almacenar el certificado de servidor en la ubicación de almacén CurrentUser reemplazando la cadena LocalMachine con CurrentUser.
@@ -390,6 +399,7 @@ makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -
 ```
 
 ### <a name="installing-server-certificate-into-clients-trusted-certificate-store"></a>Instalar el certificado del servidor en un almacén de certificados de confianza del cliente
+
  Las líneas siguientes del archivo por lotes Setup.bat copian el certificado de servidor en el almacén de los usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente (por ejemplo, un certificado emitido por Microsoft), no es necesario el paso de rellenar el almacén de certificados del cliente con el certificado de servidor.
 
 ```console
@@ -399,6 +409,7 @@ echo ************certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r C
 ```
 
 ### <a name="enabling-access-to-the-certificates-private-key"></a>Cómo permitir el acceso a la clave privada del certificado
+
  Para permitir el acceso a la clave privada del certificado del servicio hospedado por IIS, la cuenta de usuario bajo la que se ejecuta el proceso hospedado por IIS debe tener los permisos adecuados para la clave privada. Esto se logra con los últimos pasos del script Setup.bat.
 
 ```console

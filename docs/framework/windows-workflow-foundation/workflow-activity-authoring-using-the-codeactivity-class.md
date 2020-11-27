@@ -2,17 +2,19 @@
 title: Crear actividad de flujo de trabajo mediante la clase CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
-ms.openlocfilehash: e82122301ef412f9f145ef8b6e2c9e7b9033ced1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 714e0971a006db20d002b0f3a486533b1357fba7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656021"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293824"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Crear actividad de flujo de trabajo mediante la clase CodeActivity
+
 Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pueden implementar el comportamiento imperativo básico al invalidar el método <xref:System.Activities.CodeActivity.Execute%2A>.
 
 ## <a name="using-codeactivitycontext"></a>Usar CodeActivityContext
+
  Se puede tener acceso a las características del tiempo de ejecución del flujo de trabajo desde dentro del método <xref:System.Activities.CodeActivity.Execute%2A> usando los miembros del parámetro `context`, del tipo <xref:System.Activities.CodeActivityContext>. Las características disponibles mediante <xref:System.Activities.CodeActivityContext> incluyen lo siguiente:
 
 - Obtener y establecer los valores de variables y argumentos.
@@ -25,11 +27,11 @@ Las actividades creadas al heredar de <xref:System.Activities.CodeActivity> pued
 
 1. Abra Visual Studio 2010.
 
-2. Seleccione **archivo**, **nueva**y, a continuación, **proyecto**. Seleccione **Workflow 4.0** en **Visual C#** en el **tipos de proyecto** ventana y seleccione el **v2010** nodo. Seleccione **biblioteca de actividades** en el **plantillas** ventana. Dé al nuevo proyecto el nombre "HelloActivity".
+2. Seleccione **archivo**, **nuevo** y **proyecto**. Seleccione **flujo de trabajo 4,0** en **Visual C#** en la ventana **tipos de proyecto** y seleccione el nodo **V2010** . Seleccione **biblioteca de actividades** en la ventana **plantillas** . Dé al nuevo proyecto el nombre "HelloActivity".
 
-3. Haga clic en Activity1.xaml en el proyecto HelloActivity y seleccione **eliminar**.
+3. Haga clic con el botón secundario en Activity1. XAML en el proyecto HelloActivity y seleccione **eliminar**.
 
-4. Haga clic en el proyecto HelloActivity y seleccione **agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
+4. Haga clic con el botón derecho en el proyecto HelloActivity, seleccione **Agregar** y, a continuación, **clase**. Dé a la nueva clase el nombre "HelloActivity.cs".
 
 5. En el archivo HelloActivity.cs, agregue las siguientes directivas `using`.
 

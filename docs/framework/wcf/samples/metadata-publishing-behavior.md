@@ -5,14 +5,15 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 60a5884bb8d1189ab758260bf765c321392e1bfe
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7df0a8ce41b7a26f70a010b377213c8438fe659d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84584368"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294357"
 ---
 # <a name="metadata-publishing-behavior"></a>Comportamiento de publicación de metadatos
+
 El ejemplo de comportamiento de publicación de metadatos muestra cómo controlar las características de publicación de metadatos de un servicio. Para evitar la revelación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada de los servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración.  
   
 > [!IMPORTANT]
@@ -57,7 +58,7 @@ El ejemplo de comportamiento de publicación de metadatos muestra cómo controla
   
  Este ejemplo establece la propiedad <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> en `true`, que también expone los metadatos del servicio mediante HTTP GET. Para habilitar un punto de conexión de metadatos HTTP GET, el servicio debe tener una dirección base HTTP. Se utiliza `?wsdl` de la cadena de consulta en la dirección base del servicio para tener acceso a los metadatos. Por ejemplo, para ver el WSDL del servicio en un explorador Web, usaría la dirección `http://localhost/servicemodelsamples/service.svc?wsdl` . De manera alternativa, puede usar este comportamiento para exponer metadatos sobre HTTPS estableciendo <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> en `true`. Esto requiere una dirección base HTTPS.  
   
- Para tener acceso al punto de conexión MEX del servicio, use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Para tener acceso al punto de conexión MEX del servicio, use la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
  `svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs`  
   

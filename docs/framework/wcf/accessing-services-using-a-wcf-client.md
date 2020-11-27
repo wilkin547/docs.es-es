@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b6f5cd7217b447256f19891c2624fba857735107
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245549"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294877"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Acceso a los servicios mediante un cliente WCF
 
@@ -27,9 +27,10 @@ Después de crear un servicio, el siguiente paso es crear un proxy de cliente de
 
 3. Cree una instancia del proxy de cliente de WCF.
 
-El proxy de cliente de WCF se puede generar manualmente mediante la herramienta de utilidad de metadatos del modelo de servicio (SvcUtil.exe) para obtener más información, vea [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). También se puede generar el proxy de cliente de WCF en Visual Studio mediante la característica **Agregar referencia de servicio** . Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución. Si el servicio se autohospeda, debe ejecutar el host. Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.
+El proxy de cliente de WCF se puede generar manualmente mediante la herramienta de utilidad de metadatos del modelo de servicio (SvcUtil.exe) para obtener más información, vea [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). También se puede generar el proxy de cliente de WCF en Visual Studio mediante la característica **Agregar referencia de servicio**  . Para generar el proxy de cliente de WCF usando cualquier método, el servicio debe estar en ejecución. Si el servicio se autohospeda, debe ejecutar el host. Si el servicio se hospeda en IIS/WAS no necesita hacer nada más.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>Herramienta de utilidad de metadatos ServiceModel
+
  La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) es una herramienta de línea de comandos para generar código a partir de metadatos. A continuación se muestra un ejemplo del uso de un comando básico Svcutil.exe.
 
 ```console
@@ -60,6 +61,7 @@ Svcutil.exe <file1 [,file2]>
  Con el servicio en ejecución, haga clic con el botón secundario en el proyecto que contendrá el proxy de cliente de WCF y seleccione **Agregar**  >  **referencia de servicio**. En el **cuadro de diálogo Agregar referencia de servicio**, escriba la dirección URL del servicio al que desea llamar y haga clic en el botón **ir** . El cuadro de diálogo mostrará una lista de servicios disponibles en la dirección especificada. Haga doble clic en el servicio para ver los contratos y las operaciones disponibles, especifique un espacio de nombres para el código generado y haga clic en el botón **Aceptar** .
 
 ## <a name="example"></a>Ejemplo
+
  El ejemplo de código siguiente muestra un contrato de servicio creado para un servicio.
 
 ```csharp
@@ -151,6 +153,7 @@ End Class
 ```
 
 ## <a name="using-the-wcf-client"></a>Uso del cliente WCF
+
  Para usar el cliente de WCF, cree una instancia del cliente de WCF y, a continuación, llame a sus métodos, tal y como se muestra en el código siguiente.
 
 ```csharp

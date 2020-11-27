@@ -2,18 +2,19 @@
 title: Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e9a0d3fbc75a8c64af892f74acedfc41dc115da3
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: f81a596c5573405bec9389347c45ff6cb6b30fc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294864"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Agregar referencia de servicio en un proyecto de subconjuntos portátiles
 
 Los proyectos de subconjuntos portátiles permiten a los programadores de ensamblados .NET mantener un único árbol de origen y un sistema de compilación, al mismo tiempo que se admiten varias implementaciones de .NET (escritorio, Silverlight, Windows Phone y Xbox). Los proyectos de subconjuntos portátiles solo hacen referencia a bibliotecas portables que son ensamblados .NET que se pueden usar en cualquier implementación de .NET.
   
 ## <a name="add-service-reference-details"></a>Detalles de Agregar referencia de servicio  
+
  Al agregar una referencia de servicio a un proyecto de subconjunto portátil se aplican las restricciones siguientes:  
   
 1. Para <xref:System.Xml.Serialization.XmlSerializer>, solo se permiten codificaciones literales. Las codificaciones SOAP generan un error durante la importación.  
@@ -44,7 +45,7 @@ Los proyectos de subconjuntos portátiles permiten a los programadores de ensamb
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> no se admite en proyectos de subconjuntos portátiles.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Acceso a los servicios mediante un cliente WCF](accessing-services-using-a-wcf-client.md)
 - [Biblioteca de clases portable](../cross-platform/portable-class-library.md)

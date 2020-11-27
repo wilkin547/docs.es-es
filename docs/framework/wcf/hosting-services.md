@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 86ce392bb76b22e2b6a65fa1d005ed8e9589af15
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 41a7a3e651d234de4079455a667df670d6c7435d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246393"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294656"
 ---
 # <a name="hosting-services"></a>Servicios de hospedaje
 
@@ -22,7 +22,8 @@ Estas opciones de hospedaje pueden desde ejecutarse dentro de una aplicación de
 
 ## <a name="hosting-options"></a>Opciones de hospedaje
 
-### <a name="self-host-in-a-managed-application"></a>Autohospedaje en una aplicación administrada
+### <a name="self-host-in-a-managed-application"></a>Self-Host en una aplicación administrada
+
  Los servicios WCF se pueden hospedar en cualquier aplicación administrada. Ésta es la opción más flexible puesto que es la que exige una menor infraestructura para implementar. Usted incrusta el código del servicio dentro del código de la aplicación administrada y, a continuación, crea y abre una instancia del <xref:System.ServiceModel.ServiceHost> para hacer que el servicio esté disponible. Para obtener más información, consulte [Cómo: hospedar un servicio WCF en una aplicación administrada](how-to-host-a-wcf-service-in-a-managed-application.md).
 
  Esta opción habilita dos escenarios comunes: los servicios WCF que se ejecutan dentro de las aplicaciones de consola y las aplicaciones cliente enriquecidas, como las basadas en Windows Presentation Foundation (WPF) o Windows Forms (WinForms). Hospedar un servicio WCF dentro de una aplicación de consola suele ser útil durante la fase de desarrollo de la aplicación. Esto hace que sean fáciles de depurar, de obtener información de seguimiento para averiguar lo que está sucediendo dentro de la aplicación y fáciles de mover copiándolas en nuevas ubicaciones. Esta opción de hospedaje también facilita que las aplicaciones cliente enriquecidas, como las aplicaciones de WPF y WinForms, se comuniquen con el mundo exterior. Por ejemplo, un cliente de colaboración punto a punto que usa WPF para su interfaz de usuario y también hospeda un servicio WCF que permite a otros clientes conectarse a él y compartir información.
@@ -44,6 +45,7 @@ Windows Process Activation Service (WAS) es el nuevo mecanismo de activación de
  Esta opción de hospedaje requiere que se configure correctamente WAS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información acerca de cómo configurar el hospedaje de WAS, consulte [Cómo: hospedar un servicio WCF en was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Elegir un entorno de hospedaje
+
  La siguiente tabla resume algunos de las ventajas y escenarios clave asociados a cada una de las opciones de hospedaje.
 
 |Entorno de hospedaje|Escenarios comunes|Ventajas y limitaciones clave|
@@ -58,8 +60,8 @@ Windows Process Activation Service (WAS) es el nuevo mecanismo de activación de
 
 |Entorno de hospedaje|Disponibilidad de plataforma|Transportes admitidos|Reciclaje de procesos y AppDomain|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Aplicaciones administradas ("autohospedadas")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
-|Windows Services (conocidos anteriormente como servicios NT)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|Aplicaciones administradas ("autohospedadas")|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
+|Windows Services (conocidos anteriormente como servicios NT)|Windows XP, Windows Server 2003, Windows Vista,<br /><br /> Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|No|
 |IIS 5,1|Windows XP|HTTP|Yes|
 |IIS 6,0|Windows Server 2003|HTTP|Yes|
 |Servicio de activación de procesos de Windows (WAS)|Windows Vista, Windows Server 2008|HTTP,<br /><br /> net.tcp,<br /><br /> net.pipe,<br /><br /> net.msmq|Yes|

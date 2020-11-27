@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b96a32f5e11ed4808f8f35d02802afd1f48c3072
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2a8c186c839be5008bbc5315c7c9fae638680714
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601327"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293928"
 ---
 # <a name="data-contract-equivalence"></a>Equivalencia del contrato de datos
+
 Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, o para que un servicio envíe correctamente datos a un cliente, el tipo enviado no tiene que existir necesariamente en el extremo receptor. El único requisito es que los contratos de datos de ambos tipos sean equivalentes. (A veces, no se requiere una equivalencia estricta, como se describe en el [control de versiones del contrato de datos](data-contract-versioning.md)).  
   
  Para que los contratos de datos sean equivalentes, deben incluir el mismo espacio de nombres y nombre. Además, cada miembro de datos en un lado debe tener un miembro de datos equivalente en el otro.  
@@ -34,6 +35,7 @@ Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, 
  [!code-vb[C_DataContractNames#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#5)]  
   
 ## <a name="data-member-order-and-data-contract-equivalence"></a>Orden del miembro de datos y equivalencia del contrato de datos  
+
  Utilizar la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> de la clase <xref:System.Runtime.Serialization.DataMemberAttribute> puede afectar a la equivalencia del contrato de datos. Los contratos de datos deben tener miembros que aparecen en el mismo orden para ser equivalentes. El orden predeterminado es alfabético. Para obtener más información, vea orden de los [miembros de datos](data-member-order.md).  
   
  Por ejemplo, el código siguiente produce contratos de datos equivalentes.  
@@ -47,6 +49,7 @@ Para que un cliente envíe correctamente datos de un cierto tipo a un servicio, 
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Herencia, interfaces y equivalencia del contrato de datos  
+
  Al determinar la equivalencia, un contrato de datos que hereda de otro contrato de datos se trata como si fuese, simplemente, un contrato de datos que incluye todos los miembros de datos del tipo base. Tenga presente que el orden de los miembros de datos debe coincidir y que los miembros de tipo base preceden, en el orden, a los miembros de tipo derivado. Además, si, como en el ejemplo de código siguiente, dos miembros de datos tienen el mismo valor de orden, la clasificación de esos miembros de datos será alfabética. Para obtener más información, vea orden de los [miembros de datos](data-member-order.md).  
   
  En el ejemplo siguiente, el contrato de datos para el tipo `Employee` es equivalente al contrato de datos para el tipo `Worker`.  

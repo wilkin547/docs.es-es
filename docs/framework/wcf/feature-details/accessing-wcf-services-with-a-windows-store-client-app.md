@@ -2,18 +2,19 @@
 title: Obtener acceso a los servicios WCF con una aplicación cliente de la Tienda Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: d575907feea3d831b7e6f69410c8d4647e6ac95d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ab57adbe0effa2b74541053aa0fcc5b572a6b7fd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557962"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293941"
 ---
 # <a name="access-wcf-services-with-a-windows-store-client-app"></a>Acceder a servicios WCF con una aplicación cliente de la tienda Windows
 
 Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la Tienda Windows. Estas aplicaciones están diseñadas para una interfaz de pantalla táctil. .NET Framework 4.5 permite que las aplicaciones de la Tienda Windows llamen a servicios WCF.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Compatibilidad de WCF en aplicaciones de la Tienda Windows  
+
  Un subconjunto de funcionalidad de WCF está disponible en una aplicación de la Tienda Windows; vea las secciones siguientes para obtener más detalles.  
   
 > [!IMPORTANT]
@@ -23,6 +24,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
 > No se admite el uso de Agregar referencia de servicio para agregar una referencia de servicio Web a un componente de Windows Runtime.  
   
 ### <a name="supported-bindings"></a>Enlaces admitidos  
+
  Los siguientes enlaces de WCF se admiten en aplicaciones de la Tienda Windows:  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -56,6 +58,7 @@ Windows 8 presenta un nuevo tipo de aplicaciones denominadas aplicaciones de la 
  Se admiten las codificaciones de texto y binarias. Se admiten todos los modos de transferencia de WCF. Para obtener más información, vea [Streaming Message Transfer](streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Agregar referencia de servicio  
+
  Para llamar a un servicio WCF desde una aplicación de la Tienda Windows, use la característica Agregar referencia de servicio de Visual Studio 2012. Observará algunos cambios en la funcionalidad de Agregar referencia de servicio cunado se lleva a cabo desde una aplicación de la Tienda Windows. Primero no se genera ningún archivo de configuración. Las aplicaciones de la Tienda Windows no usan archivos de configuración, por lo que deben configurarse en el código. Este código de configuración se puede encontrar en el archivo References.cs que genera Agregar referencia de servicio. Para ver este archivo, asegúrese de seleccionar "Mostrar todos los archivos" en el explorador de soluciones. El archivo se encuentra en los nodos Referencias de servicio y Reference.svcmap en el proyecto. Todas las operaciones generadas para los servicios WCF en una aplicación de la Tienda Windows serán asincrónicas mediante el patrón asincrónico basado en tareas. Para obtener más información, vea [tareas asincrónicas: simplificar la programación asincrónica con tareas](/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks).  
   
  Debido a que la configuración ahora se genera en el código, cualquier cambio realizado en el archivo Reference.cs se sobrescribirá cada vez que se actualice la referencia de servicio. Para solucionar esta situación, el código de configuración se genera en un método parcial, que puede implementar en la clase de proxy cliente. El método parcial se declara de la siguiente manera:  
@@ -96,6 +99,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ```  
   
 ### <a name="serialization"></a>Serialización  
+
  Los siguientes serializadores se admiten en aplicaciones de la Tienda Windows:  
   
 1. DataContractSerializer  
@@ -143,6 +147,7 @@ En las aplicaciones de la tienda Windows se admiten los siguientes tipos de cred
 > Para que las aplicaciones de la tienda Windows realicen llamadas entre equipos, debe habilitar otra función denominada "redes domésticas o de trabajo". Esta configuración también se encuentra en el archivo package. AppManifest en la pestaña capacidades. Active la casilla Home/Work networking. Esto proporciona a la aplicación acceso entrante y saliente a las redes de los sitios de confianza del usuario, como casa y el trabajo. Los puertos críticos de entrada siempre se bloquean. Para tener acceso a servicios de Internet también debe habilitar la capacidad de Internet (cliente).  
   
 ### <a name="misc"></a>Varios  
+
  El uso de las clases siguientes se admite para las aplicaciones de la Tienda Windows:  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -152,12 +157,14 @@ En las aplicaciones de la tienda Windows se admiten los siguientes tipos de cred
 3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Definir contratos de servicio  
+
  Se recomienda definir solo operaciones de servicio asincrónicas mediante el patrón asincrónico basado en tareas. Esto garantiza que las aplicaciones de la Tienda Windows sigan respondiendo mientras se llama a una operación de servicio.  
   
 > [!WARNING]
 > Aunque no se producirá ninguna excepción si define una operación sincrónica, se recomienda definir solamente operaciones asincrónicas.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Llamar a servicios WCF desde aplicaciones de la Tienda Windows  
+
  Como se mencionó antes, toda la configuración se debe hacer en el código en el método GetBindingForEndpoint de la clase de proxy generada. La llamada a una operación de servicio se realiza igual que la llamada a cualquier método asincrónico basado en tareas, tal como se muestra en el fragmento de código siguiente.  
   
 ```csharp  

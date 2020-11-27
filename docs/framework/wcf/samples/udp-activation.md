@@ -2,14 +2,15 @@
 title: Activación UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 13d20524693b234a14b2b31061c6259f75b1c0b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 74ee3e1d53b9ba060820f69c201bfdccb6308d47
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591116"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295007"
 ---
 # <a name="udp-activation"></a>Activación UDP
+
 Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende el ejemplo [Transport: UDP](transport-udp.md) para admitir la activación de procesos mediante el servicio de activación de procesos de Windows (was).  
   
  El ejemplo está compuesto de tres partes principales:  
@@ -21,6 +22,7 @@ Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende
 - Un servicio (hospedado en un proceso de trabajo activado por WAS) que recibe los mensajes sobre el transporte personalizado de UDP.  
   
 ## <a name="udp-protocol-activator"></a>Activador del protocolo UDP  
+
  El activador del protocolo UDP es un puente entre el cliente WCF y el servicio WCF. Proporciona la comunicación de datos a través del protocolo UDP en el nivel de transporte. Tiene dos funciones principales:  
   
 - El Adaptador del agente de escucha (LA) de WAS, que colabora con WAS para activar los procesos como respuesta a los mensajes entrantes.  
@@ -30,6 +32,7 @@ Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende
  El activador se debe estar ejecutando como un programa independiente en el equipo del servidor. Normalmente, los adaptadores del agente de escucha de WAS (como NetTcpActivator y NetPipeActivator) se implementan en servicios de Windows de ejecución prolongada. Sin embargo, por motivos de simplicidad y claridad, este ejemplo implementa el activador de protocolo como una aplicación independiente.  
   
 ### <a name="was-listener-adapter"></a>Adaptador del agente de escucha de WAS  
+
  El Adaptador del agente de escucha de WAS para UDP se implementa en la clase `UdpListenerAdapter`. Es el módulo que interactúa con WAS para realizar la activación de la aplicación para el protocolo UDP. Esto se logra llamando a las API de Webhost siguientes:  
   
 - `WebhostRegisterProtocol`  
@@ -46,22 +49,26 @@ Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende
   
  Cuando una nueva solicitud entra por primera vez para una aplicación, el adaptador del agente de escucha llama a `WebhostOpenListenerChannelInstance` en WAS, lo que inicia el proceso de trabajo si no se ha iniciado aún. A continuación, se cargan los controladores de protocolo y se puede iniciar la comunicación entre el adaptador del agente de escucha y la aplicación virtual.  
   
- El adaptador del agente de escucha se registra en%SystemRoot%\System32\inetsrv\ApplicationHost.config en la `listenerAdapters` sección > < de la siguiente manera:  
+ El adaptador del agente de escucha se registra en la \System32\inetsrv\ApplicationHost.config% SystemRoot% de la sección <> de la `listenerAdapters` siguiente manera:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
 ```  
   
 ### <a name="protocol-listener"></a>Agente de escucha de protocolo  
+
  El agente de escucha del protocolo UDP es un módulo dentro del activador de protocolo que realiza escuchas en un extremo de UDP en nombre de la aplicación virtual. Se implementa en la clase `UdpSocketListener`. El punto de conexión se representa como `IPEndpoint` para lo que el número de puerto se extrae del enlace del protocolo para el sitio.  
   
 ### <a name="control-service"></a>Servicio de control  
+
  En este ejemplo, usamos WCF para comunicarse entre el activador y el proceso de trabajo WAS. El servicio que reside en el activador se denomina "servicio de control".  
   
 ## <a name="protocol-handlers"></a>Controladores de protocolo  
+
  Después de que el adaptador del agente de escucha llame a `WebhostOpenListenerChannelInstance`, el administrador del proceso de WAS inicia el proceso de trabajo si no comienza. El administrador de la aplicación dentro del proceso de trabajo carga a continuación el controlador de protocolo de proceso UDP (PPH) con la solicitud para ese `ListenerChannelId`. PPH a su vez llama a `IAdphManager` .`StartAppDomainProtocolListenerChannel` para iniciar el controlador de protocolo AppDomain de UDP (ADPH).  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
+
  La información se registra en Web.config de la siguiente manera:  
   
 ```xml  
@@ -71,6 +78,7 @@ Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende
 ```  
   
 ## <a name="special-setup-for-this-sample"></a>Instalación especial para este ejemplo  
+
  Este ejemplo solo se puede compilar y ejecutar en Windows Vista, Windows Server 2008 o Windows 7. Para ejecutar el ejemplo, debe tener primero todos los componentes configurados correctamente. Siga estos pasos para instalar el ejemplo.  
   
 #### <a name="to-set-up-this-sample"></a>Para configurar este ejemplo  
@@ -95,19 +103,20 @@ Este ejemplo se basa en el ejemplo [Transport: UDP](transport-udp.md) . Extiende
   
     - Controladores de protocolo UDP  
   
-4. Haga clic en la pestaña **activación** de la aplicación de la interfaz de usuario "WasNetActivator. exe". Haga clic en el botón **iniciar** para iniciar el adaptador del agente de escucha. Ahora ya está listo para ejecutar el programa.  
+4. Haga clic en la pestaña **activación** de la aplicación de interfaz de usuario "WasNetActivator.exe". Haga clic en el botón **iniciar** para iniciar el adaptador del agente de escucha. Ahora ya está listo para ejecutar el programa.  
   
     > [!NOTE]
     > Cuando haya finalizado con este ejemplo, debe ejecutar Cleanup.bat para quitar el enlace net.udp del "Sitio Web predeterminado".  
   
 ## <a name="sample-usage"></a>Ejemplo de uso  
+
  Después de la compilación, se han generador cuatro binarios diferentes:  
   
 - Client.exe: el código de cliente. App.config está compilado en el archivo de configuración del cliente Client.exe.config.  
   
 - UDPActivation.dll: la biblioteca que contiene todas las implementaciones de UDP principales.  
   
-- Service.dll: el código de servicio. Se copia en el directorio \bin de ServiceModelSamples de la aplicación virtual. El archivo de servicio es Service. SVC y el archivo de configuración es Web. config. Después de la compilación, se copian en la siguiente ubicación:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
+- Service.dll: el código de servicio. Se copia en el directorio \bin de ServiceModelSamples de la aplicación virtual. El archivo de servicio es Service. SVC y el archivo de configuración es Web.config. Después de la compilación, se copian en la siguiente ubicación:%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
 - WasNetActivator: el programa activador de UDP.  
   

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-ms.openlocfilehash: f9d9bf834946233e176abc463d31a99d476b86be
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: db95a963250d2fc44a774a0a7b8416808f5dcd60
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419777"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293616"
 ---
 # <a name="guide-to-the-windows-workflow-documentation"></a>Guía para la documentación de Windows Workflow
+
 Este tema contiene información sobre cómo usar la documentación de Windows Workflow Foundation. Los documentos vinculados son puntos iniciales recomendados agrupados según intereses y niveles de especialización concretos.  
   
 ## <a name="new-to-windows-workflow-foundation-programming"></a>Novedades en la programación de Windows Workflow Foundation  

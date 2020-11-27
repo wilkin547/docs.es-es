@@ -2,17 +2,19 @@
 title: Introducción a los cambios de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: f6ce9875a4ebecf11f1f8d08d681841773d9f841
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: babc62206fc700fe68c2220c4f2cd717cd758d56
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447466"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294057"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
+
 En este tema se discuten los estados y transiciones que los canales tienen, los tipos utilizados para estructurar los estados del canal, y cómo implementarlos.  
   
 ## <a name="state-machines-and-channels"></a>Equipos de estado y canales  
+
  Los objetos que están relacionados con la comunicación, por ejemplo los sockets, normalmente presentan un equipo de estado cuyas transiciones de estado están relacionadas con asignar los recursos de la red, realizar o aceptar conexiones, cerrar conexiones y finalizar la comunicación. La máquina de estados del canal proporciona un modelo uniforme de los estados de un objeto de comunicación que abstrae la implementación subyacente de ese objeto. La interfaz <xref:System.ServiceModel.ICommunicationObject> proporciona un conjunto de estados, métodos de transición de estado y eventos de transición de estado. Todos los canales, generadores de canales y escuchas de canal implementan la máquina de estados del canal.  
   
  Los eventos Cerrado, Cerrando, Error, Abierto y Abriendo señalan un observador externo después de que se produzca una transición de estado.  
@@ -22,6 +24,7 @@ En este tema se discuten los estados y transiciones que los canales tienen, los 
  La propiedad de estado devuelve el estado actual como definido por <xref:System.ServiceModel.CommunicationState>:  
   
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject y estados y transición de estado  
+
  <xref:System.ServiceModel.ICommunicationObject> empieza en el estado Creado donde se pueden configurar sus diferentes propiedades. Una vez en el estado Abierto, el objeto se puede utilizar para enviar y recibir mensajes pero sus propiedades se consideran inmutables. Una vez en el estado Cerrando, el objeto ya no puede procesar nuevas solicitudes de envío o recepción, pero las solicitudes existentes tiene una oportunidad para completarse hasta que se alcance el tiempo de espera de Cerrar.  Si se produce un error irrecuperable, el objeto pasa al estado Error donde se puede inspeccionar para obtener información sobre el error y finalmente cerrarlo. Cuando en el estado Cerrado el objeto ha llegado esencialmente al fin de la máquina de estados. Cuando objeto pasa de un estado al siguiente, no regresa a un estado anterior.  
   
  El diagrama siguiente muestra los estados <xref:System.ServiceModel.ICommunicationObject> y transiciones de estado. Las transiciones de estado se pueden producir llamando a uno de los tres métodos: Anular, Abrir o Cerrar. También se pueden producir llamando a otros métodos específicos de la implementación. La transición al estado Error se podría producir como resultado de los errores mientras se abre o después de haber abierto el objeto de comunicación.  
@@ -33,10 +36,11 @@ Figura 1. La máquina de estados de ICommunicationObject.
   
  Windows Communication Foundation (WCF) proporciona una clase base abstracta denominada <xref:System.ServiceModel.Channels.CommunicationObject> que implementa <xref:System.ServiceModel.ICommunicationObject> y la máquina de Estados del canal. El gráfico siguiente es un diagrama de estados modificado que es específico de <xref:System.ServiceModel.Channels.CommunicationObject>. Además de la máquina de estados <xref:System.ServiceModel.ICommunicationObject>, muestra el control de tiempo cuando se invocan métodos <xref:System.ServiceModel.Channels.CommunicationObject> adicionales.  
   
- ![diagrama de flujo de entrada de los cambios de estado de implementación de CommunicationObject.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
-Figura 2. La implementación de CommunicationObject del equipo de estados ICommunicationObject incluidas las llamadas a eventos y métodos protegidos.  
+ ![Diagrama de flujo de entrada de los cambios de estado de implementación de CommunicationObject.](./media/understanding-state-changes/communicationobject-implementation-state-machine.gif)
+Ilustración 2. La implementación de CommunicationObject del equipo de estados ICommunicationObject incluidas las llamadas a eventos y métodos protegidos.  
   
 ### <a name="icommunicationobject-events"></a>Eventos ICommunicationObject  
+
  <xref:System.ServiceModel.Channels.CommunicationObject> expone los cinco eventos definidos por <xref:System.ServiceModel.ICommunicationObject>. Estos eventos están diseñados para el código que utiliza el objeto de comunicación al que notificar las transiciones de estado. Como se muestra en la figura 2 anterior, se desencadena cada evento después de las transiciones de estado del objeto al estado denominado por el evento. Los cinco eventos son del tipo `EventHandler` que se define como:  
   
  `public delegate void EventHandler(object sender, EventArgs e);`  
@@ -44,6 +48,7 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
  En la implementación <xref:System.ServiceModel.Channels.CommunicationObject>, el remitente es el propio <xref:System.ServiceModel.Channels.CommunicationObject> o lo que se pasó como remitente al constructor <xref:System.ServiceModel.Channels.CommunicationObject> (si se utilizó esa sobrecarga de constructor). El parámetro EventArgs, `e`, siempre es `EventArgs.Empty`.  
   
 ### <a name="derived-object-callbacks"></a>Devoluciones de llamada de objetos derivados  
+
  Además de los cinco eventos, <xref:System.ServiceModel.Channels.CommunicationObject> declara ocho métodos virtuales protegidos diseñados para permitir a un objeto derivado volver a llamar antes y después de que se produzcan las transiciones de estado.  
   
  Los métodos <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> tienen tres devoluciones de llamada de este tipo asociadas a cada uno de ellos. Por ejemplo, correspondiendo a <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> hay <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>y <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType>. Se asocian a <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> los métodos <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType>, y <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType>.  
@@ -52,17 +57,18 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
   
  Aunque <xref:System.ServiceModel.Channels.CommunicationObject.OnOpen%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClose%2A?displayProperty=nameWithType>y <xref:System.ServiceModel.Channels.CommunicationObject.OnAbort%2A?displayProperty=nameWithType> no tienen ninguna implementación predeterminada, las otras devoluciones de llamada tienen una implementación predeterminada que es necesaria para la exactitud de la máquina de estados. Si invalida esos métodos asegúrese de llamar a la implementación base o reemplazarla correctamente.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> desencadenan los eventos <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> correspondientes. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> establecen el estado del objeto en abierto y cerrado respectivamente y, a continuación, activan los eventos <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> correspondientes.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.OnClosing%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.OnFaulted%2A?displayProperty=nameWithType> desencadenan los eventos <xref:System.ServiceModel.Channels.CommunicationObject.Opening?displayProperty=nameWithType>, <xref:System.ServiceModel.Channels.CommunicationObject.Closing?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.Faulted?displayProperty=nameWithType> correspondientes. <xref:System.ServiceModel.Channels.CommunicationObject.OnOpened%2A?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.OnClosed%2A?displayProperty=nameWithType> establecen el estado de objeto en Opened y Closed respectivamente y, después, desencadenan los eventos <xref:System.ServiceModel.Channels.CommunicationObject.Opened?displayProperty=nameWithType> y <xref:System.ServiceModel.Channels.CommunicationObject.Closed?displayProperty=nameWithType> correspondientes.  
   
 ### <a name="state-transition-methods"></a>Métodos de transición de estado  
- <xref:System.ServiceModel.Channels.CommunicationObject> proporciona implementaciones de anular, cerrar y abrir. También proporciona un método Error que provoca una transición de estado al estado Error. La figura 2 muestra la máquina de estados <xref:System.ServiceModel.ICommunicationObject> con cada transición etiquetada por el método que la produce (las transiciones no etiquetadas tienen lugar dentro de la implementación del método que produjo la última transición etiquetada).  
+
+ <xref:System.ServiceModel.Channels.CommunicationObject> proporciona implementaciones de Anular, Cerrar y Abrir. También proporciona un método Error que provoca una transición de estado al estado Error. La figura 2 muestra la máquina de estados <xref:System.ServiceModel.ICommunicationObject> con cada transición etiquetada por el método que la produce (las transiciones no etiquetadas tienen lugar dentro de la implementación del método que produjo la última transición etiquetada).  
   
 > [!NOTE]
 > Todas las implementaciones <xref:System.ServiceModel.Channels.CommunicationObject> de estado de comunicación obtener/establecer están sincronizadas por subproceso.  
   
  Constructor  
   
- <xref:System.ServiceModel.Channels.CommunicationObject> proporciona tres constructores, todos los cuales dejan el objeto en el estado creado. Los constructores se definen como:  
+ <xref:System.ServiceModel.Channels.CommunicationObject> proporciona tres constructores; todos ellos dejan el objeto en el estado Creado. Los constructores se definen como:  
   
  El primer constructor es un constructor sin parámetros que delega a la sobrecarga del constructor que toma un objeto:  
   
@@ -104,7 +110,7 @@ Invalide el método OnOpen para implementar lógica abierta personalizada como a
  ![Diagrama de flujo de entrada de los cambios de estado de ICommunicationObject. Close.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 Invalide el método OnClose para implementar la lógica del cierre personalizada, como cerrar un objeto de comunicación interno. Toda lógica de cierre elegante que se pueda bloquear durante mucho tiempo (por ejemplo, esperando a que el otro lado responda) se debería implementar en OnClose() porque toma un parámetro de tiempo de espera y porque no se llama como parte de Abort().  
   
- Anular  
+ Anulación  
   
  Condición previa: ninguna.  
 Condición posterior: el estado es Cerrado. Podría iniciar una excepción.  
@@ -114,7 +120,7 @@ Condición posterior: el estado es Cerrado. Podría iniciar una excepción.
  ![Diagrama de flujo de entrada de los cambios de estado de ICommunicationObject. Abort.](./media/understanding-state-changes/ico-abort-process-override-onabort.gif)  
 Invalide el método OnAbort para implementar lógica de finalización personalizada como finalizar un objeto de comunicación interno.  
   
- Fault  
+ Error  
   
  El método Error es específico de <xref:System.ServiceModel.Channels.CommunicationObject> y no forma parte de la interfaz <xref:System.ServiceModel.ICommunicationObject>. Se incluye aquí para proporcionar información completa.  
   
@@ -125,28 +131,30 @@ Invalide el método OnAbort para implementar lógica de finalización personaliz
  El método Fault() no hace nada si el estado actual es Error o Cerrado. De lo contrario establece el estado a Error y llama a OnFaulted(), que desencadena el evento Error. Si OnFaulted producir una excepción se reinicia.  
   
 ### <a name="throwifxxx-methods"></a>Métodos ThrowIfXxx  
+
  CommunicationObject tiene tres métodos protegidos que se pueden utilizar para producir excepciones si el objeto está en un estado concreto.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> produce una excepción si el estado es closing, Closed o FAULTED.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposed%2A> produce una excepción si el estado es Cerrando, Cerrado o Error.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> produce una excepción si no se crea el estado.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrImmutable%2A> produce una excepción si el estado no es Creado.  
   
- <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> produce una excepción si no se abre el estado.  
+ <xref:System.ServiceModel.Channels.CommunicationObject.ThrowIfDisposedOrNotOpen%2A> produce una excepción si el estado no es Abierto.  
   
  Las excepciones iniciadas dependen del estado. La tabla siguiente muestra los diferentes estados y el tipo de excepción correspondiente iniciados llamando a ThrowIfXxx que se inicia en ese estado.  
   
-|Estado|¿Se ha llamado a Anular?|Excepción|  
+|State|¿Se ha llamado a Anular?|Excepción|  
 |-----------|----------------------------|---------------|  
 |Creado|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Abriendo|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
+|Apertura|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Abierto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Closing|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
-|Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Cerrado|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> en el caso de que un objeto se haya cerrado mediante una llamada a Abort anterior y explícita. Si llama a Cerrar en el objeto, se produce <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
-|Cerrado|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Cierre|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Cierre|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closed|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> en el caso de que una llamada anterior y explícita de Anular cerrara un objeto. Si llama a Cerrar en el objeto, se produce <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
+|Closed|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Error|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
-### <a name="timeouts"></a>Tiempos de espera  
+### <a name="timeouts"></a>Tiempos de expiración  
+
  Algunos de los métodos que hemos abordado utilizan parámetros de tiempo de espera. Son Cerrar, Abrir (ciertas sobrecargas y versiones asincrónicas), OnClose y OnOpen. Estos métodos están diseñados para permitir las operaciones largas (por ejemplo, bloquear en entrada/salida mientras se cierra una conexión) de modo que el parámetro de tiempo de espera indica cuánto tiempo pueden tardar tales operaciones antes de ser interrumpidas. Las implementaciones de cualquiera de estos métodos deberían utilizar el valor de tiempo de espera proporcionado para garantizar que vuelvan al llamador dentro de ese tiempo de espera. Las implementaciones de otros métodos que no tienen un tiempo de espera no están diseñadas para las operaciones largas y no se bloquean en entrada/salida.  
   
  Las excepciones son las sobrecargas de Open() y Close() que no tienen un tiempo de espera. Estos usan un valor de tiempo de espera predeterminado proporcionado por la clase derivada. <xref:System.ServiceModel.Channels.CommunicationObject> expone dos propiedades abstractas protegidas denominadas <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> y <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> definidas como:  
@@ -166,4 +174,5 @@ Invalide el método OnAbort para implementar lógica de finalización personaliz
  `}`  
   
 #### <a name="idefaultcommunicationtimeouts"></a>IDefaultCommunicationTimeouts  
+
  Esta interfaz tiene cuatro propiedades de solo lectura para proporcionar los valores de tiempo de espera predeterminados para abrir, enviar, recibir y cerrar. Cada implementación es responsable de obtener los valores predeterminados de la manera apropiada. Como una comodidad, <xref:System.ServiceModel.Channels.ChannelFactoryBase> y <xref:System.ServiceModel.Channels.ChannelListenerBase> tienen como valor predeterminado de estos valores 1 minuto cada uno.

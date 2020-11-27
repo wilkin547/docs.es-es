@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 9c241c06f153e4f85c70459ff3c50889057103f5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295046"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Procedimiento para configurar servicios WCF para interoperar con clientes de servicios web ASP.NET
 
@@ -41,6 +41,7 @@ Para configurar un punto de conexión de servicio de Windows Communication Found
 4. Habilite un punto de conexión de metadatos HTTP/GET para su servicio. Para obtener más información, consulte [Cómo: publicar metadatos para un servicio mediante un archivo de configuración](how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el código de ejemplo siguiente se muestra cómo agregar un punto de conexión de WCF que es compatible con los clientes de servicios Web de ASP.NET en el código y, como alternativa, en los archivos de configuración.  
   
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2184a159423a611a8936e900591a480ce7ef6ec8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557533"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293811"
 ---
 # <a name="workflow-persistence"></a>Persistencia del flujo de trabajo
+
 La persistencia del flujo de trabajo es la captura duradera de un estado de la instancia de flujo de trabajo, independientemente de la información del proceso o del equipo. Esto sirve para proporcionar un punto de recuperación conocido para la instancia de flujo de trabajo en caso de error del sistema, para conservar la memoria descargando instancias de flujo de trabajo que no están funcionando de forma activa o para mover el estado de la instancia de flujo de trabajo de un nodo a otro en una granja de servidores.  
   
  La persistencia permite procesar la agilidad, escalabilidad, recuperación en caso de error y la capacidad de administrar la memoria más eficazmente. El proceso de persistencia incluye la identificación de un punto de persistencia, la recopilación de los datos que se van a guardar y finalmente la delegación del almacenamiento real de los datos a un proveedor de persistencia.  
@@ -26,6 +27,7 @@ La persistencia del flujo de trabajo es la captura duradera de un estado de la i
  Windows Server APp Fabric simplifica el proceso de configuración de persistencia. Para obtener más información, vea [conceptos de persistencia con Windows Server App fabric](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="implicit-persistence-points"></a>Puntos de persistencia implícitos  
+
  La siguiente lista contiene ejemplos de las condiciones en las que se conserva un flujo de trabajo cuando se asocia un almacén de instancias a este.  
   
 - Cuando se completa una actividad **TransactionScope** o se completa una actividad **TransactedReceiveScope** .  

@@ -3,14 +3,15 @@ title: Actividades de flujo de control en WF
 description: En este artículo se resumen las actividades de .NET Framework 4.6.1 para controlar el flujo de ejecución dentro de un flujo de trabajo.
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
-ms.openlocfilehash: 18ff982d3f215e3fd46108eb2411f3d1a5ab9745
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: fbb36ca181513a687eca7b19535bf2eb4fd4f777
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420076"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294175"
 ---
 # <a name="control-flow-activities-in-wf"></a>Actividades de flujo de control en WF
+
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] proporciona varias actividades para controlar el flujo de ejecución dentro de un flujo de trabajo. Algunas de estas actividades (como `Switch` y `If` ) implementan estructuras de control de flujo similares a las de los entornos de programación como Visual C#, mientras que otras (como `Pick` ) modelan nuevas estructuras de programación.  
   
  Tenga en cuenta que mientras las actividades `Parallel` y `ParallelForEach` programan varias actividades secundarias para su ejecución simultánea, solo se usa un subproceso para un flujo de trabajo. Cada actividad secundaria de estas actividades se ejecuta secuencialmente mientras que las actividades sucesivas no se ejecutan hasta que las anteriores se completen o pasen a estar inactivas. Como resultado, estas actividades son muy útiles para las aplicaciones en las que se deben ejecutar de un modo intercalado varias actividades de bloqueo. Si ninguna de las actividades secundarias de estas actividades se está bloqueando o está inactiva, una actividad `Parallel` se ejecuta simplemente como una actividad `Sequence` y una actividad `ParallelForEach` se ejecuta como una actividad `ForEach`. Sin embargo, si se usan actividades asincrónicas (como actividades que derivan de <xref:System.Activities.AsyncCodeActivity>) o actividades de mensajería, el control pasará a la bifurcación siguiente mientras la actividad secundaria espera que se reciba su mensaje o se complete su trabajo asincrónico.  

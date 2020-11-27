@@ -2,14 +2,15 @@
 title: Ejemplo de distribuidor de tabla de UriTemplate
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: 97e916aaf9d137eb7931470f9565797b03620d28
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 57489264de62b6adbca1c98230a0f90735b3918a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591077"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294955"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Ejemplo de distribuidor de tabla de UriTemplate
+
 La clase <xref:System.UriTemplateTable> proporciona una estructura de tabla asociativa similar a un diccionario para trabajar con un conjunto de instancias de <xref:System.UriTemplate>. Este ejemplo muestra un motor de distribución básico generado usando `UriTemplateTable`, un escenario de uso común para la clase `UriTemplateTable`.  
   
  Este ejemplo muestra los conceptos clave siguientes para la clase `UriTemplateTable`:  
@@ -35,7 +36,7 @@ La clase <xref:System.UriTemplateTable> proporciona una estructura de tabla asoc
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tabla UriTemplate](uritemplate-table-sample.md)
 - [UriTemplate](uritemplate-sample.md)

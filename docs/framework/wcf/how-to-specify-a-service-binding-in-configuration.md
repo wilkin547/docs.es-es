@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 06b1cd009d28f854ec73286efa29d42f0f557314
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051953"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293694"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Procedimiento para especificar un enlace de servicio en la configuración
+
 En este ejemplo, se define un contrato `ICalculator` para un servicio de calculadora básico; el servicio se implementa en la clase `CalculatorService` y, después, su punto de conexión se configura en el archivo Web.config, donde se especifica que el servicio usa <xref:System.ServiceModel.BasicHttpBinding>. Para obtener una descripción de cómo configurar este servicio con código en lugar de una configuración, vea [Cómo: especificar un enlace de servicio en el código](how-to-specify-a-service-binding-in-code.md).  
   
  Normalmente es el mejor procedimiento para especificar el enlace y la información de dirección de forma declarativa en configuración en lugar de hacerlo de forma imperativa en código. Normalmente, no resulta muy práctico definir los puntos de conexión en el código ya que los enlaces y las direcciones de un servicio implementado son, por lo general, diferentes de los utilizados durante el desarrollo del servicio. Más generalmente, manteniendo el enlace y la información de dirección fuera del código permite cambiarlos sin tener que recompilar o implementar la aplicación.  
@@ -94,7 +95,7 @@ En este ejemplo, se define un contrato `ICalculator` para un servicio de calcula
     </wsHttpBinding>  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Utilización de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md)
 - [Especificación de una dirección de punto de conexión](specifying-an-endpoint-address.md)

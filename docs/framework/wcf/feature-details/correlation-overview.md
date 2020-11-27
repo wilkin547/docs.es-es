@@ -2,17 +2,19 @@
 title: Información general de correlación
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3cc0bc49ad464401ccff769fd5873d5b7e19dccc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552562"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293720"
 ---
 # <a name="correlation-overview"></a>Información general de correlación
+
 Correlación es el mecanismo para relacionar mensajes de servicio de flujo de trabajo entre sí o con el estado de instancia de aplicación, como una respuesta con una solicitud inicial o un identificador de orden determinado con el estado persistente de un flujo de trabajo de procesamiento del orden. En este tema, se proporciona información general sobre la correlación. Los otros temas de esta sección proporcionan información adicional para cada tipo de correlación.  
   
 ## <a name="types-of-correlation"></a>Tipos de correlación  
+
  La correlación puede estar basada en protocolos o basada en contenidos. Las correlaciones basadas en protocolos usan datos proporcionados por la infraestructura de entrega de mensajes para proporcionar la asignación entre los mensajes. Los mensajes que se correlacionan utilizando una correlación basada en protocolos se relacionan entre sí mediante un objeto en la memoria, como <xref:System.ServiceModel.Channels.RequestContext>, o a través de un token proporcionado por el protocolo de transporte. Las correlaciones basadas en contenidos relacionan los mensajes entre sí mediante datos especificados por la aplicación. Los mensajes que se correlacionan utilizando la correlación basada en contenidos se relacionan a entre sí mediante ciertos datos definidos por la aplicación en el mensaje, como un número de cliente.  
   
  Las actividades que participan en la correlación usan una clase <xref:System.ServiceModel.Activities.CorrelationHandle> para unir las actividades de mensajería. Por ejemplo, una clase <xref:System.ServiceModel.Activities.Send> que se utiliza para llamar a un servicio, y una clase <xref:System.ServiceModel.Activities.Receive> subsiguiente que se utiliza para recibir una devolución de llamada del servicio, comparten la misma clase <xref:System.ServiceModel.Activities.CorrelationHandle>. Se utiliza este patrón básico si la correlación se basa en contenidos o en protocolos. El identificador de correlación se puede establecer explícitamente en cada actividad o las actividades se pueden contener en una actividad <xref:System.ServiceModel.Activities.CorrelationScope>. Las actividades contenidas en <xref:System.ServiceModel.Activities.CorrelationScope> tienen sus identificadores de correlación administrados por <xref:System.ServiceModel.Activities.CorrelationScope> y no necesitan que <xref:System.ServiceModel.Activities.CorrelationHandle> se establezca explícitamente. Un ámbito <xref:System.ServiceModel.Activities.CorrelationScope> proporciona una administración <xref:System.ServiceModel.Activities.CorrelationHandle> para una correlación de solicitud-respuesta y un tipo de correlación adicional. Los servicios de flujo de trabajo hospedados utilizando <xref:System.ServiceModel.Activities.WorkflowServiceHost> tienen la misma administración de correlación predeterminada como actividad <xref:System.ServiceModel.Activities.CorrelationScope>. Esta administración de correlación predeterminada suele indicar que, en muchos escenarios, las actividades de mensajería en <xref:System.ServiceModel.Activities.CorrelationScope> o un servicio de flujo de trabajo no requieren el establecimiento de <xref:System.ServiceModel.Activities.CorrelationHandle>, a menos que varias actividades de mensajería se produzcan en paralelo o se superpongan, como dos actividades <xref:System.ServiceModel.Activities.Receive> en paralelo o dos actividades <xref:System.ServiceModel.Activities.Send> seguidas por dos actividades <xref:System.ServiceModel.Activities.Receive>. Puede obtener más información sobre la correlación predeterminada en los temas de esta sección que cubren cada tipo específico de correlación. Para obtener más información sobre las actividades de mensajería, vea [actividades de mensajería](messaging-activities.md) y [Cómo: crear un servicio de flujo de trabajo con actividades de mensajería](how-to-create-a-workflow-service-with-messaging-activities.md).  

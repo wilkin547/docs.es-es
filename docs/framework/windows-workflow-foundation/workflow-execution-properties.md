@@ -2,14 +2,15 @@
 title: Propiedades de ejecución del flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f958e7e112bfddc2740c2605d446493f2d49010
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be9ae5924786ea1e23cc649034d927789c64e405
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293798"
 ---
 # <a name="workflow-execution-properties"></a>Propiedades de ejecución del flujo de trabajo
+
 A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un contexto de ejecución para cada subproceso. Este contexto de ejecución rige propiedades de subproceso bien conocidas, como la identidad del subproceso, la transacción ambiente y el conjunto de permisos actual así como las propiedades de subproceso definidas por el usuario como ranuras con nombre.  
   
  A diferencia de los programas que tienen por objetivo directo el CLR, los programas de flujo de trabajo son árboles con ámbito jerárquico de actividades que se ejecutan en un entorno independiente del subproceso. Esto implica que los mecanismos de TLS estándar no se pueden usar directamente para determinar qué contexto está en ámbito de un elemento de trabajo determinado. Por ejemplo, dos bifurcaciones paralelas de ejecución podrían usar distintas transacciones, aunque es posible que el programador intercale su ejecución en el mismo subproceso de CLR.  
@@ -17,6 +18,7 @@ A través del almacenamiento local para el subproceso (TLS), el CLR mantiene un 
  Las propiedades de ejecución del flujo de trabajo proporcionan un mecanismo para agregar propiedades específicas del contexto al entorno de una actividad. De esta forma se permite que una actividad declare qué propiedades están en ámbito para su subárbol y se proporcionen enlaces para configurar y destruir el TLS para interoperar correctamente con objetos CLR.  
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>Crear y usar propiedades de ejecución de flujo de trabajo  
+
  Las propiedades de ejecución de flujo de trabajo implementan generalmente la interfaz <xref:System.Activities.IExecutionProperty> , aunque las propiedades centradas en mensajería pueden implementar <xref:System.ServiceModel.Activities.ISendMessageCallback> y <xref:System.ServiceModel.Activities.IReceiveMessageCallback> en su lugar. Para crear una propiedad de ejecución de flujo de trabajo, cree una clase que implemente la interfaz <xref:System.Activities.IExecutionProperty> e implemente los miembros <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> y <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Estos miembros le dan a la propiedad de ejecución la oportunidad de configurar y anular el almacenamiento local de subprocesos durante cada pulso de trabajo de la actividad que contiene la propiedad, incluidas las actividades secundarias. En este ejemplo, se crea `ConsoleColorProperty`, que establece `Console.ForegroundColor`.  
   
 ```csharp  
@@ -161,7 +163,7 @@ End default text.
   
  Los autores de actividad personalizados pueden usar las propiedades de ejecución del flujo de trabajo y también proporcionan el mecanismo para controlar la administración de las actividades como <xref:System.ServiceModel.Activities.CorrelationScope> y <xref:System.Activities.Statements.TransactionScope>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>

@@ -2,20 +2,23 @@
 title: Uso del enlazador de serialización
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: bfce2a14c8757250c520919c8ff2a4d7048a9d5c
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 061afb94d97e3d8a1222e6de9932344fb3ebbe59
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138654"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294903"
 ---
 # <a name="usage-of-serialization-binder"></a>Uso del enlazador de serialización
+
 Este ejemplo muestra cómo utilizar <xref:System.Runtime.Serialization.SerializationBinder> para cambiar la versión de un tipo genérico cuando se serializa.  
   
-## <a name="demonstrates"></a>Demostraciones  
+## <a name="demonstrates"></a>Muestra  
+
  <xref:System.Runtime.Serialization.SerializationBinder>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
 ## <a name="discussion"></a>Discusión  
+
  Este ejemplo muestra cómo dos entidades que tienen como destino versiones diferentes del .NET Framework pueden comunicarse mediante el formateador binario y el enlazador de serialización.  
   
 Este ejemplo se desarrolló con .NET Remoting. Consta de un servidor que tiene como destino .NET Framework 4, que implementa un contrato con tipos genéricos y dos clientes diferentes, uno de destino .NET Framework 2,0 y otro de destino .NET Framework 4.  
@@ -26,7 +29,7 @@ Este ejemplo se desarrolló con .NET Remoting. Consta de un servidor que tiene c
   
 1. Para ejecutar el cliente, haga clic con el botón derecho en la solución, SBGenericsVTS (6 proyectos) y, a continuación, seleccione **propiedades**.  
   
-2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, seleccione **proyectos de inicio múltiples**.  
+2. En **propiedades comunes**, seleccione **proyecto de inicio** y, a continuación, seleccione **proyectos de inicio múltiples**.  
   
 3. Seleccione **servidor** primero, **Client20** y, a continuación, **Client40**. Seleccione la acción de **Inicio** en estos tres proyectos y deje el resto establecido en **ninguno**.  
   

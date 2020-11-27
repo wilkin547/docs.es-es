@@ -2,14 +2,15 @@
 title: Mensajes desajustados
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: ea90a6355f63d5fffd0cc3c5d350f83e395c31c5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: edecbc953cd3ade6135b4c76725e65d317d83132
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591090"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294986"
 ---
 # <a name="unwrapped-messages"></a>Mensajes desajustados
+
 Este ejemplo muestra mensajes desajustados. De forma predeterminada, se da formato al cuerpo del mensaje de manera que se ajusten los parámetros a una operación de servicio. El ejemplo siguiente muestra un mensaje de solicitud `Add` al servicio `ICalculator` en modo ajustado.  
   
 ```xml  
@@ -90,7 +91,7 @@ public class ResponseMessage
   
  Para permitirle ver los mensajes que se envían y se reciben, este ejemplo utiliza la traza. Además, se ha configurado <xref:System.ServiceModel.WSHttpBinding> sin seguridad para reducir el número de mensajes que registra.  
   
- El registro de seguimiento resultante (c:\logs\Message.log) se puede ver con la [herramienta Service Trace Viewer (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Para ver el contenido del mensaje, seleccione **mensajes** en los paneles izquierdo y derecho de la herramienta Visor de seguimiento de servicio. Los registros de traza en este ejemplo se configuran para que se generen en la carpeta C:\LOGS. Cree esta carpeta antes de ejecutar el ejemplo y proporcione al usuario permisos de escritura para el servicio de red correspondiente a este directorio.  
+ El registro de seguimiento resultante (c:\logs\Message.log) se puede ver mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). Para ver el contenido del mensaje, seleccione **mensajes** en los paneles izquierdo y derecho de la herramienta Visor de seguimiento de servicio. Los registros de traza en este ejemplo se configuran para que se generen en la carpeta C:\LOGS. Cree esta carpeta antes de ejecutar el ejemplo y proporcione al usuario permisos de escritura para el servicio de red correspondiente a este directorio.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   

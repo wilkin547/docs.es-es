@@ -2,14 +2,15 @@
 title: Uso de contadores de rendimiento
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d3e6b9805bd0b9c5eea991fce4dde2035f8f5c1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553049"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96294916"
 ---
 # <a name="using-performance-counters"></a>Uso de contadores de rendimiento
+
 Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Windows Communication Foundation (WCF) y cómo crear contadores de rendimiento definidos por el usuario. Este ejemplo se basa en el [Introducción](getting-started-sample.md).  
   
 > [!NOTE]

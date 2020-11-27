@@ -2,14 +2,15 @@
 title: Servicio de fachada confiable
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: e9459b4cc26ef85adcc59c308d92491fd2d3acba
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 80f139ace43d5f8d2136528681386711bea7a1e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544185"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96295059"
 ---
 # <a name="trusted-facade-service"></a>Servicio de fachada confiable
+
 Este ejemplo de escenario muestra cómo fluir la información de identidad del llamador de un servicio a otro utilizando la infraestructura de seguridad de Windows Communication Foundation (WCF).  
   
  Es un patrón de diseño común para exponer la funcionalidad proporcionada por un servicio a la red pública utilizando un servicio de fachada. El servicio de fachada reside normalmente en la red perimetral (también conocida como DMZ, zona desmilitarizada y subred filtrada) y se comunica con un servicio back-end que implementa la lógica comercial y tiene acceso a datos internos. El canal de comunicación entre el servicio de la fachada y el servicio back-end va a través de un firewall y se limita normalmente solo para un único propósito.  
@@ -28,9 +29,11 @@ Este ejemplo de escenario muestra cómo fluir la información de identidad del l
 > El servicio back-end confia en el servicio de fachada para autenticar el llamador. Debido a esto, el servicio back-end no autentica de nuevo el llamador; utiliza la información de identidad proporcionada por el servicio de fachada en la solicitud reenviada. Debido a esta relación de confianza, el servicio back-end debe autenticar el servicio de fachada para asegurarse de que el mensaje reenviado procede de una fuente de confianza, en este caso el servicio de fachada.  
   
 ## <a name="implementation"></a>Implementación  
+
  Hay dos rutas de comunicación en este ejemplo. El primero se da entre el cliente y el servicio de fachada, el segundo entre el servicio de fachada y el servicio back-end.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>Ruta de acceso de comunicación entre Cliente y Servicio de Fachada  
+
  El cliente a la ruta de comunicación de servicio de fachada utiliza `wsHttpBinding` con un tipo de credencial de cliente `UserName` . Esto significa que el cliente utiliza nombre de usuario y contraseña para autenticarse al servicio de fachada y el servicio de fachada utiliza el certificado X.509 para autenticarse al cliente. El archivo de configuración de enlace se parece al siguiente ejemplo.:  
   
 ```xml  
@@ -93,6 +96,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>Ruta de acceso de comunicación entre el Servicio de Fachada y el Servicio Back-end  
+
  La ruta de comunicación entre el servicio de fachada y el servicio back-end utiliza `customBinding` que está compuesto por varios elementos de enlace. Este enlace logra dos cosas. Autentica el servicio de fachada y el servicio back-end para asegurar que la comunicación es segura y viene de una fuente de confianza. Además, también transmite la identidad del llamador inicial dentro del token de seguridad `Username` . En este caso, solo se transmite el nombre de usuario del llamador inicial al servicio back-end, la contraseña no está incluida en el mensaje. Esto es porque el servicio back-end confia en el servicio de fachada para autenticar el llamador antes de reenviar la solicitud a él. Dado que el servicio de fachada se autentica en el servicio back-end, el servicio back-end puede confiar en la información contenida en la solicitud reenviada.  
   
  A continuación, se muestra la configuración de enlace para esta ruta de comunicación.  
@@ -212,6 +216,7 @@ public string GetCallerIdentity()
  La información de cuenta de servicio de fachada se extrae utilizando la propiedad `ServiceSecurityContext.Current.WindowsIdentity` . Para tener acceso a la información sobre el llamador inicial el servicio back-end utiliza la propiedad `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` . Busca una notificación `Identity` con un tipo `Name`. Esta demanda se genera automáticamente mediante la infraestructura de seguridad de WCF a partir de la información contenida en el `Username` token de seguridad.  
   
 ## <a name="running-the-sample"></a>Ejecución del ejemplo  
+
  Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente. Puede presionar Entrar en las ventanas de la consola de servicio de fachada y back-end para cerrar los servicios.  
   
 ```console  
