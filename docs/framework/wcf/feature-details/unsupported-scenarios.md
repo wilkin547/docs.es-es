@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2d779b49a8201b3ad53507af7710f7aef5e9321c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557819"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289651"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 
@@ -16,6 +16,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no admite algunos e
 ## <a name="impersonation-scenarios"></a>Escenarios de suplantación
 
 ### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>Es posible que la identidad suplantada no fluya cuando los clientes realizan llamadas asincrónicas
+
  Cuando un cliente realiza llamadas asincrónicas a un servicio WCF usando la autenticación de Windows bajo suplantación, se podría producir la autenticación con la identidad del proceso del cliente en lugar de la identidad suplantada.
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP y cookie de token de contexto seguro habilitados

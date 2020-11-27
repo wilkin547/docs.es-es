@@ -3,14 +3,15 @@ title: Configuración simplificada de los servicios de WCF
 description: Aprenda a implementar y configurar un servicio y un cliente típicos con WCF. El servicio se comunica con un punto de conexión especificado en un archivo de configuración.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 087618d603ea1c7df75ab5383f6c95b781dca847
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554272"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96290028"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Configuración simplificada de los servicios de WCF
+
 Este ejemplo muestra cómo implementar y configurar un servicio y un cliente típicos con Windows Communication Foundation (WCF). Este ejemplo es la base para obtener todos los otros ejemplos tecnológicos básicos.  
   
  Este servicio, que expone un punto de conexión para comunicarse con el servicio, utiliza la configuración simplificada en .NET Framework 4. Antes de .NET Framework 4, el punto de conexión se define normalmente en un archivo de configuración (Web.config), como se muestra en el siguiente código de configuración de ejemplo.  
@@ -64,11 +65,11 @@ Este ejemplo muestra cómo implementar y configurar un servicio y un cliente tí
   
 3. Ejecute el ejemplo siguiendo estos pasos:  
   
-    1. Haga clic con el botón derecho en el proyecto de **servicio** y seleccione **establecer como proyecto de inicio**y presione **Ctrl + F5**.  
+    1. Haga clic con el botón derecho en el proyecto de **servicio** y seleccione **establecer como proyecto de inicio** y presione **Ctrl + F5**.  
   
     2. Espere a que el resultado de la consola confirme que el servicio está activo y en ejecución.  
   
-    3. Haga clic con el botón derecho en el proyecto de **cliente** y seleccione **establecer como proyecto de inicio**y presione **Ctrl + F5**.  
+    3. Haga clic con el botón derecho en el proyecto de **cliente** y seleccione **establecer como proyecto de inicio** y presione **Ctrl + F5**.  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

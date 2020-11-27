@@ -7,24 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 34bde56b78ec0148cf6b924f8edd29343b97faa4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e8a6cf0cae7519c3ffdbad188c6f67d11a4a6fc1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289807"
 ---
 # <a name="forward-compatible-data-contracts"></a>Contratos de datos compatibles con el reenvío
+
 Una característica del sistema de contrato de datos Windows Communication Foundation (WCF) es que los contratos pueden evolucionar con el tiempo de maneras sin interrupción. Es decir, un cliente con una versión anterior de un contrato de datos puede comunicarse con un servicio con una versión más reciente del mismo contrato de datos, o un cliente con una versión más reciente de un contrato de datos puede comunicarse con una versión anterior del mismo contrato de datos. Para obtener más información, consulte [procedimientos recomendados: control de versiones de contratos de datos](../best-practices-data-contract-versioning.md).  
   
  Puede aplicar la mayoría de las características del control de versiones en la medida que se necesite cuando se crean las nuevas versiones de un contrato del dato existente. Sin embargo, una característica de control de versiones, *recorrido de ida y vuelta*, debe estar integrada en el tipo de la primera versión para que funcione correctamente.  
   
 ## <a name="round-tripping"></a>Round-Tripping (recorrido de ida y vuelta)  
+
  Round-tripping tiene lugar cuando los datos pasan de una nueva versión a una versión anterior y de vuelta a la nueva versión de un contrato de datos. El round-tripping garantiza que no se pierdan datos. Habilitar el round-tripping hace que el tipo sea compatible por adelantado con cualquier cambio futuro admitido por el modelo de control de versiones del contrato de datos.  
   
  Para habilitar el round-tripping para un tipo determinado, el tipo debe implementar la interfaz <xref:System.Runtime.Serialization.IExtensibleDataObject>. La interfaz contiene una propiedad, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> (que devuelve el tipo <xref:System.Runtime.Serialization.ExtensionDataObject> ). La propiedad almacena cualquier dato de las versiones futuras del contrato de datos que es desconocido para la versión actual.  
   
 ### <a name="example"></a>Ejemplo  
+
  El siguiente contrato de datos no compatible por adelantado con los cambios futuros.  
   
  [!code-csharp[C_DataContract#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#7)]

@@ -2,14 +2,15 @@
 title: Procedimiento para implementar una aplicación de integración de COM+
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: b4ae7f730296d54debc1cf2971b61e5700503430
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5f2e64ed06b98db50259edf8ef307ce430b8be38
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595432"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96289794"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Procedimiento para implementar una aplicación de integración de COM+
+
 Cuando ha escrito una aplicación de integración de COM+, puede que desee implementarla en otro equipo. En este tema se describe cómo mover una aplicación de integración de COM+ de un equipo a otro.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Mover una aplicación de integración alojada por COM+  
