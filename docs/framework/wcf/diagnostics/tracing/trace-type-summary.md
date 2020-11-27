@@ -2,17 +2,18 @@
 title: Resumen del tipo de seguimiento
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
-ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
+ms.openlocfilehash: e8d222d6f093f5db3bd620194bfde7edd4b998a8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78674838"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259250"
 ---
 # <a name="trace-type-summary"></a>Resumen del tipo de seguimiento
-[Niveles](xref:System.Diagnostics.SourceLevels) de origen define varios niveles de seguimiento: Crítico, Error, Advertencia, Información `ActivityTracing` y Detallado, así como proporciona una descripción de la marca, que alterna la salida de los eventos de transferencia de actividad y límite de seguimiento.  
+
+[Niveles de origen](xref:System.Diagnostics.SourceLevels) define varios niveles de seguimiento: crítico, error, ADVERTENCIA, información y detallado, así como una descripción de la `ActivityTracing` marca, que alterna la salida del límite de seguimiento y los eventos de transferencia de actividad.  
   
- También puede <xref:System.Diagnostics.TraceEventType> revisar los tipos de seguimientos <xref:System.Diagnostics>que se pueden emitir desde .  
+ También puede revisar <xref:System.Diagnostics.TraceEventType> los tipos de seguimientos que se pueden emitir desde <xref:System.Diagnostics> .  
   
  La tabla siguiente enumera los más importantes.  
   
@@ -21,13 +22,13 @@ ms.locfileid: "78674838"
 |Crítico|Error irrecuperable o bloqueo de la aplicación.|  
 |Error|Error recuperable.|  
 |Advertencia|Mensaje informativo.|  
-|Information|Problema no crítico.|  
+|Información|Problema no crítico.|  
 |Verbose|Traza de depuración.|  
-|Start|Inicio de una unidad lógica de procesamiento.|  
+|Inicio|Inicio de una unidad lógica de procesamiento.|  
 |Suspender|Suspensión de una unidad lógica de procesamiento.|  
-|Reanudación|Reanudación de una unidad lógica de procesamiento.|  
+|Reanudar|Reanudación de una unidad lógica de procesamiento.|  
 |Stop|Detención de una unidad lógica de procesamiento.|  
-|Transferir|Cambio de la identidad de correlación.|  
+|Transferencia|Cambio de la identidad de correlación.|  
   
  Una actividad se define como una combinación de los tipos de trazas anteriores.  
   

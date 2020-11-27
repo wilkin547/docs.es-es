@@ -2,14 +2,15 @@
 title: Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 13fae7dec3026e96e3c196467da29fe768a3655f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556881"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257937"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Cómo obtener acceso a un servicio desde una aplicación de flujo de trabajo
+
 En este tema, se describe cómo llamar a un servicio de flujo de trabajo desde una aplicación de consola de flujo de trabajo. Depende de la finalización del tema [Cómo: crear un servicio de flujo de trabajo con actividades de mensajería](how-to-create-a-workflow-service-with-messaging-activities.md) . Aunque en este tema se describe cómo llamar a un servicio de flujo de trabajo desde una aplicación de flujo de trabajo, se pueden usar los mismos métodos para llamar a cualquier servicio Windows Communication Foundation (WCF) desde una aplicación de flujo de trabajo.
 
 ### <a name="create-a-workflow-console-application-project"></a>Creación de un proyecto de aplicación de consola de flujo de trabajo

@@ -2,14 +2,15 @@
 title: Compatibilidad con POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: a9f8d185c58b22e68f7a8c11954e0e534c4bd48f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d416f37e0add99fbe3d60982fd2298748ff78556
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600469"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259972"
 ---
 # <a name="poco-support"></a>Compatibilidad con POCO
+
 En este ejemplo se muestra la compatibilidad para la serialización de los tipos sin marca; es decir, tipos a los que no se han aplicado atributos de serialización, a veces conocidos como tipos de objetos CLR antiguos sin formato (POCO). <xref:System.Runtime.Serialization.DataContractSerializer>Deduce un contrato de datos para todos los tipos públicos no marcados que tienen un constructor sin parámetros. Los contratos de datos le permiten pasar los datos estructurados hacia y desde los servicios. Para obtener más información sobre los tipos no marcados, vea [tipos serializables](../feature-details/serializable-types.md).  
   
  Este ejemplo se basa en el [Introducción](getting-started-sample.md), pero utiliza números complejos en lugar de tipos numéricos primitivos. También es similar al ejemplo de [contrato de datos básico](basic-data-contract.md) , con la excepción de que <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> no se utilizan los atributos y.  

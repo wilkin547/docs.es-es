@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 05f35bbb7dbb34cd4067c407578038cbb4eff70f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 692ccc0c39ca7ed40601551ea6bbcdd840fa03af
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599150"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257592"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Procedimiento para configurar las credenciales en un servicio de federación
+
 En Windows Communication Foundation (WCF), la creación de un servicio federado consta de los siguientes procedimientos principales:  
   
 1. Configurar un <xref:System.ServiceModel.WSFederationHttpBinding> o un enlace personalizado similar. Para obtener más información sobre cómo crear un enlace adecuado, vea [Cómo: crear un WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md).  
@@ -56,6 +57,7 @@ En Windows Communication Foundation (WCF), la creación de un servicio federado 
 5. Si es necesario, establezca el `samlSerializer` atributo del `issuedTokenAuthentication` elemento <> en el nombre de tipo de la <xref:System.IdentityModel.Tokens.SamlSerializer> clase personalizada.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo define las propiedades de un <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> en el código.  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]

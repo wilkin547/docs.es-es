@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 186dd4a7fc2beae848e5cbd167a204352ee6ed4e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 67ab5d4a4592a8b772cfdd70befe32f339062b8c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601301"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96257566"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Cómo auditar los eventos de seguridad de Windows Communication Foundation
+
 Windows Communication Foundation (WCF) permite registrar eventos de seguridad en el registro de eventos de Windows, que se pueden ver mediante el Visor de eventos de Windows. Este tema explica cómo configurar una aplicación para que registre los eventos de seguridad. Para obtener más información acerca de la auditoría de WCF, vea [Auditoría](auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Para auditar los eventos de seguridad en el código  
@@ -45,7 +46,7 @@ Windows Communication Foundation (WCF) permite registrar eventos de seguridad en
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Para establecer la auditoría en la configuración  
   
-1. Para configurar la auditoría en la configuración, agregue un [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento a la [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) sección del archivo Web. config. A continuación, agregue un [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) elemento y establezca los distintos atributos, tal y como se muestra en el ejemplo siguiente.  
+1. Para configurar la auditoría en la configuración, agregue un [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elemento a la [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) sección del archivo de web.config. A continuación, agregue un [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) elemento y establezca los distintos atributos, tal y como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <behaviors>  
@@ -73,12 +74,14 @@ Windows Communication Foundation (WCF) permite registrar eventos de seguridad en
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente código crea una instancia de la clase <xref:System.ServiceModel.ServiceHost> y agrega un nuevo <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> a la colección de comportamientos.  
   
  [!code-csharp[AuditingSecurityEvents#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#1)]
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Cuando se establece la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true`, se suprime cualquier error que genere auditorías de seguridad (si se establece como `false`, se inicia una excepción). Sin embargo, si habilita la siguiente propiedad de **configuración de seguridad local** de Windows, un error al generar eventos de auditoría hará que Windows se cierre inmediatamente:  
   
  **Auditoría: apagar el sistema de inmediato si no se pueden registrar las auditorías de seguridad**  
