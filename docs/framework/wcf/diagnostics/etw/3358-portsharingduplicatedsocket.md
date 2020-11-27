@@ -2,27 +2,30 @@
 title: 3358 - PortSharingDuplicatedSocket
 ms.date: 03/30/2017
 ms.assetid: c6e5c051-5597-49d1-a5ea-0a26ec04443d
-ms.openlocfilehash: c88170a0a259c7e2a8db19bfd763488d33aa3d66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c7fc50f171c44d708558f54afd64d1f4b04b8b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767421"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96282642"
 ---
 # <a name="3358---portsharingduplicatedsocket"></a>3358 - PortSharingDuplicatedSocket
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
 |-|-|  
 |ID|3358|  
 |Palabras clave|ActivationServices|  
-|Nivel|Detallado|  
+|Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Se genera este evento cuando se duplica el socket de uso compartido compartido del puerto.  
   
-## <a name="message"></a>Mensaje  
+## <a name="message"></a>Message  
+
  Socket duplicado para %1.  
   
 ## <a name="details"></a>Detalles

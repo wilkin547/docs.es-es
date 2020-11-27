@@ -3,14 +3,15 @@ title: Configuración de los valores de tiempo de espera en un enlace
 description: Obtenga información acerca de cómo administrar la configuración de tiempo de espera de los enlaces de WCF para mejorar el rendimiento, la facilidad de uso y la seguridad del servicio.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6582568f3579f784d4c91c707dbb35c38533551d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245120"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284048"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Configuración de los valores de tiempo de espera en un enlace
+
 Hay varias configuraciones de tiempo de espera disponibles en los enlaces de WCF. Establecer estas configuraciones de tiempo de espera correctamente puede mejorar no solo el rendimiento del servicio sino también desempeñar un papel en la facilidad de uso y la seguridad del servicio. Los tiempos de espera siguientes están disponibles en los enlaces de WCF:  
   
 1. OpenTimeout  
@@ -22,6 +23,7 @@ Hay varias configuraciones de tiempo de espera disponibles en los enlaces de WCF
 4. ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>Tiempos de espera de enlace de WCF  
+
  Cada uno de los valores descritos en este tema se crea en el propio enlace, en código o configuración. El código siguiente muestra cómo establecer mediante programación los tiempos de espera en un enlace de WCF en el contexto de un servicio autohospedado.  
   
 ```csharp  
@@ -76,6 +78,7 @@ public static void Main()
  Se puede encontrar más información sobre estos valores en la documentación de la clase <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="client-side-timeouts"></a>Tiempos de espera del lado cliente  
+
  En el lado cliente:  
   
 1. SendTimeout – se usa para inicializar OperationTimeout, que controla el proceso completo de enviar un mensaje, incluido recibir un mensaje de respuesta para una operación de servicio de solicitud y respuesta. Este tiempo de espera también se aplica al enviar mensajes de respuesta de un método de contrato de devolución de llamada.  
@@ -87,6 +90,7 @@ public static void Main()
 4. ReceiveTimeout: no se utiliza.  
   
 ### <a name="service-side-timeouts"></a>Tiempos de espera del servicio  
+
  En el lado de servicio:  
   
 1. SendTimeout, OpenTimeout y CloseTimeout son los mismos que en el cliente.  

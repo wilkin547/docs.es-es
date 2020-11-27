@@ -8,17 +8,19 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-ms.openlocfilehash: dfbe047640a3a640cf37adeea6fa3656cfd9ec6d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 31426ae0589954d4388ba6d40f156c3eea9a8989
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309682"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283892"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palabras clave y niveles ETW de CLR
+
 El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y nivel. Las [Palabras clave ETW de CLR](#clr-etw-keywords) de evento permiten el filtrado de eventos por categoría; se usan en combinaciones para los proveedores de tiempo de ejecución y detención. Los [niveles de evento](#etw-event-levels) se identifican mediante marcas.  
   
 ## <a name="clr-etw-keywords"></a>Palabras clave ETW de CLR  
+
  Las palabras clave son marcas que se pueden combinar para generar valores. En la práctica, cuando se llama a las utilidades de línea de comandos, se usan los valores hexadecimales de las palabras clave en lugar de los nombres de palabra clave.  
   
  Las palabras clave se describen en la tabla siguiente.  
@@ -32,7 +34,9 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 - [Combinaciones de palabras clave para la resolución de símbolos para el proveedor de detención](#rundown_combo)  
   
 <a name="runtime"></a>
+
 ### <a name="clr-etw-runtime-keywords"></a>Palabras clave de runtime de ETW de CLR  
+
  En la tabla siguiente se enumeran las palabras clave de runtime de ETW de CLR, sus valores y se explica para qué se usan.  
   
 |Nombre de la palabra clave de runtime|Value|Propósito|  
@@ -55,7 +59,9 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 |`StackKeyword`|0x40000000|Habilita la recopilación de [eventos de seguimiento de pila](stack-etw-event.md)de CLR.|  
   
 <a name="rundown"></a>
+
 ### <a name="clr-etw-rundown-keywords"></a>Palabras clave de detención de ETW de CLR  
+
  En la tabla siguiente se enumeran las palabras clave de detención de ETW de CLR, sus valores y se explica para qué se usan.  
   
 |Nombre de la palabra clave de detención|Value|Propósito|  
@@ -71,6 +77,7 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 |`PerfTrackKeyWord`|0x2000000|Habilita la recopilación de eventos `ModuleDCStart`, `ModuleDCEnd`, `ModuleRangeDCStart`y `ModuleRangeDCEnd` .|
   
 <a name="runtime_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Combinaciones de palabras clave para la resolución de símbolos para el proveedor de runtime  
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos de carga/descarga de módulos|Eventos de carga/descarga de método (excepto eventos dinámicos)|Eventos de carga/destrucción de métodos dinámicos|  
@@ -78,11 +85,12 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 |`LoaderKeyword`|Eventos de carga y descarga.|Ninguno.|Ninguno.|  
 |`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` no agrega nada)|Ninguno.|Eventos de carga.|Eventos de carga y descarga.|  
 |`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de carga y descarga.|Eventos de carga y descarga.|  
-|`NGenKeyword`|Ninguno.|Ninguno.|No aplicable.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguno.|Eventos de carga.|No aplicable.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de descarga.|No aplicable.|  
+|`NGenKeyword`|Ninguno.|Ninguno.|No es aplicable.|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Ninguno.|Eventos de carga.|No es aplicable.|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Ninguno.|Eventos de descarga.|No es aplicable.|  
   
 <a name="rundown_combo"></a>
+
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Combinaciones de palabras clave para la resolución de símbolos para el proveedor de detención  
   
 |Palabras clave y marcas|Dominio de aplicación, ensamblado, eventos DCStart/DCEnd de módulos|Eventos DCStart/DCEnd de método (incluidos los eventos de métodos dinámicos)|  
@@ -95,6 +103,7 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Ninguno.|Eventos`DCEnd` .|  
 
 ## <a name="etw-event-levels"></a>Niveles de eventos ETW  
+
  Los eventos ETW también se pueden filtrar por nivel. Si el nivel se establece en 0x5, se generan eventos de todos los niveles, incluidos 0 x 5 e inferiores (que son eventos que pertenecen a las categorías habilitadas mediante palabras clave). Si el nivel se establece en 0x2, tan solo se producen los eventos que pertenecen al nivel 0x2 e inferiores.  
   
  Los niveles tienen los significados siguientes:  
@@ -111,7 +120,7 @@ El Seguimiento de eventos para Windows (ETW) se puede filtrar por categoría y n
   
  0x0: LogAlways  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proveedores ETW de CLR](clr-etw-providers.md)
 - [CLR ETW Events (Eventos ETW de CLR)](clr-etw-events.md)

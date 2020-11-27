@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: d6018c8339cb04471bf9ce0f2ee86e091e1d1e95
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ab608ba954eafd9035335f00c8755629c5703c22
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597532"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284165"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuración de enlaces proporcionados por el sistema
+
 Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al hablar con un punto de conexión e indican cómo conectarse a un punto de conexión. Los enlaces se componen de elementos que definen cómo se superponen los canales de Windows Communication Foundation (WCF) para proporcionar las características de comunicación necesarias. Un enlace contiene tres tipos de elementos:  
   
 - Elementos de enlace de canal protocolares, que determinan la seguridad, confiabilidad, valores de flujo de contexto o los protocolos definidos por el usuario que se han de utilizar con los mensajes que se envían al extremo.  
@@ -31,9 +32,10 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 > No utilice contratos dúplex con enlaces que no admiten la seguridad o que tienen la seguridad deshabilitada, a menos que el intercambio de red se proteja de alguna otra manera.  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema  
+
  Los siguientes enlaces se incluyen con WCF.  
   
-|Enlace|Elemento de configuración|Descripción|  
+|Enlaces|Elemento de configuración|Descripción|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)|Un enlace que es útil para la comunicación con servicios web conformes con WS-Basic Profile, como, por ejemplo, servicios basados en servicios web de ASP.NET (ASMX). Este enlace utiliza HTTP como el transporte, y texto/XML como la codificación de mensajes predeterminada.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)|Un enlace seguro e interoperable, adecuado para contratos de servicio que no son dúplex.|  
@@ -49,20 +51,21 @@ Los enlaces especifican el mecanismo de comunicación que se ha de utilizar al h
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Un enlace adecuado para la comunicación entre equipos entre una aplicación WCF y las aplicaciones de Message Queue Server (también conocidas como MSMQ) existentes.|  
   
 ## <a name="binding-features"></a>Características de los enlaces  
+
  La siguiente tabla muestra algunas de las características clave que ofrecen cada uno de los enlaces proporcionados por el sistema. Los enlaces se enumeran en la primera columna y se describe información con respecto a las características en la tabla. La siguiente tabla proporciona una clave para las abreviaturas de enlaces utilizadas. Para seleccionar un enlace, determine qué columna satisface todas las características de fila que necesite.  
   
-|Enlace|Interoperabilidad|Modo de Seguridad (valor predeterminado)|Sesión<br /><br /> (Es el valor predeterminado).|Transacciones|Dúplex|  
+|Enlaces|Interoperabilidad|Modo de Seguridad (valor predeterminado)|Sesión<br /><br /> (Es el valor predeterminado).|Transacciones|Dúplex|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(Ninguno), transporte, mensaje, mixto|Ninguno, (ninguno)|(Ninguna)|N/D|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|N/D|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Ninguno, transporte, (mensaje), mixto|(Ninguno), transporte, sesión confiable|(Ninguno), Sí|N/D|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Ninguno, (mensaje)|(Sesión confiable)|(Ninguno), Sí|Sí|  
-|<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
-|<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Ninguno, (transporte), mensaje<br /><br /> Mixto|Sesión confiable, (transporte)|(Ninguno), Sí|Sí|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Ninguno,<br /><br /> (Transporte)|Ninguno, (transporte)|(Ninguno), Sí|Sí|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Ninguno, (mensaje)|(Sesión confiable)|(Ninguno), Sí|Yes|  
+|<xref:System.ServiceModel.WSFederationHttpBinding>|El certificado del proveedor de identidades de WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
+|<xref:System.ServiceModel.WS2007FederationHttpBinding>|El certificado del proveedor de identidades de WS-Federation|Ninguno, (mensaje), mixto|(Ninguno), sesión confiable|(Ninguno), Sí|No|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Ninguno, (transporte), mensaje<br /><br /> Mixto|Sesión confiable, (transporte)|(Ninguno), Sí|Yes|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Ninguno,<br /><br /> (Transporte)|Ninguno, (transporte)|(Ninguno), Sí|Yes|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Ninguno, mensaje, (transporte), ambos|(Ninguna)|(Ninguno), Sí|No|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Del mismo nivel|Ninguno, mensaje, (transporte), mixto|(Ninguna)|(Ninguna)|Sí|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Del mismo nivel|Ninguno, mensaje, (transporte), mixto|(Ninguna)|(Ninguna)|Yes|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|Ninguno, transporte, TransportCredentialOnly|(Ninguna)|(Ninguna)|N/D|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Ninguno, (transporte)|(Ninguna)|(Ninguno), Sí|N/D|  
   

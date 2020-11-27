@@ -2,21 +2,23 @@
 title: FailFast
 ms.date: 03/30/2017
 ms.assetid: 4fc4e476-997b-4166-90af-8d164f775924
-ms.openlocfilehash: c5ddebedd7f3467c34c73beb801807ba1feb398f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3dfcd5a3eccb54f6c28ce8ac189a76abdec6fe93
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797865"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96284360"
 ---
 # <a name="failfast"></a>FailFast
-Id.: 102  
+
+ID.: 102  
   
- Gravedad Error  
+ Gravedad: error  
   
- Categoría Traza  
+ Categoría: seguimiento  
   
-## <a name="description"></a>DESCRIPCIÓN  
+## <a name="description"></a>Descripción  
+
  Se invocó FailFast. El evento hace una lista del mensaje, seguimiento de la pila, nombre del proceso e id. de proceso.  
   
 ## <a name="see-also"></a>Vea también

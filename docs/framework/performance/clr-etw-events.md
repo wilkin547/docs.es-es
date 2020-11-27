@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8acc792b5217519e2a73c0cdf30c20161373c678
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283918"
 ---
 # <a name="clr-etw-events"></a>Eventos ETW de CLR
+
 Los temas de esta sección describen los eventos de seguimiento de eventos para Windows (ETW). Cada evento tiene una palabra clave y un nivel asociados que se describen en el tema [Palabras clave y niveles ETW de CLR](clr-etw-keywords-and-levels.md). CLR tiene dos proveedores para los eventos:  
   
 - El proveedor en tiempo de ejecución genera eventos en función de las palabras clave (categorías de eventos) que están habilitadas. El GUID del proveedor en tiempo de ejecución de CLR es e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
@@ -24,6 +25,7 @@ Los temas de esta sección describen los eventos de seguimiento de eventos para 
  Para más información, vea [Proveedores ETW de CLR](clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Eventos de información en tiempo de ejecución](runtime-information-etw-events.md)  
  Capturan información sobre el tiempo de ejecución, lo que incluye la SKU, el número de versión, la manera en que se ha activado el tiempo de ejecución, los parámetros de línea de comandos con los que se ha iniciado, el GUID (si está disponible) y otra información relevante.  
   

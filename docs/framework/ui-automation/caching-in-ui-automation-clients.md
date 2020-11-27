@@ -6,14 +6,15 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: cbf7b18d59e468be085f245cc9bb0a595bd41832
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 029e292e60cd7c66d55b9567385bdd0e53fdebd4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90540932"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283528"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Almacenar en caché en los clientes de automatización de la interfaz de usuario
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -30,31 +31,43 @@ ms.locfileid: "90540932"
  Los patrones de control y las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un elemento pueden almacenarse en caché.  
   
 <a name="Options_for_Caching"></a>
+
 ## <a name="options-for-caching"></a>Opciones de almacenamiento en caché  
+
  <xref:System.Windows.Automation.CacheRequest> especifica las siguientes opciones para el almacenamiento en caché.  
   
 <a name="Properties_to_Cache"></a>
+
 ### <a name="properties-to-cache"></a>Propiedades que se almacenarán en caché  
+
  Puede especificar las propiedades que se almacenarán en caché mediante una llamada a <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> por cada propiedad antes de activar la solicitud.  
   
 <a name="Control_Patterns_to_Cache"></a>
+
 ### <a name="control-patterns-to-cache"></a>Patrones de control que se almacenarán en caché  
+
  Puede especificar los patrones de control que se almacenarán en caché mediante una llamada a <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> por cada patrón antes de activar la solicitud. Cuando un patrón se almacena en caché, sus propiedades no se almacenan automáticamente; debe especificar las propiedades que quiera que se almacenen en caché mediante <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
   
 <a name="Scope_of_the_Caching"></a>
+
 ### <a name="scope-and-filtering-of-caching"></a>Ámbito y filtrado del almacenamiento en caché  
+
  Puede especificar los elementos cuyos patrones y propiedades quiera almacenar en caché mediante el establecimiento de la propiedad <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> antes de activar la solicitud. El ámbito es relativo a los elementos que se recuperan mientras la solicitud está activa. Por ejemplo, si solo se define <xref:System.Windows.Automation.TreeScope.Children>y después se recupera un elemento <xref:System.Windows.Automation.AutomationElement>, los patrones y las propiedades de los elementos secundarios de ese elemento se almacenan en caché, pero no sucede lo mismo con los del propio elemento. Para garantizar que se realiza el almacenamiento en caché para el propio elemento recuperado, debe incluir <xref:System.Windows.Automation.TreeScope.Element> en la propiedad <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> . No es posible establecer el ámbito en <xref:System.Windows.Automation.TreeScope.Parent> o <xref:System.Windows.Automation.TreeScope.Ancestors>. Sin embargo, es posible almacenar en caché un elemento primario cuando se almacena un elemento secundario en caché; consulte la sección Recuperación de elementos primarios y secundarios almacenados en caché de este tema.  
   
  El alcance del almacenamiento en caché también se ve afectado por la propiedad <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> . De forma predeterminada, el almacenamiento en caché se realiza solo para los elementos que aparecen en la vista de control del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Sin embargo, puede cambiar esta propiedad para aplicar el almacenamiento en caché a todos los elementos o solo a los que aparecen en la vista de contenido.  
   
 <a name="Strength_of_the_Element_References"></a>
+
 ### <a name="strength-of-the-element-references"></a>Solidez de las referencias de elemento  
+
  De forma predeterminada, cuando se recupera un elemento <xref:System.Windows.Automation.AutomationElement>, se tiene acceso a todas las propiedades y los patrones de ese elemento, incluidos los que no se almacenaron en caché. Sin embargo, para obtener una mayor eficacia, puede especificar que la referencia al elemento solo haga referencia a los datos almacenados en caché si establece la propiedad <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> del elemento <xref:System.Windows.Automation.CacheRequest> en <xref:System.Windows.Automation.AutomationElementMode.None>. En este caso, no tiene acceso a los patrones y propiedades no almacenados en caché de los elementos recuperados. Esto significa que no se puede acceder a las propiedades a través de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> o la propiedad `Current` de <xref:System.Windows.Automation.AutomationElement> , ni con ningún patrón de control; tampoco se puede recuperar un patrón mediante <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> o <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. En los patrones almacenados en caché, puede llamar a métodos que recuperen propiedades de matriz, como <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, pero no puede llamar a ninguno que realice acciones en el control, como <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
   
  Un ejemplo de una aplicación que podría no necesitar referencias completas a objetos es un lector de pantalla, que capturaría previamente las propiedades <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> y <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> de los elementos de una ventana, pero no necesitaría los propios objetos <xref:System.Windows.Automation.AutomationElement> .  
   
 <a name="Activating_the_CacheRequest"></a>
+
 ## <a name="activating-the-cacherequest"></a>Activación de CacheRequest  
+
  El almacenamiento en caché solo se realiza cuando se recuperan los objetos <xref:System.Windows.Automation.AutomationElement> mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo para el subproceso actual. Hay dos formas de activar un elemento <xref:System.Windows.Automation.CacheRequest>.  
   
  La manera habitual es llamar a <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Este método devuelve un objeto que implementa <xref:System.IDisposable>. La solicitud permanecerá activa mientras exista el objeto <xref:System.IDisposable> . La forma más fácil de controlar la duración del objeto es incluir la llamada dentro de un `using` bloque (C#) o `Using` (Visual Basic). Esto garantiza que la solicitud se extraerá de la pila, aunque se produzca una excepción.  
@@ -62,7 +75,9 @@ ms.locfileid: "90540932"
  Otra forma, que resulta útil cuando se quieren anidar solicitudes de almacenamiento en caché, es llamar a <xref:System.Windows.Automation.CacheRequest.Push%2A>. Esto coloca la solicitud en una pila y la activa. La solicitud permanece activa hasta que se quita de la pila mediante <xref:System.Windows.Automation.CacheRequest.Pop%2A>. La solicitud pasa a estar temporalmente inactiva si se inserta otra solicitud en la pila; solo la solicitud superior de la pila está activa.  
   
 <a name="Retrieving_Cached_Properties"></a>
+
 ## <a name="retrieving-cached-properties"></a>Recuperación de propiedades almacenadas en caché  
+
  Puede recuperar las propiedades almacenadas en caché de un elemento mediante los siguientes métodos y propiedades.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
@@ -74,7 +89,9 @@ ms.locfileid: "90540932"
  <xref:System.Windows.Automation.AutomationElement.Cached%2A>, como <xref:System.Windows.Automation.AutomationElement.Current%2A>, expone propiedades individuales como miembros de una estructura. Sin embargo, no es necesario recuperar esta estructura; puede acceder a las propiedades individuales directamente. Por ejemplo, la propiedad <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> se puede obtener de `element.Cached.Name`, donde `element` es un elemento <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>
+
 ## <a name="retrieving-cached-control-patterns"></a>Recuperación de patrones de control almacenados en caché  
+
  Puede recuperar los patrones de control almacenados en caché de un elemento mediante los siguientes métodos.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
@@ -86,7 +103,9 @@ ms.locfileid: "90540932"
  Puede recuperar las propiedades almacenadas en caché de un patrón de control mediante la propiedad `Cached` del objeto de patrón. También puede recuperar los valores actuales mediante la propiedad `Current` , pero solo si no se especificó <xref:System.Windows.Automation.AutomationElementMode.None> cuando se recuperó <xref:System.Windows.Automation.AutomationElement> . (<xref:System.Windows.Automation.AutomationElementMode.Full> es el valor predeterminado y permite el acceso a los valores actuales).  
   
 <a name="Retrieving_Cached_Children_and_Parents"></a>
+
 ## <a name="retrieving-cached-children-and-parents"></a>Recuperación de elementos primarios y secundarios almacenados en caché  
+
  Cuando se recupera un elemento <xref:System.Windows.Automation.AutomationElement> y se solicita almacenamiento en caché para los elementos secundarios de ese elemento mediante la propiedad <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> de la solicitud, es posible obtener posteriormente los elementos secundarios desde la propiedad <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> del elemento que recuperó.  
   
  Si <xref:System.Windows.Automation.TreeScope.Element> se incluyó en el ámbito de la solicitud de caché, el elemento raíz de la solicitud estará posteriormente disponible desde la propiedad <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> de cualquiera de los elementos secundarios.  
@@ -95,7 +114,9 @@ ms.locfileid: "90540932"
 > No se pueden almacenar en caché los elementos primarios o antecesores del elemento raíz de la solicitud.  
   
 <a name="Updating_the_Cache"></a>
+
 ## <a name="updating-the-cache"></a>Actualización de la caché  
+
  La caché solo es válida siempre y cuando no cambie nada en el elemento [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. La aplicación es responsable de actualizar la caché, normalmente como respuesta a eventos.  
   
  Si se suscribe a un evento mientras un elemento <xref:System.Windows.Automation.CacheRequest> está activo, obtendrá un elemento <xref:System.Windows.Automation.AutomationElement> con una caché actualizada como origen del evento cada vez que se llame a su delegado de controlador de eventos. También puede actualizar la información almacenada en caché de un elemento con una llamada a <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. Puede pasar el elemento <xref:System.Windows.Automation.CacheRequest> original para actualizar toda la información que se almacenó previamente en caché.  

@@ -2,14 +2,15 @@
 title: Ejemplo de WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: a51d03fab5c6499a0e9685e01a9bbace1c11f28a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 550e763d30a7fa503f6500dcaa8f9b77ea499bca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594561"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283268"
 ---
 # <a name="webcontenttypemapper-sample"></a>Ejemplo de WebContentTypeMapper
+
 Este ejemplo muestra cómo asignar los nuevos tipos de contenido a los formatos de cuerpo de mensaje de Windows Communication Foundation (WCF).  
   
  El <xref:System.ServiceModel.Description.WebHttpEndpoint> elemento se conecta en el codificador de mensajes Web, que permite a WCF recibir mensajes binarios JSON, XML o sin formato en el mismo punto de conexión. El codificador determina el formato del cuerpo del mensaje examinando el tipo de contenido del Http de la solicitud. Este ejemplo incluye la clase <xref:System.ServiceModel.Channels.WebContentTypeMapper>, que permite al usuario controlar la asignación entre el tipo de contenido y el formato del cuerpo.  
@@ -58,7 +59,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2. Compile la solución WebContentTypeMapperSample. sln tal y como se describe en [Building the Windows Communication Foundation samples](building-the-samples.md).  
   
-3. Vaya a `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (no abra JCTMClientPage. htm en el explorador desde el directorio del proyecto).  
+3. Vaya a `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (no abra JCTMClientPage.htm en el explorador desde el directorio del proyecto).  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  

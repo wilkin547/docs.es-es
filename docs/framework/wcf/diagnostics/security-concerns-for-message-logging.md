@@ -2,19 +2,21 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: df8a1b4382ce4bce60e3214def10c816ced0f13c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 8594329fb27aa1d77a2baffee2a7e37ea0d009c4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550552"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283775"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
+
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
   
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
   
 ### <a name="logging-sensitive-information"></a>Registrar información confidencial  
+
  Windows Communication Foundation (WCF) no modifica ningún dato en los encabezados y el cuerpo específicos de la aplicación. WCF tampoco realiza un seguimiento de la información personal en encabezados específicos de la aplicación o en datos de cuerpo.  
   
  Cuando el registro de mensajes está habilitado, la información personal en encabezados específicos de la aplicación, como una cadena de consulta; e información del cuerpo, como un número de tarjeta de crédito, se puede volver visible en los registros. El implementador de la aplicación es el responsable de exigir el control de acceso en los archivos de registro y configuración. Si no desea que este tipo de información sea visible, debería deshabilitar el registro o filtrar parte de los datos si desea compartir los registros.  
@@ -94,9 +96,11 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
 > PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
   
 ### <a name="custom-trace-listener"></a>Agente de escucha de traza personalizado  
+
  Agregar un agente de escucha de traza personalizado en el origen de traza del registro de mensajes es un privilegio que debe estar restringido al administrador. Esto se debe a que los agentes de escucha personalizados malintencionados se pueden configurar para enviar mensajes remotamente, lo que conduce a la divulgación de información confidencial. Además, si configura un agente de escucha personalizado para enviar mensajes en la conexión, como, por ejemplo, a una base de datos remota, debería exigir un control de acceso apropiado en los registros de mensajes en el equipo remoto.  
   
 ## <a name="events-triggered-by-message-logging"></a>Eventos activados mediante el registro de mensajes  
+
  La siguiente es una lista de todos los eventos emitidos por el registro de mensajes.  
   
 - Registro de mensajes activado: se emite este evento cuando el registro de mensajes está habilitado en la configuración o a través de WMI. El contenido del evento es “Se ha activado el registro de mensajes. Puede que se registre información confidencial en texto no cifrado, incluso aunque estuviesen cifrados en la conexión, por ejemplo, los cuerpos de mensajes”.  

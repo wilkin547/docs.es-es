@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 117fce887a04def7f9b3f7654a8e9e675ea462d2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 50f23e1a343f969ad2cbb3422038921c710b2b1b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502410"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241686"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programación para redes en .NET Framework
+
 Microsoft .NET Framework proporciona una implementación por capas, extensible y administrada de servicios de Internet que se puede integrar rápida y fácilmente en las aplicaciones. Las aplicaciones de red se pueden basar en protocolos conectables para poder usar automáticamente los nuevos protocolos de Internet, o pueden utilizar una implementación administrada de la interfaz de Windows Socket para operar con la red en el nivel de socket.  
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -87,6 +88,7 @@ Microsoft .NET Framework proporciona una implementación por capas, extensible y
  Vínculos a ejemplos de programación de red descargables que utilizan las clases de los espacios de nombres <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>y <xref:System.Net.Sockets> .  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Net?displayProperty=nameWithType>  
  Proporciona una interfaz de programación sencilla para muchos de los protocolos que se utilizan en las redes actuales. Las clases <xref:System.Net.WebRequest?displayProperty=nameWithType> y <xref:System.Net.WebResponse?displayProperty=nameWithType> de este espacio de nombres son la base para los protocolos conectables.  
   

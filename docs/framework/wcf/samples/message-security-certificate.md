@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bdebe0db25d796c2debfb905864fd8bf780c8e66
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 164a939fa7ee0112e1ceae24755854b09dc72603
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558659"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283996"
 ---
 # <a name="message-security-certificate"></a>Certificado de seguridad de mensaje
+
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de certificado X.509 v3 para el cliente y que requiere la autenticación del servidor mediante el certificado X.509 v3 del servidor. Este ejemplo utiliza la configuración predeterminada de tal modo que todos los mensajes de la aplicación entre el cliente y el servidor se firman y cifran. Este ejemplo se basa en [wsHttpBinding](wshttpbinding.md) y consta de un programa de consola de cliente y una biblioteca de servicios hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
   
 > [!NOTE]
@@ -269,7 +270,7 @@ Press <ENTER> to terminate client.
     > Si usa un valor que no es de U. S. Edición en Inglés de Windows, debe modificar el archivo Setup.bat y reemplazar el nombre de cuenta "NT AUTHORITY\NETWORK SERVICE" con su equivalente regional.  
   
 > [!NOTE]
-> Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el Símbolo del sistema para desarrolladores para Visual Studio. Haga clic en **Inicio**y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
+> Las herramientas utilizadas en este archivo por lotes se encuentran en C:\Program Files\Microsoft Visual Studio 8\Common7\tools o C:\Program Files\Microsoft SDKs\Windows\v6.0\bin Uno de estos directorios debe estar en su ruta de acceso del sistema. Si tiene Visual Studio instalado, la manera más fácil de obtener este directorio en su ruta de acceso es abrir el Símbolo del sistema para desarrolladores para Visual Studio. Haga clic en **Inicio** y, a continuación, seleccione **todos los programas**, **Visual Studio 2012**, **herramientas**. Este símbolo del sistema tiene las rutas de acceso adecuadas ya configuradas. De lo contrario, debe agregar manualmente el directorio correcto a su ruta de acceso.  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar:  
