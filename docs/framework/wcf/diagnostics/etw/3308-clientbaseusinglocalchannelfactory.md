@@ -2,14 +2,15 @@
 title: 3308 - ClientBaseUsingLocalChannelFactory
 ms.date: 03/30/2017
 ms.assetid: f1488c75-38ab-47a0-9951-852488683f2a
-ms.openlocfilehash: fdf0bf0e2cbf7686408638063d3253cd10c06752
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e408cadf90092b74ae26a7af0e9aff48a34c42e9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279615"
 ---
 # <a name="3308---clientbaseusinglocalchannelfactory"></a>3308 - ClientBaseUsingLocalChannelFactory
+
 ## <a name="properties"></a>Propiedades  
   
 |||  
@@ -20,9 +21,11 @@ ms.locfileid: "61595821"
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Descripción  
+
  Se genera este evento cuando no se usa un generador de canales desde la memoria caché.  
   
-## <a name="message"></a>Mensaje  
- No usa el generador de canales de caché, es decir, almacenamiento en caché deshabilitado por ejemplo.  
+## <a name="message"></a>Message  
+
+ No se usa el generador de canales de la memoria caché, es decir, almacenamiento en caché deshabilitado para la instancia.  
   
 ## <a name="details"></a>Detalles
