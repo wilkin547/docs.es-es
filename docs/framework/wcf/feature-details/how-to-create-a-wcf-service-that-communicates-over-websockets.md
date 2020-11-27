@@ -2,13 +2,15 @@
 title: Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 80c62ddc6630d26c6c178d1eeff8c6df05bf1d00
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 64f856bcce1234c8e833cc9be723b4af91c4569c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051940"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286167"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Procedimiento para crear un servicio WCF que se comunique a través de WebSockets
+
 Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  WebSockets se usará cuando <xref:System.ServiceModel.NetHttpBinding> determine que el contrato de servicio define un contrato de devolución de llamada. En este tema se describe cómo implementar un servicio de WCF y un cliente que use <xref:System.ServiceModel.NetHttpBinding> para comunicarse sobre WebSockets.  
   
 ### <a name="define-the-service"></a>Definir el servicio  
@@ -160,6 +162,7 @@ Los servicios y los clientes de WCF pueden usar el enlace <xref:System.ServiceMo
          No es necesario hacer nada especial en la configuración de cliente, simplemente especificar el extremo del lado cliente mediante `NetHttpBinding`.  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra el código completo que se emplea en este tema.  
   
 ```csharp  

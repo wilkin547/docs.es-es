@@ -2,14 +2,15 @@
 title: Procedimiento para crear un contrato de solicitud-respuesta
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 8a09c265c77edc584b591477e64314f1e76e332b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 506ce527348286bb53223c64245c74e4cb21879a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593443"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286557"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Procedimiento para crear un contrato de solicitud-respuesta
+
 Un contrato de solicitud-respuesta especifica un método que devuelve una respuesta. La respuesta se debe enviar y correlacionar con la solicitud según las condiciones de este contrato. Incluso si el método no devuelve ninguna respuesta (`void` en C#, o `Sub` en Visual Basic), la infraestructura crea y envía un mensaje vacío al autor de la llamada. Para evitar que se envíe un mensaje de respuesta vacío, use un contrato unidireccional para la operación.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Creación de un contrato de solicitud-respuesta  
@@ -23,6 +24,7 @@ Un contrato de solicitud-respuesta especifica un método que devuelve una respue
 4. Opcional. Establezca el valor de la propiedad <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> en `true` para evitar que se envíe un mensaje de respuesta vacío. De forma predeterminada, todas las operaciones son contratos de solicitud-respuesta.  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo define un contrato para un servicio de calculadora que proporciona métodos `Add` y `Subtract`. El método `Multiply` no es parte del contrato, porque no está marcado por la clase <xref:System.ServiceModel.OperationContractAttribute> y, por tanto, los clientes no pueden acceder a él.  
   
 ```csharp
@@ -45,7 +47,7 @@ public interface ICalculator
   
 - Para obtener más información sobre cómo especificar contratos de operación, vea la <xref:System.ServiceModel.OperationContractAttribute> clase y la <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> propiedad.  
   
-- La aplicación de los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> permite la generación automática de definiciones de contrato de servicio en un Lenguaje de descripción de servicios Web (WSDL). El documento se descarga agregando `?wsdl` a la dirección base HTTP del servicio. Por ejemplo, `http://microsoft/CalculatorService?wsdl`.  
+- La aplicación de los atributos <xref:System.ServiceModel.ServiceContractAttribute> y <xref:System.ServiceModel.OperationContractAttribute> permite la generación automática de definiciones de contrato de servicio en un Lenguaje de descripción de servicios Web (WSDL). El documento se descarga agregando `?wsdl` a la dirección base HTTP del servicio. Por ejemplo: `http://microsoft/CalculatorService?wsdl`  
   
 ## <a name="see-also"></a>Vea también
 

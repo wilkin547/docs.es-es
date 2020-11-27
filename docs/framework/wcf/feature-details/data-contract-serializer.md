@@ -6,17 +6,19 @@ helpviewer_keywords:
 - WCF, data
 - DataContractSerializer
 ms.assetid: 3d64837e-0a0c-4cc8-90ff-a5c6f313c63a
-ms.openlocfilehash: a898419a9bb1ecbd0b156f0b749da70e1b5b903f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e299d129e9296467d9b966cff5353c629461bee4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593560"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285244"
 ---
 # <a name="data-contract-serializer"></a>El serializador de contratos de datos
+
 La infraestructura de Windows Communication Foundation (WCF) utiliza la <xref:System.Runtime.Serialization.DataContractSerializer> clase como el serializador predeterminado. Los temas en esta sección proporcionan más detalles para utilizarlo como un serializador independiente.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Serialización y deserialización](serialization-and-deserialization.md)  
  Detalla cómo utilizar la clase <xref:System.Runtime.Serialization.DataContractSerializer> para serializar gráficos de objetos y deserializar documentos XML a objetos.  
   
@@ -24,6 +26,7 @@ La infraestructura de Windows Communication Foundation (WCF) utiliza la <xref:Sy
  Explica cómo generar un esquema del lenguaje de definición de esquemas XML (XSD) a partir de una .NET Framework clase o cómo generar código a partir de un documento de esquema XSD.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Runtime.Serialization.DataContractSerializer>  
   
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
@@ -33,6 +36,7 @@ La infraestructura de Windows Communication Foundation (WCF) utiliza la <xref:Sy
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Utilización de contratos de datos](using-data-contracts.md)  
   
  [Transferencia y serialización de datos](data-transfer-and-serialization.md)  

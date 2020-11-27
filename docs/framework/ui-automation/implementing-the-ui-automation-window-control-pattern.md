@@ -7,14 +7,15 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: e1d7429f86896947a10b73965caa7d771f54490b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: b43884393974e6f2863da6a4a5ca8f305e5a160c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87168186"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286102"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementar el patrón de control Window de UI Automation
+
 > [!NOTE]
 > Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para ver la información más reciente acerca de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: automatización de la interfaz de usuario](/windows/win32/winauto/entry-uiauto-win32).  
   
@@ -23,7 +24,9 @@ ms.locfileid: "87168186"
  El <xref:System.Windows.Automation.WindowPattern> patrón de control se usa para admitir controles que proporcionan la funcionalidad fundamental basada en ventanas dentro de una interfaz gráfica de usuario (GUI) tradicional. Entre los ejemplos de controles que deben implementar este patrón de control se incluyen las ventanas de aplicación de nivel superior, las ventanas secundarias de interfaz de múltiples documentos (MDI), los controles de panel de división de tamaño ajustable, los cuadros de diálogo modales y las ventanas de ayuda de globo.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
+
 ## <a name="implementation-guidelines-and-conventions"></a>Directrices y convenciones de implementación  
+
  Al implementar el patrón de control Window, tenga en cuenta las siguientes directrices y convenciones:  
   
 - Para admitir la capacidad de modificar el tamaño de la ventana y la posición de la pantalla mediante Automatización de la interfaz de usuario, un control debe implementar <xref:System.Windows.Automation.Provider.ITransformProvider> además de <xref:System.Windows.Automation.Provider.IWindowProvider>.  
@@ -37,7 +40,9 @@ ms.locfileid: "87168186"
 - El modo de pantalla completa no es compatible con IWindowProvider, ya que es una característica específica de una aplicación y no es el comportamiento de ventana típico.  
   
 <a name="Required_Members_for_IWindowProvider"></a>
+
 ## <a name="required-members-for-iwindowprovider"></a>Miembros necesarios para IWindowProvider  
+
  Para la interfaz de IWindowProvider, se requieren los siguientes métodos, eventos y propiedades.  
   
 |Miembro requerido|Tipo de miembro|Notas|  
@@ -56,7 +61,9 @@ ms.locfileid: "87168186"
 |<xref:System.Windows.Automation.WindowInteractionState>|Evento|No se garantiza que sea <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>
+
 ## <a name="exceptions"></a>Excepciones  
+
  Los proveedores deben producir las siguientes excepciones.  
   
 |Tipo de excepción|Condición|  

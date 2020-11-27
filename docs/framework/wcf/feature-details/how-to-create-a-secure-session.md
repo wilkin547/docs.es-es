@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-ms.openlocfilehash: 80973a31050cf1ede03d4a3919066c62625ae590
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f6fb73653add7362e8c8452e75be802395ffc3cd
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593417"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286531"
 ---
 # <a name="how-to-create-a-secure-session"></a>Procedimiento para crear una sesión segura
+
 A excepción del [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) enlace, los enlaces proporcionados por el sistema en Windows Communication Foundation (WCF) usan automáticamente sesiones seguras cuando la seguridad de mensajes está habilitada.  
   
  De forma predeterminada, las sesiones seguras no permanecen en ningún servidor reciclado. Cuando se establece una sesión segura, el cliente y el servicio almacenan en memoria caché la clave asociada a la sesión segura. Cuando se intercambian los mensajes, se intercambia solo un identificador de la clave almacenada en memoria caché. Si se recicla el servidor web, también se recicla la memoria en caché, de manera que el servidor web no puede recuperar la clave almacenada en memoria caché para el identificador. Si ocurre esto, se produce una excepción que se devuelve al cliente. Las sesiones seguras que usan un token de contexto de seguridad (SCT) con estado pueden sobrevivir en un servidor web que se recicle. Para obtener más información sobre el uso de un SCT con estado en una sesión segura, consulte [Cómo: crear un token de contexto de seguridad para una sesión segura](how-to-create-a-security-context-token-for-a-secure-session.md).  
@@ -60,7 +61,7 @@ A excepción del [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basi
   
 - Cree un enlace personalizado que especifica que una sesión segura protege los mensajes SOAP.  
   
-     Para obtener más información sobre cómo crear un enlace personalizado, vea [Cómo: personalizar un enlace proporcionado por el sistema](../extending/how-to-customize-a-system-provided-binding.md).  
+     Para obtener más información sobre cómo crear un enlace personalizado, vea [Cómo: personalizar un enlace de System-Provided](../extending/how-to-customize-a-system-provided-binding.md).  
   
      El ejemplo de código siguiente utiliza la configuración para especificar un enlace personalizado que envía mensajes utilizando una sesión segura.  
   

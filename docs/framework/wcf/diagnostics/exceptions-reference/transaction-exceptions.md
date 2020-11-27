@@ -2,15 +2,16 @@
 title: Excepciones en las transacciones
 ms.date: 03/30/2017
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
-ms.openlocfilehash: 85d8d043a5610743d6cbad4d950330ed4bedb502
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcdf825699368617335f2d59a05f8826884a8e9e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936986"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285686"
 ---
 # <a name="transaction-exceptions"></a>Excepciones en las transacciones
-En este tema se enumera todas las excepciones generadas por transacciones de Windows Communication Foundation (WCF).  
+
+En este tema se enumeran todas las excepciones generadas por Windows Communication Foundation transacción (WCF).  
   
 ## <a name="exception-list"></a>Lista de excepciones  
   

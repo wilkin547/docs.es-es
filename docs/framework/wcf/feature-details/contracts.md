@@ -6,19 +6,21 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 1cd7e54d50e7116c71c040df1965674a4fdaff13
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51bbd1a8a9bfc8963cee429dab41fdf9b4f594c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595601"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286765"
 ---
 # <a name="contracts"></a>Contratos
+
 En esta sección se muestra cómo definir e implementar contratos de Windows Communication Foundation (WCF). Un contrato de servicio especifica lo que un punto de conexión comunica al mundo exterior. En un nivel más concreto, es una instrucción sobre un conjunto de mensajes concretos organizada en patrones de intercambio de mensajes básicos (MEP), como solicitud/respuesta, unidireccional y dúplex. Si un contrato de servicio es un conjunto relacionado de forma lógica de intercambios de mensajes, una operación de servicio es un intercambio único de mensajes. Por ejemplo, una operación `Hello` debe aceptar obviamente un mensaje (de manera que el autor de la llamada pueda anunciar el saludo) y puede o no devolver un mensaje (dependiendo de la cortesía de la operación).  
   
  Para obtener más información sobre los contratos y otros conceptos básicos de WCF, vea [conceptos básicos de Windows Communication Foundation](../fundamental-concepts.md). Este tema se centra en describir los contratos de servicio. Para obtener más información sobre cómo crear clientes que usen contratos de servicio para conectarse a los servicios, consulte [información general del cliente de WCF](../wcf-client-overview.md). Para obtener más información acerca de los canales de cliente, la arquitectura de cliente y otros problemas de cliente, consulte [clientes](clients.md).  
   
 ## <a name="overview"></a>Información general  
+
  En este tema se proporciona una orientación conceptual de alto nivel para diseñar e implementar servicios WCF. Los subtemas proporcionan más información detallada sobre las características del diseño e implementación. Antes de diseñar e implementar la aplicación WCF, se recomienda que:  
   
 - Entender lo que es un contrato de servicio, cómo funciona, y cómo crear uno.  
@@ -26,6 +28,7 @@ En esta sección se muestra cómo definir e implementar contratos de Windows Com
 - Comprenda que los contratos especifican requisitos mínimos que la configuración en tiempo de ejecución o el entorno de alojamiento pueden no admitir.  
   
 ## <a name="service-contracts"></a>Contratos de servicio  
+
  Un contrato de servicios es una instrucción que proporciona información sobre:  
   
 - La agrupación de operaciones en un servicio.  
@@ -59,6 +62,7 @@ En esta sección se muestra cómo definir e implementar contratos de Windows Com
  Además, WCF también proporciona la capacidad de desarrollar contratos de servicio por completo en el nivel de mensaje. Para obtener más información sobre el desarrollo de contratos de servicio en el nivel de mensaje, vea [usar contratos de mensaje](using-message-contracts.md). Para obtener más información sobre el desarrollo de servicios en XML que no es SOAP, consulte [interoperabilidad con aplicaciones POX](interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Introducción a la jerarquía de los requisitos  
+
  Un contrato de servicio agrupa operaciones; especifica el MEP, tipos de mensaje y tipos de datos que llevan esos mensajes e indica categorías de comportamiento de tiempo de ejecución que una implementación debe tener para admitir el contrato (por ejemplo, puede requerir que los mensajes se cifren y firmen). El contrato de servicio en sí mismo, sin embargo, no especifica precisamente cómo se cumplen estos requisitos, solo que deben ser. Qué tipo de cifrado o cómo se firma un mensaje es tarea de la implementación y configuración de un servicio conforme.  
   
  Observe la manera en que el contrato requiere algunas cosas de la implementación del contrato de servicio y la configuración del tiempo de ejecución para agregar comportamiento. El conjunto de requisitos que se deben cumplir para exponer un servicio para usar compilaciones en el conjunto anterior de requisitos. Si un contrato realiza requisitos de la implementación, una implementación puede requerir todavía más de la configuración y enlaces que permiten al servicio ejecutarse. Finalmente, la aplicación host también debe admitir cualquier requisito que la configuración de servicio y los enlaces agreguen.  

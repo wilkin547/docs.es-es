@@ -8,17 +8,18 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a03d388f2773e312a149b5caf1747627d1c17864
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593547"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286634"
 ---
 # <a name="how-to-create-a-federated-client"></a>Procedimiento para crear un cliente federado
+
 En Windows Communication Foundation (WCF), la creación de un cliente para un *servicio federado* consta de tres pasos principales:  
   
-1. Configure un [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o un enlace personalizado similar. Para obtener más información sobre cómo crear un enlace adecuado, vea [Cómo: crear un WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Como alternativa, ejecute la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) con el punto de conexión de metadatos del servicio federado para generar un archivo de configuración para comunicarse con el servicio federado y uno o varios servicios de token de seguridad.  
+1. Configure un [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) o un enlace personalizado similar. Para obtener más información sobre cómo crear un enlace adecuado, vea [Cómo: crear un WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). También puede ejecutar la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) en el extremo de metadatos del servicio federado para generar un archivo de configuración para comunicarse con el servicio federado y uno o varios servicios de token de seguridad.  
   
 2. Establezca las propiedades de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential> que controla varios aspectos de la interacción de un cliente con un servicio de tokens de seguridad.  
   
@@ -31,7 +32,7 @@ En Windows Communication Foundation (WCF), la creación de un cliente para un *s
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Generar y examinar la configuración para un servicio federado  
   
-1. Ejecute la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) con la dirección URL de metadatos del servicio como un parámetro de línea de comandos.  
+1. Ejecute la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) con la dirección URL de metadatos del servicio como un parámetro de línea de comandos.  
   
 2. Abra el archivo de configuración generado en un editor adecuado.  
   
@@ -141,20 +142,24 @@ En Windows Communication Foundation (WCF), la creación de un cliente para un *s
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo de código configura una instancia de la clase <xref:System.ServiceModel.Security.IssuedTokenClientCredential> mediante código.  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
+
  Para evitar la posible divulgación de la información, los clientes que están ejecutando la herramienta Svcutil.exe para procesar los metadatos desde puntos de conexión federados deberían asegurarse de que las direcciones del servicio de tokens de seguridad resultantes son las esperadas. Esto es especialmente importante cuando un servicio de tokens de seguridad expone varios puntos de conexión, porque la herramienta Svcutil.exe genera el archivo de configuración resultante para utilizar el primero de esos puntos de conexión, que no puede ser el que el cliente debería estar utilizando.  
   
 ## <a name="localissuer-required"></a>LocalIssuer requerido  
+
  Si se espera que los clientes utilicen siempre un emisor local, tenga en cuenta lo siguiente: la salida predeterminada de Svcutil.exe hace que no se utilice el emisor local si el servicio de tokens de seguridad de segundo a último en la cadena especifica una dirección de emisor o una dirección de metadatos de emisor.  
   
  Para obtener más información sobre cómo establecer las <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> propiedades, y <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> de la <xref:System.ServiceModel.Security.IssuedTokenClientCredential> clase, consulte [How to: Configure a local issuer](how-to-configure-a-local-issuer.md).  
   
 ## <a name="scoped-certificates"></a>Certificados con ámbito  
+
  Si los certificados del servicio se deben especificar para comunicarse con cualquiera de los servicios de tokens de seguridad, normalmente debido a que no se utiliza la negociación de certificados, se pueden especificar mediante la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> de la clase <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>. El método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> toma un <xref:System.Uri> y un <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> como parámetros. Se utiliza el certificado especificado al comunicarse con puntos de conexión en el URI especificado. De manera alternativa, puede utilizar el método <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> para agregar un certificado a la colección devuelta por la propiedad <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A>.  
   
 > [!NOTE]

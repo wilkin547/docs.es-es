@@ -2,17 +2,19 @@
 title: Creación de un encabezado personalizado firmado o cifrado
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 0adb4100bca1add2c23ff2c802ddb5e2cb1c368c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: daa594950c25ea4a5c2012183c47231b4688719e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579663"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286726"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Creación de un encabezado personalizado firmado o cifrado
+
 Al llamar a un servicio no WCF utilizando un cliente WCF a veces es necesario utilizar encabezados SOAP personalizados. Hay un error de canonización en WCF que impide que los encabezados personalizados firmados y cifrados funcionen con un servicio no WCF. El problema se debe a la canonización incorrecta de los espacios de nombres XML predeterminados. Este hecho es problemático únicamente al llamar a servicios no WCF con encabezados personalizados firmados o cifrados.  Cuando el servicio recibe el mensaje que contiene el encabezado personalizado firmado o cifrado, no puede comprobar la firma. Esta solución evita el error de canonización, permite la interoperabilidad con servicios no WCF, pero no impide la interoperabilidad con servicios WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definición del encabezado personalizado  
+
  Para definir los encabezados personalizados, se define un contrato de mensaje y se marcan los miembros que se desean enviar como encabezados con un atributo <xref:System.ServiceModel.MessageHeaderAttribute>. Para evitar el error de canonización, debe asegurarse de que el serializador XML declara el espacio de nombres para el encabezado personalizado con un prefijo en lugar de una declaración de espacio de nombres predeterminado. El siguiente código muestra cómo definir el tipo de datos que se utilizará como encabezado del mensaje con la declaración de espacio de nombres correcta.  
   
 ```csharp

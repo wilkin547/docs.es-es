@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: 29c2a87daaf763a50aa657c9badc002ff2fa27e1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 13287d0d5c989fc3a5dc95c6df5d548bca9df4d8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593339"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286362"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>Procedimiento para crear un servicio que requiere sesiones
+
 Las sesiones crean un estado compartido entre dos o más extremos que habilita características útiles como las devoluciones de llamada, la seguridad de saltos múltiples y asociaciones entre clientes e instancias de servicio. Para obtener más información acerca de las sesiones en aplicaciones de Windows Communication Foundation (WCF), consulte [uso de sesiones](../using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>Especificar que un contrato requiere su enlace para admitir sesiones  
@@ -32,6 +33,7 @@ Las sesiones crean un estado compartido entre dos o más extremos que habilita c
      [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente código de ejemplo muestra cómo especificar un requisito de sesión del nivel de contrato y utilizar un archivo de configuración para admitir ese requisito con el enlace <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>.  
   
  [!code-csharp[SCA.Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/services.cs#1)]

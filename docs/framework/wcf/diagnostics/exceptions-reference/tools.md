@@ -2,24 +2,25 @@
 title: Herramientas
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-ms.openlocfilehash: 623ba8a3ae3b58381edc80a19bf2d1a4561f3976
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2f7ef8b7f871dada676eb05713d6f624427d5395
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774238"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96285699"
 ---
 # <a name="tools"></a>Herramientas
+
 En este tema se enumeran todas las excepciones generadas por las herramientas de Windows Communication Foundation (WCF).
 
 ## <a name="exception-list"></a>Lista de excepciones
 
 |Código de recurso|Cadena de recurso|
 |-------------------|---------------------|
-|ParametersTarget|\<enumeración >|
-|ParametersToolConfig|\<configFile >|
+|ParametersTarget|\<enum>|
+|ParametersToolConfig|\<configFile>|
 |ErrInvalidPath|La ruta de acceso especificada no es válida. Compruebe el argumento especificado.|
-|ParametersReference|\<ruta de acceso del archivo >|
+|ParametersReference|\<file path>|
 |WrnCannotLoadConfigFileForValidation|Se ha producido un error durante el procesamiento del archivo de configuración cargado de la ubicación especificada. No se pueden validar los servicios que se definen en este archivo de configuración.|
 |MoreHelp|Para más ayuda, escriba "svcutil" con los argumentos especificados.|
 |HelpMergeConfig|Provoca que la configuración generada se fusione con un archivo existente en lugar de sobrescribir el archivo existente.|
@@ -51,7 +52,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |ErrCannotCreateDirectory|No puede crear el directorio especificado.|
 |ErrCouldNotLoadTypesFromAssemblyAt|No puede cargar ningún tipo en el ensamblado especificado.|
 |ErrUnknownSwitch|El modificador especificado es una opción desconocida.|
-|Logo|El logotipo de la herramienta es "Microsoft ® Service Model Metadata Tool" con versión.|
+|Logotipo|El logotipo de la herramienta es "Microsoft ® Service Model Metadata Tool" con versión.|
 |NoCodeWasGenerated|No se generó ningún código.<br /><br /> Si estaba intentando generar un cliente, esto podría ser porque los documentos de metadatos no contenían contratos válidos o servicios<br /><br /> o porque se descubrió que todos los contratos/servicios existían en ensamblados de referencia. Compruebe que pasó todos los documentos de metadatos a la herramienta.|
 |WrnUnableToLoadContractForSGen|Se produjo un error al cargar un tipo de contrato. No puede generar el tipo XmlSerializer para este contrato. Se especifican el tipo y detalles.|
 |WrnOptionConflictsWithInput|La opción especificada no se puede utilizar con varios ensamblados de entrada. Se omite la opción especificada.|
@@ -68,14 +69,14 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |HelpCodeGenerationCategory|-= CODE GENERATION =-|
 |RetreivingMetadataWithMexAndDisco|Intentando descargar los metadatos a partir de lo especificado utilizando intercambio de metadatos WS o DISCO.|
 |ErrGeneralSchemaValidation|Se produjo un error al comprobar los esquemas XML que se generaron durante la exportación.|
-|ParametersDirectory|> de \<de directorio|
+|ParametersDirectory|\<directory>|
 |ErrCannotLoadSpecifiedType|Ningún tipo se puede cargar para el valor especificado que se pasó a la opción especificada. Asegúrese de que el ensamblado al que pertenece este tipo se especifica utilizando la opción especificada.|
 |ErrOptionModeConflict|La opción especificada no se puede utilizar con la opción especificada porque implican tipos de salida diferentes.|
 |ErrIsNotAnAssembly|No puede cargar lo especificado como un ensamblado. Compruebe que este archivo es un .NET ensamblado.|
 |ErrInputConflictsWithMode|La entrada leída a partir de lo especificado es incoherente con otras opciones.|
 |ErrDuplicateValuePassedToTypeArg|El valor especificado se pasó varias veces a la opción especificada. Se puede especificar cada tipo solo una vez.|
 |ErrInputEPRFileParseError|No puede leer la referencia del punto de conexión a partir de lo especificado. Compruebe que el formato XML es correcto y válido.|
-|ErrCouldNotCreateCodeProvider|No se puede crear un proveedor de código para el valor especificado que se pasó al argumento/{1}. Compruebe que el proveedor de código se instala y configura correctamente.|
+|ErrCouldNotCreateCodeProvider|No se puede crear un proveedor de código para el valor especificado que se pasó al {1} argumento/. Compruebe que el proveedor de código se instala y configura correctamente.|
 |ErrPathTooLongDirOnly|El resultante la ruta de acceso especificada es demasiado largo. Revise el argumento especificado.|
 |HelpDataContractSerializer|Genere tipos de datos que utilicen el serializador DataContract para la serialización y deserialización.|
 |ErrUnableToExportEndpoint|Se produjo un error al exportar el nombre de extremo especificado en el espacio de nombres especificado en el tipo de servicio especificado situado en el archivo de configuración cargado para el ensamblado.|
@@ -87,7 +88,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |ErrDirectoryNotFound|No se puede encontrar el directorio especificado. Compruebe que el directorio existe y que tiene los permisos adecuados para leerlo.|
 |ErrUnableToLoadFile|No puede leer el archivo especificado.|
 |ErrNoFilesFound|La ruta de acceso de entrada especificada no parece hacer referencia a ningún archivo existente.|
-|ParametersConfig|\<configFile >|
+|ParametersConfig|\<configFile>|
 |ErrDirectoryInsteadOfFile|La ruta de acceso de entrada especificada parece ser un directorio. La entrada debe ser direcciones URL o rutas de acceso de archivo.|
 |HelpConfig|Indica a las herramientas que generen un archivo de configuración con el nombre proporcionado. Valor predeterminado: output.config.|
 |ErrSingleUseSwitch|No puede especificarse la opción especificada varias veces.|
@@ -112,9 +113,9 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |ErrInvalidTarget|El destino especificado no es válido cuando se especifica utilizando la opción especificada. Se especifican los destinos soportados.|
 |ErrPathTooLong|La ruta de acceso resultante es demasiado larga. Revise los argumentos especificados.|
 |HelpCommonOptionsCategory|-= COMMON OPTIONS =-|
-|ParametersServiceName|\<serviceConfigName >|
+|ParametersServiceName|\<serviceConfigName>|
 |ErrNoValidInputFilesSpecified|No se especificaron archivos de entrada válidos. Especifique documentos de metadatos o archivos de ensamblado.|
-|ParametersLanguage|\<idioma >|
+|ParametersLanguage|\<language>|
 |ErrUnableToLoadMetadataDocument|Se produjo un error al leer los metadatos a partir de uno de los documentos cargados. Se especifica el identificador del documento.|
 |ErrConflictingInputs|El argumento de entrada especificado está en conflicto con lo especificado porque implican modos diferentes de operación de la herramienta.|
 |WrnUnableToLoadContractForValidation|Se produjo un error al cargar un tipo de contrato. Se especifican el tipo y detalles.|
@@ -125,7 +126,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |GeneratingFiles|Generando archivos…|
 |ErrCannotSpecifyMultipleMappingsForNamespace|Un valor no válido especificado se pasó a la opción especificada. El espacio de nombres de destino especificado no puede estar asignado a varios espacios de nombres CLR como se ha especificado.|
 |ErrCouldNotLoadReferenceAssemblyAt|No puede cargar el ensamblado de referencia especificado.|
-|ParametersOut|\<> de archivo|
+|ParametersOut|\<file>|
 |NoCodeWasGeneratedSuggestDCOnly|Para generar los contratos a partir de los esquemas, utilice la opción especificada.|
 |ErrUnableToLoadInputConfig|No puede cargar el archivo de configuración especificado.|
 |ErrUnexpectedDelimiter|Un delimitador de argumentos no válido (':' o '=') no puede iniciar la opción.|
@@ -142,7 +143,7 @@ En este tema se enumeran todas las excepciones generadas por las herramientas de
 |ErrCodegenError|Se produjo un error al generar código en el lenguaje especificado.<br /><br /> El lenguaje no soporta todos los elementos de código que se están generando. Se debería utilizar otro lenguaje.|
 |ErrInputWsdlParseError|Se produjo un error de análisis de WSDL al leer lo especificado. Compruebe que el formato XML es correcto y válido.|
 |ErrCouldNotCreateInstance|No puede crear ninguna instancia del tipo especificado que se pasó al argumento especificado.|
-|ParametersNamespace|\<String, String >|
+|ParametersNamespace|\<string,string>|
 |HelpNostdlib|No hacer referencia a las bibliotecas estándares (de forma predeterminada se hace referencia a mscorlib.dll y system.servicemodel.dll.)|
 |WrnCannotLoadConfigFileForExport|Se produjo un error durante el procesamiento del archivo de configuración que se cargó a partir de lo especificado. No se pueden cargar los servicios que se definen en este archivo de configuración.|
 |WrnUnableToLoadContractForExport|Se produjo un error al cargar un tipo de contrato. No se puede exportar este tipo especificado.|

@@ -2,21 +2,22 @@
 title: Procedimiento para crear un servicio de flujo de trabajo con actividades de mensajería
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: b4991fc9f8a6c45cae3943f1506247c42ed2b30b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 21d08d9c3c78cc8774d038018703ffb0c7ceb1fe
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286323"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procedimiento para crear un servicio de flujo de trabajo con actividades de mensajería
+
 En este tema, se describe cómo crear un servicio de flujo de trabajo simple mediante actividades de mensajería. Este tema se centra en los sistemas de creación de un servicio de flujo de trabajo compuesto solo por actividades de mensajería. En un servicio real, el flujo de trabajo contiene muchas otras actividades. El servicio implementa una operación denominada Eco, que toma una cadena y la devuelve al autor de la llamada. Este tema es el primero en una serie de dos temas. En el tema siguiente [Cómo: obtener acceso a un servicio desde una aplicación de flujo de trabajo](how-to-access-a-service-from-a-workflow-application.md) se describe cómo crear una aplicación de flujo de trabajo que pueda llamar al servicio creado en este tema.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Para crear un proyecto de servicio de flujo de trabajo  
   
 1. Inicie Visual Studio 2012.  
   
-2. Haga clic en el menú **archivo** , seleccione **nuevo**y **proyecto** para mostrar el **cuadro de diálogo nuevo proyecto**. Seleccione **flujo de trabajo** en la lista de plantillas instaladas y **aplicación de servicio de flujo de trabajo WCF** en la lista de tipos de proyecto. Asigne un nombre al proyecto `MyWFService` y use la ubicación predeterminada, tal como se muestra en la siguiente ilustración.  
+2. Haga clic en el menú **archivo** , seleccione **nuevo** y **proyecto** para mostrar el **cuadro de diálogo nuevo proyecto**. Seleccione **flujo de trabajo** en la lista de plantillas instaladas y **aplicación de servicio de flujo de trabajo WCF** en la lista de tipos de proyecto. Asigne un nombre al proyecto `MyWFService` y use la ubicación predeterminada, tal como se muestra en la siguiente ilustración.  
   
      Haga clic en el botón **Aceptar** para descartar el **cuadro de diálogo nuevo proyecto**.  
   
@@ -67,6 +68,7 @@ En este tema, se describe cómo crear un servicio de flujo de trabajo simple med
 8. Guarde y compile la solución. para ello, haga clic en el menú **compilar** y seleccione **compilar solución**.  
   
 ## <a name="configure-the-workflow-service-project"></a>Configuración del proyecto de servicio de flujo de trabajo  
+
  El servicio del flujo de trabajo ha finalizado. En esta sección, se explica cómo configurar la solución de servicio de flujo de trabajo para facilitar el hospedaje y la ejecución. Esta solución usa el servidor de desarrollo de ASP.NET para hospedar el servicio.  
   
 #### <a name="to-set-project-start-up-options"></a>Para establecer opciones de inicio de proyecto  

@@ -8,18 +8,19 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: 85c533d683558520d46f259db0bdb34dcb1214c9
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 3bb0aca2a1207a98b45fe8b6d43930e9b2acc5ec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247408"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96286711"
 ---
 # <a name="data-contract-names"></a>Nombres de contratos de datos
 
 A veces un cliente y un servicio no comparten los mismos tipos. Todavía pueden pasar datos entre sí porque los contratos de datos son equivalentes en ambos lados. La [equivalencia del contrato de datos](data-contract-equivalence.md) se basa en los nombres de los miembros de datos y del contrato de datos y, por lo tanto, se proporciona un mecanismo para asignar tipos y miembros a esos nombres. En este tema se explican las reglas para asignar nombres a los contratos de datos, así como el comportamiento predeterminado de la infraestructura de Windows Communication Foundation (WCF) al crear nombres.
 
 ## <a name="basic-rules"></a>Reglas básicas
+
 Entre las reglas básicas con respecto a los nombres de los contratos de datos se incluyen:
 
 - Un nombre de contrato de datos completo se compone de un espacio de nombres y de un nombre.
@@ -29,6 +30,7 @@ Entre las reglas básicas con respecto a los nombres de los contratos de datos s
 - Al procesar los contratos de datos, la infraestructura de WCF distingue entre mayúsculas y minúsculas en los espacios de nombres y los nombres de los contratos de datos y miembros de datos.
 
 ## <a name="data-contract-namespaces"></a>Espacios de nombres de contratos de datos
+
 Un espacio de nombres de contrato de datos toma la forma de un Identificador uniforme de recursos (URI). El URI puede ser absoluto o relativo. De forma predeterminada, se asigna un espacio de nombres que procede del espacio de nombres de Common Language Runtime (CLR) de ese tipo a los contratos de datos de un tipo determinado.
 
 De forma predeterminada, cualquier espacio de nombres CLR determinado (con el formato *CLR. Namespace*) se asigna al espacio de nombres `http://schemas.datacontract.org/2004/07/Clr.Namespace` . Para invalidar este valor predeterminado, aplique el atributo <xref:System.Runtime.Serialization.ContractNamespaceAttribute> al ensamblado o módulo completo. De manera alternativa, para controlar el espacio de nombres del contrato de datos de cada tipo, establezca la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> del <xref:System.Runtime.Serialization.DataContractAttribute>.
@@ -40,18 +42,22 @@ De forma predeterminada, cualquier espacio de nombres CLR determinado (con el fo
 > No puede invalidar el espacio de nombres predeterminado en tipos de contratos de datos que contengan declaraciones `delegate`.
 
 ## <a name="data-contract-names"></a>Nombres de contratos de datos
+
 El nombre predeterminado de un contrato de datos de un tipo determinado es el nombre de ese tipo. Para invalidar el valor predeterminado, establezca la propiedad <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> del <xref:System.Runtime.Serialization.DataContractAttribute> en un nombre alternativo. Más adelante, en este tema, se describen las reglas especiales de los tipos genéricos, en la sección "Nombres de contratos de datos para tipos genéricos".
 
 ## <a name="data-member-names"></a>Nombres de miembros de datos
+
 El nombre predeterminado de un miembro de datos de un campo o propiedad determinado es el nombre de ese campo o propiedad. Para invalidar el valor predeterminado, establezca la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> del <xref:System.Runtime.Serialization.DataMemberAttribute> en un valor alternativo.
 
 ### <a name="examples"></a>Ejemplos
+
 El siguiente ejemplo muestra cómo puede invalidar el comportamiento de denominación predeterminado de contratos de datos y miembros de datos.
 
 [!code-csharp[C_DataContractNames#1](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#1)]
 [!code-vb[C_DataContractNames#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]
 
 ## <a name="data-contract-names-for-generic-types"></a>Nombres de contratos de datos para tipos genéricos
+
 Existen reglas especiales para determinar los nombres de contratos de datos para tipos genéricos. Estas reglas ayudan a evitar las coincidencias de nombres de contratos de datos entre dos genéricos cerrados del mismo tipo genérico.
 
 De forma predeterminada, el nombre del contrato de datos para un tipo genérico es el nombre del tipo, seguido de la cadena "de", seguido de los nombres de contrato de datos de los parámetros genéricos, seguido de un *hash* calculado mediante los espacios de nombres del contrato de datos de los parámetros genéricos. Un hash es el resultado de una función matemática que actúa como una "huella" que identifica identifica de manera única una parte de datos. Cuando todos los parámetros genéricos son de tipo primitivo, se omite el hash.
