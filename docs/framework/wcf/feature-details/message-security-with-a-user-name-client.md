@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 9bcac0e45d44270d27a4cf04677e967a80e94b90
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90550207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292875"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
+
 En la ilustración siguiente se muestra un servicio y un cliente de Windows Communication Foundation (WCF) protegidos mediante la seguridad de nivel de mensaje. La autenticación del servicio se realiza mediante un certificado X.509. El cliente se autentica utilizando un nombre de usuario y contraseña.  
   
  Para obtener una aplicación de ejemplo, vea [nombre de usuario de seguridad de mensaje](../samples/message-security-user-name.md).  
@@ -21,29 +22,32 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|Modo de seguridad|Mensaje|  
+|Modo de seguridad|Message|  
 |Interoperabilidad|Solo Windows Communication Foundation (WCF)|  
 |Autenticación (servidor)|La negociación inicial requiere autenticación de servidor|  
 |Autenticación (cliente)|Nombre de usuario/contraseña|  
 |Integridad|Sí, mediante el contexto de seguridad compartido|  
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|  
 |Transporte|HTTP|  
-|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
+
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   
 - Cree un servicio mediante la configuración proporcionada, pero sin definir ningún punto de conexión.  
   
 ### <a name="code"></a>Código  
+
  El código siguiente muestra cómo crear un extremo de servicio que utiliza la seguridad del mensaje.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
 ### <a name="configuration"></a>Configuración  
+
  La siguiente configuración se puede usar en lugar del código.  
   
 ```xml  
@@ -89,12 +93,14 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 ## <a name="client"></a>Cliente  
   
 ### <a name="code"></a>Código  
+
  El siguiente código crea el cliente. El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable). El código para devolver el nombre de usuario y la contraseña no se muestra aquí porque se debe hacer en el nivel de la aplicación. Por ejemplo, use un cuadro de diálogo de Windows Forms para solicitar los datos al usuario.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
 ### <a name="configuration"></a>Configuración  
+
  El siguiente código configura el cliente. El enlace es para la seguridad del modo de mensaje y el tipo de credencial de cliente está establecido en `UserName`. El nombre de usuario y la contraseña solo se pueden especificar mediante código (no es configurable).  
   
 ```xml  

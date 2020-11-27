@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: 56648b74e400085b76f4f837852791b33fbf97e0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7a1af17ef3c2176371a394ae8b63d9cc207d5b6f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600002"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292784"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
+
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . Este ejemplo se basa en el [Introducción](getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
   
 > [!NOTE]

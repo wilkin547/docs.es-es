@@ -2,12 +2,12 @@
 title: Ejemplo de seguridad de la detección
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0957e8ddaee99e60b205c92319dc2c61e2ab007a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144908"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292641"
 ---
 # <a name="discovery-security-sample"></a>Ejemplo de seguridad de la detección
 
@@ -16,11 +16,13 @@ La especificación de la detección no requiere que los puntos de conexión que 
  El canal personalizado se aplica encima de la pila del canal existente para los puntos de conexión de anuncio y detección. De esta manera, se aplica un encabezado de firma para cada mensaje enviado. La firma se comprueba en los mensajes recibidos, y cuando no coincide o cuando los mensajes no tienen una firma, los mensajes se quitan. Para firmar y comprobar los mensajes, el ejemplo utiliza los certificados.  
   
 ## <a name="discussion"></a>Discusión  
+
  WCF es extensible y permite a los usuarios personalizar los canales según sea necesario. En el ejemplo se implementa un elemento de enlace seguro de detección que crea canales seguros. Los canales seguros aplican y comprueban las firmas de los mensajes, y se aplican encima de la pila actual.  
   
  El elemento de enlace seguro crea generadores de canales seguros y agentes de escucha del canal.  
   
 ## <a name="secure-channel-factory"></a>Generador de canales seguro  
+
  El generador de canales seguro crea canales dúplex o de salida que agregan una firma compacta a los encabezados de mensaje. Para mantener el tamaño de los mensajes lo más pequeño posible, se utiliza el formato de firma compacta. La estructura de una firma compacta se muestra en el siguiente ejemplo.  
   
 ```xml  
@@ -43,9 +45,11 @@ La especificación de la detección no requiere que los puntos de conexión que 
  Los mensajes se firman con un certificado especificado por el cliente. La ubicación del almacén, el nombre y el nombre del sujeto del certificado deben especificarse al crear el elemento de enlace. El `KeyId` de la firma compacta representa el identificador de clave del token de firma y es el identificador de clave de asunto (SKI) del token de firma o (si el SKI no existe) un valor hash SHA-1 de la clave pública del token de firma.  
   
 ## <a name="secure-channel-listener"></a>Agente de escucha del canal seguro  
+
  El agente de escucha del canal seguro crea canales dúplex o de entrada que comprueban la firma compacta en los mensajes recibidos. Para comprobar la firma, el `KeyId` especificado en la firma compacta adjuntada al mensaje se utiliza para seleccionar un certificado del almacén especificado. Si el mensaje no tiene ninguna firma o su comprobación no es correcta, los mensajes se quitan. Para utilizar el enlace seguro, el ejemplo define un generador que crea objetos <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> y <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> personalizados con el elemento de enlace seguro de detección agregado. Estos extremos seguros se pueden utilizar en agentes de escucha de anuncio de detección y en los servicios que pueden detectarse.  
   
 ## <a name="sample-details"></a>Detalles del ejemplo  
+
  En el ejemplo se incluyen una biblioteca y cuatro aplicaciones de consola:
   
 - **DiscoverySecurityChannels**: biblioteca que expone el enlace seguro. La biblioteca calcula y comprueba la firma compacta para los mensajes entrantes o salientes.  
@@ -61,7 +65,7 @@ La especificación de la detección no requiere que los puntos de conexión que 
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1. Ejecute el script Setup. bat desde un Símbolo del sistema para desarrolladores para Visual Studio. El ejemplo usa los certificados para firmar y comprobar los mensajes. El script crea los certificados mediante Makecert.exe y, a continuación, los instala utilizando Certmgr.exe. El script se debe ejecutar con privilegios de administrador.  
+1. Ejecute el script de Setup.bat desde un Símbolo del sistema para desarrolladores para Visual Studio. El ejemplo usa los certificados para firmar y comprobar los mensajes. El script crea los certificados mediante Makecert.exe y, a continuación, los instala utilizando Certmgr.exe. El script se debe ejecutar con privilegios de administrador.  
   
 2. Para compilar y ejecutar el ejemplo, abra el archivo Security. sln en Visual Studio y elija **volver a generar todo**. Actualizar las propiedades de la solución para iniciar varios proyectos: seleccione **iniciar** para todos los proyectos excepto DiscoverySecureChannels. Ejecute la solución normalmente.  
   

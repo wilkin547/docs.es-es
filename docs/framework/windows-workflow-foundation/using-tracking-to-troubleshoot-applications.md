@@ -2,17 +2,19 @@
 title: Usar el seguimiento para resolver problemas de las aplicaciones
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: fc9427d0c06ed67ea69669cab2aae64f39f7c10c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 62f2240831dd33bdaf78655199aad75b7e29c59c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551293"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293577"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Usar el seguimiento para resolver problemas de las aplicaciones
+
 Windows Workflow Foundation (WF) le permite realizar un seguimiento de la información relacionada con el flujo de trabajo para proporcionar detalles sobre la ejecución de una aplicación o servicio Windows Workflow Foundation. Windows Workflow Foundation hosts pueden capturar eventos de flujo de trabajo durante la ejecución de una instancia de flujo de trabajo. Si el flujo de trabajo genera errores o excepciones, puede usar los detalles de seguimiento de Windows Workflow Foundation para solucionar el procesamiento.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Solucionar problemas de un WF con el seguimiento de WF  
+
  Para detectar errores en el procesamiento de una actividad Windows Workflow Foundation, puede habilitar el seguimiento con un perfil de seguimiento que consulta para un <xref:System.Activities.Tracking.ActivityStateRecord> con el estado de error. La consulta correspondiente se especifica en el siguiente código.  
   
 ```xml  

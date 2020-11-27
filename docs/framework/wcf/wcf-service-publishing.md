@@ -3,12 +3,12 @@ title: Publicación de servicio WCF
 description: La publicación de servicios WCF le ayuda a implementar la aplicación en un entorno de producción con fines de prueba.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ac817dac15deaf35fdb8e078094dd4b9dca97d06
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90544575"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293496"
 ---
 # <a name="wcf-service-publishing"></a>Publicación de servicio WCF
 
@@ -38,7 +38,7 @@ Para llevar a cabo una implementación de servicio, realice los siguientes pasos
 
 1. Abra Visual Studio con privilegios elevados (haga clic con el botón derecho en el archivo ejecutable y elija **Ejecutar como administrador** para abrirlo).  Si usa IIS 7,0 o posterior, asegúrese de que ha instalado el componente "compatibilidad con la configuración de la metabase de IIS y IIS6" con "activar o desactivar las características de Windows" en el panel de control.
 
-2. Abra un proyecto de servicio, seleccione **compilar**  >  ** \<Project Name> publicación** en el menú principal, o haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y haga clic en **publicar**.
+2. Abra un proyecto de servicio, seleccione **compilar**  >  **\<Project Name> publicación** en el menú principal, o haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y haga clic en **publicar**.
 
 3. Aparece la ventana **publicar** . Haga clic en **..**.. para especificar la ubicación de destino en la que se debe implementar el servicio. Puede seleccionar la implementación de la aplicación en el sitio de IIS, sistema de archivos o FTP local. Si va a implementar la aplicación en el IIS local, puede seleccionar el sitio web y crear su aplicación web bajo él; para ello, haga clic en el icono **crear nueva aplicación web** en la esquina superior derecha.
 
@@ -51,15 +51,19 @@ Puede usar **publicar** para especificar si desea copiar el ensamblado, la confi
 Si decide implementar su aplicación en IIS local, puede encontrar errores relacionados con la instalación de IIS. Asegúrese de que IIS se instale correctamente. Puede escribir `http://localhost` en la barra de direcciones del explorador y comprobar si se muestra la página predeterminada de IIS. En algunos casos, los problemas también pueden deberse a un registro incorrecto de ASP.NET o WCF en IIS. Puede abrir el Símbolo del sistema para desarrolladores para Visual Studio y ejecutar el comando `aspnet_regiis.exe -ir` para corregir los problemas de registro de ASP.net o ejecutar el comando `ServiceModelReg.exe –ia` para corregir los problemas de registro de WCF.
 
 ## <a name="files-generated-for-publishing"></a>Archivos generados para publicación
+
  Antes de que una biblioteca de servicios WCF pueda hospedarse en Web, la herramienta genera los siguientes archivos: archivos de ensamblado, archivo de Web.config y archivo. SVC. Todos los archivos se copian en la ubicación de destino. A continuación se publica el servicio.
 
 ### <a name="assembly-files"></a>Archivos de ensamblado
+
  Al publicar un servicio WCF mediante esta herramienta, el servicio se compila primero automáticamente y los archivos de ensamblado se generan en el proyecto de servicio después de la compilación.
 
 ### <a name="svc-file"></a>Archivo .SVC
+
  La operación de publicación genera un archivo *. SVC para cada servicio WCF, tanto si el archivo existe como si no, para garantizar la validez de la versión. Hay dos tipos diferentes de archivos SVC: uno para la biblioteca de servicios de WCF y la biblioteca de servicios de distribución, y otro para la biblioteca de servicio de flujo de trabajo de equipo de estado y secuencial. El \* archivo. SVC generado se copia en la carpeta raíz en la ubicación de destino.
 
 ### <a name="webconfig-file"></a>Archivo Web.config
+
  Cada vez que un proyecto de servicio se publica en una ubicación de destino concreta, se crea un archivo Web.config.
 
  El archivo de Web.config generado incluye secciones web que son útiles para el hospedaje web y el contenido de App.config de la biblioteca de servicios WCF con los siguientes cambios:
@@ -69,9 +73,11 @@ Si decide implementar su aplicación en IIS local, puede encontrar errores relac
 - La configuración del elemento `<diagnostics>` se excluye para conservar la configuración de seguimiento de la plataforma de destino.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Publicación de servicios WCF con enlaces que no son HTTP en IIS
+
  Si usa IIS 7.0 o posterior, puede publicar servicios WCF con enlaces que no son HTTP en IIS. Necesita realizar algunas tareas de configuración previa. Para obtener más información, consulte los temas en  [hospedaje en el servicio de activación de procesos de Windows](./feature-details/hosting-in-windows-process-activation-service.md).
 
 ## <a name="security"></a>Seguridad
+
  Para la publicación en el servidor IIS local se requieren privilegios de administrador, porque IIS debe ejecutarse con la cuenta Administrador. Si un usuario sin privilegios de administrador abre la publicación de servicio WCF, IIS no estará disponible como ubicación de destino. La publicación en el sistema de archivos o el sitio FTP funciona sin privilegios de administrador.
 
 ## <a name="see-also"></a>Vea también

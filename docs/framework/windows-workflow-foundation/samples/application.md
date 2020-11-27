@@ -1,19 +1,21 @@
 ---
-title: Aplicación
+title: Application
 description: En este artículo se hace referencia a ejemplos con procedimientos detallados para las aplicaciones de flujo de trabajo en Windows Workflow Foundation.
 ms.date: 03/30/2017
 ms.assetid: 22d27e12-ab04-432b-9695-9f74e098cff3
-ms.openlocfilehash: 90c43c44781c3dca9fb91f68b44ccd40e9777242
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: b9e3cc0744ef7a2f48356c4b109ff8c448d4d354
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421402"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293498"
 ---
-# <a name="application"></a>Aplicación
+# <a name="application"></a>Application
+
 Esta sección contiene ejemplos relacionados con las aplicaciones de flujo de trabajo de Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Proceso de aprobación de un documento](document-approval-process.md)  
  Muestra cómo utilizar un flujo de trabajo en una aplicación empresarial.  
   

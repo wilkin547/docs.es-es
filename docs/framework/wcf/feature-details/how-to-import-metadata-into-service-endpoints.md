@@ -2,14 +2,15 @@
 title: Procedimiento para importar metadatos a puntos de conexión de servicio
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 1de316b8e91739d5e3e24ff960e2cdfb33cc7fab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1efc38d4b72037274edd3b6180c102cf7416faa0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597064"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293382"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Procedimiento para importar metadatos a puntos de conexión de servicio
+
 En este tema se explica cómo importar metadatos en una colección de puntos de conexión de servicio y usar el servicio definido en el [Introducción](../samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a puntos de conexión de servicio  

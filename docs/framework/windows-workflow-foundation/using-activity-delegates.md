@@ -2,14 +2,15 @@
 title: Usar delegados de actividad
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 66a03187336475ed377fda032506cfa66d3daf58
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837576"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293304"
 ---
 # <a name="using-activity-delegates"></a>Usar delegados de actividad
+
 Los delegados de actividad permiten a los autores de actividad exponer devoluciones de llamada con firmas específicas, para las que los usuarios de la actividad pueden proporcionar controladores basados en actividades. Hay dos tipos de delegados de actividad disponibles: <xref:System.Activities.ActivityAction%601> se usa para definir delegados de actividad que no tienen un valor devuelto y <xref:System.Activities.ActivityFunc%601> se utiliza para definir delegados de actividad que tienen un valor devuelto.
 
 Los delegados de actividad son útiles en situaciones en que se debe restringir una actividad secundaria para que tenga una firma determinada. Por ejemplo, una actividad <xref:System.Activities.Statements.While> puede contener cualquier tipo de actividad secundaria sin restricciones, aunque el cuerpo de una actividad <xref:System.Activities.Statements.ForEach%601> es <xref:System.Activities.ActivityAction%601> y la actividad secundaria que <xref:System.Activities.Statements.ForEach%601> ejecuta finalmente debe tener <xref:System.Activities.InArgument%601>, que es el mismo tipo de miembros de la colección que <xref:System.Activities.Statements.ForEach%601> enumera.
@@ -30,9 +31,9 @@ Los ejemplos de este tema usan la sintaxis de inicialización del objeto. Esta s
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamarC# a un constructor (Guía de programación)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) y [Cómo: declarar un objeto usando un inicializador de objeto (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).
+Para obtener más información sobre los inicializadores de objeto, vea [Cómo: inicializar objetos sin llamar a un constructor (Guía de programación de C#)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) y [Cómo: declarar un objeto usando un inicializador de objeto (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).
 
-En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador para la acción de actividad de la actividad <xref:System.Activities.Statements.Catch%601> es una actividad <xref:System.Activities.Statements.WriteLine>, y el detalle de la excepción se transmite a través de la `ex` <xref:System.Activities.DelegateInArgument%601>.
+En el siguiente ejemplo, se utiliza una actividad <xref:System.Activities.Statements.TryCatch> en un flujo de trabajo. El flujo de trabajo produce una excepción <xref:System.ApplicationException>, que es controlada por una actividad <xref:System.Activities.Statements.Catch%601>. El controlador de la <xref:System.Activities.Statements.Catch%601> acción de actividad de la actividad es una <xref:System.Activities.Statements.WriteLine> actividad, y el detalle de la excepción se transmite a través de `ex` <xref:System.Activities.DelegateInArgument%601> .
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

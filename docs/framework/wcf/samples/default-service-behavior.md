@@ -5,14 +5,15 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 4da3deff69930dba7249e0651f820b448b837862
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: acdb4652c0f49b610b8e7cad2aa5c0074fe00511
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592455"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292758"
 ---
 # <a name="default-service-behavior"></a>Comportamiento de servicio predeterminado
+
 Este ejemplo muestra cómo se pueden configurar los valores del comportamiento de servicio. El ejemplo se basa en el [Introducción](getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define explícitamente los comportamientos del servicio y de la operación mediante los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute>. Puede configurar los comportamientos en archivos de configuración o imperativamente en código (como se muestra en este ejemplo).  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  

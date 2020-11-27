@@ -2,17 +2,19 @@
 title: Transferencia
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: da31dcb24234e750c88383b9f1bea4f088f4ee3d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587773"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293408"
 ---
 # <a name="transfer"></a>Transferencia
+
 En este tema se describe la transferencia en el modelo de seguimiento de actividades de Windows Communication Foundation (WCF).  
   
 ## <a name="transfer-definition"></a>Definición de transferencia  
+
  Las transferencias entre actividades representan relaciones causales entre eventos en las actividades relacionadas dentro de los puntos de conexión. Dos actividades se relacionan con transferencias cuando el control fluye entre estas actividades, como por ejemplo, una llamada al método que cruza límites de actividad. En WCF, cuando los bytes son entrantes en el servicio, la actividad escuchar en se transfiere a la actividad recibir bytes donde se crea el objeto de mensaje. Para obtener una lista de escenarios de seguimiento de un extremo a otro, así como su actividad y diseño de seguimiento completos, consulte [escenarios de seguimiento de un extremo a otro](end-to-end-tracing-scenarios.md).  
   
  Para emitir seguimientos de transferencia, use el valor `ActivityTracing` en el origen de seguimiento, tal y como se muestra en el código de configuración siguiente.  
@@ -22,6 +24,7 @@ En este tema se describe la transferencia en el modelo de seguimiento de activid
 ```  
   
 ## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>Uso de la transferencia para poner en correlación actividades dentro de los puntos de conexión  
+
  Las actividades y transferencias permiten al usuario ubicar probabilísticamente la causa principal de un error. Por ejemplo, si transferimos de uno a otro respectivamente entre las actividades M y N en componentes M y N, y se bloquea N justamente antes de realizarse la transferencia a M, podemos sacar la conclusión de que es probable que se deba a que N emita datos a M.  
   
  Se emite un seguimiento de transferencia de la actividad M a la actividad N cuando hay flujo de control entre M y N. Por ejemplo, N realiza algún trabajo para M debido a una llamada al método que cruza los límites de las actividades. N puede que ya exista o que se haya creado. M genera N cuando esta última es una nueva actividad que realiza algún trabajo para M.  
@@ -33,6 +36,7 @@ En este tema se describe la transferencia en el modelo de seguimiento de activid
  No existe necesariamente una relación de anidamiento entre las actividades M y N. Esto puede pasar debido a dos razones. Primero, cuando la actividad M no supervisa el procesamiento real realizado en N aunque M inició N. Second, cuando N ya existe.  
   
 ## <a name="example-of-transfers"></a>Ejemplo de transferencias  
+
  A continuación se muestran dos ejemplos de transferencia.  
   
 - Al crear un host de servicio, el constructor toma el control del código de llamada o el código de llamada transfiere al constructor. Cuando el constructor ha terminado de ejecutar, devuelve el control al código de llamada o el constructor transfiere de nuevo al código de llamada. Éste es el caso de una relación anidada.  
@@ -40,6 +44,7 @@ En este tema se describe la transferencia en el modelo de seguimiento de activid
 - Cuando un agente de escucha empieza a procesar datos de transporte, crea un nuevo subproceso y da a la actividad Recibir Bytes el contexto adecuado para procesar, es decir, pasar control y datos. Cuando ese subproceso ha finalizado el procesamiento de la solicitud, la actividad Recibir Bytes no devuelve nada al agente de escucha. En este caso, tenemos una transferencia de entrada pero ninguna de salida en la nueva actividad de subproceso. Las dos actividades se relacionan pero no están anidadas.  
   
 ## <a name="activity-transfer-sequence"></a>Secuencia de transferencia de actividad  
+
  Una secuencia de transferencia de actividad bien formada incluye los pasos siguientes.  
   
 1. Comenzar una nueva actividad, que consiste en seleccionar un nuevo gAId.  

@@ -2,14 +2,15 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 8ea2ea530db8745c3802f9f39793ffd77ddd0008
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cf281ff08d56669d0257d693af93d8a9b5b2e81a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575295"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292833"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
+
 Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el ejemplo de [enlace de MSMQ de transacciones](transacted-msmq-binding.md) . El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
 
 > [!NOTE]
@@ -318,7 +319,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     2. Expanda la pestaña **características** .
 
-    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas** y seleccione **nuevo**, **cola privada**.
 
     4. Active la casilla **transaccional** .
 
@@ -350,6 +351,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.
 
 ## <a name="comments"></a>Comentarios
+
  De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "No existe el certificado de Message Queuing interno del usuario".
 
 > [!IMPORTANT]

@@ -2,20 +2,21 @@
 title: 'Modelos de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 02668962afff5f760fc02692a92e72e765089545
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4e679980df8a720eb4aa22741bbdd067940c7723
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545584"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96292680"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
-Este ejemplo muestra el patrón de publicación-suscripción basado en lista implementado como un programa Windows Communication Foundation (WCF).  
+
+Este ejemplo muestra el patrón de Publish-Subscribe basado en lista implementado como un programa de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El modelo de diseño de publicación-suscripción basado en lista se describe en la publicación Microsoft Patterns & Practices, [patrones de integración](/previous-versions/msp-n-p/ff647309(v=pandp.10)). El patrón suscripción-publicación pasa información a una colección de destinatarios que se han suscrito a un tema de la información. La suscripción-publicación basada en la lista mantiene una lista de suscriptores. Cuando hay información para compartir, se envía una copia a cada suscriptor en la lista. Este ejemplo muestra un patrón dinámico de suscripción-publicación basada en la lista, donde los clientes pueden suscribirse o cancelar su suscripción tan a menudo como sea necesario.  
+ El modelo de diseño de Publish-Subscribe basado en lista se describe en la publicación Microsoft Patterns & Practices, [patrones de integración](/previous-versions/msp-n-p/ff647309(v=pandp.10)). El patrón suscripción-publicación pasa información a una colección de destinatarios que se han suscrito a un tema de la información. La suscripción-publicación basada en la lista mantiene una lista de suscriptores. Cuando hay información para compartir, se envía una copia a cada suscriptor en la lista. Este ejemplo muestra un patrón dinámico de suscripción-publicación basada en la lista, donde los clientes pueden suscribirse o cancelar su suscripción tan a menudo como sea necesario.  
   
  El ejemplo de suscripción-publicación basada en la lista está compuesto de un cliente, un servicio y un programa de origen de datos. Puede haber más de un cliente y más de un funcionamiento de programa de origen de datos. Los clientes se suscriben al servicio, reciben las notificaciones y cancelan su suscripción. Los programas de origen de datos envían información al servicio para a compartir con todos los suscriptores actuales.  
   

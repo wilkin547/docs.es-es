@@ -2,19 +2,20 @@
 title: Utilizar extensiones de actividad
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 551ce24db8c0adc8225ac94a1d05f998a26873a9
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3a9cabda9fe92b2ea4e708da8f853f3029328775
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988634"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96293291"
 ---
 # <a name="using-activity-extensions"></a>Utilizar extensiones de actividad
+
 Las actividades pueden interactuar con extensiones de aplicación de flujo de trabajo que permiten al host proporcionar función adicional que no se modela explícitamente en el flujo de trabajo.  En este tema se describe cómo crear y utilizar una extensión para contar el número de veces que la actividad se ejecuta.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>Utilizar una extensión de actividad para contar las ejecuciones
 
-1. Abra Visual Studio 2010. Seleccione **nuevo**, **proyecto**. En el **nodo C# visual** , seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** en la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
+1. Abra Visual Studio 2010. Seleccione **nuevo**, **proyecto**. En el nodo **Visual C#** , seleccione **flujo de trabajo**.  Seleccione **aplicación de consola de flujos de trabajo** en la lista de plantillas. Dé un nombre al proyecto `Extensions`. Haga clic en **Aceptar** para crear el proyecto.
 
 2. Agregue una `using` instrucción en el archivo Program.CS para el espacio de nombres **System. Collections. Generic** .
 
