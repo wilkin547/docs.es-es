@@ -2,17 +2,19 @@
 title: Proveedor de token emitido duradero
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7e0025eb4bc4918b977d9d8c4e2b1435b0425973
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96291679"
 ---
 # <a name="durable-issued-token-provider"></a>Proveedor de token emitido duradero
+
 Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emitidos por el cliente.  
   
 ## <a name="discussion"></a>Discusión  
+
  Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:  
   
 - Si tiene un almacén de credenciales con el que el proveedor de tokens integrado no puede funcionar.  
@@ -110,6 +112,7 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
  El Servicio de token de seguridad expone un solo punto de conexión con el wsHttpBinding estándar. El Servicio de token de seguridad responde a las solicitudes de tokens de los clientes y, siempre que el cliente se autentique utilizando una cuenta de Windows, emite un token que contiene el nombre de usuario del cliente como una notificación en el token emitido. Como parte de la creación del token, el servicio de token de seguridad firma el token usando la clave privada asociada con el certificado de CN=STS. Además, crea una clave simétrica y la cifra utilizando la clave pública asociada con el certificado de CN=localhost. Para devolver el token al cliente, el servicio de token de seguridad devuelve también la clave simétrica. El cliente presenta el token emitido al servicio de la calculadora y demuestra que conoce la clave simétrica firmando el mensaje con esa clave.  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>Credenciales de cliente personalizadas y proveedor de tokens  
+
  En los pasos siguientes se muestra cómo desarrollar un proveedor de tokens personalizado que almacena en memoria caché los tokens emitidos y los integra con WCF: Security.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>Para desarrollar un proveedor de tokens personalizado  
@@ -226,9 +229,11 @@ Este ejemplo muestra cómo implementar un proveedor personalizado de tokens emit
     ```  
   
 ## <a name="running-the-sample"></a>Ejecución del ejemplo  
+
  Consulte las instrucciones siguientes para ejecutar el ejemplo. Al ejecutar el ejemplo, la solicitud para el token de seguridad se muestra en la ventana de la consola del servicio de token de seguridad. Las solicitudes y respuestas de la operación se muestran en las ventanas de la consola del cliente y el servicio. Presione ENTRAR en cualquiera de las ventanas de la consola para cerrar la aplicación.  
   
 ## <a name="the-setupcmd-batch-file"></a>Archivo por lotes Setup.cmd  
+
  El archivo por lotes de Setup.cmd incluido con este ejemplo le permite configurar el servidor y servicio de token de seguridad con certificados pertinentes para ejecutar una aplicación autohospedada. El archivo por lotes crea dos certificados en el almacén de certificados CurrentUser/TrustedPeople. El primer certificado tiene un nombre de asunto CN=STS que utiliza el servicio de token de seguridad para firmar los tokens de seguridad que emite el cliente. El segundo certificado tiene un nombre de asunto de CN=localhost que usa el servicio de token de seguridad para cifrar un secreto para que el servicio lo pueda descifrar.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
