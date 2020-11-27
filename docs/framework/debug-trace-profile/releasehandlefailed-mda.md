@@ -11,20 +11,23 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 167a304b4571aa35f758a2054caf6ae1c60a3c60
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: b337a7283e961d0fae2b51d92a21fa77f7249250
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803643"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267135"
 ---
 # <a name="releasehandlefailed-mda"></a>MDA de releaseHandleFailed
+
 El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se activa para notificar a los desarrolladores cuando el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle> devuelve `false`.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  Pérdidas de recursos o de memoria.  Si se produce un error en el método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> de la clase que deriva de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, es posible que el recurso encapsulado por la clase no se haya liberado o limpiado.  
   
 ## <a name="cause"></a>Causa  
+
  Los usuarios deben proporcionar la implementación del método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> si crean clases que deriven de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>. Por lo tanto, las circunstancias son específicas de cada recurso. Sin embargo, los requisitos son los siguientes:  
   
 - Los tipos <xref:System.Runtime.InteropServices.SafeHandle> y <xref:System.Runtime.InteropServices.CriticalHandle> representan contenedores que contienen recursos de procesos fundamentales. Si se produce una pérdida de memoria, con el tiempo, esto puede inutilizar el proceso.  
@@ -33,7 +36,8 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
   
 - Todos los errores que se producen durante la ejecución de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> y que impiden que se libere el recurso, son errores en la implementación del propio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>. Es responsabilidad del programador asegurarse de que se cumpla el contrato, aunque ese código, para realizar su función, llame a un código creado por otra persona.  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  El código que utiliza el tipo específico <xref:System.Runtime.InteropServices.SafeHandle> (o <xref:System.Runtime.InteropServices.CriticalHandle>) que generó la notificación del MDA se debe revisar, para buscar los lugares donde se extrae el valor de identificador sin formato de <xref:System.Runtime.InteropServices.SafeHandle> y se copia a otro lugar. Esta es la causa habitual de errores dentro de las implementaciones de <xref:System.Runtime.InteropServices.SafeHandle> o <xref:System.Runtime.InteropServices.CriticalHandle>, porque el tiempo de ejecución deja de realizar un seguimiento del uso del valor de identificador sin formato. Si más tarde se cierra la copia del identificador sin formato, es posible que se produzca un error en una llamada a <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> posterior, porque se trate de realizar el cierre en el mismo identificador, que ahora no es válido.  
   
  Hay varias maneras en que puede producirse la duplicación incorrecta del identificador:  
@@ -49,9 +53,11 @@ El Asistente para depuración administrada (MDA) de `releaseHandleFailed` se act
 - Tenga en cuenta que algunos tipos de identificador nativo como, por ejemplo, todos los identificadores de Win32 que se pueden liberar con la función `CloseHandle`, comparten el mismo espacio de nombres de identificador. Si un tipo de identificador se libera por error, puede producir problemas con otro. Por ejemplo, si un identificador de evento de Win32 se cierra accidentalmente dos veces, puede hacer que un identificador de archivos aparentemente no relacionado se cierre de forma prematura. Esto ocurre cuando se libera el identificador y el valor del identificador pasa a estar disponible para realizar el seguimiento de otro recurso, que puede ser de otro tipo. Si esto sucede y se produce otra liberación errónea, es posible que se invalide el identificador de un subproceso no relacionado.  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  Un mensaje que indica que un <xref:System.Runtime.InteropServices.SafeHandle> o un <xref:System.Runtime.InteropServices.CriticalHandle> no pudieron liberar correctamente el identificador. Por ejemplo:  
   
 ```output
@@ -73,6 +79,7 @@ and closing it directly or building another SafeHandle around it."
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra un ejemplo de código que puede activar el MDA de `releaseHandleFailed`.  
   
 ```csharp

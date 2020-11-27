@@ -2,17 +2,18 @@
 title: TextMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-ms.openlocfilehash: 67c1083daa9acfd204d4de50d4e9178b25aafcf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 551761af255681dd2c2dbb9e40b7103c95cd2e0a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267226"
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
+
 TextMessageEncodingBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class TextMessageEncodingBindingElement : MessageEncodingBindingElement  
@@ -25,36 +26,42 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase TextMessageEncodingBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase TextMessageEncodingBindingElement tiene las propiedades siguientes:  
   
-### <a name="encoding"></a>Codificación  
- Tipo de datos: cadena  
+### <a name="encoding"></a>Encoding  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  El codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace.  
   
 ### <a name="maxreadpoolsize"></a>MaxReadPoolSize  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores.  
   
 ### <a name="maxwritepoolsize"></a>MaxWritePoolSize  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Entero que define cuántos mensajes pueden enviarse simultáneamente sin asignar nuevos escritores.  
   
 ### <a name="readerquotas"></a>ReaderQuotas  
+
  Tipo de datos: XmlDictionaryReaderQuotas  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Las cuotas de los lectores.  
   

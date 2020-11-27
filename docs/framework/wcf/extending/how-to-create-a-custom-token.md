@@ -11,14 +11,15 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: a95d663c2669186fcb3eb1fb2f0c426ade945f1c
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: e0d80fe2433d894ef1f9e110e9090701dc305d8e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266758"
 ---
 # <a name="how-to-create-a-custom-token"></a>Procedimiento para crear un token personalizado
+
 Este tema muestra cómo crear un token de seguridad personalizado mediante la clase <xref:System.IdentityModel.Tokens.SecurityToken> y cómo integrarlo en un autenticador y en un proveedor de token de seguridad personalizado. Para obtener un ejemplo de código completo, vea el ejemplo de [token personalizado](../samples/custom-token.md) .  
   
  Un *token de seguridad* es esencialmente un elemento XML que utiliza el marco de seguridad Windows Communication Foundation (WCF) para representar las notificaciones sobre un remitente dentro del mensaje SOAP. La seguridad de WCF proporciona varios tokens para los modos de autenticación proporcionados por el sistema. En los ejemplos se incluye un token de seguridad de certificado X.509 representado por la clase <xref:System.IdentityModel.Tokens.X509SecurityToken> o un token de seguridad Username representado por la clase <xref:System.IdentityModel.Tokens.UserNameSecurityToken>.  
@@ -32,6 +33,7 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
  Vea el espacio de nombres <xref:System.IdentityModel.Tokens> para obtener más clases que representen tokens de seguridad.  
   
 ## <a name="procedures"></a>Procedimientos  
+
  Es necesario proporcionar a una aplicación cliente una manera de especificar información de la tarjeta de crédito para la infraestructura de seguridad. Una clase de credenciales de cliente personalizada pone esta información a disposición de la aplicación. El primer paso es crear una clase para que represente la información de la tarjeta de crédito para las credenciales de cliente personalizadas.  
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>Para crear una clase que represente información de la tarjeta de crédito dentro de las credenciales de cliente  
@@ -90,11 +92,11 @@ Este tema muestra cómo crear un token de seguridad personalizado mediante la cl
   
 2. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>, que se basa en un <xref:System.Xml.XmlReader> para leer la secuencia XML. El método devuelve `true` si la implementación del serializador puede deserializar el token de seguridad dado su elemento actual. En este ejemplo, este método comprueba si el elemento XML actual del lector XML tiene el nombre de elemento y espacio de nombres correctos. Si no es así, llama a la implementación de la clase base de este método para controlar el elemento XML.  
   
-3. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> . Este método lee el contenido XML del token de seguridad y construye la representación en memoria adecuada para el mismo. Si no reconoce el elemento XML sobre el que se alza el lector XML pasado, llama a la implementación de la clase base para procesar los tipos de token proporcionados por el sistema.  
+3. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>. Este método lee el contenido XML del token de seguridad y construye la representación en memoria adecuada para el mismo. Si no reconoce el elemento XML sobre el que se alza el lector XML pasado, llama a la implementación de la clase base para procesar los tipos de token proporcionados por el sistema.  
   
-4. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> . Este método devuelve `true` si puede convertir la representación del token en memoria (pasado como argumento) en la representación XML. Si no puede convertirlo, llama a la implementación de la clase base.  
+4. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29>. Este método devuelve `true` si puede convertir la representación del token en memoria (pasado como argumento) en la representación XML. Si no puede convertirlo, llama a la implementación de la clase base.  
   
-5. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> . Este método convierte una representación de tokens de seguridad en memoria en una representación XML. Si el método no puede convertirlo, llama a la implementación de la clase base.  
+5. Invalide el método <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29>. Este método convierte una representación de tokens de seguridad en memoria en una representación XML. Si el método no puede convertirlo, llama a la implementación de la clase base.  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  

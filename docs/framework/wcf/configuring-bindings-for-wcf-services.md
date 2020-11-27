@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: a2bb396e65722726e54cd315e931eea933386659
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 60ab04764851ef82a43d5c2050d3bac7b56ce551
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247633"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266732"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Configuración de enlaces para servicios Windows Communication Foundation
+
 Con frecuencia al crear una aplicación desea delegar las decisiones al administrador tras la implementación de la aplicación. Por ejemplo, a menudo no hay manera de conocer de antemano qué será una dirección de servicio o un URI. En lugar de incluir una dirección en el código, es preferible permitir a un administrador hacerlo después de crear un servicio. Esta flexibilidad se logra a través de la configuración.  
   
 > [!NOTE]
 > Use la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) con el `/config` modificador para crear rápidamente archivos de configuración.  
   
 ## <a name="major-sections"></a>Secciones principales  
+
  El esquema de configuración de Windows Communication Foundation (WCF) incluye las tres secciones principales siguientes ( `serviceModel` , `bindings` y `services` ):  
   
 ```xml  
@@ -35,6 +37,7 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
 ```  
   
 ### <a name="servicemodel-elements"></a>Elementos ServiceModel  
+
  Puede utilizar la sección limitada por el `system.ServiceModel` elemento para configurar un tipo de servicio con uno o más puntos de conexión, así como la configuración de un servicio. Cada extremo se puede configurar a continuación con una dirección, un contrato y un enlace. Para obtener más información sobre los puntos de conexión, consulte [información general](endpoint-creation-overview.md)sobre la creación de puntos de conexión. Si no se especifica ningún extremo, el tiempo de ejecución agrega extremos predeterminados. Para obtener más información sobre los puntos de conexión, enlaces y comportamientos predeterminados, vea [Configuración simplificada](simplified-configuration.md) y [Configuración simplificada de los servicios de WCF](./samples/simplified-configuration-for-wcf-services.md).  
   
  Un enlace especifica transportes (HTTP, TCP, canalizaciones, Message Queuing) y protocolos (seguridad, confiabilidad, flujos de transacción) y está compuesto de elementos de enlace, cada uno de los cuales especifica un aspecto sobre cómo un punto de conexión se comunica con el mundo.  
@@ -46,6 +49,7 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
  En los cuatro ejemplos siguientes se muestran las configuraciones de enlace más comunes que se usan para configurar un servicio WCF.  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Especificar un punto de conexión para usar un tipo de enlace  
+
  El primer ejemplo muestra cómo especificar un extremo configurado con una dirección, un contrato y un enlace.  
   
 ```xml  
@@ -68,6 +72,7 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
  El atributo `binding` selecciona un enlace predefinido o personalizado para utilizarlo para este punto de conexión concreto. Un extremo que no selecciona explícitamente un enlace utiliza la selección de enlace predeterminada, que es `BasicHttpBinding`.  
   
 #### <a name="modifying-a-predefined-binding"></a>Modificar un enlace predefinido  
+
  En el ejemplo siguiente, se modifica un enlace predefinido. Se puede utilizar a continuación para configurar cualquier extremo en el servicio. El enlace se modifica estableciendo el valor <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> en 1 segundo. Observe que la propiedad devuelve un objeto <xref:System.TimeSpan>.  
   
  Ese enlace alterado se encuentra en la sección de enlaces. Este enlace alterado se puede usar al crear cualquier punto de conexión estableciendo el atributo `binding` en el elemento `endpoint`.  
@@ -90,6 +95,7 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Configurar un comportamiento para aplicarlo a un servicio  
+
  En el ejemplo siguiente, un comportamiento concreto se configura para el tipo de servicio. El `ServiceMetadataBehavior` elemento se usa para habilitar la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para consultar el servicio y generar documentos de lenguaje de descripción de servicios web (WSDL) a partir de los metadatos.  
   
 > [!NOTE]
@@ -117,7 +123,8 @@ Con frecuencia al crear una aplicación desea delegar las decisiones al administ
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Especificar un servicio con dos extremos usando valores de enlace diferentes  
- En este último ejemplo, dos extremos se configuran para el tipo de servicio `HelloWorld`. Cada punto de conexión utiliza un `bindingConfiguration` atributo personalizado diferente del mismo tipo de enlace (cada uno modifica el `basicHttpBinding` ).  
+
+ En este último ejemplo, dos extremos se configuran para el tipo de servicio `HelloWorld`. Cada punto de conexión utiliza un  `bindingConfiguration` atributo personalizado diferente del mismo tipo de enlace (cada uno modifica el `basicHttpBinding` ).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  

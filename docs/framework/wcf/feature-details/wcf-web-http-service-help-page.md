@@ -2,14 +2,15 @@
 title: Página de ayuda del servicio web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fe6b22c6ebd637d3aa2bcd3744cb6b73e71c9482
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600171"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266940"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Página de ayuda del servicio web HTTP de WCF
+
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] proporciona una página de ayuda automática para servicios WEB HTTP de WCF. Esta página de ayuda contiene una lista de descripciones de cada operación, formatos de solicitud y respuesta, así como esquemas. Esta funcionalidad se desactiva de forma predeterminada. Cuando un usuario navega a un servicio WEB HTTP de WCF y anexa "/Help" al final de la dirección URL, por ejemplo `http://localhost:8000/Customers/Help` , se muestra una página de ayuda como la siguiente.  
   
  ![Un explorador con la página de ayuda de WCF REST abierta.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
@@ -19,6 +20,7 @@ ms.locfileid: "84600171"
  ![Un explorador con los detalles de la página de ayuda de WCF REST para el método GetCustomers abierto.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Utilizar la página de ayuda web HTTP de WCF  
+
  La página de ayuda WEB HTTP de WCF muestra una breve descripción de cada operación siempre que haya especificado una con <xref:System.ComponentModel.DescriptionAttribute>. Este atributo toma una cadena que contiene una breve descripción de la operación a la que se aplica. Por ejemplo, el siguiente código muestra cómo utilizar <xref:System.ComponentModel.DescriptionAttribute> para proporcionar una breve descripción.  
   
 ```csharp
@@ -59,6 +61,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
  La página de ayuda se basa en XHTML con marcado que identifica las diferentes partes de la página. Esto permite a los clientes tener acceso mediante programación a la página mediante <xref:System.Xml.Linq.XElement> u otros API XLinq.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>Esquemas empleados en la página de ayuda del servicio Web HTTP de WCF  
+
  En la página de ayuda del servicio Web HTTP de WCF se emplean los siguientes esquemas.  
   
 ```xml  

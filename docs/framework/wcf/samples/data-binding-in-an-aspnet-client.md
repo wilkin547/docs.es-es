@@ -2,14 +2,15 @@
 title: Enlace de datos en un cliente ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 134e1d7df3ed6bb245a870ad257fa64ad94e4e9c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e30bcb9852b34eeb919339d57d701e4dda8a644
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602601"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266875"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Enlace de datos en un cliente ASP.NET
+
 Este ejemplo muestra cómo enlazar los datos devueltos por un servicio de Windows Communication Foundation (WCF) típico en una aplicación de formularios Web Forms.  
   
 > [!NOTE]

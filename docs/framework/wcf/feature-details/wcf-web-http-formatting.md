@@ -2,17 +2,19 @@
 title: Formato HTTP Web de WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e9346cd1bb3798ad0beac5e9e28a8536007d897b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585563"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266914"
 ---
 # <a name="wcf-web-http-formatting"></a>Formato HTTP Web de WCF
+
 El modelo de programación web HTTP de WCF permite determinar dinámicamente el mejor formato para que una operación de servicio devuelva su respuesta. Dos métodos para determinar un formato adecuado se admiten: automático y explícito.  
   
 ## <a name="automatic-formatting"></a>Formato automático  
+
  Cuando se habilita, el formato automático elige el mejor formato en el que devolver la respuesta. Determina el mejor formato comprobando lo siguiente, en el orden indicado:  
   
 1. Los tipos de medios en el encabezado Accept del mensaje de solicitud.  
@@ -91,6 +93,7 @@ try
 ```  
   
 ## <a name="explicit-formatting"></a>Formato explícito  
+
  Como su nombre indica, en el formato explícito, el desarrollador determina el mejor formato que se debe utilizar dentro del código de operación. Si el formato mejor es XML o JSON, el desarrollador de software establece la propiedad <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> en los campos <xref:System.ServiceModel.Web.WebMessageFormat.Xml> o <xref:System.ServiceModel.Web.WebMessageFormat.Json>. Si no se establece explícitamente la propiedad <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>, se usa el formato predeterminado de la operación.  
   
  En el siguiente ejemplo, se comprueba el parámetro de cadena de consulta de formato para buscar el formato que se debe utilizar. Si se ha especificado, establece el formato de la operación mediante <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A>.  

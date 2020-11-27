@@ -2,17 +2,18 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: ba9031dad96f12c7c48b03f1da4af1b3adc6dd4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae6a3448896cb206bce8867daf7104c3e484ecc8
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962968"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96269020"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
+
 PeerTransportBindingElement  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="syntax"></a>Syntax  
   
 ```csharp
 class PeerTransportBindingElement : TransportBindingElement  
@@ -24,29 +25,34 @@ class PeerTransportBindingElement : TransportBindingElement
 ```  
   
 ## <a name="methods"></a>Métodos  
+
  La clase PeerTransportBindingElement no define ningún método.  
   
 ## <a name="properties"></a>Propiedades  
+
  La clase PeerTransportBindingElement tiene las propiedades siguientes:  
   
 ### <a name="listenipaddress"></a>ListenIPAddress  
- Tipo de datos: cadena  
+
+ Tipo de datos: cadena  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  La dirección IP en la que el nodo del mismo nivel realiza escuchas para los mensajes.  
   
-### <a name="port"></a>Puerto  
+### <a name="port"></a>Port  
+
  Tipo de datos: sint32  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  El puerto de la interfaz de red en el que este enlace procesa los mensajes del canal del mismo nivel.  
   
 ### <a name="security"></a>Seguridad  
+
  Tipo de datos: PeerSecuritySettings  
   
- Tipo de acceso: De sólo lectura  
+ Tipo de acceso: solo lectura  
   
  Valores de seguridad de transporte del mismo nivel.  
   

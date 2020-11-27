@@ -2,14 +2,15 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: f3b0e57f05ccb77eef25c97e7d5d028183e7b13e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1cb0cd4e7300920afb900af0291b9e3d3dc778b2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600937"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268292"
 ---
 # <a name="srmp"></a>SRMP
+
 Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transacciones utilizando Message Queuing (MSMQ) a través de HTTP.  
   
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.  
@@ -35,12 +36,15 @@ Este ejemplo muestra cómo llevar a cabo la comunicación en cola por transaccio
 8. Ejecute el cliente. Aseguúrese de que cambia la dirección del extremo para señalar al nombre de equipo o dirección IP en lugar del host local. El cliente envía un mensaje y sale.  
   
 ## <a name="requirements"></a>Requisitos  
+
  Para ejecutar este ejemplo, IIS se debe instalar en el servicio y en los equipos cliente además de en MSMQ.  
   
 ## <a name="demonstrates"></a>Muestra  
+
  En el ejemplo se muestra el envío de mensajes en cola WCF mediante MSMQ sobre HTTP. Esto también se denomina mensajería de SRMP. Cuando se envía un mensaje en cola, MSMQ en el equipo emisor transfiere los mensajes al administrador receptor de cola mediante TCP o transporte HTTP. Eligiendo SRMP, el usuario indica la opción de HTTP como un transporte para la transferencia de la cola. SRMP Secure habilita el uso de HTTPS.  
   
 ## <a name="example"></a>Ejemplo  
+
  El código muestra de este ejemplo está basado en el ejemplo de transacción. El modo en que se envía un mensaje a la cola y se recibe un mensaje de la cola utilizando SRMP es igual al modo en que se envían y reciben mensajes mediante un protocolo Native.  
   
  La configuración para el cliente se cambia para indicar la opción del protocolo de transferencia de la cola. El protocolo de transferencia de la cola puede ser uno de Nativo, SRMP o SrmpSecure. De forma predeterminada, el protocolo de transferencia es Nativo. El cliente y el servicio se especifican en la configuración para utilizar SRMP en este ejemplo.  

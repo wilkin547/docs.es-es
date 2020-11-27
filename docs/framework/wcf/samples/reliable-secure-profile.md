@@ -2,36 +2,37 @@
 title: Perfil seguro confiable
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: 9ddd0d78396bba6712650620e6b46c62f13337e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0647b8eaec39b990c139d970b5af1159fb18f8e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267239"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiable
 
-En este ejemplo se muestra cómo componer WCF y [Reliable Secure Profile (RSP).](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html) En este ejemplo se muestra la implementación de un canal [Make Connection,](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) que se puede componer junto con Reliable Messaging y, opcionalmente, un canal seguro para crear un enlace seguro confiable basado en la especificación RSP.  
+Este ejemplo muestra cómo crear WCF y un [perfil seguro confiable (RSP)](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html). Este ejemplo muestra la implementación de un canal de [creación de conexiones](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf) , que se puede componer junto con mensajería confiable y, opcionalmente, un canal seguro para crear un enlace seguro confiable basado en la especificación RSP.  
   
 > [!IMPORTANT]
 > Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Si este directorio no existe, vaya a Ejemplos de [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (WCF). Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>Discusión  
+
  En este ejemplo se muestra un escenario de intercambio de mensajes bidireccional asincrónico confiable. El servicio tiene un contrato dúplex y el cliente implementa el contrato de devolución de llamadas dúplex. El cliente inicia una solicitud a un servicio, para el que se espera una respuesta en una conexión independiente. El mensaje de solicitud se envía de forma confiable. El cliente no desea abrir un punto de conexión para realizar escuchas hasta el fin. Por tanto, sondea el servicio con solicitudes de 'Establecer conexión' para el servicio de modo que la respuesta se devuelva en el canal secundario de esta solicitud de 'Establecer conexión'. En este ejemplo se muestra cómo conseguir una comunicación dúplex, confiable y segura a través de HTTP sin que el cliente exponga un punto de conexión para realizar escuchas (y cree una excepción de firewall).  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Abra la solución **ReliableSecureProfile.**  
+1. Abra la solución **ReliableSecureProfile** .  
   
-2. Haga clic con el botón derecho en el proyecto **de servicio** en el **Explorador**de soluciones , seleccione **Depurar**, Iniciar **nueva instancia** en el menú contextual. De esta forma se inicia el host de servicio.  
+2. Haga clic con el botón derecho en el proyecto de **servicio** en **Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el host de servicio.  
   
-3. Haga clic con el botón derecho en el proyecto **Cliente** en el **Explorador**de soluciones , seleccione **Depurar**, Iniciar **nueva instancia** en el menú contextual. De esta forma se inicia el cliente.  
+3. Haga clic con el botón derecho en el proyecto de **cliente** en **Explorador de soluciones**, seleccione **depurar**, **Iniciar nueva instancia** en el menú contextual. De esta forma se inicia el cliente.  
   
 4. Escriba una cadena en el símbolo del sistema de la ventana de la consola del cliente y haga clic en ENTRAR. De este modo se envía la cadena de entrada al servicio, que calcula un valor hash de la misma.  
   

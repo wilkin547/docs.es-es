@@ -2,17 +2,19 @@
 title: Pausar y reanudar un flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 11f38339-79c7-4295-b610-24a7223bbf6d
-ms.openlocfilehash: dc6bdfe7cc10837fb8721ab12490d244d5ec1ca0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d1806c6d2c8e72b4e3a8b18bff669fcd0e0538
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79142971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268545"
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Pausar y reanudar un flujo de trabajo
+
 Los flujos de trabajo pausarán y se reanudarán en respuesta a los marcadores y actividades de bloqueo, como <xref:System.Activities.Statements.Delay>, pero un flujo de trabajo puede ser explicitamente pausado, descargado y reanudado utilizando la persistencia.  
   
 ## <a name="pausing-a-workflow"></a>Pausar un flujo de trabajo  
+
  Para pausar un flujo de trabajo, utilice <xref:System.Activities.WorkflowApplication.Unload%2A>.  Este método solicita que el flujo de trabajo se guarde y descargue, y producirá una excepción <xref:System.TimeoutException> si el flujo de trabajo no se descarga en 30 segundos.  
   
 ```csharp  
@@ -28,6 +30,7 @@ catch (TimeoutException e)
 ```  
   
 ## <a name="resuming-a-workflow"></a>Reanudar un flujo de trabajo  
+
  Para reanudar un flujo de trabajo previamente pausado y descargado, utilice <xref:System.Activities.WorkflowApplication.Load%2A>. Este método carga un flujo de trabajo en la memoria desde un almacén de persistencia.  
   
 ```csharp  
@@ -37,6 +40,7 @@ application.Load(id);
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo de código muestra cómo pausar y reanudar un flujo de trabajo utilizando la persistencia.  
   
 ```csharp  

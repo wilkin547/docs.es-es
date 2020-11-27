@@ -2,14 +2,15 @@
 title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3b2f86ee6a4dea25fb5c972d4cecb1b9ed411b29
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bb5eb6bda8bb2be3dfaaa88eb4b5ad787f47aa7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601197"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268929"
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
+
 Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, es posible que los mensajes de clientes de gran valor o "oro" deban procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
   
  En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.  
@@ -99,6 +100,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra una lista completa del archivo de configuración.  
   
 ```xml  

@@ -3,17 +3,19 @@ title: Información general de Windows Workflow
 description: En este artículo se describen los flujos de trabajo de Workflow Foundation, que son modelos que describen los procesos del mundo real.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f966aa2b62a743358d4c1ad18f237f988924014d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558105"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268682"
 ---
 # <a name="windows-workflow-overview"></a>Información general de Windows Workflow
+
 Un flujo de trabajo es un conjunto de unidades de elementos denominadas *actividades* que se almacenan como un modelo que describe un proceso real. Los flujos de trabajo proporcionan una manera de describir el orden de ejecución y las relaciones de dependencia entre las partes de trabajo de ejecución corta o prolongada. Este trabajo pasa a través del modelo desde el principio hasta al final y las actividades pueden ser ejecutadas por personas o por funciones de sistema.  
   
 ## <a name="workflow-run-time-engine"></a>Motor de tiempo de ejecución del flujo de trabajo  
+
  Las instancias de flujo de trabajo en ejecución se crean y se mantienen por medio de un motor de tiempo de ejecución en curso con el que el proceso de host interactúa a través de alguna de las clases siguientes:  
   
 - Una clase <xref:System.Activities.WorkflowInvoker>, que invoca el flujo de trabajo como si se tratara de un método.  
@@ -30,6 +32,7 @@ Un flujo de trabajo es un conjunto de unidades de elementos denominadas *activid
 Componentes de flujo de trabajo del proceso de host  
   
 ## <a name="interaction-between-workflow-components"></a>Interacción entre los componentes de flujo de trabajo  
+
  El siguiente diagrama muestra cómo los componentes de flujo de trabajo interactúan unos con otros.  
   
  ![Diagrama que muestra cómo interactúan los componentes de flujo de trabajo.](./media/overview/workflow-component-interatction.gif)  

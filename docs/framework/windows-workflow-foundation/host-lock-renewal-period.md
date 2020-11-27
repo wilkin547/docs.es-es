@@ -2,15 +2,16 @@
 title: Período de renovación del bloqueo de host
 ms.date: 03/30/2017
 ms.assetid: f8ba94fc-27e0-4d8e-8f85-50a6d2a3cd43
-ms.openlocfilehash: 91d83259c766120f7e3ffc9e49f1cf1b18c32a18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82073377353be6d4f8a7d0a343c31f2b49a2873f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268201"
 ---
 # <a name="host-lock-renewal-period"></a>Período de renovación del bloqueo de host
-El **período de renovación del bloqueo de Host** propiedad del Store de instancia de flujo de trabajo de SQL le permite especificar el período de tiempo dentro del cual el host renueva su bloqueo en una instancia de flujo de trabajo. El bloqueo sigue siendo válido durante el período de renovación del bloqueo de host más un período de 30 segundos adicional. Si se produce un error cuando el host renueva el bloqueo (en otras palabras, amplía la concesión) dentro de este período de tiempo, el bloqueo expira y el proveedor de persistencia desbloquea la instancia. El valor de esta propiedad es de tipo TimeSpan con el formato "hh". El valor mínimo permitido es "00: 00:01" (1 segundo). El valor predeterminado de esta propiedad es "00: 00:30" (30 segundos).  
+
+La propiedad **período de renovación del bloqueo de host** del almacén de instancias de flujo de trabajo de SQL le permite especificar el período de tiempo en el que el host renueva su bloqueo en una instancia de flujo de trabajo. El bloqueo sigue siendo válido durante el período de renovación del bloqueo de host más un período de 30 segundos adicional. Si se produce un error cuando el host renueva el bloqueo (en otras palabras, amplía la concesión) dentro de este período de tiempo, el bloqueo expira y el proveedor de persistencia desbloquea la instancia. El valor de esta propiedad es de tipo TimeSpan con el formato "HH: mm: SS". El valor mínimo permitido es "00:00:01" (1 segundo). El valor predeterminado de esta propiedad es "00:00:30" (30 segundos).  
   
  Esta propiedad es significativa en escenarios donde se produce un error en un host de servicio de flujo de trabajo antes de que pueda desbloquear una instancia de servicio de flujo de trabajo que posee. En este escenario, el proveedor de persistencia quita el bloqueo en la instancia de servicio de flujo de trabajo en la base de datos de persistencia después de que el bloqueo expire. De este modo, otro host de servicio de flujo de trabajo en el mismo equipo o en otro en una granja de servidores puede adquirir el bloqueo y cargar la instancia de servicio de flujo de trabajo en la memoria para reanudar su ejecución a partir de su último estado persistente.  
   

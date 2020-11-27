@@ -9,17 +9,19 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: dc3bbe0ee72ca5583b1e52a61c914ad866a22a05
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bc58e22b64284d66367302d55b5c9554c9ec0d72
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268240"
 ---
 # <a name="integrating-with-com-applications"></a>Integración en aplicaciones COM
+
 Los servicios Windows Communication Foundation (WCF) se pueden integrar directamente en el código existente mediante el moniker de servicio WCF. El moniker de servicio se puede utilizar a partir de una gama amplia de entornos de desarrollo basados en COM, como Office VBA, Visual Basic 6.0 o Visual C++ 6.0.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Integración con la información general de las aplicaciones COM](integrating-with-com-applications-overview.md)  
  Proporciona información general de las partes principales del proceso de la integración.  
   
@@ -39,6 +41,7 @@ Los servicios Windows Communication Foundation (WCF) se pueden integrar directam
  El moniker de servicio de WCF admite la `IChannelCredentials` interfaz que permite una variedad de métodos alternativos para especificar las credenciales del canal.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>Vea también

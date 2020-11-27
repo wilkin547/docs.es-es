@@ -2,14 +2,15 @@
 title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: beb7de63d300ad7986bfc59093006b074b9456ba
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec0f776f296e5ab24f4f628a204b04aa8d903d39
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586941"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268474"
 ---
 # <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
+
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
   
 > [!WARNING]
@@ -131,6 +132,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra una lista completa del archivo de configuración.  
   
 ```xml  
@@ -214,6 +216,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Ejemplo  
+
  A continuación, se muestra una lista completa de la aplicación cliente.  
   
 ```csharp  

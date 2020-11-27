@@ -11,20 +11,23 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23a8146bfa5acc08000e689917abb844c5540fec
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803487"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267083"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>MDA de streamWriterBufferedDataLost
+
 El Asistente para la depuración administrada (MDA) `streamWriterBufferedDataLost` se activa cuando se escribe un <xref:System.IO.StreamWriter>, pero después no se llama al método <xref:System.IO.StreamWriter.Flush%2A> o <xref:System.IO.StreamWriter.Close%2A> antes de que se destruya la instancia del <xref:System.IO.StreamWriter>. Cuando este MDA está habilitado, el tiempo de ejecución determina si los datos almacenados en búfer todavía existen en <xref:System.IO.StreamWriter>. Si existen datos almacenados en búfer, se activa el MDA. Llamar a los métodos <xref:System.GC.Collect%2A> y <xref:System.GC.WaitForPendingFinalizers%2A> puede forzar la ejecución de los finalizadores. En caso contrario, los finalizadores se ejecutarán en momentos aparentemente arbitrarios y posiblemente no lo hagan en la salida del proceso. La ejecución explícita de los finalizadores con este MDA habilitado ayudará a reproducir este tipo de problema de forma más confiable.  
   
 ## <a name="symptoms"></a>Síntomas  
+
  <xref:System.IO.StreamWriter> no escribe los últimos 1-4 KB de datos en un archivo.  
   
 ## <a name="cause"></a>Causa  
+
  <xref:System.IO.StreamWriter> almacena en búfer los datos internamente, lo que requiere que se llame al método <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> para escribir los datos almacenados en búfer en el almacén de datos subyacente. Si no se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> adecuadamente, es posible que los datos almacenados en búfer en la instancia de <xref:System.IO.StreamWriter> no se escriban de la forma esperada.  
   
  El siguiente es un ejemplo de código mal escrito que este MDA debería detectar.  
@@ -46,7 +49,8 @@ GC.Collect();
 GC.WaitForPendingFinalizers();  
 ```  
   
-## <a name="resolution"></a>Resolución  
+## <a name="resolution"></a>Solución  
+
  Asegúrese de que se llama a <xref:System.IO.StreamWriter.Close%2A> o <xref:System.IO.StreamWriter.Flush%2A> en <xref:System.IO.StreamWriter> antes de cerrar una aplicación o cualquier bloque de código que tenga una instancia de <xref:System.IO.StreamWriter>. Uno de los mejores mecanismos para conseguirlo es crear la instancia con un bloque `using` de C# (`Using` en Visual Basic), que se asegurará de que se invoca el método <xref:System.IO.StreamWriter.Dispose%2A> para el escritor y, como resultado, la instancia se cerrará correctamente.  
   
 ```csharp
@@ -88,9 +92,11 @@ static WriteToFile()
 ```  
   
 ## <a name="effect-on-the-runtime"></a>Efecto en el Runtime  
+
  Este MDA no tiene ningún efecto en el tiempo de ejecución.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Resultados  
+
  Un mensaje que indica que se produjo esta infracción.  
   
 ## <a name="configuration"></a>Configuración  

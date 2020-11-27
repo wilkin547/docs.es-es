@@ -2,25 +2,28 @@
 title: Extremos SOAP y HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: fee1df86026716941f65dccca15d437ae917770b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9e7ce32a0f5a2f37294db57659e2b30b364bef24
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600950"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268266"
 ---
 # <a name="soap-and-http-endpoints"></a>Extremos SOAP y HTTP
+
 Este ejemplo muestra cómo implementar un servicio basado en RPC y exponerlo en el formato SOAP y en el formato POX (XML sin formato) mediante el modelo de programación web de WCF. Vea el ejemplo de [servicio http básico](basic-http-service.md) para obtener más detalles sobre el enlace http para el servicio. Este ejemplo se centra en los detalles relativos a la exposición del mismo servicio a través de SOAP y HTTP utilizando enlaces diferentes.  
   
 ## <a name="demonstrates"></a>Muestra  
+
  Exponer un servicio RPC a través de SOAP y HTTP mediante WCF.  
   
 ## <a name="discussion"></a>Discusión  
+
  Este ejemplo consta de dos componentes: un proyecto de aplicación web (servicio) que contiene un servicio WCF y una aplicación de consola (cliente) que invoca operaciones de servicio mediante enlaces HTTP y SOAP.  
   
  El servicio WCF expone dos operaciones, `GetData` y, que devuelven `PutData` la cadena que se pasó como entrada. A las operaciones de servicio se les anotan los objetos <xref:System.ServiceModel.Web.WebGetAttribute> y <xref:System.ServiceModel.Web.WebInvokeAttribute>. Estos atributos controlan la proyección HTTP de estas operaciones. Además, se les anota el objeto <xref:System.ServiceModel.OperationContractAttribute>, que les permite ser expuestos a través de enlaces SOAP. El método `PutData` del servicio inicia una excepción <xref:System.ServiceModel.Web.WebFaultException>, que se devuelve a través de HTTP utilizando el código de estado HTTP y se devuelve a través de SOAP como un error de SOAP.  
   
- El archivo Web. config configura el servicio WCF con 3 puntos de conexión:  
+ El archivo Web.config configura el servicio WCF con 3 puntos de conexión:  
   
 - El punto de conexión ~/service.svc/mex que expone los metadatos del servicio para el acceso de los clientes basados en SOAP.  
   

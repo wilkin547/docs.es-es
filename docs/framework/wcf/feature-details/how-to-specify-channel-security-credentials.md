@@ -2,14 +2,15 @@
 title: Procedimiento para especificar las credenciales de seguridad de los canales
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9236985ef461044e480847003d9d249b7e232783
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596947"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266771"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Procedimiento para especificar las credenciales de seguridad de los canales
+
 El moniker del servicio Windows Communication Foundation (WCF) permite que las aplicaciones COM llamen a servicios WCF. La mayoría de los servicios WCF requieren que el cliente especifique las credenciales para la autenticación y autorización. Al llamar a un servicio WCF desde un cliente WCF, puede especificar estas credenciales en código administrado o en un archivo de configuración de la aplicación. Al llamar a un servicio WCF desde una aplicación COM, puede usar la <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfaz para especificar las credenciales. Este tema describe varias maneras de especificar credenciales mediante la interfaz <xref:System.ServiceModel.ComIntegration.IChannelCredentials>.  
   
 > [!NOTE]
@@ -25,7 +26,7 @@ El moniker del servicio Windows Communication Foundation (WCF) permite que las a
   
 3. Agregue `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` a la `ICalculator` definición de interfaz.  
   
-4. Agregue `bindingNamespace="http://Microsoft.ServiceModel.Samples"` a la etiqueta del punto de conexión en el archivo app. config para el servicio.  
+4. Agregue `bindingNamespace="http://Microsoft.ServiceModel.Samples"` a la etiqueta de extremo en el App.config para el servicio.  
   
 5. Compile el ejemplo de seguridad del mensaje y ejecute Service.exe. Use Internet Explorer y busque el URI del servicio ( `http://localhost:8000/ServiceModelSamples/Service` ) para asegurarse de que el servicio está funcionando.  
   

@@ -2,13 +2,15 @@
 title: Procedimiento para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 97f8174161068f2c72b6bd2bc4e8a3044f5bccdd
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: b229173381eed3e821a9ad9e1a6639912521731c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051667"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96268435"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Procedimiento para usar la configuración para agregar un punto de conexión AJAX de ASP.NET
+
 Windows Communication Foundation (WCF) le permite crear un servicio que hace que un punto de conexión habilitado para ASP.NET AJAX esté disponible al que se puede llamar desde JavaScript en un sitio web del cliente. Para crear este tipo de punto de conexión, puede usar un archivo de configuración, como con todos los demás extremos de Windows Communication Foundation (WCF), o bien usar un método que no requiera ningún elemento de configuración. En este tema se muestra el enfoque de configuración.  
   
  La parte del procedimiento que permite que el punto de conexión de servicio se convierta en ASP.NET AJAX habilitado consiste en configurar el punto de conexión para que utilice <xref:System.ServiceModel.WebHttpBinding> y para agregar el [\<enableWebScript>](../../configure-apps/file-schema/wcf/enablewebscript.md) comportamiento del extremo. Después de configurar el punto de conexión, los pasos para implementar y hospedar el servicio son similares a los utilizados por cualquier servicio de WCF. Para obtener un ejemplo práctico, vea el [servicio Ajax mediante http post](../samples/ajax-service-using-http-post.md).  
