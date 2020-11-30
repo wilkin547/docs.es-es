@@ -13,24 +13,27 @@ helpviewer_keywords:
 - strings [.NET], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a00274b7b6b7e7a54d8546f2176109688a4c4678
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a8fec6c08d44212d1b7cdd5a34c9a27b0fc19746
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824888"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683880"
 ---
 # <a name="creating-new-strings-in-net"></a>Creación de cadenas en .NET
 
 .NET permite crear cadenas mediante asignaciones simples y, además, sobrecarga un constructor de clases para admitir la creación de cadenas mediante una serie de parámetros. .NET también proporciona varios métodos en la clase <xref:System.String?displayProperty=nameWithType> que crean objetos de cadena mediante la combinación de varias cadenas, matrices de cadenas u objetos.  
   
 ## <a name="creating-strings-using-assignment"></a>Creación de cadenas mediante asignaciones  
+
  La manera más sencilla de crear un objeto <xref:System.String> es asignar un literal de cadena a un objeto <xref:System.String>.  
   
 ## <a name="creating-strings-using-a-class-constructor"></a>Creación de cadenas mediante un constructor de clase  
+
  Puede usar las sobrecargas del constructor de clases <xref:System.String> para crear cadenas a partir de matrices de caracteres. También puede crear una nueva cadena al duplicar un determinado carácter un número especificado de veces.  
   
 ## <a name="methods-that-return-strings"></a>Métodos que devuelven cadenas  
+
  En la tabla siguiente se enumeran varios métodos útiles que devuelven nuevos objetos de cadena.  
   
 |Nombre del método|Usar|  
@@ -42,6 +45,7 @@ ms.locfileid: "94824888"
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|Copia los caracteres especificados de una cadena en la posición especificada de una matriz de caracteres.|  
   
 ### <a name="format"></a>Formato  
+
  Puede usar el método **String.Format** para crear cadenas con formato y concatenar cadenas que representan a varios objetos. Este método convierte automáticamente cualquier objeto pasado en una cadena. Por ejemplo, si la aplicación debe mostrar un valor **Int32** y un valor **DateTime** al usuario, puede construir fácilmente una cadena para representar estos valores con el método **Format**. Para más información sobre las convenciones de formato usadas con este método, consulte la sección sobre [formatos compuestos](composite-formatting.md).  
   
  En el ejemplo siguiente se usa el método **Format** para crear una cadena que emplea una variable de entero.  
@@ -52,12 +56,14 @@ ms.locfileid: "94824888"
  En este ejemplo, <xref:System.DateTime.Now%2A?displayProperty=nameWithType> muestra la fecha y hora actuales en el formato especificado por la referencia cultural asociada al subproceso actual.  
   
 ### <a name="concat"></a>Concat  
+
  El método **String.Concat** se puede usar para crear fácilmente un objeto de cadena a partir de dos o más objetos existentes. Proporciona una manera independiente del lenguaje de concatenar cadenas. Este método acepta cualquier clase que derive de **System.Object**. En el ejemplo siguiente se crea una cadena a partir de dos objetos de cadena existentes y un carácter de separación.  
   
  [!code-csharp[Strings.Creating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#2)]
  [!code-vb[Strings.Creating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#2)]  
   
 ### <a name="join"></a>Join  
+
  El método **String.Join** crea una cadena a partir de una matriz de cadenas y una cadena separadora. Este método resulta útil si quiere concatenar varias cadenas para formar una lista quizás separada por una coma.  
   
  En el ejemplo siguiente se usa un espacio para enlazar una matriz de cadenas.  
@@ -66,12 +72,14 @@ ms.locfileid: "94824888"
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
 ### <a name="insert"></a>Insertar  
+
  El método **String.Insert** crea una cadena al insertar una cadena en la posición especificada de otra cadena. Este método usa un índice basado en cero. En el ejemplo siguiente se inserta una cadena en la quinta posición del índice de `MyString` y se crea una nueva cadena con este valor.  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
  [!code-vb[Strings.Creating#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#4)]  
   
 ### <a name="copyto"></a>CopyTo  
+
  El método **String.CopyTo** copia partes de una cadena en una matriz de caracteres. Puede especificar el índice inicial de la cadena y el número de caracteres que se va a copiar. Este método toma el índice de origen, una matriz de caracteres, el índice de destino y el número de caracteres que se va a copiar. Todos los índices se basan en cero.  
   
  En el ejemplo siguiente se usa el método **CopyTo** para copiar los caracteres de la palabra "Hello" de un objeto de cadena en la primera posición del índice de una matriz de caracteres.  

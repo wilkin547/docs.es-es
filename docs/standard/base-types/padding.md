@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-ms.openlocfilehash: 9931db1e76e3737ab3803400928169b30c3ecbda
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8dbea862acb87c1db2d23b11bac597eaa27d6b6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822950"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683789"
 ---
 # <a name="padding-strings-in-net"></a>Relleno de cadenas en .NET
 
@@ -30,6 +30,7 @@ Use uno de los siguientes métodos <xref:System.String> para crear una cadena qu
 |<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Rellena una cadena con caracteres finales hasta una longitud total especificada.|  
   
 ## <a name="padleft"></a>PadLeft  
+
  El método <xref:System.String.PadLeft%2A?displayProperty=nameWithType> crea una cadena mediante la concatenación de suficientes caracteres de relleno iniciales con una cadena original para alcanzar la longitud total especificada. El método <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> usa el espacio en blanco como carácter de relleno y el método <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> le permite especificar su propio carácter de relleno.  
   
  En el ejemplo de código siguiente se usa el método <xref:System.String.PadLeft%2A> para crear una cadena con una longitud de veinte caracteres. En el ejemplo se muestra "`--------Hello World!`" en la consola.  
@@ -39,6 +40,7 @@ Use uno de los siguientes métodos <xref:System.String> para crear una cadena qu
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
 ## <a name="padright"></a>PadRight  
+
  El método <xref:System.String.PadRight%2A?displayProperty=nameWithType> crea una cadena mediante la concatenación de suficientes caracteres de relleno finales con una cadena original para alcanzar la longitud total especificada. El método <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> usa el espacio en blanco como carácter de relleno y el método <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> le permite especificar su propio carácter de relleno.  
   
  En el ejemplo de código siguiente se usa el método <xref:System.String.PadRight%2A> para crear una cadena con una longitud de veinte caracteres. En el ejemplo se muestra "`Hello World!--------`" en la consola.  

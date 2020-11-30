@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
 ms.openlocfilehash: 707a37c6946cfcaf429552f0aeece6b87f3ad71d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89125012"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (opciones del compilador de C#)
@@ -33,7 +33,7 @@ La opción **-pathmap** del compilador especifica cómo asignar rutas físicas a
 
 Para especificar varias rutas de acceso de origen asignadas, sepárelas con una coma.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 El compilador escribe la ruta de acceso de origen en la salida por las razones siguientes:
 

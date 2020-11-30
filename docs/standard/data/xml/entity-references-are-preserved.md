@@ -2,14 +2,15 @@
 title: Se preservan las referencias de entidad
 ms.date: 03/30/2017
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-ms.openlocfilehash: 2cc2fcf3fdc2a89e4f72ae65e6e7385cb83f168c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 484eb5c874c6de05acae7dcd87a477c186b81482
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823841"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687273"
 ---
 # <a name="entity-references-are-preserved"></a>Se preservan las referencias de entidad
+
 Cuando no se expande toda la referencia de entidad, sino que se conserva, el modelo Document Object Model (DOM) XML compila un nodo **XmlEntityReference** al encontrar una.  
   
  Con el siguiente código XML,  

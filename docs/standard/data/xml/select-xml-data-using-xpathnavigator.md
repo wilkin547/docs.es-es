@@ -5,20 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
-ms.openlocfilehash: 791c1d16db6a2079ccccebf4dc33d5a0eb12d3c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9b12e60fcfac8c8fc4c2f2c80aac7400dfc8d6f2
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95673467"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Seleccionar datos XML con XPathNavigator
+
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para seleccionar un conjunto de nodos de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> utilizando una expresión XPath. Una vez seleccionado, puede iterar por el conjunto de nodos seleccionado.  
   
 ## <a name="xpathnavigator-selection-methods"></a>Métodos de selección de XPathNavigator  
+
  La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para seleccionar un conjunto de nodos de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> utilizando una expresión XPath. La clase <xref:System.Xml.XPath.XPathNavigator> también incluye un conjunto de métodos optimizados para seleccionar nodos antecesores, secundarios y descendientes más rápido que con una expresión XPath. El conjunto seleccionado de nodos se devuelve en un objeto <xref:System.Xml.XPath.XPathNodeIterator> o un objeto <xref:System.Xml.XPath.XPathNavigator> en el caso de haya un solo nodo seleccionado.  
   
 ### <a name="selecting-nodes-using-xpath-expressions"></a>Selección de nodos con expresiones XPath  
+
  Para seleccionar un conjunto de nodos con una expresión XPath, utilice uno de los siguientes métodos de selección.  
   
 - <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
@@ -57,6 +60,7 @@ while(nodes.MoveNext())
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
 ### <a name="optimized-selection-methods"></a>Métodos de selección optimizados  
+
  Los métodos <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> y <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> representan expresiones XPath que se utilizan habitualmente para recuperar nodos secundarios, descendientes y antecesores. Estos métodos tienen optimizado su rendimiento y son más rápidos que sus expresiones XPath correspondientes. Los métodos <xref:System.Xml.XPath.XPathNavigator.SelectChildren%2A>, <xref:System.Xml.XPath.XPathNavigator.SelectAncestors%2A> y <xref:System.Xml.XPath.XPathNavigator.SelectDescendants%2A> seleccionan nodos antecesores, secundarios y descendientes basándose en un valor <xref:System.Xml.XPath.XPathNodeType> o el nombre local e identificador URI de espacio de nombres de los nodos que se van a seleccionar. Los nodos antecesores, secundarios y descendientes se devuelven en un objeto <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="see-also"></a>Vea también

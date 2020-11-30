@@ -9,17 +9,19 @@ helpviewer_keywords:
 - .NET regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-ms.openlocfilehash: c9abccd6c93bad89cc737822fce3990c77b1b96e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef8f126559b51aa9b918f04e27f5599fba519b43
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821949"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683802"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
+
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  
   
 ## <a name="inline-options"></a>Opciones insertadas  
+
  Puede establecer o deshabilitar opciones de coincidencia de patrones específicas para una parte de una expresión regular mediante la sintaxis  
   
 `(?imnsx-imnsx)`  
@@ -56,6 +58,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
 |`\b`|Coincide con un límite de palabras.|  
   
 ## <a name="inline-comment"></a>Comentario alineado  
+
  La construcción `(?#` *comment*`)` permite incluir un comentario alineado en una expresión regular. El motor de expresiones regulares no usa ninguna parte del comentario en la coincidencia de patrones, aunque el comentario se incluye en la cadena devuelta por el método <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. El comentario termina en el primer paréntesis de cierre.  
   
  En el ejemplo siguiente se repite el primer patrón de expresión regular del ejemplo de la sección anterior. Se agregan dos comentarios alineados en la expresión regular para indicar si la comparación distingue entre mayúsculas y minúsculas. El patrón de expresión regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, se define como se indica a continuación.  
@@ -75,6 +78,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Comentario de final de línea  
+
  Un signo de número (`#`) marca un comentario en modo X, que empieza en el carácter # sin escape al final del patrón de expresión regular y continúa hasta el final de la línea. Para usar esta construcción, debe habilitar la opción `x` (mediante opciones insertadas) o proporcionar el valor <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> al parámetro `option` al crear una instancia del objeto <xref:System.Text.RegularExpressions.Regex> o al llamar al método <xref:System.Text.RegularExpressions.Regex> estático.  
   
  En el ejemplo siguiente se muestra la construcción de comentario de final de línea. Determina si una cadena es una cadena de formato compuesto que incluye al menos un elemento de formato. En la tabla siguiente se describe la construcción en el patrón de expresión regular:  

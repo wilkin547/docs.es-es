@@ -11,17 +11,19 @@ helpviewer_keywords:
 - enumerations [.NET], parsing strings
 - base types, parsing strings
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
-ms.openlocfilehash: 6054456b50c48ecee61e95851aee095a4227b176
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1339301786ed0f7ddd41565ca3fc64c2a859b3f4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821935"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683763"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizar cadenas numéricas en .NET
+
 Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  
   
 ## <a name="parsing-and-format-providers"></a>Análisis y proveedores de formato  
+
  Normalmente, las representaciones de cadena de valores numéricos se diferencian en la referencia cultural. Todos los elementos de las cadenas numéricas, como los símbolos de moneda, los separadores de grupo (o millares) y los separadores decimales, varían según la referencia cultural. Los métodos de análisis usan implícita o explícitamente un proveedor de formato que reconoce estas variaciones específicas de la referencia cultural. Si no se especifica ningún proveedor de formato en una llamada al método `Parse` o `TryParse`, se usa el proveedor de formato asociado a la referencia cultural del subproceso actual (el objeto <xref:System.Globalization.NumberFormatInfo> devuelto por la propiedad <xref:System.Globalization.NumberFormatInfo.CurrentInfo%2A?displayProperty=nameWithType>).  
   
  Un proveedor de formato se representa mediante una implementación <xref:System.IFormatProvider>. Esta interfaz tiene un solo miembro, el método <xref:System.IFormatProvider.GetFormat%2A>, cuyo único parámetro es un objeto <xref:System.Type> que representa el tipo al que se va a dar formato. Este método devuelve el objeto que proporciona información de formato. .NET es compatible con las dos implementaciones <xref:System.IFormatProvider> siguientes para analizar cadenas numéricas:  
@@ -36,6 +38,7 @@ Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` 
  [!code-vb[Parsing.Numbers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/formatproviders1.vb#1)]  
   
 ## <a name="parsing-and-numberstyles-values"></a>Análisis y valores NumberStyles  
+
  Los elementos de estilo (como espacio en blanco, separadores de grupos y separador decimal) que la operación de análisis puede controlar se definen mediante un valor de enumeración <xref:System.Globalization.NumberStyles>. De forma predeterminada, las cadenas que representan valores enteros se analizan mediante el valor <xref:System.Globalization.NumberStyles.Integer?displayProperty=nameWithType>, que solo permite dígitos numéricos, espacio en blanco inicial y final, y un signo inicial. Las cadenas que representan valores de punto flotante se analizan mediante una combinación de valores <xref:System.Globalization.NumberStyles.Float?displayProperty=nameWithType> y <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>. Este estilo compuesto permite dígitos decimales junto con un espacio en blanco inicial y final, un signo inicial, un separador decimal, separador de grupos y un exponente. Al llamar a una sobrecarga del método `Parse` o `TryParse` que incluya un parámetro de tipo <xref:System.Globalization.NumberStyles> y configurar una o más marcas <xref:System.Globalization.NumberStyles>, puede controlar los elementos de estilo que pueden estar presentes en la cadena para que la operación de análisis se realice correctamente.  
   
  Por ejemplo, una cadena que contiene un separador de grupos no puede convertirse en un valor <xref:System.Int32> mediante el método <xref:System.Int32.Parse%28System.String%29?displayProperty=nameWithType>. Pero la conversión se realiza correctamente si usa la marca <xref:System.Globalization.NumberStyles.AllowThousands?displayProperty=nameWithType>, como se muestra en el ejemplo siguiente.  
@@ -74,6 +77,7 @@ Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` 
 |<xref:System.Globalization.NumberStyles.HexNumber?displayProperty=nameWithType>|Incluye los estilos <xref:System.Globalization.NumberStyles.AllowLeadingWhite?displayProperty=nameWithType>, <xref:System.Globalization.NumberStyles.AllowTrailingWhite?displayProperty=nameWithType> y <xref:System.Globalization.NumberStyles.AllowHexSpecifier?displayProperty=nameWithType>.|  
   
 ## <a name="parsing-and-unicode-digits"></a>Análisis y dígitos Unicode  
+
  El estándar Unicode define puntos de código para dígitos de diferentes sistemas de escritura. Por ejemplo, los puntos de código de U+0030 a U+0039 representan los dígitos latinos básicos del 0 al 9, los puntos de código de U+09E6 a U+09EF representan los dígitos de bengalí del 0 al 9, y los puntos de código de U+FF10 a U+FF19 representan los dígitos de ancho completo del 0 al 9. Pero los únicos dígitos numéricos que reconocen los métodos de análisis son los dígitos latinos básicos del 0 al 9 con puntos de código de U+0030 a U+0039. Si se pasa a un método de análisis numérico una cadena que contenga cualquier otro dígito, el método producirá una excepción <xref:System.FormatException>.  
   
  En el ejemplo siguiente se usa el método <xref:System.Int32.Parse%2A?displayProperty=nameWithType> para analizar las cadenas que se componen de dígitos en sistemas de escritura diferentes. Como muestra la salida del ejemplo, el intento de analizar los dígitos latinos básicos se realiza correctamente, pero se produce un error en el intento de analizar los dígitos de ancho completo, árabe-hindús y de bengalí.  

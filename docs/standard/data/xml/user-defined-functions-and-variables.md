@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-ms.openlocfilehash: d4936ec32d54a465803d493048cba2b70ed50db6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c1f519dd539a266d61945ad221bccceaa1361779
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818510"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95675625"
 ---
 # <a name="user-defined-functions-and-variables"></a>Funciones y variables definidas por el usuario
+
 La clase <xref:System.Xml.XPath.XPathNavigator> proporciona un conjunto de métodos que se utilizan para interactuar con los datos de <xref:System.Xml.XPath.XPathDocument>. Puede suplementar las funciones XPath estándar implementando funciones y variables de extensión para utilizarlas en las expresiones de consulta XPath. El método <xref:System.Xml.XPath.XPathExpression.SetContext%2A> puede aceptar un contexto definido por el usuario derivado de <xref:System.Xml.Xsl.XsltContext>. Las funciones definidas por el usuario las resuelve el contexto personalizado.  
   
  Las funciones y variables de extensión pueden ser útiles en la prevención de ataques de inyección de XML. En estos escenarios, los datos proporcionados por el usuario se asignan a variables personalizadas y se procesan mediante funciones de extensión, no como datos sin procesar concatenados con instrucciones de procesamiento. Las funciones y variables de extensión contienen los datos proporcionados por el usuario de manera que estos solo actúan sobre los datos XML de la forma que pretendía el diseñador.  

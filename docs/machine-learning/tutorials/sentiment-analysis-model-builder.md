@@ -7,10 +7,10 @@ ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
 ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "81278956"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Análisis del sentimiento de los comentarios del sitio web en una aplicación web con el Generador de modelos de ML.NET

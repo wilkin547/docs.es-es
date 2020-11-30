@@ -7,17 +7,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-ms.openlocfilehash: ae951efafd68d0ddf4f74876edd4c12564d68dde
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7ba736272579451cf30c5e78026ffaa4186e03c9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830888"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686857"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML
+
 La API del Modelo de objetos de esquema (SOM) se puede utilizar para leer y escribir esquemas del lenguaje de definición de esquemas XML (XSD) desde archivos u otros orígenes y compilar esquemas XML en memoria, utilizando las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium).  
   
 ## <a name="reading-and-writing-xml-schemas"></a>Lectura y escritura de esquemas XML  
+
  La clase <xref:System.Xml.Schema.XmlSchema> incluye los métodos <xref:System.Xml.Schema.XmlSchema.Read%2A> y <xref:System.Xml.Schema.XmlSchema.Write%2A> para leer y escribir esquemas XML. El método <xref:System.Xml.Schema.XmlSchema.Read%2A> devuelve un objeto <xref:System.Xml.Schema.XmlSchema> que representa el esquema XML y toma un parámetro <xref:System.Xml.Schema.ValidationEventHandler> opcional para controlar los errores y advertencias de validación que se encuentran al leer un esquema XML.  
   
  El método <xref:System.Xml.Schema.XmlSchema.Write%2A> escribe esquemas XML para los objetos <xref:System.IO.Stream>, <xref:System.IO.TextWriter> y <xref:System.Xml.XmlWriter> y puede tomar un objeto <xref:System.Xml.XmlNamespaceManager> opcional como parámetro. Se utiliza un <xref:System.Xml.XmlNamespaceManager> para controlar los espacios de nombres que se encuentran en un esquema XML. Para más información sobre la clase <xref:System.Xml.XmlNamespaceManager>, vea [Administrar espacios de nombres en un documento XML](managing-namespaces-in-an-xml-document.md).  

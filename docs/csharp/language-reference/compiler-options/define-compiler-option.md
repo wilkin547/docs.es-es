@@ -13,10 +13,10 @@ helpviewer_keywords:
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
 ms.openlocfilehash: 74c9a23cd1b3a691063c2976a593c9b3a63ca618
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "91173274"
 ---
 # <a name="-define-c-compiler-options"></a>-define (Opciones del compilador de C#)

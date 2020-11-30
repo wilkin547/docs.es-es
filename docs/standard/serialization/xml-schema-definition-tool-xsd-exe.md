@@ -3,12 +3,12 @@ title: XML Schema Definition Tool (Xsd.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado especificado, lo que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: c8ae3e05f2d775cbc4c44ce27e7474d1fcfc06a3
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: a66ebfee3a461bb800e61e4f1d789f497da2f9d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281754"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676613"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -50,6 +50,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |**/p\[arameters\]:** _file.xml_|Lee las opciones de los distintos modos de operación desde el archivo .xml especificado. La forma abreviada es `/p:`. Para más información, vea la sección [Comentarios](#remarks).|
 
 ## <a name="xsd-file-options"></a>Opciones de archivos XSD
+
  Se debe especificar sólo una de las opciones siguientes de archivos .xsd.
 
 |Opción|Descripción|
@@ -105,7 +106,7 @@ El uso del modificador `/parameters` permite especificar un único archivo XML q
 </xsd>
 ```
 
-Si el XML anterior está incluido en un archivo denominado GenerateSchemas.xml, use el modificador `/parameters` escribiendo lo siguiente en una línea de comandos y presionando **Entrar** :
+Si el XML anterior está incluido en un archivo denominado GenerateSchemas.xml, use el modificador `/parameters` escribiendo lo siguiente en una línea de comandos y presionando **Entrar**:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -205,6 +206,7 @@ En la siguiente tabla se muestran los atributos que también pueden utilizarse c
 |ayuda|Muestra las opciones y la sintaxis de los comandos para la herramienta. Se establece en `true` o `false`.|
 
 ## <a name="examples"></a>Ejemplos
+
  El comando siguiente genera un esquema XML a partir de `myFile.xdr` y lo guarda en el directorio actual.
 
 ```console

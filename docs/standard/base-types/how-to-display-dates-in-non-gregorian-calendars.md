@@ -10,14 +10,15 @@ helpviewer_keywords:
 - calendars [.NET], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 6263ac2b6ce18399fa4fa56c9e2ab662a1a367b9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e8d628f3e15b080b4a5509726ece9da26523269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820571"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681397"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedimiento para mostrar fechas en calendarios no gregorianos
+
 Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método <xref:System.DateTime.ToString%2A>. En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -63,6 +64,7 @@ Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendar
     - <xref:System.Globalization.Calendar.GetMilliseconds%2A>, para mostrar los milisegundos del segundo en el calendario adecuado.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo se muestra una fecha con dos calendarios diferentes. Se muestra la fecha después de definir el calendario Hijri como calendario predeterminado de la referencia cultural ar-JO y se muestra la fecha con el calendario persa, que no se admite como calendario opcional de la referencia cultural fa-IR.  
   
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]

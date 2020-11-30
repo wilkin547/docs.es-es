@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-ms.openlocfilehash: 6f0be433abcebed7f9da70225563a04170426314
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fe227a2d3efc5c36b818b7f4431896e6f62b1f26
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818211"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685050"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parámetros Stylesheet y objetos de extensión
+
 La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible Stylesheet Language for Transformations (XSLT) y objetos de extensión XSLT. Cuando se pasan al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> se puede invocar a estos parámetros y objetos de extensión desde hojas de estilos.  
   
 > [!NOTE]
@@ -31,6 +32,7 @@ La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible 
 - Permite que se pasen fragmentos de árboles de resultados a la hoja de estilos con el uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parámetros de XSLT de hoja de estilos  
+
  Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocian un nombre completo y un identificador de recursos de uniforme (URI) de espacio de nombres con el objeto del parámetro.  
   
  El objeto del parámetro debería corresponder al tipo World Wide Web Consortium (W3C). La tabla siguiente muestra los tipos W3C correspondientes, las clases de .NET Framework equivalentes (tipo) y si el tipo W3C es un tipo de lenguaje de ruta XML (XPath) o tipo XSLT.  
@@ -54,6 +56,7 @@ La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible 
 3. Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se utiliza el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> para crear un parámetro que almacena la fecha de descuento calculada. Para calcular la fecha de descuento se deben sumar 20 días a partir de la fecha del pedido.  
   
 ```vb  
@@ -137,6 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Entrada  
+
  order.xml  
   
 ```xml  
@@ -178,6 +182,7 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>Objetos de extensión de XSLT  
+
  Los objetos de extensión XSLT se añaden a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. En ese momento se asocian un nombre completo y un identificador URI de espacio de nombres con el objeto de extensión.  
   
  Cuando se agrega un objeto, el llamador de <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> debe ser de confianza total en la directiva de seguridad. Si el llamador es de confianza parcial, la adición producirá errores.  
@@ -195,6 +200,7 @@ public class Sample
 3. Pasar <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslTransform.Transform%2A>.  
   
 ### <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se calcula la longitud de una circunferencia dado su radio.  
   
 ```vb  
@@ -305,6 +311,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Entrada  
+
  number.xml  
   
 ```xml  
@@ -341,6 +348,7 @@ public class Sample
 ```  
   
 ### <a name="output"></a>Salida  
+
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

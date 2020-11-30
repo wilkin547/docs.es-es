@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 61538656580878da775d4a42dac40165c7941eee
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 206a659656f1019af1540b9b2476ae7fe9ba93eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818276"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685115"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>
+
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
   
 > [!NOTE]
@@ -98,6 +99,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
  De esta forma se inicia una excepción debido a que no se establece una secuencia de escape para el carácter Y comercial (&amp;). Este documento se carga como XML y no se aplica un tratamiento especial al texto que hay entre las etiquetas del elemento `msxsl:script`.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se utiliza un script incrustado para calcular la longitud de una circunferencia dado su radio.  
   
 ```vb  
@@ -165,6 +167,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>Entrada  
+
  number.xml  
   
 ```xml  

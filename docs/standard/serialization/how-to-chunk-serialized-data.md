@@ -14,12 +14,12 @@ helpviewer_keywords:
 - serialization, examples
 - binary serialization, examples
 ms.assetid: 22f1b818-7e0d-428a-8680-f17d6ebdd185
-ms.openlocfilehash: 860fdcae0d1937f53ee964d9d4631ec812b3d379
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: ee8bab4fe7659b1fe5b7edeabc81187d0a13e5bc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379140"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679005"
 ---
 # <a name="how-to-chunk-serialized-data"></a>Cómo: Fragmentar datos serializados
 
@@ -46,6 +46,7 @@ Dos problemas que se producen al enviar los conjuntos de datos grandes en mensaj
 2. Implemente el método <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> para leer el flujo de datos fragmentado y escribir los bytes en el disco. Esta implementación también genera eventos de progreso que pueden ser utilizados por un control gráfico, como una barra de progreso.  
   
 ## <a name="example"></a>Ejemplo  
+
 El ejemplo de código siguiente muestra el método Web en el cliente que desactiva el almacenado en búfer de ASP.NET. También muestra la implementación del lado cliente de la interfaz <xref:System.Xml.Serialization.IXmlSerializable> que fragmenta los datos en el método <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>.  
   
 [!code-csharp[HowToChunkSerializedData#1](../../../samples/snippets/csharp/VS_Snippets_Remoting/HowToChunkSerializedData/CS/SerializationChunk.cs#1)]

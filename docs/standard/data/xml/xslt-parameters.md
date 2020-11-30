@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-ms.openlocfilehash: c203e17e327cf64690c2748c7f3a4e74b5306501
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 64a62840594773270a658738120812c59b4896cb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818302"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95685219"
 ---
 # <a name="xslt-parameters"></a>Parámetros XSLT
+
 Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocia al objeto de parámetro un nombre completo y un identificador URI de espacio de nombres.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Para utilizar un parámetro XSLT  
@@ -24,6 +25,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
 3. Pase el objeto <xref:System.Xml.Xsl.XsltArgumentList> al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="parameter-types"></a>Tipos de parámetros  
+
  El objeto de parámetro se debería corresponder a un tipo del W3C. En la siguiente tabla se muestran los tipos correspondientes del W3C, las clases de Microsoft .NET Framework equivalentes (tipo) y si el tipo del W3C es un tipo XPath o un tipo XSLT.  
   
 |Tipo del W3C|Clase equivalente de .NET (tipo)|Tipo XPath o XSLT|  
@@ -42,6 +44,7 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
  El resto de los tipos inician un error.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se utiliza el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> para crear un parámetro que almacena la fecha de descuento calculada. Para calcular la fecha de descuento se deben sumar 20 días a partir de la fecha del pedido.  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
@@ -50,9 +53,11 @@ Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediant
 ### <a name="input"></a>Entrada  
   
 ##### <a name="orderxml"></a>order.xml  
+
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
   
 ##### <a name="discountxsl"></a>discount.xsl  
+
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
 ### <a name="output"></a>Salida  

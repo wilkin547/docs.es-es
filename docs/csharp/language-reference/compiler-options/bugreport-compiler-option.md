@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 1fb2efc9b12680e95767746c7e4e1ddacbdd2594
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93281511"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (Opciones del compilador de C#)
@@ -49,7 +49,7 @@ Especifica que esa información de depuración debe colocarse en un archivo para
   
 - Una descripción de cómo cree que debe corregirse el problema, que se le pedirá.  
   
- Si esta opción se usa con **-errorreport:prompt** o **-errorreport:send** , la información del archivo se enviará a Microsoft Corporation.  
+ Si esta opción se usa con **-errorreport:prompt** o **-errorreport:send**, la información del archivo se enviará a Microsoft Corporation.  
   
  Como una copia de todos los archivos de código fuente se colocarán en `file`, puede que quiera reproducir el defecto en el código sospechoso en el programa más corto posible.  
   

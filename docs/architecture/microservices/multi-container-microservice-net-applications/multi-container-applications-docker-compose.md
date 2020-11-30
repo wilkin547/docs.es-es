@@ -2,12 +2,12 @@
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
 ms.date: 01/30/2020
-ms.openlocfilehash: 47f2bf9bcdbf021ec4232ff9e25f6b2b228aaeaa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c375d328ab9064315682fab91cb5e49e9a384b56
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539312"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95682671"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -115,7 +115,7 @@ Si nos centramos en un único contenedor, el microservicio de contenedor catalog
 
 Este servicio de contenedor tiene la siguiente configuración básica:
 
-- Se basa en la imagen **eshop/catalog-api** personalizada. Por simplicidad, no hay ninguna compilación: configuración de clave en el archivo. Esto significa que la imagen se debe haber compilado previamente (con docker build) o se debe haber descargado (con el comando docker pull) de cualquier registro de Docker.
+- Se basa en la imagen **eshop/catalog-api** personalizada. Por simplicidad, no hay ninguna compilación: configuración de clave en el archivo. Esto significa que la imagen se debe haber compilado previamente (con docker build) o se debe haber descargado (con el comando docker pull) de cualquier registro de Docker.
 
 - Define una variable de entorno denominada ConnectionString con la cadena de conexión para que la use Entity Framework para obtener acceso a la instancia de SQL Server que contiene el modelo de datos del catálogo. En este caso, el mismo contenedor de SQL Server contiene varias bases de datos. Por lo tanto, necesitará menos memoria en el equipo de desarrollo para Docker, aunque también podría implementar un contenedor de SQL Server para cada base de datos de microservicio.
 
@@ -143,7 +143,7 @@ Por lo tanto, si usa el comando docker-compose, puede fijar como objetivo los si
 
 Al desarrollar aplicaciones, es importante poder ejecutar una aplicación en un entorno de desarrollo aislado. Puede usar el comando de la CLI docker-compose para crear ese entorno o Visual Studio, que usa docker-compose en segundo plano.
 
-El archivo docker-compose.yml le permite configurar y documentar todas las dependencias de servicio de la aplicación (otros servicios, la caché, bases de datos, colas, etc.). Con el comando de la CLI docker-compose puede crear e iniciar uno o varios contenedores para cada dependencia con un solo comando (docker-compose up).
+El archivo docker-compose.yml le permite configurar y documentar todas las dependencias de servicio de la aplicación (otros servicios, la caché, bases de datos, colas, etc.). Con el comando de la CLI docker-compose puede crear e iniciar uno o varios contenedores para cada dependencia con un solo comando (docker-compose up).
 
 Los archivos docker-compose.yml son archivos de configuración interpretados por el motor de Docker, pero también actúan como prácticos archivos de documentación sobre la composición de la aplicación de varios contenedores.
 
@@ -388,7 +388,7 @@ services:
 
 En este ejemplo, la configuración de invalidación de desarrollo expone algunos puertos al host, define variables de entorno con direcciones URL de redireccionamiento y especifica cadenas de conexión para el entorno de desarrollo. Esta configuración es solo para el entorno de desarrollo.
 
-Al ejecutar `docker-compose up` (o al iniciarlo en Visual Studio), el comando lee las invalidaciones automáticamente como si se combinaran ambos archivos.
+Al ejecutar `docker-compose up` (o al iniciarlo en Visual Studio), el comando lee las invalidaciones automáticamente como si se combinaran ambos archivos.
 
 Imagínese que quiere que otro archivo Compose para el entorno de producción, con distintos valores de configuración, puertos o cadenas de conexión. Puede crear otro archivo de invalidación, como el archivo llamado `docker-compose.prod.yml`, con distintas configuraciones y variables de entorno. Ese archivo podría estar almacenado en otro repositorio de Git o lo podría administrar y proteger un equipo diferente.
 
@@ -437,7 +437,7 @@ Los valores establecidos en el entorno en tiempo de ejecución siempre invalidan
 Si está explorando Docker y .NET Core en orígenes de Internet, encontrará Dockerfiles que muestran lo fácil que es compilar una imagen de Docker copiando el origen en un contenedor. Estos ejemplos sugieren que, si usa una configuración simple, puede tener una imagen de Docker con el entorno empaquetado con la aplicación. En el ejemplo siguiente se muestra un Dockerfile sencillo en esta misma línea.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -458,7 +458,7 @@ El equipo de .NET ha estado trabajando mucho para convertir .NET Core y ASP.NET 
 
 3. **Producción**: El foco es la implementación y el inicio rápido de los contenedores, por lo que estas imágenes se limitan a los archivos binarios y el contenido necesario para ejecutar la aplicación.
 
-El equipo de .NET proporciona tres variantes básicas en [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (en Docker Hub):
+El equipo de .NET proporciona tres variantes básicas en [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (en Docker Hub):
 
 1. **sdk**: para los escenarios de desarrollo y compilación
 1. **aspnet**: para los escenarios de producción de ASP.NET

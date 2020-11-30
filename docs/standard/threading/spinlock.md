@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-ms.openlocfilehash: 071bde6e8b32d5712256e24c83d713cd63f2bffb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: adb80ffb1917ea725c458dbe3c37f3d364276fb6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819011"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674299"
 ---
 # <a name="spinlock"></a>SpinLock
+
 La estructura <xref:System.Threading.SpinLock> es un primitivo de sincronización de exclusión mutua y de bajo nivel que itera mientras espera a que se adquiera un bloqueo. En los equipos con varios núcleos, cuando se prevea que los tiempos de espera van ser breves y si la contención es mínima, <xref:System.Threading.SpinLock> puede funcionar mejor que otros tipos de bloqueos. Sin embargo, se recomienda usar <xref:System.Threading.SpinLock> solo cuando determine mediante la generación de perfiles que el método <xref:System.Threading.Monitor?displayProperty=nameWithType> o los métodos <xref:System.Threading.Interlocked> reducen significativamente el rendimiento del programa.  
   
  <xref:System.Threading.SpinLock> puede generar el intervalo de tiempo del subproceso incluso si aún no ha adquirido el bloqueo. Esto se hace para evitar la inversión de prioridades del subproceso y para permitir que el recolector de elementos no utilizados progrese. Cuando se usa <xref:System.Threading.SpinLock>, asegúrese de que ningún subproceso mantenga el bloqueo durante más de un intervalo de tiempo muy breve y que ningún subproceso puede bloquearse mientras mantiene el bloqueo.  

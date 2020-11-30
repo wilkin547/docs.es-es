@@ -3,10 +3,10 @@ title: Bloques de creación de "programas" de C#
 description: Obtenga información sobre miembros, expresiones e instrucciones de C#. Los tipos contienen miembros que se escriben. Estos miembros se crean a partir de instrucciones y expresiones.
 ms.date: 08/06/2020
 ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
-ms.sourcegitcommit: ffd4d5e824db6c5f0c3521c0e802fd9e8f0edcbe
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93342701"
 ---
 # <a name="program-building-blocks"></a>Bloques de creación de programas
@@ -20,15 +20,15 @@ Los miembros de una `class` son _*_estáticos_*_ o _*_de instancia_*_. Los miemb
 En la lista siguiente se proporciona una visión general de los tipos de miembros que puede contener una clase.
 
 - _*Constantes**: Valores constantes asociados a la clase
-- **Campos** :  variables que están asociadas a la clase
-- **Métodos** :  acciones que puede realizar la clase.
-- **Propiedades** : Acciones asociadas a la lectura y escritura de propiedades con nombre de la clase
-- **Indizadores** : Acciones asociadas a la indexación de instancias de la clase como una matriz
-- **Eventos** : Notificaciones que puede generar la clase
-- **Operadores** : Conversiones y operadores de expresión admitidos por la clase
-- **Constructores** : Acciones necesarias para inicializar instancias de la clase o la clase propiamente dicha
-- **Finalizadores** : acciones que deben realizarse antes de que las instancias de la clase se descarten de forma permanente
-- **Tipos** : Tipos anidados declarados por la clase
+- **Campos**:  variables que están asociadas a la clase
+- **Métodos**:  acciones que puede realizar la clase.
+- **Propiedades**: Acciones asociadas a la lectura y escritura de propiedades con nombre de la clase
+- **Indizadores**: Acciones asociadas a la indexación de instancias de la clase como una matriz
+- **Eventos**: Notificaciones que puede generar la clase
+- **Operadores**: Conversiones y operadores de expresión admitidos por la clase
+- **Constructores**: Acciones necesarias para inicializar instancias de la clase o la clase propiamente dicha
+- **Finalizadores**: acciones que deben realizarse antes de que las instancias de la clase se descarten de forma permanente
+- **Tipos**: Tipos anidados declarados por la clase
 
 ## <a name="accessibility"></a>Accesibilidad
 
@@ -59,7 +59,7 @@ Como se muestra en el ejemplo anterior, los *campos de solo lectura* se puede de
 
 Un *método* es un miembro que implementa un cálculo o una acción que puede realizar un objeto o una clase. A los *métodos estáticos* se accede a través de la clase. A los *métodos de instancia* se accede a través de instancias de la clase.
 
-Los métodos pueden tener una lista de *parámetros* , los cuales representan valores o referencias a variables que se pasan al método. Los métodos tienen un *tipo de valor devuelto* , el cual especifica el tipo del valor calculado y devuelto por el método. El tipo de valor devuelto de un método es `void` si no devuelve un valor.
+Los métodos pueden tener una lista de *parámetros*, los cuales representan valores o referencias a variables que se pasan al método. Los métodos tienen un *tipo de valor devuelto*, el cual especifica el tipo del valor calculado y devuelto por el método. El tipo de valor devuelto de un método es `void` si no devuelve un valor.
 
 Al igual que los tipos, los métodos también pueden tener un conjunto de parámetros de tipo, para lo cuales se deben especificar argumentos de tipo cuando se llama al método. A diferencia de los tipos, los argumentos de tipo a menudo se pueden deducir de los argumentos de una llamada al método y no es necesario proporcionarlos explícitamente.
 
@@ -189,7 +189,7 @@ A diferencia de otros miembros, los constructores de instancias no se heredan. U
 
 Las *propiedades* son una extensión natural de los campos. Ambos son miembros con nombre con tipos asociados y la sintaxis para acceder a los campos y las propiedades es la misma. Pero a diferencia de los campos, las propiedades no denotan ubicaciones de almacenamiento. Las propiedades tienen *descriptores de acceso* que especifican las instrucciones ejecutadas cuando se leen o escriben sus valores.
 
-Una propiedad se declara como un campo, salvo que la declaración finaliza con un descriptor de acceso get o un descriptor de acceso set escrito entre los delimitadores `{` y `}` en lugar de finalizar en un punto y coma. Una propiedad que tiene un descriptor de acceso get y un descriptor de acceso set es una *propiedad de lectura y escritura* , una propiedad que tiene solo un descriptor de acceso get es una *propiedad de solo lectura* y una propiedad que tiene solo un descriptor de acceso set es una *propiedad de solo escritura*.
+Una propiedad se declara como un campo, salvo que la declaración finaliza con un descriptor de acceso get o un descriptor de acceso set escrito entre los delimitadores `{` y `}` en lugar de finalizar en un punto y coma. Una propiedad que tiene un descriptor de acceso get y un descriptor de acceso set es una *propiedad de lectura y escritura*, una propiedad que tiene solo un descriptor de acceso get es una *propiedad de solo lectura* y una propiedad que tiene solo un descriptor de acceso set es una *propiedad de solo escritura*.
 
 Un descriptor de acceso get corresponde a un método sin parámetros con un valor devuelto del tipo de propiedad. Un descriptor de acceso set corresponde a un método con un solo parámetro denominado value y ningún tipo de valor devuelto. El descriptor de acceso get calcula el valor de la propiedad. El descriptor de acceso set proporciona un nuevo valor para la propiedad. Cuando la propiedad es el destino de una asignación, o el operando de `++` o `--`, se invoca al descriptor de acceso set. En otros casos en los que se hace referencia a la propiedad, se invoca al descriptor de acceso get.
 
@@ -251,8 +251,8 @@ Cuando una expresión contiene varios operadores, su *precedencia* controla el o
 
 Cuando un operando se encuentra entre dos operadores con la misma precedencia, la *asociatividad* de los operadores controla el orden en que se realizan las operaciones:
 
-* Excepto los operadores de asignación y los operadores de fusión de NULL, todos los operadores binarios son *asociativos a la izquierda* , lo que significa que las operaciones se realizan de izquierda a derecha. Por ejemplo, `x + y + z` se evalúa como `(x + y) + z`.
-* Los operadores de asignación, los operadores de fusión de NULL `??` y `??=` y el operador condicional `?:` son *asociativos a la derecha* , lo que significa que las operaciones se realizan de derecha a izquierda. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
+* Excepto los operadores de asignación y los operadores de fusión de NULL, todos los operadores binarios son *asociativos a la izquierda*, lo que significa que las operaciones se realizan de izquierda a derecha. Por ejemplo, `x + y + z` se evalúa como `(x + y) + z`.
+* Los operadores de asignación, los operadores de fusión de NULL `??` y `??=` y el operador condicional `?:` son *asociativos a la derecha*, lo que significa que las operaciones se realizan de derecha a izquierda. Por ejemplo, `x = y = z` se evalúa como `x = (y = z)`.
 
 La precedencia y la asociatividad pueden controlarse mediante paréntesis. Por ejemplo, `x + y * z` primero multiplica `y` por `z` y luego suma el resultado a `x`, pero `(x + y) * z` primero suma `x` y `y` y luego multiplica el resultado por `z`.
 

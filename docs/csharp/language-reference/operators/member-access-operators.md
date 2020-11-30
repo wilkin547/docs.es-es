@@ -1,7 +1,7 @@
 ---
 title: 'Operadores y expresiones de acceso a miembros: referencia de C#'
 description: Obtenga información sobre los operadores de C# que puede usar para acceder a los miembros de tipos.
-ms.date: 04/17/2020
+ms.date: 11/13/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 688a1fcff84a6e8f2fa31533a2bc459bf8c8717a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 28d3d9c3261f1a852d16f2637309b21412611c10
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916793"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691245"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Operadores y expresiones de acceso a miembros (referencia de C#)
 
@@ -137,9 +137,6 @@ Si `a.x` o `a[x]` es de un tipo de valor que no admite un valor NULL, `T`, `a?.x
 En el ejemplo anterior, si no utiliza el operador `??`, `numbers?.Length < 2` da como resultado `false` cuando `numbers` es `null`.
 
 El operador de acceso de miembro condicional NULL `?.` también se conoce con el nombre de operador Elvis.
-
-> [!NOTE]
-> En C# 8, el [operador null-forgiving](null-forgiving.md) finaliza la lista de operaciones null-conditional anteriores. Por ejemplo, la expresión `x?.y!.z` se analiza como `(x?.y)!.z`. Debido a esta interpretación, `z` se evalúa incluso si `x` es `null`, lo que puede dar lugar a <xref:System.NullReferenceException>.
 
 ### <a name="thread-safe-delegate-invocation"></a>Invocación de delegado seguro para subprocesos
 

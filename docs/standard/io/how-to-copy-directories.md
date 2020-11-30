@@ -12,12 +12,12 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-ms.openlocfilehash: b81723b9ed7067826692e8383bf64058d4295f0c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: dfe45d8529eb927a6b174a7bb411afa8072035f9
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830836"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95679070"
 ---
 # <a name="how-to-copy-directories"></a>Procedimiento para copiar directorios
 
@@ -28,6 +28,7 @@ Para obtener un ejemplo de la copia asincrónica de archivos, vea [E/S de archiv
 En este ejemplo, para copiar los subdirectorios se establece el elemento `copySubDirs` del método `DirectoryCopy` en `true`. Para copiar de forma recursiva los subdirectorios, el método `DirectoryCopy` se llama a si mismo en cada subdirectorio hasta que no haya ninguno más para copiar.  
   
 ## <a name="example"></a>Ejemplo  
+
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   

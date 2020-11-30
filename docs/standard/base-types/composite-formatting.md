@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 588efff637359586630554decf57072597365d32
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a0252d013ee6cf7cba7f953fc8a1e2c66c510ca7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823100"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95683958"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -43,6 +43,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
 - El método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que escribe un método informativo para los agentes de escucha de traza.  
   
 ## <a name="composite-format-string"></a>Cadena de formato compuesto  
+
  Los métodos compatibles con la característica de formato compuesto utilizan como argumentos una cadena de formato compuesto y una lista de objetos. Una cadena de formato compuesto consta de cero o más ejecuciones de texto fijo combinadas con uno o varios elementos de formato. El texto fijo es cualquier cadena que elija y cada elemento de formato se corresponde con un objeto o estructura de conversión boxing de la lista. La característica de formato compuesto devuelve una nueva cadena de resultado donde cada elemento de formato se reemplaza por la representación de cadena del objeto correspondiente de la lista.  
   
  Observe el siguiente fragmento de código <xref:System.String.Format%2A>.  
@@ -53,6 +54,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  El texto fijo es "`Name =`" y "`, hours =`". Los elementos de formato son "`{0}`", cuyo índice es 0, que corresponde al objeto `name`, y "`{1:hh}`", cuyo índice es 1, que corresponde al objeto `DateTime.Now`.  
   
 ## <a name="format-item-syntax"></a>Sintaxis de elemento de formato  
+
  Cada elemento de formato presenta la siguiente sintaxis, formada por los siguientes componentes:  
   
  `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
@@ -60,6 +62,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  Las llaves ("{" y "}") son necesarias.  
   
 ### <a name="index-component"></a>Index (Componente)  
+
  El componente *index* obligatorio, denominado también especificador de parámetros, es un número que empieza por 0 que identifica un elemento correspondiente de la lista de objetos. O sea, el elemento de formato cuyo especificador de parámetro es 0 da formato al primer objeto de la lista, el elemento de formato cuyo especificador de parámetro es 1 da formato al segundo objeto de la lista, etc. En el ejemplo siguiente se incluyen cuatro especificadores de parámetros, numerados del cero al tres, para representar números primos menores que diez:  
   
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
@@ -73,6 +76,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  Cada elemento de formato puede hacer referencia a cualquier objeto de la lista. Por ejemplo, si existen tres objetos, se puede dar formato al segundo, primero y tercer objeto mediante la especificación de una cadena de formato compuesto como esta: "{1} {0} {2}". Un objeto al que no hace referencia ningún elemento de formato se omite. Se produce una excepción de tipo <xref:System.FormatException> en tiempo de ejecución si un especificador de parámetro designa un elemento fuera de los límites de la lista de objetos.  
   
 ### <a name="alignment-component"></a>Alignment (Componente)  
+
  El componente opcional *alignment* es un entero con signo que indica el ancho de campo con formato preferido. Si el valor de *alignment* es menor que la longitud de la cadena con formato, se omite *alignment* y se usa la longitud de la cadena con formato como el ancho de campo. Los datos con formato del campo están alineados a la derecha si *alignment* es positivo y a la izquierda si *alignment* es negativo. Si hace falta relleno, se utiliza un espacio en blanco. Si se especifica *alignment*, es necesaria la coma.  
   
  El siguiente ejemplo define dos matrices, que contiene los nombres de empleados y otra contiene las horas que han trabajado en un período de dos semanas. La cadena de formato compuesto alinea a la izquierda los nombres en un campo de 20 caracteres y alinea a la derecha las horas en un campo de 5 caracteres. Tenga en cuenta que la cadena de formato estándar "N1" también se usa para dar formato a las horas con un dígito fraccionario.  
@@ -81,6 +85,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>Format String (Componente)  
+
  El componente *formatString* opcional es una cadena de formato adecuada para el tipo de objeto al que se da formato. Especifique una cadena de formato numérico estándar o personalizado si el objeto correspondiente es un valor numérico, una cadena de formato de fecha y hora estándar o personalizado si el objeto correspondiente es un objeto <xref:System.DateTime>, o una [cadena de formato de enumeración](enumeration-format-strings.md) si el objeto correspondiente es un valor de enumeración. Si no se especifica *formatString*, se usa el especificador de formato general ("G") para un tipo numérico, de fecha y hora o de enumeración. Si se especifica *formatString*, son necesarios los dos puntos.  
   
  En la tabla siguiente se enumeran los tipos o las categorías de tipos de la biblioteca de clases de .NET que admiten un conjunto predefinido de cadenas de formato, y se proporcionan vínculos a temas en los que se muestran las cadenas de formato admitidas. Observe que la asignación de formato a cadenas es un mecanismo extensible que permite definir cadenas de formato nuevas para todos los tipos existentes, así como definir un conjunto de cadenas de formato admitidas por un tipo definido por la aplicación. Para obtener más información, consulte los temas sobre las interfaces <xref:System.IFormattable> y <xref:System.ICustomFormatter>.  
@@ -94,6 +99,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
 |<xref:System.TimeSpan>|[Cadenas de formato TimeSpan estándar](standard-timespan-format-strings.md)<br /><br /> [Cadenas de formato TimeSpan personalizado](custom-timespan-format-strings.md)|  
   
 ### <a name="escaping-braces"></a>Llaves de escape  
+
  Las llaves de apertura y de cierre se interpretan como el inicio y el final de un elemento de formato. Por lo tanto, debe utilizar una secuencia de escape para que se muestre una llave de apertura o de cierre literal. Especifique dos llaves de apertura ("{{") en el texto fijo para que se muestre una llave de apertura ("{"), o dos llaves de cierre ("}}") para que se muestre una llave de cierre ("}"). Las llaves de un elemento de formato se interpretan secuencialmente, en el orden en que se encuentran. No se admite la interpretación de llaves anidadas.  
   
  El modo de interpretar las llaves de escape puede dar lugar a resultados inesperados. Tomemos como ejemplo el elemento de formato "{{{0:D}}}", cuyo propósito es mostrar una llave de apertura, un valor numérico con formato de número decimal y una llave de cierre; pero que, en la práctica, se interpreta de la siguiente forma:  
@@ -114,6 +120,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Orden de procesamiento  
+
  Si la llamada al método de formato compuesto incluye un argumento <xref:System.IFormatProvider> cuyo valor no es `null`, el runtime llama al método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> para solicitar una implementación de <xref:System.ICustomFormatter>. Si el método es capaz de devolver una implementación de <xref:System.ICustomFormatter>, se almacena en caché el tiempo que dure la llamada de método de formato compuesto.
   
  Cada valor de la lista de parámetros que se corresponda con un elemento de formato se convierte en una cadena del siguiente modo:  
@@ -135,6 +142,7 @@ La característica de formato compuesto se admite mediante métodos como los sig
  La alineación se aplica después de que se hayan realizado los pasos anteriores.  
   
 ## <a name="code-examples"></a>Ejemplos de código  
+
  En el ejemplo siguiente se muestra una cadena creada mediante formato compuesto y otra creada mediante el método `ToString` de un objeto. Los dos tipos de formato producen resultados equivalentes.  
   
  [!code-csharp[Formatting.Composite#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#3)]

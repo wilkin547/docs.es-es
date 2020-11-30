@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: 578db725458ad5c4a90256a06744a58a6d1918da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9e73be220f3f04ec6bd05b1193d4188825f1b8e8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819960"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676509"
 ---
 # <a name="cancellation-in-managed-threads"></a>Cancelación en subprocesos administrados
 
@@ -51,6 +51,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
 - Los agentes de escucha pueden recibir las solicitudes de cancelación mediante sondeo, registro de devolución de llamada o espera en identificadores de espera.  
   
 ## <a name="cancellation-types"></a>Tipos de cancelación  
+
  El marco de cancelación se implementa como un conjunto de tipos relacionados. Estos tipos se enumeran en la tabla siguiente.  
   
 |Nombre de tipo|Descripción|  
@@ -62,6 +63,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  El modelo de cancelación se integra en .NET en varios tipos. Los más importantes son <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> y <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>. Se recomienda usar este nuevo modelo de cancelación cooperativa para todo el código nuevo de una biblioteca y una aplicación.  
   
 ## <a name="code-example"></a>Ejemplo de código  
+
  En el ejemplo siguiente, el objeto solicitante crea un objeto <xref:System.Threading.CancellationTokenSource> y, a continuación, pasa su propiedad <xref:System.Threading.CancellationTokenSource.Token%2A> a la operación cancelable. La operación que recibe la solicitud supervisa el valor de la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token mediante sondeo. Cuando el valor se convierte en `true`, el agente de escucha puede finalizar de la manera adecuada. En este ejemplo el método simplemente sale, que es lo único necesario en muchos casos.  
   
 > [!NOTE]
@@ -71,6 +73,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
   
 ## <a name="operation-cancellation-versus-object-cancellation"></a>Cancelación de operaciones frente a cancelación de objetos  
+
  En el marco de cancelación cooperativa, la cancelación se refiere a las operaciones, no a los objetos. La solicitud de cancelación significa que la operación debe detenerse lo antes posible después de realizar cualquier limpieza necesaria. Un token de cancelación debe hacer referencia a una "operación cancelable", independientemente de si esa operación está implementada en su programa. Después de establecer la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> del token en `true`, no puede restablecerse a `false`. Por lo tanto, los tokens de cancelación no pueden volver a usarse una vez cancelados.  
   
  Si necesita un mecanismo de cancelación de objetos, puede basarlo en el mecanismo de cancelación de operaciones mediante una llamada al método <xref:System.Threading.CancellationToken.Register%2A?displayProperty=nameWithType>, tal como se muestra en el ejemplo siguiente.  
@@ -81,6 +84,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  Si un objeto admite más de una operación cancelable simultánea, pase un token independiente como entrada para cada operación cancelable. De este modo, se puede cancelar una operación sin que afecte al resto.  
   
 ## <a name="listening-and-responding-to-cancellation-requests"></a>Escucha y respuesta a solicitudes de cancelación  
+
  En el delegado de usuario, el implementador de una operación cancelable determina cómo finalizar la operación en respuesta a una solicitud de cancelación. En muchos casos, el delegado de usuario puede realizar simplemente cualquier limpieza necesaria y volver inmediatamente.  
   
  Sin embargo, en casos más complejos, es posible que sea necesario que el delegado de usuario notifique al código de biblioteca que se ha producido la cancelación. En estos casos, la manera correcta de finalizar la operación es que el delegado llame al método <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, lo que provocará que se genere <xref:System.OperationCanceledException>. El código de biblioteca puede detectar esta excepción en el subproceso de delegado de usuario y examinar el token de la excepción para determinar si la excepción indica una cancelación cooperativa o alguna otra situación excepcional.  
@@ -88,6 +92,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  La clase <xref:System.Threading.Tasks.Task> administra <xref:System.OperationCanceledException> de esta manera. Para más información, vea [Cancelación de tareas](../parallel-programming/task-cancellation.md).  
   
 ### <a name="listening-by-polling"></a>Escuchas mediante sondeo  
+
  Para los cálculos de ejecución prolongada que se repiten, puede escuchar una solicitud de cancelación sondeando periódicamente el valor de la propiedad <xref:System.Threading.CancellationToken.IsCancellationRequested%2A?displayProperty=nameWithType>. Si su valor es `true`, el método debe realizar una limpieza y finalizar lo antes posible. La frecuencia óptima de sondeo depende del tipo de aplicación. Es el desarrollador quien determina la mejor frecuencia de sondeo para cualquier programa dado. El sondeo en sí no afecta significativamente al rendimiento. En el ejemplo siguiente se muestra una posible manera de sondeo.  
   
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
@@ -96,6 +101,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  Para obtener un ejemplo más completo, vea [Cómo: Escucha de solicitudes de cancelación mediante sondeo](how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Escuchas mediante el registro de una devolución de llamada  
+
  Algunas operaciones se pueden bloquear de forma que no pueden comprobar el valor del token de cancelación de manera oportuna. En estos casos, se puede registrar un método de devolución de llamada que desbloquee el método cuando se reciba una solicitud de cancelación.  
   
  El método <xref:System.Threading.CancellationToken.Register%2A> devuelve un objeto <xref:System.Threading.CancellationTokenRegistration> que se usa específicamente para este propósito. En el ejemplo siguiente se muestra cómo usar el método <xref:System.Threading.CancellationToken.Register%2A> para cancelar una solicitud web asincrónica.  
@@ -116,6 +122,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  Para obtener un ejemplo más completo, vea [Cómo: Registro de devoluciones de llamada como solicitudes de cancelación](how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Escuchas mediante un identificador de espera  
+
  Cuando una operación cancelable puede bloquearse mientras espera en una primitiva de sincronización como <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> o <xref:System.Threading.Semaphore?displayProperty=nameWithType>, se puede usar la propiedad <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> para habilitar la operación de espera en el evento y la solicitud de cancelación. El identificador de espera del token de cancelación se señalará en respuesta a una solicitud de cancelación y el método puede usar el valor devuelto del método <xref:System.Threading.WaitHandle.WaitAny%2A> para determinar si era el token de cancelación el que señalaba. A continuación, la operación puede cerrarse o generar <xref:System.OperationCanceledException>, según corresponda.  
   
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
@@ -129,6 +136,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  Para obtener un ejemplo más completo, vea [Cómo: Escucha de solicitudes de cancelación que tienen identificadores de espera](how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Escucha de varios tokens simultáneamente  
+
  En algunos casos, un agente de escucha tiene que escuchar varios tokens de cancelación de manera simultánea. Por ejemplo, una operación cancelable puede tener que supervisar un token de cancelación interno además de un token pasado externamente como argumento a un parámetro de método. Para lograr esto, cree un origen de tokens vinculados que pueda combinar dos o más tokens en uno, como se muestra en el ejemplo siguiente.  
   
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
@@ -137,6 +145,7 @@ El patrón general para implementar el modelo de cancelación cooperativa es:
  Tenga en cuenta que debe llamar a `Dispose` en el origen de tokens vinculados cuando haya terminado con él. Para obtener un ejemplo más completo, vea [Cómo: Escucha de varias solicitudes de cancelación](how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Cooperación entre código de biblioteca y código de usuario  
+
  El marco de cancelación unificada hace posible que el código de biblioteca pueda cancelar el código de usuario y que el código de usuario pueda cancelar el código de la biblioteca de manera cooperativa. Una buena cooperación depende de que cada lado siga estas instrucciones:  
   
 - Si el código de biblioteca proporciona operaciones cancelables, también debe proporcionar métodos públicos que acepten un token de cancelación externo para que el código de usuario pueda solicitar la cancelación.  

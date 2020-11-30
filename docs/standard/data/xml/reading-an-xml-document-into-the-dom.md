@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-ms.openlocfilehash: 40efccba86f1bca8af838961dccdc7f98f8c93c2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 61275e9232b3d9e516636869d7153f33133cbd03
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820402"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686870"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Lectura de un documento XML en el DOM
+
 La información XML se lee en memoria desde diferentes formatos. Se puede leer desde una cadena, una secuencia, una URL, un sistema de lectura de texto o una clase derivada de <xref:System.Xml.XmlReader>.  
   
  El método <xref:System.Xml.XmlDocument.Load%2A> pone el documento en memoria y dispone de métodos sobrecargados para tomar datos de cada uno de los diferentes formatos. También hay un método <xref:System.Xml.XmlDocument.LoadXml%2A> que lee XML de una cadena.  

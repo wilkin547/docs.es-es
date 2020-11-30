@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-ms.openlocfilehash: 3a709e40908afcbd1a228aab00fe36be43097826
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0fe9d1aa0e907ab28cf53cc97488a15e6434cda
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825733"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674845"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Cómo: Realizar una acción cuando un bloque de flujos de datos recibe datos
+
 Los tipos *Bloque de flujo de datos de ejecución* llaman a un delegado proporcionado por el usuario cuando reciben datos. Las clases <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> son tipos de bloques de flujo de datos de ejecución. Puede usar la palabra clave `delegate` (`Sub` en Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> o una expresión lambda cuando proporcione una función de trabajo a un bloque de flujo de datos de ejecución. Este documento describe cómo usar <xref:System.Func%602> y expresiones lambda para realizar la acción en bloques de ejecución.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se usa el flujo de datos para leer un archivo del disco y se calcula el número de bytes en el archivo que son iguales a cero. Usa <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> para leer el archivo y calcular el número de cero bytes, y <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> para imprimir el número de cero bytes en la consola. El objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> especifica un objeto <xref:System.Func%602> para realizar el trabajo cuando los bloques reciben datos. El objeto <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> usa una expresión lambda para imprimir en la consola el número de cero bytes que se lee.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#1)]
@@ -31,6 +33,7 @@ Los tipos *Bloque de flujo de datos de ejecución* llaman a un delegado proporci
  En la sección Resumen de tipos de delegado del documento [Flujo de datos](dataflow-task-parallel-library.md) se resumen los tipos de delegado que puede proporcionar a los objetos <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> y <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. La tabla también especifica si el tipo de delegado funciona de forma sincrónica o asincrónica.  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  En este ejemplo se proporcionada un delegado de tipo <xref:System.Func%602> para el objeto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, con el fin de realizar la tarea del bloque de flujo de datos de forma sincrónica. Para que el bloque de flujo de datos se comporte de forma asincrónica, proporcione un delegado de tipo <xref:System.Func%601> al bloque de flujo de datos. Cuando un bloque de flujo de datos se comporta de forma asincrónica, la tarea del bloque de flujo de datos se completa solo cuando el objeto <xref:System.Threading.Tasks.Task%601> devuelto finaliza. En el ejemplo siguiente se modifica el método `CountBytes` y se usan los operadores [async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic) para calcular de forma asincrónica el número total de bytes que son cero en el archivo proporcionado. El método <xref:System.IO.FileStream.ReadAsync%2A> realiza las operaciones de lectura de archivo de forma asincrónica.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]

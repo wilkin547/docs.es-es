@@ -2,19 +2,21 @@
 title: Reglas para deducir tipos simples
 ms.date: 03/30/2017
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 817a35c607f810da0a3e2dc681d27ea997c5fcc7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b8fa3037d9ad5af057f477733ffdea74681f5549
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823555"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686545"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Reglas para deducir tipos simples
+
 Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos.  
   
  La clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el tipo de datos para atributos y elementos como tipos simples. Esta sección describe los tipos deducidos potenciales, cómo se reconcilian varios valores diferentes en un tipo único y cómo se controlan los atributos de definición de esquema `xsi`.  
   
 ## <a name="inferred-types"></a>Tipos deducidos  
+
  La clase <xref:System.Xml.Schema.XmlSchemaInference> deduce valores de elemento y atributo como tipos simples e incluye un atributo de tipo en el esquema resultante. Todos los tipos deducidos son tipos simples. No se incluyen tipos ni facetas base como parte del esquema resultante.  
   
  Los valores se examinan individualmente a medida que se encuentran en el documento XML. El tipo se deduce para un valor en el momento que se examina. Si un tipo ha sido deducido para un atributo o elemento y se encuentra un valor para el atributo o elemento que no coincide con el tipo deducido actual, la clase <xref:System.Xml.Schema.XmlSchemaInference> promueve el tipo de cada conjunto de reglas. Estas reglas se discuten en la sección Promoción de tipos, más adelante en este tema.  
@@ -44,6 +46,7 @@ Describe cómo la clase <xref:System.Xml.Schema.XmlSchemaInference> deduce el ti
 |cadena|Uno o más caracteres Unicode.|  
   
 ## <a name="type-promotion"></a>Promoción de tipos  
+
  La clase <xref:System.Xml.Schema.XmlSchemaInference> examina los valores de atributo y elemento uno por uno. A medida que se encuentran valores, se deduce el tipo sin signo más restrictivo. Si un tipo ha sido deducido para un atributo o elemento y se encuentra un nuevo valor que no coincide con el tipo deducido actual, el tipo deducido se promueve a un nuevo tipo que se aplica al tipo deducido actualmente y al nuevo valor. La clase <xref:System.Xml.Schema.XmlSchemaInference> considera valores anteriores cuando promueve el tipo deducido.  
   
  Por ejemplo, considere los siguientes fragmentos XML de dos documentos XML:  

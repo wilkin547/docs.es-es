@@ -3,12 +3,12 @@ title: Herramienta Generador de serializador XML (Sgen.exe)
 description: El Generador de serializador XML crea un ensamblado de serialización XML para los tipos de un ensamblado, que mejora el rendimiento de inicio de XmlSerializer.
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 80295a9a54b6f9b1970fb65dacdee43b2e938070
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: c2f33236e39f61638118f45f0d5ab5385df27ac3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282345"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95676522"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Herramienta Generador de serializador XML (Sgen.exe)
 
@@ -45,6 +45,7 @@ sgen [options]
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Cuando no se utiliza el Generador de serializador XML, un objeto <xref:System.Xml.Serialization.XmlSerializer> genera código de serialización y un ensamblado de serialización para cada tipo siempre que se ejecuta una aplicación. Para mejorar el rendimiento del inicio de la serialización XML, use la herramienta Sgen.exe a fin de generar esos ensamblados con antelación. Estos ensamblados se podrán implementar después con la aplicación.  
   
  El Generador de serializador XML también puede mejorar el rendimiento de los clientes que utilizan proxy de servicio Web XML para comunicarse con los servidores, dado que no se verá afectado el rendimiento del proceso de serialización la primera vez que se carga el tipo.  
@@ -54,6 +55,7 @@ sgen [options]
  Si el ensamblado que contiene el tipo que se debe serializar se denomina MyType.dll, el ensamblado de serialización asociado se denominará MyType.XmlSerializers.dll.  
   
 ## <a name="examples"></a>Ejemplos  
+
  Mediante el siguiente comando se crea un ensamblado denominado Data.XmlSerializers.dll para serializar todos los tipos que contiene el ensamblado denominado Data.dll.  
   
 ```console  

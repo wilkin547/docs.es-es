@@ -7,14 +7,15 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 90ae911c8942fef7a9e8238921990b0a52a47ca0
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 1623517e66955c14b7e738c860ec16086fe30429
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281764"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678979"
 ---
 # <a name="datetimeserialization-element"></a>\<dateTimeSerialization> (Elemento)
+
 Determina el modo de serialización XML de los objetos <xref:System.DateTime>.  
   
  \<configuration>  
@@ -29,6 +30,7 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
+
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
@@ -38,6 +40,7 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
 |`mode`|Opcional. Especifica el modo de serialización. Establece uno de los valores de <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> . El valor predeterminado es **RoundTrip**.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
+
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
@@ -48,9 +51,9 @@ Determina el modo de serialización XML de los objetos <xref:System.DateTime>.
   
 ## <a name="remarks"></a>Comentarios  
 
-Cuando esta propiedad se establece en **Local** , los objetos <xref:System.DateTime> siempre tienen el formato de hora local. Es decir, la información de zona horaria local siempre se incluye con los datos serializados.
+Cuando esta propiedad se establece en **Local**, los objetos <xref:System.DateTime> siempre tienen el formato de hora local. Es decir, la información de zona horaria local siempre se incluye con los datos serializados.
   
-Cuando esta propiedad se establece en **Roundtrip** , los objetos <xref:System.DateTime> se examinan para determinar si se encuentran en la zona horaria local, UTC o una zona horaria no especificada. Los objetos <xref:System.DateTime> se serializan a continuación de este tipo de manera que esta información se conserva. Éste es el comportamiento predeterminado y el que se recomienda para todas las aplicaciones nuevas que no funcionan con versiones anteriores de .Net Framework.  
+Cuando esta propiedad se establece en **Roundtrip**, los objetos <xref:System.DateTime> se examinan para determinar si se encuentran en la zona horaria local, UTC o una zona horaria no especificada. Los objetos <xref:System.DateTime> se serializan a continuación de este tipo de manera que esta información se conserva. Éste es el comportamiento predeterminado y el que se recomienda para todas las aplicaciones nuevas que no funcionan con versiones anteriores de .Net Framework.  
   
 ## <a name="see-also"></a>Vea también
 

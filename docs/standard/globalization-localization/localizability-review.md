@@ -15,12 +15,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: 30cde57a5c837d9dc324e9cd263d2a1011641af4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ecfba7b6b5908a16bb23860704a35035f58e3ed4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829848"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95686025"
 ---
 # <a name="localizability-review"></a>Revisión de localizabilidad
 
@@ -35,11 +35,13 @@ La revisión de localización consta de las tres comprobaciones siguientes:
 - [¿Ha probado la aplicación con datos internacionales?](#test)
 
 <a name="global"></a>
+
 ## <a name="implement-globalization-recommendations"></a>Implementación de recomendaciones de globalización
 
 Si ha diseñado y desarrollado la aplicación con la localización en mente y, además, si ha seguido las recomendaciones indicadas en el artículo [Globalización](globalization.md), la revisión de localización, en gran medida, será un paso para el control de calidad. Sin embargo, durante esta fase, debe revisar e implementar las recomendaciones de [globalización](globalization.md) y corregir los errores del código fuente que impiden la localización.
 
 <a name="culture"></a>
+
 ## <a name="handle-culture-sensitive-features"></a>Control de características que tienen en cuenta la referencia cultural
 
 .NET no proporciona soporte técnico de programación en un número de áreas que varían enormemente según la referencia cultural. En la mayoría de los casos, tendrá que escribir código personalizado para controlar áreas de características como las siguientes:
@@ -58,6 +60,7 @@ Si ha diseñado y desarrollado la aplicación con la localización en mente y, a
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
 
 <a name="test"></a>
+
 ## <a name="test-your-application"></a>Probar la aplicación
 
 Para localizar la aplicación, debe probarla mediante el uso de datos internacionales en versiones internacionales del sistema operativo. Aunque la mayor parte de la interfaz de usuario no se localizará en este momento, podrá detectar problemas como los siguientes:

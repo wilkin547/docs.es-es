@@ -17,14 +17,15 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-ms.openlocfilehash: 14d515ba84a9437499f4d5a75b1112990df05de6
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 44bcc831ddf6fa292fd96d8e79ad54f7be2f65c6
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830381"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95678095"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un cliente en un modelo asincrónico basado en eventos
+
 En el ejemplo de código siguiente se muestra cómo utilizar un componente que se adhiera a la [Información general sobre el modelo asincrónico basado en eventos](event-based-asynchronous-pattern-overview.md). En el formulario de este ejemplo se usa el componente `PrimeNumberCalculator` descrito en [Implementar un componente que admita el modelo asincrónico basado en eventos](component-that-supports-the-event-based-asynchronous-pattern.md).  
   
  Cuando se ejecuta un proyecto que usa este ejemplo, verá un formulario "Prime Number Calculator" (Calculadora de número primo) con una cuadrícula y dos botones: **Start New Task** (Iniciar nueva tarea) y **Cancel** (Cancelar). Puede hacer clic en el botón **Start New Task** (Iniciar nueva tarea) varias veces seguidas, y por cada clic, una operación asincrónica iniciará un cálculo para determinar si un número de prueba generado aleatoriamente es primo. El formulario mostrará periódicamente el progreso y los resultados incrementales. A cada operación se le asigna un identificador de tarea único. El resultado del cálculo se muestra en la columna **Result** (Resultado); si el número de prueba no es primo, se etiqueta como **Composite** (Compuesto) y se muestra su primer divisor.  
@@ -35,6 +36,7 @@ En el ejemplo de código siguiente se muestra cómo utilizar un componente que s
 > La mayoría de los números no serán primos. Si no ha encontrado un número primo tras realizar varias operaciones, simplemente inicie más tareas y, finalmente, encontrará algunos números primos.  
   
 ## <a name="example"></a>Ejemplo  
+
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](snippets/component-that-supports-the-event-based-asynchronous-pattern/csharp/primenumbercalculatormain.cs#10)]
  [!code-vb[System.ComponentModel.AsyncOperationManager#10](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#10)]  
   

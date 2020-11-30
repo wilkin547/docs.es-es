@@ -6,14 +6,15 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-ms.openlocfilehash: 2b91a74f7dbb31ee47535dbed7cf5fa5243e364c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 79ffea3831d5f56d73c6974fdf7265c9b00ab8ec
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820447"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95691271"
 ---
 # <a name="post-schema-compilation-infoset"></a>Conjunto de información posterior a la compilación de esquemas
+
 La [recomendación de esquemas XML del W3C (World Wide Web Consortium)](https://www.w3.org/XML/Schema) trata acerca del conjunto de información que debe presentarse para la validación del esquema previo y para la compilación del esquema posterior. El Modelo de objetos de esquema XML (SOM) consulta esta información antes y después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  El conjunto de información previo a la validación del esquema se crea durante la edición del esquema. El conjunto de información posterior a la compilación del esquema se genera después de llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> durante la compilación del esquema, y se proporciona como propiedades.  

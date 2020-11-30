@@ -6,10 +6,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "89141951"
 ---
 # <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C# Reference)
@@ -54,7 +54,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 El ámbito de una directiva `using` se limita al archivo en el que aparece.
 

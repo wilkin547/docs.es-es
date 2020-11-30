@@ -3,10 +3,10 @@ title: 'Atributos reservados de C#: Conditional, Obsolete, AttributeUsage'
 ms.date: 04/09/2020
 description: El compilador interpreta estos atributos para que afecten al código generado por el compilador.
 ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "82021768"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>Atributos reservados: ConditionalAttribute, ObsoleteAttribute, AttributeUsageAttribute

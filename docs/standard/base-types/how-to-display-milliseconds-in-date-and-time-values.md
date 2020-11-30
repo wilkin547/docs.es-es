@@ -12,14 +12,15 @@ helpviewer_keywords:
 - dates [.NET], milliseconds
 - milliseconds [.NET]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 333b41fe3d4fa68ce26ab5dbd7d5938dda220b9a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 722334c324f663ba46a3c861885d4221fc566b8d
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822118"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681267"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
+
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Para mostrar el componente de milisegundos de un valor DateTime  
@@ -29,6 +30,7 @@ Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateT
 2. Para extraer la representación de cadena del componente de milisegundos de una hora, llame al método <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%2A> del valor de fecha y hora y pase el modelo de formato personalizado `fff` o `FFF` en solitario o junto a otros especificadores de formato personalizado como el parámetro `format`.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo se muestra el componente de milisegundos de un valor <xref:System.DateTime> y <xref:System.DateTimeOffset> en la consola en su presentación en solitario e incluido en una cadena de fecha y hora más larga.  
   
  [!code-csharp[Formatting.HowTo.Millisecond#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Millisecond/cs/Millisecond.cs#1)]
