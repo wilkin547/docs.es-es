@@ -9,7 +9,7 @@ ms.openlocfilehash: 61c3b8ebd431c3a16475342984b463d5f8842a89
 ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "96235888"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Especificación del comportamiento en tiempo de ejecución del servicio
@@ -129,7 +129,7 @@ Una vez que haya diseñado un contrato de servicios ([Designing Service Contract
   
 - <xref:System.ServiceModel.TransactionFlowAttribute>. Especifica el nivel en el que una operación de servicio acepta un encabezado de transacción.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Configuración de servicios](configuring-services.md)
 - [Procedimiento para controlar la creación de instancias de servicio](./feature-details/how-to-control-service-instancing.md)

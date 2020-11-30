@@ -4,10 +4,10 @@ description: Obtenga información sobre las tareas necesarias para desarrollar e
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
 ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
+ms.lasthandoff: 11/29/2020
 ms.locfileid: "90557572"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
@@ -110,7 +110,7 @@ Los servicios WCF hospedados en IIS pueden utilizar la seguridad de transporte H
 
 Por ejemplo, un punto de conexión de WCF configurado para usar la autenticación HTTP implícita debe residir en un directorio virtual de IIS que también esté configurado para permitir la autenticación implícita de HTTP. Las combinaciones no coincidentes de la configuración de IIS y del punto de conexión de WCF producen un error durante la activación del servicio.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Hospedaje en Internet Information Services](hosting-in-internet-information-services.md)
 - [Procedimientos recomendados de hospedaje de Internet Information Services](internet-information-services-hosting-best-practices.md)
