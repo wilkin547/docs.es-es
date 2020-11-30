@@ -3,12 +3,12 @@ title: Analizador de portabilidad de .NET | .NET
 description: Obtenga información sobre cómo usar la herramienta Analizador de portabilidad de .NET para evaluar la portabilidad de su código entre las diferentes implementaciones de .NET, incluidos .NET Core, .NET Standard, UWP y Xamarin.
 ms.date: 09/13/2019
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 03b5f88a17baf8713b06bdd0eac192d9e093b969
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 048ff916d309f4159fe78177e093a58d731c2e11
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819713"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734288"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -47,6 +47,7 @@ El resultado sería similar al siguiente al abrirse en Visual Studio:
 ![Captura de pantalla del análisis DGML.](./media/portability-analyzer/dgml-example.png)
 
 ### <a name="analyze-portability"></a>Análisis de portabilidad
+
 Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o DLL del proyecto.
 
 ![Captura de pantalla del analizador de portabilidad del Explorador de soluciones.](./media/portability-analyzer/portability-solution-explorer.png)

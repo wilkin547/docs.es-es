@@ -13,14 +13,15 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 52f7efdf5591901602811cba8f2b6c1a4f42f96c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62de6dc3b6276aab4667c719033ee3b66928ea2c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823009"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734379"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
+
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
   
 - Buscar una subexpresión que se repite en la cadena de entrada.  
@@ -49,7 +50,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  Para obtener información sobre los grupos y el modelo de objetos de expresiones regulares, vea [Construcciones de agrupamiento y objetos de las expresiones regulares](#Objects).  
   
 <a name="matched_subexpression"></a>
+
 ## <a name="matched-subexpressions"></a>Subexpresiones coincidentes  
+
  La construcción de agrupación siguiente captura una subexpresión coincidente:  
   
  `(` *subexpresión* `)`  
@@ -88,7 +91,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\W`|Coincide con un carácter que no se usa para formar palabras, como los espacios en blanco y los signos de puntuación. Esto evita que el patrón de la expresión regular coincida con una palabra que comience por la palabra del primer grupo capturado.|  
   
 <a name="named_matched_subexpression"></a>
+
 ## <a name="named-matched-subexpressions"></a>Subexpresiones coincidentes con nombre  
+
  La construcción de agrupamiento siguiente captura una subexpresión coincidente y permite tener acceso a ella por nombre o por número:  
   
 `(?<name>subexpression)`  
@@ -162,7 +167,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`(?<digit>\d+)?`|Coincide con ninguna o una aparición de uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit` .|  
   
 <a name="balancing_group_definition"></a>
+
 ## <a name="balancing-group-definitions"></a>Definiciones de grupos de compensación  
+
  Una definición de grupo de compensación elimina la definición de un grupo definido anteriormente y almacena, en el grupo actual, el intervalo entre el grupo definido anteriormente y el grupo actual. Esta construcción de agrupamiento tiene el formato siguiente:  
   
 `(?<name1-name2>subexpression)`  
@@ -235,7 +242,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |24|`$`|Encuentra el final de la cadena de entrada.|  
   
 <a name="noncapturing_group"></a>
+
 ## <a name="noncapturing-groups"></a>Grupos sin captura  
+
  La construcción de agrupamiento siguiente no captura la subcadena con la que coincide una subexpresión:  
   
 `(?:subexpression)`
@@ -261,7 +270,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\.`|Coincide con un punto.|  
   
 <a name="group_options"></a>
+
 ## <a name="group-options"></a>Opciones de grupo  
+
  La siguiente construcción de agrupamiento aplica o deshabilita las opciones especificadas dentro de una subexpresión:  
   
  `(?imnsx-imnsx:` *subexpresión* `)`  
@@ -285,7 +296,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
 <a name="zerowidth_positive_lookahead_assertion"></a>
+
 ## <a name="zero-width-positive-lookahead-assertions"></a>Aserciones de búsqueda anticipada positiva de ancho cero  
+
  La construcción de agrupamiento siguiente define una aserción de búsqueda anticipada positiva de ancho cero:  
   
  `(?=` *subexpresión* `)`  
@@ -308,7 +321,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`(?=\sis\b)`|Determina si los caracteres que se usan para formar palabras van seguidos de un carácter de espacio en blanco y la cadena "is", seguida de un límite de palabras. En ese caso, la coincidencia es correcta.|  
   
 <a name="zerowidth_negative_lookahead_assertion"></a>
+
 ## <a name="zero-width-negative-lookahead-assertions"></a>Aserciones de búsqueda anticipada negativa de ancho cero  
+
  La construcción de agrupamiento siguiente define una aserción de búsqueda anticipada negativa de ancho cero:  
   
  `(?!` *subexpresión* `)`  
@@ -346,7 +361,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`\p{P})`|Si el carácter siguiente no es un signo de puntuación (como un punto o una coma), la coincidencia se realiza.|  
   
 <a name="zerowidth_positive_lookbehind_assertion"></a>
+
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Aserciones de búsqueda tardía positiva de ancho cero  
+
  La construcción de agrupamiento siguiente define una aserción de búsqueda tardía positiva de ancho cero:  
   
  `(?<=` *subexpresión* `)`  
@@ -371,7 +388,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  Las aserciones de búsqueda tardía positiva de ancho cero también se usan para limitar el retroceso cuando el último carácter o caracteres de un grupo capturado debe ser un subconjunto de los caracteres que coincide con el patrón de la expresión regular de dicho grupo. Por ejemplo, si un grupo captura todos los caracteres que se usan para formar palabras consecutivos, puede usar una aserción de búsqueda tardía positiva de ancho cero para requerir que el último carácter sea alfabético.  
   
 <a name="zerowidth_negative_lookbehind_assertion"></a>
+
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Aserciones de búsqueda tardía negativa de ancho cero  
+
  La construcción de agrupamiento siguiente define una aserción de búsqueda tardía negativa de ancho cero:  
   
  `(?<!` *subexpresión* `)`  
@@ -396,7 +415,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |<code>(?<!(Saturday&#124;Sunday) )</code>|Si la coincidencia va precedida por algo distinto de las cadenas "Saturday" o "Sunday" seguidas de un espacio, la coincidencia es correcta.|  
   
 <a name="atomic_groups"></a>
+
 ## <a name="atomic-groups"></a>Grupos atómicos  
+
  La construcción de agrupamiento siguiente representa un grupo atómico (conocido en otros motores de expresiones regulares como subexpresión sin retroceso, subexpresión atómica o subexpresión de una sola vez):
   
  `(?>` *subexpresión* `)`  
@@ -425,7 +446,9 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`(?>(\w)\1+)`|Coincide con una o varias apariciones de un carácter que se usa para formar palabras duplicado, pero no retrocede para buscar el último carácter de un límite de palabras.|  
   
 <a name="Objects"></a>
+
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Construcciones de agrupamiento y objetos de las expresiones regulares  
+
  Las subcadenas con las que coincide un grupo de captura de una expresión regular se representan mediante objetos <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> , que se pueden recuperar del objeto <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> que devuelve la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> . El objeto <xref:System.Text.RegularExpressions.GroupCollection> se rellena como sigue:  
   
 - El primer objeto <xref:System.Text.RegularExpressions.Group> de la colección (el objeto con el índice cero) representa la coincidencia completa.  

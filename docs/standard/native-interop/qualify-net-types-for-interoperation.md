@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: 3fa9f0d5d8dd4d532fc510a1d946eddf32016748
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 3f5fe0f168e0e520ce1985faf5a8228c1bfbdf20
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93187767"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734314"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>Habilitar tipos de .NET para la interoperación con COM
+
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
   
 - Las clases deben implementar interfaces de forma explícita.  

@@ -2,24 +2,24 @@
 title: Cambios de comportamiento al comparar cadenas en .NET 5 +
 description: Obtenga información sobre los cambios de comportamiento en la comparación de cadenas en .NET 5 y versiones posteriores en Windows.
 ms.date: 11/04/2020
-ms.openlocfilehash: 49be2169bb165b8fe0205800415542bea7bf9787
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93403499"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734236"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>Cambios de comportamiento al comparar cadenas en .NET 5 +
 
-.NET 5.0 presenta un cambio de comportamiento en el entorno de ejecución por el que las API de globalización [ahora usan ICU de forma predeterminada](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows) en todas las plataformas admitidas. Esto representa una divergencia respecto a versiones anteriores de .NET Core y .NET Framework, que usan la funcionalidad de compatibilidad con el idioma nacional (NLS) del sistema operativo cuando se ejecutan en Windows. Para obtener más información sobre estos cambios, incluidos los modificadores de compatibilidad que pueden revertir el cambio de comportamiento, vea [Globalización de .NET y ICU](../globalization-localization/globalization-icu.md).
+.NET 5.0 presenta un cambio de comportamiento en el entorno de ejecución por el que las API de globalización [ahora usan ICU de forma predeterminada](../../core/compatibility/globalization/5.0/icu-globalization-api.md) en todas las plataformas admitidas. Esto representa una divergencia respecto a versiones anteriores de .NET Core y .NET Framework, que usan la funcionalidad de compatibilidad con el idioma nacional (NLS) del sistema operativo cuando se ejecutan en Windows. Para obtener más información sobre estos cambios, incluidos los modificadores de compatibilidad que pueden revertir el cambio de comportamiento, vea [Globalización de .NET y ICU](../globalization-localization/globalization-icu.md).
 
 ## <a name="reason-for-change"></a>Motivo del cambio
 
-Este cambio se presentó para unificar el comportamiento de globalización de .NET en todos los sistemas operativos compatibles. También ofrece la posibilidad de que las aplicaciones agrupen sus propias bibliotecas de globalización en lugar de depender de las bibliotecas integradas del sistema operativo. Para obtener más información, vea [la notificación de cambio importante](../../core/compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+Este cambio se presentó para unificar el comportamiento de globalización de .NET en todos los sistemas operativos compatibles. También ofrece la posibilidad de que las aplicaciones agrupen sus propias bibliotecas de globalización en lugar de depender de las bibliotecas integradas del sistema operativo. Para obtener más información, vea [la notificación de cambio importante](../../core/compatibility/globalization/5.0/icu-globalization-api.md).
 
 ## <a name="behavioral-differences"></a>Diferencias de comportamiento
 
-Si usa funciones como `string.IndexOf(string)` sin llamar a la sobrecarga que toma un argumento <xref:System.StringComparison>, es posible que tenga la intención de realizar una búsqueda *ordinal* , pero en su lugar, toma involuntariamente una dependencia del comportamiento específico de la cultura. Dado que NLS y ICU implementan una lógica diferente en sus comparadores lingüísticos, los resultados de métodos como `string.IndexOf(string)` pueden devolver valores inesperados.
+Si usa funciones como `string.IndexOf(string)` sin llamar a la sobrecarga que toma un argumento <xref:System.StringComparison>, es posible que tenga la intención de realizar una búsqueda *ordinal*, pero en su lugar, toma involuntariamente una dependencia del comportamiento específico de la cultura. Dado que NLS y ICU implementan una lógica diferente en sus comparadores lingüísticos, los resultados de métodos como `string.IndexOf(string)` pueden devolver valores inesperados.
 
 Esto puede manifestarse incluso en lugares donde no siempre se espera que las instalaciones de globalización estén activas. Por ejemplo, el código siguiente puede generar una respuesta diferente en función del entorno de ejecución actual.
 
@@ -139,9 +139,9 @@ Para obtener un análisis más detallado del comportamiento predeterminado de ca
 
 ## <a name="ordinal-vs-linguistic-search-and-comparison"></a>Diferencias entre la búsqueda y comparación lingüística y ordinal
 
-La búsqueda y comparación *ordinal* (también conocida como *no lingüística* ) descompone una cadena en sus elementos `char` individuales y realiza una búsqueda o comparación carácter por carácter. Por ejemplo, las cadenas `"dog"` y `"dog"` se comparan como *iguales* en un comparador de `Ordinal`, ya que las dos cadenas están compuestas de la misma secuencia de caracteres. Sin embargo, `"dog"` y `"Dog"` se comparan como *no iguales* en un comparador de `Ordinal`, porque no se componen de la misma secuencia de caracteres. Es decir, el punto de código de `'D'` en mayúsculas `U+0044` aparece antes del punto de código de `'d'` en minúsculas `U+0064`, lo que resulta en una clasificación `"dog"` antes de `"Dog"`.
+La búsqueda y comparación *ordinal* (también conocida como *no lingüística*) descompone una cadena en sus elementos `char` individuales y realiza una búsqueda o comparación carácter por carácter. Por ejemplo, las cadenas `"dog"` y `"dog"` se comparan como *iguales* en un comparador de `Ordinal`, ya que las dos cadenas están compuestas de la misma secuencia de caracteres. Sin embargo, `"dog"` y `"Dog"` se comparan como *no iguales* en un comparador de `Ordinal`, porque no se componen de la misma secuencia de caracteres. Es decir, el punto de código de `'D'` en mayúsculas `U+0044` aparece antes del punto de código de `'d'` en minúsculas `U+0064`, lo que resulta en una clasificación `"dog"` antes de `"Dog"`.
 
-Un comparador de `OrdinalIgnoreCase` sigue funcionando carácter por carácter, pero elimina las diferencias entre mayúsculas y minúsculas mientras se realiza la operación. En un comparador de `OrdinalIgnoreCase`, los pares de caracteres `'d'` y `'D'` se comparan como *iguales* , al igual que los pares de caracteres `'á'` y `'Á'`. Pero el carácter sin acento `'a'` se compara como *no igual* al carácter acentuado `'á'`.
+Un comparador de `OrdinalIgnoreCase` sigue funcionando carácter por carácter, pero elimina las diferencias entre mayúsculas y minúsculas mientras se realiza la operación. En un comparador de `OrdinalIgnoreCase`, los pares de caracteres `'d'` y `'D'` se comparan como *iguales*, al igual que los pares de caracteres `'á'` y `'Á'`. Pero el carácter sin acento `'a'` se compara como *no igual* al carácter acentuado `'á'`.
 
 En la tabla siguiente se proporcionan algunos ejemplos:
 
@@ -232,7 +232,7 @@ Console.WriteLine("endz".EndsWith("z")); // Prints 'True'
 > - Comportamiento: Los comparadores lingüísticos y conocedores de las referencias culturales pueden someterse a ajustes de comportamiento de vez en cuando. Tanto ICU como la antigua instalación de Windows NLS se han actualizado para tener en cuenta cómo cambian los idiomas del mundo. Para obtener más información, consulte la entrada de blog [Actividad de datos de la configuración regional (cultura)](/archive/blogs/shawnste/locale-culture-data-churn). El comportamiento del comparador *ordinal* nunca cambiará, ya que realiza una búsqueda y comparación bit a bit exacta. Sin embargo, el comportamiento del comparador de *OrdinalIgnoreCase* puede cambiar a medida que Unicode crece para abarcar más conjuntos de caracteres y corrige las omisiones en los datos de mayúsculas y minúsculas existentes.
 > - Uso: Los comparadores `StringComparison.InvariantCulture` y `StringComparison.InvariantCultureIgnoreCase` son comparadores lingüísticos que no tienen en cuenta la referencia cultural. Es decir, estos comparadores entienden conceptos como el carácter acentuado é que tiene varias representaciones subyacentes posibles y que todas esas representaciones deben tratarse igual. Sin embargo, los comparadores lingüísticos que no tienen en cuenta la referencia cultural no contendrán un tratamiento especial para \<dz\> como si fuera distinto de \<d\> o \<z\>, como se mostró anteriormente. Tampoco se trata de caracteres especiales como el alemán Eszett (ß).
 
-.NET también ofrece el *modo de globalización invariable*. Este modo de inclusión deshabilita las rutas de acceso al código que se ocupan de las rutinas de comparación y búsqueda lingüística. En este modo, todas las operaciones utilizan comportamientos *Ordinal* o *OrdinalIgnoreCase* , independientemente del argumento `CultureInfo` o `StringComparison` que proporcione el autor de la llamada. Para obtener más información, vea [Opciones de configuración del entorno de ejecución para globalización](../../core/run-time-config/globalization.md) y [Modo invariable de globalización de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
+.NET también ofrece el *modo de globalización invariable*. Este modo de inclusión deshabilita las rutas de acceso al código que se ocupan de las rutinas de comparación y búsqueda lingüística. En este modo, todas las operaciones utilizan comportamientos *Ordinal* o *OrdinalIgnoreCase*, independientemente del argumento `CultureInfo` o `StringComparison` que proporcione el autor de la llamada. Para obtener más información, vea [Opciones de configuración del entorno de ejecución para globalización](../../core/run-time-config/globalization.md) y [Modo invariable de globalización de .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 Para obtener más información, consulte [Procedimientos recomendados para la comparación de cadenas en .NET](best-practices-strings.md).
 

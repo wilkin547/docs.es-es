@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: e6690a600b7b00272471362bc087633d52a98f25
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e6212abbc0d9f64765b03c3dd2e9132e9ca96ab7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824849"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730622"
 ---
 # <a name="merge-options-in-plinq"></a>Opciones de fusión mediante combinación en PLINQ
+
 Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuencia de origen para que varios subprocesos puedan funcionar en diferentes partes al mismo tiempo, por lo general en subprocesos independientes. Si los resultados se van a usar en un subproceso, por ejemplo, en un bucle `foreach` (`For Each` en Visual Basic), los resultados de cada subproceso deben volver a combinarse en una secuencia. El tipo de combinación que PLINQ realiza depende de los operadores que están presentes en la consulta. Por ejemplo, los operadores que imponen un nuevo orden de los resultados deben almacenar en búfer todos los elementos de todos los subprocesos. Desde la perspectiva del subproceso utilizado (que también es el del usuario de la aplicación), una consulta totalmente almacenada en búfer podría ejecutarse durante un período de tiempo considerable antes de generar su primer resultado. Otros operadores, de forma predeterminada, están parcialmente almacenados en búfer; producen sus resultados en lotes. Un operador, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, no se almacena en búfer de forma predeterminada. Genera inmediatamente todos los elementos de todos los subprocesos.  
   
  Mediante el uso del método <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>, como se muestra en el ejemplo siguiente, puede proporcionar una sugerencia a PLINQ que indica qué tipo de combinación se debe llevar a cabo.  
@@ -27,6 +28,7 @@ Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuenc
  Si la consulta determinada no puede admitir la opción solicitada, simplemente se omitirá la opción. En la mayoría de los casos, no es necesario especificar una opción de combinación para una consulta PLINQ. Sin embargo, en algunos casos puede observar mediante pruebas y mediciones que una consulta se ejecuta mejor en un modo no predeterminado. Un uso común de esta opción es forzar a un operador de combinación de fragmentos a transmitir por secuencias sus resultados con el fin de proporcionar una interfaz de usuario más dinámica.  
   
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
+
  La enumeración <xref:System.Linq.ParallelMergeOptions> incluye las siguientes opciones que especifican, para las formas de consulta compatibles, cómo se produjo el resultado final de la consulta cuando se usan los resultados en un subproceso:  
   
 - `Not Buffered`  
@@ -42,6 +44,7 @@ Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuenc
      La opción <xref:System.Linq.ParallelMergeOptions.FullyBuffered> hace que el resultado de la consulta completa se almacene en búfer antes de que se produzca cualquiera de los elementos. Al usar esta opción, puede tardar más tiempo antes de que el primer elemento esté disponible en el subproceso utilizado, pero los resultados completos pueden producirse más rápido en comparación con el uso de otras opciones.  
   
 ## <a name="query-operators-that-support-merge-options"></a>Operadores de consulta que admiten opciones de combinación  
+
  En la tabla siguiente se enumeran los operadores que admiten todos los modos de opción de combinación, sujetos a las restricciones especificadas.  
   
 |Operador|Restricciones|  

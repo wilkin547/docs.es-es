@@ -8,14 +8,15 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: 8f4930e0bc1fca51164d1108b169d35c8e73987d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a10b5d01d308af3c808404608e6be1d77e6be8e0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734171"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Seguridad para subprocesos en expresiones regulares
+
 La clase <xref:System.Text.RegularExpressions.Regex> es en sí misma segura para subprocesos e inmutable (de solo lectura). Es decir, se pueden crear objetos **Regex** en cualquier subproceso y compartirlos entre varios subprocesos; los métodos de coincidencia pueden llamarse desde cualquier subproceso y no modifican nunca el estado global.  
   
  Pero los objetos de resultado (**Match** y **MatchCollection)** que devuelve **Regex** deben usarse en un único subproceso. Aunque muchos de estos objetos son lógicamente inmutables, sus implementaciones pueden retrasar el cálculo de algunos resultados para mejorar el rendimiento y, en consecuencia, los llamadores deben serializar el acceso a ellos.  

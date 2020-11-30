@@ -14,14 +14,15 @@ helpviewer_keywords:
 - .NET regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.openlocfilehash: 5a9890f9ada6a4e749c8cf5ee96d9e8668525040
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 820e6cd7fa4a60fa6adfcaf0f0ff4d25fdda0f21
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823269"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734392"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
+
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
   
 - El carácter que va detrás de ella es un carácter especial, como se muestra en la tabla de la sección siguiente. Por ejemplo, `\b` es un delimitador que indica que una coincidencia de expresión regular debería comenzar en un límite de palabras, `\t` representa un carácter de tabulación y `\x020` representa un espacio.  
@@ -32,6 +33,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 > Los escapes de caracteres se reconocen en los patrones de expresiones regulares, pero no en los patrones de reemplazo.  
   
 ## <a name="character-escapes-in-net"></a>Escapes de carácter en .NET  
+
  En la tabla siguiente se enumeran los escapes de caracteres admitidos en las expresiones regulares de .NET.  
   
 |Carácter o secuencia|Descripción|  
@@ -52,6 +54,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 |`\`|Si va seguido de un carácter que no se reconoce como carácter de escape, coincide con ese carácter. Por ejemplo, `\*` coincide con un asterisco (*) y es igual que `\x2A`.|  
   
 ## <a name="an-example"></a>Un ejemplo  
+
  En el ejemplo siguiente se muestra el uso de escapes de carácter en una expresión regular. Analiza una cadena que contiene los nombres de las ciudades más grandes del mundo y sus poblaciones en 2009. Cada nombre de ciudad se separa de su población por un carácter de tabulación (`\t`) o una barra vertical (&#124; o `\u007c`). Cada ciudad y su población está separada de la siguiente por un retorno de carro y un avance de línea.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]

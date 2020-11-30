@@ -9,14 +9,15 @@ ms.date: 03/30/2017
 - hash function
 - collections [.NET], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-ms.openlocfilehash: bb6d0802526db9b6b5673fe7d13b1f12af7acfcf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 56e8ceff05f8f9777af370301a96cd17d0286f44
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831226"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733534"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Tipos de las colecciones Hashtable y Dictionary
+
 La clase <xref:System.Collections.Hashtable?displayProperty=nameWithType> y las clases genéricas <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> y <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementan la interfaz <xref:System.Collections.IDictionary?displayProperty=nameWithType>. La clase genérica <xref:System.Collections.Generic.Dictionary%602> también implementa la interfaz genérica <xref:System.Collections.Generic.IDictionary%602>. Por lo tanto, cada elemento de esta colección es un par de clave y valor.  
   
  Un objeto <xref:System.Collections.Hashtable> consta de depósitos que contienen los elementos de la colección. Un depósito es un subgrupo virtual de elementos dentro de la colección <xref:System.Collections.Hashtable>, lo que permite buscar y recuperar más fácil y rápidamente que en la mayoría de las colecciones. Cada depósito está asociado con un código hash, que se genera usando una función hash y se basa en la clave del elemento.  

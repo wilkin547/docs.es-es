@@ -13,19 +13,21 @@ helpviewer_keywords:
 - regular expressions [.NET], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 6f11825a5d744fd03c08545213bd4d6eaa14dd6d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: aceccc019542bb1afe3082881626cfc32740a338
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830290"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733651"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Ejemplo de expresiones regulares: Buscar etiquetas HREF
+
 En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
 
 [!INCLUDE [regex](../../../includes/regex.md)]
 
 ## <a name="the-regex-object"></a>El objeto Regex
+
  Dado que el método `DumpHRefs` puede llamarse varias veces desde el código de usuario, usa el método `static` (`Shared` en Visual Basic) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Esto permite que el motor de expresiones regulares almacene en caché la expresión regular y evita la sobrecarga que se produciría al crear instancias de un nuevo objeto <xref:System.Text.RegularExpressions.Regex> cada vez que se llamara al método. Después, se usa un objeto <xref:System.Text.RegularExpressions.Match> para iterar todas las coincidencias de la cadena.  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
@@ -49,9 +51,11 @@ En el ejemplo siguiente se busca una cadena de entrada y se muestran todos los v
 |`(?<1>\S+)`|Asigna uno o varios caracteres que no sean un espacio en blanco al grupo de captura con nombre `1`.|  
   
 ## <a name="match-result-class"></a>Clase de resultado Match  
+
  Los resultados de la búsqueda se almacenan en la clase <xref:System.Text.RegularExpressions.Match>, que proporciona acceso a todas las subcadenas extraídas por la búsqueda. También recuerda la cadena buscada y la expresión regular que se usa, por lo que puede llamar al método <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> para realizar otra búsqueda desde donde terminó la anterior.  
   
 ## <a name="explicitly-named-captures"></a>Capturas con nombre explícito  
+
  En las expresiones regulares tradicionales, los paréntesis de captura se numeran secuencialmente de forma automática. Esto origina dos problemas. En primer lugar, si se modifica una expresión regular al insertar o quitar un conjunto de paréntesis, se debe reescribir todo el código que hace referencia a las capturas numeradas para reflejar la nueva numeración. En segundo lugar, puesto que a menudo se usan diferentes conjuntos de paréntesis para proporcionar expresiones alternativas para una coincidencia aceptable, puede resultar difícil determinar cuál de las dos expresiones devolvió realmente un resultado.  
   
  Para abordar estos problemas, la clase <xref:System.Text.RegularExpressions.Regex> admite la sintaxis `(?<name>…)` para capturar una coincidencia en una ranura especificada (el nombre dado a la ranura puede ser una cadena o un entero; los enteros se pueden recuperar con más rapidez). Así, las coincidencias alternativas para la misma cadena se pueden dirigir todas al mismo lugar. En caso de conflicto, la última coincidencia situada en la ranura es la coincidencia correcta. (Pero está disponible una lista completa de varias coincidencias para una única ranura. Consulte la colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> para obtener más información).  

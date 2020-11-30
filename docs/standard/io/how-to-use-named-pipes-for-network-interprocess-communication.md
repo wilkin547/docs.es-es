@@ -15,12 +15,12 @@ helpviewer_keywords:
 - impersonation [.NET], named pipes
 - full duplex communication [.NET], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-ms.openlocfilehash: aad9ede3fb257899eec7bff95b6d77eaec5b97ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 421fe06ce24fe8d78c7f8306db6a32ae83da694a
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829744"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734548"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Procedimiento para usar canalizaciones con nombre para la comunicación de red entre procesos
 
@@ -29,6 +29,7 @@ Las canalizaciones con nombre permiten la comunicación entre procesos entre un 
  Para implementar canalizaciones con nombre, use las clases <xref:System.IO.Pipes.NamedPipeServerStream> y <xref:System.IO.Pipes.NamedPipeClientStream>.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra cómo crear una canalización con nombre mediante la clase <xref:System.IO.Pipes.NamedPipeServerStream>. En este ejemplo, el proceso de servidor crea cuatro subprocesos. Cada subproceso puede aceptar una conexión de cliente. A continuación, el proceso de cliente conectado proporciona un nombre de archivo al servidor. Si el cliente tiene los permisos necesarios, el proceso de servidor abre el archivo y envía su contenido de vuelta al cliente.  
   
  [!code-cpp[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/cpp/program.cpp#01)]
@@ -36,12 +37,14 @@ Las canalizaciones con nombre permiten la comunicación entre procesos entre un 
  [!code-vb[System.IO.Pipes.NamedPipeServerStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeServerStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra el proceso de cliente, que utiliza la clase <xref:System.IO.Pipes.NamedPipeClientStream>. El cliente se conecta al proceso de servidor y envía un nombre de archivo al servidor. En el ejemplo, se utiliza la suplantación, por lo que la identidad que ejecuta la aplicación cliente debe tener permiso de acceso al archivo. A continuación, el servidor devuelve el contenido del archivo al cliente. El contenido del archivo se muestra en la consola.  
   
  [!code-csharp[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/vb/program.vb#01)]  
   
 ## <a name="robust-programming"></a>Programación sólida  
+
  Los procesos de servidor y cliente de este ejemplo están diseñados para ejecutarse en el mismo equipo, por lo que el nombre del servidor proporcionado al objeto <xref:System.IO.Pipes.NamedPipeClientStream> es `"."`. Si los procesos de servidor y cliente estuvieran en equipos independientes, `"."` se reemplazaría por el nombre de red del equipo que ejecuta el proceso de servidor.  
   
 ## <a name="see-also"></a>Vea también

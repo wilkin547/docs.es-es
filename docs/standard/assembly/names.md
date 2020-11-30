@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [.NET], assemblies
 - assemblies [.NET], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-ms.openlocfilehash: 136c3b7a06ce72be02e00bcc4d2354160178468c
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 9aa94b4ee54c0a663c9f38392d37369af9f27e48
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687572"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731454"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 
@@ -48,14 +48,15 @@ La versión se corresponde al número de versión de todos los ensamblados de .N
 > El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas de Windows SDK controlan los nombres de ensamblado sin distinción entre mayúsculas y minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.
 
 ## <a name="name-application-components"></a>Componentes de la aplicación de nombre
+
  El runtime no tiene en cuenta el nombre de archivo a la hora de determinar la identidad de un ensamblado. La identidad del ensamblado, que se compone del nombre del ensamblado, la versión, la referencia cultural y el nombre seguro, debe ser clara para el runtime.
 
- Por ejemplo, si tiene un ensamblado denominado *myAssembly.exe* que hace referencia a un ensamblado llamado *myAssembly.dll* , el enlace se produce correctamente si ejecuta *myAssembly.exe*. Sin embargo, si otra aplicación ejecuta *myAssembly.exe* con el método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, el entorno de ejecución determina que `myAssembly` ya se ha cargado cuando *myAssembly.exe* solicita enlazar a `myAssembly`. En este caso, *myAssembly.dll* no se carga nunca. Como *myAssembly.exe* no contiene el tipo solicitado, se produce una excepción <xref:System.TypeLoadException>.
+ Por ejemplo, si tiene un ensamblado denominado *myAssembly.exe* que hace referencia a un ensamblado llamado *myAssembly.dll*, el enlace se produce correctamente si ejecuta *myAssembly.exe*. Sin embargo, si otra aplicación ejecuta *myAssembly.exe* con el método <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, el entorno de ejecución determina que `myAssembly` ya se ha cargado cuando *myAssembly.exe* solicita enlazar a `myAssembly`. En este caso, *myAssembly.dll* no se carga nunca. Como *myAssembly.exe* no contiene el tipo solicitado, se produce una excepción <xref:System.TypeLoadException>.
 
  Para evitar este problema, asegúrese de que los ensamblados que componen la aplicación no tengan el mismo nombre de ensamblado o coloque aquellos con el mismo nombre en directorios distintos.
 
 > [!NOTE]
-> En .NET Framework, si coloca un ensamblado con nombre seguro en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del propio ensamblado (sin la extensión del nombre del archivo, como *.exe* o *.dll* ). Por ejemplo, si el nombre de archivo de un ensamblado es *myAssembly.dll* , el nombre del ensamblado debe ser `myAssembly`. Los ensamblados privados implementados solamente en el directorio de la aplicación raíz pueden tener un nombre de ensamblado diferente al nombre de archivo.
+> En .NET Framework, si coloca un ensamblado con nombre seguro en la caché global de ensamblados, el nombre de archivo del ensamblado debe coincidir con el nombre del propio ensamblado (sin la extensión del nombre del archivo, como *.exe* o *.dll*). Por ejemplo, si el nombre de archivo de un ensamblado es *myAssembly.dll*, el nombre del ensamblado debe ser `myAssembly`. Los ensamblados privados implementados solamente en el directorio de la aplicación raíz pueden tener un nombre de ensamblado diferente al nombre de archivo.
 
 ## <a name="see-also"></a>Vea también
 

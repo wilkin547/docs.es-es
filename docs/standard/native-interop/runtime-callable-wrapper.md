@@ -9,14 +9,15 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 985f6e5057a06ac9dcadc0e2c1e4d7743d96f035
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535864"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95730232"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
+
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
   
  CLR crea exactamente un contenedor RCW para cada objeto COM, independientemente del número de referencias que existan en ese objeto. CLR mantiene un único contenedor RCW por proceso para cada objeto.  Si crea un contenedor RCW en un dominio de aplicación o apartamento y después pasa una referencia a otro dominio de aplicación o apartamento, se usará un proxy para el primer objeto.  Como se muestra en la siguiente ilustración, cualquier número de clientes administrados puede contener una referencia a los objetos COM que exponen las interfaces INew e INewer.  
@@ -32,6 +33,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
  El contenedor estándar impone las reglas de cálculo de referencias integradas. Por ejemplo, cuando un cliente .NET pasa un tipo String como parte de un argumento a un objeto no administrado, el contenedor convierte la cadena en un tipo BSTR. Si el objeto COM devuelve una cadena BSTR a su llamador administrado, el llamador recibe una cadena. Tanto el cliente como el servidor envían y reciben datos que les resultan familiares. Otros tipos no requieren conversión. Por ejemplo, un contenedor estándar pasará siempre un entero de 4 bytes entre el código administrado y no administrado sin convertir el tipo.  
   
 ## <a name="marshaling-selected-interfaces"></a>Serialización de interfaces seleccionadas  
+
  El objetivo principal del [contenedor RCW](runtime-callable-wrapper.md) es ocultar las diferencias entre los modelos de programación administrada y no administrada. Para crear una transición fluida, el contenedor RCW consume interfaces COM seleccionadas sin exponerlas al cliente .NET, tal y como se muestra en la siguiente ilustración.
 
  En la imagen siguiente se muestran las interfaces COM y el contenedor RCW:

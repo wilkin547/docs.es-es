@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 97cc7558f51b7bcbdb5201ef0f0c463da8f2c070
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9c4fbba63428e04b7b29a803061f288ca6ee5031
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822612"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734145"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Asignar la jerarquía de objetos a datos XML
+
 Cuando un documento XML está en la memoria, la representación conceptual es un árbol. Al programar, hay una jerarquía de objetos para tener acceso a los nodos del árbol. En el ejemplo siguiente se muestra cómo se convierte el contenido XML en nodos.  
   
  A medida que el contenido XML se lee en el modelo de objetos de documento (DOM), las partes se traducen en nodos, que mantienen metadatos adicionales acerca de sí mismos, como su tipo y valores. El tipo de nodo es su objeto y es lo que determina qué acciones pueden realizarse y qué propiedades pueden establecerse o recuperarse.  

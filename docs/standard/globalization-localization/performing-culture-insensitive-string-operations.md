@@ -10,12 +10,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-ms.openlocfilehash: 868f36a1025f0b121a8765edf50bb42679736240
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a418432dfaba9ab070ddb6dc862dcbd798c16343
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829770"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732221"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Realizar operaciones de cadena que no distinguen entre referencias culturales
 
@@ -24,6 +24,7 @@ La mayoría de los métodos de .NET que realizan operaciones de cadenas que no d
  En esta sección se proporcionan los artículos siguientes para mostrar cómo realizar operaciones de cadenas que no distinguen entre referencias culturales con métodos de .NET que tienen en cuenta las referencias culturales de manera predeterminada.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Realizar comparaciones de cadenas que no distinguen entre referencias culturales](performing-culture-insensitive-string-comparisons.md)  
  Se describe cómo usar los métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> y <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para realizar comparaciones de cadenas que no distinguen entre referencias culturales.  
   
@@ -37,6 +38,7 @@ La mayoría de los métodos de .NET que realizan operaciones de cadenas que no d
  Se describe cómo usar los métodos <xref:System.Array.Sort%2A?displayProperty=nameWithType> y <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> para realizar operaciones en matrices que no distinguen entre referencias culturales.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
+
  [Operaciones de cadenas que no distinguen referencias culturales](culture-insensitive-string-operations.md)  
  Describe por qué debe tomar en cuenta la referencia cultural cuando realiza operaciones en cadenas y proporciona guías que indiquen cuándo realizar operaciones que tienen en cuenta las referencias culturales y cuándo las que no distinguen entre referencias culturales.
 

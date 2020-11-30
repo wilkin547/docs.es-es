@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-ms.openlocfilehash: 343f633b3807391b8deea28f56a5166ac3d8c8c5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e4d40568710498df811954c86bb36382d93057a3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823867"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733547"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparaciones y ordenaciones en colecciones
 
@@ -26,6 +26,7 @@ Las clases <xref:System.Collections> realizan comparaciones en casi todos los pr
 Normalmente, las colecciones usan un comparador de igualdad o un comparador de orden. En las comparaciones se usan dos constructores.
 
 <a name="BKMK_Checkingforequality"></a>
+
 ## <a name="check-for-equality"></a>Comprobación de la igualdad
 
 Los métodos como `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>y `Remove` utilizan un comparador de igualdad para los elementos de la colección. Si la colección es genérica, se compara la igualdad de los elementos según las siguientes directrices:
@@ -37,6 +38,7 @@ Los métodos como `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:
 Además, algunas sobrecargas de constructores para colecciones de diccionario aceptan una implementación de <xref:System.Collections.Generic.IEqualityComparer%601>, que se utiliza para comparar la igualdad de claves. Para ver un ejemplo, consulte el constructor <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A> .
 
 <a name="BKMK_Determiningsortorder"></a>
+
 ## <a name="determine-sort-order"></a>Determinación del criterio de ordenación
 
 Los métodos como `BinarySearch` y `Sort` utilizan un comparador de orden para los elementos de la colección. Las comparaciones pueden ser entre elementos de la colección o entre un elemento y un valor especificado. Para comparar objetos, existe el concepto de un `default comparer` y un `explicit comparer`.
@@ -54,6 +56,7 @@ Para proporcionar comparaciones explícitas, algunos métodos aceptan una implem
 La configuración de la referencia cultural actual del sistema puede afectar a las comparaciones y ordenaciones de una colección. De forma predeterminada, las comparaciones y ordenaciones de las clases **colecciones** tienen en cuenta la referencia cultural. Para omitir la configuración de referencia cultural y así obtener resultados de comparación y ordenación coherentes, utilice <xref:System.Globalization.CultureInfo.InvariantCulture%2A> con sobrecargas de miembros que acepten un <xref:System.Globalization.CultureInfo>. Para obtener más información, consulte [Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en colecciones](../globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) y [Realizar operaciones de cadenas que no tienen en cuenta las referencias culturales en matrices](../globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md).
 
 <a name="BKMK_Equalityandsortexample"></a>
+
 ## <a name="equality-and-sort-example"></a>Ejemplo de igualdad y ordenación
 
 El código siguiente muestra una implementación de <xref:System.IEquatable%601> y <xref:System.IComparable%601> en un objeto comercial simple. Además, cuando el objeto se almacena en una lista y se ordena, la llamada al método <xref:System.Collections.Generic.List%601.Sort> implica el uso del comparador predeterminado para el tipo `Part` y el método <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> implementado mediante el uso de un método anónimo.

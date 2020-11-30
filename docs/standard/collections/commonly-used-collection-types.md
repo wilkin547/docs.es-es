@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 2ab86a6cbf0b92ecdaf0a97041d493f9494e3225
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1b992837bcb32537f24643ef4781b6d170a058d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831252"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733560"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de colección utilizados normalmente
+
 Los tipos de colecciones son las variaciones comunes de las colecciones de datos, como tablas hash, colas, pilas, bolsas, diccionarios y listas.  
   
  Las colecciones se basan en las interfaces <xref:System.Collections.ICollection>, <xref:System.Collections.IList>, <xref:System.Collections.IDictionary> o en sus equivalentes genéricos. La interfaz <xref:System.Collections.IList> y la interfaz <xref:System.Collections.IDictionary> se derivan ambas de la interfaz <xref:System.Collections.ICollection>; por lo tanto, todas las colecciones se basan en la interfaz <xref:System.Collections.ICollection> directa o indirectamente. En colecciones basadas en la interfaz <xref:System.Collections.IList> (como <xref:System.Array>, <xref:System.Collections.ArrayList> o <xref:System.Collections.Generic.List%601>) o directamente en la interfaz <xref:System.Collections.ICollection> (como <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> o <xref:System.Collections.Generic.LinkedList%601>), cada elemento contiene un solo valor. En colecciones basadas en la interfaz <xref:System.Collections.IDictionary> (como las clases <xref:System.Collections.Hashtable> y <xref:System.Collections.SortedList>, y las clases genéricas <xref:System.Collections.Generic.Dictionary%602> y <xref:System.Collections.Generic.SortedList%602>), o en las clases <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, cada elemento contiene una clave y un valor.  La clase <xref:System.Collections.ObjectModel.KeyedCollection%602> es única porque es una lista de valores con claves insertadas en los valores y, por lo tanto, se comporta como una lista y como un diccionario.  
@@ -40,6 +41,7 @@ Los tipos de colecciones son las variaciones comunes de las colecciones de datos
 |[Genéricos](../generics/index.md)|Se describe la característica de los genéricos proporcionados por .NET, incluidos los delegados, las colecciones y las interfaces genéricas. Proporciona vínculos a la documentación de características para C#, Visual Basic y Visual C++, así como a tecnologías de apoyo como la reflexión.|  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

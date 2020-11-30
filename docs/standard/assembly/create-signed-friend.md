@@ -6,14 +6,15 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4c441501ae0f939f69ac863a990d6e392bd35fc4
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378543"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734275"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>Procedimiento para crear ensamblados de confianza firmados
+
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>Creación de un ensamblado firmado y un ensamblado de confianza  
@@ -125,6 +126,7 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
    El programa imprime la cadena **Class1.Test**.  
   
 ## <a name="net-security"></a>Seguridad de .NET  
+
  Existen similitudes entre el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> y la clase <xref:System.Security.Permissions.StrongNameIdentityPermission>. La diferencia principal es que <xref:System.Security.Permissions.StrongNameIdentityPermission> puede exigir permisos de seguridad para ejecutar una sección determinada de código, mientras el atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> controla la visibilidad de los miembros y tipos `internal` (C#) o `Friend` (Visual Basic).  
   
 ## <a name="see-also"></a>Vea también

@@ -14,14 +14,15 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 46f780dff948d290ee7906f8de7e74b03a404cc5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 75d37527507b596d6017171279e84b8348489831
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831044"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733586"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
+
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
   
 |Cuantificador expansivo|Cuantificador diferido|Descripción|  
@@ -39,12 +40,14 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 > El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada. Para obtener más información sobre este comportamiento y sus soluciones alternativas, consulte [Retroceso](backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Cuantificadores de expresiones regulares  
+
  En las secciones siguientes se enumeran los cuantificadores admitidos en expresiones regulares de .NET.  
   
 > [!NOTE]
 > Si los caracteres *, +, ?, { y } se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyan en una [clase de caracteres](character-classes-in-regular-expressions.md). Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape. Por ejemplo, la cadena `\*` en un patrón de expresión regular se interpreta como un carácter de asterisco literal ("\*").  
   
 ### <a name="match-zero-or-more-times-"></a>Coincidir cero o más veces: *  
+
  El cuantificador `*` coincide con el elemento anterior cero o más veces. Equivale al cuantificador `{0,}`. `*` es un cuantificador expansivo cuyo equivalente diferido es `*?`.  
   
  En el ejemplo siguiente se muestra esta expresión regular. De los nueve grupos de dígitos de la cadena de entrada, cinco coinciden con el patrón y cuatro (`95`, `929`, `9219` y `9919`) no coinciden.  
@@ -62,6 +65,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-one-or-more-times-"></a>Coincidir una o más veces: +  
+
  El cuantificador `+` coincide con el elemento anterior una o más veces. Equivale a `{1,}`. `+` es un cuantificador expansivo cuyo equivalente diferido es `+?`.  
   
  Por ejemplo, la expresión regular `\ban+\w*?\b` intenta coincidir con palabras completas que empiezan por la letra `a` seguida de una o más instancias de la letra `n`. En el ejemplo siguiente se muestra esta expresión regular. La expresión regular coincide con las palabras `an`, `annual`, `announcement` y `antique`, y no coincide con `autumn` y `all`.  
@@ -79,6 +83,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-zero-or-one-time-"></a>Coincidir cero o una vez: ?  
+
  El cuantificador `?` coincide con el elemento anterior cero o una vez. Equivale a `{0,1}`. `?` es un cuantificador expansivo cuyo equivalente diferido es `??`.  
   
  Por ejemplo, la expresión regular `\ban?\b` intenta coincidir con palabras completas que empiezan por la letra `a` seguida de cero o una instancia de la letra `n`. En otras palabras, intenta coincidir con las palabras `a` y `an`. En el ejemplo siguiente se muestra esta expresión regular.  
@@ -95,6 +100,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-exactly-n-times-n"></a>Coincidir exactamente n veces: {n}  
+
  El cuantificador `{`*n*`}` coincide con el elemento anterior exactamente *n* veces, donde *n* es un entero. `{`*n*`}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`}?`.  
   
  Por ejemplo, la expresión regular `\b\d+\,\d{3}\b` intenta coincidir con un límite de palabra seguido de uno o más dígitos decimales, seguidos de tres dígitos decimales, seguidos de un límite de palabra. En el ejemplo siguiente se muestra esta expresión regular.  
@@ -113,6 +119,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-at-least-n-times-n"></a>Coincidir al menos n veces: {n,}  
+
  El cuantificador `{`*n*`,}` coincide con el elemento anterior al menos *n*, donde *n* es un entero. `{`*n*`,}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,}?`.  
   
  Por ejemplo, la expresión regular `\b\d{2,}\b\D+` intenta coincidir con un límite de palabra seguido de por lo menos dos dígitos, seguidos de un límite de palabra y de un carácter que no sea un dígito. En el ejemplo siguiente se muestra esta expresión regular. La expresión regular no coincide con la frase `"7 days"` porque solo contiene un dígito decimal, pero coincide correctamente con las frases `"10 weeks and 300 years"`.  
@@ -130,6 +137,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\D+`|Coincide con al menos un carácter de dígito no decimal.|  
   
 ### <a name="match-between-n-and-m-times-nm"></a>Coincidir de n a m veces: {n,m}  
+
  El cuantificador `{`*n*`,`*m*`}` coincide con el elemento anterior al menos *n* veces, pero no más de *m* veces, donde *n* y *m* son enteros. `{`*n*`,`*m*`}` es un cuantificador expansivo cuyo equivalente diferido es `{`*n*`,`*m*`}?`.  
   
  En el ejemplo siguiente, la expresión regular `(00\s){2,4}` intenta coincidir con dos ceros seguidos de un espacio que se repitan de dos a cuatro veces. Observe que la parte final de la cadena de entrada incluye este patrón cinco veces en lugar del máximo de cuatro. Pero solo la parte inicial de esta subcadena (hasta el espacio y el quinto par de ceros) coincide con el patrón de la expresión regular.  
@@ -138,6 +146,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
  [!code-vb[RegularExpressions.Quantifiers#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#6)]  
   
 ### <a name="match-zero-or-more-times-lazy-match-"></a>Coincidir cero o más veces (coincidencia diferida): *?  
+
  El cuantificador `*?` coincide con el elemento anterior cero o más veces, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `*`.  
   
  En el ejemplo siguiente, la expresión regular `\b\w*?oo\w*?\b` coincide con todas las palabras que contienen la cadena `oo`.  
@@ -156,6 +165,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finaliza en un límite de palabras.|  
   
 ### <a name="match-one-or-more-times-lazy-match-"></a>Coincidir una o más veces (coincidencia diferida): +?  
+
  El cuantificador `+?` coincide con el elemento anterior una o más veces, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `+`.  
   
  Por ejemplo, la expresión regular `\b\w+?\b` coincide con uno o más caracteres separados por límites de palabra. En el ejemplo siguiente se muestra esta expresión regular.  
@@ -164,6 +174,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
  [!code-vb[RegularExpressions.Quantifiers#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#8)]  
   
 ### <a name="match-zero-or-one-time-lazy-match-"></a>Coincidir cero o una vez (coincidencia diferida): ??  
+
  El cuantificador `??` coincide con el elemento anterior cero o una vez, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `?`.  
   
  Por ejemplo, la expresión regular `^\s*(System.)??Console.Write(Line)??\(??` intenta coincidir con las cadenas "Console.Write" o "Console.WriteLine". La cadena también puede incluir "System." antes de "Console", y puede ir seguida de un paréntesis de apertura. La cadena debe estar al principio de una línea, aunque puede ir precedida de un espacio en blanco. En el ejemplo siguiente se muestra esta expresión regular.  
@@ -183,6 +194,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\(??`|Coincide con cero o con una repetición del paréntesis de apertura.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Coincidir exactamente n veces (coincidencia diferida): {n}?  
+
  El cuantificador `{`*n*`}?` coincide con el elemento anterior exactamente `n` veces, donde *n* es un entero. Es el equivalente diferido del cuantificador expansivo `{`*n*`}`.  
   
  En el ejemplo siguiente, la expresión regular `\b(\w{3,}?\.){2}?\w{3,}?\b` se usa para identificar la dirección de un sitio web. Observe que coincide con "www.microsoft.com" y con "msdn.microsoft.com", pero no coincide con "mywebsite" ni con "mycompany.com".  
@@ -200,11 +212,13 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
   
 ### <a name="match-at-least-n-times-lazy-match-n"></a>Coincidir al menos n veces (coincidencia diferida): {n,}?  
+
  El cuantificador `{`*n*`,}?` coincide con el elemento anterior al menos `n` veces, donde *n* es un entero, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `{`*n*`,}`.  
   
  Vea el ejemplo del cuantificador `{`*n*`}?` en la sección anterior para obtener una ilustración. La expresión regular de ese ejemplo usa el cuantificador `{`*n*`,}` para coincidir con una cadena que tenga al menos tres caracteres seguidos de un punto.  
   
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Coincidir de n a m veces (coincidencia diferida): {n,m}?  
+
  El cuantificador `{`*n*`,`*m*`}?` coincide con el elemento anterior de `n` a `m` veces, donde *n* y *m* son enteros, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `{`*n*`,`*m*`}`.  
   
  En el ejemplo siguiente, la expresión regular `\b[A-Z](\w*?\s*?){1,10}[.!?]` coincide con las frases que contengan de una a diez palabras. Coincidencia con todas las frases de la cadena de entrada, excepto con una frase que contiene 18 palabras.  
@@ -223,7 +237,9 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`[.!?]`|Coincide con cualquiera de los caracteres de puntuación ".", "!" o "?".|  
   
 <a name="Greedy"></a>
+
 ## <a name="greedy-and-lazy-quantifiers"></a>Cuantificadores expansivos y diferidos  
+
  Varios cuantificadores tienen dos versiones:  
   
 - Una versión expansiva.  
@@ -249,6 +265,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
  En la mayoría de los casos, las expresiones regulares con cuantificadores expansivos y diferidos devuelven las mismas coincidencias. Suelen devolver resultados diferentes cuando se usan con el metacarácter comodín (`.`), que coincide con cualquier carácter.  
   
 ## <a name="quantifiers-and-empty-matches"></a>Cuantificadores y coincidencias vacías  
+
  Los cuantificadores `*`, `+` y `{`*n*`,`*m*`}` y sus equivalentes diferidos nunca se repiten tras una coincidencia vacía cuando no se ha encontrado el número mínimo de capturas. Esta regla impide que los cuantificadores entren en bucles infinitos en coincidencias de subexpresiones vacías cuando el número máximo de posibles capturas de grupo es infinito o cerca de infinito.  
   
  Por ejemplo, en el código siguiente se muestra el resultado de una llamada al método <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> con el patrón de expresión regular `(a?)*` que coincide cero o más veces con cero o un carácter "a". Observe que el único grupo de captura realiza una captura de todos los caracteres "a", así como de <xref:System.String.Empty?displayProperty=nameWithType>, pero no hay una segunda coincidencia vacía, ya que la primera coincidencia vacía hace que el cuantificador deje de repetirse.  

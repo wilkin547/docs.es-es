@@ -3,14 +3,15 @@ title: Procedimiento Carga y descarga de ensamblados
 description: CLR carga automáticamente los ensamblados .NET a los que hace referencia un programa. También puede cargar dinámicamente ensamblados específicos en el dominio de aplicación actual.
 ms.date: 08/19/2019
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: e6f1ede055dd3f68bced4eba527b2fc65f7d5715
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: fe1a5fe63361620f8ab99ec8469169ed2213c0ee
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378678"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731493"
 ---
 # <a name="how-to-load-and-unload-assemblies"></a>Procedimiento Carga y descarga de ensamblados
+
 Common Language Runtime cargará automáticamente los ensamblados a los que hace referencia el programa, pero también es posible cargar dinámicamente ensamblados específicos en el dominio de aplicación actual. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).
 
 No existe ninguna forma de descargar un ensamblado individual sin descargar todos los dominios de aplicación que lo contienen en .NET Framework. Aunque el ensamblado esté fuera de ámbito, el archivo de ensamblado actual permanecerá cargado hasta que se descarguen todos los dominios de aplicación que lo contienen. En .NET Core, la clase <xref:System.Runtime.Loader.AssemblyLoadContext?displayProperty=nameWithType> controla la descarga de ensamblados. Para obtener más información, consulte [Uso y depuración de la descargabilidad de ensamblado en .NET Core](unloadability.md).

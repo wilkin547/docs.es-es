@@ -12,14 +12,15 @@ helpviewer_keywords:
 - event handling [.NET], with multiple events
 - events [.NET], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: c62073e26ff0831bb582c9e64c16b7ec7c05b26e
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7484ad06e80e6ce131f48431fbdd1e812ce0bfa0
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94828380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734327"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
+
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  
   
  Para almacenar los delegados de cada evento, puede utilizar la clase <xref:System.ComponentModel.EventHandlerList> o implementar su propia colección. La clase de colección debe proporcionar métodos para establecer, obtener acceso y recuperar el delegado del controlador de eventos basándose en la clave del evento. Por ejemplo, se puede utilizar una clase <xref:System.Collections.Hashtable> o derivar una clase personalizada a partir de la clase <xref:System.Collections.DictionaryBase>. No es necesario exponer los detalles de implementación de la colección de delegados fuera de la clase.  
@@ -39,6 +40,7 @@ Para poder utilizar propiedades de evento, hay que definirlas en la clase que pr
 5. Utilice las propiedades de evento públicas para agregar y quitar delegados de controlador de eventos en las clases que controlan los eventos.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo de C#, se implementan las propiedades de evento `MouseDown` y `MouseUp` mediante el uso de <xref:System.ComponentModel.EventHandlerList> para almacenar el delegado de cada evento. Las palabras clave de las construcciones de propiedades de evento están en negrita.  
   
  [!code-cpp[Conceptual.Events.Other#31](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.events.other/cpp/example3.cpp#31)]

@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d94e041-d340-4ddf-9a2c-d7319e3f4f86
-ms.openlocfilehash: 1e47bee50f7fa51df82bb37ed3049765f8f360d2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 5e0f5de6fd956bcaaf30b592e04c432a5f824c52
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830082"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734106"
 ---
 # <a name="object-comparison-using-xmlnametable"></a>Comparación de objetos mediante XmlNameTable
+
 Cuando se crean **XmlDocuments**, se crea una tabla de nombres específicamente para dichos documentos. Cuando se carga XML en el documento o cuando se crean elementos o atributos, los nombres de los atributos y elementos se colocan en la tabla **XmlNameTable**. También puede crear una clase **XmlDocument** mediante una tabla **NameTable** existente de otro documento. Cuando se crean **XmlDocuments** con el constructor que acepta un parámetro **XmlNameTable**, el documento tiene acceso a los nombres de nodo, espacios de nombres y prefijos ya almacenados en la tabla **XmlNameTable**. Independientemente de cómo se carguen los nombres en la tabla, una vez que se almacenan en ella, pueden compararse rápidamente mediante la comparación de objetos, en lugar de a través de la comparación de cadenas. También se pueden agregar cadenas a la tabla de nombres con <xref:System.Xml.NameTable.Add%2A>. En el ejemplo de código siguiente se muestra una tabla de nombres creada y la cadena **MyString** que se agrega a la tabla. Después, se crea una clase **XmlDocument** con dicha tabla y los nombres de los elementos y atributos de **Myfile.xml** se agregan a la tabla de nombres existente.  
   
 ```vb  

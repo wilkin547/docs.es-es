@@ -12,14 +12,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: c50a372ee3434fcd7f72ad707ca82c5c9ad8a5c8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d848a989378ed40df794554f3a0a9a7f135fbd4e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823386"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95732195"
 ---
 # <a name="compose-streams"></a>Redactar flujos
+
 Una *memoria auxiliar* es un medio de almacenamiento, como un disco o memoria. Cada memoria auxiliar distinta implementa su propia secuencia como una implementación de la clase <xref:System.IO.Stream>.
 
 Cada tipo de secuencia lee y escribe los bytes desde y en su memoria auxiliar determinada. Los flujos que se conectan a las memorias auxiliares reciben el nombre de *secuencias base*. Las secuencias base tienen constructores con los parámetros necesarios para conectar el flujo a la memoria auxiliar. Por ejemplo, <xref:System.IO.FileStream> tiene constructores que especifican un parámetro de ruta de acceso, que especifica cómo los procesos compartirán el archivo.  
@@ -32,12 +33,14 @@ En los ejemplos de código siguientes se crea una clase **FileStream** en torno 
 >En los ejemplos, se da por supuesto que un archivo llamado *MyFile.txt* ya existe en la misma carpeta que la aplicación.  
 
 ## <a name="example-use-streamreader"></a>Ejemplo: Usar StreamReader
+
 En el siguiente ejemplo se crea una clase <xref:System.IO.StreamReader> para leer los caracteres desde **FileStream**, que se pasa a **StreamReader** como argumento de su constructor. A continuación, <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType> lee hasta que <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType> no encuentra más caracteres.  
   
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
 ## <a name="example-use-binaryreader"></a>Ejemplo: Usar BinaryReader
+
 En el siguiente ejemplo se crea una clase <xref:System.IO.BinaryReader> para leer los bytes desde **FileStream**, que se pasa a **BinaryReader** como argumento de su constructor. A continuación, <xref:System.IO.BinaryReader.ReadByte%2A> lee hasta que <xref:System.IO.BinaryReader.PeekChar%2A> no encuentra más bytes.  
   
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]

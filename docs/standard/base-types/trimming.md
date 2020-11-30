@@ -15,14 +15,15 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 8bc2980aa887dc652485e135058b9f6f718e7b45
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9b0fd87bfec747f8dd09d3972167374a1a2daffa
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831278"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734196"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Recorte y eliminación de caracteres de cadenas en .NET
+
 Si va a analizar una frase en las palabras que la forman, el resultado pueden ser palabras con espacios en blanco delante y detrás. En este caso, puede usar uno de los métodos de recorte de la clase **System.String** para quitar espacios u otros caracteres de una posición especificada de la cadena. En la tabla siguiente se describen los métodos de recorte disponibles.  
   
 |Nombre del método|Usar|  

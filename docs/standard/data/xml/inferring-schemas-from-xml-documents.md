@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 1f7b8c8b3cf51aa707a17b3a9e58c6a8c0d3d833
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4540e1706cbd3dad9490f100d7e8fa58e80a9206
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830238"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733443"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML
+
 Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInference> para deducir un lenguaje de definición de esquema XML (XSD) a partir de la estructura de un documento XML.  
   
 ## <a name="the-schema-inference-process"></a>El proceso de deducción de esquema  
+
  La clase <xref:System.Xml.Schema.XmlSchemaInference> del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> se utiliza para generar uno o más lenguajes de definición de esquema XML (XSD) a partir de la estructura de un documento XML. Los esquemas generados podrían utilizarse para validar el documento XML original.  
   
  Mientras un documento XML es procesado por la clase <xref:System.Xml.Schema.XmlSchemaInference>, la clase <xref:System.Xml.Schema.XmlSchemaInference> hace suposiciones sobre los componentes de esquema que describen los elementos y atributos en el documento XML. La clase <xref:System.Xml.Schema.XmlSchemaInference> también deduce componentes de esquema de forma restrictiva deduciendo el tipo más restrictivo para un elemento o atributo particular. A medida que se reúne más información para el documento XML, estas restricciones se pierden deduciendo tipos menos restrictivos. El tipo menos restrictivo que puede deducirse es `xs:string`.  
@@ -34,6 +36,7 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
  En el ejemplo de arriba, cuando el atributo `attribute1` se encuentra con un valor de `6` mediante el proceso <xref:System.Xml.Schema.XmlSchemaInference>, se asume que es del tipo `xs:unsignedByte`. Cuando el segundo elemento `parent` se encuentra mediante el proceso <xref:System.Xml.Schema.XmlSchemaInference>, la restricción se pierde modificando el tipo `xs:string` porque el valor del atributo `attribute1` es ahora `A`. De forma similar, el atributo `minOccurs` para todos los elementos `child` deducidos en el esquema se pierden a `minOccurs="0"` porque el segundo elemento primario no tiene elementos secundarios.  
   
 ## <a name="inferring-schemas-from-xml-documents"></a>Deducción de esquemas a partir de documentos XML  
+
  La clase <xref:System.Xml.Schema.XmlSchemaInference> utiliza dos métodos sobrecargados <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> para deducir un esquema a partir de un documento XML.  
   
  El primer método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> se utiliza para crear un esquema basado en un documento XML. El segundo método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> se utiliza para deducir un esquema que describa múltiples documentos XML. Por ejemplo, puede introducir múltiples documentos XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A?displayProperty=nameWithType> uno por uno para producir un esquema que describa el conjunto entero de documentos XML.  
@@ -65,6 +68,7 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
  [!code-xml[XmlSchemaInferenceExamples#16](../../../../samples/snippets/xml/VS_Snippets_Data/XmlSchemaInferenceExamples/XML/InferSchema2.xml#16)]  
   
 ## <a name="inline-schemas"></a>Esquemas alineados  
+
  Si un lenguaje de definición de esquema XML alineado (XSD) se encuentra durante el proceso <xref:System.Xml.Schema.XmlSchemaInference>, se inicia <xref:System.Xml.Schema.XmlSchemaInferenceException>. Por ejemplo, el siguiente esquema alineado inicia <xref:System.Xml.Schema.XmlSchemaInferenceException>.  
   
 ```xml  
@@ -77,6 +81,7 @@ Este tema describe cómo utilizar la clase <xref:System.Xml.Schema.XmlSchemaInfe
 ```  
   
 ## <a name="schemas-that-cannot-be-refined"></a>Esquemas que no pueden refinarse  
+
  Existen construcciones de esquema XML de W3C que el proceso <xref:System.Xml.Schema.XmlSchemaInference> de lenguaje de definición de esquema XML (XSD) no puede controlar si se da un tipo para refinar y provoca que se inicie una excepción. Como un tipo complejo cuyo compositor de nivel superior es una secuencia. En el modelo de objeto de esquema (SOM), esto corresponde a <xref:System.Xml.Schema.XmlSchemaComplexType> cuya propiedad <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> no es una instancia de <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
 ## <a name="see-also"></a>Vea también

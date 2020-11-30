@@ -2,14 +2,15 @@
 title: Información general sobre el Modelo de objetos de esquema XML
 ms.date: 03/30/2017
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-ms.openlocfilehash: c54f92ede64e59478a0e9bfd919666caa9481137
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 62560b641c43f2210b052e9880f2d945dbae0c6f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819219"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95733105"
 ---
 # <a name="xml-schema-object-model-overview"></a>Información general sobre el Modelo de objetos de esquema XML
+
 El Modelo de objetos de esquema (SOM) de Microsoft .NET Framework es una API enriquecida que le permite crear, editar y validar esquemas mediante programación. El SOM funciona en los documentos de esquemas XML de forma similar a cómo funciona el Modelo de objetos de documento (DOM) en los documentos XML. Los documentos de esquemas XML son archivos XML válidos que, una vez cargados en el SOM, transmiten significado sobre la estructura y la validez de otros documentos XML que cumplen el esquema.  
   
  Un esquema es un documento XML que define una clase de documentos XML especificando la estructura o el modelo de los documentos XML de un esquema en particular. Un esquema identifica las restricciones del contenido de los documentos XML y describe el vocabulario (reglas o gramática) que deben seguir los documentos conforme a XML para que se consideren válidos en ese esquema en particular. La validación de un documento XML es el proceso que garantiza que el documento sigue la gramática que especifica el esquema.  
@@ -29,6 +30,7 @@ El Modelo de objetos de esquema (SOM) de Microsoft .NET Framework es una API enr
 - Edite dinámicamente un esquema que se pueda compilar y guardar para utilizarlo en la validación de documentos de instancias XML.  
   
 ## <a name="the-schema-object-model"></a>El Modelo de objetos de esquema  
+
  El SOM consta de un amplio conjunto de clases en el espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> que se corresponde a los elementos de un esquema XML. Por ejemplo, el elemento `<xsd:schema>...</xsd:schema>` se asigna a la clase <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> y toda la información que puede contener un elemento `<xsd:schema/>` se puede representar utilizando la clase <xref:System.Xml.Schema.XmlSchema>. Igualmente, los elementos `<xsd:element>...</xsd:element>` y `<xsd:attribute>...</xsd:attribute>` se asignan a las clases <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> y <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType>, respectivamente. Esta asignación continúa para todos los elementos de un esquema XML que creen un Modelo de objetos de esquema XML en el espacio de nombres <xref:System.Xml.Schema>, tal y como se ilustra en el siguiente diagrama.  
   
  ![Modelo de objetos System.Xml.Schema](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  

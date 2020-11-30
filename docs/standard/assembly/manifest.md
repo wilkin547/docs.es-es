@@ -9,16 +9,16 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-ms.openlocfilehash: 4b3bf6f7f6b8cf459a13dd0aca45069f82d01130
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: 365c21c6ea35683d7d3fad777cab3527103903c3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687590"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95731519"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
 
-Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE ( *.exe* o *.dll* ) con código de Lenguaje Intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga solo la información sobre el manifiesto del ensamblado.  
+Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE ( *.exe* o *.dll*) con código de Lenguaje Intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga solo la información sobre el manifiesto del ensamblado.  
   
  En la siguiente ilustración se muestran las distintas formas de almacenar un manifiesto.  
   
@@ -39,6 +39,7 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
 - Representa el ensamblado como autodescriptivo.  
   
 ## <a name="assembly-manifest-contents"></a>Contenido del manifiesto del ensamblado  
+
  En la tabla siguiente, se muestra la información que contiene el manifiesto del ensamblado. Los cuatro primeros elementos (nombre del ensamblado, número de versión, referencia cultural e información sobre el nombre seguro) constituyen la identidad del ensamblado.  
   
 |Información|Descripción|  
