@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 16f2f61a2a36e4189e98c85b3d3ce706a52e2938
-ms.sourcegitcommit: 279fb6e8d515df51676528a7424a1df2f0917116
+ms.openlocfilehash: edd101e57793668d71d44db08f191ae412c6d998
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92687281"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720911"
 ---
 # <a name="resolve-assembly-loads"></a>Resolución de cargas de ensamblado
 
@@ -28,6 +28,7 @@ ms.locfileid: "92687281"
 > Para resolver cargas de ensamblado en el contexto de solo reflexión, use en su lugar el evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Cómo funciona el evento AssemblyResolve  
+
  Al registrar un controlador para el evento <xref:System.AppDomain.AssemblyResolve>, se invoca el controlador si se produce un error cuando el tiempo de ejecución enlaza a un ensamblado por nombre. Por ejemplo, si se llama a los métodos siguientes desde el código de usuario, puede producirse el evento <xref:System.AppDomain.AssemblyResolve>:  
   
 - Una sobrecarga del método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o una sobrecarga del método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> cuyo primer argumento es una cadena que representa el nombre para mostrar del ensamblado que se va a cargar (es decir, la cadena devuelta por la propiedad <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>).  
@@ -39,6 +40,7 @@ ms.locfileid: "92687281"
 - Una sobrecarga del método <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> que crea instancias de un objeto en otro dominio de aplicación.  
   
 ### <a name="what-the-event-handler-does"></a>Qué hace el controlador de eventos  
+
  El controlador del evento <xref:System.AppDomain.AssemblyResolve> recibe el nombre para mostrar del ensamblado que se va a cargar, en la propiedad <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType>. Si el controlador no reconoce el nombre del ensamblado, devuelve `null` (C#), `Nothing` (Visual Basic) o `nullptr` (Visual C++).  
   
  Si el controlador reconoce el nombre del ensamblado, puede cargar y devolver un ensamblado que cumpla la solicitud. En la lista siguiente se describen algunos escenarios de ejemplo.  
@@ -69,6 +71,7 @@ ms.locfileid: "92687281"
  Es posible cargar varias versiones del mismo ensamblado en el mismo dominio de aplicación, pero esta práctica no se recomienda porque puede provocar problemas de asignación de tipos. Vea [Procedimientos recomendados para cargar ensamblados](../../framework/deployment/best-practices-for-assembly-loading.md).  
   
 ### <a name="what-the-event-handler-should-not-do"></a>Qué no debe hacer el controlador de eventos  
+
 La regla principal que debe observar para controlar el evento <xref:System.AppDomain.AssemblyResolve> es que no debe intentar devolver un ensamblado que no reconozca. Cuando se escribe el controlador, debe saber qué ensamblados pueden hacer que se produzca el evento. El controlador debe devolver NULL para otros ensamblados.  
 
 > [!IMPORTANT]

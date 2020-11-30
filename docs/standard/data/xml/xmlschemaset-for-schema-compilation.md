@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-ms.openlocfilehash: 5916511187741c703cb39a5c168e542e124ab26b
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4501f3dde8d402bd318332dfe9b2209b3febea71
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825928"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723368"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet para compilación de esquemas
+
 Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se pueden almacenar y validar esquemas del lenguaje de definición de esquemas XML (XSD).  
   
 ## <a name="the-xmlschemaset-class"></a>La clase XmlSchemaSet  
+
  <xref:System.Xml.Schema.XmlSchemaSet> es una caché en la que se pueden almacenar y validar esquemas del lenguaje de definición de esquemas XML (XSD).  
   
  En la versión 1.0 de <xref:System.Xml?displayProperty=nameWithType>, los esquemas se cargaban en una clase <xref:System.Xml.Schema.XmlSchemaCollection> como una biblioteca de esquemas. En la versión 2.0 de <xref:System.Xml?displayProperty=nameWithType>, las clases <xref:System.Xml.XmlValidatingReader> y <xref:System.Xml.Schema.XmlSchemaCollection> están obsoletas y se han reemplazado por los métodos <xref:System.Xml.XmlReader.Create%2A> y la clase <xref:System.Xml.Schema.XmlSchemaSet>, respectivamente.  
@@ -32,6 +34,7 @@ Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se
 |Solo puede haber en la colección un esquema para un espacio de nombres de destino concreto.|Se pueden agregar varios esquemas para el mismo espacio de nombres de destino siempre y cuando no haya conflictos de tipo.|  
   
 ## <a name="migrating-to-the-xmlschemaset"></a>Migración a XmlSchemaSet  
+
  En el siguiente código muestra se proporciona una guía para realizar la migración a la nueva clase <xref:System.Xml.Schema.XmlSchemaSet> desde la clase <xref:System.Xml.Schema.XmlSchemaCollection> obsoleta. El código muestra ilustra las siguientes diferencias principales entre las dos clases.  
   
 - Al contrario que el método <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> de la clase <xref:System.Xml.Schema.XmlSchemaCollection>, los esquemas no se compilan al llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. El método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> se llama explícitamente en el código muestra.  
@@ -95,6 +98,7 @@ foreach(XmlSchema schema in schemaSet.Schemas())
 ```  
   
 ## <a name="adding-and-retrieving-schemas"></a>Adición y recuperación de esquemas  
+
  Los esquemas se agregan a <xref:System.Xml.Schema.XmlSchemaSet> con el método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. Cuando se agrega un esquema a <xref:System.Xml.Schema.XmlSchemaSet>, se asocia a un identificador URI de espacio de nombres de destino. El identificador URI de espacio de nombres de destino se puede especificar como parámetro para el método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> o, si no se especifica ningún espacio de nombres de destino, <xref:System.Xml.Schema.XmlSchemaSet> utiliza el espacio de nombres de destino que se ha definido en el esquema.  
   
  Los esquemas se recuperan de <xref:System.Xml.Schema.XmlSchemaSet> con la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. La propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de <xref:System.Xml.Schema.XmlSchemaSet> permite iterar sobre los objetos <xref:System.Xml.Schema.XmlSchema> contenidos en <xref:System.Xml.Schema.XmlSchemaSet>. La propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> devuelve todos los objetos <xref:System.Xml.Schema.XmlSchema> contenidos en <xref:System.Xml.Schema.XmlSchemaSet> o, dado un parámetro de espacio de nombres de destino, devuelve todos los objetos <xref:System.Xml.Schema.XmlSchema> que pertenecen al espacio de nombres de destino. Si se especifica `null` como el parámetro del espacio de nombres de destino, la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> devuelve todos los esquemas sin un espacio de nombres.  
@@ -127,6 +131,7 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  Para obtener más información sobre cómo agregar y recuperar esquemas de un objeto <xref:System.Xml.Schema.XmlSchemaSet>, vea la documentación de referencia del método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> y la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
   
 ## <a name="compiling-schemas"></a>Compilación de esquemas  
+
  Los esquemas de <xref:System.Xml.Schema.XmlSchemaSet> se compilan en un solo esquema lógico por medio del método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
 > [!NOTE]
@@ -154,6 +159,7 @@ schemaSet.Compile();
  Para obtener más información sobre la compilación de esquemas en <xref:System.Xml.Schema.XmlSchemaSet>, vea la documentación de referencia del método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>.  
   
 ## <a name="reprocessing-schemas"></a>Reprocesamiento de esquemas  
+
  El reprocesamiento de un esquema en <xref:System.Xml.Schema.XmlSchemaSet> realiza todos los pasos previos al procesamiento que se deben realizar en un esquema cuando se llama al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. Si la llamada al método <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> es correcta, la propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> de <xref:System.Xml.Schema.XmlSchemaSet> se establece en `false`.  
   
  El método <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> se debería utilizar cuando se haya modificado un esquema de <xref:System.Xml.Schema.XmlSchemaSet> después de que <xref:System.Xml.Schema.XmlSchemaSet> haya realizado la compilación.  
@@ -189,11 +195,13 @@ schemaSet.Reprocess(schema);
  Para obtener más información sobre el reprocesamiento de un esquema en <xref:System.Xml.Schema.XmlSchemaSet>, vea la documentación de referencia del método <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>.  
   
 ## <a name="checking-for-a-schema"></a>Comprobación de un esquema  
+
  Puede utilizar el método <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> de <xref:System.Xml.Schema.XmlSchemaSet> para comprobar si hay contenido un esquema en <xref:System.Xml.Schema.XmlSchemaSet>. El método <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> toma un espacio de nombres de destino o un objeto <xref:System.Xml.Schema.XmlSchema> para comprobarlos. En cualquiera de los casos, el método <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> devuelve `true` si el esquema está contenido en <xref:System.Xml.Schema.XmlSchemaSet>; de lo contrario, devuelve `false`.  
   
  Para obtener más información sobre la comprobación de un esquema, vea la documentación de referencia del método <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>.  
   
 ## <a name="removing-schemas"></a>Cómo quitar esquemas  
+
  Los esquemas se quitan de un <xref:System.Xml.Schema.XmlSchemaSet> utilizando los métodos <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> y <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. El método <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> elimina el esquema especificado de <xref:System.Xml.Schema.XmlSchemaSet>, mientras el método <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> quita el esquema especificado y el resto de los esquemas que importa desde <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  El siguiente ejemplo ilustra cómo agregar varios esquemas a <xref:System.Xml.Schema.XmlSchemaSet> y, a continuación, cómo utilizar el método <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> para quitar uno de los esquemas y todos los esquemas que importa.  
@@ -233,6 +241,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  Para obtener más información sobre cómo quitar esquemas de <xref:System.Xml.Schema.XmlSchemaSet>, vea <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> y la documentación de referencia del método <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>.  
   
 ## <a name="schema-resolution-and-xsimport"></a>Resolución de esquemas y xs:import  
+
  En los siguientes ejemplos se describe el comportamiento de <xref:System.Xml.Schema.XmlSchemaSet> para importar esquemas cuando existen varios esquemas para un espacio de nombres determinado en <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Por ejemplo, piense en un <xref:System.Xml.Schema.XmlSchemaSet> que contiene múltiples esquemas para el espacio de nombres `http://www.contoso.com`. Se agrega un esquema con la directiva `xs:import` siguiente a <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -244,6 +253,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet> intenta importar un esquema para el espacio de nombres `http://www.contoso.com` cargándolo desde la URL `http://www.contoso.com/schema.xsd`. En el esquema de importación solo están disponibles los tipos y la declaración de esquema que se declaran en el documento de esquema, aunque hay otros documentos de esquema para el espacio de nombres `http://www.contoso.com` en <xref:System.Xml.Schema.XmlSchemaSet>. Si no se puede encontrar el archivo `schema.xsd` en la URL `http://www.contoso.com/schema.xsd`, no se importa ningún esquema para el espacio de nombres `http://www.contoso.com` al esquema de importación.  
   
 ## <a name="validating-xml-documents"></a>Validación de documentos XML  
+
  Los documentos XML se pueden validar con esquemas en <xref:System.Xml.Schema.XmlSchemaSet>. Para validar un documento XML, agregue un esquema a la propiedad <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> de un objeto <xref:System.Xml.XmlReaderSettings> o agregue <xref:System.Xml.Schema.XmlSchemaSet> a la propiedad <xref:System.Xml.XmlReaderSettings.Schemas%2A> de un objeto <xref:System.Xml.XmlReaderSettings>. A continuación, el método <xref:System.Xml.XmlReaderSettings> de la clase <xref:System.Xml.XmlReader.Create%2A> utiliza el objeto <xref:System.Xml.XmlReader> para crear un objeto <xref:System.Xml.XmlReader> y validar el documento XML.  
   
  Para más información sobre la validación de documentos XML con una clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [Validación de esquema XML (XSD) con XmlSchemaSet](xml-schema-xsd-validation-with-xmlschemaset.md).  

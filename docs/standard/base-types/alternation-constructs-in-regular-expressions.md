@@ -14,12 +14,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 4fb9960ad3c92494cd3aa47516f6ba82ab606ee5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0a1b46443d5cd9f8a19f4cfb9f9b07a5e33e719e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825304"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714697"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 
@@ -30,6 +30,7 @@ Las construcciones de alternancia modifican una expresión regular para habilita
 - [Coincidencia condicional basada en un grupo capturado válido](#Conditional_Group)
 
 <a name="Either_Or"></a>
+
 ## <a name="pattern-matching-with-124"></a>Coincidencia de patrones con &#124;
 
 Puede usar el carácter de barra vertical (`|`) para hacer coincidir un elemento de una serie de patrones, donde el carácter `|` separa cada patrón.
@@ -62,6 +63,7 @@ La expresión regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` se interpreta como s
 |`\b`|Finalizar la búsqueda de coincidencias en un límite de palabras.|  
   
 <a name="Conditional_Expr"></a>
+
 ## <a name="conditional-matching-with-an-expression"></a>Coincidencia condicional con una expresión
 
 Este elemento del lenguaje intenta coincidir con uno de dos patrones en función de si puede coincidir con un patrón inicial. Su sintaxis es:  
@@ -93,6 +95,7 @@ El patrón de la expresión regular `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\
 |`\b`|Coincide con un límite de palabras.|  
 
 <a name="Conditional_Group"></a>
+
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Coincidencia condicional basada en un grupo capturado válido
 
 Este elemento del lenguaje intenta coincidir con uno de dos patrones en función de si coincidió con un grupo de captura especificado. Su sintaxis es:

@@ -6,19 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-ms.openlocfilehash: a97ff5afef23c361b1f675d2f07f43b3bc5df299
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 74dbe6b84c8d9400790f763f811da5542c732892
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818393"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720885"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Espacios de nombres y consultas XPath
+
 Las consultas XPath distinguen los espacios de nombres de un documento XML y pueden utilizar prefijos de espacio de nombres para calificar nombres de atributos y elementos. Al calificar los nombres de atributos y elementos con un prefijo de espacio de nombres, se limitan los nodos que devuelve la consulta XPath a únicamente aquellos nodos que pertenecen a un espacio de nombres específico.  
   
  Por ejemplo, si el prefijo `books` se asigna al espacio de nombres `http://www.contoso.com/books`, la siguiente consulta XPath `/books:books/books:book` solo selecciona los elementos `book` en el espacio de nombres `http://www.contoso.com/books`.  
   
 ## <a name="the-xmlnamespacemanager"></a>XmlNamespaceManager  
+
  Para utilizar espacios de nombres en una consulta XPath, se crea un objeto derivado de la interfaz <xref:System.Xml.IXmlNamespaceResolver> como la clase <xref:System.Xml.XmlNamespaceManager> con el prefijo e identificador URI de espacio de nombres para incluirlo en la consulta XPath.  
   
  El objeto <xref:System.Xml.XmlNamespaceManager> se puede utilizar en la consulta en cada una de las siguientes formas.  
@@ -36,6 +38,7 @@ Las consultas XPath distinguen los espacios de nombres de un documento XML y pue
 - <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Espacio de nombres predeterminado  
+
  En el siguiente documento XML, se utiliza el espacio de nombres predeterminado con un prefijo vacío para declarar el espacio de nombres `http://www.contoso.com/books`.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: Compilador XSLT (xsltc.exe)
 ms.date: 03/30/2017
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: cfeebc3ac0c0259c975439dc93c3c5f003b60c40
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 89e2291cb4eafe9ca9e5001061b960f348fe4719
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94818328"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720833"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
+
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
   
  La herramienta xsltc.exe está incluida en Visual Studio. Para obtener más información, consulte [Descargas de Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
@@ -41,6 +42,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`?`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Las soluciones XSLT puede estar compuestas por múltiples módulos de hojas de estilos. La herramienta xsltc.exe genera ensamblados a partir de hojas de estilos. Dichos ensamblados se pueden pasar al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Esto puede ayudar a reducir los costos de implementación en ciertos escenarios de XSLT.  
   
 > [!NOTE]
@@ -49,6 +51,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  La herramienta xsltc.exe no valida los nombres de la clase (`/class:`*nombre*) o del ensamblado (`/out:`*nombreDelEnsamblado*). En caso de que estos nombres no sean válidos, el CLR se encargará de generar los errores correspondientes.  
   
 ## <a name="examples"></a>Ejemplos  
+
  La siguiente instrucción compila la hoja de estilos y crea un ensamblado llamado booksort.dll.  
   
 ```console  

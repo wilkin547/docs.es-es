@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 9d0fe1afef126a9c4f73a74d969d36df27182be9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ce034260fd3e6746bb7d516483b5e6872dfdc172
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829380"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95699032"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Paralelismo de datos (biblioteca TPL)
+
 El *paralelismo de datos* hace referencia a los escenarios en los que la misma operación se realiza simultáneamente (es decir, en paralelo) en elementos de una colección o matriz de origen. En las operaciones paralelas de datos, se crean particiones de la colección de origen para que varios subprocesos puedan funcionar simultáneamente en segmentos diferentes.  
   
  La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) admite el paralelismo de datos a través de la clase <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Esta clase proporciona las implementaciones paralelas basadas en método de los bucles [for](../../csharp/language-reference/keywords/for.md) y [foreach](../../csharp/language-reference/keywords/foreach-in.md) (`For` y `For Each` en Visual Basic). Se escribe la lógica del bucle para un bucle <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> de forma muy similar a como se escribiría un bucle secuencial. No tiene que crear los subprocesos ni poner en la cola los elementos de trabajo. En bucles básicos, no es preciso tomar bloqueos. TPL administra todo el trabajo de bajo nivel. Para obtener información detallada sobre el uso de <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, descargue el documento [Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (Patrones de programación en paralelo: descripción y aplicación de los patrones en paralelo con .NET Framework 4). En el siguiente ejemplo de código se muestra un bucle `foreach` simple y su equivalente paralelo.  

@@ -6,17 +6,19 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-ms.openlocfilehash: f382165ca8e2b972c47a080244a3d0054b5eb604
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b2feb14e304c8ba7ecc19b2e79b943204044da05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822742"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722679"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusión o importación de esquemas XML
+
 Un esquema XML puede contener elementos `<xs:import />`, `<xs:include />` y `<xs:redefine />`. Estos elementos de esquema hacen referencia a otros esquemas XML que se pueden utilizar para complementar la estructura del esquema que los incluye o importa. Las clases <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> y <xref:System.Xml.Schema.XmlSchemaRedefine> se asignan estos elementos en la API del modelo de objetos de esquema (SOM).  
   
 ## <a name="including-or-importing-an-xml-schema"></a>Inclusión o importación de un esquema XML  
+
  En el siguiente ejemplo de código se complementa el esquema del cliente que se creó en el tema [Compilar esquemas XML](building-xml-schemas.md) con el esquema de direcciones. Al complementar el esquema del cliente con el esquema de direcciones, los tipos de direcciones están disponibles en el esquema del cliente.  
   
  El esquema de direcciones se puede incorporar utilizando los elementos `<xs:include />` o `<xs:import />` para utilizar los componentes del esquema de direcciones tal y como están, o utilizando un elemento `<xs:redefine />` para modificar cualquiera de sus componentes con el fin de satisfacer la necesidad del esquema del cliente. Puesto que el esquema de direcciones tiene un `targetNamespace` que es diferente del que tiene el esquema del cliente, se utiliza el elemento `<xs:import />` y, por tanto, la semántica de importación.  

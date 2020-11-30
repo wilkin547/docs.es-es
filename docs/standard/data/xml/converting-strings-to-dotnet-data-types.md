@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: 2eee3ff905473d8fd520929c0fe5abfb5d5c42da
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0cee7481f9c002f860bff7f12b8be0bb763dadb1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830966"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701476"
 ---
 # <a name="convert-strings-to-net-data-types"></a>Conversión de cadenas en tipos de datos de .NET
 
@@ -72,6 +72,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
  Pero si se convierte una cadena en un tipo **Boolean**, **Single** o **Double**, el tipo de .NET que se devuelve no es el mismo que el devuelto al usar la clase **System.Convert**.  
   
 ## <a name="string-to-boolean"></a>Conversión de cadenas en Boolean  
+
  En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas al convertir una cadena en **Boolean** mediante el método **ToBoolean**.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET|  
@@ -104,6 +105,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>Conversión de cadenas en Single  
+
  En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en **Single** mediante el método **ToSingle**.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET|  
@@ -112,6 +114,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>Conversión de cadenas en Double  
+
  En la tabla siguiente se muestra qué tipo se genera para las cadenas de entrada dadas, al convertir una cadena en **Single** mediante el método **ToDouble**.  
   
 |Parámetro de entrada de cadena válido|Tipo de salida de .NET|  

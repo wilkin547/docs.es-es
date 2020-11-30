@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
-ms.openlocfilehash: 5c69a35497feced92a05e124307d3be584ab86b7
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f5eb8e7826dd132fd46f6f476335416e7dd03269
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829445"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722692"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Procedimiento para transformar un fragmento de nodo
+
 Cuando se transforman los datos contenidos en un objeto <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>, las transformaciones XSLT se aplican a un documento completo. En otras palabras, si se pasa un nodo distinto del nodo raíz del documento, esto no evita que el proceso de transformación pueda obtener acceso a todos los nodos del documento cargado. Para transformar un fragmento del nodo, debe crear un objeto diferente que contenga el fragmento del nodo y pasar ese objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="procedures"></a>Procedimientos  
@@ -28,6 +29,7 @@ Cuando se transforman los datos contenidos en un objeto <xref:System.Xml.XmlDocu
 4. Pase el fragmento del nodo al método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se transforma un fragmento de nodo y los resultados se envían a la consola.  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
@@ -36,12 +38,15 @@ Cuando se transforman los datos contenidos en un objeto <xref:System.Xml.XmlDocu
 ### <a name="input"></a>Entrada  
   
 ##### <a name="booksxml"></a>books.xml  
+
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
 ##### <a name="singlexsl"></a>single.xsl  
+
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
 ### <a name="output"></a>Salida  
+
  El título del libro es The Confidence Man.  
   
 ## <a name="see-also"></a>Vea también

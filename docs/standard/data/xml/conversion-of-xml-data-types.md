@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-ms.openlocfilehash: d7ee7447ab7a8be1bad0d087dba5fc2afaa878e8
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 108cfbf1ee8ff3d6fbe088d6dd14d0354750cb0c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830979"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95701502"
 ---
 # <a name="conversion-of-xml-data-types"></a>Conversión de tipos de datos XML
+
 La mayor parte de los métodos que se encuentran en una clase **XmlConvert** se usan para convertir datos entre cadenas y formatos fuertemente tipados. Los métodos son independientes de la configuración regional. Esto significa que no la tienen en cuenta al realizar la conversión.  
   
 ## <a name="reading-string-as-types"></a>Leer cadenas como tipos  
+
  En el ejemplo siguiente se lee una cadena y se convierte en un tipo **DateTime**.  
   
  Dada la siguiente entrada XML:  
@@ -41,6 +43,7 @@ Console.WriteLine(vDateTime);
 ```  
   
 ## <a name="writing-strings-as-types"></a>Escribir cadenas como tipos  
+
  En el ejemplo siguiente se lee un valor **Int32** y se convierte en una cadena.  
   
  Dada la siguiente entrada XML:  

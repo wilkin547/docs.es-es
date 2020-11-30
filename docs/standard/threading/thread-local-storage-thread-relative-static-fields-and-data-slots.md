@@ -7,12 +7,12 @@ helpviewer_keywords:
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-ms.openlocfilehash: c9ea2939dcff321a1d4e24e7a97c056c016e5fdc
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b45c83887d278589cc1704ec1398ec99e27550ad
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819635"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727528"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local de subprocesos: Campos estáticos relacionados con subprocesos y ranuras de datos
 
@@ -27,6 +27,7 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado a fin d
 Puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> para crear objetos locales de subprocesos que se inicializan de forma diferida la primera vez que se usa el objeto. Para obtener más información, vea [Inicialización diferida](../../framework/performance/lazy-initialization.md).  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicidad de los datos en la TLS administrada  
+
  Si usa los campos estáticos o las ranuras para datos relacionados con subprocesos, los datos de la TLS administrada son exclusivos de la combinación de subproceso y dominio de aplicación.  
   
 - Dentro de un dominio de aplicación, un subproceso no puede modificar datos de otro subproceso, aunque ambos subprocesos utilicen el mismo campo o ranura.  
@@ -38,6 +39,7 @@ Puede usar la clase <xref:System.Threading.ThreadLocal%601?displayProperty=nameW
  De forma similar, si un subproceso obtiene la ranura para datos con el mismo nombre en dos dominios de aplicación distintos, los datos del primer dominio de aplicación son independientes de los datos del segundo dominio de aplicación.  
   
 ## <a name="thread-relative-static-fields"></a>Campos estáticos relacionados con subprocesos  
+
  Si sabe que un elemento de datos siempre es exclusivo para una combinación de dominio de aplicación y subproceso, aplique el atributo <xref:System.ThreadStaticAttribute> al campo estático. Utilice el campo como utilizaría cualquier otro campo estático. Los datos del campo son exclusivos para cada subproceso que los use.  
   
  Los campos estáticos relacionados con subprocesos ofrecen mayor rendimiento que las ranuras para datos y, además, tienen la ventaja de la comprobación de tipos en tiempo de compilación.  

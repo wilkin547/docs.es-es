@@ -11,14 +11,15 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 7b976cf48214fb623563b09aab8a991a5a05d3ca
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: a6e2ed06e92adffa6c8a61b27bbff994370e8b34
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824446"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722744"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programación asincrónica (APM)
+
 Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResult> se implementa como dos métodos con nombre `BeginOperationName` y `EndOperationName` que comienzan y terminan la operación asincrónica *OperationName* respectivamente. Por ejemplo, la clase <xref:System.IO.FileStream> ofrece los métodos <xref:System.IO.FileStream.BeginRead%2A> y <xref:System.IO.FileStream.EndRead%2A> para leer bytes de un archivo de manera asincrónica. Estos métodos implementan la versión asincrónica del método <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
@@ -27,6 +28,7 @@ Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResu
  Después de llamar a `BeginOperationName`, una aplicación puede seguir ejecutando instrucciones en el subproceso de llamada mientras la operación asincrónica tiene lugar en un subproceso diferente. Para cada llamada a `BeginOperationName`, la aplicación debe llamar a `EndOperationName` para obtener los resultados de la operación.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Comenzar una operación asincrónica  
+
  El método `BeginOperationName` comienza la operación asincrónica *OperationName* y devuelve un objeto que implementa la interfaz <xref:System.IAsyncResult>. Los objetos<xref:System.IAsyncResult> almacenan información sobre una operación asincrónica. En la tabla siguiente se muestra información sobre una operación asincrónica.  
   
 |Miembro|Descripción|  
@@ -41,6 +43,7 @@ Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResu
  `BeginOperationName` devuelve el control inmediatamente al subproceso de llamada. Si el método `BeginOperationName` genera excepciones, las excepciones se generan antes de iniciarse la operación asincrónica. Si el método `BeginOperationName` genera excepciones, no se invoca el método de devolución de llamada.  
   
 ## <a name="ending-an-asynchronous-operation"></a>Finalizar una operación asincrónica  
+
  El método `EndOperationName` finaliza la operación asincrónica *OperationName*. El valor devuelto del método `EndOperationName` es del mismo tipo devuelto por su homólogo sincrónico y es específico de la operación asincrónica. Por ejemplo, el método <xref:System.IO.FileStream.EndRead%2A> devuelve el número de bytes leídos de un <xref:System.IO.FileStream> y el método <xref:System.Net.Dns.EndGetHostByName%2A> devuelve un objeto <xref:System.Net.IPHostEntry> que contiene información sobre un equipo host. El método `EndOperationName` toma los parámetros out o ref declarados en la firma de la versión sincrónica del método. Además de los parámetros del método sincrónico, el método `EndOperationName` también incluye un parámetro <xref:System.IAsyncResult>. Los autores de la llamada deben pasar la instancia devuelta por la llamada correspondiente a `BeginOperationName`.  
   
  Si la operación asincrónica representada por el objeto <xref:System.IAsyncResult> no ha finalizado cuando se llama a `EndOperationName`, `EndOperationName` bloquea el subproceso de llamada hasta que finaliza la operación asincrónica. Las excepciones generadas por la operación asincrónica se generan desde el método `EndOperationName`. El efecto de llamar al método `EndOperationName` varias veces con el mismo <xref:System.IAsyncResult> no está definido. Del mismo modo, tampoco se ha definido la llamada al método `EndOperationName` con una interfaz <xref:System.IAsyncResult> no devuelta por el método Begin relacionado.  

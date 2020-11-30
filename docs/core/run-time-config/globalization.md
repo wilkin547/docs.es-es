@@ -3,12 +3,12 @@ title: Valores de configuración de globalización
 description: Obtenga información sobre los valores del entorno de ejecución que configuran aspectos de globalización de una aplicación de .NET Core, por ejemplo, el procedimiento para analizar las fechas japonesas.
 ms.date: 05/18/2020
 ms.topic: reference
-ms.openlocfilehash: 56228e9a6cb6dbab6a22bdc00d11212e1019776b
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: fc98e965093c28b75b9b66e4f1c9f147abd4680e
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761972"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95721924"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opciones de configuración del entorno de ejecución para globalización
 
@@ -87,7 +87,7 @@ Archivo del proyecto:
 
 - Determina si .NET usa las API de globalización de compatibilidad con el idioma nacional (NLS) o componentes internacionales para Unicode (ICU) para aplicaciones de Windows. .NET 5.0 y versiones posteriores usan las API de globalización de ICU de forma predeterminada en la actualización de mayo de 2019 de Windows 10 o versiones posteriores.
 - Si se omite esta configuración, .NET usa las API de globalización de ICU forma predeterminada. Esto es equivalente a establecer el valor en `false`.
-- Para obtener más información, consulte [Las API de globalización usan bibliotecas ICU en Windows](../compatibility/3.1-5.0.md#globalization-apis-use-icu-libraries-on-windows).
+- Para obtener más información, consulte [Las API de globalización usan bibliotecas ICU en Windows](../compatibility/globalization/5.0/icu-globalization-api.md).
 
 | | Nombre de valor | Valores | Inclusión |
 | - | - | - | - |

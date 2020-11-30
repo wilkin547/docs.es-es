@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-ms.openlocfilehash: 0cb83935b4175060a04f4be48e6b4eee2f44ed7d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 14497bb5b027209c4707eab9bcf1b60f85740dfd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823503"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697563"
 ---
 # <a name="saving-and-writing-a-document"></a>Guardar y escribir un documento
+
 Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado puede ser diferente al original de varias formas:  
   
 - Si la propiedad <xref:System.Xml.XmlDocument.PreserveWhitespace%2A> se establece en `true` antes de llamar al método <xref:System.Xml.XmlDocument.Save%2A>, en el resultado se conserva el espacio en blanco del documento; sin embargo, si la propiedad es `false`, <xref:System.Xml.XmlDocument>, se aplica sangría automáticamente al resultado.  
@@ -30,6 +31,7 @@ Cuando cargue y guarde un <xref:System.Xml.XmlDocument>, el documento guardado p
 - Si desea escribir <xref:System.Xml.XmlDocument> en un archivo o una secuencia, el resultado escrito es el mismo que el contenido del documento. Es decir, la declaración <xref:System.Xml.XmlDeclaration> solo se escribe si hay alguna en el documento y la codificación que se utiliza al escribir el documento es la misma que la del nodo de la declaración.  
   
 ## <a name="writing-an-xmldeclaration"></a>Escribir una declaración XmlDeclaration  
+
  Los miembros <xref:System.Xml.XmlDocument> y <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A> y <xref:System.Xml.XmlNode.WriteTo%2A>, además de los métodos <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlDocument.Save%2A> y <xref:System.Xml.XmlDocument.WriteContentTo%2A>, crean una declaración XML.  
   
  Para las propiedades <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A>, y los métodos <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A> y <xref:System.Xml.XmlDocument.WriteContentTo%2A>, la codificación escrita en la declaración XML se obtiene del nodo <xref:System.Xml.XmlDeclaration>. Si no existe ningún nodo <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> no se escribe. Si no hay codificación en el nodo <xref:System.Xml.XmlDeclaration>, la codificación no se escribe en la declaración XML.  
@@ -55,6 +57,7 @@ doc.Save(tw);
  Para los miembros <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> y <xref:System.Xml.XmlNode.InnerXml%2A>, si no se establece la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>, no se escribe la codificación. De lo contrario, la codificación escrita en la declaración XML es la misma que la que se encuentra en la propiedad <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Escribir el contenido de un documento con la propiedad OuterXml  
+
  La propiedad <xref:System.Xml.XmlNode.OuterXml%2A> es una extensión de Microsoft de los estándares del Modelo de objetos de documento (DOM) XML del W3C (World Wide Web Consortium). La propiedad <xref:System.Xml.XmlNode.OuterXml%2A> se utiliza para obtener el marcado de todo el documento XML o tan solo el de un nodo y sus nodos secundarios. <xref:System.Xml.XmlNode.OuterXml%2A>devuelve el marcado que representa el nodo en concreto y todos sus nodos secundarios.  
   
  El siguiente ejemplo de código muestra cómo guardar un documento por completo como una cadena.  

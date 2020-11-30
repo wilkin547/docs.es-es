@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 32d71aba5d8a650293a4d8653fb2a2e383b8a800
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 110efce0bd7fae1a4f39f5d879496bf541ffe667
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282372"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722159"
 ---
 # <a name="serialization-guidelines"></a>Directrices de serialización
 
@@ -39,6 +39,7 @@ En este artículo se enumeran las instrucciones que se deben tener en cuenta al 
   La serialización es un factor importante en el diseño de cualquier tipo, es posible que los programas necesiten conservar o transmitir instancias del tipo.
 
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>Elegir la tecnología de serialización correcta que se va a admitir
+
  Un tipo dado puede admitir una o varias tecnologías de serialización, o ninguna.
 
 - CONSIDERE admitir la *serialización de contrato de datos* si puede que las instancias de su tipo deban conservarse o usarse en Servicios Web.
@@ -52,6 +53,7 @@ En este artículo se enumeran las instrucciones que se deben tener en cuenta al 
 - EVITE admitir la serialización en tiempo de ejecución o la serialización XML solo por motivos generales de persistencia. Preferencia por la serialización de contrato de datos
 
 #### <a name="data-contract-serialization"></a>Serialización de contratos de datos
+
  Los tipos pueden admitir la serialización de contrato de datos mediante la aplicación de <xref:System.Runtime.Serialization.DataContractAttribute> al tipo y <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros (campos y propiedades) del tipo.
 
  [!code-csharp[SerializationGuidelines#1](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#1)]
@@ -80,7 +82,7 @@ En este artículo se enumeran las instrucciones que se deben tener en cuenta al 
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]
 
-     Cuando no se conoce la lista de tipos conocidos estáticamente (cuando se compila la clase **Person** ), **KnownTypeAttribute** también puede apuntar a un método que devuelve una lista de tipos conocidos en tiempo de ejecución.
+     Cuando no se conoce la lista de tipos conocidos estáticamente (cuando se compila la clase **Person**), **KnownTypeAttribute** también puede apuntar a un método que devuelve una lista de tipos conocidos en tiempo de ejecución.
 
 5. Tenga en cuenta la compatibilidad con versiones anteriores y posteriores al crear o cambiar tipos serializables.
 
@@ -96,6 +98,7 @@ En este artículo se enumeran las instrucciones que se deben tener en cuenta al 
      Para obtener más información, vea [Forward-Compatible Data Contracts](../../framework/wcf/feature-details/forward-compatible-data-contracts.md) (Contratos de datos compatibles con el reenvío).
 
 #### <a name="xml-serialization"></a>serialización XML
+
  La serialización de contrato de datos es la tecnología de serialización principal (predeterminada) en .NET Framework, pero hay escenarios de serialización que la serialización de contrato de datos no admite. Por ejemplo, no proporciona control total sobre la forma del XML generado o utilizado por el serializador. Si se requiere un control tan detallado, debe usarse la *serialización XML* y los tipos se deben diseñar para admitir esta tecnología de serialización.
 
 1. EVITE diseñar sus tipos concretamente para la serialización XML, a menos que tenga una razón de peso para controlar la forma del XML generado. Esta tecnología de serialización ha sido reemplazada por la serialización de contrato de datos que se describió en la sección anterior.
@@ -108,6 +111,7 @@ En este artículo se enumeran las instrucciones que se deben tener en cuenta al 
 2. CONSIDERE la posibilidad de implementar la interfaz <xref:System.Xml.Serialization.IXmlSerializable> si desea un mayor control sobre la forma del XML serializado del que se proporciona aplicando los atributos de serialización XML. Dos métodos de la interfaz, <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> y <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>, permiten controlar totalmente la secuencia XML serializada. También puede controlar el esquema XML que se genera para el tipo aplicando el atributo <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>.
 
 #### <a name="runtime-serialization"></a>Serialización en tiempo de ejecución
+
  La *serialización en tiempo de ejecución* es una tecnología usada por .NET Remoting. Si piensa que sus tipos se transportarán mediante .NET Remoting, asegúrese de que admitan la serialización en tiempo de ejecución.
 
  La compatibilidad básica para la *serialización en tiempo de ejecución* se puede proporcionar aplicando el atributo <xref:System.SerializableAttribute> y, en escenarios más avanzados, se implementa un *patrón serializable en tiempo de ejecución* simple (implemente -<xref:System.Runtime.Serialization.ISerializable> y proporcione un constructor de serialización).

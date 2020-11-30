@@ -3,18 +3,21 @@ title: Administrar espacios de nombres en un documento XML
 description: Aprenda a administrar espacios de nombres en un documento XML. Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos.
 ms.date: 03/30/2017
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: ab9dceed66e65ea74d0996071ab3a17057e43fc3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 120493de430c2372f3f71d1d1498ba880feda3d1
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822625"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720157"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Administrar espacios de nombres en un documento XML
+
 Los espacios de nombres XML asocian nombres de elementos y de atributos de un documento XML con identificadores URI personalizados y predefinidos. Para crear estas asociaciones, puede definir los prefijos de los URI del espacio de nombres y usar dichos prefijos para calificar los nombres de los elementos y de los atributos en los datos XML. Los espacios de nombres evitan conflictos de nombres de elementos y atributos y permiten que los elementos y atributos con el mismo nombre se traten y se validen de forma diferente.  
   
 <a name="declare"></a>
+
 ## <a name="declaring-namespaces"></a>Declarar espacios de nombres  
+
  Para declarar un espacio de nombres en un elemento, puede usar el atributo `xmlns:`:  
   
  `xmlns:<name>=<"uri">`  
@@ -32,7 +35,9 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
  Para indicar que un elemento es parte de un espacio de nombres en particular, agréguele el prefijo de espacio de nombres. Por ejemplo, si el elemento `Author` pertenece al espacio de nombres `mybook`, se declara como `<mybook:Author>`.  
   
 <a name="scope"></a>
+
 ## <a name="declaration-scope"></a>Ámbito de la declaración  
+
  Un espacio de nombres es efectivo desde el momento de su declaración hasta el fin del elemento en el que se ha declarado. En este ejemplo, el espacio de nombres definido en el elemento `BOOK` no se aplica a elementos que estén fuera del elemento `BOOK`, tales como el elemento `Publisher`:  
   
 ```xml  
@@ -59,6 +64,7 @@ Los espacios de nombres XML asocian nombres de elementos y de atributos de un do
 ```  
   
 ## <a name="managing-namespaces"></a>Administrar los espacios de nombres  
+
  La clase <xref:System.Xml.XmlNamespaceManager> almacena una colección de URI del espacio de nombres y sus prefijos y permite buscar, agregar y quitar los espacios de nombres en esta colección. En determinados contextos, esta clase es necesaria para obtener un mejor rendimiento del procesamiento XML. Por ejemplo, la clase <xref:System.Xml.Xsl.XsltContext> usa <xref:System.Xml.XmlNamespaceManager> para la compatibilidad con XPath.  
   
  El administrador de espacios de nombres no realiza ninguna validación en los espacios de nombres, pero asume que ya se han comprobado los prefijos y los espacios de nombres y son compatibles con la especificación de [espacios de nombres de W3C](https://www.w3.org/TR/REC-xml-names/).  

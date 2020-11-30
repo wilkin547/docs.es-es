@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: 188090a968b49bd77279d35dc41f00e808299938
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e1b90bdc5657c1fd22c6e77e31890ff63c3cc3ea
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819648"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95727463"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para multithreading
 
@@ -38,12 +38,15 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
 |Sincronización manual|Manual|Manual|Manual|Manual|Manual|Manual|  
   
 ## <a name="no-synchronization"></a>Sin sincronización  
+
  Este es el valor predeterminado para los objetos. Todos los subprocesos pueden acceder a cualquier método o campo en cualquier momento. Solo puede acceder a estos objetos un subproceso a la vez.  
   
 ## <a name="manual-synchronization"></a>Sincronización manual  
+
  La biblioteca de clases de .NET proporciona una serie de clases para sincronizar subprocesos. Consulte [Overview of Synchronization Primitives](overview-of-synchronization-primitives.md) (Introducción a los primitivos de sincronización).  
   
 ## <a name="synchronized-code-regions"></a>Regiones de código sincronizado  
+
  Puede usar la clase <xref:System.Threading.Monitor> o una palabra clave del compilador para sincronizar bloques de código, métodos de instancia y métodos estáticos. No se admiten los campos estáticos sincronizados.  
   
  Visual Basic y C# admiten el marcado de bloques de código con una palabra clave de lenguaje concreta, la instrucción `lock` de C# o la instrucción `SyncLock` de Visual Basic. Cuando se ejecuta el código en un subproceso, se realiza un intento de adquirir el bloqueo. Si otro subproceso ya lo ha adquirido, el subproceso se bloquea hasta que el bloqueo vuelva a estar disponible. Cuando el subproceso sale del bloque de código sincronizado, el bloqueo se libera, independientemente de la manera en que lo haga.  
@@ -59,6 +62,7 @@ Cuando varios subprocesos pueden realizar llamadas a las propiedades y los méto
 > No bloquee el tipo, es decir, `typeof(MyType)` en C#, `GetType(MyType)` en Visual Basic o `MyType::typeid` en C++, para proteger los métodos `static` (métodos `Shared` en Visual Basic). Utilice en su lugar un objeto estático privado. Asimismo, no utilice `this` en C# (`Me` en Visual Basic) para bloquear los métodos de instancia. Utilice en su lugar un objeto privado. Una clase o instancia se puede bloquear por código distinto del suyo, lo que puede producir interbloqueos o problemas de rendimiento.  
   
 ### <a name="compiler-support"></a>Compatibilidad del compilador  
+
  Visual Basic y C# admiten una palabra clave del lenguaje que utiliza <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> y <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> para bloquear el objeto. Visual Basic admite la instrucción [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md); C# admite la instrucción [lock](../../csharp/language-reference/keywords/lock-statement.md).  
   
  En ambos casos, si se produce una excepción en el bloque de código, el bloqueo de **lock** o **SyncLock** se anula automáticamente. Los compiladores de C# y Visual Basic emiten un bloque **try**/**finally** con **Monitor.Enter** al principio de try, y **Monitor.Exit** en el bloque **finalmente**. Si se produce una excepción en el bloque **lock** o **SyncLock**, el controlador **finally** se ejecuta para que realice los trabajos de limpieza.  

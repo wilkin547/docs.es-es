@@ -2,14 +2,15 @@
 title: Compatibilidad con los espacios de nombres en DOM
 ms.date: 03/30/2017
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
-ms.openlocfilehash: b71817bf8a1b2eb585ccb3b21fb361c651c2bfe9
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b3214d77b069b672e8772ec78db51c9d8ee1bf50
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830160"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95714411"
 ---
 # <a name="namespace-support-in-the-dom"></a>Compatibilidad con los espacios de nombres en DOM
+
 El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al espacio de nombres. Sólo se admiten documentos XML que tengan en cuenta los espacios de nombres. El W3C especifica que las aplicaciones DOM que implementan el nivel 1 pueden no tener en cuenta los espacios de nombres, a diferencia de las características de nivel 2 de DOM, que sí los tienen en cuenta. No obstante, todas las características de DOM XML tienen en cuenta los espacios de nombres, independientemente de si el método proviene del nivel 1 o del nivel 2 de la recomendación de DOM.  
   
  Por ejemplo, en una configuración que no tiene en cuenta el espacio de nombres, si se llama a `setAttribute("A:b", "123")`, como se especifica en la recomendación del nivel 1 de DOM, el resultado no es un atributo con el prefijo `A` y el nombre local `b`. El resultado sería un atributo con el valor `A:b`.  

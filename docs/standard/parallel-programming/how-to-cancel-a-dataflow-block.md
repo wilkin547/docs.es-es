@@ -9,14 +9,15 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-ms.openlocfilehash: 3dbe0675b73f902a7da0fb4f7881c1ee15022b36
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: c0f184720849a0c21fdeda1de4543a2443d60674
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825863"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95713358"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Cómo: Cancelar un bloque de flujos de datos
+
 En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Este ejemplo usa Windows Forms para mostrar dónde están activos los elementos de trabajo en una canalización de flujo de datos y también los efectos de la canalización.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,6 +35,7 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
 5. Agregue cuatro objetos <xref:System.Windows.Forms.ToolStripProgressBar> al control <xref:System.Windows.Forms.ToolStrip>.  
   
 ## <a name="creating-the-dataflow-pipeline"></a>Creación de la canalización de flujo de datos  
+
  En esta sección se describe cómo crear la canalización de flujo de datos que procesa los elementos de trabajo y actualiza las barras de progreso.  
   
 ### <a name="to-create-the-dataflow-pipeline"></a>Para crear la canalización de flujo de datos  
@@ -65,6 +67,7 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
  Este ejemplo establece la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cuando construye los miembros de la canalización. Dado que la propiedad <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> cancela de forma permanente la ejecución del bloque de flujo de datos, se debe volver a crear la canalización completa después de que el usuario cancela la operación, en caso de que después desee agregar más elementos de trabajo a la canalización. Para consultar un ejemplo en el que se muestre una forma alternativa de cancelar un bloque de flujo de datos, a fin de que se pueda realizar otro trabajo después de cancelar una operación, vea [Tutorial: uso de flujo de datos en una Aplicación de Windows Forms](walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Conexión de la canalización de flujo de datos a la interfaz de usuario  
+
  En esta sección se describe cómo conectar la canalización de flujo de datos a la interfaz de usuario. Tanto la creación de la canalización como la adición de elementos de trabajo a la canalización se controlan mediante el controlador de eventos para el botón **Agregar elementos de trabajo**. La cancelación se inicia con el botón **Cancelar**. Cuando el usuario hace clic en cualquiera de estos botones, se inicia la acción correspondiente de forma asincrónica.  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Para conectar la canalización de flujo de datos a la interfaz de usuario  
@@ -84,6 +87,7 @@ En este ejemplo se explica cómo habilitar la cancelación en la aplicación. Es
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente ejemplo se muestra el código completo de Form1.cs (Form1.vb para Visual Basic).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]

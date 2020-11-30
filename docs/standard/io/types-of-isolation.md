@@ -17,12 +17,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: ce6afc6438060b88e8740eab24ace960f3b78fa3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e2ba53a285649f8081c4836661ad3d70739aa64
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830537"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725331"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 
@@ -54,7 +54,9 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
 > El almacenamiento aislado no está disponible para las aplicaciones de la Tienda Windows 8.x. En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  
   
 <a name="UserAssembly"></a>
+
 ## <a name="isolation-by-user-and-assembly"></a>Aislamiento por usuario y ensamblado  
+
  Cuando es necesario acceder al ensamblado que usa el almacén de datos desde cualquier dominio de la aplicación, el aislamiento por usuario y ensamblado es adecuado. Normalmente, en esta situación, el almacenamiento aislado se usa para almacenar datos que se aplican en varias plataformas y no está vinculado a ninguna aplicación concreta, como el nombre del usuario o la información de licencia. Para acceder al almacenamiento aislado por usuario y ensamblado, el código debe ser de confianza para transferir información entre aplicaciones. Por lo general, se permite el aislamiento por usuario y ensamblado en intranets, pero no en Internet. La llamada al método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A?displayProperty=nameWithType> y pasar un usuario y un ensamblado <xref:System.IO.IsolatedStorage.IsolatedStorageScope> devuelven almacenamiento con este tipo de aislamiento.  
   
  El ejemplo de código siguiente recupera un almacén aislado por usuario y ensamblado. Se puede acceder al almacén con el objeto `isoFile`.  
@@ -72,7 +74,9 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
  [!code-vb[Conceptual.IsolatedStorage#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source11.vb#18)]  
   
 <a name="UserDomainAssembly"></a>
+
 ## <a name="isolation-by-user-domain-and-assembly"></a>Aislamiento por usuario, dominio y ensamblado  
+
  Si la aplicación usa un ensamblado de terceros que requiera un almacén de datos privado, puede usar el almacenamiento aislado para almacenar los datos privados. El aislamiento por usuario, dominio y ensamblado garantiza que solo el código de un ensamblado determinado pueda acceder a los datos, únicamente cuando el ensamblado lo usa la aplicación que se estaba ejecutando cuando el ensamblado creó el almacén y solo cuando el usuario para el que se creó el almacén ejecuta la aplicación. El aislamiento por usuario, dominio y ensamblado impide que el ensamblado de terceros filtre datos a otras aplicaciones. Este tipo de aislamiento debe ser la opción predeterminada si sabe que desea usar el almacenamiento aislado pero no está seguro de qué tipo de aislamiento usar. La llamada al método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> de <xref:System.IO.IsolatedStorage.IsolatedStorageFile> y pasar un usuario, un dominio y un ensamblado <xref:System.IO.IsolatedStorage.IsolatedStorageScope> devuelven almacenamiento con este tipo de aislamiento.  
   
  El ejemplo de código siguiente recupera un almacén aislado por usuario, dominio y ensamblado. Se puede acceder al almacén con el objeto `isoFile`.  
@@ -88,7 +92,9 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
  [!code-vb[Conceptual.IsolatedStorage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#15)]  
   
 <a name="Roaming"></a>
+
 ## <a name="isolated-storage-and-roaming"></a>Almacenamiento aislado e itinerancia  
+
  Los perfiles de usuario móvil son una característica de Windows que permite a un usuario configurar una identidad en una red y utilizar esa identidad para iniciar sesión en cualquier equipo de la red, conservando toda la configuración personalizada. Un ensamblado que usa almacenamiento aislado puede especificar que el almacenamiento aislado del usuario debe moverse con el perfil de usuario móvil. La itinerancia puede usarse junto con el aislamiento por usuario y ensamblado o con el aislamiento por usuario, dominio y ensamblado. Si no se usa un ámbito de itinerancia, los almacenes no realizarán la itinerancia aunque se use el perfil de usuario móvil.  
   
  El ejemplo de código siguiente realiza la itinerancia de un almacén aislado por usuario y ensamblado. Se puede acceder al almacén con el objeto `isoFile`.  

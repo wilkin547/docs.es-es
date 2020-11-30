@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: e5acda4137d020d35d3144e9cc61e174024e165a
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 740cd1b78b96c2fcaecf39a725973d738037f403
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826474"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723758"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 
@@ -35,6 +35,7 @@ Common Language Runtime ofrece un mecanismo de seguridad para determinadas excep
 > Es posible que el runtime inicie una excepción no controlada antes de que un código administrado haya tenido ocasión de instalar un controlador de excepciones. Aunque el código administrado no tuviera ninguna oportunidad de controlar la excepción, esta puede continuar normalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Exponer problemas de subprocesamiento durante el desarrollo  
+
  Cuando se permite que los subprocesos se interrumpan silenciosamente, sin finalizar la aplicación, graves problemas de programación pueden pasar inadvertidos. Se trata de un problema concreto de los servicios y otras aplicaciones que se ejecutan durante períodos prolongados. A medida que los subprocesos dejan de ejecutarse, el estado del programa se daña gradualmente. Puede que el rendimiento de la aplicación se degrade o que la aplicación deje de responder.  
   
  Si se permite que las excepciones no controladas en subprocesos continúen naturalmente hasta que el sistema operativo finalice el programa, estos problemas se exponen durante el desarrollo y pruebas. Los informes de errores en la finalización de programas admiten la depuración.  

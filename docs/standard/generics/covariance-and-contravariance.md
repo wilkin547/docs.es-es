@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 1ad8f72f80e88971e2bbf672bd92d9c607134783
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 9d5d5b27fb77500aa5f6deff3fcb1c739ba8b094
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827417"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722666"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covarianza y contravarianza en genéricos
 
@@ -71,6 +71,7 @@ Cuando se hace referencia a un sistema de tipos, la covarianza, contravarianza e
 - A partir de C# 9, se admiten los tipos de valor devuelto covariantes. Un método de invalidación puede declarar un tipo de valor devuelto más derivado que el método que invalida, y una propiedad de invalidación, de solo lectura, puede declarar un tipo más derivado.
 
 <a name="InterfaceCovariantTypeParameters"></a>
+
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfaces genéricas con parámetros de tipo covariante
 
 Varias interfaces genéricas tienen parámetros de tipo covariante; por ejemplo, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IEnumerator%601>, <xref:System.Linq.IQueryable%601> y <xref:System.Linq.IGrouping%602>. Todos los parámetros de tipo de estas interfaces son covariantes, por lo que los parámetros de tipo se usan únicamente para los tipos de valor devuelto de los miembros.  

@@ -14,19 +14,21 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 7b9e557e36d2ff6aa978eb28d3c82764ffb1980a
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 38632c5a1f462c3a7b537978fde81424916746da
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188684"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95706299"
 ---
 # <a name="applying-interop-attributes"></a>Aplicar atributos de interoperabilidad
+
 El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres categorías de atributos específicos de interoperabilidad: los que se aplican por parte del usuario en tiempo de diseño, los que se aplican mediante herramientas de interoperabilidad COM y durante el proceso de conversión, y los que se aplican por parte del usuario o interoperabilidad COM.  
   
  Si no está familiarizado con la tarea de aplicar atributos al código administrado, vea [Extender metadatos mediante atributos](../attributes/index.md). Al igual que otros atributos personalizados, puede aplicar atributos específicos de interoperabilidad a tipos, métodos, propiedades, parámetros, campos y otros miembros.  
   
 ## <a name="design-time-attributes"></a>Atributos en tiempo de diseño  
+
  Puede ajustar el resultado del proceso de conversión realizado por las API y las herramientas de interoperabilidad COM mediante atributos en tiempo de diseño. En la tabla siguiente se describen los atributos que se pueden aplicar al código fuente administrado. En ocasiones, es posible que las herramientas de interoperabilidad COM también apliquen los atributos descritos en esta tabla.  
   
 |Atributo|Descripción|  
@@ -41,7 +43,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Representa tipos visibles para COM cuando el valor del atributo es igual a **false**. Este atributo se puede aplicar a un tipo individual o a un ensamblado completo para controlar la visibilidad de COM. De forma predeterminada, todos los tipos públicos son visibles; no se necesita el atributo para hacerlos visibles.|  
 |<xref:System.Runtime.InteropServices.DispIdAttribute>|Especifica el identificador de envío (DISPID) de COM de un método o campo. Este atributo contiene el DISPID para el método, campo o propiedad que describe.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|
 |<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Indica la interfaz predeterminada para una clase COM implementada en .NET.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|
-|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Indica la posición física de cada campo dentro de una clase cuando se usa con **StructLayoutAttribute** , y **LayoutKind** se establece en Explicit.|  
+|<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Indica la posición física de cada campo dentro de una clase cuando se usa con **StructLayoutAttribute**, y **LayoutKind** se establece en Explicit.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Especifica el identificador único global (GUID) de una clase, interfaz o una biblioteca de tipos completa. La cadena que se pasa al atributo debe tener un formato que sea un argumento de constructor aceptable para el tipo de **System.Guid**.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Indica la implementación de la interfaz **IDispatch** que usa el Common Language Runtime cuando expone interfaces duales e interfaces dispinterface a COM.|  
 |<xref:System.Runtime.InteropServices.InAttribute>|Indica que los datos se deben serializar en el llamador. Se puede usar para parámetros de atributo.|  
@@ -55,6 +57,7 @@ El espacio de nombres <xref:System.Runtime.InteropServices> proporciona tres cat
 |<xref:System.Runtime.InteropServices.StructLayoutAttribute>|Controla el diseño físico de los campos de una clase.<br /><br /> Las herramientas de interoperabilidad COM pueden aplicar este atributo.|  
   
 ## <a name="conversion-tool-attributes"></a>Atributos de la herramienta de conversión  
+
  En la tabla siguiente se describen los atributos que las herramientas de interoperabilidad COM aplican durante el proceso de conversión. Estos atributos no se aplican en tiempo de diseño.  
   
 |Atributo|Descripción|  

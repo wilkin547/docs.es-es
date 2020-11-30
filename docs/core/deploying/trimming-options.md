@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo controlar el recorte de aplicacion
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: e36aca3aadb6968f73a439ca985dc410d1bc88d8
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515837"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95704661"
 ---
 # <a name="trimming-options"></a>Opciones de recorte
 
@@ -140,11 +140,11 @@ Varias áreas de características de las bibliotecas de marco incluyen directiva
 
 - `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
 
-    Elimina la compatibilidad con la serialización BinaryFormatter. Para obtener más información, consulte la sección [Métodos de serialización BinaryFormatter obsoletos](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps).
+    Elimina la compatibilidad con la serialización BinaryFormatter. Para obtener más información, consulte la sección [Métodos de serialización BinaryFormatter obsoletos](../compatibility/core-libraries/5.0/binaryformatter-serialization-obsolete.md).
 
 - `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
 
-    Elimina el código de codificación UTF-7 poco seguro. Para obtener más información, vea la sección [Rutas de acceso al código UTF-7 obsoletas](../compatibility/corefx.md#utf-7-code-paths-are-obsolete).
+    Elimina el código de codificación UTF-7 poco seguro. Para obtener más información, vea la sección [Rutas de acceso al código UTF-7 obsoletas](../compatibility/core-libraries/5.0/utf-7-code-paths-obsolete.md).
 
 - `<EventSourceSupport>false</EventSourceSupport>`
 

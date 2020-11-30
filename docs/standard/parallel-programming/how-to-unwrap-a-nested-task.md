@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to unwrap nested tasks
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
-ms.openlocfilehash: cda42dbc88d73eadf04720c0faaf98151d371127
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3eec3b7e8cc76ee171d88a7886b4983000848084
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825564"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722627"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>Cómo: Desencapsular una tarea anidada
+
 Puede devolver una tarea de un método y, a continuación, esperar o continuar a partir de dicha tarea, tal como se muestra en el ejemplo siguiente:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -35,6 +36,7 @@ Puede devolver una tarea de un método y, a continuación, esperar o continuar a
  Los métodos <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> se pueden usar para transformar cualquier delegado `Task<Task>` o `Task<Task<TResult>>` (`Task(Of Task)` o `Task(Of Task(Of TResult))` en Visual Basic) en un delegado `Task` o `Task<TResult>` (`Task(Of TResult)` en Visual Basic). La nueva tarea representa totalmente la tarea anidada interna e incluye el estado de cancelación y todas las excepciones.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra cómo usar los métodos de extensión <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A>.  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]

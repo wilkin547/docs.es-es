@@ -7,12 +7,12 @@ helpviewer_keywords:
 - generics [.NET], interfaces
 - ordering comparisons [.NET]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 429aa3c4d48fa6805b498206bcb699b56f522409
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f8cdd7ea71e68f73871a606c6f9b754d675ca7eb
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827196"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722640"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 
@@ -24,6 +24,7 @@ Las interfaces genéricas proporcionan homólogas con seguridad de tipos a las i
 > Los parámetros de tipo de varias interfaces genéricas están marcados como covariantes o contravariantes, y ofrecen una mayor flexibilidad para asignar y usar tipos que implementan estas interfaces. Vea [Covarianza y contravarianza](covariance-and-contravariance.md).  
   
 ## <a name="equality-and-ordering-comparisons"></a>Comparaciones de igualdad y ordenación  
+
  En el espacio de nombres <xref:System>, las interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> y <xref:System.IEquatable%601?displayProperty=nameWithType>, igual que sus homólogas no genéricas, definen métodos para realizar comparaciones de ordenación y comparaciones de igualdad, respectivamente. Los tipos implementan estas interfaces para proporcionar la capacidad de desempeñar dichas comparaciones.  
   
  En el espacio de nombres <xref:System.Collections.Generic>, las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601> ofrecen una manera de definir una comparación de ordenación o de igualdad para los tipos que no implementan las interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> o <xref:System.IEquatable%601?displayProperty=nameWithType> y proporcionan una manera de redefinir esas relaciones para los tipos que sí lo hacen. Estas interfaces son usadas por métodos y constructores de muchas de las clases de colección genéricas. Por ejemplo, puede pasar un objeto genérico <xref:System.Collections.Generic.IComparer%601> al constructor de la clase <xref:System.Collections.Generic.SortedDictionary%602> para especificar un criterio de ordenación para un tipo que no implementa una interfaz <xref:System.IComparable%601?displayProperty=nameWithType> genérica. Hay sobrecargas del método estático genérico <xref:System.Array.Sort%2A?displayProperty=nameWithType> y el método de instancia <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> para ordenar matrices y listas usando implementaciones genéricas <xref:System.Collections.Generic.IComparer%601>.  
@@ -31,6 +32,7 @@ Las interfaces genéricas proporcionan homólogas con seguridad de tipos a las i
  Las clases genéricas <xref:System.Collections.Generic.Comparer%601> y <xref:System.Collections.Generic.EqualityComparer%601> proporcionan clases base para las implementaciones de las interfaces genéricas <xref:System.Collections.Generic.IComparer%601> y <xref:System.Collections.Generic.IEqualityComparer%601>, y también proporcionan comparaciones de ordenación y de igualdad predeterminadas mediante sus respectivas propiedades <xref:System.Collections.Generic.Comparer%601.Default%2A?displayProperty=nameWithType> y <xref:System.Collections.Generic.EqualityComparer%601.Default%2A?displayProperty=nameWithType>.  
   
 ## <a name="collection-functionality"></a>Funcionalidad de colección  
+
  La interfaz genérica <xref:System.Collections.Generic.ICollection%601> es la interfaz básica para los tipos de colección genéricos. Proporciona la funcionalidad básica para agregar, quitar, copiar y enumerar elementos. <xref:System.Collections.Generic.ICollection%601> hereda tanto de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601> como de la interfaz no genérica <xref:System.Collections.IEnumerable>.  
   
  La interfaz genérica <xref:System.Collections.Generic.IList%601> extiende la interfaz genérica <xref:System.Collections.Generic.ICollection%601> con métodos para la recuperación indizada.  

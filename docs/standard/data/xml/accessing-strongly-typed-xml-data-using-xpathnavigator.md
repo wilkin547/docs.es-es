@@ -5,17 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
-ms.openlocfilehash: fcf46a0716d79fd27cb06924bf74c119b8435147
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7051aeb8cdc25518f99fe093045e7e769ae7f6f5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822833"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725422"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Acceso a datos XML fuertemente tipados utilizando XPathNavigator
+
 Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.XPathNavigator> puede contener datos fuertemente tipados que se asignen a tipos de Common Language Runtime (CLR). De acuerdo con el modelo de datos XPath 2.0, solo los elementos y los atributos pueden contener datos fuertemente tipados. La clase <xref:System.Xml.XPath.XPathNavigator> proporciona mecanismos para acceder a los datos en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> como datos fuertemente tipados, así como mecanismos para convertir un tipo de datos en otro.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Información de tipo proporcionada por XPathNavigator  
+
  Técnicamente, los datos de XML 1.0 no tienen tipo, a menos que se procesen con una DTD, un esquema del lenguaje de definición de esquemas XML (XSD) u otro mecanismo. Existe una serie de categorías de información de tipo que se pueden asociar a un atributo o elemento XML.  
   
 - Tipos CLR simples: ninguno de los lenguajes de esquema XML es compatible directamente con los tipos CLR. Puesto que es útil poder ver el contenido simple de atributos y elementos como el tipo CLR más apropiado, todo el contenido simple puede tener información del tipo <xref:System.String> en ausencia de información de esquema con cualquier información de esquema agregada que potencialmente refine este contenido con un tipo más apropiado. Para encontrar el mejor tipo CLR coincidente del contenido simple de atributos y elementos, utilice la propiedad <xref:System.Xml.XPath.XPathNavigator.ValueType%2A>. Para obtener más información sobre la asignación de tipos integrados de esquemas a tipos CLR, vea [Compatibilidad de tipos en las clases System.Xml](type-support-in-the-system-xml-classes.md).  
@@ -29,6 +31,7 @@ Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.X
 - Reflexión del tipo específico del lenguaje de esquema: en otros casos, es posible que quiera obtener más detalles del tipo específico del esquema que se aplica a un documento XML. Por ejemplo, al leer un archivo XML, puede que desee extraer el atributo `maxOccurs` para cada nodo válido del documento XML con el fin de realizar algún cálculo personalizado. Puesto que esta información solo se establece a través de la validación de esquemas, se tiene acceso a ella a través de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>. Para obtener más información, vea la sección El conjunto de información posterior a la validación de esquemas.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>Descriptores de acceso con información de tipos de XPathNavigator  
+
  En la siguiente tabla se muestran las diversas propiedades y métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se pueden utilizar para tener acceso a la información de tipo sobre un nodo.  
   
 |Propiedad.|Descripción|  
@@ -47,6 +50,7 @@ Como instancia del modelo de datos XPath 2.0, la clase <xref:System.Xml.XPath.X
  Para obtener más información sobre la asignación de tipos integrados de esquemas a tipos CLR, vea [Compatibilidad de tipos en las clases System.Xml](type-support-in-the-system-xml-classes.md).  
   
 ## <a name="the-post-schema-validation-infoset-psvi"></a>El conjunto de información posterior a la validación de esquemas (PSVI)  
+
  Un procesador de esquemas XML acepta un conjunto de información XML como entrada y lo convierte en un conjunto de información posterior a la validación de esquemas. Un conjunto de información posterior a la validación de esquemas es el conjunto de información XML original en el que se han agregado nuevos elementos de información y nuevas propiedades a elementos de información existentes. Existen tres clases de información muy amplias que se agregan al conjunto de información XML del conjunto de información posterior a la validación de esquemas que proporciona el <xref:System.Xml.XPath.XPathNavigator>.  
   
 1. Resultados de la validación: información referente a si un elemento o atributo se ha validado correctamente o no. Esta información la proporciona la propiedad <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> de la propiedad <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator>.  
@@ -137,6 +141,7 @@ xmlns:xs="http://www.w3.org/2001/XMLSchema">
 ```  
   
 ## <a name="obtain-typed-values-using-valueas-properties"></a>Obtención de valores con información de tipos utilizando propiedades ValueAs  
+
  El valor con información de tipos de un nodo se puede recuperar obteniendo acceso a la propiedad <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> de <xref:System.Xml.XPath.XPathNavigator>. En determinados casos, puede que desee convertir el valor con información de tipos de un nodo en un tipo diferente. Un ejemplo muy común es la obtención de un valor numérico de un nodo XML. Por ejemplo, considere los siguientes documentos XML no validados y sin información de tipos.  
   
 ```xml  

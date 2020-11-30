@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 804a72f865fc491d6fc991e78c53ceb62d20cd1c
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 70e68de3ce736bc4935dea80e37cc805068b0bc5
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94824459"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722471"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
@@ -630,6 +630,7 @@ En el ejemplo siguiente se incluye el especificador de formato personalizado "zz
 ## <a name="date-and-time-separator-specifiers"></a>Especificadores de separador de fecha y hora
 
 ### <a name="the--custom-format-specifier"></a><a name="timeSeparator"></a> Especificador de formato personalizado ":"
+
 El especificador de formato personalizado ":" representa el separador de hora, que se usa para diferenciar horas, minutos y segundos. El separador de hora adaptado adecuado se recupera de la propiedad <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> de la referencia cultural actual o especificada.
 
 > [!NOTE]

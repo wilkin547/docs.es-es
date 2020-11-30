@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 1779bb51267af3c2f50ec03112f3c45199390333
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ef7363cd1c5161217fa4cf74dbfae9dee86fa76f
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830433"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95697745"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Cómo: Implementar un componente que admita el modelo asincrónico basado en eventos
 
@@ -51,6 +51,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
  Para copiar el código de este tema como una sola lista, vea [Cómo: Implementar un cliente en un modelo asincrónico basado en eventos](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Crear el componente  
+
  El primer paso es crear el componente que implementará el modelo asincrónico basado en eventos.  
   
 ### <a name="to-create-the-component"></a>Para crear el componente  
@@ -58,6 +59,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
 - Cree una clase llamada `PrimeNumberCalculator` y heredada de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definir delegados y eventos asincrónicos públicos  
+
  El componente se comunica con los clientes mediante eventos. El evento _MethodName_**Completed** informa a los clientes de la finalización de una tarea asincrónica, y el evento _MethodName_**ProgressChanged** informa a los clientes del progreso de una tarea asincrónica.  
   
 ### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Para definir eventos asincrónicos para los clientes de su componente:  
@@ -83,6 +85,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>Punto de control  
+
  En este momento, puede compilar el componente.  
   
 ### <a name="to-test-your-component"></a>Para probar el componente  
@@ -99,6 +102,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      Estas advertencias se borrarán en la sección siguiente.  
   
 ## <a name="defining-private-delegates"></a>Definir delegados privados  
+
  Los aspectos asincrónicos del componente `PrimeNumberCalculator` se implementan internamente con un delegado especial conocido como <xref:System.Threading.SendOrPostCallback>. <xref:System.Threading.SendOrPostCallback> representa un método de devolución de llamada que se ejecuta en un subproceso <xref:System.Threading.ThreadPool>. El método de devolución de llamada debe tener una firma que toma un único parámetro de tipo <xref:System.Object>, lo que significa que tendrá que pasar información de estado entre los delegados de una clase contenedora. Para obtener más información, consulta <xref:System.Threading.SendOrPostCallback>.  
   
 ### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Para implementar un comportamiento asincrónico interno del componente:  
@@ -130,6 +134,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#23)]  
   
 ## <a name="implementing-public-events"></a>Implementar eventos públicos  
+
  Los componentes que implementan el modelo asincrónico basado en eventos se comunican con los clientes mediante eventos. Estos eventos se invocan en el subproceso adecuado con la ayuda de la clase <xref:System.ComponentModel.AsyncOperation>.  
   
 ### <a name="to-raise-events-to-your-components-clients"></a>Para generar eventos en los clientes del componente:  
@@ -140,6 +145,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#24)]  
   
 ## <a name="implementing-the-completion-method"></a>Implementar el método de finalización  
+
  El delegado de finalización es el método que el comportamiento asincrónico de subproceso libre y subyacente invocará cuando la operación asincrónica finaliza tras una terminación correcta, un error o una cancelación. Esta invocación se produce en un subproceso arbitrario.  
   
  Este método es donde se quita el identificador de tarea del cliente de la colección interna de tokens de clientes exclusivos. Este método también finaliza la duración de una operación asincrónica determinada llamando al método <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> en la clase <xref:System.ComponentModel.AsyncOperation> correspondiente. Esta llamada genera el evento de finalización en el subproceso que es apropiado para el modelo de aplicación. Después de llamar al método <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>, ya no se puede usar la instancia de <xref:System.ComponentModel.AsyncOperation>, y todos los intentos posteriores para usarla generarán una excepción.  
@@ -154,6 +160,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>Punto de control  
+
  En este momento, puede compilar el componente.  
   
 ### <a name="to-test-your-component"></a>Para probar el componente  
@@ -169,6 +176,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      Esta advertencia se resolverá en la sección siguiente.  
   
 ## <a name="implementing-the-worker-methods"></a>Implementar los métodos de trabajo  
+
  Hasta ahora, ha implementado el código asincrónico admitido para el componente `PrimeNumberCalculator`. Ahora puede implementar el código que realiza el trabajo real. Implementará tres métodos: `CalculateWorker`, `BuildPrimeNumberList` y `IsPrime`. Juntos, `BuildPrimeNumberList` y `IsPrime` constituyen un algoritmo muy conocido denominado criba de Eratóstenes, que determina si un número es primo buscando todos los números primos hasta la raíz cuadrada del número de prueba. Si no se encuentran divisores en este punto, el número de prueba es primo.  
   
  Si este componente se hubiera escrito para obtener la máxima eficacia, recordaría todos los números primos detectados por distintas invocaciones para diferentes números de prueba. También buscaría divisores triviales como 2, 3 y 5. Con este ejemplo se pretende demostrar cómo las operaciones que consumen mucho tiempo pueden ejecutarse de forma asincrónica; sin embargo, estas optimizaciones se dejan como un ejercicio para el usuario.  
@@ -208,6 +216,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>Punto de control  
+
  En este momento, puede compilar el componente.  
   
 ### <a name="to-test-your-component"></a>Para probar el componente  
@@ -217,6 +226,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      Todo lo que queda por escribir son los métodos para iniciar y cancelar operaciones asincrónicas, `CalculatePrimeAsync` y `CancelAsync`.  
   
 ## <a name="implementing-the-start-and-cancel-methods"></a>Implementación de los métodos de inicio y cancelación  
+
  Inicie el método de trabajo en su propio subproceso llamando a `BeginInvoke` en el delegado que lo contiene. Para administrar la duración de una operación asincrónica determinada, llame al método <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> en la clase del asistente <xref:System.ComponentModel.AsyncOperationManager>. Devuelve <xref:System.ComponentModel.AsyncOperation>, que serializa las llamadas a los controladores de eventos del cliente para el subproceso o contexto apropiados.  
   
  Puede cancelar una operación pendiente concreta si llama a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> en su clase <xref:System.ComponentModel.AsyncOperation> correspondiente. Esto finaliza esa operación y todas las llamadas posteriores a <xref:System.ComponentModel.AsyncOperation> generarán una excepción.  
@@ -234,6 +244,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](snippets/component-that-supports-the-event-based-asynchronous-pattern/vb/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>Punto de control  
+
  En este momento, puede compilar el componente.  
   
 ### <a name="to-test-your-component"></a>Para probar el componente  
@@ -245,6 +256,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
  Para un cliente de ejemplo que usa el componente `PrimeNumberCalculator`, consulte [Cómo: Implementar un cliente del modelo asincrónico basado en eventos](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
+
  Puede rellenar este ejemplo escribiendo `CalculatePrime`, el equivalente sincrónico del método `CalculatePrimeAsync`. Esto hará que el componente `PrimeNumberCalculator` sea totalmente compatible con el modelo asincrónico basado en eventos.  
   
  Puede mejorar este ejemplo conservando la lista de todos los números primos detectados por varias invocaciones de distintos números de prueba. Con este enfoque, cada tarea se beneficiará del trabajo realizado por tareas anteriores. Tenga la precaución de proteger esta lista con las regiones `lock`, para que el acceso a la lista por parte de diferentes subprocesos se serialice.  

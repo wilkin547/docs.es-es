@@ -15,12 +15,12 @@ helpviewer_keywords:
 - namespaces [.NET], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: d9ee7020c7ec06f079b7f0a05d5fea67ff1c1a90
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 0f80be2d1da43341f8e2af6f32580be2e01289dc
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94823191"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723225"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 
@@ -170,11 +170,13 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 - Las definiciones de todos los miembros del tipo  
   
 ### <a name="attributes"></a>Atributos  
+
  Los atributos proporcionan metadatos adicionales definidos por el usuario . Normalmente, se emplean para almacenar información adicional sobre un tipo en su ensamblado o para modificar el comportamiento de un miembro de tipo en tiempo de diseño o en tiempo de ejecución.  
   
  Los atributos son clases que heredan de <xref:System.Attribute?displayProperty=nameWithType>. Los lenguajes que admiten el uso de atributos tienen su propia sintaxis para aplicar atributos a un elemento del lenguaje. Los atributos se pueden aplicar a casi cualquier elemento del lenguaje; los elementos específicos a los que se puede aplicar un atributo los define la clase <xref:System.AttributeUsageAttribute> aplicada a esa clase de atributos.  
   
 ### <a name="type-accessibility"></a>Accesibilidad a tipos  
+
  Todos los tipos tienen un modificador que rige su accesibilidad desde otros tipos. En la tabla siguiente se describen las accesibilidades a tipos que admite el motor en tiempo de ejecución.  
   
 |Accesibilidad|Descripción|  
@@ -197,6 +199,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 - Si la accesibilidad declarada de `M` es `private`, el dominio de accesibilidad de `M` es el texto de programa de `T`.  
   
 ### <a name="type-names"></a>Nombres de tipo  
+
  El sistema de tipos común sólo impone dos restricciones en los nombres:  
   
 - Todos los nombres se codifican como cadenas de caracteres Unicode (de 16 bits).  
@@ -208,6 +211,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Aunque un tipo puede hacer referencia a tipos de otros módulos y ensamblados, es preciso que se defina íntegramente en un solo módulo de .NET. (Sin embargo, según la compatibilidad del compilador, se puede dividir en varios archivos de código fuente.) Los nombres de tipo solo tienen que ser únicos dentro de un espacio de nombres. Para identificar íntegramente un tipo, su nombre debe calificarse con el espacio de nombres que contiene la implementación del tipo.  
   
 ### <a name="base-types-and-interfaces"></a>Tipos base e interfaces  
+
  Un tipo puede heredar valores y comportamientos de otro. El sistema de tipos común no permite que los tipos hereden de más de un tipo base.  
   
  Un tipo puede implementar cualquier número de interfaces. Para implementar una interfaz, un tipo debe implementar todos los miembros virtuales de la interfaz. Un tipo derivado puede implementar un método virtual, que se puede invocar estática o dinámicamente.  
@@ -291,12 +295,14 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 |virtual|Métodos, propiedades y eventos|Un tipo derivado puede implementar el método, que se puede invocar estática o dinámicamente. Si se usa la invocación dinámica, el tipo de la instancia que hace la llamada en tiempo de ejecución (en lugar del tipo conocido en tiempo de compilación) determina a qué implementación del método se llama. Para invocar un método virtual de manera estática, es posible que haya que convertir la variable en un tipo que use la versión deseada del método.|  
   
 ### <a name="overloading"></a>Sobrecarga  
+
  Cada miembro de tipo tiene una firma única. Las firmas de método están formadas por el nombre del método y una lista de parámetros (el orden y los tipos de los argumentos del método). Se pueden definir varios métodos con el mismo nombre dentro un tipo, siempre y cuando sus firmas sean distintas. Cuando se definen dos o más métodos con el mismo nombre se dice que el método está sobrecargado. Por ejemplo, en <xref:System.Char?displayProperty=nameWithType>, se reemplaza el método <xref:System.Char.IsDigit%2A>. Un método toma un argumento de tipo <xref:System.Char>. El otro método toma un argumento de tipo <xref:System.String> y un argumento de tipo <xref:System.Int32>.  
   
 > [!NOTE]
 > El tipo de valor devuelto no se considera parte de la firma de un método. Es decir, no se pueden sobrecargar los métodos si solo difieren en el tipo de valor devuelto.  
   
 ### <a name="inherit-override-and-hide-members"></a>Herencia, invalidación y ocultación de miembros  
+
  Un tipo derivado hereda todos los miembros de su tipo base, es decir, estos miembros se definen en el tipo derivado y están disponibles para él. El comportamiento o cualidades de los miembros heredados se puede modificar de dos maneras:  
   
 - Un tipo derivado puede ocultar un miembro heredado definiendo un nuevo miembro con la misma firma. Esto puede hacerse para convertir un miembro público en privado o para definir un nuevo comportamiento para un método heredado que está marcado como `final`.  

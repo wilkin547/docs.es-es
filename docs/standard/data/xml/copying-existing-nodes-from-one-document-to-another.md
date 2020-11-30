@@ -2,14 +2,15 @@
 title: Copia de nodos existentes de un documento a otro
 ms.date: 03/30/2017
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-ms.openlocfilehash: f4d58fa5aafdd48feff1a768ab0463ac09315476
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 2e66d6eb83692e8e6541ce869062e2ce67c3c1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829614"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95722211"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copia de nodos existentes de un documento a otro
+
 El método **ImportNode** es el mecanismo por el que un nodo o todo el subárbol de nodos se copia de una clase **XmlDocument** a otra. El nodo que devuelve la llamada es una copia del nodo del documento de origen, incluidos los valores de atributo, el nombre del nodo, el tipo de nodo y todos los atributos relacionados con el espacio de nombres como el prefijo, el nombre local y el identificador de recursos uniformes (URI) del espacio de nombres. El documento de origen no cambia. Una vez importado el nodo, todavía tiene que agregarlo al árbol utilizando uno de los métodos usados para insertar nodos.  
   
  Cuando el nodo se adjunta a su nuevo documento, éste se convierte en poseedor del nodo. La razón es que cada nodo, cuando se crea, tiene un documento en propiedad, aunque los nodos se creen en distintos fragmentos del documento. Se trata de un requisito de Document Object Model (DOM) XML que exige el diseño de creación Factory en la clase **XmlDocument**. Por ejemplo, **CreateElement** es la única manera de crear nodos.  

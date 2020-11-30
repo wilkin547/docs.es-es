@@ -2,17 +2,19 @@
 title: Acceso a datos XML con XPathNavigator
 ms.date: 03/30/2017
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-ms.openlocfilehash: a3911230598a282d66fa50bf1d82c4b4083a30e4
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: f87e2e12b7ebc740809dc8db902f2ece92e8f127
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94821897"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725409"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>Acceso a datos XML con XPathNavigator
+
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye métodos que se utilizan para navegar por los nodos, extraer datos XML y obtener acceso a datos XML fuertemente tipados en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Navegación por un conjunto de nodos con XPathNavigator](node-set-navigation-using-xpathnavigator.md)  
  Se describen los métodos de navegación por conjuntos de nodos de la clase <xref:System.Xml.XPath.XPathNavigator> que se utilizan para navegar por los nodos de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
   

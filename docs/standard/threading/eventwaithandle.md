@@ -7,12 +7,12 @@ helpviewer_keywords:
 - event wait handles [.NET]
 - threading [.NET], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
-ms.openlocfilehash: 5e448397e4aabe0acb4144abe1469af6a631aeaa
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 078bda2354a6f0aec2215b0c5da2a021f53ff922
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819921"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95723789"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 
@@ -24,6 +24,7 @@ La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se 
  Ambos identificadores de espera de evento local y con nombre usan objetos de sincronización del sistema, protegidos por contenedores <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> para garantizar la liberación de los recursos. Puede usar el método <xref:System.Threading.WaitHandle.Dispose%2A> para liberar los recursos inmediatamente cuando haya terminado de utilizar el objeto.  
   
 ## <a name="event-wait-handles-that-reset-automatically"></a>Identificadores de espera de evento que se restablecen automáticamente  
+
  Cree un evento de restablecimiento automático definiendo <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> al crear el objeto <xref:System.Threading.EventWaitHandle>. Como su nombre implica, este evento de sincronización se restablece automáticamente cuando se señala, después de liberar un único subproceso en espera. Señale el evento mediante una llamada a su método <xref:System.Threading.EventWaitHandle.Set%2A>.  
   
  Los eventos de restablecimiento automático se utilizan normalmente para proporcionar acceso exclusivo a un recurso a un único subproceso cada vez. Un subproceso solicita el recurso mediante una llamada al método <xref:System.Threading.WaitHandle.WaitOne%2A>. Si ningún otro subproceso contiene el identificador de espera, el método devuelve `true` y el subproceso que realiza la llamada tiene el control del recurso.  
@@ -34,6 +35,7 @@ La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se 
  Si un evento de restablecimiento automático se señaliza cuando no hay ningún subproceso en espera, permanece señalado hasta que un subproceso intenta esperar en él. El evento libera el subproceso y lo restablece inmediatamente, bloqueando los subprocesos subsiguientes.  
   
 ## <a name="event-wait-handles-that-reset-manually"></a>Identificadores de espera de evento que se restablecen manualmente  
+
  Cree un evento de restablecimiento manual definiendo <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> al crear el objeto <xref:System.Threading.EventWaitHandle>. Como su nombre implica, este evento de sincronización debe restablecerse manualmente después de que se haya señalado. Hasta que se restablezca, mediante una llamada a su método <xref:System.Threading.EventWaitHandle.Reset%2A>, los subprocesos que esperan en el identificador de evento se ejecutarán inmediatamente, sin bloquearse.  
   
  Un evento de restablecimiento manual funciona como la puerta de un establo. Si no se señala un evento, los subprocesos que esperan en él se bloquean, como los caballos de un establo. Cuando se señala el evento, mediante una llamada a su método <xref:System.Threading.EventWaitHandle.Set%2A>, todos los subprocesos en espera pueden continuar libremente. El evento permanece señalado hasta que se llama a su método <xref:System.Threading.EventWaitHandle.Reset%2A>. Esto hace que el evento de restablecimiento manual sea una forma ideal de retener subprocesos que necesitan esperar hasta que un subproceso finaliza una tarea.  
@@ -41,11 +43,13 @@ La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se 
  Como los caballos cuando dejan un establo, lleva tiempo que el sistema operativo programe los subprocesos liberados y reanudar su ejecución. Si se llama al método <xref:System.Threading.EventWaitHandle.Reset%2A> antes de que se reanude la ejecución de los subprocesos, los subprocesos restantes se vuelven a bloquear. Los subprocesos que se reanudan y los subprocesos que se bloquean es una cuestión que depende de factores aleatorios, como la carga del sistema, el número de subprocesos que esperan al programador, etc. Esto no plantea ningún problema si el subproceso que señala el evento termina después de la señalización, que es el patrón de uso más común. Si desea que el subproceso que señaló el evento inicie una nueva tarea después de que todos los subprocesos en espera se hayan reanudado, debe bloquearlo hasta que todos los subprocesos en espera se hayan reanudado. En caso contrario, se produce una condición de carrera y el comportamiento del código es imprevisible.  
   
 ## <a name="features-common-to-automatic-and-manual-events"></a>Características comunes de eventos automáticos y manuales  
+
  Normalmente, uno o varios subprocesos se bloquean en <xref:System.Threading.EventWaitHandle> hasta que un subproceso desbloqueado llama al método <xref:System.Threading.EventWaitHandle.Set%2A>, lo que libera uno de los subprocesos en espera (en el caso de los eventos de restablecimiento automático) o todos ellos (en el caso de eventos de restablecimiento manual). Un subproceso puede señalar <xref:System.Threading.EventWaitHandle> y, a continuación, bloquearse ahí, como una operación atómica, mediante una llamada al método estático <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType>.  
   
  Los objetos <xref:System.Threading.EventWaitHandle> pueden usarse con los métodos estáticos <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> y <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>. Dado que las clases <xref:System.Threading.EventWaitHandle> y <xref:System.Threading.Mutex> se derivan de <xref:System.Threading.WaitHandle>, puede usar las dos con estos métodos.  
   
 ### <a name="named-events"></a>Eventos con nombre  
+
  El sistema operativo Windows permite que los identificadores de espera de evento tengan nombres. Un evento con nombre abarca todo el sistema. Es decir, una vez creado el evento con nombre, es visible para todos los subprocesos de todos los procesos. Por lo tanto, los eventos con nombre pueden utilizarse para sincronizar tanto las actividades de procesos como las de subprocesos.  
   
  Puede crear un objeto <xref:System.Threading.EventWaitHandle> que represente un evento de sistema con nombre mediante el uso de uno de los constructores que especifica un nombre de evento.  

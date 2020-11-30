@@ -2,19 +2,21 @@
 title: Navegación por el espacio de nombres XPath
 ms.date: 03/30/2017
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: 4d2ef71a41d19fd5bb573afab66dc8a15e19c393
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: d5350f0c8f73c5efb0f7d9e4c492a841b4978c36
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94831213"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95720898"
 ---
 # <a name="xpath-namespace-navigation"></a>Navegación por el espacio de nombres XPath
+
 Para usar consultas XPath con documentos XML, debe direccionar correctamente los espacios de nombres XML y los elementos que contienen los espacios de nombres. Los espacios de nombres evitan las ambigüedades que pueden producirse cuando los nombres se utilizan en varios contextos; por ejemplo, el nombre `ID` puede referirse a varios identificadores asociados con distintos elementos de un documento XML. La sintaxis de los espacios de nombres especifica los URI, nombres y prefijos que distinguen los elementos de un documento XML.  
   
  El ejemplo de este tema muestra el uso de los prefijos durante la navegación por un documento XML con <xref:System.Xml.XPath.XPathNavigator>. Para obtener más información sobre los espacios de nombres y la sintaxis, vea [XML Files: Understanding XML Namespaces](/previous-versions/dotnet/articles/bb986013(v=msdn.10)) (Archivos XML: descripción de los espacios de nombres XML).  
   
 ## <a name="namespace-declarations"></a>Declaraciones de espacios de nombres  
+
  Las declaraciones de espacios de nombres permiten distinguir y direccionar los elementos de un documento XML cuando se utiliza una instancia de <xref:System.Xml.XPath.XPathNavigator>. Los prefijos de los espacios de nombres proporcionan una sintaxis breve para direccionar los espacios de nombres.  
   
  Los prefijos se definen mediante el formato: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` En esta sintaxis, el prefijo "`e`" es una abreviatura del URI formal del espacio de nombres. Puede identificar el elemento `Body` como miembro del espacio de nombres `Envelope` mediante el uso de la sintaxis: `e:Body`.  
@@ -35,6 +37,7 @@ Para usar consultas XPath con documentos XML, debe direccionar correctamente los
 ```  
   
 ## <a name="navigation-by-namespace-prefix"></a>Navegación por prefijos de los espacios de nombres  
+
  El código de esta sección utiliza objetos <xref:System.Xml.XPath.XPathNavigator> y <xref:System.Xml.XmlNamespaceManager> para seleccionar el elemento `Search` del documento XML de la sección anterior. La expresión `xpath` de la consulta incluye los prefijos de los espacios de nombres para cada elemento de la ruta. El hecho de especificar la identidad precisa de los espacios de nombres que contienen cada elemento garantiza una navegación correcta al elemento `Search` con el método <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>.  
   
 ```csharp  

@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 92fb912cdd2030f87bee1109b9944e1fa857dddd
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: ab1d4d436ce833af94e7eaba35943e499a047a05
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819466"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95725071"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Cuándo usar una colección segura para subprocesos
 
@@ -33,6 +33,7 @@ ms.locfileid: "94819466"
  Aumento del rendimiento que es proporcional al número de núcleos del equipo. Un algoritmo que escala funciona más rápido con ocho núcleos que con dos núcleos.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) frente a Queue(T)  
+
  En escenarios productor-consumidor puros, cuando el tiempo de procesamiento de cada elemento es muy pequeño (pocas instrucciones), <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> puede ofrecer modestas ventajas de rendimiento sobre <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> con un bloqueo externo. En este escenario, <xref:System.Collections.Concurrent.ConcurrentQueue%601> funciona mejor cuando un subproceso dedicado se está poniendo en cola y un subproceso dedicado se está quitando de la cola. Si no se aplica esta regla, <xref:System.Collections.Generic.Queue%601> podría funcionar incluso algo más rápido que <xref:System.Collections.Concurrent.ConcurrentQueue%601> en equipos con varios núcleos.  
   
  Cuando el tiempo de procesamiento es de unos 500 FLOPS (operaciones de punto flotante) o más, la regla de dos subprocesos no se aplica a <xref:System.Collections.Concurrent.ConcurrentQueue%601>, que en ese caso tiene muy buena escalabilidad. <xref:System.Collections.Generic.Queue%601> no escala bien en este escenario.  
@@ -40,6 +41,7 @@ ms.locfileid: "94819466"
  En escenarios productor-consumidor mixtos, cuando el tiempo de procesamiento es muy pequeño, <xref:System.Collections.Generic.Queue%601> con un bloqueo externo escala mejor que <xref:System.Collections.Concurrent.ConcurrentQueue%601>. Pero cuando el tiempo de procesamiento es de unos 500 FLOPS o más, <xref:System.Collections.Concurrent.ConcurrentQueue%601> escala mejor.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack frente a Pila  
+
  En escenarios productor-consumidor puros, cuando el tiempo de procesamiento es muy pequeño, <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> y <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> con un bloqueo externo probablemente funcionarán más o menos igual con un subproceso dedicado que se inserta y un subproceso dedicado que se extrae. Pero a medida que aumenta el número de subprocesos, ambos tipos se ralentizan debido a una mayor contención y <xref:System.Collections.Generic.Stack%601> podría funcionar mejor que <xref:System.Collections.Concurrent.ConcurrentStack%601>. Cuando el tiempo de procesamiento es de unos 500 FLOPS o más, ambos tipos escalan con una velocidad similar.  
   
  En escenarios productor-consumidor mixtos, <xref:System.Collections.Concurrent.ConcurrentStack%601> es más rápido para cargas de trabajo grandes y pequeñas.  
@@ -47,6 +49,7 @@ ms.locfileid: "94819466"
  El uso de <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> y <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> puede acelerar considerablemente el tiempo de acceso.  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary frente a Dictionary  
+
  En general, use <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> en cualquier escenario en el que agregue y actualice claves o valores simultáneamente desde varios subprocesos. En escenarios que implican actualizaciones frecuentes y relativamente pocas lecturas, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> suele ofrecer ventajas modestas. En escenarios que implican numerosas lecturas y actualizaciones, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> suele ser considerablemente más rápido en equipos con cualquier número de núcleos.  
   
  En escenarios que implican actualizaciones frecuentes, puede aumentar el grado de simultaneidad en <xref:System.Collections.Concurrent.ConcurrentDictionary%602> y medir el rendimiento para ver si aumenta en equipos que tienen más núcleos. Si cambia el nivel de simultaneidad, evite las operaciones globales tanto como pueda.  
@@ -54,11 +57,13 @@ ms.locfileid: "94819466"
  Si solo va a leer claves o valores, <xref:System.Collections.Generic.Dictionary%602> es más rápido porque no se necesita ninguna sincronización cuando no hay ningún subproceso que modifique el diccionario.  
   
 ## <a name="concurrentbag"></a>ConcurrentBag  
+
  En escenarios productor-consumidor puros, <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> probablemente será más lento que los otros tipos de colección simultánea.  
   
  En escenarios productor-consumidor mixtos, <xref:System.Collections.Concurrent.ConcurrentBag%601> es generalmente mucho más rápido y más escalable que cualquier otro tipo de colección simultánea para cargas de trabajo grandes y pequeñas.  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
+
  Cuando se necesita una semántica de límite y bloqueo, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> probablemente funcionará más rápido que cualquier implementación personalizada. Además, admite tareas avanzadas de cancelación, enumeración y control de excepciones.  
   
 ## <a name="see-also"></a>Vea también
