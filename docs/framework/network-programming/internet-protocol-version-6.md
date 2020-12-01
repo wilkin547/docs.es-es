@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: c2b23705ae309436344513e54d6258e206d69da4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f5b74674ba4144f75d125267f2458394bb74fab1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551470"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283957"
 ---
 # <a name="internet-protocol-version-6"></a>Protocolo de Internet versión 6
+
 El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos estándar para la capa de red de Internet. IPv6 está diseñado para resolver muchos de los problemas que se producen en la versión actual del conjunto de protocolo de Internet (conocido como IPv4) en relación con el agotamiento de direcciones, la seguridad, la configuración automática, la extensibilidad, etc. IPv6 amplía las funciones de Internet para habilitar nuevos tipos de aplicaciones, incluidas las aplicaciones móviles y de punto a punto. A continuación se indican los principales problemas del protocolo IPv4 actual:  
   
 - Rápido agotamiento del espacio de direcciones.  
@@ -46,6 +47,7 @@ El protocolo de Internet versión 6 (IPv6) es un nuevo conjunto de protocolos es
  Para más información, vea [Direccionamiento IPv6](ipv6-addressing.md), [Enrutamiento de IPv6](ipv6-routing.md), [Configuración automática de IPv6](ipv6-auto-configuration.md), [Habilitar y deshabilitar IPv6](enabling-and-disabling-ipv6.md) y [Cómo: Modificar el archivo de configuración de equipo para habilitar la compatibilidad con IPv6](how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Referencias  
+
  Aquí hay una selección de documentos RFC que se pueden encontrar en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/):  
   
 - RFC 1287, Towards the Future Internet Architecture (Hacia la arquitectura de Internet del futuro).  

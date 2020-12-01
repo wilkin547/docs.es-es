@@ -10,11 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-ms.openlocfilehash: 4cf1e5787fe2e430d20208d8e79b610e9126c67c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1b2ee58ccbd4bdfceb6300c20d5255718982f2e5
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96272532"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 
@@ -134,11 +135,13 @@ El archivo de configuración de directiva de edición reemplaza la información 
 Cuando se actualiza un componente compartido y todas las aplicaciones que lo usan deben seleccionar la nueva versión de dicho componente, se usa un archivo de directiva de edición. La configuración del archivo de directiva de edición invalida la configuración del archivo de configuración de la aplicación, a menos que este último aplique el modo seguro.
 
 #### <a name="safe-mode"></a>Modo seguro
+
 Los archivos de directiva de edición por lo general se instalan explícitamente como parte de un Service Pack o de una actualización del programa. Si hay algún problema con el componente compartido actualizado, puede pasar por alto los reemplazos realizados en el archivo de directiva de edición usando el modo seguro. El modo seguro está determinado por el elemento **\<publisherPolicy apply="yes**&#124;**no"/>** , que se encuentra solo en el archivo de configuración de la aplicación. Especifica si la información de configuración de directiva de edición debe quitarse del proceso de enlace.
 
 El modo seguro se puede establecer para toda la aplicación o para los ensamblados seleccionados. Es decir, puede desactivar la directiva para todos los ensamblados que componen la aplicación, o bien activarla para algunos ensamblados pero no para otros. Para aplicar de forma selectiva la directiva de publicador a los ensamblados que componen una aplicación, establezca **\<publisherPolicy apply\=no/>** y especifique los ensamblados que desee que se vean afectados mediante el elemento \<**dependentAssembly**>. Para aplicar la directiva de edición a todos los ensamblados que componen la aplicación, establezca **\<publisherPolicy apply\=no/>** sin elementos de ensamblado dependiente. Para obtener más información acerca de la configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
 
 ### <a name="machine-configuration-file"></a>Archivo de configuración del equipo
+
 En tercer lugar, el tiempo de ejecución examina el archivo de configuración del equipo. Este archivo, denominado Machine.config, reside en el equipo local, el subdirectorio Config del directorio raíz donde está instalado el tiempo de ejecución. Los administradores pueden usar este archivo para especificar las restricciones de enlace de ensamblado locales de ese equipo. La configuración incluida en el archivo de configuración del equipo tiene prioridad sobre otras opciones de configuración; sin embargo, esto no significa que todos los valores de configuración deban colocarse en este archivo. La versión determinada por el archivo de directiva del administrador es final y no se puede invalidar. Los reemplazos especificados en el archivo Machine.config afectan a todas las aplicaciones. Para obtener más información acerca de los archivos de configuración, consulte [Configurar aplicaciones con archivos de configuración](../configure-apps/index.md).
 
 <a name="step2"></a>

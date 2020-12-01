@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: d10af40420c1ab9ab177514c0babeaf5cea96922
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957442"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259081"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Creación de archivos de recursos para aplicaciones .NET
 
@@ -33,6 +33,7 @@ Puede incluir recursos, como cadenas, imágenes o datos de objeto, en los archiv
 - Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) para crear un archivo de recursos e incluirlo en el proyecto. Visual Studio proporciona un editor de recursos que le permite agregar, eliminar y modificar recursos. En tiempo de compilación, el archivo de recursos se convierte automáticamente en un archivo .resources binario y se incrusta en un ensamblado de la aplicación o un ensamblado satélite. Para obtener más información, vea la sección [Archivos de recursos en Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
+
 ## <a name="resources-in-text-files"></a>Recursos en archivos de texto
 
 Puede usar archivos de texto (.txt o .restext) únicamente para almacenar recursos de cadena. Para los recursos que no son de cadena, use archivos .resx o créelos mediante programación. Los archivos de texto que contienen recursos de cadena tienen el siguiente formato:
@@ -135,7 +136,9 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 <a name="ResxFiles"></a>
+
 ## <a name="resources-in-resx-files"></a>Recursos en archivos .resx
+
  A diferencia de los archivos de texto, que solo pueden almacenar recursos de cadena, los archivos de recursos XML (.resx) pueden almacenar cadenas, datos binarios (como imágenes, iconos y clips de sonido) y objetos de programación. Los archivos .resx contienen un encabezado estándar, en el que se describe el formato de las entradas de los recursos y se especifica la información sobre el control de versiones correspondiente al código XML que se usa para analizar los datos. Los datos del archivo de recursos siguen lo establecido en el encabezado XML. Cada elemento de datos se compone de un par nombre/valor incluido en una etiqueta `data`. Su atributo `name` define el nombre del recurso y la etiqueta `value` anidada contiene el valor del recurso. En el caso de los datos de cadena, la etiqueta `value` contiene la cadena.
 
  Por ejemplo, la etiqueta `data` siguiente define un recurso de cadena denominado `prompt` cuyo valor es "Enter your name:".
@@ -174,6 +177,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > Como los archivos .resx deben componerse de código XML con formato correcto y tener un formato predefinido, no resulta recomendable trabajar manualmente con este tipo de archivos, sobre todo cuando contienen recursos que no son cadenas. En cambio, [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) proporciona una interfaz transparente para crear y manipular archivos. resx. Para obtener más información, vea la sección [Archivos de recursos en Visual Studio](creating-resource-files-for-desktop-apps.md#VSResFiles). También puede crear y manipular archivos .resx mediante programación. Para obtener más información, vea [Working with .resx Files Programmatically](working-with-resx-files-programmatically.md) (Trabajar con archivos .resx mediante programación).
 
 <a name="ResourcesFiles"></a>
+
 ## <a name="resources-in-resources-files"></a>Recursos en archivos .resources
 
 Puede usar la clase <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> para crear mediante programación un archivo de recursos binario (.resources) directamente desde el código. También puede usar el [Generador de archivos de recursos (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) para crear un archivo .resources a partir de un archivo de texto o un archivo .resx. El archivo .resources puede contener datos binarios (matrices de bytes) y datos de objeto además de datos de cadena. Al crear un archivo .resources mediante programación, se requieren los siguientes pasos:
@@ -195,6 +199,7 @@ Puede usar la clase <xref:System.Resources.ResourceWriter?displayProperty=nameWi
  Después de crear el archivo .resources, puede insertarlo en un ejecutable o una biblioteca en tiempo de ejecución si incluye el modificador `/resource` del compilador del lenguaje o insertarlo en un ensamblado satélite mediante [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md).
 
 <a name="VSResFiles"></a>
+
 ## <a name="resource-files-in-visual-studio"></a>Archivos de recursos en Visual Studio
 
 Cuando agrega un archivo de recursos a su proyecto de [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), Visual Studio crea un archivo .resx en el directorio del proyecto. Visual Studio proporciona editores de recursos que permiten agregar cadenas, imágenes y objetos binarios. Dado que los editores están diseñados para administrar únicamente datos estáticos, no se pueden utilizar para almacenar objetos de programación; debe escribir mediante programación los datos de objeto en un archivo .resx o un archivo .resources. Para más información, consulte el tema [Trabajar con archivos .resx mediante programación](working-with-resx-files-programmatically.md) y la sección [Recursos en archivos .resources](creating-resource-files-for-desktop-apps.md#ResourcesFiles).

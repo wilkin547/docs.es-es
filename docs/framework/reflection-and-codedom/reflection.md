@@ -22,12 +22,12 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 46c67595126af2c62b28d29983775943586a0b90
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 371f56c3a57b8e320c9b329c539075a40cd7a19f
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865286"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258418"
 ---
 # <a name="reflection-in-net"></a>Reflexión en .NET
 
@@ -62,6 +62,7 @@ La reflexión también se puede usar para crear aplicaciones llamadas explorador
 La reflexión tiene otros usos. Los compiladores de lenguajes como JScript usan la reflexión para generar tablas de símbolos. Las clases del espacio de nombres <xref:System.Runtime.Serialization> usan la reflexión para acceder a los datos y para determinar los campos que se deben conservar. Las clases del espacio de nombres <xref:System.Runtime.Remoting> usan la reflexión indirectamente a través de la serialización.  
   
 ## <a name="runtime-types-in-reflection"></a>Tipos de reflexión en tiempo de ejecución  
+
 La reflexión proporciona clases, como <xref:System.Type> y <xref:System.Reflection.MethodInfo>, para representar tipos, miembros, parámetros y otras entidades de código. Pero cuando se usa la reflexión no se trabaja directamente con estas clases, porque la mayoría son abstractas (`MustInherit` en Visual Basic). En su lugar, se trabaja con tipos proporcionados por Common Language Runtime (CLR).  
   
 Por ejemplo, cuando se usa el operador de C# `typeof` (`GetType` en Visual Basic) para obtener un objeto <xref:System.Type>, el objeto es en realidad un `RuntimeType`. `RuntimeType` deriva de <xref:System.Type> y proporciona implementaciones de todos los métodos abstractos.  

@@ -18,17 +18,19 @@ helpviewer_keywords:
 - receiving data, about receiving data
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
-ms.openlocfilehash: 19350d685a81d56657ca0a117d61b50ae24fab6a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 87ad0144f57bdca0e0235aea30c4ab450cc890f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502189"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279303"
 ---
 # <a name="requesting-data"></a>Solicitud de datos
+
 El desarrollo de aplicaciones que se ejecutan en el entorno operativo distribuido de Internet hoy en día requiere un método eficaz y fácil de usar para recuperar datos de recursos de todo tipo. Los protocolos acoplables permiten desarrollar aplicaciones que usan una sola interfaz para recuperar datos de varios protocolos de Internet.  
   
 ## <a name="uploading-and-downloading-data-from-an-internet-server"></a>Cargar y descargar datos desde un servidor de Internet  
+
  Para transacciones simples de solicitud y respuesta, la clase <xref:System.Net.WebClient> proporciona el método más sencillo para cargar datos en un servidor de Internet o para descargarlos de él. **WebClient** proporciona métodos para cargar y descargar archivos, enviar y recibir secuencias, y enviar un búfer de datos al servidor y recibir una respuesta. **WebClient** usa las clases <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse> para establecer las conexiones reales con el recurso de Internet, por lo que cualquier protocolo acoplable registrado está disponible para su uso.  
   
  Las aplicaciones cliente que necesitan realizar transacciones más complejas solicitan datos de los servidores mediante la clase **WebRequest** y sus descendientes. **WebRequest** encapsula los detalles del proceso de conectar con el servidor, enviar la solicitud y recibir la respuesta. **WebRequest** es una clase abstracta que define un conjunto de propiedades y métodos que están disponibles para todas las aplicaciones que usan protocolos acoplables. Los descendientes de **WebRequest**, como <xref:System.Net.HttpWebRequest>, implementan las propiedades y los métodos definidos por **WebRequest** de una forma coherente con el protocolo subyacente.  

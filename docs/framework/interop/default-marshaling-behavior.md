@@ -10,14 +10,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f2a508b87d2f4a9ad92bc0f27fc44d74d8e916d3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 3e18bb5c4caa43a8e951eed3fc6992ec1b2d2afb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555281"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256664"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
+
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
   
  En esta sección se identifican las características predeterminadas de comportamiento del servicio de serialización de interoperabilidad, y se muestra información detallada sobre la serialización de matrices, tipos booleanos, tipos de caracteres, delegados, clases, objetos, cadenas y estructuras.  
@@ -26,6 +27,7 @@ La serialización de interoperabilidad funciona con reglas que dictan cómo se c
 > No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Administración de memoria con el serializador de interoperabilidad  
+
  El serializador de interoperabiliad siempre intenta liberar memoria asignada por código no administrado. Este comportamiento cumple con las reglas de administración de memoria COM, pero difiere de las reglas que rigen C++ nativo.  
   
  Se puede producir confusión si se prevé un comportamiento de C++ nativo (sin liberación de memoria) al usar invocación de plataforma, que automáticamente libera memoria para los punteros. Por ejemplo, la llamada al siguiente método no administrado desde una DLL de C++ no libera automáticamente memoria.  
@@ -43,12 +45,15 @@ BSTR MethodOne (BSTR b) {
  El tiempo de ejecución usa siempre el método **CoTaskMemFree** para liberar memoria. Si la memoria con la que está trabajando no se asignó con el método **CoTaskMemAlloc**, debe usar un **IntPtr** y liberar la memoria manualmente mediante el método adecuado. De forma similar, puede evitar la liberación automática de la memoria en situaciones donde nunca se debería liberar, como al usar la función **GetCommandLine** de Kernel32.dll, que devuelve un puntero a la memoria del kernel. Para obtener más información sobre cómo liberar memoria manualmente, vea el [ejemplo sobre búferes](/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Serialización predeterminada para clases  
+
  Las clases solo se pueden serializar con la interoperabilidad COM y siempre se serializan como interfaces. En algunos casos, la interfaz usada para calcular las referencias de la clase se conoce como interfaz de clase. Para obtener información sobre cómo reemplazar la interfaz de clase por una interfaz de su elección, consulte [Presentar la interfaz de clase](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Pasar clases a COM  
+
  Cuando una clase administrada se pasa a COM, el serializador de interoperabilidad automáticamente encapsula la clase con un proxy COM y pasa la interfaz de clase generada por el proxy a la llamada de método COM. El proxy delega entonces todas las llamadas en la interfaz de clase al objeto administrado. El proxy también expone otras interfaces que no están implementadas explícitamente por la clase. El proxy implementa automáticamente interfaces como **IUnknown** e **IDispatch** en nombre de la clase.  
   
 ### <a name="passing-classes-to-net-code"></a>Pasar clases a código de .NET  
+
  Las coclases no suelen usarse como argumentos de método en COM. En lugar de la coclase, normalmente se pasa una interfaz predeterminada.  
   
  Cuando una interfaz se pasa a código administrado, el serializador de interoperabilidad es responsable de encapsular la interfaz en el contenedor adecuado y pasar este contenedor al método administrado. Determinar qué contenedor se usará puede resultar difícil. Cada instancia de un objeto COM tiene un solo contenedor, independientemente de cuántas interfaces implemente el objeto. Por ejemplo, un único objeto COM que implementa cinco interfaces distintas tiene un solo contenedor. El mismo contenedor expone las cinco interfaces. Si se crean dos instancias del objeto COM, también se crean dos instancias del contenedor.  
@@ -70,6 +75,7 @@ BSTR MethodOne (BSTR b) {
 3. Si el serializador sigue sin poder identificar la clase, encapsula la interfaz en una clase de contenedor genérica denominada **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Serialización predeterminada para delegados  
+
  Un delegado administrado se serializa como una interfaz COM o como un puntero de función según el mecanismo de llamada:  
   
 - Para invocación de plataforma, se serializa un delegado como un puntero de función no administrada de forma predeterminada.  
@@ -161,6 +167,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Serialización predeterminada para tipos de valor  
+
  La mayoría de los tipos de valor, como enteros y números de punto flotante, [pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) y no requieren serialización. Otros tipos que [no pueden transferirse en bloque de bits](blittable-and-non-blittable-types.md) tienen representaciones distintas en memoria administrada y no administrada, y requieren serialización. Hay también otros tipos que requieren un formato explícito en el límite de interoperación.  
   
  En esta sección se proporciona información sobre los tipos de valor con el formato siguiente:  
@@ -186,6 +193,7 @@ internal class DelegateTest {
      Indica que los miembros se distribuyen según el <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporcionado con cada campo.  
   
 ### <a name="value-types-used-in-platform-invoke"></a>Tipos de valor utilizados en la invocación de plataforma  
+
  En el ejemplo siguiente, los tipos `Point` y `Rect` proporcionan información de distribución de miembros mediante **StructLayoutAttribute**.  
   
 ```vb  
@@ -330,6 +338,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>Tipos de valor utilizados en la interoperabilidad COM  
+
  Los tipos con formato también pueden pasarse a llamadas de métodos de interoperabilidad COM. De hecho, cuando se exportan a una biblioteca de tipos, los tipos de valor se convierten automáticamente en estructuras. Como se muestra en el ejemplo siguiente, el tipo de valor `Point` se convierte en una definición de tipo (typedef) con el nombre `Point`. Todas las referencias al tipo de valor `Point` en otro lugar de la biblioteca de tipos se reemplazan por el typedef `Point`.  
   
  **Representación de biblioteca de tipos**  
@@ -353,6 +362,7 @@ interface _Graphics {
 > Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
   
 ### <a name="system-value-types"></a>Tipos de valor System  
+
  El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=nameWithType> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  
   
 |Tipo de valor System|Tipo de elemento|  

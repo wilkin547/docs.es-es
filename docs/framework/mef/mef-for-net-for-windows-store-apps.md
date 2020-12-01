@@ -3,14 +3,15 @@ title: MEF de .NET para aplicaciones de la Tienda Windows
 description: Revise los espacios de nombres de Managed Extensibility Framework (MEF) que contienen tipos para desarrollar aplicaciones de Microsoft Store 8.x extensibles.
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 470ce5f4ac9945f96a430af9806de6f6df6eb1f8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1bd62ad0b405f84952aca9d527c5f8a8e9f744f4
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558711"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96276599"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF de .NET para aplicaciones de la Tienda Windows
+
 <xref:System.Composition?displayProperty=nameWithType> y sus espacios de nombres secundarios contiene tipos para desarrollar aplicaciones de la Tienda Windows 8.x extensibles con Managed Extensibility Framework (MEF). Estos espacios de nombres forman parte del subconjunto de .NET para aplicaciones de la Tienda Windows 8.x del sistema operativo Windows 8.  
   
  Los espacios de nombres no forman parte de la biblioteca de clases básica distribuida con .NET Framework. Para instalar estos espacios de nombres, abra el proyecto en Visual Studio, elija **Administrar paquetes NuGet** en el menú **Proyecto** y busque en línea el paquete Microsoft.Composition.  

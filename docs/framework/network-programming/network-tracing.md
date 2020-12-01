@@ -19,14 +19,15 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: 172f8ce4a50fe9294ee34cf65c0a39eb2f29badc
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: c3c710d99c9597120b0c4d9674439a27c3bedfcc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502254"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96261688"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Traza de la red en .NET Framework
+
 El seguimiento de red de .NET Framework proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Esta característica es útil para depurar las aplicaciones en desarrollo y para analizar las aplicaciones implementadas. El resultado proporcionado por la traza de la red se puede personalizar para admitir diferentes escenarios de uso en tiempo de desarrollo y en un entorno de producción.  
   
  Para habilitar el seguimiento de red en .NET Framework, debe seleccionar un destino para el resultado del seguimiento y agregar opciones de configuración de seguimiento de la red al archivo de configuración de la aplicación o del equipo. Para obtener descripciones de los archivos de configuración y de cómo se usan, vea [Archivos de configuración](../configure-apps/index.md). Para obtener información sobre cómo habilitar el seguimiento de red, vea [Habilitación del seguimiento de red](enabling-network-tracing.md). Para obtener información sobre los valores que se deben agregar al archivo de configuración, vea [Cómo: Configurar el seguimiento de red](how-to-configure-network-tracing.md).  

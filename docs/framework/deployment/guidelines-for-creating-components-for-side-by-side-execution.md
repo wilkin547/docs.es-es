@@ -6,13 +6,15 @@ helpviewer_keywords:
 - side-by-side execution, multiple application versions
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
-ms.openlocfilehash: f0d25984f2444d29d9fc0edb3add23b6adc04c62
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3ac7c514a69ae05b00e7a486aadcbf41e5d1cbd6
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622645"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96262520"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Instrucciones para crear componentes para la ejecución en paralelo
+
 Siga estas instrucciones generales para crear aplicaciones administradas o componentes diseñados para la ejecución en paralelo:  
   
 - Enlazar la identidad de tipo a una versión determinada de un archivo.  
@@ -28,6 +30,7 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
      Una aplicación o componente que se ejecuta de forma aislada debe administrar los recursos para evitar conflictos cuando dos instancias de la aplicación o componente se ejecutan simultáneamente. La aplicación o componente debe usar también una estructura de archivos específica de la versión.  
   
 ## <a name="application-and-component-isolation"></a>Aislamiento de aplicación y componente  
+
  El aislamiento es una de las claves en el diseño de una aplicación o componente para la ejecución en paralelo. La aplicación o componente debe administrar todos los recursos —especialmente la E/S de archivos— de forma aislada. Siga estas instrucciones para asegurarse de que su aplicación o componente se ejecuta de forma aislada:  
   
 - Escriba en el registro de una manera específica de la versión. Almacene los valores en subárboles o claves que indiquen la versión y no comparta información ni el estado entre las versiones de un componente. Esto evita que dos aplicaciones o componentes que se ejecutan al mismo tiempo sobrescriban la información.  
@@ -39,6 +42,7 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
 - Cree grupos y cuentas de usuario de forma específica a una versión. Los grupos y cuentas de usuarios creados por una aplicación deben identificarse por versión. No comparta cuentas de usuarios y grupos entre distintas versiones de una aplicación.  
   
 ## <a name="installing-and-uninstalling-versions"></a>Instalar y desinstalar versiones  
+
  Al diseñar una aplicación para la ejecución en paralelo, siga estas instrucciones relativas a la instalación y desinstalación de versiones:  
   
 - No elimine información del Registro que pueda ser necesaria para otras aplicaciones que se ejecutan en una versión diferente de .NET Framework.  
@@ -54,6 +58,7 @@ Siga estas instrucciones generales para crear aplicaciones administradas o compo
 - No agregue nada al Registro que contenga una ruta de acceso sin versión.  
   
 ## <a name="file-version-number-and-assembly-version-number"></a>Número de versión de archivo y número de versión de ensamblado  
+
  La versión del archivo es un recurso de versión de Win32 que no es usada por el runtime. En general, la versión del archivo debe actualizarse incluso para una actualización en contexto. Dos archivos idénticos pueden tener información de versión de archivo diferente y dos archivos distintos pueden tener la misma información de versión de archivo.  
   
  El runtime usa la versión del ensamblado para el enlace de ensamblados. El runtime considera ensamblados diferentes a dos ensamblados idénticos con un número de versión distinto.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4961b4bc57d25f9fa83cf40f82b153aa93592b55
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90547185"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267018"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedimiento para registrar ensamblados de interoperabilidad primarios
 
@@ -42,6 +42,7 @@ Use la [herramienta Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-as
      En este comando, *nombre_de_ensamblado* es el nombre de archivo del ensamblado que se va a registrar. Regasm.exe agrega una entrada para el ensamblado de interoperabilidad primario bajo la misma clave del Registro que la biblioteca de tipos original.
 
 ## <a name="example"></a>Ejemplo
+
  En el ejemplo siguiente se registra el ensamblado de interoperabilidad primario `CompanyA.UtilLib.dll`.
 
 ```console

@@ -2,17 +2,19 @@
 title: Enrutamiento de IPv6
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 646eef4ec178472a99f60de4785fd53381296c3a
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047787"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258340"
 ---
 # <a name="ipv6-routing"></a>Enrutamiento de IPv6
+
 Una de las ventajas de IPv6 es el mecanismo de enrutamiento flexible. Debido a la manera en que se asignaban y todavía se asignan los identificadores de red IPv4, los enrutadores que se encuentran en las redes troncales de Internet deben mantener grandes tablas de enrutamiento. Estos enrutadores deben conocer todas las rutas con el fin de reenviar los paquetes que se dirigen potencialmente a cualquier nodo de Internet. Con su capacidad para agregar direcciones, IPv6 permite el direccionamiento flexible y reduce drásticamente el tamaño de las tablas de enrutamiento. En esta nueva arquitectura de direccionamiento, los enrutadores intermedios deben realizar un seguimiento únicamente de la parte local de su red para reenviar los mensajes de forma adecuada.  
   
 ## <a name="neighbor-discovery"></a>Detección de equipos cercanos  
+
  Algunas de las características proporcionadas por la detección de equipos cercanos son las siguientes:  
   
 - Detección de enrutadores. Permite que los hosts identifiquen los enrutadores locales.  

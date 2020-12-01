@@ -18,14 +18,15 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
-ms.openlocfilehash: 8b85afb3ffdf69973eff37ccbb067b470ed44e3a
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6800a1973d9eb65bbb7520f9db7a8f431656c685
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502033"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265211"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Usar un socket de servidor asincrónico
+
 Los sockets de servidor asincrónico usan el modelo de programación asincrónico de .NET Framework para procesar las solicitudes de servicio de red. La clase <xref:System.Net.Sockets.Socket> sigue el patrón estándar de nomenclatura asincrónico de .NET Framework; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Accept%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginAccept%2A> y <xref:System.Net.Sockets.Socket.EndAccept%2A>.  
   
  Un socket de servidor asincrónico requiere un método para comenzar a aceptar solicitudes de conexión de la red, un método de devolución de llamada para controlar las solicitudes de conexión y comenzar a recibir datos de la red, así como un método de devolución de llamada para dejar de recibir los datos. Todos estos métodos se describen más adelante en la presente sección.  

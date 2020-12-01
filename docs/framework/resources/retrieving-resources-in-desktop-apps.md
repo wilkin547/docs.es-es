@@ -19,19 +19,21 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: cefdfef32928783b23ac0d51be596e48c27bde9a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 26e4367d28193ce731198ee0ba3d3b35d83cf19c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90535513"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96254550"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la Tienda Windows 8.x, vea [Creación y recuperación de recursos en aplicaciones de la Tienda Windows](/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
+
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperar recursos de ensamblados  
+
  La clase <xref:System.Resources.ResourceManager> proporciona acceso a los recursos en tiempo de ejecución. Puede usar el método <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> para recuperar recursos de cadena y el método <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> para recuperar recursos que no son de cadena. Cada método tiene dos sobrecargas:  
   
 - Una sobrecarga cuyo parámetro único es una cadena que contiene el nombre del recurso. El método intenta recuperar ese recurso para la referencia cultural del subproceso actual. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
@@ -41,6 +43,7 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
  El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para obtener más información, consulte la sección "El proceso de reserva de recursos" de [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
   
 ### <a name="retrieving-string-data-an-example"></a>Recuperación de datos de cadena: Un ejemplo  
+
  En el ejemplo siguiente se llama al método <xref:System.Resources.ResourceManager.GetString%28System.String%29> para recuperar los recursos de cadena de la referencia cultural de interfaz de usuario actual. Incluye un recurso de cadena neutro para la referencia cultural de inglés (Estados Unidos) y recursos localizados para las referencias culturales de ruso (Rusia) y de francés (Francia). El siguiente recurso de inglés (Estados Unidos) está en un archivo denominado Strings.txt:  
   
 ```text
@@ -82,6 +85,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  Si la referencia cultural de interfaz de usuario actual es el español (España), tenga en cuenta que en el ejemplo se muestran los recursos del idioma inglés, ya que los recursos del idioma español no están disponibles y el inglés es la referencia cultural predeterminada del ejemplo.  
   
 ### <a name="retrieving-object-data-two-examples"></a>Recuperación de datos de objeto: dos ejemplos  
+
  Puede usar los métodos <xref:System.Resources.ResourceManager.GetObject%2A> y <xref:System.Resources.ResourceManager.GetStream%2A> para recuperar datos de objeto. Se incluyen los tipos de datos primitivos, los objetos serializables y los objetos que se almacenan en formato binario (como las imágenes).  
   
  En el ejemplo siguiente se usa el método <xref:System.Resources.ResourceManager.GetStream%28System.String%29> para recuperar un mapa de bits que se emplea en la ventana de inicio de una aplicación. El siguiente código fuente del archivo CreateResources.cs (para C#) o CreateResources.vb (para Visual Basic) genera un archivo .resx que contiene la imagen serializada. En este caso, la imagen se carga desde un archivo denominado SplashScreen.jpg; puede modificar el nombre del archivo para sustituir su propia imagen.  
@@ -134,6 +138,7 @@ GetObject.exe
 ```  
   
 ## <a name="versioning-support-for-satellite-assemblies"></a>Compatibilidad de versiones de los ensamblados satélite  
+
  De forma predeterminada, cuando el objeto <xref:System.Resources.ResourceManager> recupera los recursos solicitados, busca ensamblados satélite que tengan números de versión que coincidan con el número de versión del ensamblado principal. Después de implementar una aplicación, puede actualizar el ensamblado principal o los ensamblados satélite de recursos específicos. .NET Framework proporciona compatibilidad de las versiones del ensamblado principal y de los ensamblados satélite.  
   
  El atributo <xref:System.Resources.SatelliteContractVersionAttribute> proporciona compatibilidad de versiones para un ensamblado principal. Al especificar este atributo en el ensamblado principal de una aplicación, puede actualizar y volver a implementar un ensamblado principal sin tener que actualizar sus ensamblados satélite. Una vez actualizado el ensamblado principal, incremente el número de versión del ensamblado principal sin modificar el número de versión del contrato satélite. Cuando el Administrador de recursos recupere los recursos solicitados, cargará la versión del ensamblado satélite especificada por este atributo.  
@@ -145,10 +150,13 @@ GetObject.exe
  Para obtener más información sobre las versiones de los ensamblados, consulte [Assembly Versioning](../../standard/assembly/versioning.md) (Versiones de los ensamblados) y [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>
+
 ## <a name="retrieving-resources-from-resources-files"></a>Recuperar recursos desde archivos .resources  
+
  Si decide no implementar recursos en los ensamblados satélite, puede usar un objeto <xref:System.Resources.ResourceManager> para obtener acceso directo a los recursos de los archivos .resources. Para ello, debe implementar correctamente los archivos .resources. Luego, deberá usar el método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> para crear una instancia de un objeto <xref:System.Resources.ResourceManager> y especificar el directorio que contiene los archivos .resources independientes.  
   
 ### <a name="deploying-resources-files"></a>Implementar archivos .resources  
+
  Al insertar archivos .resources en un ensamblado de aplicación y en ensamblados satélite, todos los ensamblados satélite tienen el mismo nombre de archivo, pero se encuentran en un subdirectorio que refleja la referencia cultural del ensamblado satélite. En cambio, al obtener acceso directo a los recursos desde los archivos .resources, puede colocar todos los archivos .resources en un solo directorio, que normalmente es un subdirectorio del directorio de la aplicación. El nombre del archivo .resources predeterminado de la aplicación consta solo de un nombre de raíz, sin ninguna indicación de la referencia cultural (por ejemplo, strings.resources). Los recursos de cada referencia cultural localizada se almacenan en un archivo cuyo nombre consta del nombre de raíz seguido de la referencia cultural (por ejemplo, strings.ja.resources o strings.de-DE.resources).
 
  En la siguiente ilustración se muestra dónde deben estar ubicados los archivos de recursos en la estructura de directorio. También proporciona las convenciones de nomenclatura de los archivos .resource.  
@@ -156,6 +164,7 @@ GetObject.exe
  ![Ilustración en la que se muestra el directorio principal de la aplicación.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Usar el Administrador de recursos  
+
  Una vez creados los recursos y colocados en el directorio correspondiente, debe crear un objeto <xref:System.Resources.ResourceManager> para usar los recursos llamando al método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . El primer parámetro especifica el nombre de la raíz del archivo .resources predeterminado de la aplicación (en el ejemplo de la sección anterior sería "strings"). El segundo parámetro especifica la ubicación de los recursos (en el ejemplo anterior, "Resources"). El tercer parámetro especifica la implementación <xref:System.Resources.ResourceSet> que se va a usar. Si el tercer parámetro es `null`, se usará la clase <xref:System.Resources.ResourceSet> en tiempo de ejecución predeterminada.  
   
 > [!NOTE]
@@ -164,6 +173,7 @@ GetObject.exe
  Después de crear una instancia del objeto <xref:System.Resources.ResourceManager> , debe usar los métodos <xref:System.Resources.ResourceManager.GetString%2A>, <xref:System.Resources.ResourceManager.GetObject%2A>y <xref:System.Resources.ResourceManager.GetStream%2A> como se ha descrito anteriormente para recuperar los recursos. A pesar de ello, la recuperación de recursos directamente desde los archivos .resources difiere de la recuperación de recursos insertados desde ensamblados. Al recuperar recursos desde archivos .resources, los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> siempre recuperan los recursos de la referencia cultural predeterminada, independientemente de la referencia cultural actual. Para recuperar los recursos de la referencia cultural actual de la aplicación o de una referencia cultural en concreto, debe llamar al método <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>o <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> y especificar la referencia cultural cuyos recursos se van a recuperar. Para recuperar los recursos de la referencia cultural actual, especifique el valor de la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> como argumento `culture` . Si el Administrador de recursos no puede recuperar los recursos de `culture`, aplicará las reglas de reserva de recursos estándar para recuperar los recursos adecuados.  
   
 ### <a name="an-example"></a>Un ejemplo  
+
  En el ejemplo siguiente se muestra cómo el Administrador de recursos recupera los recursos directamente desde archivos .resources. El ejemplo consta de tres archivos de recursos basados en texto para las referencias culturales de inglés (Estados Unidos), francés (Francia) y ruso (Rusia). Inglés (Estados Unidos) es la referencia cultural predeterminada del ejemplo. Sus recursos están almacenados en el siguiente archivo, denominado Strings.txt:  
   
 ```text

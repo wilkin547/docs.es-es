@@ -12,14 +12,15 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-ms.openlocfilehash: cd74021e1f1a79626e171db13def98e546cd51df
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3baacbeca7f5cc50fbb720849aec273f996f86e7
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865208"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96259146"
 ---
 # <a name="viewing-type-information"></a>Ver información de tipos
+
 La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la reflexión. Common Language Runtime crea el objeto **Type** para un tipo cargado cuando lo solicita la reflexión. Puede usar los métodos, los campos, las propiedades y las clases anidadas de un objeto **Type** para averiguarlo todo sobre dicho tipo.  
   
  Use <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de ensamblados no cargados y pasar el nombre de los tipos que quiera. Use <xref:System.Type.GetType%2A?displayProperty=nameWithType> para obtener objetos **Type** de un ensamblado que ya está cargado. Use <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de módulo.  
@@ -46,6 +47,7 @@ La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la 
  Si tiene un objeto **Type**, puede usar la propiedad <xref:System.Type.Module%2A?displayProperty=nameWithType> para obtener un objeto que encapsule el módulo que contiene dicho tipo. Use la propiedad <xref:System.Reflection.Module.Assembly%2A?displayProperty=nameWithType> para buscar un objeto que encapsule el ensamblado que contiene el módulo. Puede obtener el ensamblado que encapsula el tipo directamente mediante la propiedad <xref:System.Type.Assembly%2A?displayProperty=nameWithType>.  
   
 ## <a name="systemtype-and-constructorinfo"></a>System.Type y ConstructorInfo  
+
  En el ejemplo siguiente se muestra cómo enumerar los constructores de una clase, en este caso, la clase <xref:System.String>.  
   
  [!code-cpp[Conceptual.Types.ViewInfo#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source1.cpp#1)]
@@ -53,6 +55,7 @@ La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la 
  [!code-vb[Conceptual.Types.ViewInfo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source1.vb#1)]  
   
 ## <a name="memberinfo-methodinfo-fieldinfo-and-propertyinfo"></a>MemberInfo, MethodInfo, FieldInfo y PropertyInfo  
+
  Obtenga información sobre los métodos, las propiedades, los eventos y los campos del tipo mediante los objetos <xref:System.Reflection.MemberInfo>, <xref:System.Reflection.MethodInfo>, <xref:System.Reflection.FieldInfo> o <xref:System.Reflection.PropertyInfo>.  
   
  En el ejemplo siguiente se usa **MemberInfo** para mostrar el número de miembros en la clase **System.IO.File** y se usa la propiedad <xref:System.Type.IsPublic%2A> para determinar la visibilidad de la clase.  

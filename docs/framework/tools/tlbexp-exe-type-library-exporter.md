@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1a9e984e1b81adda572076cb118a25f5f3a045ea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543392"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283762"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Exportador de la biblioteca de tipos)
+
 El Exportador de la biblioteca de tipos genera una biblioteca que describe los tipos definidos en un ensamblado de Common Language Runtime.  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
@@ -56,6 +57,7 @@ tlbexp assemblyName [options]
 > Las opciones de la línea de comandos de Tlbexp.exe no distinguen entre mayúsculas y minúsculas, y se pueden proporcionar en cualquier orden. Por otra parte, basta con especificar parte de la opción de forma que se identifique de manera inequívoca. Por ejemplo, **/n** equivale a **/nologo** y **/o:** *outfile.tlb*, a **/out:** *outfile.tlb*.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Tlbexp.exe genera una biblioteca de tipos que contiene las definiciones de los tipos definidos en el ensamblado. Las aplicaciones como Visual Basic 6.0 pueden utilizar la biblioteca de tipos generada para enlazarla a los tipos de .NET definidos en el ensamblado.  
   
 > [!IMPORTANT]
@@ -96,6 +98,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
  El Exportador de la biblioteca de tipos se admite en Microsoft Windows 2000 y versiones posteriores.  
   
 ## <a name="examples"></a>Ejemplos  
+
  El comando siguiente genera una biblioteca de tipos con el mismo nombre que el ensamblado que se encuentra en `myTest.dll`.  
   
 ```console  

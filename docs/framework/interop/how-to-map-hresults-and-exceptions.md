@@ -12,14 +12,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: a1a43d7ce3fbc678cc9aa047c5110ac8615ea27e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ea5d920ccfa8a91c9fdc9d95c6165c8dfb52c6ff
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554148"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267044"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Procedimiento para asignar resultados HRESULT y excepciones
+
 Los métodos COM informan de errores devolviendo valores HRESULT; los métodos de .NET informan de ellos iniciando excepciones. El tiempo de ejecución controla la transición entre los dos. Cada clase de excepción de .NET Framework se asigna a un valor HRESULT.  
   
  Las clases de excepción definidas por el usuario pueden especificar el valor HRESULT que sea necesario. Estas clases de excepción pueden cambiar dinámicamente el valor HRESULT que se devuelve cuando se genera la excepción si se establece el campo **HResult** en el objeto de excepción. Se proporciona información adicional sobre la excepción al cliente a través de la interfaz **IErrorInfo**, que se implementa en el objeto .NET en el proceso no administrado.  

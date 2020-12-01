@@ -18,14 +18,15 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 9cf46e9519bcecf4d7a20ff99b86fa5f66af2087
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: af5379533e51e7488d673359dc24268c6329c082
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502046"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265224"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Usar un socket de cliente asincrónico
+
 Un socket de cliente asincrónico no suspende la aplicación mientras espera a que finalicen las operaciones de red. En lugar de eso, usa el modelo de programación asincrónico estándar de .NET Framework para procesar la conexión de red en un subproceso mientras la aplicación continúa ejecutándose en el subproceso original. Los sockets asincrónicos son adecuados para aplicaciones que hacen un uso intensivo de la red o que no pueden esperar a que finalicen las operaciones de red antes de continuar.  
   
  La clase <xref:System.Net.Sockets.Socket> sigue el patrón de nombres de .NET Framework para los métodos asincrónicos; por ejemplo, el método sincrónico <xref:System.Net.Sockets.Socket.Receive%2A> se corresponde con los métodos asincrónicos <xref:System.Net.Sockets.Socket.BeginReceive%2A> y <xref:System.Net.Sockets.Socket.EndReceive%2A>.  

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: f059cbdd3b2a66ac8a668b7b8a80d9ad1551fa64
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 228c286f6c5620dc838df5002edc60863a0fe4e2
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475234"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256604"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
+
 A partir de .NET Framework 4.6, el entorno de ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Comportamiento inesperado o excepciones  
+
  En algunos casos, la compilación con el nuevo compilador JIT de 64 bits provoca una excepción en tiempo de ejecución o en el comportamiento que no se observa al ejecutar el código compilado por el compilador JIT de 64 bits antiguo. Las diferencias conocidas incluyen lo siguiente:  
   
 > [!IMPORTANT]
@@ -38,7 +40,9 @@ A partir de .NET Framework 4.6, el entorno de ejecución incluye un nuevo compil
 - En determinadas condiciones, si se utiliza una instrucción `if` para comprobar una condición antes de entrar en un bloque `try` y en la salida del bloque `try`, y se evalúa la misma condición en el bloque `catch` o `finally`, el compilador JIT de 64 bits nuevo quita la condición `if` del bloque `catch` o `finally` cuando optimiza el código. Como resultado, el código dentro de la instrucción `if` en el bloque `catch` o `finally` se ejecuta de forma incondicional.  
   
 <a name="General"></a>
+
 ## <a name="mitigation-of-known-issues"></a>Mitigación de problemas conocidos  
+
  Si encuentra los problemas mencionados anteriormente, puede solucionarlos realizando las siguientes operaciones:  
   
 - Actualizar a the .NET Framework 4.6.2. El nuevo compilador de 64 bits incluido con .NET Framework 4.6.2 soluciona estos problemas conocidos.  
@@ -48,7 +52,9 @@ A partir de .NET Framework 4.6, el entorno de ejecución incluye un nuevo compil
 - Compilación con el compilador JIT de 64 bits más antiguo. Vea la sección [Mitigación de otros problemas](#Other) sección para obtener más información sobre el procedimiento.  
   
 <a name="Other"></a>
+
 ## <a name="mitigation-of-other-issues"></a>Mitigación de otros problemas  
+
  Si detecta cualquier otra diferencia en el comportamiento entre el código compilado con el compilador de 64 bits antiguo y el compilador de 64 bits nuevo, o entre las versiones de depuración y publicación de la aplicación que se compilan con el nuevo compilador JIT de 64 bits, puede realizar el siguiente procedimiento para compilar la aplicación con el compilador JIT de 64 bits anterior:  
   
 - Según la aplicación, se puede agregar el elemento [\<useLegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) al archivo de configuración de la aplicación. Lo siguiente deshabilita la compilación con el nuevo compilador JIT de 64 bits y en su lugar usa el compilador JIT de 64 bits hereado.  

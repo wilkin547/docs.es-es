@@ -15,14 +15,15 @@ helpviewer_keywords:
 - signed assemblies
 - COM interop, exposing COM components
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
-ms.openlocfilehash: 190b10ede4bc0037836d44332408d7752108346c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2a8c94ac482bc16cb373fc694c4610ad42e8f631
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555073"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96267096"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
+
 Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y Windows SDK proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, tal como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
   
 - Mediante tipos de interoperabilidad insertados: A partir de .NET Framework 4, se puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
@@ -32,9 +33,11 @@ Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .
  Si usa tipos de interoperabilidad insertados, la implementación es sencilla y directa. No es necesario hacer nada especial. En el resto de este artículo se describen los escenarios para implementar ensamblados de interoperabilidad con la aplicación.  
   
 ## <a name="deploying-interop-assemblies"></a>Implementar ensamblados de interoperabilidad  
+
  Los ensamblados pueden tener nombres seguros. Un ensamblado con nombre seguro incluye la clave pública del editor, que proporciona una identidad única. Los ensamblados generados por el [importador de la biblioteca de tipos (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) pueden estar firmados por el publicador mediante la opción **/keyfile**. Puede instalar ensamblados firmados en la caché global de ensamblados. Los ensamblados no firmados deben instalarse en el equipo del usuario como ensamblados privados.  
   
 ### <a name="private-assemblies"></a>Ensamblados privados  
+
  Para instalar un ensamblado que se va a usar de forma privada, el archivo ejecutable de la aplicación y el ensamblado de interoperabilidad que contiene los tipos COM importados deben instalarse en la misma estructura de directorios. En la ilustración siguiente se muestra un ensamblado de interoperabilidad sin firma que se va a usar de forma privada por parte de Client1.exe y Client2.exe, que residen en directorios de aplicación diferentes. El ensamblado de interoperabilidad, denominado LOANLib.dll en este ejemplo, se instala dos veces.  
   
  ![Estructura de directorios y Registro de Windows](./media/deploying-an-interop-application/com-private-deployment.gif "Estructura de directorios y entradas del Registro para una implementación privada")  
@@ -42,6 +45,7 @@ Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .
  Todos los componentes COM asociados a la aplicación deben instalarse en el Registro de Windows. Si Client1.exe y Client2.exe en la ilustración se instalan en equipos diferentes, debe registrar los componentes COM en ambos equipos.  
   
 ### <a name="shared-assemblies"></a>Ensamblados compartidos  
+
  Los ensamblados que se comparten entre varias aplicaciones deben instalarse en un repositorio centralizado, denominado caché global de ensamblados. Los clientes de .NET pueden tener acceso a la misma copia del ensamblado de interoperabilidad, que se firma y se instala en la caché global de ensamblados. Para más información sobre cómo generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también

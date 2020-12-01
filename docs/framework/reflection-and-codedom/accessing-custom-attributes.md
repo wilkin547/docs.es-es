@@ -11,20 +11,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], accessing
 - reflection, custom attributes
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
-ms.openlocfilehash: 1197fc5149e144d293deda1173e82ca2dadeda7d
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: d441bad7d4af3a88c4ede507d1bce7bdd1ab3215
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475143"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266823"
 ---
 # <a name="accessing-custom-attributes"></a>Acceso a atributos personalizados
+
 Después de asociar atributos a elementos de un programa, puede usar la reflexión para consultar su existencia y sus valores. En .NET Framework versión 1.0 y 1.1, los atributos personalizados se examinan en el contexto de ejecución. .NET Framework versión 2.0 proporciona un nuevo contexto de carga, el contexto de solo reflexión, que puede usarse para examinar el código que no se puede cargar para su ejecución.  
   
 ## <a name="the-reflection-only-context"></a>Contexto de solo reflexión  
+
  El código cargado en el contexto de solo reflexión no se puede ejecutar. Esto significa que no se pueden crear instancias de atributos personalizados, porque requeriría la ejecución de sus constructores. Para cargar y examinar los atributos personalizados en el contexto de solo reflexión, use la clase <xref:System.Reflection.CustomAttributeData>. Puede obtener instancias de esta clase mediante la sobrecarga adecuada del método <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> estático. Vea [Cómo: Cargar ensamblados en el contexto de solo reflexión](how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 ## <a name="the-execution-context"></a>Contexto de ejecución  
+
  Los principales métodos de reflexión para consultar los atributos en el contexto de ejecución son <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType> y <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>.  
   
  La accesibilidad de un atributo personalizado se comprueba con respecto al ensamblado al que está asociado. Esto equivale a comprobar si un método en un tipo del ensamblado al que está asociado el atributo personalizado puede llamar al constructor del atributo personalizado.  

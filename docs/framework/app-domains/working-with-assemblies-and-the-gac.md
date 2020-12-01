@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: e27fdd7def2d234e1e8eb7557e869bf478d68210
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105163"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279316"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabajar con ensamblados y la memoria caché global de ensamblados
 
@@ -46,6 +46,7 @@ Existen varias razones para instalar un ensamblado en la caché global de ensamb
  Tenga en cuenta que hay escenarios en los que no deseará instalar un ensamblado en la memoria caché global de ensamblados. Si coloca uno de los ensamblados que componen una aplicación en la memoria caché global de ensamblados, ya no podrá replicar ni instalar la aplicación utilizando XCOPY para copiar el directorio de la aplicación. En este caso, debe mover también el ensamblado a la caché global de ensamblados.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
 [Cómo: Instalar un ensamblado en la caché global de ensamblados](install-assembly-into-gac.md)  
 Describe las formas de instalar un ensamblado en la caché global de ensamblados.  
   

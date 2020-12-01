@@ -2,14 +2,15 @@
 title: NAT Traversal mediante IPv6 y Teredo
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
-ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6448ddf117e1f454338869820751ae5d9e0070e
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "61642183"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96258626"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>NAT Traversal mediante IPv6 y Teredo
+
 Se han realizado mejoras que proporcionan compatibilidad con la traducción de direcciones de red (NAT) transversal. Estos cambios están diseñados para su uso con IPv6 y Teredo, pero también son aplicables a otras tecnologías de túnel IP. Estas mejoras afectan a las clases del espacio de nombres <xref:System.Net> y de otros espacios de nombres relacionados.  
   
  Estos cambios pueden afectar a las aplicaciones cliente y servidor que tienen previsto usar tecnologías de túnel IP.  
@@ -17,6 +18,7 @@ Se han realizado mejoras que proporcionan compatibilidad con la traducción de d
  Los cambios para admitir NAT transversal{1}{2}solo están disponibles para las aplicaciones que usan .NET Framework versión 4. Estas características no están disponibles en versiones anteriores de .NET Framework.  
   
 ## <a name="overview"></a>Información general  
+
  El protocolo de Internet versión 4 (IPv4) definía una dirección IPv4 con una longitud de 32 bits. Como resultado, IPv4 admite aproximadamente 4 mil millones de direcciones IP únicas (2^32). Con el aumento del número de equipos y dispositivos de red en Internet en la década de 1990, los límites del espacio de direcciones IPv4 se hacían cada vez más evidentes.  
   
  Una de las diversas técnicas usadas para ampliar la vigencia de IPv4 consistía en implementar NAT de modo que permitiese que una sola dirección IP pública representase un gran número de direcciones IP privadas (intranet privada). Las direcciones IP privadas tras el dispositivo NAT comparten la única dirección IPv4 pública. El dispositivo NAT puede ser un dispositivo de hardware dedicado (un económico punto de acceso inalámbrico y enrutador, por ejemplo) o un equipo que ejecuta un servicio para proporcionar NAT. Un dispositivo o servicio para esta dirección IP pública traduce los paquetes de red IP entre la red de Internet pública y la intranet privada.  
@@ -30,6 +32,7 @@ Se han realizado mejoras que proporcionan compatibilidad con la traducción de d
  Teredo es una de las tecnologías de transición IPv6 que ofrece conectividad IPv6 en redes IPv4. Las especificaciones de Teredo están documentadas en RFC 4380, publicado por Internet Engineering Task Force (IETF). Windows XP SP2 y versiones posteriores proporcionan compatibilidad con un adaptador Teredo virtual que puede proporcionar una dirección IPv6 pública en el intervalo 2001:0::/32. Esta dirección IPv6 puede usarse para escuchar las conexiones entrantes procedentes de Internet y puede proporcionarse a los clientes habilitados para IPv6 que quieren conectar con el servicio de escucha. Esto hace que una aplicación no tenga que preocuparse por cómo dirigirse a un equipo tras un dispositivo NAT, dado que la aplicación solo se puede conectar a él mediante su dirección Teredo IPv6.  
   
 ## <a name="enhancements-to-support-nat-traversal-and-teredo"></a>Mejoras para admitir NAT transversal{1}{2}y Teredo  
+
  Se han agregado mejoras a los espacios de nombres <xref:System.Net>, <xref:System.Net.NetworkInformation> y <xref:System.Net.Sockets> para admitir NAT transversal{4}{5}mediante IPv6 y Teredo.  
   
  Se han agregado varios métodos a la clase <xref:System.Net.NetworkInformation.IPGlobalProperties?displayProperty=nameWithType> para obtener la lista de direcciones IP de unidifusión en el host. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.BeginGetUnicastAddresses%2A> inicia una solicitud asincrónica para recuperar la tabla de direcciones IP de unidifusión estables del equipo local. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.EndGetUnicastAddresses%2A> finaliza una solicitud asincrónica pendiente para recuperar la tabla de direcciones IP de unidifusión estables del equipo local. El método <xref:System.Net.NetworkInformation.IPGlobalProperties.GetUnicastAddresses%2A> es una solicitud sincrónica para recuperar la tabla de direcciones IP de unidifusión estables del equipo local, que espera hasta que la tabla de direcciones se estabilice, si es necesario.  

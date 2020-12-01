@@ -6,16 +6,19 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 078f2eaada8fac57138bef22d46218ef2ccda835
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 85d0ec90a8877384517e9de3b56258d294e0c612
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622606"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283489"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
+
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
   
 ## <a name="background"></a>Fondo  
+
  .NET Framework siempre ha proporcionado hospedaje en paralelo para aplicaciones de código administrado, pero antes de .NET Framework 4, no proporcionaba esta funcionalidad para los componentes COM administrados. Anteriormente, los componentes COM administrados que se cargaban en un proceso se ejecutaban con la versión del tiempo de ejecución que ya se había cargado o con la última versión instalada de .NET Framework. Si esta versión no era compatible con el componente COM, se producía un error en el componente.  
   
  .NET Framework 4 proporciona un enfoque nuevo para el hospedaje en paralelo que garantiza lo siguiente:  
@@ -46,6 +49,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
 > Las versiones 3.0 y 3.5 de .NET Framework se compilan de forma incremental en la versión 2.0 y no es necesario ejecutarlas en paralelo. Se trata básicamente de la misma versión.  
   
 <a name="scenarios"></a>
+
 ## <a name="common-side-by-side-hosting-scenarios"></a>Escenarios comunes de hospedaje en paralelo  
   
 - **Escenario 1:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework.  
@@ -84,6 +88,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
     ```  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo siguiente se muestra un host COM no administrado que está ejecutando un componente COM administrado mediante la versión de .NET Framework que el componente debe usar de acuerdo con su compilación.  
   
  Para ejecutar el ejemplo que se muestra a continuación, compile y registre el siguiente componente COM administrado con .NET Framework 3.5. Para registrar el componente, en el menú **Proyecto**, haga clic en **Propiedades**, en la pestaña **Compilar** y, después, active la casilla **Registrar para interoperabilidad COM**.  

@@ -3,13 +3,15 @@ title: Procedimiento Migrar código administrado DCOM a WCF
 description: Migre las llamadas de código administrado del modelo de objetos componentes distribuido (DCOM) entre servidores y clientes a Windows Communication Foundation (WCF).
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: cc6ac1dd01e17bb184d1f1faca372134d6130d33
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: eb84b8071d8dec5d3e70a2f1903f84ee64c31b08
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619096"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96274847"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Procedimiento Migrar código administrado DCOM a WCF
+
 Windows Communication Foundation (WCF) es la opción recomendada y segura para reemplazar al modelo de objetos de componentes distribuidos (DCOM) en las llamadas de código administrado entre servidores y clientes en un entorno distribuido. En este artículo se muestra cómo migrar el código de DCOM a WCF en los escenarios siguientes.  
   
 - El servicio remoto devuelve un objeto por valor al cliente.  
@@ -23,6 +25,7 @@ Windows Communication Foundation (WCF) es la opción recomendada y segura para r
  Para obtener más detalles sobre cómo crear servicios WCF y clientes para esos servicios, vea [Programación basica de WFC](../wcf/basic-wcf-programming.md), [Diseño e implementación de servicios](../wcf/designing-and-implementing-services.md) y [Creación de clientes](../wcf/building-clients.md).  
   
 ## <a name="dcom-example-code"></a>Código de ejemplo DCOM  
+
  Para estos escenarios, las interfaces DCOM que se muestran con WCF tienen la siguiente estructura:  
   
 ```csharp  
@@ -47,6 +50,7 @@ public class Customer
 ```  
   
 ## <a name="the-service-returns-an-object-by-value"></a>El servicio devuelve un objeto por valor  
+
  En este escenario, se realiza una llamada a un servicio y el método devuelve un objeto que se pasa por valor desde el servidor al cliente. Este escenario representa la siguiente llamada COM:  
   
 ```csharp  
@@ -59,6 +63,7 @@ public interface IRemoteService
  En este escenario, el cliente recibe una copia deserializada de un objeto desde el servicio remoto. El cliente puede interactuar con esta copia local sin tener que volver a llamar al servicio.  En otras palabras, se garantiza al cliente que el servicio no participará en modo alguno cuando se llame a métodos en la copia local. WCF siempre devuelve objetos desde el servicio por valor, por lo que los pasos siguientes describen la creación de un servicio WCF normal.  
   
 ### <a name="step-1-define-the-wcf-service-interface"></a>Paso 1: Definir la interfaz de servicio WCF  
+
  Defina una interfaz pública para el servicio WCF y márquela con el atributo [<xref:System.ServiceModel.ServiceContractAttribute>].  Marque los métodos que desea exponer a los clientes con el atributo [<xref:System.ServiceModel.OperationContractAttribute>]. En el ejemplo siguiente se muestra cómo usar estos atributos para identificar la interfaz del servidor y los métodos de interfaz a los que puede llamar un cliente. El método usado para este escenario se muestra en negrita.  
   
 ```csharp  
@@ -78,6 +83,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="step-2-define-the-data-contract"></a>Paso 2: Definir el contrato de datos  
+
  A continuación debe crear un contrato de datos para el servicio, en el que se describirá cómo se intercambian los datos entre el servicio y sus clientes.  Las clases descritas en el contrato de datos deben marcarse con el atributo [<xref:System.Runtime.Serialization.DataContractAttribute>]. Las propiedades o los campos individuales que quiera que sean visibles para el cliente y el servidor deben marcarse con el atributo [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Si quiere que los tipos derivados de una clase estén permitidos en el contrato de datos, debe identificarlos con el atributo [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. WCF solo serializará o deserializará tipos en la interfaz de servicio y tipos identificados como tipos conocidos. Si intenta usar un tipo que no sea un tipo conocido, se producirá una excepción.  
   
  Para más información sobre los contratos de datos, vea [Data Contracts](../wcf/samples/data-contracts.md) (Contratos de datos).  
@@ -120,6 +126,7 @@ public class Address
 ```  
   
 ### <a name="step-3-implement-the-wcf-service"></a>Paso 3: Implementar el servicio WCF  
+
  A continuación, debe implementar la clase de servicio WCF que implementa la interfaz que definió en el paso anterior.  
   
 ```csharp  
@@ -137,6 +144,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-4-configure-the-service-and-the-client"></a>Paso 4: Configurar el servicio y el cliente  
+
  Para ejecutar un servicio WCF, deberá declarar un punto de conexión que exponga esa interfaz de servicio en una dirección URL específica mediante un enlace WCF específico. Un enlace especifica los detalles de transporte, codificación y protocolo para que los clientes y el servidor puedan comunicarse. Normalmente, los enlaces se agregan al archivo de configuración del proyecto de servicio (web.config). A continuación se muestra una entrada de enlace para el servicio de ejemplo:  
   
 ```xml  
@@ -169,6 +177,7 @@ public class CustomerService: ICustomerManager
 ```  
   
 ### <a name="step-5-run-the-service"></a>Paso 5: Ejecutar el servicio  
+
  Por último, puede probarlo internamente en una aplicación de consola; para ello, agregue las líneas siguientes a la aplicación de servicio e inicie la aplicación. Para más información sobre otras formas de hospedar una aplicación de servicio WCF, vea [Hosting Services](../wcf/hosting-services.md) (Servicios de hospedaje).  
   
 ```csharp  
@@ -177,6 +186,7 @@ customerServiceHost.Open();
 ```  
   
 ### <a name="step-6-call-the-service-from-the-client"></a>Paso 6: Llamar al servicio desde el cliente  
+
  Para llamar al servicio desde el cliente, deberá crear un generador de canales para el servicio y solicitar un canal, lo que le permitirá llamar directamente al método `GetCustomer` desde el cliente. El canal implementa la interfaz del servicio y controla automáticamente la lógica de solicitud/respuesta subyacente.  El valor devuelto de esta llamada de método es la copia deserializada de la respuesta del servicio.  
   
 ```csharp  
@@ -187,6 +197,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
 ```  
   
 ## <a name="the-client-sends-a-by-value-object-to-the-server"></a>El cliente envía un objeto por valor al servidor  
+
  En este escenario, el cliente envía un objeto en el servidor por valor. Esto significa que el servidor recibirá una copia del objeto deserializada.  El servidor puede llamar a métodos en esa copia con la garantía de que no habrá ninguna devolución de llamada en el código de cliente. Como se mencionó anteriormente, los intercambios normales de datos de WCF son por valor.  Esto garantiza que una llamada a métodos en uno de estos objetos se ejecuta únicamente de forma local y no invoca código en el cliente.  
   
  Este escenario representa la siguiente llamada de método COM:  
@@ -212,6 +223,7 @@ public interface ICustomerManager
 ```  
   
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>Agregar código al cliente que envíe un objeto por valor  
+
  El siguiente código muestra cómo el cliente crea un nuevo objeto de cliente por valor, crea un canal para comunicarse con el servicio `ICustomerManager` y le envía el objeto de cliente.  
   
  El objeto de cliente se serializa y se envía al servicio, donde se deserializa en una nueva copia del objeto.  Cualquier método al que llame el servicio en este objeto solo se ejecutará localmente en el servidor. Es importante que tenga en cuenta que este código ejemplifique el envío de un tipo derivado (`PremiumCustomer`).  El contrato de servicio espera un objeto `Customer`, pero los datos del servicio de contrato usan el atributo [<xref:System.Runtime.Serialization.KnownTypeAttribute>] para indicar que `PremiumCustomer` también está permitido.  WCF no podrá serializar ni deserializar cualquier otro tipo a través de esta interfaz de servicio.  
@@ -232,6 +244,7 @@ customerManager.StoreCustomer(customer);
 ```  
   
 ## <a name="the-service-returns-an-object-by-reference"></a>El servicio devuelve un objeto por referencia  
+
  En este escenario, la aplicación cliente realiza una llamada al servicio remoto y el método devuelve un objeto que se pasa por referencia desde el servicio al cliente.  
   
  Como se mencionó anteriormente, los servicios WCF siempre devuelven objetos por valor.  Sin embargo, se puede conseguir un resultado similar usando la clase <xref:System.ServiceModel.EndpointAddress10>.  <xref:System.ServiceModel.EndpointAddress10> es un objeto serializable por valor que el cliente puede usar para obtener un objeto por referencia con sesión en el servidor.  
@@ -250,6 +263,7 @@ public interface IRemoteService
 ```  
   
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Paso 1: Definir la interfaz de servicio de WCF con sesión y la implementación  
+
  En primer lugar, defina una interfaz de servicio WCF que contenga el objeto con sesión.  
   
  En este código, el objeto con sesión se marca con el atributo `ServiceContract`, que lo identifica como una interfaz de servicio WCF normal.  Además, se establece la propiedad <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> para indicar que será un servicio con sesión.  
@@ -290,6 +304,7 @@ public interface ISessionBoundObject
 ```  
   
 ### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Paso 2: Definir el servicio del generador WCF para el objeto con sesión  
+
  El servicio que crea el objeto con sesión debe definirse e implementarse. El código siguiente muestra cómo hacerlo. Este código crea otro servicio WCF que devuelve un objeto <xref:System.ServiceModel.EndpointAddress10>.  Se trata de una forma serializable de un punto de conexión que puede usarse para crear el objeto con sesión.  
   
 ```csharp  
@@ -322,6 +337,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ```  
   
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Paso 3: Configurar e iniciar los servicios WCF  
+
  Para hospedar estos servicios, deberá agregar lo siguiente al archivo de configuración del servidor (web.config).  
   
 1. Agregue una sección `<client>` que describa el extremo para el objeto con sesión.  En este escenario, el servidor también actúa como un cliente y debe configurarse para habilitar esta opción.  
@@ -368,6 +384,7 @@ sessionBoundServiceHost.Open();
 ```  
   
 ### <a name="step-4-configure-the-client-and-call-the-service"></a>Paso 4: Configurar el cliente y llamar al servicio  
+
  Configure el cliente para comunicarse con los servicios WCF; para ello, realice las siguientes entradas en el archivo de configuración de aplicación del proyecto (app.config).  
   
 ```xml  

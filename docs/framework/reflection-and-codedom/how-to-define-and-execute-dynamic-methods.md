@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
-ms.openlocfilehash: d1ccf3d3ac966e35e1708f0639785a2760eb8287
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 1ea15149ea72c3c422251abefb5a1008cc496f2c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559192"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263456"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Procedimiento para definir y ejecutar métodos dinámicos
+
 En los procedimientos siguientes se muestra cómo definir y ejecutar un método dinámico simple y un método dinámico enlazado a una instancia de una clase. Para obtener más información sobre los métodos dinámicos, vea la clase <xref:System.Reflection.Emit.DynamicMethod> y [Reflection Emit Dynamic Method Scenarios](/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)) (Escenarios de métodos dinámicos de emisión de reflexión).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>Para definir y ejecutar un método dinámico  
@@ -101,6 +102,7 @@ En los procedimientos siguientes se muestra cómo definir y ejecutar un método 
      [!code-vb[DynamicMethodHowTo#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#16)]  
   
 ## <a name="example"></a>Ejemplo  
+
  En el código siguiente se muestra un método dinámico simple y un método dinámico enlazado a una instancia de una clase.  
   
  El método dinámico simple toma un argumento, un entero de 32 bits, y devuelve el cuadrado de 64 bits de ese entero. Se usa un delegado genérico para invocar el método.  

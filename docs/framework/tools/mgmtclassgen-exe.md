@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 89facd4369dad6168e46febd3e34d7f7c235faf0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 1dea4b0b94053919169abb639ff48ecd3abbd66c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517300"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96279160"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
+
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,6 +46,7 @@ WMIClass [options]
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Mgmtclassgen.exe usa el método <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>. Por tanto, se puede utilizar cualquier proveedor de código personalizado para generar código en lenguajes administrados distintos de C#, Visual Basic y JScript.  
   
  Tenga en cuenta que las clases generadas se enlazan al esquema para el que se generan. Si el esquema subyacente cambia, se debe volver a generar la clase para que los cambios se reflejen en el esquema.  
@@ -93,6 +95,7 @@ WMIClass [options]
  Para obtener más información sobre WMI, vea el tema sobre **Instrumental de administración de Windows** en la documentación de Platform SDK.  
   
 ## <a name="examples"></a>Ejemplos  
+
  El siguiente comando genera una clase administrada en código de C# para la clase WMI **Win32_LogicalDisk** en el espacio de nombres **Root\cimv2**. La herramienta escribe la clase administrada en el archivo de código fuente en c:\disk.cs en el espacio de nombres **ROOT.CIMV2.Win32**.  
   
 ```console  

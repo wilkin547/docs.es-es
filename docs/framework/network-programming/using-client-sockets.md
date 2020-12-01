@@ -17,14 +17,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-ms.openlocfilehash: 1dc02d0b3651d5766d1d30752566217d8417af0c
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 6982d09c20cd0d7e9d27fc63880b39e0982c86ef
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502007"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96265198"
 ---
 # <a name="using-client-sockets"></a>Usar sockets de cliente
+
 Antes de poder iniciar una conversación a través de un <xref:System.Net.Sockets.Socket>, debe crear una canalización de datos entre su aplicación y el dispositivo remoto. Aunque existen otros protocolos y familias de direcciones de red, en este ejemplo se muestra cómo crear una conexión TCP/IP a un servicio remoto.  
   
  TCP/IP usa una dirección de red y un número de puerto de servicio para identificar un servicio de forma única. La dirección de red identifica un dispositivo específico en la red; el número de puerto identifica el servicio específico en ese dispositivo al que conectarse. La combinación de puerto de servicio y dirección de red se denomina "punto de conexión", que en .NET Framework se representa mediante la clase <xref:System.Net.EndPoint>. Para cada familia de direcciones compatible se define un descendiente de **EndPoint**; para la familia de direcciones IP, la clase es <xref:System.Net.IPEndPoint>.  

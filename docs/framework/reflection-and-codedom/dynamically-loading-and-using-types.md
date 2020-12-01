@@ -13,14 +13,15 @@ helpviewer_keywords:
 - implicit late binding
 - reflection, dynamically using types
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
-ms.openlocfilehash: 39a4a9a2ff77cb900db7f39a55dc17a5b8c62cf3
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: be9991a4df866f65aabe063be3cc2b374f4d124d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266797"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
+
 La reflexión facilita la infraestructura que utilizan los compiladores de lenguaje para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. Visual Basic le permite usar el enlace en tiempo de ejecución implícito en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
   
  En el ejemplo siguiente, el compilador de Visual Basic usa implícitamente la reflexión para llamar a un método en un objeto cuyo tipo se desconoce en tiempo de compilación. Una clase **HelloWorld** tiene un método **PrintHello** que imprime "Hello World" de forma concatenada con texto que se pasa al método **PrintHello**. El método **PrintHello** llamado en este ejemplo es en realidad <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; el código de Visual Basic permite invocar el método **PrintHello** como si se conociera el tipo del objeto (helloObj) en tiempo de compilación (enlace anticipado), y no en tiempo de ejecución (enlace en tiempo de ejecución).  
@@ -40,6 +41,7 @@ End Module
 ```  
   
 ## <a name="custom-binding"></a>Enlace personalizado  
+
  Además de usarla implícitamente los compiladores para el enlace en tiempo de ejecución, la reflexión puede usarse explícitamente en el código para realizar el enlace en tiempo de ejecución.  
   
  [Common Language Runtime](../../standard/clr.md) admite varios lenguajes de programación, y las reglas de enlace de estos lenguajes son diferentes. En el caso del enlace anticipado, los generadores de código pueden controlar completamente este enlace. Pero en el caso del enlace en tiempo de ejecución mediante reflexión, es necesario controlarlo mediante un enlace personalizado. La clase <xref:System.Reflection.Binder> proporciona un control personalizado de la selección e invocación de miembros.  
@@ -53,6 +55,7 @@ End Module
  [!code-vb[Conceptual.Types.Dynamic#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.dynamic/vb/source1.vb#1)]  
   
 ### <a name="invokemember-and-createinstance"></a>InvokeMember y CreateInstance  
+
  Use <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType> para invocar un miembro de un tipo. Los métodos **CreateInstance** de diversas clases, como <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> y <xref:System.Reflection.Assembly.CreateInstance%2A?displayProperty=nameWithType>, son formas especializadas de **InvokeMember** que crean nuevas instancias del tipo especificado. La clase **Binder** se usa para la resolución de sobrecarga y la conversión de argumentos en estos métodos.  
   
  En el ejemplo siguiente se muestran las tres posibles combinaciones de conversión de argumentos (conversión de tipos) y selección de miembros. En el caso 1, no se necesita ni conversión de argumentos ni selección de miembros. En el caso 2, solo se necesita la selección de miembros. En el caso 3, solo se necesita la conversión de argumentos.  

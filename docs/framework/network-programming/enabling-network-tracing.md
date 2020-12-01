@@ -12,14 +12,15 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 4ad0b23fc93ddcdc11cebcc556d12148df5e8ae2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 246a975ead3cb9c1acb4fe0512dfa91d1b8a00c0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287428"
 ---
 # <a name="enabling-network-tracing"></a>Habilitación del seguimiento de red
+
 El seguimiento de red proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Para habilitar el seguimiento de red en la aplicación tiene que realizar las tareas siguientes:  
   
 - Compilar el código con el seguimiento habilitado. Vea [Cómo: Compile Conditionally with Trace and Debug](../debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) (Cómo: Compilar de forma condicional con Trace y Debug) para más información sobre los modificadores del compilador necesarios para habilitar el seguimiento.  

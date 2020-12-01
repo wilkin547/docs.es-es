@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: e6f5dbce6bd10ae68b2033a135660d1e31aceff9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 9f4ae96a148d850efd92f950a177b32cc75c33ab
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558457"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283177"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework
 
@@ -53,6 +53,7 @@ En esta tabla, 4.5.x hace referencia a .NET Framework 4.5 y sus versiones secun
 |Este programa de instalación requiere un equipo x64 o x86. No se puede instalar en un equipo IA64.|Consulte [Requisitos del sistema](../get-started/system-requirements.md).|  
 
 <a name="compat"></a>
+
 ### <a name="program-compatibility-issues"></a>Problemas de compatibilidad de programas
 
 Al instalar .NET Framework 4.5 o una de sus versiones secundarias, se produce el código de error 1603 o se bloquea cuando se ejecuta en el modo de compatibilidad de programas de Windows. El **Asistente para la compatibilidad de programas** indica que es posible que .NET Framework no se haya instalado correctamente y le solicita reinstalarlo utilizando la configuración recomendada (modo de compatibilidad de programas). El Asistente para la compatibilidad de programas también podría haber establecido el modo de compatibilidad después de que se produjeran intentos anteriores erróneos o cancelados para ejecutar el programa de instalación de .NET Framework.

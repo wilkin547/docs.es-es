@@ -6,14 +6,15 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81f0eaa33b185c6bfbc8758e73a68a6bfc248872
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71048877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96287571"
 ---
 # <a name="cache-management-for-network-applications"></a>Administración de la memoria caché para aplicaciones de red
+
 Este tema y los temas secundarios relacionados describen el almacenamiento en caché de los recursos obtenidos mediante las clases <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> y <xref:System.Net.FtpWebRequest>.  
   
  Una memoria caché proporciona almacenamiento temporal de recursos solicitados por una aplicación. Si una aplicación solicita el mismo recurso más de una vez, este se puede devolver desde la memoria caché, con lo que se evita la sobrecarga de volver a solicitarlo desde el servidor. El almacenamiento en caché puede mejorar el rendimiento de la aplicación al reducir el tiempo necesario para obtener un recurso solicitado. El almacenamiento en caché también puede disminuir el tráfico de red al reducir el número de viajes al servidor. Aunque el almacenamiento en caché mejora el rendimiento, aumenta el riesgo de que el recurso devuelto a la aplicación esté obsoleto, lo que significa que no es idéntico al recurso que habría enviado el servidor si no se estuviera usando el almacenamiento en caché.  
@@ -23,6 +24,7 @@ Este tema y los temas secundarios relacionados describen el almacenamiento en ca
  Por motivos de seguridad, el almacenamiento en caché **no** se recomienda para escenarios de nivel intermedio.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Directiva de caché](cache-policy.md)  
  Explica qué es una directiva de caché y cómo definirla.  
   
@@ -36,5 +38,6 @@ Este tema y los temas secundarios relacionados describen el almacenamiento en ca
  Explica cómo crear directivas de caché mediante programación y solicitudes que usen el almacenamiento en caché.  
   
 ## <a name="reference"></a>Referencia  
+
  <xref:System.Net.Cache>  
  Define los tipos y las enumeraciones usados para definir directivas de caché para los recursos obtenidos mediante las clases <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> y <xref:System.Net.FtpWebRequest>.

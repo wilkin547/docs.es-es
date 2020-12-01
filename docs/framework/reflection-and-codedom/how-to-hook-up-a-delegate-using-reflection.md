@@ -11,14 +11,15 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: b5d93efd278a53a4e6382f2321918e58ead55899
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9a92afd1c2aeadeb0cf7bc1e626b5bd1fb3cecea
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865091"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263430"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedimiento para enlazar un delegado mediante la reflexión
+
 Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usar características del lenguaje como el operador `+=` de C# o la [instrucción AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) de Visual Basic para enlazar eventos. Los procedimientos siguientes muestran cómo enlazar un método existente a un evento obteniendo todos los tipos necesarios mediante reflexión y cómo crear un método dinámico utilizando la emisión de la reflexión y enlazarlo a un evento.  
   
 > [!NOTE]
@@ -69,6 +70,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 <a name="procedureSection1"></a>
+
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>Para generar un controlador de eventos en tiempo de ejecución utilizando un método dinámico  
   
 1. utilizando métodos dinámicos ligeros y la emisión de reflexión se pueden generar métodos de controlador de eventos en tiempo de ejecución. Para construir un controlador de eventos, es necesario conocer el tipo de valor devuelto y los tipos de parámetros del delegado. Éstos se pueden obtener examinando el método `Invoke` del delegado. El código siguiente utiliza los métodos `GetDelegateReturnType` y `GetDelegateParameterTypes` para obtener esta información. El código para estos métodos se puede encontrar más adelante en este tema, en la sección Ejemplo.  
@@ -98,6 +100,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
 ## <a name="example"></a>Ejemplo  
+
  El siguiente ejemplo de código muestra cómo enlazar un método existente con un evento utilizando la reflexión y cómo utilizar la clase <xref:System.Reflection.Emit.DynamicMethod> para emitir un método en tiempo de ejecución y enlazarlo con un evento.  
   
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]

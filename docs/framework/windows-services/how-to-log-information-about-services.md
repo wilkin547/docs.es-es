@@ -13,14 +13,15 @@ helpviewer_keywords:
 - application event logs, service applications
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
-ms.openlocfilehash: 0d6c245e3defb7d518093cca904572d3db00fcf8
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 2e5f1fd8ebbbb218e8d6eba9b2d30d05e7c0e62c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608561"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270581"
 ---
 # <a name="how-to-log-information-about-services"></a>Procedimiento para registrar información sobre servicios
+
 De forma predeterminada, todos los proyectos de servicio de Windows tienen la capacidad de interactuar con el registro de eventos de la aplicación y escriben información y excepciones en él. Utilice la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para indicar si quiere esta funcionalidad en la aplicación. De forma predeterminada, el registro está activado para cualquier servicio que se cree con la plantilla de proyecto de servicio de Windows. Puede utilizar una forma estática de la clase <xref:System.Diagnostics.EventLog> para escribir información de servicio en un registro sin tener que crear una instancia de un componente <xref:System.Diagnostics.EventLog> ni registrar manualmente un origen.  
   
  El instalador del servicio registra automáticamente cada uno de los servicios del proyecto como un origen de eventos válido con el registro de aplicaciones en el equipo donde está instalado el servicio, cuando el registro está activado. El servicio registra información cada vez que el servicio se inicia, se detiene, se pone en pausa, se reanuda, se instala o se desinstala. También registra los errores que se producen. No es necesario escribir nada de código para escribir entradas en el registro cuando se utiliza el comportamiento predeterminado; el servicio se encarga de ello automáticamente.  

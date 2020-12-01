@@ -11,14 +11,15 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 57d18c01bd6261e8207d8ad3849a3a7da9a24b6c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104907"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96264613"
 ---
 # <a name="global-assembly-cache"></a>Caché global de ensamblados
+
 Cada equipo donde está instalado Common Language Runtime tiene una memoria caché de código denominada caché global de ensamblados. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo.  
   
  Se recomienda compartir los ensamblados mediante su instalación en la caché global de ensamblados solo cuando sea necesario. Como norma general, mantenga las dependencias de los ensamblados privadas y coloque los ensamblados en el directorio de la aplicación, a menos que sea explícitamente necesario compartir un ensamblado en concreto. Además, no es necesario instalar los ensamblados en la caché global de ensamblados para que el código de interoperabilidad COM o el código no administrado puedan acceder a ellos.  

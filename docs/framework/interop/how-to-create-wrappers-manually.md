@@ -5,14 +5,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-ms.openlocfilehash: 0d696adbe1ee224e78f79a049ed2e41d50be1faa
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0321e98e6237e54397db7e583546fd69803ab7e1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554174"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96275962"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Procedimiento para la creación manual de contenedores
+
 Si decide declarar manualmente los tipos COM en código fuente administrado, lo mejor es empezar con un archivo o una biblioteca de tipos existente del Lenguaje de definición de interfaz (IDL). Cuando no tiene el archivo IDL o no puede generar un archivo de biblioteca de tipos, puede simular los tipos COM si crea declaraciones administradas y exporta el ensamblado resultante a una biblioteca de tipos.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>Para simular tipos COM a partir de código fuente administrado  
@@ -34,6 +35,7 @@ Si decide declarar manualmente los tipos COM en código fuente administrado, lo 
 4. Como ocurre con los tipos importados con Tlbimp.exe, algunos requieren información adicional, que puede agregar directamente al código. Para obtener más detalles, vea [Cómo: Editar ensamblados de interoperabilidad](/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100)).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el siguiente código se muestra un ejemplo de la interfaz `ISATest` y la clase `SATest` en IDL, y los tipos correspondientes en código fuente de C#.  
   
  **Archivo IDL o de biblioteca de tipos**  

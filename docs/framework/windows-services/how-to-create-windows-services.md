@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-ms.openlocfilehash: 35d78acd4fae7bf98a2b3f4ce6ac8a32393c35d4
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: 9b171fa54cf65a482625c276c26185b12075c753
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608600"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270711"
 ---
 # <a name="how-to-create-windows-services"></a>Procedimiento para crear servicios de Windows
+
 Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **Servicio de Windows**. Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
   
 > [!WARNING]

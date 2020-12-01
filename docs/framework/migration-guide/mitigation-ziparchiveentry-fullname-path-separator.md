@@ -9,18 +9,19 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 8cd6362038ce0548681f3d3b44724f3ef9ff62cb
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6e2c0908098f8487f7d429274fe7ad797bedfda1
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475299"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96283450"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigación: separador de ruta de acceso ZipArchiveEntry.FullName
 
 A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el separador de ruta de acceso utilizado en la propiedad <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> ha cambiado de la barra diagonal inversa ("\\") utilizada en versiones anteriores de .NET Framework a una barra diagonal ("/"). Los objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> se crean al llamar a una de las sobrecargas del método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
   
 ## <a name="impact"></a>Impacto  
+
  El cambio trae la implementación de .NET en conformidad con la sección 4.4.17.1 de la [Especificación de formato de archivo .ZIP](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) y permite que los archivos ZIP se descompriman en sistemas distintos de Windows.  
   
  Al descomprimir un archivo ZIP creado por una aplicación que tiene como destino una versión anterior de .NET Framework en sistemas operativos que no son de Windows, como MacOS, no se puede conservar la estructura de directorios. Por ejemplo, en MacOS, crea un conjunto de archivos cuyo nombre de archivo concatena la ruta de acceso del directorio, junto con cualquier carácter de barra diagonal inversa ("\\") y el nombre de archivo. Como resultado, no se conserva la estructura de directorios de archivos descomprimidos.  
@@ -28,6 +29,7 @@ A partir de las aplicaciones que tienen como destino .NET Framework 4.6.1, el s
  El impacto de este cambio en los archivos ZIP que se descomprimen en el sistema operativo Windows mediante interfaces API en el espacio de nombres <xref:System.IO> de .NET Framework debe ser mínimo, ya que estas API pueden controlar sin problemas una barra diagonal ("/") o una barra diagonal inversa ("\\") como carácter separador de la ruta de acceso.  
   
 ## <a name="mitigation"></a>Mitigación  
+
  Si este comportamiento no es el deseado, puede rechazar la adición de un valor de configuración a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación. A continuación se muestra la sección `<runtime>` y el conmutador de rechazo.  
   
 ```xml  

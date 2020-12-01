@@ -8,14 +8,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 525e3724aec82a74f5b0339296808b41f30d0ddc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90559283"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96266381"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
+
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
   
  Para poder activar un componente administrado desde un cliente COM, es necesario registrarlo primero en el Registro de Windows. En la tabla siguiente se muestran las claves que Regasm.exe suele agregar al Registro de Windows. (000000 indica el valor real de GUID).  
@@ -38,6 +39,7 @@ Puede ejecutar una herramienta de línea de comandos denominada [Registro de ens
  Regasm.exe también crea la clave InProcServer32 bajo la clave HKCR\CLSID\\{0000…0000}. El valor predeterminado de la clave se establece en el nombre del archivo DLL que inicializa Common Language Runtime (Mscoree.dll).  
   
 ## <a name="examining-registry-entries"></a>Examinar las entradas del Registro  
+
  La interoperabilidad COM proporciona una implementación de generador de clases estándar para crear una instancia de cualquier clase de .NET Framework. Los clientes pueden llamar a **DllGetClassObject** en el archivo DLL administrado para obtener un generador de clases y crear objetos, tal como harían con cualquier otro componente COM.  
   
  Para la subclave `InprocServer32`, aparece una referencia a Mscoree.dll en lugar de una biblioteca de tipos COM tradicional para indicar que Common Language Runtime crea el objeto administrado.  

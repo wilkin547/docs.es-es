@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2819fb3857fa6d40a2b2e42eeaec2d9c6e50eef0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74101472"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96299358"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorización: la sobrecarga de AddAuthorization se ha cambiado a otro ensamblado
 
@@ -15,6 +15,7 @@ Se ha cambiado a `AddAuthorizationCore` el nombre de los métodos `AddAuthorizat
 3.0
 
 #### <a name="old-behavior"></a>Comportamiento anterior
+
 Los métodos `AddAuthorization` existían en `Microsoft.AspNetCore.Authorization`.
 
 #### <a name="new-behavior"></a>Comportamiento nuevo

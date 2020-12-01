@@ -9,14 +9,15 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-ms.openlocfilehash: cd749d325bec6636243dec1905f79abb5e42f04e
-ms.sourcegitcommit: 97405ed212f69b0a32faa66a5d5fae7e76628b68
+ms.openlocfilehash: ab153b89272323a1a7a71181559f4f4eee082640
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91608405"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96270516"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedimiento para escribir servicios mediante programación
+
 Si decide no utilizar la plantilla de proyecto de servicio de Windows, puede escribir sus propios servicios configurando la herencia y otros elementos de infraestructura. Al crear un servicio mediante programación, debe realizar varios pasos que, de lo contrario, la plantilla los controlaría:  
   
 - Debe configurar la clase de servicio para que herede de la clase <xref:System.ServiceProcess.ServiceBase>.  
@@ -33,7 +34,7 @@ Si decide no utilizar la plantilla de proyecto de servicio de Windows, puede esc
   
     2. En la pestaña **.NET Framework**, desplácese a **System.dll** y haga clic en **Seleccionar**.  
   
-    3. Desplácese a even**System.ServiceProcess.dll**  y haga clic en **Seleccionar**.  
+    3. Desplácese a even **System.ServiceProcess.dll**  y haga clic en **Seleccionar**.  
   
     4. Haga clic en **Aceptar**.  
   

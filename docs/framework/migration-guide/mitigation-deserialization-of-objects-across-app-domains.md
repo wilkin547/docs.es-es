@@ -3,17 +3,19 @@ title: 'Mitigación: Deserialización de objetos en distintos dominios de aplica
 description: Aprenda a diagnosticar y mitigar un problema en el que un intento de deserializar objetos en el contexto de una llamada lógica entre dominios de aplicación produce una excepción.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1b8060870962ddd26d90c4152a270a65936c2af3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96256643"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigación: deserialización de objetos en distintos dominios de aplicación
+
 En algunos casos, cuando una aplicación usa dos o más dominios de aplicación con distintas bases de aplicación, un intento de deserializar objetos en el contexto de llamada lógico entre dominios de aplicación produce una excepción.  
   
 ## <a name="diagnosing-the-issue"></a>Diagnóstico del problema  
+
  El problema se produce bajo la secuencia siguiente de condiciones:  
   
 1. Una aplicación usa dos o más dominios de aplicación con distintas bases de aplicación.  
@@ -37,6 +39,7 @@ En algunos casos, cuando una aplicación usa dos o más dominios de aplicación 
 6. Dado que los tipos incluidos en el contexto de llamada lógico no se pueden resolver en el dominio de aplicación predeterminado, se produce una excepción.  
   
 ## <a name="mitigation"></a>Mitigación  
+
  Para solucionar este problema, haga lo siguiente  
   
 1. Busque la llamada a `get_Evidence` en la pila de llamadas cuando se produce la excepción. La excepción puede ser cualquiera de las existentes en un gran subconjunto de excepciones, incluidas <xref:System.IO.FileNotFoundException> y <xref:System.Runtime.Serialization.SerializationException>.  

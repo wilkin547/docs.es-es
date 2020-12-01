@@ -3,17 +3,19 @@ title: Mejoras de rendimiento de socket en la versión 3.5
 description: Obtenga información sobre las mejoras de rendimiento de la clase System.Net.Sockets.Socket en .NET Framework 3.5.
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 5a640c58e47bf1630a3a551aed72b9bc9d4fd6fe
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 5bd7c97d6a6edd5f914d6fe3118b6d81b64544e0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502150"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96263144"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Mejoras de rendimiento de socket en la versión 3.5
+
 En la versión 3.5 se ha mejorado la clase <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> para su uso por parte de aplicaciones que usan la E/S de red asincrónica para lograr el máximo rendimiento. Se han agregado una serie de clases como parte de un conjunto de mejoras de la clase <xref:System.Net.Sockets.Socket> que proporcionan un patrón asincrónico alternativo que pueden usar las aplicaciones de socket de alto rendimiento especializadas. Estas mejoras se han diseñado específicamente para las aplicaciones de servidor de red que necesitan un alto rendimiento. Una aplicación puede usar el patrón asincrónico mejorado exclusivamente o solo en áreas activas de destino de su aplicación (al recibir grandes cantidades de datos, por ejemplo).  
   
 ## <a name="class-enhancements"></a>Mejoras de clase  
+
  La característica principal de estas mejoras es la elusión de la asignación y la sincronización repetidas de objetos durante la E/S de socket asincrónico de gran volumen. El patrón de diseño de principio o final actualmente implementado por la clase <xref:System.Net.Sockets.Socket> para la E/S de socket asincrónico exige asignar un objeto <xref:System.IAsyncResult?displayProperty=nameWithType> para cada operación de socket asincrónico.  
   
  En las nuevas mejoras de la clase <xref:System.Net.Sockets.Socket>, las operaciones de socket asincrónico se describen mediante objetos reutilizables de la clase <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> asignados y mantenidos por la aplicación. Las aplicaciones de socket de alto rendimiento saben mejor la cantidad de operaciones de socket superpuestas que se deben mantener. La aplicación puede crear tantos objetos <xref:System.Net.Sockets.SocketAsyncEventArgs> como necesite. Por ejemplo, si una aplicación de servidor necesita tener 15 operaciones de aceptación de socket pendientes en todo momento para admitir velocidades de conexión de cliente entrantes, puede asignar 15 objetos reutilizables <xref:System.Net.Sockets.SocketAsyncEventArgs> de antemano para ese fin.  
