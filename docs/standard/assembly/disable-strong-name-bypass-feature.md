@@ -6,14 +6,15 @@ helpviewer_keywords:
 - strong-name bypass feature
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
-ms.openlocfilehash: 1914997b322591d8deda13d00192bc5f60d81ca2
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 2846efbbd76cf677a42a7031e53661d302c6c964
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378494"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95687468"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedimiento para deshabilitar la característica de omisión de nombres seguros
+
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  
   
  La característica de omisión se aplica a todos los ensamblados de plena confianza que no tienen firma retrasada y que se cargan en un objeto <xref:System.AppDomain> de plena confianza desde el directorio especificado por la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A>.  
@@ -55,5 +56,5 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
 ## <a name="see-also"></a>Vea también
 
 - [Sn.exe (Herramienta de nombre seguro)](../../framework/tools/sn-exe-strong-name-tool.md)
-- Elemento [\<bypassTrustedAppStrongNames>](../../framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
+- [Elemento \<bypassTrustedAppStrongNames>](../../framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Creación y uso de ensamblados con nombre seguro](create-use-strong-named.md)
