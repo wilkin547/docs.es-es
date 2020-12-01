@@ -4,12 +4,12 @@ description: 'Obtenga información sobre las directivas de preprocesador de leng
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: ff106339478c3413dc6458b12f12e1d3f9cd1fe5
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557325"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438170"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -26,7 +26,7 @@ En la siguiente tabla se recoge una lista de las directivas de preprocesador dis
 |`#if`*símbolo* de|Admite la compilación condicional. El código de la sección después de `#if` se incluye si se define el *símbolo* . El símbolo también se puede negar con `!` .|
 |`#else`|Admite la compilación condicional. Marca una sección de código que incluir si el símbolo usado con la directiva `#if` anterior no se ha definido.|
 |`#endif`|Admite la compilación condicional. Marca el final de una sección condicional de código.|
-|`#`Ondula *int*,<br/>`#`Ondula *int* *cadena*int,<br/>`#`Ondula *int* *cadena literal* int|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
+|`#`Ondula *int*,<br/>`#`Ondula *int* *cadena* int,<br/>`#`Ondula *int* *cadena literal* int|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
 |`#nowarn`*warningcode*|Deshabilita una o varias advertencias del compilador. Para deshabilitar una advertencia, encuentre su número correspondiente en los resultados del compilador e inclúyalo entre comillas. Omita el prefijo "FS". Para deshabilitar varios números de advertencia en la misma línea, incluya cada número entre comillas y separe cada cadena con un espacio. Por ejemplo:
 
 `#nowarn "9" "40"`
@@ -78,7 +78,7 @@ En la siguiente tabla se recoge una lista de las directivas de compilador dispon
 |---------|-----------|
 |`#light` ["ON" &#124; "OFF"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, vea [Sintaxis detallada](verbose-syntax.md).|
 
-Para las directivas de intérprete (fsi.exe), vea [programación interactiva con F #](../tutorials/fsharp-interactive/index.md).
+Para las directivas de intérprete (fsi.exe), vea [programación interactiva con F #](../tools/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vea también
 
