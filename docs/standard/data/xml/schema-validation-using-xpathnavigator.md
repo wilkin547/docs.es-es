@@ -5,22 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-ms.openlocfilehash: 304177ed4cb600aa27142e3b1c3690a3d7053c5d
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 1c91dfa63723cc087662630232376e74394c7b13
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94822482"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734704"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Validación de esquemas con XPathNavigator
+
 Con la clase <xref:System.Xml.XmlDocument>, puede validar el contenido XML de un objeto <xref:System.Xml.XmlDocument> de dos formas. La primera forma sirve para validar el contenido XML utilizando un objeto <xref:System.Xml.XmlReader> de validación y, la segunda, consiste en utilizar el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>. También se puede realizar una validación de solo lectura del contenido XML utilizando la clase <xref:System.Xml.XPath.XPathDocument>.  
   
 ## <a name="validating-xml-data"></a>Validación de datos XML  
+
  La clase <xref:System.Xml.XmlDocument> no valida un documento XML utilizando una DTD o una validación de esquema del lenguaje de definición de esquemas XML (XSD). Solo comprueba que el documento XML sea correcto.  
   
  La primera forma de validar un documento XML consiste en validarlo a medida que se carga en un objeto <xref:System.Xml.XmlDocument> utilizando un objeto <xref:System.Xml.XmlReader> de validación. La segunda forma consiste en validar un documento XML que previamente no tenga información de tipos utilizando el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>. En ambos casos, se pueden volver a validar los cambios realizados en el documento XML utilizando el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>.  
   
 ### <a name="validating-a-document-as-it-is-loaded"></a>Validación de un documento a medida que se carga  
+
  Para crear un objeto <xref:System.Xml.XmlReader> de validación, se pasa un objeto <xref:System.Xml.XmlReaderSettings> al método <xref:System.Xml.XmlReader.Create%2A> de la clase <xref:System.Xml.XmlReader> que toma un objeto <xref:System.Xml.XmlReaderSettings> como parámetro. El objeto <xref:System.Xml.XmlReaderSettings> que se pasa como parámetro tiene la propiedad <xref:System.Xml.XmlReaderSettings.ValidationType%2A> establecida en `Schema` y un esquema XML para el documento XML contenido en el objeto <xref:System.Xml.XmlDocument> que se ha agregado a su propiedad <xref:System.Xml.XmlReaderSettings.Schemas%2A>. A continuación, el objeto <xref:System.Xml.XmlReader> de validación se utiliza para crear el objeto <xref:System.Xml.XmlDocument>.  
   
  En el siguiente ejemplo se valida el archivo `contosoBooks.xml` a medida que se carga en el objeto <xref:System.Xml.XmlDocument> creando el objeto <xref:System.Xml.XmlDocument> utilizando un objeto <xref:System.Xml.XmlReader> de validación. Dado que el documento XML es válido de acuerdo con su esquema, no se genera ninguna advertencia ni error de validación del esquema.  
@@ -129,6 +132,7 @@ class ValidatingReaderExample
 > Cuando se carga un documento XML en un objeto <xref:System.Xml.XmlDocument> con un esquema asociado que define valores predeterminados, el objeto <xref:System.Xml.XmlDocument> trata estos valores predeterminados como si aparecieran en el documento XML. Esto significa que la propiedad <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> siempre devuelve `false` para un elemento que utilice los valores predeterminados de un esquema, incluso aunque el documento XML se hubiera escrito como un elemento vacío.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validación de un documento con el método Validate  
+
  El método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument> valida el documento XML contenido en un objeto <xref:System.Xml.XmlDocument> con los esquemas que se especifican en la propiedad <xref:System.Xml.XmlDocument> del objeto <xref:System.Xml.XmlDocument.Schemas%2A> y aumenta el conjunto de información. El resultado es que se reemplaza un documento XML que previamente no tiene información de tipos del objeto <xref:System.Xml.XmlDocument> por un documento con información de tipos.  
   
  El objeto <xref:System.Xml.XmlDocument> notifica los errores y advertencias de validación de esquemas utilizando el delegado <xref:System.Xml.Schema.ValidationEventHandler> que se pasa como parámetro al método <xref:System.Xml.XmlDocument.Validate%2A>.  
@@ -216,6 +220,7 @@ class ValidateExample
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 ### <a name="validating-modifications"></a>Validación de modificaciones  
+
  Después de realizar modificaciones en un documento XML, puede validarlas con el esquema del documento XML utilizando el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>.  
   
  En el siguiente ejemplo se valida el archivo `contosoBooks.xml` a medida que se carga en el objeto <xref:System.Xml.XmlDocument> creando el objeto <xref:System.Xml.XmlDocument> utilizando un objeto <xref:System.Xml.XmlReader> de validación. El documento XML se valida correctamente a medida que se carga sin generar ningún error ni advertencia de validación del esquema. A continuación, el ejemplo realiza dos modificaciones en el documento XML que no son válidas de acuerdo con el esquema `contosoBooks.xsd`. La primera modificación inserta un elemento secundario no válido que produce un error de validación del esquema, y la segunda modificación establece el valor de un nodo con información de tipos en un valor que no es válido de acuerdo con el tipo de nodo, lo cual produce una excepción.  
@@ -350,6 +355,7 @@ class ValidatingReaderExample
  Para obtener más información sobre la modificación de valores con el método <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A>, vea el tema [Modificación de datos XML con XPathNavigator](modify-xml-data-using-xpathnavigator.md).  
   
 ### <a name="read-only-validation"></a>Validación de solo lectura  
+
  La clase <xref:System.Xml.XPath.XPathDocument> es una representación en memoria de solo lectura de un documento XML. Tanto la clase <xref:System.Xml.XPath.XPathDocument> como la clase <xref:System.Xml.XmlDocument> crean objetos <xref:System.Xml.XPath.XPathNavigator> para navegar por documentos XML y editarlos. Dado que la clase <xref:System.Xml.XPath.XPathDocument> es de solo lectura, los objetos <xref:System.Xml.XPath.XPathNavigator> que devuelven los objetos <xref:System.Xml.XPath.XPathDocument> no pueden editar el documento XML contenido en el objeto <xref:System.Xml.XPath.XPathDocument>.  
   
  En caso de validación, puede crear un objeto <xref:System.Xml.XPath.XPathDocument> igual que crea un objeto <xref:System.Xml.XmlDocument> utilizando un objeto <xref:System.Xml.XmlReader> de validación, tal y como se ha descrito anteriormente en este tema. El objeto <xref:System.Xml.XPath.XPathDocument> valida el documento XML a medida que se carga, pero dado que no se pueden editar los datos XML en el objeto <xref:System.Xml.XPath.XPathDocument>, no se puede volver a validar el documento XML.  

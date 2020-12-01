@@ -14,14 +14,15 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: ffb7a5d027ef7691d03caf0ac45d4a3dd9bdb652
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 62c4ddb7e4b904be501ed2938692bce405c7e5f3
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502423"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253406"
 ---
 # <a name="http"></a>HTTP
+
 .NET Framework proporciona compatibilidad completa para el protocolo HTTP, que constituye la mayor parte de todo el tráfico de Internet, con las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.HttpWebResponse>. Estas clases, derivadas de <xref:System.Net.WebRequest> y <xref:System.Net.WebResponse>, se devuelven de manera predeterminada siempre que el método estático <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> detecte un URI que comience por "http" o "https". En la mayoría de los casos, las clases **WebRequest** y **WebResponse** proporcionan todo lo necesario para realizar la solicitud, pero si necesita tener acceso a las características específicas de HTTP expuestas como propiedades, puede convertir estas clases en **HttpWebRequest** o **HttpWebResponse**.  
   
  **HttpWebRequest** y **HttpWebResponse** encapsulan una transacción de solicitud y respuesta HTTP estándar y proporcionan acceso a los encabezados HTTP comunes. Estas clases también admiten la mayoría de las características de HTTP 1.1, incluidas la canalización, envío y recepción de datos en fragmentos, autenticación, preautenticación, cifrado, compatibilidad de proxy, validación de certificados de servidor y administración de conexiones. Los encabezados y los encabezados personalizados que no se proporcionan mediante propiedades pueden almacenarse y se puede acceder a ellos mediante la propiedad **Headers**.  

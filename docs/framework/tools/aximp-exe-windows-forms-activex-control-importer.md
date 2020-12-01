@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-ms.openlocfilehash: d4fd6762195078963b43392178996a61f90feb94
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 97e5201aecc540594aa154bb5a2e93e85c925570
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167344"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247348"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
+
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
   
  Windows Forms solo puede hospedar controles de Windows Forms; es decir, clases derivadas de <xref:System.Windows.Forms.Control>. Aximp.exe genera una clase contenedora para un control ActiveX que se puede hospedar en un Windows Form. Esto permite utilizar la misma compatibilidad en tiempo de diseño y la misma metodología de programación que si se tratase de controles usuales de Windows Forms.  
@@ -58,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  Proxy de Common Language Runtime para tipos COM: *progid*.dll  
   
- Proxy de Windows Forms para controles ActiveX (donde Ax significa ActiveX): Ax*progid*.dll  
+ Proxy de Windows Forms para controles ActiveX (donde Ax significa ActiveX): Ax *progid*.dll  
   
 > [!NOTE]
 > Si el nombre de un miembro del control ActiveX coincide con un nombre definido en .NET Framework, Aximp.exe agregará el prefijo "Ctl" al nombre del miembro al crear la clase derivada AxHost. Por ejemplo, si el control ActiveX tiene un miembro denominado "Layout", el nombre de este se cambia a "CtlLayout" en la clase derivada AxHost porque el evento Layout está definido en .NET Framework.  
@@ -72,6 +73,7 @@ aximp [options]{file.dll | file.ocx}
  Si se utiliza Aximp.exe con shdocvw.dll con el fin de crear un ensamblado .NET para utilizarlo en el desarrollo de aplicaciones, también pueden producirse problemas. En este caso, la aplicación cargará la versión del sistema de shdocvw.dll y la versión generada, por lo que la versión del sistema podría tener prioridad. En este caso, al intentar cargar una página web dentro del control ActiveX WebBrowser, es posible que a los usuarios les aparezca un cuadro de diálogo para abrir o guardar. Cuando el usuario haga clic en **Abrir**, la página web se abrirá en Internet Explorer. Esto solo ocurre en los equipos que ejecutan Internet Explorer versión 6 o una versión anterior. Para evitar este problema, use el control <xref:System.Windows.Forms.WebBrowser> administrado o Visual Studio para generar el control shdocvw.dll administrado, como se describe en [Cómo: Agregar referencias a bibliotecas de tipos](../interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Ejemplo  
+
  El comando siguiente genera los archivos MediaPlayer.dll y AxMediaPlayer.dll para el control de Media Player `msdxm.ocx`.  
   
 ```console

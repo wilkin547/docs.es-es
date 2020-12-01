@@ -6,16 +6,19 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - deployment [.NET Framework]
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
-ms.openlocfilehash: 9e9fef2af56ca278b0e326c15546ca9f849a3253
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b42646b60fab91fe761a8fdef59d67be6ffa884b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622775"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242050"
 ---
 # <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
+
 En esta sección de la documentación de .NET Framework se proporciona información para los desarrolladores que quieran instalar .NET Framework con sus aplicaciones y para los administradores que quieran implementar .NET Framework en una red. También se describen los problemas de activación y reinicio asociados a la implementación, así como la manera de supervisar el progreso de la instalación de .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
+
  [Guía de implementación para desarrolladores](deployment-guide-for-developers.md)  
  Explica cómo los desarrolladores de software pueden instalar .NET Framework en los equipos de los usuarios con sus aplicaciones.  
   

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-ms.openlocfilehash: 4c2cddd78e14d1ae0b04bab07b57fe0ce0f627ca
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6810fc4fbe39fa82a02faa967b1afd8ad9c7a3cc
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543373"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96244891"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
+
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).  
@@ -73,6 +74,7 @@ tlbimp tlbFile [options]
 > Las opciones de la línea de comandos de Tlbimp.exe no distinguen entre mayúsculas y minúsculas, y se pueden proporcionar en cualquier orden. Por otra parte, basta con especificar parte de la opción de forma que se identifique de manera inequívoca. Por lo tanto, **/n** equivale a **/nologo** y **/ou:** *outfile.dll* equivale a **/out:** *outfile.dll*.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Tlbimp.exe realiza las conversiones de una biblioteca completa de tipos de una vez. No se puede utilizar esta herramienta para generar información de tipos para un subconjunto de los tipos definidos en una biblioteca de tipos sencilla.  
   
  Hay veces que resulta útil o es necesario poder asignar [nombres seguros](../../standard/assembly/strong-named.md) a los ensamblados. Por consiguiente, Tlbimp.exe incluye opciones que proporcionan la información necesaria para generar ensamblados con nombre seguro. Las dos opciones **/keyfile:** y **/keycontainer:** firman los ensamblados con nombres seguros. Por tanto, lo lógico es proporcionar una de estas opciones cada vez.  
@@ -84,6 +86,7 @@ tlbimp tlbFile [options]
  De manera opcional, un identificador de recurso se puede anexar a un archivo de biblioteca de tipos cuando se importa desde un módulo que contiene varias bibliotecas de tipos. Tlbimp.exe encuentra este archivo solo si se ubica en el directorio actual o si se especifica la ruta de acceso completa. Vea el ejemplo que se muestra más adelante en este tema.  
   
 ## <a name="examples"></a>Ejemplos  
+
  El comando siguiente genera un ensamblado con el mismo nombre que el de la biblioteca de tipos que se encuentra en `myTest.tlb` y con la extensión .dll.  
   
 ```console  

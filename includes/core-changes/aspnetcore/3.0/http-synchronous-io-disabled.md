@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901608"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032778"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP: se ha deshabilitado la E/S sincrónica en todos los servidores
 

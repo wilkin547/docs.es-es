@@ -10,14 +10,15 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: c0bcf4becf8193f3bd6bc728dc6d7e96276dddf2
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 2ab53ef5973091d8828260aa82d287ce4a2455eb
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502735"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250702"
 ---
 # <a name="asynchronous-client-socket-example"></a>Ejemplo de sockets de cliente asincrónicos
+
 El programa de ejemplo siguiente crea un cliente que se conecta a un servidor. El cliente se ha creado con un socket asincrónico, así que no se suspende la ejecución de la aplicación de cliente mientras se espera una respuesta del servidor. La aplicación envía una cadena al servidor y luego muestra la cadena devuelta por el servidor en la consola.  
   
 ```vb  

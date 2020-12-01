@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c8f44ae1a500ed240dbff7d9a2c1479af368b7f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394066"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032794"
 ---
 ### <a name="identity-default-bootstrap-version-of-ui-changed"></a>Identity: se ha cambiado la versión de Bootstrap predeterminada de la interfaz de usuario
 

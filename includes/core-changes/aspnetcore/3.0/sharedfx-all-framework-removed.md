@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 959f3959c28c7d0159be7a213986345e2865b9a2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72394436"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032863"
 ---
 ### <a name="shared-framework-removed-microsoftaspnetcoreall"></a>Marco compartido: se ha eliminado Microsoft.AspNetCore.All
 

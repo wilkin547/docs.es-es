@@ -8,14 +8,15 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: f091f0f675fcf22cb7c6be83a5766fcc8d279be7
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 96511c44507706b616c1542a534a52b02070efc9
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250234"
 ---
 # <a name="network-programming-how-to-topics"></a>Temas de procedimientos de programación de red
+
 La lista siguiente incluye vínculos a los temas de procedimientos relacionados con la programación de red que se pueden encontrar en la documentación conceptual.  
   
  **Solicitud de datos:**  

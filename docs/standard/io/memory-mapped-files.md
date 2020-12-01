@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: dc0da9842df7b0a827293c42d80ccdd418a043b2
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4a179bff7ec7988c5b7410fa99eab346d4add1df
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94819206"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734834"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 
@@ -31,6 +31,7 @@ Hay dos tipos de archivos asignados a memoria:
      Los archivos no persistentes son archivos asignados a memoria que no están asociados a un archivo ubicado en un disco. Cuando el último proceso termina de usar el archivo, se pierden los datos y la recolección de elementos no utilizados reclama el archivo. Estos archivos son idóneos para crear memoria compartida para las comunicaciones entre procesos (IPC).  
   
 ## <a name="processes-views-and-managing-memory"></a>Procesos, vistas y administración de memoria  
+
  Los archivos asignados a memoria se pueden compartir entre varios procesos. Los procesos pueden realizar una asignación al mismo archivo asignado a memoria usando un nombre común asignado por el proceso que creó el archivo.  
   
  Para trabajar con un archivo asignado a memoria, debe crear una vista de todo o parte del archivo asignado a memoria. También puede crear varias vistas a la misma parte del archivo asignado a memoria, creando de esta forma memoria simultánea. Para que dos vistas sigan siendo simultáneas, tienen que crearse a partir del mismo archivo asignado a memoria.  
@@ -48,6 +49,7 @@ Hay dos tipos de archivos asignados a memoria:
  ![Captura de pantalla que muestra las vistas de un archivo asignado a memoria.](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>Programar con archivos asignados a memoria  
+
  En la siguiente tabla, se describe cómo usar los objetos de archivo asignado a memoria y sus miembros.  
   
 |Tarea|Métodos o propiedades que se usan|  
@@ -61,6 +63,7 @@ Hay dos tipos de archivos asignados a memoria:
 |Para retrasar la asignación de memoria hasta que se crea una vista (solo archivos no persistentes).<br /><br /> (Para determinar el actual tamaño de página del sistema, utilice la propiedad <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>.)|Método <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> con el valor <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>.<br /><br /> o bien<br /><br /> Métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> como parámetro.|  
   
 ### <a name="security"></a>Seguridad  
+
  Se pueden aplicar derechos de acceso cuando se crea un archivo asignado a memoria si se usan los siguientes métodos con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> como parámetro:  
   
 - <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
@@ -78,6 +81,7 @@ Hay dos tipos de archivos asignados a memoria:
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="persisted-memory-mapped-files"></a>Archivos asignados a memoria persistentes  
+
  Los métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> crean un archivo asignado a memoria a partir de un archivo existente en disco.  
   
  En el ejemplo siguiente se crea una vista asignada a memoria de una parte de un archivo muy grande y se manipula una parte de él.  
@@ -93,6 +97,7 @@ Hay dos tipos de archivos asignados a memoria:
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
 ### <a name="non-persisted-memory-mapped-files"></a>Archivos asignados a memoria no persistentes  
+
  Los métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> y <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> crean un archivo asignado a memoria que no está asignado a un archivo existente en el disco.  
   
  El ejemplo siguiente consta de tres procesos independientes (aplicaciones de consola) que escriben valores booleanos en un archivo asignado a memoria. Se produce la siguiente secuencia de acciones:  

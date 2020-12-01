@@ -16,14 +16,15 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: a1f0829aa0e9e4bcc68168b73443578c3a34310b
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 085ca27dd0cfedc90211b21c10cc8bc5cf1ecd21
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502384"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241595"
 ---
 # <a name="internet-authentication"></a>Autenticación de Internet
+
 Las clases <xref:System.Net> admiten diversos mecanismos de autenticación de cliente, incluidos los métodos de autenticación de Internet estándares básico, implícito, negociado, NTLM y autenticación Kerberos, así como métodos personalizados que puede crear.  
   
  Las credenciales de autenticación se almacenan en las clases <xref:System.Net.NetworkCredential> y <xref:System.Net.CredentialCache>, que implementan la interfaz <xref:System.Net.ICredentials>. Cuando se consulta una de estas clases para obtener las credenciales, devuelve una instancia de la clase **NetworkCredential**. El proceso de autenticación se administra mediante la clase <xref:System.Net.AuthenticationManager> y el proceso de autenticación real se realiza mediante una clase del módulo de autenticación que implementa la interfaz <xref:System.Net.IAuthenticationModule>. Debe registrar un módulo de autenticación personalizado con **AuthenticationManager** para que se pueda usar. Los módulos para los métodos de autenticación básico, implícito, negociado, NTLM y Kerberos están registrados de forma predeterminada.  

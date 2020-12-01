@@ -14,14 +14,15 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 30a35ded6fc86af6dc6dd4bf19cdf60f66570e0c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96247257"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
+
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
   
  El administrador de certificados se instala automáticamente con Visual Studio. Para iniciar la herramienta, use los [símbolos del sistema](developer-command-prompt-for-vs.md).  
@@ -72,6 +73,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 ## <a name="remarks"></a>Comentarios  
+
  Certmgr.exe realiza las funciones básicas siguientes:  
   
 - Muestra certificados, listas CTL y listas CRL en la consola.  
@@ -94,6 +96,7 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
  Para más información, consulte [Trabajar con certificados](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Ejemplos  
+
  El comando siguiente muestra un almacén del sistema predeterminado denominado `my` con salida detallada.  
   
 ```console  

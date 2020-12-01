@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ec6724ab378dd614c55a024ede18d997d27be3a3
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549603"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032910"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Plataforma de destino: se ha quitado la compatibilidad con .NET Framework
 

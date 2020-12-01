@@ -15,17 +15,19 @@ helpviewer_keywords:
 - data stores, reading and writing to files
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
-ms.openlocfilehash: eff020ebb1de40f83582bbf872339c7652d1d4b1
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 3a8b783cf2cce93cb26b11823d9f565961376ca3
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830706"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734600"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Cómo: Leer y escribir en archivos en almacenamiento aislado
+
 Para leer o escribir en un archivo de un almacén aislado, use un objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> con un lector de secuencias (objeto <xref:System.IO.StreamReader>) o el escritor de secuencias (objeto <xref:System.IO.StreamWriter>).  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo de código siguiente se obtiene un almacén aislado y se comprueba si existe un archivo denominado TestStore.txt en el almacén. Si no existe, crea el archivo y escribe "Hello Isolated Storage" en el archivo. Si TestStore.txt ya existe, el código de ejemplo se lee desde el archivo.  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]

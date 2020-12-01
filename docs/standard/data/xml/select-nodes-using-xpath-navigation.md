@@ -6,17 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: b8a67d1fd508d0674d9230d4b934071a15669599
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b6b68d9351431acc6d9ef20276f51ac4d667d325
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829250"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734691"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selección de nodos con la navegación XPath
+
 El Modelo de objetos del documento (DOM) XML contiene métodos que le permiten utilizar la navegación del lenguaje de ruta XML (XPath) para consultar información en el DOM. Puede utilizar XPath para buscar un solo nodo específico o para buscar todos los nodos que cumplen algunos criterios.  
   
 ## <a name="xpath-select-methods"></a>Métodos de selección de XPath  
+
  Las clases DOM incluyen dos métodos para la selección de XPath: <xref:System.Xml.XmlNode.SelectSingleNode%2A> y <xref:System.Xml.XmlNode.SelectNodes%2A>. El método <xref:System.Xml.XmlNode.SelectSingleNode%2A> devuelve el primer nodo que cumple los criterios de selección. El método <xref:System.Xml.XmlNode.SelectNodes%2A> devuelve un <xref:System.Xml.XmlNodeList> que contiene los nodos coincidentes.  
   
  En el siguiente ejemplo se utiliza el método <xref:System.Xml.XmlNode.SelectSingleNode%2A> para seleccionar el primer nodo `book` en el que el apellido del autor cumple los criterios especificados. El archivo bookstore.xml (que se proporciona al final de este tema) se utiliza como archivo de entrada.  
@@ -122,12 +124,14 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > Cuando se modifica el documento subyacente, es aconsejable volver a ejecutar la selección. Si el nodo modificado puede provocar que el nodo se agregue a la lista de nodos cuando antes no estaba, o que se quite de la lista de nodos, no hay ninguna garantía de que la lista de nodos sea precisa.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>Espacios de nombres en expresiones XPath  
+
  Las expresiones XPath pueden incluir espacios de nombres. La resolución de espacios de nombres es compatible con <xref:System.Xml.XmlNamespaceManager>. Si la expresión XPath incluye un prefijo, el par del prefijo y el identificador URI de espacio de nombres se debe agregar a <xref:System.Xml.XmlNamespaceManager>, y <xref:System.Xml.XmlNamespaceManager> se pasa al método <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> o <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>. Observe que los ejemplos de código anteriores utilizan <xref:System.Xml.XmlNamespaceManager> para resolver el espacio de nombres del documento bookstore.xml.  
   
 > [!NOTE]
 > Si la expresión XPath no incluye un prefijo, se asume que el identificador uniforme de recursos (URI) de espacio de nombres es el espacio de nombres vacío. Si el XML incluye un espacio de nombres predeterminado, deberá agregar también un prefijo y un identificador URI de espacio de nombres a <xref:System.Xml.XmlNamespaceManager>; de lo contrario, no se seleccionará ningún nodo.  
   
 #### <a name="input-file"></a>Archivo de entrada  
+
  A continuación, se muestra el archivo bookstore.xml que se utiliza como archivo de entrada en los ejemplos incluidos en este tema:  
   
 ```xml  

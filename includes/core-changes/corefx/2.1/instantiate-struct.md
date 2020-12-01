@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b55de00188d92623c493dfc5f9aca915890ae5df
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021463"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032090"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>Campos privados agregados a tipos struct integrados
 

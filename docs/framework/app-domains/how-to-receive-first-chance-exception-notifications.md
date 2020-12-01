@@ -9,14 +9,15 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-ms.openlocfilehash: e8b5ae5fb69c7befd329316aee11523f79d73fcd
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 0b3150a52a68e078d1052a9894bb652ad35027d0
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104743"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96242570"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procedimiento para recibir notificaciones de excepciones de primera oportunidad
+
 El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.AppDomain> permite recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.
 
  El evento se genera en el nivel de dominio de aplicación. Un subproceso de ejecución puede pasar a través de varios dominios de aplicación, así que una excepción no controlada en un dominio de aplicación podría controlarse en otro. La notificación se produce en cada dominio de aplicación que haya agregado un controlador para el evento, hasta que un dominio de aplicación controle la excepción.
@@ -26,6 +27,7 @@ El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.
  Para ver un ejemplo más complejo que abarca varios dominios de aplicación, vaya al ejemplo del evento <xref:System.AppDomain.FirstChanceException>.
 
 ## <a name="receiving-first-chance-exception-notifications-in-the-default-application-domain"></a>Recepción de notificaciones de primera excepción en el dominio de aplicación predeterminado
+
  En el siguiente procedimiento, el punto de entrada de la aplicación, el método `Main()`, se ejecuta en el dominio de aplicación predeterminado.
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>Para mostrar notificaciones de primera excepción en el dominio de aplicación predeterminado
@@ -51,6 +53,7 @@ El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#5)]
 
 ## <a name="receiving-first-chance-exception-notifications-in-another-application-domain"></a>Recepción de notificaciones de primera excepción en otro dominio de aplicación
+
  Si el programa contiene más de un dominio de aplicación, puede elegir cuáles reciben notificaciones.
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>Para recibir notificaciones de primera excepción en un dominio de aplicación que cree
@@ -85,6 +88,7 @@ El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
 
 ## <a name="example"></a>Ejemplo
+
  En el ejemplo siguiente se crea un dominio de aplicación denominado `AD1` y se agrega un controlador de eventos al evento <xref:System.AppDomain.FirstChanceException> del dominio de aplicación. En el ejemplo se crea una instancia de la clase `Worker` en el dominio de aplicación y se llama a un método denominado `Thrower` que inicia una <xref:System.ArgumentException>. Según el valor de su argumento, el método captura la excepción o no la controla.
 
  Cada vez que el método `Thrower` inicia una excepción en `AD1`, se genera el evento <xref:System.AppDomain.FirstChanceException> en `AD1` y el controlador de eventos muestra un mensaje. Luego el runtime busca un controlador de excepciones. En el primer caso, el controlador de excepciones se encuentra en `AD1`. En el segundo caso, la excepción no se controla en `AD1` y se captura en el dominio de aplicación predeterminado.

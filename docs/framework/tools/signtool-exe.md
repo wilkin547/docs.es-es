@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: ff330691483b56740ee72e280c1471af4282c638
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 46a7453ff7de0329d9cd7f671dcaa0a3e3e0e54c
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238475"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Herramienta de firma)
+
 La herramienta Firmar es una herramienta de la línea de comandos que firma archivos digitalmente, comprueba firmas en archivos o archivos con marcas de tiempo.  
   
  Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](developer-command-prompt-for-vs.md).
@@ -55,7 +56,9 @@ signtool [command] [options] [file_name | ...]
 |**/debug**|Muestra información de depuración.|  
   
 <a name="catdb"></a>
+
 ## <a name="catdb-command-options"></a>Opciones del comando catdb  
+
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `catdb`.  
   
 |Opción de catdb|Descripción|  
@@ -66,7 +69,9 @@ signtool [command] [options] [file_name | ...]
 |`/u`|Especifica que se genera un nombre único automáticamente para los archivos de catálogo agregados. Si es necesario, a los archivos de catálogo se les cambia el nombre para evitar que se produzcan conflictos de nombre con archivos de catálogo existentes. Si no se especifica esta opción, la herramienta Firmar sobrescribe cualquier catálogo existente que tenga el mismo nombre que el catálogo que se va a agregar.|  
   
 <a name="sign"></a>
+
 ## <a name="sign-command-options"></a>Opciones del comando sign  
+
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `sign`.  
   
 |Opción del comando sign|Descripción|  
@@ -80,7 +85,7 @@ signtool [command] [options] [file_name | ...]
 |`/du`  *URL*|Especifica el localizador uniforme de recursos (URL) de la descripción ampliada del contenido firmado.|  
 |`/f`  *SignCertFile*|Especifica el certificado de firma en un archivo. Si el archivo está en formato de intercambio de información personal (PFX) y protegido por una contraseña, utilice la opción `/p` para especificar la contraseña. Si el archivo no contiene claves privadas, utilice las opciones `/csp` y `/kc` para especificar el CSP y el nombre de contenedor de claves privadas, respectivamente.|  
 |`/fd`|Especifica el algoritmo de resumen de archivo que se va a usar para crear signaturas de archivo. </br> **Nota:** Se genera una advertencia si el modificador `/fd` no se proporciona durante la firma. El algoritmo predeterminado es SHA1, pero se recomienda SHA256.|
-|`/fd`  *certHash*|Si se especifica la cadena *certHash* , se establecerá de manera predeterminada en el algoritmo que se usa en el certificado de firma. </br> **Nota:** Solo está disponible en las compilaciones 20236 y posteriores del kit de Windows 10.|  
+|`/fd`  *certHash*|Si se especifica la cadena *certHash*, se establecerá de manera predeterminada en el algoritmo que se usa en el certificado de firma. </br> **Nota:** Solo está disponible en las compilaciones 20236 y posteriores del kit de Windows 10.|  
 |`/i`  *IssuerName*|Especifica el nombre del emisor del certificado de firma. Este valor puede corresponder a una subcadena del nombre del emisor completo.|  
 |`/kc`  *PrivKeyContainerName*|Especifica el nombre del contenedor de claves privadas.|  
 |`/n`  *SubjectName*|Especifica el nombre del sujeto del certificado de firma. Este valor puede corresponder a una subcadena del nombre del sujeto completo.|  
@@ -103,7 +108,9 @@ signtool [command] [options] [file_name | ...]
  Para obtener ejemplos de uso, vea [Using SignTool to Sign a File](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file) (Usar SignTool para firmar un archivo).  
   
 <a name="TimeStamp"></a>
+
 ## <a name="timestamp-command-options"></a>Opciones del comando TimeStamp  
+
  En la tabla siguiente se enumeran las opciones que se pueden utilizar con el comando `TimeStamp`.  
   
 |Opción de TimeStamp|Descripción|  
@@ -117,6 +124,7 @@ signtool [command] [options] [file_name | ...]
  Para obtener un ejemplo de uso, vea [Adding Time Stamps to Previously Signed Files](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files) (Agregar marcas de tiempo a archivos ya firmados).  
   
 <a name="Verify"></a>
+
 ## <a name="verify-command-options"></a>Opciones del comando Verify  
   
 |Opción de Verify|Descripción|  
@@ -132,7 +140,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica un algoritmo hash opcional que se usará al buscar un archivo en un catálogo.|  
 |`/kp`|Especifica que la comprobación debe realizarse con la directiva de firma de controladores en modo kernel.|  
 |`/ms`|Utiliza la semántica de comprobación múltiple. Este es el comportamiento predeterminado de una llamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) en Windows 8 y versiones posteriores.|  
-|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID* : *VerMajor*. *VerMinor*. *BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
+|`/o` *Version*|Comprueba el archivo por versión del sistema operativo. *Version* tiene el formato siguiente: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa el valor subyacente de un miembro de enumeración <xref:System.PlatformID>. **Importante:**  Se recomienda el uso del modificador `/o`. Si no se especifica `/o`, SignTool.exe puede devolver resultados inesperados. Por ejemplo, si no incluye el modificador `/o`, los catálogos del sistema que se validan correctamente en un sistema operativo anterior pueden no validarse correctamente en un sistema operativo más reciente.|  
 |`/p7`|Comprueba los archivos PKCS #7. No se usa ninguna directiva existente para la validación de PKCS #7. Se comprueba la signatura y se genera una cadena para el certificado de firma.|  
 |`/pa`|Especifica que se debe usar la directiva de comprobación de Authenticode predeterminada. Si no se especifica la opción `/pa`, la herramienta Firmar utiliza la directiva de comprobación de controladores de Windows. Esta opción no se puede combinar con la opción `catdb`.|  
 |`/pg` *PolicyGUID*|Especifica una directiva de comprobación por GUID. *PolicyGUID* corresponde a la propiedad ActionID de la directiva de comprobación. Esta opción no se puede combinar con la opción `catdb`.|  
@@ -143,6 +151,7 @@ signtool [command] [options] [file_name | ...]
  Para obtener ejemplos de uso, vea [Using SignTool to Verify a File Signature](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature) (Usar SignTool para comprobar una firma de archivo).  
   
 ## <a name="return-value"></a>Valor devuelto  
+
  La herramienta Firmar devuelve uno de los siguientes códigos de salida al finalizar.  
   
 |Código de salida|Descripción|  
@@ -152,6 +161,7 @@ signtool [command] [options] [file_name | ...]
 |2|La ejecución ha finalizado con advertencias.|  
 
 ## <a name="examples"></a>Ejemplos  
+
  El comando siguiente agrega el archivo de catálogo MyCatalogFileName.cat al componente del sistema y la base de datos del controlador. La opción `/u` genera un nombre único si es necesario para impedir que se reemplace un archivo de catálogo existente denominado `MyCatalogFileName.cat`.  
   
 ```console  

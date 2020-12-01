@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539623"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032693"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Los cambios de SameSite en los exploradores afectan a la autenticación.
 

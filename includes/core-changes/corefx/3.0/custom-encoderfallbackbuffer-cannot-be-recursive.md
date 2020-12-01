@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 54ef49755dc0b9d1b821ae7999ab218626d455e1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556347"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96032109"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>No se puede recurrir de formar recursiva a las instancias personalizadas de EncoderFallbackBuffer
 

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: 8f10dab9b395640e46cb9bf3ca468b8f6bb2bc1b
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: bb9640bbb46683a3facf290c8157853007f4407d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238449"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
+
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../standard/assembly/strong-named.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
   
 > [!WARNING]
@@ -79,6 +80,7 @@ sn [-quiet][option [parameter(s)]]
 > Todas las opciones de Sn.exe distinguen entre mayúsculas y minúsculas, y se deben escribir exactamente como se muestra en esta tabla para que la herramienta pueda reconocerlas.  
   
 ## <a name="remarks"></a>Comentarios  
+
  Las opciones **-R** y **–Rc** son útiles con ensamblados firmados con retraso. En este escenario, únicamente se ha establecido en tiempo de compilación la clave pública, y la firma se agrega más tarde, cuando se conoce la clave privada.  
   
 > [!NOTE]
@@ -87,6 +89,7 @@ sn [-quiet][option [parameter(s)]]
 La herramienta Nombre seguro asume que los pares de claves pública y privada se generan con el identificador del algoritmo `AT_SIGNATURE`. Los pares de claves pública y privada generados con el algoritmo `AT_KEYEXCHANGE` producen un error.
 
 ## <a name="examples"></a>Ejemplos  
+
  El comando siguiente crea un nuevo par de claves aleatorio y lo almacena en el `keyPair.snk`.  
   
 ```console  

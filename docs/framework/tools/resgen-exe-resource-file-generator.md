@@ -16,14 +16,15 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-ms.openlocfilehash: f51ee6c8537abafc82017f3cc29d734e939a254f
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 27ff0ea4e014f440d14e2972a8ba2963386f142b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517235"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96238565"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
+
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creación de archivos de recursos](../resources/creating-resource-files-for-desktop-apps.md).)  
   
  Resgen.exe es una utilidad de conversión de recursos de uso general que realiza las tareas siguientes:  
@@ -83,9 +84,11 @@ resgen filename.extension [outputDirectory]
 |`/publicClass`|Crea una clase de recursos fuertemente tipados como una clase pública. De forma predeterminada, la clase de recursos es `internal` en C# y `Friend` en Visual Basic.<br /><br /> Esta opción se omite si no se usa la opción `/str:`.|  
   
 ## <a name="resgenexe-and-resource-file-types"></a>Resgen.exe y los tipos de archivos de recursos  
+
  Para que Resgen.exe convierta correctamente los recursos, los archivos de texto y los archivos .resx deben tener el formato correcto.  
   
 ### <a name="text-txt-and-restext-files"></a>Archivos de texto (.txt y .restext)  
+
  Los archivos de texto (.txt o .restext) solo pueden contener recursos de cadena. Los recursos de cadena son útiles cuando se crea una aplicación que debe tener cadenas traducidas a varios idiomas. Por ejemplo, mediante el recurso de cadena apropiado, se pueden adaptar las cadenas de opciones de menú a la configuración regional de forma sencilla. Resgen.exe lee los archivos de texto que contienen pares nombre-valor, donde el nombre es una cadena que describe el recurso y el valor es la propia cadena de recursos.  
   
 > [!NOTE]
@@ -96,6 +99,7 @@ resgen filename.extension [outputDirectory]
  Resgen.exe comprueba si en el archivo de texto existen nombres de recursos duplicados. Si el archivo de texto contiene nombres de recursos duplicados, Resgen.exe emite una advertencia y omite el segundo valor.  
   
 ### <a name="resx-files"></a>Archivos .resx  
+
  El formato de archivo de recursos .resx consiste en entradas XML. En estas entradas XML puede especificar recursos de cadena, tal y como haría en los archivos de texto. Una ventaja importante de los archivos .resx sobre los archivos de texto es que también permiten especificar o incrustar objetos. Cuando se ve un archivo .resx, se puede observar la forma binaria de un objeto incrustado (por ejemplo, una imagen) cuando esta información binaria forma parte del manifiesto del recurso. Al igual que los archivos de texto, los archivos .resx se pueden abrir con un editor de texto (como el Bloc de notas o Microsoft Word) y escribir, analizar y manipular el contenido. Tenga en cuenta que esto requiere un conocimiento profundo de las etiquetas XML y de la estructura de archivos .resx. Para obtener más detalles sobre el formato de archivo .resx, vea la sección sobre recursos en archivos .resx de [Creación de archivos de recursos](../resources/creating-resource-files-for-desktop-apps.md).  
   
  Para crear un archivo .resources que contenga objetos incrustados que no son de cadena, debe usar Resgen.exe para convertir un archivo .resx que contenga objetos, o bien debe agregar los recursos de objeto al archivo directamente desde el código, utilizando los métodos que proporciona la clase <xref:System.Resources.ResourceWriter>.  
@@ -103,6 +107,7 @@ resgen filename.extension [outputDirectory]
  Si el archivo .resx o .resources contiene objetos y usa Resgen.exe para convertirlo en un archivo de texto, todos los recursos de cadena se convertirán correctamente, pero los tipos de datos de los objetos que no son de cadena también se escribirán en el archivo como cadenas. Se perderán los objetos incrustados en la conversión y Resgen.exe notificará el error al recuperar los recursos.  
   
 ### <a name="converting-between-resources-file-types"></a>Convertir tipos de archivos de recursos  
+
  Al intentar convertir tipos de archivos de recursos en otros diferentes, es posible que Resgen.exe no pueda realizar la conversión o que pierda información sobre recursos específicos, en función de los tipos de archivos de origen y de destino. En la tabla siguiente se especifican los tipos de conversiones que se pueden realizar entre los distintos tipos de archivos de recursos.  
   
 |Conversión de|A archivo de texto|A archivo .resx|A archivo .resw|A archivo .resources|  
@@ -113,6 +118,7 @@ resgen filename.extension [outputDirectory]
 |Ensamblado .exe o .dll|No compatible|No compatibles|Solo los recursos de cadena (incluidos los nombres de ruta de acceso) se reconocen como recursos|No compatibles|  
   
 ## <a name="performing-specific-resgenexe-tasks"></a>Realizar tareas específicas de Resgen.exe  
+
  Puede usar la herramienta Resgen.exe de varias maneras: para compilar un archivo de recursos basado en texto o en XML en un archivo binario, para realizar conversiones entre los distintos formatos de archivo de recursos, y para generar una clase que incluya la funcionalidad <xref:System.Resources.ResourceManager> y proporcione acceso a los recursos. En esta sección se proporciona información detallada sobre cada tarea.  
   
 - [Compilar recursos en un archivo binario](resgen-exe-resource-file-generator.md#Compiling)  
@@ -128,7 +134,9 @@ resgen filename.extension [outputDirectory]
 - [Generar una clase de recursos fuertemente tipados](resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>
+
 ### <a name="compiling-resources-into-a-binary-file"></a>Compilar recursos en un archivo binario  
+
  El uso más común de Resgen.exe es compilar un archivo de recursos basado en texto (un archivo .txt o .restext) o un archivo de recursos basado en XML (un archivo .resx) en un archivo .resources binario. El archivo de salida se puede insertar en un ensamblado principal mediante un compilador de lenguaje, o en un ensamblado satélite mediante [Assembly Linker (AL.exe)](al-exe-assembly-linker.md).  
   
  La sintaxis para compilar un archivo de recursos es la siguiente:  
@@ -166,7 +174,9 @@ resgen Resources.resx Resources.resources
 ```  
   
 <a name="Convert"></a>
+
 ### <a name="converting-between-resource-file-types"></a>Convertir tipos de archivos de recursos  
+
  Además de compilar archivos de recursos basados en texto o en XML en archivos .resources binarios, Resgen.exe puede convertir cualquier tipo de archivo compatible en cualquier otro tipo de archivo compatible. Esto significa que puede realizar las conversiones siguientes:  
   
 - Archivos .txt y .restext en archivos .resx.  
@@ -201,7 +211,9 @@ resgen Resources.resx Resources.restext
 ```  
   
 <a name="Multiple"></a>
+
 ### <a name="compiling-or-converting-multiple-files"></a>Compilar o convertir varios archivos  
+
  Puede usar el modificador `/compile` para convertir el formato de una lista de archivos de recursos en otro formato en una única operación. La sintaxis es la siguiente:  
   
 ```console  
@@ -215,7 +227,9 @@ resgen /compile StringResources.txt TableResources.resx ImageResources.resx
 ```  
   
 <a name="Exporting"></a>
+
 ### <a name="exporting-resources-to-a-resw-file"></a>Exportar recursos a un archivo .resw  
+
  Si va a desarrollar una aplicación de la Tienda Windows 8.x, quizás desee usar recursos de una aplicación de escritorio existente. Sin embargo, los dos tipos de aplicaciones admiten formatos de archivo diferentes. En las aplicaciones de escritorio, los recursos de los archivos de texto (.txt o .restext) o de los archivos .resx se compilan en archivos .resources binarios. En las aplicaciones de la Tienda Windows 8.x, los archivos .resw se compilan en archivos de índice de recursos del paquete (PRI) binarios. Puede usar la herramienta Resgen.exe cubrir esta carencia extrayendo los recursos de un archivo ejecutable o un ensamblado satélite y escribiéndolos en uno o varios archivos .resw que se podrán usar para desarrollar una aplicación de la Tienda Windows 8.x.  
   
 > [!IMPORTANT]
@@ -242,7 +256,9 @@ resgen MyApp.exe Win8Resources
 ```  
   
 <a name="Conditional"></a>
+
 ### <a name="conditionally-compiling-resources"></a>Compilar recursos de manera condicional  
+
  A partir de .NET Framework 4.5, Resgen.exe admite la compilación condicional de recursos de cadena en archivos de texto (.txt y .restext). Esto permite usar un único archivo de recursos basado en texto en varias configuraciones de compilación.  
   
  En un archivo .txt o .restext, use la construcción `#ifdef`…`#endif` para incluir un recurso en el archivo .resources binario si se ha definido un símbolo, y use la construcción `#if !`... `#endif` para incluir un recurso si no se ha definido ningún símbolo. En tiempo de compilación, los símbolos se definen mediante la opción `/define:` seguida de una lista de símbolos delimitados por comas. La comparación distingue entre mayúsculas y minúsculas. El formato de mayúsculas y minúsculas definido en `/define` debe coincidir con el de los archivos de texto que se van a compilar.  
@@ -271,7 +287,9 @@ resgen /define:CONSULT UIResources.restext
  Esto genera un archivo .resources que contiene dos recursos de cadena. El valor del recurso `AppTitle` es "My Consulting Company Project Manager".  
   
 <a name="Strong"></a>
+
 ### <a name="generating-a-strongly-typed-resource-class"></a>Generar una clase de recursos fuertemente tipados  
+
  Resgen.exe admite recursos fuertemente tipados y encapsula el acceso a los recursos mediante la creación de clases que contienen un conjunto de propiedades estáticas de solo lectura. A la hora de recuperar recursos, esto proporciona una alternativa a la llamada a los métodos de la clase <xref:System.Resources.ResourceManager> directamente. Para habilitar la compatibilidad con los recursos fuertemente tipados en Resgen.exe, use la opción `/str`, que incluye la funcionalidad de la clase <xref:System.Resources.Tools.StronglyTypedResourceBuilder>. Cuando se especifica la opción `/str`, el resultado de Resgen.exe es una clase que contiene propiedades fuertemente tipadas que coinciden con los recursos a los que se hace referencia en el parámetro de entrada. Esta clase proporciona acceso de solo lectura fuertemente tipado a los recursos que están disponibles en el archivo procesado.  
   
  La sintaxis para crear un recurso fuertemente tipado es la siguiente:  

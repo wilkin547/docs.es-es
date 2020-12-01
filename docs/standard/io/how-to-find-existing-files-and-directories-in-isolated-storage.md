@@ -16,12 +16,12 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-ms.openlocfilehash: ebd2ae6684e7b3390b29aeebeb2552b4616a69f3
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 43685a6ecb92510ad8d80c472a1c774d46cbb5f7
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830732"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734639"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Cómo: Buscar archivos y directorios existentes en almacenamiento aislado
 
@@ -32,6 +32,7 @@ Para buscar un directorio en el almacenamiento aislado, use el método <xref:Sys
  Ninguno de estos métodos es recursivo; la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> no proporciona ningún método para enumerar todos los directorios o archivos en el almacén. Sin embargo, los métodos recursivos se muestran en el ejemplo de código siguiente.  
   
 ## <a name="example"></a>Ejemplo  
+
  En el ejemplo de código siguiente se muestra cómo crear archivos y directorios en un almacén aislado. En primer lugar, un almacén aislado para usuarios, dominios y ensamblados se recupera y se coloca en la variable `isoStore`. El método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> se usa para configurar algunos directorios distintos y el constructor <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> crea algunos archivos en estos directorios. El código pasa por los resultados del método `GetAllDirectories`. Este método usa <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> para buscar todos los nombres de directorio en el directorio actual. Estos nombres se almacenan en una matriz y, a continuación, `GetAllDirectories` se llama a sí mismo, pasando cada directorio que ha encontrado. Como resultado, se devuelven todos los nombres de directorio en una matriz. A continuación, el código llama al método `GetAllFiles`. Este método llama a `GetAllDirectories` para averiguar los nombres de todos los directorios y, a continuación, comprueba cada directorio de archivos mediante el uso del método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>. El resultado se devuelve en una matriz para su presentación.  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]

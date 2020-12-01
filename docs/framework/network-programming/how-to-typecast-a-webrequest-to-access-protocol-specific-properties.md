@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: d38a40aa1e6e3db769aedfc440077721cdfaf06d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09bd551dad77358b1503871c6ee100a869adf75b
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180755"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253432"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Cómo: convertir una WebRequest a propiedades específicas del protocolo de acceso
+
 En este ejemplo se muestra cómo convertir una WebRequest de manera que pueda tener acceso a las propiedades específicas del protocolo.  
   
 ## <a name="example"></a>Ejemplo  

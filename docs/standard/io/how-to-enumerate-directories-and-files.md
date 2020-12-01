@@ -8,14 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: da55881b9ca517abd045d4ebd2a5307c67d06560
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7f565531bc3ed44370da8859ed210e0e25027d78
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830901"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95734665"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Procedimiento para enumerar directorios y archivos
+
 Las colecciones enumerables ofrecen mayor rendimiento que las matrices cuando se trabaja con colecciones grandes de directorios y archivos. Para enumerar directorios y archivos, use métodos que devuelvan una colección enumerable de nombres de directorio o archivo, o bien sus objetos <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> o <xref:System.IO.FileSystemInfo>.  
   
 Si quiere buscar y devolver solo los nombres de directorios o archivos, use los métodos de enumeración de la clase <xref:System.IO.Directory>. Si quiere buscar y devolver otras propiedades de directorios o archivos, use las clases <xref:System.IO.DirectoryInfo> y <xref:System.IO.FileSystemInfo>.  

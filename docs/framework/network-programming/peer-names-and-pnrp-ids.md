@@ -2,17 +2,19 @@
 title: Nombres de mismo nivel e identificadores PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a56200d599d417dac549af000b35024338d43796
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71047504"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96239229"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nombres de mismo nivel e identificadores PNRP
+
 Un nombre de mismo nivel representa un punto de conexión para la comunicación, que puede ser un equipo, un usuario, un grupo, un servicio o cualquier elemento asociado a un elemento del mismo nivel que se puede resolver en una dirección IPv6. El Protocolo de resolución de nombres de mismo nivel (PNRP) toma el nombre de mismo nivel estadísticamente único para la creación de un identificador PNRP, que se usa para identificar a los miembros de la nube.  
   
 ## <a name="peer-names"></a>Nombres de mismo nivel  
+
  Los nombres de mismo nivel se pueden registrar como no seguros o seguros. Los nombres no seguros son simplemente cadenas de texto que están sujetas a la suplantación de identidad, dado que cualquier usuario puede registrar un nombre no seguro duplicado. Los nombres no seguros son útiles en redes privadas o bien, en otros casos, protegidas. Los nombres seguros están protegidos con un certificado y una firma digital. Solo el publicador original podrá demostrar la propiedad de un nombre seguro.  
   
  La combinación de la nube y el ámbito proporciona un entorno razonablemente seguro para equipos del mismo nivel que participan en la actividad de PNRP. Sin embargo, el uso de un nombre seguro de mismo nivel no garantiza la seguridad global de la aplicación de red. La seguridad de la aplicación depende de la implementación.  
@@ -20,6 +22,7 @@ Un nombre de mismo nivel representa un punto de conexión para la comunicación,
  Los nombres de mismo nivel seguros solo se registran por su propietario y están protegidos con criptografía de clave pública. Un nombre seguro de mismo nivel se considera que pertenecen a la entidad de mismo nivel que tiene la clave privada correspondiente. La propiedad se puede probar a través de la dirección de mismo nivel certificada (CPA), que se firma con la clave privada. Un usuario malintencionado no puede falsificar la propiedad de un nombre de mismo nivel sin la clave privada correspondiente.  
   
 ## <a name="pnrp-ids"></a>Identificadores PNRP  
+
  ![Identificador de PNRP](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  Los identificadores PNRP se componen de lo siguiente:  

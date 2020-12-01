@@ -6,20 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
-ms.openlocfilehash: 0672361ca5c0bc7cb6ec166f59278b93555e0947
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 0744a703c1e9dc35a8accc448d34f1a736e77e4d
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475312"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96253536"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Mitigación: validación de esquemas XML
+
 En .NET Framework 4.6, la validación de esquemas XSD detecta una infracción de la restricción única si se usa una clave compuesta y una clave está vacía.  
   
 ## <a name="impact"></a>Impacto  
+
  El impacto de este cambio debe ser mínimo: según la especificación del esquema, se espera un error de validación de esquema si se infringe `xsd:unique` usando una clave compuesta con una clave vacía.  
   
 ## <a name="mitigation"></a>Mitigación  
+
  El hecho de que se detecte un error de validación de esquema si una clave compuesta tiene una clave vacía es una característica configurable:  
   
 - A partir de las aplicaciones que tienen como destino .NET Framework 4.6, la detección del error de validación de esquema está habilitada de forma predeterminada, aunque se puede optar por no incluirlo, de manera que no se detecte el error.  

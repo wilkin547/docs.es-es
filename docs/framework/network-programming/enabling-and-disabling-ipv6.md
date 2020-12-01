@@ -3,17 +3,19 @@ title: Habilitar y deshabilitar IPv6
 description: Siga estos pasos de configuración para habilitar el uso del protocolo IPv6, que incluyen la modificación del archivo de configuración del equipo o de la aplicación.
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 7729647b09df20a98d5d639a641cb0a31f557330
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 00a59e25731d276d81ba74af086b3e19e68d5fad
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96250546"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Habilitar y deshabilitar IPv6
+
 Para usar el protocolo IPv6, asegúrese de que está ejecutando una versión del sistema operativo que admita IPv6 y asegúrese de que el sistema operativo y las clases de red están configurados correctamente.  
   
 ## <a name="configuration-steps"></a>Pasos de la configuración  
+
  En la tabla siguiente se muestran varias configuraciones  
   
 |¿El sistema operativo está habilitado para IPv6?|¿Las clases de red están habilitadas para IPv6?|Descripción|  

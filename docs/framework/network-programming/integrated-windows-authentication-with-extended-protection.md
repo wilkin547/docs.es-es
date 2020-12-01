@@ -2,14 +2,15 @@
 title: Autenticación de Windows integrada con protección ampliada
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: d69471f4be0f102381dee4fc5037e8f8b0c625c3
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 74f421131da0e5b11fd676ff23229f5ff6ec7eca
+ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144856"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96241629"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticación de Windows integrada con protección ampliada
+
 Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> y clases relacionadas del espacio de nombres <xref:System.Net> y espacios de nombres relacionados controlan la autenticación integrada de Windows. Se ha agregado compatibilidad para que la protección ampliada mejore la seguridad.  
   
  Estos cambios pueden afectar a las aplicaciones que usan estas clases para realizar solicitudes web y recibir respuestas donde se emplea la autenticación integrada de Windows. Este cambio también puede afectar a los servidores web y a las aplicaciones cliente configurados para usar autenticación integrada de Windows.  
@@ -19,6 +20,7 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
  Los cambios para admitir la protección ampliada solo están disponibles para las aplicaciones en Windows 7 y Windows Server 2008 R2. Las características de protección ampliada no están disponibles en versiones anteriores de Windows.  
   
 ## <a name="overview"></a>Información general  
+
  El diseño de la autenticación integrada de Windows permite que algunas respuestas de desafío de credenciales sean universales, lo que significa que se pueden volver a usar o reenviar. Las respuestas de desafío deben crearse como mínimo con información específica del destino y, preferiblemente, también con información específica del canal. Después, los servicios pueden proporcionar protección ampliada para asegurarse de que las respuestas de desafío de credenciales contengan información específica de servicio, como un nombre de entidad de seguridad de servicio (SPN). Con esta información en los intercambios de credenciales, los servicios pueden mejorar la protección contra el uso malintencionado de respuestas de desafío de credenciales que podrían haberse usado de forma inapropiada.  
   
  El diseño de protección ampliada es una mejora en los protocolos de autenticación diseñada para mitigar los ataques de retransmisión de autenticación. Está basada en el concepto de información de enlace de canal y servicio.  
@@ -64,6 +66,7 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
  La protección ampliada es actualmente compatible con Windows 7. Se proporciona un mecanismo para que una aplicación pueda determinar si el sistema operativo admite la protección ampliada.  
   
 ## <a name="changes-to-support-extended-protection"></a>Cambios para admitir la protección ampliada  
+
  El proceso de autenticación usado con la autenticación integrada de Windows, según el protocolo de autenticación usado, suele incluir un desafío emitido por el equipo de destino y enviado de vuelta al equipo cliente. La protección ampliada agrega nuevas características a este proceso de autenticación.  
   
  El espacio de nombres <xref:System.Security.Authentication.ExtendedProtection> proporciona compatibilidad con la autenticación mediante la protección ampliada de las aplicaciones. La clase <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> de este espacio de nombres representa un enlace de canal. La clase <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> de este espacio de nombres representa la directiva de protección ampliada usada por el servidor para validar las conexiones de cliente entrantes. Se usan otros miembros de clase con la protección ampliada.  
@@ -107,6 +110,7 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
  Se ha agregado una propiedad <xref:System.Net.Configuration.SmtpNetworkElement> para admitir la configuración de la protección ampliada para los clientes SMTP en el espacio de nombres <xref:System.Net.Security>.  
   
 ## <a name="extended-protection-for-client-applications"></a>Protección ampliada para aplicaciones cliente  
+
  La compatibilidad con la protección ampliada tiene lugar de manera automática en la mayoría de las aplicaciones cliente. Las clases <xref:System.Net.HttpWebRequest> y <xref:System.Net.Mail.SmtpClient> admiten la protección ampliada siempre que la versión de Windows subyacente admita la protección ampliada. Una instancia <xref:System.Net.HttpWebRequest> envía un SPN construido a partir del <xref:System.Uri>. De forma predeterminada, una instancia <xref:System.Net.Mail.SmtpClient> envía un SPN construido a partir del nombre de host del servidor de correo SMTP.  
   
  Para una autenticación personalizada, las aplicaciones cliente pueden usar los métodos <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> o <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> en la clase <xref:System.Net.HttpWebRequest> que permiten recuperar la clase <xref:System.Net.TransportContext> y el CBT mediante el método <xref:System.Net.TransportContext.GetChannelBinding%2A>.  
@@ -116,6 +120,7 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
  Se puede usar la propiedad <xref:System.Net.Mail.SmtpClient.TargetName%2A> para establecer un SPN personalizado que se usará para la autenticación integrada de Windows para la conexión de SMTP.  
   
 ## <a name="extended-protection-for-server-applications"></a>Protección ampliada para aplicaciones de servidor  
+
  <xref:System.Net.HttpListener> proporciona automáticamente mecanismos para validar los enlaces de servicio al realizar la autenticación HTTP.  
   
  El escenario más seguro consiste en habilitar la protección ampliada para prefijos `HTTPS://`. En este caso, establezca <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> en <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> con <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> establecido en <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> o <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>, y <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> establecido en <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>. Un valor de <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> coloca <xref:System.Net.HttpListener> en modo parcialmente protegido, mientras que <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> se corresponde con el modo completamente protegido.  
