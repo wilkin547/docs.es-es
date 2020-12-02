@@ -138,7 +138,7 @@ items:
           - name: Novedades
             href: ../core/dotnet-five.md
           - name: Cambios importantes
-            href: ../core/compatibility/5.0.md
+            href: ../core/compatibility/5.0.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
       - name: ".NET Core\_3.1"
         items:
           - name: Novedades
@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: Herramienta de desinstalación de .NET
             href: ../core/additional-tools/uninstall-tool.md
+          - name: Generación de certificados autofirmados
+            href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: Proveedor de WCF Web Service Reference
             href: ../core/additional-tools/wcf-web-service-reference-guide.md
           - name: Utilidad del servicio WCF
@@ -385,9 +387,12 @@ items:
           - name: Depuradores administrados
             href: ../core/diagnostics/managed-debuggers.md
           - name: Volcados
-            href: ../core/diagnostics/dumps.md
-          - name: Depuración de volcados de memoria de Linux
-            href: ../core/diagnostics/debug-linux-dumps.md
+            items:
+              - name: Información general
+                displayName: dumps
+                href: ../core/diagnostics/dumps.md
+              - name: Volcados de memoria de Linux
+                href: ../core/diagnostics/debug-linux-dumps.md
           - name: EventCounters
             href: ../core/diagnostics/event-counters.md
           - name: EventPipe
@@ -1603,10 +1608,36 @@ items:
                 displayName: json serialization
               - name: Cómo serializar y deserializar JSON
                 href: ../standard/serialization/system-text-json-how-to.md
-              - name: Procedimientos para escribir convertidores personalizados
-                href: ../standard/serialization/system-text-json-converters-how-to.md
+              - name: Control del comportamiento de la serialización
+                items:
+                  - name: Creación de una instancia de JsonSerializerOptions
+                    href: ../standard/serialization/system-text-json-configure-options.md
+                  - name: Habilitación de la coincidencia sin distinción entre mayúsculas y minúsculas
+                    href: ../standard/serialization/system-text-json-character-casing.md
+                  - name: Personalización de los nombres y valores de propiedad
+                    href: ../standard/serialization/system-text-json-customize-properties.md
+                  - name: Omisión de propiedades
+                    href: ../standard/serialization/system-text-json-ignore-properties.md
+                  - name: Permiso del formato JSON no válido
+                    href: ../standard/serialization/system-text-json-invalid-json.md
+                  - name: JSON de desbordamiento de control
+                    href: ../standard/serialization/system-text-json-handle-overflow.md
+                  - name: Conservación de las referencias
+                    href: ../standard/serialization/system-text-json-preserve-references.md
+                  - name: Tipos inmutables y descriptores de acceso no públicos
+                    href: ../standard/serialization/system-text-json-immutability.md
+                  - name: Serialización polimórfica
+                    href: ../standard/serialization/system-text-json-polymorphism.md
               - name: Migración desde Newtonsoft.json
                 href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+              - name: Avanzado
+                items:
+                  - name: Personalización de la codificación de caracteres
+                    href: ../standard/serialization/system-text-json-character-encoding.md
+                  - name: Serializadores y deserializadores personalizados
+                    href: ../standard/serialization/write-custom-serializer-deserializer.md
+                  - name: Convertidores personalizados
+                    href: ../standard/serialization/system-text-json-converters-how-to.md
           - name: Serialización binaria
             items:
               - name: Información general
@@ -2249,7 +2280,7 @@ items:
           - name: Uso del paquete de compatibilidad de Windows
             href: ../core/porting/windows-compat-pack.md
           - name: Portabilidad de los proyectos de Windows Forms
-            href: ../core/porting/winforms.md
+            href: /dotnet/desktop/winforms/migration/?view=netdesktop-5.0
           - name: Portabilidad de los proyectos de WPF
             href: /dotnet/desktop/wpf/migration/convert-project-from-net-framework
           - name: Portabilidad de los proyectos de C++/CLI

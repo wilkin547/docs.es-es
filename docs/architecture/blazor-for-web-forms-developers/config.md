@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/01/2020
-ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 11/20/2020
+ms.openlocfilehash: 360d9077bc981a2e9875bb1f86b49c0029424d6e
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267508"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509798"
 ---
 # <a name="app-configuration"></a>Configuración de la aplicación
 
@@ -28,9 +28,9 @@ Con ASP.NET Core y el lado servidor Blazor , el archivo de *web.config* puede es
 
 ASP.NET Core reconoce que hay muchos orígenes de configuración que puede usar para la aplicación. El marco de trabajo intenta ofrecerle lo mejor de estas características de forma predeterminada. La configuración se lee y se agrega desde estos diversos orígenes mediante ASP.NET Core. Los valores cargados posteriormente para la misma clave de configuración tienen prioridad sobre los valores anteriores.
 
-ASP.NET Core se diseñó para ser compatible con la nube y para facilitar la configuración de aplicaciones para operadores y desarrolladores. ASP.NET Core es compatible con el entorno y sabe si se está ejecutando en `Production` su `Development` entorno de o. El indicador de entorno se establece en la `ASPNETCORE_ENVIRONMENT` variable de entorno del sistema. Si no se configura ningún valor, el valor predeterminado de la aplicación es en ejecución en el `Production` entorno.
+ASP.NET Core se diseñó para ser compatible con la nube y para facilitar la configuración de las aplicaciones para operadores y desarrolladores. ASP.NET Core es compatible con el entorno y sabe si se está ejecutando en `Production` su `Development` entorno de o. El indicador de entorno se establece en la `ASPNETCORE_ENVIRONMENT` variable de entorno del sistema. Si no se configura ningún valor, el valor predeterminado de la aplicación es en ejecución en el `Production` entorno.
 
-La aplicación puede desencadenar y agregar la configuración de varios orígenes según el nombre del entorno. De forma predeterminada, la configuración se carga desde los siguientes recursos en el orden mostrado:
+La aplicación puede desencadenar y agregar la configuración de varios orígenes según el nombre del entorno. De forma predeterminada, la configuración se carga de los siguientes recursos en el orden mostrado:
 
 1. *appsettings.jsen* el archivo, si está presente
 1. *appSettings. {ENVIRONMENT_NAME}. archivo JSON* , si está presente
@@ -64,7 +64,7 @@ Los secretos de usuario son:
 * Valores de configuración que se almacenan en un archivo JSON en la estación de trabajo del desarrollador, fuera de la carpeta de desarrollo de la aplicación.
 * Solo se carga cuando se ejecuta en el `Development` entorno.
 * Asociado a una aplicación específica.
-* Se administra con el comando del CLI de .NET Core `user-secrets` .
+* Administrado con el comando de la CLI de .NET `user-secrets` .
 
 Configure la aplicación para el almacenamiento de secretos ejecutando el `user-secrets` comando:
 

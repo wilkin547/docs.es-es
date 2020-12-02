@@ -3,13 +3,13 @@ title: Inicio de la aplicación
 description: Obtenga información sobre cómo definir la lógica de inicio de la aplicación.
 author: csharpfritz
 ms.author: jefritz
-ms.date: 02/25/2020
-ms.openlocfilehash: 883f9a3fbe2d52cb7d0fbc5dfc94ce829a5d2bf3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 11/20/2020
+ms.openlocfilehash: d812079f84f67409334d07c4c10c5577446503be
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158193"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509707"
 ---
 # <a name="app-startup"></a>Inicio de la aplicación
 
@@ -22,13 +22,13 @@ El método predeterminado de formularios Web Forms `Application_Start` ha crecid
 - `RouteConfig` -Enrutamiento de URL de la aplicación
 - `BundleConfig` -Agrupación de CSS y JavaScript y minificación
 
-Cada uno de estos archivos individuales reside en la `App_Start` carpeta y solo se ejecuta una vez al principio de la aplicación.  `RouteConfig` en la plantilla de proyecto predeterminada, agrega el `FriendlyUrlSettings` para formularios Web Forms para permitir que las direcciones URL de la aplicación omitan la `.ASPX` extensión de archivo.  La plantilla predeterminada también contiene una directiva que proporciona códigos de estado de redirección HTTP permanente (HTTP 301) para las `.ASPX` páginas a la dirección URL descriptiva con el nombre de archivo que omite la extensión.
+Cada uno de estos archivos individuales reside en la `App_Start` carpeta y se ejecuta solo una vez al principio de la aplicación.  `RouteConfig` en la plantilla de proyecto predeterminada, agrega el `FriendlyUrlSettings` para formularios Web Forms para permitir que las direcciones URL de la aplicación omitan la `.ASPX` extensión de archivo.  La plantilla predeterminada también contiene una directiva que proporciona códigos de estado de redirección HTTP permanente (HTTP 301) para las `.ASPX` páginas a la dirección URL descriptiva con el nombre de archivo que omite la extensión.
 
 Con ASP.NET Core y increíbles, estos métodos se han simplificado y consolidado en la `Startup` clase o se eliminan en favor de las tecnologías web comunes.
 
 ## <a name="blazor-server-startup-structure"></a>Estructura de inicio del servidor extraordinaria
 
-Las aplicaciones de servidor de extraordinarias residen en una aplicación ASP.NET Core 3,0 o posterior.  ASP.NET Core las aplicaciones web se configuran a través de un par de métodos en la `Startup.cs` clase en la carpeta raíz de la aplicación.  A continuación se muestra el contenido predeterminado de la clase de inicio
+Las aplicaciones de servidor de extraordinarias residen en un ASP.NET Core 3,0 o una versión posterior.  ASP.NET Core las aplicaciones web se configuran a través de un par de métodos en la `Startup.cs` clase en la carpeta raíz de la aplicación.  A continuación se muestra el contenido predeterminado de la clase de inicio
 
 ```csharp
 public class Startup
@@ -89,7 +89,7 @@ A continuación, se muestra un método de configuración inesperado en `UseStati
 
 La siguiente línea es la primera que replica una de las opciones de configuración de formularios Web Forms: `UseRouting` .  Este método agrega la ASP.NET Core enrutador a la canalización y se puede configurar aquí o en los archivos individuales a los que puede tener en cuenta el enrutamiento.  Puede encontrar más información sobre la configuración de enrutamiento en la [sección enrutamiento](pages-routing-layouts.md).
 
-La última instrucción de este método define los extremos en los que está escuchando el ASP.NET Core.  Estas son las ubicaciones accesibles desde web a las que se puede tener acceso en el servidor Web y que reciben algún contenido controlado por .NET y que se le devuelven.  La primera entrada `MapBlazorHub` configura un concentrador signalr para utilizarlo en el suministro de la conexión persistente y en tiempo real al servidor en el que se controla el estado y la representación de los componentes increíbles.  La `MapFallbackToPage` llamada al método indica la ubicación accesible desde la Web de la página que inicia la aplicación increíblemente alta y también configura la aplicación para controlar las solicitudes de vinculación profunda desde el lado cliente.  Verá esta característica en el trabajo si abre un explorador y navega directamente a la ruta de control más impresionante de la aplicación, como `/counter` en la plantilla de proyecto predeterminada. La solicitud se controla mediante la página de reserva de *_Host. cshtml* , que luego ejecuta el enrutador increíble y representa la página del contador.
+La última instrucción de este método define los extremos en los que está escuchando el ASP.NET Core.  Estas rutas son las ubicaciones accesibles desde web a las que se puede tener acceso en el servidor Web y reciben algún contenido controlado por .NET y que se le devuelvan.  La primera entrada `MapBlazorHub` configura un concentrador signalr para utilizarlo en el suministro de la conexión persistente y en tiempo real al servidor en el que se controla el estado y la representación de los componentes increíbles.  La `MapFallbackToPage` llamada al método indica la ubicación accesible desde la Web de la página que inicia la aplicación increíblemente alta y también configura la aplicación para controlar las solicitudes de vinculación profunda desde el lado cliente.  Verá esta característica en el trabajo si abre un explorador y navega directamente a la ruta de control más impresionante de la aplicación, como `/counter` en la plantilla de proyecto predeterminada. La solicitud se controla mediante la página de reserva de *_Host. cshtml* , que luego ejecuta el enrutador increíble y representa la página del contador.
 
 ## <a name="upgrading-the-bundleconfig-process"></a>Actualización del proceso BundleConfig
 

@@ -1,15 +1,15 @@
 ---
 title: Referencia sobre F# interactivo (dotnet)
 description: Obtenga información sobre cómo se utiliza F# interactivo (dotnet fsi) para ejecutar código de F# de manera interactiva en la consola o para ejecutar scripts de F#.
-ms.date: 10/31/2020
+ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: b535cb03d76909043ca192ed5a9d2078f9343795
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 92177c41dc6b31d9186bae8176f85787e2fb89e0
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099440"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438047"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -117,6 +117,17 @@ let f (x: Tensor) = sin (sqrt x)
 
 printfn "%A" (f (dsharp.tensor 1.2))
 ```
+
+### <a name="specifying-a-package-source"></a>Especificación del origen de un paquete
+
+También puede especificar el origen de un paquete con el comando `#i`. En el ejemplo siguiente, se especifican un origen remoto y uno local:
+
+```fsharp
+#i "nuget:https://my-remote-package-source/index.json
+#i @"path-to-my-local-source"
+```
+
+Esto le indicará al motor de resolución en segundo plano que también tenga en cuenta los orígenes locales o remotos agregados a un script.
 
 Puede especificar tantas referencias de paquete como desee en un script.
 

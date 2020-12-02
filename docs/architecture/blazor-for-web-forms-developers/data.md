@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 09/08/2020
-ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 11/20/2020
+ms.openlocfilehash: 66e6001cbcac612cb556e90fb86fd694ca7d1459
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515857"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509759"
 ---
 # <a name="work-with-data"></a>Trabajar con datos
 
@@ -29,7 +29,7 @@ ADO.NET es el enfoque de bajo nivel para interactuar con una base de datos. Las 
 
 ## <a name="entity-framework"></a>Entity Framework
 
-Entity Framework (EF) es el marco de trabajo de asignación relacional de objetos de código abierto mantenido por .NET Foundation. En la primera versión de .NET Framework, EF permite generar código para las conexiones de base de datos, los esquemas de almacenamiento y las interacciones. Con esta abstracción, puede centrarse en las reglas de negocios de la aplicación y permitir que un administrador de bases de datos de confianza administre la base de datos. En .NET Core, puede usar una versión actualizada de EF denominada EF Core. EF Core ayuda a generar y mantener las interacciones entre el código y la base de datos con una serie de comandos que están disponibles para usted mediante la `dotnet ef` herramienta de línea de comandos. Echemos un vistazo a algunos ejemplos para trabajar con una base de datos.
+Entity Framework (EF) es el marco de trabajo de asignación relacional de objetos de código abierto mantenido por .NET Foundation. En la primera versión de .NET Framework, EF permite generar código para las conexiones de base de datos, los esquemas de almacenamiento y las interacciones. Con esta abstracción, puede centrarse en las reglas de negocios de la aplicación y permitir que un administrador de bases de datos de confianza administre la base de datos. En .NET, puede usar una versión actualizada de EF denominada EF Core. EF Core ayuda a generar y mantener las interacciones entre el código y la base de datos con una serie de comandos que están disponibles para usted mediante la `dotnet ef` herramienta de línea de comandos. Echemos un vistazo a algunos ejemplos para trabajar con una base de datos.
 
 ### <a name="ef-code-first"></a>Code First EF
 

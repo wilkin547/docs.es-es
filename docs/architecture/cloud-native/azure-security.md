@@ -1,19 +1,19 @@
 ---
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
-ms.date: 05/13/2020
-ms.openlocfilehash: e6f91cc4c240dd3349faed2f87db1ba99b2780a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
+ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161001"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96509824"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
 
 Las aplicaciones nativas en la nube pueden ser más fáciles y más difíciles de proteger que las aplicaciones tradicionales. En el inconveniente, debe proteger aplicaciones más pequeñas y dedicar más energía a la creación de la infraestructura de seguridad. La naturaleza heterogénea de los lenguajes de programación y los estilos en la mayoría de las implementaciones de servicio también significa que debe prestar más atención a los boletines de seguridad de muchos proveedores diferentes.
 
-En el lado de volteo, los servicios más pequeños, cada uno con su propio almacén de datos, limitan el ámbito de un ataque. Si un atacante pone en peligro un sistema, probablemente sea más difícil para el atacante hacer el salto a otro sistema que en una aplicación monolítica. Los límites de los procesos son límites fuertes. Además, si se pierde una copia de seguridad de la base de datos, el daño es más limitado, ya que la base de datos solo contiene un subconjunto de datos y es improbable que contenga datos personales.
+En el lado de volteo, los servicios más pequeños, cada uno con su propio almacén de datos, limitan el ámbito de un ataque. Si un atacante pone en peligro un sistema, probablemente sea más difícil para el atacante hacer el salto a otro sistema que en una aplicación monolítica. Los límites de los procesos son límites fuertes. Además, si se expone una copia de seguridad de base de datos, el daño es más limitado, ya que la base de datos solo contiene un subconjunto de datos y es improbable que contenga datos personales.
 
 ## <a name="threat-modeling"></a>Modelado de amenazas
 
@@ -26,7 +26,7 @@ Sin importar si las ventajas superan las desventajas de las aplicaciones nativas
 
 Todas estas preguntas forman parte de un proceso llamado [modelo de amenazas](/azure/security/azure-security-threat-modeling-tool). Este proceso intenta responder a la pregunta de qué amenazas hay en el sistema, la probabilidad de que se trate de las amenazas y los posibles daños que puedan tener.
 
-Una vez establecida la lista de amenazas, debe decidir si merece la pena mitigarla. A veces, una amenaza es tan improbable y costosa de planear que no merece la pena gastar energía en ella. Por ejemplo, algunos actores de nivel de estado pueden insertar cambios en el diseño de un proceso que usan millones de dispositivos. Ahora, en lugar de ejecutar un determinado fragmento de código en el [anillo 3](https://en.wikipedia.org/wiki/Protection_ring), el código se ejecuta en el anillo 0. Esto permite una vulnerabilidad que puede omitir el hipervisor y ejecutar el código de ataque en los equipos sin sistema operativo, lo que permite ataques en todas las máquinas virtuales que se ejecutan en ese hardware.
+Una vez establecida la lista de amenazas, debe decidir si merece la pena mitigarla. A veces, una amenaza es tan improbable y costosa de planear que no merece la pena gastar energía en ella. Por ejemplo, algunos actores de nivel de estado pueden insertar cambios en el diseño de un proceso que usan millones de dispositivos. Ahora, en lugar de ejecutar un determinado fragmento de código en el [anillo 3](https://en.wikipedia.org/wiki/Protection_ring), el código se ejecuta en el anillo 0. Este proceso permite una vulnerabilidad que puede omitir el hipervisor y ejecutar el código de ataque en los equipos sin sistema operativo, lo que permite ataques en todas las máquinas virtuales que se ejecutan en ese hardware.
 
 Los procesadores modificados son difíciles de detectar sin un microscopio y conocimientos avanzados del diseño de Silicon del procesador. No es probable que se produzca este escenario y se reduzca el costo, por lo que es probable que no haya ningún modelo de amenazas que recomiende la creación de protección contra vulnerabilidades.
 
@@ -58,9 +58,9 @@ En caso de que un atacante intente penetrar en una aplicación, debería haber a
 
 Un lugar en el que se suele pasar por alto la seguridad está en torno al proceso de compilación. La compilación no solo debe ejecutar comprobaciones de seguridad, como el análisis de código no seguro ni credenciales protegidas, pero la propia compilación debe ser segura. Si el servidor de compilación está en peligro, proporciona un vector fantástico para introducir código arbitrario en el producto.
 
-Imagine que un atacante está intentando robar las contraseñas de los usuarios que inician sesión en una aplicación Web. Podrían introducir un paso de compilación que modifica el código desprotegido para reflejar cualquier solicitud de inicio de sesión en otro servidor. La próxima vez que el código pase por la compilación, se actualizará de forma silenciosa. El examen de vulnerabilidades del código fuente no lo detectará mientras se ejecuta antes de la compilación. Del mismo modo, nadie lo detectará en una revisión de código, ya que los pasos de compilación se activan en el servidor de compilación. El código aprovechado irá a producción en la que puede recopilar contraseñas. Probablemente no haya ningún registro de auditoría de los cambios realizados en el proceso de compilación, o al menos nadie supervisando la auditoría.
+Imagine que un atacante está intentando robar las contraseñas de los usuarios que inician sesión en una aplicación Web. Podrían introducir un paso de compilación que modifica el código desprotegido para reflejar cualquier solicitud de inicio de sesión en otro servidor. La próxima vez que el código pase por la compilación, se actualizará de forma silenciosa. El examen de vulnerabilidades del código fuente no detectará esta vulnerabilidad mientras se ejecuta antes de la compilación. Del mismo modo, nadie lo detectará en una revisión de código, ya que los pasos de compilación se activan en el servidor de compilación. El código aprovechado irá a producción en la que puede recopilar contraseñas. Probablemente no haya ningún registro de auditoría de los cambios realizados en el proceso de compilación, o al menos nadie supervisando la auditoría.
 
-Este es un ejemplo perfecto de un destino de valor aparentemente bajo que se puede utilizar para interrumpir el sistema. Una vez que un atacante infringe el perímetro del sistema, puede empezar a trabajar en la búsqueda de maneras de elevar sus permisos hasta el punto en el que pueden causar daños reales en cualquier lugar en el que quieran.
+Este escenario es un ejemplo perfecto de un destino aparentemente de valor bajo que se puede utilizar para interrumpir el sistema. Una vez que un atacante infringe el perímetro del sistema, puede empezar a trabajar en la búsqueda de maneras de elevar sus permisos hasta el punto en el que pueden causar daños reales en cualquier lugar en el que quieran.
 
 ## <a name="building-secure-code"></a>Compilar código seguro
 
@@ -82,7 +82,7 @@ En un entorno de implementación local, una gran cantidad de energía está dedi
 
 Desde el cuadro, la mayoría de los recursos de Azure PaaS solo tienen la configuración de redes más básica y permisiva. Por ejemplo, cualquier persona en Internet puede acceder a una instancia de App Service. Las instancias de SQL Server nuevas suelen estar restringidas, por lo que las entidades externas no pueden tener acceso a ellas, pero se permiten los intervalos de direcciones IP que usa Azure. Por lo tanto, mientras el servidor SQL Server está protegido contra amenazas externas, un atacante solo necesita configurar un servidor cabeza de puente de Azure desde donde puedan lanzar ataques contra todas las instancias de SQL en Azure.
 
-Afortunadamente, la mayoría de los recursos de Azure se pueden colocar en una Virtual Network de Azure que permite un control de acceso más detallado. De forma similar a la manera en que las redes locales establecen redes privadas que están protegidas del mundo más amplio, las redes virtuales son islas de direcciones IP privadas que se encuentran en la red de Azure.
+Afortunadamente, la mayoría de los recursos de Azure se pueden colocar en una Virtual Network de Azure que permita un control de acceso específico. De forma similar a la manera en que las redes locales establecen redes privadas que están protegidas del mundo más amplio, las redes virtuales son islas de direcciones IP privadas que se encuentran en la red de Azure.
 
 ![Figura 9-1 una red virtual en Azure](./media/virtual-network.png)
 
@@ -90,15 +90,15 @@ Afortunadamente, la mayoría de los recursos de Azure se pueden colocar en una V
 
 Del mismo modo que las redes locales tienen un firewall que rige el acceso a la red, puede establecer un firewall similar en el límite de la red virtual. De forma predeterminada, todos los recursos de una red virtual pueden seguir hablando con Internet. Solo son conexiones entrantes que requieren algún tipo de excepción explícita del firewall.
 
-Con la red establecida, los recursos internos, como las cuentas de almacenamiento, pueden configurarse para permitir solo el acceso a los recursos que también se encuentran en el Virtual Network. Este firewall proporciona un nivel de seguridad adicional, en caso de que se pierdan las claves de esa cuenta de almacenamiento, los atacantes no podrán conectarse a ella para aprovechar las claves perdidas. Este es otro ejemplo del principio de privilegios mínimos.
+Con la red establecida, los recursos internos, como las cuentas de almacenamiento, pueden configurarse para permitir solo el acceso a los recursos que también se encuentran en el Virtual Network. Este firewall proporciona un nivel de seguridad adicional, en caso de que se pierdan las claves de esa cuenta de almacenamiento, los atacantes no podrán conectarse a ella para aprovechar las claves perdidas. Este escenario es otro ejemplo del principio de privilegios mínimos.
 
 Los nodos de un clúster de Azure Kubernetes pueden participar en una red virtual, al igual que otros recursos que son más nativos de Azure. Esta funcionalidad se denomina [interfaz de red de contenedor de Azure](https://github.com/Azure/azure-container-networking/blob/master/docs/cni.md). De hecho, asigna una subred dentro de la red virtual en la que se asignan las máquinas virtuales y las imágenes de contenedor.
 
 Al continuar con la ruta de acceso que ilustra el principio de privilegios mínimos, no todos los recursos de una Virtual Network deben comunicarse con los demás recursos. Por ejemplo, en una aplicación que proporciona una API Web a través de una cuenta de almacenamiento y una base de datos SQL, es poco probable que la base de datos y la cuenta de almacenamiento deban comunicarse entre sí. Cualquier uso compartido de datos entre ellos pasará a través de la aplicación Web. Por lo tanto, se puede usar un [grupo de seguridad de red (NSG)](/azure/virtual-network/security-overview) para denegar el tráfico entre los dos servicios.
 
-Una directiva de denegación de la comunicación entre los recursos puede resultar molesta de implementar, especialmente desde un segundo plano sobre el uso de Azure sin restricciones de tráfico. En algunas otras nubes, el concepto de grupos de seguridad de red es mucho más frecuente. Por ejemplo, la directiva predeterminada en AWS es que los recursos no se pueden comunicar entre ellos hasta que las reglas de un NSG lo habilitan. Aunque es más lento desarrollar esto, el entorno más restrictivo proporciona un valor predeterminado más seguro. El uso de prácticas de DevOps adecuadas, especialmente el uso de [Azure Resource Manager o terraform](infrastructure-as-code.md) para administrar permisos puede facilitar el control de las reglas.
+Una directiva de denegación de la comunicación entre los recursos puede resultar molesta de implementar, especialmente desde un segundo plano sobre el uso de Azure sin restricciones de tráfico. En algunas otras nubes, el concepto de grupos de seguridad de red es mucho más frecuente. Por ejemplo, la directiva predeterminada en AWS es que los recursos no se pueden comunicar entre ellos hasta que las reglas de un NSG lo habilitan. Aunque es más lento desarrollar esto, un entorno más restrictivo proporciona un valor predeterminado más seguro. El uso de prácticas de DevOps adecuadas, especialmente el uso de [Azure Resource Manager o terraform](infrastructure-as-code.md) para administrar permisos puede facilitar el control de las reglas.
 
-Las redes virtuales también pueden ser útiles al configurar la comunicación entre los recursos locales y en la nube. Una red privada virtual se puede usar para conectar las dos redes sin problemas. Esto permite ejecutar una red virtual sin ningún tipo de puerta de enlace para los escenarios en los que todos los usuarios están en el sitio. Hay una serie de tecnologías que se pueden usar para establecer esta red. La más sencilla es usar una [VPN de sitio a sitio](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) que se puede establecer entre varios enrutadores y Azure. El tráfico se cifra y se tuneliza por Internet con el mismo costo por byte que cualquier otro tráfico. En escenarios donde se desea más ancho de banda o más seguridad, Azure ofrece un [servicio denominado expressroute](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) que usa un circuito privado entre una red local y Azure. Es más costosa y difícil de establecer, pero también más seguro.
+Las redes virtuales también pueden ser útiles al configurar la comunicación entre los recursos locales y en la nube. Una red privada virtual se puede usar para conectar las dos redes sin problemas. Este enfoque permite ejecutar una red virtual sin ningún tipo de puerta de enlace para los escenarios en los que todos los usuarios están en el sitio. Hay una serie de tecnologías que se pueden usar para establecer esta red. La más sencilla es usar una [VPN de sitio a sitio](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#s2smulti) que se puede establecer entre varios enrutadores y Azure. El tráfico se cifra y se tuneliza por Internet con el mismo costo por byte que cualquier otro tráfico. En escenarios donde se desea más ancho de banda o más seguridad, Azure ofrece un [servicio denominado expressroute](/azure/vpn-gateway/vpn-gateway-about-vpngateways?toc=%252fazure%252fvirtual-network%252ftoc.json#ExpressRoute) que usa un circuito privado entre una red local y Azure. Es más costosa y difícil de establecer, pero también más seguro.
 
 ## <a name="role-based-access-control-for-restricting-access-to-azure-resources"></a>Control de acceso basado en roles para restringir el acceso a los recursos de Azure
 
@@ -121,7 +121,7 @@ La entidad de seguridad se puede aplicar a la mayoría de los recursos. Esto sig
 
 ## <a name="roles"></a>Roles
 
-Una entidad de seguridad puede asumir muchos roles o, con una analogía más sartorial, gastar muchos sombreros. Cada rol define una serie de permisos, como "leer mensajes de Azure Service Bus punto de conexión". El conjunto de permisos efectivo de una entidad de seguridad es la combinación de todos los permisos asignados a todos los roles que tiene la entidad de seguridad. Azure tiene un gran número de roles integrados y los usuarios pueden definir sus propios roles.
+Una entidad de seguridad puede asumir muchos roles o, con una analogía más sartorial, gastar muchos sombreros. Cada rol define una serie de permisos, como "leer mensajes de Azure Service Bus punto de conexión". El conjunto de permisos efectivo de una entidad de seguridad es la combinación de todos los permisos asignados a todos los roles que tiene una entidad de seguridad. Azure tiene un gran número de roles integrados y los usuarios pueden definir sus propios roles.
 
 ![Figura 9-3 definiciones de roles RBAC](./media/rbac-role-definition.png)
 
@@ -137,7 +137,7 @@ Los roles se pueden aplicar a un conjunto restringido de recursos dentro de Azur
 
 El ámbito puede ser tan estrecho como un recurso único o se puede aplicar a un grupo de recursos completo, una suscripción o incluso un grupo de administración.
 
-Al probar si una entidad de seguridad tiene un permiso determinado, se tiene en cuenta la combinación de rol y ámbito. Esta combinación proporciona un mecanismo de autorización eficaz.
+Al probar si una entidad de seguridad tiene determinados permisos, se tiene en cuenta la combinación de rol y ámbito. Esta combinación proporciona un mecanismo de autorización eficaz.
 
 ## <a name="deny"></a>Denegar
 
@@ -147,7 +147,7 @@ Las reglas de denegación tienen prioridad sobre las reglas de permiso. Ahora qu
 
 ## <a name="checking-access"></a>Comprobando el acceso
 
-Como puede imaginar, tener un gran número de roles y ámbitos puede hacer que la determinancia del permiso efectivo de una entidad de servicio sea bastante difícil. Apilar las reglas de denegación en la parte superior, solo sirve para aumentar la complejidad. Afortunadamente, hay una [calculadora de permisos](/azure/role-based-access-control/check-access) que puede mostrar los permisos efectivos de cualquier entidad de servicio. Normalmente se encuentra en la pestaña IAM del portal, como se muestra en la figura 10-3.
+Como puede imaginar, tener un gran número de roles y ámbitos puede hacer que la determinancia del permiso efectivo de una entidad de servicio sea bastante difícil. Apilar las reglas de denegación en la parte superior, solo sirve para aumentar la complejidad. Afortunadamente, hay una [calculadora de permisos](/azure/role-based-access-control/check-access) que puede mostrar los permisos efectivos de cualquier entidad de servicio. Normalmente se encuentra en la pestaña IAM del portal, como se muestra en la figura 9-3.
 
 ![Figura 9-4 calculadora de permisos para una aplicación de App Service](./media/check-rbac.png)
 
@@ -225,11 +225,11 @@ Aunque este nivel de cifrado no va a ser suficiente para todo el tiempo, debe in
 
 ### <a name="at-rest"></a>En reposo
 
-En cualquier aplicación, hay una serie de lugares en los que los datos se colocan en el disco. El propio código de aplicación se carga desde algún mecanismo de almacenamiento. La mayoría de las aplicaciones también utilizan algún tipo de base de datos, como SQL Server, Cosmos DB o incluso el Table Storage sorprendentemente eficaz. Todas estas bases de datos usan almacenamiento de gran cifrado para asegurarse de que nadie distinto de las aplicaciones con los permisos adecuados puede leer los datos. Incluso los operadores del sistema no pueden leer los datos que se han cifrado. Así, los clientes pueden estar seguros de que la información secreta sigue siendo secreta.
+En cualquier aplicación, hay una serie de lugares en los que los datos se encuentran en el disco. El propio código de aplicación se carga desde algún mecanismo de almacenamiento. La mayoría de las aplicaciones también utilizan algún tipo de base de datos, como SQL Server, Cosmos DB o incluso el Table Storage sorprendentemente eficaz. Todas estas bases de datos usan almacenamiento de gran cifrado para asegurarse de que nadie distinto de las aplicaciones con los permisos adecuados puede leer los datos. Incluso los operadores del sistema no pueden leer los datos que se han cifrado. Así, los clientes pueden estar seguros de que la información secreta sigue siendo secreta.
 
 ### <a name="storage"></a>Storage
 
-La subyacente de gran parte de Azure es el motor de Azure Storage. Los discos de máquina virtual se montan encima de Azure Storage. Azure Kubernetes Services se ejecuta en máquinas virtuales que, a su vez, se hospedan en Azure Storage. Incluso las tecnologías sin servidor, como Azure Functions aplicaciones y Azure Container Instances, se ejecutan fuera del disco que forma parte de Azure Storage.
+La subyacente de gran parte de Azure es el motor de Azure Storage. Los discos de máquina virtual se montan encima de Azure Storage. Azure Kubernetes Service se ejecuta en máquinas virtuales que, a su vez, se hospedan en Azure Storage. Incluso las tecnologías sin servidor, como Azure Functions aplicaciones y Azure Container Instances, se ejecutan fuera del disco que forma parte de Azure Storage.
 
 Si Azure Storage está bien cifrado, proporciona una base para la mayoría de los demás que también se cifren. Azure Storage [está cifrado](/azure/storage/common/storage-service-encryption) con la [norma FIPS 140-2](https://en.wikipedia.org/wiki/FIPS_140) compatible con [AES de 256 bits](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). Se trata de una tecnología de cifrado bien considerada que ha sido el asunto de un amplio examen académico en los últimos 20 años. En la actualidad, no hay ningún ataque práctico conocido que permita a alguien sin conocimiento de la clave leer los datos cifrados con AES.
 
