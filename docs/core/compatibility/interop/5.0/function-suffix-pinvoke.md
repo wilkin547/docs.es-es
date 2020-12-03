@@ -1,0 +1,55 @@
+---
+title: 'Cambio importante: No se incluye el sondeo del sufijo A/W en plataformas que no son de Windows'
+description: Obtenga información sobre el cambio de interoperabilidad en .NET 5.0, donde los sufijos ya no se agregan a los nombres de exportación de función durante el sondeo de P/Invoke en plataformas que no son de Windows.
+ms.date: 08/13/2020
+ms.openlocfilehash: a4c612a81796faf80fa257df21232a54f7b95431
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95760199"
+---
+# <a name="no-aw-suffix-probing-on-non-windows-platforms"></a><span data-ttu-id="bbef1-103">No se incluye el sondeo del sufijo A/W en plataformas que no son de Windows</span><span class="sxs-lookup"><span data-stu-id="bbef1-103">No A/W suffix probing on non-Windows platforms</span></span>
+
+<span data-ttu-id="bbef1-104">Los runtimes de .NET ya no agregan un sufijo `A` o `W` a los nombres de exportación de funciones durante el sondeo de P/Invoke en plataformas que no son de Windows.</span><span class="sxs-lookup"><span data-stu-id="bbef1-104">The .NET runtimes no longer add an `A` or `W` suffix to function export names during probing for P/Invokes on non-Windows platforms.</span></span>
+
+## <a name="version-introduced"></a><span data-ttu-id="bbef1-105">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="bbef1-105">Version introduced</span></span>
+
+<span data-ttu-id="bbef1-106">5.0</span><span class="sxs-lookup"><span data-stu-id="bbef1-106">5.0</span></span>
+
+## <a name="change-description"></a><span data-ttu-id="bbef1-107">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="bbef1-107">Change description</span></span>
+
+<span data-ttu-id="bbef1-108">[Windows tiene la convención](/windows/win32/intl/conventions-for-function-prototypes) de agregar un sufijo `A` o `W` a los nombres de función de Windows SDK. Estos prefijos corresponden a la página de códigos de Windows y a las versiones de Unicode respectivamente.</span><span class="sxs-lookup"><span data-stu-id="bbef1-108">[Windows has a convention](/windows/win32/intl/conventions-for-function-prototypes) of adding an `A` or `W` suffix to Windows SDK function names, which correspond to the Windows code page and Unicode versions, respectively.</span></span>
+
+<span data-ttu-id="bbef1-109">En versiones anteriores de .NET, los runtimes de CoreCLR y Mono agregan un sufijo `A` o `W` al nombre de la exportación durante la detección de exportación para P/Invokes *en todas las plataformas*.</span><span class="sxs-lookup"><span data-stu-id="bbef1-109">In previous versions of .NET, both the CoreCLR and Mono runtimes add an `A` or `W` suffix to the export name during export discovery for P/Invokes *on all platforms*.</span></span>
+
+<span data-ttu-id="bbef1-110">En .NET 5,0 y versiones posteriores, se agrega un sufijo `A` o `W` al nombre de la exportación durante la detección de exportación *solo en Windows*.</span><span class="sxs-lookup"><span data-stu-id="bbef1-110">In .NET 5.0 and later versions, an `A` or `W` suffix is added to the export name during export discovery *on Windows only*.</span></span> <span data-ttu-id="bbef1-111">En las plataformas UNIX, no se agrega el sufijo.</span><span class="sxs-lookup"><span data-stu-id="bbef1-111">On Unix platforms, the suffix is not added.</span></span> <span data-ttu-id="bbef1-112">La semántica de los runtimes en la plataforma de Windows no se modifica.</span><span class="sxs-lookup"><span data-stu-id="bbef1-112">The semantics of both runtimes on the Windows platform remain unchanged.</span></span>
+
+## <a name="reason-for-change"></a><span data-ttu-id="bbef1-113">Motivo del cambio</span><span class="sxs-lookup"><span data-stu-id="bbef1-113">Reason for change</span></span>
+
+<span data-ttu-id="bbef1-114">Este cambio se ha realizado para simplificar el sondeo entre plataformas.</span><span class="sxs-lookup"><span data-stu-id="bbef1-114">This change was made to simplify cross-platform probing.</span></span> <span data-ttu-id="bbef1-115">Es algo de lo que no habría que preocuparse, ya que las plataformas que no son de Windows no contienen esta semántica.</span><span class="sxs-lookup"><span data-stu-id="bbef1-115">It's overhead that shouldn't be incurred, given that non-Windows platforms don't contain this semantic.</span></span>
+
+## <a name="recommended-action"></a><span data-ttu-id="bbef1-116">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="bbef1-116">Recommended action</span></span>
+
+<span data-ttu-id="bbef1-117">Para mitigar el cambio, puede agregar manualmente el sufijo deseado en plataformas que no son de Windows.</span><span class="sxs-lookup"><span data-stu-id="bbef1-117">To mitigate the change, you can manually add the desired suffix on non-Windows platforms.</span></span> <span data-ttu-id="bbef1-118">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="bbef1-118">For example:</span></span>
+
+```csharp
+[DllImport(...)]
+extern static void SetWindowTextW();
+```
+
+## <a name="affected-apis"></a><span data-ttu-id="bbef1-119">API afectadas</span><span class="sxs-lookup"><span data-stu-id="bbef1-119">Affected APIs</span></span>
+
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>
+
+<!--
+
+### Affected APIs
+
+- `T:System.Runtime.InteropServices.DllImportAttribute`
+
+### Category
+
+Interop
+
+-->
