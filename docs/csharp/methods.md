@@ -4,12 +4,12 @@ description: Información general sobre métodos, parámetros de método y valor
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: d5ca96ab3a07b85fa525dd06c975f8e3221c82e8
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: ea07553d20ea6c18bac048a2e8d697f665bfb949
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92223659"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031681"
 ---
 # <a name="methods-in-c"></a>Métodos de C#
 
@@ -45,11 +45,11 @@ Tenga en cuenta que la clase `Motorcycle` incluye un método sobrecargado, `Driv
 
 ## <a name="method-invocation"></a>Invocación de método
 
-Los métodos pueden ser de *instancia* o *estáticos* . Para invocar un método de instancia es necesario crear una instancia de un objeto y llamar al método del objeto; el método de una instancia actúa en dicha instancia y sus datos. Si quiere invocar un método estático, haga referencia al nombre del tipo al que pertenece el método; los métodos estáticos no actúan en datos de instancia. Al intentar llamar a un método estático mediante una instancia de objeto se genera un error del compilador.
+Los métodos pueden ser de *instancia* o *estáticos*. Para invocar un método de instancia es necesario crear una instancia de un objeto y llamar al método del objeto; el método de una instancia actúa en dicha instancia y sus datos. Si quiere invocar un método estático, haga referencia al nombre del tipo al que pertenece el método; los métodos estáticos no actúan en datos de instancia. Al intentar llamar a un método estático mediante una instancia de objeto se genera un error del compilador.
 
-Llamar a un método es como acceder a un campo. Después del nombre de objeto (si se llama a un método de instancia) o el nombre de tipo (si llama a un método `static`), agregue un punto, el nombre del método y paréntesis. Los argumentos se enumeran entre paréntesis y están separados por comas.
+Llamar a un método es como acceder a un campo. Después del nombre de objeto (si se llama a un método de instancia) o el nombre de tipo (si llama a un método `static`), agregue un punto, el nombre del método y paréntesis. Los argumentos se enumeran entre paréntesis y se separan mediante comas.
 
-La definición del método especifica los nombres y tipos de todos los parámetros necesarios. Cuando un autor de llamada invoca el método, proporciona valores concretos denominados argumentos para cada parámetro. Los argumentos deben ser compatibles con el tipo de parámetro, pero el nombre de argumento, si se usa alguno en el código de llamada, no tiene que ser el mismo que el del parámetro con nombre definido en el método. En el ejemplo siguiente, el método `Square` incluye un parámetro único de tipo `int` denominado *i* . La primera llamada de método pasa al método `Square` una variable de tipo `int` denominada *num* ; la segunda, una constante numérica; y la tercera, una expresión.
+La definición del método especifica los nombres y tipos de todos los parámetros necesarios. Cuando un autor de llamada invoca el método, proporciona valores concretos denominados argumentos para cada parámetro. Los argumentos deben ser compatibles con el tipo de parámetro, pero el nombre de argumento, si se usa alguno en el código de llamada, no tiene que ser el mismo que el del parámetro con nombre definido en el método. En el ejemplo siguiente, el método `Square` incluye un parámetro único de tipo `int` denominado *i*. La primera llamada de método pasa al método `Square` una variable de tipo `int` denominada *num*; la segunda, una constante numérica; y la tercera, una expresión.
 
 [!code-csharp[csSnippets.Methods#74](../../samples/snippets/csharp/concepts/methods/params74.cs#74)]
 
@@ -81,7 +81,7 @@ Los tipos pueden invalidar miembros heredados usando la palabra clave `override`
 
 ## <a name="passing-parameters"></a>Pasar parámetros
 
-Todos los tipos de C# son *tipos de valor* o *tipos de referencia* . Para obtener una lista de tipos de valor integrados, vea [Tipos](./tour-of-csharp/types.md). De forma predeterminada, los tipos de valor y los tipos de referencia se pasan a un método por valor.
+Todos los tipos de C# son *tipos de valor* o *tipos de referencia*. Para obtener una lista de tipos de valor integrados, vea [Tipos](./tour-of-csharp/types.md). De forma predeterminada, los tipos de valor y los tipos de referencia se pasan a un método por valor.
 
 <a name="byval"></a>
 
@@ -154,7 +154,7 @@ Si se invoca un método con varios argumentos opcionales mediante argumentos pos
 
 Si se llama a un método mediante argumentos con nombre o una combinación de argumentos posicionales y con nombre, el autor de la llamada puede omitir los argumentos que siguen al último argumento posicional en la llamada al método.
 
-En el ejemplo siguiente se llama tres veces al método `ExampleMethod`.  Las dos primeras llamadas al método usan argumentos posicionales. La primera omite los dos argumentos opcionales, mientras que la segunda omite el último argumento. La tercera llamada al método proporciona un argumento posicional para el parámetro necesario, pero usa un argumento con nombre para proporcionar un valor al parámetro `description` mientras omite el argumento `optionalInt`.
+En el ejemplo siguiente se llama tres veces al método `ExampleMethod`.  Las dos primeras llamadas al método usan argumentos posicionales. La primera omite los dos argumentos opcionales, mientras que la segunda omite el último argumento. La tercera llamada de método proporciona un argumento posicional para el parámetro necesario, pero usa un argumento con nombre para proporcionar un valor al parámetro `description` mientras omite el argumento `optionalInt`.
 
 [!code-csharp[csSnippets.Methods#22](../../samples/snippets/csharp/concepts/methods/optional1.cs#22)]
 
@@ -184,7 +184,7 @@ Para utilizar un valor devuelto de un método, el método de llamada puede usar 
 
 Usar una variable local, en este caso, `result`, para almacenar un valor es opcional. La legibilidad del código puede ser útil, o puede ser necesaria si debe almacenar el valor original del argumento para todo el ámbito del método.
 
-A veces, quiere que el método devuelva más que un solo valor. A partir de C# 7.0, puede hacer esto fácilmente mediante *tipos de tupla* y *literales de tupla* . El tipo de tupla define los tipos de datos de los elementos de la tupla. Los literales de tupla proporcionan los valores reales de la tupla devuelta. En el ejemplo siguiente, `(string, string, string, int)` define el tipo de tupla que devuelve el método `GetPersonalInfo`. La expresión `(per.FirstName, per.MiddleName, per.LastName, per.Age)` es el literal de tupla; el método devuelve el nombre, los apellidos y la edad de un objeto `PersonInfo`.
+A veces, quiere que el método devuelva más que un solo valor. A partir de C# 7.0, puede hacer esto fácilmente mediante *tipos de tupla* y *literales de tupla*. El tipo de tupla define los tipos de datos de los elementos de la tupla. Los literales de tupla proporcionan los valores reales de la tupla devuelta. En el ejemplo siguiente, `(string, string, string, int)` define el tipo de tupla que devuelve el método `GetPersonalInfo`. La expresión `(per.FirstName, per.MiddleName, per.LastName, per.Age)` es el literal de tupla; el método devuelve el nombre, los apellidos y la edad de un objeto `PersonInfo`.
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)

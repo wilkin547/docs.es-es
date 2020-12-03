@@ -2,12 +2,12 @@
 title: Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores con Windows (basado en Docker estándar)
 description: Obtenga información sobre cómo usar PowerShell al trabajar con Docker en contenedores de Windows.
 ms.date: 08/06/2020
-ms.openlocfilehash: 6096e4cbad4fb37b485d595c650dc10dc5ed5a22
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.openlocfilehash: d65538c821a848d83915e715ee3a02990b40e836
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434814"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95681254"
 ---
 # <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Uso de comandos de Windows PowerShell en un archivo DockerFile para configurar contenedores con Windows (basado en Docker estándar)
 
@@ -24,7 +24,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 En este caso, vamos a usar Windows PowerShell para instalar una imagen base de Windows Server Core, así como IIS.
 
-Del mismo modo, también se pueden usar comandos de Windows PowerShell para configurar otros componentes, como ASP.NET 4.x tradicional, .NET 4.6 o cualquier otro software de Windows, como se muestra aquí:
+Del mismo modo, también se pueden usar comandos de Windows PowerShell para configurar componentes adicionales como ASP.NET 4.x tradicional, .NET Framework 4.6 o cualquier otro software de Windows, como se muestra aquí:
 
 ```dockerfile
 RUN powershell add-windowsfeature web-asp-net45

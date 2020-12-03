@@ -4,12 +4,12 @@ description: Se muestran las diversas maneras de instalar el SDK y el entorno de
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 9e96773e30fb8ee395e37dca7a4794cd42359bb2
-ms.sourcegitcommit: c38bf879a2611ff46aacdd529b9f2725f93e18a9
+ms.openlocfilehash: f7422941af7e39d69d286a0f79920b025c1bf9c0
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94594620"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031909"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-fedora"></a>Instalación del SDK y el entorno de ejecución de .NET en Fedora
 
@@ -42,6 +42,10 @@ Las versiones siguientes de .NET ya no se admiten. Las descargas de estas siguen
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>Eliminación de versiones preliminares
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
 

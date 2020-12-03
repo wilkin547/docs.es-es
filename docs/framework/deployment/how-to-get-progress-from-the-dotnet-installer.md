@@ -1,6 +1,6 @@
 ---
 title: Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
-description: Aprenda a obtener el progreso del instalador de .NET 4.5. Si desarrolla aplicaciones para esta versión de .NET, puede incluir (encadenar) el programa de instalación de .NET 4.5 en el programa de instalación de la aplicación.
+description: Obtenga información sobre cómo obtener el progreso del instalador de .NET Framework 4.5. Si desarrolla aplicaciones para esta versión de .NET, puede incluir (encadenar) el programa de instalación de .NET Framework 4.5 en el programa de instalación de la aplicación.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 7e21a376c5a7551ecadeaa70c0a70968dc5752fd
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904265"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95729127"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
 

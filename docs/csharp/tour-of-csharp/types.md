@@ -3,10 +3,10 @@ title: 'Definición de tipos y sus miembros: un recorrido por C#'
 description: Los bloques de creación de los programas son los tipos. Aprenda a crear clases, estructuras, interfaces y mucho más en C#.
 ms.date: 08/06/2020
 ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "88559120"
 ---
 # <a name="types-and-members"></a>Tipos y miembros
@@ -36,11 +36,11 @@ La memoria ocupada por un objeto se reclama automáticamente cuando el objeto ya
 
 ### <a name="type-parameters"></a>Parámetros de tipo
 
-Las clases genéricas definen [***parámetros de tipo***](../programming-guide/generics/index.md). Los parámetros de tipo son una lista de nombres de parámetros de tipo entre paréntesis angulares. Los parámetros de tipo siguen el nombre de la clase. Los parámetros de tipo pueden usarse luego en el cuerpo de las declaraciones de clase para definir a los miembros de la clase. En el ejemplo siguiente, los parámetros de tipo de `Pair` son `TFirst` y `TSecond`:
+Las clases genéricas definen [***parámetros de tipo** _](../programming-guide/generics/index.md). Los parámetros de tipo son una lista de nombres de parámetros de tipo entre paréntesis angulares. Los parámetros de tipo siguen el nombre de la clase. Los parámetros de tipo pueden usarse luego en el cuerpo de las declaraciones de clase para definir a los miembros de la clase. En el ejemplo siguiente, los parámetros de tipo de `Pair` son `TFirst` y `TSecond`:
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DefinePairClass":::
 
-Un tipo de clase que se declara para tomar parámetros de tipo se conoce como *tipo de clase genérica*. Los tipos de estructura, interfaz y delegado también pueden ser genéricos.
+Un tipo de clase que se declara para tomar parámetros de tipo se denomina _tipo de clase genérica*. Los tipos de estructura, interfaz y delegado también pueden ser genéricos.
 Cuando se usa la clase genérica, se deben proporcionar argumentos de tipo para cada uno de los parámetros de tipo:
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="CreatePairObject":::
@@ -61,15 +61,15 @@ Existe una conversión implícita de un tipo de clase a cualquiera de sus tipos 
 
 ## <a name="structs"></a>Estructuras
 
-Las clases definen tipos que admiten la herencia y el polimorfismo. Permiten crear comportamientos sofisticados basados en jerarquías de clases derivadas. Por el contrario, los tipos [***struct***](../language-reference/builtin-types/struct.md) son tipos más sencillos cuyo propósito principal es almacenar valores de datos. Dichos tipos struct no pueden declarar un tipo base; se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>. No se pueden derivar otros tipos de `struct` a partir de un tipo de `struct`. Están sellados implícitamente.
+Las clases definen tipos que admiten la herencia y el polimorfismo. Permiten crear comportamientos sofisticados basados en jerarquías de clases derivadas. Por el contrario, los tipos [***struct** _](../language-reference/builtin-types/struct.md) son tipos más sencillos cuyo propósito principal es almacenar valores de datos. Dichos tipos struct no pueden declarar un tipo base; se derivan implícitamente de <xref:System.ValueType?displayProperty=nameWithType>. No se pueden derivar otros tipos de `struct` a partir de un tipo de `struct`. Están sellados implícitamente.
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="PointStruct":::
 
 ## <a name="interfaces"></a>Interfaces
 
-Una [***interfaz***](../programming-guide/interfaces/index.md) define un contrato que se puede implementar mediante clases y estructuras. Una interfaz puede contener métodos, propiedades, eventos e indexadores. Normalmente, una interfaz no proporciona implementaciones de los miembros que define, sino que simplemente especifica los miembros que se deben proporcionar mediante clases o estructuras que implementan la interfaz.
+Una [_*_interfaz_*_](../programming-guide/interfaces/index.md) define un contrato que se puede implementar mediante clases y estructuras. Una interfaz puede contener métodos, propiedades, eventos e indexadores. Normalmente, una interfaz no proporciona implementaciones de los miembros que define, sino que simplemente especifica los miembros que se deben proporcionar mediante clases o estructuras que implementan la interfaz.
 
-Las interfaces pueden usar ***herencia múltiple***. En el ejemplo siguiente, la interfaz `IComboBox` hereda de `ITextBox` y `IListBox`.
+Las interfaces pueden usar la _*_herencia múltiple_*_. En el ejemplo siguiente, la interfaz `IComboBox` hereda de `ITextBox` y `IListBox`.
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="FirstInterfaces":::
 
@@ -83,7 +83,7 @@ Cuando una clase o un struct implementan una interfaz determinada, las instancia
 
 ## <a name="enums"></a>Enumeraciones
 
-Un tipo de [***enumeración***](../language-reference/builtin-types/enum.md) define un conjunto de valores constantes. En el elemento `enum` siguiente se declaran constantes que definen diferentes verduras de raíz:
+Un tipo de [_*_enumeración_*_](../language-reference/builtin-types/enum.md) define un conjunto de valores constantes. En el elemento `enum` siguiente se declaran constantes que definen diferentes verduras de raíz:
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="EnumDeclaration":::
 
@@ -97,13 +97,13 @@ En el ejemplo siguiente se muestran las declaraciones de ambas enumeraciones ant
 
 ## <a name="nullable-types"></a>Tipos que aceptan valores NULL
 
-Las variables de cualquier tipo se pueden declarar como ***que no aceptan valores NULL*** o ***que sí aceptan valores NULL***. Una variable que acepta valores NULL puede contener un valor `null` adicional que no indica valor alguno. Los tipos de valor que aceptan valores NULL (estructuras o enumeraciones) se representan mediante <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos de referencia que no aceptan valores NULL y los que sí aceptan valores NULL se representan mediante el tipo de referencia subyacente. La distinción se representa mediante metadatos leídos por el compilador y algunas bibliotecas. El compilador proporciona advertencias cuando se desreferencian las referencias que aceptan valores NULL sin comprobar primero su valor con `null`. El compilador también proporciona advertencias cuando las referencias que no aceptan valores NULL se asignan a un valor que puede ser `null`. En el ejemplo siguiente se declara un elemento ***int que acepta valores NULL*** y que se inicializa en `null`. A continuación, establece el valor en `5`. Muestra el mismo concepto con una ***cadena que acepta valores NULL***. Para más información, consulte [Tipos de valor que admiten un valor NULL](../language-reference/builtin-types/nullable-value-types.md) y [Tipos de referencia que aceptan valores NULL](../nullable-references.md).
+Las variables de cualquier tipo se pueden declarar como _*_que no aceptan valores NULL_*_ o _*_que admiten un valor NULL_*_. Una variable que acepta valores NULL puede contener un valor `null` adicional que no indica valor alguno. Los tipos de valor que aceptan valores NULL (estructuras o enumeraciones) se representan mediante <xref:System.Nullable%601?displayProperty=nameWithType>. Los tipos de referencia que no aceptan valores NULL y los que sí aceptan valores NULL se representan mediante el tipo de referencia subyacente. La distinción se representa mediante metadatos leídos por el compilador y algunas bibliotecas. El compilador proporciona advertencias cuando se desreferencian las referencias que aceptan valores NULL sin comprobar primero su valor con `null`. El compilador también proporciona advertencias cuando las referencias que no aceptan valores NULL se asignan a un valor que puede ser `null`. En el ejemplo siguiente se declara un elemento _*_int que admite un valor NULL_*_, y que se inicializa en `null`. A continuación, establece el valor en `5`. Muestra el mismo concepto con una _*_cadena que admite un valor NULL_*_. Para más información, consulte [Tipos de valor que admiten un valor NULL](../language-reference/builtin-types/nullable-value-types.md) y [Tipos de referencia que aceptan valores NULL](../nullable-references.md).
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareNullable":::
 
 ## <a name="tuples"></a>Tuplas
 
-C# admite [***tuplas***](../language-reference/builtin-types/value-tuples.md), lo cual proporciona una sintaxis concisa para agrupar varios elementos de datos en una estructura de datos ligera. Puede crear una instancia de una tupla declarando los tipos y los nombres de los miembros entre `(` y `)`, como se muestra en el ejemplo siguiente:
+C# admite [_ *_tuplas_**](../language-reference/builtin-types/value-tuples.md), lo que proporciona una sintaxis concisa para agrupar varios elementos de datos en una estructura de datos ligera. Puede crear una instancia de una tupla declarando los tipos y los nombres de los miembros entre `(` y `)`, como se muestra en el ejemplo siguiente:
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareTuples":::
 

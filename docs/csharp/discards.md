@@ -3,16 +3,16 @@ title: Descartes - Guía de C#
 description: Describe la compatibilidad de C# con descartes, que son variables sin asignar y descartables, así como las maneras en que pueden usarse.
 ms.technology: csharp-fundamentals
 ms.date: 09/22/2020
-ms.openlocfilehash: 4de48aebaeb896b198b2e9f2431c6a38ba11469e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: baa7c559095460cf747cb5c8f7ad581270893bd7
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869319"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "95698811"
 ---
 # <a name="discards---c-guide"></a>Descartes - Guía de C#
 
-A partir de C# 7.0, C# admite descartes, que son variables temporales y ficticias que no se usan deliberadamente en el código de la aplicación. Los descartes son equivalentes a variables sin asignar, ya que no tienen un valor. Puesto que solo hay una variable de descarte única y es posible que a dicha variable no se le haya asignado almacenamiento, los descartes pueden reducir las asignaciones de memoria. Como la intención de estas variables es que el código sea claro, mejoran su legibilidad y facilidad de mantenimiento.
+A partir de C# 7.0, C# admite descartes, que son variables de marcador de posición que no se usan deliberadamente en el código de la aplicación. Los descartes son equivalentes a variables sin asignar, ya que no tienen un valor. Puesto que solo hay una variable de descarte única y es posible que a dicha variable no se le haya asignado almacenamiento, los descartes pueden reducir las asignaciones de memoria. Como la intención de estas variables es que el código sea claro, mejoran su legibilidad y facilidad de mantenimiento.
 
 Para indicar que una variable es un descarte, se le asigna como nombre el carácter de subrayado (`_`). Por ejemplo, la siguiente llamada al método devuelve una tupla de tres donde el primer y el segundo valor se descartan y *area* es una variable declarada previamente para establecerse en el tercer componente correspondiente devuelto por  *GetCityInformation*:
 

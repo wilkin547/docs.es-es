@@ -2,12 +2,12 @@
 title: Selección del sistema operativo de destino con contenedores de .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Selección del sistema operativo de destino con contenedores de .NET
 ms.date: 01/30/2020
-ms.openlocfilehash: a09e3981ece478a9795c0f27acc98d604864cdd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f52dcb4da6509be7e771af353daea9cfc97306c
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501861"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95688463"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Selección del sistema operativo de destino con contenedores de .NET
 
@@ -34,10 +34,10 @@ Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el siste
 
 | Imagen | Comentarios |
 |-------|----------|
-| mcr.microsoft.com/dotnet/core/runtime:3.1 | Arquitectura múltiple de .NET Core 3.1: es compatible con Linux y Windows Nano Server en función del host de Docker. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1 | Arquitectura múltiple de ASP.NET Core 3.1: es compatible con Linux y Windows Nano Server en función del host de Docker. <br/> La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core. |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim | Solo entorno de ejecución de .NET Core 3.1 en una distribución de Linux Debian |
-| mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1809 | Solo entorno de ejecución de .NET Core 3.1 en Windows Nano Server (Windows Server 1809) |
+| mcr.microsoft.com/dotnet/runtime:3.1 | Arquitectura múltiple de .NET Core 3.1: es compatible con Linux y Windows Nano Server en función del host de Docker. |
+| mcr.microsoft.com/dotnet/aspnet:3.1 | Arquitectura múltiple de ASP.NET Core 3.1: es compatible con Linux y Windows Nano Server en función del host de Docker. <br/> La imagen de aspnetcore tiene algunas optimizaciones para ASP.NET Core. |
+| mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim | Solo entorno de ejecución de .NET Core 3.1 en una distribución de Linux Debian |
+| mcr.microsoft.com/dotnet/aspnet:3.1-nanoserver-1809 | Solo entorno de ejecución de .NET Core 3.1 en Windows Nano Server (Windows Server 1809) |
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

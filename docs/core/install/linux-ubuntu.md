@@ -4,12 +4,12 @@ description: Se muestran las diversas maneras de instalar el SDK y el entorno de
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 419bcf3ccd011cadba8f8c64e195d7dbdbf7e241
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507027"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031856"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Instalación del SDK y el entorno de ejecución de .NET en Ubuntu
 
@@ -46,15 +46,27 @@ Las versiones siguientes de .NET ya no se admiten. Las descargas de estas siguen
 - 2.2
 - 2.0
 
+## <a name="remove-preview-versions"></a>Eliminación de versiones preliminares
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
+
 ## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="2010-"></a>20.10 ✔️
 
-En la actualidad, las fuentes de paquetes de .NET 5 y .NET Core 3.1 para Ubuntu 20.10 tienen un problema. Para obtener más información, vea el [problema de GitHub dotnet/core n.º 5549](https://github.com/dotnet/core/issues/5549). Este artículo se actualizará cuando se resuelva el problema.
+> [!IMPORTANT]
+> .NET Core 2.1 todavía no está disponible en la fuente de paquetes.
 
-Para instalar .NET 5 o .NET Core 3.1 en Ubuntu 20.10, siga las instrucciones correspondientes a [20.04](#2004-).
+[!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
+
+```bash
+wget https://packages.microsoft.com/config/ubuntu/20.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+```
+
+[!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
 ## <a name="2004-"></a>20.04 ✔️
 

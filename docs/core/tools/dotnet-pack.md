@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes NuGet para el proyecto de .NET.
 ms.date: 04/28/2020
-ms.openlocfilehash: 4312ea64a75fa89eae58cdb41a6dc3463cdd215c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
+ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634238"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95674806"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -118,7 +118,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 - **`-s|--serviceable`**
 
-  Establece la marca de servicio en el paquete. Para más información, consulte [.NET Blog: .NET 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
+  Establece la marca de servicio en el paquete. Para obtener más información, vea [.NET Blog: .NET Framework 4.5.1 Supports Microsoft Security Updates for .NET NuGet Libraries](https://aka.ms/nupkgservicing) (Blog de .NET: .NET Framework 4.5.1 admite actualizaciones de seguridad de Microsoft para bibliotecas NuGet de .NET).
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
@@ -185,7 +185,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
   ```
 
   Para obtener información sobre cómo usar `NuspecFile`, `NuspecBasePath` y `NuspecProperties`, vea los siguientes recursos:
-  
+
   - [Empaquetado mediante un archivo .nuspec](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
   - [Puntos de extensión avanzados para crear un paquete personalizado](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
   - [Propiedades globales](/visualstudio/msbuild/msbuild-properties#global-properties)

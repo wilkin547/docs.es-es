@@ -4,12 +4,12 @@ description: En este artículo se muestran las diversas maneras de instalar el S
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 17012f3689e5834fd1629946767e931cb22a2c1b
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: eb31e3109ccd40999c22a27607d48544bf117dc2
+ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506910"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "96031870"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-opensuse"></a>Instalación del SDK y el entorno de ejecución de .NET en openSUSE
 
@@ -36,6 +36,10 @@ Las versiones siguientes de .NET ya no se admiten. aunque sus descargas siguen e
 - 3.0
 - 2.2
 - 2.0
+
+## <a name="remove-preview-versions"></a>Eliminación de versiones preliminares
+
+[!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
 ## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
 
