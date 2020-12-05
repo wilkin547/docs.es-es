@@ -6,55 +6,55 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594697"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739535"
 ---
-# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a><span data-ttu-id="47a04-103">Inicio rápido: uso de .NET para impulsar un sombrero de sentido de Raspberry PI</span><span class="sxs-lookup"><span data-stu-id="47a04-103">Quickstart - Use .NET to drive a Raspberry Pi Sense HAT</span></span>
+# <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a><span data-ttu-id="d55c2-103">Inicio rápido: uso de .NET para impulsar un sombrero de sentido de Raspberry PI</span><span class="sxs-lookup"><span data-stu-id="d55c2-103">Quickstart - Use .NET to drive a Raspberry Pi Sense HAT</span></span>
 
-<span data-ttu-id="47a04-104">El [sombrero de detección](https://www.raspberrypi.org/products/sense-hat/) de Raspberry PI <span class="docon docon-navigate-external x-hidden-focus"></span> es un panel complementario para Raspberry PI.</span><span class="sxs-lookup"><span data-stu-id="47a04-104">The Raspberry Pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> is an add-on board for Raspberry Pi.</span></span> <span data-ttu-id="47a04-105">El sombrero de detección está equipado con una matriz de LED RGB de 8 × 8, un joystick de cinco botones e incluye los sensores siguientes:</span><span class="sxs-lookup"><span data-stu-id="47a04-105">The Sense HAT is equipped with an 8×8 RGB LED matrix, a five-button joystick, and includes the following sensors:</span></span>
+<span data-ttu-id="d55c2-104">El [sensor](https://www.raspberrypi.org/products/sense-hat/) de Raspberry PI <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** hardware **a** ttached en **T** OP) es un panel complementario para Raspberry PI.</span><span class="sxs-lookup"><span data-stu-id="d55c2-104">The Raspberry Pi [Sense HAT](https://www.raspberrypi.org/products/sense-hat/) <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** ardware **A** ttached on **T** op) is an add-on board for Raspberry Pi.</span></span> <span data-ttu-id="d55c2-105">El sombrero de detección está equipado con una matriz de LED RGB de 8 × 8, un joystick de cinco botones e incluye los sensores siguientes:</span><span class="sxs-lookup"><span data-stu-id="d55c2-105">The Sense HAT is equipped with an 8×8 RGB LED matrix, a five-button joystick, and includes the following sensors:</span></span>
 
-- <span data-ttu-id="47a04-106">Giroscopio</span><span class="sxs-lookup"><span data-stu-id="47a04-106">Gyroscope</span></span>
-- <span data-ttu-id="47a04-107">Acelerómetro</span><span class="sxs-lookup"><span data-stu-id="47a04-107">Accelerometer</span></span>
-- <span data-ttu-id="47a04-108">Magnetómetro</span><span class="sxs-lookup"><span data-stu-id="47a04-108">Magnetometer</span></span>
-- <span data-ttu-id="47a04-109">Temperatura</span><span class="sxs-lookup"><span data-stu-id="47a04-109">Temperature</span></span>
-- <span data-ttu-id="47a04-110">Presión barométrica</span><span class="sxs-lookup"><span data-stu-id="47a04-110">Barometric pressure</span></span>
-- <span data-ttu-id="47a04-111">Humedad</span><span class="sxs-lookup"><span data-stu-id="47a04-111">Humidity</span></span>
+- <span data-ttu-id="d55c2-106">Giroscopio</span><span class="sxs-lookup"><span data-stu-id="d55c2-106">Gyroscope</span></span>
+- <span data-ttu-id="d55c2-107">Acelerómetro</span><span class="sxs-lookup"><span data-stu-id="d55c2-107">Accelerometer</span></span>
+- <span data-ttu-id="d55c2-108">Magnetómetro</span><span class="sxs-lookup"><span data-stu-id="d55c2-108">Magnetometer</span></span>
+- <span data-ttu-id="d55c2-109">Temperatura</span><span class="sxs-lookup"><span data-stu-id="d55c2-109">Temperature</span></span>
+- <span data-ttu-id="d55c2-110">Presión barométrica</span><span class="sxs-lookup"><span data-stu-id="d55c2-110">Barometric pressure</span></span>
+- <span data-ttu-id="d55c2-111">Humedad</span><span class="sxs-lookup"><span data-stu-id="d55c2-111">Humidity</span></span>
 
-<span data-ttu-id="47a04-112">Esta guía de inicio rápido usa .NET para recuperar los valores del sensor desde el sombrero de detección, responder a la entrada del joystick y controlar la matriz de LED.</span><span class="sxs-lookup"><span data-stu-id="47a04-112">This quickstart uses .NET to retrieve sensor values from the Sense HAT, respond to joystick input, and drive the LED matrix.</span></span>
+<span data-ttu-id="d55c2-112">Esta guía de inicio rápido usa .NET para recuperar los valores del sensor desde el sombrero de detección, responder a la entrada del joystick y controlar la matriz de LED.</span><span class="sxs-lookup"><span data-stu-id="d55c2-112">This quickstart uses .NET to retrieve sensor values from the Sense HAT, respond to joystick input, and drive the LED matrix.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="47a04-113">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="47a04-113">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="d55c2-113">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="d55c2-113">Prerequisites</span></span>
 
 - [!INCLUDE [prereq-rpi](../includes/prereq-rpi.md)]
-- <span data-ttu-id="47a04-114">Detección HAT</span><span class="sxs-lookup"><span data-stu-id="47a04-114">Sense HAT</span></span>
+- <span data-ttu-id="d55c2-114">Detección HAT</span><span class="sxs-lookup"><span data-stu-id="d55c2-114">Sense HAT</span></span>
 
 [!INCLUDE [prepare-pi-i2c](../includes/prepare-pi-i2c.md)]
 
-## <a name="run-the-quickstart"></a><span data-ttu-id="47a04-115">Ejecutar la guía de inicio rápido</span><span class="sxs-lookup"><span data-stu-id="47a04-115">Run the quickstart</span></span>
+## <a name="run-the-quickstart"></a><span data-ttu-id="d55c2-115">Ejecutar la guía de inicio rápido</span><span class="sxs-lookup"><span data-stu-id="d55c2-115">Run the quickstart</span></span>
 
-<span data-ttu-id="47a04-116">Adjunte el sombrero de detección a su Raspberry PI.</span><span class="sxs-lookup"><span data-stu-id="47a04-116">Attach the Sense HAT to your Raspberry Pi.</span></span> <span data-ttu-id="47a04-117">En un símbolo del sistema de bash en Raspberry PI (local o remoto), ejecute el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="47a04-117">From a Bash prompt on the Raspberry Pi (local or remote), run the following command:</span></span>
+<span data-ttu-id="d55c2-116">Adjunte el sombrero de detección a su Raspberry PI.</span><span class="sxs-lookup"><span data-stu-id="d55c2-116">Attach the Sense HAT to your Raspberry Pi.</span></span> <span data-ttu-id="d55c2-117">En un símbolo del sistema de bash en Raspberry PI (local o remoto), ejecute el siguiente comando:</span><span class="sxs-lookup"><span data-stu-id="d55c2-117">From a Bash prompt on the Raspberry Pi (local or remote), run the following command:</span></span>
 
 ```bash
 . <(wget -q -O - https://aka.ms/dotnet-iot-sensehat-quickstart)
 ```
 
-<span data-ttu-id="47a04-118">El comando descarga y ejecuta un script.</span><span class="sxs-lookup"><span data-stu-id="47a04-118">The command downloads and runs a script.</span></span> <span data-ttu-id="47a04-119">El script:</span><span class="sxs-lookup"><span data-stu-id="47a04-119">The script:</span></span>
+<span data-ttu-id="d55c2-118">El comando descarga y ejecuta un script.</span><span class="sxs-lookup"><span data-stu-id="d55c2-118">The command downloads and runs a script.</span></span> <span data-ttu-id="d55c2-119">El script:</span><span class="sxs-lookup"><span data-stu-id="d55c2-119">The script:</span></span>
 
-- <span data-ttu-id="47a04-120">Instala el SDK de .NET.</span><span class="sxs-lookup"><span data-stu-id="47a04-120">Installs the .NET SDK.</span></span>
-- <span data-ttu-id="47a04-121">Clona un repositorio de GitHub que incluye el proyecto de inicio rápido de Sense HAT.</span><span class="sxs-lookup"><span data-stu-id="47a04-121">Clones a GitHub repository that includes the Sense HAT quickstart project.</span></span>
-- <span data-ttu-id="47a04-122">Compila el proyecto.</span><span class="sxs-lookup"><span data-stu-id="47a04-122">Builds the project.</span></span>
-- <span data-ttu-id="47a04-123">Ejecuta el proyecto.</span><span class="sxs-lookup"><span data-stu-id="47a04-123">Runs the project.</span></span>
+- <span data-ttu-id="d55c2-120">Instala el SDK de .NET.</span><span class="sxs-lookup"><span data-stu-id="d55c2-120">Installs the .NET SDK.</span></span>
+- <span data-ttu-id="d55c2-121">Clona un repositorio de GitHub que incluye el proyecto de inicio rápido de Sense HAT.</span><span class="sxs-lookup"><span data-stu-id="d55c2-121">Clones a GitHub repository that includes the Sense HAT quickstart project.</span></span>
+- <span data-ttu-id="d55c2-122">Compila el proyecto.</span><span class="sxs-lookup"><span data-stu-id="d55c2-122">Builds the project.</span></span>
+- <span data-ttu-id="d55c2-123">Ejecuta el proyecto.</span><span class="sxs-lookup"><span data-stu-id="d55c2-123">Runs the project.</span></span>
 
-<span data-ttu-id="47a04-124">Observe el resultado de la consola a medida que se muestran los datos del sensor.</span><span class="sxs-lookup"><span data-stu-id="47a04-124">Observe the console output as sensor data is displayed.</span></span> <span data-ttu-id="47a04-125">La matriz LED muestra un píxel amarillo en un campo de color azul.</span><span class="sxs-lookup"><span data-stu-id="47a04-125">The LED matrix displays a yellow pixel on a field of blue.</span></span> <span data-ttu-id="47a04-126">Al mantener el joystick en cualquier dirección, se mueve el píxel amarillo en esa dirección.</span><span class="sxs-lookup"><span data-stu-id="47a04-126">Holding the joystick in any direction moves the yellow pixel in that direction.</span></span> <span data-ttu-id="47a04-127">Al hacer clic en el botón central joystick, el fondo cambia de azul a rojo.</span><span class="sxs-lookup"><span data-stu-id="47a04-127">Clicking the center joystick button causes the background to switch from blue to red.</span></span>
+<span data-ttu-id="d55c2-124">Observe el resultado de la consola a medida que se muestran los datos del sensor.</span><span class="sxs-lookup"><span data-stu-id="d55c2-124">Observe the console output as sensor data is displayed.</span></span> <span data-ttu-id="d55c2-125">La matriz LED muestra un píxel amarillo en un campo de color azul.</span><span class="sxs-lookup"><span data-stu-id="d55c2-125">The LED matrix displays a yellow pixel on a field of blue.</span></span> <span data-ttu-id="d55c2-126">Al mantener el joystick en cualquier dirección, se mueve el píxel amarillo en esa dirección.</span><span class="sxs-lookup"><span data-stu-id="d55c2-126">Holding the joystick in any direction moves the yellow pixel in that direction.</span></span> <span data-ttu-id="d55c2-127">Al hacer clic en el botón central joystick, el fondo cambia de azul a rojo.</span><span class="sxs-lookup"><span data-stu-id="d55c2-127">Clicking the center joystick button causes the background to switch from blue to red.</span></span>
 
-## <a name="get-the-source-code"></a><span data-ttu-id="47a04-128">Obtención del código fuente</span><span class="sxs-lookup"><span data-stu-id="47a04-128">Get the source code</span></span>
+## <a name="get-the-source-code"></a><span data-ttu-id="d55c2-128">Obtención del código fuente</span><span class="sxs-lookup"><span data-stu-id="d55c2-128">Get the source code</span></span>
 
-<span data-ttu-id="47a04-129">El origen de esta guía de inicio rápido está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart).</span><span class="sxs-lookup"><span data-stu-id="47a04-129">The source for this quickstart is [available on GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart).</span></span> <span class="docon docon-navigate-external x-hidden-focus"></span>
+<span data-ttu-id="d55c2-129">El origen de esta guía de inicio rápido está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .</span><span class="sxs-lookup"><span data-stu-id="d55c2-129">The source for this quickstart is [available on GitHub](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span>.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="47a04-130">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="47a04-130">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="d55c2-130">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="d55c2-130">Next steps</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="47a04-131">Aprenda a usar De uso general entrada/salida para hacer parpadear un LED</span><span class="sxs-lookup"><span data-stu-id="47a04-131">Learn to use General Purpose Input/Output to blink an LED</span></span>](../tutorials/blink-led.md)
+> [<span data-ttu-id="d55c2-131">Aprenda a usar De uso general entrada/salida para hacer parpadear un LED</span><span class="sxs-lookup"><span data-stu-id="d55c2-131">Learn to use General Purpose Input/Output to blink an LED</span></span>](../tutorials/blink-led.md)
