@@ -2,12 +2,12 @@
 title: 'Declaraciones de importación: palabra clave open'
 description: 'Obtenga información sobre las declaraciones de importación de F # y cómo especifican un módulo o un espacio de nombres a cuyos elementos puede hacer referencia sin usar un nombre completo.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ab208c53809e120bc216c8f8b4d04a322d67cf2f
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 4d3fd159aa4b334e9db0d7f756047470ad9c0829
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94557186"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739690"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Declaraciones de importación: `open` palabra clave
 
@@ -20,7 +20,7 @@ open module-or-namespace-name
 open type type-name
 ```
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 La referencia al código mediante el espacio de nombres completo o la ruta de acceso del módulo cada vez puede crear código que es difícil de escribir, leer y mantener. En su lugar, puede usar la `open` palabra clave para los módulos y espacios de nombres que se usan con frecuencia, de modo que cuando se haga referencia a un miembro de ese módulo o espacio de nombres, se pueda usar la forma abreviada del nombre en lugar del nombre completo. Esta palabra clave es similar a la `using` palabra clave en C#, `using namespace` en Visual C++ y `Imports` en Visual Basic.
 
@@ -39,7 +39,7 @@ El compilador de F # no emite un error o advertencia cuando se producen ambigüe
 ```fsharp
 open List
 open Seq
-printfn "%A" empty
+printfn %"{empty}"
 ```
 
 Por lo tanto, tenga cuidado al abrir módulos o espacios de nombres como `List` o `Seq` que contengan miembros que tengan nombres idénticos; en su lugar, considere la posibilidad de usar los nombres completos. Debe evitar cualquier situación en la que el código dependa del orden de las declaraciones de importación.

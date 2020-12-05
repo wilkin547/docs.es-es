@@ -2,12 +2,12 @@
 title: 'Novedades de F # 5,0-Guía de F #'
 description: 'Obtenga información general sobre las nuevas características disponibles en F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: dd954fac31b008beab37cd6c1f06b1d41c5d5004
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96438010"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740190"
 ---
 # <a name="whats-new-in-f-50"></a>Novedades de F# 5.0
 
@@ -30,7 +30,7 @@ open Newtonsoft.Json
 
 let o = {| X = 2; Y = "Hello" |}
 
-printfn "%s" (JsonConvert.SerializeObject o)
+printfn $"{JsonConvert.SerializeObject o}"
 ```
 
 También puede proporcionar una versión explícita después del nombre del paquete como se indica a continuación:
@@ -50,8 +50,8 @@ open FParsec
 
 let test p str =
     match run p str with
-    | Success(result, _, _)   -> printfn "Success: %A" result
-    | Failure(errorMsg, _, _) -> printfn "Failure: %s" errorMsg
+    | Success(result, _, _)   -> printfn $"Success: {result}"
+    | Failure(errorMsg, _, _) -> printfn $"Failure: {errorMsg}"
 
 test pfloat "1.234"
 ```
@@ -123,9 +123,9 @@ let lookupMonth month =
 
     months.[month-1]
 
-printfn "%s" (lookupMonth 12)
-printfn "%s" (lookupMonth 1)
-printfn "%s" (lookupMonth 13)
+printfn $"{lookupMonth 12}"
+printfn $"{lookupMonth 1}"
+printfn $"{lookupMonth 13}"
 ```
 
 La última línea producirá una excepción y "Month" se mostrará en el mensaje de error.
@@ -136,9 +136,9 @@ Puede tomar un nombre de casi todas las construcciones de F #:
 module M =
     let f x = nameof x
 
-printfn "%s" (M.f 12)
-printfn "%s" (nameof M)
-printfn "%s" (nameof M.f)
+printfn $"{M.f 12}"
+printfn $"{nameof M}"
+printfn $"{nameof M.f}"
 ```
 
 Tres adiciones finales son cambios en el funcionamiento de los operadores: la adición del `nameof<'type-parameter>` formulario para los parámetros de tipo genérico y la capacidad de usar `nameof` como patrón en una expresión de coincidencia de patrones.
@@ -199,7 +199,7 @@ module M =
 // Open only the type inside the module
 open type M.DU
 
-printfn "%A" A
+printfn $"{A}"
 ```
 
 A diferencia de C#, cuando se trabaja `open type` con dos tipos que exponen un miembro con el mismo nombre, el miembro del último tipo que se va a `open` cambiar de nombre prevalece sobre el otro. Esto es coherente con la semántica de F # en torno a la sombra que ya existe.
@@ -285,7 +285,7 @@ let inline negate x = -x
 <@ negate 1.0 @>  |> eval
 ```
 
-La restricción generada por la `inline` función se conserva en la expresión de código delimitada. `negate`Ahora se puede evaluar el formulario entrecomillado de la función.
+La restricción generada por la `inline` función se conserva en la expresión de código delimitada. `negate`Ahora se puede evaluar el formulario quotated de la función.
 
 Esta característica implementa [F # RFC FS-1071](https://github.com/fsharp/fslang-design/blob/master/FSharp-5.0/FS-1071-witness-passing-quotations.md).
 
@@ -324,8 +324,8 @@ let run r1 r2 r3 =
         }
 
     match res1 with
-    | Ok x -> printfn "%s is: %d" (nameof res1) x
-    | Error e -> printfn "%s is: %s" (nameof res1) e
+    | Ok x -> printfn $"{nameof res1} is: %d{x}"
+    | Error e -> printfn $"{nameof res1} is: {e}"
 
 let printApplicatives () =
     let r1 = Ok 2
@@ -394,11 +394,11 @@ type MyType() =
     interface MyDim
 
 let md = MyType() :> MyDim
-printfn "DIM from C#: %d" md.Z
+printfn $"DIM from C#: %d{md.Z}"
 
 // You can also implement it via an object expression
 let md' = { new MyDim }
-printfn "DIM from C# but via Object Expression: %d" md'.Z
+printfn $"DIM from C# but via Object Expression: %d{md'.Z}"
 ```
 
 Esto le permite aprovechar de forma segura el código C# y los componentes .NET escritos en C# moderno cuando esperan que los usuarios puedan usar una implementación predeterminada.
@@ -466,7 +466,7 @@ type Span<'T> with
 
 let printSpan (sp: Span<int>) =
     let arr = sp.ToArray()
-    printfn "%A" arr
+    printfn $"{arr}"
 
 let run () =
     let sp = [| 1; 2; 3; 4; 5 |].AsSpan()

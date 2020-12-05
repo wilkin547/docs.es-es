@@ -8,16 +8,19 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: ca3a9cb914befbc8e0982070b818b27ee3143793
-ms.sourcegitcommit: b1442669f1982d3a1cb18ea35b5acfb0fc7d93e4
+ms.openlocfilehash: 8efac4d5e3fddcb9fdc6e08bcc933f2776420ced
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "96594635"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739979"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
-Los analizadores de .NET Compiler Platform (Roslyn) inspeccionan el código de C# o Visual Basic para supervisar la calidad del código y verificar si contiene problemas de estilo. A partir de .NET 5.0, estos analizadores se incluyen con el SDK de .NET. (Anteriormente, ha instalado analizadores de calidad de código como un [paquete NuGet](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers)y los analizadores de estilo de código se instalaron con Visual Studio).
+Los analizadores de .NET Compiler Platform (Roslyn) inspeccionan el código de C# o Visual Basic para supervisar la calidad del código y verificar si contiene problemas de estilo. A partir de .NET 5.0, estos analizadores se incluyen con el SDK de .NET. Si no desea pasar al SDK de .NET 5 o si prefiere un modelo basado en paquetes NuGet, los analizadores también están disponibles en el `Microsoft.CodeAnalysis.NetAnalyzers` [paquete Nuget](https://www.nuget.org/packages/Microsoft.CodeAnalysis.NetAnalyzers). Podría preferir un modelo basado en paquetes para las actualizaciones de versión a petición.
+
+> [!NOTE]
+> Los analizadores de .NET son independientes de la plataforma de destino. Es decir, el proyecto no necesita tener como destino una plataforma .NET específica. Los analizadores funcionan para los proyectos que tienen `net5.0` como destino y versiones anteriores de .net, como `netcoreapp` , `netstandard` y `net472` .
 
 - [Análisis de calidad del código (reglas "CAxxxx")](#code-quality-analysis)
 - [Análisis de estilo de código (reglas "IDExxxx")](#code-style-analysis)
@@ -149,7 +152,7 @@ Visual Studio proporciona formas adicionales de suprimir las advertencias de las
 
 Para obtener más información sobre los niveles de gravedad de las reglas, consulte [configurar la gravedad](configuration-options.md#severity-level)de la regla.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de reglas de análisis de calidad de código](quality-rules/index.md)
 - [Referencia de reglas de análisis de estilo de código](style-rules/index.md)

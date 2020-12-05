@@ -1,17 +1,17 @@
 ---
 title: Expresiones de objeto
-description: Aprenda a usar F# expresiones de objeto cuando desea evitar el código adicional y la sobrecarga necesaria para crear un nuevo tipo con nombre.
+description: 'Obtenga información sobre cómo usar las expresiones de objeto de F # cuando desee evitar el código adicional y la sobrecarga necesaria para crear un nuevo tipo con nombre.'
 ms.date: 02/08/2019
-ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a3e40b7833b551eefb95ec62b935acd1ba7b1f9
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666298"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96740307"
 ---
 # <a name="object-expressions"></a>Expresiones de objeto
 
-Un *objeto expresión* es una expresión que crea una nueva instancia de un tipo de objeto anónimo creado dinámicamente que se basa en un tipo base existente, una interfaz o un conjunto de interfaces.
+Una *expresión de objeto* es una expresión que crea una nueva instancia de un tipo de objeto anónimo creado dinámicamente que se basa en un tipo base existente, una interfaz o un conjunto de interfaces.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,15 +30,15 @@ Un *objeto expresión* es una expresión que crea una nueva instancia de un tipo
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, el *typename* representa un tipo de clase existente o un tipo de interfaz. *parámetros de tipo* se describen los parámetros de tipo genérico opcionales. El *argumentos* se usan únicamente para los tipos de clase, que requieren los parámetros del constructor. El *definiciones de miembros* son reemplazos de métodos de clase base o implementaciones de los métodos abstractos de una clase base o una interfaz.
+En la sintaxis anterior, *TypeName* representa un tipo de clase o de interfaz existente. *Type-params* describe los parámetros de tipo genérico opcionales. Los *argumentos* solo se usan para los tipos de clase, que requieren parámetros de constructor. Las *definiciones de miembro* son invalidaciones de métodos de clase base o implementaciones de métodos abstractos de una clase base o una interfaz.
 
-El ejemplo siguiente muestra los distintos tipos de expresiones de objeto.
+En el ejemplo siguiente se muestran varios tipos diferentes de expresiones de objeto.
 
 ```fsharp
 // This object expression specifies a System.Object but overrides the
 // ToString method.
 let obj1 = { new System.Object() with member x.ToString() = "F#" }
-printfn "%A" obj1
+printfn $"{obj1}"
 
 // This object expression implements the IFormattable interface.
 let delimiter(delim1: string, delim2: string, value: string) =
@@ -73,9 +73,9 @@ let implementer() =
         member this.G() = () }
 ```
 
-## <a name="using-object-expressions"></a>Uso de expresiones de objeto
+## <a name="using-object-expressions"></a>Usar expresiones de objeto
 
-Usar expresiones de objeto cuando desea evitar el código adicional y la sobrecarga que se necesita para crear un nuevo tipo con nombre. Si se usan expresiones de objeto para minimizar el número de tipos creados en un programa, puede reducir el número de líneas de código y evitar la proliferación innecesaria de tipos. En lugar de crear muchos tipos simplemente para controlar situaciones específicas, puede usar una expresión de objeto que se personaliza un tipo existente o proporcione una implementación apropiada de una interfaz para el caso en cuestión.
+Las expresiones de objeto se usan cuando se desea evitar el código adicional y la sobrecarga necesaria para crear un nuevo tipo con nombre. Si utiliza expresiones de objeto para minimizar el número de tipos creados en un programa, puede reducir el número de líneas de código y evitar la proliferación innecesaria de tipos. En lugar de crear muchos tipos solo para controlar situaciones específicas, puede usar una expresión de objeto que personalice un tipo existente o proporcione una implementación adecuada de una interfaz para el caso concreto a mano.
 
 ## <a name="see-also"></a>Vea también
 

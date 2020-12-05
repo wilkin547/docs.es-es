@@ -1,21 +1,21 @@
 ---
-title: Información del llamador
+title: Información del agente de llamada
 description: Describe cómo usar los atributos de argumento de información del llamador para obtener información del llamador de un método.
 ms.date: 11/04/2019
-ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 700cde26fbe4e6c48155f88bfc63af59af86cfe2
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976797"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739781"
 ---
-# <a name="caller-information"></a>Información del llamador
+# <a name="caller-information"></a>Información del agente de llamada
 
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.
 
 Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
-|Atributo|Descripción|Type|
+|Atributo|Descripción|Tipo|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|
@@ -35,10 +35,10 @@ type Tracer() =
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
-        Trace.WriteLine(sprintf "Message: %s" message)
-        Trace.WriteLine(sprintf "Member name: %s" memberName)
-        Trace.WriteLine(sprintf "Source file path: %s" path)
-        Trace.WriteLine(sprintf "Source line number: %d" line)
+        Trace.WriteLine(sprintf $"Message: {message}")
+        Trace.WriteLine(sprintf $"Member name: {memberName}")
+        Trace.WriteLine(sprintf $"Source file path: {path}")
+        Trace.WriteLine(sprintf $"Source line number: {line}")
 ```
 
 ## <a name="remarks"></a>Comentarios
@@ -51,10 +51,10 @@ Puede proporcionar explícitamente los argumentos opcionales para controlar la i
 
 ## <a name="member-names"></a>Nombres de miembro
 
-Puede usar el atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) para evitar especificar el nombre de miembro como un argumento `String` para el método llamado. Mediante esta técnica, se evita el problema de que la refactorización de cambio de nombre no cambie los valores de `String`. Esta ventaja es especialmente útil para las siguientes tareas:
+Puede usar el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento para el método llamado. Mediante esta técnica, se evita el problema de que la refactorización de cambio de nombre no cambie los valores `String`. Esta ventaja es especialmente útil para las siguientes tareas:
 
 - Usar el seguimiento y las rutinas de diagnóstico.
-- Implementar la interfaz [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) , debe especificar el nombre de la propiedad como un literal.
+- Implementar la interfaz [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de la propiedad como un literal.
 
 En el gráfico siguiente se muestran los nombres de miembro que se devuelven cuando se usa el atributo CallerMemberName.
 

@@ -6,16 +6,16 @@ ms.author: casoper
 ms.date: 11/13/2020
 ms.topic: quickstart
 ms.prod: dotnet
-ms.openlocfilehash: 09e0c46a08e08a2021a9dffe214d3d62d6fb8ec5
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 2919db55304590f5557aa0cbda50cc4bd6640443
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "96594697"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739535"
 ---
 # <a name="quickstart---use-net-to-drive-a-raspberry-pi-sense-hat"></a>Inicio rápido: uso de .NET para impulsar un sombrero de sentido de Raspberry PI
 
-El [sombrero de detección](https://www.raspberrypi.org/products/sense-hat/) de Raspberry PI <span class="docon docon-navigate-external x-hidden-focus"></span> es un panel complementario para Raspberry PI. El sombrero de detección está equipado con una matriz de LED RGB de 8 × 8, un joystick de cinco botones e incluye los sensores siguientes:
+El [sensor](https://www.raspberrypi.org/products/sense-hat/) de Raspberry PI <span class="docon docon-navigate-external x-hidden-focus"></span> (**H** hardware **a** ttached en **T** OP) es un panel complementario para Raspberry PI. El sombrero de detección está equipado con una matriz de LED RGB de 8 × 8, un joystick de cinco botones e incluye los sensores siguientes:
 
 - Giroscopio
 - Acelerómetro
@@ -52,7 +52,7 @@ Observe el resultado de la consola a medida que se muestran los datos del sensor
 
 ## <a name="get-the-source-code"></a>Obtención del código fuente
 
-El origen de esta guía de inicio rápido está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart). <span class="docon docon-navigate-external x-hidden-focus"></span>
+El origen de esta guía de inicio rápido está [disponible en github](https://github.com/MicrosoftDocs/dotnet-iot-assets/tree/master/quickstarts/SenseHat.Quickstart) <span class="docon docon-navigate-external x-hidden-focus"></span> .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

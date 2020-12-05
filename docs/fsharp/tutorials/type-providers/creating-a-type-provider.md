@@ -2,12 +2,12 @@
 title: 'Tutorial: Creación de un proveedor de tipos'
 description: 'Obtenga información sobre cómo crear sus propios proveedores de tipos de F # en F # 3,0 examinando varios proveedores de tipos simples para ilustrar los conceptos básicos.'
 ms.date: 11/04/2019
-ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 65cb9616f66b5850135dbfcdd9b9a9dad30421de
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810877"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739703"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Tutorial: Creación de un proveedor de tipos
 
@@ -243,7 +243,7 @@ Debe tener en cuenta los puntos siguientes:
 A continuación, agregue la documentación XML al tipo. Esta documentación se demora, es decir, se calcula a petición si el compilador host la necesita.
 
 ```fsharp
-t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
+t.AddXmlDocDelayed (fun () -> $"""This provided type {"Type" + string n}""")
 ```
 
 A continuación, agregue una propiedad estática proporcionada al tipo:
@@ -352,9 +352,9 @@ t.AddMembersDelayed(fun () ->
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
 
               p.AddXmlDocDelayed(fun () ->
-                  sprintf "This is StaticProperty%d on NestedType" i)
+                  $"This is StaticProperty{i} on NestedType")
 
-              p
+              p
       ]
 
     staticPropsInNestedType)
@@ -461,7 +461,7 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-Tenga en cuenta los puntos siguientes:
+Tenga en cuenta los siguientes puntos:
 
 - El tipo estándar Regex representa el tipo parametrizado `RegexTyped`.
 
@@ -527,7 +527,7 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-Tenga en cuenta los puntos siguientes:
+Tenga en cuenta los siguientes puntos:
 
 - El proveedor de tipos toma dos parámetros estáticos: `pattern`, el patrón, que es obligatorio, y `options`, las opciones, que son opcionales (porque se proporciona un valor predeterminado).
 
@@ -581,7 +581,7 @@ for group in r.GetGroupNames() do
         propertyName = group,
         propertyType = typeof<Group>,
         getterCode = fun args -> <@@ ((%%args.[0]:obj) :?> Match).Groups.[group] @@>)
-        prop.AddXmlDoc(sprintf @"Gets the ""%s"" group from this match" group)
+        prop.AddXmlDoc($"""Gets the ""{group}"" group from this match""")
     matchTy.AddMember prop
 ```
 
@@ -764,7 +764,7 @@ De nuevo, el primer paso es considerar qué aspecto debe tener la API. Dado un a
 let info = new MiniCsv<"info.csv">()
 for row in info.Data do
 let time = row.Time
-printfn "%f" (float time)
+printfn $"{float time}"
 ```
 
 En este caso, el compilador debería convertir estas llamadas en algo similar al ejemplo siguiente:
@@ -773,7 +773,7 @@ En este caso, el compilador debería convertir estas llamadas en algo similar al
 let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
-printfn "%f" (float time)
+printfn $"%f{float time}"
 ```
 
 La conversión óptima requerirá que el proveedor de tipos defina un tipo `CsvFile` real en el ensamblado del proveedor de tipos. Los proveedores de tipos a veces se basan en algunos tipos y métodos del asistente para contener la lógica importante. Dado que las medidas se borran en tiempo de ejecución, se puede utilizar `float[]` como el tipo borrado para una fila. El compilador considerará que las distintas columnas contienen distintos tipos de medidas. Por ejemplo, la primera columna de nuestro ejemplo contiene el tipo `float<meter>` y la segunda contiene `float<second>`. Sin embargo, la representación borrada puede seguir siendo bastante simple.

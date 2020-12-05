@@ -2,12 +2,12 @@
 title: Programación asincrónica
 description: 'Obtenga información sobre cómo F # proporciona compatibilidad limpia para asincronía basándose en un modelo de programación de nivel de lenguaje derivado de conceptos básicos de la programación funcional.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811774"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739332"
 ---
 # <a name="async-programming-in-f"></a>Programación asincrónica en F\#
 
@@ -57,7 +57,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -87,7 +87,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]
@@ -119,7 +119,7 @@ let printTotalFileBytes path =
     async {
         let! bytes = File.ReadAllBytesAsync(path) |> Async.AwaitTask
         let fileName = Path.GetFileName(path)
-        printfn "File %s has %d bytes" fileName bytes.Length
+        printfn $"File {fileName} has %d{bytes.Length} bytes"
     }
 
 [<EntryPoint>]

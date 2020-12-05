@@ -2,12 +2,12 @@
 title: Convenciones de código de F#
 description: 'Aprenda instrucciones generales y expresiones al escribir código de F #.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554031"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739907"
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F#
 
@@ -190,9 +190,9 @@ En este caso, se puede producir un error en las tres formas conocidas de retirar
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f" am
-    | InsufficientFunds balance -> printfn "Failed: balance is %f" balance
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O" expiredDate
+    | Success am -> printfn "Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -317,7 +317,7 @@ Las funciones currificadas no etiquetan sus argumentos. Esto tiene implicaciones
 
 ```fsharp
 let func name age =
-    printfn "My name is %s and I am %d years old!" name age
+    printfn "My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -508,7 +508,7 @@ Al realizar una prueba comparativa de estas funciones con una herramienta estad�
 
 #### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>Considere uniones discriminadas de struct cuando el tipo de datos sea pequeño con tasas de asignación elevadas.
 
-Las observaciones anteriores sobre el rendimiento con tuplas y registros de struct también contienen [uniones discriminadas de F #](../language-reference/discriminated-unions.md). Observe el código siguiente:
+Las observaciones anteriores sobre el rendimiento con tuplas y registros de struct también contienen [uniones discriminadas de F #](../language-reference/discriminated-unions.md). Tenga en cuenta el código siguiente:
 
 ```fsharp
     type Name = Name of string
