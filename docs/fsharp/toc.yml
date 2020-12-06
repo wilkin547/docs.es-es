@@ -142,6 +142,8 @@
       href: language-reference/classes.md
     - name: Estructuras
       href: language-reference/structures.md
+    - name: Tipos de valor que aceptan valores NULL
+      href: language-reference/nullable-value-types.md
     - name: Herencia
       href: language-reference/inheritance.md
     - name: Interfaces
