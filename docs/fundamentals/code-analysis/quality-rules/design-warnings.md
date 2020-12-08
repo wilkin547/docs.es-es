@@ -11,12 +11,12 @@ helpviewer_keywords:
 - rules, design
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: c8c7d46b9271e33ab7ce3f989fae95bd57394ccd
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7b49403b1aa3d48008e6f7448ab0ed5a84468373
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "96594425"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851534"
 ---
 # <a name="design-rules"></a>Reglas de diseño
 
@@ -75,3 +75,4 @@ Las reglas de diseño admiten el cumplimiento de las [directrices de diseño de 
 | [CA1068: Los parámetros CancellationToken deben aparecer en último lugar](ca1068.md) | Un método tiene un parámetro CancellationToken que no es el último parámetro. |
 | [CA1069: Los enumeradores no deben tener valores duplicados](ca1069.md) | Una enumeración tiene varios miembros a los que se les asigna explícitamente el mismo valor constante. |
 | [CA1070: No declarar los campos de eventos como virtuales](ca1070.md) | Un [evento similar](../../../csharp/event-pattern.md#defining-and-raising-field-like-events) a un campo se declaró como virtual. |
+| [CA1071: invalide base. Es igual a al implementar IEquatable](ca1071.md) | Un tipo derivado implementa <xref:System.IEquatable%601> , pero no invalida el método de la clase base <xref:System.IEquatable%601.Equals%2A> . |
