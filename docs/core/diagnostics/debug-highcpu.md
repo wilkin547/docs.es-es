@@ -3,12 +3,12 @@ title: 'Depuración del uso elevado de CPU: .NET Core'
 description: Tutorial que le guiará a lo largo del proceso de depuración del uso elevado de CPU en .NET Core.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 91f31f77b54398d2f9816890338955bc9b0852e4
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538714"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437835"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>Depuración del uso elevado de CPU en .NET Core
 
@@ -90,7 +90,7 @@ Con la aplicación web en ejecución, inmediatamente después del inicio, no se 
 Ahora, vuelva a ejecutar el comando [dotnet-counters](dotnet-counters.md). Para supervisar solo `cpu-usage`, especifique `System.Runtime[cpu-usage]` como parte del comando.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 Debería ver un aumento en el uso de CPU, como se muestra a continuación:

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 42d60f919cb6ae0dab262ef9056a7c33c312a911
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e48f2f83b65ef934c7c460d42f05e2f8de04cbd
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726670"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437897"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novedades de .NET Core 3.0
 
@@ -573,5 +573,5 @@ Muchas veces cuando está desarrollando una aplicación, desea utilizar una cone
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Revise los cambios importantes entre .NET Core 2.2 y 3.0.](../compatibility/2.2-3.0.md)
+- [Revise los cambios importantes entre .NET Core 2.2 y 3.0.](../compatibility/3.0.md)
 - [Revise los cambios importantes de .NET Core 3.0 para aplicaciones de Windows Forms.](../compatibility/winforms.md#net-core-30)

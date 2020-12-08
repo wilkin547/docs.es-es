@@ -3,12 +3,12 @@ title: Medición del rendimiento mediante EventCounters en .NET Core
 description: En este tutorial se aprende a medir el rendimiento mediante EventCounters.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 75f6f1469c87eb1fe8a3064a815ec72943771f88
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538571"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437455"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Tutorial: Medición del rendimiento mediante EventCounters en .NET Core
 
@@ -97,7 +97,7 @@ dotnet-counters ps
 Con el identificador de proceso de la salida del comando `dotnet-counters ps`, puede empezar a supervisar el contador de eventos con el siguiente comando `dotnet-counters monitor`:
 
 ```console
-dotnet-counters monitor --process-id 2196 Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters monitor --process-id 2196 --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Mientras se ejecuta el comando `dotnet-counters monitor`, mantenga presionada la tecla <kbd>F5</kbd> en el explorador para iniciar la emisión de solicitudes continuas al punto de conexión `https://localhost:5001/api/values`. Tras unos segundos, detenga al presionar <kbd>q</kbd>.
@@ -118,7 +118,7 @@ Press p to pause, r to resume, q to quit.
 El comando `dotnet-counters monitor` es excelente para la supervisión activa. Pero se recomienda recopilar estas métricas de diagnóstico para el procesamiento y el análisis posteriores. Para ello,use el comando `dotnet-counters collect`. El comando modificador `collect` es similar al comando `monitor`, pero acepta algunos parámetros adicionales. Puede especificar el nombre de archivo de salida y el formato que quiera. En el caso de un archivo JSON denominado *diagnostics.json*, use el siguiente comando:
 
 ```console
-dotnet-counters collect --process-id 2196 --format json -o diagnostics.json Sample.EventCounter.Minimal Microsoft.AspNetCore.Hosting[total-requests,requests-per-second] System.Runtime[cpu-usage]
+dotnet-counters collect --process-id 2196 --format json -o diagnostics.json --counters Sample.EventCounter.Minimal,Microsoft.AspNetCore.Hosting[total-requests,requests-per-second],System.Runtime[cpu-usage]
 ```
 
 Una vez más, mientras se ejecuta el comando, mantenga presionada la tecla <kbd>F5</kbd> en el explorador para iniciar la emisión de solicitudes continuas al punto de conexión `https://localhost:5001/api/values`. Tras unos segundos, detenga al presionar <kbd>q</kbd>. Se escribe el archivo *diagnostics.json*. Pero no se aplica sangría al archivo JSON escrito; para mejorar la legibilidad, la sangría se aplica aquí.

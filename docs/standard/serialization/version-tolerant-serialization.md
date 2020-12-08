@@ -14,12 +14,12 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: e7c4d6ca4c72390c3e0803502aa9c1a675e02345
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 26612c5b0591efa61fcd476733aee2b219d67c62
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282422"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438168"
 ---
 # <a name="version-tolerant-serialization"></a>Serialización tolerante a versiones
 
@@ -28,7 +28,7 @@ En las versiones anteriores de .NET Framework, la creación de tipos serializab
 - Las versiones anteriores de una aplicación produciría excepciones en caso de solicitar la deserialización de las nuevas versiones del tipo anterior.
 - Las versiones más recientes de una aplicación producirían las excepciones al deserializar versiones anteriores de un tipo con datos que faltan.
 
-La serialización tolerante a versiones (VTS) es un conjunto de características que facilita, con el tiempo, modificar los tipos serializables. Específicamente, las características VTS están habilitadas para las clases a las que se ha aplicado el atributo <xref:System.SerializableAttribute>, incluidos los tipos genéricos. VTS posibilita el agregar los nuevos campos a esas clases sin interrumpir la compatibilidad con otras versiones del tipo. Para obtener una aplicación de ejemplo en funcionamiento, vea [Ejemplo de tecnología de serialización tolerante a versiones](basic-serialization-technology-sample.md).
+La serialización tolerante a versiones (VTS) es un conjunto de características que facilita, con el tiempo, modificar los tipos serializables. Específicamente, las características VTS están habilitadas para las clases a las que se ha aplicado el atributo <xref:System.SerializableAttribute>, incluidos los tipos genéricos. VTS posibilita el agregar los nuevos campos a esas clases sin interrumpir la compatibilidad con otras versiones del tipo.
 
 Las características VTS están habilitadas al utilizar <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Además, todas las características, excepto la tolerancia de datos extraños, están habilitadas también al utilizar <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Para más información sobre el uso de estas clases para la serialización, vea [Serialización binaria](binary-serialization.md).
 

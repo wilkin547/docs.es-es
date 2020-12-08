@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 3af08b5a92c61f29a3700a3417043170f41407bc
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 6a3f61525ca86afc9ee71d56cbc9450862760ba4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916155"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599517"
 ---
 # <a name="tutorial-create-a-net-class-library-using-visual-studio"></a>Tutorial: Creación de una biblioteca de clases de .NET con Visual Studio
 
@@ -126,6 +126,7 @@ En un principio, el nuevo proyecto de aplicación de consola no tiene acceso a l
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [Desarrollo de bibliotecas con la CLI de .NET](libraries.md)
+* [Versiones de .NET Standard y las plataformas que admiten](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

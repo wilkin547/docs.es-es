@@ -3,12 +3,12 @@ title: Error SYSLIB0002
 description: Obtenga información sobre la obsolescencia que genera el error en tiempo de compilación SYSLIB0002.
 ms.topic: reference
 ms.date: 10/20/2020
-ms.openlocfilehash: 53eb51d5e525c463e5698710bdb6fa0c0907e43c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: 36ecde3c52845a6594c4d04e167df48142038654
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440782"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437505"
 ---
 # <a name="syslib0002-principalpermissionattribute-is-obsolete"></a>SYSLIB0002: PrincipalPermissionAttribute está obsoleto
 
@@ -64,4 +64,4 @@ A diferencia de otras advertencias de obsolescencia, el error no se puede suprim
 
 ## <a name="see-also"></a>Vea también
 
-- [PrincipalPermissionAttribute está obsoleto como error](3.1-5.0.md#principalpermissionattribute-is-obsolete-as-error)
+- [PrincipalPermissionAttribute está obsoleto como error](core-libraries/5.0/principalpermissionattribute-obsolete.md)
