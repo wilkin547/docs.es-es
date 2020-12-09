@@ -367,6 +367,8 @@ items:
             href: ../core/additional-tools/index.md
           - name: Herramienta de desinstalación de .NET
             href: ../core/additional-tools/uninstall-tool.md
+          - name: Herramienta de instalación de .NET para autores de extensiones
+            href: ../core/additional-tools/vscode-dotnet-runtime.md
           - name: Generación de certificados autofirmados
             href: ../core/additional-tools/self-signed-certificates-guide.md
           - name: Proveedor de WCF Web Service Reference
@@ -1645,6 +1647,8 @@ items:
                 displayName: binary serialization
               - name: Guía de seguridad de BinaryFormatter
                 href: ../standard/serialization/binaryformatter-security-guide.md
+              - name: Origen de eventos de BinaryFormatter
+                href: ../standard/serialization/binaryformatter-event-source.md
               - name: Conceptos de serialización
                 href: ../standard/serialization/serialization-concepts.md
               - name: Serialización básica
