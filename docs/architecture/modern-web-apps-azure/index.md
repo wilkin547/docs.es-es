@@ -3,19 +3,21 @@ title: Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 description: Es una guía en la que se proporcionan instrucciones de un extremo a otro sobre cómo compilar aplicaciones web monolíticas con ASP.NET Core y Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 5/25/2020
-ms.openlocfilehash: 7be03ea8edb763096b0684a62e71826f1cfcd42f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 12/07/2020
+ms.openlocfilehash: 90d092b2269315e5b6734430e82cc7211324479b
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284460"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851300"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Diseño de aplicaciones web modernas con ASP.NET Core y Azure
 
 ![Imagen de portada de la guía Diseño de aplicaciones web modernas.](./media/index/web-application-guide-cover-image.png)
 
-**EDICIÓN v3.1**: actualizada a ASP.NET Core 3.1
+**EDICIÓN v5.0**: actualizada a ASP.NET Core 5.0
+
+Consulte el [registro de cambios](https://aka.ms/aspnet-ebook-changelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
 
 PUBLICADO POR
 
@@ -59,7 +61,7 @@ Editores:
 
 ## <a name="introduction"></a>Introducción
 
-.NET Core y ASP.NET Core ofrecen varias ventajas con respecto al desarrollo tradicional con .NET. Debe usar .NET Core para las aplicaciones de servidor si algunos o todos los elementos siguientes son importantes para el éxito de su aplicación:
+.NET 5 y ASP.NET Core ofrecen varias ventajas con respecto al desarrollo tradicional con .NET. Debe usar .NET 5 para las aplicaciones de servidor si algunos o todos los elementos siguientes son importantes para el éxito de su aplicación:
 
 - Compatibilidad entre plataformas.
 
@@ -71,7 +73,7 @@ Editores:
 
 - Control de versiones en paralelo de versiones de .NET por aplicación en el mismo servidor.
 
-Las aplicaciones tradicionales de .NET son compatibles con muchos de estos requisitos, pero ASP.NET Core y .NET Core se han optimizado para ofrecer una compatibilidad mejorada para los escenarios anteriores.
+Las aplicaciones tradicionales de .NET son compatibles con muchos de estos requisitos, pero ASP.NET Core y .NET 5 se han optimizado para ofrecer una compatibilidad mejorada para los escenarios anteriores.
 
 Cada vez más organizaciones deciden hospedar sus aplicaciones web en la nube con servicios como Microsoft Azure. Considere la posibilidad de hospedar su aplicación en la nube si los siguientes elementos son importantes para la aplicación o la organización:
 
@@ -89,7 +91,7 @@ La compilación de aplicaciones web con ASP.NET Core, hospedadas en Azure, ofrec
 
 ## <a name="version"></a>Versión
 
-Esta guía se ha revisado para abarcar la versión **.NET Core 3.1** junto con muchas actualizaciones adicionales relacionadas con la misma "ola" de tecnologías (es decir, Azure y otras tecnologías de terceros) que coincidan en el tiempo con la versión de .NET Core 3.1. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **3.1**.
+Esta guía se ha revisado para abarcar la versión **.NET 5.0** junto con muchas actualizaciones adicionales relacionadas con la misma "ola" de tecnologías (es decir, Azure y otras tecnologías de terceros) que coincidan en el tiempo con la versión de .NET 5.0. Este es el motivo por el que la versión del libro se ha actualizado también a la versión **5.0**.
 
 ## <a name="purpose"></a>Propósito
 
@@ -118,7 +120,7 @@ No dude en reenviar esta guía a su equipo para ayudarlo a garantizar una compre
 
 ## <a name="references"></a>Referencias
 
-- **Selección entre .NET Core y .NET Framework para aplicaciones de servidor**  
+- **Elección entre .NET 5 y .NET Framework para aplicaciones de servidor**  
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
