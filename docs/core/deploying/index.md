@@ -2,12 +2,12 @@
 title: Publicación de aplicaciones
 description: Obtenga más información sobre las formas de publicar una aplicación de .NET Core. .NET Core puede publicar aplicaciones específicas de la plataforma o multiplataforma. Puede publicar una aplicación como independiente o como dependiente de la plataforma. Cada modo afecta a la forma en la que un usuario ejecuta la aplicación.
 ms.date: 04/01/2020
-ms.openlocfilehash: 27206065c899e41a44685f72cfb35ae57986aa4c
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.openlocfilehash: 03d53c8b5184d7276a69a1058d6b1b2f1e62dc81
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654677"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599582"
 ---
 # <a name="net-core-application-publishing-overview"></a>Información general sobre la publicación de aplicaciones de .NET Core
 
@@ -67,7 +67,7 @@ La publicación de una aplicación como dependiente de la plataforma genera un [
 
 El archivo binario multiplataforma de la aplicación se puede ejecutar con el comando `dotnet <filename.dll>` en cualquier plataforma. Si la aplicación usa un paquete NuGet que tenga implementaciones específicas de la plataforma, se copiarán todas las dependencias de la plataforma en la carpeta de publicación junto con la aplicación.
 
-Puede crear un archivo ejecutable para una plataforma específica pasando los parámetros `-r <RID> --self-contained false` al comando [`dotnet publish`](../tools/dotnet-publish.md). Si se omite el parámetro `-r`, se creará un archivo ejecutable para la plataforma actual. Los paquetes NuGet que tengan dependencias específicas de la plataforma para la plataforma de destino se copiarán en la carpeta de publicación.
+Puede crear un archivo ejecutable para una plataforma específica pasando los parámetros `-r <RID> --self-contained false` al comando [`dotnet publish`](../tools/dotnet-publish.md). Si se omite el parámetro `-r`, se creará un archivo ejecutable para la plataforma actual. Los paquetes NuGet que tengan dependencias específicas de la plataforma para la plataforma de destino se copiarán en la carpeta de publicación. Si no necesita un ejecutable específico de la plataforma, puede especificar `<UseAppHost>False</UseAppHost>` en el archivo de proyecto. Para obtener más información, consulte la [Referencia de MSBuild para proyectos de SDK de .NET](../project-sdk/msbuild-props.md#useapphost).
 
 ### <a name="advantages"></a>Ventajas
 
