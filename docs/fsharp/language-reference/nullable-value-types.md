@@ -1,13 +1,13 @@
 ---
 title: Tipos de valor que aceptan valores NULL
-description: 'Aprenda a usar tipos de valor que aceptan valores NULL, una manera de representar un tipo de valor que también puede ser null, en F #.'
+description: 'Aprenda a usar tipos de valor que aceptan valores NULL, una manera de representar tipos de valor que también pueden ser null en F #.'
 ms.date: 11/19/2020
-ms.openlocfilehash: da0cd85bd651db81ba98c02a9db31d92dc52a8c6
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: e28cbfc57c5631573f46ac36462517cf011e96d2
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740435"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009643"
 ---
 # <a name="nullable-value-types"></a>Tipos de valor que aceptan valores NULL
 
@@ -62,7 +62,7 @@ Esto se debe `Nullable<'T>` `null` a que no tiene un valor adecuado.
 
 ## <a name="pass-and-assign-to-members"></a>Pasar y asignar a miembros
 
-Una diferencia clave entre trabajar con miembros y valores de F # es que los tipos de valor que aceptan valores NULL se pueden inferir implícitamente al trabajar con miembros. Considere el método folling que toma un tipo de valor que acepta valores NULL como entrada:
+Una diferencia clave entre trabajar con miembros y valores de F # es que los tipos de valor que aceptan valores NULL se pueden inferir implícitamente al trabajar con miembros. Considere el siguiente método que toma un tipo de valor que acepta valores NULL como entrada:
 
 ```fsharp
 type C() =
@@ -74,7 +74,7 @@ c.M(12)
 c.NVT <- 12
 ```
 
-En el ejemplo anterior, puede pasar `12` al método `M` . También puede asignar `12` a la propiedad auto `NVT` . El compilador de F # convertirá implícitamente una llamada o asignación como esta cuando el tipo de destino coincida con la entrada, si la entrada se puede construir como un tipo de valor nullabel.
+En el ejemplo anterior, puede pasar `12` al método `M` . También puede asignar `12` a la propiedad auto `NVT` . Si la entrada se puede construir como un tipo de valor que acepta valores NULL y coincide con el tipo de destino, el compilador de F # convertirá implícitamente dichas llamadas o asignaciones.
 
 ## <a name="examine-a-nullable-value-type-instance"></a>Examinar una instancia de tipo de valor que acepta valores NULL
 

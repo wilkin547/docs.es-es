@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 657975742c3efc2985264fe16cb316357b959e73
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851821"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009851"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
@@ -40,7 +40,7 @@ Las reglas de *análisis de calidad de código* ("CAxxxx") inspeccionan el códi
 
 Las siguientes reglas están habilitadas de forma predeterminada en .NET 5,0.
 
-| Id. de diagnóstico | Category | severity | Descripción |
+| Id. de diagnóstico | Category | Gravedad | Descripción |
 | - | - | - | - |
 | [CA1416](/visualstudio/code-quality/ca1416) | Interoperabilidad | Advertencia | Analizador de compatibilidad de plataformas |
 | [CA1417](/visualstudio/code-quality/ca1417) | Interoperabilidad | Advertencia | No usar `OutAttribute` en parámetros de cadena para P/Invoke |
@@ -60,7 +60,7 @@ Puede cambiar la gravedad de estas reglas para deshabilitarlas o elevarlas a err
 
 El *modo de análisis* hace referencia a una configuración de análisis de código predefinida en la que ninguna, algunas o todas las reglas están habilitadas. En el modo de análisis predeterminado, solo se habilita un pequeño número de reglas [como advertencias de compilación](#enabled-rules). Puede cambiar el modo de análisis del proyecto estableciendo la propiedad [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) en el archivo de proyecto. Los valores permitidos son:
 
-| Value | Descripción |
+| Valor | Descripción |
 | - | - |
 | `AllDisabledByDefault` | Este es el modo más conservador. Todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](configuration-options.md) de forma selectiva reglas individuales para habilitarlas.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | Este es el modo más intenso. Todas las reglas se habilitan como advertencias de compilación. Puede [rechazar](configuration-options.md) selectivamente las reglas individuales para deshabilitarlas.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -101,7 +101,7 @@ De forma predeterminada, obtendrá las reglas de análisis de código más recie
 
 ## <a name="code-style-analysis"></a>Análisis de estilo de código
 
-Las reglas de *análisis de estilo de código* ("IDExxxx") permiten definir y mantener un estilo de código coherente en el código base. La configuración de habilitación predeterminada es:
+Las reglas de *análisis de estilo de código* ("IDExxxx") le permiten definir y mantener un estilo de código coherente en el código base. La configuración de habilitación predeterminada es:
 
 - Compilación de línea de comandos: el análisis de estilo de código está deshabilitado de forma predeterminada para todos los proyectos de .NET en compilaciones de línea de comandos.
 - Visual Studio: el análisis de estilo de código está habilitado, de forma predeterminada, para todos los proyectos de .NET dentro de Visual Studio como [acciones rápidas de refactorización de código](/visualstudio/ide/code-generation-in-visual-studio).
@@ -110,10 +110,9 @@ A partir de .NET 5,0, puede habilitar el análisis de estilo de código en la co
 
 Para obtener una lista completa de las reglas de análisis de estilo de código, vea [reglas de estilo de código](style-rules/index.md).
 
-> [!NOTE]
-> La característica de análisis de estilo de código es experimental y puede cambiar entre las versiones .NET 5 y .NET 6.
+### <a name="enable-on-build"></a>Habilitar al compilar
 
-Pasos para habilitar el análisis de estilo de código en la compilación:
+Siga estos pasos para habilitar el análisis de estilo de código en la compilación:
 
 1. Establezca la propiedad de MSBuild [EnforceCodeStyleInBuild](../../core/project-sdk/msbuild-props.md#enforcecodestyleinbuild) en `true` .
 
@@ -136,6 +135,9 @@ Pasos para habilitar el análisis de estilo de código en la compilación:
    # IDE0040: Accessibility modifiers required (disabled on build)
    dotnet_diagnostic.IDE0040.severity = silent
    ```
+
+> [!NOTE]
+> La característica de análisis de estilo de código es experimental y puede cambiar entre las versiones .NET 5 y .NET 6.
 
 ## <a name="suppress-a-warning"></a>Suprimir una advertencia
 
