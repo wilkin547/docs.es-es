@@ -1,21 +1,21 @@
 ---
-title: Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio para Mac
-description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET Core. Compruebe que la biblioteca de clases de .NET Core funciona correctamente con pruebas unitarias.
-ms.date: 06/08/2020
-ms.openlocfilehash: 3adcddc96abf77012f89a28c1cf60ea57ae506a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+title: Prueba de una biblioteca de clases de .NET con Visual Studio para Mac
+description: Cree un proyecto de prueba unitaria para una biblioteca de clases de .NET. Compruebe que la biblioteca de clases de .NET funciona correctamente con pruebas unitarias.
+ms.date: 11/18/2020
+ms.openlocfilehash: 02d5aa74258ec15c5447b23246a3c7e9c61a6760
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91180535"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599531"
 ---
-# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Prueba de una biblioteca de clases .NET Standard con .NET Core mediante Visual Studio
+# <a name="test-a-net-class-library-using-visual-studio"></a>Prueba de una biblioteca de clases de .NET con Visual Studio
 
 En este tutorial se muestra cómo automatizar las pruebas unitarias mediante la adición de un proyecto de prueba a una solución.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca .NET Standard con Visual Studio para Mac](library-with-visual-studio-mac.md).
+- Este tutorial funciona con la solución que se crea en [Creación de una biblioteca de clases de .NET con Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 ## <a name="create-a-unit-test-project"></a>Crear un proyecto de prueba unitaria
 
@@ -23,19 +23,19 @@ Las pruebas unitarias proporcionan pruebas de software automatizadas durante el 
 
 1. Inicie Visual Studio para Mac:
 
-1. Abra la solución `ClassLibraryProjects` que creó en [Creación de una biblioteca .NET Standard con Visual Studio para Mac](library-with-visual-studio-mac.md).
+1. Abra la solución `ClassLibraryProjects` que ha creado en [Creación de una biblioteca de clases de .NET con Visual Studio para Mac](library-with-visual-studio-mac.md).
 
 1. En el panel **Solución**, presione <kbd>Ctrl</kbd>, haga clic en la solución `ClassLibraryProjects` y seleccione **Agregar** > **Nuevo proyecto**.
 
 1. En el cuadro de diálogo **Nuevo proyecto**, seleccione **Pruebas** en el nodo **Web and Console** (Web y consola). Seleccione el **proyecto MSTest** y, luego, **Siguiente**.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba":::
 
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest" y seleccione **Crear**.
+1. Seleccione **.NET 5.0** como **Marco de destino** y, a continuación, elija **Siguiente**.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
+1. Asigne al nuevo proyecto el nombre "StringLibraryTest" y seleccione **Crear**.
 
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac en el que se proporciona el nombre del proyecto":::
 
    Visual Studio crea un archivo de clase con el código siguiente:
 
@@ -71,9 +71,7 @@ Para que el proyecto de prueba funcione con la clase `StringLibrary`, agregue un
 
 1. En el cuadro de diálogo **Referencias**, seleccione el proyecto **StringLibrary**. Seleccione **Aceptar**.
 
-      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Cuadro de diálogo Editar referencias de Visual Studio para Mac":::
 
 ## <a name="add-and-run-unit-test-methods"></a>Adición y ejecución de métodos de prueba unitaria
 
@@ -106,9 +104,7 @@ Para crear los métodos de prueba:
 
 1. En la barra de menús, seleccione **Archivo** > **Guardar como**. En el cuadro de diálogo, asegúrese de que **Codificación** esté establecida en **Unicode (UTF-8)** .
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Cuadro de diálogo Guardar archivo como de Visual Studio":::
 
 1. Cuando se le pregunte si quiere reemplazar el archivo existente, seleccione **Reemplazar**.
 
@@ -118,17 +114,13 @@ Para crear los métodos de prueba:
 
 1. Haga clic en el icono **Acoplar** para mantener abierto el panel.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Icono de acoplamiento del panel Pruebas unitarias de Visual Studio para Mac":::
 
 1. Haga clic en el botón **Ejecutar todas**.
 
    Todas las pruebas se superan.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Prueba superada esperada de Visual Studio para Mac":::
 
 ## <a name="handle-test-failures"></a>Administración de errores de prueba
 
@@ -145,17 +137,15 @@ Si está realizando el desarrollo controlado por pruebas (TDD), escribirá las p
 
    Esta vez, en la ventana **Explorador de pruebas** se indica que dos pruebas se han realizado correctamente y que una ha finalizado con errores.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="Ventana Explorador de pruebas con pruebas no superadas":::
 
 1. Presione <kbd>Ctrl</kbd> y haga clic en la prueba con errores, `TestDoesNotStartWithUpper`, y seleccione **Mostrar el panel de resultados** en el menú contextual.
 
    El panel **Resultados** muestra el mensaje generado por la aserción: "Error de Assert.IsFalse. Se esperaba para "Error": false; real: True". Debido al error, no se probaron todas las cadenas de la matriz después de "Error".
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="Ventana del Explorador de pruebas que muestra el error de aserción IsFalse":::
 
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest" que agregó en el paso 1. Vuelva a ejecutar la prueba y se superarán las pruebas.
+1. Quite la cadena "Error" que agregó en el paso 1. Vuelva a ejecutar la prueba y se superarán las pruebas.
 
 ## <a name="test-the-release-version-of-the-library"></a>Prueba de la versión de la biblioteca
 
@@ -165,15 +155,11 @@ Para probar la compilación de versión:
 
 1. En la barra de herramientas de Visual Studio, cambie la configuración de compilación de **Depurar** a **Versión**.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Barra de herramientas de Visual Studio con la compilación de versión resaltada":::
 
 1. En el panel **Solución**, presione <kbd>Ctrl</kbd> y haga clic en el proyecto **StringLibrary** y seleccione **Compilación** en el menú contextual para volver a compilar la biblioteca.
 
-   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="Cuadro de diálogo Nuevo proyecto de Visual Studio para Mac que crea un proyecto de prueba&quot;:::
-
-1. Seleccione **.NET Core 3.1**. Asigne al nuevo proyecto el nombre &quot;StringLibraryTest":::
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="Menú contextual de StringLibrary con el comando Compilar":::
 
 1. Ejecute de nuevo las pruebas unitarias.
 
@@ -181,13 +167,13 @@ Para probar la compilación de versión:
 
 ## <a name="debug-tests"></a>Depuración de pruebas
 
-Si usa Visual Studio para Mac como IDE, puede emplear el mismo proceso que se muestra en [Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio para Mac](debugging-with-visual-studio-mac.md) para depurar el código mediante el proyecto de prueba unitaria. En lugar de iniciar el proyecto de aplicación *ShowCase*, presione <kbd>Ctrl</kbd> y haga clic en el proyecto **StringLibraryTests** y seleccione **Iniciar depuración del proyecto** en el menú contextual.
+Si usa Visual Studio para Mac como IDE, puede emplear el mismo proceso que se muestra en [Tutorial: Depuración de una aplicación de consola de .NET con Visual Studio para Mac](debugging-with-visual-studio-mac.md) para depurar el código mediante el proyecto de prueba unitaria. En lugar de iniciar el proyecto de aplicación *ShowCase*, presione <kbd>Ctrl</kbd> y haga clic en el proyecto **StringLibraryTests** y seleccione **Iniciar depuración del proyecto** en el menú contextual.
 
 Visual Studio inicia el proyecto de prueba con el depurador asociado. La ejecución se detendrá en cualquier punto de interrupción que haya agregado al proyecto de prueba o al código de la biblioteca subyacente.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Pruebas unitarias en .NET Core y .NET Standard](../testing/index.md)
+* [Pruebas unitarias en .NET](../testing/index.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -204,4 +190,4 @@ Si publica una biblioteca como un paquete NuGet, otros usuarios pueden instalarl
 No es necesario distribuir una biblioteca como un paquete. Se puede agrupar con una aplicación de consola que la use. Para aprender a publicar una aplicación de consola, vea el tutorial anterior de esta serie:
 
 > [!div class="nextstepaction"]
-> [Publicación de una aplicación de consola de .NET Core con Visual Studio para Mac](publishing-with-visual-studio-mac.md)
+> [Publicación de una aplicación de consola de .NET con Visual Studio para Mac](publishing-with-visual-studio-mac.md)

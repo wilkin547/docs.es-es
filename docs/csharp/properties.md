@@ -3,12 +3,12 @@ title: Propiedades
 description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
 ms.technology: csharp-fundamentals
 ms.date: 04/25/2018
-ms.openlocfilehash: 28050a77e1f7b0ac148bba6112aa79ef4d46b710
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 5306650a10a3de0ff208f7c72c0ba520a527e746
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89358913"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437937"
 ---
 # <a name="properties"></a>Propiedades
 
@@ -129,7 +129,7 @@ Si la versión calculada previamente es válida, es la que se usa. Si otro cambi
 ### <a name="attaching-attributes-to-auto-implemented-properties"></a>Asociar atributos a propiedades implementadas automáticamente
 
 A partir de C# 7.3, los atributos de campo se pueden conectar al campo de respaldo generado por el compilador en las propiedades implementadas automáticamente. Por ejemplo, pensemos en una revisión de la clase `Person` que agrega una propiedad `Id` de entero único.
-Escribimos la propiedad `Id` usando una propiedad implementada automáticamente, pero el diseño no requiere que la propiedad `Id` se conserve. <xref:System.NonSerializedAttribute> solo se puede asociar a campos, no a propiedades. <xref:System.NonSerializedAttribute> se puede asociar al campo de respaldo de la propiedad `Id` usando el especificador `field:` en el atributo, como se muestra en el siguiente ejemplo:
+Escribe la propiedad `Id` usando una propiedad implementada automáticamente, pero el diseño no requiere que la propiedad `Id` se conserve. <xref:System.NonSerializedAttribute> solo se puede asociar a campos, no a propiedades. <xref:System.NonSerializedAttribute> se puede asociar al campo de respaldo de la propiedad `Id` usando el especificador `field:` en el atributo, como se muestra en el siguiente ejemplo:
 
 [!code-csharp[Attaching attributes to a backing field](../../samples/snippets/csharp/properties/Person.cs#14)]
 

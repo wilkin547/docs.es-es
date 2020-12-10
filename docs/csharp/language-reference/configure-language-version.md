@@ -3,12 +3,12 @@ title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo se determina la versión del lenguaje C# en función del proyecto y los motivos de esa decisión. Obtenga información sobre cómo invalidar el valor predeterminado de forma manual.
 ms.custom: updateeachrelease
 ms.date: 08/11/2020
-ms.openlocfilehash: a06aa8812dad6f4b9a9254eef9f7c678c22af860
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: b022b726861bd6ea45b188df44549dc279d34a74
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634510"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96598920"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -41,8 +41,8 @@ El compilador determina un valor predeterminado según estas reglas:
 
 Cuando el proyecto tiene como destino un marco en versión preliminar que tenga una versión de lenguaje preliminar correspondiente, la versión de lenguaje que se usa es la que está en versión preliminar. Puede usar las características más recientes con esa versión preliminar en cualquier entorno, sin que afecte a los proyectos que tienen como destino una versión de .NET Core publicada.
 
-> [!TIP]
-> Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un diagnóstico, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente.
+> [!IMPORTANT]
+> Visual Studio 2017 agregaba una entrada `<LangVersion>latest</LangVersion>` a los archivos de proyecto creados. Eso implicaba el uso de *C# 7.0* cuando esto sucedía. Sin embargo, una vez que se actualiza a Visual Studio 2019, se usa la versión más reciente, sin importar la plataforma de destino. Estos proyectos ahora [invalidan el comportamiento predeterminado](#override-a-default). Debe editar el archivo de proyecto y quitar ese nodo. Después, el proyecto usará la versión del compilador recomendada para la plataforma de destino.
 
 ## <a name="override-a-default"></a>Invalidación de un valor predeterminado
 
@@ -51,6 +51,9 @@ Si debe especificar su versión de C# explícitamente, puede hacerlo de varias m
 - Editar manualmente el [archivo del proyecto](#edit-the-project-file).
 - Establecer la versión del lenguaje [para varios proyectos en un subdirectorio](#configure-multiple-projects).
 - Configurar la opción dl compilador [Reemplace la opción del compilador `-langversion`](compiler-options/langversion-compiler-option.md).
+
+> [!TIP]
+> Para saber qué versión de lenguaje está usando actualmente, incluya `#error version` (con distinción de mayúsculas y minúsculas) en el código. Esto hace que el compilador genere un diagnóstico, CS8304, con un mensaje que contiene la versión del compilador que se usa y la versión del lenguaje seleccionada actualmente.
 
 ### <a name="edit-the-project-file"></a>Edición del archivo del proyecto
 

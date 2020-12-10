@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 71c853b38e56c56d0077d7eb20e36cd83d3cd23c
-ms.sourcegitcommit: 67ebdb695fd017d79d9f1f7f35d145042d5a37f7
+ms.openlocfilehash: 8230dfed11bb4ba21e922827cc1a525ce45ba3e5
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92224315"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599120"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restricciones de tipos de parámetros (Guía de programación de C#)
 
@@ -20,7 +20,7 @@ Las restricciones informan al compilador sobre las capacidades que debe tener un
 
 |Restricción|Descripción|
 |----------------|-----------------|
-|`where T : struct`|El argumento de tipo debe ser un tipo que no acepta valores NULL. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md). Todos los tipos de valor tienen un constructor sin parámetros accesible, por lo que la restricción `struct` implica la restricción `new()` y no se puede combinar con la restricción `new()`. No puede combinar la restricción `struct` con la restricción `unmanaged`.|
+|`where T : struct`|El argumento de tipo debe ser un [tipo de valor](../../language-reference/builtin-types/value-types.md) que no acepta valores NULL. Para más información sobre los tipos de valor que admiten un valor NULL, consulte [Tipos de valor que admiten un valor NULL](../../language-reference/builtin-types/nullable-value-types.md). Todos los tipos de valor tienen un constructor sin parámetros accesible, por lo que la restricción `struct` implica la restricción `new()` y no se puede combinar con la restricción `new()`. No puede combinar la restricción `struct` con la restricción `unmanaged`.|
 |`where T : class`|El argumento de tipo debe ser un tipo de referencia. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz. En un contexto que admite un valor NULL en C# 8.0 o versiones posteriores, `T` debe ser un tipo de referencia que no acepte valores NULL. |
 |`where T : class?`|El argumento de tipo debe ser un tipo de referencia, que acepte o no valores NULL. Esta restricción se aplica también a cualquier clase, interfaz, delegado o tipo de matriz.|
 |`where T : notnull`|El argumento de tipo debe ser un tipo que no acepta valores NULL. El argumento puede ser un tipo de referencia que no acepta valores NULL en C# 8.0 o posterior, o bien un tipo de valor que no acepta valores NULL. |

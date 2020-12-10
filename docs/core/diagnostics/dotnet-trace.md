@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-trace: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta dotnet-trace de la CLI para recopilar seguimientos de .NET de un proceso en ejecución sin el generador de perfiles nativo, mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: d0798e4f703c18c48db47193ac24ec0d13b66ae5
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 6bc5ad449f62ed0080ff6b1f401f1871d90cf5ec
+ms.sourcegitcommit: c6de55556add9f92af17e0f8d1da8f356a19a03d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94829315"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96549337"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
@@ -115,7 +115,13 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--profile <profile-name>`**
 
-  Un conjunto con nombre predefinido de configuraciones de proveedor que permite especificar sucintamente los escenarios de seguimiento comunes.
+  Un conjunto con nombre predefinido de configuraciones de proveedor que permite especificar sucintamente los escenarios de seguimiento comunes. Hay disponibles los perfiles siguientes:
+
+ | Perfil | Descripción |
+ |---------|-------------|
+ |`cpu-sampling`|Resulta útil para realizar el seguimiento del uso de CPU y la información general del entorno de ejecución de .NET. Esta es la opción predeterminada si no se especifica ningún perfil o proveedor.|
+ |`gc-verbose`|Realiza un seguimiento de las recolecciones de elementos no utilizados y las asignaciones de objetos de ejemplo.|
+ |`gc-collect`|Realiza un seguimiento de las recolecciones de elementos no utilizados solo con una sobrecarga muy baja.|
 
 - **`--providers <list-of-comma-separated-providers>`**
 

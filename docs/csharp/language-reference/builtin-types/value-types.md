@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6fb33ad2eb3f6a5e8f6506527f3807f31bf33fdc
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 64c9e9eba2495531cfef8a603d53fb21c95c87a4
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92471656"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599400"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -31,7 +31,7 @@ Si un tipo de valor contiene un miembro de datos de un tipo de referencia, solo 
 > [!NOTE]
 > Para que el código sea menos propenso a errores y más sólido, defina y use tipos de valor inmutables. En este artículo se usan tipos de valor mutables solo con fines de demostración.
 
-## <a name="kinds-of-value-types"></a>Clases de tipos de valor
+## <a name="kinds-of-value-types-and-type-constraints"></a>Clases de tipos de valor y restricciones de tipo
 
 Un tipo de valor puede ser de una de las dos clases siguientes:
 
@@ -39,6 +39,8 @@ Un tipo de valor puede ser de una de las dos clases siguientes:
 - un [tipo de enumeración](enum.md), que se define mediante un conjunto de constantes con nombre y representa una opción o una combinación de opciones.
 
 Un [tipo de valor que admite valores NULL](nullable-value-types.md) `T?` representa todos los valores de su tipo de valor subyacente `T` y un valor [NULL](../keywords/null.md) adicional. No se puede asignar `null` a una variable de un tipo de valor, a menos que sea un tipo de valor que acepte valores NULL.
+
+Puede usar la [restricción `struct`](../../programming-guide/generics/constraints-on-type-parameters.md) para especificar que un parámetro de tipo es un tipo de valor que no acepta valores NULL. Los tipos de estructura y enumeración satisfacen la restricción `struct`. A partir C# 7.3, puede usar `System.Enum` en una restricción de clase base (conocida como la [restricción de enumeración](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)) para especificar que un parámetro de tipo es un tipo de enumeración.
 
 ## <a name="built-in-value-types"></a>Tipos de valor integrados
 

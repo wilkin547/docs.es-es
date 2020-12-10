@@ -2,12 +2,12 @@
 title: Depuración de una aplicación de consola de .NET con Visual Studio Code
 description: Aprenda a depurar una aplicación de consola de .NET con Visual Studio Code.
 ms.date: 05/26/2020
-ms.openlocfilehash: 85095a9e70ee3ff846716ef91239b240d8c42410
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: 7215ed4a93b31ebac313c04708734667148c4e02
+ms.sourcegitcommit: 30fef5b0ed76e334377d28fa8e80159b29353e10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94916234"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96556114"
 ---
 # <a name="tutorial-debug-a-net-console-application-using-visual-studio-code"></a>Tutorial: Depuración de una aplicación de consola de .NET con Visual Studio Code
 
@@ -47,15 +47,7 @@ El punto de interrupción se encuentra después de una llamada al método `Conso
 
 1. Abra *.vscode/launch.json*.
 
-1. Cambie la opción `console` a `integratedTerminal`.
-
-   De:
-
-   ```json
-   "console": "internalConsole",
-   ```
-
-   A:
+1. Cambie la opción `console` de `internalConsole` a `integratedTerminal`:
 
    ```json
    "console": "integratedTerminal",

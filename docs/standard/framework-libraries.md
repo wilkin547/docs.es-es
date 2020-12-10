@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo las bibliotecas proporcionan imple
 author: richlander
 ms.date: 06/20/2016
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: e59f53f2a16dc84709e0b815d3e2b710c903ff60
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 4e71f81b0dd72f4569d8b6b319b9e97491533d28
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827937"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96438204"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
@@ -39,7 +39,7 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 .NET incluye un conjunto de estructuras de datos que son la piedra angular de casi cualquier aplicación .NET. Principalmente se trata de colecciones, pero también incluyen otros tipos.
 
-* <xref:System.Array>: representa una matriz de objetos fuertemente tipados a la que se puede obtener acceso por índice. Tiene un tamaño fijo debido a su construcción.
+* <xref:System.Array>: representa una matriz de objetos fuertemente tipados a la que se puede acceder por el índice. Tiene un tamaño fijo debido a su construcción.
 * <xref:System.Collections.Generic.List%601>: representa una lista de objetos fuertemente tipados a la que se puede obtener acceso por índice. Cambia automáticamente de tamaño según sea necesario.
 * <xref:System.Collections.Generic.Dictionary%602>: representa una colección de valores que se indexan mediante una clave. Se puede obtener acceso a los valores a través de la clave. Cambia automáticamente de tamaño según sea necesario.
 * <xref:System.Uri>: proporciona una representación de objeto de un identificador uniforme de recursos (URI) y un acceso sencillo a las partes del identificador URI.

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 5489c77fa7290bdd1c03e04d8cc777ab772fdce7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7b8c634404cf2f214cc4bee5d754443e9302a723
+ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699635"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "96739521"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (permite valores NULL) (referencia de C#)
 
-Disponible en C# 8.0 y versiones posteriores, el operador `!` de postfijo unario es el operador que permite un valor NULL. En un [contexto de anotación que admite un valor NULL](../../nullable-references.md#nullable-annotation-context) habilitado, se usa el operador que permite un valor NULL para declarar que la expresión `x` de un tipo de referencia no es `null`: `x!`. El operador `!` de prefijo unario es el [operador lógico de negación](boolean-logical-operators.md#logical-negation-operator-).
+Disponible en C# 8.0 y versiones posteriores, el operador `!` de postfijo unario es el operador que permite valores NULL o supresión de valores NULL. En un [contexto de anotación que admite un valor NULL](../../nullable-references.md#nullable-annotation-context) habilitado, se usa el operador que permite un valor NULL para declarar que la expresión `x` de un tipo de referencia no es `null`: `x!`. El operador `!` de prefijo unario es el [operador lógico de negación](boolean-logical-operators.md#logical-negation-operator-).
 
 El operador que permite un valor NULL no tiene ningún efecto en tiempo de ejecución. Solo afecta al análisis de flujo estático del compilador al cambiar el estado NULL de la expresión. En tiempo de ejecución, la expresión `x!` se evalúa en el resultado de la expresión subyacente `x`.
 

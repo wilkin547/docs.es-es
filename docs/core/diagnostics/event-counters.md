@@ -2,12 +2,12 @@
 title: EventCounters de .NET Core
 description: En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 ms.date: 08/07/2020
-ms.openlocfilehash: 212cd6b495785dcd091187f97a1b5e44e5597a4a
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
+ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687647"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96437815"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters de .NET Core
 
@@ -61,10 +61,10 @@ dotnet-counters ps
    1400180 sample-counters C:\sample-counters\bin\Debug\netcoreapp3.1\sample-counters.exe
 ```
 
-Pase el nombre del <xref:System.Diagnostics.Tracing.EventSource> al modificador `counter_list` para iniciar la supervisión del contador:
+Pase el nombre <xref:System.Diagnostics.Tracing.EventSource> a la opción `--counters` para empezar a supervisar el contador:
 
 ```console
-dotnet-counters monitor --process-id 1400180 Sample.EventCounter.Minimal
+dotnet-counters monitor --process-id 1400180 --counters Sample.EventCounter.Minimal
 ```
 
 En el siguiente ejemplo se muestra la salida de la supervisión:

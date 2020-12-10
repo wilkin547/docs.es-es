@@ -9,24 +9,24 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: daf332dae483d75ef27e78dad5ee912734ccdb5f
-ms.sourcegitcommit: 532b03d5bbab764d63356193b04cd2281bc01239
+ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2020
-ms.locfileid: "92526607"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599107"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
-Un *tipo de estructura* (o *tipo struct* ) es un [tipo de valor](value-types.md) que puede encapsular datos y funcionalidad relacionada. Para definir un tipo de estructura se usa la palabra clave `struct`:
+Un *tipo de estructura* (o *tipo struct*) es un [tipo de valor](value-types.md) que puede encapsular datos y funcionalidad relacionada. Para definir un tipo de estructura se usa la palabra clave `struct`:
 
 [!code-csharp[struct example](snippets/shared/StructType.cs#StructExample)]
 
-Los tipos de estructura tienen *semántica de valores* . Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
+Los tipos de estructura tienen *semántica de valores*. Es decir, una variable de un tipo de estructura contiene una instancia del tipo. De forma predeterminada, los valores de variable se copian al asignar, pasar un argumento a un método o devolver el resultado de un método. En el caso de una variable de tipo de estructura, se copia una instancia del tipo. Para más información, vea [Tipos de valor](value-types.md).
 
-Normalmente, los tipos de estructura se usan para diseñar tipos de pequeño tamaño centrados en datos que proporcionan poco o ningún comportamiento. Por ejemplo, en .NET se usan los tipos de estructura para representar un número ([entero](integral-numeric-types.md) y [real](floating-point-numeric-types.md)), un [valor booleano](bool.md), un [caracter Unicode](char.md), una [instancia de tiempo](xref:System.DateTime). Si le interesa el comportamiento de un tipo, considere la posibilidad de definir una [clase](../keywords/class.md). Los tipos de clase tienen *semántica de referencias* . Es decir, una variable de un tipo de clase contiene una referencia a una instancia del tipo, no la propia instancia.
+Normalmente, los tipos de estructura se usan para diseñar tipos de pequeño tamaño centrados en datos que proporcionan poco o ningún comportamiento. Por ejemplo, en .NET se usan los tipos de estructura para representar un número ([entero](integral-numeric-types.md) y [real](floating-point-numeric-types.md)), un [valor booleano](bool.md), un [caracter Unicode](char.md), una [instancia de tiempo](xref:System.DateTime). Si le interesa el comportamiento de un tipo, considere la posibilidad de definir una [clase](../keywords/class.md). Los tipos de clase tienen *semántica de referencias*. Es decir, una variable de un tipo de clase contiene una referencia a una instancia del tipo, no la propia instancia.
 
-Dado que los tipos de estructura tienen semántica del valor, le recomendamos que defina tipos de estructura *inmutables* .
+Dado que los tipos de estructura tienen semántica del valor, le recomendamos que defina tipos de estructura *inmutables*.
 
 ## <a name="readonly-struct"></a>Estructura `readonly`
 
@@ -129,6 +129,10 @@ Para declarar una estructura `ref` como [`readonly`](#readonly-struct), combine 
 [!code-csharp[readonly ref struct](snippets/shared/StructType.cs#ReadonlyRef)]
 
 En .NET, <xref:System.Span%601?displayProperty=nameWithType> y <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> son ejemplos de una estructura `ref`.
+
+## <a name="struct-constraint"></a>Restricción struct
+
+Use también la palabra clave `struct` de la [restricción `struct`](../../programming-guide/generics/constraints-on-type-parameters.md) para especificar que un parámetro de tipo es un tipo de valor que no acepta valores NULL. Los tipos de estructura y [enumeración](enum.md) satisfacen la restricción `struct`.
 
 ## <a name="conversions"></a>Conversiones
 

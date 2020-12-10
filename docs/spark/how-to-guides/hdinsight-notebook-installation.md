@@ -1,21 +1,21 @@
 ---
-title: Instalación de .NET para Apache Spark en cuadernos de Jupyter en clústeres de Azure HDInsight Spark
+title: Instalación de .NET para Apache Spark en cuadernos de Jupyter Notebook en clústeres de Azure HDInsight Spark
 description: Aprenda a instalar .NET para Apache Spark en cuadernos de Jupyter de Azure HDInsight.
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: e2319fec833147ce50c7b94dd8ccc84f552f20d2
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: ff6b3a64c01fb9148d3abe3d04579233d11a4f73
+ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94688285"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96599660"
 ---
-# <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalación de .NET para Apache Spark en cuadernos de Jupyter en clústeres de Azure HDInsight Spark
+# <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Instalación de .NET para Apache Spark en cuadernos de Jupyter Notebook en clústeres de Azure HDInsight Spark
 
-En este artículo se muestra cómo instalar .NET para Apache Spark en cuadernos de Jupyter en clústeres de Azure HDInsight Spark. Puede implementar .NET para Apache Spark en clústeres de Azure HDInsight mediante una combinación de la línea de comandos y Azure Portal (para más información, consulte [Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight](../tutorials/hdinsight-deployment.md)), pero los cuadernos proporcionan una experiencia más interactiva e iterativa.
+En este artículo se muestra cómo instalar .NET para Apache Spark en cuadernos de Jupyter Notebook en clústeres de Azure HDInsight Spark. Puede implementar .NET para Apache Spark en clústeres de Azure HDInsight mediante una combinación de la línea de comandos y Azure Portal (para más información, consulte [Implementación de una aplicación de .NET para Apache Spark en Azure HDInsight](../tutorials/hdinsight-deployment.md)), pero los cuadernos proporcionan una experiencia más interactiva e iterativa.
 
-Los clústeres de Azure HDInsight ya incluyen cuadernos de Jupyter, así que todo lo que tiene que hacer es configurar estos para ejecutar .NET para Apache Spark. Para usar .NET para Apache Spark en los cuadernos de Jupyter, se necesita un REPL de C# para ejecutar el código de C# línea por línea y conservar el estado de ejecución cuando sea necesario. [Try .NET](https://github.com/dotnet/try) se ha integrado como el REPL oficial de .NET.
+Los clústeres de Azure HDInsight ya incluyen cuadernos de Jupyter Notebook, así que todo lo que tiene que hacer es configurar estos para ejecutar .NET para Apache Spark. Para usar .NET para Apache Spark en los cuadernos de Jupyter Notebook, se necesita un REPL de C# para ejecutar el código de C# línea por línea y conservar el estado de ejecución cuando sea necesario. [Try .NET](https://github.com/dotnet/try) se ha integrado como el REPL oficial de .NET.
 
 Para habilitar .NET para Apache Spark mediante la experiencia de Jupyter Notebooks, debe seguir algunos pasos manuales por medio de [Ambari](/azure/hdinsight/hdinsight-hadoop-manage-ambari) y enviar [acciones de script](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux) en el clúster de HDInsight Spark.
 
@@ -121,11 +121,11 @@ Siga las instrucciones de la sección [Detención del servidor de Livy](#stop-th
 
    Cuando se le solicite, seleccione **CONFIRM RESTART ALL** (CONFIRMAR REINICIAR TODO) y, luego, haga clic en **Aceptar** para finalizar.
 
-## <a name="submit-jobs-through-a-jupyter-notebook"></a>Envío de trabajos mediante un cuaderno de Jupyter
+## <a name="submit-jobs-through-a-jupyter-notebook"></a>Envío de trabajos mediante un cuaderno de Jupyter Notebook
 
-Después de finalizar los pasos anteriores, ahora puede enviar sus trabajos de .NET para Apache Spark mediante cuadernos de Jupyter.
+Después de finalizar los pasos anteriores, ahora puede enviar sus trabajos de .NET para Apache Spark mediante cuadernos de Jupyter Notebook.
 
-1. Cree un cuaderno de .NET para Apache Spark. Inicie un cuaderno de Jupyter desde el clúster de HDI en Azure Portal.
+1. Cree un cuaderno de .NET para Apache Spark. Inicie un cuaderno de Jupyter Notebook desde el clúster de HDI en Azure Portal.
 
    ![Inicio de Jupyter Notebook](./media/hdinsight-notebook-installation/launch-notebook.png)
 
