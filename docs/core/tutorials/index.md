@@ -1,19 +1,19 @@
 ---
-title: Tutoriales de .NET Core
-description: Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET Core en Mac, Linux y Windows.
-author: richlander
-ms.date: 09/09/2020
+title: Tutoriales de .NET
+description: Siga los tutoriales para aprender a compilar aplicaciones y bibliotecas de .NET en Mac, Linux y Windows.
+author: tdykstra
+ms.date: 12/07/2020
 titleSuffix: ''
-ms.openlocfilehash: 84c8daa735df0255b0e383244f1abd8db4fe21fe
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: cf466f7ea004199052c1f02f5860668f2bb2ff28
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656163"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009324"
 ---
-# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET Core y el SDK de .NET Core
+# <a name="learn-net-and-the-net-sdk-tools-by-exploring-these-tutorials"></a>Explore estos tutoriales para obtener información sobre las herramientas de .NET y el SDK de .NET.
 
-Los siguientes tutoriales están disponibles para aprender sobre .NET Core.
+En los tutoriales siguientes se muestra cómo desarrollar bibliotecas y aplicaciones de consola para .NET Core y .NET 5, y versiones posteriores. Para otros tipos de aplicaciones, consulte [Tutoriales de introducción a .NET](../../standard/get-started.md).
 
 ## <a name="use-visual-studio"></a>Usar Visual Studio
 
@@ -58,7 +58,3 @@ Elija estos tutoriales si quiere usar Visual Studio Code u otro editor de códi
 - [Creación de plantillas para la CLI](cli-templates-create-item-template.md)
 - [Creación y uso de herramientas para la CLI](../tools/global-tools-how-to-create.md)
 - [Creación de una aplicación con complementos](creating-app-with-plugin-support.md)
-
-## <a name="create-web-apps"></a>Creación de aplicaciones web
-
-Para ver tutoriales sobre el desarrollo de aplicaciones web ASP.NET Core, vea la [documentación de ASP.NET Core](/aspnet/core/).

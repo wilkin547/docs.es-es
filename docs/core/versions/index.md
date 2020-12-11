@@ -1,36 +1,34 @@
 ---
-title: Creación de versiones del entorno de ejecución y el SDK de .NET Core
-description: En este artículo se le enseña cómo se crean versiones del entorno de ejecución y el SDK de .NET Core (parecido al control de versiones semántico).
-ms.date: 06/24/2020
-ms.openlocfilehash: baa3f94947699d21ce7426054359d91f7781b565
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: Creación de versiones del entorno de ejecución y el SDK de .NET
+description: En este artículo se explica cómo crear versiones del entorno de ejecución y el SDK de .NET (parecido al control de versiones semántico).
+ms.date: 12/07/2020
+ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726709"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009311"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
+# <a name="overview-of-how-net-is-versioned"></a>Información general sobre la creación de versiones de .NET
 
-.NET Core se refiere al runtime y el SDK de .NET Core, que contiene las herramientas que necesita para desarrollar aplicaciones. Los SDK de .NET Core están diseñados para funcionar con cualquier versión anteriores del runtime de .NET Core. En este artículo se explican el runtime y la estrategia de la versión del SDK. En el artículo [.NET Standard](../../standard/net-standard.md#net-implementation-support) se ofrece una explicación de los números de versión de .NET Standard.
-
-El runtime y el SDK de .NET Core agregan características a un ritmo diferente; en general, el SDK de .NET Core incluye herramientas actualizadas antes de que el runtime de .NET Core cambie el runtime que se usa en producción.
+El [entorno de ejecución y el SDK de .NET](../introduction.md#sdk-and-runtimes) agregan nuevas características con distintas frecuencias. En general, el SDK se actualiza con más frecuencia que el entorno de ejecución. En este artículo se detallan los números de versión del SDK y el entorno de ejecución.
 
 ## <a name="versioning-details"></a>Detalles de control de versiones
 
-".NET Core 2.1" se refiere al número de versión del runtime de .NET Core. El runtime de .NET Core sigue el esquema de control de versiones "principal/secundaria/revisón", que se basa en el [control de versiones semántico](#semantic-versioning).
+El entorno de ejecución de .NET sigue el esquema de control de versiones "principal/secundaria/revisión", que se basa en el [control de versiones semántico](#semantic-versioning).
 
-El SDK de .NET Core no sigue el esquema de control de versiones semántico. El SDK de .NET Core se publica con mayor rapidez, y sus versiones deben comunicar tanto el runtime alineado como la versión secundaria y las publicaciones de revisiones del propio SDK. Las dos primeras posiciones de la versión del SDK de .NET Core siempre reflejan el runtime de .NET Core con el que se publicó. Cada versión del SDK puede crear aplicaciones tanto para este runtime como para cualquier versión anterior.
+El SDK de .NET no sigue el esquema de control de versiones semántico. El SDK de .NET se publica con mayor rapidez, y sus números de versión deben indicar tanto el entorno de ejecución alineado como la versión secundaria y las publicaciones de revisiones del SDK.
 
-La tercera posición del número de versión del SDK comunica tanto la versión secundaria como el número de revisión. La versión secundaria se multiplica por 100. La versión secundaria 1 y la revisión 2 se representan con 102. Los dos dígitos finales representan el número de revisión. Por ejemplo, la versión de .NET Core 2.2 puede crear versiones como en la tabla siguiente:
+Las dos primeras posiciones del número de versión del SDK de .NET siempre reflejan el entorno de ejecución de .NET con el que se publicó. Cada versión del SDK puede crear aplicaciones tanto para este runtime como para cualquier versión anterior.
 
-| Cambio                | Runtime de .NET Core | SDK de .NET Core (\*) |
+La tercera posición del número de versión del SDK comunica tanto la versión secundaria como el número de revisión. La versión secundaria se multiplica por 100. La versión secundaria 1 y la revisión 2 se representan con 102. Los dos dígitos finales representan el número de revisión. Por ejemplo, esta es una secuencia posible de los números de versión del SDK y el entorno de ejecución:
+
+| Change                | Runtime de .NET      | SDK de .NET (\*)     |
 |-----------------------|-------------------|-------------------|
 | Versión inicial       | 2.2.0             | 2.2.100           |
 | Revisión del SDK             | 2.2.0             | 2.2.101           |
 | Runtime y revisión del SDK | 2.2.1             | 2.2.102           |
 | Cambio de características del SDK    | 2.2.1             | 2.2.200           |
-
-(\*) En este gráfico se usa el entorno de ejecución 2.2 de .NET Core como ejemplo, ya que un artefacto histórico indica que el primer SDK de .NET Core 2.1 es el de la versión 2.1.300. Para obtener más información, consulte [.Selección de la versión de .NET Core](selection.md).
 
 NOTAS:
 
@@ -41,7 +39,7 @@ Puede ver más detalles en la propuesta inicial, que forma parte del repositorio
 
 ## <a name="semantic-versioning"></a>Control de versiones semántico
 
-En cierto modo, el *runtime* de .NET Core sigue el [Versionamiento Semántico (SemVer)](https://semver.org/), que adopta el uso del esquema de control de versiones `MAJOR.MINOR.PATCH` y emplea las distintas partes del número de versión para describir el grado y el tipo de cambio.
+En cierto modo, el *entorno de ejecución* de .NET Core el [Versionamiento Semántico (SemVer)](https://semver.org/), que adopta el uso del esquema de control de versiones `MAJOR.MINOR.PATCH` y emplea las distintas partes del número de versión para describir el grado y el tipo de cambio.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -76,11 +74,11 @@ Cuando hay varios cambios, se incrementa el elemento superior afectado por cambi
 
 ## <a name="version-numbers-in-file-names"></a>Números de versión en los nombres de archivo
 
-Los archivos descargados para .NET Core indican la versión; por ejemplo, `dotnet-sdk-2.1.300-win10-x64.exe`.
+Los archivos descargados para .NET indican la versión; por ejemplo, `dotnet-sdk-2.1.300-win10-x64.exe`.
 
 ### <a name="preview-versions"></a>Versiones preliminares
 
-Las versiones preliminares tienen un elemento `-preview[number]-([build]|"final")` anexado a la versión. Por ejemplo: `2.0.0-preview1-final`.
+Las versiones preliminares tienen un elemento `-preview[number]-([build]|"final")` anexado al número de versión. Por ejemplo: `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versiones de mantenimiento
 
@@ -88,29 +86,17 @@ Cuando se lanza una versión, las ramas de la versión generalmente dejan de pro
 
 ## <a name="relationship-to-net-standard-versions"></a>Relación con versiones de .NET Standard
 
-.NET Standard consta de un ensamblado de referencia de .NET. Hay varias implementaciones específicas de cada plataforma. El ensamblado de referencia contiene la definición de las API de .NET que forman parte de una versión concreta de .NET Standard. Cada implementación cumple el contrato de .NET Standard en una plataforma en cuestión. Puede obtener más información sobre .NET Standard en el artículo [.NET Standard](../../standard/net-standard.md) de la guía de .NET.
+.NET Standard consta de un ensamblado de referencia de .NET. Hay varias implementaciones específicas de cada plataforma. El ensamblado de referencia contiene la definición de las API de .NET que forman parte de una versión concreta de .NET Standard. Cada implementación cumple el contrato de .NET Standard en una plataforma en cuestión.
 
 El ensamblado de referencia de .NET Standard usa el esquema de control de versiones `MAJOR.MINOR`. El nivel `PATCH` no es útil para .NET Standard porque solo expone una especificación de API en lugar de una implementación, de modo que , por definición, cualquier cambio en la API representaría un cambio en el conjunto de características (es decir, una versión de `MINOR` nueva).
 
 Las implementaciones de cada plataforma pueden actualizarse, normalmente como parte de la versión de la plataforma. Por tanto, es posible que no sean evidentes para los programadores que usen .NET Standard en la plataforma en cuestión.
 
-Cada versión de .NET Core implementa una versión de .NET Standard. Implementar una versión de .NET Standard implica la compatibilidad con versiones anteriores de .NET Standard. Versión de .NET standard y .NET Core por separado. Es una coincidencia que .NET Core 2.0 implemente .NET Standard 2.0. .NET Core 2.1 también implementa .NET Standard 2.0. .NET Core será compatible con versiones futuras de .NET Standard en cuanto estén disponibles.
-
-| .NET Core | .NET Standard |
-|-----------|---------------|
-| 1.0       | hasta la versión 1.6     |
-| 2.0       | hasta la versión 2.0     |
-| 2.1       | hasta la versión 2.0     |
-| 2.2       | hasta la versión 2.0     |
-| 3.0       | hasta la versión 2.1     |
-| 3.1       | hasta la versión 2.1     |
-
-Para obtener una tabla interactiva de las versiones de .NET Standard y ver cómo se corresponden con las implementaciones de .NET, vea [Versiones de .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
+Para más información, consulte [.NET Standard](../../standard/net-standard.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Marcos de trabajo de destino](../../standard/frameworks.md)
-- [Empaquetado de distribución de .NET Core](../distribution-packaging.md)
-- [Hoja de información sobre el ciclo de vida de compatibilidad de .NET Core](https://dotnet.microsoft.com/platform/support/policy)
-- [.NET Core 2+ Version Binding (Enlace de versión de .NET Core 2+)](https://github.com/dotnet/designs/issues/3)
-- [Imágenes de Docker para .NET Core](https://hub.docker.com/_/microsoft-dotnet/)
+- [Empaquetado de distribución de .NET](../distribution-packaging.md)
+- [Hoja de información sobre el ciclo de vida de compatibilidad de .NET](https://dotnet.microsoft.com/platform/support/policy)
+- [Imágenes de Docker para .NET](https://hub.docker.com/_/microsoft-dotnet/)
