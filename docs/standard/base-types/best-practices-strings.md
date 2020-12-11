@@ -17,12 +17,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: d0a928fffb84e925ae167885e6d2456dc45b6892
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: bf11edc3669916ba4d30a3648692ca9b084d4340
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825083"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009824"
 ---
 # <a name="best-practices-for-comparing-strings-in-net"></a>Procedimientos recomendados para la comparación de cadenas en .NET
 
@@ -166,9 +166,6 @@ es equivalente a esta comparación (pero más rápida):
 [!code-vb[Conceptual.Strings.BestPractices#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]
 
 Estas comparaciones siguen siendo muy rápidas.
-
-> [!NOTE]
-> El comportamiento de las cadenas del sistema de archivos, claves del Registro y valores, y variables de entorno se representa mejor mediante <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
 Tanto <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> como <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> usan los valores binarios directamente y son más adecuados para la búsqueda de coincidencias. Si no sabe con seguridad qué configuración de comparación debe emplear, use uno de estos dos valores. Sin embargo, puesto que realizan una comparación byte a byte, no ordenan según un criterio de ordenación lingüístico (como un diccionario de inglés) sino según un criterio de ordenación binario. Los resultados pueden parecer extraños en la mayoría de los contextos si se muestran a los usuarios.
 
