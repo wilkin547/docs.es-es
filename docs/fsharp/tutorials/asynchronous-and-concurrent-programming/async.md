@@ -2,12 +2,12 @@
 title: Programación asincrónica
 description: 'Obtenga información sobre cómo F # proporciona compatibilidad limpia para asincronía basándose en un modelo de programación de nivel de lenguaje derivado de conceptos básicos de la programación funcional.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 04b397ddbfb468aa3bc4ee245175d3ec9bdedb50
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 8bf8d6987187377cc1f44e77141b5d70d873f849
+ms.sourcegitcommit: fcbe432482464b1639decad78cc4dc8387c6269e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739332"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "97366820"
 ---
 # <a name="async-programming-in-f"></a>Programación asincrónica en F\#
 
@@ -93,7 +93,7 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Parallel
     |> Async.Ignore
     |> Async.RunSynchronously
@@ -101,14 +101,14 @@ let main argv =
     0
 ```
 
-Como puede ver, la `main` función tiene bastantes llamadas más. Conceptualmente, hace lo siguiente:
+Como puede ver, la `main` función tiene bastantes más elementos. Conceptualmente, hace lo siguiente:
 
-1. Transforme los argumentos de la línea de comandos en `Async<unit>` cálculos con `Array.map` .
+1. Transforme los argumentos de la línea de comandos en una secuencia de `Async<unit>` cálculos con `Seq.map` .
 2. Cree un `Async<'T[]>` que programe y ejecute los `printTotalFileBytes` cálculos en paralelo cuando se ejecute.
-3. Cree un `Async<unit>` que ejecutará el cálculo en paralelo y omitirá su resultado.
-4. Ejecute explícitamente el último cálculo con `Async.RunSynchronously` y bloquee hasta que se complete.
+3. Cree un `Async<unit>` que ejecutará el cálculo en paralelo y omitirá su resultado (que es `unit[]` ).
+4. Ejecute explícitamente el cálculo compuesto general con `Async.RunSynchronously` , y bloquee hasta que se complete.
 
-Cuando se ejecuta este programa, `printTotalFileBytes` se ejecuta en paralelo para cada argumento de la línea de comandos. Dado que los cálculos asincrónicos se ejecutan de forma independiente del flujo de programa, no hay ningún orden en el que impriman su información y terminen de ejecutarse. Los cálculos se programarán en paralelo, pero no se garantiza su orden de ejecución.
+Cuando se ejecuta este programa, `printTotalFileBytes` se ejecuta en paralelo para cada argumento de la línea de comandos. Dado que los cálculos asincrónicos se ejecutan de forma independiente del flujo de programa, no hay ningún orden definido en el que impriman su información y terminen de ejecutarse. Los cálculos se programarán en paralelo, pero no se garantiza su orden de ejecución.
 
 ## <a name="sequence-asynchronous-computations"></a>Cálculos asincrónicos de secuencia
 
@@ -125,18 +125,18 @@ let printTotalFileBytes path =
 [<EntryPoint>]
 let main argv =
     argv
-    |> Array.map printTotalFileBytes
+    |> Seq.map printTotalFileBytes
     |> Async.Sequential
     |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
 
-Esto programará `printTotalFileBytes` para que se ejecute en el orden de los elementos de en `argv` lugar de programarlos en paralelo. Dado que el siguiente elemento no se programará hasta que haya finalizado la ejecución del último cálculo, los cálculos se secuenciarán de modo que no se superpongan en su ejecución.
+Esto programará `printTotalFileBytes` para que se ejecute en el orden de los elementos de en `argv` lugar de programarlos en paralelo. Dado que cada operación sucesiva no se programará hasta que el cálculo anterior haya terminado de ejecutarse, los cálculos se ordenan de modo que no se superponen en su ejecución.
 
 ## <a name="important-async-module-functions"></a>Funciones importantes del módulo Async
 
-Al escribir código asincrónico en F #, normalmente interactuará con un marco que controla la programación de los cálculos. Sin embargo, este no es siempre el caso, por lo que es conveniente conocer las distintas funciones de inicio para programar el trabajo asincrónico.
+Al escribir código asincrónico en F #, normalmente interactuará con un marco que controla la programación de los cálculos. Sin embargo, este no es siempre el caso, por lo que es conveniente comprender las distintas funciones que se pueden usar para programar el trabajo asincrónico.
 
 Dado que los cálculos asincrónicos de F # son una _especificación_ del trabajo en lugar de una representación del trabajo que ya se está ejecutando, deben iniciarse explícitamente con una función de inicio. Hay muchos [métodos de inicio asincrónico](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) que son útiles en contextos diferentes. En la siguiente sección se describen algunas de las funciones de inicio más comunes.
 
@@ -190,7 +190,7 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 Cuándo usarlo:
 
-- Cuando necesita llamar a una API de .NET que espera que <xref:System.Threading.Tasks.Task%601> represente el resultado de un cálculo asincrónico.
+- Cuando necesita llamar a una API de .NET que produce un <xref:System.Threading.Tasks.Task%601> para representar el resultado de un cálculo asincrónico.
 
 Qué debe ver:
 
@@ -198,12 +198,12 @@ Qué debe ver:
 
 ### <a name="asyncparallel"></a>Async. Parallel
 
-Programa una secuencia de cálculos asincrónicos que se van a ejecutar en paralelo. El grado de paralelismo se puede optimizar o limitar opcionalmente especificando el `maxDegreesOfParallelism` parámetro.
+Programa una secuencia de cálculos asincrónicos que se van a ejecutar en paralelo, produciendo una matriz de resultados en el orden en el que se proporcionaron. El grado de paralelismo se puede optimizar o limitar opcionalmente especificando el `maxDegreeOfParallelism` parámetro.
 
 Signature:
 
 ```fsharp
-computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreeOfParallelism: int -> Async<'T[]>
 ```
 
 Cuándo usarlo
@@ -251,7 +251,7 @@ Cuándo usarlo:
 
 Qué debe ver:
 
-- Las excepciones se incluyen en <xref:System.AggregateException> la siguiente Convención de la biblioteca de Parallel Task y este comportamiento es diferente de la forma en que F # Async normalmente muestra excepciones.
+- Las excepciones se incluyen en <xref:System.AggregateException> la siguiente Convención de la biblioteca Parallel de tarea; este comportamiento es diferente de la forma en que F # Async normalmente muestra excepciones.
 
 ### <a name="asynccatch"></a>Async. Catch
 
@@ -273,7 +273,7 @@ Qué debe ver:
 
 ### <a name="asyncignore"></a>Async. ignore
 
-Crea un cálculo asincrónico que ejecuta el cálculo especificado y omite su resultado.
+Crea un cálculo asincrónico que ejecuta el cálculo dado pero quita su resultado.
 
 Signature:
 
@@ -283,7 +283,7 @@ computation: Async<'T> -> Async<unit>
 
 Cuándo usarlo:
 
-- Cuando tiene un cálculo asincrónico cuyo resultado no es necesario. Esto es análogo al `ignore` código para el código no asincrónico.
+- Cuando tiene un cálculo asincrónico cuyo resultado no es necesario. Esto es análogo a la `ignore` función para el código no asincrónico.
 
 Qué debe ver:
 
@@ -291,7 +291,7 @@ Qué debe ver:
 
 ### <a name="asyncrunsynchronously"></a>Async. RunSynchronously
 
-Ejecuta un cálculo asincrónico y espera su resultado en el subproceso que realiza la llamada. Esta llamada está bloqueando.
+Ejecuta un cálculo asincrónico y espera su resultado en el subproceso que realiza la llamada. Propaga una excepción en caso de que el cálculo produzca una. Esta llamada está bloqueando.
 
 Signature:
 
@@ -310,7 +310,7 @@ Qué debe ver:
 
 ### <a name="asyncstart"></a>Async. Start
 
-Inicia un cálculo asincrónico en el grupo de subprocesos que devuelve `unit` . No espera el resultado. Los cálculos anidados iniciados con `Async.Start` se inician independientemente del cálculo primario que los llamó. Su duración no está asociada a ningún cálculo primario. Si se cancela el cálculo primario, no se cancelan los cálculos secundarios.
+Inicia un cálculo asincrónico que devuelve `unit` en el grupo de subprocesos. No espera a que se completen o observan un resultado de excepción. Los cálculos anidados iniciados con `Async.Start` se inician independientemente del cálculo primario que los llamó; su duración no está asociada a ningún cálculo primario. Si se cancela el cálculo primario, no se cancelan los cálculos secundarios.
 
 Signature:
 
@@ -323,7 +323,7 @@ Use solo cuando:
 - Tiene un cálculo asincrónico que no produce un resultado ni requiere procesamiento de uno.
 - No es necesario saber cuándo se completa un cálculo asincrónico.
 - No le importa en qué subproceso se ejecuta un cálculo asincrónico.
-- No es necesario tener en cuenta ni notificar las excepciones resultantes de la tarea.
+- No es necesario tener en cuenta ni notificar las excepciones resultantes de la ejecución.
 
 Qué debe ver:
 
@@ -382,7 +382,7 @@ Por ejemplo, un cálculo puede ejecutarse realmente en el subproceso del llamado
 
 Aunque F # proporciona algunas funciones para iniciar un cálculo asincrónico en el subproceso actual (o explícitamente no en el subproceso actual), asincronía generalmente no está asociado a una estrategia de subprocesos determinada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
 - [Modelo de programación asincrónica de F #](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Guía de F # Async de jet. com](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

@@ -2,12 +2,12 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: 9542f4919c9b1f0363fb8bc27136eb9a7e074913
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: d6eeed2ed5fbf68120c789b7d8203e811fb8608d
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110174"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
@@ -47,7 +47,6 @@ Todos los tutoriales de introducción posteriores a la lección Hola mundo se en
 
 ## <a name="explore-new-features-in-c"></a>Explorar las nuevas características de C\#
 
-* [Prueba de las características nuevas en C# 6 de manera interactiva](exploration/csharp-6.yml): explore las características agregadas en [C# 6](../whats-new/csharp-6.md) de manera interactiva en el explorador.
 * [Interpolación de cadenas](string-interpolation.md): muestra cómo usar la interpolación de cadenas para crear cadenas con formato en C#.
 * [Tipos de referencia que aceptan valores NULL](nullable-reference-types.md): se muestra cómo usar los tipos de referencia que aceptan valores NULL para expresar la intención de referencias nulas.
 * [Actualización de un proyecto para usar tipos de referencia nula](upgrade-to-nullable-references.md): demuestra técnicas para actualizar un proyecto existente y usar los tipos de referencia nula.
