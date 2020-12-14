@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 349f2cfbe0fc93060eb6927ee8c3528c16b99aca
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.openlocfilehash: 7258dc8b8fcfbd6354b5ceee4183429bfee14038
+ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97110733"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -134,17 +134,17 @@ Pero `async` y `await` son los auténticos protagonistas de esta versión. Cuand
 
 Con las versiones 3.0 y 5.0, C# había agregado nuevas características destacables a un lenguaje orientado a objetos. Con la versión 6.0, publicada con Visual Studio 2015, en lugar de introducir una característica innovadora y predominante, se publicaron muchas características menores que aumentaron la productividad de la programación de C#. Estas son algunas de ellas:
 
-- [Importaciones estáticas](./csharp-6.md#using-static)
-- [Filtros de excepciones](./csharp-6.md#exception-filters)
-- [Inicializadores de propiedades automáticas](./csharp-6.md#auto-property-initializers)
-- [Miembros de cuerpo de expresión](./csharp-6.md#expression-bodied-function-members)
-- [Propagador de null](./csharp-6.md#null-conditional-operators)
-- [Interpolación de cadenas](./csharp-6.md#string-interpolation)
-- [operador nameof](./csharp-6.md#the-nameof-expression)
-- [Inicializadores de índice](csharp-6.md#extension-add-methods-in-collection-initializers)
+- [Importaciones estáticas](../language-reference/keywords/using-static.md)
+- [Filtros de excepciones](../language-reference/keywords/when.md)
+- [Inicializadores de propiedades automáticas](../properties.md)
+- [Miembros de cuerpo de expresión](../language-reference/operators/lambda-operator.md#expression-body-definition)
+- [Propagador de null](../language-reference/operators/member-access-operators.md#null-conditional-operators--and-)
+- [Interpolación de cadenas](../language-reference/tokens/interpolated.md)
+- [operador nameof](../language-reference/operators/nameof.md)
 
 Entre las otras características nuevas se incluyen estas:
 
+- Inicializadores de índice
 - Await en bloques catch y finally
 - Valores predeterminados para las propiedades solo de captador
 
