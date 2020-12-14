@@ -1,7 +1,7 @@
 ---
 title: Conservación de las referencias con System.Text.Json
 description: Aprenda a conservar las referencias y controlar las referencias circulares durante la serialización y deserialización de JSON en .NET.
-ms.date: 11/30/2020
+ms.date: 12/09/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
@@ -11,18 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 9254ca261c7d748c04c311fa56359014f752ff31
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: d358c953c0979ca097c080fcd750d5ef95b07de0
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439838"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97008739"
 ---
-# <a name="how-to-handle-circular-references-with-no-locsystemtextjson"></a>Control de las referencias circulares con System.Text.Json
-
-En este artículo, aprenderá a controlar las referencias circulares con el espacio de nombres `System.Text.Json`.
-
-## <a name="preserve-references-and-handle-circular-references"></a>Conservación de las referencias y administración de las referencias circulares
+# <a name="how-to-preserve-references-and-handle-circular-references-with-no-locsystemtextjson"></a>Cómo conservar las referencias y administrar las referencias circulares con System.Text.Json
 
 ::: zone pivot="dotnet-5-0"
 
@@ -59,7 +55,8 @@ System.Text.Json en .NET Core 3.1 solo admite la serialización por valor y pr
 ## <a name="see-also"></a>Vea también
 
 * [Información general de System.Text.Json](system-text-json-overview.md)
-* [Creación de una instancia de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Cómo serializar y deserializar JSON](system-text-json-how-to.md)
+* [Creación de instancias de JsonSerializerOptions](system-text-json-configure-options.md)
 * [Habilitación de la coincidencia sin distinción entre mayúsculas y minúsculas](system-text-json-character-casing.md)
 * [Personalización de los nombres y valores de propiedad](system-text-json-customize-properties.md)
 * [Omisión de propiedades](system-text-json-ignore-properties.md)
@@ -67,4 +64,10 @@ System.Text.Json en .NET Core 3.1 solo admite la serialización por valor y pr
 * [JSON de desbordamiento de control](system-text-json-handle-overflow.md)
 * [Tipos inmutables y descriptores de acceso no públicos](system-text-json-immutability.md)
 * [Serialización polimórfica](system-text-json-polymorphism.md)
-* [Referencia de la API System.Text.Json](xref:System.Text.Json)
+* [Migración desde Newtonsoft.Json a System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalización de la codificación de caracteres](system-text-json-character-encoding.md)
+* [Escritura de serializadores y deserializadores personalizados](write-custom-serializer-deserializer.md)
+* [Escritura de convertidores personalizados para la serialización de JSON](system-text-json-converters-how-to.md)
+* [Compatibilidad con DateTime y DateTimeOffset](../datetime/system-text-json-support.md)
+* [Referencia de API de System.Text.Json](xref:System.Text.Json)
+* [Referencia de API de System.Text.Json.Serialization](xref:System.Text.Json.Serialization)

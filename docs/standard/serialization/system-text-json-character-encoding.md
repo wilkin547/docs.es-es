@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: f6a50a3ca2a5e871294cf7c056cbf197a61cd668
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: cfb83af0c58e0c9dfb73ecb8e2177d255e403fae
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96439877"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009630"
 ---
 # <a name="how-to-customize-character-encoding-with-no-locsystemtextjson"></a>Personalización de la codificación de caracteres con System.Text.Json
 
@@ -86,6 +86,19 @@ Para minimizar el escape, puede usar <xref:System.Text.Encodings.Web.JavaScriptE
 ## <a name="see-also"></a>Vea también
 
 * [Información general de System.Text.Json](system-text-json-overview.md)
+* [Cómo serializar y deserializar JSON](system-text-json-how-to.md)
+* [Creación de instancias de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitación de la coincidencia sin distinción entre mayúsculas y minúsculas](system-text-json-character-casing.md)
+* [Personalización de los nombres y valores de propiedad](system-text-json-customize-properties.md)
+* [Omisión de propiedades](system-text-json-ignore-properties.md)
+* [Permiso del formato JSON no válido](system-text-json-invalid-json.md)
+* [JSON de desbordamiento de control](system-text-json-handle-overflow.md)
+* [Conservación de las referencias](system-text-json-preserve-references.md)
+* [Tipos inmutables y descriptores de acceso no públicos](system-text-json-immutability.md)
+* [Serialización polimórfica](system-text-json-polymorphism.md)
+* [Migración desde Newtonsoft.Json a System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [Escritura de serializadores y deserializadores personalizados](write-custom-serializer-deserializer.md)
 * [Escritura de convertidores personalizados para la serialización de JSON](system-text-json-converters-how-to.md)
-* [Referencia de la API System.Text.Json](xref:System.Text.Json)
+* [Compatibilidad con DateTime y DateTimeOffset](../datetime/system-text-json-support.md)
+* [Referencia de API de System.Text.Json](xref:System.Text.Json)
+* [Referencia de API de System.Text.Json.Serialization](xref:System.Text.Json.Serialization)

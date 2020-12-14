@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d8bd5bcf78db534bd722972db01253cbd13a7a06
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: cb5c15c2a5c336e2d5b4a3754fa7a02a370602f3
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93282403"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009890"
 ---
 # <a name="json-serialization-and-deserialization-marshalling-and-unmarshalling-in-net---overview"></a>Serialización y deserialización de JSON en .NET: información general
 
@@ -37,9 +37,19 @@ La biblioteca también proporciona clases para trabajar con un Document Object M
 ## <a name="additional-resources"></a>Recursos adicionales
 
 * [Cómo usar la biblioteca](system-text-json-how-to.md)
-* [Procedimiento para migrar desde Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Procedimiento para escribir convertidores](system-text-json-converters-how-to.md)
-* [Código fuente System.Text.Json](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json)
-* [Referencia de API System.Text.Json](xref:System.Text.Json)
+* [Creación de instancias de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Habilitación de la coincidencia sin distinción entre mayúsculas y minúsculas](system-text-json-character-casing.md)
+* [Personalización de los nombres y valores de propiedad](system-text-json-customize-properties.md)
+* [Omisión de propiedades](system-text-json-ignore-properties.md)
+* [Permiso del formato JSON no válido](system-text-json-invalid-json.md)
+* [JSON de desbordamiento de control](system-text-json-handle-overflow.md)
+* [Conservación de las referencias](system-text-json-preserve-references.md)
+* [Tipos inmutables y descriptores de acceso no públicos](system-text-json-immutability.md)
+* [Serialización polimórfica](system-text-json-polymorphism.md)
+* [Migración desde Newtonsoft.Json a System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalización de la codificación de caracteres](system-text-json-character-encoding.md)
+* [Escritura de serializadores y deserializadores personalizados](write-custom-serializer-deserializer.md)
+* [Escritura de convertidores personalizados para la serialización de JSON](system-text-json-converters-how-to.md)
+* [Compatibilidad con DateTime y DateTimeOffset](../datetime/system-text-json-support.md)
+* [Referencia de API de System.Text.Json](xref:System.Text.Json)
 * [Referencia de API de System.Text.Json.Serialization](xref:System.Text.Json.Serialization)
-<!-- * [Roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

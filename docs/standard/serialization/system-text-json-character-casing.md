@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 2d663ac8c1c15d61959a62c40d9a3b0993484032
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 3e2fb8cbdd35e772b5e97c731199f69aa834bd0a
+ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599081"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97009747"
 ---
 # <a name="how-to-enable-case-insensitive-property-name-matching-with-no-locsystemtextjson"></a>Habilitación de la coincidencia de nombres de propiedad sin distinción entre mayúsculas y minúsculas con System.Text.Json
 
@@ -45,12 +45,19 @@ Aquí se muestra un ejemplo de JSON con nombres de propiedades en mayúsculas y 
 ## <a name="see-also"></a>Vea también
 
 * [Información general de System.Text.Json](system-text-json-overview.md)
-* [Creación de una instancia de JsonSerializerOptions](system-text-json-configure-options.md)
+* [Cómo serializar y deserializar JSON](system-text-json-how-to.md)
+* [Creación de instancias de JsonSerializerOptions](system-text-json-configure-options.md)
 * [Personalización de los nombres y valores de propiedad](system-text-json-customize-properties.md)
 * [Omisión de propiedades](system-text-json-ignore-properties.md)
 * [Permiso del formato JSON no válido](system-text-json-invalid-json.md)
 * [JSON de desbordamiento de control](system-text-json-handle-overflow.md)
-* [Conservación de referencias circulares](system-text-json-preserve-references.md)
+* [Conservación de las referencias](system-text-json-preserve-references.md)
 * [Tipos inmutables y descriptores de acceso no públicos](system-text-json-immutability.md)
 * [Serialización polimórfica](system-text-json-polymorphism.md)
-* [Referencia de la API System.Text.Json](xref:System.Text.Json)
+* [Migración desde Newtonsoft.Json a System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Personalización de la codificación de caracteres](system-text-json-character-encoding.md)
+* [Escritura de serializadores y deserializadores personalizados](write-custom-serializer-deserializer.md)
+* [Escritura de convertidores personalizados para la serialización de JSON](system-text-json-converters-how-to.md)
+* [Compatibilidad con DateTime y DateTimeOffset](../datetime/system-text-json-support.md)
+* [Referencia de API de System.Text.Json](xref:System.Text.Json)
+* [Referencia de API de System.Text.Json.Serialization](xref:System.Text.Json.Serialization)

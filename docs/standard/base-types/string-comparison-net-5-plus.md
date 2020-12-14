@@ -1,13 +1,13 @@
 ---
 title: Cambios de comportamiento al comparar cadenas en .NET 5 +
 description: Obtenga información sobre los cambios de comportamiento en la comparación de cadenas en .NET 5 y versiones posteriores en Windows.
-ms.date: 11/04/2020
-ms.openlocfilehash: fa1a1d12f45e5b41877a674d7b8747bb2b2f9658
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/07/2020
+ms.openlocfilehash: a53c36b31785fb43c0aa5f5040042abb6d40031a
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734236"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851756"
 ---
 # <a name="behavior-changes-when-comparing-strings-on-net-5"></a>Cambios de comportamiento al comparar cadenas en .NET 5 +
 
@@ -43,16 +43,29 @@ En esta sección se proporcionan dos opciones para tratar los cambios de comport
 
 ### <a name="enable-code-analyzers"></a>Habilitación de analizadores de código
 
-Los [analizadores de código](../../fundamentals/code-analysis/overview.md) pueden detectar sitios de llamada posiblemente erróneos. Para protegerse contra cualquier comportamiento sorprendente, se recomienda instalar [el paquete NuGet __Microsoft. CodeAnalysis. FxCopAnalyzers__](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) en el proyecto. Este paquete incluye las reglas de análisis de código [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) y [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md), que ayudan a marcar el código que podría estar utilizando un comparador lingüístico involuntariamente cuando estuviera previsto un comparador ordinal.
+Los [analizadores de código](../../fundamentals/code-analysis/overview.md) pueden detectar sitios de llamada posiblemente erróneos. Para protegerse frente a comportamientos sorprendentes, se recomienda habilitar los analizadores de .NET Compiler Platform (Roslyn) en el proyecto. Estos analizadores ayudan a marcar el código que podría estar utilizando un comparador lingüístico involuntariamente cuando se tiene previsto utilizar un comparador ordinal. Las siguientes reglas deberían ayudar a marcar estos problemas:
 
-Por ejemplo:
+- [CA1307: Especificar StringComparison para mayor claridad](../../fundamentals/code-analysis/quality-rules/ca1307.md)
+- [CA1309: Utilizar StringComparison ordinal](../../fundamentals/code-analysis/quality-rules/ca1309.md)
+- [CA1310: Especificar StringComparison para mayor corrección](../../fundamentals/code-analysis/quality-rules/ca1310.md)
+
+Estas reglas específicas no están habilitadas de forma predeterminada. Para habilitarlas y hacer que las infracciones se muestren como errores de compilación, establezca las siguientes propiedades en el archivo de proyecto:
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+  <WarningsAsErrors>$(WarningsAsErrors);CA1307;CA1309;CA1310</WarningsAsErrors>
+</PropertyGroup>
+```
+
+En el fragmento de código siguiente se muestran ejemplos de código que producen advertencias o errores pertinentes del analizador de código.
 
 ```cs
 //
 // Potentially incorrect code - answer might vary based on locale.
 //
 string s = GetString();
-// Produces analyzer warning CA1307.
+// Produces analyzer warning CA1310 for string; CA1307 matches on char ','
 int idx = s.IndexOf(",");
 Console.WriteLine(idx);
 
@@ -89,17 +102,12 @@ List<string> list = GetListOfStrings();
 list.Sort(StringComparer.Ordinal);
 ```
 
-Para obtener más información sobre estas reglas del analizador de código, incluido cuándo podría ser adecuado suprimir estas reglas en su propia base de código, consulte los siguientes artículos:
-
-* [CA1307: Especificar StringComparison para mayor claridad](../../fundamentals/code-analysis/quality-rules/ca1307.md)
-* [CA1309: Utilizar StringComparison ordinal](../../fundamentals/code-analysis/quality-rules/ca1309.md)
-
 ### <a name="revert-back-to-nls-behaviors"></a>Reversión a los comportamientos de NLS
 
 Para revertir las aplicaciones de .NET 5 a los comportamientos de NLS anteriores cuando se ejecutan en Windows, siga los pasos descritos en [Globalización de .NET e ICU](../globalization-localization/globalization-icu.md). Este modificador de compatibilidad para toda la aplicación debe establecerse en el nivel de aplicación. Las bibliotecas individuales no pueden aceptar este comportamiento ni excluirse de él.
 
 > [!TIP]
-> Le recomendamos encarecidamente que habilite las reglas de análisis de código [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md) y [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) para ayudar a mejorar la higiene del código y detectar los errores latentes existentes. Para obtener más información, vea [Habilitación de analizadores de código](#enable-code-analyzers).
+> Le recomendamos encarecidamente que habilite las reglas de análisis de código [CA1307](../../fundamentals/code-analysis/quality-rules/ca1307.md), [CA1309](../../fundamentals/code-analysis/quality-rules/ca1309.md) y [CA1310](../../fundamentals/code-analysis/quality-rules/ca1310.md) para ayudar a mejorar la higiene del código y detectar los errores latentes existentes. Para obtener más información, vea [Habilitación de analizadores de código](#enable-code-analyzers).
 
 ## <a name="affected-apis"></a>API afectadas
 
