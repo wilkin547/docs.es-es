@@ -6,12 +6,12 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: fd560c84c095dffc3718a7709af904d9ba722a18
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267690"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512774"
 ---
 # <a name="build-reusable-ui-components-with-no-locblazor"></a>Cree componentes de interfaz de usuario reutilizables con Blazor
 
@@ -79,13 +79,13 @@ En la tabla siguiente se resumen las distintas directivas de Razor usadas en Bla
 
 |Directiva    |Descripción|Ejemplo|Equivalentes de formularios Web Forms|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Agrega un atributo de nivel de clase al componente.|`@attribute [Authorize]`|None|
+|`@attribute` |Agrega un atributo de nivel de clase al componente.|`@attribute [Authorize]`|Ninguno|
 |`@code`      |Agrega miembros de clase al componente.|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Implementa la interfaz especificada.|`@implements IDisposable`|Uso de código subyacente|
 |`@inherits`  |Hereda de la clase base especificada|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Inserta un servicio en el componente.|`@inject IJSRuntime JS`|None|
+|`@inject`    |Inserta un servicio en el componente.|`@inject IJSRuntime JS`|Ninguno|
 |`@layout`    |Especifica un componente de diseño para el componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Establece el espacio de nombres del componente.|`@namespace MyNamespace`|None|
+|`@namespace` |Establece el espacio de nombres del componente.|`@namespace MyNamespace`|Ninguno|
 |`@page`      |Especifica la ruta del componente.|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Especifica un parámetro de tipo genérico para el componente.|`@typeparam TItem`|Uso de código subyacente|
 |`@using`     |Especifica un espacio de nombres que se va a incluir en el ámbito|`@using MyComponentNamespace`|Agregar espacio de nombres en *web.config*|
@@ -110,7 +110,7 @@ Los distintos atributos de directiva utilizados por Blazor ( `@onclick` , `@bind
 
 Muchas de las sintaxis que se usan en los archivos *. aspx* y *. ascx* tienen sintaxis paralelas en Razor. A continuación se muestra una comparación sencilla de las sintaxis de los formularios Web Forms de ASP.NET y Razor.
 
-|Característica                      |Formularios Web Forms           |Sintaxis               |Razor         |Sintaxis |
+|Característica                      |formularios Web Forms           |Sintaxis               |Razor         |Sintaxis |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Directivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Bloques de código                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
@@ -550,7 +550,9 @@ Después, un componente primario puede proporcionar contenido secundario mediant
 
 ```razor
 <ChildContentComponent>
-    <p>The time is @DateTime.Now</p>
+    <ChildContent>
+        <p>The time is @DateTime.Now</p>
+    </ChildContent>
 </ChildContentComponent>
 ```
 
