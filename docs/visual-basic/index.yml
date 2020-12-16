@@ -6,13 +6,13 @@ metadata:
   description: 'Aprenda a programar en Visual Basic en .NET: para desarrolladores noveles, desarrolladores poco familiarizados con Visual Basic y desarrolladores con experiencia en Visual Basic.'
   ms.topic: landing-page
   ms.date: 08/13/2020
-  ms.custom: contperfq1
-  ms.openlocfilehash: 5c393052a1782b64af18d32727f6df5bbd9d1415
-  ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+  ms.custom: contperf-fy21q1
+  ms.openlocfilehash: 559b97e9c6b3a6b48eb05643ad3221a36b5b5a23
+  ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/04/2020
-  ms.locfileid: "96599686"
+  ms.lasthandoff: 12/15/2020
+  ms.locfileid: "97512624"
 landingContent:
 - title: Primeros pasos
   linkLists:
