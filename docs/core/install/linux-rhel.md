@@ -4,12 +4,12 @@ description: Se muestran las diversas maneras de instalar el SDK y el entorno de
 author: adegeo
 ms.author: adegeo
 ms.date: 11/10/2020
-ms.openlocfilehash: 931cad51ff8e35ff16b67ff9b795feb36010a66b
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0b6138185bfd3e2f50c1b31e82779165715a5b6e
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031790"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851645"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-rhel"></a>Instalación del SDK y el entorno de ejecución de .NET en RHEL
 
@@ -50,28 +50,51 @@ Consulte la [documentación de Red Hat para .NET](https://access.redhat.com/docu
 
 ## <a name="rhel-8-"></a>RHEL 8 ✔️
 
-> [!TIP]
-> .NET 5.0 todavía no está disponible en los repositorios de AppStream, pero .NET Core 3.1 sí. Para instalar .NET Core 3.1, use el comando `dnf install` con el paquete adecuado, como `aspnetcore-runtime-3.1` o `dotnet-sdk-3.1`. Las siguientes instrucciones son para .NET 5.0.
-
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
-
-```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
-```
+.NET se incluye en los repositorios de AppStream para RHEL 8.
 
 [!INCLUDE [linux-dnf-install-50](includes/linux-install-50-dnf.md)]
 
 ## <a name="rhel-7--net-50"></a>RHEL 7 ✔️ .NET 5.0
 
-[!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
+El siguiente comando instala el paquete `scl-utils`:
 
 ```bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+sudo yum install scl-utils
 ```
 
-[!INCLUDE [linux-dnf-install-50](includes/linux-install-50-yum.md)]
+### <a name="install-the-sdk"></a>Instalación del SDK
+
+El SDK de .NET permite desarrollar aplicaciones con .NET. Si instala el SDK de .NET, no necesita instalar el entorno de ejecución correspondiente. Para instalar el SDK de .NET, ejecute los comandos siguientes:
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50 -y
+scl enable rh-dotnet50 bash
+```
+
+Red Hat no recomienda habilitar `rh-dotnet50` de forma permanente porque puede afectar a otros programas. Si quiere habilitar `rh-dotnet` de forma permanente, agregue la siguiente línea al archivo _~/.bashrc_.
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+### <a name="install-the-runtime"></a>Instalación de la instancia en tiempo de ejecución
+
+El entorno de ejecución de .NET permite ejecutar aplicaciones creadas con .NET, pero sin incluir el entorno de ejecución. Los siguientes comandos instalan el entorno de ejecución de ASP.NET Core, que es el entorno de ejecución más compatible con .NET Core. En el terminal, ejecute los comandos siguientes.
+
+```bash
+subscription-manager repos --enable=rhel-7-server-dotnet-rpms
+yum install rh-dotnet50-aspnetcore-runtime-5.0 -y
+scl enable rh-dotnet50 bash
+```
+
+Red Hat no recomienda habilitar `rh-dotnet50` de forma permanente porque puede afectar a otros programas. Si quiere habilitar `rh-dotnet50` de forma permanente, agregue la siguiente línea al archivo _~/.bashrc_.
+
+```bash
+source scl_source enable rh-dotnet50
+```
+
+Una alternativa al entorno de ejecución de ASP.NET Core es instalar el de .NET, que no incluye compatibilidad con ASP.NET Core. Reemplace `rh-dotnet50-aspnetcore-runtime-5.0` en los comandos anteriores por `rh-dotnet50-dotnet-runtime-5.0`.
 
 ## <a name="rhel-7--net-core-31"></a>RHEL 7 ✔️ .NET Core 3.1
 
@@ -106,13 +129,13 @@ source scl_source enable rh-dotnet31
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
-scl enable rh-dotnet31-aspnetcore-runtime-3.1 bash
+scl enable rh-dotnet31 bash
 ```
 
-Red Hat no recomienda habilitar `rh-dotnet31-aspnetcore-runtime-3.1` de forma permanente porque puede afectar a otros programas. Por ejemplo, `rh-dotnet31-aspnetcore-runtime-3.1` incluye una versión de `libcurl` que varía con respecto a la versión base de RHEL. Esto puede dar lugar a problemas en programas que no esperan una versión diferente de `libcurl`. Si quiere habilitar `rh-dotnet31-aspnetcore-runtime-3.1` de forma permanente, agregue la siguiente línea al archivo _~/.bashrc_.
+Red Hat no recomienda habilitar `rh-dotnet31` de forma permanente porque puede afectar a otros programas. Por ejemplo, `rh-dotnet31` incluye una versión de `libcurl` que varía con respecto a la versión base de RHEL. Esto puede dar lugar a problemas en programas que no esperan una versión diferente de `libcurl`. Si quiere habilitar `rh-dotnet31` de forma permanente, agregue la siguiente línea al archivo _~/.bashrc_.
 
 ```bash
-source scl_source enable rh-dotnet31-aspnetcore-runtime-3.1
+source scl_source enable rh-dotnet31
 ```
 
 Una alternativa al entorno de ejecución de ASP.NET Core es instalar la instancia de .NET Core Runtime que no incluye compatibilidad con ASP.NET Core. Reemplace `rh-dotnet31-aspnetcore-runtime-3.1` en los comandos anteriores por `rh-dotnet31-dotnet-runtime-3.1`.

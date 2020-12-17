@@ -6,20 +6,20 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 07/27/2020
-ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.date: 12/01/2020
+ms.openlocfilehash: c29e58fb4c748d6025b7c2fbe62a54a85cc71fba
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515824"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851658"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
 > "Ley de Atwood: cualquier aplicación que se pueda escribir en JavaScript, se acabará escribiendo en JavaScript".  
 > _\- Jeff Atwood_
 
-En la actualidad hay dos enfoques generales para crear aplicaciones web: aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web, y se comunican con el servidor web principalmente mediante las API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
+En la actualidad hay dos enfoques generales para compilar aplicaciones web: las aplicaciones web tradicionales que ejecutan la mayor parte de la lógica de aplicación en el servidor, y las aplicaciones de página única (SPA) que ejecutan la mayor parte de la lógica de la interfaz de usuario en un explorador web y se comunican con el servidor web principalmente mediante API web. También es posible un enfoque híbrido; el más sencillo es hospedar una o más subaplicaciones enriquecidas de tipo SPA dentro de una aplicación web tradicional más grande.
 
 Use las aplicaciones web tradicionales en los casos siguientes:
 
@@ -53,17 +53,17 @@ Considere la posibilidad de compilar la aplicación web con Blazor en los casos 
 
 - Su equipo está más familiarizado con el desarrollo de .NET que con el desarrollo de JavaScript o TypeScript.
 
-Si tiene una aplicación de Web Forms que está pensando migrar a .NET Core, puede que quiera revisar el libro electrónico gratuito "[Blazor para desarrolladores de Web Forms](../blazor-for-web-forms-developers/index.md)" para ver si tiene sentido migrarla a Blazor.
+Si tiene una aplicación de Web Forms que está pensando en migrar a .NET Core o la versión más reciente de .NET, puede que quiera consultar el libro electrónico gratuito [Blazor para desarrolladores de Web Forms](../blazor-for-web-forms-developers/index.md) y ver si tiene sentido migrarla a Blazor.
 
 Para obtener más información sobre Blazor, consulte [Introducción a Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 
-A continuación se explican de manera más detallada las razones indicadas anteriormente para elegir aplicaciones web tradicionales.
+En la sección siguiente se explican de manera más detallada las razones indicadas anteriormente para elegir aplicaciones web tradicionales.
 
 **La aplicación tiene requisitos simples del lado cliente, posiblemente de solo lectura**
 
-La mayoría de los usuarios usan muchas aplicaciones web principalmente en un modo de solo lectura. Las aplicaciones de solo lectura (o principalmente de solo lectura) tienden a ser mucho más sencillas que las que mantienen y manipulan una gran cantidad de estado. Por ejemplo, es posible que un motor de búsqueda conste de un único punto de entrada con un cuadro de texto y una segunda página para mostrar los resultados de la búsqueda. Los usuarios anónimos pueden realizar solicitudes con facilidad y la necesidad de lógica del lado cliente es escasa. Del mismo modo, una aplicación de acceso público de un blog o sistema de administración de contenido suele estar compuesta principalmente de contenido con poco comportamiento del lado cliente. Estas aplicaciones se compilan fácilmente como aplicaciones web tradicionales basadas en servidor que ejecutan la lógica en el servidor web y representan HTML que se mostrará en el explorador. El hecho de que cada página del sitio tenga su propia dirección URL que se pueda guardar como marcador e indexar por los motores de búsqueda (de forma predeterminada, sin tener que agregar esto como una característica independiente de la aplicación) también es una ventaja clara en este tipo de escenarios.
+La mayoría de los usuarios usan muchas aplicaciones web principalmente en un modo de solo lectura. Las aplicaciones de solo lectura (o principalmente de solo lectura) tienden a ser mucho más sencillas que las que mantienen y manipulan una gran cantidad de elementos de estado. Por ejemplo, es posible que un motor de búsqueda conste de un único punto de entrada con un cuadro de texto y una segunda página para mostrar los resultados de la búsqueda. Los usuarios anónimos pueden realizar solicitudes con facilidad y la necesidad de lógica del lado cliente es escasa. Del mismo modo, una aplicación de acceso público de un blog o sistema de administración de contenido suele estar compuesta principalmente de contenido con poco comportamiento del lado cliente. Estas aplicaciones se compilan fácilmente como aplicaciones web tradicionales basadas en servidor que ejecutan la lógica en el servidor web y representan HTML que se mostrará en el explorador. El hecho de que cada página del sitio tenga su propia dirección URL que los motores de búsqueda pueden guardar como marcador e indexar (de forma predeterminada, sin tener que agregar esta función como una característica independiente de la aplicación) también es una ventaja clara en este tipo de escenarios.
 
 **La aplicación necesita funcionar en exploradores que no admiten JavaScript**
 
@@ -75,7 +75,7 @@ Si el equipo no está familiarizado con JavaScript o TypeScript, pero sí con el
 
 ## <a name="when-to-choose-spas"></a>Casos en los que elegir SPA
 
-A continuación, se ofrece una explicación más detallada de cuándo se debe elegir un estilo de desarrollo de aplicaciones de página única para la aplicación web.
+En la sección siguiente se ofrece una explicación más detallada de cuándo se debe elegir un estilo de desarrollo de aplicaciones de página única (SPA) para las aplicaciones web.
 
 **La aplicación tiene que exponer una interfaz de usuario enriquecida con muchas características**
 
@@ -102,7 +102,7 @@ Si ya admite una API web para su uso por otros clientes, crear una implementaci�
 
 ## <a name="when-to-choose-no-locblazor"></a>Casos en los que elegir Blazor
 
-A continuación, le ofrecemos una explicación más detallada sobre por qué elegir Blazor para su aplicación web.
+En la sección siguiente ofrecemos una explicación más detallada sobre por qué elegir Blazor para su aplicación web.
 
 **La aplicación tiene que exponer una interfaz de usuario enriquecida**
 

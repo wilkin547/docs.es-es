@@ -15,3 +15,5 @@
       href: ./fs0009.md
     - name: 'FS0025: coincidencia de patrón incompleta'
       href: ./fs0025.md
+    - name: 'FS0052: copia defensiva'
+      href: ./fs0052.md

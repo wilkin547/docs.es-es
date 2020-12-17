@@ -3,13 +3,13 @@ title: Prueba de aplicaciones ASP.NET Core MVC
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Prueba de aplicaciones ASP.NET Core MVC
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: ca86388b9f5dfe5e63ead1b5f84486ba2181af57
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/01/2020
+ms.openlocfilehash: b253cfb90487cc462b0f3b8a7564c97ad403aa06
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169081"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851404"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -26,11 +26,11 @@ Hay muchos tipos de pruebas automatizadas para las aplicaciones de software. La 
 
 Una prueba unitaria prueba un único elemento de la lógica de la aplicación. Se puede describir aún más enumerando algunas de las cosas que no hace. Una prueba unitaria no prueba el funcionamiento del código con dependencias o infraestructura; eso lo comprueban las pruebas de integración. Una prueba unitaria no prueba el marco para el que se escribe el código; se debe asumir que funciona o, si se detecta que no lo hace, registrar un error y codificar una solución alternativa. Una prueba unitaria se ejecuta completamente en memoria y en proceso. No se comunica con el sistema de archivos, la red o una base de datos. Las pruebas unitarias solo deben probar el código.
 
-Las pruebas unitarias, como solo prueban una unidad del código, sin dependencias externas, se deben ejecutar muy rápidamente. Por tanto, debe ser capaz de ejecutar conjuntos de cientos de pruebas unitarias en unos segundos. Ejecute las pruebas con frecuencia, idealmente antes de cada inserción en un repositorio de control de código fuente compartido y, por supuesto, con cada compilación automatizada en el servidor de compilación.
+Las pruebas unitarias, puesto que solo prueban una unidad del código, sin dependencias externas, se deben ejecutar muy rápidamente. Por tanto, debe ser capaz de ejecutar conjuntos de cientos de pruebas unitarias en unos segundos. Ejecute las pruebas con frecuencia, idealmente antes de cada inserción en un repositorio de control de código fuente compartido y, por supuesto, con cada compilación automatizada en el servidor de compilación.
 
 ### <a name="integration-tests"></a>Pruebas de integración
 
-Aunque es una buena idea encapsular el código que interactúa con la infraestructura como bases de datos y sistemas de archivos, seguirá disponiendo de parte de ese código y, probablemente le interesará probarlo. Además, debe comprobar que las capas del código interactúan según lo esperado cuando se resuelvan completamente las dependencias de la aplicación. Esta es la responsabilidad de las pruebas de integración. Las pruebas de integración tienden a ser más lentas y más difíciles de configurar que las pruebas unitarias, porque a menudo dependen de la infraestructura y de dependencias externas. Por tanto, debe evitar realizar pruebas de cosas que podrían evaluarse con pruebas unitarias en pruebas de integración. Si un escenario determinado se puede probar con una prueba unitaria, debe probarlo con una prueba unitaria. Si no es posible, considere la posibilidad de usar una prueba de integración.
+Aunque es una buena idea encapsular el código que interactúa con la infraestructura como bases de datos y sistemas de archivos, seguirá disponiendo de parte de ese código y, probablemente le interesará probarlo. Además, debe comprobar que las capas del código interactúan según lo esperado cuando se resuelvan completamente las dependencias de la aplicación. Esta función es la responsabilidad de las pruebas de integración. Las pruebas de integración tienden a ser más lentas y más difíciles de configurar que las pruebas unitarias, porque a menudo dependen de la infraestructura y de dependencias externas. Por tanto, debe evitar realizar pruebas de cosas que podrían evaluarse con pruebas unitarias en pruebas de integración. Si un escenario determinado se puede probar con una prueba unitaria, debe probarlo con una prueba unitaria. Si no es posible, considere la posibilidad de usar una prueba de integración.
 
 Las pruebas de integración a menudo tendrán procedimientos más complejos de instalación y desmontaje que las pruebas unitarias. Por ejemplo, una prueba de integración dirigida a una base de datos real necesitará un modo de devolver la base de datos a un estado conocido antes de cada serie de pruebas. Cuando se agregan nuevas pruebas y el esquema de base de datos de producción evoluciona, estos scripts de prueba tienden a aumentar de tamaño y complejidad. En muchos sistemas de gran tamaño, no resulta práctico ejecutar conjuntos completos de pruebas de integración en las estaciones de trabajo de desarrollador antes de insertar en el repositorio los cambios en el control de código fuente compartido. En estos casos, las pruebas de integración se pueden ejecutar en un servidor de compilación.
 
@@ -44,7 +44,7 @@ Fuente: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks
 
 Me gusta decir: "Como desarrolladores, fallamos de dos maneras: creamos algo de forma incorrecta o creamos algo incorrecto". Las pruebas unitarias aseguran que se cree algo de forma correcta y las pruebas funcionales que se cree algo correcto.
 
-Como las pruebas funcionales operan en el nivel de sistema, pueden requerir cierto grado de automatización de la interfaz de usuario. Al igual que las pruebas de integración, también suelen funcionar con algún tipo de infraestructura de pruebas. Esto hace que sean más lentas y frágiles que las pruebas unitarias y las de integración. Solo se deben tener las pruebas funcionales necesarias para estar seguro de que el sistema se comporta tal y como esperan los usuarios.
+Como las pruebas funcionales operan en el nivel de sistema, pueden requerir cierto grado de automatización de la interfaz de usuario. Al igual que las pruebas de integración, también suelen funcionar con algún tipo de infraestructura de pruebas. Esta actividad hace que sean más lentas y frágiles que las pruebas unitarias y de integración. Solo se deben tener las pruebas funcionales necesarias para estar seguro de que el sistema se comporta tal y como esperan los usuarios.
 
 ### <a name="testing-pyramid"></a>Pirámide de pruebas
 
@@ -78,7 +78,7 @@ Puede usar el marco de pruebas que prefiera. El marco de trabajo xUnit funciona 
 
 ### <a name="test-naming"></a>Nombres de pruebas
 
-Asigne nombres a las pruebas de forma coherente, con un nombre que indique lo que hace cada prueba. Un enfoque con el que he tenido buenos resultados consiste en asignar nombres a las clases de prueba en función de la clase y el método que estén probando. Esto da como resultado muchas clases de prueba pequeñas, pero deja muy claro la responsabilidad de cada una. Con el nombre de la clase de prueba configurado para identificar la clase y el método que se van a probar, se puede usar el nombre del método de prueba para especificar el comportamiento que se está probando. Esto debe incluir el comportamiento esperado y las entradas o suposiciones que deban producir este comportamiento. Algunos nombres de prueba de ejemplo:
+Asigne nombres a las pruebas de forma coherente, con un nombre que indique lo que hace cada prueba. Un enfoque con el que he tenido buenos resultados consiste en asignar nombres a las clases de prueba en función de la clase y el método que estén probando. Este enfoque da como resultado muchas clases de prueba pequeñas, pero deja muy claro la responsabilidad de cada una. Con el nombre de la clase de prueba configurado para identificar la clase y el método que se van a probar, se puede usar el nombre del método de prueba para especificar el comportamiento que se está probando. Este nombre debe incluir el comportamiento esperado, y las entradas o suposiciones que deban producir este comportamiento. Algunos nombres de prueba de ejemplo:
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -94,7 +94,7 @@ Una variante de este enfoque finaliza cada nombre de clase de prueba con "Should
 
 - `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
-Para algunos equipos el segundo método de nomenclatura es más claro, aunque un poco más detallado. En cualquier caso, intente usar una convención de nomenclatura que proporcione información del comportamiento de la prueba, para que cuando se produzca un error en una o varias pruebas, sea obvio a partir de los nombres en qué casos se ha producido el error. Evite asignar nombre a las pruebas de forma vaga, como ControllerTests.Test1, dado que eso no ofrece ningún valor cuando se ven en los resultados de las pruebas.
+Para algunos equipos el segundo método de nomenclatura es más claro, aunque un poco más detallado. En cualquier caso, intente usar una convención de nomenclatura que proporcione información del comportamiento de la prueba, para que cuando se produzca un error en una o varias pruebas, sea obvio a partir de los nombres en qué casos se ha producido el error. Evite asignar nombres vagos a las pruebas, como ControllerTests.Test1, dado que estos nombres no ofrecen ningún valor cuando se ven en los resultados de las pruebas.
 
 Si sigue una convención de nomenclatura como la anterior que genera muchas clases de prueba pequeñas, es aconsejable organizar más las pruebas mediante carpetas y espacios de nombres. En la figura 9-4 se muestra un enfoque para organizar las pruebas por carpeta en varios proyectos de prueba.
 
@@ -102,13 +102,13 @@ Si sigue una convención de nomenclatura como la anterior que genera muchas clas
 
 **Figura 9-4.** Organización de las clases de prueba por carpeta en función de la clase que se está probando.
 
-Si una clase de aplicación determinada tiene muchos métodos para probar (y, por tanto, muchas clases de prueba), tiene sentido colocarlos en una carpeta correspondiente a la clase de aplicación. Esta organización es similar a cómo se podrían organizar los archivos en carpetas en otra parte. Si tiene más de tres o cuatro archivos relacionados en una carpeta que contiene otros muchos archivos, suele resultar útil moverlos a su propia subcarpeta.
+Si una clase de aplicación determinada tiene muchos métodos para probar (y, por tanto, muchas clases de prueba), tiene sentido colocar estas clases en una carpeta correspondiente a la clase de aplicación. Esta organización es similar a cómo se podrían organizar los archivos en carpetas en otra parte. Si tiene más de tres o cuatro archivos relacionados en una carpeta que contiene otros muchos archivos, suele resultar útil moverlos a su propia subcarpeta.
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Pruebas unitarias de aplicaciones ASP.NET Core
 
-En una aplicación ASP.NET Core bien diseñada, la mayor parte de la complejidad y la lógica de negocios se encapsulará en entidades de negocio y una variedad de servicios. La propia aplicación ASP.NET Core MVC con sus controladores, filtros, modelos de vista y vistas, no debería requerir muchas pruebas unitarias. Gran parte de la funcionalidad de una acción determinada se encuentra fuera del propio método de acción. Con una prueba unitaria no se puede comprobar de forma eficaz si el enrutamiento o el control de errores globales funcionan correctamente. Del mismo modo, los filtros, incluidos los de autenticación y validación del modelo y los de autorización, no se pueden someter a pruebas unitarias con una prueba que tiene como objetivo el método de acción de un controlador. Sin estas fuentes de comportamiento, la mayoría de los métodos de acción deberían ser pequeños, y delegar la mayor parte de su trabajo a servicios que se puedan probar de forma independiente al controlador que los usa.
+En una aplicación ASP.NET Core bien diseñada, la mayor parte de la complejidad y la lógica de negocios se encapsulará en entidades de negocio y una variedad de servicios. La propia aplicación ASP.NET Core MVC, con sus controladores, filtros, modelos de vista y vistas, no debería requerir muchas pruebas unitarias. Gran parte de la funcionalidad de una acción determinada se encuentra fuera del propio método de acción. Con una prueba unitaria no se puede comprobar de forma eficaz si el enrutamiento o el control de errores globales funcionan correctamente. Del mismo modo, los filtros, incluidos los de autenticación y validación del modelo y los de autorización, no se pueden someter a pruebas unitarias con una prueba que tiene como objetivo el método de acción de un controlador. Sin estas fuentes de comportamiento, la mayoría de los métodos de acción deberían ser pequeños, y delegar la mayor parte de su trabajo a servicios que se puedan probar de forma independiente al controlador que los usa.
 
-En ocasiones tendrá que refactorizar el código para poder realizar pruebas unitarias en él. Con frecuencia, esto implica la identificación de abstracciones y el uso de la inserción de dependencias para tener acceso a la abstracción en el código que se quiere probar, en lugar de codificar directamente en la infraestructura. Por ejemplo, considere este método de acción simple para mostrar imágenes:
+En ocasiones tendrá que refactorizar el código para poder realizar pruebas unitarias en él. Con frecuencia, esta actividad implica la identificación de abstracciones y el uso de la inserción de dependencias para acceder a la abstracción en el código que se quiere probar, en lugar de codificar directamente en la infraestructura. Por ejemplo, considere este método de acción sencillo para mostrar imágenes:
 
 ```csharp
 [HttpGet("[controller]/pic/{id}")]
@@ -121,7 +121,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-La realización de pruebas unitarias en este método se complica debido a su dependencia directa de `System.IO.File`, que usa para leer el sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe destacar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerlo con una prueba funcional en breve.
+La realización de pruebas unitarias en este método se complica debido a su dependencia directa de `System.IO.File`, que usa para leer el sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe destacar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerla con una prueba funcional en breve.
 
 Si no se pueden realizar directamente pruebas unitarias del comportamiento del sistema de archivos y no se puede probar la ruta, ¿qué se puede probar? Después de la refactorización para que las pruebas unitarias sean posibles, puede detectar varios casos de prueba y comportamiento que falta, como el control de errores. ¿Qué hace el método cuando no se encuentra un archivo? ¿Qué debería hacer? En este ejemplo, el método refactorizado tiene el aspecto siguiente:
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-`_logger` y `_imageService` se insertan como dependencias. Ahora se puede probar que el mismo identificador que se pasa al método de acción se pasa a `_imageService` y que los bytes resultantes se devuelven como parte de FileResult. También se puede probar que el registro de errores se está realizando de la forma esperada y que se devuelve un resultado de `NotFound` si la imagen no se encuentra, suponiendo que se trate de un comportamiento importante de la aplicación (es decir, no solo código temporal que el desarrollador agregó para diagnosticar un problema). La lógica real del archivo se ha trasladado a un servicio de implementación independiente y se ha ampliado para devolver una excepción específica de la aplicación en el caso de un archivo que falta. Puede probar esta implementación de forma independiente, con una prueba de integración.
+`_logger` y `_imageService` se insertan como dependencias. Ahora se puede probar que el mismo identificador que se pasa al método de acción se pasa a `_imageService` y que los bytes resultantes se devuelven como parte de FileResult. También se puede probar que el registro de errores se esté realizando de la forma esperada y que se devuelva un resultado de `NotFound` si la imagen no se encuentra, suponiendo que se trate de un comportamiento importante de la aplicación (es decir, no solo código temporal que el desarrollador ha agregado para diagnosticar una incidencia). La lógica real del archivo se ha trasladado a un servicio de implementación independiente y se ha ampliado para devolver una excepción específica de la aplicación en el caso de un archivo que falta. Puede probar esta implementación de forma independiente, con una prueba de integración.
 
 En la mayoría de los casos, es recomendable que use controladores de excepciones globales en los controladores, por lo que la cantidad de lógica que contengan debería ser mínima y probablemente no valga la pena realizar pruebas unitarias. Haga la mayoría de las pruebas de acciones de controlador con pruebas funcionales y la clase `TestServer`, que se describe a continuación.
 
@@ -155,7 +155,7 @@ La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core debe
 
 Para las aplicaciones ASP.NET Core, la clase `TestServer` facilita considerablemente la escritura de pruebas funcionales. Para configurar un elemento `TestServer`, use directamente `WebHostBuilder` (o `HostBuilder`), como lo haría para su aplicación, o bien el tipo `WebApplicationFactory` (disponible a partir de la versión 2.1). Intente que el host de prueba coincida lo máximo posible con el host de producción para que las pruebas ejecuten un comportamiento similar al que tendrá la aplicación en la fase de producción. La clase `WebApplicationFactory` es útil para configurar ContentRoot de TestServer, que ASP.NET Core usa para localizar recursos estáticos como las vistas.
 
-Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente `IClassFixture\<WebApplicationFactory\<TEntry>>`, donde `TEntry` es la clase `Startup` de la aplicación web. Después de agregarlo, el accesorio de prueba puede crear un cliente con el método `CreateClient` de la fábrica:
+Puede crear pruebas funcionales sencillas si crea una clase de prueba que implemente `IClassFixture\<WebApplicationFactory\<TEntry>>`, donde `TEntry` es la clase `Startup` de la aplicación web. Después de incorporar esta interfaz, el accesorio de prueba puede crear un cliente con el método `CreateClient` de la fábrica:
 
 ```csharp
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
@@ -171,7 +171,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Con frecuencia, le interesará configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para ello, cree una subclase propia de `WebApplicationFactory\<TEntry>` e invalide su método `ConfigureWebHost`. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
+Con frecuencia, querrá configurar opciones adicionales del sitio antes de ejecutar cada prueba, como configurar la aplicación para que use un almacén de datos en memoria y, después, propagar datos de prueba en la aplicación. Para lograr esta función, cree su propia subclase de `WebApplicationFactory\<TEntry>` e invalide su método `ConfigureWebHost`. El ejemplo siguiente es del proyecto eShopOnWeb FunctionalTests y se usa como parte de las pruebas en la aplicación web principal.
 
 ```csharp
 using Microsoft.AspNetCore.Hosting;

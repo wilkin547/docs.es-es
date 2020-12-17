@@ -5,17 +5,17 @@ author: ardalis
 ms.author: wiwagn
 no-loc:
 - Blazor
-ms.date: 12/04/2019
-ms.openlocfilehash: e8ea035c491fad39d2932572255a19c7c1493418
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 12/01/2020
+ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174359"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851671"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
-> "Los sitios web deben tener una apariencia correcta, tanto interna como externa".  
+> "Los sitios web deben tener una apariencia correcta, tanto interna como externa".
 > _- Paul Cookson_
 
 Las aplicaciones ASP.NET Core son aplicaciones web y normalmente se basan en tecnologías web del lado cliente como HTML, CSS y JavaScript. Al separar el contenido de la página (HTML) de su diseño y estilos (CSS), y su comportamiento (a través de JavaScript), las aplicaciones web complejas pueden aprovechar el principio de separación de intereses. Los cambios futuros en la estructura, el diseño o el comportamiento de la aplicación se pueden realizar más fácilmente cuando estos intereses no están entrelazados.
@@ -23,7 +23,7 @@ Las aplicaciones ASP.NET Core son aplicaciones web y normalmente se basan en tec
 Mientras que HTML y CSS son relativamente estables, JavaScript, por medio de los marcos de aplicaciones y los desarrolladores de utilidades con los que trabajan para crear aplicaciones basadas en web, ha evolucionado a velocidad vértigo. En este capítulo se examinan algunas maneras en las que los desarrolladores web usan JavaScript y se proporciona una descripción general de las bibliotecas del lado cliente Angular y React.
 
 > [!NOTE]
-> Blazor proporciona una alternativa a los marcos de JavaScript para crear interfaces de usuario de cliente enriquecidas e interactivas. La compatibilidad con el lado cliente de Blazor todavía está en versión preliminar, por lo que por ahora está fuera del ámbito de este capítulo.
+> Blazor proporciona una alternativa a los marcos de JavaScript para crear interfaces de usuario de cliente enriquecidas e interactivas.
 
 ## <a name="html"></a>HTML
 
@@ -65,7 +65,7 @@ Todas estas tareas se pueden realizar con JavaScript por sí solo, pero existen 
 
 Aunque de acuerdo con los estándares de marco de trabajo de JavaScript se considere antigua, jQuery sigue siendo una biblioteca de uso común para trabajar con HTML y CSS, y crear aplicaciones que realizan llamadas AJAX a las API web. Pero jQuery funciona en el nivel del modelo de objetos de documento (DOM) del explorador y, de forma predeterminada, ofrece un modelo imperativo, en lugar de declarativo.
 
-Por ejemplo, imagine que, si el valor de un cuadro de texto es superior a 10, se deba mostrar un elemento en la página. En jQuery, esto normalmente se implementaría mediante la escritura de un controlador de eventos con código que inspeccionaría el valor del cuadro de texto y establecería la visibilidad del elemento de destino en función de ese valor. Se trata de un enfoque imperativo basado en código. Es posible que, en su lugar, otro marco de trabajo usara el enlace de datos para enlazar mediante declaración la visibilidad del elemento al valor del cuadro de texto. Con esto no sería necesario escribir código, solo habría que decorar los elementos implicados con atributos de enlace de datos. Cuando aumenta la complejidad de los comportamientos del lado cliente, los enfoques de enlace de datos suelen dar como resultado soluciones más simples con menos código y complejidad condicional.
+Por ejemplo, imagine que, si el valor de un cuadro de texto es superior a 10, se deba mostrar un elemento en la página. En jQuery, esta función normalmente se implementaría mediante la escritura de un controlador de eventos con código que inspeccionaría el valor del cuadro de texto y establecería la visibilidad del elemento de destino en función de ese valor. Este proceso es un enfoque imperativo basado en código. Es posible que, en su lugar, otro marco de trabajo usara el enlace de datos para enlazar mediante declaración la visibilidad del elemento al valor del cuadro de texto. Este enfoque no requeriría escribir código, solo habría que decorar los elementos implicados con atributos de enlace de datos. Cuando aumenta la complejidad de los comportamientos del lado cliente, los enfoques de enlace de datos suelen dar como resultado soluciones más simples con menos código y complejidad condicional.
 
 ### <a name="jquery-vs-a-spa-framework"></a>Diferencias entre jQuery y un marco de trabajo de SPA
 
@@ -80,11 +80,11 @@ Por ejemplo, imagine que, si el valor de un cuadro de texto es superior a 10, se
 
 La mayoría de las características de las que jQuery carece intrínsecamente se pueden agregar con la adición de otras bibliotecas. Pero un marco de SPA como Angular proporciona estas características de forma más integrada, ya que se ha diseñado con todas esas funciones en mente desde el principio. Además, jQuery es una biblioteca imperativa, lo que significa que se debe llamar a funciones de jQuery para realizar cualquier operación con jQuery. Gran parte del trabajo y la funcionalidad que proporcionan los marcos de SPA se puede realizar mediante declaración, lo que no requiere escribir ningún código.
 
-El enlace de datos es un buen ejemplo de esto. En jQuery, normalmente basta con una línea de código para obtener el valor de un elemento DOM, o bien para establecer el valor de un elemento. Pero tendrá que escribir este código siempre que necesite cambiar el valor del elemento y, a veces, esto ocurrirá en varias funciones de una página. Otro ejemplo común es la visibilidad de los elementos. En jQuery, es posible que haya muchos lugares diferentes en los que tendría que escribir código para controlar si determinados elementos son visibles. En cada uno de estos casos, cuando se usa el enlace de datos, no sería necesario escribir código. Simplemente se podría enlazar el valor o la visibilidad de los elementos en cuestión a un *modelo de vista* en la página y los cambios en ese modelo de vista se reflejarán automáticamente en los elementos enlazados.
+El enlace de datos es un buen ejemplo de esta función. En jQuery, normalmente basta con una línea de código para obtener el valor de un elemento DOM, o bien para establecer el valor de un elemento. Pero tendrá que escribir este código siempre que necesite cambiar el valor del elemento y, a veces, esto ocurrirá en varias funciones de una página. Otro ejemplo común es la visibilidad de los elementos. En jQuery, es posible que haya muchos lugares diferentes en los que tendría que escribir código para controlar si determinados elementos son visibles. En cada uno de estos casos, cuando se usa el enlace de datos, no sería necesario escribir código. Simplemente se podría enlazar el valor o la visibilidad de los elementos en cuestión a un *modelo de vista* en la página y los cambios en ese modelo de vista se reflejarán automáticamente en los elementos enlazados.
 
 ### <a name="angular-spas"></a>SPA de Angular
 
-Angular sigue siendo uno de los marcos de JavaScript más populares del mundo. Desde Angular 2, el equipo recompiló el marco de trabajo desde el principio (mediante [TypeScript](https://www.typescriptlang.org/)) y cambió el nombre original de AngularJS a simplemente Angular. El Angular rediseñado, que ya tiene varios años, sigue siendo un marco robusto para la creación de aplicaciones de página única.
+Angular sigue siendo uno de los marcos de JavaScript más populares del mundo. Desde Angular 2, el equipo ha recompilado el marco desde el principio (mediante [TypeScript](https://www.typescriptlang.org/)) y ha cambiado el nombre original de AngularJS a Angular. El Angular rediseñado, que ya tiene varios años, sigue siendo un marco robusto para la creación de aplicaciones de página única.
 
 Las aplicaciones de Angular se compilan a partir de componentes. Los componentes combinan plantillas HTML con objetos especiales y controlan una parte de la página. Aquí se muestra un componente simple de la documentación de Angular:
 
@@ -105,7 +105,7 @@ Al trabajar con componentes y plantillas, en lugar de elementos DOM, las aplicac
 
 Puede desarrollar aplicaciones de Angular mediante una CLI. La introducción al desarrollo local de Angular (suponiendo que ya se haya instalado npm y git) consiste en clonar simplemente un repositorio de GitHub y ejecutar `npm install` y `npm start`. Aparte de esto, Angular suministra su propia CLI que puede crear proyectos, agregar archivos y ayudar con las tareas de pruebas, agrupación e implementación. Esta facilidad de uso de la CLI hace que Angular sea especialmente compatible con ASP.NET Core, que también incluye una excelente compatibilidad con la CLI.
 
-Microsoft ha desarrollado una aplicación de referencia, [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), que incluye una implementación de SPA de Angular. Esta aplicación incluye módulos de Angular para administrar la cesta de la compra de la tienda en línea, cargar y presentar los artículos del catálogo y controlar la creación de pedidos. Puede ver y descargar la aplicación de ejemplo en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
+Microsoft ha desarrollado una aplicación de referencia, eShopOnContainers, que incluye una implementación de SPA de Angular. Esta aplicación incluye módulos de Angular para administrar la cesta de la compra de la tienda en línea, cargar y presentar los artículos del catálogo y controlar la creación de pedidos. Puede ver y descargar la aplicación de ejemplo en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
 ### <a name="react"></a>React
 
@@ -161,9 +161,19 @@ Esto es suficiente para representar "¡Hola Vue!" en la página. Sin embargo, te
 
 Por supuesto, esto es solo una muy pequeña parte de lo que es capaz de hacer Vue. Se ha vuelto muy popular en los últimos años y cuenta con el respaldo de una comunidad bastante grande. También hay una lista [enorme y creciente de bibliotecas y componentes de apoyo](https://github.com/vuejs/awesome-vue#redux) que funcionan con Vue y permiten ampliarlo. Si quiere agregar un comportamiento de lado cliente a la aplicación web o está pensando en crear una SPA completa, merece la pena valorar Vue.
 
+### <a name="no-locblazor-webassembly"></a>Blazor WebAssembly
+
+A diferencia de otros marcos de JavaScript, `Blazor WebAssembly` es un marco de aplicaciones de página única (SPA) para compilar aplicaciones web interactivas del lado cliente con. NET. Blazor WebAssembly usa estándares web abiertos sin complementos o recompilación de código en otros lenguajes. Blazor WebAssembly funciona en todos los exploradores web modernos, incluidos los exploradores móviles.
+
+La ejecución de código .NET dentro de exploradores web se consigue mediante WebAssembly (abreviado como `wasm`). WebAssembly es un formato de código de bytes compacto optimizado para descargas rápidas y una velocidad de ejecución máxima. WebAssembly es un estándar web abierto y es compatible con exploradores web sin complementos.
+
+El código de WebAssembly puede acceder a toda la funcionalidad del explorador mediante JavaScript, denominada interoperabilidad de JavaScript. El código de .NET que se ejecuta a través de WebAssembly en el explorador se ejecuta a su vez en el espacio aislado de JavaScript del explorador con las protecciones que proporciona dicho espacio aislado contra acciones malintencionadas en la máquina cliente.
+
+Para obtener más detalles, vea [Introducción a ASP.NET Core Blazor](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0).
+
 ### <a name="choosing-a-spa-framework"></a>Elección de un marco de trabajo de SPA
 
-Al considerar qué marco JavaScript funcionará mejor para admitir la SPA, tenga en cuenta las consideraciones siguientes:
+Al valorar qué opción funcionará mejor para admitir la SPA, tenga en cuenta las consideraciones siguientes:
 
 - ¿El equipo está familiarizado con el marco de trabajo y sus dependencias (incluido TypeScript en algunos casos)?
 
@@ -177,7 +187,7 @@ Al considerar qué marco JavaScript funcionará mejor para admitir la SPA, tenga
 
 - ¿Qué nivel de actividad tiene su equipo principal? ¿Se resuelven los problemas y se publican periódicamente versiones nuevas?
 
-Los marcos de JavaScript siguen evolucionando a una velocidad de vértigo. Use las consideraciones enumeradas anteriormente para ayudar a mitigar el riesgo de elegir un marco del que más adelante se arrepienta de depender. Si es especialmente reacio a los riesgos, considere la posibilidad de un marco de trabajo que ofrezca soporte técnico comercial o esté desarrollado por una gran empresa.
+Los marcos siguen evolucionando a una velocidad de vértigo. Use las consideraciones enumeradas anteriormente para ayudar a mitigar el riesgo de elegir un marco del que más adelante se arrepienta de depender. Si es especialmente reacio a los riesgos, considere la posibilidad de un marco de trabajo que ofrezca soporte técnico comercial o esté desarrollado por una gran empresa.
 
 > ### <a name="references--client-web-technologies"></a>Referencias: tecnologías web cliente
 >

@@ -3,13 +3,13 @@ title: Proceso de desarrollo para Azure
 description: Aplicaciones web modernas con ASP.NET Core y Azure | Proceso de desarrollo para Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 8907c63f8dcd57ec22c3c196cbb1db52d91a3b5f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 12/01/2020
+ms.openlocfilehash: 2706a4091565e6f3cb795acf031a238ae55a1068
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2020
-ms.locfileid: "91169042"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851632"
 ---
 # <a name="development-process-for-azure"></a>Proceso de desarrollo para Azure
 
@@ -30,9 +30,9 @@ Con independencia de que prefiera un IDE eficaz y completo, o un editor ligero y
 
 [Descargar Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Visual Studio Code y la CLI de DotNet** (herramientas multiplataforma para Mac, Linux y Windows). Si prefiere un editor ligero y multiplataforma que admita cualquier lenguaje de programación, puede usar Visual Studio Code y la CLI de DotNet. Estos productos proporcionan una experiencia sencilla y sólida que agiliza el flujo de trabajo del desarrollador. Además, Visual Studio Code admite extensiones para C\# y desarrollo web, lo que proporciona IntelliSense y tareas de acceso directo en el editor.
+**Visual Studio Code y la CLI de dotnet** (herramientas multiplataforma para Mac, Linux y Windows). Si prefiere un editor ligero y multiplataforma que admita cualquier lenguaje de programación, puede usar Visual Studio Code y la CLI de DotNet. Estos productos proporcionan una experiencia sencilla y sólida que agiliza el flujo de trabajo del desarrollador. Además, Visual Studio Code admite extensiones para C\# y desarrollo web, lo que proporciona IntelliSense y tareas de acceso directo en el editor.
 
-[Descargar el SDK de .NET Core](https://dotnet.microsoft.com/download)
+[Descarga del SDK de .NET](https://dotnet.microsoft.com/download)
 
 [Descargar Visual Studio Code](https://code.visualstudio.com/download)
 
@@ -56,17 +56,17 @@ Cree un Azure App Service donde se va a implementar la aplicación. Vaya a la ho
 
 **Figura 10-1.** Creación de una aplicación web de Azure App Service en Azure Portal.
 
-El proceso de compilación de CI realizará una compilación automatizada siempre que se confirme código nuevo en el repositorio de control de código fuente del proyecto. Esto ofrece información inmediata de que el código se compila (y, de forma ideal, que pasa las pruebas automatizadas) y que potencialmente se puede implementar. Esta compilación de CI generará un artefacto de paquete de implementación web y lo publicará para su uso por el proceso de CD.
+El proceso de compilación de CI realizará una compilación automatizada siempre que se confirme código nuevo en el repositorio de control de código fuente del proyecto. Este proceso ofrece información inmediata de que el código se compila (y, de forma ideal, que pasa las pruebas automatizadas) y que potencialmente se puede implementar. Esta compilación de CI generará un artefacto de paquete de implementación web y lo publicará para su uso por el proceso de CD.
 
 [Definir el proceso de compilación de CI](/azure/devops/pipelines/ecosystems/dotnet-core)
 
 Asegúrese de habilitar la integración continua para que el sistema ponga en cola una compilación cada vez que alguien del equipo confirme código nuevo. Pruebe la compilación y compruebe que está generando un paquete de implementación web como uno de sus artefactos.
 
-Cuando la compilación se realice correctamente, el proceso de CD implementará los resultados de la compilación de CI en la aplicación web de Azure. Para configurar esto, se crea y configura una *Versión*, que se implementará en Azure App Service.
+Cuando la compilación se realice correctamente, el proceso de CD implementará los resultados de la compilación de CI en la aplicación web de Azure. Para configurar este paso, se crea y configura una *Versión*, que se implementará en Azure App Service.
 
 [Implementación de una aplicación web de Azure](/azure/devops/pipelines/targets/webapp)
 
-Una vez que se configura la canalización de CI/CD, puede realizar actualizaciones en la aplicación web y confirmarlas en el control de código fuente para que se implementen.
+Una vez que se configura la canalización de CI/CD, puede realizar actualizaciones de forma sencilla en la aplicación web y confirmarlas en el control de código fuente para que se implementen.
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Flujo de trabajo para desarrollar aplicaciones ASP.NET Core hospedadas en Azure
 
@@ -78,7 +78,7 @@ Una vez configurados la cuenta de Azure y el proceso de CI/CD, el desarrollo de 
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>Paso 1. Bucle interno del entorno de desarrollo local
 
-El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no es distinto al desarrollo de la aplicación en otros casos. Use el entorno de desarrollo local con el que se sienta cómodo, ya sea Visual Studio 2017 o la CLI de DotNet y Visual Studio Code, o bien el editor que prefiera. Puede escribir código, ejecutar y depurar los cambios, ejecutar pruebas automatizadas y realizar confirmaciones locales en el control de código fuente hasta que esté listo para insertar los cambios en el repositorio de control de código fuente compartido.
+El desarrollo de la aplicación ASP.NET Core para su implementación en Azure no es distinto al desarrollo de la aplicación en otros casos. Use el entorno de desarrollo local que prefiera, ya sea Visual Studio 2019 o la CLI de dotnet y Visual Studio Code, o bien el editor de su elección. Puede escribir código, ejecutar y depurar los cambios, ejecutar pruebas automatizadas y realizar confirmaciones locales en el control de código fuente hasta que esté listo para insertar los cambios en el repositorio de control de código fuente compartido.
 
 #### <a name="step-2-application-code-repository"></a>Paso 2. Repositorio de código de la aplicación
 
@@ -90,7 +90,7 @@ Siempre que se realiza una confirmación nueva en el repositorio de código de l
 
 #### <a name="step-4-build-server-continuous-delivery"></a>Paso 4. Servidor de compilación: Entrega continua.
 
-Una vez realizada correctamente la compilación, el proceso de CD recogerá los artefactos de compilación generados. Esto incluirá un paquete de implementación web. El servidor de compilación implementará este paquete en Azure App Service, reemplazando cualquier servicio existente con el recién creado. Normalmente, este paso tiene como destino un entorno de ensayo, pero algunas aplicaciones se implementan directamente en producción a través de un proceso de CD.
+Una vez realizada correctamente la compilación, el proceso de CD recogerá los artefactos de compilación generados. Este proceso incluirá un paquete de implementación web. El servidor de compilación implementará este paquete en Azure App Service, reemplazando cualquier servicio existente con el recién creado. Normalmente, este paso tiene como destino un entorno de ensayo, pero algunas aplicaciones se implementan directamente en producción a través de un proceso de CD.
 
 #### <a name="step-5-azure-app-service-web-app"></a>Paso 5. Aplicación web de Azure App Service
 

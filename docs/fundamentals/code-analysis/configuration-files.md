@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: cf9b8f4033e6774684b2b7e3b788ef3c157d95df
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96594727"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633993"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Archivos de configuración para las reglas de análisis de código
 
@@ -68,7 +68,7 @@ dotnet_diagnostic.CA1000.severity = warning
 
 ## <a name="global-analyzerconfig"></a>AnalyzerConfig global
 
-A partir del SDK de .NET 5,0 (que es compatible con la versión 16,8 de Visual Studio 2019 y versiones posteriores), también puede configurar las opciones del analizador con archivos _AnalyzerConfig_ globales. Estos archivos se usan para proporcionar **las opciones que se aplican a todos los archivos de origen de un proyecto**, independientemente de sus nombres de archivo o rutas de acceso de archivo.
+A partir del SDK de .NET 5 (que se admite en la versión 16,8 de Visual Studio 2019 y versiones posteriores), también puede configurar las opciones del analizador con archivos _AnalyzerConfig_ globales. Estos archivos se usan para proporcionar **las opciones que se aplican a todos los archivos de origen de un proyecto**, independientemente de sus nombres de archivo o rutas de acceso de archivo.
 
 A diferencia [EditorConfig](#editorconfig) de los archivos, los archivos de configuración global no se pueden usar para configurar los valores de estilo de editor para IDE, como el tamaño de sangría o si se debe recortar el espacio en blanco final. En su lugar, están diseñados exclusivamente para especificar las opciones de configuración del analizador de nivel de proyecto.
 
@@ -141,6 +141,6 @@ Las [reglas de prioridad general](#general-options) anteriores se aplican a toda
 
 - Para obtener información sobre las reglas de prioridad de las opciones de gravedad relacionadas con claves diferentes, por ejemplo, cuando se especifican diferentes gravedades para una sola regla y para la categoría en la que esta regla se encuentra bajo, vea [Opciones de configuración para el análisis de código](configuration-options.md#precedence).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [EditorConfig problema de diseño de AnalyzerConfig global de vs](https://github.com/dotnet/roslyn/issues/47707)

@@ -6,16 +6,16 @@ ms.author: adegeo
 ms.date: 11/10/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 39020a32cdea9b82dc9d30e62e663ebc4ee39ebb
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 2fc12c8c398b1a74d623e53884df666f4d4b85f1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687447"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851619"
 ---
 # <a name="how-to-check-that-net-is-already-installed"></a>Cómo comprobar que .NET Core ya está instalado
 
-En este artículo se explica cómo comprobar las versiones del entorno de ejecución y el SDK de .NET que están instaladas en el equipo. Es posible que .NET ya se haya instalado si tiene un entorno de desarrollo integrado, como Visual Studio o Visual Studio para Mac.
+En este artículo se explica cómo comprobar las versiones del entorno de ejecución y el SDK de .NET que están instaladas en el equipo. Si tiene un entorno de desarrollo integrado, como Visual Studio o Visual Studio para Mac, es posible que .NET ya se haya instalado.
 
 Al instalar un SDK, se instala el entorno de ejecución correspondiente.
 
@@ -139,7 +139,7 @@ Microsoft.NETCore.App 5.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="check-for-install-folders"></a>Buscar carpetas de instalación
 
-Es posible que .NET esté instalado, pero no se haya agregado a la variable `PATH` del sistema operativo o el perfil de usuario. Es posible que no funcione la ejecución de los comandos de las secciones anteriores. Como alternativa, puede comprobar que existen las carpetas de instalación de .NET.
+Es posible que .NET esté instalado, pero no se haya agregado a la variable `PATH` del sistema operativo o el perfil de usuario. En este caso, es posible que no funcionen los comandos de las secciones anteriores. Como alternativa, puede comprobar que existen las carpetas de instalación de .NET.
 
 Al instalar .NET desde un instalador o un script, la instalación se efectúa en una carpeta estándar. La mayor parte del tiempo, el instalador o el script que usa para instalar .NET le ofrece la opción de realizar la instalación en otra carpeta. Si decide instalar en una carpeta diferente, ajuste el inicio de la ruta de acceso de la carpeta.
 
@@ -191,3 +191,7 @@ Se pueden ver las versiones del SDK y del entorno de ejecución con el comando `
 - [Instalación del SDK y el entorno de ejecución de .NET para Windows](windows.md).
 - [Instalación del SDK y el entorno de ejecución de .NET para macOS](macos.md).
 - [Instalación del SDK y el entorno de ejecución de .NET para Linux](linux.md).
+
+## <a name="see-also"></a>Vea también
+
+- [Determinación de las versiones instaladas de .NET Framework](../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)

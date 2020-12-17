@@ -3,20 +3,20 @@ title: Arquitecturas de aplicaciones web comunes
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Explorar las arquitecturas de aplicaciones web comunes
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: 86d2e931e6462fb9f6ff5e3cd31b8d3fd188dd5a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 12/01/2020
+ms.openlocfilehash: c9c593788d4cdbb5a1d4c57ac91880ef965f06fa
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682047"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851743"
 ---
 # <a name="common-web-application-architectures"></a>Arquitecturas de aplicaciones web comunes
 
-> "Si cree que la buena arquitectura es cara, pruebe la mala".  
+> "Si cree que la buena arquitectura es cara, pruebe la mala".
 > _- Brian Foote y Joseph Yoder_
 
-La mayoría de aplicaciones .NET tradicionales se implementan como unidades únicas que corresponden a un archivo ejecutable o una sola aplicación web que se ejecuta dentro de un único dominio de aplicación de IIS. Este es el modelo de implementación más sencillo y sirve muy bien a muchas aplicaciones internas y públicas más pequeñas. Pero incluso con esta única unidad de implementación, la mayoría de las aplicaciones de negocio importantes se aprovechan de cierta separación lógica en varias capas.
+La mayoría de aplicaciones .NET tradicionales se implementan como unidades únicas que corresponden a un archivo ejecutable o una sola aplicación web que se ejecuta dentro de un único dominio de aplicación de IIS. Este enfoque es el modelo de implementación más sencillo, y sirve muy bien a muchas aplicaciones internas y públicas más pequeñas. Pero incluso con esta única unidad de implementación, la mayoría de las aplicaciones de negocio importantes se aprovechan de cierta separación lógica en varias capas.
 
 ## <a name="what-is-a-monolithic-application"></a>¿Qué es una aplicación monolítica?
 
@@ -40,15 +40,15 @@ Para resolver estos problemas, las aplicaciones suelen evolucionar a soluciones 
 
 ## <a name="what-are-layers"></a>¿Qué son las capas?
 
-Cuando aumenta la complejidad de las aplicaciones, una manera de administrarla consiste en dividir la aplicación según sus responsabilidades o intereses. Esto sigue el principio de separación de intereses y puede ayudar a mantener organizado un código base que crece para que los desarrolladores puedan encontrar fácilmente donde se implementa una funcionalidad determinada. Pero la arquitectura en capas ofrece una serie de ventajas que van más allá de la simple organización del código.
+Cuando aumenta la complejidad de las aplicaciones, una manera de administrarla consiste en dividir la aplicación según sus responsabilidades o intereses. Este enfoque sigue el principio de separación de intereses y puede ayudar a mantener organizado un código base que crece para que los desarrolladores puedan encontrar fácilmente dónde se implementa una función determinada. Pero la arquitectura en capas ofrece una serie de ventajas que van más allá de la simple organización del código.
 
 Al organizar el código en capas, la funcionalidad común de bajo nivel se puede reutilizar en toda la aplicación. Esta reutilización es beneficiosa ya que significa escribir menos código y puede permitir que la aplicación se estandarice en una sola implementación, siguiendo el principio [Una vez y solo una (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-Con una arquitectura en capas, las aplicaciones pueden aplicar restricciones sobre qué capas se pueden comunicar con otras capas. Esto ayuda a lograr la encapsulación. Cuando se cambia o reemplaza una capa, solo deberían verse afectadas aquellas capas que funcionan con ella. Mediante la limitación de qué capas dependen de otras, se puede mitigar el impacto de los cambios para que un único cambio no afecte a toda la aplicación.
+Con una arquitectura en capas, las aplicaciones pueden aplicar restricciones sobre qué capas se pueden comunicar con otras capas. Esta arquitectura permite lograr la encapsulación. Cuando se cambia o reemplaza una capa, solo deberían verse afectadas aquellas capas que funcionan con ella. Mediante la limitación de qué capas dependen de otras, se puede mitigar el impacto de los cambios para que un único cambio no afecte a toda la aplicación.
 
-Las capas (y la encapsulación) facilitan considerablemente el reemplazo de funcionalidad dentro de la aplicación. Por ejemplo, es posible que una aplicación use inicialmente su propia base de datos de SQL Server para la persistencia, pero más adelante podría optar por usar una estrategia de persistencia basada en la nube, o situada detrás de una API web. Si la aplicación ha encapsulado correctamente su implementación de persistencia dentro de una capa lógica, esa capa específica de SQL Server se podría sustituir por una nueva que implementara la misma interfaz pública.
+Las capas (y la encapsulación) facilitan considerablemente el reemplazo de funcionalidad dentro de la aplicación. Por ejemplo, es posible que una aplicación use inicialmente su propia base de datos de SQL Server para la persistencia, pero más adelante podría optar por usar una estrategia de persistencia basada en la nube, o situada detrás de una API web. Si la aplicación ha encapsulado correctamente su implementación de persistencia dentro de una capa lógica, esa capa específica de SQL Server se podría reemplazar por una nueva que implementara la misma interfaz pública.
 
-Además de la posibilidad de intercambiar las implementaciones en respuesta a cambios futuros en los requisitos, las capas de aplicación también facilitan el intercambio de implementaciones con fines de prueba. En lugar de tener que escribir pruebas que funcionan en la capa de datos reales o de la interfaz de usuario de la aplicación, estas capas se pueden reemplazar en tiempo de prueba con implementaciones falsas que proporcionen respuestas conocidas a las solicitudes. Esto normalmente hace que las pruebas sean mucho más fáciles de escribir y mucho más rápidas de ejecutar en comparación con la ejecución de pruebas sobre la infraestructura real de la aplicación.
+Además de la posibilidad de intercambiar las implementaciones en respuesta a cambios futuros en los requisitos, las capas de aplicación también facilitan el intercambio de implementaciones con fines de prueba. En lugar de tener que escribir pruebas que funcionan en la capa de datos reales o de la interfaz de usuario de la aplicación, estas capas se pueden reemplazar en tiempo de prueba con implementaciones falsas que proporcionen respuestas conocidas a las solicitudes. Este enfoque normalmente hace que las pruebas sean mucho más fáciles de escribir y mucho más rápidas de ejecutar en comparación con la ejecución de pruebas sobre la infraestructura real de la aplicación.
 
 Las capas lógicas son una técnica común para mejorar la organización del código en las aplicaciones de software empresarial, y hay varias formas de organizar el código en capas.
 
@@ -101,7 +101,7 @@ Las aplicaciones que siguen el principio de inversión de dependencias, así com
 
 La aplicación de referencia eShopOnWeb utiliza el enfoque de arquitectura limpia para organizar su código en proyectos. Puede encontrar una plantilla de solución que puede usar como punto de partida para su propio ASP.NET Core en el repositorio de GitHub [ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture).
 
-La arquitectura limpia coloca el modelo de lógica de negocios y aplicación en el centro de la aplicación. En lugar de tener lógica de negocios que depende del acceso a datos o de otros aspectos de infraestructura, esta dependencia se invierte: los detalles de la infraestructura y la implementación dependen del núcleo de la aplicación. Esto se logra mediante la definición de abstracciones o interfaces, en el núcleo de la aplicación, que después se implementan mediante tipos definidos en el nivel de infraestructura. Una forma habitual de visualizar esta arquitectura es usar una serie de círculos concéntricos, similares a una cebolla. En la figura 5-7 se muestra un ejemplo de este estilo de representación de la arquitectura.
+La arquitectura limpia coloca el modelo de lógica de negocios y aplicación en el centro de la aplicación. En lugar de tener lógica de negocios que depende del acceso a datos o de otros aspectos de infraestructura, esta dependencia se invierte: los detalles de la infraestructura y la implementación dependen del núcleo de la aplicación. Esta función se logra mediante la definición de abstracciones o interfaces, en el núcleo de la aplicación, que después se implementan mediante tipos definidos en el nivel de infraestructura. Una forma habitual de visualizar esta arquitectura es usar una serie de círculos concéntricos, similares a una cebolla. En la figura 5-7 se muestra un ejemplo de este estilo de representación de la arquitectura.
 
 ![Arquitectura limpia; vista de cebolla](./media/image5-7.png)
 
@@ -215,15 +215,15 @@ El uso de contenedores para administrar las implementaciones de aplicaciones mon
 
 Implementar las actualizaciones como imágenes de Docker es mucho más rápido y eficaz en la red. Normalmente, las imágenes de Docker se inician en segundos, lo que acelera las implementaciones. Anular una instancia de Docker es tan fácil como ejecutar un comando `docker stop`, que normalmente se completa en menos de un segundo.
 
-Como por diseño los contenedores son intrínsecamente inmutables, no tendrá que preocuparse de que las máquinas virtuales resulten dañadas, mientras que es posible que los scripts de actualización olviden tener en cuenta alguna configuración concreta o archivo que se conserve en disco.
+Dado que, por diseño, los contenedores son intrínsecamente inmutables, no tendrá que preocuparse de que las máquinas virtuales resulten dañadas, mientras que es posible que los scripts de actualización olviden tener en cuenta alguna configuración concreta o archivo que se conserve en el disco.
 
-Puede usar contenedores de Docker para la implementación monolítica de aplicaciones web más sencillas. Esto mejora la integración continua y las canalizaciones de implementación continua y ayuda a llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no tendrá que pensar en por qué no funciona en producción, aunque sí que funcione en su equipo.
+Puede usar contenedores de Docker para una implementación monolítica de aplicaciones web más sencillas. Este enfoque mejora las canalizaciones de integración continua e implementación continua, y permite llevar a cabo correctamente el proceso desde la implementación hasta la producción. Ya no tendrá que pensar en por qué no funciona en producción, aunque sí que funcione en su equipo.
 
 Una arquitectura basada en microservicios tiene muchas ventajas, pero a costa de una mayor complejidad. En algunos casos, los costos superan las ventajas, por lo que es una opción mejor utilizar una aplicación de implementación monolítica que se ejecute en un solo contenedor o en unos pocos contenedores.
 
 Es posible que una aplicación monolítica no se pueda descomponer fácilmente en microservicios bien separados. Los microservicios deberían funcionar de manera independiente para proporcionar una aplicación más resistente. Si no puede proporcionar sectores de características independientes de la aplicación, el hecho de separarla solo conlleva más complejidad.
 
-Una aplicación podría no necesitar inicialmente el escalado de las características por separado. Cuando es necesario escalar una aplicación más allá de una única instancia, muchas aplicaciones pueden hacerlo a través del proceso relativamente sencillo de clonación de esa instancia completa. El trabajo adicional de separar la aplicación en servicios discretos apenas proporciona beneficios, mientras que el escalado de instancias completas de la aplicación es simple y rentable.
+Una aplicación podría no necesitar inicialmente el escalado de las características por separado. Cuando es necesario escalar una aplicación más allá de una única instancia, muchas aplicaciones pueden hacerlo a través del proceso relativamente sencillo de clonación de esa instancia completa. El trabajo adicional de separar la aplicación en servicios discretos apenas proporciona ventajas cuando el escalado de instancias completas de la aplicación es simple y rentable.
 
 En las fases tempranas del desarrollo de una aplicación, es posible que no se tenga una idea clara de dónde están los límites funcionales naturales. Mientras desarrolla un producto mínimamente viable, puede que todavía no sea evidente la separación natural. Algunas de estas condiciones pueden ser temporales. Podría empezar creando una aplicación monolítica y, más adelante, separar algunas características para desarrollarlas e implementarlas como microservicios. Otras condiciones podrían ser básicas para el espacio de problemas de la aplicación y, en consecuencia, tal vez no se pueda dividir nunca en varios microservicios.
 
@@ -231,17 +231,17 @@ La separación de una aplicación en varios procesos diferenciados también intr
 
 La [aplicación de referencia eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb), mucho más sencilla, admite el uso de un único contenedor monolítico. La aplicación incluye una aplicación web con vistas MVC tradicionales, API web y Razor Pages. Esta aplicación se puede iniciar desde la raíz de la solución mediante los comandos `docker-compose build` y `docker-compose up`. Este comando configura un contenedor para la instancia web mediante el elemento `Dockerfile` que se encuentra en la raíz de cada proyecto web y ejecuta el contenedor en un puerto específico. Puede descargar de GitHub el código fuente para esta aplicación y ejecutarlo de forma local. Incluso esta aplicación monolítica se beneficia de la implementación en un entorno de contenedor.
 
-Ante todo, la implementación en contenedor implica que cada instancia de la aplicación se ejecuta en el mismo entorno. Esto incluye el entorno de desarrollo donde tienen lugar las pruebas y el desarrollo iniciales. El equipo de desarrollo puede ejecutar la aplicación en un entorno en contenedor que coincida con el entorno de producción.
+Ante todo, la implementación en contenedor implica que cada instancia de la aplicación se ejecuta en el mismo entorno. Este enfoque incluye el entorno de desarrollo donde tienen lugar las pruebas y el desarrollo iniciales. El equipo de desarrollo puede ejecutar la aplicación en un entorno en contenedor que coincida con el entorno de producción.
 
-Además, las aplicaciones en contenedor se escalan horizontalmente con un costo menor. La utilización de un entorno de contenedor permite un mayor uso compartido de los recursos que los entornos de máquina virtual tradicionales.
+Además, las aplicaciones contenedorizadas se escalan horizontalmente con un costo menor. La utilización de un entorno de contenedor permite un mayor uso compartido de los recursos que los entornos de máquina virtual tradicionales.
 
 Por último, el hecho de incluir la aplicación en un contenedor fuerza la separación entre la lógica de negocios y el servidor de almacenamiento. Cuando la aplicación se escala horizontalmente, los diversos contenedores se basan en un único medio de almacenamiento físico. Normalmente este medio de almacenamiento es un servidor de alta disponibilidad que ejecuta una base de datos de SQL Server.
 
 ## <a name="docker-support"></a>Compatibilidad con Docker
 
-El proyecto `eShopOnWeb` se ejecuta en .NET Core. Por lo tanto, se puede ejecutar en contenedores basados en Linux o en Windows. Tenga en cuenta que, para la implementación de Docker, le interesa usar el mismo tipo de host para SQL Server. Los contenedores basados en Linux permiten una superficie menor y son preferibles.
+El proyecto `eShopOnWeb` se ejecuta en .NET. Por lo tanto, se puede ejecutar en contenedores basados en Linux o en Windows. Tenga en cuenta que, para la implementación de Docker, le interesa usar el mismo tipo de host para SQL Server. Los contenedores basados en Linux permiten una superficie menor y son preferibles.
 
-Puede usar Visual Studio 2017 o versiones posteriores para agregar compatibilidad con Docker a una aplicación existente haciendo clic con el botón derecho en **Explorador de soluciones** y seleccionando **Agregar** > **Compatibilidad con Docker**. Esto agrega los archivos necesarios y modifica el proyecto para poder usarlos. En el ejemplo `eShopOnWeb` actual ya se incluyen estos archivos.
+Puede usar Visual Studio 2017 o versiones posteriores para agregar compatibilidad con Docker a una aplicación existente haciendo clic con el botón derecho en **Explorador de soluciones** y seleccionando **Agregar** > **Compatibilidad con Docker**. Este paso agrega los archivos necesarios y modifica el proyecto para poder usarlos. En el ejemplo `eShopOnWeb` actual ya se incluyen estos archivos.
 
 El archivo `docker-compose.yml` de nivel de solución contiene información sobre qué imágenes se van a compilar y qué contenedores se van a iniciar. El archivo le permite usar el comando `docker-compose` para iniciar varias aplicaciones al mismo tiempo. En este caso, solo está iniciando el proyecto web. También se puede usar para configurar las dependencias, como un contenedor de base de datos independiente.
 
@@ -268,7 +268,7 @@ networks:
 El archivo `docker-compose.yml` hace referencia a `Dockerfile` en el proyecto `Web`. El `Dockerfile` se usa para especificar qué contenedor base se va a utilizar y cómo se configurará la aplicación en él. El `Dockerfile` de `Web`:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -278,7 +278,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

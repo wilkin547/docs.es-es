@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
-ms.date: 02/14/2020
-ms.openlocfilehash: 898c53772a28b8cc3b65532dfc3d9bd6e73d467c
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/07/2020
+ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634375"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851708"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -194,3 +194,19 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   ```dotnetcli
   dotnet sln todo.sln remove (ls -r **/*.csproj)
   ```
+
+- Cree una solución, una aplicación de consola y dos bibliotecas de clases. Agregue los proyectos a la solución y use la opción `--solution-folder` de `dotnet sln` para organizar las bibliotecas de clases en una carpeta de soluciones.
+
+  ```dotnetcli
+  dotnet new sln -n mysolution
+  dotnet new console -o myapp
+  dotnet new classlib -o mylib1
+  dotnet new classlib -o mylib2
+  dotnet sln mysolution.sln add myapp\myapp.csproj
+  dotnet sln mysolution.sln add mylib1\mylib1.csproj --solution-folder mylibs
+  dotnet sln mysolution.sln add mylib2\mylib2.csproj --solution-folder mylibs
+  ```
+
+  En la captura de pantalla siguiente se muestra el resultado en el **Explorador de soluciones** de Visual Studio 2019:
+
+  :::image type="content" source="media/dotnet-sln/dotnet-sln-solution-folder.png" alt-text="Explorador de soluciones mostrando los proyectos de biblioteca de clases agrupados en una carpeta de soluciones.":::

@@ -34,6 +34,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: los paquetes de integración de Azure con Microsoft como prefijo se han quitado
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Lógica de precedencia de ruta cambiada en aplicaciones Blazor'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: compatibilidad con exploradores actualizada'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: espacio en blanco insignificante recortado por el compilador'
@@ -292,6 +294,8 @@
                   href: aspnet-core/5.0/authorization-resource-in-endpoint-routing.md
                 - name: los paquetes de integración de Azure con Microsoft como prefijo se han quitado
                   href: aspnet-core/5.0/azure-integration-packages-removed.md
+                - name: 'Blazor: Lógica de precedencia de ruta cambiada en aplicaciones Blazor'
+                  href: aspnet-core/5.0/blazor-routing-logic-changed.md
                 - name: 'Blazor: compatibilidad con exploradores actualizada'
                   href: aspnet-core/5.0/blazor-browser-support-updated.md
                 - name: 'Blazor: espacio en blanco insignificante recortado por el compilador'

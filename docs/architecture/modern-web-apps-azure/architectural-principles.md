@@ -3,13 +3,13 @@ title: Principios de la arquitectura
 description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Principios de la arquitectura
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: a3444071abae89780304a9687e486f3842283a33
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 12/01/2020
+ms.openlocfilehash: f4079e0409c1675e8f8a3e494303683daeef29c1
+ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396242"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96851417"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -30,7 +30,7 @@ Desde el punto de vista de la arquitectura, las aplicaciones se pueden crear de 
 
 Las diferentes partes de una aplicación deben usar la **encapsulación** para aislarse de otras partes de la aplicación. Las capas y los componentes de la aplicación deben poder ajustar su implementación interna sin interrumpir a sus colaboradores mientras no se infrinjan los externos. El uso correcto de la encapsulación contribuye a lograr el acoplamiento flexible y la modularidad en los diseños de aplicaciones, ya que los objetos y paquetes se pueden reemplazar con implementaciones alternativas, siempre y cuando se mantenga la misma interfaz.
 
-En las clases, la encapsulación se logra mediante la limitación del acceso externo al estado interno de la clase. Si un actor externo quiere manipular el estado del objeto, deberá hacerlo a través de una función bien definida (o un establecedor de propiedades), en lugar de tener acceso directo al estado privado del objeto. Del mismo modo, los componentes de aplicación y las propias aplicaciones deben exponer interfaces bien definidas para que sus colaboradores las usen, en lugar de permitir que su estado se modifique directamente. Esto libera el diseño interno de la aplicación para que evolucione con el tiempo sin tener que preocuparse de si al hacerlo afectará a los colaboradores, siempre y cuando se mantengan los contratos públicos.
+En las clases, la encapsulación se logra mediante la limitación del acceso externo al estado interno de la clase. Si un actor externo quiere manipular el estado del objeto, deberá hacerlo a través de una función bien definida (o un establecedor de propiedades), en lugar de tener acceso directo al estado privado del objeto. Del mismo modo, los componentes de aplicación y las propias aplicaciones deben exponer interfaces bien definidas para que sus colaboradores las usen, en lugar de permitir que su estado se modifique directamente. Este enfoque libera el diseño interno de la aplicación para que evolucione con el tiempo sin tener que preocuparse de si, al hacerlo, interrumpirá a los colaboradores, siempre y cuando se mantengan los contratos públicos.
 
 ### <a name="dependency-inversion"></a>Inversión de dependencias
 

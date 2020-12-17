@@ -2,12 +2,12 @@
 title: DevOps
 description: Consideraciones de DevOps para las aplicaciones nativas de la nube
 ms.date: 05/13/2020
-ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1a04f5178877f3fdde707753e94718ce0f0bb49d
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164004"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633720"
 ---
 # <a name="devops"></a>DevOps
 
@@ -118,11 +118,11 @@ Hay muchas herramientas que pueden realizar análisis estáticos de código para
 
 También hay muchas desventajas en el enfoque de repositorio único. Uno de los más preocupados es que tener un único repositorio genera problemas de seguridad. Si el contenido de un repositorio se pierde en un repositorio por cada modelo de servicio, la cantidad de código perdido es mínima. Con un único repositorio, se podría perder todo lo que posea la compañía. En el pasado, hemos habido muchos ejemplos en los que se entrenó todo el trabajo de desarrollo de juegos. El hecho de tener varios repositorios expone menos área expuesta, lo que es un rasgo deseable en la mayoría de los procedimientos de seguridad.
 
-Es probable que el tamaño del único repositorio deje de ser fácil de administrar. Esto presenta algunas implicaciones interesantes en el rendimiento. Puede ser necesario usar herramientas especializadas como el [sistema de archivos virtual para git](https://vfsforgit.org/), que se diseñó originalmente para mejorar la experiencia de los desarrolladores en el equipo de Windows.
+Es probable que el tamaño del único repositorio deje de ser fácil de administrar. Esto presenta algunas implicaciones interesantes en el rendimiento. Puede ser necesario usar herramientas especializadas como el [sistema de archivos virtual para git](https://github.com/Microsoft/VFSForGit), que se diseñó originalmente para mejorar la experiencia de los desarrolladores en el equipo de Windows.
 
 Con frecuencia, el argumento para usar un único repositorio se reduce a un argumento que Facebook o Google usan este método para la organización del código fuente. Si el enfoque es lo suficientemente bueno para estas empresas, seguramente es el enfoque correcto para todas las empresas. La verdad de la cuestión es que pocas empresas operan en algo como la escala de Facebook o Google. Los problemas que se producen en esas escalas son diferentes de los que se verán en la mayoría de los desarrolladores. Lo que es adecuado para el OCA no puede ser bueno para el Gander.
 
-Al final, cualquiera de las soluciones se puede usar para hospedar el código fuente de los microservicios. Sin embargo, en la mayoría de los casos, la administración y la sobrecarga de ingeniería de trabajar en un único repositorio no merece la pena las ventajas de Meager. Al dividir el código en varios repositorios, se fomenta una mejor separación de problemas y se fomenta la autonomía entre los equipos de desarrollo.  
+Al final, cualquiera de las soluciones se puede usar para hospedar el código fuente de los microservicios. Sin embargo, en la mayoría de los casos, la administración y la sobrecarga de ingeniería de trabajar en un único repositorio no merece la pena las ventajas de Meager. Al dividir el código en varios repositorios, se fomenta una mejor separación de problemas y se fomenta la autonomía entre los equipos de desarrollo.
 
 ### <a name="standard-directory-structure"></a>Estructura de directorios estándar
 
@@ -199,7 +199,7 @@ variables:
   artifactName: drop
   buildPlatform: any cpu
   buildConfiguration: release
-  
+
 pool:
   name: Hosted VS2017
   demands:
