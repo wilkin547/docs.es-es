@@ -6,16 +6,16 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: dbb0a94b0401d58139c024fd8ca3e00353a19efa
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267885"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678030"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, controladores y middleware
 
-Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS*y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá qué middleware en el contexto de una Blazor aplicación.
+Una aplicación ASP.NET Core se basa en una serie de *middleware*. El middleware es controladores que se organizan en una canalización para controlar solicitudes y respuestas. En una aplicación de formularios Web Forms, los controladores y módulos HTTP solucionan problemas similares. En ASP.NET Core, los módulos, los controladores, *global.asax.CS* y el ciclo de vida de la aplicación se reemplazan por middleware. En este capítulo, aprenderá sobre el middleware en el contexto de una Blazor aplicación.
 
 ## <a name="overview"></a>Información general
 
@@ -46,8 +46,8 @@ En la tabla siguiente se enumeran los componentes y el middleware de reemplazo e
 |Almacenamiento en caché de HTTP           |`HttpCacheModule`            |[Middleware de almacenamiento en caché de respuestas](/aspnet/core/performance/caching/middleware)|
 |Registro HTTP           |`HttpLoggingModule`          |[Registro de ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
 |Redirección HTTP       |`HttpRedirectionModule`      |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
-|Filtros ISAPI          |`IsapiFilterModule`          |[Software intermedio](/aspnet/core/fundamentals/middleware/index)|
-|ISAPI                  |`IsapiModule`                |[Software intermedio](/aspnet/core/fundamentals/middleware/index)|
+|Filtros ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
+|ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |Filtro de solicitudes      |`RequestFilteringModule`     |[Middleware de reescritura de URL IRule](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
 |&#8224; de reescritura de direcciones URL   |`RewriteModule`              |[Middleware de reescritura de dirección URL](/aspnet/core/fundamentals/url-rewriting)|
 |Compresión estática     |`StaticCompressionModule`    |[Middleware de compresión de respuestas](/aspnet/core/performance/response-compression)|
