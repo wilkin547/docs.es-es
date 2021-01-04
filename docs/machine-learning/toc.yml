@@ -45,6 +45,8 @@
           href: tutorials/image-classification.md
         - name: Previsión de la demanda de alquiler de bicicletas (serie temporal)
           href: tutorials/time-series-demand-forecasting.md
+        - name: Picos de llamada de volumen (detección de anomalías)
+          href: tutorials/phone-calls-anomaly-detection.md
         - name: Análisis de ventas de productos (detección de anomalías)
           href: tutorials/sales-anomaly-detection.md
         - name: Detección de objetos en imágenes (detección de objetos)
