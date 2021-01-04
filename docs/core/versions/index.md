@@ -2,12 +2,12 @@
 title: Creación de versiones del entorno de ejecución y el SDK de .NET
 description: En este artículo se explica cómo crear versiones del entorno de ejecución y el SDK de .NET (parecido al control de versiones semántico).
 ms.date: 12/07/2020
-ms.openlocfilehash: 2fe0b162b52f1e4500ec87f7d5d92054cd569552
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 2fbc2775f31b4eab1c9883282c58accd9bb2b9f5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009311"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633629"
 ---
 # <a name="overview-of-how-net-is-versioned"></a>Información general sobre la creación de versiones de .NET
 
@@ -19,15 +19,15 @@ El entorno de ejecución de .NET sigue el esquema de control de versiones "princ
 
 El SDK de .NET no sigue el esquema de control de versiones semántico. El SDK de .NET se publica con mayor rapidez, y sus números de versión deben indicar tanto el entorno de ejecución alineado como la versión secundaria y las publicaciones de revisiones del SDK.
 
-Las dos primeras posiciones del número de versión del SDK de .NET siempre reflejan el entorno de ejecución de .NET con el que se publicó. Cada versión del SDK puede crear aplicaciones tanto para este runtime como para cualquier versión anterior.
+Las dos primeras posiciones del número de versión del SDK de .NET siempre reflejan la versión del entorno de ejecución de .NET con el que se ha publicado. Cada versión del SDK puede crear aplicaciones tanto para este runtime como para cualquier versión anterior.
 
-La tercera posición del número de versión del SDK comunica tanto la versión secundaria como el número de revisión. La versión secundaria se multiplica por 100. La versión secundaria 1 y la revisión 2 se representan con 102. Los dos dígitos finales representan el número de revisión. Por ejemplo, esta es una secuencia posible de los números de versión del SDK y el entorno de ejecución:
+La tercera posición del número de versión del SDK comunica tanto la versión secundaria como el número de revisión. La versión secundaria se multiplica por 100. Los dos dígitos finales representan el número de revisión. La versión secundaria 1 y la revisión 2 se representan con 102. Por ejemplo, esta es una secuencia posible de los números de versión del SDK y el entorno de ejecución:
 
 | Change                | Runtime de .NET      | SDK de .NET (\*)     |
 |-----------------------|-------------------|-------------------|
 | Versión inicial       | 2.2.0             | 2.2.100           |
 | Revisión del SDK             | 2.2.0             | 2.2.101           |
-| Runtime y revisión del SDK | 2.2.1             | 2.2.102           |
+| Entorno de ejecución y revisión del SDK | 2.2.1             | 2.2.102           |
 | Cambio de características del SDK    | 2.2.1             | 2.2.200           |
 
 NOTAS:
