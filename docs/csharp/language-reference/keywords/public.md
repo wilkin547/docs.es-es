@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 26edaf7538d11d082a4b8863228213c3ebc46937
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 90c1d2a1d9efcdf57f914f4318bf7a743d3f37ec
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122347"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938473"
 ---
 # <a name="public-c-reference"></a>public (Referencia de C#)
 
@@ -30,7 +30,7 @@ Vea [Modificadores de acceso](../../programming-guide/classes-and-structs/access
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, se declaran dos clases, `PointTest` y `MainClass`. Se obtiene acceso a los miembros públicos `x` e `y` de `PointTest` directamente desde `MainClass`.
+En el ejemplo siguiente, se declaran dos clases, `PointTest` y `Program`. Se obtiene acceso a los miembros públicos `x` e `y` de `PointTest` directamente desde `Program`.
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 

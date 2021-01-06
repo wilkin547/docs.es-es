@@ -1,21 +1,21 @@
 ---
 title: 'Cifrado y seguridad de red: gRPC para desarrolladores de WCF'
 description: Algunas notas sobre la seguridad de red y el cifrado en gRPC
-ms.date: 09/02/2019
-ms.openlocfilehash: f8a7aeaf2a65e4ff56ac33d728e40f09a436f7a6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542785"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938629"
 ---
 # <a name="encryption-and-network-security"></a>Cifrado y seguridad de red
 
-El modelo de seguridad de red para Windows Communication Foundation (WCF) es amplio y complejo. Incluye seguridad de nivel de transporte mediante HTTPS o TLS a través de TCP, y seguridad de nivel de mensaje mediante la especificación de WS-Security para cifrar mensajes individuales.
+El modelo de seguridad de red para Windows Communication Foundation (WCF) es amplio y complejo. Incluye seguridad de nivel de transporte mediante HTTPS o TLS a través de TCP, y seguridad de nivel de mensaje mediante el WS-Security especificación para cifrar mensajes individuales.
 
 gRPC deja redes seguras en el protocolo HTTP/2 subyacente, que se puede proteger mediante el uso de certificados TLS.
 
-Los exploradores Web insisten en el uso de conexiones TLS para HTTP/2, pero la mayoría de los clientes de programación, incluido. La `HttpClient`de red, puede usar HTTP/2 a través de conexiones no cifradas. `HttpClient` requiere el cifrado de forma predeterminada, pero puede invalidarlo mediante un modificador <xref:System.AppContext>.
+Los exploradores Web insisten en el uso de conexiones TLS para HTTP/2, pero la mayoría de los clientes de programación, incluido. La red `HttpClient` , puede usar http/2 a través de conexiones no cifradas. `HttpClient` requiere el cifrado de forma predeterminada, pero puede invalidar este comportamiento mediante un <xref:System.AppContext> modificador.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

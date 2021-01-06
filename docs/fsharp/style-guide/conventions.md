@@ -1,13 +1,13 @@
 ---
 title: Convenciones de código de F#
 description: 'Aprenda instrucciones generales y expresiones al escribir código de F #.'
-ms.date: 01/15/2020
-ms.openlocfilehash: 87955c379f0abba929b0ced75d62d2601f37dc5a
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/5/2021
+ms.openlocfilehash: e69ceb2f3c37404ca8d8ed972f985340e62ecb59
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739907"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938694"
 ---
 # <a name="f-coding-conventions"></a>Convenciones de código de F#
 
@@ -135,7 +135,7 @@ Hay muchas ocasiones en las que la inicialización de un valor puede tener efect
 ```fsharp
 // This is bad!
 module MyApi =
-    let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
+    let dep1 = File.ReadAllText "/Users/<name>/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
 
     let private r = Random()
@@ -190,9 +190,9 @@ En este caso, se puede producir un error en las tres formas conocidas de retirar
 let handleWithdrawal amount =
     let w = withdrawMoney amount
     match w with
-    | Success am -> printfn "Successfully withdrew %f{am}"
-    | InsufficientFunds balance -> printfn "Failed: balance is %f{balance}"
-    | CardExpired expiredDate -> printfn "Failed: card expired on %O{expiredDate}"
+    | Success am -> printfn $"Successfully withdrew %f{am}"
+    | InsufficientFunds balance -> printfn $"Failed: balance is %f{balance}"
+    | CardExpired expiredDate -> printfn $"Failed: card expired on {expiredDate}"
     | UndisclosedFailure -> printfn "Failed: unknown"
 ```
 
@@ -238,7 +238,7 @@ La reconciliación de la funcionalidad para realizar en el caso de una excepció
 
 ### <a name="do-not-use-monadic-error-handling-to-replace-exceptions"></a>No usar el control de errores Monad para reemplazar excepciones
 
-Las excepciones se ven como algo Taboo en la programación funcional. De hecho, las excepciones infringen la pureza, por lo que es seguro considerarlas que no son bastante funcionales. Sin embargo, esto omite la realidad de dónde se debe ejecutar el código y que se pueden producir errores en tiempo de ejecución. En general, escriba código en el supuesto de que la mayoría de las cosas no son puras ni totales, con el fin de minimizar las sorpresas desagradables.
+A menudo, las excepciones se ven como Taboo en la programación funcional. De hecho, las excepciones infringen la pureza, por lo que es seguro considerarlas que no son bastante funcionales. Sin embargo, esto omite la realidad de dónde se debe ejecutar el código y que se pueden producir errores en tiempo de ejecución. En general, escriba código en el supuesto de que la mayoría de las cosas no son puras ni totales, con el fin de minimizar las sorpresas desagradables.
 
 Es importante tener en cuenta los siguientes aspectos principales y aspectos de las excepciones con respecto a su relevancia y adecuadaidad en el entorno de tiempo de ejecución .NET y el ecosistema multilingüe:
 
@@ -317,7 +317,7 @@ Las funciones currificadas no etiquetan sus argumentos. Esto tiene implicaciones
 
 ```fsharp
 let func name age =
-    printfn "My name is {name} and I am %d{age} years old!"
+    printfn $"My name is {name} and I am %d{age} years old!"
 
 let funcWithApplication =
     printfn "My name is %s and I am %d years old!"
@@ -331,7 +331,7 @@ val func : name:string -> age:int -> unit
 val funcWithApplication : (string -> int -> unit)
 ```
 
-En el sitio de la llamada, la información sobre herramientas, como Visual Studio, no proporcionará información significativa sobre lo que `string` los `int` tipos de entrada y representan realmente.
+En el sitio de la llamada, la información sobre herramientas en herramientas como Visual Studio le proporcionará la firma de tipo, pero como no hay ningún nombre definido, no se mostrarán los nombres. Los nombres son esenciales para un buen diseño de API porque ayudan a los autores de llamadas a comprender mejor el significado de la API. El uso de código sin punto en la API pública puede dificultar la comprensión de los llamadores.
 
 Si se encuentra con código sin punto, como el `funcWithApplication` que se puede utilizar públicamente, se recomienda realizar una expansión η completa para que las herramientas puedan recoger los nombres descriptivos de los argumentos.
 

@@ -1,13 +1,13 @@
 ---
 title: Equilibrio de carga gRPC-gRPC para desarrolladores de WCF
 description: Elección de un equilibrador de carga para trabajar con gRPC Services.
-ms.date: 09/02/2019
-ms.openlocfilehash: 215c0983146bbf9168f01956d64733f80cea6faf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.date: 12/15/2020
+ms.openlocfilehash: 55f61608dce1f159b11d7265a47938ba49e9e188
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711174"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938590"
 ---
 # <a name="load-balancing-grpc"></a>Equilibrio de carga gRPC
 
@@ -17,7 +17,7 @@ Los equilibradores de carga se clasifican según la *capa* en la que operan. Los
 
 ## <a name="l4-load-balancers"></a>Equilibradores de carga L4
 
-Un equilibrador de carga L4 acepta una solicitud de conexión TCP de un cliente, abre otra conexión a una de las instancias de back-end y copia los datos entre las dos conexiones sin ningún procesamiento real. L4 ofrece un rendimiento excelente y una baja latencia, pero muy poco control o inteligencia. Siempre que el cliente mantenga abierta la conexión, todas las solicitudes se dirigirán a la misma instancia de back-end.
+Un equilibrador de carga L4 acepta una solicitud de conexión TCP de un cliente, abre otra conexión a una de las instancias de back-end y copia los datos entre las dos conexiones sin ningún procesamiento real. L4 ofrece un rendimiento y una baja latencia excelentes, pero con pocos controles o inteligencia. Siempre que el cliente mantenga abierta la conexión, todas las solicitudes se dirigirán a la misma instancia de back-end.
 
  [Azure load balancer](https://azure.microsoft.com/services/load-balancer/) es un ejemplo de un equilibrador de carga L4.
 

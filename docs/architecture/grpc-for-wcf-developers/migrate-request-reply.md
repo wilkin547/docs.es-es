@@ -1,13 +1,13 @@
 ---
 title: Migrar un servicio de solicitud-respuesta de WCF a gRPC-gRPC para desarrolladores de WCF
 description: Obtenga información sobre cómo migrar un servicio de solicitud-respuesta simple de WCF a gRPC.
-ms.date: 09/02/2019
-ms.openlocfilehash: 29a7bc77bc3a4becd767fc7a50adff5b746f54bc
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.date: 12/15/2020
+ms.openlocfilehash: 38c6e33e7588dd7c1b263d813d06c088ab484948
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97512702"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938577"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrar un servicio de solicitud-respuesta de WCF a una RPC unaria de gRPC
 
@@ -196,7 +196,7 @@ La firma para todos los métodos de servicio unario gRPC en ASP.NET Core es cohe
 
 El tipo de valor devuelto del método es `Task<T>` , donde `T` es el tipo de mensaje de respuesta. Todos los métodos de servicio de gRPC son asíncronos.
 
-## <a name="migrate-the-portfoliodata-library-to-net-core"></a>Migración de la biblioteca de PortfolioData a .NET Core
+## <a name="migrate-the-portfoliodata-library-to-net"></a>Migración de la biblioteca de PortfolioData a .NET
 
 En este momento, el proyecto necesita el repositorio de cartera y los modelos contenidos en la `TraderSys.PortfolioData` biblioteca de clases de la solución WCF. La forma más fácil de llevarlos a cabo es crear una nueva biblioteca de clases mediante el cuadro de diálogo **nuevo proyecto** de Visual Studio con la plantilla biblioteca de clases (.net Standard) o desde la línea de comandos mediante el CLI de .net Core, ejecutando estos comandos desde el directorio que contiene el `TraderSys.sln` archivo:
 
@@ -395,7 +395,7 @@ Después de migrar correctamente el servicio de solicitud-respuesta de WCF a gRP
 Cree una biblioteca de clases de .NET Standard en la misma solución que contenga el cliente. Este es principalmente un ejemplo de la creación de código de cliente, pero podría empaquetar dicha biblioteca mediante el uso de NuGet y distribuirlo en un repositorio interno para que otros equipos de .NET lo consuman. Continúe y agregue una nueva biblioteca de clases de .NET Standard denominada `TraderSys.Portfolios.Client` a la solución y elimine el `Class1.cs` archivo.
 
 > [!CAUTION]
-> El paquete NuGet de [GRPC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) requiere .net Core 3,0 (u otro tiempo de ejecución compatible con .net Standard 2,1). Las versiones anteriores de .NET Framework y .NET Core son compatibles con el paquete NuGet [GRPC. Core](https://www.nuget.org/packages/Grpc.Core) .
+> El paquete NuGet de [GRPC .net. Client](https://www.nuget.org/packages/Grpc.Net.Client) requiere .net Core 3,0 o posterior (u otro Runtime compatible con .net Standard 2,1). Las versiones anteriores de .NET Framework y .NET Core son compatibles con el paquete NuGet [GRPC. Core](https://www.nuget.org/packages/Grpc.Core) .
 
 En Visual Studio 2019, puede Agregar referencias a los servicios de gRPC de una manera similar a como se haría con la adición de referencias de servicio a proyectos de WCF en versiones anteriores de Visual Studio. Las referencias de servicio y los servicios conectados se administran ahora en la misma interfaz de usuario. Para acceder a la interfaz de usuario, haga clic con el botón secundario en el nodo **dependencias** del `TraderSys.Portfolios.Client` proyecto en explorador de soluciones y seleccione **Agregar servicio conectado**. En la ventana de herramientas que aparece, seleccione la sección **referencias de servicio** y, a continuación, seleccione **Agregar nueva referencia de servicio de gRPC**:
 

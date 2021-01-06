@@ -1,13 +1,13 @@
 ---
 title: 'Mallas de servicio: gRPC para desarrolladores de WCF'
 description: Usar una malla de servicio para enrutar y equilibrar las solicitudes a los servicios de gRPC en un clúster de Kubernetes.
-ms.date: 09/02/2019
-ms.openlocfilehash: a29d6893e585c7eb60c847cef0149afeeaebcdab
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: a1c72a4facf1c133af912bbee242328653a051b6
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503385"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938135"
 ---
 # <a name="service-meshes"></a>Mallas de servicio
 
@@ -19,9 +19,9 @@ Una malla de servicio es un componente de infraestructura que toma el control de
 - Cifrado
 - Supervisión
 
-Las mallas de servicio de Kubernetes funcionan agregando un contenedor adicional, denominado *proxy sidecar*, a cada POD incluido en la malla. El proxy asume el control de todas las solicitudes de red entrantes y salientes. Después, puede mantener la configuración y la administración de las redes con independencia de los contenedores de la aplicación. En muchos casos, esta separación no requiere ningún cambio en el código de la aplicación.
+Las mallas de servicio de Kubernetes funcionan agregando un contenedor adicional, denominado *proxy sidecar*, a cada POD incluido en la malla. El proxy asume el control de todas las solicitudes de red entrantes y salientes. A continuación, puede mantener la configuración y la administración de las redes en materia independiente de los contenedores de la aplicación. En muchos casos, esta separación no requiere ningún cambio en el código de la aplicación.
 
-En el [ejemplo del capítulo anterior](kubernetes.md#test-the-application), las solicitudes de gRPC de la aplicación web se enrutaron a una única instancia del servicio gRPC. Esto sucede porque el nombre de host del servicio se resuelve en una dirección IP y esa dirección IP se almacena en caché durante la duración de la instancia de `HttpClientHandler`. Es posible que se pueda solucionar esto mediante el control manual de las búsquedas de DNS o la creación de varios clientes. Sin embargo, esta solución complicaría el código de la aplicación sin agregar ningún valor empresarial o de cliente.
+En el [ejemplo del capítulo anterior](kubernetes.md#test-the-application), las solicitudes de gRPC de la aplicación web se enrutaron a una única instancia del servicio gRPC. Esto sucede porque el nombre de host del servicio se resuelve en una dirección IP y esa dirección IP se almacena en caché durante la duración de la `HttpClientHandler` instancia. Es posible que se pueda solucionar este comportamiento mediante el control manual de las búsquedas de DNS o la creación de varios clientes. Sin embargo, esta solución complicaría el código de la aplicación sin agregar ningún valor empresarial o de cliente.
 
 Cuando se usa una malla de servicio, las solicitudes del contenedor de la aplicación se envían al proxy sidecar. Después, el proxy sidecar puede distribuirlos de forma inteligente en todas las instancias del otro servicio. La malla también puede:
 
@@ -29,11 +29,11 @@ Cuando se usa una malla de servicio, las solicitudes del contenedor de la aplica
 - Administrar la semántica de reintentos para llamadas o tiempos de espera con error.
 - Reenruta las solicitudes con error a una instancia alternativa sin volver a la aplicación cliente.
 
-En la captura de pantalla siguiente se muestra la aplicación StockWeb que se ejecuta con la malla del servicio Linkerd. No hay ningún cambio en el código de la aplicación y no se usa la imagen de Docker. El único cambio necesario era la adición de una anotación a la implementación en los archivos YAML para los servicios `stockdata` y `stockweb`.
+En la captura de pantalla siguiente se muestra la aplicación StockWeb que se ejecuta con la malla del servicio Linkerd. No hay ningún cambio en el código de la aplicación y no se usa la imagen de Docker. El único cambio necesario era la adición de una anotación a la implementación en los archivos YAML para los `stockdata` servicios y `stockweb` .
 
 ![StockWeb con la malla de servicio](media/service-mesh/stockweb-servicemesh-screenshot.png)
 
-Puede ver en la columna **servidor** que las solicitudes de la aplicación StockWeb se han enrutado a ambas réplicas del servicio StockData, a pesar de que se originan desde una sola instancia de `HttpClient` en el código de la aplicación. De hecho, si revisa el código, verá que todas las solicitudes 100 al servicio StockData se realizan simultáneamente mediante la misma instancia de `HttpClient`. Con la malla de servicio, esas solicitudes se equilibrarán a lo largo de todas las instancias de servicio disponibles.
+Puede ver en la columna **servidor** que las solicitudes de la aplicación StockWeb se han enrutado a ambas réplicas del servicio StockData, a pesar de que se originan desde una sola `HttpClient` instancia en el código de la aplicación. De hecho, si revisa el código, verá que todas las solicitudes 100 al servicio StockData se realizan simultáneamente mediante la misma `HttpClient` instancia. Con la malla de servicio, esas solicitudes se equilibrarán a lo largo de todas las instancias de servicio disponibles.
 
 Las mallas de servicio solo se aplican al tráfico dentro de un clúster. Para clientes externos, vea el siguiente capítulo, [equilibrio de carga](load-balancing.md).
 
@@ -56,7 +56,7 @@ Con la CLI de Linkerd instalada, siga las instrucciones [Introducción](https://
 
 ### <a name="add-linkerd-to-kubernetes-deployments"></a>Agregar Linkerd a las implementaciones de Kubernetes
 
-La CLI de Linkerd proporciona un comando `inject` para agregar las secciones y propiedades necesarias a los archivos Kubernetes. Puede ejecutar el comando y escribir el resultado en un archivo nuevo.
+La CLI de Linkerd proporciona un `inject` comando para agregar las secciones y propiedades necesarias a los archivos Kubernetes. Puede ejecutar el comando y escribir el resultado en un archivo nuevo.
 
 ```console
 linkerd inject stockdata.yml > stockdata-with-mesh.yml
@@ -65,7 +65,7 @@ linkerd inject stockweb.yml > stockweb-with-mesh.yml
 
 Puede inspeccionar los nuevos archivos para ver qué cambios se han realizado. En el caso de los objetos de implementación, se agrega una anotación de metadatos para indicar a Linkerd que inserte un contenedor de proxy sidecar en el POD cuando se crea.
 
-También es posible canalizar el resultado del comando `linkerd inject` a `kubectl` directamente. Los siguientes comandos funcionarán en PowerShell o en cualquier Shell de Linux.
+También es posible canalizar el resultado del `linkerd inject` comando `kubectl` directamente. Los siguientes comandos funcionarán en PowerShell o en cualquier Shell de Linux.
 
 ```console
 linkerd inject stockdata.yml | kubectl apply -f -
@@ -74,7 +74,7 @@ linkerd inject stockweb.yml | kubectl apply -f -
 
 ### <a name="inspect-services-in-the-linkerd-dashboard"></a>Inspeccionar los servicios en el panel de Linkerd
 
-Abra el panel de Linkerd mediante la CLI de `linkerd`.
+Abra el panel de Linkerd mediante la `linkerd` CLI.
 
 ```console
 linkerd dashboard

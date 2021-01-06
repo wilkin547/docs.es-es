@@ -1,13 +1,13 @@
 ---
 title: Comparación de WCF con gRPC-gRPC para desarrolladores de WCF
 description: Comparación de los marcos WCF y gRPC para compilar aplicaciones distribuidas.
-ms.date: 09/02/2019
-ms.openlocfilehash: 4f54db76c9512b770b4dd993496d95437dd89753
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 12/15/2020
+ms.openlocfilehash: 7dd41c3d6f248bb1ef5eacb323b1443c7bc575a7
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503336"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938499"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Comparar WCF con gRPC
 
@@ -18,11 +18,11 @@ En el capítulo anterior se ha dado una buena mirada a protobuf y cómo gRPC con
 - Tipos RPC
 - Metadatos
 - Control de errores
-- Protocolos WS-\*
+- Protocolos WS \*
 
 ## <a name="grpc-example"></a>ejemplo de gRPC
 
-Al crear un nuevo proyecto ASP.NET Core 3,0 gRPC desde Visual Studio 2019 o desde la línea de comandos, se genera el equivalente gRPC de "Hola mundo". Consta de un archivo `greeter.proto` que define el servicio y sus mensajes, y un archivo `GreeterService.cs` con una implementación del servicio.
+Al crear un nuevo proyecto ASP.NET Core 5,0 gRPC desde Visual Studio 2019 o desde la línea de comandos, se genera el equivalente gRPC de "Hola mundo". Consta de un `greeter.proto` archivo que define el servicio y sus mensajes, y un `GreeterService.cs` archivo con una implementación del servicio.
 
 ```protobuf
 syntax = "proto3";
