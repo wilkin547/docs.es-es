@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 79336396de3058e40cf7328e6d92e7e9e54296e9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 358cbff1ded3bd4ee9a3f78965eac1e1b1883ede
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242921"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633856"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -30,7 +30,7 @@ También querrá una aplicación de .NET Core sencilla con la que probar el host
 Hay dos API distintas que pueden usarse para hospedar .NET Core. En este artículo (y sus [ejemplos](https://github.com/dotnet/samples/tree/master/core/hosting) asociados) se describen estas dos opciones.
 
 * El método preferido para hospedar el tiempo de ejecución de .NET Core en .NET Core 3.0 y superior es con las APIs de las bibliotecas `nethost` y `hostfxr`. Estos puntos de entrada tratan la complejidad de buscar y configurar el entorno de ejecución para la inicialización y permiten tanto el inicio de una aplicación administrada como la llamada a un método administrado estático.
-* El método preferido para hospedar el entorno de ejecución .NET Core antes de la versión .NET Core 3.0 es con la API de [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h). Esta API expone funciones para iniciar y detener fácilmente el entorno de ejecución e invocar código administrado (ya sea mediante el inicio de un archivo .exe administrado o una llamada a métodos estáticos administrados).
+* El método preferido para hospedar el entorno de ejecución .NET Core antes de la versión .NET Core 3.0 es con la API de [`coreclrhost.h`](https://github.com/dotnet/runtime/blob/master/src/coreclr/hosts/inc/coreclrhost.h). Esta API expone funciones para iniciar y detener fácilmente el entorno de ejecución e invocar código administrado (ya sea mediante el inicio de un archivo .exe administrado o una llamada a métodos estáticos administrados).
 
 ## <a name="sample-hosts"></a>Hosts de ejemplo
 
@@ -84,7 +84,7 @@ El host nativo ahora puede llamar al método administrado y pasarle los parámet
 
 En los siguientes pasos se explica cómo usar la API de `coreclrhost.h` para iniciar el entorno de ejecución de .NET Core en una aplicación nativa y llamar a un método estático administrado. Los fragmentos de código de este documento usan algunas API específicas de Windows, pero el [host de ejemplo completo](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost) muestra las rutas de acceso de código de Windows y Linux.
 
-El [host Unix CoreRun](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/unixcorerun) muestra un ejemplo más complejo y real de hospedaje mediante `coreclrhost.h`.
+El [host Unix CoreRun](https://github.com/dotnet/runtime/tree/master/src/coreclr/hosts/unixcorerun) muestra un ejemplo más complejo y real de hospedaje mediante `coreclrhost.h`.
 
 ### <a name="step-1---find-and-load-coreclr"></a>Paso 1: Buscar y cargar CoreCLR
 

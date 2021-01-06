@@ -3,12 +3,12 @@ title: Referencia de comandos de la CLI de ML.NET
 description: Información general, ejemplos y referencia del comando de entrenamiento automático en la herramienta de la CLI de ML.NET.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
-ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
+ms.openlocfilehash: 6f07cd8b4237f8931bbc0ec97bc0bbe18c488f16
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946946"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856073"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>Referencia de comandos de la CLI de ML.NET
 
@@ -99,7 +99,7 @@ mlnet classification
 La ejecución de `mlnet regression` entrenará un modelo de regresión. Elija este comando si quiere que un modelo de ML prediga un valor numérico (por ejemplo, predicción de precio).
 
 ```console
-mlnet classification
+mlnet regression
 
 --dataset <path> (REQUIRED)
 
@@ -134,7 +134,7 @@ mlnet classification
 La ejecución de `mlnet recommendation` entrenará un modelo de recomendación.  Elija este comando si quiere que un modelo de ML recomiende elementos a los usuarios en función de las clasificaciones (por ejemplo, recomendación de productos).
 
 ```console
-mlnet classification
+mlnet recommendation
 
 --dataset <path> (REQUIRED)
 

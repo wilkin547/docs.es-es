@@ -3,13 +3,13 @@ title: 'Tutorial: Algoritmos de compilación con coincidencia de patrones'
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
-ms.custom: contperfq1
-ms.openlocfilehash: ee8b3a90a06fabd4e9d73d7682efecda6cbfd23e
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955634"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513229"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos.
 

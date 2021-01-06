@@ -2,12 +2,12 @@
 title: Registros
 description: 'Obtenga información sobre cómo los registros de F # representan agregados simples de valores con nombre, opcionalmente con miembros.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 03de96b9c53bc21e7a7723a15d2a8451d100ba76
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2da31da0ec830d458a370e64ca105048181f5d74
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95682034"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899644"
 ---
 # <a name="records"></a>Registros
 
@@ -163,7 +163,7 @@ let weirdString = p.WeirdToString()
 
 ## <a name="differences-between-records-and-classes"></a>Diferencias entre los registros y las clases
 
-Los campos de registro difieren de las clases en que se exponen automáticamente como propiedades y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de clases. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción que se describe en este tema. Las clases no tienen ninguna relación directa entre los parámetros de constructor, los campos y las propiedades.
+Los campos de registro se diferencian de los campos de clase en que se exponen automáticamente como propiedades, y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de clases. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción que se describe en este tema. Las clases no tienen ninguna relación directa entre los parámetros de constructor, los campos y las propiedades.
 
 Al igual que los tipos de estructura y Unión, los registros tienen una semántica estructural de igualdad. Las clases tienen semántica de igualdad de referencia. El siguiente ejemplo de código muestra esto.
 
