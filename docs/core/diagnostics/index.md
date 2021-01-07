@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: c43e661ad8c9f665151e0240bf6b54e61b9acfef
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031922"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753619"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -24,6 +24,10 @@ Los [depuradores administrados](managed-debuggers.md) le permiten interactuar co
 
 El [registro y seguimiento](logging-tracing.md) son técnicas relacionadas. Hacen referencia a la instrumentación del código para crear archivos de registro. Los archivos registran los detalles de lo que hace un programa. Estos detalles se pueden usar para diagnosticar los problemas más complejos. Cuando se combinan con marcas de tiempo, estas técnicas también son valiosas para investigaciones de rendimiento.
 
+## <a name="metrics"></a>Métricas
+
+Los elementos [EventCounter](event-counters.md) permiten escribir métricas para identificar y supervisar los problemas de rendimiento. Las métricas incurren en una carga de rendimiento menor en comparación con el seguimiento, lo que las hace más convenientes para una supervisión de rendimiento permanente. El entorno de ejecución y las bibliotecas de .NET publican varios [elementos EventCounter conocidos](available-counters.md) que también puede supervisar.
+
 ## <a name="unit-testing"></a>Pruebas unitarias
 
 Las [pruebas unitarias](../testing/index.md) son un componente clave de la integración continua y la implementación de software de alta calidad. Las pruebas unitarias están diseñadas para brindarle una advertencia temprana cuando se daña algo.
@@ -32,13 +36,13 @@ Las [pruebas unitarias](../testing/index.md) son un componente clave de la integ
 
 Un [volcado](./dumps.md) es un archivo que contiene una instantánea del proceso en el momento de la creación. Pueden ser útiles para examinar el estado de la aplicación con fines de depuración.
 
+## <a name="symbols"></a>Símbolos
+
+Los símbolos son un requisito indispensable para la depuración y otras herramientas de diagnóstico. El contenido de los archivos de símbolos varia según los lenguajes, los compiladores y las plataformas. En un nivel muy alto, los símbolos son una asignación entre el código de origen y el binario que produce el compilador. Dichas asignaciones se usan para proporcionar datos como la información del número de línea y los nombres de las variables locales en herramientas de diagnóstico como [Visual Studio](/visualstudio/debugger/what-is-debugging) y [Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging).  El siguiente vínculo incluye una explicación detallada de los [símbolos](/windows/win32/dxtecharts/debugging-with-symbols) para Windows, aunque muchos de los conceptos también son aplicables a otras plataformas. Los [símbolos portables de .NET](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) tienen una extensión de nombre de archivo "PDB" similar a la de los archivos PDB de Windows, aunque no son compatibles con este formato.
+
 ## <a name="collect-diagnostics-in-containers"></a>Recopilación de diagnósticos en contenedores
 
 Las herramientas de diagnóstico que se usan en los entornos de Linux que no están en contenedores también se pueden utilizar para [recopilar diagnósticos en contenedores](diagnostics-in-containers.md). Solo es necesario realizar algunos cambios en la utilización para asegurarse de que las herramientas funcionan en un contenedor de Docker.
-
-## <a name="debug-linux-dumps"></a>Depuración de volcados de Linux
-
-[Depuración de volcados de Linux](debug-linux-dumps.md) explica cómo recopilar y analizar volcados en Linux.
 
 ## <a name="net-core-diagnostic-global-tools"></a>Herramientas globales de diagnóstico de .NET Core
 
@@ -64,7 +68,7 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-SOS](dotnet-sos.md) se usa para instalar la [extensión de depuración de SOS](../../framework/tools/sos-dll-sos-debugging-extension.md) en Linux o MacOS (o en Windows si se usan herramientas de depuración anteriores).
+[dotnet-sos](dotnet-sos.md) instala la [extensión de depuración de SOS](sos-debugging-extension.md) en Linux y macOS (también en Windows si usa [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)).
 
 ### <a name="perfcollect"></a>PerfCollect
 
@@ -83,6 +87,14 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 ### <a name="debug-deadlock"></a>Depuración de interbloqueo
 
 [Tutorial: Depuración de interbloqueo](debug-deadlock.md) muestra cómo usar la herramienta [dotnet-dump](dotnet-dump.md) para investigar los subprocesos y bloqueos.
+
+### <a name="debug-a-stackoverflow"></a>Depuración de StackOverflow
+
+[Tutorial: Depuración de StackOverflow](debug-stackoverflow.md) muestra cómo depurar un elemento <xref:System.StackOverflowException> en Linux.
+
+### <a name="debug-linux-dumps"></a>Depuración de volcados de Linux
+
+[Depuración de volcados de Linux](debug-linux-dumps.md) explica cómo recopilar y analizar volcados en Linux.
 
 ### <a name="measure-performance-using-eventcounters"></a>Medición del rendimiento mediante EventCounters
 

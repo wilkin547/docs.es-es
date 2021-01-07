@@ -1,13 +1,13 @@
 ---
 title: 'Creación de bibliotecas de cliente de gRPC: gRPC para desarrolladores de WCF'
 description: Explicación de los paquetes o bibliotecas de cliente compartidos para gRPC Services.
-ms.date: 12/15/2020
-ms.openlocfilehash: b1233bb40a5fa2119a325be2657b500a4c626c18
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c55b6d1da2377af0b687e32e7776f12b96b0a2ba
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938434"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970133"
 ---
 # <a name="create-grpc-client-libraries"></a>Creación de bibliotecas de cliente de gRPC
 
@@ -147,7 +147,7 @@ namespace Grpc.Core
 
 ## <a name="summary"></a>Resumen
 
-Los <xref:System.IAsyncDisposable> <xref:System.IObservable%601> modelos y son formas bien documentadas y bien documentadas de tratar con flujos de datos asincrónicos en .net. gRPC streams se asigna bien a ambos paradigmas, ofreciendo una estrecha integración con .NET y estilos de programación reactivo y asincrónico.
+Los <xref:System.Collections.Generic.IAsyncEnumerable%601> <xref:System.IObservable%601> modelos y son formas bien documentadas y bien documentadas de tratar con flujos de datos asincrónicos en .net. gRPC streams se asigna bien a ambos paradigmas, ofreciendo una estrecha integración con .NET y estilos de programación reactivo y asincrónico.
 
 >[!div class="step-by-step"]
 >[Anterior](streaming-versus-repeated.md)

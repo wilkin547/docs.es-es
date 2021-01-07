@@ -1,24 +1,27 @@
 ---
 title: Errores y advertencias del compilador
-description: Descripciones y soluciones para errores y advertencias F# que emitirá el compilador
+description: Descripciones y soluciones de los errores y las advertencias que emite el compilador de F#
 ms.date: 12/21/2019
-ms.openlocfilehash: 52d94475e8b0195281d6244230c50c8f64230aeb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
-ms.translationtype: MT
+ms.openlocfilehash: 58430297abe807027afdc52841d67d1233401ff1
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929658"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856125"
 ---
-# <a name="f-compiler-messages"></a>F#mensajes del compilador
+# <a name="f-compiler-messages"></a>Mensajes del compilador de F#
 
-En esta sección se detallan los errores F# y advertencias del compilador que emitirá el compilador para ciertas construcciones. Los conjuntos de errores predeterminados se pueden cambiar:
+En esta sección se detallan los errores y las advertencias que el compilador de F# emite para ciertos constructores. Para cambiar los conjuntos de errores predeterminados, puede hacer lo siguiente:
 
-- Tratar advertencias específicas como si fueran errores mediante la opción del compilador `-warnaserror+`,
+- Tratar las advertencias específicas como si fueran errores mediante el uso de la opción `-warnaserror+` del compilador.
 
-- Omitir advertencias específicas mediante la opción del compilador `-nowarn`
+- Omitir las advertencias específicas mediante el uso de la opción `-nowarn` del compilador.
 
-Si aún no se ha registrado una advertencia o un error determinado en esta sección, vaya al final de esta página y envíe comentarios que incluyan el número o el texto del error.
+Si algún error o advertencia particular todavía no aparece registrado en esta sección:
 
-## <a name="see-also"></a>Vea también
+- Vaya al final de esta página y envíe comentarios al respecto con el número o el texto del error.
+- Agréguelo siguiendo las instrucciones que encontrará en [create-new-fsharp-compiler-message.fsx](https://github.com/dotnet/docs/blob/master/docs/fsharp/language-reference/compiler-messages/util/create-new-fsharp-compiler-message.fsx) y abriendo una solicitud de incorporación de cambios relativa a este repositorio.
 
-- [F#Opciones del compilador](../compiler-options.md)
+## <a name="see-also"></a>Consulte también
+
+- [Opciones del compilador de F#](../compiler-options.md)

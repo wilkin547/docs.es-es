@@ -393,15 +393,29 @@ items:
               - name: Información general
                 displayName: dumps
                 href: ../core/diagnostics/dumps.md
+              - name: Depuración de StackOverflow
+                href: ../core/diagnostics/debug-stackoverflow.md
               - name: Volcados de memoria de Linux
                 href: ../core/diagnostics/debug-linux-dumps.md
+              - name: Extensión del depurador de SOS
+                href: ../core/diagnostics/sos-debugging-extension.md
           - name: EventCounters
-            href: ../core/diagnostics/event-counters.md
+            items:
+              - name: Información general
+                displayName: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: Contadores conocidos en .NET
+                href: ../core/diagnostics/available-counters.md
           - name: EventPipe
             href: ../core/diagnostics/eventpipe.md
           - name: Registro y seguimiento
-            href: ../core/diagnostics/logging-tracing.md
-          - name: Eventos en tiempo de ejecución
+            items:
+              - name: Información general
+                displayName: logging and tracing
+                href: ../core/diagnostics/logging-tracing.md
+              - name: Proveedores de eventos conocidos
+                href: ../core/diagnostics/well-known-event-providers.md
+          - name: Eventos del entorno de ejecución
             items:
               - name: Información general
                 href: ../fundamentals/diagnostics/runtime-events.md
@@ -413,9 +427,9 @@ items:
                 href: ../fundamentals/diagnostics/runtime-garbage-collection-events.md
               - name: Eventos de interoperabilidad
                 href: ../fundamentals/diagnostics/runtime-interop-events.md
-              - name: Eventos de cargador y enlazador
+              - name: Eventos de cargadores y enlazadores
                 href: ../fundamentals/diagnostics/runtime-loader-binder-events.md
-              - name: Eventos de método
+              - name: Eventos de métodos
                 href: ../fundamentals/diagnostics/runtime-method-events.md
               - name: Eventos ThreadPool
                 href: ../fundamentals/diagnostics/runtime-thread-events.md
@@ -579,8 +593,6 @@ items:
                         href: code-analysis/quality-rules/ca1069.md
                       - name: CA1070
                         href: code-analysis/quality-rules/ca1070.md
-                      - name: CA1071
-                        href: code-analysis/quality-rules/ca1071.md
                   - name: Reglas de documentación
                     items:
                       - name: Información general

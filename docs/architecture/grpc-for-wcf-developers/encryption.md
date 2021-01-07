@@ -1,13 +1,13 @@
 ---
 title: 'Cifrado y seguridad de red: gRPC para desarrolladores de WCF'
 description: Algunas notas sobre la seguridad de red y el cifrado en gRPC
-ms.date: 12/15/2020
-ms.openlocfilehash: 0735158ed69ce425c4f00eed6c42689b888a1885
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: cf4d30ff862e64aadfeacf45ed3768fc14737800
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938629"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970146"
 ---
 # <a name="encryption-and-network-security"></a>Cifrado y seguridad de red
 
@@ -15,11 +15,7 @@ El modelo de seguridad de red para Windows Communication Foundation (WCF) es amp
 
 gRPC deja redes seguras en el protocolo HTTP/2 subyacente, que se puede proteger mediante el uso de certificados TLS.
 
-Los exploradores Web insisten en el uso de conexiones TLS para HTTP/2, pero la mayoría de los clientes de programación, incluido. La red `HttpClient` , puede usar http/2 a través de conexiones no cifradas. `HttpClient` requiere el cifrado de forma predeterminada, pero puede invalidar este comportamiento mediante un <xref:System.AppContext> modificador.
-
-```csharp
-AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-```
+Los exploradores Web insisten en el uso de conexiones TLS para HTTP/2, pero la mayoría de los clientes de programación, incluido. La red `HttpClient` , puede usar http/2 a través de conexiones no cifradas.
 
 En el caso de las API públicas, siempre debe usar las conexiones TLS y proporcionar certificados válidos para los servicios de una autoridad SSL adecuada. [LetsEncrypt](https://letsencrypt.org) proporciona certificados SSL gratis y automatizados, y la mayoría de la infraestructura de hospedaje es compatible actualmente con el estándar LetsEncrypt con complementos o extensiones comunes.
 

@@ -1,13 +1,13 @@
 ---
 title: Creación de un nuevo ASP.NET Core proyecto de gRPC-gRPC para desarrolladores de WCF
 description: Obtenga información sobre cómo crear un proyecto de gRPC con Visual Studio o la línea de comandos.
-ms.date: 12/15/2020
-ms.openlocfilehash: 960725a9507797f43b2c15283e384b0ad827c2b1
-ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
+ms.date: 01/06/2021
+ms.openlocfilehash: c9d66a773f0633c2ae93c42ce3ce53084032cd17
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97938666"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970263"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>Creación de un nuevo proyecto gRPC de ASP.NET Core
 
@@ -16,7 +16,7 @@ El SDK de .NET incluye una eficaz herramienta de la CLI, `dotnet` , que permite 
 ## <a name="create-the-project-by-using-visual-studio"></a>Crear el proyecto mediante Visual Studio
 
 > [!IMPORTANT]
-> Para desarrollar cualquier aplicación ASP.NET Core 5,0, necesita la versión 16,3 de Visual Studio 2019 o posterior, con la carga de trabajo de **desarrollo web y ASP.net** instalada.
+> Para desarrollar cualquier aplicación ASP.NET Core 5,0, necesita la versión 16,8 de Visual Studio 2019 o posterior, con la carga de trabajo de **desarrollo web y ASP.net** instalada.
 
 Cree una solución vacía denominada **Traders** a partir de la plantilla de *solución en blanco* . Agregue una carpeta de soluciones denominada `src` . A continuación, haga clic con el botón derecho en la carpeta y elija **Agregar**  >  **nuevo proyecto**. Escriba `grpc` en el cuadro de búsqueda de plantillas y debería ver una plantilla de proyecto denominada `gRPC Service` .
 
