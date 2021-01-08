@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 2f59b97de6f92e5a9bf927e1318286e400017dad
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009851"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025086"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
@@ -60,7 +60,7 @@ Puede cambiar la gravedad de estas reglas para deshabilitarlas o elevarlas a err
 
 El *modo de análisis* hace referencia a una configuración de análisis de código predefinida en la que ninguna, algunas o todas las reglas están habilitadas. En el modo de análisis predeterminado, solo se habilita un pequeño número de reglas [como advertencias de compilación](#enabled-rules). Puede cambiar el modo de análisis del proyecto estableciendo la propiedad [AnalysisMode](../../core/project-sdk/msbuild-props.md#analysismode) en el archivo de proyecto. Los valores permitidos son:
 
-| Valor | Descripción |
+| Value | Descripción |
 | - | - |
 | `AllDisabledByDefault` | Este es el modo más conservador. Todas las reglas están deshabilitadas de forma predeterminada. Puede [incluir](configuration-options.md) de forma selectiva reglas individuales para habilitarlas.<br /><br />`<AnalysisMode>AllDisabledByDefault</AnalysisMode>` |
 | `AllEnabledByDefault` | Este es el modo más intenso. Todas las reglas se habilitan como advertencias de compilación. Puede [rechazar](configuration-options.md) selectivamente las reglas individuales para deshabilitarlas.<br /><br />`<AnalysisMode>AllEnabledByDefault</AnalysisMode>` |
@@ -104,13 +104,16 @@ De forma predeterminada, obtendrá las reglas de análisis de código más recie
 Las reglas de *análisis de estilo de código* ("IDExxxx") le permiten definir y mantener un estilo de código coherente en el código base. La configuración de habilitación predeterminada es:
 
 - Compilación de línea de comandos: el análisis de estilo de código está deshabilitado de forma predeterminada para todos los proyectos de .NET en compilaciones de línea de comandos.
-- Visual Studio: el análisis de estilo de código está habilitado, de forma predeterminada, para todos los proyectos de .NET dentro de Visual Studio como [acciones rápidas de refactorización de código](/visualstudio/ide/code-generation-in-visual-studio).
 
-A partir de .NET 5,0, puede habilitar el análisis de estilo de código en la compilación, tanto en la línea de comandos como en Visual Studio. Las infracciones de estilo de código aparecen como advertencias o errores con un prefijo "IDE". Esto le permite aplicar estilos de código coherentes en tiempo de compilación.
+  A partir de .NET 5,0, puede [Habilitar el análisis de estilo de código en la compilación](#enable-on-build), tanto en la línea de comandos como en Visual Studio. Las infracciones de estilo de código aparecen como advertencias o errores con un prefijo "IDE". Esto le permite aplicar estilos de código coherentes en tiempo de compilación.
+
+- Visual Studio: el análisis de estilo de código está habilitado, de forma predeterminada, para todos los proyectos de .NET dentro de Visual Studio como [acciones rápidas de refactorización de código](/visualstudio/ide/code-generation-in-visual-studio).
 
 Para obtener una lista completa de las reglas de análisis de estilo de código, vea [reglas de estilo de código](style-rules/index.md).
 
 ### <a name="enable-on-build"></a>Habilitar al compilar
+
+Con el SDK de .NET 5,0 y versiones posteriores, puede habilitar el análisis de estilo de código al compilar desde la línea de comandos y en Visual Studio. (Sin embargo, por motivos de rendimiento, [un puñado de reglas de estilo de código](https://github.com/dotnet/roslyn/blob/9f87b444da9c48a4d492b19f8337339056bf2b95/src/Analyzers/Core/Analyzers/EnforceOnBuildValues.cs#L95) se seguirá aplicando solo en el IDE de Visual Studio).
 
 Siga estos pasos para habilitar el análisis de estilo de código en la compilación:
 

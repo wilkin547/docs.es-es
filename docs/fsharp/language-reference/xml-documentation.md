@@ -2,12 +2,12 @@
 title: Documentación de XML
 description: 'Obtenga información sobre la compatibilidad de F # para generar documentación a partir de comentarios.'
 ms.date: 09/15/2020
-ms.openlocfilehash: 24d9dbfb5e28d39e224ef9428f025298464fc7f4
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 2f8788e79ea964143eecfaddbeb039474dd61f8e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099014"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025021"
 ---
 # <a name="document-your-code-with-xml-comments"></a>Documentación del código con comentarios XML
 
@@ -101,7 +101,7 @@ type SomeType
 
 ## <a name="limitations"></a>Limitaciones
 
-Algunas características de la documentación XML en C# y otros lenguajes .NET no se admiten en C#.
+Algunas características de la documentación XML en C# y otros lenguajes .NET no se admiten en F #.
 
 - En F #, las referencias cruzadas deben usar la firma XML completa del símbolo correspondiente, por ejemplo `cref="T:System.Console"` .
   El compilador de F # no comprueba las referencias cruzadas simples de estilo C#, como, `cref="Console"` que no se han elaborado a firmas XML completas y que estos elementos no se comprueban. Algunas herramientas de documentación pueden permitir el uso de estas referencias cruzadas en el procesamiento posterior, pero se deben usar las firmas completas.
@@ -128,7 +128,7 @@ Se recomienda documentar código por diversos motivos. A continuación se muestr
 
 - El texto de la documentación se debe escribir con frases completas que terminen en punto.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Comentarios de documentación XML de C# &#40;guía de programación de C&#35;&#41;](../../csharp/programming-guide/xmldoc/index.md).
 - [Referencia del lenguaje F#](index.md)

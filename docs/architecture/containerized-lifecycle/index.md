@@ -1,19 +1,19 @@
 ---
 title: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 description: Obtenga información general de alto nivel del proceso de desarrollo e implementación para desarrollar e implementar aplicaciones en contenedores con la plataforma y las herramientas de Microsoft y Docker.
-ms.date: 11/10/2020
-ms.openlocfilehash: cf20ea97ec252649cdb14add40ead67b6319520a
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.date: 01/06/2021
+ms.openlocfilehash: 94c277e349bacee9b9fc7b160043005dd4135958
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94506667"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970120"
 ---
 # <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a>Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 
 ![Portada del libro](./media/devops-book-cover-large-we.png)
 
-**EDICIÓN v3.1** : actualizada a ASP.NET Core 3.1
+**EDICIÓN v5.0**: actualizada a ASP.NET Core 5.0
 
 Consulte el [registro de cambios](https://aka.ms/DockerLifecycleEbookChangelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
 
@@ -29,7 +29,7 @@ Hemos creado esta guía para ayudarle a entender la arquitectura de aplicaciones
 
 Autor:
 
-> **Cesar de la Torre** , administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
+> **Cesar de la Torre**, administrador de programas sénior del equipo de producto de .NET, Microsoft Corp.
 
 Editor de adquisiciones:
 
@@ -37,7 +37,7 @@ Editor de adquisiciones:
 
 Editor de desarrollo:
 
-> **Bob Russell** , profesional de soluciones en Microsoft
+> **Bob Russell**, profesional de soluciones en Microsoft
 >
 > [**Octal Publishing, Inc.**](http://www.octalpub.com/)
 
@@ -49,15 +49,15 @@ Producción editorial:
 
 Revisor:
 
-> **Bob Russell** , profesional de soluciones en Microsoft
+> **Bob Russell**, profesional de soluciones en Microsoft
 
 Participantes y revisores:
 
-> **Nish Anil** , director de administración de programas, equipo de .NET, Microsoft
+> **Nish Anil**, director de administración de programas, equipo de .NET, Microsoft
 >
-> **Miguel Veloso** , ingeniero de desarrollo de software en Plain Concepts
+> **Miguel Veloso**, ingeniero de desarrollo de software en Plain Concepts
 >
-> **Sumit Ghosh** , asesor principal en Neudesic
+> **Sumit Ghosh**, asesor principal en Neudesic
 
 ## <a name="copyright"></a>Copyright
 
@@ -71,7 +71,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2020 de Microsoft Corporation
+Copyright &copy; 2021 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 

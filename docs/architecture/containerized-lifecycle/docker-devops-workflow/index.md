@@ -1,13 +1,13 @@
 ---
 title: Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma de Microsoft y el flujo de trabajo de DevOps con herramientas de Microsoft
-ms.date: 08/06/2020
-ms.openlocfilehash: 30c5066fa90d8792d8eef8f760dc63c00ce32130
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: 7f2d380dec046804772ea7d13e764ab6f3224c12
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915207"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970159"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Flujo de trabajo de DevOps para aplicaciones de Docker con herramientas de Microsoft
 
@@ -15,11 +15,11 @@ ms.locfileid: "87915207"
 
 Con Visual Studio y Azure DevOps Services en la nube, junto con Team Foundation Server local, los equipos de desarrollo pueden crear, probar y publicar aplicaciones en contenedor de manera productiva dirigidas a Windows o Linux.
 
-Las herramientas de Microsoft pueden automatizar la canalización de implementaciones específicas de aplicaciones en contenedor (Docker, .NET Core o cualquier combinación con otras plataformas) desde compilaciones globales e integración continua (CI) y pruebas con Azure DevOps Services o Team Foundation Server, para realizar una implementación continua (CD) en entornos de Docker (desarrollo, almacenamiento provisional y producción) y para transmitir información de análisis sobre los servicios al equipo de desarrollo a través de Azure Monitor. Cada confirmación de código puede iniciar una compilación (CI) e implementar automáticamente los servicios en entornos en contenedores específicos (CD).
+Las herramientas de Microsoft pueden automatizar la canalización de implementaciones específicas de aplicaciones contenedorizadas (Docker, .NET o cualquier combinación con otras plataformas), desde compilaciones globales e integración continua (CI) y pruebas con Azure DevOps Services o Team Foundation Server, para realizar una implementación continua (CD) en entornos de Docker (desarrollo, almacenamiento provisional y producción) y para transmitir información de análisis sobre los servicios al equipo de desarrollo por medio de Azure Monitor. Cada confirmación de código puede iniciar una compilación (CI) e implementar automáticamente los servicios en entornos en contenedores específicos (CD).
 
 Los desarrolladores y evaluadores pueden aprovisionar con facilidad y rapidez entornos de prueba y desarrollo tipo producción basados en Docker con el uso de plantillas de Microsoft Azure.
 
-La complejidad del desarrollo de aplicaciones en contenedores aumenta de forma constante según las necesidades empresariales de complejidad y escalabilidad. Un buen ejemplo de esta complejidad son las aplicaciones basadas en arquitecturas de microservicios. Para tener éxito en un entorno de este tipo, el proyecto debe automatizar todo el ciclo de vida, no solo la compilación y la implementación, sino que también debe administrar versiones junto con la recopilación de telemetría. Azure DevOps Services y Azure ofrecen las siguientes funcionalidades:
+La complejidad del desarrollo de aplicaciones en contenedores aumenta de forma constante según las necesidades empresariales de complejidad y escalabilidad. Un buen ejemplo de esta complejidad son las aplicaciones basadas en arquitecturas de microservicios. Para tener éxito en un entorno de este tipo, el proyecto debe automatizar todo el ciclo de vida, no solo la compilación y el desarrollo, sino que también debe administrar versiones junto con la colección de telemetría. Azure DevOps Services y Azure ofrecen las siguientes funcionalidades:
 
 - Administración del código fuente de Azure DevOps Services/Team Foundation Server (basada en Git o en el Control de versiones de Team Foundation), planeación de Agile (Agile, Scrum y CMMI son compatibles), integración continua, administración de versiones y otras herramientas para equipos de Agile.
 
