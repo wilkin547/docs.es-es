@@ -1,21 +1,25 @@
 ---
-title: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (segunda edición)
+title: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
 description: Obtenga información sobre cómo elevar, desplazar y modernizar las aplicaciones existentes en la nube de Azure y en los contenedores con este e-book.
-ms.date: 04/28/2018
-ms.openlocfilehash: f4ae4e2d24d343b55811955fb43e929c0db6f01b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/07/2021
+ms.openlocfilehash: bf6e6dff75c939508947aabeda14955b880f5a89
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705337"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025482"
 ---
-# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows (segunda edición)
+# <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers"></a>Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
 
 ![Imagen de portada de la guía Modernización de las aplicaciones .NET](./media/index/web-application-guide-cover-image.png)
 
+**EDICIÓN 5.0**
+
+Consulte el [registro de cambios](https://aka.ms/modernize-ebook-changelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
+
 PUBLICADO POR las divisiones Microsoft Press y Microsoft DevDiv de Microsoft Corporation, One Microsoft Way, Redmond Washington, 98052-6399
 
-Copyright © 2020 de Microsoft Corporation
+Copyright © 2021 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -37,7 +41,7 @@ Participantes y revisores:
 
 ## <a name="introduction"></a>Introducción
 
-Si decide modernizar las aplicaciones web o los servicios, y moverlos a la nube, no tiene necesariamente que rediseñar por completo las aplicaciones. Rediseñar una aplicación con un enfoque avanzado como los microservicios no siempre es posible por las restricciones de costos y tiempo. Según el tipo de aplicación, rediseñar una aplicación podría no ser necesario. Para optimizar la rentabilidad de la estrategia de migración a la nube de su organización, es importante tener en cuenta las necesidades de su negocio y los requisitos de las aplicaciones. Debe determinar:
+Si decide modernizar las aplicaciones web o los servicios, y moverlos a la nube, no tiene necesariamente que rediseñar por completo las aplicaciones. Rediseñar una aplicación con un enfoque avanzado como los microservicios no siempre es posible por las restricciones de costos y tiempo. Según el tipo de aplicación, rediseñar una aplicación podría no ser necesario. Para optimizar la rentabilidad de la estrategia de migración a la nube de su organización, conviene tener en cuenta las necesidades de la empresa y los requisitos de las aplicaciones. Debe determinar:
 
 - Qué aplicaciones requieren una transformación o un cambio de diseño.
 
@@ -47,7 +51,7 @@ Si decide modernizar las aplicaciones web o los servicios, y moverlos a la nube,
 
 ## <a name="about-this-guide"></a>Acerca de esta guía
 
-Esta guía se centra principalmente en la modernización inicial de las aplicaciones orientadas a servicios o aplicaciones web de Microsoft .NET Framework, es decir, se centra en la acción de mover una carga de trabajo a un entorno más moderno y nuevo sin alterar significativamente la arquitectura básica ni el código de la aplicación.
+Esta guía se centra principalmente en la modernización inicial de las aplicaciones orientadas a servicios o aplicaciones web de Microsoft .NET Framework, es decir, en la acción de mover una carga de trabajo a un entorno más moderno y nuevo sin alterar significativamente la arquitectura básica ni el código de la aplicación.
 
 En esta guía también se destacan las ventajas derivadas de mover las aplicaciones a la nube y modernizarlas parcialmente con el uso de un conjunto específico de nuevas tecnologías y enfoques, como los contenedores de Windows y las plataformas de procesos en Azure que admiten los contenedores de Windows.
 
@@ -72,7 +76,7 @@ A continuación se definen y explican brevemente los distintos niveles de madure
 **Nivel 1: aplicaciones de infraestructura lista para la nube**: en este enfoque de migración, solo tiene que migrar o volver a hospedar las aplicaciones locales actuales a una plataforma de infraestructura como servicio ([IaaS](https://azure.microsoft.com/overview/what-is-iaas/)). Las aplicaciones tienen casi la misma composición que antes, pero ahora se implementan en máquinas virtuales en la nube.
 Este sencillo tipo de migración se suele conocer en el sector como "elevar y desplazar".
 
-**Nivel 2: aplicaciones optimizadas para la nube**: En este nivel y sin tener que rediseñar o modificar código significativo, puede obtener ventajas adicionales de la ejecución de la aplicación en la nube con tecnologías modernas como contenedores y otros servicios administrados en la nube. Se mejora la agilidad de las aplicaciones para distribuirlas con más rapidez al perfeccionar los procesos de las operaciones de desarrollo empresariales (DevOps). Esto se consigue mediante el uso de tecnologías como los contenedores de Windows, que se basan en el motor de Docker. Los contenedores eliminan la fricción causada por las dependencias de la aplicación al implementarla en varias fases. En este modelo de madurez, puede implementar contenedores en IaaS o PaaS, a la vez que usa otros servicios administrados en la nube relacionados con las bases de datos, la memoria caché como servicio, la supervisión y las canalizaciones de integración continua e implementación continua (CI/CD).
+**Nivel 2: aplicaciones optimizadas para la nube**: En este nivel y sin tener que rediseñar o modificar código significativo, puede obtener ventajas adicionales de la ejecución de la aplicación en la nube con tecnologías modernas como contenedores y otros servicios administrados en la nube. Se mejora la agilidad de las aplicaciones para distribuirlas con más rapidez al perfeccionar los procesos de las operaciones de desarrollo empresariales (DevOps). Esta funcionalidad se consigue mediante el uso de tecnologías como son los contenedores de Windows, que se basan en el motor de Docker. Los contenedores eliminan la fricción causada por las dependencias de la aplicación al implementarla en varias fases. En este modelo de madurez, puede implementar contenedores en IaaS o PaaS, a la vez que usa otros servicios administrados en la nube relacionados con las bases de datos, la memoria caché como servicio, la supervisión y las canalizaciones de integración continua e implementación continua (CI/CD).
 
 El tercer nivel de madurez es el objetivo final de la nube, pero es opcional para muchas aplicaciones y no el enfoque principal de esta guía:
 
@@ -89,7 +93,7 @@ En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada
 | **Ventajas**|
 | <li>Sin rediseños ni código nuevo <li> Mínimo esfuerzo para una migración rápida <li> Mínimo común denominador compatible con Azure <li> Garantías de disponibilidad básicas <li> Después de la migración a la nube, todavía es más fácil modernizar | <li> Sin rediseños <li> Cambios mínimos en el código o la configuración <li> Desarrollo y agilidad de DevOps mejorados para publicar debido a los contenedores <li> Mayor densidad y costos de implementación más bajos <li> Portabilidad de aplicaciones y dependencias <li> Flexibilidad de destinos de host: Enfoques de PaaS o IaaS | <li> Arquitecto de la nube, obtiene los mejores beneficios de la nube, pero se necesita nuevo código. <li> Enfoques nativos de la nube de los microservicios <li> Aplicaciones críticas modernas, muy escalables y resistentes en la nube <li> Servicios totalmente administrados <li> Optimizado para escalado <li> Optimizado para la agilidad autónoma por subsistema <li> Basado en implementaciones y DevOps |
 | **Desafíos** |
-| <li> Valor menor de la nube, aparte del cambio en gastos operativos o en el cierre de los centros de datos <li> Muy poca administración: sin aplicación de revisiones del SO o del software intermedio, con posibles soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> La inclusión en contenedores es un paso adicional de la curva de aprendizaje para los desarrolladores y las operaciones de TI <li> Las canalizaciones de DevOps y CI/CD suelen ser imprescindibles en este enfoque. Si no están presentes actualmente en la cultura de la organización, podría ser un desafío adicional| <li> Es necesario volver a diseñar para las aplicaciones nativas en la nube y las arquitecturas de microservicios. Además, normalmente se requiere la reescritura o refactorización de código importante durante la modernización (mayor tiempo y presupuesto)|
+| <li> Menor inferior de la nube, más allá del cambio en los gastos operativos o en el cierre de los centros de datos <li> Muy poca administración: sin aplicación de revisiones del SO o del software intermedio, con posibles soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> La inclusión en contenedores es un paso adicional de la curva de aprendizaje para los desarrolladores y las operaciones de TI <li> Las canalizaciones de DevOps y CI/CD suelen ser imprescindibles en este enfoque. Si no están presentes actualmente en la cultura de la organización, podría ser un desafío adicional| <li> Es necesario volver a diseñar para las aplicaciones nativas en la nube y las arquitecturas de microservicios. Además, normalmente se requiere la reescritura o refactorización de código importante durante la modernización (mayor tiempo y presupuesto)|
 > **Tabla 1-1.** Ventajas y desafíos de la modernización de rutas de los servicios y las aplicaciones .NET existentes
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Arquitecturas y tecnologías clave por nivel de madurez
@@ -184,7 +188,7 @@ En el último capítulo de esta guía se presentan varios tutoriales centrados e
 
 ## <a name="sample-apps-for-modernizing-legacy-apps-eshopmodernizing"></a>Aplicaciones de ejemplo para modernizar aplicaciones heredadas: eShopModernizing
 
-En el repositorio [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) de GitHub se ofrecen dos aplicaciones de ejemplo que simulan aplicaciones web monolíticas heredadas. Una aplicación web se desarrolla mediante ASP.NET MVC; la segunda aplicación web se desarrolla mediante ASP.NET Web Forms y la tercera aplicación es una aplicación de n niveles con una aplicación de escritorio cliente de WinForms que consume un back-end de servicio WCF. Todas estas aplicaciones se basan en el marco .NET Framework tradicional. Estas aplicaciones de ejemplo no usan .NET Core o ASP.NET Core, ya que se supone que se van a modernizar aplicaciones .NET Framework existentes/heredadas.
+En el repositorio [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing) de GitHub se ofrecen dos aplicaciones de ejemplo que simulan aplicaciones web monolíticas heredadas. Una aplicación web se desarrolla mediante ASP.NET MVC; la segunda aplicación web se desarrolla mediante ASP.NET Web Forms y la tercera aplicación es una aplicación de n niveles con una aplicación de escritorio cliente de WinForms que consume un back-end de servicio WCF. Todas estas aplicaciones se basan en el marco .NET Framework tradicional. Estas aplicaciones de ejemplo no usan .NET Core, .NET 5.0 o ASP.NET Core, ya que se supone que se van a modernizar aplicaciones .NET Framework existentes o heredadas.
 
 Estas aplicaciones de ejemplo tienen una segunda versión, con código modernizado, y son bastante sencillas. La diferencia más importante entre las versiones de las aplicaciones es que las segundas versiones usan los contenedores de Windows como opción de implementación. También hay algunas adiciones en las segundas versiones, como Azure Storage Blob para administrar imágenes, Azure Active Directory para administrar la seguridad y Azure Application Insights para supervisar y auditar las aplicaciones.
 
