@@ -3,12 +3,12 @@ title: Comparación entre project.json y csproj
 description: Vea una asignación entre los elementos project.json y csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427026"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970881"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Una asignación entre propiedades project.json y csproj
 
@@ -620,7 +620,7 @@ En MSBuild, esto se hace mediante [elementos](/visualstudio/msbuild/common-msbui
 ```
 
 > [!NOTE]
-> El SDK de .NET Core agrega automáticamente muchos de los [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) predeterminados. Para más información, consulte [Inclusiones de compilación predeterminadas](../project-sdk/overview.md#default-compilation-includes).
+> El SDK de .NET Core agrega automáticamente muchos de los [patrones globales](https://en.wikipedia.org/wiki/Glob_(programming)) predeterminados. Para más información, consulte [Inclusiones de compilación predeterminadas](../project-sdk/overview.md#default-includes-and-excludes).
 
 Todos los elementos `ItemGroup` de MSBuild admiten `Include`, `Exclude` y `Remove`.
 
