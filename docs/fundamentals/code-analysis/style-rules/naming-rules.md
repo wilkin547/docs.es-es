@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 8ce209e64ee7f9f9028c221daedef8fc6a993ef7
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96594742"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191084"
 ---
 # <a name="naming-rules"></a>Reglas de nomenclatura
 
@@ -79,7 +79,7 @@ Todas las propiedades de las reglas de nomenclatura son necesarias para que una 
 | -- | -- |
 | `symbols` | El título del grupo de símbolos, que define los símbolos a los que se debe aplicar esta regla. |
 | `style` | Título del estilo de nomenclatura que debe asociarse a esta regla. |
-| `severity` |  Establece la gravedad con la que se va a aplicar la regla de nomenclatura. Establezca el valor asociado en uno de los [niveles de gravedad](https://docs.microsoft.com/dotnet/fundamentals/code-analysis/configuration-options#severity-level)disponibles. <sup>1</sup> |
+| `severity` |  Establece la gravedad con la que se va a aplicar la regla de nomenclatura. Establezca el valor asociado en uno de los [niveles de gravedad](../configuration-options.md#severity-level)disponibles. <sup>1</sup> |
 
 **Notas:**
 
@@ -172,7 +172,7 @@ dotnet_diagnostic.IDE1006.severity = <severity value>
 
 El valor de gravedad debe ser o aplicarse `warning` `error` en la [compilación](../overview.md#code-style-analysis). Para obtener todos los valores de gravedad posibles, consulte [nivel de gravedad](../configuration-options.md#severity-level).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 - [Reglas del lenguaje](language-rules.md)
 - [Reglas de formato](formatting-rules.md)

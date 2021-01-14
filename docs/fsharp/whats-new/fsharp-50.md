@@ -2,12 +2,12 @@
 title: 'Novedades de F # 5,0-Guía de F #'
 description: 'Obtenga información general sobre las nuevas características disponibles en F # 5,0.'
 ms.date: 11/06/2020
-ms.openlocfilehash: 2384f1a75f5e708dc6f170d82fa15c5e0f54c85d
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: 9b138e4801a3e599db650990acd53c0f956b78b8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96740190"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190733"
 ---
 # <a name="whats-new-in-f-50"></a>Novedades de F# 5.0
 
@@ -15,7 +15,7 @@ F # 5,0 agrega varias mejoras en el lenguaje F # y F# interactivo. Se publica co
 
 Puede descargar el SDK de .NET más reciente de la [página de descargas de .NET](https://dotnet.microsoft.com/download).
 
-## <a name="get-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
 F # 5,0 está disponible en todas las distribuciones de .NET Core y las herramientas de Visual Studio. Para obtener más información, consulte Introducción a [F #](../get-started/index.md) para obtener más información.
 
@@ -407,7 +407,7 @@ Esta característica implementa [F # RFC FS-1074](https://github.com/fsharp/fsla
 
 ## <a name="simplified-interop-with-nullable-value-types"></a>Interoperabilidad simplificada con tipos de valor que aceptan valores NULL
 
-F # es compatible con los [tipos que aceptan valores NULL (valores)](https://docs.microsoft.com/dotnet/api/system.nullable-1) (denominados tradicionalmente tipos que aceptan valores NULL), pero la interacción con ellos ha sido tradicionalmente algo de un problema, ya que tendría que crear un `Nullable` `Nullable<SomeType>` contenedor o cada vez que desease pasar un valor. Ahora, el compilador convertirá implícitamente un tipo de valor en `Nullable<ThatValueType>` si el tipo de destino coincide. Ahora es posible el siguiente código:
+F # es compatible con los [tipos que aceptan valores NULL (valores)](/dotnet/api/system.nullable-1) (denominados tradicionalmente tipos que aceptan valores NULL), pero la interacción con ellos ha sido tradicionalmente algo de un problema, ya que tendría que crear un `Nullable` `Nullable<SomeType>` contenedor o cada vez que desease pasar un valor. Ahora, el compilador convertirá implícitamente un tipo de valor en `Nullable<ThatValueType>` si el tipo de destino coincide. Ahora es posible el siguiente código:
 
 ```fsharp
 #r "nuget: Microsoft.Data.Analysis"

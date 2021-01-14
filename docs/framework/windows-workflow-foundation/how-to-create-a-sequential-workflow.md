@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: f80ac471fdcc425504b11b5fb17effa888aa9590
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 0c47290d11770a094fb09bcb4dc34aee1e4371a9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419699"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190525"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Procedimiento para crear un flujo de trabajo secuencial
 
@@ -19,9 +19,6 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 
 > [!NOTE]
 > Cada uno de los temas del tutorial de introducción depende de los temas anteriores. Para completar este tema, primero debe completar [Cómo: crear una actividad](how-to-create-an-activity.md).
-
-> [!NOTE]
-> Para descargar una versión completa del tutorial, consulte [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45): tutorial introductorio)](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="to-create-the-workflow"></a>Para crear el flujo de trabajo
 
@@ -165,6 +162,6 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Diseñar flujos de trabajo](designing-workflows.md)
-- [Tutorial de Introducción](getting-started-tutorial.md)
+- [Tutorial de introducción](getting-started-tutorial.md)
 - [Procedimiento para crear una actividad](how-to-create-an-activity.md)
 - [Procedimiento para ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

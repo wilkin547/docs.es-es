@@ -5,19 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 878e610bd1fe0b7e2496f251333a3ad21909788a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1505582e5ac7303a2df20539fdcf67435746b9d3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245099"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190499"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Control de versiones en paralelo en WorkflowServiceHost
 
 El <xref:System.ServiceModel.Activities.WorkflowServiceHost> control de versiones en paralelo introducido en .NET Framework 4,5 proporciona la capacidad de hospedar varias versiones de un servicio de flujo de trabajo en un único punto de conexión. La funcionalidad en paralelo proporcionada permite configurar un servicio de flujo de trabajo para crear nuevas instancias del servicio de flujo de trabajo usando la nueva definición de flujo de trabajo, mientras que las instancias en ejecución se completan usando la definición existente. Este tema proporciona información general sobre la ejecución en paralelo del servicio de flujo de trabajo mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
-  
-> [!NOTE]
-> Para descargar un ejemplo y ver un tutorial en vídeo sobre el control de versiones en paralelo del servicio de flujo de trabajo, consulte control de versiones en paralelo [con un servicio de flujo de trabajo de Web-Hosted Xamlx](https://go.microsoft.com/fwlink/?LinkId=393746).  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>Hospedar varias versiones en un servicio de flujo de trabajo  
 
