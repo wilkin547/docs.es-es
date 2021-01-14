@@ -3,12 +3,12 @@ title: Seguimiento de aplicaciones de .NET con PerfCollect.
 description: Tutorial en el que se le guía través de la recopilación de un seguimiento con perfcollect en .NET.
 ms.topic: tutorial
 ms.date: 10/23/2020
-ms.openlocfilehash: 376c957833924a9991e574557671ea3c8503d7c2
-ms.sourcegitcommit: bc9c63541c3dc756d48a7ce9d22b5583a18cf7fd
+ms.openlocfilehash: 53e4584953d2af4e766daadfa757cca752ae7329
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94507246"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593225"
 ---
 # <a name="trace-net-applications-with-perfcollect"></a>Seguimiento de aplicaciones de .NET con PerfCollect
 
@@ -250,3 +250,31 @@ Después, debe obtener nombres simbólicos para los archivos DLL nativos al ejec
 ## <a name="collect-in-a-docker-container"></a>Recopilación en un contenedor de Docker
 
 Para obtener más información sobre cómo usar `perfcollect` en entornos de contenedor, vea [Recopilación de diagnósticos en contenedores](./diagnostics-in-containers.md).
+
+## <a name="learn-more-about-collection-options"></a>Más información sobre las opciones de recopilación
+
+Puede especificar las siguientes marcas opcionales con `perfcollect` para que se adapte mejor a sus necesidades de diagnóstico.
+
+### <a name="collect-for-a-specific-duration"></a>Recopilación con una duración específica
+
+Si quiere recopilar un seguimiento con una duración específica, puede usar la opción `-collectsec` seguida de un número que especifique el total de segundos durante los que se va a recopilar el seguimiento.
+
+### <a name="collect-threadtime-traces"></a>Recopilación de seguimientos de tiempo de subproceso
+
+Si especifica `-threadtime` con `perfcollect`, podrá recopilar datos de uso de CPU por subproceso. Esto le permite analizar el lugar en el que está consumiendo su tiempo de CPU cada subproceso.
+
+### <a name="collect-traces-for-managed-memory-and-garbage-collector-performance"></a>Recopilación de seguimientos de memoria administrada y rendimiento del recolector de elementos no utilizados
+
+Las siguientes opciones le permiten recopilar específicamente los eventos de GC del entorno de ejecución.
+
+* `perfcollect collect -gccollectonly`
+
+Recopile solo un conjunto mínimo de eventos de recopilación de GC. Este es el perfil de recopilación de eventos de GC menos detallado y con el menor impacto en el rendimiento de la aplicación de destino. Este comando es análogo al comando `PerfView.exe /GCCollectOnly collect` en PerfView.
+
+* `perfcollect collect -gconly`
+
+Recopile eventos de recopilación de GC más detallados con eventos JIT, Loader y de excepción. Esto solicita eventos más detallados (como la información de asignación y la información de combinación de GC) y tendrá un impacto mayor en el rendimiento de la aplicación de destino que la opción `-gccollectonly`. Este comando es análogo al comando `PerfView.exe /GCOnly collect` en PerfView.
+
+* `perfcollect collect -gcwithheap`
+
+Recopile los eventos de recopilación de GC más detallados; incluye también un seguimiento de los movimientos y la supervivencia del montón. Esto proporciona un análisis exhaustivo del comportamiento del GC, pero incurrirá en un costo de alto rendimiento, ya que cada GC puede tardar más del doble. Es recomendable que comprenda la implicación del rendimiento del uso de esta opción de seguimiento cuando realice el seguimiento en entornos de producción.

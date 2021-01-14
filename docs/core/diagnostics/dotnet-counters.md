@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-counters: CLI de .NET'
 description: Obtenga información sobre cómo instalar y usar la herramienta dotnet-counter de la CLI para la investigación del rendimiento y la supervisión del estado de primer nivel ad hoc.
 ms.date: 11/17/2020
-ms.openlocfilehash: 48e3b038ddb5c9421367612a592c5ba6b9459791
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: 89695c77e7913d41f030890be7cc00947e42fa3a
+ms.sourcegitcommit: e395fabeeea5c705d243d246fa64446839ac85b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009552"
+ms.lasthandoff: 01/03/2021
+ms.locfileid: "97856060"
 ---
 # <a name="investigate-performance-counters-dotnet-counters"></a>Investigación de los contadores de rendimiento (dotnet-counters)
 
@@ -153,9 +153,9 @@ System.Runtime
     cpu-usage                                    Amount of time the process has utilized the CPU (ms)
     working-set                                  Amount of working set used by the process (MB)
     gc-heap-size                                 Total heap size reported by the GC (MB)
-    gen-0-gc-count                               Number of Gen 0 GCs / min
-    gen-1-gc-count                               Number of Gen 1 GCs / min
-    gen-2-gc-count                               Number of Gen 2 GCs / min
+    gen-0-gc-count                               Number of Gen 0 GCs per interval
+    gen-1-gc-count                               Number of Gen 1 GCs per interval
+    gen-2-gc-count                               Number of Gen 2 GCs per interval
     time-in-gc                                   % time in GC since the last GC
     gen-0-size                                   Gen 0 Heap Size
     gen-1-size                                   Gen 1 Heap Size
@@ -163,7 +163,7 @@ System.Runtime
     loh-size                                     LOH Heap Size
     alloc-rate                                   Allocation Rate
     assembly-count                               Number of Assemblies Loaded
-    exception-count                              Number of Exceptions / sec
+    exception-count                              Number of Exceptions per interval
     threadpool-thread-count                      Number of ThreadPool Threads
     monitor-lock-contention-count                Monitor Lock Contention Count
     threadpool-queue-length                      ThreadPool Work Items Queue Length
@@ -277,6 +277,96 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [-n|--name] [--diagnostic-
 
   Press p to pause, r to resume, q to quit.
       request                                      100
+  ```
+
+- Vea todos los contadores conocidos que están disponibles en `dotnet-counters`:
+
+  ```console
+  > dotnet-counters list
+
+  Showing well-known counters for .NET (Core) version 3.1 only. Specific processes may support additional counters.
+  System.Runtime              
+      cpu-usage                          The percent of process' CPU usage relative to all of the system CPU resources [0-100]
+      working-set                        Amount of working set used by the process (MB)
+      gc-heap-size                       Total heap size reported by the GC (MB)
+      gen-0-gc-count                     Number of Gen 0 GCs between update intervals
+      gen-1-gc-count                     Number of Gen 1 GCs between update intervals
+      gen-2-gc-count                     Number of Gen 2 GCs between update intervals
+      time-in-gc                         % time in GC since the last GC
+      gen-0-size                         Gen 0 Heap Size
+      gen-1-size                         Gen 1 Heap Size
+      gen-2-size                         Gen 2 Heap Size
+      loh-size                           LOH Size
+      alloc-rate                         Number of bytes allocated in the managed heap between update intervals
+      assembly-count                     Number of Assemblies Loaded
+      exception-count                    Number of Exceptions / sec
+      threadpool-thread-count            Number of ThreadPool Threads
+      monitor-lock-contention-count      Number of times there were contention when trying to take the monitor lock between update intervals
+      threadpool-queue-length            ThreadPool Work Items Queue Length
+      threadpool-completed-items-count   ThreadPool Completed Work Items Count
+      active-timer-count                 Number of timers that are currently active
+
+  Microsoft.AspNetCore.Hosting
+      requests-per-second                Number of requests between update intervals
+      total-requests                     Total number of requests
+      current-requests                   Current number of requests
+      failed-requests                    Failed number of requests
+  ```
+
+- Vea todos los contadores conocidos que están disponibles en `dotnet-counters` para aplicaciones de .NET 5:
+
+  ```console
+  > dotnet-counters list --runtime-version 5.0
+
+  Showing well-known counters for .NET (Core) version 5.0 only. Specific processes may support additional counters.
+  System.Runtime                     
+      cpu-usage                          The percent of process' CPU usage relative to all of the system CPU resources [0-100]
+      working-set                        Amount of working set used by the process (MB)
+      gc-heap-size                       Total heap size reported by the GC (MB)
+      gen-0-gc-count                     Number of Gen 0 GCs between update intervals
+      gen-1-gc-count                     Number of Gen 1 GCs between update intervals
+      gen-2-gc-count                     Number of Gen 2 GCs between update intervals
+      time-in-gc                         % time in GC since the last GC
+      gen-0-size                         Gen 0 Heap Size
+      gen-1-size                         Gen 1 Heap Size
+      gen-2-size                         Gen 2 Heap Size
+      loh-size                           LOH Size
+      poh-size                           POH (Pinned Object Heap) Size
+      alloc-rate                         Number of bytes allocated in the managed heap between update intervals
+      gc-fragmentation                   GC Heap Fragmentation
+      assembly-count                     Number of Assemblies Loaded
+      exception-count                    Number of Exceptions / sec
+      threadpool-thread-count            Number of ThreadPool Threads
+      monitor-lock-contention-count      Number of times there were contention when trying to take the monitor lock between update intervals
+      threadpool-queue-length            ThreadPool Work Items Queue Length
+      threadpool-completed-items-count   ThreadPool Completed Work Items Count
+      active-timer-count                 Number of timers that are currently active
+      il-bytes-jitted                    Total IL bytes jitted
+      methods-jitted-count               Number of methods jitted
+
+  Microsoft.AspNetCore.Hosting       
+      requests-per-second   Number of requests between update intervals
+      total-requests        Total number of requests
+      current-requests      Current number of requests
+      failed-requests       Failed number of requests
+
+  Microsoft-AspNetCore-Server-Kestrel
+      connections-per-second      Number of connections between update intervals
+      total-connections           Total Connections
+      tls-handshakes-per-second   Number of TLS Handshakes made between update intervals
+      total-tls-handshakes        Total number of TLS handshakes made
+      current-tls-handshakes      Number of currently active TLS handshakes
+      failed-tls-handshakes       Total number of failed TLS handshakes
+      current-connections         Number of current connections
+      connection-queue-length     Length of Kestrel Connection Queue
+      request-queue-length        Length total HTTP request queue
+
+  System.Net.Http                    
+      requests-started        Total Requests Started
+      requests-started-rate   Number of Requests Started between update intervals
+      requests-aborted        Total Requests Aborted
+      requests-aborted-rate   Number of Requests Aborted between update intervals
+      current-requests        Current Requests
   ```
 
 - Inicie `my-aspnet-server.exe` y supervise el número de ensamblados cargados desde su inicio (solo para .NET 5.0 o versiones posteriores):

@@ -2,19 +2,19 @@
 title: Creación de un paquete de plantillas para dotnet new
 description: Obtenga información sobre cómo crear un archivo csproj que compilará un paquete de plantillas para el comando dotnet new.
 author: adegeo
-ms.date: 12/10/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 25264fff42c47f5bb660f68f85dbb123b5b2608c
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2aea143f1e41d580de41a9cc9e924d70b55695db
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324342"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633603"
 ---
 # <a name="tutorial-create-a-template-pack"></a>Tutorial: Creación de un paquete de plantillas
 
-Con .NET Core, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el tercero de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
+Con .NET, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el tercero de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
 
 En esta parte de la serie, aprenderá a:
 
@@ -51,10 +51,6 @@ dotnet new console -n templatepack -o .
 
 El parámetro `-n` establece el nombre de archivo _.csproj_ en _templatepack.csproj_. El parámetro `-o` crea los archivos en el directorio actual. Verá un resultado similar a la salida siguiente.
 
-```dotnetcli
-dotnet new console -n templatepack -o .
-```
-
 ```console
 The template "Console Application" was created successfully.
 
@@ -84,6 +80,7 @@ A continuación, abra el archivo _templatepack.csproj_ en su editor favorito y r
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -94,11 +91,13 @@ A continuación, abra el archivo _templatepack.csproj_ en su editor favorito y r
 </Project>
 ```
 
-El valor `<PropertyGroup>` del XML anterior se divide en tres grupos. El primer grupo trata con las propiedades requeridas para un paquete de NuGet. Los tres valores `<Package` están relacionados con las propiedades del paquete de NuGet para identificar el paquete en una fuente NuGet. En concreto, el valor `<PackageId>` se usa para desinstalar el paquete de plantillas con un solo nombre en lugar de una ruta de acceso a un directorio. También se puede usar para instalar el paquete de plantillas desde una fuente NuGet. Los valores restantes, como `<Title>` y `<PackageTags>`, están relacionados con los metadatos que aparecen en la fuente NuGet. Para más información sobre la configuración de NuGet, consulte el artículo sobre [propiedades de NuGet y MSBuild](/nuget/reference/msbuild-targets).
+El valor `<PropertyGroup>` del XML anterior se divide en tres grupos. El primer grupo trata con las propiedades requeridas para un paquete de NuGet. Los tres valores `<Package*>` están relacionados con las propiedades del paquete de NuGet para identificar el paquete en una fuente NuGet. En concreto, el valor `<PackageId>` se usa para desinstalar el paquete de plantillas con un solo nombre en lugar de una ruta de acceso a un directorio. También se puede usar para instalar el paquete de plantillas desde una fuente NuGet. Los valores restantes, como `<Title>` y `<PackageTags>`, están relacionados con los metadatos que aparecen en la fuente NuGet. Para más información sobre la configuración de NuGet, consulte el artículo sobre [propiedades de NuGet y MSBuild](/nuget/reference/msbuild-targets).
 
 La configuración `<TargetFramework>` se debe establecer de manera que MSBuild se ejecute correctamente al ejecutar el comando pack para compilar y empaquetar el proyecto.
 
-Los tres últimos valores están relacionados con la configuración correcta del proyecto para incluir las plantillas en la carpeta correspondiente del paquete de NuGet cuando se crea.
+Los tres valores siguientes están relacionados con la configuración correcta del proyecto para incluir las plantillas en la carpeta correspondiente del paquete de NuGet cuando se crea.
+
+La última configuración suprime un mensaje de advertencia que no se aplica a los proyectos del paquete de plantillas.
 
 `<ItemGroup>` contiene dos valores. En primer lugar, el valor `<Content>` incluye todo lo que hay en la carpeta _templates_ como contenido. También se establece para excluir cualquier carpeta _bin_ o carpeta _obj_ para evitar que se incluya cualquier código compilado (si probó y compiló las plantillas). En segundo lugar, el valor `<Compile>` excluye todos los archivos de código de la compilación, independientemente de dónde estén ubicados. Esto evita que el proyecto que se usa para crear un paquete de plantillas intente compilar el código en la jerarquía de carpetas _templates_.
 
@@ -117,7 +116,7 @@ dotnet pack
 ```
 
 ```console
-Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
+Microsoft (R) Build Engine version 16.8.0+126527ff1 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Restore completed in 123.86 ms for C:\working\templatepack.csproj.
@@ -138,12 +137,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Example templates: async project                  consoleasync          [C#]              Common/Console/C#8
-Class library                                     classlib              [C#], F#, VB      Common/Library
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Example templates: async project                  consoleasync             [C#]              Common/Console/C#9
+Class library                                     classlib                 [C#], F#, VB      Common/Library
 ```
 
 Si cargó el paquete de NuGet en una fuente NuGet, puede usar el comando `dotnet new -i PACKAGEID`, donde `PACKAGEID` es igual que el valor `<PackageId>` del archivo _.csproj_. Este identificador de paquete es igual que el identificador del paquete de NuGet.
@@ -160,29 +159,33 @@ dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
   AdatumCorporation.Utility.Templates
+    Details:
+      NuGetPackageId: AdatumCorporation.Utility.Templates
+      Version: 1.0.0
+      Author: Me
     Templates:
       Example templates: async project (consoleasync) C#
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u AdatumCorporation.Utility.Templates
 ```
 
 Ejecute `dotnet new -u AdatumCorporation.Utility.Templates` para desinstalar la plantilla. El comando `dotnet new` generará información de ayuda sobre que debe omitir las plantillas que instaló previamente.

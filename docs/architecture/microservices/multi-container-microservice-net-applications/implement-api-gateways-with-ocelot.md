@@ -2,12 +2,12 @@
 title: Implementación de puertas de enlace de API con Ocelot
 description: Obtenga información sobre cómo implementar puertas de enlace de API con Ocelot y cómo usar Ocelot en un entorno basado en contenedores.
 ms.date: 03/02/2020
-ms.openlocfilehash: 6d9229228e228b664a602ce9a682d435505a8107
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5da8533eff394b587d123970742727484a7236ad
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718103"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678121"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementación de puertas de enlace de API con Ocelot
 
@@ -97,7 +97,7 @@ El puerto 80 que se muestra en el código es interno dentro del host de Docker, 
 
 Las aplicaciones cliente solo pueden acceder a los puertos externos (si existen) publicados al implementar con `docker-compose`.
 
-Esos puertos externos no se deben publicar al implementar en un entorno de producción. Por esto precisamente se va a usar la puerta de enlace de API, para evitar la comunicación directa entre las aplicaciones cliente y los microservicios.
+Esos puertos externos no se deben publicar al implementar en un entorno de producción. Por esta precisa razón se va a usar la puerta de enlace de API, para evitar la comunicación directa entre las aplicaciones cliente y los microservicios.
 
 Pero durante el desarrollo, le interesa acceder directamente al contenedor o microservicio, y ejecutarlo a través de Swagger. Por eso en eShopOnContainers se siguen especificando los puertos externos, aunque la puerta de enlace de API o las aplicaciones cliente no los vayan a usar.
 
@@ -155,7 +155,7 @@ En eShopOnContainers, la implementación de la puerta de enlace de API es un pro
 
 **Figura 6-32**. El proyecto base de OcelotApiGw en eShopOnContainers
 
-Este proyecto ASP.NET Core WebHost se compila básicamente con dos archivos sencillos: `Program.cs` y `Startup.cs`.
+Este proyecto ASP.NET Core WebHost se compila con dos archivos sencillos: `Program.cs` y `Startup.cs`.
 
 El archivo Program.cs solo tiene que crear y configurar el típico BuildWebHost de ASP.NET Core.
 
@@ -267,7 +267,7 @@ El puerto es el puerto interno que usa el servicio. Al usar contenedores, el pue
 
 `Host` es un nombre de servicio que depende de la resolución de nombres de servicio que se use. Cuando se usa docker-compose, los nombres de los servicios los proporciona el host de Docker, que usa los nombres de servicio proporcionados en los archivos docker-compose. Si se usa un orquestador como Kubernetes o Service Fabric, ese nombre se debe resolver mediante DNS o la resolución de nombres proporcionada por cada orquestador.
 
-DownstreamHostAndPorts es una matriz que contiene el host y el puerto de los servicios de nivel inferior a los que se quieren reenviar las solicitudes. Normalmente esto solo contendrá una entrada, pero a veces es posible que quiera equilibrar la carga de las solicitudes a los servicios de nivel inferior y Ocelot permite agregar más de una entrada y después seleccionar un equilibrador de carga. Pero si se usa Azure y un orquestador, probablemente una idea mejor sea equilibrar la carga con la infraestructura de nube y de orquestador.
+DownstreamHostAndPorts es una matriz que contiene el host y el puerto de los servicios de nivel inferior a los que se quieren reenviar las solicitudes. Normalmente esta configuración solo contendrá una entrada, pero a veces es posible que quiera equilibrar la carga de las solicitudes a los servicios de nivel inferior y Ocelot permite agregar más de una entrada y después seleccionar un equilibrador de carga. Pero si se usa Azure y un orquestador, probablemente una idea mejor sea equilibrar la carga con la infraestructura de nube y de orquestador.
 
 UpstreamPathTemplate es la dirección URL que Ocelot usará para identificar qué DownstreamPathTemplate se va a usar para una solicitud determinada desde el cliente. Por último, se usa UpstreamHttpMethod para que Ocelot pueda distinguir entre diferentes solicitudes (GET, POST, PUT) a la misma dirección URL.
 
@@ -393,7 +393,7 @@ Al ampliar más el área empresarial "Shopping" de la imagen siguiente, se puede
 
 **Figura 6-38**. Visión ampliada de los servicios de agregador
 
-Se puede observar la complejidad del diagrama cuando se muestran las posibles solicitudes procedentes de las puertas de enlace de API. Aunque se puede ver cómo se simplificarían las flechas de color azul, desde la perspectiva de las aplicaciones cliente, al usar el patrón de agregadores mediante la reducción del intercambio de mensajes y la latencia de la comunicación, en última instancia se mejora de forma significativa la experiencia del usuario, especialmente para las aplicaciones remotas (aplicaciones móviles y SPA).
+Se puede observar la complejidad del diagrama cuando se muestran las posibles solicitudes procedentes de las puertas de enlace de API. Por otro lado, cuando se usa el patrón de agregación, puede ver cómo las flechas en azul simplificarían la comunicación desde una perspectiva de aplicación cliente. Este patrón no solo ayuda a reducir la proximidad y la latencia de la comunicación, sino que también mejora la experiencia del usuario de manera significativa para las aplicaciones remotas (aplicaciones móviles y de SPA).
 
 El caso del área empresarial "Marketing" y los microservicios es un caso de uso simple, por lo que no hay necesidad de usar agregadores, aunque se podría, si fuera necesario.
 
@@ -527,7 +527,7 @@ En Kubernetes, si no se usa ningún enfoque de entrada, los servicios y pods tie
 
 Pero si usa un enfoque de entrada, tendrá una capa intermedia entre Internet y los servicios (incluidas las puertas de enlace de API), que actúa como un proxy inverso.
 
-Como definición, una entrada es una colección de reglas que permiten que las conexiones entrantes lleguen a los servicios de clúster. Normalmente, una entrada se configura para proporcionar a los servicios direcciones URL accesibles de forma externa, tráfico con equilibrio de carga, terminación SSL y mucho más. Los usuarios solicitan la entrada mediante la publicación del recurso de entrada en el servidor de API.
+Como definición, una entrada es una colección de reglas que permiten que las conexiones entrantes lleguen a los servicios de clúster. Una entrada se configura para proporcionar a los servicios direcciones URL accesibles de forma externa, tráfico con equilibrio de carga, terminación SSL y mucho más. Los usuarios solicitan la entrada mediante la publicación del recurso de entrada en el servidor de API.
 
 En eShopOnContainers, al desarrollar de forma local y usar solamente el equipo de desarrollo como el host de Docker, no se usa ninguna entrada, solo las diferentes puertas de enlace de API.
 
@@ -543,7 +543,7 @@ Tener un nivel Nginx de entrada en Kubernetes delante de las aplicaciones web ad
 
 **Figura 6-41**. El nivel de entrada en eShopOnContainers cuando se implementa en Kubernetes
 
-Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que normalmente están fuera del ámbito de la puerta de enlace de la API. Al implementar eShopOnContainers en Kubernetes, solo expone algunos servicios o puntos de conexión a través de la _entrada_, básicamente la lista siguiente de postfijos en las direcciones URL:
+Una entrada de Kubernetes actúa como un proxy inverso para todo el tráfico a la aplicación, incluidas las aplicaciones web, que están fuera del ámbito de la puerta de enlace de la API. Al implementar eShopOnContainers en Kubernetes, solo expone algunos servicios o puntos de conexión a través de la _entrada_, básicamente la lista siguiente de postfijos en las direcciones URL:
 
 - `/` para la aplicación web SPA cliente
 - `/webmvc` para la aplicación web MVC cliente

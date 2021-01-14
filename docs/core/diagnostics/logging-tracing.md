@@ -2,12 +2,12 @@
 title: 'Registro y seguimiento: .NET Core'
 description: Introducción al registro y seguimiento de .NET Core.
 ms.date: 10/12/2020
-ms.openlocfilehash: 86444f2451079e54050f6698f3e45ddff0700acf
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: fac8eeed63e8737ad42699d81b421747b207c69a
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94820584"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753632"
 ---
 # <a name="net-core-logging-and-tracing"></a>Registro y seguimiento de .NET Core
 
@@ -36,11 +36,11 @@ La elección de la API de estilo de impresión que se va a usar depende de usted
   - Resulta útil para la información que es posible que el cliente necesite ver en la versión.
   - Dado que es el enfoque más sencillo, a menudo se usa para la depuración temporal ad hoc. Este código de depuración a veces no se registra nunca en el control de código fuente.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - Solo se habilita cuando se define `TRACE`.
+  - Solo se habilita cuando se define `TRACE` agregando `#define TRACE` al origen o especificando la opción `/d:TRACE` al compilar.
   - Escribe en el elemento <xref:System.Diagnostics.Trace.Listeners> adjuntado, de forma predeterminada, <xref:System.Diagnostics.DefaultTraceListener>.
   - Use esta API cuando cree registros que se vayan a habilitar en la mayoría de compilaciones.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - Solo se habilita cuando se define `DEBUG`.
+  - Solo se habilita cuando se define `DEBUG` agregando `#define DEBUG` al origen o especificando la opción `/d:DEBUG` al compilar.
   - Escribe en un depurador adjuntado.
   - En `*nix`, escribe en stderr si se establece `COMPlus_DebugWriteToStdErr`.
   - Use esta API cuando cree registros que se vayan a habilitar solo en las compilaciones de depuración.
@@ -95,6 +95,8 @@ Por ejemplo, para que pueda elegir la mejor opción para la aplicación, .NET of
 - La [interpolación de cadenas de C#](../../csharp/language-reference/tokens/interpolated.md) puede simplificar la escritura de código de registro.
 
 - [Lista de eventos del proveedor en tiempo de ejecución](../../fundamentals/diagnostics/runtime-events.md)
+
+- [Proveedores de eventos conocidos en .NET](well-known-event-providers.md)
 
 - La propiedad <xref:System.Exception.Message?displayProperty=nameWithType> es útil para las excepciones de registro.
 

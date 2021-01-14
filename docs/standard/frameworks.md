@@ -5,12 +5,12 @@ ms.date: 11/06/2020
 ms.prod: dotnet
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 1a0d6ef9d31b85fd6c083604dd11b9ca9ff09c79
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 7a3dcd61c330607bacf0d05dbd775c62cfa15b37
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827924"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97765064"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>Plataformas de destino en proyectos de estilo SDK
 
@@ -22,7 +22,7 @@ Una aplicación o biblioteca también puede tener como destino una implementaci�
 
 Para algunas plataformas de destino (por ejemplo, .NET Framework), las API se definen mediante los ensamblados que la plataforma instala en un sistema y pueden incluir API del marco de trabajo de la aplicación (por ejemplo, ASP.NET).
 
-Para plataformas de destino basadas en paquetes (por ejemplo, .NET 5, .NET Standard y .NET Core), las API se definen mediante los paquetes incluidos en la aplicación o biblioteca. Un *metapaquete* es un paquete de NuGet que no tiene contenido propio, pero que es una lista de dependencias (otros paquetes). Una plataforma de destino basada en paquetes de NuGet especifica implícitamente un metapaquete que hace referencia a todos los paquetes que forman el marco de trabajo.
+Para plataformas de destino basadas en paquetes (por ejemplo, .NET 5, .NET Standard y .NET Core), las API se definen mediante los paquetes NuGet incluidos en la aplicación o biblioteca.
 
 ## <a name="latest-versions"></a>Últimas versiones
 

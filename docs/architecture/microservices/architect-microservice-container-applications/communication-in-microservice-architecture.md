@@ -2,12 +2,12 @@
 title: Comunicación en una arquitectura de microservicio
 description: Explore distintas formas de comunicación entre microservicios, y comprenda las implicaciones de formas sincrónicas y asincrónicas.
 ms.date: 01/30/2020
-ms.openlocfilehash: f1a240609b898fe8f365c39ba0c95f486377c445
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a918ea7573d7402a82d2df2c63301e4838fa66dc
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169263"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899605"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicación en una arquitectura de microservicio
 
@@ -103,7 +103,7 @@ Como se muestra en la figura 4-17, la comunicación HTTP en tiempo real signific
 
 ![Diagrama que muestra las comunicaciones de inserción y en tiempo real basadas en SignalR.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
-**Figura 4-17**. Comunicación de mensajes asincrónica en tiempo real uno a uno
+**Figura 4-17**. Comunicación de mensajes asincrónica en tiempo real uno a varios
 
 SignalR es una buena forma de lograr una comunicación en tiempo real para insertar contenido a los clientes desde un servidor back-end. Puesto que la comunicación es en tiempo real, las aplicaciones cliente muestran los cambios prácticamente de forma inmediata. Normalmente, esto se controla mediante un protocolo como WebSockets, con muchas conexiones WebSockets (una por cliente). Un ejemplo típico es cuando un servicio comunica un cambio en el marcador de un partido a muchas aplicaciones web cliente a la vez.
 

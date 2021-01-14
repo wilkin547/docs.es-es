@@ -2,19 +2,19 @@
 title: Creación de una plantilla de proyecto para dotnet new
 description: Obtenga información sobre cómo crear una plantilla de proyecto para el comando dotnet new.
 author: adegeo
-ms.date: 06/25/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 75fedb2333a4ef9e16a27126055b6cacaf37c1c5
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ed40cfd303c70c7b8f198a0f5b593bf1e1ebeaf8
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324331"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97513138"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: Creación de una plantilla de proyecto
 
-Con .NET Core, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el segundo de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
+Con .NET, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el segundo de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
 
 En esta parte de la serie, aprenderá a:
 
@@ -33,7 +33,7 @@ En esta parte de la serie, aprenderá a:
 
 ## <a name="create-a-project-template"></a>Creación de una plantilla de proyecto
 
-Las plantillas de proyecto generan proyectos listos para ejecutarse que facilita a los usuarios empezar a trabajar con un espacio de trabajo de código. .NET Core incluye algunas plantillas de proyecto, como una aplicación de consola o una biblioteca de clases. En este ejemplo, creará un proyecto de consola nuevo que habilita C# 8.0 y genera un punto de entrada `async main`.
+Las plantillas de proyecto generan proyectos listos para ejecutarse que facilita a los usuarios empezar a trabajar con un espacio de trabajo de código. .NET incluye algunas plantillas de proyecto, como una aplicación de consola o una biblioteca de clases. En este ejemplo, creará un proyecto de consola nuevo que habilita C# 9.0 y genera un punto de entrada `async main`.
 
 En el terminal, vaya a la carpeta _working\templates_ y cree una subcarpeta denominada _consoleasync_. Entre a la subcarpeta y ejecute `dotnet new console` para generar la aplicación de consola estándar. Para crear una plantilla nueva, tendrá que editar los archivos que genere esta plantilla.
 
@@ -59,7 +59,7 @@ namespace consoleasync
     {
         static async Task Main(string[] args)
         {
-            await Console.Out.WriteAsync("Hello World with C# 8.0!");
+            await Console.Out.WriteAsync("Hello World with C# 9.0!");
         }
     }
 }
@@ -67,16 +67,16 @@ namespace consoleasync
 
 ## <a name="modify-consoleasynccsproj"></a>Modificación de consoleasync.csproj
 
-Actualicemos la versión del lenguaje C# que usa el proyecto a la versión 8.0. Edite el archivo _consoleasync.csproj_ y agregue el valor `<LangVersion>` a un nodo `<PropertyGroup>`.
+Actualicemos la versión del lenguaje C# que usa el proyecto a la versión 9.0. Edite el archivo _consoleasync.csproj_ y agregue el valor `<LangVersion>` a un nodo `<PropertyGroup>`.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>9.0</LangVersion>
 
   </PropertyGroup>
   
@@ -96,7 +96,7 @@ dotnet run
 Obtendrá la siguiente salida.
 
 ```console
-Hello World with C# 8.0!
+Hello World with C# 9.0!
 ```
 
 Puede eliminar las carpetas _obj_ y _bin_ creadas si usa `dotnet run`. La eliminación de estos archivos garantizar que la plantilla solo incluya los archivos relacionados con la plantilla y no cualquier archivo que resulte de una acción de compilación.
@@ -105,7 +105,7 @@ Ahora que creó el contenido de la plantilla, debe crear su configuración en la
 
 ## <a name="create-the-template-config"></a>Creación de la configuración de una plantilla
 
-En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\consoleasync_.
+En .NET, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\consoleasync_.
 
 Cuando se crea una plantilla, todos los archivos y las carpetas de la carpeta de la plantilla se incluyen como parte de la plantilla, a excepción de la carpeta de configuración especial. Esta carpeta de configuración se denomina _.template.config_.
 
@@ -125,7 +125,7 @@ Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON 
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Me",
-  "classifications": [ "Common", "Console", "C#8" ],
+  "classifications": [ "Common", "Console", "C#9" ],
   "identity": "ExampleTemplate.AsyncProject",
   "name": "Example templates: async project",
   "shortName": "consoleasync",
@@ -136,7 +136,7 @@ Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON 
 }
 ```
 
-Este archivo de configuración contiene todos los valores de la plantilla. Puede ver los valores básicos, como `name` y `shortName`, pero también hay un valor `tags/type` que está establecido en `project`. Esto diseña la plantilla como una plantilla de proyecto. No hay ninguna restricción en el tipo de plantilla que crea. Los valores `item` y `project` son nombres comunes que .NET Core recomienda para que los usuarios puedan filtrar fácilmente el tipo de plantilla que buscan.
+Este archivo de configuración contiene todos los valores de la plantilla. Puede ver los valores básicos, como `name` y `shortName`, pero también hay un valor `tags/type` que está establecido en `project`. Esto diseña la plantilla como una plantilla de proyecto. No hay ninguna restricción en el tipo de plantilla que crea. Los valores `item` y `project` son nombres comunes que .NET recomienda para que los usuarios puedan filtrar fácilmente el tipo de plantilla que buscan.
 
 El elemento `classifications` representa la columna **tags** que ve cuando ejecuta `dotnet new` y obtiene una lista de plantillas. Los usuarios también pueden hacer una búsqueda según las etiquetas de clasificación. No confunda la propiedad `tags` del archivo .json con la lista de etiquetas `classifications`. Lamentablemente, son dos elementos que tienen nombres similares. El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json*, consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
 
@@ -159,19 +159,17 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Console Application                               console               [C#], F#, VB      Common/Console
-Example templates: async project                  consoleasync          [C#]              Common/Console/C#8
-Class library                                     classlib              [C#], F#, VB      Common/Library
-WPF Application                                   wpf                   [C#], VB          Common/WPF
-Windows Forms (WinForms) Application              winforms              [C#], VB          Common/WinForms
-Worker Service                                    worker                [C#]              Common/Worker/Web
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Console Application                               console                  [C#], F#, VB      Common/Console
+Example templates: async project                  consoleasync             [C#]              Common/Console/C#9
+Class library                                     classlib                 [C#], F#, VB      Common/Library
+WPF Application                                   wpf                      [C#], VB          Common/WPF
 ```
 
 ### <a name="test-the-project-template"></a>Prueba de la plantilla de proyecto
 
-Ahora que tiene instalada una plantilla de elemento, pruébela.
+Ahora que tiene instalada una plantilla de proyecto, pruébela.
 
 1. Vaya a la carpeta _test_.
 
@@ -196,14 +194,14 @@ Ahora que tiene instalada una plantilla de elemento, pruébela.
     Obtendrá la siguiente salida.
 
     ```console
-    Hello World with C# 8.0!
+    Hello World with C# 9.0!
     ```
 
-¡Enhorabuena! Ha creado e implementado una plantilla de proyecto con .NET Core. Como preparación para la próxima parte de esta serie de tutoriales, debe desinstalar la plantilla que creó. Asegúrese de eliminar también todos los archivos de la carpeta _test_. Esto le permitirá volver a un estado limpio listo para la próxima sección importante de este tutorial.
+¡Enhorabuena! Ha creado e implementado una plantilla de proyecto con .NET. Como preparación para la próxima parte de esta serie de tutoriales, debe desinstalar la plantilla que creó. Asegúrese de eliminar también todos los archivos de la carpeta _test_. Esto le permitirá volver a un estado limpio listo para la próxima sección importante de este tutorial.
 
 ### <a name="uninstall-the-template"></a>Desinstalación de la plantilla
 
-Como instaló la plantilla a través de una ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use la ruta de acceso mostrada para desinstalar la plantilla con el comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
+Como instaló la plantilla a través de una ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use el `Uninstall Command` indicado para desinstalar la plantilla.
 
 ```dotnetcli
 dotnet new -u
@@ -215,31 +213,31 @@ Verá un resultado similar al siguiente.
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
-  C:\working\templates\consoleasync
+  C:\Test\templatetutorial\working\templates\consoleasync
     Templates:
       Example templates: async project (consoleasync) C#
+    Uninstall Command:
+      dotnet new -u C:\working\templates\consoleasync
 ```
 
-Para desinstalar una plantilla, ejecute el siguiente comando.
+Para desinstalar la plantilla que ha creado, ejecute el `Uninstall Command` que se muestra en la salida.
 
 ```dotnetcli
 dotnet new -u C:\working\templates\consoleasync

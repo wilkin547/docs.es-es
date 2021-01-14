@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: c8caf7e34397faf9f7085d6634287cffcb37eb08
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e0efad959d5212f6c07d4c4b5344761490018a4c
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89141886"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899670"
 ---
 # <a name="yield-c-reference"></a>yield (Referencia de C#)
 
@@ -42,7 +42,7 @@ La declaración de un iterador debe cumplir los requisitos siguientes:
 
 - El tipo de valor devuelto debe ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
-- La declaración no puede tener ningún parámetro [in](in-parameter-modifier.md) [ref](ref.md) o [out](out-parameter-modifier.md).
+- La declaración no puede tener ningún parámetro [in](in-parameter-modifier.md), [ref](ref.md) o [out](out-parameter-modifier.md).
 
 El tipo `yield` de un iterador que devuelve <xref:System.Collections.IEnumerable> o <xref:System.Collections.IEnumerator> es `object`.  Si el iterador devuelve <xref:System.Collections.Generic.IEnumerable%601> o <xref:System.Collections.Generic.IEnumerator%601>, debe haber una conversión implícita del tipo de la expresión en la instrucción `yield return` al parámetro de tipo genérico.
 
@@ -96,7 +96,7 @@ En el ejemplo siguiente se muestra un descriptor de acceso `get` que es un itera
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)

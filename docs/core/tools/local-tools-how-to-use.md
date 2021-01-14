@@ -2,13 +2,13 @@
 title: 'Tutorial: Instalación y uso de herramientas locales de .NET'
 description: Aprenda a instalar y usar una herramienta de .NET como una herramienta local.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 2cb25443706293b66325d43136afcd3fd886294d
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/11/2020
+ms.openlocfilehash: f32a5c4091ff63c7c50cf339dddd89b78e543c4c
+ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633886"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97512468"
 ---
 # <a name="tutorial-install-and-use-a-net-local-tool-using-the-net-cli"></a>Tutorial: Instalación y uso de una herramienta local de .NET mediante la CLI de .NET
 
@@ -172,7 +172,7 @@ Normalmente, una herramienta local se instala en el directorio raíz del reposit
 
 ## <a name="update-a-local-tool"></a>Actualización de una herramienta local
 
-La versión instalada de la herramienta local `dotnetsay` es 2.1.3.  La versión más reciente es 2.1.4. Use el comando [dotnet tool update](dotnet-tool-update.md) para actualizar la herramienta a la versión más reciente.
+La versión instalada de la herramienta local `dotnetsay` es 2.1.3.  Use el comando [dotnet tool update](dotnet-tool-update.md) para actualizar la herramienta a la versión más reciente.
 
 ```dotnetcli
 dotnet tool update dotnetsay
@@ -181,7 +181,7 @@ dotnet tool update dotnetsay
 En la salida se indica el nuevo número de versión:
 
 ```console
-Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.4'
+Tool 'dotnetsay' was successfully updated from version '2.1.3' to version '2.1.7'
 (manifest file /home/name/repository/.config/dotnet-tools.json).
 ```
 
@@ -205,4 +205,4 @@ Si recibe un mensaje de error al seguir el tutorial, vea [Solución de problemas
 
 ## <a name="see-also"></a>Vea también
 
-Para obtener más información, vea [Herramientas de .NET Core](global-tools.md).
+Para obtener más información, vea [Herramientas de .NET](global-tools.md).

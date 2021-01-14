@@ -3,12 +3,12 @@ title: Cómo elegir un algoritmo de ML.NET
 description: Aprenda a elegir un algoritmo de ML.NET para su modelo de Machine Learning
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: 04cf191401c7c25f1fa341acaf9312dc19752260
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90679643"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593095"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Cómo elegir un algoritmo de ML.NET
 
@@ -22,7 +22,7 @@ Un algoritmo es la expresión matemática que se ejecuta para generar un **model
 
 Con ML.NET, se puede aplicar el mismo algoritmo a distintas tareas. Por ejemplo, se puede usar el ascenso coordinado dual estocástico para la clasificación binaria, la clasificación multiclase y la regresión. La diferencia radica en cómo se interpreta la salida del algoritmo para que coincida con la tarea.
 
-Para cada combinación de tarea o algoritmo, ML.NET proporciona un componente que ejecuta el algoritmo de entrenamiento y no la interpretación. Estos componentes se denominan instructores. Por ejemplo, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa el algoritmo **StochasticDualCoordinatedAscent** que se aplica a la tarea de **regresión**.
+Para cada combinación de tarea o algoritmo, ML.NET proporciona un componente que ejecuta el algoritmo de entrenamiento y hace la interpretación. Estos componentes se denominan instructores. Por ejemplo, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa el algoritmo **StochasticDualCoordinatedAscent** que se aplica a la tarea de **regresión**.
 
 ## <a name="linear-algorithms"></a>Algoritmos lineales
 

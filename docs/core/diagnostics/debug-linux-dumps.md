@@ -2,12 +2,12 @@
 title: Depuración de volcados de memoria de Linux
 description: En este artículo, aprenderá a recopilar y analizar volcados de memoria desde entornos de Linux.
 ms.date: 08/27/2020
-ms.openlocfilehash: 94f923f2ec7b5fa20c2ebc9b83540094348dff03
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: e6f2eea3af718853ad7365a5209b397a66035dde
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95099151"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753606"
 ---
 # <a name="debug-linux-dumps"></a>Depuración de volcados de memoria de Linux
 
@@ -15,7 +15,10 @@ ms.locfileid: "95099151"
 
 ## <a name="collect-dumps-on-linux"></a>Recopilación de volcados de memoria en Linux
 
-Las dos formas recomendadas de recopilar volcados en Linux es mediante las herramientas [`dotnet-dump`](dotnet-dump.md) o [`createdump`](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md).
+Las dos formas recomendadas de recopilar volcados en Linux son las siguientes:
+
+* Herramienta de la CLI [`dotnet-dump`](dotnet-dump.md)
+* [Variables de entorno](dumps.md#collecting-dumps-on-crash) que recopilan volcados de memoria al producirse bloqueos
 
 ### <a name="managed-dumps-with-dotnet-dump"></a>Volcados administrados con `dotnet-dump`
 

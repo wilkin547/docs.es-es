@@ -2,12 +2,12 @@
 title: 'Volcados de memoria: .NET'
 description: Una introducción a los volcados de memoria en .NET.
 ms.date: 10/12/2020
-ms.openlocfilehash: 56cf4085d10658c828bac39be93eed3f774e00d5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7a4c7bf54b3e9ea43e685eafbd00b4a373326520
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96242778"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764947"
 ---
 # <a name="dumps"></a>Volcados
 
@@ -53,7 +53,13 @@ Para recopilar el volcado de memoria cuando prefiera, puede usar `dotnet-dump`, 
 
 ## <a name="analyze-dumps"></a>Análisis de volcados de memoria
 
-Los volcados de memoria se pueden analizar mediante [`dotnet-dump`](dotnet-dump.md).
+Puede analizar volcados mediante la herramienta de la CLI [`dotnet-dump`](dotnet-dump.md) o con [Visual Studio](https://docs.microsoft.com/visualstudio/debugger/using-dump-files).
+
+> [!NOTE]
+> La versión 16.8 y posteriores de Visual Studio le permite [abrir volcados de Linux](https://devblogs.microsoft.com/visualstudio/linux-managed-memory-dump-debugging/) generados en .NET Core 3.1.7 o versiones posteriores.  
+
+> [!NOTE]
+> Si es necesaria la depuración nativa, se puede usar la [extensión del depurador de SOS](sos-debugging-extension.md) con [LLDB en Linux y macOS](debug-linux-dumps.md#analyze-dumps-on-linux). También se admite SOS con [WinDbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools) en Windows, aunque se recomienda Visual Studio.
 
 ## <a name="see-also"></a>Consulte también
 

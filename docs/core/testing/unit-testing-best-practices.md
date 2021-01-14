@@ -4,12 +4,12 @@ description: Obtenga información sobre los procedimientos recomendados para esc
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 6c1e9a665ad541bf6109634a6df857880ee47042
-ms.sourcegitcommit: 74d05613d6c57106f83f82ce8ee71176874ea3f0
+ms.openlocfilehash: 56f51cde0e52a9e6a38e5291c81470beee61adef
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93281654"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678112"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Procedimientos recomendados de pruebas unitarias con .NET Core y .NET Standard
 
@@ -63,11 +63,11 @@ Un alto porcentaje de cobertura de código no es un indicador de éxito, ni impl
 
 Desafortunadamente, el término *ficticio* se emplea de forma incorrecta al referirse a las pruebas. Los puntos siguientes definen los tipos más comunes de *emulaciones* al escribir pruebas unitarias:
 
-*Emulación* : una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
+*Emulación*: una emulación es un término genérico que se puede usar para describir un stub o un objeto ficticio. Si es un stub o un objeto ficticio depende del contexto en el que se use. Es decir, una emulación puede ser un stub o un objeto ficticio.
 
-*Objeto ficticio* : un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara una instrucción Assert en ella.
+*Objeto ficticio*: un objeto ficticio es una emulación del sistema que decide si una prueba unitaria se ha superado o no. Un objeto ficticio comienza como una emulación hasta que se declara una instrucción Assert en ella.
 
-*Stub* : un stub es un reemplazo controlable para una dependencia existente (o colaborador) en el sistema. Con un stub, puede probar el código sin tratar directamente con la dependencia. De forma predeterminada, una emulación empieza como un stub.
+*Stub*: un stub es un reemplazo controlable para una dependencia existente (o colaborador) en el sistema. Con un stub, puede probar el código sin tratar directamente con la dependencia. De forma predeterminada, un stub empieza como una emulación.
 
 Tenga en cuenta el fragmento de código siguiente:
 
@@ -188,7 +188,7 @@ La asignación de nombres a las variables de las pruebas unitarias es tan import
 #### <a name="why"></a>¿Por qué?
 
 - Evita la necesidad de que el lector de la prueba inspeccione el código de producción con el fin de averiguar lo que hace que el valor sea especial.
-- Muestra explícitamente lo que se intenta *probar* , en lugar de lo que se intenta *lograr*.
+- Muestra explícitamente lo que se intenta *probar*, en lugar de lo que se intenta *lograr*.
 
 Las cadenas mágicas pueden provocar confusión al lector de las pruebas. Si una cadena tiene un aspecto fuera de lo normal, puede preguntarse por qué se ha elegido un determinado valor para un parámetro o valor devuelto. Esto puede dar lugar a un vistazo más detallado a los detalles de implementación, en lugar de centrarse en la prueba.
 

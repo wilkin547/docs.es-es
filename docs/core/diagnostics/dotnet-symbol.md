@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-symbol: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta de la CLI dotnet-symbol para descargar los archivos necesarios para depurar minivolcados y volcados de memoria de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 8ea694e5331f1e4e75b3b3ad644428568e515331
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 69c05544e886d9d41113c8a2383f760b85d01124
+ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94825343"
+ms.lasthandoff: 12/24/2020
+ms.locfileid: "97764999"
 ---
 # <a name="symbol-downloader-dotnet-symbol"></a>Aplicación de descarga de símbolos (dotnet-symbol)
 
@@ -15,7 +15,7 @@ ms.locfileid: "94825343"
 
 ## <a name="install"></a>Instalar
 
-Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-trace) de `dotnet-trace`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
+Para instalar la versión de lanzamiento más reciente del [paquete NuGet](https://www.nuget.org/packages/dotnet-symbol) de `dotnet-symbol`, use el comando [dotnet tool install](../tools/dotnet-tool-install.md):
 
 ```dotnetcli
 dotnet tool install --global dotnet-symbol
@@ -98,3 +98,8 @@ dotnet-symbol --host-only --debugging <dump file path>
 - Error "404 No encontrado" al descargar símbolos.
 
    La descarga de símbolos solo se admite para las versiones oficiales del entorno de ejecución de .NET Core adquiridas a través de canales oficiales como el [sitio web oficial](https://dotnet.microsoft.com/download/dotnet-core) y los [orígenes predeterminados en los scripts de instalación de dotnet](../tools/dotnet-install-script.md). Un error 404 al descargar archivos de depuración puede indicar que el volcado de memoria se ha creado con un entorno de ejecución de .NET Core desde otro origen, como uno compilado localmente desde el origen o para una distribución concreta de Linux, o bien desde sitios de la comunidad como archlinux. En estos casos, el archivo necesario para la depuración (dotnet, libcoreclr.so y libmscordaccore.so) se debe copiar desde esos orígenes o desde el entorno en el que se creó el archivo de volcado de memoria.
+
+## <a name="see-also"></a>Consulte también
+
+* [Depuración con símbolos](/windows/win32/dxtecharts/debugging-with-symbols)
+* [PDB portátiles](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)

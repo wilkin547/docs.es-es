@@ -3,12 +3,12 @@ title: Creación de un cliente de REST con .NET Core
 description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656949"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899657"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -42,7 +42,7 @@ dotnet new console --name WebAPIClient
 
 Esta acción crea los archivos de inicio para una aplicación básica "Hola mundo". El nombre del proyecto es "WebAPIClient". Como se trata de un proyecto nuevo, ninguna de las dependencias está en su lugar, así que la primera ejecución descargará .NET Core Framework, instalará un certificado de desarrollo y ejecutará el gestor de paquetes NuGet para restaurar las dependencias que faltan.
 
-Antes de empezar a hacer modificaciones, escriba `dotnet run` ([vea la nota](#dotnet-restore-note)) en el símbolo del sistema para ejecutar la aplicación. `dotnet run` ejecuta automáticamente `dotnet restore` si el entorno no tiene dependencias. También ejecuta `dotnet build` si hay que volver a compilar la aplicación.
+Antes de empezar a hacer modificaciones, escriba `cd` en el directorio "WebAPIClient" y luego `dotnet run` ([vea la nota](#dotnet-restore-note)) en el símbolo del sistema para ejecutar la aplicación. `dotnet run` ejecuta automáticamente `dotnet restore` si el entorno no tiene dependencias. También ejecuta `dotnet build` si hay que volver a compilar la aplicación.
 Después de la instalación inicial, solo tendrá que ejecutar `dotnet restore` o `dotnet build` cuando tenga sentido para su proyecto.
 
 ## <a name="adding-new-dependencies"></a>Adición de nuevas dependencias

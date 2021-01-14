@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-gcdump: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta de la CLI dotnet-gcdump para recopilar volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET en vivo mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 59de1845ada9e5bdd0b24bf4312517283324ce94
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
+ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94826045"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97593375"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Herramienta de análisis del montón (dotnet-gcdump)
 
@@ -27,7 +27,7 @@ Hay dos maneras de descargar e instalar `dotnet-gcdump`:
 
 - **Descarga directa:**
 
-  Descargue el archivo ejecutable de la herramienta que coincida con la plataforma:
+  descargue el archivo ejecutable de la herramienta que coincida con la plataforma:
 
   | SO  | Plataforma |
   | --- | -------- |
@@ -68,6 +68,9 @@ Puede recopilar varios archivos `.gcdump` y abrirlos simultáneamente en Visual�
 ## `dotnet-gcdump collect`
 
 Recopila un volcado de memoria de GC de un proceso que se está ejecutando actualmente.
+
+> [!WARNING]
+> Para recorrer el montón de GC, este comando desencadena una recolección de elementos no utilizados de generación 2 (completa), que puede suspender el entorno de ejecución durante mucho tiempo, especialmente cuando el montón de GC es grande. No utilice este comando en entornos sensibles al rendimiento cuando el montón de GC sea grande.
 
 ### <a name="synopsis"></a>Sinopsis
 

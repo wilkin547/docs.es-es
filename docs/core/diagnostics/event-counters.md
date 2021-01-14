@@ -2,12 +2,12 @@
 title: EventCounters de .NET Core
 description: En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 ms.date: 08/07/2020
-ms.openlocfilehash: 68c831713eed8c49d24ebf93da301ef68d213bf9
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437815"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678207"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters de .NET Core
 
@@ -15,13 +15,11 @@ ms.locfileid: "96437815"
 
 Los EventCounters son las API de .NET Core que se usan para la recopilación ligera, multiplataforma y casi en tiempo real de métricas de rendimiento. Los EventCounters se agregaron como una alternativa multiplataforma a los "contadores de rendimiento" de .NET Framework en Windows. En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 
-El entorno de ejecución de .NET Core y algunas bibliotecas de .NET publican información de diagnóstico básica mediante EventCounters a partir de .NET Core 3.0. Además de los EventCounters proporcionados por el entorno de ejecución de .NET, puede implementar sus propios EventCounters. Los EventCounters se pueden usar para realizar el seguimiento de diversas métricas.
+El entorno de ejecución de .NET Core y algunas bibliotecas de .NET publican información de diagnóstico básica mediante EventCounters a partir de .NET Core 3.0. Además de los EventCounters proporcionados por el entorno de ejecución de .NET, puede implementar sus propios EventCounters. Los EventCounters se pueden usar para realizar el seguimiento de diversas métricas. Obtenga más información en [EventCounters conocidos en .NET](available-counters.md)
 
 Los EventCounters existen como parte de <xref:System.Diagnostics.Tracing.EventSource> y se insertan automáticamente en las herramientas de escucha de forma periódica. Al igual que todos los demás eventos de <xref:System.Diagnostics.Tracing.EventSource>, se pueden consumir en proceso y fuera de proceso mediante <xref:System.Diagnostics.Tracing.EventListener> y [EventPipe](./eventpipe.md). Este artículo se centra en las capacidades multiplataforma de los EventCounters y excluye de forma deliberada a PerfView y ETW (seguimiento de eventos para Windows), aunque ambos se pueden usar con los EventCounters.
 
 ![Imagen de diagrama de EventCounters en proceso y fuera de proceso](media/event-counters.svg)
-
-[!INCLUDE [available-counters](includes/available-counters.md)]
 
 ## <a name="eventcounter-api-overview"></a>Información general sobre la API EventCounter
 

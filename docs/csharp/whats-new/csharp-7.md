@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 10/02/2020
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 84f5961d573b99438320a75d7f89bc7fd94f6266
-ms.sourcegitcommit: b59237ca4ec763969a0dd775a3f8f39f8c59fe24
+ms.openlocfilehash: c238439b0f435e579d932b3b1eb13e9b0061fa5f
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91955218"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678225"
 ---
 # <a name="whats-new-in-c-70-through-c-73"></a>Novedades de C# 7.0 hasta C# 7.3
 
@@ -235,7 +235,7 @@ El atributo `SomeThingAboutFieldAttribute` se aplica al campo de respaldo genera
 
 ## <a name="more-expression-bodied-members"></a>Más miembros con forma de expresión
 
-En C# 6 se presentaron los [miembros con forma de expresión](csharp-6.md#expression-bodied-function-members) para funciones de miembros y propiedades de solo lectura. C# 7.0 amplía los miembros permitidos que pueden implementarse como expresiones. En C# 7.0, se pueden implementar *constructores*, *finalizadores* y descriptores de acceso `get` y `set` en *propiedades* e *indizadores*. En el código siguiente se muestran ejemplos de cada uno:
+En C# 6 se presentaron los miembros con forma de expresión para funciones de miembros y propiedades de solo lectura. C# 7.0 amplía los miembros permitidos que pueden implementarse como expresiones. En C# 7.0, se pueden implementar *constructores*, *finalizadores* y descriptores de acceso `get` y `set` en *propiedades* e *indizadores*. En el código siguiente se muestran ejemplos de cada uno:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 

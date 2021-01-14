@@ -1,20 +1,21 @@
 ---
-title: 'Creación de una plantilla de elemento para dotnet new: CLI de .NET Core'
+title: 'Creación de una plantilla de elemento para dotnet new: CLI de .NET'
+titleSuffix: ''
 description: Obtenga información sobre cómo crear una plantilla de elemento para el comando dotnet new. Las plantillas de elemento pueden contener cualquier número de archivos.
 author: adegeo
-ms.date: 06/25/2019
+ms.date: 12/11/2020
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 0b804d26b2f33d4d600c17de2f7f71101a0f9c98
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: d213646a933c77bd0d9a3f1aa9b6b4948b66439b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324375"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633668"
 ---
 # <a name="tutorial-create-an-item-template"></a>Tutorial: Creación de una plantilla de elemento
 
-Con .NET Core, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el primero de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
+Con .NET, puede crear e implementar plantillas que generan proyectos, archivos e inclusos recursos. Este tutorial es el primero de una serie que enseña a crear, instalar y desinstalar plantillas para usarlas con el comando `dotnet new`.
 
 En esta parte de la serie, aprenderá a:
 
@@ -28,7 +29,7 @@ En esta parte de la serie, aprenderá a:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [SDK de .NET Core 2.2](https://dotnet.microsoft.com/download) o versiones posteriores.
+* [SDK de .NET 5.0](https://dotnet.microsoft.com/download) o una versión posterior.
 * Leer el artículo de referencia [Plantillas personalizadas para dotnet new](../tools/custom-templates.md).
 
   En el artículo de referencia se explican los aspectos básicos de las plantillas y cómo se unen. Parte de esta información se repetirá en este tutorial.
@@ -85,7 +86,7 @@ Ahora que creó el contenido de la plantilla, debe crear su configuración en la
 
 ## <a name="create-the-template-config"></a>Creación de la configuración de una plantilla
 
-En .NET Core, las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\extensions_.
+Las plantillas se reconocen con una carpeta especial y un archivo de configuración que existen en la raíz de la plantilla. En este tutorial, la carpeta de la plantilla se encuentra en _working\templates\extensions_.
 
 Cuando se crea una plantilla, todos los archivos y las carpetas de la carpeta de la plantilla se incluyen como parte de la plantilla, a excepción de la carpeta de configuración especial. Esta carpeta de configuración se denomina _.template.config_.
 
@@ -116,7 +117,7 @@ Abra _template.json_ con el editor de texto que prefiera, pegue el código JSON 
 }
 ```
 
-Este archivo de configuración contiene todos los valores de la plantilla. Puede ver los valores básicos, como `name` y `shortName`, pero también hay un valor `tags/type` que está establecido en `item`. De este modo, la plantilla se clasifica como una plantilla de elemento. No hay ninguna restricción en el tipo de plantilla que crea. Los valores `item` y `project` son nombres comunes que .NET Core recomienda para que los usuarios puedan filtrar fácilmente el tipo de plantilla que buscan.
+Este archivo de configuración contiene todos los valores de la plantilla. Puede ver los valores básicos, como `name` y `shortName`, pero también hay un valor `tags/type` que está establecido en `item`. De este modo, la plantilla se clasifica como una plantilla de elemento. No hay ninguna restricción en el tipo de plantilla que crea. Los valores `item` y `project` son nombres comunes que .NET recomienda para que los usuarios puedan filtrar fácilmente el tipo de plantilla que buscan.
 
 El elemento `classifications` representa la columna **tags** que ve cuando ejecuta `dotnet new` y obtiene una lista de plantillas. Los usuarios también pueden hacer una búsqueda según las etiquetas de clasificación. No confunda la propiedad `tags` del archivo \*.json con la lista de etiquetas `classifications`. Lamentablemente, son dos elementos que tienen nombres similares. El esquema completo del archivo *template.json* puede encontrarse en el [Almacenamiento del esquema JSON](http://json.schemastore.org/template). Para más información sobre el archivo *template.json*, consulte la [wiki de plantillas dotnet](https://github.com/dotnet/templating/wiki).
 
@@ -137,14 +138,12 @@ Options:
 
 ... cut to save space ...
 
-Templates                                         Short Name            Language          Tags
--------------------------------------------------------------------------------------------------------------------------------
-Example templates: string extensions              stringext             [C#]              Common/Code
-Console Application                               console               [C#], F#, VB      Common/Console
-Class library                                     classlib              [C#], F#, VB      Common/Library
-WPF Application                                   wpf                   [C#], VB          Common/WPF
-Windows Forms (WinForms) Application              winforms              [C#], VB          Common/WinForms
-Worker Service                                    worker                [C#]              Common/Worker/Web
+Templates                                         Short Name               Language          Tags
+--------------------------------------------      -------------------      ------------      ----------------------
+Example templates: string extensions              stringext                [C#]              Common/Code
+Console Application                               console                  [C#], F#, VB      Common/Console
+Class library                                     classlib                 [C#], F#, VB      Common/Library
+WPF Application                                   wpf                      [C#], VB          Common/WPF
 ```
 
 ## <a name="test-the-item-template"></a>Prueba de la plantilla de elemento
@@ -209,11 +208,11 @@ Obtendrá la siguiente salida.
 !dlroW olleH
 ```
 
-¡Enhorabuena! Ha creado e implementado una plantilla de elemento con .NET Core. Como preparación para la próxima parte de esta serie de tutoriales, debe desinstalar la plantilla que creó. Asegúrese de eliminar también todos los archivos de la carpeta _test_. Esto le permitirá volver a un estado limpio listo para la próxima sección importante de este tutorial.
+¡Enhorabuena! Ha creado e implementado una plantilla de elemento con .NET. Como preparación para la próxima parte de esta serie de tutoriales, debe desinstalar la plantilla que creó. Asegúrese de eliminar también todos los archivos de la carpeta _test_. Esto le permitirá volver a un estado limpio listo para la próxima sección importante de este tutorial.
 
 ## <a name="uninstall-the-template"></a>Desinstalación de la plantilla
 
-Como instaló la plantilla a través de la ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use la ruta de acceso mostrada para desinstalar la plantilla con el comando `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>`.
+Como instaló la plantilla a través de la ruta de acceso de archivo, debe desinstalarla con la ruta de acceso de archivo **absoluta**. Ejecute el comando `dotnet new -u` para ver una lista de las plantillas instaladas. Su plantilla debe aparecer en último lugar. Use el `Uninstall Command` indicado para desinstalar la plantilla.
 
 ```dotnetcli
 dotnet new -u
@@ -225,31 +224,31 @@ Verá un resultado similar al siguiente.
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
-  Microsoft.DotNet.Common.ItemTemplates
+  Microsoft.DotNet.Common.ProjectTemplates.2.2
+    Details:
+      NuGetPackageId: Microsoft.DotNet.Common.ProjectTemplates.2.2
+      Version: 1.0.2-beta4
+      Author: Microsoft
     Templates:
-      dotnet gitignore file (gitignore)
-      global.json file (globaljson)
-      NuGet Config (nugetconfig)
-      Solution File (sln)
-      Dotnet local tool manifest file (tool-manifest)
-      Web Config (webconfig)
+      Class library (classlib) C#
+      Class library (classlib) F#
+      Class library (classlib) VB
+      Console Application (console) C#
+      Console Application (console) F#
+      Console Application (console) VB
+    Uninstall Command:
+      dotnet new -u Microsoft.DotNet.Common.ProjectTemplates.2.2
 
 ... cut to save space ...
 
-  NUnit3.DotNetNew.Template
-    Templates:
-      NUnit 3 Test Project (nunit) C#
-      NUnit 3 Test Item (nunit-test) C#
-      NUnit 3 Test Project (nunit) F#
-      NUnit 3 Test Item (nunit-test) F#
-      NUnit 3 Test Project (nunit) VB
-      NUnit 3 Test Item (nunit-test) VB
-  C:\working\templates\extensions
+C:\Test\templatetutorial\working\templates\extensions
     Templates:
       Example templates: string extensions (stringext) C#
+    Uninstall Command:
+      dotnet new -u C:\working\templates\extensions
 ```
 
-Para desinstalar una plantilla, ejecute el siguiente comando.
+Para desinstalar la plantilla que ha creado, ejecute el `Uninstall Command` que se muestra en la salida.
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

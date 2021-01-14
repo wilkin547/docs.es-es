@@ -2,13 +2,13 @@
 title: 'Tutorial: Creación de una herramienta de .NET'
 description: Obtenga información sobre cómo crear una herramienta de .NET. Una herramienta es una aplicación de consola que se instala mediante la CLI de .NET.
 ms.topic: tutorial
-ms.date: 02/12/2020
-ms.openlocfilehash: 93d0567f3d73707f828f84fad6128804debf6579
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.date: 12/14/2020
+ms.openlocfilehash: dc5cf014336848ff1a3035647a386419653a083b
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633783"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633902"
 ---
 # <a name="tutorial-create-a-net-tool-using-the-net-cli"></a>Tutorial: Creación de una herramienta de .NET mediante la CLI de .NET
 
@@ -18,14 +18,14 @@ En este tutorial se explica cómo crear y empaquetar una herramienta de .NET. La
 
 La herramienta que se va a crear es una aplicación de consola que toma un mensaje como entrada y muestra el mensaje junto con líneas de texto que crean la imagen de un robot.
 
-Este es el primero en una serie de tres tutoriales. En este tutorial, creará y empaquetará una herramienta. En los dos tutoriales siguientes, [usará la herramienta como una herramienta global](global-tools-how-to-use.md) y [usará la herramienta como una herramientas local](local-tools-how-to-use.md).
+Este es el primero en una serie de tres tutoriales. En este tutorial, creará y empaquetará una herramienta. En los dos tutoriales siguientes, [usará la herramienta como una herramienta global](global-tools-how-to-use.md) y [usará la herramienta como una herramientas local](local-tools-how-to-use.md). Los procedimientos para crear una herramienta son los mismos tanto si se usan como una herramienta global o como una herramienta local.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [SDK 3.1 de NET Core](https://dotnet.microsoft.com/download) o una versión posterior.
+- [SDK 5.0.100 de .NET](https://dotnet.microsoft.com/download) o una versión posterior.
 
-  Este tutorial y el siguiente [tutorial para las herramientas globales](global-tools-how-to-use.md) se aplican al SDK de .NET Core 2.1 y versiones posteriores, porque las herramientas globales están disponibles a partir de esa versión. Pero en este tutorial se da por supuesto que tiene instalada la versión 3.1 o posterior para que tenga la opción de continuar con el [tutorial de herramientas locales](local-tools-how-to-use.md). Las herramientas locales están disponibles a partir del SDK de .NET Core 3.0. Los procedimientos para crear una herramienta son los mismos tanto si se usan como una herramienta global o como una herramienta local.
-  
+  En este tutorial se usa el SDK de .NET 5.0, pero las herramientas globales están disponibles a partir del SDK de .NET Core 2.1. Las herramientas locales están disponibles a partir del SDK de .NET Core 3.0.
+
 - Un editor de texto o un editor de código de su elección.
 
 ## <a name="create-a-project"></a>Crear un proyecto
@@ -35,10 +35,22 @@ Este es el primero en una serie de tres tutoriales. En este tutorial, creará y 
 1. Desplácese hasta la carpeta *repository* y escriba el comando siguiente:
 
    ```dotnetcli
-   dotnet new console -n microsoft.botsay
+   dotnet new console -n microsoft.botsay -f net5.0
    ```
 
    El comando crea una carpeta denominada *microsoft.botsay* en la carpeta *repository*.
+
+   > [!NOTE]
+   > En este tutorial se crea una herramienta que tiene como destino .NET 5.0. Para que el destino sea otra plataforma, cambie la opción `-f|--framework`. Para que el destino sean varias plataformas, cambie el elemento `TargetFramework` a un elemento `TargetFrameworks` en el archivo de proyecto, como se muestra en el ejemplo siguiente:
+   >
+   > ```xml
+   > <Project Sdk="Microsoft.NET.Sdk">
+   >   <PropertyGroup>
+   >     <OutputType>Exe</OutputType>
+   >     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+   >   </PropertyGroup>
+   > </Project>
+   > ```
 
 1. Navegue hasta la carpeta *microsoft.botsay*.
 
@@ -158,22 +170,22 @@ Antes de que pueda empaquetar y distribuir la aplicación como una herramienta, 
 
    `<ToolCommandName>` es un elemento opcional que especifica el comando que invocará a la herramienta una vez instalada. Si no se proporciona este elemento, el nombre de comando para la herramienta es el nombre del archivo de proyecto sin la extensión *.csproj*.
 
-   `<PackageOutputPath>` es un elemento opcional que determina dónde se generará el paquete NuGet. El paquete NuGet es el que la CLI de .NET Core utiliza para instalar la herramienta.
+   `<PackageOutputPath>` es un elemento opcional que determina dónde se generará el paquete NuGet. El paquete NuGet es el que la CLI de .NET utiliza para instalar la herramienta.
 
    El archivo del proyecto debe ser similar al siguiente ejemplo:
 
    ```xml
    <Project Sdk="Microsoft.NET.Sdk">
-  
+
      <PropertyGroup>
 
        <OutputType>Exe</OutputType>
-       <TargetFramework>netcoreapp3.1</TargetFramework>
-  
+       <TargetFramework>net5.0</TargetFramework>
+
        <PackAsTool>true</PackAsTool>
        <ToolCommandName>botsay</ToolCommandName>
        <PackageOutputPath>./nupkg</PackageOutputPath>
-  
+
      </PropertyGroup>
 
    </Project>
@@ -186,7 +198,7 @@ Antes de que pueda empaquetar y distribuir la aplicación como una herramienta, 
    ```
 
    El archivo *microsoft.botsay.1.0.0.nupkg* se crea en la carpeta identificada por el valor `<PackageOutputPath>` del archivo *microsoft.botsay.csproj*, que en este ejemplo es la carpeta *./nupkg*.
-  
+
    Si quiere lanzar una herramienta públicamente, puede cargarla en `https://www.nuget.org`. Una vez que la herramienta está disponible en NuGet, los desarrolladores pueden instalar la herramienta mediante el comando [dotnet tool install](dotnet-tool-install.md). En este tutorial, se instalará el paquete directamente desde la carpeta local *nupkg*, por lo que no es necesario cargar el paquete en NuGet.
 
 ## <a name="troubleshoot"></a>Solucionar problemas

@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: El comando dotnet-sln proporciona una opción conveniente para agregar, quitar y enumerar los proyectos en un archivo de solución.
 ms.date: 12/07/2020
-ms.openlocfilehash: 480634550f6fa1983bb46f51b439dc8a686ead3c
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: af502efe842e9c9610137738d86c05e00a3b37df
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851708"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633655"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -104,7 +104,7 @@ dotnet sln add [-h|--help]
 
 - **`-s|--solution-folder <PATH>`**
 
-  La ruta de acceso de la carpeta de la solución de destino a la que se van a agregar los proyectos. Disponible desde el SDK de .NET Core 3.0.
+  La ruta de acceso de la [carpeta de la solución](/visualstudio/ide/solutions-and-projects-in-visual-studio#solution-folder) de destino a la que se van a agregar los proyectos. Disponible desde el SDK de .NET Core 3.0.
 
 ### `remove`
 

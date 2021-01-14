@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3b58fd080439c73ee30d5c8dc59c50c0410db164
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 27944a6726f8d74a3b00c7c774faa8037c0f2f0e
+ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851580"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97899631"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -365,6 +365,7 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 ## <a name="reference-properties-and-items"></a>Referencia de propiedades y elementos
 
 - [AssetTargetFallback](#assettargetfallback)
+- [DisableImplicitFrameworkReferences](#disableimplicitframeworkreferences)
 - [PackageReference](#packagereference)
 - [ProjectReference](#projectreference)
 - [Referencia](#reference)
@@ -379,6 +380,18 @@ Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones d
 ```xml
 <PropertyGroup>
   <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
+```
+
+### <a name="disableimplicitframeworkreferences"></a>DisableImplicitFrameworkReferences
+
+La propiedad `DisableImplicitFrameworkReferences` controla los elementos `FrameworkReference` implícitos cuando el destino es .NET Core 3.0 y versiones posteriores. Cuando el destino es .NET Core 2.1 o .NET Standard 2.0 y versiones anteriores, controla los elementos [PackageReference](#packagereference) implícitos en los paquetes de un metapaquete. (Un metapaquete es un paquete basado en la plataforma que consta únicamente de dependencias en otros paquetes). Esta propiedad también controla las referencias implícitas como `System` y `System.Core` cuando el destino es .NET Framework.
+
+Establezca esta propiedad en `true` para deshabilitar los elementos `FrameworkReference` o [PackageReference](#packagereference) implícitos. Si establece esta propiedad en `true`, puede agregar referencias explícitas solo a las plataformas o paquetes que necesite.
+
+```xml
+<PropertyGroup>
+  <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
 </PropertyGroup>
 ```
 
@@ -433,6 +446,36 @@ La restauración de un paquete al que se hace referencia instala todas sus depen
 ```xml
 <PropertyGroup>
   <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
+
+## <a name="run-properties"></a>Propiedades de Run
+
+Las siguientes propiedades se usan para iniciar una aplicación con el comando [`dotnet run`](../tools/dotnet-run.md):
+
+- [RunArguments](#runarguments)
+- [RunWorkingDirectory](#runworkingdirectory)
+
+### <a name="runarguments"></a>RunArguments
+
+La propiedad `RunArguments` define los argumentos que se pasan a la aplicación cuando se ejecuta.
+
+```xml
+<PropertyGroup>
+  <RunArguments>-mode dryrun</RunArguments>
+</PropertyGroup>
+```
+
+> [!TIP]
+> Puede especificar los argumentos adicionales que se pasarán a la aplicación mediante la opción [`--` para `dotnet run`](../tools/dotnet-run.md#options).
+
+### <a name="runworkingdirectory"></a>RunWorkingDirectory
+
+La propiedad `RunWorkingDirectory` define el directorio de trabajo en el que se iniciará el proceso. Si no se especifica un directorio, se usa `OutDir` como directorio de trabajo.
+
+```xml
+<PropertyGroup>
+  <RunWorkingDirectory>c:\temp</RunWorkingDirectory>
 </PropertyGroup>
 ```
 

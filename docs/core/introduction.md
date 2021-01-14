@@ -4,12 +4,12 @@ description: Obtenga información sobre .NET, una plataforma de desarrollo gratu
 author: tdykstra
 ms.date: 11/16/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1fd452ac9b7740c428e92cc6a510bab5f4d2d7d0
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 0adc348c1fc340fe481d9987cdbe28c6cf8b065d
+ms.sourcegitcommit: 655f8a16c488567dfa696fc0b293b34d3c81e3df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687522"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97938681"
 ---
 # <a name="introduction-to-net"></a>Introducción a .NET
 
@@ -144,6 +144,13 @@ La descarga del SDK incluye los componentes siguientes:
 * [Bibliotecas tiempo de ejecución](#runtime-libraries). Proporciona tipos de datos primitivos y utilidades fundamentales.
 * El entorno de ejecución de ASP.NET Core. Proporciona servicios básicos para las aplicaciones conectadas a Internet, como aplicaciones web, aplicaciones de IoT y back-ends para dispositivos móviles.
 * El entorno de ejecución de escritorio. Proporciona servicios básicos para las aplicaciones de escritorio de Windows, como Windows Forms y WPF.
+
+La descarga del entorno de ejecución incluye los componentes siguientes:
+
+* Opcionalmente, el escritorio o el entorno de ejecución de ASP.NET Core.
+* El [entorno de ejecución de .NET](#clr). Proporciona un sistema de tipos, la carga de ensamblados, un recolector de elementos no utilizados, interoperabilidad nativa y otros servicios básicos.
+* [Bibliotecas tiempo de ejecución](#runtime-libraries). Proporciona tipos de datos primitivos y utilidades fundamentales.
+* El [controlador](tools/index.md#driver) `dotnet`. Un comando de la CLI que ejecuta aplicaciones dependientes del marco.
 
 Para obtener más información, vea los siguientes recursos:
 

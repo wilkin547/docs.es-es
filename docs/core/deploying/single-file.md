@@ -3,13 +3,13 @@ title: Aplicación de archivo único
 description: Obtenga información sobre qué es una aplicación de archivo único y por qué debería considerar el uso de este modelo de implementación de aplicaciones.
 author: lakshanf
 ms.author: lakshanf
-ms.date: 08/28/2020
-ms.openlocfilehash: 16e9586cfc29072fa2ca70dc482272a5a0e7306a
-ms.sourcegitcommit: 39b1d5f2978be15409c189a66ab30781d9082cd8
+ms.date: 12/17/2020
+ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
+ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92050421"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97678147"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implementación de archivo único y ejecutable
 
@@ -96,6 +96,39 @@ Por ejemplo, agregue la siguiente propiedad al archivo de proyecto de un ensambl
 </PropertyGroup>
 ```
 
+## <a name="publish-a-single-file-app---sample-project-file"></a>Publicación de una aplicación de archivo único: archivo de proyecto de ejemplo
+
+Este es un archivo de proyecto de ejemplo que especifica la publicación de un archivo único:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishReadyToRun>true</PublishReadyToRun>
+  </PropertyGroup>
+
+</Project>
+```
+
+Estas propiedades tienen las siguientes funciones:
+
+* `PublishSingleFile`: habilita la publicación de un solo archivo.
+* `SelfContained`: determina si la aplicación será independiente o dependiente de la plataforma.
+* `RuntimeIdentifier`: especifica el [sistema operativo y el tipo de CPU](../rid-catalog.md) que tiene como destino.
+* `PublishTrimmed`: habilita el uso del [recorte de ensamblados](trim-self-contained.md), que solo se admite para aplicaciones independientes.
+* `PublishReadyToRun`: habilita la [compilación Ahead Of Time (AOT)](ready-to-run.md).
+
+**Notas:**
+
+* Las aplicaciones son específicas del sistema operativo y de la arquitectura. Debe publicar para cada configuración, como Linux x64, Linux ARM64, Windows x64, etc.
+* Los archivos de configuración, como *\*.runtimeconfig.json*, se incluyen en el archivo único. Si se necesita un archivo de configuración adicional, puede colocarlo junto al archivo único.
+
 ## <a name="publish-a-single-file-app---cli"></a>Publicación de una aplicación de archivo único: CLI
 
 Publique una aplicación de archivo único mediante el comando [dotnet publish](../tools/dotnet-publish.md). Al publicar la aplicación, establezca las propiedades siguientes:
@@ -129,7 +162,7 @@ Visual Studio crea perfiles de publicación reutilizables que controlan cómo s
 
 01. Elija **Editar**.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Explorador de soluciones con un menú contextual en el que se resalta la opción Publicar.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-edit-settings.png" alt-text="Perfil de publicación de Visual Studio con el botón Editar.":::
 
 01. En el cuadro de diálogo **Configuración de perfil**, establezca las opciones siguientes:
 
@@ -139,7 +172,7 @@ Visual Studio crea perfiles de publicación reutilizables que controlan cómo s
 
     Elija **Guardar** para guardar la configuración y volver al cuadro de diálogo **Publicar**.
 
-    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Explorador de soluciones con un menú contextual en el que se resalta la opción Publicar.":::
+    :::image type="content" source="media/single-file/visual-studio-publish-single-file-properties.png" alt-text="Cuadro de diálogo Configuración de perfil con las opciones Modo de implementación, Tiempo de ejecución de destino y Archivo único resaltadas.":::
 
 01. Elija **Publicar** para publicar la aplicación como un archivo único.
 

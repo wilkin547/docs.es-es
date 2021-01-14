@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-trace: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta dotnet-trace de la CLI para recopilar seguimientos de .NET de un proceso en ejecución sin el generador de perfiles nativo, mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 868ce7828eee6bd7f2101d5d6a65c7f7bf87fe24
-ms.sourcegitcommit: 81f1bba2c97a67b5ca76bcc57b37333ffca60c7b
+ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
+ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97009539"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97753671"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
@@ -144,6 +144,9 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
   > [!NOTE]
   > El uso de esta opción supervisa el primer proceso de .NET 5.0 que se comunica con la herramienta, lo que significa que, si el comando inicia varias aplicaciones de .NET, solo recopilará la primera. Por tanto, se recomienda usar esta opción en aplicaciones independientes, o bien utilizar la opción `dotnet exec <app.dll>`.
 
+> [!NOTE]
+> En aplicaciones de gran tamaño, detener el seguimiento puede tardar mucho tiempo (hasta minutos). El entorno de ejecución debe enviar a través de la memoria caché de tipos todo el código administrado que se capturó en el seguimiento.
+
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 
 Convierte los seguimientos de `nettrace` en formatos alternativos para usarlos con herramientas de análisis de seguimiento alternativas.
@@ -169,6 +172,9 @@ dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>
 - **`-o|--output <output-filename>`**
 
   Nombre de archivo de salida. Se agregará la extensión del formato de destino.
+
+> [!NOTE]
+> La conversión de archivos `nettrace` en archivos `chromium` o `speedscope` es irreversible. Los archivos `speedscope` y `chromium` no tienen toda la información necesaria para reconstruir los archivos `nettrace`, pero el comando `convert` conserva el archivo `nettrace` original, por lo que no debe eliminar este archivo si tiene previsto abrirlo en el futuro.
 
 ## <a name="dotnet-trace-ps"></a>dotnet-trace ps
 
@@ -329,12 +335,31 @@ dotnet-trace collect --process-id <PID> --providers System.Runtime:0:1:EventCoun
 
 El comando anterior deshabilita los eventos en tiempo de ejecución y el generador de perfiles de pila administrado.
 
-## <a name="net-providers"></a>Proveedores .NET
+## <a name="use-rsp-file-to-avoid-typing-long-commands"></a>Uso del archivo. rsp para evitar escribir comandos largos
 
-El runtime de .NET Core admite los siguientes proveedores .NET. .NET Core usa las mismas palabras clave para habilitar los seguimientos de `Event Tracing for Windows (ETW)` y `EventPipe`.
+Puede iniciar `dotnet-trace` con un archivo `.rsp` que contenga los argumentos que se van a pasar. Esto puede ser útil cuando se habilitan proveedores que esperan argumentos largos o cuando se usa un entorno de shell que quita caracteres.
 
-| Nombre del proveedor                            | Información |
-|------------------------------------------|-------------|
-| `Microsoft-Windows-DotNETRuntime`        | [El proveedor de runtime](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palabras clave de runtime de CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
-| `Microsoft-Windows-DotNETRuntimeRundown` | [El proveedor de informe detallado](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palabras clave de informe detallado de CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |
-| `Microsoft-DotNETCore-SampleProfiler`    | Habilita el generador de perfiles de ejemplo. |
+Por ejemplo, el proveedor siguiente puede resultar complicado de escribir cada vez que quiera realizar un seguimiento:
+
+```cmd
+dotnet-trace collect --providers Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+Además, el ejemplo anterior contiene `"` como parte del argumento. Dado que cada shell manipula las comillas de forma diferente, podría experimentar varios problemas al usar diferentes shells. Por ejemplo, el comando que se va a especificar en `zsh` es diferente del comando en `cmd`.
+
+En lugar de escribirlo cada vez, puede guardar el siguiente texto en un archivo denominado `myprofile.rsp`.
+
+```txt
+--providers
+Microsoft-Diagnostics-DiagnosticSource:0x3:5:FilterAndPayloadSpecs="SqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandBefore@Activity1Start:-Command;Command.CommandText;ConnectionId;Operation;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nSqlClientDiagnosticListener/System.Data.SqlClient.WriteCommandAfter@Activity1Stop:\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuting@Activity2Start:-Command;Command.CommandText;ConnectionId;IsAsync;Command.Connection.ClientConnectionId;Command.Connection.ServerVersion;Command.CommandTimeout;Command.CommandType;Command.Connection.ConnectionString;Command.Connection.Database;Command.Connection.DataSource;Command.Connection.PacketSize\r\nMicrosoft.EntityFrameworkCore/Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted@Activity2Stop:",OtherProvider,AnotherProvider
+```
+
+Cuando haya guardado `myprofile.rsp`, puede iniciar `dotnet-trace` con esta configuración con el siguiente comando:
+
+```bash
+dotnet-trace @myprofile.rsp
+```
+
+## <a name="see-also"></a>Consulte también
+
+- [Proveedores de eventos conocidos en.NET](well-known-event-providers.md)

@@ -1,13 +1,13 @@
 ---
 title: 'Cambio importante: OutputType establecido en WinExe para aplicaciones de WPF y WinForms'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde OutputType se establece automáticamente en WinExe para las aplicaciones Windows Forms.
+description: Obtenga información sobre el cambio importante en el SDK 5.0.100 de .NET, donde OutputType se establece automáticamente en WinExe para las aplicaciones Windows Forms.
 ms.date: 09/18/2020
-ms.openlocfilehash: 072c5b11c8304eb540e176ce9747930789f28505
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0b56db57d5242f2fb001c4de339a7f696c088dfc
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760266"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633862"
 ---
 # <a name="outputtype-set-to-winexe-for-wpf-and-winforms-apps"></a>OutputType establecido en WinExe para aplicaciones de WPF y WinForms
 
@@ -15,7 +15,7 @@ ms.locfileid: "95760266"
 
 ## <a name="change-description"></a>Descripción del cambio
 
-En versiones anteriores de .NET, se usa el valor especificado para `OutputType` en el archivo del proyecto. Por ejemplo:
+En versiones anteriores del SDK de .NET, se usa el valor especificado para `OutputType` en el archivo del proyecto. Por ejemplo:
 
 ```xml
 <PropertyGroup>
@@ -23,7 +23,7 @@ En versiones anteriores de .NET, se usa el valor especificado para `OutputType` 
 </PropertyGroup>
 ```
 
-A partir de .NET 5.0, `OutputType` se establece de forma automática en `WinExe` para las aplicaciones de WPF y Windows Forms. Por ejemplo:
+A partir de la versión 5.0.100 del SDK de .NET, `OutputType` se establece automáticamente en `WinExe` para WPF y las aplicaciones de Windows Forms que tienen como destino cualquier versión de Framework, incluido .NET Framework. Por ejemplo:
 
 ```xml
 <PropertyGroup>
@@ -37,7 +37,7 @@ Se supone que la mayoría de los usuarios no quieren que se abra una ventana de 
 
 ## <a name="version-introduced"></a>Versión introducida
 
-.NET 5.0
+.NET 5.0.100
 
 ## <a name="recommended-action"></a>Acción recomendada
 
