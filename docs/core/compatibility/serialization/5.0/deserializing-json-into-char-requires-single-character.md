@@ -1,54 +1,56 @@
 ---
-title: 'Cambio importante: Deserialize necesita una cadena de un solo carácter'
-description: Obtenga información sobre el cambio importante en .NET 5.0, donde JsonSerializer.Deserialize necesita una cadena de un solo carácter.
-ms.date: 10/18/2020
-ms.openlocfilehash: 780f2928d776ecb6db9a7fc05a720e889eb363e7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+title: 'Cambio importante: Deserialize char necesita una cadena de un solo carácter'
+description: Obtenga información sobre el cambio importante en .NET 5.0, por el que System.Text.Json requiere una cadena de un solo elemento char en JSON al realizar una deserialización a un destino de un carácter.
+ms.date: 12/15/2020
+ms.openlocfilehash: 39a2d25b00bf8855cfbf46a4d78b8545052703e5
+ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95760249"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97633876"
 ---
-# <a name="jsonserializerdeserialize-requires-single-character-string"></a><span data-ttu-id="c5236-103">JsonSerializer.Deserialize requiere una cadena de un solo carácter</span><span class="sxs-lookup"><span data-stu-id="c5236-103">JsonSerializer.Deserialize requires single-character string</span></span>
+# <a name="systemtextjson-requires-single-char-string-to-deserialize-a-char"></a><span data-ttu-id="8dd72-103">System.Text.Json requiere una cadena de un solo elemento char para deserializar a un elemento char</span><span class="sxs-lookup"><span data-stu-id="8dd72-103">System.Text.Json requires single-char string to deserialize a char</span></span>
 
-<span data-ttu-id="c5236-104">Cuando el parámetro de tipo es <xref:System.Char>, el argumento de cadena para <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> debe contener un solo carácter para que la deserialización se realice correctamente.</span><span class="sxs-lookup"><span data-stu-id="c5236-104">When the type parameter is <xref:System.Char>, the string argument to <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> must contain a single character for deserialization to succeed.</span></span>
+<span data-ttu-id="8dd72-104">Para deserializar correctamente un elemento <xref:System.Char> mediante <xref:System.Text.Json>, la cadena JSON debe contener un solo carácter.</span><span class="sxs-lookup"><span data-stu-id="8dd72-104">To successfully deserialize a <xref:System.Char> using <xref:System.Text.Json>, the JSON string must contain a single character.</span></span>
 
-## <a name="change-description"></a><span data-ttu-id="c5236-105">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="c5236-105">Change description</span></span>
+## <a name="change-description"></a><span data-ttu-id="8dd72-105">Descripción del cambio</span><span class="sxs-lookup"><span data-stu-id="8dd72-105">Change description</span></span>
 
-<span data-ttu-id="c5236-106">En versiones anteriores de .NET, si se pasa una cadena de varios caracteres a <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> y el parámetro de tipo es <xref:System.Char>, la deserialización se realiza correctamente y solo se deserializa el primer carácter.</span><span class="sxs-lookup"><span data-stu-id="c5236-106">In previous .NET versions, if you pass a multi-character string to <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> and the type parameter is <xref:System.Char>, the deserialization succeeds and only the first character is deserialized.</span></span>
-
-<span data-ttu-id="c5236-107">En .NET 5.0 y versiones posteriores, cuando el parámetro de tipo es <xref:System.Char>, si se pasa algo distinto a una cadena de un solo carácter, se inicia una excepción <xref:System.Text.Json.JsonException>.</span><span class="sxs-lookup"><span data-stu-id="c5236-107">In .NET 5.0 and later, when the type parameter is <xref:System.Char>, passing anything other than a single-character string causes a <xref:System.Text.Json.JsonException> to be thrown.</span></span>
+<span data-ttu-id="8dd72-106">En versiones anteriores de .NET, una cadena de varios elementos `char` en JSON se deserializaba correctamente en una propiedad o campo `char`.</span><span class="sxs-lookup"><span data-stu-id="8dd72-106">In previous .NET versions, a multi-`char` string in the JSON is successfully deserialized to a `char` property or field.</span></span> <span data-ttu-id="8dd72-107">Solo se usa el primer elemento `char` de la cadena, como en el ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="8dd72-107">Only the first `char` of the string is used, as in the following example:</span></span>
 
 ```csharp
-// .NET Core 3.0 and 3.1: Returns the first character 'a'.
-// .NET 5.0 and later: Throws JsonException because payload has more than one character.
-JsonSerializer.Deserialize<char>("\"abc\"");
-
-// Correct usage.
-JsonSerializer.Deserialize<char>("\"a\"");
+// .NET Core 3.0 and 3.1: Returns the first char 'a'.
+// .NET 5.0 and later: Throws JsonException because payload has more than one char.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"abc\"");
 ```
 
-## <a name="version-introduced"></a><span data-ttu-id="c5236-108">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="c5236-108">Version introduced</span></span>
+<span data-ttu-id="8dd72-108">En .NET 5.0 y versiones posteriores, si se pasa algo distinto a una cadena de un solo elemento `char`, se inicia una excepción <xref:System.Text.Json.JsonException> cuando el parámetro de tipo es un elemento `char`.</span><span class="sxs-lookup"><span data-stu-id="8dd72-108">In .NET 5.0 and later, anything other than a single-`char` string causes a <xref:System.Text.Json.JsonException> to be thrown when the deserialization target is a `char`.</span></span> <span data-ttu-id="8dd72-109">La siguiente cadena de ejemplo se deserializa correctamente en todas las versiones de .NET:</span><span class="sxs-lookup"><span data-stu-id="8dd72-109">The following example string is successfully deserialized in all .NET versions:</span></span>
 
-<span data-ttu-id="c5236-109">5.0</span><span class="sxs-lookup"><span data-stu-id="c5236-109">5.0</span></span>
+```csharp
+// Correct usage.
+char deserializedChar = JsonSerializer.Deserialize<char>("\"a\"");
+```
 
-## <a name="reason-for-change"></a><span data-ttu-id="c5236-110">Motivo del cambio</span><span class="sxs-lookup"><span data-stu-id="c5236-110">Reason for change</span></span>
+## <a name="version-introduced"></a><span data-ttu-id="8dd72-110">Versión introducida</span><span class="sxs-lookup"><span data-stu-id="8dd72-110">Version introduced</span></span>
 
-<span data-ttu-id="c5236-111"><xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> analiza el texto que representa un único valor JSON en una instancia del tipo especificado por el parámetro de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="c5236-111"><xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType> parses text that represents a single JSON value into an instance of the type specified by the generic type parameter.</span></span> <span data-ttu-id="c5236-112">El análisis solo se realiza correctamente si la carga proporcionada es válida para el parámetro de tipo genérico especificado.</span><span class="sxs-lookup"><span data-stu-id="c5236-112">Parsing should only succeed when the provided payload is valid for the specified generic type parameter.</span></span> <span data-ttu-id="c5236-113">Para un tipo de valor <xref:System.Char>, una carga válida es una cadena de un solo carácter.</span><span class="sxs-lookup"><span data-stu-id="c5236-113">For a <xref:System.Char> value type, a valid payload is a single character string.</span></span>
+<span data-ttu-id="8dd72-111">5.0</span><span class="sxs-lookup"><span data-stu-id="8dd72-111">5.0</span></span>
 
-## <a name="recommended-action"></a><span data-ttu-id="c5236-114">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="c5236-114">Recommended action</span></span>
+## <a name="reason-for-change"></a><span data-ttu-id="8dd72-112">Motivo del cambio</span><span class="sxs-lookup"><span data-stu-id="8dd72-112">Reason for change</span></span>
 
-<span data-ttu-id="c5236-115">Al analizar una cadena en un tipo <xref:System.Char> mediante <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>, asegúrese de que la cadena consta de un solo carácter.</span><span class="sxs-lookup"><span data-stu-id="c5236-115">When parsing a string into a <xref:System.Char> type using <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>, make sure the string consists of a single character.</span></span>
+<span data-ttu-id="8dd72-113">El análisis para la deserialización solo se realiza correctamente si la carga proporcionada es válida para el tipo de destino.</span><span class="sxs-lookup"><span data-stu-id="8dd72-113">Parsing for deserialization should only succeed when the provided payload is valid for the target type.</span></span> <span data-ttu-id="8dd72-114">Para un tipo `char`, la única carga válida es una cadena de un solo elemento `char`.</span><span class="sxs-lookup"><span data-stu-id="8dd72-114">For a `char` type, the only valid payload is a single-`char` string.</span></span>
 
-## <a name="affected-apis"></a><span data-ttu-id="c5236-116">API afectadas</span><span class="sxs-lookup"><span data-stu-id="c5236-116">Affected APIs</span></span>
+## <a name="recommended-action"></a><span data-ttu-id="8dd72-115">Acción recomendada</span><span class="sxs-lookup"><span data-stu-id="8dd72-115">Recommended action</span></span>
 
-- <xref:System.Text.Json.JsonSerializer.Deserialize%60%601(System.String,System.Text.Json.JsonSerializerOptions)?displayProperty=fullName>
+<span data-ttu-id="8dd72-116">Al deserializar JSON en un destino `char`, asegúrese de que la cadena se compone de un solo elemento `char`.</span><span class="sxs-lookup"><span data-stu-id="8dd72-116">When you deserialize JSON into a `char` target, make sure the string consists of a single `char`.</span></span>
+
+## <a name="affected-apis"></a><span data-ttu-id="8dd72-117">API afectadas</span><span class="sxs-lookup"><span data-stu-id="8dd72-117">Affected APIs</span></span>
+
+- <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=fullName>
 
 <!--
 
 ### Affected APIs
 
-- `M:System.Text.Json.JsonSerializer.Deserialize``1(System.String,System.Text.Json.JsonSerializerOptions)`
+- `Overload:System.Text.Json.JsonSerializer.Deserialize`
 
 ### Category
 
