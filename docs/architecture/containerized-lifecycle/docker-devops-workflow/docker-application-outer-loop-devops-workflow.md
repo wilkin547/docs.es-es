@@ -1,13 +1,13 @@
 ---
 title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 description: Conozca los pasos del "bucle exterior" del flujo de trabajo de DevOps.
-ms.date: 08/06/2020
-ms.openlocfilehash: 82a45c8669812580623811e18cc55f55f45cb6d3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.date: 01/06/2021
+ms.openlocfilehash: bfac2d2c7866bfd11cd18201a93cb17a72cae588
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271912"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970302"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -77,7 +77,7 @@ Puede usar estas plantillas y tareas a fin de construir artefactos de CI/CD para
 
 Con estas tareas de Visual Studio Team Services, un host o máquina virtual de Docker de Linux de compilación aprovisionados en Azure y su registro de Docker preferido (Azure Container Registry, Docker Hub, DTR de Docker privado o cualquier otro registro de Docker), puede ensamblar su canalización de CI de Docker de forma coherente.
 
-***Requisitos:***
+**_Requisitos:_* _
 
 - Azure DevOps Services o, para instalaciones locales, Team Foundation Server 2015 Update 3 o una versión posterior.
 
@@ -90,7 +90,7 @@ Con estas tareas de Visual Studio Team Services, un host o máquina virtual de D
 > - Ejecución de un agente de Visual Studio Team Services (ahora Azure DevOps Services) como un contenedor de Docker: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Creación de imágenes de Docker de Linux para .NET Core con Azure DevOps Services: \
+> - Creación de imágenes de Docker de Linux para .NET con Azure DevOps Services: \
 >   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Creación de una máquina de compilación de Visual Studio Team Services basada en Linux con compatibilidad con Docker: \
@@ -126,7 +126,7 @@ Normalmente, le interesa tener los repositorios privados para las imágenes pers
 
 ![Diagrama que muestra la extracción de imágenes personalizadas a un registro de contenedor.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
-**Figura 5-4**. Publicación de imágenes personalizadas en el registro de Docker
+_*Figura 5-4**. Publicación de imágenes personalizadas en el registro de Docker
 
 En el paso 3, para la compilación, la integración y las pruebas (CI), podría interesarle publicar las imágenes de Docker resultantes en un registro privado o público. Existen proveedores de nube que ofrecen diversos registros de Docker, como Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Quay Registry, etc.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 96a39609e9ae8b11e9872b049134136fe1ff3e2a
-ms.sourcegitcommit: 9d525bb8109216ca1dc9e39c149d4902f4b43da5
+ms.openlocfilehash: 2ceac94c04dd8deb169e836f09928dfd9a38ac35
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96599107"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025438"
 ---
 # <a name="structure-types-c-reference"></a>Tipos de estructura (Referencia de C#)
 
@@ -30,11 +30,7 @@ Dado que los tipos de estructura tienen semántica del valor, le recomendamos qu
 
 ## <a name="readonly-struct"></a>Estructura `readonly`
 
-A partir de C# 7.2, usa el modificador `readonly` para declarar que un tipo de estructura es inmutable:
-
-[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
-
-Todos los miembros de datos de una estructura `readonly` debe ser de solo lectura tal como se indica a continuación:
+A partir de C# 7.2, se usa el modificador `readonly` para declarar que un tipo de estructura es inmutable. Todos los miembros de datos de una estructura `readonly` debe ser de solo lectura tal como se indica a continuación:
 
 - Cualquier declaración de campo debe tener el [modificador `readonly`](../keywords/readonly.md)
 - Cualquier propiedad, incluidas las implementadas automáticamente, debe ser de solo lectura. En C# 9.0 y versiones posteriores, una propiedad puede tener un [descriptor de acceso `init`](../../whats-new/csharp-9.md#init-only-setters).
@@ -43,6 +39,10 @@ Esto garantiza que ningún miembro de una estructura `readonly` modifique el est
 
 > [!NOTE]
 > En una estructura `readonly`, un miembro de datos de un tipo de referencia mutable puede seguir mutando su propio estado. Por ejemplo, no puede reemplazar una instancia de <xref:System.Collections.Generic.List%601>, pero puede agregarle nuevos elementos.
+
+En el código siguiente se define una estructura `readonly` con establecedores de propiedad de solo inicialización, disponibles en C# 9.0 y versiones posteriores:
+
+[!code-csharp[readonly struct](snippets/shared/StructType.cs#ReadonlyStruct)]
 
 ## <a name="readonly-instance-members"></a>Miembros de instancia de `readonly`
 

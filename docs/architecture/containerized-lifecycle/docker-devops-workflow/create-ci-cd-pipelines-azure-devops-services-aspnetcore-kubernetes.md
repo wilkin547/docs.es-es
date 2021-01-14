@@ -1,15 +1,15 @@
 ---
-title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
+title: Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación de .NET en contenedores e implementación en un clúster de Kubernetes
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-ms.date: 08/06/2020
-ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: ef994f132716547ee402237016ee71013528d779
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915212"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970491"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación .NET Core en contenedores e implementación en un clúster de Kubernetes
+# <a name="create-cicd-pipelines-in-azure-devops-services-for-a-net-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Creación de canalizaciones de CI/CD en Azure DevOps Services para una aplicación de .NET en contenedores e implementación en un clúster de Kubernetes
 
 En la figura 5-12 se puede ver el escenario completo de DevOps, que comprende la administración de código, la compilación de código, la creación de imágenes de Docker, la inserción de imágenes de Docker en un registro de Docker y, por último, la implementación en un clúster de Kubernetes en Azure.
 

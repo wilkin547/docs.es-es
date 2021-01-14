@@ -1,13 +1,13 @@
 ---
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
-ms.date: 04/29/2018
-ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.date: 12/21/2020
+ms.openlocfilehash: f3f164ca0578d5358f2c5365fd5a1d2e8e22d8c5
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738423"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025361"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -29,7 +29,7 @@ A medida que los contenedores son cada vez más comunes, se están convirtiendo 
 
 La creación de aplicaciones mediante contenedores, que también podrían definirse como bloques de creación ligeros, ofrece un aumento significativo en la agilidad para crear, enviar y ejecutar cualquier aplicación, en cualquier infraestructura.
 
-Con los contenedores, puede llevar cualquier aplicación del desarrollo a producción con poco o ningún cambio de código, gracias a la integración de Docker entre las herramientas de desarrollo de Microsoft, los sistemas operativos y la nube.
+Con los contenedores, puede llevar cualquier aplicación del desarrollo a la producción con pocos cambios en el código, e incluso ninguno, gracias a la integración de Docker entre las herramientas de desarrollo de Microsoft, los sistemas operativos y la nube.
 
 Cuando se implementa en máquinas virtuales convencionales, es probable que ya tenga un método para implementar aplicaciones de ASP.NET en las máquinas virtuales. Sin embargo, es probable que el método implique varios pasos manuales o complejos procesos automatizados mediante una herramienta de implementación como Puppet o una herramienta similar. Es posible que necesite realizar tareas como la modificación de elementos de configuración, la copia de contenido de la aplicación entre servidores y la ejecución de programas de instalación interactiva basados en configuraciones .msi, seguidos de pruebas. Todos estos pasos de la implementación agregan tiempo y riesgo a las implementaciones. Obtendrá errores cada vez que una dependencia no esté presente en el entorno de destino.
 
@@ -65,11 +65,11 @@ En un futuro próximo, serán posibles, e incluso comunes, los entornos mixtos c
 
 Las ventajas de usar contenedores de Windows son fundamentalmente las mismas ventajas que se obtienen de los contenedores en general. El uso de contenedores de Windows trata de mejorar considerablemente la agilidad, la portabilidad y el control.
 
-Las aplicaciones .NET existentes hacen referencia a las aplicaciones que se crearon con .NET Framework. Por ejemplo, puede tratarse de aplicaciones web de ASP.NET tradicionales: no usan .NET Core, que es más reciente y se ejecuta en varias plataformas en Linux, Windows y MacOS.
+Las aplicaciones .NET existentes hacen referencia a las aplicaciones que se crearon con .NET Framework. Por ejemplo, puede tratarse de aplicaciones web de ASP.NET tradicionales; no usan .NET Core o .NET 5.0, que es más reciente y se ejecuta en varias plataformas en Linux, Windows y MacOS.
 
 La dependencia principal en .NET Framework es Windows. También tiene dependencias secundarias, como IIS y System.Web en ASP.NET tradicional.
 
-Una aplicación .NET Framework se debe ejecutar en Windows. Si desea incluir en contenedores las aplicaciones .NET Framework existentes y no puede o no desea invertir en una migración a .NET Core ("si funciona correctamente, no migrar"), la única opción que tiene para los contenedores es usar contenedores de Windows.
+Una aplicación .NET Framework se debe ejecutar en Windows. Si quiere incluir en contenedores las aplicaciones de .NET Framework existentes y no puede o no quiere invertir en una migración a .NET Core o versiones posteriores ("si funciona correctamente, no se migra"), la única opción que tiene para los contenedores es usar contenedores de Windows.
 
 Por lo tanto, una de las principales ventajas de los contenedores de Windows es que ofrecen una forma de modernizar las aplicaciones .NET Framework existentes que se ejecutan en Windows a través de la inclusión en contenedores. En última instancia, los contenedores de Windows le aportan las ventajas que está buscando mediante contenedores: agilidad, portabilidad y un mejor control.
 
@@ -77,7 +77,7 @@ Por lo tanto, una de las principales ventajas de los contenedores de Windows es 
 
 Teniendo en cuenta la diversidad de sistemas operativos que son compatibles con Docker, así como las diferencias entre .NET Framework y .NET Core, debe escoger un sistema operativo de destino específico y versiones específicas basadas en la plataforma que utilice.
 
-Para Windows, puede usar Windows Server Core o Nano Server de Windows. Estas versiones de Windows proporcionan diferentes características (como IIS frente a un servidor web autohospedado, como Kestrel) que las aplicaciones .NET Framework o .NET Core podrían necesitar.
+Para Windows, puede usar Windows Server Core o Nano Server de Windows. Estas versiones de Windows proporcionan diferentes características (como IIS frente a un servidor web autohospedado, como Kestrel) que las aplicaciones de .NET Framework o .NET podrían necesitar.
 
 Para Linux, hay varias distribuciones disponibles y compatibles en imágenes oficiales del Docker de .NET (por ejemplo, Debian).
 
@@ -93,19 +93,19 @@ Al agregar el nombre de imagen al archivo Dockerfile, puede seleccionar el siste
 
 > | **Tag** | **Sistema y versión** |
 > |---|---|
-> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4.x en Windows Server Core |
-> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4.x con personalización ASP.NET adicional, en Windows Server Core |
+> | **mcr.microsoft.com/dotnet/framework/runtime:4.x-windowsservercore-20H2** | .NET Framework 4.x en Windows Server Core |
+> | **mcr.microsoft.com/dotnet/framework/aspnet:4.x-windowsservercore-20H2** | .NET Framework 4.x con personalización ASP.NET adicional, en Windows Server Core |
 
-Para .NET Core (multiplataforma para Linux y Windows), las etiquetas tendrían el aspecto siguiente:
+Para .NET (multiplataforma para Linux y Windows), las etiquetas tendrían el aspecto siguiente:
 
 > | **Tag** | **Sistema y versión**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | Entorno de ejecución .NET Core 2.0 solo en Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Entorno de ejecución .NET Core 2.0, solo en Windows Nano Server |
+> | **mcr.microsoft.com/dotnet/runtime:5.0** | Entorno de ejecución de .NET solo en Linux |
+> | **mcr.microsoft.com/dotnet/runtime:5.0-nanoserver-20H2** | Entorno de ejecución de .NET solo en Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Imágenes multiarquitectura
 
-A partir de mediados de 2017, también puede usar una nueva característica de Docker llamada [imágenes multiarquitectura](https://github.com/moby/moby/issues/15866). Las imágenes de Docker de .NET Core pueden usar etiquetas multiarquitectura. Los archivos de Dockerfile ya no necesitan definir el sistema operativo de destino. La característica de multiarquitectura permite usar una sola etiqueta en varias configuraciones de máquina. Por ejemplo, con la multiarquitectura, puede usar una etiqueta común: **microsoft/dotnet:2.0.0-runtime**. Si extrae esa etiqueta de un entorno de contenedores de Linux, obtendrá la imagen basada en Debian. Si extrae esa etiqueta de un entorno de contenedor de Windows, obtendrá la imagen basada en Nano Server.
+A partir de mediados de 2017, también puede usar una nueva característica de Docker llamada [imágenes multiarquitectura](https://github.com/moby/moby/issues/15866). Las imágenes de Docker de .NET pueden usar etiquetas multiarquitectura. Los archivos de Dockerfile ya no necesitan definir el sistema operativo de destino. La característica de multiarquitectura permite usar una sola etiqueta en varias configuraciones de máquina. Por ejemplo, con la multiarquitectura, puede usar una etiqueta común: **mcr.microsoft.com/dotnet/runtime:5.0**. Si extrae esa etiqueta de un entorno de contenedores de Linux, obtendrá la imagen basada en Debian. Si extrae esa etiqueta de un entorno de contenedor de Windows, obtendrá la imagen basada en Nano Server.
 
 En el caso de las imágenes de .NET Framework, ya que .NET Framework tradicional solo admite Windows, no puede usar la característica de multiarquitectura.
 

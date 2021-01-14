@@ -1,13 +1,13 @@
 ---
 title: Compilación de aplicaciones ASP.NET Core implementadas como contenedores de Linux en clústeres de AKS/Kubernetes
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
-ms.date: 08/06/2020
-ms.openlocfilehash: 831d2372131e20788d0f48190eb8c600aa02485c
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.date: 01/06/2021
+ms.openlocfilehash: 7a8f8272ab2faabd0398aeeb2039b6f034b4dedb
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440834"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970646"
 ---
 # <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Compilación de aplicaciones ASP.NET Core implementadas como contenedores de Linux en un orquestador de AKS/Kubernetes
 
@@ -21,13 +21,13 @@ Estas son las características principales de AKS:
 - Escalado configurable por el usuario
 - Experiencia de usuario más sencilla para desarrolladores y operadores de clúster.
 
-En los ejemplos siguientes se examina la creación de una aplicación ASP.NET Core 3.1 que se ejecuta en Linux y se implementa en un clúster de AKS en Azure, mientras que el desarrollo se realiza con Visual Studio 2019.
+En los ejemplos siguientes se examina la creación de una aplicación de ASP.NET Core 5.0 que se ejecuta en Linux y se implementa en un clúster de AKS en Azure, mientras que el desarrollo se realiza con Visual Studio 2019, versión 16.8.
 
 ## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a>Creación del proyecto de ASP.NET Core con Visual Studio 2019
 
 ASP.NET Core es una plataforma de desarrollo de uso general de cuyo mantenimiento se encargan Microsoft y la comunidad .NET en GitHub. Es multiplataforma, admite Windows, macOS y Linux y puede usarse en escenarios de dispositivo, nube, IoT e incrustados.
 
-En este ejemplo se usan un par de proyectos simples basados en plantillas de Visual Studio, por lo que no necesita muchos conocimientos adicionales para crear el ejemplo. Solo tiene que crear el proyecto con una plantilla estándar que incluya todos los elementos para ejecutar un proyecto pequeño con una API de REST y una aplicación web con Razor Pages, mediante la tecnología ASP.NET Core 3.1.
+En este ejemplo se usan un par de proyectos simples basados en plantillas de Visual Studio, por lo que no necesita muchos conocimientos adicionales para crear el ejemplo. Solo tiene que crear el proyecto con una plantilla estándar que incluya todos los elementos para ejecutar un proyecto pequeño con una API REST y una aplicación web con Razor Pages, mediante la tecnología ASP.NET Core 5.0.
 
 ![Ventana para agregar nuevo proyecto en Visual Studio, con la aplicación web de ASP.NET Core seleccionada.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
@@ -41,11 +41,11 @@ Luego escriba el nombre y la ubicación de la aplicación como se muestra en la 
 
 **Figura 4-36**. Especificación del nombre y la ubicación del proyecto en Visual Studio 2019.
 
-Compruebe que ha seleccionado ASP.NET Core 3.1 como marco. .NET Core 3.1 está incluido en la última versión de Visual Studio 2019 y se instala y configura automáticamente al instalar Visual Studio.
+Compruebe que ha seleccionado ASP.NET Core 5.0 como marco. .NET 5.0 está incluido en la última versión de Visual Studio 2019, y se instala y configura automáticamente al instalar Visual Studio.
 
 ![Cuadro de diálogo de Visual Studio para seleccionar el tipo de aplicación web ASP.NET Core con la opción API seleccionada.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-**Figura 4-37**. Selección de ASP.NET Core 3.1 y del tipo de proyecto API web
+**Figura 4-37**. Selección de ASP.NET Core 5.0 y del tipo de proyecto API web
 
 Observe que la compatibilidad con Docker no está habilitada, solo para mostrar que se puede hacer después de la creación del proyecto.
 
@@ -63,7 +63,7 @@ Para acabar de agregar compatibilidad con Docker, puede elegir Windows o Linux. 
 
 **Figura 4-39**. Selección de contenedores de Linux
 
-Con estos sencillos pasos, ya tiene la aplicación ASP.NET Core 3.1 en ejecución en un contenedor de Linux.
+Con estos sencillos pasos, ya tiene la aplicación de ASP.NET Core 5.0 en ejecución en un contenedor de Linux.
 
 De forma similar, también puede agregar un proyecto **WebApp** muy sencillo (figura 4-40) para usar el punto de conexión de la API web, aunque los detalles no se tratan aquí.
 

@@ -1,13 +1,13 @@
 ---
 title: Tutoriales e introducción técnica
 description: Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Tutoriales e introducción técnica
-ms.date: 04/28/2018
-ms.openlocfilehash: 98d33b13d2b28bfe1c35894df45e525cff0520c1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 6bfa25e3eeeecf5a936f378df3ae548d6fa37a30
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172149"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025282"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Tutoriales e introducción técnica
 
@@ -117,7 +117,7 @@ Ejecutar una aplicación monolítica en un contenedor tiene ciertas ventajas. En
 
 Una ventaja adicional es que los desarrolladores pueden ejecutar la aplicación en el entorno coherente que proporcionan los contenedores de Windows. Los problemas que solo aparecen con ciertas versiones se pueden solucionar inmediatamente, en lugar de hacerlo en un entorno de ensayo o de producción. Las diferencias en los entornos de desarrollo que usan los miembros del equipo de desarrollo tienen menos importancia cuando las aplicaciones se ejecutan en contenedores.
 
-Las aplicaciones en contenedor también tienen una curva de escalado horizontal más plana. Las aplicaciones en contenedor permiten tener más instancias de aplicaciones y servicios (basadas en contenedores) en una máquina virtual o en una máquina física en comparación con las implementaciones de aplicaciones normales por máquina. Esto se traduce en una mayor densidad y en menos recursos necesarios, especialmente cuando se usan orquestadores como Kubernetes.
+Las aplicaciones en contenedor también tienen una curva de escalado horizontal más plana. Las aplicaciones en contenedor permiten tener más instancias de aplicaciones y servicios (basadas en contenedores) en una máquina virtual o en una máquina física en comparación con las implementaciones de aplicaciones normales por máquina. Este enfoque se traduce en una mayor densidad y en menos recursos necesarios, especialmente cuando se usan orquestadores como Kubernetes.
 
 En situaciones ideales, la inclusión en contenedores no requiere ningún cambio en el código de la aplicación (C\#). En la mayoría de los escenarios, solo necesita los archivos de metadatos de implementación de Docker (archivos Dockerfiles y Docker Compose).
 
@@ -198,7 +198,7 @@ En este tutorial se muestran los principales escenarios en el momento de impleme
 
 ### <a name="scenarios"></a>Escenarios
 
-Puede haber variaciones sobre la implementación de las aplicaciones de eShopModernizing en ACI, como la implementación de solo una o todas las aplicaciones (aplicación MVC, aplicación WebForms o servicio WCF). En el escenario siguiente puede ver que tanto la aplicación ASP.NET MVC como el contenedor de SQL Server se han implementado como contenedores en ACI (Azure Container Instances).
+Puede haber variaciones sobre la implementación de las aplicaciones de eShopModernizing en ACI, como la implementación de solo una o todas las aplicaciones (aplicación MVC, aplicación WebForms o servicio WCF). En el escenario siguiente puede ver que tanto la aplicación de ASP.NET MVC como el contenedor de SQL Server se han implementado como contenedores en ACI (Azure Container Instances).
 
 ![Implementación en ACI desde un entorno de desarrollo](./media/image5-3.5.6.png)
 
@@ -228,7 +228,7 @@ El tutorial técnico completo está disponible en la wiki del repositorio de Git
 
 ### <a name="overview"></a>Información general
 
-Una aplicación basada en contenedores de Windows tendrá que usar rápidamente plataformas, con lo que se alejará aún más de las máquinas virtuales de IaaS. Esto es necesario para lograr fácilmente una alta escalabilidad y mejor escalabilidad automatizada y para obtener una mejora significativa en las implementaciones automatizadas y el control de versiones. Puede alcanzar estos objetivos si usa el orquestador [Kubernetes](https://kubernetes.io/), disponible en [Azure Container Services](https://azure.microsoft.com/services/container-service/).
+Una aplicación basada en contenedores de Windows tendrá que usar rápidamente plataformas, con lo que se alejará aún más de las máquinas virtuales de IaaS. Este enfoque es necesario para lograr fácilmente una alta escalabilidad y una mejor escalabilidad automatizada, así como para obtener una mejora significativa en las implementaciones automatizadas y el control de versiones. Puede alcanzar estos objetivos si usa el orquestador [Kubernetes](https://kubernetes.io/), disponible en [Azure Container Services](https://azure.microsoft.com/services/container-service/).
 
 ### <a name="goals"></a>Objetivos
 
@@ -300,7 +300,7 @@ El objetivo de este tutorial es aprender a implementar una aplicación basada en
 
 ### <a name="benefits"></a>Ventajas
 
-La implementación en Azure App Service para contenedores ofrece las ventajas de los contenedores junto con las ventajas de PaaS de Azure App Service. El servicio de aplicación se puede escalar fácilmente de manera vertical y horizontal y puede configurarse para ajustarlo automáticamente a las exigencias cambiantes. Las actualizaciones se pueden realizar sin tiempo de inactividad y la configuración de la implementación continua desde un registro también se configura fácilmente.
+La implementación en Azure App Service para contenedores ofrece las ventajas de los contenedores junto con las ventajas de PaaS de Azure App Service. El servicio de aplicación se puede escalar fácilmente de manera vertical y horizontal y puede configurarse para ajustarlo automáticamente a las exigencias cambiantes. Las actualizaciones se pueden realizar sin tiempo de inactividad, y la configuración de la implementación continua desde un registro también se configura fácilmente.
 
 ### <a name="next-steps"></a>Pasos siguientes
 

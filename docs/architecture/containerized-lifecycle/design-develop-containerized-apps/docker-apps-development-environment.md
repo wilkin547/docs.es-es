@@ -1,13 +1,13 @@
 ---
 title: Entorno de desarrollo para aplicaciones de Docker
 description: Familiarícese con las opciones de herramientas de desarrollo más importantes que son compatibles con el ciclo de vida de desarrollo de Docker.
-ms.date: 08/06/2020
-ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/06/2021
+ms.openlocfilehash: c6c4a1fda41131c00ba87808ed408f1d3250cabf
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916028"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970530"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entorno de desarrollo para aplicaciones de Docker
 
@@ -36,7 +36,7 @@ Puede usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?u
 
 Puede desarrollar aplicaciones de Docker mediante el uso de herramientas de Microsoft con los lenguajes más modernos. A continuación se muestra una lista inicial, aunque no está limitado a ella:
 
-- .NET Core y ASP.NET Core
+- .NET y ASP.NET Core
 - Node.js
 - Ir
 - Java

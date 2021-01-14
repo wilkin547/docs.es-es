@@ -3,12 +3,12 @@ title: Comando dotnet nuget push
 description: El comando dotnet nuget push inserta un paquete en el servidor y lo publica.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 50a4a542c2d192bfbd927845489d04fd1b6c6cf3
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 99e735f7bb18b7af1c12c3ef77fc150a19083542
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555128"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970660"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -74,7 +74,9 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
 
 - **`-s|--source <SOURCE>`**
 
-  Especifica la dirección URL del servidor. Esta opción es necesaria a menos que el valor de configuración `DefaultPushSource` esté establecido en el archivo de configuración de NuGet.
+  Especifica la dirección URL del servidor. NuGet identifica un origen de carpeta local o UNC y simplemente copia el archivo allí, en lugar de insertarlo mediante HTTP.
+  > [!IMPORTANT]
+  > A partir de NuGet 3.4.2, se trata de un parámetro obligatorio, a menos que el archivo de configuración de NuGet especifique un valor `DefaultPushSource`. Para más información, vea [Configuring NuGet behavior](/nuget/consume-packages/configuring-nuget-behavior) (Configuración del comportamiento de NuGet).
 
 - **`--skip-duplicate`**
 
@@ -94,7 +96,7 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
 
 ## <a name="examples"></a>Ejemplos
 
-- Inserte *foo.nupkg* en el origen de inserción predeterminado y especifique una clave de API:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado especificado en el archivo de configuración de NuGet, mediante una clave de API:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
@@ -112,7 +114,7 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- Inserte *foo.nupkg* en el origen de inserción predeterminado:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado especificado en el archivo de configuración de NuGet:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
@@ -124,13 +126,13 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- Inserte *foo.nupkg* en el origen de inserción predeterminado y especifique un tiempo de espera de 360 segundos:
+- Inserte *foo.nupkg* en el origen de inserción predeterminado especificado en el archivo de configuración de NuGet, con un tiempo de espera de 360 segundos:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- Inserte todos los archivos *.nupkg*  del directorio actual en el origen de inserción predeterminado:
+- Inserte todos los archivos *.nupkg* del directorio actual en el origen de inserción predeterminado especificado en el archivo de configuración de NuGet:
 
   ```dotnetcli
   dotnet nuget push "*.nupkg"
@@ -143,7 +145,7 @@ El comando inserta un paquete existente. No crea un paquete. Para crear un paque
   > [!NOTE]
   > Las comillas de inclusión son necesarias para los shells como bash que usan comodines de archivo. Para obtener más información, vea [NuGet/Home#4393](https://github.com/NuGet/Home/issues/4393#issuecomment-667618120).
 
-- Inserte todos los archivos *.nupkg*, aunque un servidor HTTP(S) devuelva una respuesta de conflicto 409:
+- Inserte todos los archivos *.nupkg* en el origen de inserción predeterminado especificado en el archivo de configuración de NuGet, incluso si un servidor HTTP(S) devuelve una respuesta de conflicto 409:
 
   ```dotnetcli
   dotnet nuget push "*.nupkg" --skip-duplicate

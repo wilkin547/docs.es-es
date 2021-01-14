@@ -1,13 +1,13 @@
 ---
 title: Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 description: Modernización de aplicaciones de .NET existentes con Azure Cloud y contenedores Windows
-ms.date: 04/28/2018
-ms.openlocfilehash: d610222aa6649c1b28e198c074794dd316f895ec
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: fb875c38cac236826007bba217189238b7c00898
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172175"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025399"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Migración mediante lift-and-shift de aplicaciones de .NET existentes a la IaaS de Azure (listas para la infraestructura en la nube)
 
@@ -39,7 +39,7 @@ En las secciones siguientes se describen las aplicaciones optimizadas para la nu
 
 Si su objetivo es simplemente trasladar las aplicaciones existentes a la nube, identifique primero las aplicaciones que no requieren una modificación sustancial para ejecutarse en Azure App Service. Estas aplicaciones deben ser las primeras candidatas para el modelo optimizado para la nube.
 
-Después, migre a máquinas virtuales simples (IaaS) las aplicaciones que todavía no se pueden trasladar a contenedores Windows y PaaS, como App Service u orquestadores como Azure Kubernetes Service.
+Después, migre a máquinas virtuales simples (IaaS) las aplicaciones que todavía no se pueden trasladar a contenedores de Windows y PaaS, como App Service u orquestadores como Azure Kubernetes Service.
 
 Sin embargo, tenga en cuenta que la configuración, la protección y el mantenimiento correctos de las máquinas virtuales requieren mucho más tiempo y conocimientos de TI en comparación con el uso de servicios de PaaS en Azure. Si está considerando la opción de Azure Virtual Machines, tenga en cuenta el esfuerzo constante de mantenimiento requerido para aplicar revisiones al entorno de la máquina virtual, así como para actualizarlo y administrarlo. Azure Virtual Machines es IaaS.
 

@@ -1,13 +1,13 @@
 ---
 title: ¿Qué son las aplicaciones nativas para la nube?
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | ¿Qué ocurre con las aplicaciones nativas de la nube?
-ms.date: 04/28/2018
-ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: 700d23c6b44f4eb48b3f6ec20569323280682082
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543552"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025191"
 ---
 # <a name="what-about-cloud-native-applications"></a>¿Qué son las aplicaciones nativas para la nube?
 
@@ -46,7 +46,7 @@ Para obtener instrucciones detalladas sobre cómo diseñar y desarrollar aplicac
 * [Diseño de aplicaciones de .NET nativas en la nube para Azure](../../cloud-native/introduction.md)
 * [Microservicios de .NET. Arquitectura para aplicaciones .NET en contenedor](../../microservices/index.md).
 
-El factor más importante que hay que tener en cuenta si migra una aplicación completa al modelo nativo de la nube es que debe rediseñar una arquitectura basada en microservicios. Esto requiere claramente una inversión significativa en desarrollo debido al gran proceso de refactorización que implica. Esta opción se elige normalmente para las aplicaciones críticas que necesitan nuevos niveles de escalabilidad y agilidad a largo plazo. Sin embargo, puede empezar el traslado al modelo nativo de la nube agregando microservicios para unos pocos escenarios nuevos y, finalmente, refactorizar la aplicación por completo como microservicios. Este es un enfoque incremental que es la mejor opción para algunos escenarios.
+El factor más importante que hay que tener en cuenta si migra una aplicación completa al modelo nativo de la nube es que debe rediseñar una arquitectura basada en microservicios. Este enfoque requiere claramente una inversión considerable en desarrollo debido al gran proceso de refactorización que implica. Esta opción se elige normalmente para las aplicaciones críticas que necesitan nuevos niveles de escalabilidad y agilidad a largo plazo. Sin embargo, puede empezar el traslado al modelo nativo de la nube agregando microservicios para unos pocos escenarios nuevos y, finalmente, refactorizar la aplicación por completo como microservicios. Este paso es un enfoque incremental que se considera la mejor opción para algunos escenarios.
 
 ## <a name="what-about-microservices"></a>¿Qué hay de los microservicios?
 
@@ -56,9 +56,9 @@ La arquitectura de microservicios es un enfoque avanzado que puede usar para apl
 
 Sin embargo, los microservicios no son obligatorios para una aplicación nueva o moderna. Los microservicios no son mágicos y no son la mejor manera de crear todas las aplicaciones. Cómo y cuándo se usan los microservicios depende del tipo de aplicación que se debe crear.
 
-La arquitectura de microservicios se está convirtiendo en el método preferido para aplicaciones críticas distribuidas y grandes o complejas basadas en múltiples subsistemas independientes en forma de servicios autónomos. En una arquitectura basada en microservicios, una aplicación se crea como una colección de servicios que se pueden desarrollar, probar, implementar y escalar de forma independiente, y crear versiones de ella. Esto puede incluir cualquier base de datos autónoma relacionada por microservicio.
+La arquitectura de microservicios se está convirtiendo en el método preferido para aplicaciones críticas distribuidas y grandes o complejas basadas en múltiples subsistemas independientes en forma de servicios autónomos. En una arquitectura basada en microservicios, una aplicación se crea como una colección de servicios que se pueden desarrollar, probar, implementar y escalar de forma independiente, y crear versiones de ella. Este enfoque puede incluir cualquier base de datos autónoma relacionada por microservicio.
 
-Para ver información detallada de una arquitectura de microservicios que puede implementar con .NET Core, consulte el libro electrónico en PDF descargable [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook). La guía también está disponible [en línea](../../microservices/index.md).
+Para ver información detallada de una arquitectura de microservicios que puede implementar con .NET, consulte el libro electrónico en PDF descargable [Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook). La guía también está disponible [en línea](../../microservices/index.md).
 
 Sin embargo, incluso en escenarios en los que los microservicios ofrecen una implementación eficaz e independiente de la funcionalidad, límites de subsistema seguros y diversidad tecnológica, también plantean muchos desafíos nuevos. Los desafíos son, entre otros: el desarrollo de aplicaciones distribuidas, como los modelos de datos fragmentados e independientes; lograr una comunicación resistente entre los microservicios; la necesidad de coherencia final; y la complejidad operativa. Los microservicios presentan un nivel de complejidad mayor en comparación con las aplicaciones monolíticas tradicionales.
 

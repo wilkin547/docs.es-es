@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Obtenga información sobre los SDK de proyectos de .NET.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 6b6651f674f09d5d0d18ddb873096037ad3b2ba5
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247583"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970699"
 ---
 # <a name="net-project-sdks"></a>SDK de proyectos de .NET
 
@@ -83,9 +83,9 @@ Si el proyecto tiene varias plataformas de destino, para centrar los resultados 
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-compilation-includes"></a>Inclusiones de compilación predeterminadas
+### <a name="default-includes-and-excludes"></a>Inclusiones y exclusiones predeterminadas
 
-Las inclusiones y exclusiones predeterminadas de los elementos de compilación, los recursos insertados y los elementos `None` se definen en el SDK. A diferencia de los proyectos de .NET Framework que no son de SDK, no es necesario especificar estos elementos en el archivo del proyecto, ya que los valores predeterminados cubren los casos de uso más comunes. Como resultado, el archivo de proyecto es más pequeño y más fácil de entender y editar manualmente, si es necesario.
+Las inclusiones y exclusiones predeterminadas de los [elementos `Compile`](/visualstudio/msbuild/common-msbuild-project-items#compile), los [recursos insertados](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource) y los [elementos `None`](/visualstudio/msbuild/common-msbuild-project-items#none) se definen en el SDK. A diferencia de los proyectos de .NET Framework que no son de SDK, no es necesario especificar estos elementos en el archivo del proyecto, ya que los valores predeterminados cubren los casos de uso más comunes. Este comportamiento hace que el archivo de proyecto sea más pequeño y más fácil de entender y editar manualmente, si es necesario.
 
 En la tabla siguiente se muestra qué elementos y qué [globs](https://en.wikipedia.org/wiki/Glob_(programming)) se incluyen y excluyen en el SDK de .NET:
 
@@ -96,7 +96,7 @@ En la tabla siguiente se muestra qué elementos y qué [globs](https://en.wikipe
 | None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx |
 
 > [!NOTE]
-> De forma predeterminada, las carpetas `./bin` y `./obj` (representadas por las propiedades de MSBuild `$(BaseOutputPath)` y `$(BaseIntermediateOutputPath)`) se excluyen de los globs. Las exclusiones se representan por medio de la propiedad `$(DefaultItemExcludes)`.
+> De forma predeterminada, las carpetas `./bin` y `./obj` (representadas por las propiedades de MSBuild `$(BaseOutputPath)` y `$(BaseIntermediateOutputPath)`) se excluyen de los globs. Las exclusiones se representan mediante la [propiedad DefaultItemExcludes](msbuild-props.md#defaultitemexcludes).
 
 #### <a name="build-errors"></a>Errores de compilación
 
@@ -110,7 +110,7 @@ Para resolver los errores, lleve a cabo una de las siguientes acciones:
 
 - Quite los elementos `Compile`, `EmbeddedResource` o `None` explícitos que coincidan con los implícitos enumerados en la tabla anterior.
 
-- Establezca la propiedad `EnableDefaultItems` en `false` para deshabilitar toda la inclusión de archivos implícita:
+- Establezca la [propiedad EnableDefaultItems](msbuild-props.md#enabledefaultitems) en `false` para deshabilitar toda la inclusión de archivos implícita:
 
   ```xml
   <PropertyGroup>
@@ -120,7 +120,7 @@ Para resolver los errores, lleve a cabo una de las siguientes acciones:
 
   Si quiere especificar que se publiquen archivos con la aplicación, puede seguir usando los mecanismos de MSBuild conocidos para ello, por ejemplo, el elemento `Content`.
 
-- Deshabilite de forma selectiva solo los globs `Compile`, `EmbeddedResource` o `None` estableciendo la propiedad `EnableDefaultCompileItems`, `EnableDefaultEmbeddedResourceItems` o `EnableDefaultNoneItems` en `false`:
+- Deshabilite de forma selectiva solo los globs `Compile`, `EmbeddedResource` o `None` mediante el establecimiento de la propiedad [EnableDefaultCompileItems](msbuild-props.md#enabledefaultcompileitems), [EnableDefaultEmbeddedResourceItems](msbuild-props.md#enabledefaultembeddedresourceitems) o [EnableDefaultNoneItems](msbuild-props.md#enabledefaultnoneitems) en `false`:
 
   ```xml
   <PropertyGroup>

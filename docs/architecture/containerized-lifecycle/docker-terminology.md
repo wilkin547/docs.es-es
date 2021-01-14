@@ -1,13 +1,13 @@
 ---
 title: Terminología de Docker
 description: Descubra la terminología básica que se usa habitualmente al trabajar con Docker.
-ms.date: 08/06/2020
-ms.openlocfilehash: a323075bdd73a117769913ac59426b5bec5df614
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/06/2021
+ms.openlocfilehash: 640c3481e271b8fe2b7d7eeb7d5eaeb02af1cc21
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686456"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970107"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -35,7 +35,7 @@ docker build
 
 **Registro**: servicio que proporciona acceso a los repositorios. El registro predeterminado para la mayoría de las imágenes públicas es [Docker Hub](https://hub.docker.com/) (propiedad de Docker como una organización). Normalmente, un registro contiene repositorios procedentes de varios equipos. Las empresas suelen tener registros privados para almacenar y administrar imágenes que han creado. Azure Container Registry es otro ejemplo.
 
-**Imagen multiarquitectura**: En el caso de la arquitectura múltiple, es una característica que simplifica la selección de la imagen adecuada, según la plataforma donde se ejecuta Docker. Por ejemplo, si un Dockerfile solicita una imagen base **FROM mcr.microsoft.com/dotnet/sdk:3.1** del registro, en realidad obtendrá **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** o **3.1-sdk-buster-slim**, según el sistema operativo en el que se ejecute Docker y la versión.
+**Imagen multiarquitectura**: En el caso de la arquitectura múltiple, es una característica que simplifica la selección de la imagen adecuada, según la plataforma donde se ejecuta Docker. Por ejemplo, si un Dockerfile solicita una imagen base **FROM mcr.microsoft.com/dotnet/sdk:5.0** del Registro, en realidad obtendrá **5.0-nanoserver-20H2**, **5.0-nanoserver-2004** o **5.0-buster-slim**, según el sistema operativo en el que se ejecute Docker y la versión.
 
 **Docker Hub**: registro público para cargar imágenes y trabajar con ellas. Docker Hub proporciona hospedaje de imágenes de Docker, registros públicos o privados, desencadenadores de compilación y enlaces web e integración con GitHub y Bitbucket.
 

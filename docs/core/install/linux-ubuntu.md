@@ -3,17 +3,17 @@ title: 'Instalación de .NET en Ubuntu: .NET'
 description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en Ubuntu.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 22ce3379e028f065528e1f507a2d8c1ae598f0e8
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 14e5e9548d4aa09a586e2038f3e35a489ee65cd2
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031856"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970778"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-ubuntu"></a>Instalación del SDK y el entorno de ejecución de .NET en Ubuntu
 
-.NET es compatible con Ubuntu. En este artículo se describe cómo instalar .NET en Ubuntu. Cuando una versión de Ubuntu no es compatible, .NET deja de ser compatible con esa versión. Pero estas instrucciones pueden ayudarle a conseguir que .NET se ejecute en esas versiones, aunque no se admita.
+.NET es compatible con Ubuntu. En este artículo se describe cómo instalar .NET en Ubuntu. Cuando una versión de Ubuntu no es compatible, .NET deja de ser compatible con esa versión.
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
@@ -50,14 +50,7 @@ Las versiones siguientes de .NET ya no se admiten. Las descargas de estas siguen
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
 
-## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
-
-[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
-
 ## <a name="2010-"></a>20.10 ✔️
-
-> [!IMPORTANT]
-> .NET Core 2.1 todavía no está disponible en la fuente de paquetes.
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 
@@ -179,7 +172,11 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-50](includes/linux-install-50-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>SDK o entorno de ejecución de actualización de APT
+## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>Uso de APT para actualizar .NET
 
 Cuando hay disponible una nueva versión de revisión para .NET, basta con actualizarla mediante APT con los comandos siguientes:
 
@@ -218,10 +215,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>Dependencias
 
 Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Pero si instala manualmente .NET o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
@@ -245,14 +238,7 @@ Para las aplicaciones de .NET en las que se usa el ensamblado *System.Drawing.Co
   > [!WARNING]
   > Puede instalar una versión reciente de *libgdiplus* agregando el repositorio Mono al sistema. Para obtener más información, vea <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Instalación con script
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Instalación manual
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Pasos siguientes
 
+- [Procedimiento para habilitar la finalización con tabulación para la CLI de .NET](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Creación de una aplicación de consola con el SDK de .NET mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)

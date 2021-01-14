@@ -3,13 +3,13 @@ title: 'Instalación de .NET en Debian: .NET'
 description: Se muestran las diversas maneras de instalar el SDK y el entorno de ejecución de .NET en Debian.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: 683d0a9c47edf3cf9c47426d659e778eeb6f84df
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.date: 01/06/2021
+ms.openlocfilehash: 913d8bffdd6c0b5e88a70dae0ec4c8d732e80cc0
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96031896"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970842"
 ---
 # <a name="install-the-net-sdk-or-the-net-runtime-on-debian"></a>Instalación del SDK y el entorno de ejecución de .NET en Debian
 
@@ -42,10 +42,6 @@ Las versiones siguientes de .NET ya no se admiten. aunque sus descargas siguen e
 ## <a name="remove-preview-versions"></a>Eliminación de versiones preliminares
 
 [!INCLUDE [package-manager uninstall notice](./includes/linux-uninstall-preview-info.md)]
-
-## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
-
-[!INCLUDE [hack-pkgname](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="debian-10-"></a>Debian 10 ✔️
 
@@ -90,7 +86,11 @@ sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 
 [!INCLUDE [linux-apt-install-21](includes/linux-install-21-apt.md)]
 
-## <a name="apt-update-sdk-or-runtime"></a>SDK o entorno de ejecución de actualización de APT
+## <a name="how-to-install-other-versions"></a>Procedimiento para instalar otras versiones
+
+[!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="use-apt-to-update-net"></a>Uso de APT para actualizar .NET
 
 Cuando hay disponible una nueva versión de revisión para .NET, basta con actualizarla mediante APT con los comandos siguientes:
 
@@ -129,10 +129,6 @@ sudo apt-get update; \
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]
 
-## <a name="snap"></a>Snap
-
-[!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
-
 ## <a name="dependencies"></a>Dependencias
 
 Al realizar la instalación con un administrador de paquetes, estas bibliotecas se instalan automáticamente. Sin embargo, si instala manualmente .NET Core o publica una aplicación independiente, deberá asegurarse de que estas bibliotecas estén instaladas:
@@ -156,14 +152,7 @@ En el caso de las aplicaciones de .NET Core que utilizan el ensamblado *System.D
   > [!WARNING]
   > Puede instalar una versión reciente de *libgdiplus* agregando el repositorio Mono al sistema. Para obtener más información, vea <https://www.mono-project.com/download/stable/>.
 
-## <a name="scripted-install"></a>Instalación con script
-
-[!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
-
-## <a name="manual-install"></a>Instalación manual
-
-[!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
-
 ## <a name="next-steps"></a>Pasos siguientes
 
+- [Procedimiento para habilitar la finalización con tabulación para la CLI de .NET](../tools/enable-tab-autocomplete.md)
 - [Tutorial: Creación de una aplicación de consola con el SDK de .NET mediante Visual Studio Code](../tutorials/with-visual-studio-code.md)

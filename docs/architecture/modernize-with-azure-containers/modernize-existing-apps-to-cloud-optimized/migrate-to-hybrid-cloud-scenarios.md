@@ -1,13 +1,13 @@
 ---
 title: Migración a escenarios de nube híbrida
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Migración a escenarios de nube híbrida
-ms.date: 04/30/2018
-ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: d5bf7f08381f3718061742b37c73604d8e57f1e2
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937363"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025230"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migración a escenarios de nube híbrida
 
@@ -15,7 +15,7 @@ Algunas organizaciones y empresas no pueden migrar algunas de sus aplicaciones a
 
 Microsoft ofrece la mejor solución de nube híbrida, una en la que puede optimizar los recursos que tiene en el entorno local y en la nube pública y, al mismo tiempo, garantizar la coherencia en una nube híbrida de Azure. Puede maximizar las aptitudes existentes y obtener un enfoque flexible y unificado para crear aplicaciones que se puedan ejecutar en la nube o en el entorno local, gracias a Azure Stack (local) y a Azure (nube pública).
 
-En cuanto a la seguridad, puede centralizar la administración y la seguridad de toda la nube híbrida. Puede tener el control de todos los recursos, desde su centro de datos a la nube, y proporcionar un inicio de sesión único a las aplicaciones locales y en la nube. Para ello, puede extender Active Directory a una nube híbrida y usar la administración de identidades.
+En cuanto a la seguridad, puede centralizar la administración y la seguridad de toda la nube híbrida. Puede tener el control de todos los recursos, desde su centro de datos a la nube, y proporcionar un inicio de sesión único a las aplicaciones locales y en la nube. Para conseguir esta funcionalidad, puede extender Active Directory a una nube híbrida y usar la administración de identidades.
 
 Por último, puede distribuir y analizar datos sin problemas, usar los mismos lenguajes de consulta para los recursos locales y en la nube, y aplicar análisis y aprendizaje profundo en Azure para enriquecer sus datos, independientemente de su origen.
 

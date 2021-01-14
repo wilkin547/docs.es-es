@@ -1,13 +1,13 @@
 ---
 title: 'Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube'
 description: 'Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube'
-ms.date: 04/30/2018
-ms.openlocfilehash: 8e9f1eda71e4b98a56cbfc1c7a4ff34e67bee3f4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2020
+ms.openlocfilehash: 4d592a5761cdf696f3e57516d747cbd770512053
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172162"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025334"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube
 
@@ -35,7 +35,7 @@ Puede usar estas técnicas tanto en recursos HTTP como en recursos de base de da
 
 Implementar comunicaciones resistentes que tienen acceso a la base de datos, en función de la versión de .NET que use, puede ser sencillo (por ejemplo, con [Entity Framework 6 o versiones posteriores](/ef/ef6/fundamentals/connection-resiliency/retry-logic). Solo es cuestión de configurar la conexión de base de datos). O bien, puede que necesite usar bibliotecas adicionales como [Transient Fault Handling Application Block](/previous-versions/msp-n-p/hh680934(v=pandp.50)) (para versiones anteriores de .NET) o incluso implementar su propia biblioteca.
 
-Al implementar los reintentos HTTP y los disyuntores, la recomendación para .NET es usar la biblioteca [Polly](https://github.com/App-vNext/Polly) con .NET Framework 4.0, .NET Framework 4.5 y .NET Standard 1.1, y compatible con .NET Core.
+Al implementar los reintentos HTTP y los disyuntores, la recomendación para .NET consiste en usar la biblioteca [Polly](https://github.com/App-vNext/Polly), que tiene como destino .NET Standard 1.1 (cobertura: .NET Core 1.0, Mono, Xamarin, UWP, y WP8.1 y versiones posteriores), y .NET Standard 2.0 y versiones posteriores (cobertura: .NET Core 2.0 y versiones posteriores, .NET Core 3.0, y destinos posteriores de Mono, Xamarin y UWP). El paquete NuGet también incluye destinos directos para .NET Framework 4.6.1 y 4.7.2.
 
 Para obtener información sobre cómo implementar estrategias para controlar errores parciales en la nube, consulte las referencias siguientes.
 

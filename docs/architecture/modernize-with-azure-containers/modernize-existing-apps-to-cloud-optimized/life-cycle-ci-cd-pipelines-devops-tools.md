@@ -1,13 +1,13 @@
 ---
 title: Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
-ms.date: 04/30/2018
-ms.openlocfilehash: 98ebd29b8ab81c8fff6da546942825133f06f4de
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 12/21/2018
+ms.openlocfilehash: e7ad76edb659fbacfc85cb398ec0c9fe9e3c66c9
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172058"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025256"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 
@@ -15,7 +15,7 @@ Las empresas actuales deben innovar a un ritmo rápido para ser competitivas en 
 
 Aunque las prácticas de integración e implementación continuas están bien establecidas, la introducción de contenedores presenta nuevas consideraciones, sobre todo cuando se trabaja con aplicaciones en varios contenedores.
 
-Azure DevOps Services admite la integración y la implementación continuas de aplicaciones en varios contenedores en una gran variedad de entornos mediante las tareas de implementación oficiales de Azure DevOps Services:
+Azure DevOps Services admite la integración y la implementación continuas de aplicaciones en varios contenedores en diversos entornos mediante las tareas de implementación oficiales de Azure DevOps Services:
 
 - [Implementación en una aplicación de Azure Web App for Containers](/azure/devops/pipelines/apps/cd/deploy-docker-webapp?tabs=dotnet-core)
 

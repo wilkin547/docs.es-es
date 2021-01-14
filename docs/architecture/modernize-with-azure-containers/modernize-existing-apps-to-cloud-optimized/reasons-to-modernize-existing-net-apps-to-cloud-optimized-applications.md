@@ -1,13 +1,13 @@
 ---
 title: Razones para modernizar las aplicaciones .NET existentes a aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Razones para modernizar las aplicaciones .NET existentes a aplicaciones optimizadas para la nube
-ms.date: 04/28/2018
-ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 12/21/2020
+ms.openlocfilehash: e9b3ad151cf0591783ada8a1ab87cb0f14423a7e
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73093629"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025217"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes a aplicaciones optimizadas para la nube
 
@@ -23,7 +23,7 @@ La idea básica es que, cuando una organización crea y administra aplicaciones 
 
 Las mejoras en la nube se centran principalmente en cumplir dos objetivos: Aumentar la agilidad para reducir los costos y mejorar el crecimiento empresarial. Para lograr estos objetivos, hay que simplificar los procesos y reducir la fricción en el lanzamiento y la distribución de aplicaciones.
 
-Una aplicación es optimizada para la nube si puede desarrollar la aplicación de forma autónoma y ágil a partir de otras aplicaciones locales y, a continuación, publicar, implementar, escalar automáticamente, supervisar y solucionar problemas de la aplicación en la nube.
+Una aplicación está optimizada para la nube si puede desarrollar la aplicación de forma autónoma y ágil a partir de otras aplicaciones locales y, luego, publicar, implementar, escalar automáticamente y supervisar la aplicación en la nube, así como solucionar problemas.
 
 La clave es la *agilidad*. No se puede distribuir con agilidad a menos que reduzca al mínimo los problemas de implementación en producción y los problemas en el entorno de desarrollo y pruebas. Los contenedores (especialmente Docker como estándar de hecho) y los servicios administrados se diseñaron específicamente para este fin.
 

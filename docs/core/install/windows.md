@@ -3,13 +3,13 @@ title: Instalación de .NET en Windows
 description: Obtenga información sobre las versiones de Windows en las que puede instalar .NET.
 author: adegeo
 ms.author: adegeo
-ms.date: 11/10/2020
-ms.openlocfilehash: b5c0949bbd591906536094a33d8583a265d8a4c8
-ms.sourcegitcommit: 9b877e160c326577e8aa5ead22a937110d80fa44
+ms.date: 01/06/2021
+ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97110239"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98025458"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -180,30 +180,21 @@ Para obtener más información sobre los sistemas operativos compatibles con .NE
 
 ### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
-Se necesitan dependencias adicionales en caso de instalar el SDK o el entorno de ejecución de .NET en las versiones siguientes de Windows:
+Se necesitan más dependencias en caso de que se instale el SDK o el entorno de ejecución de .NET en las versiones siguientes de Windows:
 
-- Windows 7 SP1 [ESU][esu]
-- Windows Vista SP2
-- Windows 8.1
-- Windows Server 2008 R2
-- Windows Server 2012 R2
+| Sistema operativo         | Prerrequisitos                                                                    |
+|--------------------------|----------------------------------------------------------------------------------|
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] <br> - KB3063858 [64 bits][kb64] / [32 bits][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (solo .NET Core 2.1) |
+| Windows Vista SP2       | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
+| Windows 8.1              | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
+| Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
+| Windows Server 2012 R2   | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
 
-Instale el software siguiente:
+Los requisitos anteriores también son necesarios si se encuentra con un error relacionado con uno de los archivos DLL siguientes:
 
-- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=52685).
-- [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)
-
-Los requisitos anteriores también son necesarios si se encuentra con uno de los errores siguientes:
-
-> El programa no se puede iniciar porque el archivo *api-ms-win-crt-runtime-l1-1-0.dll* falta en el equipo. Intente volver a instalar el programa para corregir este problema.
->
-> \- o -
->
-> El programa no se puede iniciar porque falta el archivo *api-ms-win-cor-timezone-l1-1-0.dll* en el equipo. Intente volver a instalar el programa para corregir este problema.
->
-> \- o -
->
-> La biblioteca *hostfxr.dll* se ha encontrado, pero no se ha podido cargar desde *C:\\\<path_to_app>\\hostfxr.dll*.
+- *api-ms-win-crt-runtime-l1-1-0.dll*
+- *api-ms-win-cor-timezone-l1-1-0.dll*
+- *hostfxr.dll*
 
 ## <a name="install-with-powershell-automation"></a>Instalación mediante la automatización de PowerShell
 
@@ -318,3 +309,7 @@ Para obtener más información sobre el uso de .NET en un contenedor de Docker, 
 - [Tutorial: Inclusión de una aplicación de .NET Core en un contenedor](../docker/build-container.md).
 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
+[vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
+[vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
+[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
