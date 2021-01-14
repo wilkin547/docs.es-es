@@ -6,22 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 557b3512e534198d47c0c6f6b0a7c5f92bb71739
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 701788ac5575ad671afd56db3af4bd247efac8b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419556"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188470"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Cómo crear y ejecutar un flujo de trabajo de ejecución prolongada
 
 Una de las características centrales de Windows Workflow Foundation (WF) es la capacidad del motor en tiempo de ejecución para conservar y descargar flujos de trabajo inactivos en una base de datos. En los pasos de [Cómo: ejecutar un flujo de trabajo se](how-to-run-a-workflow.md) muestran los aspectos básicos del hospedaje de flujos de trabajo mediante una aplicación de consola. Se mostraron ejemplos de cómo iniciar flujos de trabajo, de los controladores de ciclo de vida de los flujos de trabajo y de los marcadores de reanudación. Para demostrar la persistencia del flujo de trabajo con efectividad, es necesario un host de flujo de trabajo más complejo que admita el inicio y la reanudación de varias instancias de flujo de trabajo. En este paso del tutorial se muestra cómo crear una aplicación host de Windows Forms que admita iniciar y reanudar varias instancias de flujo de trabajo o la persistencia del flujo de trabajo, y que proporcione una base para características avanzadas como el seguimiento y el control de versiones mostrado en los siguientes pasos del tutorial.
 
 > [!NOTE]
-> En este paso del tutorial y en los pasos siguientes se usan los tres tipos de flujo de trabajo de [Cómo: crear un flujo de trabajo](how-to-create-a-workflow.md). Si no completó los tres tipos, puede descargar una versión completada de los pasos del [tutorial de introducción de Windows Workflow Foundation (WF45)](https://go.microsoft.com/fwlink/?LinkID=248976).
-
-> [!NOTE]
-> Para descargar una versión completada o ver un tutorial en vídeo del tutorial, consulte [Windows Workflow Foundation (WF45)-Introducción tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+> En este paso del tutorial y en los pasos siguientes se usan los tres tipos de flujo de trabajo de [Cómo: crear un flujo de trabajo](how-to-create-a-workflow.md).
 
 ## <a name="to-create-the-persistence-database"></a>Para crear la base de datos de persistencia
 
@@ -55,26 +52,23 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
 
 ## <a name="to-create-the-workflow-host-form"></a>Para crear el formulario de host de flujo de trabajo
 
-> [!NOTE]
-> Los pasos de este procedimiento describen cómo agregar y configurar el formulario manualmente. Si lo desea, puede descargar los archivos de solución para el tutorial y agregar el formulario completo al proyecto. Para descargar los archivos del tutorial, consulte [Windows Workflow Foundation (WF45)-Introducción tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Una vez descargados los archivos, haga clic con el botón derecho en **NumberGuessWorkflowHost** y elija **Agregar referencia**. Agregue una referencia a **System. Windows. Forms** y **System. Drawing**. Estas referencias se agregan automáticamente si agrega un nuevo formulario desde el menú **Agregar**, **nuevo elemento** , pero se debe agregar manualmente al importar un formulario. Una vez agregadas las referencias, haga clic con el botón derecho en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **elemento existente**. Vaya a la `Form` carpeta en los archivos de proyecto, seleccione **WorkflowHostForm.CS** (o **WorkflowHostForm. VB**) y haga clic en **Agregar**. Si decide importar el formulario, puede omitir hasta la sección siguiente [para agregar las propiedades y los métodos auxiliares del formulario](#to-add-the-properties-and-helper-methods-of-the-form).
-
 1. Haga clic con el botón secundario en **NumberGuessWorkflowHost** en **Explorador de soluciones** y elija **Agregar**, **nuevo elemento**.
 
 2. En la lista plantillas **instaladas** , elija **Windows Forms**, escriba `WorkflowHostForm` en el cuadro **nombre** y haga clic en **Agregar**.
 
 3. Configure las siguientes propiedades en el formulario.
 
-    |Propiedad|Value|
+    |Propiedad|Valor|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
     |MaximizeBox|False|
-    |Tamaño|400, 420|
+    |Size|400, 420|
 
 4. Agregue los siguientes controles al formulario en el orden especificado y configure las propiedades como dirigidas.
 
     |Control|Propiedad: valor|
     |-------------|---------------------|
-    |**Botón**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: nuevo juego|
+    |**Button**|Nombre: NewGame<br /><br /> Ubicación: 13, 13<br /><br /> Tamaño: 75, 23<br /><br /> Texto: nuevo juego|
     |**Label**|Ubicación: 94, 18<br /><br /> Texto: adivine un número de 1 a|
     |**ComboBox**|Nombre: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elementos: 10, 100, 1000<br /><br /> Ubicación: 228, 12<br /><br /> Tamaño: 143, 21|
     |**Label**|Ubicación: 13, 43<br /><br /> Texto: tipo de flujo de trabajo|
@@ -91,8 +85,8 @@ Una de las características centrales de Windows Workflow Foundation (WF) es la 
     |**ComboBox**|Nombre: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Ubicación: 121, 17<br /><br /> Tamaño: 227, 21|
     |**Label**|Ubicación: 7, 47<br /><br /> Texto: Guess|
     |**TextBox**|Nombre: Guess<br /><br /> Ubicación: 50, 44<br /><br /> Tamaño: 65, 20|
-    |**Botón**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: escriba Guess|
-    |**Botón**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: salir|
+    |**Button**|Nombre: EnterGuess<br /><br /> Ubicación: 121, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: escriba Guess|
+    |**Button**|Nombre: QuitGame<br /><br /> Ubicación: 274, 42<br /><br /> Tamaño: 75, 23<br /><br /> Texto: salir|
     |**TextBox**|Nombre: WorkflowStatus<br /><br /> Ubicación: 10, 73<br /><br /> Multiline: true<br /><br /> ReadOnly: true<br /><br /> Barras de desplazamiento: vertical<br /><br /> Tamaño: 338, 208|
 
 5. Establezca la propiedad **AcceptButton** del formulario en **EnterGuess**.
@@ -183,7 +177,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     }
     ```
 
-6. Agregue el código siguiente a `WorkflowHostForm_Load`.
+6. Agregue el siguiente código a `WorkflowHostForm_Load`.
 
     ```vb
     ' Initialize the store and configure it so that it can be used for
@@ -228,7 +222,7 @@ Los pasos de esta sección agregan propiedades y métodos del asistente a la cla
     }
     ```
 
-8. Agregue el código siguiente a `InstanceId_SelectedIndexChanged`. Siempre que el usuario selecciona un flujo de trabajo mediante el cuadro combinado, este controlador actualiza la ventana de estado.
+8. Agregue el siguiente código a `InstanceId_SelectedIndexChanged`. Siempre que el usuario selecciona un flujo de trabajo mediante el cuadro combinado, este controlador actualiza la ventana de estado.
 
     ```vb
     If InstanceId.SelectedIndex = -1 Then

@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 11/20/2020
-ms.openlocfilehash: d91430eb654ee16934408bf064803b34ca700640
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.openlocfilehash: ba7113c88db728f30812821deaf7c06a80663d1f
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509811"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189094"
 ---
 # <a name="project-structure-for-no-locblazor-apps"></a>Estructura del proyecto para las Blazor aplicaciones
 
@@ -146,7 +146,7 @@ Las rutas del componente no se deducen actualmente por la ubicación del archivo
 
 Veremos más detalladamente el enrutamiento en Blazor en la sección [páginas, enrutamiento y diseños](./pages-routing-layouts.md) .
 
-## <a name="layout"></a>Diseño
+## <a name="layout"></a>Layout
 
 En las aplicaciones de formularios Web Forms de ASP.NET, un diseño de página común se controla mediante páginas maestras (*site. Master*). En Blazor las aplicaciones de, el diseño de página se controla mediante componentes de diseño (*Shared/MainLayout. Razor*). Los componentes de diseño se tratarán con más detalle en la sección [página, enrutamiento y diseños](./pages-routing-layouts.md) .
 
@@ -223,7 +223,7 @@ En la Blazor WebAssembly aplicación, la página host es un archivo HTML estáti
 
 ```
 
-El componente raíz que se va a representar se configura en el método de la aplicación `Program.Main` con la flexibilidad de registrar distintos servicios a través de la inserción de dependencias. Puede hacer referencia a agregar servicios a una aplicación [ Blazor WebAssembly ](https://docs.microsoft.com/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-5.0#blazor-webassembly) en
+El componente raíz que se va a representar se especifica en el método de la aplicación `Program.Main` con la flexibilidad de registrar los servicios mediante la inserción de dependencias. Para obtener más información, vea [ASP.net Core la Blazor inserción de dependencias](/aspnet/core/blazor/fundamentals/dependency-injection?pivots=webassembly).
 
 ```csharp
 public class Program

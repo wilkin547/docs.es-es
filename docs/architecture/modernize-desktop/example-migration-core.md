@@ -2,12 +2,12 @@
 title: Ejemplo de migración a .NET Core 3.1
 description: Muestra cómo migrar una aplicación de ejemplo que tiene como destino .NET Framework a .NET Core 3,1.
 ms.date: 05/12/2020
-ms.openlocfilehash: 6a0311e9aaeb25ac39f3394d3a62e17046fe03d8
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: dc0d3d825847bd72a38469615cfc5b2d793f1977
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "97866780"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188782"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>Ejemplo de migración a .NET Core 3.1
 
@@ -65,7 +65,7 @@ Un aspecto interesante de esta herramienta es que solo muestra las diferencias d
 
 En la mayoría de los casos, querrá actualizar el proyecto existente al nuevo formato de .NET Core. Sin embargo, también puede crear un nuevo proyecto manteniendo el anterior. El principal inconveniente de actualizar el proyecto anterior es que pierde la compatibilidad con el diseñador, que puede ser importante para usted. Si desea seguir usando el diseñador, debe crear un nuevo proyecto de .NET Core en paralelo con el antiguo y compartir los recursos. Si necesita modificar los elementos de la interfaz de usuario en el diseñador, puede cambiar al proyecto anterior para hacerlo. Y como los activos están vinculados, también se actualizarán en el proyecto de .NET Core.
 
-El [proyecto de estilo SDK](../../core/project-sdk/msbuild-props.md) para .net Core es mucho más sencillo que el formato de proyecto de .NET Framework. Además de las entradas mencionadas anteriormente `PackageReference` , no tendrá que hacer mucho más. El nuevo formato de proyecto incluye determinadas extensiones de archivo de [forma predeterminada](../../core/tools/csproj.md#default-compilation-includes-in-net-core-projects), como `.cs` `.xaml` archivos y, sin necesidad de incluirlas explícitamente en el archivo de proyecto.
+El [proyecto de estilo SDK](../../core/project-sdk/msbuild-props.md) para .net Core es mucho más sencillo que el formato de proyecto de .NET Framework. Además de las entradas mencionadas anteriormente `PackageReference` , no tendrá que hacer mucho más. El nuevo formato de proyecto [incluye archivos con determinadas extensiones de forma predeterminada](../../core/project-sdk/overview.md#default-includes-and-excludes), `.cs` como `.xaml` archivos y, sin necesidad de incluirlos explícitamente en el archivo de proyecto.
 
 #### <a name="assemblyinfo-considerations"></a>Consideraciones sobre Assembly.info
 
