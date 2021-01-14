@@ -3,19 +3,19 @@ title: Cómo genera MSBuild los nombres de archivo de manifiesto
 description: Describe los factores que influyen en el nombre de un archivo de manifiesto de recurso generado por MSBuild en tiempo de compilación.
 ms.date: 05/08/2020
 ms.topic: conceptual
-ms.openlocfilehash: 383bf6a077b0631e70ddaa4721b20e992127a73c
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 2e0461e34bbd7f8da35bea1db1913a32915c7117
+ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "97866394"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97970686"
 ---
 # <a name="how-resource-manifest-files-are-named"></a>Cómo se asigna un nombre a los archivos de manifiesto del recurso
 
 Cuando MSBuild compila un proyecto de .NET Core, los archivos de recursos XML, que tienen la extensión de archivo *.resx*, se convierten en archivos *.resources* binarios. Los archivos binarios se insertan en la salida del compilador y los puede leer el <xref:System.Resources.ResourceManager>. En este artículo se describe cómo MSBuild elige un nombre para cada archivo *.resources*.
 
 > [!TIP]
-> Si agrega explícitamente un elemento de recurso al archivo de proyecto y también se [incluye con los patrones globales de inclusión predeterminados para .NET Core](../project-sdk/overview.md#default-compilation-includes), obtendrá un error de compilación. Para incluir manualmente los archivos de recursos como elementos `EmbeddedResource`, establezca la propiedad `EnableDefaultEmbeddedResourceItems` en false.
+> Si agrega explícitamente un elemento de recurso al archivo de proyecto y también se [incluye con los patrones globales de inclusión predeterminados para .NET Core](../project-sdk/overview.md#default-includes-and-excludes), obtendrá un error de compilación. Para incluir manualmente los archivos de recursos como elementos `EmbeddedResource`, establezca la propiedad `EnableDefaultEmbeddedResourceItems` en false.
 
 ## <a name="default-name"></a>Nombre predeterminado
 
@@ -36,7 +36,7 @@ Por ejemplo, el nombre de manifiesto del archivo de recursos que se define en el
 <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
 ```
 
-O bien
+o bien
 
 ```xml
 <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
