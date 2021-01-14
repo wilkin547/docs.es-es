@@ -2,12 +2,12 @@
 title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 ms.date: 07/19/2017
-ms.openlocfilehash: 73fbfed6943e3eb535e6eead3b3496edd3426c26
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 28da1723ed91d169305c2865c5346b8ce6e0b3d1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970725"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189715"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
 
@@ -78,7 +78,7 @@ El formato de csproj de .NET Core ha cambiado y evolucionado con cada nueva vers
 - Quite el espacio de nombres XML (`xmlns`) del elemento `<Project>`.
 - Si no existe, agregue el atributo `Sdk` al elemento `<Project>` y establézcalo en `Microsoft.NET.Sdk` o `Microsoft.NET.Sdk.Web`. Este atributo especifica que el proyecto usa el SDK que se va a usar. `Microsoft.NET.Sdk.Web` se usa para las aplicaciones web.
 - Quite las instrucciones `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` de la parte superior e inferior del proyecto. Estas instrucciones de importación están implícitas en el SDK, por lo que no es necesario que estén en el proyecto.
-- Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](../tools/csproj.md).
+- Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](../project-sdk/overview.md).
 - Quite el elemento `Microsoft.NET.Sdk` `<PackageReference>`, si existe. La referencia del SDK procede del atributo `Sdk` del elemento `<Project>`.
 - Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../project-sdk/overview.md#default-includes-and-excludes). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación.
 

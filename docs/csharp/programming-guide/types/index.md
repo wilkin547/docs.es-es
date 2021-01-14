@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c347dbc6af46d4c334445d606d7cedfdf17e43f6
-ms.sourcegitcommit: 30e9e11dfd90112b8eec6406186ba3533f21eba1
+ms.openlocfilehash: 6a1a5b230e427a4991162a702245f1a87352784d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95098715"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190252"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guía de programación de C#)
 
@@ -74,8 +74,6 @@ Es importante entender dos aspectos fundamentales sobre el sistema de tipos en .
 - En CTS, cada tipo se define como un *tipo de valor* o un *tipo de referencia*. Estos tipos incluyen todos los tipos personalizados de la biblioteca de clases .NET y también sus propios tipos definidos por el usuario. Los tipos que se definen mediante el uso de la palabra clave [struct](../../language-reference/builtin-types/struct.md) son tipos de valor; todos los tipos numéricos integrados son `structs`. Los tipos que se definen mediante el uso de la palabra clave [class](../../language-reference/keywords/class.md) son tipos de referencia. Los tipos de referencia y los tipos de valor tienen distintas reglas de tiempo de compilación y distintos comportamientos de tiempo de ejecución.
 
 En la ilustración siguiente se muestra la relación entre los tipos de valor y los tipos de referencia en CTS.
-
-En la imagen siguiente se muestran tipos de valores y tipos de referencias en CTS:
 
 ![Captura de pantalla en la que se muestran tipos de valores y tipos de referencias en CTS.](./media/index/value-reference-types-common-type-system.png)
 
@@ -185,7 +183,7 @@ Para más información, consulte los siguientes artículos.
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Referencia de C#](../../language-reference/index.md)
 - [Guía de programación de C#](../index.md)

@@ -3,12 +3,12 @@ title: 'Información general de las herramientas de diagnóstico: .NET Core'
 description: Información general de las herramientas y técnicas disponibles para diagnosticar las aplicaciones de .NET Core.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: d468ec5b9cc050cc54f6c53f8a4ea4531f8b58f5
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: ee79057e45700e17fdd37cc36288b790d64d7a09
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753619"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188483"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>¿Qué herramientas de diagnóstico están disponibles en .NET Core?
 
@@ -68,7 +68,7 @@ La herramienta [dotnet-gcdump](dotnet-gcdump.md) permite recopilar volcados de m
 
 ### <a name="dotnet-sos"></a>dotnet-sos
 
-[dotnet-sos](dotnet-sos.md) instala la [extensión de depuración de SOS](sos-debugging-extension.md) en Linux y macOS (también en Windows si usa [Windbg/cdb](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools)).
+[dotnet-sos](dotnet-sos.md) instala la [extensión de depuración de SOS](sos-debugging-extension.md) en Linux y macOS (también en Windows si usa [Windbg/cdb](/windows-hardware/drivers/debugger/debugger-download-tools)).
 
 ### <a name="perfcollect"></a>PerfCollect
 

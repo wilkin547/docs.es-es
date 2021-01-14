@@ -3,12 +3,12 @@ title: Portabilidad de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: 764c615d250474573f873b1745b9f1469e637d29
-ms.sourcegitcommit: 34968a61e9bac0f6be23ed6ffb837f52d2390c85
+ms.openlocfilehash: 247e709ac6898a6a89318626e3aa9a2a8e239a9a
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94687417"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189940"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>Introducción a la portabilidad de .NET Framework a .NET Core
 
@@ -53,7 +53,7 @@ Le recomendamos que use el siguiente proceso al portar un proyecto a .NET Core:
 
 1. Convierta el archivo de proyecto a la nueva estructura de archivos de estilo SDK. Puede crear nuevos proyectos para .NET Core y copiar los archivos de código fuente, o bien intentar convertir el archivo de proyecto existente usando una herramienta.
 
-   .NET Core usa un [formato de archivo de proyecto](../tools/csproj.md) simplificado y diferente al de .NET Framework. Deberá convertir los archivos de proyecto en este formato para continuar. Este estilo de proyecto también le permite tener como destino .NET Framework, algo interesante en este punto.
+   .NET Core usa un [formato de archivo de proyecto](../project-sdk/overview.md) simplificado y diferente al de .NET Framework. Deberá convertir los archivos de proyecto en este formato para continuar. Este estilo de proyecto también le permite tener como destino .NET Framework, algo interesante en este punto.
 
    Puede intentar portar soluciones más pequeñas o proyectos individuales en una operación en el formato de archivo de proyecto de .NET Core con la herramienta [dotnet try-convert](https://github.com/dotnet/try-convert). No hay ninguna garantía de que `dotnet try-convert` funcione con todos los proyectos y puede provocar cambios sutiles de comportamiento de los que dependa. Use esta herramienta como _punto inicial_ que automatice los elementos básicos que se pueden automatizar. No es una solución garantizada para migrar un proyecto, ya que hay muchas diferencias en los destinos que utilizan los proyectos de estilo SDK en comparación con los archivos de proyecto de estilo antiguo.
 
