@@ -1,14 +1,14 @@
 ---
 title: Creación de un cliente de REST con .NET Core
-description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
+description: Este tutorial le enseña varias características de .NET Core y el lenguaje C#.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: b537108bd77b3ed2248ca9e459044e09fa854ba9
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: a8490efbc954ca585a2a0fa9d571191095a4b24c
+ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97899657"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98024982"
 ---
 # <a name="rest-client"></a>Cliente REST
 
@@ -21,16 +21,16 @@ Este tutorial le enseña varias características de .NET Core y el lenguaje C#. 
 * Procesamiento de información de JSON
 * Administración de la configuración con atributos
 
-Creará una aplicación que emite solicitudes HTTP a un servicio REST en GitHub. Leerá información en formato JSON y convertirá ese paquete JSON en objetos de C#. Por último, verá cómo trabajar con objetos de C#.
+Creará una aplicación que emitirá solicitudes HTTP a un servicio REST en GitHub. Leerá información en formato JSON y convertirá ese paquete JSON en objetos de C#. Por último, verá cómo trabajar con objetos de C#.
 
 Este tutorial incluye muchas características. Vamos a compilarlas una a una.
 
-Si prefiere seguir el [ejemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) de este tema, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
+Si prefiere seguir el [ejemplo final](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) de este artículo, puede descargarlo. Para obtener instrucciones de descarga, vea [Ejemplos y tutoriales](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download). Puede ejecutar esta aplicación en Windows, Linux, Mac OS o en un contenedor de Docker.
-Deberá instalar su editor de código favorito. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
+Deberá configurar la máquina para ejecutar .NET Core. Puede encontrar las instrucciones de instalación en la página [Descargas de .NET Core](https://dotnet.microsoft.com/download). Puede ejecutar esta aplicación en Windows, Linux o macOS, o en un contenedor de Docker.
+Deberá instalar el editor de código que prefiera. En las siguientes descripciones se usa [Visual Studio Code](https://code.visualstudio.com/), que es un editor multiplataforma de código abierto. Sin embargo, puede usar las herramientas que le resulten más cómodas.
 
 ## <a name="create-the-application"></a>Crear la aplicación
 
@@ -129,7 +129,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-Esta primera versión realiza una solicitud web para leer la lista de todos los repositorios en la organización dotnet foundation. (El id. de gitHub para .NET Foundation es "dotnet"). Las primeras líneas configuran el objeto <xref:System.Net.Http.HttpClient> para esta solicitud. En primer lugar, se configura para aceptar las respuestas JSON de GitHub.
+Esta primera versión realiza una solicitud web para leer la lista de todos los repositorios en la organización dotnet foundation. (El id. de GitHub para .NET Foundation es `dotnet`). Las primeras líneas configuran el objeto <xref:System.Net.Http.HttpClient> para esta solicitud. En primer lugar, se configura para aceptar las respuestas JSON de GitHub.
 Este formato es simplemente JSON. La siguiente línea agrega un encabezado de agente de usuario a todas las solicitudes desde este objeto. Estos dos encabezados se comprueban mediante el código de servidor de GitHub y son necesarios para recuperar información de GitHub.
 
 Después de haber configurado el objeto <xref:System.Net.Http.HttpClient>, realizará una solicitud web y recuperará la respuesta. En esta primera versión, usa el método de conveniencia <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType>. Este método de conveniencia inicia una tarea que realiza la solicitud web y, a continuación, cuando la solicitud se devuelve, lee la secuencia de respuesta y extrae el contenido de la secuencia. El cuerpo de la respuesta se devuelve como <xref:System.String>. La cadena está disponible cuando finaliza la tarea.
@@ -191,7 +191,7 @@ foreach (var repo in repositories)
     Console.WriteLine(repo.name);
 ```
 
-Compile y ejecute la aplicación. Se imprimirán los nombres de los repositorios que forman parte de .NET Foundation.
+Compile y ejecute la aplicación. Se imprimirán los nombres de los repositorios que forman parte de .NET Foundation.
 
 ## <a name="controlling-serialization"></a>Control de la serialización
 
