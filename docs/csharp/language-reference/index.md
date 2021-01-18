@@ -1,7 +1,8 @@
 ---
 description: Referencia de C#
 title: Referencia de C#
-ms.date: 02/14/2017
+ms.date: 01/13/2021
+ms.custom: updateeachrelease
 f1_keywords:
 - _CSharpKeyword
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 317f375c46eee3bb9c719afb68993cd4720e54fe
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 663d08921b1fb6c5013ce8dddb044ba12ead8409
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89127196"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235240"
 ---
 # <a name="c-reference"></a>Referencia de C#
 
@@ -61,7 +62,10 @@ Las características que se han implementado en versiones de C# posteriores a 6.
   
  [Propuestas de especificación de C# 8.0](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
  C# 8.0 está disponible con .NET Core 3.0. Entre las características se incluyen tipos de referencia que aceptan valores NULL, coincidencia de patrones recursiva, métodos de interfaz predeterminados, secuencias asincrónicas, intervalos e índices, using basado en patrones y declaraciones using, asignación de uso combinado de NULL y miembros de instancia de solo lectura.
-  
+
+ [Propuestas de especificaciones de C# 9.0](../../../_csharplang/proposals/csharp-9.0/records.md)  
+ C# 9.0 está disponible con .NET 5.0. Entre las características disponibles se incluyen las siguientes: registros, instrucciones de nivel superior, mejoras en la coincidencia de patrones, establecedores solo de inicialización, nuevas expresiones con tipo de destino, inicializadores de módulos, ampliación de los métodos parciales, funciones anónimas estáticas, expresiones condicionales con tipo de destino, tipos de retorno de covariantes, extensión GetEnumerator en bucles Foreach, parámetros de descarte de expresiones lambda, atributos en funciones locales, enteros de tamaño nativo, punteros de funciones, supresión de la emisión de marcas localsinit y anotaciones de parámetros de tipos sin restricciones.
+
 ## <a name="related-sections"></a>Secciones relacionadas  
 
  [Uso del entorno de desarrollo de Visual Studio para C#](/visualstudio/get-started/csharp)  

@@ -10,12 +10,12 @@
           href: container-docker-introduction/docker-terminology.md
         - name: 'Contenedores, imágenes y registros de Docker'
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Selección entre .NET Core y .NET Framework para contenedores de Docker
+    - name: "Selección entre .NET\_5 y .NET Framework para contenedores de Docker"
       href: net-core-net-framework-containers/index.md
       items:
         - name: Instrucciones generales
           href: net-core-net-framework-containers/general-guidance.md
-        - name: Cuándo elegir .NET Core para contenedores de Docker
+        - name: Cuándo elegir .NET para contenedores de Docker
           href: net-core-net-framework-containers/net-core-container-scenarios.md
         - name: Cuándo elegir .NET Framework para contenedores de Docker
           href: net-core-net-framework-containers/net-framework-container-scenarios.md
@@ -101,7 +101,7 @@
           href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
         - name: Diseño de un modelo de dominio de microservicio
           href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
-        - name: Implementar un modelo de dominio de microservicio con .NET Core
+        - name: Implementación de un modelo de dominio de microservicio con .NET
           href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
         - name: Seedwork (interfaces y clases base reutilizables para su modelo de dominio)
           href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
