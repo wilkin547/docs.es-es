@@ -3,12 +3,12 @@ title: Migración de una aplicación web o un servicio de .NET a Azure App Servi
 description: Aprenda aspectos relacionados con la migración de un servicio o una aplicación web .NET de un entorno local a Azure App Service.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 0e2aaa23aedabef007878901ec7297711f140533
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539091"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189257"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Migración de una aplicación web o un servicio de .NET a Azure App Service
 
@@ -24,7 +24,7 @@ Compruebe el acceso a los recursos locales, ya que es posible que haya que migra
 
 * Crear una VPN que conecte App Service a recursos locales mediante [Azure Virtual Networks](/azure/app-service/web-sites-integrate-with-vnet).
 * Exponer de forma segura servicios locales en la nube sin cambios en el firewall mediante [Azure Relay](/azure/service-bus-relay/relay-what-is-it).
-* Migrar dependencias como un [base de datos SQL](https://go.microsoft.com/fwlink/?linkid=863217) a Azure.
+* Migrar dependencias como un [base de datos SQL](./sql.md) a Azure.
 * Usar las ofertas de plataforma como servicio en la nube para reducir las dependencias. Por ejemplo, en lugar de conectarse a un servidor de correo local, considere la posibilidad de usar [SendGrid](/azure/sendgrid-dotnet-how-to-send-email).
 
 ### <a name="port-bindings"></a>Enlaces de puerto

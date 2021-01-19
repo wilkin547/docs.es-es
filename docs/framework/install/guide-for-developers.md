@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 45ae10a92b66bc1b487e3ed4e1e29b6905b895f5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543716"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190785"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalación de .NET Framework para desarrolladores
 
@@ -134,7 +134,7 @@ Los instaladores web y sin conexión están diseñados para equipos con sistemas
 
 - .NET Framework 4.5 y versiones posteriores reemplazan .NET Framework 4.0. Si instala estas versiones en un sistema que tenga instalado .NET Framework 4, se reemplazarán los ensamblados.
 
-- La desinstalación de .NET Framework 4.5 o versiones posteriores también quita los archivos de .NET Framework 4 ya existentes. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).
+- La desinstalación de .NET Framework 4.5 o versiones posteriores también quita los archivos de .NET Framework 4 ya existentes. Si desea volver a .NET Framework 4, deberá reinstalarlo, así como todas sus actualizaciones. Vea [Instalación de .NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).
 
 - Debe tener credenciales administrativas para instalar .NET Framework 4.5 o versiones posteriores.
 

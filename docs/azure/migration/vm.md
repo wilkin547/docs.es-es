@@ -3,12 +3,12 @@ title: Migración de una aplicación web ASP.NET a una máquina virtual de Azure
 description: Vea cómo migrar una aplicación web ASP.NET de un entorno local a una máquina virtual de Azure.
 ms.topic: how-to
 ms.date: 06/20/2020
-ms.openlocfilehash: 940243310c5e6ed13d2a42c8d9d87244200479f5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bf591ce0bd02537414527c8f3ba22bd41cf51d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91171564"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189218"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Migración de una aplicación web ASP.NET a una máquina virtual de Azure
 
@@ -26,7 +26,7 @@ Estos tutoriales muestran los pasos para crear (o migrar) una máquina virtual, 
   - [Creación de una nueva máquina virtual para aplicaciones ASP.NET](https://go.microsoft.com/fwlink/?linkid=863237)
   - [Migración de una máquina virtual VMWare local existente](/azure/migrate/tutorial-migrate-vmware)
   - [Migración de una máquina virtual Hyper-V local existente](/azure/migrate/tutorial-migrate-hyper-v)
-- [Publicación de la aplicación mediante Visual Studio](https://go.microsoft.com/fwlink/?linkid=863240)
+- [Publicación de la aplicación mediante Visual Studio](/azure/virtual-machines/windows/publish-web-app-from-visual-studio)
 - [Creación de una red virtual segura para sus máquinas virtuales](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
 - [Creación de una canalización de CI/CD para la aplicación](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
 - [Traslado a un conjunto de escalado de máquinas virtuales para alta disponibilidad y escalabilidad](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)

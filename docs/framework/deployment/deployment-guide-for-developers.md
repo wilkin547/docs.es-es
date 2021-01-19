@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 950ff048a918a52e6c64d8cc15e1ef0f80233b88
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dddd10846c5c57c88d23fef6d6851e288bd2d4b1
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96238657"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98191097"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guía de implementación de .NET Framework para desarrolladores
 
@@ -316,19 +316,19 @@ En la tabla siguiente se muestra una lista de los códigos de retorno más comun
 
 Vea el contenido siguiente:
 
-- [Códigos de error del Servicio de transferencia inteligente en segundo plano (BITS)](https://go.microsoft.com/fwlink/?LinkId=180946)
+- [Códigos de error del Servicio de transferencia inteligente en segundo plano (BITS)](/windows/win32/bits/bits-return-values)
 
-- [Códigos de error del moniker de dirección URL](https://go.microsoft.com/fwlink/?LinkId=180947)
+- [Códigos de error del moniker de dirección URL](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
-- [Códigos de error de WinHttp](https://go.microsoft.com/fwlink/?LinkId=180948)
+- [Códigos de error de WinHttp](/windows/win32/winhttp/error-messages)
 
 #### <a name="other-error-codes"></a>Otros códigos de error
 
 Vea el contenido siguiente:
 
-- [Códigos de error de Windows Installer](https://go.microsoft.com/fwlink/?LinkId=180949)
+- [Códigos de error de Windows Installer](/previous-versions/aa368542(v=vs.85))
 
-- [Códigos de resultado del Agente de Windows Update](https://go.microsoft.com/fwlink/?LinkId=180951)
+- [Códigos de resultado del Agente de Windows Update](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="uninstalling-the-net-framework"></a>Desinstalar .NET Framework
 

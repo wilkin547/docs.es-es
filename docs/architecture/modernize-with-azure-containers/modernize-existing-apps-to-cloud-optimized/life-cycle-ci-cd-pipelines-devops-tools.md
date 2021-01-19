@@ -1,13 +1,13 @@
 ---
 title: Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 description: Modernización de las aplicaciones .NET existentes con Azure Clour y contenedores Windows | Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
-ms.date: 12/21/2018
-ms.openlocfilehash: e7ad76edb659fbacfc85cb398ec0c9fe9e3c66c9
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.date: 12/21/2020
+ms.openlocfilehash: f8517ebe8570b8d2be7b49c3cb9e1bc436076af2
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025256"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235344"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 

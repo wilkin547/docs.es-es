@@ -2,12 +2,12 @@
 title: Comando dotnet clean
 description: El comando dotnet clean limpia el directorio actual.
 ms.date: 02/14/2020
-ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1023f13c7662abb7dad613128631c7644ca15bb9
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463702"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189608"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -46,7 +46,7 @@ Proyecto o solución de MSBuild que se va a limpiar. Si no se especifica un arch
 
 * **`-f|--framework <FRAMEWORK>`**
 
-  El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación. El marco se debe definir en el [archivo de proyecto](csproj.md). Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.
+  El [marco](../../standard/frameworks.md) que se especificó en tiempo de compilación. El marco se debe definir en el [archivo de proyecto](../project-sdk/overview.md). Si especificó el marco en tiempo de compilación, debe especificar el marco al realizar la limpieza.
 
 * **`-h|--help`**
 

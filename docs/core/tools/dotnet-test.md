@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: a5666cfe4c09b2b88d77b256fac922154c7d6bd7
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634388"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189159"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -146,7 +146,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 
 - **`-l|--logger <LOGGER>`**
 
-  Especifica un registrador para los resultados de pruebas. A diferencia de MSBuild, la prueba de dotnet no acepta abreviaturas: en lugar de `-l "console;v=d"` use `-l "console;verbosity=detailed"`.
+  Especifica un registrador para los resultados de pruebas. A diferencia de MSBuild, la prueba de dotnet no acepta abreviaturas: en lugar de `-l "console;v=d"` use `-l "console;verbosity=detailed"`. Especifique el parámetro varias veces para habilitar varios registradores.
 
 - **`--no-build`**
 

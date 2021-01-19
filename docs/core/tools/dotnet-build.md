@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: El comando dotnet build compila un proyecto y todas sus dependencias.
 ms.date: 02/14/2020
-ms.openlocfilehash: ea0291129aeaed3bebef5c454ff003131bd3562b
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: cc8c6ed30dbf8ff0602fb19e5001f618a8380f16
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634486"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189962"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -83,7 +83,7 @@ El archivo de proyecto o solución para compilar. Si no se especifica un archivo
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  Compila para un [marco de trabajo](../../standard/frameworks.md) específico. El marco se debe definir en el [archivo de proyecto](csproj.md).
+  Compila para un [marco de trabajo](../../standard/frameworks.md) específico. El marco se debe definir en el [archivo de proyecto](../project-sdk/overview.md).
 
 - **`--force`**
 
