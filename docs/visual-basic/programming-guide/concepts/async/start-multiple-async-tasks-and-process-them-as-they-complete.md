@@ -2,96 +2,96 @@
 title: Iniciar varias tareas asincrónicas y procesarlas a medida que se completan
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 52e4d786667a70730f311ca20a30acd7108107e3
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: 4eb4d15739da82cbfcc8dc5e03af4c1ae761d553
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91090374"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615911"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a><span data-ttu-id="00b44-102">Start Multiple Async Tasks and Process Them As They Complete (Visual Basic) (Inicio de varias tareas asincrónicas y cómo procesarlas a medida que se completan [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="00b44-102">Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)</span></span>
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a><span data-ttu-id="b33f1-102">Start Multiple Async Tasks and Process Them As They Complete (Visual Basic) (Inicio de varias tareas asincrónicas y cómo procesarlas a medida que se completan [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="b33f1-102">Start Multiple Async Tasks and Process Them As They Complete (Visual Basic)</span></span>
 
-<span data-ttu-id="00b44-103">Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.</span><span class="sxs-lookup"><span data-stu-id="00b44-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>  
+<span data-ttu-id="b33f1-103">Si usa <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, puede iniciar varias tareas a la vez y procesarlas una por una a medida que se completen, en lugar de procesarlas en el orden en el que se han iniciado.</span><span class="sxs-lookup"><span data-stu-id="b33f1-103">By using <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, you can start multiple tasks at the same time and process them one by one as they’re completed rather than process them in the order in which they're started.</span></span>  
   
- <span data-ttu-id="00b44-104">En el siguiente ejemplo se usa una consulta para crear una colección de tareas.</span><span class="sxs-lookup"><span data-stu-id="00b44-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="00b44-105">Cada tarea descarga el contenido de un sitio web especificado.</span><span class="sxs-lookup"><span data-stu-id="00b44-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="00b44-106">En cada iteración de un bucle while, una llamada awaited a `WhenAny` devuelve la tarea en la colección de tareas que termine primero su descarga.</span><span class="sxs-lookup"><span data-stu-id="00b44-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="00b44-107">Esa tarea se quita de la colección y se procesa.</span><span class="sxs-lookup"><span data-stu-id="00b44-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="00b44-108">El bucle se repite hasta que la colección no contiene más tareas.</span><span class="sxs-lookup"><span data-stu-id="00b44-108">The loop repeats until the collection contains no more tasks.</span></span>  
+ <span data-ttu-id="b33f1-104">En el siguiente ejemplo se usa una consulta para crear una colección de tareas.</span><span class="sxs-lookup"><span data-stu-id="b33f1-104">The following example uses a query to create a collection of tasks.</span></span> <span data-ttu-id="b33f1-105">Cada tarea descarga el contenido de un sitio web especificado.</span><span class="sxs-lookup"><span data-stu-id="b33f1-105">Each task downloads the contents of a specified website.</span></span> <span data-ttu-id="b33f1-106">En cada iteración de un bucle while, una llamada awaited a `WhenAny` devuelve la tarea en la colección de tareas que termine primero su descarga.</span><span class="sxs-lookup"><span data-stu-id="b33f1-106">In each iteration of a while loop, an awaited call to `WhenAny` returns the task in the collection of tasks that finishes its download first.</span></span> <span data-ttu-id="b33f1-107">Esa tarea se quita de la colección y se procesa.</span><span class="sxs-lookup"><span data-stu-id="b33f1-107">That task is removed from the collection and processed.</span></span> <span data-ttu-id="b33f1-108">El bucle se repite hasta que la colección no contiene más tareas.</span><span class="sxs-lookup"><span data-stu-id="b33f1-108">The loop repeats until the collection contains no more tasks.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="00b44-109">Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior instalados en el equipo.</span><span class="sxs-lookup"><span data-stu-id="00b44-109">To run the examples, you must have Visual Studio 2012 or newer and  the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+> <span data-ttu-id="b33f1-109">Para ejecutar los ejemplos, debe tener Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior instalados en el equipo.</span><span class="sxs-lookup"><span data-stu-id="b33f1-109">To run the examples, you must have Visual Studio 2012 or newer and  the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-## <a name="downloading-the-example"></a><span data-ttu-id="00b44-110">Descargar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="00b44-110">Downloading the Example</span></span>  
+## <a name="downloading-the-example"></a><span data-ttu-id="b33f1-110">Descargar el ejemplo</span><span class="sxs-lookup"><span data-stu-id="b33f1-110">Downloading the Example</span></span>  
 
- <span data-ttu-id="00b44-111">Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.</span><span class="sxs-lookup"><span data-stu-id="00b44-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
+ <span data-ttu-id="b33f1-111">Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.</span><span class="sxs-lookup"><span data-stu-id="b33f1-111">You can download the complete Windows Presentation Foundation (WPF) project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) and then follow these steps.</span></span>  
   
-1. <span data-ttu-id="00b44-112">Descomprima el archivo descargado y, a continuación, inicie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="00b44-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
+1. <span data-ttu-id="b33f1-112">Descomprima el archivo descargado y, a continuación, inicie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="b33f1-112">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-2. <span data-ttu-id="00b44-113">En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.</span><span class="sxs-lookup"><span data-stu-id="00b44-113">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+2. <span data-ttu-id="b33f1-113">En la barra de menús, elija **Archivo**, **Abrir**, **Proyecto o solución**.</span><span class="sxs-lookup"><span data-stu-id="b33f1-113">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-3. <span data-ttu-id="00b44-114">En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y después abra el archivo de la solución (.sln) para AsyncFineTuningVB.</span><span class="sxs-lookup"><span data-stu-id="00b44-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
+3. <span data-ttu-id="b33f1-114">En el cuadro de diálogo **Abrir proyecto**, abra la carpeta que contiene el código de ejemplo que descomprimió y después abra el archivo de la solución (.sln) para AsyncFineTuningVB.</span><span class="sxs-lookup"><span data-stu-id="b33f1-114">In the **Open Project** dialog box, open the folder that holds the sample code that you decompressed, and then open the solution (.sln) file for AsyncFineTuningVB.</span></span>  
   
-4. <span data-ttu-id="00b44-115">En el **Explorador de soluciones**, abra el menú contextual del proyecto **ProcessTasksAsTheyFinish** y, después, pulse **Establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="00b44-115">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>  
+4. <span data-ttu-id="b33f1-115">En el **Explorador de soluciones**, abra el menú contextual del proyecto **ProcessTasksAsTheyFinish** y, después, pulse **Establecer como proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="b33f1-115">In **Solution Explorer**, open the shortcut menu for the **ProcessTasksAsTheyFinish** project, and then choose **Set as StartUp Project**.</span></span>  
   
-5. <span data-ttu-id="00b44-116">Pulse la tecla F5 para ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="00b44-116">Choose the F5 key to run the project.</span></span>  
+5. <span data-ttu-id="b33f1-116">Pulse la tecla F5 para ejecutar el proyecto.</span><span class="sxs-lookup"><span data-stu-id="b33f1-116">Choose the F5 key to run the project.</span></span>  
   
-     <span data-ttu-id="00b44-117">Presione las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.</span><span class="sxs-lookup"><span data-stu-id="00b44-117">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
+     <span data-ttu-id="b33f1-117">Presione las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.</span><span class="sxs-lookup"><span data-stu-id="b33f1-117">Choose the Ctrl+F5 keys to run the project without debugging it.</span></span>  
   
-6. <span data-ttu-id="00b44-118">Ejecute el proyecto varias veces para comprobar que las longitudes que se han descargado no aparecen siempre en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="00b44-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>  
+6. <span data-ttu-id="b33f1-118">Ejecute el proyecto varias veces para comprobar que las longitudes que se han descargado no aparecen siempre en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="b33f1-118">Run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>  
   
- <span data-ttu-id="00b44-119">Si no desea descargar el proyecto, puede revisar el archivo MainWindow.xaml.vb al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="00b44-119">If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.</span></span>  
+ <span data-ttu-id="b33f1-119">Si no desea descargar el proyecto, puede revisar el archivo MainWindow.xaml.vb al final de este tema.</span><span class="sxs-lookup"><span data-stu-id="b33f1-119">If you don't want to download the project, you can review the MainWindow.xaml.vb file at the end of this topic.</span></span>  
   
-## <a name="building-the-example"></a><span data-ttu-id="00b44-120">Compilación del ejemplo</span><span class="sxs-lookup"><span data-stu-id="00b44-120">Building the Example</span></span>  
+## <a name="building-the-example"></a><span data-ttu-id="b33f1-120">Compilación del ejemplo</span><span class="sxs-lookup"><span data-stu-id="b33f1-120">Building the Example</span></span>  
 
- <span data-ttu-id="00b44-121">En este ejemplo se agrega al código que [se ha desarrollado en cancelar las tareas asincrónicas restantes una vez que se ha completado una (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) y se usa la misma interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="00b44-121">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) and uses the same UI.</span></span>  
+ <span data-ttu-id="b33f1-121">En este ejemplo se agrega al código que [se ha desarrollado en cancelar las tareas asincrónicas restantes una vez que se ha completado una (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) y se usa la misma interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="b33f1-121">This example adds to the code that’s developed in [Cancel Remaining Async Tasks after One Is Complete (Visual Basic)](cancel-remaining-async-tasks-after-one-is-complete.md) and uses the same UI.</span></span>  
   
- <span data-ttu-id="00b44-122">Para generar el ejemplo personalmente, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAfterOneTask** como el **Proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="00b44-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAfterOneTask** as the **StartUp Project**.</span></span> <span data-ttu-id="00b44-123">Agregue los cambios de este tema al método `AccessTheWebAsync` de ese proyecto.</span><span class="sxs-lookup"><span data-stu-id="00b44-123">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="00b44-124">Los cambios se marcan con asteriscos.</span><span class="sxs-lookup"><span data-stu-id="00b44-124">The changes are marked with asterisks.</span></span>  
+ <span data-ttu-id="b33f1-122">Para generar el ejemplo personalmente, paso a paso, siga las instrucciones de la sección "Descargar el ejemplo", pero elija **CancelAfterOneTask** como el **Proyecto de inicio**.</span><span class="sxs-lookup"><span data-stu-id="b33f1-122">To build the example yourself, step by step, follow the instructions in the "Downloading the Example" section, but choose **CancelAfterOneTask** as the **StartUp Project**.</span></span> <span data-ttu-id="b33f1-123">Agregue los cambios de este tema al método `AccessTheWebAsync` de ese proyecto.</span><span class="sxs-lookup"><span data-stu-id="b33f1-123">Add the changes in this topic to the `AccessTheWebAsync` method in that project.</span></span> <span data-ttu-id="b33f1-124">Los cambios se marcan con asteriscos.</span><span class="sxs-lookup"><span data-stu-id="b33f1-124">The changes are marked with asterisks.</span></span>  
   
- <span data-ttu-id="00b44-125">El proyecto **CancelAfterOneTask** ya incluye una consulta que, cuando se ejecuta, crea una colección de tareas.</span><span class="sxs-lookup"><span data-stu-id="00b44-125">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="00b44-126">Cada llamada a `ProcessURLAsync` en el siguiente código devuelve un objeto <xref:System.Threading.Tasks.Task%601> donde `TResult` es un entero.</span><span class="sxs-lookup"><span data-stu-id="00b44-126">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span>  
+ <span data-ttu-id="b33f1-125">El proyecto **CancelAfterOneTask** ya incluye una consulta que, cuando se ejecuta, crea una colección de tareas.</span><span class="sxs-lookup"><span data-stu-id="b33f1-125">The **CancelAfterOneTask** project already includes a query that, when executed, creates a collection of tasks.</span></span> <span data-ttu-id="b33f1-126">Cada llamada a `ProcessURLAsync` en el siguiente código devuelve un objeto <xref:System.Threading.Tasks.Task%601> donde `TResult` es un entero.</span><span class="sxs-lookup"><span data-stu-id="b33f1-126">Each call to `ProcessURLAsync` in the following code returns a <xref:System.Threading.Tasks.Task%601> where `TResult` is an integer.</span></span>  
   
 ```vb  
 Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- <span data-ttu-id="00b44-127">En el archivo MainWindow. Xaml. VB del proyecto, realice los cambios siguientes en el `AccessTheWebAsync` método.</span><span class="sxs-lookup"><span data-stu-id="00b44-127">In the MainWindow.xaml.vb file of the  project, make the following changes to the `AccessTheWebAsync` method.</span></span>  
+ <span data-ttu-id="b33f1-127">En el archivo MainWindow. Xaml. VB del proyecto, realice los cambios siguientes en el `AccessTheWebAsync` método.</span><span class="sxs-lookup"><span data-stu-id="b33f1-127">In the MainWindow.xaml.vb file of the  project, make the following changes to the `AccessTheWebAsync` method.</span></span>  
   
-- <span data-ttu-id="00b44-128">Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.</span><span class="sxs-lookup"><span data-stu-id="00b44-128">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
+- <span data-ttu-id="b33f1-128">Ejecute la consulta aplicando <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> en lugar de <xref:System.Linq.Enumerable.ToArray%2A>.</span><span class="sxs-lookup"><span data-stu-id="b33f1-128">Execute the query by applying <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> instead of <xref:System.Linq.Enumerable.ToArray%2A>.</span></span>  
   
     ```vb  
     Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
     ```  
   
-- <span data-ttu-id="00b44-129">Agregue un bucle while que realice los pasos siguientes para cada tarea de la colección.</span><span class="sxs-lookup"><span data-stu-id="00b44-129">Add a while loop that performs the following steps for each task in the collection.</span></span>  
+- <span data-ttu-id="b33f1-129">Agregue un bucle while que realice los pasos siguientes para cada tarea de la colección.</span><span class="sxs-lookup"><span data-stu-id="b33f1-129">Add a while loop that performs the following steps for each task in the collection.</span></span>  
   
-    1. <span data-ttu-id="00b44-130">Espera una llamada a `WhenAny` para identificar la primera tarea en la colección para finalizar su descarga.</span><span class="sxs-lookup"><span data-stu-id="00b44-130">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>  
+    1. <span data-ttu-id="b33f1-130">Espera una llamada a `WhenAny` para identificar la primera tarea en la colección para finalizar su descarga.</span><span class="sxs-lookup"><span data-stu-id="b33f1-130">Awaits a call to `WhenAny` to identify the first task in the collection to finish its download.</span></span>  
   
         ```vb  
-        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+        Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
         ```  
   
-    2. <span data-ttu-id="00b44-131">Quita la tarea de la colección.</span><span class="sxs-lookup"><span data-stu-id="00b44-131">Removes that task from the collection.</span></span>  
+    2. <span data-ttu-id="b33f1-131">Quita la tarea de la colección.</span><span class="sxs-lookup"><span data-stu-id="b33f1-131">Removes that task from the collection.</span></span>  
   
         ```vb  
-        downloadTasks.Remove(firstFinishedTask)  
+        downloadTasks.Remove(finishedTask)  
         ```  
   
-    3. <span data-ttu-id="00b44-132">Espera `firstFinishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`.</span><span class="sxs-lookup"><span data-stu-id="00b44-132">Awaits `firstFinishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="00b44-133">La variable `firstFinishedTask` es un <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero.</span><span class="sxs-lookup"><span data-stu-id="00b44-133">The `firstFinishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="00b44-134">La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="00b44-134">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>  
+    3. <span data-ttu-id="b33f1-132">Espera `finishedTask`, que se devuelve mediante una llamada a `ProcessURLAsync`.</span><span class="sxs-lookup"><span data-stu-id="b33f1-132">Awaits `finishedTask`, which is returned by a call to `ProcessURLAsync`.</span></span> <span data-ttu-id="b33f1-133">La variable `finishedTask` es un <xref:System.Threading.Tasks.Task%601> donde `TReturn` es un entero.</span><span class="sxs-lookup"><span data-stu-id="b33f1-133">The `finishedTask` variable is a <xref:System.Threading.Tasks.Task%601> where `TReturn` is an integer.</span></span> <span data-ttu-id="b33f1-134">La tarea ya está completa, pero la espera para recuperar la longitud del sitio web descargado, como se muestra en el ejemplo siguiente.</span><span class="sxs-lookup"><span data-stu-id="b33f1-134">The task is already complete, but you await it to retrieve the length of the downloaded website, as the following example shows.</span></span>  
   
         ```vb  
-        Dim length = Await firstFinishedTask  
+        Dim length = Await finishedTask  
         resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         ```  
   
- <span data-ttu-id="00b44-135">Debe ejecutar el proyecto varias veces para comprobar que las longitudes que se han descargado no aparecen siempre en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="00b44-135">You should run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>  
+ <span data-ttu-id="b33f1-135">Debe ejecutar el proyecto varias veces para comprobar que las longitudes que se han descargado no aparecen siempre en el mismo orden.</span><span class="sxs-lookup"><span data-stu-id="b33f1-135">You should run the project several times to verify that the downloaded lengths don't always appear in the same order.</span></span>  
   
 > [!CAUTION]
-> <span data-ttu-id="00b44-136">Puede usar `WhenAny` en un bucle, como se describe en el ejemplo, para solucionar problemas que implican un número reducido de tareas.</span><span class="sxs-lookup"><span data-stu-id="00b44-136">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="00b44-137">Sin embargo, otros enfoques son más eficaces si hay que procesar un gran número de tareas.</span><span class="sxs-lookup"><span data-stu-id="00b44-137">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="00b44-138">Para obtener más información y ejemplos, consulte [procesamiento de tareas a medida que se completan](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).</span><span class="sxs-lookup"><span data-stu-id="00b44-138">For more information and examples, see [Processing Tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).</span></span>  
+> <span data-ttu-id="b33f1-136">Puede usar `WhenAny` en un bucle, como se describe en el ejemplo, para solucionar problemas que implican un número reducido de tareas.</span><span class="sxs-lookup"><span data-stu-id="b33f1-136">You can use `WhenAny` in a loop, as described in the example, to solve problems that involve a small number of tasks.</span></span> <span data-ttu-id="b33f1-137">Sin embargo, otros enfoques son más eficaces si hay que procesar un gran número de tareas.</span><span class="sxs-lookup"><span data-stu-id="b33f1-137">However, other approaches are more efficient if you have a large number of tasks to process.</span></span> <span data-ttu-id="b33f1-138">Para obtener más información y ejemplos, consulte [procesamiento de tareas a medida que se completan](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).</span><span class="sxs-lookup"><span data-stu-id="b33f1-138">For more information and examples, see [Processing Tasks as they complete](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/).</span></span>  
   
-## <a name="complete-example"></a><span data-ttu-id="00b44-139">Ejemplo completo</span><span class="sxs-lookup"><span data-stu-id="00b44-139">Complete Example</span></span>  
+## <a name="complete-example"></a><span data-ttu-id="b33f1-139">Ejemplo completo</span><span class="sxs-lookup"><span data-stu-id="b33f1-139">Complete Example</span></span>  
 
- <span data-ttu-id="00b44-140">El código siguiente es el texto completo del archivo MainWindow.xaml.vb para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="00b44-140">The following code is the complete text of the MainWindow.xaml.vb file for the example.</span></span> <span data-ttu-id="00b44-141">Los asteriscos marcan los elementos que se agregaron para este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="00b44-141">Asterisks mark the elements that were added for this example.</span></span>  
+ <span data-ttu-id="b33f1-140">El código siguiente es el texto completo del archivo MainWindow.xaml.vb para el ejemplo.</span><span class="sxs-lookup"><span data-stu-id="b33f1-140">The following code is the complete text of the MainWindow.xaml.vb file for the example.</span></span> <span data-ttu-id="b33f1-141">Los asteriscos marcan los elementos que se agregaron para este ejemplo.</span><span class="sxs-lookup"><span data-stu-id="b33f1-141">Asterisks mark the elements that were added for this example.</span></span>  
   
- <span data-ttu-id="00b44-142">Observe que debe agregar una referencia para <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="00b44-142">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
+ <span data-ttu-id="b33f1-142">Observe que debe agregar una referencia para <xref:System.Net.Http>.</span><span class="sxs-lookup"><span data-stu-id="b33f1-142">Notice that you must add a reference for <xref:System.Net.Http>.</span></span>  
   
- <span data-ttu-id="00b44-143">Puede descargar el proyecto desde [Async Sample: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span><span class="sxs-lookup"><span data-stu-id="00b44-143">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>  
+ <span data-ttu-id="b33f1-143">Puede descargar el proyecto desde [Async Sample: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span><span class="sxs-lookup"><span data-stu-id="b33f1-143">You can download the project from [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).</span></span>  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -144,24 +144,24 @@ Class MainWindow
         ' Call SetUpURLList to make a list of web addresses.  
         Dim urlList As List(Of String) = SetUpURLList()  
   
-        ' ***Create a query that, when executed, returns a collection of tasks.  
+        ' **_Create a query that, when executed, returns a collection of tasks.  
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
             From url In urlList Select ProcessURLAsync(url, client, ct)  
   
-        ' ***Use ToList to execute the query and start the download tasks.
+        ' _*_Use ToList to execute the query and start the download tasks.
         Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
   
-        ' ***Add a loop to process the tasks one at a time until none remain.  
+        ' _*_Add a loop to process the tasks one at a time until none remain.  
         While downloadTasks.Count > 0  
-            ' ***Identify the first task that completes.  
-            Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+            ' _*_Identify the first task that completes.  
+            Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
   
-            ' ***Remove the selected task from the list so that you don't  
+            ' _*_Remove the selected task from the list so that you don't  
             ' process it more than once.  
-            downloadTasks.Remove(firstFinishedTask)  
+            downloadTasks.Remove(finishedTask)  
   
-            ' ***Await the first completed task and display the results.  
-            Dim length = Await firstFinishedTask  
+            ' _**Await the first completed task and display the results.  
+            Dim length = Await finishedTask  
             resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         End While  
   
@@ -209,9 +209,9 @@ End Class
 ' Downloads complete.  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="00b44-144">Vea también</span><span class="sxs-lookup"><span data-stu-id="00b44-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b33f1-144">Consulte también</span><span class="sxs-lookup"><span data-stu-id="b33f1-144">See also</span></span>
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
-- <span data-ttu-id="00b44-145">[Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="00b44-145">[Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md)</span></span>
-- [<span data-ttu-id="00b44-146">Programación asincrónica con Async y Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="00b44-146">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](index.md)
-- [<span data-ttu-id="00b44-147">Ejemplo de async: Ajuste de la aplicación</span><span class="sxs-lookup"><span data-stu-id="00b44-147">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <span data-ttu-id="b33f1-145">[Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])</span><span class="sxs-lookup"><span data-stu-id="b33f1-145">[Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md)</span></span>
+- [<span data-ttu-id="b33f1-146">Programación asincrónica con Async y Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b33f1-146">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](index.md)
+- [<span data-ttu-id="b33f1-147">Ejemplo de async: Ajuste de la aplicación</span><span class="sxs-lookup"><span data-stu-id="b33f1-147">Async Sample: Fine Tuning Your Application</span></span>](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
