@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones de escritorio modernas
 description: Todo lo que necesita saber acerca de la implementación de aplicaciones de escritorio modernas.
 ms.date: 05/12/2020
-ms.openlocfilehash: 4a4d93caf1c2f8f58d48ee3199bbe6983fa939f4
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ba47f09b27adf270734bbfff285fe44dd4175d29
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866684"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615859"
 ---
 # <a name="deploying-modern-desktop-applications"></a>Implementación de aplicaciones de escritorio modernas
 
@@ -115,7 +115,7 @@ Una de las cosas más interesantes sobre MSIX es que funciona para todo el catá
 
 #### <a name="windows-application-packaging-project"></a>Proyecto de paquete de aplicación de Windows
 
-Puede usar el proyecto de **proyecto de paquete de aplicación de Windows**   en Visual Studio para generar un paquete para la aplicación de escritorio. A continuación, puede publicar el paquete en el Microsoft Store o transferirlo a uno o varios equipos.
+Puedes usar el **proyecto de paquete de aplicación de Windows** en Visual Studio para generar un paquete para la aplicación de escritorio. A continuación, puede publicar el paquete en el Microsoft Store o transferirlo a uno o varios equipos.
 
 #### <a name="msix-packaging-tool"></a>Herramienta de empaquetado MSIX
 
@@ -226,4 +226,4 @@ MSIX crea una interfaz de usuario para la instalación que muestra algunas propi
 Una vez que haya generado el nuevo paquete MSIX y lo haya pasado al servidor de implementación, solo tiene que editar el archivo *. AppInstaller* para reflejar estos cambios, principalmente la versión y la ruta de acceso al nuevo archivo MSIX. La próxima vez que el usuario inicie la aplicación, el sistema detectará el cambio y descargará los archivos de la nueva versión en segundo plano. Una vez hecho esto, la instalación se ejecutará en el nuevo inicio de la aplicación de forma transparente para el usuario.
 
 >[!div class="step-by-step"]
->[Anterior](example-migration-core.md)
+>[Anterior](example-migration.md)

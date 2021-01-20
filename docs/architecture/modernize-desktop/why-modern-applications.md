@@ -1,13 +1,13 @@
 ---
 title: Aplicaciones de escritorio modernas, ¿por qué?
 description: Obtenga información sobre las tecnologías de escritorio como Windows Forms, WPF y UWP en el mundo moderno.
-ms.date: 09/16/2019
-ms.openlocfilehash: f8b70ba9e0ee97a6e0938e3219ecd0d2324248ae
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.date: 12/29/2020
+ms.openlocfilehash: 8489e41c973bb472a23bca38e9374c36e4cdd366
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "97866688"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615898"
 ---
 # <a name="why-modern-desktop-applications"></a>Aplicaciones de escritorio modernas, ¿por qué?
 
@@ -25,9 +25,9 @@ Es posible que se encuentre en el mismo barco, donde tiene aplicaciones de Windo
 
 Antes del lanzamiento de Internet, las aplicaciones de escritorio eran el método principal para crear sistemas de software. Los desarrolladores pueden elegir cualquier lenguaje de programación, como COBOL, Fortran, VB6 o C++. Pero cuando desarrollaron herramientas pequeñas o arquitecturas distribuidas complejas, eran todas las aplicaciones de escritorio.
 
-A continuación, las tecnologías de Internet empezaron a sousar el mundo de desarrollo y ganar más ingenieros con ventajas como la implementación sencilla y los procesos de distribución simplificados. El hecho de que una vez que se implementó una aplicación web en producción, todos los usuarios obtuvieron actualizaciones automáticas hicieron un gran impacto en la agilidad del software.
+Después, las tecnologías de Internet empezaron a desaprovechar el mundo de desarrollo y ganar más ingenieros con ventajas como la implementación sencilla y los procesos de distribución simplificados. El hecho de que una vez que se implementó una aplicación web en producción, todos los usuarios obtuvieron actualizaciones automáticas hicieron un gran impacto en la agilidad del software.
 
-Sin embargo, la infraestructura de Internet, los protocolos subyacentes y los estándares como HTTP y HTML no se diseñaron para compilar aplicaciones complejas. De hecho, el importante esfuerzo de desarrollo fue el único objetivo: ofrecer a las aplicaciones web las mismas funcionalidades que tienen las aplicaciones de escritorio, como la entrada rápida de datos y la administración de Estados.
+Sin embargo, la infraestructura de Internet, los protocolos subyacentes y los estándares como HTTP y HTML no se diseñaron para compilar aplicaciones complejas. De hecho, el importante esfuerzo de desarrollo después era tener un solo objetivo: ofrecer a las aplicaciones web las mismas capacidades que tienen las aplicaciones de escritorio, como la entrada rápida de datos y la administración de Estados.
 
 Aunque las aplicaciones web y móviles han crecido a un ritmo increíble, para determinadas tareas, las aplicaciones de escritorio aún mantienen el número en términos de eficiencia y rendimiento. Esto explica por qué hay millones de desarrolladores que compilan sus proyectos con WPF y WinForms y que la cantidad de esas aplicaciones crece constantemente.
 
@@ -37,7 +37,7 @@ Estas son algunas de las razones para elegir aplicaciones de escritorio en su de
 - El rendimiento de las aplicaciones de escritorio para cálculos complejos es mucho mayor que el rendimiento de las aplicaciones Web.
 - La ejecución de la lógica personalizada en el lado cliente es posible pero mucho más difícil con una aplicación Web.
 - El uso de multithreading es más fácil y eficaz en una aplicación de escritorio.
-- La curva de aprendizaje para diseñar interfaces de usuario (IUS) no es pronunciada. Y para WinForms, es totalmente intuitivo con la experiencia de arrastrar y colocar del diseñador de Windows Forms.
+- La curva de aprendizaje para diseñar interfaces de usuario (IUS) no es pronunciada. Y para WinForms, es intuitivo con la experiencia de arrastrar y colocar del diseñador de Windows Forms.
 - Es fácil empezar a codificar y probar los algoritmos sin necesidad de configurar una infraestructura de servidor ni de preocuparse por los problemas de conectividad, los firewalls y la compatibilidad del explorador.
 - La depuración es eficaz en comparación con la depuración web.
 - El acceso a los dispositivos de hardware, como la cámara, el Bluetooth o los lectores de tarjeta, es fácil.
@@ -102,7 +102,7 @@ UWP contiene un marco de presentación basado en XAML, como WPF, pero tiene algu
 
 ## <a name="a-tale-of-two-platforms"></a>Un testigo de dos plataformas
 
-En los últimos 20 años, mientras que las tecnologías de escritorio de la interfaz de usuario estaban creciendo y después de la ruta de acceso de Windows Forms a UWP, el hardware también ha evolucionado desde unidades de PC de gran peso con pequeños monitores de CRT a monitores de alta PPP y tabletas ligeras y teléfonos con distintas técnicas de entrada de datos, como la entrada táctil y la entrada manuscrita. Estos cambios han dado lugar a la creación de dos conceptos diferentes: una aplicación de escritorio y una aplicación moderna. Una aplicación moderna es aquella que considera diferentes factores de forma de dispositivo, varios métodos de entrada y salida, y aprovecha las características de escritorio modernas mientras se ejecuta en un modelo de ejecución en espacio aislado. La aplicación de escritorio (tradicional), por otro lado, es una aplicación que necesita una interfaz de usuario sólida con alta densidad de controles que funciona mejor con un mouse y un teclado.
+En los últimos 20 años, mientras que las tecnologías de escritorio de la interfaz de usuario estaban creciendo y después de la ruta de acceso de Windows Forms a UWP, el hardware también ha evolucionado desde unidades de PC de gran peso con pequeños monitores de CRT a monitores de alta PPP y tabletas ligeras y teléfonos con distintas técnicas de entrada de datos, como la entrada táctil y la entrada manuscrita. Estos cambios han dado lugar a la creación de dos conceptos diferentes: una aplicación de escritorio y una aplicación moderna. Una aplicación moderna es aquella que considera diferentes factores de forma de dispositivo, varios métodos de entrada y salida, y aprovecha las características de escritorio modernas mientras se ejecuta en un modelo de ejecución en espacio aislado. La aplicación de escritorio (tradicional), por otro lado, es una aplicación que necesita una interfaz de usuario sólida con una alta densidad de controles que funciona mejor con un mouse y un teclado.
 
 En la tabla siguiente se describen las diferencias entre los dos conceptos:
 
@@ -143,14 +143,14 @@ Esta ruta de acceso le mostrará cómo puede aprovechar las características mod
 
 Los ciclos de desarrollo modernos se han destacado para proporcionar agilidad sobre cómo se implementan las nuevas versiones de las aplicaciones en cada usuario único. Dado que las aplicaciones de Windows Forms y WPF se basan en una versión determinada del .NET Framework que deben estar presentes en el equipo, no pueden aprovechar las nuevas características de la versión .NET Framework sin la intervención de los usuarios de TI con el riesgo de tener efectos secundarios para otras aplicaciones que se ejecutan en el mismo equipo. Ha limitado el ritmo de innovación para que los desarrolladores les obliguen a permanecer en versiones obsoletas del .NET Framework.
 
-Desde el lanzamiento de .NET Core 3,0, puede aprovechar un nuevo método para implementar varias versiones de .NET Core en paralelo y especificar la versión de .NET Core a la que debe dirigirse cada aplicación. De este modo, puede usar las características más recientes en una aplicación mientras está seguro de que no va a interrumpir otras aplicaciones.
+Desde el lanzamiento de .NET Core 3,0, puede aprovechar un nuevo enfoque de la implementación de varias versiones de .NET en paralelo y la especificación de la versión de .NET a la que debe dirigirse cada aplicación. De este modo, puede usar las características más recientes en una aplicación mientras está seguro de que no va a interrumpir otras aplicaciones.
 
 ### <a name="installation"></a>Instalación
 
-Las aplicaciones de escritorio siempre dependen de algún tipo de proceso de instalación antes de que el usuario pueda empezar a usarlas. Este hecho ha incorporado el juego a un conjunto de tecnologías, desde MSI y ClickOnce hasta instaladores personalizados o incluso implementación de XCOPY. Cualquiera de estos métodos se ocupa de los problemas delicados porque las aplicaciones necesitan una manera de tener acceso a los recursos compartidos de la máquina. A veces, la instalación necesita tener acceso al registro para insertar o actualizar nuevos valores de clave, a veces para actualizar los archivos dll compartidos a los que hace referencia la aplicación principal. Esto provoca un dolor continuo para los usuarios y crea esta percepción que, una vez que instale alguna aplicación, el equipo nunca será el mismo, incluso aunque la desinstale después.
+Las aplicaciones de escritorio siempre dependen de algún tipo de proceso de instalación antes de que el usuario pueda empezar a usarlas. Este hecho ha incorporado el juego a un conjunto de tecnologías, desde MSI y ClickOnce hasta instaladores personalizados o incluso implementación de XCOPY. Cualquiera de estos métodos se ocupa de los problemas delicados porque las aplicaciones necesitan una manera de tener acceso a los recursos compartidos de la máquina. A veces, la instalación necesita tener acceso al registro para insertar o actualizar nuevos valores de clave, a veces para actualizar los archivos dll compartidos a los que hace referencia la aplicación principal. Este comportamiento provoca un dolor continuo para los usuarios y crea esta percepción que, una vez que se instala alguna aplicación, el equipo nunca será el mismo, incluso aunque se desinstale después.
 
-En este libro, introduciremos una nueva forma de instalar aplicaciones con MSIX que resuelve el problema descrito anteriormente. Aprenderá cómo puede configurar fácilmente un empaquetado, una instalación y actualizaciones para su aplicación.
+En este libro, introduciremos una nueva forma de instalar aplicaciones con MSIX que resuelve el problema descrito anteriormente. Aprenderá cómo puede configurar fácilmente el empaquetado, la instalación y las actualizaciones de la aplicación.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
->[Siguiente](whats-new-dotnet-core.md)
+>[Siguiente](whats-new-dotnet.md)

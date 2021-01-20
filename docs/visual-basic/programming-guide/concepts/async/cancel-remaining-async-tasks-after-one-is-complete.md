@@ -2,12 +2,12 @@
 title: Cancelar las tareas asincrónicas restantes cuando se completa una
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: be716e98263c865adad3c197236467b2f48d7740
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a0a04c62378ddf70ab3dee9a522e490b0a73b83e
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396680"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615963"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic) (Cancelación de tareas asincrónicas restantes [Visual Basic])
 
@@ -20,7 +20,7 @@ En este ejemplo se muestra cómo usar un token de cancelación junto con `WhenAn
 
 ## <a name="downloading-the-example"></a>Descargar el ejemplo
 
-Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]) y después seguir estos pasos.
+Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) desde [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo de Async: Ajuste de la aplicación) y después seguir estos pasos.
 
 1. Descomprima el archivo descargado y, a continuación, inicie Visual Studio.
 
@@ -32,13 +32,13 @@ Puede descargar el proyecto completo de Windows Presentation Foundation (WPF) en
 
 5. Pulse la tecla F5 para ejecutar el proyecto.
 
-    Pulse las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.
+    Presione las teclas Ctrl+F5 para ejecutar el proyecto sin depurarlo.
 
 6. Ejecute el programa varias veces para comprobar que finalizan primero descargas diferentes.
 
 Si no desea descargar el proyecto, puede revisar el archivo MainWindow.xaml.vb al final de este tema.
 
-## <a name="building-the-example"></a>Compilar el ejemplo
+## <a name="building-the-example"></a>Compilación del ejemplo
 
 En el ejemplo de este tema se agrega al proyecto desarrollado en [cancelar una tarea asincrónica o una lista de tareas](cancel-an-async-task-or-a-list-of-tasks.md) para cancelar una lista de tareas. En el ejemplo se usa la misma interfaz de usuario, aunque el botón **Cancelar** no se usa explícitamente.
 
@@ -47,7 +47,7 @@ Para generar su propio ejemplo, paso a paso, siga las instrucciones de la secci�
 En el archivo MainWindow. Xaml. VB del proyecto **CancelAListOfTasks** , inicie la transición moviendo los pasos de procesamiento de cada sitio web del bucle `AccessTheWebAsync` al siguiente método asincrónico.
 
 ```vb
-' ***Bundle the processing steps for a website into one async method.
+' **_Bundle the processing steps for a website into one async method.
 Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)
 
     ' GetAsync returns a Task(Of HttpResponseMessage).
@@ -69,7 +69,7 @@ Realice los siguientes cambios en `AccessTheWebAsync`. Los asteriscos marcan los
 2. Cree una consulta que, cuando se ejecute, genere una colección de tareas genéricas. Cada llamada a `ProcessURLAsync` devuelve un <xref:System.Threading.Tasks.Task%601> donde `TResult` es un entero.
 
     ```vb
-    ' ***Create a query that, when executed, returns a collection of tasks.
+    ' _*_Create a query that, when executed, returns a collection of tasks.
     Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
         From url In urlList Select ProcessURLAsync(url, client, ct)
     ```
@@ -77,29 +77,29 @@ Realice los siguientes cambios en `AccessTheWebAsync`. Los asteriscos marcan los
 3. Llame a `ToArray` para ejecutar la consulta e iniciar las tareas. La aplicación del método `WhenAny` en el paso siguiente ejecutaría la consulta e iniciaría las tareas sin usar `ToArray`, pero es posible que otros métodos no lo hagan. La práctica más segura es forzar explícitamente la ejecución de la consulta.
 
     ```vb
-    ' ***Use ToArray to execute the query and start the download tasks.
+    ' _*_Use ToArray to execute the query and start the download tasks.
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()
     ```
 
-4. Llame a `WhenAny` en la colección de tareas. `WhenAny` devuelve una `Task(Of Task(Of Integer))` o `Task<Task<int>>`.  Es decir, `WhenAny` devuelve una tarea que se evalúa como una única `Task(Of Integer)` o `Task<int>` cuando se espera. Esa única tarea es la primera tarea de la colección en finalizar. La tarea que finalizó primero se asigna a `firstFinishedTask`. El tipo de `firstFinishedTask` es <xref:System.Threading.Tasks.Task%601>, donde `TResult` es un entero, ya que es el tipo de valor devuelto de `ProcessURLAsync`.
+4. Llame a `WhenAny` en la colección de tareas. `WhenAny` devuelve una `Task(Of Task(Of Integer))` o `Task<Task<int>>`.  Es decir, `WhenAny` devuelve una tarea que se evalúa como una única `Task(Of Integer)` o `Task<int>` cuando se espera. Esa única tarea es la primera tarea de la colección en finalizar. La tarea que finalizó primero se asigna a `finishedTask`. El tipo de `finishedTask` es <xref:System.Threading.Tasks.Task%601>, donde `TResult` es un entero, ya que es el tipo de valor devuelto de `ProcessURLAsync`.
 
     ```vb
-    ' ***Call WhenAny and then await the result. The task that finishes
-    ' first is assigned to firstFinishedTask.
-    Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
+    ' _*_Call WhenAny and then await the result. The task that finishes
+    ' first is assigned to finishedTask.
+    Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
     ```
 
 5. En este ejemplo, solo le interesa la tarea que finaliza primero. Por lo tanto, use <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> para cancelar las tareas restantes.
 
     ```vb
-    ' ***Cancel the rest of the downloads. You just want the first one.
+    ' _*_Cancel the rest of the downloads. You just want the first one.
     cts.Cancel()
     ```
 
-6. Por último, espere a `firstFinishedTask` para recuperar la longitud del contenido descargado.
+6. Por último, espere a `finishedTask` para recuperar la longitud del contenido descargado.
 
     ```vb
-    Dim length = Await firstFinishedTask
+    Dim length = Await finishedTask
     resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     ```
 
@@ -107,11 +107,11 @@ Ejecute el programa varias veces para comprobar que finalizan primero descargas 
 
 ## <a name="complete-example"></a>Ejemplo completo
 
-El código siguiente es el archivo completo MainWindow. Xaml. vb o MainWindow.xaml.cs para el ejemplo. Los asteriscos marcan los elementos que se han agregado a este ejemplo.
+El código siguiente es el archivo completo MainWindow. Xaml. vb o MainWindow.xaml.cs para el ejemplo. Los asteriscos marcan los elementos que se agregaron para este ejemplo.
 
 Observe que debe agregar una referencia para <xref:System.Net.Http>.
 
-Puede descargar el proyecto de [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación [C# y Visual Basic]).
+Puede descargar el proyecto desde [Async Sample: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```vb
 ' Add an Imports directive and a reference for System.Net.Http.
@@ -178,28 +178,28 @@ Class MainWindow
         ''        vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         ''Next
 
-        ' ***Create a query that, when executed, returns a collection of tasks.
+        ' _*_Create a query that, when executed, returns a collection of tasks.
         Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
             From url In urlList Select ProcessURLAsync(url, client, ct)
 
-        ' ***Use ToArray to execute the query and start the download tasks.
+        ' _*_Use ToArray to execute the query and start the download tasks.
         Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()
 
-        ' ***Call WhenAny and then await the result. The task that finishes
-        ' first is assigned to firstFinishedTask.
-        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
+        ' _*_Call WhenAny and then await the result. The task that finishes
+        ' first is assigned to finishedTask.
+        Dim finishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)
 
-        ' ***Cancel the rest of the downloads. You just want the first one.
+        ' _*_Cancel the rest of the downloads. You just want the first one.
         cts.Cancel()
 
-        ' ***Await the first completed task and display the results
+        ' _*_Await the first completed task and display the results
         ' Run the program several times to demonstrate that different
         ' websites can finish first.
-        Dim length = Await firstFinishedTask
+        Dim length = Await finishedTask
         resultsTextBox.Text &= vbCrLf & $"Length of the downloaded website:  {length}" & vbCrLf
     End Function
 
-    ' ***Bundle the processing steps for a website into one async method.
+    ' _**Bundle the processing steps for a website into one async method.
     Async Function ProcessURLAsync(url As String, client As HttpClient, ct As CancellationToken) As Task(Of Integer)
 
         ' GetAsync returns a Task(Of HttpResponseMessage).
@@ -236,9 +236,9 @@ End Class
 ' Download complete.
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Fine-Tuning Your Async Application (Visual Basic)](fine-tuning-your-async-application.md) (Ajuste de una aplicación asincrónica [Visual Basic])
 - [Programación asincrónica con Async y Await (Visual Basic)](index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Ejemplo asincrónico: Ajustar la aplicación)
+- [Ejemplo de async: Ajuste de la aplicación](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
