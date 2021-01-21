@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una aplicación .NET Core qu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: ce7ac826feaf4542307abefde6d40a319d78e423
-ms.sourcegitcommit: c04535ad05e374fb269fcfc6509217755fbc0d54
+ms.openlocfilehash: d3b532ae72a80eef9603fc6f3ada8c11cae966dd
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91247597"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187904"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Creación de una aplicación de .NET Core con complementos
 
@@ -22,7 +22,10 @@ Este tutorial muestra cómo crear un contexto <xref:System.Runtime.Loader.Assemb
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Instale el [SDK de .NET Core 3.0](https://dotnet.microsoft.com/download) o una versión más reciente.
+- Instale el [SDK de .NET 5](https://dotnet.microsoft.com/download) o una versión más reciente.
+
+> [!NOTE]
+> El código de ejemplo tiene como destino .NET 5, pero todas las características que usa se incluyeron en .NET Core 3.0 y están disponibles en todas las versiones de .NET desde entonces.
 
 ## <a name="create-the-application"></a>Crear la aplicación
 
@@ -239,7 +242,7 @@ Ahora, abra el archivo *HelloPlugin.csproj*. Debería tener un aspecto similar a
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -287,7 +290,7 @@ Esto evita que los ensamblados `A.PluginBase` se copien en el directorio de sali
 
 ## <a name="plugin-target-framework-recommendations"></a>Recomendaciones para plataformas de destino de complemento
 
-Como en la carga de dependencias de complemento se usa el archivo *deps.json*, hay un problema relacionado con la plataforma de destino del complemento. En concreto, los complementos deben tener como destino un runtime como .NET Core 3.0, en lugar de una versión de .NET Standard. El archivo *.deps.json* se genera en función de la plataforma de destino del proyecto y, como muchos paquetes compatibles con .NET Standard incluyen ensamblados de referencia para compilar en .NET Standard y ensamblados de implementación para runtimes específicos, es posible que el archivo *.deps.json* no vea correctamente los ensamblados de implementación, o bien que tome la versión de .NET Standard de un ensamblado en lugar de la de .NET Core que se espera.
+Como en la carga de dependencias de complemento se usa el archivo *deps.json*, hay un problema relacionado con la plataforma de destino del complemento. En concreto, los complementos deben tener como destino un entorno de ejecución como .NET 5, en lugar de una versión de .NET Standard. El archivo *.deps.json* se genera en función de la plataforma de destino del proyecto y, como muchos paquetes compatibles con .NET Standard incluyen ensamblados de referencia para compilar en .NET Standard y ensamblados de implementación para runtimes específicos, es posible que el archivo *.deps.json* no vea correctamente los ensamblados de implementación, o bien que tome la versión de .NET Standard de un ensamblado en lugar de la de .NET Core que se espera.
 
 ## <a name="plugin-framework-references"></a>Referencias del marco de trabajo de complementos
 

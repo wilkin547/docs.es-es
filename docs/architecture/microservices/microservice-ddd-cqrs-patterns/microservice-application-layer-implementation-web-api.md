@@ -1,13 +1,13 @@
 ---
 title: Implementación del nivel de aplicación de microservicios mediante la API web
 description: Comprenda los procesos de inserción de dependencias y los patrones de mediador y sus detalles de implementación en la capa de aplicación de la API web.
-ms.date: 08/17/2020
-ms.openlocfilehash: 45121026e06c55258a16f41aa801c06808a6919f
-ms.sourcegitcommit: 721c3e4bdbb1ea0bb420818ec944c538fe5c513a
+ms.date: 01/13/2021
+ms.openlocfilehash: bf37b0bfc7d9438752673d1c617657822b2a48ad
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96437786"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188977"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementación del nivel de aplicación de microservicios mediante la API web
 
@@ -27,7 +27,7 @@ En ASP.NET Core se incluye un simple [contenedor de IoC integrado](/aspnet/core/
 
 Normalmente, le interesará insertar dependencias que implementen objetos de infraestructura. Una dependencia habitual para insertar es un repositorio. Pero también podría insertar cualquier otra dependencia de infraestructura que pueda tener. Para las implementaciones más sencillas, también podría insertar directamente el objeto de patrón de unidades de trabajo (el objeto DbContext de EF), porque DBContext también es la implementación de los objetos de persistencia de infraestructura.
 
-En el ejemplo siguiente, puede ver cómo .NET Core inserta los objetos de repositorio necesarios a través del constructor. La clase es un controlador de comandos, que se explica en esta sección.
+En el ejemplo siguiente, puede ver cómo .NET inserta los objetos necesarios del repositorio mediante el constructor. La clase es un controlador de comandos, que se explica en esta sección.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -111,7 +111,7 @@ El modelo más común al registrar los tipos en un contenedor de IoC es registra
 
 #### <a name="use-the-scrutor-library-for-automatic-types-registration"></a>Uso de la biblioteca Scrutor para el registro de tipos automático
 
-Al usar DI en .NET Core, es posible que le interese poder examinar un ensamblado y registrar sus tipos de manera automática por convención. Actualmente, esta característica no está disponible en ASP.NET Core, pero puede usar la biblioteca [Scrutor](https://github.com/khellang/Scrutor) para hacerlo. Este enfoque resulta conveniente cuando existen docenas de tipos que deben registrarse en el contenedor de IoC.
+Al usar DI en .NET, es posible que le interese poder examinar un ensamblado y registrar sus tipos de manera automática por convención. Actualmente, esta característica no está disponible en ASP.NET Core, pero puede usar la biblioteca [Scrutor](https://github.com/khellang/Scrutor) para hacerlo. Este enfoque resulta conveniente cuando existen docenas de tipos que deben registrarse en el contenedor de IoC.
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
@@ -503,7 +503,7 @@ En cualquier caso, debe ser una decisión basada en los requisitos empresariales
 
 Como implementación de ejemplo, en esta guía se propone el uso de la canalización de proceso basada en el patrón de mediador para controlar la ingesta de comandos y enrutarlos, en memoria, a los controladores de comandos correctos. En la guía también se propone la aplicación de [comportamientos](https://github.com/jbogard/MediatR/wiki/Behaviors) para separar las cuestiones transversales.
 
-Para la implementación en .NET Core, hay varias bibliotecas de código abierto disponibles que implementan el patrón de mediador. En esta guía se usa la biblioteca de código abierto [MediatR](https://github.com/jbogard/MediatR) (creada por Jimmy Bogard), pero puede usar otro enfoque. MediatR es una biblioteca pequeña y simple que permite procesar mensajes en memoria como un comando, mientras se aplican elementos Decorator o comportamientos.
+Para la implementación en .NET, hay varias bibliotecas de código abierto disponibles que implementan el patrón de mediador. En esta guía se usa la biblioteca de código abierto [MediatR](https://github.com/jbogard/MediatR) (creada por Jimmy Bogard), pero puede usar otro enfoque. MediatR es una biblioteca pequeña y simple que permite procesar mensajes en memoria como un comando, mientras se aplican elementos Decorator o comportamientos.
 
 El uso del patrón de mediador ayuda a reducir el acoplamiento y aislar los problemas del trabajo solicitado, mientras se conecta automáticamente al controlador que lleva a cabo ese trabajo, en este caso, a controladores de comandos.
 

@@ -1,17 +1,17 @@
 ---
 title: Implementación de lecturas/consultas en un microservicio CQRS
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación del lado de consultas de CQRS en el microservicio Ordering en eShopOnContainers mediante Dapper.
-ms.date: 10/08/2018
-ms.openlocfilehash: e6ea7b4b7b37df9ee972319f597ab045bf3bd215
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.date: 01/13/2021
+ms.openlocfilehash: 047fc3893dcaf72a17d29f5560c928879757d024
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678808"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188925"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementación de lecturas/consultas en un microservicio CQRS
 
-Para lecturas/consultas, el microservicio de pedidos (Ordering) de la aplicación de referencia eShopOnContainers implementa las consultas de manera independiente del modelo DDD y el área transaccional. Esto se hacía principalmente porque las demandas de consultas y transacciones son muy diferentes. Las escrituras ejecutan transacciones que deben ser compatibles con la lógica del dominio. Por otro lado, las consultas son idempotentes y se pueden segregar de las reglas de dominio.
+Para lecturas/consultas, el microservicio de pedidos (Ordering) de la aplicación de referencia eShopOnContainers implementa las consultas de manera independiente del modelo DDD y el área transaccional. Esta implementación se hacía principalmente porque las demandas de consultas y transacciones son muy diferentes. Las escrituras ejecutan transacciones que deben ser compatibles con la lógica del dominio. Por otro lado, las consultas son idempotentes y se pueden segregar de las reglas de dominio.
 
 El enfoque es sencillo, como se muestra en la figura 7-3. La interfaz API se implementa mediante los controladores de API Web con cualquier infraestructura, como un microasignador objeto-relacional (ORM) como Dapper, y devolviendo ViewModel dinámicos según las necesidades de las aplicaciones de interfaz de usuario.
 
@@ -21,7 +21,7 @@ El enfoque es sencillo, como se muestra en la figura 7-3. La interfaz API se imp
 
 El enfoque más sencillo para el lado de las consultas en un enfoque CQRS simplificado se puede implementar consultando la base de datos con un Micro-ORM como Dapper, devolviendo ViewModel dinámicos. Las definiciones de consulta realizan una consulta a la base de datos y devuelven un ViewModel dinámico creado sobre la marcha para cada consulta. Puesto que las consultas son idempotentes, no cambian los datos por muchas veces que ejecute una consulta. Por lo tanto, no es necesario estar restringido por un patrón DDD usado en el lado transaccional, como agregados y otros patrones, y por eso las consultas se separan del área transaccional. Consulta la base de datos para obtener los datos que necesita la interfaz de usuario y devolver un ViewModel dinámico que no tiene que estar definido estáticamente en ningún lugar (no hay clases para los ViewModel), excepto en las propias instrucciones SQL.
 
-Puesto que se trata de un método sencillo, el código necesario para el lado de las consultas (como código que usa un micro ORM como [Dapper](https://github.com/StackExchange/Dapper)) pueden implementarse [dentro del mismo proyecto de API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). Esto se muestra en la Figura 7-4. Las consultas se definen en el proyecto de microservicio **Ordering.API** dentro de la solución eShopOnContainers.
+Puesto que se trata de un método sencillo, el código necesario para el lado de las consultas (como código que usa un micro ORM como [Dapper](https://github.com/StackExchange/Dapper)) pueden implementarse [dentro del mismo proyecto de API Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). En la figura 7-4 se muestra este enfoque. Las consultas se definen en el proyecto de microservicio **Ordering.API** dentro de la solución eShopOnContainers.
 
 ![Captura de pantalla de la carpeta Queries del proyecto Ordering.API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
@@ -33,7 +33,7 @@ Dado que las consultas se realizan para obtener los datos que necesitan para las
 
 Los datos devueltos (ViewModel) pueden ser el resultado de combinar datos de varias entidades o tablas de la base de datos, o incluso de varios agregados definidos en el modelo de dominio para el área transaccional. En este caso, dado que va a crear consultas independientes del modelo de dominio, se ignoran las restricciones y los límites de agregados, y se pueden consultar cualquier tabla y columna que necesite. Este enfoque proporciona gran flexibilidad y productividad a los desarrolladores que crean o actualizan las consultas.
 
-Los elementos ViewModels pueden ser tipos estáticos definidos en clases (como se implementa en el microservicio de pedidos). O bien, se pueden crear dinámicamente en función de las consultas realizadas, lo que resulta muy ágil para los desarrolladores.
+Los elementos ViewModels pueden ser tipos estáticos definidos en clases (como se implementa en el microservicio de pedidos). O bien, se pueden crear dinámicamente en función de las consultas realizadas, lo que resulta ágil para los desarrolladores.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Uso de Dapper como micro ORM para realizar consultas
 

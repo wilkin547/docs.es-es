@@ -1,21 +1,21 @@
 ---
 title: Aplicar los patrones CQRS y DDD simplificados en un microservicio
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Información sobre la relación general entre patrones DDD y CQRS.
-ms.date: 10/08/2018
-ms.openlocfilehash: e4e36bafff39f5f30d6371ed7c113322a85c3362
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 01/13/2021
+ms.openlocfilehash: c1a990689a446e2efba48beafe4b55d614b54427
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805594"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188964"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Aplicación de patrones CQRS y DDD simplificados en un microservicio
 
-CQRS es un patrón de arquitectura que separa los modelos para leer y escribir datos. Bertrand Meyer definió originalmente el término relacionado [Separación de consultas y comandos (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) en su libro *Construcción de software orientada a objetos*. La idea básica es que puede dividir las operaciones de un sistema en dos categorías claramente diferenciadas:
+CQRS es un patrón de arquitectura que separa los modelos para leer y escribir datos. Bertrand Meyer definió originalmente el término relacionado [Separación de consultas y comandos (CQS)](https://martinfowler.com/bliki/CommandQuerySeparation.html) en su libro *Construcción de software orientado a objetos*. La idea básica es que puede dividir las operaciones de un sistema en dos categorías claramente diferenciadas:
 
-- Consultas. Devuelven un resultado sin cambiar el estado del sistema y no tienen efectos secundarios.
+- Consultas. Estas consultas devuelven un resultado sin cambiar el estado del sistema y no tienen efectos secundarios.
 
-- Comandos. Cambian el estado de un sistema.
+- Comandos. Estos comandos cambian el estado de un sistema.
 
 CQS es un concepto simple: se trata de métodos dentro del mismo objeto que son consultas o comandos. Cada método devuelve o transforma el estado, pero no ambas cosas. Incluso un único objeto de patrón de repositorio puede cumplir con CQS. CQS puede considerarse un principio fundamental para CQRS.
 

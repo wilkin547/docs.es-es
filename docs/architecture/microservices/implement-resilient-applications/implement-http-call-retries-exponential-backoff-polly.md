@@ -1,19 +1,19 @@
 ---
 title: Implementación de reintentos de llamada HTTP con retroceso exponencial con Polly
 description: Obtenga información sobre cómo controlar los errores HTTP con Polly e IHttpClientFactory.
-ms.date: 03/03/2020
-ms.openlocfilehash: 49396dd545a05699278254474c77acf1483e0e0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 8cffc644d73eaec5019e00c6a83de8635b569cde
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846801"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189055"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-ihttpclientfactory-and-polly-policies"></a>Implementación de reintentos de llamada HTTP con retroceso exponencial con IHttpClientFactory y las directivas de Polly
 
 El enfoque recomendado para los reintentos con retroceso exponencial consiste en aprovechar las ventajas de las bibliotecas de .NET más avanzadas como la biblioteca de código abierto [Polly](https://github.com/App-vNext/Polly).
 
-Polly es una biblioteca de .NET que proporciona capacidades de resistencia y control de errores transitorios. Puede implementar esas funcionalidades mediante la aplicación de directivas de Polly como las de reintento, interruptor, aislamiento compartimentado, tiempo de espera y reserva. Polly tiene como destino .NET Framework 4.x y .NET Standard 1.0, 1.1 y 2.0 (que admite .NET Core).
+Polly es una biblioteca de .NET que proporciona capacidades de resistencia y control de errores transitorios. Puede implementar esas funcionalidades mediante la aplicación de directivas de Polly como las de reintento, interruptor, aislamiento compartimentado, tiempo de espera y reserva. Polly tiene como destino .NET Framework 4.x y .NET Standard 1.0, 1.1 y 2.0 (que admite .NET Core y versiones posteriores).
 
 En los pasos siguientes se muestra cómo usar reintentos HTTP con Polly integrados en `IHttpClientFactory`, que se explica en la sección anterior.
 

@@ -1,13 +1,13 @@
 ---
 title: Resistencia y alta disponibilidad en microservicios
 description: Con el objetivo de ofrecer una alta disponibilidad, los microservicios deben estar diseñados para soportar errores en la red transitoria y las dependencias.
-ms.date: 09/20/2018
-ms.openlocfilehash: 601255c1e6941b2de9fdb34098dea7edf6d8b987
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 8afe92babb38cc3a87f26315b42311de3269de9d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172455"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188457"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resistencia y alta disponibilidad en microservicios
 
@@ -15,9 +15,9 @@ Tratar errores inesperados es uno de los problemas más difíciles de resolver, 
 
 Un microservicio debe ser resistente a errores y poder reiniciarse a menudo en otra máquina a efectos de disponibilidad. Esta resistencia también se refiere al estado que se guardó en nombre del microservicio, en los casos en que el estado se puede recuperar a partir del microservicio, y al hecho de si el microservicio puede reiniciarse correctamente. En otras palabras, debe haber resistencia en la capacidad de proceso (el proceso puede reiniciarse en cualquier momento), así como en el estado o los datos (sin pérdida de datos y que se mantenga la consistencia de los datos).
 
-Los problemas de resistencia se agravan durante otros escenarios, como cuando se producen errores durante la actualización de una aplicación. El microservicio, trabajando con el sistema de implementación, debe determinar si puede avanzar a la versión más reciente o, en su lugar, revertir a una versión anterior para mantener un estado consistente. Deben tenerse en cuenta cuestiones como si están disponibles suficientes máquinas para seguir avanzando y cómo recuperar versiones anteriores del microservicio. Esto requiere que el microservicio emita información de mantenimiento para que la aplicación en conjunto y el orquestador puedan tomar estas decisiones.
+Los problemas de resistencia se agravan durante otros escenarios, como cuando se producen errores durante la actualización de una aplicación. El microservicio, trabajando con el sistema de implementación, debe determinar si puede avanzar a la versión más reciente o, en su lugar, revertir a una versión anterior para mantener un estado consistente. Deben tenerse en cuenta cuestiones como si están disponibles suficientes máquinas para seguir avanzando y cómo recuperar versiones anteriores del microservicio. Este enfoque requiere que el microservicio emita información sobre el estado para que la aplicación en conjunto y el orquestador puedan tomar estas decisiones.
 
-Además, la resistencia está relacionada con cómo deben comportarse los sistemas basados en la nube. Como se ha mencionado, un sistema basado en la nube debe estar preparado para los errores e intentar recuperarse automáticamente de ellos. Por ejemplo, en caso de errores de red o de contenedor, las aplicaciones de cliente o los servicios de cliente deben disponer de una estrategia para volver a intentar enviar mensajes o solicitudes, ya que en muchos casos, los errores en la nube son parciales. En la sección [Implementar aplicaciones resistentes](../implement-resilient-applications/index.md) de esta guía se explica cómo controlar errores parciales. Se describen técnicas como los reintentos con retroceso exponencial o el patrón de interruptor en .NET Core en que se usan bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
+Además, la resistencia está relacionada con cómo deben comportarse los sistemas basados en la nube. Como se ha mencionado, un sistema basado en la nube debe estar preparado para los errores e intentar recuperarse automáticamente de ellos. Por ejemplo, en caso de errores de red o de contenedor, las aplicaciones de cliente o los servicios de cliente deben disponer de una estrategia para volver a intentar enviar mensajes o solicitudes, ya que en muchos casos, los errores en la nube son parciales. En la sección [Implementar aplicaciones resistentes](../implement-resilient-applications/index.md) de esta guía se explica cómo controlar errores parciales. Se describen técnicas como los reintentos con retroceso exponencial o el patrón de interruptor en .NET mediante el uso de bibliotecas como [Polly](https://github.com/App-vNext/Polly), que ofrece una gran variedad de directivas para controlar este asunto.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Administración del estado y diagnóstico en microservicios
 
@@ -38,7 +38,7 @@ También tiene la opción de usar una biblioteca de código abierto excelente ll
 
 Los registros ofrecen información sobre cómo se ejecuta una aplicación o un servicio, incluidos las excepciones, las advertencias y los mensajes informativos simples. Normalmente, cada registro se presenta en un formato de texto con una línea por evento, aunque las excepciones también suelen mostrar el seguimiento de la pila en varias líneas.
 
-En las aplicaciones monolíticas basadas en servidor, puede simplemente escribir registros en un archivo en disco (un archivo de registro) y, a continuación, analizarlo con cualquier herramienta. Puesto que la ejecución de la aplicación se limita a un servidor o una máquina virtual fijos, por lo general no es demasiado complejo analizar el flujo de eventos. Sin embargo, en una aplicación distribuida en que se ejecutan varios servicios a través de muchos nodos en un clúster de orquestador, poder correlacionar los eventos distribuidos supone un reto.
+En las aplicaciones monolíticas basadas en servidor, puede escribir registros en un archivo en disco (un archivo de registro) y, luego, analizarlo con cualquier herramienta. Puesto que la ejecución de la aplicación se limita a un servidor o una máquina virtual fijos, por lo general no es demasiado complejo analizar el flujo de eventos. Sin embargo, en una aplicación distribuida en que se ejecutan varios servicios a través de muchos nodos en un clúster de orquestador, poder correlacionar los eventos distribuidos supone un reto.
 
 Una aplicación basada en microservicio no debe intentar almacenar la secuencia de salida de eventos o archivos de registro por sí misma y ni siquiera intentar administrar el enrutamiento de los eventos a una ubicación central. Debe ser transparente, lo que significa que cada proceso solo debe escribir su secuencia de eventos en una salida estándar que la infraestructura de entorno de ejecución donde se está ejecutando recopilará por debajo. Un ejemplo de estos enrutadores de secuencia de eventos es [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), que recopila secuencias de eventos de varios orígenes y las publica en sistemas de salida. Estos pueden incluir salidas estándar simples para un entorno de desarrollo, o sistemas en la nube como [Azure Monitor](https://azure.microsoft.com/services/monitor//) y [Azure Diagnostics](/azure/azure-monitor/platform/diagnostics-extension-overview). También hay buenas plataformas y herramientas de análisis de registros de otros fabricantes que pueden buscar, alertar, informar y supervisar registros, incluso en tiempo real, como [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
@@ -50,7 +50,7 @@ Crear una aplicación basada en microservicio implica enfrentarse a cierto grado
 
 **Figura 4-22**. Una plataforma de microservicio es fundamental para la administración del estado de una aplicación
 
-Es muy difícil que pueda resolver por sí mismo los problemas complejos que se muestran en la figura 4-22. Los equipos de desarrollo deben centrarse en solucionar problemas empresariales y crear aplicaciones personalizadas con enfoques basados en microservicio. No deben centrarse en solucionar problemas de infraestructura complejos; si fuera así, el coste de cualquier aplicación basada en microservicio sería enorme. Por tanto, hay plataformas orientadas a microservicios, denominadas orquestadores o clústeres de microservicio, que tratan de solucionar los problemas complejos de crear y ejecutar un servicio y usar de forma eficaz los recursos de infraestructura. Esto reduce las complejidades de crear aplicaciones que usan un enfoque de microservicios.
+Es difícil que pueda resolver por su cuenta los problemas complejos que se muestran en la figura 4-22. Los equipos de desarrollo deben centrarse en solucionar problemas empresariales y crear aplicaciones personalizadas con enfoques basados en microservicio. No deben centrarse en solucionar problemas de infraestructura complejos; si fuera así, el coste de cualquier aplicación basada en microservicio sería enorme. Por tanto, hay plataformas orientadas a microservicios, denominadas orquestadores o clústeres de microservicio, que tratan de solucionar los problemas complejos de crear y ejecutar un servicio y usar de forma eficaz los recursos de infraestructura. Este enfoque reduce las complejidades de crear aplicaciones que usan un enfoque de microservicios.
 
 Distintos orquestadores podrían parecer similares, pero las comprobaciones de diagnóstico y estado que ofrece cada uno de ellos difieren en las características y el estado de madurez, y a veces dependen de la plataforma del sistema operativo, como se explica en la sección siguiente.
 

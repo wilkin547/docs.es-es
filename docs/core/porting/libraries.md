@@ -3,12 +3,12 @@ title: Traslado de bibliotecas a .NET Core
 description: Obtenga información sobre cómo portar proyectos de .NET Framework a .NET Core.
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 25c53cdc71f4269b058953ef1903dc72d222f65f
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: 09874899018abc09051af17771c9df829b8dbe96
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633915"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189686"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -30,8 +30,8 @@ En este artículo se describe la especificación formal de las API de .NET que s
 [Desarrollo de bibliotecas con herramientas multiplataforma](../tutorials/libraries.md)\
 En este artículo se explica cómo escribir bibliotecas con la CLI de .NET Core.
 
-[Adiciones al formato *csproj* para .NET Core](../tools/csproj.md)\
-En este artículo se describen los cambios que se han agregado al archivo de proyecto como parte del cambio a *csproj* y MSBuild.
+[SDK de proyectos de .NET](../project-sdk/overview.md)\
+En este artículo se describe el formato de archivo de proyecto de estilo SDK.
 
 [Migración a .NET Core - Análisis de las dependencias de terceros](third-party-deps.md)\
 En este artículo se trata la portabilidad de dependencias de terceros y qué hacer cuando una dependencia de paquetes de NuGet no se ejecuta en .NET Core.

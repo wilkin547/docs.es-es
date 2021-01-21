@@ -1,17 +1,17 @@
 ---
-title: Implementar un modelo de dominio de microservicio con .NET Core
+title: Implementación de un modelo de dominio de microservicio con .NET
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación de un modelo de dominio orientado a un DDD.
-ms.date: 10/08/2018
-ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 9689058b77701eee35ef018ed2e3f18bd648b0f4
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152551"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188275"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementación de un modelo de dominio de microservicio con .NET Core
 
-En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET Core (código C\# sin formato) y EF Core. El modelo de dominio solo estará formado por el código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
+En la sección anterior se han explicado los principios y patrones de diseño fundamentales para diseñar un modelo de dominio. Ahora es el momento de analizar las posibles formas de implementar el modelo de dominio mediante .NET (código C\# sin formato) y EF Core. El modelo de dominio solo estará formado por el código. Tiene solo los requisitos del modelo de EF Core, pero no las dependencias reales en EF. En el modelo de dominio no debe haber dependencias fuertes ni referencias a EF Core ni ningún otro ORM.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Estructura del modelo de dominio en una biblioteca personalizada de .NET Standard
 
@@ -46,7 +46,7 @@ Si abre cualquiera de los archivos de una carpeta de agregado, puede ver que est
 En .NET, los modelos de dominio se implementan mediante la creación de clases POCO que implementan las entidades de dominio. En el ejemplo siguiente, la clase Order se define como una entidad y también como una raíz de agregado. Dado que la clase Order deriva de la clase base Entity, puede reutilizar código común relacionado con entidades. Tenga en cuenta que estas clases base e interfaces las define el usuario en el proyecto de modelo de dominio, por lo que es el código, no el código de infraestructura de un ORM, como EF.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 5.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {

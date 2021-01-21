@@ -1,13 +1,13 @@
 ---
 title: Definir una aplicación de varios contenedores con docker-compose.yml
 description: Cómo se especifica la composición de microservicios para una aplicación de varios contenedores con docker-compose.yml.
-ms.date: 01/30/2020
-ms.openlocfilehash: 81303be621da54b7336228585e86d1120a6b7598
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.date: 01/13/2021
+ms.openlocfilehash: 224b06c6a10834b42218746964f05b055d947235
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739794"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188795"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definir una aplicación de varios contenedores con docker-compose.yml
 
@@ -17,7 +17,7 @@ Por ejemplo, puede describir explícitamente cómo quiere implementar la aplicac
 
 Básicamente define cada uno de los contenedores que quiere implementar, además de ciertas características para cada implementación de contenedor. Una vez que tenga un archivo de descripción de la implementación de varios contenedores, puede implementar la solución completa en una sola acción organizada por el comando de la CLI [docker-compose up](https://docs.docker.com/compose/overview/) o bien puede implementarla de forma transparente en Visual Studio. En caso contrario, tendría que usar la CLI de Docker para implementar uno a uno los contenedores en varios pasos mediante el comando `docker run` desde la línea de comandos. Por lo tanto, cada servicio definido en el archivo docker-compose.yml debe especificar exactamente una imagen o compilación. El resto de las claves son opcionales y son análogas a sus equivalentes de la línea de comandos de `docker run`.
 
-El siguiente código YAML es la definición de un archivo docker-compose.yml posiblemente global pero único para el ejemplo de eShopOnContainers. Este no es el archivo docker-compose real de eShopOnContainers, sino que es una versión simplificada y consolidada en un único archivo, lo cual no es la mejor manera de trabajar con archivos docker-compose, como se explicará más adelante.
+El siguiente código YAML es la definición de un archivo docker-compose.yml posiblemente global pero único para el ejemplo de eShopOnContainers. Este código no es el archivo docker-compose real de eShopOnContainers. sino que es una versión simplificada y consolidada en un único archivo, lo cual no es la mejor manera de trabajar con archivos docker-compose, como se explicará más adelante.
 
 ```yml
 version: '3.4'
@@ -127,7 +127,7 @@ Dado que la cadena de conexión se define mediante una variable de entorno, podr
 
 - Reenvía el puerto 80 expuesto del contenedor al puerto 5101 del equipo host de Docker (la máquina virtual de Linux).
 
-- Vincula el servicio web al servicio **sqldata** (la base de datos de instancias de SQL Server para Linux que se ejecuta en un contenedor). Al especificar esta dependencia, el contenedor catalog-api no se iniciará hasta que se haya iniciado el contenedor sqldata. Esto es importante porque catalog-api necesita primero que la base de datos de SQL Server esté en ejecución. Pero este tipo de dependencia de contenedor no es suficiente en muchos casos, dado que Docker efectúa comprobaciones únicamente en el nivel de contenedor. A veces es posible que el servicio (en este caso SQL Server) aún no esté listo, por lo que es aconsejable implementar la lógica de reintento con retroceso exponencial en los microservicios de su cliente. De este modo, si un contenedor de dependencia no está listo durante un período de tiempo breve, la aplicación seguirá siendo resistente.
+- Vincula el servicio web al servicio **sqldata** (la base de datos de instancias de SQL Server para Linux que se ejecuta en un contenedor). Al especificar esta dependencia, el contenedor catalog-api no se iniciará hasta que se haya iniciado el contenedor sqldata. Este aspecto es importante porque catalog-api necesita primero que la base de datos de SQL Server esté en ejecución. Pero este tipo de dependencia de contenedor no es suficiente en muchos casos, dado que Docker efectúa comprobaciones únicamente en el nivel de contenedor. A veces es posible que el servicio (en este caso SQL Server) aún no esté listo, por lo que es aconsejable implementar la lógica de reintento con retroceso exponencial en los microservicios de su cliente. De este modo, si un contenedor de dependencia no está listo durante un período de tiempo breve, la aplicación seguirá siendo resistente.
 
 - Está configurado para permitir el acceso a los servidores externos: el valor de configuración extra\_hosts le permite obtener acceso a máquinas o servidores externos situados fuera del host de Docker (es decir, fuera de la máquina virtual de Linux predeterminada, que es un host de Docker de desarrollo), como una instancia local de SQL Server en su equipo de desarrollo.
 
@@ -169,7 +169,7 @@ En cualquier caso, docker-compose es una herramienta y un formato de metadatos p
 
 ### <a name="using-multiple-docker-compose-files-to-handle-several-environments"></a>Usar varios archivos docker-compose para controlar distintos entornos
 
-Al fijar como objetivo entornos diferentes, debe usar varios archivos compose. Así puede crear distintas variantes de configuración en función del entorno.
+Al fijar como objetivo entornos diferentes, debe usar varios archivos compose. Este enfoque permite crear distintas variantes de configuración en función del entorno.
 
 #### <a name="overriding-the-base-docker-compose-file"></a>Invalidar el archivo base docker-compose
 
@@ -434,10 +434,10 @@ Los valores establecidos en el entorno en tiempo de ejecución siempre invalidan
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Compilación de imágenes optimizadas de Docker de ASP.NET Core
 
-Si está explorando Docker y .NET Core en orígenes de Internet, encontrará Dockerfiles que muestran lo fácil que es compilar una imagen de Docker copiando el origen en un contenedor. Estos ejemplos sugieren que, si usa una configuración simple, puede tener una imagen de Docker con el entorno empaquetado con la aplicación. En el ejemplo siguiente se muestra un Dockerfile sencillo en esta misma línea.
+Si está explorando Docker y .NET en orígenes de Internet, encontrará Dockerfiles que muestran lo fácil que es compilar una imagen de Docker copiando el origen en un contenedor. Estos ejemplos sugieren que, si usa una configuración simple, puede tener una imagen de Docker con el entorno empaquetado con la aplicación. En el ejemplo siguiente se muestra un Dockerfile sencillo en esta misma línea.
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -448,9 +448,9 @@ ENTRYPOINT ["dotnet", "run"]
 
 Un Dockerfile como este funcionará, pero puede optimizar considerablemente sus imágenes, sobre todo las imágenes de producción.
 
-En el modelo de microservicios y contenedores están iniciando contenedores constantemente. El método habitual de usar los contenedores no reinicia un contenedor inactivo, porque el contenedor se puede descartar. Los orquestadores (como Kubernetes y Azure Service Fabric) tan solo crean instancias de imágenes. Esto significa que tendría que efectuar una optimización precompilando la aplicación al crearla para que el proceso de creación de instancias sea más rápido. Cuando se inicia el contenedor, tendría que estar preparado para ejecutarse. No restaure ni compile en tiempo de ejecución con los comandos `dotnet restore` y `dotnet build` de la CLI, como puede ver en las entradas de blog sobre .NET Core y Docker.
+En el modelo de microservicios y contenedores están iniciando contenedores constantemente. El método habitual de usar los contenedores no reinicia un contenedor inactivo, porque el contenedor se puede descartar. Los orquestadores (como Kubernetes y Azure Service Fabric) crean instancias de imágenes. Esto significa que tendría que efectuar una optimización precompilando la aplicación al crearla para que el proceso de creación de instancias sea más rápido. Cuando se inicia el contenedor, tendría que estar preparado para ejecutarse. No realice restauraciones ni compilaciones en tiempo de ejecución con los comandos `dotnet restore` y `dotnet build` de la CLI, como puede ver en las entradas de blog sobre .NET y Docker.
 
-El equipo de .NET ha estado trabajando mucho para convertir .NET Core y ASP.NET Core en un marco optimizado para contenedores. .NET Core no solo es un marco ligero con una superficie de memoria pequeña; el equipo se ha centrado en imágenes de Docker optimizadas para los tres escenarios principales y las han publicado en el registro de Docker Hub en *dotnet/core*, empezando por la versión 2.1:
+El equipo de .NET ha estado trabajando mucho para convertir .NET y ASP.NET Core en un marco optimizado para contenedores. .NET no solo es un marco ligero con una superficie de memoria pequeña; el equipo se ha centrado en imágenes de Docker optimizadas para los tres escenarios principales y las ha publicado en el registro de Docker Hub en *dotnet/* , empezando por la versión 2.1:
 
 1. **Desarrollo**: La prioridad es la capacidad de iterar con rapidez y depurar cambios, donde el tamaño es secundario.
 
@@ -458,7 +458,7 @@ El equipo de .NET ha estado trabajando mucho para convertir .NET Core y ASP.NET 
 
 3. **Producción**: El foco es la implementación y el inicio rápido de los contenedores, por lo que estas imágenes se limitan a los archivos binarios y el contenido necesario para ejecutar la aplicación.
 
-El equipo de .NET proporciona tres variantes básicas en [dotnet/core](https://hub.docker.com/_/microsoft-dotnet/) (en Docker Hub):
+El equipo de .NET proporciona cuatro variantes básicas en [dotnet](https://hub.docker.com/_/microsoft-dotnet/) (en Docker Hub):
 
 1. **sdk**: para los escenarios de desarrollo y compilación
 1. **aspnet**: para los escenarios de producción de ASP.NET
@@ -472,7 +472,7 @@ Para un inicio más rápido, las imágenes en tiempo de ejecución también conf
 - **Compilación de imágenes de Docker optimizadas con ASP.NET Core**
   <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
-- **Compilación de imágenes de Docker para aplicaciones de .NET Core**
+- **Compilación de imágenes de Docker para aplicaciones de .NET**
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]

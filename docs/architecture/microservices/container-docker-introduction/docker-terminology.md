@@ -1,13 +1,13 @@
 ---
 title: Terminología de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Terminología de Docker
-ms.date: 01/30/2020
-ms.openlocfilehash: b30ea26ee174caf3484931945c832c72a1acf93d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/13/2021
+ms.openlocfilehash: 567635060502ec3b2293f5eee6dd8dfe4d934ff7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707771"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189348"
 ---
 # <a name="docker-terminology"></a>Terminología de Docker
 
@@ -35,7 +35,7 @@ docker build
 
 **Registro**: servicio que proporciona acceso a los repositorios. El registro predeterminado para la mayoría de las imágenes públicas es [Docker Hub](https://hub.docker.com/) (propiedad de Docker como una organización). Normalmente, un registro contiene repositorios procedentes de varios equipos. Las empresas suelen tener registros privados para almacenar y administrar imágenes que han creado. Azure Container Registry es otro ejemplo.
 
-**Imagen multiarquitectura**: En el caso de la arquitectura múltiple, es una característica que simplifica la selección de la imagen adecuada, según la plataforma donde se ejecuta Docker. Por ejemplo, si un Dockerfile solicita una imagen base **FROM mcr.microsoft.com/dotnet/sdk:3.1** del registro, en realidad obtendrá **3.1-sdk-nanoserver-1909**, **3.1-sdk-nanoserver-1809** o **3.1-sdk-buster-slim**, según el sistema operativo en el que se ejecute Docker y la versión.
+**Imagen multiarquitectura**: En el caso de la arquitectura múltiple, es una característica que simplifica la selección de la imagen adecuada, según la plataforma donde se ejecuta Docker. Por ejemplo, si un Dockerfile solicita una imagen base **mcr.microsoft.com/dotnet/sdk:5.0** del Registro, en realidad obtendrá **5.0-nanoserver-1909**, **5.0-nanoserver-1809** o **5.0-buster-slim**, según el sistema operativo en el que se ejecute Docker y la versión.
 
 **Docker Hub**: registro público para cargar imágenes y trabajar con ellas. Docker Hub proporciona hospedaje de imágenes de Docker, registros públicos o privados, desencadenadores de compilación y enlaces web e integración con GitHub y Bitbucket.
 
@@ -43,7 +43,7 @@ docker build
 
 **Docker Trusted Registry (DTR)** : servicio del registro de Docker (ofrecido por Docker) que se puede instalar de forma local, por lo que se encuentra en el centro de datos y la red de la organización. Es ideal para imágenes privadas que deben administrarse dentro de la empresa. Docker Trusted Registry se incluye como parte del producto Docker Datacenter. Para más información, vea [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
-**Docker Community Edition (CE)** : herramientas de desarrollo para Windows y MacOS para compilar, ejecutar y probar contenedores localmente. Docker CE para Windows proporciona entornos de desarrollo para contenedores de Windows y Linux. El host de Docker de Linux en Windows se basa en una máquina virtual [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization). El host para los contenedores de Windows se basa directamente en Windows. Docker CE para Mac se basa en el marco del hipervisor de Apple y el [hipervisor xhyve](https://github.com/mist64/xhyve), lo que proporciona una máquina virtual de host de Docker de Linux en Mac OS X. Docker CE para Windows y para Mac sustituye a Docker Toolbox, que se basaba en Oracle VirtualBox.
+**Docker Community Edition (CE)** : herramientas de desarrollo para Windows y MacOS para compilar, ejecutar y probar contenedores localmente. Docker CE para Windows proporciona entornos de desarrollo para contenedores de Windows y Linux. El host de Docker de Linux en Windows se basa en una máquina virtual [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization). El host para los contenedores de Windows se basa directamente en Windows. Docker CE para Mac se basa en el marco del hipervisor de Apple y el [hipervisor xhyve](https://github.com/mist64/xhyve), lo que proporciona una máquina virtual de host de Docker de Linux en macOS X. Docker CE para Windows y para Mac sustituye a Docker Toolbox, que se basaba en Oracle VirtualBox.
 
 **Docker Enterprise Edition (EE)** : versión a escala empresarial de las herramientas de Docker para el desarrollo de Linux y Windows.
 

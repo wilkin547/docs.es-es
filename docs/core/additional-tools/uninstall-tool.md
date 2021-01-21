@@ -3,12 +3,12 @@ title: Herramienta de desinstalación
 description: Información general de la herramienta de desinstalación de .NET Core, una herramienta guiada que permite limpiar de forma controlada los SDK y los entornos en tiempo de ejecución de .NET Core.
 author: sfoslund
 ms.date: 05/27/2020
-ms.openlocfilehash: dcfa12a3ec5fe0e8a29c5897ee4c71bfc7352eda
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed43b4ec8437ae0ccaf5f1234758dda9f16bd51e
+ms.sourcegitcommit: 4f5f1855849cb02c3b610c7006ac21d7429f3348
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84590804"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98235357"
 ---
 # <a name="net-core-uninstall-tool"></a>Herramienta de desinstalación de .NET Core
 
@@ -23,7 +23,7 @@ En Windows, la herramienta solo puede desinstalar los SDK y entornos en tiempo d
 
 En macOS, la herramienta solo puede desinstalar los SDK y entornos en tiempo de ejecución ubicados en la carpeta */usr/local/share/dotnet*.
 
-Debido a estas limitaciones, es posible que la herramienta no pueda desinstalar todos los SDK y los entornos en tiempo de ejecución de .NET Core de la máquina. Puede usar el comando `dotnet --info` para buscar todos los SDK y los entornos en tiempo de ejecución de .NET Core instalados, incluidos los entornos en tiempo de ejecución y SDK que esta herramienta no puede quitar. El comando `dotnet-core-uninstall list` muestra qué SDK se pueden desinstalar con la herramienta.
+Debido a estas limitaciones, es posible que la herramienta no pueda desinstalar todos los SDK y los entornos en tiempo de ejecución de .NET Core de la máquina. Puede usar el comando `dotnet --info` para buscar todos los SDK y los entornos en tiempo de ejecución de .NET Core instalados, incluidos los entornos en tiempo de ejecución y SDK que esta herramienta no puede quitar. El comando `dotnet-core-uninstall list` muestra qué SDK se pueden desinstalar con la herramienta. La versión 1.2 y posteriores pueden desinstalar SDK y entornos de ejecución con la versión 5.0 o anteriores, mientras que las versiones anteriores de la herramienta pueden desinstalar la versión 3.1 y anteriores.
 
 ## <a name="install-the-tool"></a>Instalación de la herramienta
 
@@ -295,7 +295,7 @@ Notas:
 
 ### <a name="step-3---uninstall-net-core-sdks-and-runtimes"></a>Paso 3: Desinstalar los SDK y los entornos en tiempo de ejecución de .NET Core
 
-`dotnet-core-uninstall remove` desinstala los SDK y los entornos en tiempo de ejecución de .NET Core especificados por una colección de opciones. La herramienta no se puede usar para desinstalar los SDK y entornos en tiempo de ejecución con la versión 5.0 o posterior.
+`dotnet-core-uninstall remove` desinstala los SDK y los entornos en tiempo de ejecución de .NET Core especificados por una colección de opciones. La versión 1.2 y posteriores pueden desinstalar SDK y entornos de ejecución con la versión 5.0 o anteriores, mientras que las versiones anteriores de la herramienta pueden desinstalar la versión 3.1 y anteriores.
 
 Dado que esta herramienta tiene un comportamiento destructivo, es **altamente** recomendable que realice un simulacro antes de ejecutar el comando remove. El simulacro le mostrará qué SDK y entornos en tiempo de ejecución de .NET Core se quitarán cuando use el comando `remove`. Consulte [¿Puedo quitar una versión?](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version) para saber qué SDK y entornos en tiempo de ejecución se pueden quitar de forma segura.
 

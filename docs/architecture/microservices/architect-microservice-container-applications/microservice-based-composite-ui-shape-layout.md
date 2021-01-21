@@ -1,13 +1,13 @@
 ---
 title: Creación de interfaces de usuario compuestas basadas en microservicios
 description: La arquitectura de microservicios no es solo para el back-end. Obtenga una vista de inspección usándola en el front-end.
-ms.date: 09/20/2018
-ms.openlocfilehash: 1861d3bb6e5d4a0226aa8f3f72a2e0d3e83be56f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/13/2021
+ms.openlocfilehash: 3d866172cf7d15486dd2cc0d5dbb286c77693cea
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72275740"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189420"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Creación de interfaces de usuario compuestas basadas en microservicios
 
@@ -23,7 +23,7 @@ En contraste, los propios microservicios generan y componen con precisión una i
 
 En el momento de iniciarse la aplicación cliente, cada uno de los componentes de la interfaz de usuario cliente (por ejemplo, las clases de TypeScript) se registra con un microservicio de infraestructura capaz de proporcionar ViewModels para un escenario determinado. Si el microservicio cambia la forma, la interfaz de usuario también cambia.
 
-En la figura 4-21 se muestra una versión de este enfoque de interfaz de usuario compuesta. Esto se simplifica porque es posible que tenga otros microservicios que agreguen elementos pormenorizados basados en otras técnicas. Depende de si va a crear un enfoque web tradicional (ASP.NET MVC) o una SPA (aplicación de página única).
+En la figura 4-21 se muestra una versión de este enfoque de interfaz de usuario compuesta. Este enfoque se simplifica, ya que es posible que tenga otros microservicios que agreguen elementos pormenorizados basados en otras técnicas. Depende de si va a crear un enfoque web tradicional (ASP.NET MVC) o una SPA (aplicación de página única).
 
 ![Diagrama de una interfaz de usuario compuesta que consta de muchos modelos de vista.](./media/microservice-based-composite-ui-shape-layout/microservice-generate-composite-ui.png)
 

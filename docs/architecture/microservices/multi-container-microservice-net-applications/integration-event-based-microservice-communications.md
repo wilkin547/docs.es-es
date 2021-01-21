@@ -1,19 +1,19 @@
 ---
 title: Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre los eventos de integración para implementar la comunicación basada en eventos entre microservicios.
-ms.date: 10/02/2018
-ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 65c0414184fdd1bccfbc61ef4df8fdcb88284ebe
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91152538"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188210"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementación de comunicación basada en eventos entre microservicios (eventos de integración)
 
 Como se describió anteriormente, si utiliza una comunicación basada en eventos, un microservicio publica un evento cuando sucede algo importante, como cuando actualiza una entidad de negocio. Otros microservicios se suscriben a esos eventos. Cuando un microservicio recibe un evento, puede actualizar sus propias entidades de negocio, lo que puede comportar que se publiquen más eventos. Esta es la esencia del concepto de la coherencia final. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos puede diseñarse como una interfaz con la API necesaria para suscribirse a eventos, cancelar las suscripciones y publicar eventos. También puede tener una o más implementaciones basadas en cualquier comunicación de mensajería o entre procesos, como una cola de mensajes o un bus de servicio que admita la comunicación asincrónica y un modelo de publicación/suscripción.
 
-Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual proporciona una eventual coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción. En la figura 6-18 siguiente se muestra un evento PriceUpdated publicado mediante un bus de eventos, para que la actualización de los precios se propague a la cesta y a otros microservicios.
+Puede usar eventos para implementar transacciones de negocio que abarquen varios servicios, lo cual termina proporcionando coherencia entre dichos servicios. Una eventual transacción coherente consta de una serie de acciones distribuidas. En cada acción, el microservicio actualiza una entidad de negocio y publica un evento que desencadena la siguiente acción. En la figura 6-18 siguiente se muestra un evento PriceUpdated publicado mediante un bus de eventos, para que la actualización de los precios se propague a la cesta y a otros microservicios.
 
 ![Diagrama de comunicación asincrónica controlada por eventos con un bus de eventos.](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
@@ -35,7 +35,7 @@ Para reiterar: las abstracciones de bus de eventos de ejemplo y la implementaci�
 
 ## <a name="integration-events"></a>Eventos de integración
 
-Los eventos de integración se utilizan para sincronizar el estado de dominio en varios microservicios o sistemas externos. Esto se realiza mediante la publicación de eventos de integración fuera del microservicio. Cuando se publica un evento en varios microservicios de receptor (en tantos microservicios como estén suscritos al evento de integración), el controlador de eventos correspondiente en cada microservicio de receptor controla el evento.
+Los eventos de integración se utilizan para sincronizar el estado de dominio en varios microservicios o sistemas externos. Esta funcionalidad se lleva a cabo mediante la publicación de eventos de integración fuera del microservicio. Cuando se publica un evento en varios microservicios de receptor (en tantos microservicios como estén suscritos al evento de integración), el controlador de eventos correspondiente en cada microservicio de receptor controla el evento.
 
 Un evento de integración es básicamente una clase de almacenamiento de datos, como en el ejemplo siguiente:
 
@@ -76,7 +76,7 @@ En el [patrón de observador](https://en.wikipedia.org/wiki/Observer_pattern), s
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Patrón de publicación/suscripción (Pub/Sus)
 
-El propósito del [patrón de publicación/suscripción ](/previous-versions/msp-n-p/ff649664(v=pandp.10)) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Pero cuando se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "mensaje de agente" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
+El propósito del [patrón de publicación/suscripción ](/previous-versions/msp-n-p/ff649664(v=pandp.10)) es el mismo que el del modelo de observador: informar a otros servicios de la realización de determinados eventos. Pero hay una diferencia importante entre los patrones Observador y Pub/Sus. En el patrón de observador, la difusión se realiza directamente desde el objeto observable a los observadores, por lo que "se reconocen" entre sí. Sin embargo, si se usa un patrón Pub/Sus, hay un tercer componente, denominado "agente", "agente de mensaje" o "bus de eventos", que tanto el publicador como el suscriptor conocen. Por lo tanto, al utilizar el patrón Pub/Sus, el publicador y los suscriptores se desvinculan precisamente gracias al bus de eventos o al mensaje de agente mencionados.
 
 ### <a name="the-middleman-or-event-bus"></a>El intermediario o bus de eventos
 
@@ -90,7 +90,7 @@ Normalmente, los buses de eventos están compuestos de dos partes:
 
 En la Figura 6-19 puede ver cómo, desde el punto de vista de la aplicación, el bus de eventos no es más que un canal de Pub/Sus. La forma de implementar este tipo de comunicación asincrónica puede variar. Puede tener varias implementaciones para intercambiarlas dependiendo de los requisitos del entorno (por ejemplo, entornos de producción frente a entornos de desarrollo).
 
-En la Figura 6-20 puede ver una abstracción de un bus de eventos con varias implementaciones basadas en tecnologías de mensajería de infraestructura, como RabbitMQ, Azure Service Bus u otro agente de eventos o de mensajería.
+En la figura 6-20, puede ver una abstracción de un bus de eventos con varias implementaciones basadas en tecnologías de mensajería de infraestructura, como RabbitMQ, Azure Service Bus, u otro agente de eventos o de mensajería.
 
 ![Diagrama que muestra la adición de una capa de abstracción de bus de eventos.](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 

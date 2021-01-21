@@ -1,17 +1,17 @@
 ---
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
-ms.date: 01/30/2020
-ms.openlocfilehash: 838aaebbd390a66142c2bcdfa2f3b0ee4c32b7f0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: c9146ddbdfbf00e743108c07af1f74d7690a17a8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172214"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188730"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
-El primer paso para usar el bus de eventos es suscribir los microservicios a los eventos que quieren recibir. Eso debe realizarse en los microservicios de receptor.
+El primer paso para usar el bus de eventos es suscribir los microservicios a los eventos que quieren recibir. Esa funcionalidad debe realizarse en los microservicios del receptor.
 
 En el siguiente código simple se muestra lo que cada microservicio de receptor debe implementar al iniciar el servicio (es decir, en la clase `Startup`) para que se suscriba a los eventos que necesita. En este caso, el microservicio `basket-api` necesita suscribirse a los mensajes `ProductPriceChangedIntegrationEvent` y `OrderStartedIntegrationEvent`.
 
@@ -32,7 +32,7 @@ Después de ejecutar este código, el microservicio de suscriptor escuchará a t
 
 ## <a name="publishing-events-through-the-event-bus"></a>Publicación de eventos a través del bus de eventos
 
-Por último, el remitente del mensaje (el microservicio de origen) publica los eventos de integración con código similar al del ejemplo siguiente. (Es un ejemplo simplificado que no tiene en cuenta la atomicidad). Debería implementar un código similar cada vez que un evento se tenga que propagar entre varios microservicios, normalmente inmediatamente después de confirmar datos o transacciones desde el microservicio de origen.
+Por último, el remitente del mensaje (el microservicio de origen) publica los eventos de integración con código similar al del ejemplo siguiente. (Este enfoque es un ejemplo simplificado que no tiene en cuenta la atomicidad). Debería implementar un código similar cada vez que un evento se tenga que propagar entre varios microservicios, normalmente inmediatamente después de confirmar datos o transacciones desde el microservicio de origen.
 
 En primer lugar, el objeto de implementación del bus de eventos (basado en RabbitMQ o en un Service Bus) se insertará en el constructor del controlador, como se muestra en el código siguiente:
 
@@ -91,25 +91,25 @@ En microservicios más avanzados, como cuando se usan enfoques de CQRS, se puede
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Diseño de la atomicidad y la resistencia al publicar en el bus de eventos
 
-Al publicar eventos de integración a través de un sistema de mensajería distribuido como el bus de eventos, tiene el problema de actualizar la base de datos original de forma atómica y de publicar un evento (es decir, se completan las dos operaciones o ninguna de ellas). Por ejemplo, en el ejemplo simplificado mostrado anteriormente, el código confirma los datos en la base de datos cuando cambia el precio del producto y, después, publica un mensaje ProductPriceChangedIntegrationEvent. En principio, es posible que parezca fundamental que estas dos operaciones se realicen de forma atómica. Pero si está usando una transacción distribuida que implique la base de datos y el agente de mensajes, como se hace en sistemas anteriores como [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)), no se recomienda por las razones descritas por el [Teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
+Al publicar eventos de integración a través de un sistema de mensajería distribuido como el bus de eventos, tiene el problema de actualizar la base de datos original de forma atómica y de publicar un evento (es decir, se completan las dos operaciones o ninguna de ellas). Por ejemplo, en el ejemplo simplificado mostrado anteriormente, el código confirma los datos en la base de datos cuando cambia el precio del producto y, después, publica un mensaje ProductPriceChangedIntegrationEvent. En principio, es posible que parezca fundamental que estas dos operaciones se realicen de forma atómica. Pero si está usando una transacción distribuida que implique la base de datos y el agente de mensajes, como se hace en sistemas anteriores como [Microsoft Message Queuing (MSMQ)](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)), este enfoque no se recomienda por las razones descritas por el [teorema CAP](https://www.quora.com/What-Is-CAP-Theorem-1).
 
 Básicamente, los microservicios se usan para crear sistemas escalables y de alta disponibilidad. Para simplificarlo de algún modo, el teorema CAP afirma que no se puede crear una base de datos (distribuida), o un microservicio que posea su modelo, que esté continuamente disponible, tenga coherencia fuerte *y* sea tolerante a cualquier partición. Debe elegir dos de estas tres propiedades.
 
 En las arquitecturas basadas en microservicios, debe elegir la disponibilidad y la tolerancia, y quitar énfasis a la coherencia fuerte. Por tanto, en las aplicaciones basadas en microservicios más modernas, normalmente no le interesará usar transacciones distribuidas en la mensajería, como haría al implementar [transacciones distribuidas](/previous-versions/windows/desktop/ms681205(v=vs.85)) basadas en el Coordinador de transacciones distribuidas (DTC) de Windows con [MSMQ](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85)).
 
-Volvamos al problema inicial y su ejemplo. Si el servicio se bloquea después de que se actualice la base de datos (en este caso, inmediatamente después de la línea de código con `_context.SaveChangesAsync()`), pero antes de que se publique el evento de integración, el sistema global puede volverse incoherente. Esto podría ser crítico para la empresa, según la operación empresarial específica con la que se esté tratando.
+Volvamos al problema inicial y su ejemplo. Si el servicio se bloquea después de que se actualice la base de datos (en este caso, inmediatamente después de la línea de código con `_context.SaveChangesAsync()`), pero antes de que se publique el evento de integración, el sistema global puede volverse incoherente. Este enfoque podría ser crítico para la empresa, según la operación empresarial específica con la que se esté tratando.
 
 Como se mencionó anteriormente en la sección sobre arquitectura, puede tener varios enfoques para solucionar este problema:
 
 - Uso del [patrón de orígenes de eventos](/azure/architecture/patterns/event-sourcing) completo.
 
-- Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Uso de la minería del registro de transacciones.
 
 - Uso del [patrón de bandeja de salida](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Se trata de una tabla transaccional para almacenar los eventos de integración (extendiendo la transacción local).
 
 En este escenario, el uso del modelo de orígenes de evento (ES) completo es uno de los mejores métodos, si no *el* mejor. Pero en muchas situaciones, es posible que no pueda implementar un sistema de ES completo. Con los orígenes de evento solo se almacenan los eventos de dominio en la base de datos transaccional, en lugar de almacenar los datos de estado actuales. Almacenar solo los eventos de dominio puede tener grandes ventajas, como tener el historial del sistema disponible y poder determinar el estado del sistema en cualquier momento del pasado. Pero la implementación de un sistema de ES completo requiere que se cambie la arquitectura de la mayor parte del sistema y presenta otras muchas complejidades y requisitos. Por ejemplo, le interesaría usar una base de datos creada específicamente para los orígenes de eventos, como [Event Store](https://eventstore.org/), o bien una base de datos orientada a documentos como Azure Cosmos DB, MongoDB, Cassandra, CouchDB o RavenDB. Los orígenes de evento son un buen enfoque para este problema, pero no es la solución más sencilla a menos que ya esté familiarizado con los orígenes de eventos.
 
-La opción de usar la minería del registro de transacciones parece transparente en un principio. Pero para usar este enfoque, el microservicio debe acoplarse al registro de transacciones de RDBMS, como el registro de transacciones de SQL Server. Esto probablemente no sea deseable. Otra desventaja es que es posible que las actualizaciones de bajo nivel en el registro de transacciones no estén al mismo nivel que los eventos de integración generales. En ese caso, el proceso de utilización de técnicas de ingeniería inversa en esas operaciones de registro de transacciones puede ser complicado.
+La opción de usar la minería del registro de transacciones parece transparente en un principio. Pero para usar este enfoque, el microservicio debe acoplarse al registro de transacciones de RDBMS, como el registro de transacciones de SQL Server. Probablemente, este enfoque no sea deseable. Otra desventaja es que es posible que las actualizaciones de bajo nivel en el registro de transacciones no estén al mismo nivel que los eventos de integración generales. En ese caso, el proceso de utilización de técnicas de ingeniería inversa en esas operaciones de registro de transacciones puede ser complicado.
 
 Un enfoque equilibrado es una combinación de una tabla de base de datos transaccional y un patrón de ES simplificado. Puede usar un estado como "listo para publicar el evento" que se establece en el evento original cuando se confirma en la tabla de eventos de integración. Después, intente publicar el evento en el bus de eventos. Si la acción de publicación de evento se realiza correctamente, inicie otra transacción en el servicio de origen y cambie el estado de "listo para publicar el evento" a "evento ya publicado".
 

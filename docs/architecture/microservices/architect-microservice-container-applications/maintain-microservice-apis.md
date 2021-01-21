@@ -1,13 +1,13 @@
 ---
 title: Creación, desarrollo y control de versiones de los contratos y las API de microservicio
 description: Cree las API de microservicio y contratos teniendo en cuenta la evolución y el control de versiones, porque las necesidades pueden cambiar.
-ms.date: 09/20/2018
-ms.openlocfilehash: 9164bfd12df18a88ac187c8962f0afc80b702881
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.date: 01/13/2021
+ms.openlocfilehash: 84eeaa9776947abda6171949c730f8473e97b241
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557677"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189465"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Creación, desarrollo y control de versiones de los contratos y las API de microservicio
 
@@ -19,7 +19,7 @@ Pero, aunque piense en su contrato inicial, una API de servicio debe cambiar con
 
 Cuando los cambios en la API son pequeños, por ejemplo, si agrega atributos o parámetros a la API, los clientes que usen una API anterior deberán cambiar y trabajar con la nueva versión del servicio. Usted puede proporcionar los valores predeterminados para los atributos que falten y que sean necesarios, y los clientes pueden pasar por alto cualquier atributo de respuesta adicional.
 
-Pero en ciertas ocasiones necesitará realizar cambios importantes e incompatibles en una API de servicio. Puesto que es posible que no pueda forzar a los servicios o aplicaciones cliente a que se actualicen inmediatamente a la nueva versión, un servicio debe admitir versiones anteriores de la API durante cierto período de tiempo. Si está utilizando un mecanismo basado en HTTP, como REST, una opción es insertar el número de versión de la API en la dirección URL o en un encabezado HTTP. A continuación, puede decidir si quiere implementar ambas versiones del servicio al mismo tiempo en la misma instancia de servicio o si prefiere implementar distintas instancias y que cada una controle una versión de la API. Una buena opción es utilizar el [patrón mediador](https://en.wikipedia.org/wiki/Mediator_pattern) (por ejemplo, la [biblioteca MediatR](https://github.com/jbogard/MediatR)) para desacoplar las diferentes versiones de implementación en los controladores independientes.
+Pero en ciertas ocasiones necesitará realizar cambios importantes e incompatibles en una API de servicio. Puesto que es posible que no pueda forzar a los servicios o aplicaciones cliente a que se actualicen inmediatamente a la nueva versión, un servicio debe admitir versiones anteriores de la API durante cierto período de tiempo. Si está utilizando un mecanismo basado en HTTP, como REST, una opción es insertar el número de versión de la API en la dirección URL o en un encabezado HTTP. A continuación, puede decidir si quiere implementar ambas versiones del servicio al mismo tiempo en la misma instancia de servicio o si prefiere implementar distintas instancias y que cada una controle una versión de la API. Una buena opción que ofrece esta funcionalidad es utilizar el [patrón mediador](https://en.wikipedia.org/wiki/Mediator_pattern) (por ejemplo, la [biblioteca MediatR](https://github.com/jbogard/MediatR)) para desacoplar las diferentes versiones de implementación en los controladores independientes.
 
 Por último, si utiliza una arquitectura REST, [Hypermedia](https://www.infoq.com/articles/mark-baker-hypermedia) es la mejor solución para controlar las versiones de los servicios y permitir las API avanzadas.
 

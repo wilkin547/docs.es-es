@@ -6,12 +6,12 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 ms.date: 12/01/2020
-ms.openlocfilehash: a4549e48152b21af05c67f601c1db65029e346fa
-ms.sourcegitcommit: 45c7148f2483db2501c1aa696ab6ed2ed8cb71b2
+ms.openlocfilehash: 75c696d881ad0586b11cdbd264f3ff90ec3bce8d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96851671"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98187969"
 ---
 # <a name="common-client-side-web-technologies"></a>Tecnologías web comunes del lado cliente
 
@@ -169,7 +169,7 @@ La ejecución de código .NET dentro de exploradores web se consigue mediante We
 
 El código de WebAssembly puede acceder a toda la funcionalidad del explorador mediante JavaScript, denominada interoperabilidad de JavaScript. El código de .NET que se ejecuta a través de WebAssembly en el explorador se ejecuta a su vez en el espacio aislado de JavaScript del explorador con las protecciones que proporciona dicho espacio aislado contra acciones malintencionadas en la máquina cliente.
 
-Para obtener más detalles, vea [Introducción a ASP.NET Core Blazor](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0).
+Para más información, vea [Introducción a ASP.NET Core Blazor](/aspnet/core/blazor/).
 
 ### <a name="choosing-a-spa-framework"></a>Elección de un marco de trabajo de SPA
 

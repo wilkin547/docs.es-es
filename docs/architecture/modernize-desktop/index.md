@@ -1,17 +1,21 @@
 ---
-title: Modernización de aplicaciones de escritorio en Windows 10 con .NET Core 3.1
-description: Información sobre cómo modernizar aplicaciones de escritorio con .NET Core 3.1
-ms.date: 05/12/2020
-ms.openlocfilehash: 5861f806a9158ef761c47bc23e51327d4e2d0480
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+title: Modernización de aplicaciones de escritorio en Windows 10 con .NET 5
+description: Información sobre cómo modernizar aplicaciones de escritorio con .NET 5
+ms.date: 01/06/2021
+ms.openlocfilehash: de8a451b0598b5eabd99028d377c161dace61623
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83422666"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615714"
 ---
-# <a name="modernizing-desktop-apps-on-windows-10-with-net-core-31"></a>Modernización de aplicaciones de escritorio en Windows 10 con .NET Core 3.1
+# <a name="modernizing-desktop-apps-on-windows-10-with-net-5"></a>Modernización de aplicaciones de escritorio en Windows 10 con .NET 5
 
 ![Captura de pantalla en la que se muestra la portada del libro electrónico de modernización de aplicaciones de escritorio.](./media/modernizing-existing-desktop-apps-ebook-cover.png)
+
+**EDICIÓN v1.0.1**: actualizada a .NET 5
+
+Consulte el [registro de cambios](https://aka.ms/desktop-ebook-changelog) para ver las modificaciones del libro y las colaboraciones para la comunidad.
 
 PUBLICADO POR
 
@@ -23,7 +27,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2020 de Microsoft Corporation
+Copyright © 2021 de Microsoft Corporation
 
 Todos los derechos reservados. No se puede reproducir ni transmitir de ninguna forma ni por ningún medio ninguna parte del contenido de este libro sin la autorización por escrito del publicador.
 
@@ -75,13 +79,13 @@ El enfoque de Microsoft para modernizar las aplicaciones consiste en proporciona
 
 ## <a name="who-should-use-the-book"></a>Destinatarios de este libro
 
-Este libro está destinado a los desarrolladores y arquitectos de soluciones que quieren modernizar las aplicaciones de escritorio existentes de Windows Forms y WPF para aprovechar las ventajas que ofrecen .NET Core y Windows 10.
+Libro para los desarrolladores y arquitectos de soluciones que quieren modernizar las aplicaciones de escritorio existentes de Windows Forms y WPF para aprovechar las ventajas que ofrecen .NET y Windows 10.
 
 También es posible que este libro le resulte útil si se dedica a tomar decisiones técnicas, por ejemplo, si es arquitecto empresarial o un director o responsable de desarrollo que quiere disponer de información general relacionada con las ventajas de actualizar las aplicaciones de escritorio.
 
 ## <a name="how-to-use-the-book"></a>Cómo usar este libro
 
-En este libro se aborda el motivo por el que es recomendable modernizar las aplicaciones existentes y, además, se explican las ventajas específicas derivadas del uso de .NET Core 3.1 y MSIX para hacerlo. El contenido del libro está diseñado para arquitectos y responsables de la toma de decisiones técnicas que quieren obtener información general, pero que no tienen que centrarse en información detallada de carácter técnico ni de implementación.
+En este libro se aborda el motivo por el que es recomendable modernizar las aplicaciones existentes y, además, se explican las ventajas específicas derivadas del uso de .NET y MSIX para hacerlo. El contenido del libro está diseñado para arquitectos y responsables de la toma de decisiones técnicas que quieren obtener información general, pero que no tienen que centrarse en información detallada de carácter técnico ni de implementación.
 
 A lo largo de los distintos capítulos, se proporcionan fragmentos de códigos de implementación de ejemplo y capturas de pantalla. Además, el capítulo 5 se ha dedicado a mostrar el proceso de migración completo de unas aplicaciones de muestra.
 
@@ -93,7 +97,7 @@ Este libro no trata sobre el desarrollo desde cero de aplicaciones modernas con 
 
 ## <a name="samples-used-in-this-book"></a>Ejemplos usados en este libro
 
-Para indicar los pasos necesarios para realizar una modernización, usaremos una aplicación de ejemplo llamada `eShopModernizing`. Esta aplicación tiene dos tipos, Windows Forms y WPF, y nosotros explicaremos un proceso detallado sobre cómo llevar a cabo la modernización de los dos en .NET Core.
+Para indicar los pasos necesarios para realizar una modernización, usaremos una aplicación de ejemplo llamada `eShopModernizing`. Esta aplicación tiene dos tipos, Windows Forms y WPF, y nosotros explicaremos un proceso detallado sobre cómo llevar a cabo la modernización de los dos en .NET.
 
 Además, en el repositorio de GitHub de este libro, encontrará los resultados del proceso, que puede consultar si decide seguir el tutorial paso a paso.
 

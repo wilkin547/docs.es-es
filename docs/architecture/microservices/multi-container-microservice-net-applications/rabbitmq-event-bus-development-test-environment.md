@@ -1,13 +1,13 @@
 ---
 title: Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedores | Uso de RabbitMQ para implementar la mensajería de un bus de eventos para entornos de integración con fines de desarrollo de entornos de prueba.
-ms.date: 10/02/2018
-ms.openlocfilehash: 1af72d18825eb610d6900178205450e2c2e34c25
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 01/13/2021
+ms.openlocfilehash: a1e7d11e376080a03269f202fa6ae24ffeb0f4d2
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306895"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188086"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementación de un bus de eventos con RabbitMQ para el entorno de desarrollo o de prueba
 
@@ -21,7 +21,7 @@ La implementación del bus de eventos con RabbitMQ permite que los microservicio
 
 **Figura 6-21.** Implementación de RabbitMQ de un bus de eventos
 
-Para controlar la distribución, RabbitMQ funciona como intermediario entre el publicador de mensajes y los suscriptores. En el código, la clase EventBusRabbitMQ implementa la interfaz genérica de IEventBus. Esto se basa en la inserción de dependencias para que pueda cambiar de esta versión de desarrollo/pruebas a una versión de producción.
+Para controlar la distribución, RabbitMQ funciona como intermediario entre el publicador de mensajes y los suscriptores. En el código, la clase EventBusRabbitMQ implementa la interfaz genérica de IEventBus. Esta implementación se basa en la inserción de dependencias para que se pueda cambiar de esta versión de desarrollo/pruebas a una de producción.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -35,7 +35,7 @@ La implementación de RabbitMQ de un bus de eventos de desarrollo/pruebas de eje
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementar un método de publicación sencillo con RabbitMQ
 
-El código siguiente es una versión ***simplificada*** de una implementación de bus de eventos de RabbitMQ con el objetivo de presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs).
+El código siguiente es una versión **_simplificada_* _ de una implementación de bus de eventos para RabbitMQ que tiene como objetivo presentar todo el escenario. Lo cierto es que este no es el modo de controlar la conexión. Para ver la implementación completa, consulte el código real en el repositorio [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs).
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -63,7 +63,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 }
 ```
 
-El [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) del método Publish en la aplicación eShopOnContainers se ha mejorado con una directiva de reintentos de [Polly](https://github.com/App-vNext/Polly), que vuelve a intentar la tarea un número determinado de veces en caso de que el contenedor RabbitMQ no esté listo. Esto puede ocurrir cuando docker-compose inicia los contenedores; por ejemplo, el contenedor de RabbitMQ puede iniciarse más lentamente que los otros contenedores.
+El [código real](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) del método Publish en la aplicación eShopOnContainers se ha mejorado con una directiva de reintentos de [Polly](https://github.com/App-vNext/Polly), que vuelve a intentar realizar la tarea varias veces en caso de que el contenedor RabbitMQ no esté listo. Este escenario puede producirse cuando docker-compose inicia los contenedores; por ejemplo, el contenedor de RabbitMQ puede iniciarse más lentamente que los otros contenedores.
 
 Como se ha mencionado anteriormente, hay muchas configuraciones posibles en RabbitMQ, por lo que este código debe usarse únicamente para entornos de desarrollo y pruebas.
 
@@ -116,7 +116,7 @@ En escenarios de producción, compruebe los recursos adicionales siguientes, esp
 
 Solución lista para la producción compatibles con RabbitMQ.
 
-- **EasyNetQ**: cliente de la API de .NET de código abierto para RabbitMQ \
+- _ *EasyNetQ**: cliente de la API de .NET de código abierto para RabbitMQ \
   <https://easynetq.com/>
 
 - **MassTransit** \

@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-dump: CLI de .NET'
 description: Obtenga información sobre cómo instalar y usar la herramienta dotnet-dump de la CLI para recopilar y analizar volcados de Windows y Linux sin ningún depurador nativo.
 ms.date: 11/17/2020
-ms.openlocfilehash: eaffbb1f2959dba5c25a603b6f785c7480e4a8c0
-ms.sourcegitcommit: c0b803bffaf101e12f071faf94ca21b46d04ff30
+ms.openlocfilehash: 84b3796f4ee92880e6d432df606a6addfd2471b0
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/24/2020
-ms.locfileid: "97765051"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189809"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilidad de recopilación y análisis de volcado de memoria (dotnet-dump)
 
@@ -37,6 +37,9 @@ Hay dos maneras de descargar e instalar `dotnet-dump`:
   | Windows | [x86](https://aka.ms/dotnet-dump/win-x86) \| [x64](https://aka.ms/dotnet-dump/win-x64) \| [arm](https://aka.ms/dotnet-dump/win-arm) \| [arm-x64](https://aka.ms/dotnet-dump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-dump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-dump/linux-x64) \| [arm](https://aka.ms/dotnet-dump/linux-arm) \| [arm64](https://aka.ms/dotnet-dump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-dump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-dump/linux-musl-arm64) |
+
+> [!NOTE]
+> Para usar `dotnet-dump` en una aplicación x86, necesita la versión x86 correspondiente de la herramienta.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -113,6 +116,12 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [-n|--name] [--type] [-o|--out
 - **`--diag`**
 
   Habilita el registro de diagnóstico de la recopilación de volcado.
+
+> [!NOTE]
+> En Linux y macOS, este comando espera que la aplicación de destino y `dotnet-dump` compartan la misma variable de entorno `TMPDIR`. De lo contrario, se agotará el tiempo de espera del comando.
+
+> [!NOTE]
+> Para recopilar un volcado mediante `dotnet-dump`, debe ejecutarse como el mismo usuario que el que ejecuta el proceso de destino, o bien como usuario raíz. De lo contrario, la herramienta no podrá establecer una conexión con el proceso de destino.
 
 ## <a name="dotnet-dump-analyze"></a>dotnet-dump analyze
 

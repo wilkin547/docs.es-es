@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-trace: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta dotnet-trace de la CLI para recopilar seguimientos de .NET de un proceso en ejecución sin el generador de perfiles nativo, mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: a3b5748cb2a6c2060971fbad0d81ade00dc83087
-ms.sourcegitcommit: 35ca2255c6c86968eaef9e3a251c9739ce8e4288
+ms.openlocfilehash: 93698882e94f58eda84abebc277e1eacfe22a3da
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97753671"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189710"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>Utilidad de análisis de rendimiento dotnet-trace
 
@@ -34,6 +34,9 @@ Hay dos maneras de descargar e instalar `dotnet-trace`:
   | Windows | [x86](https://aka.ms/dotnet-trace/win-x86) \| [x64](https://aka.ms/dotnet-trace/win-x64) \| [arm](https://aka.ms/dotnet-trace/win-arm) \| [arm-x64](https://aka.ms/dotnet-trace/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-trace/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-trace/linux-x64) \| [arm](https://aka.ms/dotnet-trace/linux-arm) \| [arm64](https://aka.ms/dotnet-trace/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-trace/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-trace/linux-musl-arm64) |
+
+> [!NOTE]
+> Para usar `dotnet-trace` en una aplicación x86, necesita la versión x86 correspondiente de la herramienta.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -95,7 +98,47 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 - **`--clrevents <clrevents>`**
 
-  Lista de eventos de tiempo de ejecución de CLR que se van a emitir.
+  Lista de palabras clave del proveedor del entorno de ejecución de CLR para habilitación separadas por signos `+`. Se trata de una asignación simple que le permite especificar palabras clave de eventos mediante alias de cadenas en lugar de sus valores hexadecimales. Por ejemplo, `dotnet-trace collect --providers Microsoft-Windows-DotNETRuntime:3:4` solicita el mismo conjunto de eventos que `dotnet-trace collect --clrevents gc+gchandle --clreventlevel informational`. En la tabla siguiente, se muestra la lista de palabras clave disponibles:
+
+  | Alias de cadena de palabra clave | Valor hexadecimal de palabra clave |
+  | ------------ | ------------------- |
+  | `gc` | `0x1` |
+  | `gchandle` | `0x2` |
+  | `fusion` | `0x4` |
+  | `loader` | `0x8` |
+  | `jit` | `0x10` |
+  | `ngen` | `0x20` |
+  | `startenumeration` | `0x40` |
+  | `endenumeration` | `0x80` |
+  | `security` | `0x400` |
+  | `appdomainresourcemanagement` | `0x800` |
+  | `jittracing` | `0x1000` |
+  | `interop` | `0x2000` |
+  | `contention` | `0x4000` |
+  | `exception` | `0x8000` |
+  | `threading` | `0x10000` |
+  | `jittedmethodiltonativemap` | `0x20000` |
+  | `overrideandsuppressngenevents` | `0x40000` |
+  | `type` | `0x80000` |
+  | `gcheapdump` | `0x100000` |
+  | `gcsampledobjectallocationhigh` | `0x200000` |
+  | `gcheapsurvivalandmovement` | `0x400000` |
+  | `gcheapcollect` | `0x800000` |
+  | `gcheapandtypenames` | `0x1000000` |
+  | `gcsampledobjectallocationlow` | `0x2000000` |
+  | `perftrack` | `0x20000000` |
+  | `stack` | `0x40000000` |
+  | `threadtransfer` | `0x80000000` |
+  | `debugger` | `0x100000000` |
+  | `monitoring` | `0x200000000` |
+  | `codesymbols` | `0x400000000` |
+  | `eventsource` | `0x800000000` |
+  | `compilation` | `0x1000000000` |
+  | `compilationdiagnostic` | `0x2000000000` |
+  | `methoddiagnostic` | `0x4000000000` |
+  | `typediagnostic` | `0x8000000000` |
+
+  Puede obtener información más detallada sobre el proveedor de CLR en la [documentación de referencia del proveedor del entorno de ejecución de .NET](../../fundamentals/diagnostics/runtime-events.md).
 
 - **`--format {Chromium|NetTrace|Speedscope}`**
 
@@ -146,6 +189,12 @@ dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--
 
 > [!NOTE]
 > En aplicaciones de gran tamaño, detener el seguimiento puede tardar mucho tiempo (hasta minutos). El entorno de ejecución debe enviar a través de la memoria caché de tipos todo el código administrado que se capturó en el seguimiento.
+
+> [!NOTE]
+> En Linux y macOS, este comando espera que la aplicación de destino y `dotnet-trace` compartan la misma variable de entorno `TMPDIR`. De lo contrario, se agotará el tiempo de espera del comando.
+
+> [!NOTE]
+> Para recopilar un seguimiento mediante `dotnet-trace`, debe ejecutarse como el mismo usuario que el que ejecuta el proceso de destino, o bien como usuario raíz. De lo contrario, la herramienta no podrá establecer una conexión con el proceso de destino.
 
 ## <a name="dotnet-trace-convert"></a>dotnet-trace convert
 

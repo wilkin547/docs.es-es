@@ -1,13 +1,13 @@
 ---
 title: Seguimiento de estado
 description: Explore una forma de implementar la supervisión de estado.
-ms.date: 03/02/2020
-ms.openlocfilehash: 3e3e8ec41de1469f0c397d8d80d224dd2f7a2bd2
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 01/13/2021
+ms.openlocfilehash: 4b85193c260b950b0c7a1c97ca5c83dfc87e5fb3
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267898"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189068"
 ---
 # <a name="health-monitoring"></a>Seguimiento de estado
 
@@ -31,10 +31,10 @@ En esta sección, aprenderá a implementar la característica HealthChecks en un
 
 Para empezar, debe definir qué constituye un estado correcto en cada microservicio. En la aplicación de ejemplo, definiremos que el estado del microservicio es correcto si se puede acceder a su API a través de HTTP y si su base de datos de SQL Server relacionada también está disponible.
 
-En .NET Core 3.1, con las API integradas, puede configurar los servicios, añadir una comprobación de estado para el microservicio y su base de datos de SQL Server dependiente de esta forma:
+En .NET 5, con las API integradas, puede configurar los servicios, y agregar una comprobación de estado para el microservicio y su base de datos de SQL Server dependiente de esta forma:
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web API sample
+// Startup.cs from .NET 5 Web API sample
 //
 public void ConfigureServices(IServiceCollection services)
 {
@@ -109,7 +109,7 @@ Tenga en cuenta que en el código anterior, `Select 1` es la consulta usada para
 Por último, agregue un middleware que responda a la dirección URL `/hc`:
 
 ```csharp
-// Startup.cs from .NET Core 3.1 Web Api sample
+// Startup.cs from .NET 5 Web Api sample
 //
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
@@ -130,7 +130,7 @@ Cuando se invoca, el punto de conexión `<yourmicroservice>/hc` ejecuta todas la
 
 Los microservicios de eShopOnContainers se basan en varios servicios para realizar su tarea. Por ejemplo, el microservicio `Catalog.API` de eShopOnContainers depende de muchos servicios, como Azure Blob Storage, SQL Server y RabbitMQ. Por lo tanto, tiene varias comprobaciones de estado agregadas mediante el método `AddCheck()`. En todos los servicios dependientes, se debería agregar una implementación `IHealthCheck` que defina su estado de mantenimiento correspondiente.
 
-El proyecto de código abierto [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) resuelve este problema mediante implementaciones de comprobación de estado personalizadas para cada uno de estos servicios empresariales basados en .NET Core 3.1. Cada comprobación de estado está disponible como paquete NuGet individual que se puede agregar fácilmente al proyecto. eShopOnContainers los usa mayoritariamente en todos sus microservicios.
+El proyecto de código abierto [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) resuelve este problema mediante implementaciones de comprobación de estado personalizadas para cada uno de estos servicios empresariales basados en .NET 5. Cada comprobación de estado está disponible como paquete NuGet individual que se puede agregar fácilmente al proyecto. eShopOnContainers los usa mayoritariamente en todos sus microservicios.
 
 Por ejemplo, en el microservicio `Catalog.API`, se agregaron los siguientes paquetes NuGet:
 

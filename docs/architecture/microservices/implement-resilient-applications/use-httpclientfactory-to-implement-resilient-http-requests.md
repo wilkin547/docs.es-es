@@ -1,19 +1,19 @@
 ---
 title: Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 description: Aprenda a utilizar IHttpClientFactory, disponible a partir de .NET Core 2.1, para crear instancias de `HttpClient`, lo que le facilita su uso en sus aplicaciones.
-ms.date: 08/31/2020
-ms.openlocfilehash: 4ebb82395dd685d30846b3549b654abf7c41d43f
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 01/13/2021
+ms.openlocfilehash: 056a8982fe4331e7e680b33cf1f43785b48da7d6
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804814"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189003"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Uso de IHttpClientFactory para implementar solicitudes HTTP resistentes
 
 <xref:System.Net.Http.IHttpClientFactory> es un contrato implementado por `DefaultHttpClientFactory`, una fábrica bien fundamentada disponible desde .NET Core 2.1 para crear instancias de <xref:System.Net.Http.HttpClient> con el fin de usarlas en las aplicaciones.
 
-## <a name="issues-with-the-original-httpclient-class-available-in-net-core"></a>Problemas con la clase HttpClient original disponible en .NET Core
+## <a name="issues-with-the-original-httpclient-class-available-in-net"></a>Problemas con la clase HttpClient original disponible en .NET
 
 La clase <xref:System.Net.Http.HttpClient> original y bien conocida se puede usar fácilmente pero, en algunos casos, muchos desarrolladores no la usan de manera correcta.
 
@@ -190,7 +190,7 @@ Hasta ahora, el fragmento de código anterior solo ha mostrado el ejemplo de rea
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Uso de HttpClientFactory en .NET Core**  
+- **Uso de HttpClientFactory en .NET**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
 - **Código fuente de HttpClientFactory en el repositorio de GitHub `dotnet/extensions`**  

@@ -3,12 +3,12 @@ title: Comparación entre project.json y csproj
 description: Vea una asignación entre los elementos project.json y csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: 7de9f623a57a6a094debd3e018edc1560d837fc2
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 3c9b2f266c2fcc3acdfbe40e19509edde20eec93
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970881"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190187"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Una asignación entre propiedades project.json y csproj
 
@@ -253,6 +253,9 @@ El valor `<RuntimeFrameworkVersion>` del proyecto migrado viene determinado por 
 </ItemGroup>
 ```
 
+> [!NOTE]
+> La propiedad `PackageTargetFallback` está en desuso. Use [AssetTargetFallback](../project-sdk/msbuild-props.md#assettargetfallback) en su lugar.
+
 ### <a name="dependency-type"></a>dependency type
 
 #### <a name="type-project"></a>type: project
@@ -356,7 +359,9 @@ Para obtener más información, consulte [Implementaciones autocontenidas (SCD)]
 ```
 
 > [!NOTE]
-> En csproj no se admite `imports` en herramientas. Las herramientas que necesitan importaciones no funcionarán con el nuevo SDK `Microsoft.NET.Sdk`.
+>
+> - En csproj no se admite `imports` en herramientas. Las herramientas que necesitan importaciones no funcionarán con `Microsoft.NET.Sdk`.
+> - `DotNetCliToolReference` está en desuso; en su lugar, se recomienda utilizar [herramientas locales](global-tools.md#install-a-local-tool).
 
 ## <a name="buildoptions"></a>buildOptions
 
@@ -609,7 +614,7 @@ En MSBuild, esto se hace mediante [elementos](/visualstudio/msbuild/common-msbui
   <EmbeddedResource Include="..\Shared\*.resx" />
   <Content Include="Views\**\*" PackagePath="%(Identity)" />
   <None Include="some/path/in/project.txt" Pack="true" PackagePath="in/package.txt" />
-  
+
   <None Include="notes.txt" CopyToOutputDirectory="Always" />
   <!-- CopyToOutputDirectory = { Always, PreserveNewest, Never } -->
 
@@ -674,3 +679,4 @@ Para obtener más información, consulte [Including content in a package](/nuget
 ## <a name="see-also"></a>Vea también
 
 - [Introducción de alto nivel de cambios en la CLI](cli-msbuild-architecture.md)
+- [Referencia de MSBuild para proyectos del SDK de .NET](../project-sdk/msbuild-props.md)

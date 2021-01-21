@@ -4,12 +4,12 @@ titleSuffix: ''
 description: Obtenga información sobre los SDK de proyectos de .NET.
 ms.date: 09/17/2020
 ms.topic: conceptual
-ms.openlocfilehash: 270735c9eef9f1930680687917317ac8bdf39e6d
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: 2adb0713fabda142d071425a2affe66cc9d4c172
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970699"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189673"
 ---
 # <a name="net-project-sdks"></a>SDK de proyectos de .NET
 
@@ -83,7 +83,7 @@ Si el proyecto tiene varias plataformas de destino, para centrar los resultados 
 
 `dotnet msbuild -property:TargetFramework=netcoreapp2.0 -preprocess:output.xml`
 
-### <a name="default-includes-and-excludes"></a>Inclusiones y exclusiones predeterminadas
+## <a name="default-includes-and-excludes"></a>Inclusiones y exclusiones predeterminadas
 
 Las inclusiones y exclusiones predeterminadas de los [elementos `Compile`](/visualstudio/msbuild/common-msbuild-project-items#compile), los [recursos insertados](/visualstudio/msbuild/common-msbuild-project-items#embeddedresource) y los [elementos `None`](/visualstudio/msbuild/common-msbuild-project-items#none) se definen en el SDK. A diferencia de los proyectos de .NET Framework que no son de SDK, no es necesario especificar estos elementos en el archivo del proyecto, ya que los valores predeterminados cubren los casos de uso más comunes. Este comportamiento hace que el archivo de proyecto sea más pequeño y más fácil de entender y editar manualmente, si es necesario.
 
@@ -98,7 +98,7 @@ En la tabla siguiente se muestra qué elementos y qué [globs](https://en.wikipe
 > [!NOTE]
 > De forma predeterminada, las carpetas `./bin` y `./obj` (representadas por las propiedades de MSBuild `$(BaseOutputPath)` y `$(BaseIntermediateOutputPath)`) se excluyen de los globs. Las exclusiones se representan mediante la [propiedad DefaultItemExcludes](msbuild-props.md#defaultitemexcludes).
 
-#### <a name="build-errors"></a>Errores de compilación
+### <a name="build-errors"></a>Errores de compilación
 
 Si define explícitamente cualquiera de estos elementos en el archivo del proyecto, es probable que obtenga un error de compilación "NETSDK1022" similar al siguiente:
 
@@ -131,6 +131,31 @@ Para resolver los errores, lleve a cabo una de las siguientes acciones:
   ```
 
   Si solo deshabilita los globs `Compile`, el Explorador de soluciones de Visual Studio sigue mostrando elementos \*.cs como parte del proyecto, incluidos como elementos `None`. Para deshabilitar el glob `None` implícito, establezca `EnableDefaultNoneItems` en `false`.
+
+## <a name="build-events"></a>Eventos de compilación
+
+En los proyectos de estilo SDK, use un destino de MSBuild denominado `PreBuild` o `PostBuild`, y establezca la propiedad `BeforeTargets` para `PreBuild`, o bien la propiedad `AfterTargets` para `PostBuild`.
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>
+> - Puede usar cualquier nombre para los destinos de MSBuild. A pesar de ello, el IDE de Visual Studio reconoce los destinos `PreBuild` y `PostBuild`, por lo que, al usar esos nombres, puede editar los comandos en el IDE.
+> - No se recomiendan las propiedades `PreBuildEvent` ni `PostBuildEvent` en los proyectos de tipo SDK, ya que las macros como `$(ProjectDir)` no se resuelven. Por ejemplo, no se admite el código siguiente:
+>
+> ```xml
+> <PropertyGroup>
+>   <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)"</PreBuildEvent>
+> </PropertyGroup>
+> ```
 
 ## <a name="customize-the-build"></a>Personalización de la compilación
 
@@ -168,7 +193,7 @@ El fragmento de código XML siguiente es de un archivo *.csproj* que indica al c
     </ItemGroup>
   </Target>
   ...
-  
+
 </Project>
 ```
 

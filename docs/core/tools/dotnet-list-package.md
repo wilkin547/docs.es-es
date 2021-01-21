@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: El comando "dotnet list package" ofrece una opción práctica para mostrar las referencias de paquete de un proyecto o una solución.
 ms.date: 11/11/2020
-ms.openlocfilehash: ecb83e5485c9fb49a454a35091e1a7b753b1f291
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 684b73dec553a424252e1368c265847622fb7850
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556893"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189901"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -43,7 +43,7 @@ Project 'SentimentAnalysis' has the following package references
 (A) : Auto-referenced package.
 ```
 
-La columna **Requested** hace referencia a la versión de paquete especificada en el archivo del proyecto y puede ser un intervalo. La columna **Resolved** muestra la versión que el proyecto usa actualmente y siempre se trata de un valor único. Los paquetes que tienen `(A)` junto al nombre representan [referencias implícitas de paquete](csproj.md#implicit-package-references) que se deducen de la configuración del proyecto (tipo de `Sdk`, propiedad `<TargetFramework>` o `<TargetFrameworks>`, etc.).
+La columna **Requested** hace referencia a la versión de paquete especificada en el archivo del proyecto y puede ser un intervalo. La columna **Resolved** muestra la versión que el proyecto usa actualmente y siempre se trata de un valor único. Los paquetes que tienen `(A)` junto al nombre representan referencias implícitas de paquete que se deducen de la configuración del proyecto (tipo `Sdk`, propiedad `<TargetFramework>` o `<TargetFrameworks>`, etc.).
 
 Use la opción `--outdated` para averiguar si hay disponibles más recientes de los paquetes que usa en los proyectos. De manera predeterminada, `--outdated` muestra los paquetes estables más recientes, a menos que la versión resuelta también sea una versión preliminar. Para incluir versiones preliminares cuando se muestren versiones más recientes, especifique también la opción `--include-prerelease`. En los ejemplos siguientes se muestra la salida del comando `dotnet list package --outdated --include-prerelease` para el mismo proyecto, tal como en el ejemplo anterior:
 

@@ -1,13 +1,13 @@
 ---
 title: Comunicación asincrónica basada en mensajes
 description: Arquitectura de Microservicios de .NET para aplicaciones .NET en contenedor | Las comunicaciones asincrónicas basadas en mensajes son un concepto fundamental en la arquitectura de microservicios, porque es la mejor manera de mantener los microservicios independientes entre sí mientras siguen sincronizándose.
-ms.date: 09/20/2018
-ms.openlocfilehash: 17b3fb3fe3f94d5387359061e3297ebfa6e5be7a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: f9d92e2640721b12d47223902712c420b06a5618
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169250"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189595"
 ---
 # <a name="asynchronous-message-based-communication"></a>Comunicación asincrónica basada en mensajes
 
@@ -45,9 +45,9 @@ Cuando se usa una comunicación de publicación y suscripción, es posible que s
 
 ## <a name="asynchronous-event-driven-communication"></a>Comunicación asincrónica controlada por eventos
 
-Cuando se usa la comunicación asincrónica controlada por eventos, un microservicio publica un evento de integración cuando sucede algo dentro de su dominio y otro microservicio debe ser consciente de ello, como por ejemplo un cambio de precio en un microservicio del catálogo de productos. Los microservicios adicionales se suscriben a los eventos para poder recibirlos de forma asincrónica. Cuando esto sucede, es posible que los receptores actualicen sus propias entidades de dominio, lo que puede provocar la publicación de más eventos de integración. Este sistema de publicación/suscripción normalmente se realiza mediante una implementación de un bus de eventos. El bus de eventos se puede diseñar como una abstracción o interfaz, con la API que se necesita para suscribirse o cancelar la suscripción a los eventos y para publicarlos. El bus de eventos también puede tener una o más implementaciones basadas en cualquier agente entre procesos y de mensajería, como una cola de mensajes o un Service Bus que admita la comunicación asincrónica y un modelo de publicación y suscripción.
+Cuando se usa la comunicación asincrónica controlada por eventos, un microservicio publica un evento de integración cuando sucede algo dentro de su dominio y otro microservicio debe ser consciente de ello, como por ejemplo un cambio de precio en un microservicio del catálogo de productos. Los microservicios adicionales se suscriben a los eventos para poder recibirlos de forma asincrónica. Cuando esto sucede, es posible que los receptores actualicen sus propias entidades de dominio, lo que puede provocar la publicación de más eventos de integración. Este sistema de publicación/suscripción se realiza mediante una implementación de un bus de eventos. El bus de eventos se puede diseñar como una abstracción o interfaz, con la API que se necesita para suscribirse o cancelar la suscripción a los eventos y para publicarlos. El bus de eventos también puede tener una o más implementaciones basadas en cualquier agente entre procesos y de mensajería, como una cola de mensajes o un Service Bus que admita la comunicación asincrónica y un modelo de publicación y suscripción.
 
-Si un sistema usa la coherencia final controlada por eventos de integración, se recomienda que este enfoque sea totalmente transparente para el usuario final. El sistema no debe usar un enfoque que imite a los eventos de integración, como SignalR o sistemas de sondeo desde el cliente. El usuario final y el propietario de la empresa tienen que adoptar explícitamente la coherencia final en el sistema y saber que, en muchos casos, la empresa no tiene ningún problema con este enfoque, siempre que sea explícito. Esto es importante porque los usuarios pueden esperar ver algunos resultados inmediatamente y es posible que esto no pase con la coherencia final.
+Si un sistema usa la coherencia final controlada por eventos de integración, se recomienda que este enfoque sea transparente para el usuario final. El sistema no debe usar un enfoque que imite a los eventos de integración, como SignalR o sistemas de sondeo desde el cliente. El usuario final y el propietario de la empresa tienen que adoptar explícitamente la coherencia final en el sistema y saber que, en muchos casos, la empresa no tiene ningún problema con este enfoque, siempre que sea explícito. Este enfoque es importante porque los usuarios pueden esperar ver algunos resultados inmediatamente y es posible que esto no pase con la coherencia final.
 
 Como se indicó anteriormente en la sección [Desafíos y soluciones para la administración de datos distribuidos](distributed-data-management.md), se pueden usar eventos de integración para implementar tareas de negocio que abarquen varios microservicios. Por tanto, tendrá coherencia final entre dichos servicios. Una transacción con coherencia final se compone de una colección de acciones distribuidas. En cada acción, el microservicio relacionado actualiza una entidad de dominio y publica otro evento de integración que genera la siguiente acción dentro de la misma tarea empresarial descentralizada.
 
@@ -69,11 +69,11 @@ Pero para sistemas decisivos y de producción que necesiten una gran escalabilid
 
 ## <a name="resiliently-publishing-to-the-event-bus"></a>Publicación de forma resistente en el bus de eventos
 
-Un desafío al implementar una arquitectura controlada por eventos entre varios microservicios es cómo actualizar de manera atómica el estado en el microservicio original mientras se publica de forma resistente su evento de integración relacionado en el bus de eventos, en cierta medida en función de las transacciones. Las siguientes son algunas maneras de lograrlo, aunque podría haber enfoques adicionales.
+Un desafío al implementar una arquitectura controlada por eventos entre varios microservicios es cómo actualizar de manera atómica el estado en el microservicio original mientras se publica de forma resistente su evento de integración relacionado en el bus de eventos, en cierta medida en función de las transacciones. Las siguientes son algunas maneras de lograr esta funcionalidad, aunque podría haber enfoques adicionales.
 
 - Uso de una cola transaccional (basada en DTC) como MSMQ. (Pero es un método heredado).
 
-- Uso de la [minería del registro de transacciones](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Uso de la minería del registro de transacciones.
 
 - Uso del patrón de [orígenes de eventos](/azure/architecture/patterns/event-sourcing) completo.
 

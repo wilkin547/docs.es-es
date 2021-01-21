@@ -1,13 +1,13 @@
 ---
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
-ms.date: 01/07/2019
-ms.openlocfilehash: 88cea3b7c2fdd09bec605431308df8783c343332
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.date: 01/13/2021
+ms.openlocfilehash: 86c975b7d739e62b8f0d465abdf36ad74047c56c
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240607"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189582"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -25,7 +25,7 @@ En este enfoque, cada microservicio tiene un punto de conexión público, a vece
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-En un entorno de producción basado en un clúster, la dirección URL anterior estaría asignada al equilibrador de carga que se utiliza en el clúster, que a su vez distribuye las solicitudes entre los microservicios. En entornos de producción, se puede tener un controlador de entrega de aplicaciones (ADC) como [Azure Application Gateway](/azure/application-gateway/application-gateway-introduction) entre los microservicios e Internet. Este controlador actúa como una capa transparente que no solo realiza el equilibrio de carga, sino que también protege sus servicios, ya que ofrece terminación SSL. Esto mejora la carga de los hosts, puesto que Azure Application Gateway se descarga de la terminación SSL y de otras tareas de enrutamiento que consumen mucha CPU. En cualquier caso, un equilibrador de carga y el ADC son transparentes desde un punto de vista de la arquitectura de aplicación lógica.
+En un entorno de producción basado en un clúster, la dirección URL anterior estaría asignada al equilibrador de carga que se utiliza en el clúster, que a su vez distribuye las solicitudes entre los microservicios. En entornos de producción, se puede tener un controlador de entrega de aplicaciones (ADC) como [Azure Application Gateway](/azure/application-gateway/application-gateway-introduction) entre los microservicios e Internet. Esta capa actúa como un nivel transparente que no solo realiza el equilibrio de carga, sino que también protege los servicios, ya que ofrece terminación SSL. Este enfoque mejora la carga de los hosts, puesto que la terminación SSL y otras tareas de enrutamiento que consumen mucha CPU se descargan a Azure Application Gateway. En cualquier caso, un equilibrador de carga y el ADC son transparentes desde un punto de vista de la arquitectura de aplicación lógica.
 
 Una arquitectura de comunicación directa de cliente a microservicio podría bastar para una pequeña aplicación basada en microservicio, especialmente si se trata de una aplicación web del lado cliente como, por ejemplo, una aplicación de ASP.NET MVC. Pero al compilar aplicaciones grandes y complejas basadas en microservicios (por ejemplo, al administrar docenas de tipos de microservicio) y, sobre todo, cuando las aplicaciones cliente son aplicaciones móviles remotas o aplicaciones web SPA, este enfoque se enfrenta a algunos problemas.
 
@@ -33,7 +33,7 @@ Al desarrollar una aplicación de gran tamaño basada en microservicios, conside
 
 - *¿Cómo pueden las aplicaciones cliente minimizar el número de solicitudes al back-end y reducir el exceso de comunicación con varios microservicios?*
 
-Interactuar con varios microservicios para crear una única pantalla de interfaz de usuario aumenta el número de recorridos de ida y vuelta a través de Internet. Esto aumenta la latencia y la complejidad en el lado de la interfaz de usuario. Idealmente, las respuestas se deberían agregar eficazmente en el lado del servidor. Esto reduce la latencia, ya que varios fragmentos de datos regresan en paralelo y alguna interfaz de usuario puede mostrar los datos tan pronto como estén listos.
+Interactuar con varios microservicios para crear una única pantalla de interfaz de usuario aumenta el número de recorridos de ida y vuelta a través de Internet. Este enfoque aumenta la latencia y la complejidad en el lado de la interfaz de usuario. Idealmente, las respuestas se deberían agregar eficazmente en el lado del servidor. Este enfoque reduce la latencia, ya que varios fragmentos de datos regresan en paralelo, y alguna interfaz de usuario puede mostrar los datos en cuanto estén listos.
 
 - *¿Cómo se pueden controlar cuestiones transversales como la autorización, las transformaciones de datos y la distribución de solicitudes dinámicas?*
 
@@ -41,21 +41,21 @@ La implementación de seguridad y cuestiones transversales como la seguridad y l
 
 - *¿Cómo pueden las aplicaciones cliente comunicarse con servicios que usan protocolos no compatible con Internet?*
 
-Normalmente, los protocolos usados en el lado del servidor (por ejemplo, AMQP o protocolos binarios) no se admiten en aplicaciones cliente. Por lo tanto, las solicitudes deben realizarse a través de protocolos como HTTP/HTTPS y convertirse posteriormente a los demás protocolos. Un enfoque *man-in-the-middle* puede ser útil en esta situación.
+Los protocolos usados en el lado del servidor (por ejemplo, AMQP o protocolos binarios) no se admiten en aplicaciones cliente. Por lo tanto, las solicitudes deben realizarse a través de protocolos como HTTP/HTTPS y convertirse posteriormente a los demás protocolos. Un enfoque *man-in-the-middle* puede ser útil en esta situación.
 
 - *¿Cómo se puede dar forma a una fachada creada especialmente para las aplicaciones móviles?*
 
-El diseño de la API de varios microservicios podría no adaptarse a las necesidades de diferentes aplicaciones cliente. Por ejemplo, las necesidades de una aplicación móvil pueden ser diferentes a las necesidades de una aplicación web. Para las aplicaciones móviles, la optimización debe ser incluso mayor para que las respuestas de datos sean más eficaces. Para lograr esto, puede agregar los datos de varios microservicios y devolver un único conjunto de datos y, a veces, eliminar los datos de la respuesta que no son necesarios para la aplicación móvil. Y, por supuesto, puede comprimir los datos. Una vez más, una fachada o API entre la aplicación móvil y los microservicios puede ser conveniente para este escenario.
+El diseño de la API de varios microservicios podría no adaptarse a las necesidades de diferentes aplicaciones cliente. Por ejemplo, las necesidades de una aplicación móvil pueden ser diferentes a las necesidades de una aplicación web. Para las aplicaciones móviles, la optimización debe ser incluso mayor para que las respuestas de datos sean más eficaces. Para lograr esta funcionalidad, puede agregar los datos de varios microservicios y devolver un único conjunto de datos y, a veces, eliminar los datos de la respuesta que no son necesarios para la aplicación móvil. Y, por supuesto, puede comprimir los datos. Una vez más, una fachada o API entre la aplicación móvil y los microservicios puede ser conveniente para este escenario.
 
 ## <a name="why-consider-api-gateways-instead-of-direct-client-to-microservice-communication"></a>Por qué considerar las puertas de enlace de API en lugar de la comunicación directa de cliente a microservicio
 
 En una arquitectura de microservicios, las aplicaciones cliente generalmente necesitan consumir funcionalidades de más de un microservicio. Si ese consumo se realiza directamente, el cliente debe controlar varias llamadas a los puntos de conexión de microservicio. ¿Qué ocurre cuando la aplicación evoluciona y se introducen nuevos microservicios o se actualizan microservicios existentes? Si la aplicación tiene muchos microservicios, controlar tantos puntos de conexión desde las aplicaciones cliente puede ser una pesadilla. Puesto que la aplicación cliente debería acoplarse a esos puntos de conexión internos, la evolución de los microservicios en el futuro podría provocar un alto impacto para las aplicaciones cliente.
 
-Por lo tanto, disponer de un nivel intermedio o un nivel de direccionamiento indirecto (puerta de enlace) puede ser muy práctico para las aplicaciones basadas en microservicios. Si no dispone de las puertas de enlace de API, las aplicaciones cliente deben enviar solicitudes directamente a los microservicios y eso genera problemas, como los siguientes:
+Por lo tanto, disponer de un nivel intermedio o un nivel de direccionamiento indirecto (puerta de enlace) puede ser práctico para las aplicaciones basadas en microservicios. Si no dispone de las puertas de enlace de API, las aplicaciones cliente deben enviar solicitudes directamente a los microservicios y eso genera problemas, como los siguientes:
 
 - **Acoplamiento**: Sin el patrón de puerta de enlace de API, las aplicaciones cliente se acoplan a los microservicios internos. Las aplicaciones cliente necesitan saber cómo se descomponen las diferentes áreas de la aplicación en microservicios. Al hacer evolucionar y refactorizar los microservicios internos, esas acciones tienen un impacto en el mantenimiento porque provocan cambios bruscos en las aplicaciones cliente debido a la referencia directa a los microservicios internos desde las aplicaciones cliente. Las aplicaciones cliente deben actualizarse con frecuencia, lo que dificulta la evolución de la solución.
 
-- **Demasiados ciclos de ida y vuelta**: Una única pantalla o página en la aplicación cliente puede requerir varias llamadas a varios servicios. Esto puede dar como resultado múltiples recorridos de ida y vuelta entre el cliente y el servidor, lo cual agrega una latencia significativa. La agregación controlada en un nivel intermedio podría mejorar el rendimiento y la experiencia del usuario para la aplicación cliente.
+- **Demasiados ciclos de ida y vuelta**: Una única pantalla o página en la aplicación cliente puede requerir varias llamadas a varios servicios. Este enfoque puede dar como resultado múltiples recorridos de ida y vuelta de red entre el cliente y el servidor, lo cual agrega una latencia significativa. La agregación controlada en un nivel intermedio podría mejorar el rendimiento y la experiencia del usuario para la aplicación cliente.
 
 - **Problemas de seguridad**: Sin una puerta de enlace, todos los microservicios se deben exponer al "mundo externo", haciendo que la superficie del ataque sea mayor que si se ocultan los microservicios internos que las aplicaciones cliente no usan de forma directa. Cuanto menor sea la superficie de ataque, más segura será la aplicación.
 
@@ -63,9 +63,9 @@ Por lo tanto, disponer de un nivel intermedio o un nivel de direccionamiento ind
 
 ## <a name="what-is-the-api-gateway-pattern"></a>¿Qué es el patrón de puerta de enlace de API?
 
-Al diseñar y crear aplicaciones basadas en microservicios grandes o complejas con varias aplicaciones cliente, un buen planteamiento podría ser una [puerta de enlace de API](https://microservices.io/patterns/apigateway.html). Se trata de un servicio que proporciona un punto de entrada único para determinados grupos de microservicios. Es similar al [patrón de fachada](https://en.wikipedia.org/wiki/Facade_pattern) del diseño orientado a objetos, pero en este caso forma parte de un sistema distribuido. En ocasiones, el patrón de puerta de enlace de API también se conoce como "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)) porque en la compilación se tienen en cuenta las necesidades de la aplicación cliente.
+Al diseñar y crear aplicaciones basadas en microservicios grandes o complejas con varias aplicaciones cliente, un buen planteamiento podría ser una [puerta de enlace de API](https://microservices.io/patterns/apigateway.html). Este patrón es un servicio que proporciona un punto de entrada única para determinados grupos de microservicios. Es similar al [patrón de fachada](https://en.wikipedia.org/wiki/Facade_pattern) del diseño orientado a objetos, pero en este caso forma parte de un sistema distribuido. En ocasiones, el patrón de puerta de enlace de API también se conoce como "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)) porque en la compilación se tienen en cuenta las necesidades de la aplicación cliente.
 
-Por lo tanto, la puerta de enlace de API se encuentra entre las aplicaciones cliente y los microservicios. Actúa como un proxy inverso, enrutando las solicitudes de los clientes a los servicios. También puede proporcionar características transversales adicionales, como autenticación, terminación SSL y caché.
+Por lo tanto, la puerta de enlace de API se encuentra entre las aplicaciones cliente y los microservicios. Actúa como un proxy inverso, enrutando las solicitudes de los clientes a los servicios. También puede proporcionar otras características transversales adicionales, como autenticación, terminación SSL y caché.
 
 La figura 4-13 muestra el encaje de una puerta de enlace de API personalizada en una arquitectura basada en microservicios simplificada con solo algunos microservicios.
 
@@ -87,7 +87,7 @@ Al dividir el nivel de puerta de enlace de API en múltiples puertas de enlace d
 
 **Figura 4-13.1**. Uso de varias puertas de enlace de API personalizadas
 
-Figura 4-13.1 que muestra puertas de enlace de API personalizadas, segregadas por tipo de cliente; una para los clientes móviles y otra para los clientes web. Una aplicación web tradicional se conecta a un microservicio MVC que usa la puerta de enlace de API web. En el ejemplo se muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)); por tanto, se basan solo en la API necesaria para cada aplicación cliente. Pero en aplicaciones más grandes también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo pivote de diseño.
+Figura 4-13.1 que muestra puertas de enlace de API personalizadas, segregadas por tipo de cliente; una para los clientes móviles y otra para los clientes web. Una aplicación web tradicional se conecta a un microservicio MVC que usa la puerta de enlace de API web. En el ejemplo se muestra una arquitectura simplificada con varias puertas de enlace de API específicas. En este caso, los límites identificados para cada puerta de enlace de API se basan estrictamente en el patrón "back-end para front-end" ([BFF](https://samnewman.io/patterns/architectural/bff/)); por tanto, se basan solo en la API necesaria para cada aplicación cliente. Sin embargo, en aplicaciones más grandes, también debe ir más allá y crear otras puertas de enlace de API basadas en los límites del negocio como un segundo eje de diseño.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Características principales en el patrón de puerta de enlace de API
 
@@ -103,7 +103,7 @@ Dependiendo del producto de puerta de enlace de API que use, es posible que pued
 
 Para obtener más información, consulte [Patrón Gateway Aggregation](/azure/architecture/patterns/gateway-aggregation).
 
-**Cuestiones transversales o descarga de puerta de enlace.** Dependiendo de las características que ofrece cada producto de puerta de enlace de API, puede descargar la funcionalidad de microservicios individuales a la puerta de enlace, lo que simplifica la implementación de cada microservicio consolidando las cuestiones transversales en un nivel. Esto resulta especialmente útil para las características especializadas, que pueden ser bastante complicadas de implementar correctamente en cada microservicio interno, como la funcionalidad siguiente:
+**Cuestiones transversales o descarga de puerta de enlace.** Dependiendo de las características que ofrece cada producto de puerta de enlace de API, puede descargar la funcionalidad de microservicios individuales a la puerta de enlace, lo que simplifica la implementación de cada microservicio consolidando las cuestiones transversales en un nivel. Este enfoque resulta especialmente útil para características especializadas que pueden ser bastante complicadas de implementar correctamente en cada microservicio interno, como la funcionalidad siguiente:
 
 - Autenticación y autorización
 - Integración del servicio de detección
@@ -136,7 +136,7 @@ Azure API Management resuelve las necesidades de administración y de puerta de 
 
 Los productos de puerta de enlace de API suelen actuar más como un proxy inverso para la comunicación de entrada, en el que se pueden filtrar las API de los microservicios internos y también aplicar la autorización a las API publicadas en este nivel único.
 
-La información disponible desde un sistema API le ayuda a comprender cómo se están utilizando las API y cuál es su rendimiento. Para ello, le permiten ver informes de análisis prácticamente en tiempo real e identificar las tendencias que podrían afectar a su negocio. Además, puede obtener registros sobre la actividad de solicitudes y respuestas para su posterior análisis en línea y sin conexión.
+La información disponible desde un sistema API le ayuda a comprender cómo se están utilizando las API y cuál es su rendimiento. Para llevar a cabo esta actividad, le permiten ver informes de análisis casi en tiempo real e identificar las tendencias que podrían afectar a su negocio. Además, puede obtener registros sobre la actividad de solicitudes y respuestas para su posterior análisis en línea y sin conexión.
 
 Con Azure API Management, puede proteger sus API con una clave, un token y el filtrado de IP. Estas características le permiten aplicar cuotas flexibles y específicas y límites de frecuencia, modificar la forma y el comportamiento de las API mediante directivas y mejorar el rendimiento con el almacenamiento de respuestas en caché.
 
@@ -146,7 +146,7 @@ En esta guía y en la aplicación de ejemplo de referencia (eShopOnContainers), 
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) es una puerta de enlace de API ligera, recomendada para enfoques más simples. Ocelot es una puerta de enlace de API de código abierto basada en .NET Core especialmente diseñada para las arquitecturas de microservicios que necesitan puntos de entrada unificados en sus sistemas. Es ligera, rápida y escalable, y proporciona enrutamiento y autenticación, entre muchas otras características.
 
-La razón principal para elegir Ocelot para la [aplicación de referencia eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) es porque es una puerta de enlace de API ligera de .NET Core que se puede implementar en el mismo entorno de implementación de aplicaciones en el que se implementan los microservicios y contenedores, como Docker Host, Kubernetes, etc. Y puesto que se basa en .NET Core, es multiplataforma, así que la puede implementar en Linux o Windows.
+La razón principal para elegir Ocelot para la [aplicación de referencia eShopOnContainers 2.0](https://github.com/dotnet-architecture/eShopOnContainers/releases/tag/2.0) es que se trata de una puerta de enlace de API ligera de .NET Core que se puede implementar en el mismo entorno de implementación de aplicaciones en el que se implementan los microservicios o contenedores, como Docker Host, Kubernetes, etc. Y puesto que se basa en .NET Core, es multiplataforma, así que la puede implementar en Linux o Windows.
 
 Los diagramas anteriores que muestran puertas de enlace de API personalizadas que se ejecutan en contenedores son precisamente la forma en que también puede ejecutar Ocelot en una aplicación basada en contenedor y microservicio.
 
@@ -166,7 +166,7 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 
 - Una puerta de enlace de API exige un mayor desarrollo y mantenimiento futuro si incluye lógica personalizada y agregación de datos. Los desarrolladores deben actualizar la puerta de enlace de API con el fin de exponer los puntos de conexión de cada microservicio. Además, los cambios de implementación en los microservicios internos pueden provocar cambios de código en el nivel de la puerta de enlace de API. Pero si la puerta de enlace de API simplemente aplica seguridad, registro y control de versiones (como al utilizar Azure API Management), este costo de desarrollo adicional podría no ser aplicable.
 
-- Si la puerta de enlace de API ha sido desarrollada por un único equipo, puede haber un cuello de botella de desarrollo. Este es otro de los motivos por el que es más adecuado tener varias puertas de enlace de API específicas que respondan a las distintas necesidades del cliente. También puede separar la puerta de enlace de API internamente en varias áreas o capas que pertenezcan a los diferentes equipos que trabajan en los microservicios internos.
+- Si la puerta de enlace de API ha sido desarrollada por un único equipo, puede haber un cuello de botella de desarrollo. Este aspecto es otro de los motivos por los que es más adecuado tener varias puertas de enlace de API específicas que respondan a las distintas necesidades del cliente. También puede separar la puerta de enlace de API internamente en varias áreas o capas que pertenezcan a los diferentes equipos que trabajan en los microservicios internos.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 

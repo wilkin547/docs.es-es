@@ -1,13 +1,13 @@
 ---
 title: Diseño de una aplicación orientada a microservicios
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las ventajas y desventajas de una aplicación orientada a microservicios que le permitirá tomar una decisión informada.
-ms.date: 10/02/2018
-ms.openlocfilehash: 11aa6327a8d870a1ff6356b88695b693c27f99a9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 568c55cd8524cd67c311214774391918212e95d8
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172344"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188184"
 ---
 # <a name="design-a-microservice-oriented-application"></a>Diseño de una aplicación orientada a microservicios
 
@@ -15,17 +15,17 @@ Esta sección se centra en desarrollar una hipotética aplicación empresarial d
 
 ## <a name="application-specifications"></a>Especificaciones de la aplicación
 
-La aplicación hipotética controla las solicitudes mediante la ejecución de lógica de negocios, el acceso a bases de datos y, después, la devolución de respuestas HTML, JSON o XML. Diremos que la aplicación debe admitir una variedad de clientes, incluidos exploradores de escritorio que ejecuten aplicaciones de página única (SPA), aplicaciones web tradicionales, aplicaciones web móviles y aplicaciones móviles nativas. También es posible que la aplicación exponga una API para el consumo de terceros. También debe ser capaz de integrar sus microservicios o aplicaciones externas de forma asincrónica, para que ese enfoque ayude a la resistencia de los microservicios en caso de errores parciales.
+La aplicación hipotética controla las solicitudes mediante la ejecución de lógica de negocios, el acceso a bases de datos y, después, la devolución de respuestas HTML, JSON o XML. Diremos que la aplicación debe admitir varios clientes, incluidos exploradores de escritorio que ejecuten aplicaciones de página única (SPA), aplicaciones web tradicionales, aplicaciones web móviles y aplicaciones móviles nativas. También es posible que la aplicación exponga una API para el consumo de terceros. También debe ser capaz de integrar sus microservicios o aplicaciones externas de forma asincrónica, para que ese enfoque ayude a la resistencia de los microservicios en caso de errores parciales.
 
 La aplicación constará de estos tipos de componentes:
 
-- Componentes de presentación. Son los responsables del control de la interfaz de usuario y el consumo de servicios remotos.
+- Componentes de presentación. Estos componentes son los responsables del control de la interfaz de usuario y el consumo de servicios remotos.
 
-- Lógica de dominio o de negocios. Se trata de la lógica de dominio de la aplicación.
+- Lógica de dominio o de negocios. Este componente es la lógica de dominio de la aplicación.
 
-- Lógica de acceso a bases de datos. Son los componentes de acceso a datos responsables de obtener acceso a las bases de datos (SQL o NoSQL).
+- Lógica de acceso a bases de datos. Este componente está formado por componentes de acceso a datos responsables de acceder a las bases de datos (SQL o NoSQL).
 
-- Lógica de integración de aplicaciones. Incluye un canal de mensajería, basado principalmente en agentes de mensajes.
+- Lógica de integración de aplicaciones. Este componente incluye un canal de mensajería basado en agentes de mensajes.
 
 La aplicación requerirá alta escalabilidad, además de permitir que sus subsistemas verticales se escalen horizontalmente de forma autónoma, porque algunos subsistemas requerirán mayor escalabilidad que otros.
 
@@ -55,11 +55,11 @@ Con este enfoque, cada servicio (contenedor) implementa un conjunto de funciones
 
 Los microservicios se comunican mediante protocolos como HTTP (REST), pero también de forma asincrónica (por ejemplo, mediante AMQP) siempre que sea posible, en especial al propagar actualizaciones con eventos de integración.
 
-Los microservicios se desarrollan e implementan como contenedores de forma independiente entre ellos. Esto significa que un equipo de desarrollo puede desarrollar e implementar un microservicio determinado sin afectar a otros subsistemas.
+Los microservicios se desarrollan e implementan como contenedores de forma independiente entre ellos. Este enfoque implica que un equipo de desarrollo puede desarrollar e implementar un microservicio determinado sin afectar a otros subsistemas.
 
 Cada microservicio tiene su propia base de datos, lo que permite separarlo totalmente de otros microservicios. Cuando sea necesario, la coherencia entre las bases de datos de los diferentes microservicios se logra mediante eventos de integración de nivel de aplicación (a través de un bus de eventos lógicos), como se controla en Command and Query Responsibility Segregation (CQRS). Por ese motivo, las restricciones de negocio deben adoptar la coherencia final entre los múltiples microservicios y bases de datos relacionadas.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: una aplicación de referencia para .NET Core y microservicios implementados mediante contenedores
+### <a name="eshoponcontainers-a-reference-application-for-net-and-microservices-deployed-using-containers"></a>eShopOnContainers: aplicación de referencia para .NET y microservicios implementados mediante contenedores
 
 Para que pueda centrarse en la arquitectura y las tecnologías en lugar de pensar en un dominio de negocio hipotético que es posible que no conozca, se ha seleccionado un dominio de negocio conocido: una aplicación de comercio electrónico simplificada (e-shop) que presenta un catálogo de productos, recibe pedidos de los clientes, comprueba el inventario y realiza otras funciones de negocio. El código fuente basado en contenedores de esta aplicación está disponible en el repositorio de GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture).
 
@@ -75,15 +75,15 @@ En el diagrama anterior se muestra que los clientes móviles y SPA se comunican 
 
 **Arquitectura de comunicación**. En la aplicación eShopOnContainers se usan dos tipos de comunicación, según el tipo de la acción funcional (consultas frente a transacciones y actualizaciones):
 
-- Comunicación de cliente a microservicio de HTTP a través de puertas de enlace de API. Se usa para las consultas y al aceptar los comandos transaccionales o de actualización desde las aplicaciones cliente. El enfoque que usa puertas de enlace de API se explica con detalle en secciones posteriores.
+- Comunicación de cliente a microservicio de HTTP a través de puertas de enlace de API. Este enfoque se sigue para las consultas y al aceptar los comandos transaccionales o de actualización desde las aplicaciones cliente. El enfoque que usa puertas de enlace de API se explica con detalle en secciones posteriores.
 
-- Comunicación asincrónica basada en eventos. Se realiza a través de un bus de eventos para propagar las actualizaciones entre los microservicios o para la integración con aplicaciones externas. El bus de eventos se puede implementar con cualquier tecnología de infraestructura de agente de mensajería como RabbitMQ, o bien mediante Service Bus de nivel superior (nivel de abstracción) como Azure Service Bus, NServiceBus, MassTransit o Brighter.
+- Comunicación asincrónica basada en eventos. Esta comunicación se realiza mediante un bus de eventos para propagar las actualizaciones en los microservicios o para la integración con aplicaciones externas. El bus de eventos se puede implementar con cualquier tecnología de infraestructura de agente de mensajería como RabbitMQ, o bien mediante Service Bus de nivel superior (nivel de abstracción) como Azure Service Bus, NServiceBus, MassTransit o Brighter.
 
 La aplicación se implementa como un conjunto de microservicios en forma de contenedores. Las aplicaciones cliente pueden comunicarse con esos microservicios que se ejecuten como contenedores a través de las direcciones URL públicas publicadas por las puertas de enlace de API.
 
 ### <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 
-En la aplicación de ejemplo, cada microservicio posee su propia base de datos u origen de datos, aunque todas las bases de datos de SQL Server se implementan como un contenedor único. Esta decisión de diseño se tomó solo para facilitar a los desarrolladores la obtención del código desde GitHub, clonarlo y abrirlo en Visual Studio o Visual Studio Code. O bien, como alternativa, facilita la compilación de las imágenes de Docker personalizadas mediante la CLI de .NET Core y la de Docker, y después su implementación y ejecución en un entorno de desarrollo de Docker. En cualquier caso, el uso de contenedores para orígenes de datos permite a los desarrolladores compilar e implementar en cuestión de minutos sin tener que aprovisionar una base de datos externa o cualquier otro origen de datos con dependencias en la infraestructura (en la nube o locales).
+En la aplicación de ejemplo, cada microservicio posee su propia base de datos u origen de datos, aunque todas las bases de datos de SQL Server se implementan como un contenedor único. Esta decisión de diseño se tomó solo para facilitar a los desarrolladores la obtención del código desde GitHub, clonarlo y abrirlo en Visual Studio o Visual Studio Code. También facilita la compilación de las imágenes de Docker personalizadas mediante la CLI de .NET y la de Docker, y la implementación y ejecución posteriores en un entorno de desarrollo de Docker. En cualquier caso, el uso de contenedores para orígenes de datos permite a los desarrolladores compilar e implementar en cuestión de minutos sin tener que aprovisionar una base de datos externa o cualquier otro origen de datos con dependencias en la infraestructura (en la nube o locales).
 
 En un entorno de producción real, para alta disponibilidad y escalabilidad, las bases de datos deberían basarse en servidores de base de datos en la nube o locales, pero no en contenedores.
 
@@ -106,7 +106,7 @@ Una solución basada en microservicios como esta tiene muchas ventajas:
 
 - Un IDE como Visual Studio puede cargar proyectos más pequeños con rapidez, aumentando la productividad de los desarrolladores.
 
-- Cada microservicio se puede diseñar, desarrollar e implementar independientemente de otros microservicios, lo que proporciona agilidad dado que es más fácil implementar nuevas versiones de los microservicios con frecuencia.
+- Cada microservicio se puede diseñar, desarrollar e implementar con independencia de otros microservicios. Esto aporta agilidad, dado que es más fácil implementar nuevas versiones de los microservicios con frecuencia.
 
 **Es posible escalar horizontalmente áreas individuales de la aplicación**. Por ejemplo, es posible que sea necesario escalar horizontalmente el servicio de catálogo o el de cesta de la compra, pero no el proceso de pedidos. Una infraestructura de microservicios será mucho más eficaz con respecto a los recursos que se usan durante el escalado horizontal que una arquitectura monolítica.
 
@@ -114,7 +114,7 @@ Una solución basada en microservicios como esta tiene muchas ventajas:
 
 **Los problemas son más aislados**. Si se produce un problema en un servicio, inicialmente solo se ve afectado ese servicio (excepto cuando se usa un diseño incorrecto, con dependencias directas entre los microservicios) y los demás servicios pueden continuar con el control de las solicitudes. Por el contrario, un componente en mal estado en una arquitectura de implementación monolítica puede colapsar todo el sistema, especialmente si hay recursos implicados, como una fuga de memoria. Además, cuando se resuelve un problema en un microservicio, se puede implementar el microservicio afectado sin afectar al resto de la aplicación.
 
-**Se pueden usar las tecnologías más recientes**. Como se puede empezar a desarrollar los servicios de forma independiente y ejecutarlos en paralelo (gracias a los contenedores y .NET Core), se pueden usar las tecnologías y plataformas más modernas de forma oportuna en lugar de quedarse atascado en una pila o marco de trabajo antiguo para toda la aplicación.
+**Se pueden usar las tecnologías más recientes**. Como es posible empezar a desarrollar los servicios de forma independiente y ejecutarlos en paralelo (gracias a los contenedores y .NET), se pueden usar las tecnologías y plataformas más modernas de forma oportuna en lugar de atascarse en una pila o marco antiguo para toda la aplicación.
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>Desventajas de una solución basada en microservicios
 
@@ -126,7 +126,7 @@ Una solución basada en microservicios como esta también tiene algunas desventa
 
 **Transacciones atómicas**. Normalmente, no se pueden realizar transacciones atómicas entre varios microservicios. Los requisitos de negocio deben adoptar la coherencia final entre varios microservicios.
 
-**Aumento de las necesidades de recursos globales** (total de memoria, unidades y recursos de red para todos los hosts o servidores). En muchos casos, al reemplazar una aplicación monolítica con un enfoque de microservicios, la cantidad de recursos globales inicial necesaria para la nueva aplicación basada en microservicios será mayor que las necesidades de infraestructura de la aplicación monolítica original. Esto se debe a que el mayor grado de granularidad y servicios distribuidos requiere más recursos globales. Pero dado el bajo costo de los recursos en general y la ventaja de poder escalar horizontalmente solo determinadas áreas de la aplicación en comparación con los costos a largo plazo a la hora de desarrollar aplicaciones monolíticas, el aumento en el uso de recursos normalmente es una ventaja para las grandes aplicaciones a largo plazo.
+**Aumento de las necesidades de recursos globales** (total de memoria, unidades y recursos de red para todos los hosts o servidores). En muchos casos, al reemplazar una aplicación monolítica con un enfoque de microservicios, la cantidad de recursos globales inicial necesaria para la nueva aplicación basada en microservicios será mayor que las necesidades de infraestructura de la aplicación monolítica original. Este enfoque se debe a que un mayor grado de granularidad y servicios distribuidos requiere más recursos globales. Sin embargo, dado el bajo costo de los recursos en general y la ventaja de poder escalar horizontalmente determinadas áreas de la aplicación en comparación con los costos a largo plazo a la hora de desarrollar aplicaciones monolíticas, el aumento en el uso de recursos normalmente es una ventaja para las grandes aplicaciones a largo plazo.
 
 **Problemas de comunicación directa de cliente a microservicio**. Cuando la aplicación es grande, con docenas de microservicios, hay problemas y limitaciones si la aplicación requiere comunicaciones directas del cliente al microservicio. Un problema es un error de coincidencia potencial entre las necesidades del cliente y las API expuestas por cada uno de los microservicios. En algunos casos, es posible que la aplicación cliente tenga que realizar varias solicitudes independientes para crear la interfaz de usuario, lo que puede resultar ineficaz a través de Internet y poco práctico a través de una red móvil. Por tanto, se deben minimizar las solicitudes de la aplicación cliente al sistema back-end.
 
@@ -136,7 +136,7 @@ Otra desventaja con este enfoque directo de cliente a servicio es que resulta di
 
 Como se mencionó en la sección sobre arquitectura, al diseñar y crear una aplicación compleja basada en microservicios, podría considerar el uso de varias puertas de enlace de API específicas en lugar del enfoque más sencillo de comunicación directa entre el cliente y el microservicio.
 
-**Creación de particiones de los microservicios**. Por último, independientemente del enfoque que se adopte para la arquitectura del microservicio, otro desafío consiste en decidir cómo dividir una aplicación integral en varios microservicios. Como se indicó en la sección sobre arquitectura de la guía, se pueden adoptar varias técnicas y enfoques. Básicamente, debe identificar las áreas de la aplicación que se separan del resto y que tienen un número reducido de dependencias fuertes. En muchos casos, esto se alinea con la creación de particiones de los servicios por caso de uso. Por ejemplo, en la aplicación de tienda electrónica, hay un servicio de pedidos que se encarga de toda la lógica de negocios relacionada con el proceso de pedidos. También hay un servicio de catálogo y otro de cesta de la compra que implementan otras funciones. Idealmente, cada servicio solo debería tener un conjunto reducido de responsabilidades. Esto es similar al principio de responsabilidad única (SRP) aplicado a las clases, que indica que una clase solo debe tener un motivo para cambiar. Pero en este caso, se trata de microservicios, por lo que el ámbito será mayor que el de una sola clase. Sobre todo, un microservicio tiene que ser completamente autónomo, de principio a fin, incluida la responsabilidad de sus propios orígenes de datos.
+**Creación de particiones de los microservicios**. Por último, independientemente del enfoque que se adopte para la arquitectura del microservicio, otro desafío consiste en decidir cómo dividir una aplicación integral en varios microservicios. Como se indicó en la sección sobre arquitectura de la guía, se pueden adoptar varias técnicas y enfoques. Básicamente, debe identificar las áreas de la aplicación que se separan del resto y que tienen un número reducido de dependencias fuertes. En muchos casos, este enfoque se alinea con la creación de particiones de los servicios por caso de uso. Por ejemplo, en la aplicación de tienda electrónica, hay un servicio de pedidos que se encarga de toda la lógica de negocios relacionada con el proceso de pedidos. También hay un servicio de catálogo y otro de cesta de la compra que implementan otras funciones. Idealmente, cada servicio solo debería tener un conjunto reducido de responsabilidades. Este enfoque es similar al principio de responsabilidad única (SRP) aplicado a las clases, que indica que una clase solo debe tener un motivo para cambiar. Pero en este caso, se trata de microservicios, por lo que el ámbito será mayor que el de una sola clase. Sobre todo, un microservicio tiene que ser autónomo de principio a fin, incluida la responsabilidad de sus propios orígenes de datos.
 
 ## <a name="external-versus-internal-architecture-and-design-patterns"></a>Diferencias entre patrones de arquitectura y diseño externos e internos
 
@@ -168,7 +168,7 @@ Los desarrolladores y arquitectos de software usan muchos modelos arquitectónic
 
 - [Arquitectura controlada por eventos](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
-También se pueden compilar microservicios con muchas tecnologías y lenguajes, como las API web de ASP.NET Core, NancyFx, ASP.NET Core SignalR (disponible con .NET Core 2), F\#, Node.js, Python, Java, C++, GoLang y muchos más.
+También se pueden compilar microservicios con muchas tecnologías y lenguajes, como las API web de ASP.NET Core, NancyFx, ASP.NET Core SignalR (disponible con .NET Core 2 o versiones posteriores), F\#, Node.js, Python, Java, C++, GoLang y otros.
 
 Lo importante es que ningún modelo o estilo arquitectónico determinado, ni ninguna tecnología concreta, es adecuado para todas las situaciones. En la figura 6-3 se muestran algunos enfoques y tecnologías (aunque en ningún orden concreto) que se pueden usar en otros microservicios.
 

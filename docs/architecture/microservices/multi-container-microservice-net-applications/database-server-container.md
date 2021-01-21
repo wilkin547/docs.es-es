@@ -1,13 +1,13 @@
 ---
 title: Uso de un servidor de bases de datos que se ejecuta como contenedor
 description: Sirve para comprender la importancia de usar un servidor de base de datos que se ejecuta como contenedor solamente para el desarrollo. Nunca se debe usar para la producción.
-ms.date: 01/30/2020
-ms.openlocfilehash: 38f77e195b184d57dcad5904674a0025ef6c2bd8
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/13/2021
+ms.openlocfilehash: 1292bf37e3baaeb6284f6fba15b4bc7c9c17b4a7
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539404"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188743"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>Uso de un servidor de bases de datos que se ejecuta como contenedor
 
@@ -270,7 +270,7 @@ En eShopOnContainers, el microservicio `basket-api` usa una caché de Redis que 
       - "6379"
 ```
 
-Este código de docker-compose.yml define un contenedor denominado `basketdata` que se basa en la imagen de Redis y publica el puerto 6379 de forma interna. Esto significa que solo será accesible desde otros contenedores que se ejecuten dentro del host de Docker.
+Este código de docker-compose.yml define un contenedor denominado `basketdata` que se basa en la imagen de Redis y publica el puerto 6379 de forma interna. Esta configuración implica que solo será accesible desde otros contenedores que se ejecuten dentro del host de Docker.
 
 Por último, en el archivo *docker-compose.override.yml*, el microservicio `basket-api` para el ejemplo de eShopOnContainers define la cadena de conexión que se usará para ese contenedor de Redis:
 

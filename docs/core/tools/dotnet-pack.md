@@ -2,12 +2,12 @@
 title: Comando dotnet
 description: El comando dotnet pack crea paquetes NuGet para el proyecto de .NET.
 ms.date: 04/28/2020
-ms.openlocfilehash: 3ca7947b4ed9902b163f09a7b57696f304610cce
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a9a634c358f5de4f28c3de06edc9a2b4d2eb8d57
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674806"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190083"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,7 +46,7 @@ De forma predeterminada, `dotnet pack` compila primero el proyecto. Si desea evi
 > [!NOTE]
 > En algunos casos, no se puede realizar la compilación implícita. Esto puede ocurrir cuando se establece `GeneratePackageOnBuild`, para evitar una dependencia cíclica entre los destinos de compilación y de paquete. La compilación también puede producir un error si hay un archivo bloqueado u otro problema.
 
-Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el proceso de empaquetado. Para obtener más información, vea [Propiedades de metadatos de NuGet](csproj.md#nuget-metadata-properties) y la [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La sección [Ejemplos](#examples) muestra cómo utilizar el modificador -p de MSBuild en un par de escenarios diferentes.
+Puede proporcionar propiedades de MSBuild en el comando `dotnet pack` para el proceso de empaquetado. Para obtener más información, vea [pack y restore de NuGet como destinos de MSBuild](/nuget/reference/msbuild-targets#pack-target) y [Referencia de la línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). La sección [Ejemplos](#examples) muestra cómo utilizar el modificador `-p` de MSBuild en un par de escenarios diferentes.
 
 Los proyectos web no están empaquetados de forma predeterminada. Para invalidar el comportamiento predeterminado, agregue la siguiente propiedad a su archivo *.csproj*:
 
@@ -64,7 +64,7 @@ Los proyectos web no están empaquetados de forma predeterminada. Para invalidar
 
 `PROJECT | SOLUTION`
 
-  El archivo de proyecto o solución para empaquetar. Es una ruta de acceso a un [archivo csproj](csproj.md), un archivo vbproj, un archivo fsproj, un archivo de solución o un directorio. Si no se especifica, el comando busca un archivo del proyecto o de la solución en el directorio actual.
+  El archivo de proyecto o solución para empaquetar. Se trata de una ruta a un archivo .csproj, .vbproj o .fsproj, o a un archivo de solución o un directorio. Si no se especifica, el comando busca un archivo del proyecto o de la solución en el directorio actual.
 
 ## <a name="options"></a>Opciones
 

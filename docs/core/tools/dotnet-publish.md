@@ -2,12 +2,12 @@
 title: Comando dotnet publish
 description: El comando dotnet publish publica un proyecto o una solución de .NET en un directorio.
 ms.date: 11/11/2020
-ms.openlocfilehash: 9b5d00816e2f4f9557280175e4b016fe79af0673
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 3918c0708e207157ac33dd1a8fdefb993a1d6741
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634434"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98190070"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -72,8 +72,8 @@ Para obtener más información, vea los siguientes recursos:
 - **`PROJECT|SOLUTION`**
 
   El archivo de proyecto o solución que se va a publicar.
-  
-  * `PROJECT` es la ruta de acceso y el nombre de archivo de un archivo de proyecto de [C#](csproj.md), F# o Visual Basic, o bien la ruta de acceso a un directorio que contiene un archivo de proyecto de C#, F# o Visual Basic. Si no se especifica el directorio, se toma como predeterminado el actual.
+
+  * `PROJECT` es la ruta y el nombre de un archivo de proyecto de C#, F# o Visual Basic, o bien la ruta a un directorio que contiene un archivo de proyecto de C#, F# o Visual Basic. Si no se especifica el directorio, se toma como predeterminado el actual.
 
   * `SOLUTION` es la ruta de acceso y el nombre de archivo de un archivo de solución (extensión *.sln*), o bien la ruta de acceso a un directorio que contiene un archivo de solución. Si no se especifica el directorio, se toma como predeterminado el actual. Disponible desde el SDK de .NET Core 3.0.
 
@@ -132,16 +132,16 @@ Para obtener más información, vea los siguientes recursos:
   ```
 
   - SDK de .NET Core 3.x y versiones posteriores
-  
+
     Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo al directorio de trabajo actual, no a la ubicación del archivo del proyecto.
 
     Si se especifica una ruta de acceso relativa al publicar una solución, todas las salidas de todos los proyectos van en la carpeta especificada relativa al directorio de trabajo actual. A fin de que la salida de la publicación vaya a carpetas independientes para cada proyecto, especifique una ruta de acceso relativa mediante el uso de la propiedad `PublishDir` de MSBuild en lugar de la opción `--output`. Por ejemplo, `dotnet publish -p:PublishDir=.\publish` envía la salida de publicación de cada proyecto a una carpeta `publish` en la carpeta que contiene el archivo del proyecto.
 
   - SDK de .NET Core 2.x
-  
+
     Si se especifica una ruta de acceso relativa al publicar un proyecto, el directorio de salida generado es relativo a la ubicación del archivo del proyecto, no al directorio de trabajo actual.
 
-    Si se especifica una ruta de acceso relativa al publicar una solución, la salida de cada proyecto va a una carpeta independiente relativa a la ubicación del archivo del proyecto. Si se especifica una ruta de acceso absoluta al publicar una solución, la salida de las publicaciones de todos los proyectos van a la carpeta especificada.
+    Si se especifica una ruta de acceso relativa al publicar una solución, la salida de cada proyecto va a una carpeta independiente relativa a la ubicación del archivo del proyecto. Si se especifica una ruta de acceso absoluta al publicar una solución, la salida de las publicaciones de todos los proyectos va a la carpeta especificada.
 
 - **`-p:PublishReadyToRun=true`**
 

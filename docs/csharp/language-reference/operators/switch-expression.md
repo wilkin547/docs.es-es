@@ -1,13 +1,13 @@
 ---
 title: 'Expresión switch: referencia de C#'
 description: Obtenga información sobre cómo usar la expresión switch de C# para la coincidencia de patrones y otra introspección de datos
-ms.date: 03/19/2020
-ms.openlocfilehash: 2249afc1ff1cc81e9ad423d910ebb95df8c787d4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.date: 01/14/2021
+ms.openlocfilehash: 55fef8d351b178fd0ec23847e81e6c56eb1367b0
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916664"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536091"
 ---
 # <a name="switch-expression-c-reference"></a>Expresión switch (referencia de C#)
 
@@ -48,10 +48,13 @@ Por último, puede agregar los patrones `_` y `null` para detectar argumentos no
 
 En el ejemplo anterior se agrega un patrón `null` y se cambia el patrón de tipo `IEnumerable<T>` a un patrón `_`. El patrón `null` proporciona una comprobación de NULL como segmento de expresión switch. La expresión para ese segmento inicia una excepción <xref:System.ArgumentNullException>. El patrón `_` coincide con todas las entradas que no han coincidido con segmentos anteriores. Debe aparecer después de la comprobación `null` o coincidiría con las entradas `null`.
 
-Puede leer más en la propuesta de especificación de lenguaje C# para [patrones recursivos](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression).
+## <a name="non-exhaustive-switch-expressions"></a>Expresiones switch no exhaustivas
 
-## <a name="see-also"></a>Vea también
+Si ninguno de los patrones de una expresión switch detecta un argumento, el entorno de ejecución produce una excepción. En .NET Core 3.0 y versiones posteriores, la excepción es <xref:System.Runtime.CompilerServices.SwitchExpressionException?displayProperty=nameWithType>. En .NET Framework, la excepción es <xref:System.InvalidOperationException>.
 
+## <a name="see-also"></a>Consulte también
+
+- [Propuesta de especificación del lenguaje C# para patrones recursivos](~/_csharplang/proposals/csharp-8.0/patterns.md#switch-expression)
 - [Referencia de C#](../index.md)
 - [Operadores y expresiones de C#](index.md)
 - [Coincidencia de patrones](../../pattern-matching.md)

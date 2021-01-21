@@ -1,13 +1,13 @@
 ---
 title: Probar aplicaciones web y servicios ASP.NET Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Descubra una arquitectura para probar aplicaciones web y servicios ASP.NET Core en contenedores.
-ms.date: 08/07/2020
-ms.openlocfilehash: 67872668781d8ae5d79bf360aee73f744cf4404b
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.date: 01/13/2021
+ms.openlocfilehash: dfd0a320491f92154bc9e2804d56c00120224e62
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633954"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188008"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Probar aplicaciones web y servicios ASP.NET Core
 
@@ -15,13 +15,13 @@ Los controladores son una parte fundamental de cualquier servicio de la API de A
 
 Debe probar cómo se comporta el controlador según las entradas válidas o no válidas y probar las respuestas del controlador en función del resultado de la operación comercial que lleve a cabo. Pero debe realizar estos tipos de pruebas en los microservicios:
 
-- Pruebas unitarias. Esto garantiza que los componentes individuales de la aplicación funcionan según lo previsto. Las aserciones prueban la API del componente.
+- Pruebas unitarias. Estas pruebas garantizan que los componentes individuales de la aplicación funcionen según lo previsto. Las aserciones prueban la API del componente.
 
-- Pruebas de integración. Esto garantiza que las interacciones del componente funcionen según lo previsto con los artefactos externos como bases de datos. Las aserciones pueden poner a prueba la API del componente, la interfaz de usuario o los efectos secundarios de acciones como la E/S de la base de datos, el registro, etc.
+- Pruebas de integración. Estas pruebas garantizan que las interacciones de los componentes funcionen según lo previsto con los artefactos externos como bases de datos. Las aserciones pueden poner a prueba la API del componente, la interfaz de usuario o los efectos secundarios de acciones como la E/S de la base de datos, el registro, etc.
 
-- Pruebas funcionales para cada microservicio. Esto garantiza que la aplicación funcione según lo esperado desde la perspectiva del usuario.
+- Pruebas funcionales para cada microservicio. Estas pruebas garantizan que la aplicación funcione según lo esperado desde la perspectiva del usuario.
 
-- Pruebas de servicio. Esto garantiza que se pongan a prueba todos los casos de uso de servicio de un extremo a otro, incluidas pruebas de servicios múltiples al mismo tiempo. Para este tipo de prueba, primero debe preparar el entorno. En este caso, esto significa iniciar los servicios (por ejemplo, mediante el uso de Docker Compose).
+- Pruebas de servicio. Estas pruebas garantizan que se pongan a prueba todos los casos de uso de servicio de un extremo a otro, incluidas pruebas de servicios múltiples al mismo tiempo. Para este tipo de prueba, primero debe preparar el entorno. En este caso, esto significa iniciar los servicios (por ejemplo, mediante el uso de Docker Compose).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Implementación de pruebas unitarias para las API web de ASP.NET Core
 
@@ -70,7 +70,7 @@ Como las pruebas de integración usan segmentos de código más grandes que las 
 
 ASP.NET Core incluye un host web de prueba integrado que puede usarse para controlar las solicitudes HTTP sin causar una sobrecarga en la red, lo que significa que puede ejecutar dichas pruebas más rápidamente si usa un host de web real. El host web de prueba (TestServer) está disponible en un componente NuGet como Microsoft.AspNetCore.TestHost. Se puede agregar a proyectos de prueba de integración y utilizarlo para hospedar aplicaciones de ASP.NET Core.
 
-Como puede ver en el código siguiente, al crear pruebas de integración para controladores de ASP.NET Core, los controladores se ejemplifican a través del host de prueba. Esto se puede comparar a una solicitud HTTP, pero se ejecuta con mayor rapidez.
+Como puede ver en el código siguiente, al crear pruebas de integración para controladores de ASP.NET Core, los controladores se ejemplifican a través del host de prueba. Esta funcionalidad es comparable a una solicitud HTTP, pero se ejecuta con mayor rapidez.
 
 ```csharp
 public class PrimeWebDefaultRequestShould
@@ -107,7 +107,7 @@ public class PrimeWebDefaultRequestShould
 - **Steve Smith. Pruebas de integración** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
-- **Pruebas unitarias en .NET Core con dotnet test** \
+- **Pruebas unitarias en .NET con dotnet test** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Sitio oficial. \
@@ -146,7 +146,7 @@ Mientras que las pruebas unitarias y de integración se organizan en una carpeta
 
 **Figura 6-25**. Estructura de carpetas de prueba en eShopOnContainers
 
-Las pruebas de integración y funcionales de microservicios y aplicaciones se ejecutan desde Visual Studio, mediante el ejecutor de pruebas periódicas, pero primero debe iniciar los servicios de infraestructura necesarios, por medio de un conjunto de archivos docker-compose incluidos en la carpeta de prueba de la solución:
+Las pruebas de integración y funcionales de microservicios y aplicaciones se ejecutan desde Visual Studio, mediante el ejecutor de pruebas periódicas, pero primero debe iniciar los servicios de infraestructura necesarios, con un conjunto de archivos docker-compose incluidos en la carpeta de prueba de la solución:
 
 **docker-compose-test.yml**
 
@@ -194,7 +194,7 @@ Por tanto, para ejecutar las pruebas de integración y funcionales primero debe 
 docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ```
 
-Como puede ver, estos archivos docker-compose solo inician los microservicios Redis, RabbitMQ, SQL Server y MongoDB.
+Como puede ver, estos archivos docker-compose solo inician los microservicios Redis, RabbitMQ, SQL Server y MongoDB.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 

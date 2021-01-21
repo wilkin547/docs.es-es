@@ -4,12 +4,12 @@ description: Obtenga información sobre las versiones de Windows en las que pued
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: d8ca3eed3786a728002d8ffe80b774a0018eee82
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025458"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536130"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -260,11 +260,31 @@ Aunque Visual Studio Code no viene con un instalador automatizado de .NET Core 
 
 La [página de descarga](https://dotnet.microsoft.com/download/dotnet-core) de .NET proporciona ejecutables de Windows Installer.
 
-Al usar los archivos MSI para instalar .NET, puede personalizar la ruta de instalación estableciendo los parámetros `DOTNETHOME_X64` y `DOTNETHOME_X86`:
+Al usar los instaladores de Windows para instalar .NET, puede personalizar la ruta de instalación estableciendo los parámetros `DOTNETHOME_X64` y `DOTNETHOME_X86`:
 
 ```console
 dotnet-sdk-3.1.301-win-x64.exe DOTNETHOME_X64="F:\dotnet\x64" DOTNETHOME_X86="F:\dotnet\x86"
 ```
+
+Si quiere instalar .NET de forma silenciosa, como en un entorno de producción o para admitir la integración continua, use las expresiones switch siguientes:
+
+- `/install`\
+Instala .NET.
+
+- `/quiet`\
+Impide que se muestren interfaces de usuario y solicitudes.
+
+- `norestart`\
+Suprime los intentos de reinicio.
+
+```console
+dotnet-sdk-3.1.301-win-x64.exe /install /quiet /norestart
+```
+
+Para obtener más información, vea [Opciones de la línea de comandos del instalador estándar](/windows/win32/msi/standard-installer-command-line-options).
+
+> [!TIP]
+> El instalador devuelve un código de salida 0 en caso de no detectar ningún error y un código de salida 3010 para indicar que se requiere un reinicio. Cualquier otro valor suele ser un código de error.
 
 ## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
 

@@ -1,19 +1,19 @@
 ---
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones de .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
-ms.date: 01/30/2020
-ms.openlocfilehash: 878d4d64e92ca92fd2393d60d496f1c5671e7029
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/13/2021
+ms.openlocfilehash: 2c7b6dbe2f59a26d33a4842e74aed2b7588bd14d
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172357"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188899"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
 Al utilizar bases de datos relacionales, como SQL Server, Oracle o PostgreSQL, se recomienda implementar el nivel de persistencia basado en Entity Framework (EF). EF es compatible con LINQ y proporciona objetos fuertemente tipados para el modelo, así como una persistencia simplificada en la base de datos.
 
-Entity Framework hace mucho tiempo que forma parte de .NET Framework. Al utilizar .NET Core, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET Core. EF Core es una reescritura completa de Entity Framework, que se implementa con una superficie mucho menor y con mejoras importantes en el rendimiento.
+Entity Framework hace mucho tiempo que forma parte de .NET Framework. Al utilizar .NET, también debe usar Entity Framework Core, que se ejecuta en Windows o Linux de la misma manera que .NET. EF Core es una reescritura completa de Entity Framework, que se implementa con una superficie mucho menor y con mejoras importantes en el rendimiento.
 
 ## <a name="introduction-to-entity-framework-core"></a>Introducción a Entity Framework Core
 

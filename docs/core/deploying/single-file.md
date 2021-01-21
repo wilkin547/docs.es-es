@@ -4,12 +4,12 @@ description: Obtenga información sobre qué es una aplicación de archivo únic
 author: lakshanf
 ms.author: lakshanf
 ms.date: 12/17/2020
-ms.openlocfilehash: e2d2c9ed4c28d11a77e4f840602982a36cf1c80c
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 10ffc947f6a3adcf2889a03edd2616007ce236f3
+ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678147"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98536143"
 ---
 # <a name="single-file-deployment-and-executable"></a>Implementación de archivo único y ejecutable
 
@@ -56,6 +56,8 @@ Para corregir estos errores, _mscordbi_ debe copiarse junto al archivo ejecutabl
 ## <a name="other-considerations"></a>Otras consideraciones
 
 De forma predeterminada, las aplicaciones de archivo único no agrupan bibliotecas nativas. En Linux, se realiza el enlace previo del runtime a la agrupación y solo se implementan bibliotecas nativas de la aplicación en el mismo directorio que la aplicación de archivo único. En Windows, solo se realiza el enlace previo del código de hospedaje, y el runtime y las bibliotecas nativas de la aplicación se implementan en el mismo directorio que la aplicación de archivo único. Esto permite garantizar una buena experiencia de depuración, que requiere que los archivos nativos se excluyan del archivo único. Hay una opción para establecer una marca, `IncludeNativeLibrariesForSelfExtract`, a fin de incluir bibliotecas nativas en el paquete de archivo único, pero estos archivos se extraerán en un directorio temporal en el equipo cliente cuando se ejecute la aplicación de archivo único.
+
+Si se especifica `IncludeAllContentForSelfExtract`, se extraerán todos los archivos antes de ejecutar el archivo ejecutable. Esto permite conservar el comportamiento original de implementación de un solo archivo de .NET Core.
 
 La aplicación de un solo archivo tendrá todos los archivos PDB relacionados junto con él y no se agrupará de forma predeterminada. Si desea incluir PDB dentro del ensamblado para los proyectos que se compilan, establezca `DebugType` en `embedded` tal y como se describe [a continuación](#include-pdb-files-inside-the-bundle) en detalle.
 

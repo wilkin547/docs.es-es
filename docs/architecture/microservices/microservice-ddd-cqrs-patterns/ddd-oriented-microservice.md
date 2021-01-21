@@ -1,13 +1,13 @@
 ---
 title: Diseño de un microservicio orientado a un DDD
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre el diseño del microservicio Ordering orientado a DDD y sus niveles de aplicación.
-ms.date: 10/08/2018
-ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 01/13/2021
+ms.openlocfilehash: 1d17f0842bb371ce65e96f33d25b2d6e94493396
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988744"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188340"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Diseño de un microservicio orientado a DDD
 
@@ -15,7 +15,7 @@ El diseño guiado por el dominio (DDD) propone un modelado basado en la realidad
 
 A veces, estos patrones y reglas técnicas de DDD se perciben como obstáculos con una curva de aprendizaje pronunciada a la hora de implementar opciones de DDD. Pero lo importante no son los patrones en sí, sino organizar el código para que esté en línea con los problemas del negocio y utilizar los mismos términos empresariales (lenguaje ubicuo). Además, las opciones de DDD solo deben aplicarse en el caso de implementar microservicios complejos con reglas de negocio importantes. Las responsabilidades más sencillas, como el servicio CRUD, se pueden administrar con enfoques más sencillos.
 
-La clave está en dónde situar los límites al diseñar y definir un microservicio. Los patrones de DDD le ayudan a comprender la complejidad del dominio. En el modelo de dominio de cada contexto delimitado, debe identificar y definir las entidades, los objetos de valor y los agregados que modelan el dominio. Debe crear y perfeccionar un modelo de dominio que se encuentre dentro de un límite definido por su contexto. Y esto se hace claramente patente en la forma de un microservicio. Los componentes situados dentro de esos límites acaban siendo sus microservicios, aunque, en algunos casos, los contextos delimitados o los microservicios pueden estar compuestos de varios servicios físicos. El DDD afecta a los límites y, por lo tanto, a los microservicios.
+La clave está en dónde situar los límites al diseñar y definir un microservicio. Los patrones de DDD le ayudan a comprender la complejidad del dominio. En el modelo de dominio de cada contexto delimitado, debe identificar y definir las entidades, los objetos de valor y los agregados que modelan el dominio. Debe crear y perfeccionar un modelo de dominio que se encuentre dentro de un límite definido por su contexto. Y esto se hace patente en la forma de un microservicio. Los componentes situados dentro de esos límites acaban siendo sus microservicios, aunque, en algunos casos, los contextos delimitados o los microservicios pueden estar compuestos de varios servicios físicos. El DDD afecta a los límites y, por lo tanto, a los microservicios.
 
 ## <a name="keep-the-microservice-context-boundaries-relatively-small"></a>Mantener los límites de contexto del microservicio relativamente estrechos
 
@@ -31,7 +31,7 @@ La mayoría de aplicaciones de empresa con una significativa complejidad empresa
 
 Por ejemplo, una entidad se puede cargar desde la base de datos. Puede ser que se envíe parte de esa información, o un agregado de información que incluya datos adicionales de otras entidades, a la interfaz de usuario del cliente a través de una API web de REST. La cuestión es que la entidad de dominio se debe situar dentro del nivel de modelo de dominio y no puede propagarse a otras áreas a las que no pertenece, como al nivel de presentación.
 
-Además, debe tener entidades siempre válidas (consulte la sección [Diseño de validaciones en el nivel de modelo de dominio](domain-model-layer-validations.md)) y controladas por raíces agregadas (entidades raíz). Por lo tanto, las entidades no pueden estar enlazadas a vistas de cliente, porque puede ser que algunos datos no estén validados en el nivel de la interfaz de usuario. Para esto sirve el modelo ViewModel. El modelo ViewModel es un modelo de datos exclusivo para las necesidades del nivel de presentación. Las entidades de dominio no pertenecen directamente al modelo ViewModel. En cambio, debe traducir entre ViewModels y entidades de dominio, y viceversa.
+Además, debe tener entidades siempre válidas (consulte la sección [Diseño de validaciones en el nivel de modelo de dominio](domain-model-layer-validations.md)) y controladas por raíces agregadas (entidades raíz). Por lo tanto, las entidades no pueden estar enlazadas a vistas de cliente, porque puede ser que algunos datos no estén validados en el nivel de la interfaz de usuario. Y ese es el propósito de ViewModel. El modelo ViewModel es un modelo de datos exclusivo para las necesidades del nivel de presentación. Las entidades de dominio no pertenecen directamente al modelo ViewModel. En cambio, debe traducir entre ViewModels y entidades de dominio, y viceversa.
 
 Al hablar de complejidad, es importante tener un modelo de dominio controlado por raíces agregadas que garanticen que todas las invariantes y reglas relacionadas con ese grupo de entidades (agregadas) se realicen a través de un punto de entrada o puerta únicos: la raíz agregada.
 
@@ -41,7 +41,7 @@ En la Figura 7-5 se muestra cómo se implementa un diseño por niveles en la apl
 
 **Figura 7-5**. Niveles de DDD en el microservicio de ordenación en eShopOnContainers
 
-Las tres capas en un microservicio DDD como Ordering. Cada capa es un proyecto de VS: la capa de aplicación es Ordering.API, el nivel de dominio es Ordering.Domain y el nivel de infraestructura es Ordering.Infrastructure. Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solamente con otros niveles determinados. Esto puede ser más fácil de aplicar si los niveles se implementan como bibliotecas de clase distintas, porque puede identificar claramente qué dependencias se establecen entre bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe depender de ningún otro nivel (las clases del modelo de dominio deben ser clases de objetos CLR estándar o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Como se muestra en la Figura 7-6, la biblioteca de nivel **Ordering.Domain** solo tiene dependencias en las bibliotecas .NET Core o en los paquetes NuGet, pero no en otras bibliotecas personalizadas, como la biblioteca de datos o de persistencia.
+Las tres capas en un microservicio DDD como Ordering. Cada capa es un proyecto de VS: la capa de aplicación es Ordering.API, el nivel de dominio es Ordering.Domain y el nivel de infraestructura es Ordering.Infrastructure. Le recomendamos que diseñe el sistema de modo que cada nivel se comunique solamente con otros niveles determinados. Este enfoque puede ser más fácil de aplicar si los niveles se implementan como bibliotecas de clase distintas, porque puede identificar claramente qué dependencias se establecen entre bibliotecas. Por ejemplo, el nivel de modelo de dominio no debe depender de ningún otro nivel (las clases del modelo de dominio deben ser clases de objetos CLR estándar o [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Como se muestra en la figura 7-6, la biblioteca de nivel **Ordering.Domain** solo tiene dependencias en las bibliotecas de .NET o en los paquetes NuGet, pero no en otras bibliotecas personalizadas, como la biblioteca de datos o de persistencia.
 
 ![Captura de pantalla de las dependencias de Ordering.Domain.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
@@ -61,7 +61,7 @@ Las entidades de dominio no deben depender directamente (como derivarse de una c
 
 Los marcos ORM más modernos, como Entity Framework Core, permiten este enfoque, de forma que las clases de modelo de dominio no se acoplan a la infraestructura. Pero no siempre se puede disponer de entidades POCO al usar marcos y bases de datos NoSQL determinados, como actores y colecciones de confianza en Azure Service Fabric.
 
-Incluso cuando es importante seguir el principio de omisión de persistencia en el modelo de dominio, no debe ignorar los problemas de persistencia. Sigue siendo muy importante comprender el modelo de datos físicos y cómo se asigna a un modelo de objetos entidad. En caso contrario, puede crear diseños imposibles.
+Incluso cuando es importante seguir el principio de omisión de persistencia en el modelo de dominio, no debe ignorar los problemas de persistencia. Sigue siendo importante comprender el modelo de datos físicos y cómo se asigna a un modelo de objetos entidad. En caso contrario, puede crear diseños imposibles.
 
 Además, esto no significa que pueda tomar un modelo diseñado para una base de datos relacional y moverla directamente a un NoSQL o a una base de datos orientada a un documento. En algunos modelos de entidad, es posible que el modelo encaje, pero normalmente no lo hace. Sigue habiendo restricciones que el modelo de entidad debe cumplir, basándose en la tecnología de almacenamiento y en la tecnología ORM.
 

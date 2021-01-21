@@ -2,12 +2,12 @@
 title: 'Herramienta de diagnóstico dotnet-gcdump: CLI de .NET'
 description: Aprenda a instalar y usar la herramienta de la CLI dotnet-gcdump para recopilar volcados de memoria de GC (recolector de elementos no utilizados) de procesos de .NET en vivo mediante EventPipe de .NET.
 ms.date: 11/17/2020
-ms.openlocfilehash: 02e1a7c5d86b582289672a027464aefd67a6f490
-ms.sourcegitcommit: e301979e3049ce412d19b094c60ed95b316a8f8c
+ms.openlocfilehash: fe7772eed642daadbd1754627751f58d0ab57b8e
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97593375"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98188574"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Herramienta de análisis del montón (dotnet-gcdump)
 
@@ -34,6 +34,9 @@ Hay dos maneras de descargar e instalar `dotnet-gcdump`:
   | Windows | [x86](https://aka.ms/dotnet-gcdump/win-x86) \| [x64](https://aka.ms/dotnet-gcdump/win-x64) \| [arm](https://aka.ms/dotnet-gcdump/win-arm) \| [arm-x64](https://aka.ms/dotnet-gcdump/win-arm64) |
   | macOS   | [x64](https://aka.ms/dotnet-gcdump/osx-x64) |
   | Linux   | [x64](https://aka.ms/dotnet-gcdump/linux-x64) \| [arm](https://aka.ms/dotnet-gcdump/linux-arm) \| [arm64](https://aka.ms/dotnet-gcdump/linux-arm64) \| [musl-x64](https://aka.ms/dotnet-gcdump/linux-musl-x64) \| [musl-arm64](https://aka.ms/dotnet-gcdump/linux-musl-arm64) |
+
+> [!NOTE]
+> Para usar `dotnet-gcdump` en una aplicación x86, necesita la versión x86 correspondiente de la herramienta.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -103,6 +106,12 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 - **`-n|--name <name>`**
 
   Nombre del proceso del que se va a recopilar el volcado de memoria de GC.
+
+> [!NOTE]
+> En Linux y macOS, este comando espera que la aplicación de destino y `dotnet-gcdump` compartan la misma variable de entorno `TMPDIR`. De lo contrario, se agotará el tiempo de espera del comando.
+
+> [!NOTE]
+> Para recopilar un volcado de recolección de elementos no utilizados mediante `dotnet-gcdump`, debe ejecutarse como el mismo usuario que el que ejecuta el proceso de destino, o bien como usuario raíz. De lo contrario, la herramienta no podrá establecer una conexión con el proceso de destino.
 
 ## `dotnet-gcdump ps`
 

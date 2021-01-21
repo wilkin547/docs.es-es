@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e7deb8c32fd01452524122e41f758ab037020ee4
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970712"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98189990"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -79,15 +79,43 @@ Puede especificar propiedades como `PackageId`, `PackageVersion`, `PackageIcon`,
 </PropertyGroup>
 ```
 
-## <a name="publish-properties-and-items"></a>Publicación de propiedades y elementos
+## <a name="publish-properties-items-and-metadata"></a>Propiedades, elementos y metadatos de publicación
 
 - [AppendRuntimeIdentifierToOutputPath](#appendruntimeidentifiertooutputpath)
 - [AppendTargetFrameworkToOutputPath](#appendtargetframeworktooutputpath)
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
+- [CopyToPublishDirectory](#copytopublishdirectory)
+- [LinkBase](#linkbase)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
+
+### <a name="copytopublishdirectory"></a>CopyToPublishDirectory
+
+Los metadatos de `CopyToPublishDirectory` relativos a un elemento de MSBuild controlan cuándo se copia el elemento en el directorio de publicación. Los valores permitidos son `PreserveNewest`, que solo copia el elemento si ha cambiado; `Always`, que siempre lo copia; y `Never`, que nunca lo hace. Desde el punto de vista del rendimiento, `PreserveNewest` es preferible porque permite una compilación incremental.
+
+```xml
+<ItemGroup>
+  <None Update="appsettings.Development.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+</ItemGroup>
+```
+
+### <a name="linkbase"></a>LinkBase
+
+En el caso de un elemento situado fuera del directorio del proyecto y sus subdirectorios, el destino de publicación usa los [metadatos de Link](/visualstudio/msbuild/common-msbuild-item-metadata) del elemento para determinar dónde se debe copiar este. `Link` también determina cómo se muestran los elementos situados fuera del árbol del proyecto en la ventana Explorador de soluciones de Visual Studio.
+
+Si no se especifica `Link` para un elemento situado fuera del cono del proyecto, este tiene `%(LinkBase)\%(RecursiveDir)%(Filename)%(Extension)` como valor predeterminado. `LinkBase` permite especificar una carpeta base razonable para los elementos situados fuera del cono del proyecto. La jerarquía de carpetas de la carpeta base se conserva por medio de `RecursiveDir`. Si no se especifica `LinkBase`, se omite de la ruta a `Link`.
+
+```xml
+<ItemGroup>
+  <Content Include="..\Extras\**\*.cs" LinkBase="Shared"/>
+</ItemGroup>
+```
+
+En la imagen siguiente, se ilustra cómo se muestra globalmente un archivo incluido en el elemento anterior `Include` en el Explorador de soluciones.
+
+:::image type="content" source="media/solution-explorer-linkbase.png" alt-text="Elemento con metadatos de LinkBase en el Explorador de soluciones.":::
 
 ### <a name="appendtargetframeworktooutputpath"></a>AppendTargetFrameworkToOutputPath
 
@@ -478,7 +506,7 @@ La propiedad `TieredCompilationQuickJitForLoops` configura si el compilador JIT 
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-La propiedad `AssetTargetFallback` permite especificar versiones de la plataforma compatibles adicionales para las referencias de proyectos y los paquetes NuGet. Por ejemplo, si se especifica una dependencia de paquete mediante `PackageReference` pero ese paquete no contiene recursos compatibles con el valor `TargetFramework` del proyecto, entra en juego la propiedad `AssetTargetFallback`. La compatibilidad del paquete al que se hace referencia se vuelve a comprobar con cada plataforma de destino que se especifica en `AssetTargetFallback`.
+La propiedad `AssetTargetFallback` permite especificar versiones de la plataforma compatibles adicionales para las referencias de proyectos y los paquetes NuGet. Por ejemplo, si se especifica una dependencia de paquete mediante `PackageReference` pero ese paquete no contiene recursos compatibles con el valor `TargetFramework` del proyecto, entra en juego la propiedad `AssetTargetFallback`. La compatibilidad del paquete al que se hace referencia se vuelve a comprobar con cada plataforma de destino que se especifica en `AssetTargetFallback`. Esta propiedad reemplaza la propiedad en desuso `PackageTargetFallback`.
 
 Puede establecer la propiedad `AssetTargetFallback` en una o varias [versiones de plataforma de destino](../../standard/frameworks.md#supported-target-frameworks).
 
@@ -504,7 +532,7 @@ Establezca esta propiedad en `true` para deshabilitar los elementos `FrameworkRe
 
 El elemento `PackageReference` define una referencia a un paquete NuGet.
 
-El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges). También puede agregar los metadatos `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` a una referencia de proyecto.
+El atributo `Include` especifica el identificador del paquete. El atributo `Version` especifica la versión o el intervalo de versiones. Para obtener más información sobre cómo especificar una versión mínima, una máxima, un intervalo o una coincidencia exacta, vea [Intervalos de versiones](/nuget/concepts/package-versioning#version-ranges). También puede agregar [atributos de recurso](#asset-attributes) a una referencia de paquete.
 
 El fragmento del archivo del proyecto del ejemplo siguiente hace referencia al paquete [System.Runtime](https://www.nuget.org/packages/System.Runtime/).
 
@@ -515,6 +543,30 @@ El fragmento del archivo del proyecto del ejemplo siguiente hace referencia al p
 ```
 
 Para obtener más información, vea [Referencias de paquete en un archivo del proyecto](/nuget/consume-packages/package-references-in-project-files).
+
+#### <a name="asset-attributes"></a>Atributos de recurso
+
+Los metadatos de `IncludeAssets`, `ExcludeAssets` y `PrivateAssets` se pueden agregar a una referencia de paquete.
+
+| Atributo | Descripción |
+| - | - |
+| `IncludeAssets` | Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` se deben consumir. De forma predeterminada, se incluyen todos los recursos del paquete. |
+| `ExcludeAssets`| Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` no se deben consumir. |
+| `PrivateAssets` | Indica qué recursos pertenecientes al paquete especificado por `<PackageReference>` se deben consumir, pero no pasar al proyecto siguiente. Cuando este atributo no está presente, los recursos `Analyzers`, `Build` y `ContentFiles` son privados de forma predeterminada. |
+
+Estos atributos pueden contener uno o varios de los siguientes elementos, separados por punto y coma (`;`), si aparece más de uno:
+
+- `Compile`: el contenido de la carpeta *lib* está disponible para compilación.
+- `Runtime`: el contenido de la carpeta *runtime* está distribuido.
+- `ContentFiles`: se usa el contenido de la carpeta *contentfiles*.
+- `Build`: se usan los archivos props/targets de la carpeta *build*.
+- `Native`: el contenido de recursos nativos se copia en la carpeta *output* en runtime.
+- `Analyzers`: se usan los analizadores.
+
+Como alternativa, el atributo puede contener:
+
+- `None`: no se usa ninguno de los recursos.
+- `All`: se usan todos los recursos.
 
 ### <a name="projectreference"></a>ProjectReference
 

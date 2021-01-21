@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 492576bd83053d9d4e44c56eda73fed3a4d56d0f
-ms.sourcegitcommit: 88fbb019b84c2d044d11fb4f6004aec07f2b25b1
+ms.openlocfilehash: 6ec731725ad6f0a6093a9b0eeb7d55a5636868d5
+ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97911528"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98195315"
 ---
 | Nombre | Paquete | Docs | Source |
 | ---- | ------- | ---- | ------ |
@@ -13,12 +13,14 @@ ms.locfileid: "97911528"
 | Extensión de ASP.NET: secretos de configuración | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.Configuration.Secrets/1.0.2) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.Configuration.Secrets-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.Configuration.Secrets_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.Configuration.Secrets/) |
 | Extensión de ASP.NET: blobs de DataProtection | NuGet [1.2.0](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Blobs/1.2.0) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Blobs-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Blobs_1.2.0/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Blobs/) |
 | Extensión de ASP.NET: claves de DataProtection | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Extensions.AspNetCore.DataProtection.Keys/1.0.2) | [docs](/dotnet/api/overview/azure/Extensions.AspNetCore.DataProtection.Keys-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Extensions.AspNetCore.DataProtection.Keys_1.0.2/sdk/extensions/Azure.Extensions.AspNetCore.DataProtection.Keys/) |
+| Atestación | NuGet [0.10.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Attestation/0.10.0-preview) |  | GitHub [0.10.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Attestation_0.10.0-preview/sdk/attestation/Microsoft.Azure.Attestation/) |
+| Azure Security Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-alpha.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Cognitive Search | NuGet [11.1.1](https://www.nuget.org/packages/Azure.Search.Documents/11.1.1)<br>NuGet [11.2.0-beta.2](https://www.nuget.org/packages/Azure.Search.Documents/11.2.0-beta.2) | [docs](/dotnet/api/overview/azure/Search.Documents-readme/) | GitHub [11.1.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.1.1/sdk/search/Azure.Search.Documents/)<br>GitHub [11.2.0-beta.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Search.Documents_11.2.0-beta.2/sdk/search/Azure.Search.Documents/) |
 | Communication Administration | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Administration/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Administration-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Administration_1.0.0-beta.3/sdk/communication/Azure.Communication.Administration/) |
 | Communication Chat | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Chat/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Chat-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Chat_1.0.0-beta.3/sdk/communication/Azure.Communication.Chat/) |
 | Communication Common | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Common/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Common-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Common_1.0.0-beta.3/sdk/communication/Azure.Communication.Common/) |
 | Communication SMS | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
-| Core | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| Core | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | Básico: AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [docs](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Digital Twins: básico | NuGet [1.2.0](https://www.nuget.org/packages/Azure.DigitalTwins.Core/1.2.0) | [docs](/dotnet/api/overview/azure/DigitalTwins.Core-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.DigitalTwins.Core_1.2.0/sdk/digitaltwins/Azure.DigitalTwins.Core/) |
@@ -58,30 +60,8 @@ ms.locfileid: "97911528"
 | Administración de recursos: Red | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | Administración de recursos: Recursos | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | Administración de recursos: Storage | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
-| Azure.Security.Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  |  |
-| Microsoft.Azure.Amqp | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
-| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
-| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
-| Microsoft.Azure.Devices.Client.PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
-| Microsoft.Azure.Devices.DigitalTwin.Client | NuGet [1.0.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.DigitalTwin.Service | NuGet [1.0.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
-| Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Security.Tpm | NuGet [1.13.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Service | NuGet [1.17.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Http | NuGet [1.13.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
-| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
-| Microsoft.Azure.Functions.Worker | NuGet [1.0.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview1) |  |  |
-| Microsoft.Azure.Functions.Worker.Sdk | NuGet [1.0.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview1) |  |  |
-| Microsoft.Azure.Management.RedisEnterprise | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
-| Microsoft.Azure.uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
-| Microsoft.Azure.umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Anomaly Detector | NuGet [3.0.0-preview.2](https://www.nuget.org/packages/Azure.AI.AnomalyDetector/3.0.0-preview.2) | [docs](/dotnet/api/overview/azure/AI.AnomalyDetector-readme-pre/) | GitHub [3.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.AnomalyDetector_3.0.0-preview.2/sdk/anomalydetector/Azure.AI.AnomalyDetector/) |
-| Anomaly Detector  | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
+| Anomaly Detector | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.AnomalyDetector/1.0.0-preview.1) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.AnomalyDetector_1.0.0-preview.1/sdk/cognitiveservices/AnomalyDetector) |
 | App Configuration | NuGet [1.0.2](https://www.nuget.org/packages/Azure.Data.AppConfiguration/1.0.2) | [docs](/dotnet/api/overview/azure/Data.AppConfiguration-readme/) | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Data.AppConfiguration_1.0.2/sdk/appconfiguration/Azure.Data.AppConfiguration/) |
 | App Service | NuGet [0.2.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.AppService/0.2.2-alpha) |  |  |
 | App Service: API Apps Common | NuGet [0.9.36](https://www.nuget.org/packages/Microsoft.Azure.AppService.ApiApps.Common/0.9.36) |  |  |
@@ -96,6 +76,7 @@ ms.locfileid: "97911528"
 | Autosuggest | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/2.0.0) |  |  |
 | Azure Active Directory: autenticación de aplicaciones | NuGet [1.6.0](https://www.nuget.org/packages/Microsoft.Azure.Services.AppAuthentication/1.6.0) |  |  |
 | Exportador de Azure Monitor para OpenTelemetry | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.OpenTelemetry.Exporter.AzureMonitor/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.OpenTelemetry.Exporter.AzureMonitor-readme-pre/) |  |
+| Azure Security Attestation | NuGet [1.0.0-alpha.1](https://www.nuget.org/packages/Azure.Security.Attestation/1.0.0-alpha.1) |  | GitHub [1.0.0-alpha.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Security.Attestation_1.0.0-alpha.1/sdk/attestation/Azure.Security.Attestation/) |
 | Azure Stack: almacenamiento coherente de Azure | NuGet [0.10.8-preview](https://www.nuget.org/packages/Microsoft.AzureStack.AzureConsistentStorage/0.10.8-preview) |  |  |
 | Batch | NuGet [14.0.0](https://www.nuget.org/packages/Microsoft.Azure.Batch/14.0.0) | [docs](/dotnet/api/overview/azure/Microsoft.Batch-readme/) | GitHub [14.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Batch_14.0.0/sdk/batch/Microsoft.Azure.Batch/) |
 | Batch: criptografía de aplicaciones | NuGet [1.1.1.4](https://www.nuget.org/packages/Microsoft.Azure.Batch.Apps.Cryptography/1.1.1.4) |  |  |
@@ -128,312 +109,19 @@ ms.locfileid: "97911528"
 | Communication SMS | NuGet [1.0.0-beta.3](https://www.nuget.org/packages/Azure.Communication.Sms/1.0.0-beta.3) | [docs](/dotnet/api/overview/azure/Communication.Sms-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Communication.Sms_1.0.0-beta.3/sdk/communication/Azure.Communication.Sms/) |
 | Computer Vision | NuGet [6.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0)<br>NuGet [6.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ComputerVision/6.0.0-preview.1) |  | GitHub [6.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ComputerVision_6.0.0-preview.1/sdk/cognitiveservices/Vision.ComputerVision) |
 | Configuration Manager | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.ConfigurationManager/4.0.0) |  |  |
-| Conectores: Act | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Act/0.0.1-alpha) |  |  |
-| Conectores: Acumatica | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Acumatica/0.0.1-alpha) |  |  |
-| Conectores: Adobe Creative Cloud | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AdobeCreativeCloud/0.0.1-alpha) |  |  |
-| Conectores: Agilite | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Agilite/0.0.1-alpha) |  |  |
-| Conectores: Ahead | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ahead/0.0.1-alpha) |  |  |
-| Conectores: AirSlate | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AirSlate/0.0.1-alpha) |  |  |
-| Conectores: todos | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.All/0.0.2-alpha) |  |  |
-| Conectores: Ally | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Ally/0.0.1-alpha) |  |  |
-| Conectores: Amazon RedShift | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonRedShift/0.0.1-alpha) |  |  |
-| Conectores: Amazon SQS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AmazonSQS/0.0.1-alpha) |  |  |
-| Conectores: Apache Impala | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApacheImpala/0.0.1-alpha) |  |  |
-| Conectores: Appfigures | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Appfigures/0.0.1-alpha) |  |  |
-| Conectores: Appointment Scheduling 10To8 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppointmentScheduling10To8/0.0.1-alpha) |  |  |
-| Conectores: AppsForOps Timeline | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AppsForOpsTimeline/0.0.1-alpha) |  |  |
-| Conectores: Apptigent Power Tools LITE | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ApptigentPowerToolsLITE/0.0.1-alpha) |  |  |
-| Conectores: AS2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AS2/0.0.1-alpha) |  |  |
-| Conectores: AtBot Admin | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotAdmin/0.0.1-alpha) |  |  |
-| Conectores: AtBot Logic | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AtBotLogic/0.0.1-alpha) |  |  |
-| Conectores: AuthentiseLineItem | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseLineItem/0.0.1-alpha) |  |  |
-| Conectores: AuthentiseOrder | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AuthentiseOrder/0.0.1-alpha) |  |  |
-| Conectores: AWeber | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AWeber/0.0.1-alpha) |  |  |
-| Conectores: Axtension Content Gate | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AxtensionContentGate/0.0.1-alpha) |  |  |
-| Conectores: Azure AD Identity Protection | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureADIdentityProtection/0.0.1-alpha) |  |  |
-| Conectores: Azure App Service | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAppService/0.0.1-alpha) |  |  |
-| Conectores: Azure Application Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureApplicationInsights/0.0.1-alpha) |  |  |
-| Conectores: Azure Automation | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureAutomation/0.0.1-alpha) |  |  |
-| Conectores: Azure Blob Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureBlobStorage/0.0.1-alpha) |  |  |
-| Conectores: Azure Container Instance | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureContainerInstance/0.0.1-alpha) |  |  |
-| Conectores: Azure Cosmos DB | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureCosmosDB/0.0.1-alpha) |  |  |
-| Conectores: Azure Data Factory | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataFactory/0.0.1-alpha) |  |  |
-| Conectores: Azure Data Lake | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDataLake/0.0.1-alpha) |  |  |
-| Conectores: Azure DevOps | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureDevOps/0.0.1-alpha) |  |  |
-| Conectores: Azure Event Grid Publish | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureEventGridPublish/0.0.1-alpha) |  |  |
-| Conectores: Azure File Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureFileStorage/0.0.1-alpha) |  |  |
-| Conectores: Azure IoT Central | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureIoTCentral/0.0.1-alpha) |  |  |
-| Conectores: Azure Key Vault | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureKeyVault/0.0.1-alpha) |  |  |
-| Conectores: Azure Log Analytics | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalytics/0.0.1-alpha) |  |  |
-| Conectores: recopilador de datos de Azure Log Analytics | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureLogAnalyticsDataCollector/0.0.1-alpha) |  |  |
-| Conectores: registros de Azure Monitor | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureMonitorLogs/0.0.1-alpha) |  |  |
-| Conectores: Azure Table Storage | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureTableStorage/0.0.1-alpha) |  |  |
-| Conectores: máquina virtual de Azure | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.AzureVM/0.0.1-alpha) |  |  |
-| Conectores: Basecamp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp/0.0.1-alpha) |  |  |
-| Conectores: Basecamp 2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Basecamp2/0.0.1-alpha) |  |  |
-| Conectores: BillsPLS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BillsPLS/0.0.1-alpha) |  |  |
-| Conectores: Bing Maps | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingMaps/0.0.1-alpha) |  |  |
-| Conectores: Bing Search | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BingSearch/0.0.1-alpha) |  |  |
-| Conectores: Bitbucket | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitbucket/0.0.1-alpha) |  |  |
-| Conectores: Bitly | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bitly/0.0.1-alpha) |  |  |
-| Conectores: BizTalkServer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BizTalkServer/0.0.1-alpha) |  |  |
-| Conectores: Blackbaud Raisers Edge NXT | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BlackbaudRaisersEdgeNXT/0.0.1-alpha) |  |  |
-| Conectores: Blogger | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Blogger/0.0.1-alpha) |  |  |
-| Conectores: Box | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Box/0.0.1-alpha) |  |  |
-| Conectores: bttn | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Bttn/0.0.1-alpha) |  |  |
-| Conectores: Business Central | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.BusinessCentral/0.0.1-alpha) |  |  |
-| Conectores: Campfire | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Campfire/0.0.1-alpha) |  |  |
-| Conectores: Capsule CRM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CapsuleCRM/0.0.1-alpha) |  |  |
-| Conectores: Casper365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Casper365/0.0.1-alpha) |  |  |
-| Conectores: Chatter | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Chatter/0.0.1-alpha) |  |  |
-| Conectores: Cisco Webex Meetings | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CiscoWebexMeetings/0.0.1-alpha) |  |  |
-| Conectores: Cloud PKI Management | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudPKIManagement/0.0.1-alpha) |  |  |
-| Conectores: Cloudmersive Data Validation | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveDataValidation/0.0.1-alpha) |  |  |
-| Conectores: Cloudmersive NLP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CloudmersiveNLP/0.0.1-alpha) |  |  |
-| Conectores: Cognito Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CognitoForms/0.0.1-alpha) |  |  |
-| Conectores: Commercient | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Commercient/0.0.1-alpha) |  |  |
-| Conectores: Common Data Service | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CommonDataService/0.0.1-alpha) |  |  |
-| Conectores: Computer Vision API | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ComputerVisionAPI/0.0.1-alpha) |  |  |
-| Conectores: Content Conversion | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentConversion/0.0.1-alpha) |  |  |
-| Conectores: Content Moderator | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ContentModerator/0.0.1-alpha) |  |  |
-| Conectores: Corda Blockchain | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CordaBlockchain/0.0.1-alpha) |  |  |
-| Conectores: CPQSync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CPQSync/0.0.1-alpha) |  |  |
-| Conectores: Custom Vision | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.CustomVision/0.0.1-alpha) |  |  |
-| Conectores: D7SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.D7SMS/0.0.1-alpha) |  |  |
-| Conectores: Data8 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Data8/0.0.1-alpha) |  |  |
-| Conectores: DB2 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DB2/0.0.1-alpha) |  |  |
-| Conectores: Derdack SIGNL4 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DerdackSIGNL4/0.0.1-alpha) |  |  |
-| Conectores: DnB Optimizer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DnBOptimizer/0.0.1-alpha) |  |  |
-| Conectores: DocFusion365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocFusion365/0.0.1-alpha) |  |  |
-| Conectores: DocuSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DocuSign/0.0.1-alpha) |  |  |
-| Conectores: Dropbox | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dropbox/0.0.2-alpha) |  |  |
-| Conectores: Dynamic Signal | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicSignal/0.0.1-alpha) |  |  |
-| Conectores: Dynamics 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365/0.0.1-alpha) |  |  |
-| Conectores: Dynamics 365 Customer Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerInsights/0.0.1-alpha) |  |  |
-| Conectores: Dynamics 365 Customer Voice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365CustomerVoice/0.0.1-alpha) |  |  |
-| Conectores: Dynamics 365 for Fin & Ops | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365forFinOps/0.0.1-alpha) |  |  |
-| Conectores: Dynamics 365 Sales Insights | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Dynamics365SalesInsights/0.0.1-alpha) |  |  |
-| Conectores: Dynamics NAV | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.DynamicsNAV/0.0.1-alpha) |  |  |
-| Conectores: Easy Redmine | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyRedmine/0.0.1-alpha) |  |  |
-| Conectores: Easyvista Self Help | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EasyvistaSelfHelp/0.0.1-alpha) |  |  |
-| Conectores: Edifact | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Edifact/0.0.1-alpha) |  |  |
-| Conectores: Eduframe | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eduframe/0.0.1-alpha) |  |  |
-| Conectores: Elastic Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticForms/0.0.1-alpha) |  |  |
-| Conectores: ElasticOCR | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ElasticOCR/0.0.1-alpha) |  |  |
-| Conectores: emfluence Marketing Platform | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EmfluenceMarketingPlatform/0.0.1-alpha) |  |  |
-| Conectores: Encodian | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Encodian/0.0.1-alpha) |  |  |
-| Conectores: EntegrationsInvoicing | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EntegrationsInvoicing/0.0.1-alpha) |  |  |
-| Conectores: Envoy | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Envoy/0.0.1-alpha) |  |  |
-| Conectores: Ethereum Blockchain | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EthereumBlockchain/0.0.1-alpha) |  |  |
-| Conectores: Event Hubs | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.EventHubs/0.0.1-alpha) |  |  |
-| Conectores: Eventbrite | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Eventbrite/0.0.1-alpha) |  |  |
-| Conectores: Excel Online | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnline/0.0.1-alpha) |  |  |
-| Conectores: Excel Online One Drive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExcelOnlineOneDrive/0.0.1-alpha) |  |  |
-| Conectores: ExghtsGenDocumentnMore | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ExghtsGenDocumentnMore/0.0.1-alpha) |  |  |
-| Conectores: Face API | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FaceAPI/0.0.1-alpha) |  |  |
-| Conectores: Facebook | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Facebook/0.0.1-alpha) |  |  |
-| Conectores: File System | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FileSystem/0.0.1-alpha) |  |  |
-| Conectores: FireText | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FireText/0.0.1-alpha) |  |  |
-| Conectores: FlowForma | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FlowForma/0.0.1-alpha) |  |  |
-| Conectores: FORCAM FORCE Bridge | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ForcamForceBridge/0.0.1-alpha) |  |  |
-| Conectores: Form Recognizer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FormRecognizer/0.0.1-alpha) |  |  |
-| Conectores: FreshBooks | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FreshBooks/0.0.1-alpha) |  |  |
-| Conectores: Freshdesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshdesk/0.0.1-alpha) |  |  |
-| Conectores: Freshservice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Freshservice/0.0.1-alpha) |  |  |
-| Conectores: FTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.FTP/0.0.1-alpha) |  |  |
-| Conectores: Fulcrum | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Fulcrum/0.0.1-alpha) |  |  |
-| Conectores: GetMyInvoices | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GetMyInvoices/0.0.1-alpha) |  |  |
-| Conectores: GitHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GitHub/0.0.1-alpha) |  |  |
-| Conectores: Gmail | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Gmail/0.0.1-alpha) |  |  |
-| Conectores: GoFileRoom | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoFileRoom/0.0.1-alpha) |  |  |
-| Conectores: Google Calendar | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleCalendar/0.0.1-alpha) |  |  |
-| Conectores: Google Contacts | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleContacts/0.0.1-alpha) |  |  |
-| Conectores: Google Drive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleDrive/0.0.1-alpha) |  |  |
-| Conectores: Google Sheets | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoogleSheets/0.0.1-alpha) |  |  |
-| Conectores: GoToMeeting | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToMeeting/0.0.1-alpha) |  |  |
-| Conectores: GoToTraining | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToTraining/0.0.1-alpha) |  |  |
-| Conectores: GoToWebinar | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.GoToWebinar/0.0.1-alpha) |  |  |
-| Conectores: Harvest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Harvest/0.0.1-alpha) |  |  |
-| Conectores: HelloSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HelloSign/0.0.1-alpha) |  |  |
-| Conectores: HipChat | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HipChat/0.0.1-alpha) |  |  |
-| Conectores: HotProfile | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HotProfile/0.0.1-alpha) |  |  |
-| Conectores: HouseRater QA | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HouseRaterQA/0.0.1-alpha) |  |  |
-| Conectores: HTTP con Azure AD | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.HTTPwithAzureAD/0.0.1-alpha) |  |  |
-| Conectores: IBM 3270 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IBM3270/0.0.1-alpha) |  |  |
-| Conectores: Imprezian 360 CRM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Imprezian360CRM/0.0.1-alpha) |  |  |
-| Conectores: IN-D KYC India | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDKYCIndia/0.0.1-alpha) |  |  |
-| Conectores: IN-D Payables | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.INDPayables/0.0.1-alpha) |  |  |
-| Conectores: Industrial App Store | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IndustrialAppStore/0.0.1-alpha) |  |  |
-| Conectores: Infobip | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infobip/0.0.1-alpha) |  |  |
-| Conectores: Informix | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Informix/0.0.1-alpha) |  |  |
-| Conectores: Infusionsoft | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Infusionsoft/0.0.1-alpha) |  |  |
-| Conectores: Inoreader | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Inoreader/0.0.1-alpha) |  |  |
-| Conectores: Instagram | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instagram/0.0.1-alpha) |  |  |
-| Conectores: Instapaper | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Instapaper/0.0.1-alpha) |  |  |
-| Conectores: Integrable PDF | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.IntegrablePDF/0.0.1-alpha) |  |  |
-| Conectores: Intercom | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Intercom/0.0.1-alpha) |  |  |
-| Conectores: JIRA | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JIRA/0.0.1-alpha) |  |  |
-| Conectores: JungleMail 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.JungleMail365/0.0.1-alpha) |  |  |
-| Conectores: kintone | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kintone/0.0.1-alpha) |  |  |
-| Conectores: KnowledgeLake | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.KnowledgeLake/0.0.1-alpha) |  |  |
-| Conectores: Kusto | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Kusto/0.0.1-alpha) |  |  |
-| Conectores: LatinShare Documents | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareDocuments/0.0.1-alpha) |  |  |
-| Conectores: LatinShare SHP Management | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPManagement/0.0.1-alpha) |  |  |
-| Conectores: LatinShare SHP Permissions | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LatinShareSHPPermissions/0.0.1-alpha) |  |  |
-| Conectores: LeadDesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeadDesk/0.0.1-alpha) |  |  |
-| Conectores: LeanKit | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LeanKit/0.0.1-alpha) |  |  |
-| Conectores: LINK Mobility | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LINKMobility/0.0.1-alpha) |  |  |
-| Conectores: LinkedIn | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LinkedInV2/0.0.1-alpha) |  |  |
-| Conectores: LiveChat | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveChat/0.0.1-alpha) |  |  |
-| Conectores: LiveTiles Bots | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LiveTilesBots/0.0.1-alpha) |  |  |
-| Conectores: LUIS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.LUIS/0.0.1-alpha) |  |  |
-| Conectores: MailChimp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailChimp/0.0.1-alpha) |  |  |
-| Conectores: MailParser | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MailParser/0.0.1-alpha) |  |  |
-| Conectores: Mandrill | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mandrill/0.0.1-alpha) |  |  |
-| Conectores: Marketing Content Hub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MarketingContentHub/0.0.1-alpha) |  |  |
-| Conectores: Marketo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Marketo/0.0.1-alpha) |  |  |
-| Conectores: Medium | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Medium/0.0.1-alpha) |  |  |
-| Conectores: MeetingRoomMap | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MeetingRoomMap/0.0.1-alpha) |  |  |
-| Conectores: Microblink | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Microblink/0.0.1-alpha) |  |  |
-| Conectores: Microsoft Defender ATP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftDefenderATP/0.0.1-alpha) |  |  |
-| Conectores: Microsoft Forms | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftForms/0.0.1-alpha) |  |  |
-| Conectores: Microsoft School Data Sync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftSchoolDataSync/0.0.1-alpha) |  |  |
-| Conectores: Microsoft StaffHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftStaffHub/0.0.1-alpha) |  |  |
-| Conectores: Microsoft Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTeams/0.0.1-alpha) |  |  |
-| Conectores: Microsoft To Do | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftToDo/0.0.1-alpha) |  |  |
-| Conectores: Microsoft Translator | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MicrosoftTranslatorV2/0.0.1-alpha) |  |  |
-| Conectores: Mitto | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Mitto/0.0.1-alpha) |  |  |
-| Conectores: MobilyWS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MobilyWS/0.0.1-alpha) |  |  |
-| Conectores: MotaWord Translations | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MotaWordTranslations/0.0.1-alpha) |  |  |
-| Conectores: MQ | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MQ/0.0.1-alpha) |  |  |
-| Conectores: MSG91ForSMSTextnVoice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSG91ForSMSTextnVoice/0.0.1-alpha) |  |  |
-| Conectores: MSN Weather | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MSNWeather/0.0.1-alpha) |  |  |
-| Conectores: Mtarget SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MtargetSMS/0.0.1-alpha) |  |  |
-| Conectores: Muhimbi PDF | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MuhimbiPDF/0.0.1-alpha) |  |  |
-| Conectores: MySQL | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.MySQL/0.0.1-alpha) |  |  |
-| Conectores: Nexmo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nexmo/0.0.1-alpha) |  |  |
-| Conectores: Nitro | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Nitro/0.0.1-alpha) |  |  |
-| Conectores: Notiivy Browser Notifications | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.NotiivyBrowserNotifications/0.0.1-alpha) |  |  |
-| Conectores: grupos de Office 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Groups/0.0.1-alpha) |  |  |
-| Conectores: correo de grupos de Office 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365GroupsMail/0.0.1-alpha) |  |  |
-| Conectores: Outlook de Office 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Outlook/0.0.1-alpha) |  |  |
-| Conectores: usuarios de Office 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Users/0.0.1-alpha) |  |  |
-| Conectores: vídeo de Office 365 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Office365Video/0.0.1-alpha) |  |  |
-| Conectores: OneDrive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDrive/0.0.1-alpha) |  |  |
-| Conectores: OneDrive para la Empresa | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneDriveForBusiness/0.0.1-alpha) |  |  |
-| Conectores: OneNote | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OneNote/0.0.1-alpha) |  |  |
-| Conectores: OpenText CS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextCS/0.0.1-alpha) |  |  |
-| Conectores: OpenText eDOCS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OpenTextEDOCS/0.0.1-alpha) |  |  |
-| Conectores: Oracle Database | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OracleDatabase/0.0.1-alpha) |  |  |
-| Conectores: Outlook | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Outlook/0.0.1-alpha) |  |  |
-| Conectores: Outlook Customer Manager | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.OutlookCustomerManager/0.0.1-alpha) |  |  |
-| Conectores: PagerDuty | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PagerDuty/0.0.1-alpha) |  |  |
-| Conectores: Parserr | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parserr/0.0.1-alpha) |  |  |
-| Conectores: Parsuer | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Parsuer/0.0.1-alpha) |  |  |
-| Conectores: eventos del Centro de partners | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterEvents/0.0.1-alpha) |  |  |
-| Conectores: referencias del Centro de partners | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PartnerCenterReferrals/0.0.1-alpha) |  |  |
-| Conectores: PDF4me | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PDF4me/0.0.1-alpha) |  |  |
-| Conectores: Pinterest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pinterest/0.0.1-alpha) |  |  |
-| Conectores: Pipedrive | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pipedrive/0.0.1-alpha) |  |  |
-| Conectores: Pitney Bowes Data Validation | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PitneyBowesDataValidation/0.0.1-alpha) |  |  |
-| Conectores: Pivotal Tracker | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PivotalTracker/0.0.1-alpha) |  |  |
-| Conectores: Planner | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Planner/0.0.1-alpha) |  |  |
-| Conectores: Plivo | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Plivo/0.0.1-alpha) |  |  |
-| Conectores: Plumsail Documents | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailDocuments/0.0.1-alpha) |  |  |
-| Conectores: Plumsail HelpDesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailHelpDesk/0.0.1-alpha) |  |  |
-| Conectores: Plumsail SP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PlumsailSP/0.0.1-alpha) |  |  |
-| Conectores: PoliteMail | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PoliteMail/0.0.1-alpha) |  |  |
-| Conectores: PostgreSQL | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PostgreSQL/0.0.1-alpha) |  |  |
-| Conectores: Power BI | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PowerBI/0.0.1-alpha) |  |  |
-| Conectores: Priority Matrix | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PriorityMatrix/0.0.1-alpha) |  |  |
-| Conectores: Projectum Present It | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ProjectumPresentIt/0.0.1-alpha) |  |  |
-| Conectores: Pure Leads | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.PureLeads/0.0.1-alpha) |  |  |
-| Conectores: PushCut | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Pushcut/0.0.1-alpha) |  |  |
-| Conectores: QnA Maker | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.QnAMaker/0.0.1-alpha) |  |  |
-| Conectores: Recorded Future | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RecordedFuture/0.0.1-alpha) |  |  |
-| Conectores: Redmine | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Redmine/0.0.1-alpha) |  |  |
-| Conectores: RegoLink para Clarity PPM | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RegoLinkForClarityPPM/0.0.1-alpha) |  |  |
-| Conectores: Rencore Code | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RencoreCode/0.0.1-alpha) |  |  |
-| Conectores: RiskIQ | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RiskIQ/0.0.1-alpha) |  |  |
-| Conectores: RSS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.RSS/0.0.1-alpha) |  |  |
-| Conectores: Sage 100cloudCompta | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudCompta/0.0.1-alpha) |  |  |
-| Conectores: Sage 100cloudVente | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sage100cloudVente/0.0.1-alpha) |  |  |
-| Conectores: Salesforce | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Salesforce/0.0.1-alpha) |  |  |
-| Conectores: SAP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SAP/0.0.1-alpha) |  |  |
-| Conectores: Scrive eSign | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ScriveESign/0.0.1-alpha) |  |  |
-| Conectores: SeekTable | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SeekTable/0.0.1-alpha) |  |  |
-| Conectores: Sendmode | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Sendmode/0.0.1-alpha) |  |  |
-| Conectores: Serverless360 BAM & Tracking | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Serverless360BAMTracking/0.0.1-alpha) |  |  |
-| Conectores: Service Bus | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceBus/0.0.1-alpha) |  |  |
-| Conectores: ServiceNow | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ServiceNow/0.0.1-alpha) |  |  |
-| Conectores: SerwerSMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SerwerSMS/0.0.1-alpha) |  |  |
-| Conectores: SFTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTP/0.0.1-alpha) |  |  |
-| Conectores: SFTP SSH | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SFTPSSH/0.0.1-alpha) |  |  |
-| Conectores: ShareEffect | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShareEffect/0.0.1-alpha) |  |  |
-| Conectores: SharePoint | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SharePoint/0.0.1-alpha) |  |  |
-| Conectores: Turnos para Microsoft Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShiftsForMicrosoftTeams/0.0.1-alpha) |  |  |
-| Conectores: dirección URL corta | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.ShortURL/0.0.1-alpha) |  |  |
-| Conectores: SigningHub | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SigningHub/0.0.1-alpha) |  |  |
-| Conectores: SignRequest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SignRequest/0.0.1-alpha) |  |  |
-| Conectores: Skype Empresarial Online | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SkypeForBusinessOnline/0.0.1-alpha) |  |  |
-| Conectores: Slack | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slack/0.0.1-alpha) |  |  |
-| Conectores: Slascone | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Slascone/0.0.1-alpha) |  |  |
-| Conectores: Smarp | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smarp/0.0.1-alpha) |  |  |
-| Conectores: Smartsheet | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Smartsheet/0.0.1-alpha) |  |  |
-| Conectores: SMSLink | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMSLink/0.0.1-alpha) |  |  |
-| Conectores: SMTP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SMTP/0.0.1-alpha) |  |  |
-| Conectores: Soft1 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Soft1/0.0.1-alpha) |  |  |
-| Conectores: SOLYP | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SOLYP/0.0.1-alpha) |  |  |
-| Conectores: SparkPost | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SparkPost/0.0.1-alpha) |  |  |
-| Conectores: SproketPowerActions | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SproketPowerActions/0.0.1-alpha) |  |  |
-| Conectores: SQL Server | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SQLServer/0.0.1-alpha) |  |  |
-| Conectores: Stormboard | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stormboard/0.0.1-alpha) |  |  |
-| Conectores: Stripe | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Stripe/0.0.1-alpha) |  |  |
-| Conectores: Survey123 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Survey123/0.0.1-alpha) |  |  |
-| Conectores: SurveyMonkey | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.SurveyMonkey/0.0.1-alpha) |  |  |
-| Conectores: Tallyfy | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tallyfy/0.0.1-alpha) |  |  |
-| Conectores: Teamwork Projects | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeamworkProjects/0.0.1-alpha) |  |  |
-| Conectores: TeleSign SMS | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TeleSignSMS/0.0.1-alpha) |  |  |
-| Conectores: Teradata | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Teradata/0.0.1-alpha) |  |  |
-| Conectores: Text Analytics | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TextAnalytics/0.0.2-alpha) |  |  |
-| Conectores: Ticketing Events | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TicketingEvents/0.0.1-alpha) |  |  |
-| Conectores: Tilkee | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Tilkee/0.0.1-alpha) |  |  |
-| Conectores: Todoist | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Todoist/0.0.1-alpha) |  |  |
-| Conectores: Traction Guest | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TractionGuest/0.0.1-alpha) |  |  |
-| Conectores: Trello | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trello/0.0.1-alpha) |  |  |
-| Conectores: TRIGGERcmd | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TRIGGERcmd/0.0.1-alpha) |  |  |
-| Conectores: Trustual | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Trustual/0.0.1-alpha) |  |  |
-| Conectores: Twilio | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twilio/0.0.1-alpha) |  |  |
-| Conectores: Twitter | NuGet [0.0.2-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Twitter/0.0.2-alpha) |  |  |
-| Conectores: TxtSync | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.TxtSync/0.0.1-alpha) |  |  |
-| Conectores: UserVoice | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.UserVoice/0.0.1-alpha) |  |  |
-| Conectores: Vantage 365 Imaging | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Vantage365Imaging/0.0.1-alpha) |  |  |
-| Conectores: Ventipix Asset and Inventory | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.VentipixAssetAndInventory/0.0.1-alpha) |  |  |
-| Conectores: Webex Teams | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebexTeams/0.0.1-alpha) |  |  |
-| Conectores: WebMerge | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WebMerge/0.0.1-alpha) |  |  |
-| Conectores: Witivio | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Witivio/0.0.1-alpha) |  |  |
-| Conectores: Word Online (Empresa) | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordOnlineBusiness/0.0.1-alpha) |  |  |
-| Conectores: WordPress | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WordPress/0.0.1-alpha) |  |  |
-| Conectores: WorkPoint | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.WorkPoint/0.0.1-alpha) |  |  |
-| Conectores: X12 | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.X12/0.0.1-alpha) |  |  |
-| Conectores: Xooa Blockchain Database | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainDatabase/0.0.1-alpha) |  |  |
-| Conectores: Xooa Blockchain Smart Contract | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.XooaBlockchainSmartContract/0.0.1-alpha) |  |  |
-| Conectores: Xpertdoc | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Xpertdoc/0.0.1-alpha) |  |  |
-| Conectores: Zendesk | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zendesk/0.0.1-alpha) |  |  |
-| Conectores: Zenkraft | NuGet [0.0.1-alpha](https://www.nuget.org/packages/Microsoft.Azure.Connectors.Zenkraft/0.0.1-alpha) |  |  |
 | Container Registry | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.ContainerRegistry/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.ContainerRegistry_1.0.0-preview.1/sdk/containerregistry/Microsoft.Azure.ContainerRegistry/) |
 | Content Moderator | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.ContentModerator/2.0.0) |  |  |
-| Core | NuGet [1.7.0](https://www.nuget.org/packages/Azure.Core/1.7.0) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.7.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.7.0/sdk/core/Azure.Core/) |
+| Core | NuGet [1.8.1](https://www.nuget.org/packages/Azure.Core/1.8.1) | [docs](/dotnet/api/overview/azure/Core-readme/) | GitHub [1.8.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core_1.8.1/sdk/core/Azure.Core/) |
 | Básico: AMQP | NuGet [1.0.0](https://www.nuget.org/packages/Azure.Core.Amqp/1.0.0) | [docs](/dotnet/api/overview/azure/Core.Amqp-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Amqp_1.0.0/sdk/core/Azure.Core.Amqp/) |
 | Core Experimental | NuGet [0.1.0-preview.7](https://www.nuget.org/packages/Azure.Core.Experimental/0.1.0-preview.7) | [docs](/dotnet/api/overview/azure/Core.Experimental-readme-pre/) | GitHub [0.1.0-preview.7](https://github.com/Azure/azure-sdk-for-net/tree/Azure.Core.Experimental_0.1.0-preview.7/sdk/core/Azure.Core.Experimental/) |
-| Core Newtonsoft Json | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.NewtonsoftJson-readme-pre/) |  |
-| Core Spatial | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial-readme-pre/) |  |
-| Core Spatial Newtonsoft Json | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Core.Spatial.NewtonsoftJson-readme-pre/) |  |
+| Core Newtonsoft Json | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Core.NewtonsoftJson/1.0.0-preview.1) |  |  |
+| Core Spatial | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0)<br>NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial/1.0.0-beta.1) |  |  |
+| Core Spatial Newtonsoft Json | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0)<br>NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Core.Spatial.NewtonsoftJson/1.0.0-beta.1) |  |  |
 | Cosmos DB | NuGet [4.0.0-preview3](https://www.nuget.org/packages/Azure.Cosmos/4.0.0-preview3) | [docs](/dotnet/api/azure.cosmos) | GitHub [4.0.0-preview3](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/4.0.0-preview3) |
 | Cosmos DB | NuGet [3.14.0](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.14.0)<br>NuGet [3.15.2-preview](https://www.nuget.org/packages/Microsoft.Azure.Cosmos/3.15.2-preview) | [docs](/dotnet/api/overview/azure/cosmosdb) | GitHub [3.14.0](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/3.12.0/Microsoft.Azure.Cosmos) |
 | Cosmos DB: BulkExecutor | NuGet [2.5.1-preview](https://www.nuget.org/packages/Microsoft.Azure.CosmosDB.BulkExecutor/2.5.1-preview) |  | GitHub [2.5.1-preview](https://github.com/Azure/azure-cosmosdb-bulkexecutor-dotnet-getting-started) |
 | Cosmos DB: Direct | NuGet [3.15.4](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Direct/3.15.4) |  | GitHub [3.15.4](https://github.com/Azure/azure-cosmos-dotnet-v3) |
-| Cosmos DB: Encryption | NuGet [1.0.0-preview7](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview7) |  | GitHub [1.0.0-preview7](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
+| Cosmos DB: Encryption | NuGet [1.0.0-preview9](https://www.nuget.org/packages/Microsoft.Azure.Cosmos.Encryption/1.0.0-preview9) |  | GitHub [1.0.0-preview9](https://github.com/Azure/azure-cosmos-dotnet-v3/tree/releases/encryption/1.0.0-preview4/Microsoft.Azure.Cosmos.Encryption) |
 | Custom Image Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomImageSearch/2.0.0) |  |  |
 | Búsqueda personalizada | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/2.0.0) |  |  |
 | Custom Vision Prediction | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction_2.0.0/sdk/cognitiveservices/Vision.CustomVision.Prediction) |
@@ -456,6 +144,7 @@ ms.locfileid: "97911528"
 | Event Hubs: registro de esquemas Apache Avro | NuGet [1.0.0-beta.1](https://www.nuget.org/packages/Microsoft.Azure.Data.SchemaRegistry.ApacheAvro/1.0.0-beta.1) | [docs](/dotnet/api/overview/azure/Microsoft.Data.SchemaRegistry.ApacheAvro-readme-pre/) |  |
 | Event Hubs: procesador de Service Fabric | NuGet [0.5.4](https://www.nuget.org/packages/Microsoft.Azure.EventHubs.ServiceFabricProcessor/0.5.4) |  | GitHub [0.5.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.EventHubs.ServiceFabricProcessor_0.5.4/sdk/eventhub/Microsoft.Azure.EventHubs.ServiceFabricProcessor/) |
 | Extensiones: almacenamiento en caché de Cosmos | NuGet [1.0.0-preview5](https://www.nuget.org/packages/Microsoft.Extensions.Caching.Cosmos/1.0.0-preview5) |  | GitHub [1.0.0-preview5](https://github.com/Azure/Microsoft.Extensions.Caching.Cosmos/tree/v1.0.0-preview4) |
+| Face | NuGet [2.6.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Form Recognizer | NuGet [3.0.0](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.0.0)<br>NuGet [3.1.0-beta.1](https://www.nuget.org/packages/Azure.AI.FormRecognizer/3.1.0-beta.1) | [docs](/dotnet/api/overview/azure/AI.FormRecognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.0.0/sdk/formrecognizer/Azure.AI.FormRecognizer/)<br>GitHub [3.1.0-beta.1](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.FormRecognizer_3.1.0-beta.1/sdk/formrecognizer/Azure.AI.FormRecognizer/) |
 | Form Recognizer | NuGet [0.8.0-preview](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.FormRecognizer/0.8.0-preview) |  | GitHub [0.8.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/FormRecognizer) |
 | Functions: extensiones | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0)<br>NuGet [1.1.0-preview1](https://www.nuget.org/packages/Microsoft.Azure.Functions.Extensions/1.1.0-preview1) |  | GitHub [1.1.0](https://github.com/Azure/azure-functions-dotnet-extensions) |
@@ -486,6 +175,26 @@ ms.locfileid: "97911528"
 | LUIS: entorno de ejecución | NuGet [3.1.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime/3.1.0-preview.1) |  | GitHub [3.1.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime_3.1.0-preview.1/sdk/cognitiveservices/Language.LUIS.Runtime) |
 | Media Live Video Analytics Edge | NuGet [1.0.4-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Media.LiveVideoAnalytics.Edge/1.0.4-preview.1) |  | GitHub [1.0.4-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/mediaservices/Microsoft.Azure.Media.LiveVideoAnalytics.Edge) |
 | Metrics Advisor | NuGet [1.0.0-beta.2](https://www.nuget.org/packages/Azure.AI.MetricsAdvisor/1.0.0-beta.2) | [docs](/dotnet/api/overview/azure/AI.MetricsAdvisor-readme-pre/) | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.AI.MetricsAdvisor_1.0.0-beta.2/sdk/metricsadvisor/Azure.AI.MetricsAdvisor/) |
+| Microsoft.Azure.Amqp | NuGet [2.4.9](https://www.nuget.org/packages/Microsoft.Azure.Amqp/2.4.9) |  |  |
+| Microsoft.Azure.Devices | NuGet [1.28.1](https://www.nuget.org/packages/Microsoft.Azure.Devices/1.28.1) |  |  |
+| Microsoft.Azure.Devices.Client | NuGet [1.33.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client/1.33.1) |  |  |
+| Microsoft.Azure.Devices.Client.PCL | NuGet [1.0.16](https://www.nuget.org/packages/Microsoft.Azure.Devices.Client.PCL/1.0.16) |  |  |
+| Microsoft.Azure.Devices.DigitalTwin.Client | NuGet [1.0.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Client/1.0.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.DigitalTwin.Service | NuGet [1.0.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.DigitalTwin.Service/1.0.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.Core | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Core/2.0.1) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.IotHubClient | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.IotHubClient/2.0.1) |  |  |
+| Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage | NuGet [2.0.1](https://www.nuget.org/packages/Microsoft.Azure.Devices.ProtocolGateway.Providers.CloudStorage/2.0.1) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Client | NuGet [1.17.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Client/1.17.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Security.Tpm | NuGet [1.13.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Security.Tpm/1.13.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Service | NuGet [1.17.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Service/1.17.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Amqp | NuGet [1.14.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Amqp/1.14.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Http | NuGet [1.13.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Http/1.13.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Provisioning.Transport.Mqtt | NuGet [1.14.0-preview.001](https://www.nuget.org/packages/Microsoft.Azure.Devices.Provisioning.Transport.Mqtt/1.14.0-preview-001) |  |  |
+| Microsoft.Azure.Devices.Shared | NuGet [1.26.0](https://www.nuget.org/packages/Microsoft.Azure.Devices.Shared/1.26.0) |  |  |
+| Microsoft.Azure.Functions.Worker | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker/1.0.0-preview2) |  |  |
+| Microsoft.Azure.Functions.Worker.Sdk | NuGet [1.0.0-preview2](https://www.nuget.org/packages/Microsoft.Azure.Functions.Worker.Sdk/1.0.0-preview2) |  |  |
+| Microsoft.Azure.uamqp | NuGet [1.2.11](https://www.nuget.org/packages/Microsoft.Azure.uamqp/1.2.11) |  |  |
+| Microsoft.Azure.umqtt | NuGet [1.1.11](https://www.nuget.org/packages/Microsoft.Azure.umqtt/1.1.11) |  |  |
 | Mobile Server: Cross Domain | NuGet [2.0.3](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Server.CrossDomain/2.0.3) |  |  |
 | Mobile Service: Resource Broker | NuGet [1.0.2.1](https://www.nuget.org/packages/Microsoft.WindowsAzure.Mobile.Service.ResourceBroker/1.0.2.1) |  |  |
 | News Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.NewsSearch/2.0.0) |  |  |
@@ -540,7 +249,6 @@ ms.locfileid: "97911528"
 | Text Analytics | NuGet [4.1.0-preview.2](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.TextAnalytics/4.1.0-preview.2) |  | GitHub [4.1.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Language.TextAnalytics_4.1.0-preview.2/sdk/cognitiveservices/Language.TextAnalytics) |
 | Video Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/2.0.0) |  |  |
 | Vision Content Moderator | NuGet [2.1.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.ContentModerator/2.1.0-preview.1) |  | GitHub [2.1.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.ContentModerator_2.1.0-preview.1/sdk/cognitiveservices/Vision.ContentModerator) |
-| Vision Face | NuGet [2.6.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Vision.Face/2.6.0-preview.1) |  | GitHub [2.6.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.CognitiveServices.Vision.Face_2.6.0-preview.1/sdk/cognitiveservices/Vision.Face) |
 | Visual Search | NuGet [2.0.0](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/2.0.0) |  |  |
 | Wastorage | NuGet [4.0.0](https://www.nuget.org/packages/wastorage/4.0.0) |  |  |
 | Wastorage: Redist | NuGet [2.0.0](https://www.nuget.org/packages/wastorage.redist/2.0.0) |  |  |
@@ -669,7 +377,7 @@ ms.locfileid: "97911528"
 | Administración: Container Service Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ContainerService.Fluent/1.36.1) |  |  |
 | Administración: Content Delivery Network | NuGet [5.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn/5.0.0-preview) |  | GitHub [5.0.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Cdn_5.0.0-preview/sdk/cdn/Microsoft.Azure.Management.Cdn/) |
 | Administración: Content Delivery Network Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Cdn.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/cdn) |  |
-| Administración: Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.3.2-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.3.2-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.3.2-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.3.2-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
+| Administración: Cosmos DB | NuGet [1.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.2.0)<br>NuGet [1.4.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB/1.4.0-preview) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.2.0/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/)<br>GitHub [1.4.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.CosmosDB_1.4.0-preview/sdk/cosmosdb/Microsoft.Azure.Management.CosmosDB/) |
 | Administración: Cosmos DB Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.CosmosDB.Fluent/1.36.1) |  |  |
 | Administración: Customer Insights | NuGet [0.9.1-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights/0.9.1-preview) |  | GitHub [0.9.1-preview](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/customer-insights/Microsoft.Azure.Management.CustomerInsights) |
 | Administración: Customer Insights Fluent | NuGet [1.9.1-beta](https://www.nuget.org/packages/Microsoft.Azure.Management.CustomerInsights.Fluent/1.9.1-beta) |  |  |
@@ -728,14 +436,14 @@ ms.locfileid: "97911528"
 | Administración: Maps | NuGet [1.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Maps/1.0.2) |  | GitHub [1.0.2](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/maps/Microsoft.Azure.Management.Maps) |
 | Administración: Marketplace | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/1.1.0)<br>NuGet [2.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Marketplace/2.0.0-preview) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_1.1.0/sdk/marketplace/Microsoft.Azure.Management.Marketplace/)<br>GitHub [2.0.0-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Marketplace_2.0.0-preview/sdk/marketplace/Microsoft.Azure.Management.Marketplace/) |
 | Administración: pedidos en Marketplace | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.MarketplaceOrdering/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/marketplaceordering/Microsoft.Azure.Management.MarketplaceOrdering) |
-| Administración: elementos multimedia | NuGet [3.0.2](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.2) |  | GitHub [3.0.2](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.2/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
+| Administración: elementos multimedia | NuGet [3.0.3](https://www.nuget.org/packages/Microsoft.Azure.Management.Media/3.0.3) |  | GitHub [3.0.3](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Media_3.0.3/sdk/mediaservices/Microsoft.Azure.Management.Media/) |
 | Administración: Migrate Resource Mover | NuGet [1.0.1-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Migrate.ResourceMover/1.0.1-preview) |  |  |
 | Administración: Mixed Reality | NuGet [1.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.MixedReality/1.0.0) | [docs](/dotnet/api/overview/azure/mixed-reality) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.MixedReality_1.0.0/sdk/mixedreality/Microsoft.Azure.Management.MixedReality/) |
 | Administración: Monitor | NuGet [0.25.3-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor/0.25.3-preview) |  | GitHub [0.25.3-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Monitor_0.25.3-preview/sdk/monitor/Microsoft.Azure.Management.Monitor/) |
 | Administración: Monitor Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Monitor.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/monitor) |  |
 | Administración: MySQL | NuGet [0.1.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.MySQL/0.1.0-preview) |  |  |
 | Administración: NetApp | NuGet [1.8.0](https://www.nuget.org/packages/Microsoft.Azure.Management.NetApp/1.8.0) |  | GitHub [1.8.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NetApp_1.8.0/sdk/netapp/Microsoft.Azure.Management.NetApp/) |
-| Administración: red | NuGet [20.2.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.2.1) |  | GitHub [20.2.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.2.1/sdk/network/Microsoft.Azure.Management.Network/) |
+| Administración: red | NuGet [20.3.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Network/20.3.0) |  | GitHub [20.3.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Network_20.3.0/sdk/network/Microsoft.Azure.Management.Network/) |
 | Administración: red Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Network.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/virtual-network) |  |
 | Administración: Notification Hubs | NuGet [2.3.3-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs/2.3.3-preview) | [docs](/dotnet/api/overview/azure/notification-hubs) | GitHub [2.3.3-preview](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.NotificationHubs_2.3.3-preview/sdk/notificationhubs/Microsoft.Azure.Management.NotificationHubs/) |
 | Administración: Notification Hubs Fluent | NuGet [1.9.1-beta](https://www.nuget.org/packages/Microsoft.Azure.Management.NotificationHubs.Fluent/1.9.1-beta) |  |  |
@@ -767,7 +475,6 @@ ms.locfileid: "97911528"
 | Administración: búsqueda | NuGet [4.0.0](https://www.nuget.org/packages/Microsoft.Azure.Management.Search/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/search/Microsoft.Azure.Management.Search) |
 | Administración: búsqueda Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Search.Fluent/1.36.1) |  |  |
 | Administración: Security Center | NuGet [2.2.0](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityCenter/2.2.0) |  | GitHub [2.2.0](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityCenter_2.2.0/sdk/securitycenter/Microsoft.Azure.Management.SecurityCenter/) |
-| Administración: Security Insights | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  |  |
 | Administración: Server Management | NuGet [1.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServerManagement/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servermanagement/Microsoft.Azure.Management.ServerManagement) |
 | Administración: Service Bus | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus/2.1.0) |  | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servicebus/Microsoft.Azure.Management.ServiceBus) |
 | Administración: Service Bus Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.ServiceBus.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/service-bus) |  |
@@ -787,11 +494,12 @@ ms.locfileid: "97911528"
 | Administración: Stream Analytics | NuGet [2.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/2.1.0)<br>NuGet [3.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.StreamAnalytics/3.0.0-preview) | [docs](/dotnet/api/overview/azure/stream-analytics) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/streamanalytics/Microsoft.Azure.Management.StreamAnalytics) |
 | Administración: suscripción | NuGet [1.1.5](https://www.nuget.org/packages/Microsoft.Azure.Management.Subscription/1.1.5) |  | GitHub [1.1.5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Subscription_1.1.5/sdk/subscription/Microsoft.Azure.Management.Subscription/) |
 | Administración: soporte técnico | NuGet [1.0.1](https://www.nuget.org/packages/Microsoft.Azure.Management.Support/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Support_1.0.1/sdk/support/Microsoft.Azure.Management.Support/) |
-| Administración: Synapse | NuGet [1.0.0-preview.4](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.4) |  | GitHub [1.0.0-preview.4](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.4/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
+| Administración: Synapse | NuGet [1.0.0-preview.5](https://www.nuget.org/packages/Microsoft.Azure.Management.Synapse/1.0.0-preview.5) |  | GitHub [1.0.0-preview.5](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.Synapse_1.0.0-preview.5/sdk/synapse/Microsoft.Azure.Management.Synapse/) |
 | Administración: Traffic Manager | NuGet [2.5.3](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager/2.5.3) |  | GitHub [2.5.3](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/trafficmanager/Microsoft.Azure.Management.TrafficManager) |
 | Administración: Traffic Manager Fluent | NuGet [1.36.1](https://www.nuget.org/packages/Microsoft.Azure.Management.TrafficManager.Fluent/1.36.1) | [docs](/dotnet/api/overview/azure/traffic-manager) |  |
 | Administración: WebSites | NuGet [3.1.0](https://www.nuget.org/packages/Microsoft.Azure.Management.WebSites/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/websites/Microsoft.Azure.Management.WebSites) |
 | Administración: monitor de carga de trabajo | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.WorkloadMonitor/1.0.0-preview) |  |  |
+| Microsoft.Azure.Management.RedisEnterprise | NuGet [1.0.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.RedisEnterprise/1.0.0-preview) |  |  |
 | Administración de perfiles hybrid_2018_03_01: autorización | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Authorization/0.9.0-preview) |  |  |
 | Administración de perfiles hybrid_2018_03_01: Compute | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Compute/0.9.0-preview) |  |  |
 | Administración de perfiles hybrid_2018_03_01: DNS | NuGet [0.9.0-preview](https://www.nuget.org/packages/Microsoft.Azure.Management.Profiles.hybrid_2018_03_01.Dns/0.9.0-preview) |  |  |
@@ -822,6 +530,7 @@ ms.locfileid: "97911528"
 | Administración de recursos: Red | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Network/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Network-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Network_1.0.0-preview.2/sdk/network/Azure.ResourceManager.Network/) |
 | Administración de recursos: Recursos | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Resources/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Resources-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Resources_1.0.0-preview.2/sdk/resources/Azure.ResourceManager.Resources/) |
 | Administración de recursos: Storage | NuGet [1.0.0-preview.2](https://www.nuget.org/packages/Azure.ResourceManager.Storage/1.0.0-preview.2) | [docs](/dotnet/api/overview/azure/ResourceManager.Storage-readme-pre/) | GitHub [1.0.0-preview.2](https://github.com/Azure/azure-sdk-for-net/tree/Azure.ResourceManager.Storage_1.0.0-preview.2/sdk/storage/Azure.ResourceManager.Storage/) |
+| Información de seguridad | NuGet [1.0.0-preview.1](https://www.nuget.org/packages/Microsoft.Azure.Management.SecurityInsights/1.0.0-preview.1) |  | GitHub [1.0.0-preview.1](https://github.com/Azure/azure-sdk-for-net/tree/Microsoft.Azure.Management.SecurityInsights_1.0.0-preview.1/sdk/securityinsights/Microsoft.Azure.Management.SecurityInsights/) |
 | Administración de SignalR | NuGet [1.6.1](https://www.nuget.org/packages/Microsoft.Azure.SignalR.Management/1.6.1) |  | GitHub [1.6.1](https://github.com/Azure/azure-signalr/tree/v1.5.0/src/Microsoft.Azure.SignalR.Management) |
 | Administración de SQL Server: proveedor de Key Vault | NuGet [2.4.0](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider/2.4.0) |  |  |
 | Administración de WindowsAzure | NuGet [4.1.3](https://www.nuget.org/packages/Microsoft.WindowsAzure.Management/4.1.3) |  |  |
