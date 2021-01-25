@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 04/29/2020
-ms.openlocfilehash: 4834da766bd052f44127a72635b65866eb7e3352
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 2671cbe6f610cfa8aa98e63e67f3240a1650cd6b
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189159"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757881"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -250,7 +250,7 @@ Donde `Microsoft.NET.Test.Sdk` es el host de prueba y `xunit` es el marco de pru
 | Marco de prueba | Propiedades admitidas                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>NOMBRE</li><li>ClassName</li><li>Prioridad</li><li>TestCategory</li></ul> |
-| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Rasgos</li></ul>                                   |
+| xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Category</li></ul>                                 |
 | NUnit          | <ul><li>FullyQualifiedName</li><li>NOMBRE</li><li>TestCategory</li><li>Prioridad</li></ul>                                   |
 
 `<operator>` describe la relación entre la propiedad y el valor:
