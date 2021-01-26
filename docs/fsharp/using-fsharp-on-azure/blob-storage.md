@@ -1,19 +1,19 @@
 ---
-title: Introducción a Azure Blob Storage mediante F#
-description: Almacene datos no estructurados en la nube con Azure BLOB Storage.
+title: 'Introducción a Azure Blob Storage con F #'
+description: Almacene datos no estructurados en la nube con Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: 91aec8fc2b57c71ce4ba47d62619912af6c71e59
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 58c120c26a1e99481b49ae3a0fb096a2188f359e
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756252"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794809"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure BLOB Storage mediante F\#
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob Storage con F\#
 
-Almacenamiento de blobs de Azure es un servicio que almacena datos no estructurados en la nube como objetos o blobs. El Almacenamiento de blobs puede almacenar cualquier tipo de datos binarios o texto, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs a veces se conoce como "almacenamiento de objetos".
+Azure Blob Storage es un servicio que almacena datos no estructurados en la nube como objetos o BLOBs. El Almacenamiento de blobs puede almacenar cualquier tipo de datos binarios o texto, como un documento, un archivo multimedia o un instalador de aplicación. El Almacenamiento de blobs a veces se conoce como "almacenamiento de objetos".
 
 En este artículo se muestra cómo realizar tareas comunes con el almacenamiento de blobs. Los ejemplos se escriben con F # mediante la biblioteca de cliente de Azure Storage para .NET. Entre las tareas descritas se incluyen cómo cargar, enumerar, descargar y eliminar BLOBs.
 
@@ -183,7 +183,7 @@ En el ejemplo siguiente se crea un nuevo BLOB en anexos y se anexan algunos dato
 
 Consulte [Descripción Blobs en bloques, en anexos y en páginas](/rest/api/storageservices/Understanding-Block-Blobs--Append-Blobs--and-Page-Blobs) para obtener más información acerca de las diferencias entre los tres tipos de blobs.
 
-## <a name="concurrent-access"></a>simultáneo
+## <a name="concurrent-access"></a>Simultáneo
 
 Para permitir el acceso simultáneo a un blob desde varios clientes o varias instancias de proceso, puede usar etiquetas **ETag** o **concesiones**.
 
