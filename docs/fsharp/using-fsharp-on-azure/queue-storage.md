@@ -1,23 +1,23 @@
 ---
-title: Introducción a Azure Queue Storage mediante F#
+title: 'Introducción a Azure Queue Storage con F #'
 description: Las colas de Azure proporcionan mensajería asincrónica confiable entre componentes de aplicaciones. La mensajería en la nube permite que los componentes de las aplicaciones se escalen de forma independiente.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: daa5372b7903f10c0d966c5c92e35c8bf9d362d8
-ms.sourcegitcommit: a8a205034eeffc7c3e1bdd6f506a75b0f7099ebf
+ms.openlocfilehash: 0ab131647e37985d45073966ffc01b9a7f379e2f
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91756226"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899300"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue Storage mediante F\#
+# <a name="get-started-with-azure-queue-storage-using-f"></a>Introducción a Azure Queue Storage con F\#
 
-El almacenamiento en cola de Azure proporciona mensajería en la nube entre componentes de aplicaciones. A la hora de diseñar aplicaciones para escala, los componentes de las mismas suelen desacoplarse para poder escalarlos de forma independiente. El almacenamiento en cola ofrece mensajería asincrónica para la comunicación entre los componentes de las aplicaciones, independientemente de si se ejecutan en la nube, en el escritorio, en un servidor local o en un dispositivo móvil. Además, este tipo de almacenamiento admite la administración de tareas asincrónicas y la creación de flujos de trabajo de procesos.
+Azure Queue Storage proporciona mensajería en la nube entre componentes de aplicaciones. A la hora de diseñar aplicaciones para escala, los componentes de las mismas suelen desacoplarse para poder escalarlos de forma independiente. El almacenamiento en cola ofrece mensajería asincrónica para la comunicación entre los componentes de las aplicaciones, independientemente de si se ejecutan en la nube, en el escritorio, en un servidor local o en un dispositivo móvil. Además, este tipo de almacenamiento admite la administración de tareas asincrónicas y la creación de flujos de trabajo de procesos.
 
 ### <a name="about-this-tutorial"></a>Acerca de este tutorial
 
-En este tutorial se muestra cómo escribir código de F # para algunas tareas comunes mediante el almacenamiento de colas de Azure. Entre las tareas descritas se incluyen la creación y eliminación de colas y la adición, lectura y eliminación de mensajes de la cola.
+En este tutorial se muestra cómo escribir código de F # para algunas tareas comunes con Azure Queue Storage. Entre las tareas descritas se incluyen la creación y eliminación de colas y la adición, lectura y eliminación de mensajes de la cola.
 
 Para obtener información general conceptual sobre Queue Storage, consulte [la guía de .net para Queue Storage](/azure/storage/storage-dotnet-how-to-use-queues).
 
@@ -78,11 +78,11 @@ En este ejemplo se muestra cómo crear una cola si aún no existe:
 
 ## <a name="insert-a-message-into-a-queue"></a>un mensaje en una cola
 
-Para insertar un mensaje en una cola existente, cree primero un nuevo `CloudQueueMessage` . A continuación, llame al `AddMessage` método. `CloudQueueMessage`Se puede crear una a partir de una cadena (en formato UTF-8) o de una `byte` matriz, de la siguiente manera:
+Para insertar un mensaje en una cola existente, cree en primer lugar un nuevo `CloudQueueMessage`. A continuación, llame al método `AddMessage`. `CloudQueueMessage`Se puede crear una a partir de una cadena (en formato UTF-8) o de una `byte` matriz, de la siguiente manera:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
-## <a name="peek-at-the-next-message"></a>siguiente mensaje
+## <a name="peek-at-the-next-message"></a>Inspección del siguiente mensaje
 
 Puede inspeccionar el mensaje situado en la parte delantera de una cola, sin quitarlo de la cola, llamando al `PeekMessage` método.
 
@@ -96,15 +96,15 @@ Puede recuperar el mensaje al principio de una cola para su procesamiento median
 
 Más adelante indicará el procesamiento correcto del mensaje mediante `DeleteMessage` .
 
-## <a name="change-the-contents-of-a-queued-message"></a>contenido de un mensaje en cola
+## <a name="change-the-contents-of-a-queued-message"></a>Cambio del contenido de un mensaje en cola
 
 Puede cambiar el contenido de un mensaje recuperado en la cola. Si el mensaje representa una tarea de trabajo, puede usar esta característica para actualizar el estado de la tarea de trabajo. El siguiente código actualiza el mensaje de la cola con contenido nuevo y amplía el tiempo de espera de la visibilidad en 60 segundos más. De este modo, se guarda el estado de trabajo asociado al mensaje y se le proporciona al cliente un minuto más para que siga elaborando el mensaje. Esta técnica se puede utilizar para realizar un seguimiento de los flujos de trabajo de varios pasos en los mensajes en cola, sin que sea necesario volver a empezar desde el principio si se produce un error en un paso del proceso a causa de un error de hardware o software. Normalmente, también tendría que mantener un número de reintentos y, si el mensaje se vuelve a intentar más de un número de veces, lo eliminaría. Esto proporciona protección frente a un mensaje que produce un error en la aplicación cada vez que se procesa.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L65-L69)]
 
-## <a name="de-queue-the-next-message"></a>siguiente mensaje de la cola
+## <a name="de-queue-the-next-message"></a>Extracción del siguiente mensaje
 
-El código quita un mensaje de una cola en dos pasos. Cuando llame a `GetMessage` , obtendrá el siguiente mensaje en una cola. Un mensaje devuelto por `GetMessage` se hace invisible a cualquier otro código de lectura de mensajes de esta cola. De forma predeterminada, este mensaje permanece invisible durante 30 segundos. Para terminar de quitar el mensaje de la cola, también debe llamar a `DeleteMessage` . Este proceso de extracción de un mensaje que consta de dos pasos garantiza que si su código no puede procesar un mensaje a causa de un error de hardware o software, otra instancia de su código puede obtener el mismo mensaje e intentarlo de nuevo. El código siguiente llama a `DeleteMessage` justo después de haberse procesado el mensaje.
+El código quita un mensaje de una cola en dos pasos. Al llamar a `GetMessage`, obtiene el siguiente mensaje de una cola. Un mensaje devuelto por `GetMessage` se hace invisible a cualquier otro código de lectura de mensajes de esta cola. De forma predeterminada, este mensaje permanece invisible durante 30 segundos. Para terminar quitando el mensaje de la cola, también debe llamar a `DeleteMessage`. Este proceso de extracción de un mensaje que consta de dos pasos garantiza que si su código no puede procesar un mensaje a causa de un error de hardware o software, otra instancia de su código puede obtener el mismo mensaje e intentarlo de nuevo. El código siguiente llama a `DeleteMessage` justo después de haberse procesado el mensaje.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -129,7 +129,7 @@ Puede obtener una estimación del número de mensajes existentes en una cola. El
 
 ## <a name="delete-a-queue"></a>Eliminación de una cola
 
-Para eliminar una cola y todos los mensajes contenidos en ella, llame al `Delete` método en el objeto Queue.
+Para eliminar una cola y todos los mensajes que contiene, llame al método `Delete` en el objeto de cola.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 

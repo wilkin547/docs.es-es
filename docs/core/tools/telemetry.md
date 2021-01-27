@@ -3,12 +3,12 @@ title: Telemetría del SDK de .NET
 description: Descubra las características de telemetría del SDK de .NET que recopilan información de uso para el análisis, qué datos se recopilan y cómo deshabilitarlos.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 4f137822c61e1a04eccd28ebd0cd56c04f4a85e2
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 137b703dc9369f09fb535af40edf057e4e02117a
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94633875"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98757842"
 ---
 # <a name="net-sdk-telemetry"></a>Telemetría del SDK de .NET
 
@@ -33,6 +33,9 @@ La telemetría *se recopila* cuando se usa cualquiera de los [comandos de la CLI
 La característica de telemetría del SDK de .NET está habilitada de manera predeterminada. Para desactivar la característica de telemetría, establezca la variable de entorno `DOTNET_CLI_TELEMETRY_OPTOUT` en `1` o `true`.
 
 El instalador del SDK de .NET también envía una única entrada de telemetría cuando se produce una instalación correcta. Para no participar, establezca la variable de entorno `DOTNET_CLI_TELEMETRY_OPTOUT` antes de instalar el SDK de .NET.
+
+> [!IMPORTANT]
+> Para no participar una vez iniciado el instalador, ciérrelo, establezca la variable de entorno y ejecute el instalador de nuevo con ese valor establecido.
 
 ## <a name="disclosure"></a>Divulgación
 

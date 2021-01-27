@@ -1,19 +1,19 @@
 ---
-title: Introducción a Azure File Storage mediante F#
-description: Almacene datos de archivo en la nube con el Almacenamiento de archivos de Azure y monte un recurso compartido de archivos de nube desde una máquina virtual (VM) de Azure o desde una aplicación local con Windows.
+title: 'Introducción a Azure File Storage con F #'
+description: Almacene datos de archivos en la nube con Azure File Storage y Monte el recurso compartido de archivos en la nube desde una máquina virtual (VM) de Azure o desde una aplicación local que ejecute Windows.
 author: sylvanc
 ms.date: 09/20/2016
 ms.custom: devx-track-fsharp
-ms.openlocfilehash: dd19b156e73774f4eca63afd3f4c10a4a7b8d46c
-ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.openlocfilehash: bcea58b4bf756fc9d696cd5a1010b0feffb127a7
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91100131"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899430"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Introducción a Azure File Storage mediante F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Introducción a Azure File Storage con F\#
 
-Almacenamiento de archivos de Azure es un servicio que ofrece recursos compartidos de archivos en la nube mediante el [protocolo Bloque de mensajes del servidor (SMB)](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)estándar. Se admiten SMB 2.1 y SMB 3.0. Con Almacenamiento de archivos de Azure puede migrar aplicaciones heredadas basadas en recursos compartidos de archivos a Azure con rapidez y sin necesidad de costosas reescrituras. Las aplicaciones que se ejecutan en máquinas virtuales de Azure o en servicios en la nube o desde clientes locales pueden montar un recurso compartido de archivos en la nube, igual que una aplicación de escritorio monta un recurso compartido SMB típico. Cualquier número de componentes de aplicación puede montar y acceder simultáneamente al recurso compartido de Almacenamiento de archivos.
+Azure File Storage es un servicio que ofrece recursos compartidos de archivos en la nube mediante el [Protocolo de bloque de mensajes del servidor (SMB)](/windows/win32/fileio/microsoft-smb-protocol-and-cifs-protocol-overview)estándar. Se admiten SMB 2.1 y SMB 3.0. Con Azure File Storage, puede migrar aplicaciones heredadas que se basan en recursos compartidos de archivos en Azure de forma rápida y sin costosas reescrituras. Las aplicaciones que se ejecutan en máquinas virtuales de Azure o en servicios en la nube o desde clientes locales pueden montar un recurso compartido de archivos en la nube, igual que una aplicación de escritorio monta un recurso compartido SMB típico. Cualquier número de componentes de aplicación puede montar y acceder simultáneamente al recurso compartido de Almacenamiento de archivos.
 
 Para obtener información general conceptual sobre el almacenamiento de archivos, consulte [la guía de .net para el almacenamiento de archivos](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -154,7 +154,7 @@ Para obtener más información sobre Azure File Storage, consulte estos vínculo
 
 ### <a name="blog-posts"></a>Publicaciones de blog
 
-- [El almacenamiento de archivos de Azure ya está disponible de manera general](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
+- [Azure File Storage ya está disponible con carácter general](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Dentro de Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Introducing Microsoft Azure File Service (Introducción al servicio de archivos de Microsoft Azure)](/archive/blogs/windowsazurestorage/introducing-microsoft-azure-file-service)
 - [Persisting connections to Microsoft Azure Files (Persistencia de conexiones en archivos de Microsoft Azure)](/archive/blogs/windowsazurestorage/persisting-connections-to-microsoft-azure-files)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 11c04441dcec260f0bfb90f6ed2b919b1545b382
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 27c6353f8f71254a505b434921f4b1e61e64cdda
+ms.sourcegitcommit: 2b878d7011306b215dbf3d5dc9c1e78355a6dcd5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721480"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98758169"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>Modernización de FolderBrowserDialog
 
@@ -16,7 +16,7 @@ En .NET Framework, Windows Forms utiliza el siguiente cuadro de diálogo para 
 
 ![FolderBrowserDialogControl en .NET Framework](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-framework.png)
 
-En .NET Core 3.0, los usuarios de Windows Forms utilizan un control basado en COM más reciente que se presentó en Windows Vista:
+En .NET Core 3.0, Windows Forms usa un control basado en COM más reciente que se presentó en Windows Vista:
 
 ![FolderBrowserDialogControl en .NET Core](~/docs/images/core-changes/windowsforms/modernized-folderbrowserdialog/folderdlg-core.png)
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 51bf44af5ec3478f2b2557b047df270c0c22990d
-ms.sourcegitcommit: f99115e12a5eb75638abe45072e023a3ce3351ac
+ms.openlocfilehash: 2ae63396c0b1bb0bf1fe5c33b1103f69f6dcf664
+ms.sourcegitcommit: 632818f4b527e5bf3c48fc04e0c7f3b4bdb8a248
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94556847"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98615873"
 ---
 # <a name="lambda-expressions-c-reference"></a>Expresiones lambda (referencia de C#)
 
-Una *expresión lambda* es una expresión que tiene cualquiera de estas dos formas:
+Use una *expresión lambda* para crear una función anónima. Use el [operador de declaración lambda `=>`](lambda-operator.md) para separar la lista de parámetros de la lamba de su cuerpo. Una expresión lambda puede tener cualquiera de las dos formas siguientes:
 
 - Una [lambda de expresión](#expression-lambdas) que tiene una expresión como cuerpo:
 
@@ -32,7 +32,7 @@ Una *expresión lambda* es una expresión que tiene cualquiera de estas dos form
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-Use el [operador de declaración lambda `=>`](lambda-operator.md) para separar la lista de parámetros de la lamba de su cuerpo. Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda y una expresión o bloque de instrucciones en el otro lado.
+Para crear una expresión lambda, especifique los parámetros de entrada (si existen) a la izquierda del operador lambda y una expresión o bloque de instrucciones en el otro lado.
 
 Toda expresión lambda se puede convertir en un tipo [delegado](../builtin-types/reference-types.md#the-delegate-type). El tipo delegado al que se puede convertir una expresión lambda se define según los tipos de sus parámetros y el valor devuelto. Si una expresión lambda no devuelve un valor, se puede convertir en uno de los tipos delegados `Action`; de lo contrario, se puede convertir en uno de los tipos delegados `Func`. Por ejemplo, una expresión lambda que tiene dos parámetros y no devuelve ningún valor corresponde a un delegado <xref:System.Action%602>. Una expresión lambda que tiene un parámetro y devuelve un valor se puede convertir en un delegado <xref:System.Func%602>. En el ejemplo siguiente, la expresión lambda `x => x * x`, que especifica un parámetro denominado `x` y devuelve el valor de `x` al cuadrado, se asigna a una variable de un tipo delegado:
 

@@ -4,12 +4,12 @@ description: Referencia de las propiedades y los elementos de MSBuild admitidos 
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: e35ccc3540756a4cb7905d5864caf65cded4362b
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 21bbe46cf60540c01344cc8fcb82c62ff0fbbee5
+ms.sourcegitcommit: 4313614f57690f9a5119a37314f0a1fd738ebda2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98189990"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98692714"
 ---
 # <a name="msbuild-reference-for-net-sdk-projects"></a>Referencia de MSBuild para proyectos del SDK de .NET
 
@@ -86,6 +86,8 @@ Puede especificar propiedades como `PackageId`, `PackageVersion`, `PackageIcon`,
 - [CopyLocalLockFileAssemblies](#copylocallockfileassemblies)
 - [CopyToPublishDirectory](#copytopublishdirectory)
 - [LinkBase](#linkbase)
+- [PreserveCompilationContext](#preservecompilationcontext)
+- [PreserveCompilationReferences](#preservecompilationreferences)
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
 - [TrimmerRootAssembly](#trimmerrootassembly)
@@ -153,6 +155,30 @@ La propiedad `CopyLocalLockFileAssemblies` es útil para los proyectos de comple
 
 > [!TIP]
 > Como alternativa, puede usar `dotnet publish` para publicar la biblioteca de clases. Para obtener más información, vea [dotnet publish](../tools/dotnet-publish.md).
+
+### <a name="preservecompilationcontext"></a>PreserveCompilationContext
+
+La propiedad `PreserveCompilationContext` permite a una aplicación creada o publicada compilar más código en tiempo de ejecución con la misma configuración que se utilizó en el momento de la creación. Los ensamblados a los que se hace referencia en el tiempo de compilación se copiarán en el subdirectorio *ref* del directorio de salida. Los nombres de los ensamblados de referencia se almacenan en el archivo *.deps.json* de la aplicación junto con las opciones que se pasan al compilador. Puede recuperar esta información mediante las propiedades <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompileLibraries?displayProperty=nameWithType> y <xref:Microsoft.Extensions.DependencyModel.DependencyContext.CompilationOptions?displayProperty=nameWithType>.
+
+Esta funcionalidad la usan principalmente MVC de ASP.NET Core y páginas Razor para admitir la compilación en tiempo de ejecución de archivos Razor.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
+```
+
+### <a name="preservecompilationreferences"></a>PreserveCompilationReferences
+
+La propiedad `PreserveCompilationReferences` es similar a la propiedad [PreserveCompilationContext](#preservecompilationcontext), salvo que solo copia los ensamblados a los que se hace referencia en el directorio de publicación, sin el archivo *.deps.json*.
+
+```xml
+<PropertyGroup>
+  <PreserveCompilationReferences>true</PreserveCompilationReferences>
+</PropertyGroup>
+```
+
+Para obtener más información, consulte las [propiedades del SDK de Razor](/aspnet/core/razor-pages/sdk#properties).
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
