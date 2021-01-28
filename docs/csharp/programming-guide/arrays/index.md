@@ -1,17 +1,17 @@
 ---
 title: 'Matrices: Guía de programación de C#'
 description: Puede almacenar varias variables del mismo tipo en una estructura de datos de matriz de C#. Declare una matriz especificando un tipo o especifique un objeto para almacenar cualquier tipo.
-ms.date: 07/20/2015
+ms.date: 01/22/2021
 helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: e302ff2e4c2488c4899c4eb99a666d2d322119ce
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 203d8b86da4e74d8c5397132a0ba68618eedf348
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474740"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794764"
 ---
 # <a name="arrays-c-programming-guide"></a>Matrices (Guía de programación de C#)
 
@@ -39,17 +39,25 @@ Una matriz tiene las propiedades siguientes:
 - Los elementos de una matriz puede ser cualquier tipo, incluido un tipo de matriz.
 - Los tipos de matriz son [tipos de referencia](../../language-reference/keywords/reference-types.md) que proceden del tipo base abstracto <xref:System.Array>. Como este tipo implementa <xref:System.Collections.IEnumerable> y <xref:System.Collections.Generic.IEnumerable%601>, puede usar la iteración [foreach](../../language-reference/keywords/foreach-in.md) en todas las matrices de C#.
 
-## <a name="related-sections"></a>Secciones relacionadas
+### <a name="arrays-as-objects"></a>Matrices como objetos
 
-- [Matrices como objetos](arrays-as-objects.md)
+En C#, las matrices son actualmente objetos, y no simplemente regiones direccionables de memoria contigua como en C y C++. <xref:System.Array> es el tipo base abstracto de todos los tipos de matriz. Puede usar las propiedades, y otros miembros de clase, que tiene <xref:System.Array>. Un ejemplo de esto sería usar la propiedad <xref:System.Array.Length%2A> para obtener la longitud de una matriz. El código siguiente asigna la longitud de la matriz `numbers`, que es `5`, a una variable denominada `lengthOfNumbers`:
+
+[!code-csharp[csProgGuideArrays#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#3)]
+
+La clase <xref:System.Array> proporciona muchos otros métodos útiles y propiedades para ordenar, buscar y copiar matrices. En los ejemplos siguientes se usa la propiedad <xref:System.Array.Rank%2A> para mostrar el número de dimensiones de una matriz.
+
+[!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
+
+## <a name="see-also"></a>Vea también
+
+- [Uso de matrices unidimensionales](single-dimensional-arrays.md)
+- [Uso de matrices multidimensionales](multidimensional-arrays.md)
+- [Uso de matrices escalonadas](jagged-arrays.md)
 - [Utilizar foreach con matrices](using-foreach-with-arrays.md)
 - [Pasar matrices como argumentos](passing-arrays-as-arguments.md)
-
-## <a name="c-language-specification"></a>Especificación del lenguaje C#
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="see-also"></a>Consulte también
-
+- [Matrices con tipo implícito](implicitly-typed-arrays.md)
 - [Guía de programación de C#](../index.md)
 - [Colecciones](../concepts/collections.md)
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
