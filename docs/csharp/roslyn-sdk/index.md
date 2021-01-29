@@ -3,12 +3,12 @@ title: SDK de .NET Compiler Platform (API de Roslyn)
 description: Aprenda a usar el SDK de .NET Compiler Platform (también denominado API de Roslyn) para comprender el código. NET, detectar errores y corregir dichos errores.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 872bfd388f6974a6d99f769c43e5d341454518cc
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: cd81551234a1bc955323e392f473cd01180f6dc5
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226678"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899248"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>SDK de .NET Compiler Platform
 
@@ -19,17 +19,18 @@ En lugar de actuar como traductores opacos de código fuente de entrada en códi
 
 El SDK de .NET Compiler Platform reduce notablemente la barrera de entrada para crear herramientas y aplicaciones centradas en código. Crea numerosas oportunidades para la innovación en áreas como la metaprogramación, la generación y la transformación de código, el uso interactivo de los lenguajes C# y Visual Basic, y la inserción de C# y Visual Basic en lenguajes específicos del dominio.
 
-El SDK de .NET Compiler Platform le permite crear ***analizadores*** y ***correcciones de código*** que buscan y corrigen errores de codificación. Los ***analizadores*** comprenden la sintaxis y la estructura del código y detectan las prácticas que se deben corregir. Las ***correcciones de código*** sugieren una o varias correcciones para tratar los errores de codificación que los analizadores encuentran. Por lo general, un analizador y las correcciones de código asociadas se empaquetan conjuntamente en un solo proyecto.
+El SDK de .NET Compiler Platform le permite crear ***analizadores** _ y _*_correcciones de código_*_ que buscan y corrigen errores de codificación. Los _*_analizadores_*_ comprenden la sintaxis (estructura del código) y la semántica y detectan las prácticas que se deben corregir. Las _*_correcciones de código_*_ sugieren una o varias correcciones para tratar los errores de codificación que encuentran los analizadores o los diagnósticos del compilador. Por lo general, un analizador y las correcciones de código asociadas se empaquetan conjuntamente en un solo proyecto.
 
 Los analizadores y las correcciones de código usan el análisis estático para comprender el código. No ejecutan el código o proporcionan otras ventajas de pruebas. Sin embargo, pueden señalar prácticas que suelen dar lugar a errores, código que no se puede mantener o validación de guías estándar.
 
-El SDK de .NET Compiler Platform proporciona un único conjunto de API que le permite examinar y entender un código base de C# o Visual Basic. Dado que puede usar este código base único, puede escribir analizadores y correcciones de código más fácilmente aprovechando las API de análisis sintáctico y semántico que proporciona el SDK de .NET Compiler Platform. Una vez liberado de la ardua tarea de replicar el análisis realizado por el compilador, puede concentrarse en la tarea más específica de encontrar y corregir errores de codificación comunes para el proyecto o la biblioteca.
+Además de los analizadores y las correcciones de código, el SDK de .NET Compiler Platform también le permite compilar _*_refactorizaciones de código_*_.
+También proporciona un único conjunto de API que le permite examinar y entender un código base de C# o Visual Basic. Dado que puede usar este código base único, puede escribir analizadores y correcciones de código más fácilmente aprovechando las API de análisis sintáctico y semántico que proporciona el SDK de .NET Compiler Platform. Una vez liberado de la ardua tarea de replicar el análisis realizado por el compilador, puede concentrarse en la tarea más específica de encontrar y corregir errores de codificación comunes para el proyecto o la biblioteca.
 
 Una ventaja menor es que los analizadores y las correcciones de código son más pequeños y usan muchos menos memoria cuando se cargan en Visual Studio que si escribiera su propio código base para entender el código de un proyecto. Aprovechando las mismas clases que usa el compilador y Visual Studio, puede crear sus propias herramientas de análisis estático. Esto significa que el equipo puede usar los analizadores y las correcciones de código sin un impacto perceptible en el rendimiento del IDE.
 
 Hay tres escenarios principales para escribir analizadores y correcciones de código:
 
-1. [*Aplicar estándares de codificación de equipo*](#enforce-team-coding-standards)
+1. [_Aplicación de estándares de codificación de equipo*](#enforce-team-coding-standards)
 1. [*Proporcionar instrucciones con paquetes de biblioteca*](#provide-guidance-with-library-packages)
 1. [*Suministro de una guía general*](#provide-general-guidance)
 
@@ -40,6 +41,9 @@ Muchos equipos tienen estándares de codificación que se aplican a través de r
 Los analizadores se ejecutan a medida que un desarrollador escribe código. Obtiene comentarios al instante que animan a seguir la guía de inmediato. Crea hábitos para escribir código compatible tan pronto como comienza la creación de prototipos. Cuando la característica está lista para que las personas la revisen, se habrá aplicado toda la guía estándar.
 
 Los equipos pueden crear analizadores y correcciones de código que busquen las prácticas más comunes que infringen las prácticas de codificación del equipo. Se pueden instalar en el equipo del desarrollador para aplicar los estándares.
+
+> [!TIP]
+> Antes de compilar su propio analizador, consulte los integrados. Para obtener más información, vea [Reglas de estilo del código](../../fundamentals/code-analysis/overview.md#code-style-analysis).
 
 ## <a name="provide-guidance-with-library-packages"></a>Suministro de instrucciones con paquetes de biblioteca
 
