@@ -2,12 +2,12 @@
 title: 'Funciones recursivas: palabra clave rec'
 description: "Obtenga información sobre cómo se usa la palabra clave ' Rec ' de F # con la palabra clave ' Let ' para definir una función recursiva."
 ms.date: 08/12/2020
-ms.openlocfilehash: 1ab00ff9400129e531fd7320861b3d9625cad08c
-ms.sourcegitcommit: b4a46f6d7ebf44c0035627d00924164bcae2db30
+ms.openlocfilehash: 27f215f7b6f09646e847898c2618cfac10175e6e
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91438074"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215717"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Funciones recursivas: palabra clave rec
 
@@ -38,7 +38,7 @@ En el ejemplo siguiente se muestra una función recursiva que *calcula el númer
 ```fsharp
 let rec fib n =
     match n with
-    | 0 | 1 -> 1
+    | 0 | 1 -> n
     | n -> fib (n-1) + fib (n-2)
 ```
 
@@ -51,7 +51,7 @@ Los métodos son implícitamente recursivos dentro del tipo en el que se definen
 type MyClass() =
     member this.Fib(n) =
         match n with
-        | 0 | 1 -> 1
+        | 0 | 1 -> n
         | n -> this.Fib(n-1) + this.Fib(n-2)
 ```
 

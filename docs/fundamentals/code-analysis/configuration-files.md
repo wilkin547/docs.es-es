@@ -5,19 +5,19 @@ ms.date: 09/24/2020
 ms.topic: conceptual
 no-loc:
 - EditorConfig
-ms.openlocfilehash: 0d64df42ffb1763afed3e883c4f043755e158489
-ms.sourcegitcommit: 635a0ff775d2447a81ef7233a599b8f88b162e5d
+ms.openlocfilehash: b98fdd48f2373bd23fcd3273834860a60c682969
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97633993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216387"
 ---
 # <a name="configuration-files-for-code-analysis-rules"></a>Archivos de configuración para las reglas de análisis de código
 
 Las reglas de análisis de código tienen varias [Opciones de configuración](configuration-options.md). Estas opciones se especifican como pares clave-valor en uno de los siguientes archivos de configuración del analizador:
 
 - [EditorConfig](#editorconfig) archivo: opciones de configuración basadas en archivos o carpetas.
-- Archivo [AnalyzerConfig global](#global-analyzerconfig) : opciones de configuración de nivel de proyecto.
+- Archivo [AnalyzerConfig global](#global-analyzerconfig) : opciones de configuración de nivel de proyecto. Resulta útil cuando algunos archivos de proyecto residen fuera de la carpeta de proyecto.
 
 ## EditorConfig
 
@@ -58,7 +58,7 @@ tab_width = 4
 #### .NET Coding Conventions ####
 
 # this. and Me. preferences
-dotnet_style_qualification_for_method = true:warning
+dotnet_style_qualification_for_method = true
 
 #### Diagnostic configuration ####
 
@@ -141,6 +141,6 @@ Las [reglas de prioridad general](#general-options) anteriores se aplican a toda
 
 - Para obtener información sobre las reglas de prioridad de las opciones de gravedad relacionadas con claves diferentes, por ejemplo, cuando se especifican diferentes gravedades para una sola regla y para la categoría en la que esta regla se encuentra bajo, vea [Opciones de configuración para el análisis de código](configuration-options.md#precedence).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EditorConfig problema de diseño de AnalyzerConfig global de vs](https://github.com/dotnet/roslyn/issues/47707)

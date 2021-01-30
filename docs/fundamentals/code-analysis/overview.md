@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: 80815b5913ad72756de503209b52e8848dd708bf
-ms.sourcegitcommit: 5d9cee27d9ffe8f5670e5f663434511e81b8ac38
+ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98025086"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216478"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
@@ -127,7 +127,7 @@ Siga estos pasos para habilitar el análisis de estilo de código en la compilac
    dotnet_diagnostic.IDE0040.severity = warning
    ```
 
-   Como alternativa, puede configurar la categoría de "estilo" completa como advertencia o error, de forma predeterminada y, a continuación, desactivar selectivamente las reglas que no desea que se ejecuten en la compilación. Por ejemplo:
+   Como alternativa, puede configurar una categoría completa para que sea una advertencia o un error, de forma predeterminada y, a continuación, desactivar selectivamente las reglas de esa categoría que no desea que se ejecuten en la compilación. Por ejemplo:
 
    ```ini
    [*.{cs,vb}]
@@ -158,7 +158,7 @@ Para obtener más información sobre los niveles de gravedad de las reglas, cons
 
 Además de los analizadores de .NET oficiales, también puede instalar analizadores de terceros, como [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/), [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/), [analizadores de xUnit](https://www.nuget.org/packages/xunit.analyzers/)y [Sónar Analyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de reglas de análisis de calidad de código](quality-rules/index.md)
 - [Referencia de reglas de análisis de estilo de código](style-rules/index.md)
