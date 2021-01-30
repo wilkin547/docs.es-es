@@ -16,42 +16,40 @@ helpviewer_keywords:
 - naming code style rules [EditorConfig]
 - naming rules
 - EditorConfig naming conventions
-ms.openlocfilehash: 0eea5e89ac5055a45d9ead14363cc2f2fc574401
-ms.sourcegitcommit: a4cecb7389f02c27e412b743f9189bd2a6dea4d6
+ms.openlocfilehash: 1fce275204b729b4d23729ca432e06a5a249620d
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98191084"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065140"
 ---
 # <a name="naming-rules"></a>Reglas de nomenclatura
 
-Las reglas de nomenclatura se refieren a la denominación de los elementos de código del lenguaje de programación .NET, como clases, propiedades y métodos. Por ejemplo, puede especificar que los miembros públicos deben escribirse en mayúsculas, o que los campos privados deben comenzar por `_`.
+En el `.editorconfig` archivo, puede definir **reglas de nomenclatura** para el modo en que los elementos de código del lenguaje de programación .net &mdash; , como las clases, las propiedades y los métodos, &mdash; deben tener nombre. Por ejemplo, puede especificar que los miembros públicos deben escribirse en mayúsculas o que los campos privados deban comenzar por `_` .
 
-Una regla de nomenclatura tiene tres partes:
+Una regla de nomenclatura tiene tres componentes:
 
-* Grupo de símbolos al que se aplica.
-* Estilo de nomenclatura que se va a asociar a la regla.
+* El **grupo de símbolos al** que &mdash; se aplica la regla.
+* **Estilo de nomenclatura** que se va a asociar a la regla.
 * La gravedad para aplicar la Convención.
-
-Las reglas de nomenclatura se definen en un archivo EditorConfig.
 
 ## <a name="general-syntax"></a>Sintaxis general
 
 Para definir una regla de nomenclatura, un grupo de símbolos o un estilo de nomenclatura, establezca una o varias propiedades con la sintaxis siguiente:
 
 ```ini
-<prefix>.<title>.<propertyName> = <propertyValue>
+<kind>.<title>.<propertyName> = <propertyValue>
 ```
 
 Cada propiedad solo se debe establecer una vez, pero algunas opciones de configuración permiten varios valores separados por comas.
 
 El orden de las propiedades no es importante.
 
-### \<prefix>
+### \<kind>
 
-**\<prefix>** Especifica qué tipo de elemento se define &mdash; como regla de nomenclatura, grupo de símbolos o estilo de nomenclatura, &mdash; y debe ser uno de los siguientes:
+**\<kind>** Especifica qué tipo de elemento se define &mdash; como regla de nomenclatura, grupo de símbolos o estilo de nomenclatura, &mdash; y debe ser uno de los siguientes:
 
-| Para establecer una propiedad para | Usar el prefijo | Ejemplo |
+| Para establecer una propiedad para | Usar el \<kind> valor | Ejemplo |
 | --- | --- | -- |
 | Regla de nomenclatura | `dotnet_naming_rule` | `dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion` |
 | Grupo de símbolos | `dotnet_naming_symbols` | `dotnet_naming_symbols.interface.applicable_kinds = interface` |
@@ -77,25 +75,17 @@ Todas las propiedades de las reglas de nomenclatura son necesarias para que una 
 
 | Propiedad | Descripción |
 | -- | -- |
-| `symbols` | El título del grupo de símbolos, que define los símbolos a los que se debe aplicar esta regla. |
+| `symbols` | Título de un grupo de símbolos; la regla de nomenclatura se aplicará a los símbolos de este grupo |
 | `style` | Título del estilo de nomenclatura que debe asociarse a esta regla. |
 | `severity` |  Establece la gravedad con la que se va a aplicar la regla de nomenclatura. Establezca el valor asociado en uno de los [niveles de gravedad](../configuration-options.md#severity-level)disponibles. <sup>1</sup> |
 
 **Notas:**
 
-1. La especificación de gravedad dentro de una regla de nomenclatura solo se respeta dentro de los IDE de desarrollo, como Visual Studio. Los compiladores de C# o VB no entienden este valor, por lo que no se respetan durante la compilación. En su lugar, para aplicar reglas de estilo de nomenclatura en la compilación, debe establecer la gravedad mediante la configuración de gravedad basada en el identificador de regla, tal como se explica en [esta sección](#rule-id-ide1006-naming-rule-violation). Para obtener más información, vea [este problema de GitHub](https://github.com/dotnet/roslyn/issues/44201).
-
-## <a name="rule-order"></a>Orden de las reglas
-
-No importa el orden en el que se definen las reglas de nomenclatura en un archivo EditorConfig. Las reglas de nomenclatura se ordenan automáticamente según la definición de las propias reglas. La [extensión de servicio de lenguaje de EditorConfig](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) puede analizar un archivo EditorConfig y notificar los casos en los que el orden de las reglas del archivo es diferente al que va a usar el compilador en tiempo de ejecución.
-
-> [!NOTE]
->
-> Si utiliza una versión de Visual Studio anterior a la versión 16,2 de Visual Studio 2019, las reglas de nomenclatura deben ordenarse de la más específica a la menos específica en el archivo EditorConfig. La primera regla encontrada que se puede aplicar es la única que se aplica. Sin embargo, si hay varias *propiedades* de regla con el mismo nombre, la prioridad la tiene la última propiedad encontrada con ese nombre. Para más información, consulte [Prioridad y jerarquía de los archivos](/visualstudio/ide/create-portable-custom-editor-options#file-hierarchy-and-precedence).
+1. La especificación de gravedad dentro de una regla de nomenclatura solo se respeta dentro de los IDE de desarrollo, como Visual Studio. Los compiladores de C# o VB no entienden este valor, por lo que no se respetan durante la compilación. Para aplicar reglas de estilo de nomenclatura en la compilación, debe establecer la gravedad mediante la [configuración](#rule-id-ide1006-naming-rule-violation)de la gravedad de la regla de código. Para obtener más información, vea [este problema de GitHub](https://github.com/dotnet/roslyn/issues/44201).
 
 ## <a name="symbol-group-properties"></a>Propiedades de grupo de símbolos
 
-Puede establecer las siguientes propiedades para los grupos de símbolos, a fin de limitar qué símbolos se incluyen en el grupo. Para especificar varios valores en un único valor de propiedad, sepárelos con una coma.
+Puede establecer las siguientes propiedades para los grupos de símbolos, a fin de limitar qué símbolos se incluyen en el grupo. Para especificar varios valores para una sola propiedad, separe los valores con una coma.
 
 | Propiedad | Descripción | Valores permitidos | Obligatorio |
 | -- | -- | -- | -- |
@@ -131,6 +121,14 @@ Puede establecer las siguientes propiedades para un estilo de nomenclatura:
 
 1. Debe especificar un estilo de uso de mayúsculas como parte del estilo de nomenclatura; en caso contrario, es posible que el estilo de nomenclatura se ignore.
 
+## <a name="rule-order"></a>Orden de las reglas
+
+No importa el orden en el que se definen las reglas de nomenclatura en un archivo EditorConfig. Las reglas de nomenclatura se ordenan automáticamente según la definición de las propias reglas. La [extensión de servicio de lenguaje de EditorConfig](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) puede analizar un archivo EditorConfig y notificar los casos en los que el orden de las reglas del archivo es diferente al que va a usar el compilador en tiempo de ejecución.
+
+> [!NOTE]
+>
+> Si utiliza una versión de Visual Studio anterior a la versión 16,2 de Visual Studio 2019, las reglas de nomenclatura deben ordenarse de la más específica a la menos específica en el archivo EditorConfig. La primera regla encontrada que se puede aplicar es la única que se aplica. Sin embargo, si hay varias *propiedades* de regla con el mismo nombre, la prioridad la tiene la última propiedad encontrada con ese nombre. Para más información, consulte [Prioridad y jerarquía de los archivos](/visualstudio/ide/create-portable-custom-editor-options#file-hierarchy-and-precedence).
+
 ## <a name="default-naming-styles"></a>Estilos de nomenclatura predeterminados
 
 Si no especifica ninguna regla de nomenclatura personalizada, se usan los siguientes estilos predeterminados:
@@ -138,6 +136,16 @@ Si no especifica ninguna regla de nomenclatura personalizada, se usan los siguie
 - Para clases, estructuras, enumeraciones, propiedades y eventos con accesibilidad `public`, `private`, `internal`, `protected` o `protected_internal`, el estilo de nomenclatura predeterminado es Pascal Case.
 
 - Para interfaces con accesibilidad `public`, `private`, `internal`, `protected` o `protected_internal`, el estilo de nomenclatura predeterminado es Pascal Case con el prefijo necesario **l**.
+
+## <a name="code-rule-id-ide1006-naming-rule-violation"></a><a name="rule-id-ide1006-naming-rule-violation"></a>IDENTIFICADOR de regla de código: `IDE1006 (Naming rule violation)`
+
+Todas las opciones de nomenclatura tienen el identificador `IDE1006` y el título de la regla `Naming rule violation` . Puede configurar la gravedad de las infracciones de nomenclatura globalmente en un archivo EditorConfig con la siguiente sintaxis:
+
+```ini
+dotnet_diagnostic.IDE1006.severity = <severity value>
+```
+
+El valor de gravedad debe ser o aplicarse `warning` `error` en la [compilación](../overview.md#code-style-analysis). Para obtener todos los valores de gravedad posibles, consulte [nivel de gravedad](../configuration-options.md#severity-level).
 
 ## <a name="example"></a>Ejemplo
 
@@ -162,17 +170,7 @@ dotnet_naming_rule.public_members_must_be_capitalized.style    = first_word_uppe
 dotnet_naming_rule.public_members_must_be_capitalized.severity = suggestion
 ```
 
-## <a name="rule-id-ide1006-naming-rule-violation"></a><a name="rule-id-ide1006-naming-rule-violation"></a>IDENTIFICADOR de regla: "IDE1006" (infracción de la regla de nomenclatura)
-
-Todas las opciones de nomenclatura tienen el identificador `IDE1006` y el título de la regla `Naming rule violation` . Puede configurar la gravedad de las infracciones de nomenclatura globalmente en un archivo EditorConfig con la siguiente sintaxis:
-
-```ini
-dotnet_diagnostic.IDE1006.severity = <severity value>
-```
-
-El valor de gravedad debe ser o aplicarse `warning` `error` en la [compilación](../overview.md#code-style-analysis). Para obtener todos los valores de gravedad posibles, consulte [nivel de gravedad](../configuration-options.md#severity-level).
-
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - [Reglas del lenguaje](language-rules.md)
 - [Reglas de formato](formatting-rules.md)
