@@ -6,18 +6,18 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 07b3e54c9ffeb1abacaf5ddd04d2058697e653e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c224f96091e8fd5c51139757002ec8a67461a508
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203974"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898741"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Constructores estáticos (Guía de programación de C#)
 
 Un constructor estático se usa para inicializar cualquier dato [estático](../../language-reference/keywords/static.md) o realizar una acción determinada que solo debe realizarse una vez. Es llamado automáticamente antes de crear la primera instancia o de hacer referencia a cualquier miembro estático.  
   
- [!code-csharp[csProgGuideObjects#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#14)]  
+ [!code-csharp[SimpleClass#1](snippets/static-constructors/Program.cs#1)]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -57,7 +57,7 @@ Los constructores estáticos tienen las propiedades siguientes:
 
  En este ejemplo, la clase `Bus` tiene un constructor estático. Cuando se crea la primera instancia de `Bus` (`bus1`), se invoca el constructor estático para inicializar la clase. En el resultado del ejemplo, se comprueba que el constructor estático se ejecuta solo una vez, incluso si se crean dos instancias de `Bus`, y que se ejecuta antes de que se ejecute el constructor de instancia.  
   
- [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
+ [!code-csharp[BusSample#2](snippets/static-constructors/Program.cs#2)]
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

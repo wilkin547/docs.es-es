@@ -3,12 +3,12 @@ title: Habilitar un origen de datos para realizar consultas LINQ
 description: Obtenga información sobre cómo extender LINQ en C# para habilitar la consulta de cualquier origen de datos en el patrón LINQ, lo que facilita a los clientes la consulta de un origen de datos.
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d7d751c0584072e740b4e5292071e400a5020f82
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 84769e27e3f8b8d7ee30b79c219b180333337af9
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202622"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794826"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 
@@ -32,7 +32,7 @@ Hay varias maneras de extender LINQ para permitir consultar cualquier origen de 
   
 ### <a name="remote-data"></a>Datos remotos  
 
- La mejor opción para permitir las consultas LINQ para un origen de datos remoto consiste en implementar la interfaz <xref:System.Linq.IQueryable%601>. Sin embargo, esto es diferente de extender un proveedor como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para un origen de datos. En Visual Studio 2008, no existen modelos de proveedor para extender tecnologías de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] existentes, como LINQ, a otros tipos de origen de datos.
+ La mejor opción para permitir las consultas LINQ para un origen de datos remoto consiste en implementar la interfaz <xref:System.Linq.IQueryable%601>. Sin embargo, esto es diferente de extender un proveedor como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para un origen de datos.
   
 ## <a name="iqueryable-linq-providers"></a>Proveedores LINQ de IQueryable  
 

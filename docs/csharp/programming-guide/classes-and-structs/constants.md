@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 9eff44f3260f0f50fef956ba60b01e2497d7d2dd
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4783aff8e9424c90e46cb52692a3e645e995d914
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91199216"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899079"
 ---
 # <a name="constants-c-programming-guide"></a>Constantes (Guía de programación de C#)
 
@@ -23,7 +23,7 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
   
  Las constantes se deben inicializar al declararse. Por ejemplo:  
   
- [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
+ [!code-csharp[Calendar#1](snippets/constants/Calendar.cs#1)]
   
  En este ejemplo la constante `Months` siempre es 12 y ni siquiera la propia clase la puede cambiar. De hecho, cuando el compilador detecta un identificador de constante en el código fuente de C# (por ejemplo, `Months`), sustituye directamente el valor literal en el código de lenguaje intermedio (IL) que genera. Dado que no hay ninguna dirección de variable asociada a una constante en tiempo de ejecución, no se pueden pasar los campos `const` por referencia ni pueden aparecer como un valor L en una expresión.  
   
@@ -32,17 +32,17 @@ Las constantes son valores inmutables que se conocen en tiempo de compilación y
   
  Se pueden declarar varias constantes del mismo tipo a la vez, por ejemplo:  
   
- [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
+ [!code-csharp[Calendar#2](snippets/constants/Calendar.cs#2)]
   
  La expresión que se usa para inicializar una constante puede hacer referencia a otra constante si no crea una referencia circular. Por ejemplo:  
   
- [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
+ [!code-csharp[Calendar#3](snippets/constants/Calendar.cs#3)]
   
  Las constantes pueden marcarse como [públicas](../../language-reference/keywords/public.md), [privadas](../../language-reference/keywords/private.md), [protegidas](../../language-reference/keywords/protected.md), [internas](../../language-reference/keywords/internal.md), [protegidas internas](../../language-reference/keywords/protected-internal.md)o [privadas protegidas](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden acceder a la constante. Para más información, vea [Modificadores de acceso](./access-modifiers.md).  
   
  A las constantes se accede como si fueran campos [estáticos](../../language-reference/keywords/static.md) porque el valor de la constante es el mismo para todas las instancias del tipo. No use la palabra clave `static` para declararlas. Las expresiones que no están en la clase que define la constante deben usar el nombre de la clase, un punto y el nombre de la constante para acceder a ella. Por ejemplo:  
   
- [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
+ [!code-csharp[Calendar#4](snippets/constants/Calendar.cs#4)]
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 

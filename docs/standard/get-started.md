@@ -3,12 +3,12 @@ title: Tutoriales de introducción a .NET
 description: Elija un tutorial para aprender sobre el desarrollo de aplicaciones .NET o uno de los lenguajes de programación de .NET.
 author: tdykstra
 ms.date: 09/30/2020
-ms.openlocfilehash: 3002b23dcae44b38c9e4dbc2679a2919f1a8d1ce
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: e41a6ce0ae3e1c58b9d83eb644b2e68362cc04ed
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94827183"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99215912"
 ---
 # <a name="tutorials-for-getting-started-with-net"></a>Tutoriales de introducción a .NET
 
@@ -44,7 +44,7 @@ Los siguientes tutoriales paso a paso se ejecutan en Windows, Linux o macOS, sal
 
 ## <a name="resources-for-learning-net-languages"></a>Recursos de aprendizaje para lenguajes de .NET
 
-* [Introducción a C#](../csharp/getting-started/index.md)
+* [Introducción a C#](../csharp/tour-of-csharp/index.md)
 * [Introducción a F#](../fsharp/get-started/index.md)
 * [Introducción a Visual Basic](../visual-basic/getting-started/index.md)
 
