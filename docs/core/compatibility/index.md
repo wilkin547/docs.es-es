@@ -1,27 +1,27 @@
 ---
 title: Tipos de cambios importantes
-description: Obtenga más información sobre los esfuerzos de .NET Core por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
-ms.date: 06/10/2019
-ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
-ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
+description: Obtenga información sobre los esfuerzos de .NET por mantener la compatibilidad entre versiones de .NET para los desarrolladores, así como sobre los tipos de cambios que se consideran importantes.
+ms.date: 01/28/2021
+ms.openlocfilehash: d539a82b21abc4df8d726673ef728020f36551bf
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415750"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216043"
 ---
 # <a name="changes-that-affect-compatibility"></a>Cambios que afectan a la compatibilidad
 
-A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibilidad de versión a versión y a través de los sabores de .NET. Esto sigue siendo cierto para .NET Core. Aunque .NET Core se puede considerar como una nueva tecnología que es independiente de .NET Framework, hay dos factores principales que limitan la capacidad de .NET Core para desviarse de .NET Framework:
+A lo largo de su historia, .NET ha intentado mantener un alto nivel de compatibilidad de una versión a otra y entre sus implementaciones. Aunque .NET 5 (y .NET Core) y versiones posteriores se pueden considerar una nueva tecnología en comparación con .NET Framework, hay dos factores principales que limitan la capacidad de .NET para desviarse de .NET Framework:
 
 - Un gran número de desarrolladores desarrollaron originalmente o continúan desarrollando aplicaciones .NET Framework. Esperan un comportamiento coherente en las implementaciones de .NET.
 
-- Los proyectos de bibliotecas .NET Standard permiten a los desarrolladores crear bibliotecas dirigidas a las API comunes compartidas por .NET Core y .NET Framework. Los desarrolladores esperan que una biblioteca utilizada en una aplicación .NET Core se comporte de forma idéntica a la misma biblioteca utilizada en una aplicación .NET Framework.
+- Los proyectos de bibliotecas de .NET Standard permiten a los desarrolladores crear bibliotecas dirigidas a las API comunes compartidas por .NET Framework y .NET 5 (y .NET Core), versiones posteriores. Los desarrolladores esperan que una biblioteca que se usa en una aplicación de .NET 5 se comporte de forma idéntica a la misma biblioteca utilizada en una aplicación de .NET Framework.
 
-Junto con la compatibilidad entre las implementaciones de .NET, los desarrolladores esperan un alto nivel de compatibilidad entre las versiones .NET Core. En particular, el código escrito para una versión anterior de .NET Core debería funcionar sin problemas en una versión posterior de .NET Core. De hecho, muchos desarrolladores esperan que las nuevas API que se encuentran en las versiones más recientes de .NET Core también sean compatibles con las versiones preliminares en las que se introdujeron dichas API.
+Junto con la compatibilidad entre las implementaciones de .NET, los desarrolladores esperan un alto nivel de compatibilidad entre las versiones de una implementación determinada de .NET. En concreto, el código escrito para una versión anterior de .NET Core debería funcionar sin problemas en .NET 5 o una versión posterior. De hecho, muchos desarrolladores esperan que las nuevas API que se encuentran en las versiones más recientes de .NET también sean compatibles con las versiones preliminares en las que se han presentado esas API.
 
 En este artículo se describen los cambios que afectan a la compatibilidad y el modo en el que el equipo de .NET evalúa cada tipo de cambio. El hecho de entender cómo el equipo de .NET aborda los posibles cambios importantes es particularmente útil para los desarrolladores que abren solicitudes de incorporación de cambios con el objetivo modificar el comportamiento de las [API de .NET existentes](https://github.com/dotnet/runtime).
 
-En las secciones siguientes se describen las categorías de los cambios realizados en las API de .NET Core y su impacto sobre la compatibilidad de aplicaciones. Los cambios están permitidos ✔️, no permitidos ❌ o requieren un criterio y una evaluación de cuán predecible, obvio y coherente era el comportamiento anterior ❓.
+En las secciones siguientes se describen las categorías de los cambios realizados en las API de .NET y su impacto sobre la compatibilidad de las aplicaciones. Los cambios están permitidos ✔️, no permitidos ❌ o requieren un criterio y una evaluación de cuán predecible, obvio y coherente era el comportamiento anterior ❓.
 
 > [!NOTE]
 >
