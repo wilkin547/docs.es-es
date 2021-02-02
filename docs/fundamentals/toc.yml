@@ -197,7 +197,7 @@ items:
                 href: ../core/tools/sdk-errors/netsdk1079.md
               - name: NETSDK1145
                 href: ../core/tools/sdk-errors/netsdk1145.md
-      - name: CLI de .NET Core
+      - name: CLI de .NET
         items:
           - name: Información general
             displayName: '.net cli,command-line interface,cli,tool'
@@ -439,7 +439,7 @@ items:
                 href: ../fundamentals/diagnostics/runtime-type-events.md
           - name: Recopilación de diagnósticos en contenedores
             href: ../core/diagnostics/diagnostics-in-containers.md
-          - name: Herramientas globales de la CLI de .NET Core
+          - name: Herramientas globales de la CLI de .NET
             items:
               - name: dotnet-counters
                 href: ../core/diagnostics/dotnet-counters.md
@@ -453,7 +453,7 @@ items:
                 href: ../core/diagnostics/dotnet-symbol.md
               - name: dotnet-sos
                 href: ../core/diagnostics/dotnet-sos.md
-          - name: Tutoriales de diagnóstico de .NET Core
+          - name: Tutoriales de diagnóstico de .NET
             items:
               - name: Recopilación del seguimiento del rendimiento en Linux con PerfCollect
                 href: ../core/diagnostics/trace-perfcollect-lttng.md
@@ -478,6 +478,8 @@ items:
                 href: code-analysis/configuration-options.md
               - name: Archivos de configuración
                 href: code-analysis/configuration-files.md
+              - name: Procedimiento para suprimir advertencias
+                href: code-analysis/suppress-warnings.md
               - name: Reglas de calidad del código
                 items:
                   - name: Opciones de la regla
@@ -1296,15 +1298,15 @@ items:
                 href: ../core/dependency-loading/loading-unmanaged.md
           - name: Tutoriales
             items:
-              - name: Creación de una aplicación de .NET Core con complementos
+              - name: Creación de una aplicación de .NET con complementos
                 href: ../core/tutorials/creating-app-with-plugin-support.md
-              - name: Uso y depuración de la descargabilidad de ensamblado en .NET Core
+              - name: Procedimiento para usar y depurar la descargabilidad de ensamblados en .NET
                 href: ../core/../standard/assembly/unloadability.md
       - name: Control de versiones
         items:
           - name: Información general
             href: ../core/versions/index.md
-          - name: Selección de la versión de .NET Core
+          - name: Selección de la versión de .NET
             href: ../core/versions/selection.md
       - name: Configuración del entorno en tiempo de ejecución
         items:
@@ -1354,7 +1356,7 @@ items:
         items:
           - name: Introducción a .NET y Docker
             href: ../core/docker/introduction.md
-          - name: Incluir una aplicación de .NET Core en un contenedor
+          - name: Inclusión de una aplicación de .NET en un contenedor
             href: ../core/docker/build-container.md
           - name: Herramientas de contenedor de Visual Studio
             href: /visualstudio/containers/overview
@@ -1836,6 +1838,8 @@ items:
             displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
           - name: Patrón de opciones
             href: ../core/extensions/options.md
+          - name: Guía sobre los patrones de opciones para creadores de bibliotecas
+            href: ../core/extensions/options-library-authors.md
       - name: Registro
         items:
           - name: Información general
@@ -2054,7 +2058,7 @@ items:
         href: ../core/testing/unit-testing-code-coverage.md
       - name: Salida publicada de una prueba unitaria
         href: ../core/testing/unit-testing-published-output.md
-      - name: "Pruebas unitarias dinámicas de proyectos de .NET Core con Visual\_Studio"
+      - name: "Pruebas unitarias dinámicas de proyectos de .NET con Visual\_Studio"
         href: /visualstudio/test/live-unit-testing-start
   - name: Seguridad
     href: ../standard/security/
@@ -2133,9 +2137,9 @@ items:
             href: ../standard/native-interop/best-practices.md
           - name: Juegos de caracteres y serialización
             href: ../standard/native-interop/charset.md
-          - name: "Exposición de los componentes de .NET\_Core a COM"
+          - name: Exposición de componentes de .NET a COM
             href: ../core/native-interop/expose-components-to-com.md
-          - name: "Hospedaje de .NET\_Core desde código nativo"
+          - name: Hospedaje de .NET desde código nativo
             href: ../core/tutorials/netcore-hosting.md
           - name: Interoperabilidad COM
             items:
@@ -2157,7 +2161,7 @@ items:
             href: ../standard/native-interop/apply-interop-attributes.md
           - name: Excepciones
             href: ../standard/native-interop/exceptions-interoperability.md
-      - name: Empaquetado de distribución de .NET Core
+      - name: Empaquetado de distribución de .NET
         href: ../core/distribution-packaging.md
       - name: Globalización y localización
         href: ../standard/globalization-localization/
@@ -2295,7 +2299,7 @@ items:
             href: ../core/porting/third-party-deps.md
           - name: Portabilidad de las bibliotecas
             href: ../core/porting/libraries.md
-          - name: Organización de proyectos para .NET Core
+          - name: Organización de proyectos para .NET
             href: ../core/porting/project-structure.md
           - name: Tecnologías no disponibles
             href: ../core/porting/net-framework-tech-unavailable.md?toc=/dotnet/fundamentals/toc.json&bc=/dotnet/breadcrumb/toc.json
