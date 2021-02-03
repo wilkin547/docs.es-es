@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo se utiliza F# interactivo (dotnet 
 ms.date: 11/29/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: fe8ee2ebb97f4a47e80f39d5be8d95ba5b72ddc7
-ms.sourcegitcommit: ecd9e9bb2225eb76f819722ea8b24988fe46f34c
+ms.openlocfilehash: fe48d4d7de92eea800a489b12342e3ae181e8cb1
+ms.sourcegitcommit: 38999dc0ec4f7c4404de5ce0951b64c55997d9ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2020
-ms.locfileid: "96739318"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99426986"
 ---
 # <a name="interactive-programming-with-f"></a>Programación interactiva con F\#
 
@@ -91,7 +91,7 @@ El scripting de F# es compatible de forma nativa con [Visual Studio](../../get-
 ## <a name="referencing-packages-in-f-interactive"></a>Referencia a paquetes en F# interactivo
 
 > [!NOTE]
-> El sistema de administración de paquetes es extensible; obtenga más información [acerca de otras extensiones](https://github.com/dotnet/fsharp/tree/main/src/fsharp/Microsoft.DotNet.DependencyManager).
+> El sistema de administración de paquetes es extensible; obtenga más información [acerca de otras extensiones](https://fsharp.github.io/FSharp.Compiler.Service/reference/Microsoft.DotNet.DependencyManager.html).
 
 F# interactivo permite hacer referencia a paquetes de NuGet con la sintaxis `#r "nuget:"` y una versión opcional:
 
@@ -126,7 +126,7 @@ printfn $"{f (dsharp.tensor 1.2)}"
 También puede especificar el origen de un paquete con el comando `#i`. En el ejemplo siguiente, se especifican un origen remoto y uno local:
 
 ```fsharp
-#i "nuget:https://my-remote-package-source/index.json
+#i "nuget:https://my-remote-package-source/index.json"
 #i @"path-to-my-local-source"
 ```
 
@@ -168,7 +168,7 @@ Puede especificar tantas referencias de ensamblado como desee en un script.
 
 ## <a name="loading-other-scripts"></a>Carga de otros scripts
 
-Al crear scripts, a menudo puede ser útil usar diferentes scripts para distintas tareas. En ocasiones, es posible que desee volver a usar el código del script en otro. En lugar de copiar y pegar su contenido en el archivo, puede cargarlo y evaluarlo con `#load`.
+Al crear scripts, a menudo puede ser útil usar diferentes scripts para distintas tareas. En ocasiones, es posible que quiera volver a usar el código de un script en otros. En lugar de copiar y pegar el contenido en el archivo, puede cargarlo y evaluarlo fácilmente con `#load`.
 
 Observe la sintaxis `Script1.fsx` siguiente:
 
