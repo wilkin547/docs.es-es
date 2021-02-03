@@ -1,21 +1,21 @@
 ---
 title: Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
-description: Obtenga información sobre el identificador en tiempo de ejecución (RID) y sobre cómo se usan los RID en .NET Core.
-ms.date: 12/15/2020
-ms.openlocfilehash: 6b45c42d626de41c7d67c66aac7dc31c51c36a22
-ms.sourcegitcommit: 7ef96827b161ef3fcde75f79d839885632e26ef1
+description: Obtenga información sobre el identificador del entorno de ejecución (RID) y sobre cómo se usan los RID en .NET.
+ms.date: 01/28/2021
+ms.openlocfilehash: e5e1c4712965211b25a02b14a7cf2c91d74d8306
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97970673"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216010"
 ---
-# <a name="net-core-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET Core
+# <a name="net-rid-catalog"></a>Catálogo de identificadores de entorno de ejecución (RID) de .NET
 
 RID es la abreviatura de *identificador de entorno de ejecución*. Los valores de RID se usan para identificar las plataformas de destino donde se ejecuta la aplicación.
 Los paquetes de .NET los usan para presentar los recursos específicos de la plataforma en los paquetes de NuGet. Los valores siguientes son ejemplos de RID: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` o `osx.10.12-x64`.
 En el caso de los paquetes con dependencias nativas, el RID designa las plataformas en las que se puede restauran el paquete.
 
-Un único RID se puede establecer en el elemento `<RuntimeIdentifier>` del archivo del proyecto. Se pueden definir varios RID como una lista delimitada por punto y coma en el elemento `<RuntimeIdentifiers>` del archivo del proyecto. También se usan a través de la opción `--runtime` con los [comandos de la CLI de .NET Core](./tools/index.md) siguientes:
+Un único RID se puede establecer en el elemento `<RuntimeIdentifier>` del archivo del proyecto. Se pueden definir varios RID como una lista delimitada por punto y coma en el elemento `<RuntimeIdentifiers>` del archivo del proyecto. También se usan mediante la opción `--runtime` con los [comandos de la CLI de .NET](./tools/index.md) siguientes:
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -82,7 +82,7 @@ Hay algunas consideraciones sobre los RID que debe tener en cuenta cuando trabaj
 Para poder usar los RID, debe saber cuáles son los RID que existen. Se agregan valores nuevos a la plataforma de manera habitual.
 Para obtener la versión más reciente y completa, vea el archivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) en el repositorio `dotnet/runtime`.
 
-El SDK de .NET Core 2.0 presenta el concepto de RID portátiles. Son nuevos valores agregados al grafo de RID que no están vinculados a una versión específica o distribución del sistema operativo, y son la opción preferida cuando se usa .NET Core 2.0 y versiones posteriores. Resultan especialmente útiles al tratar con varias distribuciones de Linux dado que la mayoría de los RID de distribución se asignan a los RID portátiles.
+Los RID portables son valores agregados al grafo de RID que no están vinculados a una versión o a una distribución de SO específica. Son la opción preferida, especialmente cuando se trabaja con varias distribuciones de Linux, ya que la mayoría de los RID de distribución están asignados a los RID portables.
 
 En la lista siguiente se muestra un pequeño subconjunto de los RID más comunes que se usan con cada sistema operativo.
 
@@ -90,7 +90,7 @@ En la lista siguiente se muestra un pequeño subconjunto de los RID más comunes
 
 Solo se muestran los valores comunes. Para obtener la versión más reciente y completa, vea el archivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/Microsoft.NETCore.Platforms/pkg/runtime.json) en el repositorio `dotnet/runtime`.
 
-- Portátil (.NET Core 2.0 o versiones posteriores)
+- Portátil
   - `win-x64`
   - `win-x86`
   - `win-arm`
@@ -108,7 +108,7 @@ Solo se muestran los valores comunes. Para obtener la versión más reciente y c
   - `win10-arm`
   - `win10-arm64`
 
-Para obtener más información, vea [Dependencias y requisitos de .NET Core](./install/windows.md#dependencies) .
+Para obtener más información, vea [Dependencias y requisitos de .NET](./install/windows.md#dependencies).
 
 ## <a name="linux-rids"></a>RID de Linux
 
@@ -127,7 +127,7 @@ Solo se muestran los valores comunes. Para obtener la versión más reciente y c
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Para obtener más información, vea [Dependencias y requisitos de .NET Core](./install/linux.md) .
+Para obtener más información, vea [Dependencias y requisitos de .NET](./install/linux.md).
 
 ## <a name="macos-rids"></a>RID de macOS
 
@@ -151,7 +151,7 @@ Los RID de macOS usan la personalización de marca antigua "OSX". Solo se muestr
   - `osx.11.0-x64`
   - `osx.11.0-arm64`
 
-Para obtener más información, vea [Dependencias y requisitos de .NET Core](./install/macos.md#dependencies) .
+Para obtener más información, vea [Dependencias y requisitos de .NET](./install/macos.md#dependencies).
 
 ## <a name="see-also"></a>Vea también
 

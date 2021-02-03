@@ -3,12 +3,12 @@ title: Modelo de objetos y conceptos del SDK de .NET Compiler Platform
 description: En este tema se proporciona la información necesaria para trabajar de forma eficaz con el SDK de .NET Compiler. Aprenderá sobre las capas de API, los tipos principales implicados y el modelo de objetos general.
 ms.date: 07/13/2020
 ms.custom: mvc
-ms.openlocfilehash: a65d282dd3c58279bbfd635c0386d50ce3f30055
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f4b2163c3bf8824b6ad93f0b144a6b02d870f50a
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374473"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899170"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Descripción del modelo del SDK de .NET Compiler Platform
 
@@ -42,7 +42,7 @@ La capa de compilador contiene los modelos de objetos que corresponden con la in
 
 ### <a name="diagnostic-apis"></a>API de diagnóstico
 
-Como parte de su análisis, el compilador puede generar un conjunto de diagnósticos que abarcan desde errores de sintaxis, semántica y asignación definitiva hasta distintas advertencias y diagnósticos informativos. La capa de la API de compilador expone diagnósticos a través de una API extensible que permite incluir analizadores definidos por el usuario en el proceso de compilación. Permite generar diagnósticos definidos por el usuario, como los de herramientas como StyleCop o FxCop, junto con diagnósticos definidos por el compilador. La generación de diagnósticos de este modo tiene la ventaja de integrarse de forma natural con herramientas como MSBuild y Visual Studio, que dependen de diagnósticos de experiencias como detener una compilación según una directiva y mostrar subrayados ondulados activos en el editor y sugerir correcciones de código.
+Como parte de su análisis, el compilador puede generar un conjunto de diagnósticos que abarcan desde errores de sintaxis, semántica y asignación definitiva hasta distintas advertencias y diagnósticos informativos. La capa de la API de compilador expone diagnósticos a través de una API extensible que permite incluir analizadores definidos por el usuario en el proceso de compilación. Permite generar diagnósticos definidos por el usuario, como los de herramientas como StyleCop, junto con diagnósticos definidos por el compilador. La generación de diagnósticos de este modo tiene la ventaja de integrarse de forma natural con herramientas como MSBuild y Visual Studio, que dependen de diagnósticos de experiencias como detener una compilación según una directiva y mostrar subrayados ondulados activos en el editor y sugerir correcciones de código.
 
 ### <a name="scripting-apis"></a>API de scripting
 

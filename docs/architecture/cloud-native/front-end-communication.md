@@ -2,13 +2,13 @@
 title: Comunicación de cliente front-end
 description: Obtenga información sobre cómo los clientes front-end se comunican con sistemas nativos de la nube
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 147adb3d0375f8bf5dadf14e1237aa93e9e42908
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 089f55f8f6b9320fe552602eb40bb83be28f119b
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158115"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506245"
 ---
 # <a name="front-end-client-communication"></a>Comunicación de cliente front-end
 
@@ -37,7 +37,7 @@ En su lugar, un modelo de diseño en la nube ampliamente aceptado es implementar
 
 **Figura 4-3.** Patrón de puerta de enlace de API
 
-En la ilustración anterior, observe cómo el servicio de puerta de enlace de API abstrae los microservicios principales de back-end. Implementado como una API Web, actúa como un *proxy inverso*y enruta el tráfico entrante a los microservicios internos.
+En la ilustración anterior, observe cómo el servicio de puerta de enlace de API abstrae los microservicios principales de back-end. Implementado como una API Web, actúa como un *proxy inverso* y enruta el tráfico entrante a los microservicios internos.
 
 La puerta de enlace aísla al cliente de la creación de particiones y refactorización del servicio interno. Si cambia un servicio back-end, lo acomoda en la puerta de enlace sin interrumpir el cliente. También es la primera línea de defensa para cuestiones transversales, como la identidad, el almacenamiento en caché, la resistencia, la medición y la limitación. Muchas de estas cuestiones transversales se pueden descargar de los servicios principales de back-end a la puerta de enlace, lo que simplifica los servicios back-end.
 
@@ -55,16 +55,16 @@ Para empezar, puede crear su propio servicio de puerta de enlace de API. Una bú
 
 En el caso de las aplicaciones nativas de la nube de .NET, puede considerar la [puerta de enlace de Ocelot](https://github.com/ThreeMammals/Ocelot). Ocelot es una puerta de enlace de API de código abierto creada para microservicios de .NET que requiere un punto de entrada unificado en su sistema. Es ligero, rápido y escalable.
 
-Al igual que cualquier puerta de enlace de API, su funcionalidad principal es reenviar las solicitudes HTTP entrantes a los servicios de bajada. Además, admite una amplia variedad de capacidades que se pueden configurar en una canalización de middleware de .NET Core. Su conjunto de características se presenta en la tabla siguiente.
+Al igual que cualquier puerta de enlace de API, su funcionalidad principal es reenviar las solicitudes HTTP entrantes a los servicios de bajada. Además, admite una amplia variedad de capacidades que se pueden configurar en una canalización de middleware de .NET. Su conjunto de características se presenta en la tabla siguiente.
 
 |Características de Ocelot  | |
 | :-------- | :-------- |
-| Enrutamiento | Authentication |
-| Solicitar agregación | Authorization |
+| Enrutamiento | Autenticación |
+| Solicitar agregación | Autorización |
 | Detección de servicios (con Consul y Eureka) | Limitaciones |
 | Equilibrio de carga | Registro, seguimiento |
 | Almacenamiento en memoria caché | Encabezados/transformación de cadena de consulta |
-| Paso de correlación | Middleware personalizado |
+| Pass-Through de correlación | Middleware personalizado |
 | Calidad de servicio | Directivas de reintento |
 
 Cada puerta de enlace de Ocelot especifica las direcciones ascendentes y descendentes, y las características configurables en un archivo de configuración JSON. El cliente envía una solicitud HTTP a la puerta de enlace de Ocelot. Una vez recibida, Ocelot pasa el objeto HttpRequest a través de su canalización y lo manipula en el estado especificado por su configuración. Al final de la canalización, Ocelot crea un nuevo HTTPResponseObject y lo pasa al servicio de bajada. En la respuesta, Ocelot invierte la canalización y envía la respuesta de vuelta al cliente.
@@ -128,7 +128,7 @@ Habilita las características de puerta de enlace de API para los siguientes cas
 
 - Los microservicios implementados mediante tecnologías sin servidor como [Azure Functions](/azure/azure-functions/functions-overview) y [Azure Logic apps](https://azure.microsoft.com/services/logic-apps/).
 - Recursos del servicio de respaldo de Azure, como Service Bus colas y temas, Azure Storage y otros.
-- Los microservicios en los que el tráfico tiene picos ocasionales grandes, pero permanece bajo la mayoría del tiempo.
+- Los microservicios en los que el tráfico tiene picos de gran tamaño, pero permanecen bajo la mayor parte del tiempo.
 
 El nivel de consumo utiliza el mismo servicio subyacente API Management componentes, pero emplea una arquitectura totalmente diferente basada en recursos asignados dinámicamente. Se alinea perfectamente con el modelo de informática sin servidor:
 
@@ -148,7 +148,7 @@ Los sistemas en tiempo real se caracterizan a menudo por flujos de datos de alta
 
 [Azure signalr Service](https://azure.microsoft.com/services/signalr-service/) es un servicio de Azure totalmente administrado que simplifica la comunicación en tiempo real para las aplicaciones nativas en la nube. Los detalles técnicos de la implementación, como el aprovisionamiento de la capacidad, el escalado y las conexiones persistentes, se abstraen. Se administran automáticamente con un acuerdo de nivel de servicio del 99,9%. Se centra en las características de la aplicación, no en la infraestructura.
 
-Una vez habilitado, un servicio HTTP basado en la nube puede enviar actualizaciones de contenido directamente a los clientes conectados, incluidas las aplicaciones de explorador, móviles y de escritorio. Los clientes se actualizan sin necesidad de sondear el servidor. Azure Signalr abstrae las tecnologías de transporte que crean conectividad en tiempo real, incluidos WebSockets, eventos del servidor y el sondeo prolongado. Los desarrolladores se centran en enviar mensajes a todos o a subconjuntos específicos de clientes conectados.
+Una vez habilitado, un servicio HTTP basado en la nube puede enviar actualizaciones de contenido directamente a los clientes conectados, incluidas las aplicaciones de explorador, móviles y de escritorio. Los clientes se actualizan sin necesidad de sondear el servidor. Azure Signalr abstrae las tecnologías de transporte que crean conectividad en tiempo real, incluidos WebSockets, eventos de Server-Side y sondeos largos. Los desarrolladores se centran en enviar mensajes a todos o a subconjuntos específicos de clientes conectados.
 
 En la figura 4-7 se muestra un conjunto de clientes HTTP que se conectan a una aplicación nativa en la nube con Azure Signalr habilitado.
 

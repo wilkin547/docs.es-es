@@ -2,13 +2,13 @@
 title: Definición de nativo en la nube
 description: Obtenga información sobre los pilares básicos que proporcionan el cimientos para sistemas nativos en la nube.
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 1f0d842a2369ae04ffc1c634f9de60398a88e86f
-ms.sourcegitcommit: 4d45bda8cd9558ea8af4be591e3d5a29360c1ece
+ms.date: 01/19/2021
+ms.openlocfilehash: 180b32d753fea5071174830be4ff3b8a81527a75
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91654697"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506219"
 ---
 # <a name="defining-cloud-native"></a>Definir nativo en la nube
 
@@ -66,13 +66,13 @@ La plataforma en la nube de Azure admite este tipo de infraestructura muy elást
 
 ¿Cómo se diseña una aplicación nativa en la nube? ¿Cuál sería la apariencia de la arquitectura? ¿A qué principios, patrones y procedimientos recomendados cumpliría? ¿Qué problemas de infraestructura y de funcionamiento serían importantes?
 
-### <a name="the-twelve-factor-application"></a>Aplicación de doce factores
+### <a name="the-twelve-factor-application"></a>La aplicación Twelve-Factor
 
 Una metodología ampliamente aceptada para construir aplicaciones basadas en la nube es la [aplicación de doce factores](https://12factor.net/). Describe un conjunto de principios y prácticas que los desarrolladores siguen para crear aplicaciones optimizadas para entornos modernos en la nube. Se presta especial atención a la portabilidad entre entornos y la automatización declarativa.
 
-Aunque es aplicable a cualquier aplicación basada en Web, muchos profesionales consideran doce factores como una base sólida para la creación de aplicaciones nativas en la nube. Los sistemas basados en estos principios pueden implementar y escalar rápidamente y agregar características para reaccionar rápidamente a los cambios de mercado.
+Aunque es aplicable a cualquier aplicación basada en Web, muchos profesionales consideran Twelve-Factor como una base sólida para la creación de aplicaciones nativas en la nube. Los sistemas basados en estos principios pueden implementar y escalar rápidamente y agregar características para reaccionar rápidamente a los cambios de mercado.
 
-En la tabla siguiente se resalta la metodología de doce factores:
+En la tabla siguiente se resalta la metodología de Twelve-Factor:
 
 |    |  Factor | Explicación  |
 | :-------- | :-------- | :-------- |
@@ -89,7 +89,7 @@ En la tabla siguiente se resalta la metodología de doce factores:
 | 11 | Registro | Tratar los registros generados por los microservicios como flujos de eventos. Procesarlos con un agregador de eventos y propagar los datos a herramientas de administración de datos y minería de datos, como Azure Monitor o Splunk y, finalmente, el archivo a largo plazo. |
 | 12 | Procesos de administración | Ejecutar tareas administrativas o de administración como procesos de un solo uso. Las tareas pueden incluir la limpieza de datos y el análisis de extracción de un informe. Las herramientas que ejecutan estas tareas deben invocarse desde el entorno de producción, pero independientemente de la aplicación. |
 
-En el libro, [más allá de la aplicación de doce factores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), cree Kevin Hoffman detalla cada uno de los 12 factores originales (escritos en 2011). Además, comenta tres factores adicionales que reflejan el diseño de la aplicación en la nube actual de hoy en día.
+En el libro, [más allá de la aplicación Twelve-Factor](https://content.pivotal.io/blog/beyond-the-twelve-factor-app), el autor Kevin Hoffman detalla cada uno de los 12 factores originales (escritos en 2011). Además, comenta tres factores adicionales que reflejan el diseño de la aplicación en la nube actual de hoy en día.
 
 |    |  Nuevo factor | Explicación  |
 | :-------- | :-------- | :-------- |
@@ -171,11 +171,11 @@ Una excelente guía de referencia para comprender los microservicios es [microse
 
 Los microservicios se pueden crear con cualquier plataforma de desarrollo moderna.
 
-La plataforma de Microsoft .NET Core es una excelente opción. Gratis y de código abierto, tiene muchas características integradas para simplificar el desarrollo de microservicios. .NET Core es multiplataforma. Las aplicaciones se pueden compilar y ejecutar en Windows, macOS y la mayoría de los tipos de Linux.
+La plataforma Microsoft .NET es una excelente opción. Gratis y de código abierto, tiene muchas características integradas para simplificar el desarrollo de microservicios. .NET es multiplataforma. Las aplicaciones se pueden compilar y ejecutar en Windows, macOS y la mayoría de los tipos de Linux.
 
-.NET Core tiene un alto rendimiento y ha puntuado bien en comparación con Node.js y otras plataformas de la competencia. Curiosamente, [TechEmpower](https://www.techempower.com/) llevó a cabo un amplio conjunto de pruebas comparativas de [rendimiento](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) en muchas plataformas y marcos de aplicaciones Web. .NET Core puntuado en las 10 mejores Node.js y otras plataformas de la competencia.
+.NET tiene un alto rendimiento y ha puntuado bien en comparación con Node.js y otras plataformas de la competencia. Curiosamente, [TechEmpower](https://www.techempower.com/) llevó a cabo un amplio conjunto de pruebas comparativas de [rendimiento](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) en muchas plataformas y marcos de aplicaciones Web. .NET puntuado en las 10 mejores Node.js y otras plataformas de la competencia.
 
-.NET Core es mantenido por Microsoft y la comunidad de .NET en GitHub.
+.NET es mantenido por Microsoft y la comunidad de .NET en GitHub.
 
 ## <a name="containers"></a>Contenedores
 
@@ -223,9 +223,9 @@ En la tabla siguiente se describen las tareas comunes de orquestación.
 
 |  Tareas | Explicación  |
 | :-------- | :-------- |
-| Scheduling | Aprovisionar automáticamente las instancias de contenedor.|
+| Programación | Aprovisionar automáticamente las instancias de contenedor.|
 | Afinidad/antiafinidad | Aprovisione contenedores cercanos o alejados entre sí, ayudando a la disponibilidad y al rendimiento. |
-| Supervisión del estado | Detectar y corregir errores automáticamente.|
+| Seguimiento de estado | Detectar y corregir errores automáticamente.|
 | Conmutación por error | Reaprovisionamiento automático de la instancia con errores en máquinas correctas.|
 | Ampliación | Agregue o quite automáticamente la instancia de contenedor para satisfacer la demanda.|
 | Redes | Administrar una superposición de redes para la comunicación del contenedor.|
@@ -242,7 +242,7 @@ Aunque existen varios orquestadores de contenedor, [Kubernetes](https://kubernet
 
 Podría hospedar su propia instancia de Kubernetes, pero entonces debería ser responsable de aprovisionar y administrar sus recursos, lo que puede ser complejo. Las características de la nube de Azure Kubernetes como un servicio administrado, [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). Un servicio administrado le permite sacar el máximo partido de sus características, sin tener que instalarlas y mantenerlas.
 
-Azure Kubernetes Services se describe en el capítulo 2 sobre *el escalado de aplicaciones nativas de la nube*.
+Azure Kubernetes Services se describe en el capítulo 2 sobre el *escalado de Cloud-Native aplicaciones*.
 
 ## <a name="backing-services"></a>Servicios de respaldo
 
@@ -274,9 +274,9 @@ Con este patrón, un servicio de respaldo se puede adjuntar y separar sin cambio
 
 Los proveedores de nube proporcionan las API para que pueda comunicarse con sus servicios de respaldo. Estas bibliotecas encapsulan la infraestructura y la complejidad. La comunicación directa con estas API acoplará estrechamente el código al servicio de respaldo. Es aconsejable aislar los detalles de implementación de la API del proveedor. Introduzca una capa de intermediación, o una API intermedia, que exponga las operaciones genéricas en el código de servicio. Este acoplamiento flexible le permite intercambiar un servicio de respaldo para otro o trasladar el código a una nube pública diferente sin tener que realizar cambios en el código del servicio principal.
 
-Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube*y el capítulo 4, *patrones de comunicación nativa en la nube*.
+Los servicios de respaldo se describen en el capítulo 5 de detalle, *patrones de datos nativos de la nube* y el capítulo 4, *patrones de comunicación nativa en la nube*.
 
-## <a name="automation"></a>Automatización
+## <a name="automation"></a>Automation
 
 Como ha visto, los sistemas nativos en la nube adoptan microservicios, contenedores y un diseño moderno del sistema para lograr la velocidad y la agilidad. Pero eso es solo parte de la historia. ¿Cómo se aprovisionan los entornos de nube en los que se ejecutan estos sistemas? ¿Cómo se implementan rápidamente características y actualizaciones de aplicaciones? ¿Cómo se redondea la imagen completa?
 

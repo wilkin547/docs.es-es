@@ -1,17 +1,17 @@
 ---
 title: Asignación de eShopOnContainers a los servicios de Azure
 description: Asignación de eShopOnContainers a servicios de Azure como Azure Kubernetes Service, API Gateway y Azure Service Bus.
-ms.date: 05/13/2020
-ms.openlocfilehash: c4627a4b6d9d8b62737984b507e638019544ab67
-ms.sourcegitcommit: 48466b8fb7332ececff5dc388f19f6b3ff503dd4
+ms.date: 01/19/2021
+ms.openlocfilehash: aa0d5cc3bf6c0226627ce558606f974b0e7ec238
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93400453"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506258"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>Asignación de eShopOnContainers a los servicios de Azure
 
-Aunque no es necesario, Azure es idóneo para admitir eShopOnContainers porque el proyecto se creó para ser una aplicación nativa en la nube. La aplicación se compila con .NET Core, por lo que se puede ejecutar en contenedores de Linux o Windows, en función del host de Docker. La aplicación se compone de varios microservicios autónomos, cada uno con sus propios datos. Los diferentes microservicios exhiben diferentes enfoques, desde operaciones CRUD simples hasta patrones DDD y CQRS más complejos. Los microservicios se comunican con los clientes a través de HTTP y entre sí a través de la comunicación basada en mensajes. La aplicación también admite varias plataformas para los clientes, ya que adopta HTTP como protocolo de comunicación estándar e incluye ASP.NET Core y Xamarin Mobile Apps que se ejecutan en plataformas Android, iOS y Windows.
+Aunque no es necesario, Azure es idóneo para admitir eShopOnContainers porque el proyecto se creó para ser una aplicación nativa en la nube. La aplicación se compila con .NET, por lo que se puede ejecutar en contenedores de Linux o Windows, en función del host de Docker. La aplicación se compone de varios microservicios autónomos, cada uno con sus propios datos. Los diferentes microservicios exhiben diferentes enfoques, desde operaciones CRUD simples hasta patrones DDD y CQRS más complejos. Los microservicios se comunican con los clientes a través de HTTP y entre sí a través de la comunicación basada en mensajes. La aplicación también admite varias plataformas para los clientes, ya que adopta HTTP como protocolo de comunicación estándar e incluye ASP.NET Core y Xamarin Mobile Apps que se ejecutan en plataformas Android, iOS y Windows.
 
 La arquitectura de la aplicación se muestra en la figura 2-5. A la izquierda se encuentran las aplicaciones cliente, divididas en aplicaciones móviles, web tradicionales y de aplicación de una sola página web (SPA). A la derecha están los componentes del lado servidor que componen el sistema y cada uno de ellos se puede hospedar en los contenedores de Docker y en los clústeres de Kubernetes. La aplicación web tradicional se basa en la ASP.NET Core aplicación MVC que se muestra en amarillo. Esta aplicación y las aplicaciones móviles y Web SPA se comunican con los microservicios individuales a través de una o varias puertas de enlace de API. Las puertas de enlace de API siguen el patrón "back-ends para front-ends" (BFF), lo que significa que cada puerta de enlace está diseñada para admitir un cliente de front-end determinado. Los microservicios individuales se enumeran a la derecha de las puertas de enlace de API e incluyen la lógica de negocios y algún tipo de almacén de persistencia. Los diferentes servicios hacen uso de SQL Server bases de datos, instancias de caché en Redis y almacenes MongoDB/CosmosDB. En el extremo derecho se encuentra el bus de eventos del sistema, que se usa para la comunicación entre los microservicios.
 
@@ -40,7 +40,7 @@ El portal para desarrolladores sirve como recurso principal para los desarrollad
 
 Con APIM, las aplicaciones pueden exponer varios grupos diferentes de servicios, cada uno de los cuales proporciona un back-end para un cliente de front-end determinado. Se recomienda APIM para escenarios complejos. Para las necesidades más sencillas, se puede usar la puerta de enlace de API ligera Ocelot. La aplicación eShopOnContainers usa Ocelot debido a su simplicidad y porque se puede implementar en el mismo entorno de aplicación que la propia aplicación. [Más información acerca de eShopOnContainers, APIM y Ocelot.](../microservices/architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#azure-api-management)
 
-Otra opción si la aplicación usa AKS es implementar el controlador de entrada de puerta de enlace de Azure como Pod en el clúster de AKS. Esto permite que el clúster se integre con una puerta de enlace de Aplicación de Azure, lo que permite que la puerta de enlace equilibre la carga del tráfico a los pods de AKS. [Obtenga más información sobre el controlador de entrada de puerta de enlace de Azure para AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
+Otra opción si la aplicación usa AKS es implementar el controlador de entrada de puerta de enlace de Azure como Pod en el clúster de AKS. Este enfoque permite que el clúster se integre con una puerta de enlace de Aplicación de Azure, lo que permite que la puerta de enlace equilibre la carga del tráfico a los pods de AKS. [Obtenga más información sobre el controlador de entrada de puerta de enlace de Azure para AKS](https://github.com/Azure/application-gateway-kubernetes-ingress).
 
 ## <a name="data"></a>data
 
@@ -48,7 +48,7 @@ Los diversos servicios de back-end que usa eShopOnContainers tienen requisitos d
 
 Por SQL Server compatibilidad con bases de datos, Azure tiene productos para todo, desde bases de datos únicas hasta grupos elásticos de gran escalabilidad SQL Database. Los microservicios individuales se pueden configurar para comunicarse con sus propias bases de datos de SQL Server individuales de forma rápida y sencilla. Estas bases de datos se pueden escalar según sea necesario para admitir cada microservicio independiente según sus necesidades.
 
-La aplicación eShopOnContainers almacena la cesta de la compra actual del usuario entre las solicitudes. Lo administra el microservicio de cesta que almacena los datos en una caché en Redis. En desarrollo, esta caché se puede implementar en un contenedor, mientras que en producción puede usar caché de Azure para Redis. Caché de Azure para Redis es un servicio totalmente administrado que ofrece un alto rendimiento y confiabilidad sin necesidad de implementar y administrar instancias o contenedores de Redis por su cuenta.
+La aplicación eShopOnContainers almacena la cesta de la compra actual del usuario entre las solicitudes. Este aspecto lo administra el microservicio de cesta que almacena los datos en una caché en Redis. En desarrollo, esta caché se puede implementar en un contenedor, mientras que en producción puede usar caché de Azure para Redis. Caché de Azure para Redis es un servicio totalmente administrado que ofrece un alto rendimiento y confiabilidad sin necesidad de implementar y administrar instancias o contenedores de Redis por su cuenta.
 
 El microservicio de ubicaciones utiliza una base de datos de MongoDB NoSQL para su persistencia. Durante el desarrollo, la base de datos se puede implementar en su propio contenedor, mientras que en producción el servicio puede aprovechar la [API de Azure Cosmos dB para MongoDB](/azure/cosmos-db/mongodb-introduction). Una de las ventajas de Azure Cosmos DB es su capacidad para aprovechar varios protocolos de comunicación diferentes, entre los que se incluyen una API de SQL y las API NoSQL comunes, como MongoDB, Cassandra, Gremlin y Azure Table Storage. Azure Cosmos DB ofrece una base de datos totalmente administrada y distribuida globalmente como servicio que se puede escalar para satisfacer las necesidades de los servicios que la usan.
 
@@ -56,7 +56,7 @@ Los datos distribuidos en aplicaciones nativas en la nube se describen con más 
 
 ## <a name="event-bus"></a>Bus de eventos
 
-La aplicación utiliza eventos para comunicar cambios entre distintos servicios. Esta funcionalidad se puede implementar con una variedad de implementaciones y localmente la aplicación eShopOnContainers usa [RabbitMQ](https://www.rabbitmq.com/). Cuando se hospeda en Azure, la aplicación aprovecharía [Azure Service Bus](/azure/service-bus/) para su mensajería. Azure Service Bus es un agente de mensajes de integración totalmente administrado que permite a las aplicaciones y servicios comunicarse entre sí de forma desacoplada, confiable y asincrónica. Azure Service Bus admite colas individuales, así como *temas* independientes para admitir escenarios de suscriptor de publicador. La aplicación eShopOnContainers aprovecharía temas con Azure Service Bus para admitir la distribución de mensajes de un microservicio a cualquier otro microservicio que necesitaba reaccionar a un mensaje determinado.
+La aplicación utiliza eventos para comunicar cambios entre distintos servicios. Esta funcionalidad se puede implementar con varias implementaciones y localmente la aplicación de eShopOnContainers usa [RabbitMQ](https://www.rabbitmq.com/). Cuando se hospeda en Azure, la aplicación aprovecharía [Azure Service Bus](/azure/service-bus/) para su mensajería. Azure Service Bus es un agente de mensajes de integración totalmente administrado que permite a las aplicaciones y servicios comunicarse entre sí de forma desacoplada, confiable y asincrónica. Azure Service Bus admite colas individuales, así como *temas* independientes para admitir escenarios de suscriptor de publicador. La aplicación eShopOnContainers aprovecharía temas con Azure Service Bus para admitir la distribución de mensajes de un microservicio a cualquier otro microservicio que necesitaba reaccionar a un mensaje determinado.
 
 ## <a name="resiliency"></a>Resistencia
 

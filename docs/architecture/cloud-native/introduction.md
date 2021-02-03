@@ -2,13 +2,13 @@
 title: Introducción a las aplicaciones nativas en la nube
 description: Más información sobre la informática nativa en la nube
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 6ec02a1388d6e0f26cdaa1f728f23a22ba52d735
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 01/19/2021
+ms.openlocfilehash: 852eed27d4cfcaefdfa89a73c54414a6306ed28d
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613946"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506102"
 ---
 # <a name="introduction-to-cloud-native-applications"></a>Introducción a las aplicaciones nativas en la nube
 
@@ -32,7 +32,7 @@ Si sigue las instrucciones de los últimos 15 años, lo más probable es que com
 
 Cree una aplicación de gran tamaño que contenga toda la lógica del dominio. Incluye módulos como identidad, catálogo, ordenación y mucho más. La aplicación principal se comunica con una base de datos relacional de gran tamaño. El núcleo expone la funcionalidad a través de una interfaz HTML.
 
-¡Enhorabuena!  Acaba de crear una aplicación monolítica.
+Enhorabuena.  Acaba de crear una aplicación monolítica.
 
 No todo está dañado. Los monolíticos ofrecen algunas ventajas distintas. Por ejemplo, son sencillos...
 
@@ -58,7 +58,7 @@ Sin embargo, en algún momento se empieza a sentirse incómodo. Verá que pierde
 
 Muchas organizaciones han abordado el ciclo de miedo monolítica mediante la adopción de un enfoque nativo de la nube para la creación de sistemas. En la figura 1-2 se muestra el mismo sistema creado para aplicar las técnicas y prácticas nativas en la nube.
 
-![Diseño nativo en la nube](./media/cloud-native-design.png)
+![Diseño de Cloud-Native](./media/cloud-native-design.png)
 
 **Figura 1-2**. Diseño nativo en la nube
 
@@ -66,7 +66,7 @@ Observe cómo la aplicación se descompone en un conjunto de pequeños microserv
 
 ### <a name="cloud-native-computing"></a>Informática nativa en la nube
 
-Hmm... Acabamos de usar el término _nativo_de la nube. El primer pensamiento podría ser "lo que significa exactamente eso?". Otra moda del sector concocted por los proveedores de software para comercializar más cosas? "
+Hmm... Acabamos de usar el término _nativo_ de la nube. El primer pensamiento podría ser "lo que significa exactamente eso?". Otra moda del sector concocted por los proveedores de software para comercializar más cosas? "
 
 Afortunadamente, es mucho diferente y, afortunadamente, este libro le ayudará a convencerle.
 

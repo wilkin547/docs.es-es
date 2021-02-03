@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e395122e59f17ed66bbd9d83b01610993f663ce1
-ms.sourcegitcommit: 5114e7847e0ff8ddb8c266802d47af78567949cf
+ms.openlocfilehash: a3a27c1baaab135108ef475d77c35d607c45fa82
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94915950"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794796"
 ---
 # <a name="tutorial-create-a-net-console-application-using-visual-studio"></a>Tutorial: Creación de una aplicación de consola de .NET con Visual Studio
 
@@ -56,7 +56,7 @@ Cree un proyecto de aplicación de consola de .NET denominado "HelloWorld".
 
 La plantilla crea una aplicación "Hola mundo" sencilla. Llama al método <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> para mostrar "Hola mundo" en la ventana de la consola.
 
-El código de plantilla define una clase, `Program`, con un solo método, `Main`, que toma una matriz de <xref:System.String> como argumento:
+El código de plantilla define una clase, `Program`, con un único método, `Main`, que toma una matriz de <xref:System.String> como argumento:
 
 ```csharp
 using System;
@@ -108,7 +108,7 @@ Mejore la aplicación para pedir su nombre al usuario y mostrarlo con la fecha y
 
    Este código muestra un mensaje en la ventana de la consola y espera a que el usuario escriba una cadena y, luego, presione <kbd>Entrar</kbd>. Almacena esta cadena en una variable denominada `name`. También recupera el valor de la propiedad <xref:System.DateTime.Now?displayProperty=nameWithType>, que contiene la hora local actual, y lo asigna a una variable denominada `date` (`currentDate` en Visual Basic). Asimismo, muestra estos valores en la ventana de la consola. Por último, muestra un mensaje en la ventana de la consola y llama al método <xref:System.Console.ReadKey(System.Boolean)?displayProperty=nameWithType> para esperar a la entrada del usuario.
 
-   El símbolo `\n` (`vbCrLf` en Visual Basic) representa un carácter de nueva línea.
+   El código `\n` (o `vbCrLf` en el código Visual Basic) representa un carácter de nueva línea.
 
    El signo de dólar (`$`) delante de una cadena permite colocar expresiones como nombres de variable entre llaves en la cadena. El valor de la expresión se inserta en la cadena en lugar de la expresión. Esta sintaxis se conoce como [cadenas interpoladas](../../csharp/language-reference/tokens/interpolated.md).
 

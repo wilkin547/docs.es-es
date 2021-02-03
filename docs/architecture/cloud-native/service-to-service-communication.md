@@ -2,13 +2,13 @@
 title: Comunicación entre servicios
 description: Obtenga información sobre cómo los microservicios de back-end nativos en la nube se comunican con otros microservicios de back-end.
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: 9761b99cd9ad076eb82a23a00ec3099e8913168b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 63c80b38e2fa42dccebefc772c969266fa9d79ca
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166084"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506271"
 ---
 # <a name="service-to-service-communication"></a>Comunicación entre servicios
 
@@ -30,7 +30,7 @@ Los sistemas de microservicios suelen usar una combinación de estos tipos de in
 
 ## <a name="queries"></a>Consultas
 
-Muchas veces, un microservicio podría necesitar *consultar* otro, lo que requiere una respuesta inmediata para completar una operación. Un microservicio de cesta de la compra puede necesitar información del producto y un precio para agregar un artículo a su cesta. Existen varios enfoques para implementar operaciones de consulta.
+Muchas veces, un microservicio podría necesitar *consultar* otro, lo que requiere una respuesta inmediata para completar una operación. Un microservicio de cesta de la compra puede necesitar información del producto y un precio para agregar un artículo a su cesta. Existen muchos enfoques para implementar operaciones de consulta.
 
 ### <a name="requestresponse-messaging"></a>Mensajería de solicitud-respuesta
 
@@ -76,7 +76,7 @@ Otro enfoque para desacoplar mensajes HTTP sincrónicos es un [patrón de solici
 
 En este caso, el productor de mensajes crea un mensaje basado en consulta que contiene un identificador de correlación único y lo coloca en una cola de solicitudes. El servicio consumidor quita los mensajes de la cola, los procesa y coloca la respuesta en la cola de respuesta con el mismo identificador de correlación. El servicio productor quita el mensaje de la cola, lo hace coincidir con el identificador de correlación y continúa el procesamiento. En la sección siguiente se describen los detalles de las colas.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 
 Otro tipo de interacción de comunicación es un *comando*. Un microservicio puede necesitar otro microservicio para realizar una acción. El microservicio de pedidos puede necesitar el microservicio de envío para crear un envío para un pedido aprobado. En la figura 4-12, un microservicio, denominado productor, envía un mensaje a otro microservicio, el consumidor, y le hace algo.
 
@@ -122,7 +122,7 @@ Azure Storage las colas son una opción económica para implementar la mensajer�
 
 Para requisitos de mensajería más complejos, considere la posibilidad de Azure Service Bus las colas.
 
-Sentado sobre una infraestructura de mensajes sólida, [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) admite un *modelo de mensajería*asíncrona. Los mensajes se almacenan de forma confiable en un agente (la cola) hasta que los recibe el consumidor. La cola garantiza la entrega de mensajes de primero en salir/primero en salir (FIFO), respetando el orden en que se agregaron los mensajes a la cola.
+Sentado sobre una infraestructura de mensajes sólida, [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview) admite un *modelo de mensajería* asíncrona. Los mensajes se almacenan de forma confiable en un agente (la cola) hasta que los recibe el consumidor. La cola garantiza la entrega de mensajes de primero en salir/primero en salir (FIFO), respetando el orden en que se agregaron los mensajes a la cola.
 
 El tamaño de un mensaje puede ser mucho mayor, hasta 256 KB. Los mensajes se conservan en la cola durante un período de tiempo ilimitado. Service Bus admite no solo llamadas basadas en HTTP, sino que también proporciona compatibilidad total con el [Protocolo AMQP](/azure/service-bus-messaging/service-bus-amqp-overview). AMQP es un estándar abierto entre proveedores que admite un protocolo binario y mayores grados de confiabilidad.
 
@@ -142,7 +142,7 @@ En la figura 4-14 se describe la arquitectura de alto nivel de una cola de Servi
 
 En la ilustración anterior, observe la relación punto a punto. Dos instancias del mismo proveedor están poniendo en cola los mensajes en una sola cola de Service Bus. Cada mensaje se consume solo en una de las tres instancias de consumidor de la derecha. A continuación, se describe cómo implementar la mensajería en la que es posible que todos los consumidores puedan estar interesados en el mismo mensaje.
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 Message Queue Server es una manera eficaz de implementar la comunicación en la que un productor puede enviar un mensaje de forma asincrónica a un consumidor. Sin embargo, ¿qué ocurre cuando *muchos consumidores diferentes* están interesados en el mismo mensaje? Una cola de mensajes dedicada para cada consumidor no se podría escalar bien y resultaría difícil de administrar.
 
@@ -152,9 +152,9 @@ Los eventos son un proceso de dos pasos. Para un cambio de estado determinado, u
 
 En la figura 4-15 se muestra un microservicio de cesta de la compra que publica un evento con otros dos microservicios que se suscriben a él.
 
-![Mensajería controlada por eventos](./media/event-driven-messaging.png)
+![Mensajería Event-Driven](./media/event-driven-messaging.png)
 
-**Figura 4-15**. Mensajería controlada por eventos
+**Figura 4-15**. Mensajería Event-Driven
 
 Tenga en cuenta el componente de *bus de eventos* que se encuentra en medio del canal de comunicación. Es una clase personalizada que encapsula el agente de mensajes y lo desacopla de la aplicación subyacente. Los microservicios de ordenación y de inventario operan de forma independiente el evento sin ningún conocimiento de los demás ni del microservicio de cesta de la compra. Cuando el evento registrado se publica en el bus de eventos, actúan sobre él.
 
@@ -184,7 +184,7 @@ Aunque Azure Service Bus es un agente de mensajería probado en la batalla con u
 
 A primera vista, Event Grid puede parecer simplemente otro sistema de mensajería basado en temas. Sin embargo, es diferente de muchas maneras. Centrado en las cargas de trabajo orientadas a eventos, permite el procesamiento de eventos en tiempo real, la integración profunda de Azure y una plataforma abierta, todo ello en una infraestructura sin servidor. Está diseñado para aplicaciones contemporáneos nativas en la nube y sin servidor
 
-Como *backplane*centralizado, o canalización, Event Grid reacciona a los eventos dentro de los recursos de Azure y desde sus propios servicios.
+Como *backplane* centralizado, o canalización, Event Grid reacciona a los eventos dentro de los recursos de Azure y desde sus propios servicios.
 
 Las notificaciones de eventos se publican en un tema Event Grid, que, a su vez, enruta cada evento a una suscripción. Los suscriptores se asignan a las suscripciones y consumen los eventos. Al igual que Service Bus, Event Grid admite un *modelo de suscriptor filtrado* donde una suscripción establece una regla para los eventos que desea recibir. Event Grid proporciona un rendimiento rápido con una garantía de 10 millones eventos por segundo, lo que permite la entrega casi en tiempo real, más allá de lo que puede generar Azure Service Bus.
 
@@ -196,7 +196,7 @@ Al publicar y suscribirse a eventos nativos desde recursos de Azure, no se requi
 
 **Figura 4-17**. Event Grid anatomía
 
-Una diferencia importante entre EventGrid y Service Bus es el *patrón de intercambio de mensajes*subyacente.
+Una diferencia importante entre EventGrid y Service Bus es el *patrón de intercambio de mensajes* subyacente.
 
 Service Bus implementa un *modelo de extracción* de estilo anterior en el que el suscriptor de nivel inferior sondea activamente la suscripción de tema para los nuevos mensajes. En el costado, este enfoque proporciona al suscriptor control total sobre el ritmo en el que procesa los mensajes. Controla cuándo y cuántos mensajes se procesan en un momento dado. Los mensajes sin leer permanecen en la suscripción hasta que se procesen. Una laguna significativa es la latencia entre el momento en que se genera el evento y la operación de sondeo que extrae ese mensaje al suscriptor para su procesamiento. Además, la sobrecarga de sondeo constante para el siguiente evento consume recursos y dinero.
 
@@ -218,7 +218,7 @@ Event hubs admite la baja latencia y la retención de tiempo configurable. A dif
 
 Event hubs admite protocolos de publicación de eventos comunes, como HTTPS y AMQP. También es compatible con Kafka 1,0. [Las aplicaciones de Kafka existentes pueden comunicarse con el centro de eventos](/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) mediante el protocolo Kafka, lo que proporciona una alternativa a la administración de clústeres de Kafka de gran tamaño. Muchos sistemas nativos de la nube de código abierto adoptan Kafka.
 
-Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan eventos más recientes, se agregan al final de esta secuencia.En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
+Event Hubs implementa el streaming de mensajes a través de un [modelo de consumidor con particiones](/azure/event-hubs/event-hubs-features) en el que cada consumidor solo Lee un subconjunto específico o una partición del flujo de mensajes. Este patrón permite una gran escala horizontal para procesamiento de eventos y proporciona otras características centradas en secuencias que no están disponibles en colas y temas. Una partición es una secuencia ordenada de eventos que se mantiene en un centro de eventos. A medida que llegan eventos más recientes, se agregan al final de esta secuencia. En la figura 4-19 se muestra la creación de particiones en un centro de eventos.
 
 ![Creación de particiones del centro de eventos](./media/event-hub-partitioning.png)
 

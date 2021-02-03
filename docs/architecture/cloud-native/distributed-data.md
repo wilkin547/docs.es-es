@@ -2,13 +2,13 @@
 title: Datos distribuidos
 description: Compare el almacenamiento de datos en aplicaciones monolíticas y nativas en la nube.
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: b7c8c43b16f2f70f9009c4fe4a8d19c52fa7ea2a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: c83ac5dc973ff4c7a4626746472a74cfc6bf54bb
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163939"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505874"
 ---
 # <a name="distributed-data"></a>Datos distribuidos
 
@@ -61,7 +61,7 @@ Aunque los microservicios son independientes y se centran en funcionalidades fun
 
 **Figura 5-3**. Consultas entre microservicios
 
-En la ilustración anterior, vemos un microservicio de cesta de la compra que agrega un artículo a la cesta de la compra de un usuario. Mientras que el almacén de datos para este microservicio contiene datos de cesta y de elemento de línea, no mantiene los datos de productos o de precios. En su lugar, los elementos de datos son propiedad de los microservicios de catálogo y de precios. Esto supone un problema. ¿Cómo puede el microservicio de cesta de la compra agregar un producto a la cesta de la compra del usuario cuando no tiene datos de productos ni de precios en su base de datos?
+En la ilustración anterior, vemos un microservicio de cesta de la compra que agrega un artículo a la cesta de la compra de un usuario. Mientras que el almacén de datos para este microservicio contiene datos de cesta y de elemento de línea, no mantiene los datos de productos o de precios. En su lugar, los elementos de datos son propiedad de los microservicios de catálogo y de precios. Este aspecto presenta un problema. ¿Cómo puede el microservicio de cesta de la compra agregar un producto a la cesta de la compra del usuario cuando no tiene datos de productos ni de precios en su base de datos?
 
 Una opción que se describe en el capítulo 4 es una [llamada http directa](service-to-service-communication.md#queries) desde la cesta de la compra al catálogo y los microservicios de precios. Sin embargo, en el capítulo 4, hemos mencionado que las *llamadas http* sincrónicas unen microservicios, lo que reduce su autonomía y reduce sus ventajas arquitectónicas.
 

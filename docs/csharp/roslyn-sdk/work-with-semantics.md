@@ -3,12 +3,12 @@ title: Trabajar con el modelo semántico del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción del tipo que se usa para entender y manipular el modelo semántico del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 8575988cd98a4c0ba3f24107788f065f7472f55d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0d254045a168f82888c5cc77a34f194a68aed0e
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156940"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899131"
 ---
 # <a name="work-with-semantics"></a>Trabajar con semántica
 
@@ -41,7 +41,7 @@ Un símbolo representa un elemento diferenciado declarado por el código fuente 
 
 Una serie de métodos y propiedades del tipo <xref:Microsoft.CodeAnalysis.Compilation> ayudan a encontrar símbolos. Por ejemplo, puede buscar el símbolo de un tipo declarado por su nombre de metadatos común. También puede acceder a la tabla de símbolos completa como un árbol de símbolos enraizado por el espacio de nombres global.
 
-Los símbolos también contienen información adicional que el compilador determina desde el origen o los metadatos, como otros símbolos referenciados. Cada tipo de símbolo se representa mediante una interfaz independiente derivada de <xref:Microsoft.CodeAnalysis.ISymbol>, cada una con sus propios métodos y propiedades que detallan la información recopilada por el compilador. Muchas de estas propiedades hacen referencia directamente a otros símbolos. Por ejemplo, la propiedad <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> indica el símbolo de tipo real al que hace referencia la declaración del método.
+Los símbolos también contienen información adicional que el compilador determina desde el origen o los metadatos, como otros símbolos referenciados. Cada tipo de símbolo se representa mediante una interfaz independiente derivada de <xref:Microsoft.CodeAnalysis.ISymbol>, cada una con sus propios métodos y propiedades que detallan la información recopilada por el compilador. Muchas de estas propiedades hacen referencia directamente a otros símbolos. Por ejemplo, la propiedad <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> indica el símbolo de tipo real que devuelve el método.
 
 Los símbolos presentan una representación común de espacios de nombres, tipos y miembros, entre el código fuente y los metadatos. Por ejemplo, un método que se ha declarado en el código fuente y un método que se ha importado desde los metadatos se representan mediante un elemento <xref:Microsoft.CodeAnalysis.IMethodSymbol> con las mismas propiedades.
 

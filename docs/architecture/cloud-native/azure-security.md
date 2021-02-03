@@ -1,13 +1,13 @@
 ---
 title: Seguridad de Azure para aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Seguridad de Azure para aplicaciones nativas en la nube
-ms.date: 12/01/2020
-ms.openlocfilehash: 5e541606c762ea192ab8767e78e9b7346b3ec9c1
-ms.sourcegitcommit: 2f485e721f7f34b87856a51181b5b56624b31fd5
+ms.date: 01/19/2021
+ms.openlocfilehash: 1e2dce97a43479d49aecf220893efcc19bb00a8c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96509824"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505887"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Seguridad de Azure para aplicaciones nativas en la nube
 
@@ -117,7 +117,7 @@ El primer componente de RBAC es una entidad de seguridad. Una entidad de segurid
 - Entidad de servicio: identidad de seguridad en la que se ejecutan los servicios o las aplicaciones.
 - Identidad administrada: identidad de Azure Active Directory administrada por Azure. Las identidades administradas se utilizan normalmente al desarrollar aplicaciones en la nube que administran las credenciales para autenticarse en los servicios de Azure.
 
-La entidad de seguridad se puede aplicar a la mayoría de los recursos. Esto significa que es posible asignar una entidad de seguridad a un contenedor que se ejecuta en Azure Kubernetes, lo que le permite acceder a los secretos almacenados en Key Vault. Una función de Azure puede asumir un permiso que le permite comunicarse con una instancia de Active Directory para validar un JWT para un usuario que realiza la llamada. Una vez que los servicios se habilitan con una entidad de servicio, sus permisos se pueden administrar granularmente mediante roles y ámbitos.
+La entidad de seguridad se puede aplicar a la mayoría de los recursos. Este aspecto significa que es posible asignar una entidad de seguridad a un contenedor que se ejecuta dentro de Azure Kubernetes, lo que le permite acceder a los secretos almacenados en Key Vault. Una función de Azure puede asumir un permiso que le permite comunicarse con una instancia de Active Directory para validar un JWT para un usuario que realiza la llamada. Una vez que los servicios se habilitan con una entidad de servicio, sus permisos se pueden administrar granularmente mediante roles y ámbitos.
 
 ## <a name="roles"></a>Roles
 

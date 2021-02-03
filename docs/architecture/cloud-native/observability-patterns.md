@@ -1,17 +1,17 @@
 ---
 title: Patrones de observación
 description: Patrones de observación para aplicaciones nativas de la nube
-ms.date: 08/10/2020
-ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 01/19/2021
+ms.openlocfilehash: acb1dc5c62787e9487c0e95c7e86a8f9a1967951
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539858"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506024"
 ---
 # <a name="observability-patterns"></a>Patrones de observación
 
-Al igual que los patrones se han desarrollado para ayudar en el diseño del código de las aplicaciones, hay patrones para las aplicaciones operativas de una forma confiable. Han surgido tres patrones útiles para el mantenimiento de las aplicaciones: **registro**, **supervisión**y **alertas**.
+Al igual que los patrones se han desarrollado para ayudar en el diseño del código de las aplicaciones, hay patrones para las aplicaciones operativas de una forma confiable. Han surgido tres patrones útiles para el mantenimiento de las aplicaciones: **registro**, **supervisión** y **alertas**.
 
 ## <a name="when-to-use-logging"></a>Cuándo usar el registro
 
@@ -41,7 +41,7 @@ Por último, el número de usuarios en algunas aplicaciones nativas de la nube e
 Cada lenguaje de programación tiene herramientas que permiten escribir registros y, por lo general, la sobrecarga de escribir estos registros es baja. Muchas de las bibliotecas de registro de proporcionan el registro de diferentes tipos de críticas, que se pueden optimizar en tiempo de ejecución. Por ejemplo, la [biblioteca Serilog](https://serilog.net/) es una conocida biblioteca de registro estructurado para .net que proporciona los siguientes niveles de registro:
 
 * Verbose
-* Depurar
+* Depuración
 * Information
 * Advertencia
 * Error
@@ -74,7 +74,7 @@ La supervisión, que se implementa correctamente, puede permitirle conocer las c
 
 Algunos sistemas de registro centralizados adoptan un rol adicional para recopilar la telemetría fuera de los registros puros. Pueden recopilar métricas, como el tiempo para ejecutar una consulta de base de datos, el tiempo medio de respuesta de un servidor Web, e incluso los promedios de carga de la CPU y la presión de memoria que muestra el sistema operativo. Junto con los registros, estos sistemas pueden proporcionar una vista holística del estado de los nodos del sistema y de la aplicación en su conjunto.
 
-Las capacidades de recopilación de métricas de las herramientas de supervisión también se pueden alimentar manualmente desde dentro de la aplicación. Los flujos de negocio que son de especial interés, como los nuevos usuarios que se suscriben o los pedidos que se colocan, se pueden instrumentar de forma que incrementen un contador en el sistema de supervisión central. Esto desbloquea las herramientas de supervisión para no solo supervisar el estado de la aplicación, sino también el estado de la empresa.
+Las capacidades de recopilación de métricas de las herramientas de supervisión también se pueden alimentar manualmente desde dentro de la aplicación. Los flujos de negocio que son de especial interés, como los nuevos usuarios que se suscriben o los pedidos que se colocan, se pueden instrumentar de forma que incrementen un contador en el sistema de supervisión central. Este aspecto desbloquea las herramientas de supervisión para no solo supervisar el estado de la aplicación, sino también el estado de la empresa.
 
 Las consultas se pueden construir en las herramientas de agregación de registros para buscar determinadas estadísticas o patrones, que se pueden mostrar en forma gráfica en los paneles personalizados. Con frecuencia, los equipos invertirán en pantallas grandes montadas en pared que giran por las estadísticas relacionadas con una aplicación. De este modo, es fácil ver los problemas a medida que se producen.
 

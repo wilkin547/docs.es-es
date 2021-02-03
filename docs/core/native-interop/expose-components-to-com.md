@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 346776ebae3a6077fd39f26d5bd19d599d163db2
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 13c91e5cb6728c5669642d1b5f7bb461efdd44f8
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608342"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065056"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Exposición de los componentes de .NET Core a COM
 
@@ -92,6 +92,9 @@ Puede encontrar un [ejemplo de servidor COM](https://github.com/dotnet/samples/t
 ## <a name="additional-notes"></a>Notas adicionales
 
 A diferencia de lo que ocurre en .NET Framework, .NET Core no admite la generación de una biblioteca de tipos COM (TLB) a partir de un ensamblado de .NET Core. La instrucción es escribir manualmente un archivo IDL o un encabezado C/C++ para las declaraciones nativas de las interfaces COM.
+
+> [!IMPORTANT]
+> En .NET Framework, tanto los clientes de 32 bits como los de 64 bits pueden consumir un ensamblado "Cualquier CPU". De forma predeterminada, en .NET Core, .NET 5 y versiones posteriores, los ensamblados "Cualquier CPU" van acompañados de un archivo *\*.comhost.dll* de 64 bits. Por este motivo, solo los clientes de 64 bits pueden consumirlos. Es el valor predeterminado porque es lo que representa el SDK. Este comportamiento es idéntico al modo en el que se publica la característica "autocontenida": de forma predeterminada, usa lo que proporciona el SDK. La propiedad `NETCoreSdkRuntimeIdentifier` de MSBuild determina el valor de bits de *\*.comhost.dll*. En realidad, la parte administrada ignora el valor de bits, como se espera, pero el valor predeterminado del recurso nativo asociado es el SDK de destino.
 
 No se admiten [implementaciones autocontenidas](../deploying/index.md#publish-self-contained) de componentes COM. Solo se admiten las [implementaciones dependientes del marco](../deploying/index.md#publish-framework-dependent) de los componentes COM.
 

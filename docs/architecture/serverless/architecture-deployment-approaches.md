@@ -4,12 +4,12 @@ description: Una guía para las distintas formas en que se implementan las arqui
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7e91412600e8e4e5a0dca2a454f1cb0680c881b2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 89a8e6a52331b563be334a867f563e9ded8d8cc4
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173346"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957967"
 ---
 # <a name="architecture-deployment-approaches"></a>Enfoques para la implementación de arquitecturas
 
@@ -101,7 +101,7 @@ Para más información sobre los contenedores de Docker, consulte [¿Qué es Doc
 
 Por lo general, la administración de contenedores entre los hosts requiere una herramienta de orquestación como Kubernetes. La configuración y administración de las soluciones de orquestación puede agregar sobrecarga y complejidad adicionales a los proyectos. Afortunadamente, muchos proveedores de nube proporcionan servicios de orquestación a través de soluciones PaaS para simplificar la administración de contenedores.
 
-En la imagen siguiente se muestra una instalación de Kubernetes de ejemplo. Los nodos de la instalación abordan la escalabilidad horizontal y la conmutación por error. Ejecutan instancias de contenedor de Docker administradas por el servidor maestro. *Kubelet* es el cliente que retransmite los comandos de Kubernetes a Docker.
+En la imagen siguiente se muestra una instalación de Kubernetes de ejemplo. Los nodos de la instalación abordan la escalabilidad horizontal y la conmutación por error. Ejecutan instancias de contenedor de Docker administradas por el servidor principal. *Kubelet* es el cliente que retransmite los comandos de Kubernetes a Docker.
 
 ![Kubernetes](./media/kubernetes-example.png)
 

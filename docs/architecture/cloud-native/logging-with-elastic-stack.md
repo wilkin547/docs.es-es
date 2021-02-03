@@ -1,13 +1,13 @@
 ---
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
-ms.date: 05/13/2020
-ms.openlocfilehash: 3f10b0d06c87b7bed6d3e302742b1dc52e2c9d3b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: ebe7eef16d3b1a73d0fd3a010a509bbaf7be3fd5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91155346"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505822"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
 
@@ -26,10 +26,10 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 **Figura 7-5**. Variables de configuración para Kubernetes
 
-Con esto se instalará Elasticsearch en el clúster y se le enviarán todos los registros de clúster.
+En este paso se instalará Elasticsearch en el clúster y se le enviará un destino que le envíe todos los registros del clúster.
 
 ![Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros ingeridos de la ](./media/kibana-dashboard.png)
- **figura 7-6**de Kubernetes. Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros que se introducen en Kubernetes
+ **figura 7-6** de Kubernetes. Un ejemplo de un panel de Kibana que muestra los resultados de una consulta en los registros que se introducen en Kubernetes
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>¿Cuáles son las ventajas de la pila elástica?
 
@@ -39,7 +39,7 @@ La pila elástica proporciona un registro centralizado en una manera de bajo cos
 
 El primer componente es [Logstash](https://www.elastic.co/products/logstash). Esta herramienta se usa para recopilar información de registro de una gran variedad de orígenes diferentes. Por ejemplo, Logstash puede leer registros del disco y recibir también mensajes de bibliotecas de registro como [Serilog](https://serilog.net/). Logstash puede realizar algunas tareas de filtrado y expansión básicas en los registros a medida que llegan. Por ejemplo, si los registros contienen direcciones IP, Logstash puede configurarse para realizar una búsqueda geográfica y obtener un país o incluso una ciudad de origen para ese mensaje.
 
-Serilog es una biblioteca de registro para los lenguajes .NET, que permite el registro con parámetros. En lugar de generar un mensaje de registro de texto que incrusta campos, los parámetros se mantienen separados. Esto permite realizar búsquedas y filtrados más inteligentes. En la figura 7-7 se muestra una configuración de Serilog de ejemplo para escribir en Logstash.
+Serilog es una biblioteca de registro para los lenguajes .NET, que permite el registro con parámetros. En lugar de generar un mensaje de registro de texto que incrusta campos, los parámetros se mantienen separados. Esta biblioteca permite realizar búsquedas y filtrados más inteligentes. En la figura 7-7 se muestra una configuración de Serilog de ejemplo para escribir en Logstash.
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -105,7 +105,7 @@ El componente final de la pila es Kibana. Esta herramienta se usa para proporcio
 
 ## <a name="installing-elastic-stack-on-azure"></a>Instalación de la pila elástica en Azure
 
-La pila elástica se puede instalar en Azure de varias maneras. Como siempre, es posible [aprovisionar máquinas virtuales e instalar la pila elástica en ellas directamente](/azure/virtual-machines/linux/tutorial-elasticsearch). Algunos usuarios experimentados prefieren esta opción, ya que ofrece el mayor grado de personalización. La implementación en la infraestructura como servicio presenta una sobrecarga importante en la administración que obliga a quienes toman esa ruta de acceso a tomar posesión de todas las tareas asociadas a la infraestructura como servicio, como la protección de las máquinas y la actualización de las revisiones.
+La pila elástica se puede instalar en Azure de muchas maneras. Como siempre, es posible [aprovisionar máquinas virtuales e instalar la pila elástica en ellas directamente](/azure/virtual-machines/linux/tutorial-elasticsearch). Algunos usuarios experimentados prefieren esta opción, ya que ofrece el mayor grado de personalización. La implementación en la infraestructura como servicio presenta una sobrecarga importante en la administración que obliga a quienes toman esa ruta de acceso a tomar posesión de todas las tareas asociadas a la infraestructura como servicio, como la protección de las máquinas y la actualización de las revisiones.
 
 Una opción con menos sobrecarga es usar uno de los muchos contenedores de Docker en los que ya se ha configurado la pila elástica. Estos contenedores pueden colocarse en un clúster de Kubernetes existente y ejecutarse junto al código de la aplicación. El contenedor [sebp/Elk](https://elk-docker.readthedocs.io/) es un contenedor de pila elástica bien documentado y probado.
 

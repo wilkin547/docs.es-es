@@ -1,19 +1,19 @@
 ---
 title: Configuración centralizada
 description: Centralizar la configuración de aplicaciones nativas en la nube con la configuración de App de Azure y el almacén de AzureKey.
-ms.date: 05/13/2020
-ms.openlocfilehash: 0d40c5b2d70f30beb17489dfd55900f7c5fc1a75
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 770c0c19a6de01250c59a586badb6a4afa2e9ae5
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160884"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505718"
 ---
 # <a name="centralized-configuration"></a>Configuración centralizada
 
-A diferencia de una aplicación monolítica en la que todo se ejecuta dentro de una única instancia, una aplicación nativa en la nube se compone de servicios independientes distribuidos entre máquinas virtuales, contenedores y regiones geográficas. La administración de los valores de configuración para docenas de servicios interdependientes puede resultar complicada. Las copias duplicadas de los valores de configuración en diferentes ubicaciones es propensa a errores y difíciles de administrar. La configuración centralizada es un requisito fundamental para las aplicaciones distribuidas nativas en la nube.
+A diferencia de una aplicación monolítica en la que todo se ejecuta dentro de una única instancia, una aplicación nativa en la nube se compone de servicios independientes distribuidos entre máquinas virtuales, contenedores y regiones geográficas. La administración de los valores de configuración para docenas de servicios interdependientes puede resultar complicada. Las copias duplicadas de los valores de configuración en diferentes ubicaciones son propensas a errores y difíciles de administrar. La configuración centralizada es un requisito fundamental para las aplicaciones distribuidas nativas en la nube.
 
-Como se describe en el [capítulo 1](introduction.md), las recomendaciones de la aplicación de doce factores requieren una separación estricta entre el código y la configuración. La configuración se debe almacenar externamente desde la aplicación y se puede leer según sea necesario. El almacenamiento de valores de configuración como constantes o valores literales en el código es una infracción. Muchos servicios de la misma aplicación suelen usar los mismos valores de configuración. Además, debemos admitir los mismos valores en varios entornos, como desarrollo, pruebas y producción. La práctica recomendada es almacenarlas en un almacén de configuración centralizado.
+Como se describe en el [capítulo 1](introduction.md), las recomendaciones sobre aplicaciones Twelve-Factor requieren una separación estricta entre el código y la configuración. La configuración se debe almacenar externamente desde la aplicación y se puede leer según sea necesario. El almacenamiento de valores de configuración como constantes o valores literales en el código es una infracción. Muchos servicios de la misma aplicación suelen usar los mismos valores de configuración. Además, debemos admitir los mismos valores en varios entornos, como desarrollo, pruebas y producción. La práctica recomendada es almacenarlas en un almacén de configuración centralizado.
 
 La nube de Azure presenta varias opciones excelentes.
 

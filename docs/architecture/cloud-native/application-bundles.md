@@ -1,25 +1,25 @@
 ---
 title: Agrupaciones de aplicaciones nativas en la nube
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Agrupaciones de aplicaciones nativas en la nube
-ms.date: 05/13/2020
-ms.openlocfilehash: 7f1fcd448f3299a31043bf269717f7b777329c62
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: d3427ddf82b65dd274ef253749a9b87864092a0a
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158128"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506141"
 ---
 # <a name="cloud-native-application-bundles"></a>Agrupaciones de aplicaciones nativas en la nube
 
 Una propiedad clave de las aplicaciones nativas en la nube es que aprovechan las capacidades de la nube para acelerar el desarrollo. Este diseño suele significar que una aplicación completa utiliza diferentes tipos de tecnologías. Las aplicaciones pueden enviarse en contenedores de Docker, algunos servicios pueden usar Azure Functions, mientras que otras pueden ejecutarse directamente en máquinas virtuales asignadas en servidores de gran tamaño con la aceleración de GPU de hardware. Dos aplicaciones nativas en la nube no son las mismas, por lo que resulta difícil proporcionar un único mecanismo para enviarlas.
 
-Los contenedores de Docker se pueden ejecutar en Kubernetes mediante un gráfico de Helm para la implementación. El Azure Functions se puede asignar mediante plantillas terraform. Por último, las máquinas virtuales se pueden asignar mediante terraform pero se crean con ansible. Se trata de una gran cantidad de tecnologías y no ha sido posible empaquetarlas todas juntas en un paquete razonable. Hasta ahora.
+Los contenedores de Docker se pueden ejecutar en Kubernetes mediante un gráfico de Helm para la implementación. El Azure Functions se puede asignar mediante plantillas terraform. Por último, las máquinas virtuales se pueden asignar mediante terraform pero se crean con ansible. Se trata de una gran variedad de tecnologías y no ha sido posible empaquetarlas todas juntas en un paquete razonable. Hasta ahora.
 
-Las agrupaciones de aplicaciones nativas en la nube (CNABs) son un esfuerzo conjunto por una serie de empresas de la comunidad, como Microsoft, Docker y HashiCorp, para desarrollar una especificación para empaquetar aplicaciones distribuidas.
+Las agrupaciones de aplicaciones nativas en la nube (CNABs) son un esfuerzo conjunto de muchas empresas de la comunidad, como Microsoft, Docker y HashiCorp, para desarrollar una especificación para empaquetar aplicaciones distribuidas.
 
 El esfuerzo se anunció en diciembre de 2018, por lo que sigue habiendo un poco de trabajo para exponer el esfuerzo a la mayor comunidad. Sin embargo, ya existe una [especificación Open](https://github.com/deislabs/cnab-spec) y una implementación de referencia conocida como [duffle](https://duffle.sh/). Esta herramienta, que se escribió en Go, es un esfuerzo conjunto entre Docker y Microsoft.
 
-CNABs puede contener diferentes tipos de tecnologías de instalación. Esto permite que elementos como gráficos de Helm, plantillas de terraform y guías de ansible coexistan en el mismo paquete. Una vez creados, los paquetes son independientes y portátiles; se pueden instalar desde un stick USB.  Los paquetes se firman criptográficamente para asegurarse de que se originan en la entidad que notifican.
+CNABs puede contener diferentes tipos de tecnologías de instalación. Este aspecto permite elementos como gráficos de Helm, plantillas de terraform y guías de ansible para coexistir en el mismo paquete. Una vez creados, los paquetes son independientes y portátiles; se pueden instalar desde un stick USB.  Los paquetes se firman criptográficamente para asegurarse de que se originan en la entidad que notifican.
 
 El núcleo de un CNAB es un archivo denominado `bundle.json` . Este archivo define el contenido de la agrupación, se terraform o imágenes o cualquier otro elemento. En la figura 11-9 se define un CNAB que invoca algunos terraform. No obstante, tenga en cuenta que en realidad se define una imagen de invocación que se usa para invocar terraform. Cuando se empaqueta, el archivo de Docker que se encuentra en el directorio *CNAB* se integra en una imagen de Docker, que se incluirá en la agrupación. Tener terraform instalado dentro de un contenedor de Docker en el paquete significa que los usuarios no necesitan tener terraform instalado en su equipo para ejecutar la agrupación.
 
@@ -70,7 +70,7 @@ El núcleo de un CNAB es un archivo denominado `bundle.json` . Este archivo defi
 
 **Figura 10-18** : un archivo de terraform de ejemplo
 
-`bundle.json`También define un conjunto de parámetros que se pasan en terraform. La parametrización de la agrupación permite la instalación en diversos entornos diferentes.
+`bundle.json`También define un conjunto de parámetros que se pasan en terraform. La parametrización de la agrupación permite la instalación en varios entornos diferentes.
 
 El formato CNAB también es flexible, lo que permite su uso en cualquier nube. Incluso se puede usar en soluciones locales como [OpenStack](https://www.openstack.org/).
 

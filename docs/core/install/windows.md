@@ -4,12 +4,12 @@ description: Obtenga información sobre las versiones de Windows en las que pued
 author: adegeo
 ms.author: adegeo
 ms.date: 01/06/2021
-ms.openlocfilehash: 57cebc562949627be70aabe24e75ad4567d072fd
-ms.sourcegitcommit: 3a8f1979a98c6c19217a1930e0af5908988eb8ba
+ms.openlocfilehash: 33492cc6fa6c64ec3a1d745a4fa0c6cc418f87bd
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98536130"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98898793"
 ---
 # <a name="install-net-on-windows"></a>Instalación de .NET en Windows
 
@@ -56,7 +56,7 @@ Las fechas de fin de servicio de Windows 10 están segmentadas por edición. En
 
 ## <a name="unsupported-releases"></a>Versiones no admitidas
 
-Las versiones siguientes de .NET ya ❌ no se admiten. Las descargas de estas siguen estando publicadas:
+Las versiones siguientes de .NET ya ❌ no se admiten. Las descargas de estas versiones siguen estando publicadas:
 
 - 3.0
 - 2.2
@@ -174,6 +174,18 @@ Las versiones siguientes de Windows son compatibles con .NET Core 2.1:
 
 Para obtener más información sobre los sistemas operativos compatibles con .NET Core 2.1, las distribuciones y la directiva del ciclo de vida, vea [Versiones de SO compatibles con .NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
 
+### <a name="offline-install-for-windows-7"></a>Instalación sin conexión para Windows 7
+
+Al realizar una instalación sin conexión para .NET Core 2.1 en Windows 7, primero deberá asegurarse de que se ha instalado en la máquina de destino la versión más reciente de [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm).
+
+La herramienta _certmgr.exe_ puede automatizar la instalación de un certificado y se obtiene de Visual Studio o Windows SDK. El siguiente comando se usa para instalar el certificado antes de ejecutar el instalador de .NET Core 2.1:
+
+```console
+certmgr.exe /add MicRooCerAut2011_2011_03_22.crt /s /r localMachine root
+```
+
+Asegúrese de revisar las dependencias necesarias para [Windows 7 a continuación](#additional-deps).
+
 ---
 
 <!-- markdownlint-disable MD001 -->
@@ -184,7 +196,7 @@ Se necesitan más dependencias en caso de que se instale el SDK o el entorno de 
 
 | Sistema operativo         | Prerrequisitos                                                                    |
 |--------------------------|----------------------------------------------------------------------------------|
-| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] <br> - KB3063858 [64 bits][kb64] / [32 bits][kb32] <br> - [MicrosoftRootCertificateAuthority2011.cer](https://go.microsoft.com/fwlink/?linkid=747875&clcid=0x409) (solo .NET Core 2.1) |
+| Windows 7 SP1 [ESU][esu] | - Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] <br> - KB3063858 [64 bits][kb64] / [32 bits][kb32] <br> - [Microsoft Root Certificate Authority 2011](https://www.microsoft.com/pkiops/Docs/Repository.htm) (solo instalador sin conexión de .NET Core 2.1) |
 | Windows Vista SP2       | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
 | Windows 8.1              | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
 | Windows Server 2008 R2   | Microsoft Visual C++ 2015-2019 Redistributable [64 bits][vcc64] / [32 bits][vcc32] |
@@ -288,7 +300,7 @@ Para obtener más información, vea [Opciones de la línea de comandos del insta
 
 ## <a name="download-and-manually-install"></a>Descarga e instalación de forma manual
 
-Como alternativa a los instaladores de Windows para .NET, puede descargar e instalar manualmente el SDK o el entorno de ejecución. La instalación manual se suele llevar a cabo durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet-core).
+Como alternativa a los instaladores de Windows para .NET, puede descargar e instalar manualmente el SDK o el entorno de ejecución. La instalación manual se suele realizar durante las pruebas de integración continua. Para un desarrollador o usuario, generalmente es mejor usar un [instalador](https://dotnet.microsoft.com/download/dotnet-core).
 
 Tanto el SDK como el entorno de ejecución de .NET se pueden instalar manualmente una vez que se han descargado. Si instala el SDK de .NET, no necesita instalar el entorno de ejecución correspondiente. En primer lugar, descargue una versión binaria del SDK o del entorno de ejecución de uno de los siguientes sitios:
 
@@ -331,5 +343,5 @@ Para obtener más información sobre el uso de .NET en un contenedor de Docker, 
 [esu]: /troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 [vcc64]: https://aka.ms/vs/16/release/vc_redist.x64.exe
 [vcc32]: https://aka.ms/vs/16/release/vc_redist.x86.exe
-[kb64]: https://www.microsoft.com/en-us/download/details.aspx?id=47442
-[kb32]: https://www.microsoft.com/en-us/download/details.aspx?id=47409
+[kb64]: https://www.microsoft.com/download/details.aspx?id=47442
+[kb32]: https://www.microsoft.com/download/details.aspx?id=47409

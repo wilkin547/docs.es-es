@@ -3,12 +3,12 @@ title: Trabajar con el modelo de área de trabajo del SDK de .NET Compiler Platf
 description: En este tema se proporciona una descripción del tipo que se usa para consultar y manipular el área de trabajo y los proyectos del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: d21873b132d5f0788033693a319e556feeac59a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b613c85c01cc054dea9dd4bb9cf0062ffedb08bf
+ms.sourcegitcommit: 8299abfbd5c49b596d61f1e4d09bc6b8ba055b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156888"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98899118"
 ---
 # <a name="work-with-a-workspace"></a>Trabajar con un área de trabajo
 
@@ -24,7 +24,7 @@ Un área de trabajo es una representación activa de la solución como una colec
 
 También puede crear áreas de trabajo independientes desconectadas del entorno de host o que se usen en una aplicación sin entorno de host.
 
-## <a name="solutions-projects-documents"></a>Soluciones, proyectos, documentos
+## <a name="solutions-projects-and-documents"></a>Soluciones, proyectos y documentos
 
 Aunque un área de trabajo puede cambiar cada vez que se pulsa una tecla, puede trabajar con el modelo de la solución de forma aislada.
 

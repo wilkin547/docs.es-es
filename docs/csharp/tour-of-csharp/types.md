@@ -2,14 +2,16 @@
 title: 'Definición de tipos y sus miembros: un recorrido por C#'
 description: Los bloques de creación de los programas son los tipos. Aprenda a crear clases, estructuras, interfaces y mucho más en C#.
 ms.date: 08/06/2020
-ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: b1ce24611fec6fdf01d5ecb8d6ae974e147c78c5
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88559120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216608"
 ---
 # <a name="types-and-members"></a>Tipos y miembros
+
+En cuanto lenguaje orientado a objetos, C# admite los conceptos de encapsulación, herencia y polimorfismo. Una clase puede heredar directamente de una clase primaria e implementar cualquier número de interfaces. Los métodos que invalidan los métodos virtuales en una clase primaria requieren la palabra clave `override` como una manera de evitar redefiniciones accidentales. En C#, un struct es como una clase ligera; es un tipo asignado en la pila que puede implementar interfaces pero que no admite la herencia. C# también proporciona registros, que son tipos de clase cuyo propósito es, principalmente, almacenar valores de datos.
 
 ## <a name="classes-and-objects"></a>Clases y objetos
 

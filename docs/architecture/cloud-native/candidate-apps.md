@@ -2,13 +2,13 @@
 title: Aplicaciones candidatas para la nube nativa
 description: Obtenga información sobre los tipos de aplicaciones que se benefician de un enfoque nativo en la nube
 author: robvet
-ms.date: 05/14/2020
-ms.openlocfilehash: 8f00633a575dad12b0bc1d5adb83acac03db0659
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 443a7c1a1aaef078b33f352f597b33b768d989a3
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160949"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506193"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplicaciones candidatas para la nube nativa
 
@@ -40,7 +40,7 @@ El libro electrónico gratuito de Microsoft [modernizar las aplicaciones .net ex
 
 Las aplicaciones monolíticas que no son críticas se benefician en gran medida de una migración rápida de elevación y desplazamiento ([lista para la infraestructura en la nube](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). En este caso, la carga de trabajo local se hospeda en una máquina virtual en la nube, sin cambios. Este enfoque utiliza el [modelo de IaaS (infraestructura como servicio)](https://azure.microsoft.com/overview/what-is-iaas/). Azure incluye varias herramientas, como [Azure Migrate](https://azure.microsoft.com/services/azure-migrate/), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)y [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) para facilitar este movimiento. Aunque esta estrategia puede producir un ahorro de costos, estas aplicaciones no se diseñaron normalmente para desbloquear y aprovechar las ventajas de la informática en la nube.
 
-Las aplicaciones monolíticas que son críticas para el negocio a menudo se benefician de una migración mejorada de elevación y desplazamiento (*optimizada*para la nube). Este enfoque incluye optimizaciones de implementación que habilitan los servicios en la nube clave, sin cambiar la arquitectura básica de la aplicación. Por ejemplo, podría incluir la aplicación en un [contenedor](/virtualization/windowscontainers/about/) e implementarla en un orquestador de contenedores, como [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/), que se describe más adelante en este libro. Una vez en la nube, la aplicación podría consumir otros servicios en la nube, como bases de datos, colas de mensajes, supervisión y almacenamiento en caché distribuida.
+Las aplicaciones monolíticas que son críticas para el negocio a menudo se benefician de una migración mejorada de elevación y desplazamiento (*optimizada* para la nube). Este enfoque incluye optimizaciones de implementación que habilitan los servicios en la nube clave, sin cambiar la arquitectura básica de la aplicación. Por ejemplo, podría incluir la aplicación en un [contenedor](/virtualization/windowscontainers/about/) e implementarla en un orquestador de contenedores, como [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/), que se describe más adelante en este libro. Una vez en la nube, la aplicación podría consumir otros servicios en la nube, como bases de datos, colas de mensajes, supervisión y almacenamiento en caché distribuida.
 
 Por último, las aplicaciones monolíticas que realizan funciones estratégicas de empresa podrían beneficiarse mejor de un enfoque nativo de la *nube* , el asunto de este libro. Este enfoque proporciona agilidad y velocidad. Pero se trata de un costo de replataforma, rediseño y reescritura de código.
 
@@ -74,11 +74,11 @@ Con la introducción, ahora profundizaremos en una mirada mucho más detallada e
 
 - [Microservicios de .NET: arquitectura para aplicaciones .NET en contenedor](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
+- [Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows](https://dotnet.microsoft.com/download/thank-you/modernizing-existing-net-apps-ebook)
 
 - [Patrones nativos en la nube de Cornelia Davis](https://www.manning.com/books/cloud-native-patterns)
 
-- [Más allá de la aplicación de doce factores](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
+- [Más allá de la aplicación Twelve-Factor](https://content.pivotal.io/blog/beyond-the-twelve-factor-app)
 
 - [Qué es la infraestructura como código](/azure/devops/learn/what-is-infrastructure-as-code)
 

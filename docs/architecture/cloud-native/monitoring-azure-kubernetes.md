@@ -1,13 +1,13 @@
 ---
 title: Supervisión en Azure Kubernetes Service
 description: Supervisión en Azure Kubernetes Service
-ms.date: 05/13/2020
-ms.openlocfilehash: 3900f169b9be4f807e72392da38a1224d6ce28e3
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: d044337150edddac9e24218ccaeaace1f413e654
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91163705"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506037"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Supervisión en Azure Kubernetes Service
 
@@ -26,10 +26,10 @@ La información de registro y métrica se recopila no solo de los contenedores q
 
 La instalación de los recopiladores de registros es diferente en los clústeres de [Windows](/azure/azure-monitor/insights/containers#configure-a-log-analytics-windows-agent-for-kubernetes) y [Linux](/azure/azure-monitor/insights/containers#configure-a-log-analytics-linux-agent-for-kubernetes) . Sin embargo, en ambos casos, la colección de registros se implementa como un [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)Kubernetes, lo que significa que el recopilador de registros se ejecuta como un contenedor en cada uno de los nodos.
 
-Independientemente del orquestador o del sistema operativo que ejecute el demonio de Azure Monitor, la información de registro se reenvía a las mismas herramientas de Azure Monitor con las que los usuarios están familiarizados. Esto garantiza una experiencia paralela en entornos que mezclen distintos orígenes de registro, como un entorno híbrido de Kubernetes/Azure Functions.
+Independientemente del orquestador o del sistema operativo que ejecute el demonio de Azure Monitor, la información de registro se reenvía a las mismas herramientas de Azure Monitor con las que los usuarios están familiarizados. Este enfoque garantiza una experiencia paralela en entornos que mezclen distintos orígenes de registro, como un entorno híbrido de Kubernetes/Azure Functions.
 
 ![Un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución. ](./media/containers-dashboard.png)
- **Figura 7-11**. Un panel de ejemplo que muestra información de registro y métrica de varios contenedores en ejecución.
+ **Figura 7-11**. Un panel de ejemplo que muestra información de registro y métrica de muchos contenedores en ejecución.
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

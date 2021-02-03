@@ -1,13 +1,13 @@
 ---
 title: Azure Monitor
 description: El uso de Azure Monitor para obtener visibilidad en el sistema se está ejecutando.
-ms.date: 07/05/2020
-ms.openlocfilehash: 65e17740dba49c3ac3f6e13462897b5342da6710
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: a93b71db642e05a830b20b80d8387c24d35ea8c1
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91160975"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506180"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -43,7 +43,7 @@ StormEvents
 En la figura 7-13 se muestran los resultados de esta Application Insights consulta.
 
 ![Application Insights la ](./media/application_insights_example.png)
- **figura 7-13**de resultados de la consulta. Application Insights resultados de la consulta.
+ **figura 7-13** de resultados de la consulta. Application Insights resultados de la consulta.
 
 Hay una [animación para experimentar con consultas Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples) . Leer [consultas de ejemplo](/azure/kusto/query/samples) también puede ser instructivo.
 
@@ -74,7 +74,7 @@ Cuando se desencadena, las alertas pueden realizar una amplia variedad de tareas
 
 A medida que se identifican las causas comunes de las alertas, las alertas se pueden mejorar con detalles sobre las causas comunes de las alertas y los pasos que deben seguirse para resolverlos. Las implementaciones de aplicaciones nativas en la nube de gran madurez pueden optar por iniciar tareas de recuperación automática, que realizan acciones como la eliminación de nodos con errores de un conjunto de escalado o la activación de una actividad de escalado automático. Finalmente, es posible que ya no sea necesario reactivar al personal de la llamada en 2AM para resolver un problema en el sitio activo, ya que el sistema podrá ajustarse a sí mismo para compensar o al menos Limp, hasta que alguien llegue al trabajo la mañana siguiente.
 
-Azure Monitor aprovecha automáticamente el aprendizaje automático para comprender los parámetros operativos normales de las aplicaciones implementadas. Esto le permite detectar los servicios que funcionan fuera de sus parámetros normales. Por ejemplo, el tráfico de día de la semana típico en el sitio podría ser 10.000 solicitudes por minuto. Y después, en una semana determinada, el número de solicitudes alcanza una cantidad muy inusual de 20.000 solicitudes por minuto. La [detección inteligente](/azure/azure-monitor/app/proactive-diagnostics) observará esta desviación de la norma y desencadenará una alerta. Al mismo tiempo, el análisis de tendencias es lo suficientemente inteligente como para evitar la activación de falsos positivos cuando se espera la carga del tráfico.
+Azure Monitor aprovecha automáticamente el aprendizaje automático para comprender los parámetros operativos normales de las aplicaciones implementadas. Este enfoque permite detectar servicios que funcionan fuera de sus parámetros normales. Por ejemplo, el tráfico de día de la semana típico en el sitio podría ser 10.000 solicitudes por minuto. Y después, en una semana determinada, el número de solicitudes alcanza una cantidad muy inusual de 20.000 solicitudes por minuto. La [detección inteligente](/azure/azure-monitor/app/proactive-diagnostics) observará esta desviación de la norma y desencadenará una alerta. Al mismo tiempo, el análisis de tendencias es lo suficientemente inteligente como para evitar la activación de falsos positivos cuando se espera la carga del tráfico.
 
 ## <a name="references"></a>Referencias
 

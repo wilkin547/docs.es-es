@@ -5,13 +5,13 @@ author: robvet
 no-loc:
 - Blazor
 - Blazor WebAssembly
-ms.date: 05/13/2020
-ms.openlocfilehash: 9ed6906bd388a1ddef7f97bbaac001b4274853f9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 8667f2d3a7a19aa6dffdd8ce8bef103eab5cc54f
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91158089"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505705"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -61,7 +61,7 @@ gRPC está integrado en el SDK de .NET Core 3,0 y versiones posteriores. Las sig
 - Visual Studio Code
 - la CLI de dotnet
 
-El SDK incluye herramientas para el enrutamiento de puntos de conexión, IoC integrado y registro. El servidor Web Kestrel de código abierto admite conexiones HTTP/2. En la figura 4-20 se muestra una plantilla de Visual Studio 2019 que scaffolding un proyecto de esqueleto para un servicio de gRPC. Tenga en cuenta que .NET Core es totalmente compatible con Windows, Linux y macOS.
+El SDK incluye herramientas para el enrutamiento de puntos de conexión, IoC integrado y registro. El servidor Web Kestrel de código abierto admite conexiones HTTP/2. En la figura 4-20 se muestra una plantilla de Visual Studio 2019 que scaffolding un proyecto de esqueleto para un servicio de gRPC. Observe cómo .NET es totalmente compatible con Windows, Linux y macOS.
 
 ![Compatibilidad con gRPC en Visual Studio 2019](./media/visual-studio-2019-grpc-template.png)
 
@@ -93,19 +93,19 @@ En el momento en que se redactó este documento, gRPC se usa principalmente con 
 
 ## <a name="grpc-implementation"></a>implementación de gRPC
 
-La arquitectura de referencia de microservicios, [eShop en contenedores](https://github.com/dotnet-architecture/eShopOnContainers), de Microsoft, muestra cómo implementar gRPC Services en aplicaciones de .net Core. En la figura 4-22 se presenta la arquitectura de back-end.
+La arquitectura de referencia de microservicios, [eShop en contenedores](https://github.com/dotnet-architecture/eShopOnContainers), de Microsoft, muestra cómo implementar gRPC Services en aplicaciones .net. En la figura 4-22 se presenta la arquitectura de back-end.
 
 ![Arquitectura de back-end para eShop en contenedores](./media/eshop-with-aggregators.png)
 
 **Figura 4-22**. Arquitectura de back-end para eShop en contenedores
 
-En la ilustración anterior, observe cómo eShop adopta el [back-end para el patrón de Front](/azure/architecture/patterns/backends-for-frontends) -ends (BFF) exponiendo varias puertas de enlace de API. En este capítulo se describe el patrón BFF. Preste mucha atención al microservicio del agregador (en gris) que se encuentra entre la puerta de enlace de API de la compra web y los microservicios de compra de back-end. El agregador recibe una única solicitud de un cliente, la envía a varios microservicios, agrega los resultados y los devuelve al cliente que realiza la solicitud. Estas operaciones suelen requerir la comunicación sincrónica como para generar una respuesta inmediata. En eShop, las llamadas de back-end del agregador se realizan mediante gRPC como se muestra en la figura 4-23.
+En la ilustración anterior, observe cómo eShop adopta el [back-end para el patrón de Front](/azure/architecture/patterns/backends-for-frontends) -ends (BFF) exponiendo varias puertas de enlace de API. En este capítulo se describe el patrón BFF. Preste mucha atención al microservicio del agregador (en gris) que se encuentra entre el Web-Shopping la puerta de enlace de API y los microservicios de compra de back-end. El agregador recibe una única solicitud de un cliente, la envía a varios microservicios, agrega los resultados y los devuelve al cliente que realiza la solicitud. Estas operaciones suelen requerir la comunicación sincrónica como para generar una respuesta inmediata. En eShop, las llamadas de back-end del agregador se realizan mediante gRPC como se muestra en la figura 4-23.
 
 ![gRPC en eShop en contenedores](./media/grpc-implementation.png)
 
 **Figura 4-23**. gRPC en eShop en contenedores
 
-la comunicación de gRPC requiere componentes de cliente y de servidor. En la ilustración anterior, observe cómo el agregador de compras implementa un cliente de gRPC. El cliente realiza llamadas sincrónicas de gRPC (en rojo) a microservicios de back-end, cada una de las cuales implementa un servidor de gRPC. Tanto el cliente como el servidor aprovechan las ventajas de la estructura gRPC integrada desde el SDK de .NET Core. El *código auxiliar* del lado cliente proporciona la fontanería para invocar llamadas gRPC remotas. Los componentes del lado servidor proporcionan mecanismos gRPC que las clases de servicio personalizadas pueden heredar y consumir.
+la comunicación de gRPC requiere componentes de cliente y de servidor. En la ilustración anterior, observe cómo el agregador de compras implementa un cliente de gRPC. El cliente realiza llamadas sincrónicas de gRPC (en rojo) a microservicios de back-end, cada una de las cuales implementa un servidor de gRPC. Tanto el cliente como el servidor aprovechan las ventajas de la estructura gRPC integrada del SDK de .NET. El *código auxiliar* del lado cliente proporciona la fontanería para invocar llamadas gRPC remotas. Los componentes del lado servidor proporcionan mecanismos gRPC que las clases de servicio personalizadas pueden heredar y consumir.
 
 Los microservicios que exponen una API de RESTful y la comunicación de gRPC requieren varios puntos de conexión para administrar el tráfico. Abriría un punto de conexión que escucha el tráfico HTTP para las llamadas RESTful y otro para llamadas gRPC. El punto de conexión de gRPC debe configurarse para el protocolo HTTP/2 que se requiere para la comunicación de gRPC.
 

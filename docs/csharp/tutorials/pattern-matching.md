@@ -4,12 +4,12 @@ description: En este tutorial avanzado se muestra cómo usar técnicas de coinci
 ms.date: 10/06/2020
 ms.technology: csharp-whats-new
 ms.custom: contperf-fy21q1
-ms.openlocfilehash: 730098bf599dfc855676c86ab7a6e7f3ef7658f1
-ms.sourcegitcommit: d0990c1c1ab2f81908360f47eafa8db9aa165137
+ms.openlocfilehash: be1c330973859df62cd4706e5f6f9ca4326fb221
+ms.sourcegitcommit: 4d5e25a46aa7cd0d29b4b9227b92987354d444c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97513229"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98794816"
 ---
 # <a name="tutorial-use-pattern-matching-to-build-type-driven-and-data-driven-algorithms"></a>Tutorial: Uso de la coincidencia de patrones para compilar algoritmos basados en tipos y basados en datos.
 
@@ -152,7 +152,7 @@ La autoridad encargada de los peajes quiere incentivar que los vehículos viajen
 - Los buses que viajan con menos del 50 % de su capacidad pagan USD 2 adicionales.
 - Los buses que viajan con más del 90 % de su capacidad tienen un descuento de USD 1.
 
-Estas reglas se pueden implementar con el **patrón de propiedad** en la misma expresión switch. El patrón de propiedad examina las propiedades del objeto una vez que se determina el tipo. El caso único de `Car` se amplía a cuatro casos distintos:
+Estas reglas se pueden implementar con el **patrón de propiedad** en la misma expresión switch. Un patrón de propiedades es una cláusula `when` que compara un valor de propiedad con un valor constante. El patrón de propiedad examina las propiedades del objeto una vez que se determina el tipo. El caso único de `Car` se amplía a cuatro casos distintos:
 
 ```csharp
 vehicle switch

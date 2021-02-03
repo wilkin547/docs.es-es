@@ -2,12 +2,12 @@
 title: EventCounters de .NET Core
 description: En este artículo se aprende qué son los EventCounters, cómo se implementan y cómo se usan.
 ms.date: 08/07/2020
-ms.openlocfilehash: 08180b5580d2e7fe782fbd531a26872715825cdf
-ms.sourcegitcommit: 4b79862c5b41fbd86cf38f926f6a49516059f6f2
+ms.openlocfilehash: 843f1ec645bf7f52fd4f85e30d183e6e21fee5c6
+ms.sourcegitcommit: 78eb25647b0c750cd80354ebd6ce83a60668e22c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97678207"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99065069"
 ---
 # <a name="eventcounters-in-net-core"></a>EventCounters de .NET Core
 
@@ -195,11 +195,11 @@ Puede usar los valores de un contador por medio de la API <xref:System.Diagnosti
 
 En primer lugar, es necesario habilitar el <xref:System.Diagnostics.Tracing.EventSource> que genera el valor del contador. Invalide el método <xref:System.Diagnostics.Tracing.EventListener.OnEventSourceCreated%2A?displayProperty=nameWithType> para obtener una notificación cuando se cree un <xref:System.Diagnostics.Tracing.EventSource> y, si es el <xref:System.Diagnostics.Tracing.EventSource> correcto con los EventCounters, puede llamar a <xref:System.Diagnostics.Tracing.EventListener.EnableEvents%2A?displayProperty=nameWithType> en él. Esta es una invalidación de ejemplo:
 
-:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="16-27":::
+:::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs" range="11-22":::
 
 #### <a name="sample-code"></a>Código de ejemplo
 
-Esta es una clase <xref:System.Diagnostics.Tracing.EventListener> de ejemplo que imprime todos los nombres y valores de contador del <xref:System.Diagnostics.Tracing.EventSource> del entorno de ejecución de .NET, para publicar sus contadores internos (`System.Runtime`) en algún intervalo.
+Esta es una clase <xref:System.Diagnostics.Tracing.EventListener> de ejemplo que imprime todos los nombres y valores de contador de <xref:System.Diagnostics.Tracing.EventSource> del entorno de ejecución de .NET para publicar sus contadores internos (`System.Runtime`) cada segundo.
 
 :::code language="csharp" source="snippets/EventCounters/SimpleEventListener.cs":::
 

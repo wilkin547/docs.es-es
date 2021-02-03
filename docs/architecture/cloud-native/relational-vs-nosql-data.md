@@ -2,13 +2,13 @@
 title: Soluciones relacionales y datos NoSQL
 description: Más información sobre los datos relacionales y NoSQL en aplicaciones nativas de la nube
 author: robvet
-ms.date: 05/17/2020
-ms.openlocfilehash: 11db5cdca06b9c2c8ce12598456c4b147ac379ba
-ms.sourcegitcommit: 98d20cb038669dca4a195eb39af37d22ea9d008e
+ms.date: 01/19/2021
+ms.openlocfilehash: 1148778b68c90586187d927eccd9b733403ede44
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434860"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505516"
 ---
 # <a name="relational-vs-nosql-data"></a>Soluciones relacionales y datos NoSQL
 
@@ -191,7 +191,7 @@ Al volver a platformar aplicaciones monolíticas en una arquitectura nativa en l
 
 | Proveedor | Descripción  |
 | :-------- | :-------- |
-| API DE SQL | API propietaria que admite documentos JSON y consultas basadas en SQL |
+| API SQL | API propietaria que admite documentos JSON y consultas basadas en SQL |
 | API de Mongo DB | Admite API de Mongo DB y documentos JSON|
 | API de Gremlin | Admite Gremlin API con nodos basados en gráficos y representaciones de datos perimetrales |
 | Cassandra API | Admite la API de Casandra para representaciones de datos de columnas anchas |  
@@ -206,7 +206,7 @@ En la tabla anterior, tenga en cuenta la opción [TABLE API](/azure/cosmos-db/ta
 
 |  | Azure Table Storage  | Azure Cosmos DB  |
 | :-------- | :-------- |:-------- |
-| Latencia | Fast (rápido) | Latencia de milisegundos de un solo dígito para lecturas y escrituras en cualquier parte del mundo |
+| Latencia | Rápido | Latencia de milisegundos de un solo dígito para lecturas y escrituras en cualquier parte del mundo |
 | Throughput | Límite de 20.000 operaciones por tabla | 10 millones operaciones por tabla |
 | Distribución global | Una sola región con una región de lectura secundaria única opcional | Distribuciones llave en mano a todas las regiones con conmutación automática por error |
 | Indización | Solo disponible para las propiedades de clave de fila y partición | Indexación automática de todas las propiedades |
@@ -233,7 +233,7 @@ Azure Cosmos DB ofrece cinco [modelos de coherencia](/azure/cosmos-db/consistenc
 | Ocasional | No hay garantía de ordenación para las lecturas. Finalmente, las réplicas convergerán. |
 | Prefijo constante | Las lecturas siguen siendo eventuales, pero los datos se devuelven en el orden en que se escriben. |
 | Sesión | Garantiza que se pueden leer los datos escritos durante la sesión actual. Es el nivel de coherencia predeterminado. |
-| De obsolescencia entrelazada | Lee las escrituras finales por el intervalo que especifique. |  
+| De obsolescencia limitada | Lee las escrituras finales por el intervalo que especifique. |  
 | Alta  | Se garantiza que las lecturas devuelven la última versión confirmada de un elemento. Un cliente nunca ve una lectura parcial o no confirmada. |  
 
 En el artículo que se [encuentra detrás de la bola: Cosmos dB se han explicado los niveles de coherencia](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/), el administrador de programas de Microsoft Jeremy Likness proporciona una excelente explicación de los cinco modelos.
@@ -262,14 +262,14 @@ Internamente, Cosmos DB administra automáticamente la ubicación de las [partic
 
 Cloud Native Computing Foundation (CNCF) incluye varios proyectos de base de datos NewSQL.
 
-| Project | Características |
+| Proyecto | Características |
 | :-------- | :-------- |
 | BASE de Cockroach |Base de datos relacional compatible con ACID que se escala globalmente. Agregar un nuevo nodo a un clúster y CockroachDB se encarga de equilibrar los datos entre las instancias y las zonas geográficas. Crea, administra y distribuye réplicas para garantizar la confiabilidad. Es de código abierto y está disponible libremente.  |
 | TiDB | Una base de datos de código abierto que admite cargas de trabajo de procesamiento analítico y transaccional híbridos (HTAP). Es compatible con MySQL y ofrece escalabilidad horizontal, coherencia alta y alta disponibilidad.  TiDB actúa como un servidor MySQL. Puede seguir usando las bibliotecas de cliente de MySQL existentes, sin necesidad de realizar cambios de código completos en la aplicación. |
 | YugabyteDB | Una base de datos SQL distribuida de código abierto y de alto rendimiento. Admite una latencia de consulta baja, resistencia contra errores y distribución de datos global. YugabyteDB es compatible con PostgressSQL y controla las cargas de trabajo de OLTP y escalabilidad horizontal de Internet. El producto también admite NoSQL y es compatible con Cassandra. |
 |Vitess | Vitess es una solución de base de datos para implementar, escalar y administrar clústeres de gran tamaño de instancias de MySQL. Puede ejecutarse en una arquitectura de nube pública o privada. Vitess combina y extiende muchas características y características de MySQL importantes, así como la compatibilidad con el particionamiento vertical y horizontal. Creado por YouTube, Vitess ha estado atendiendo todo el tráfico de base de datos de YouTube desde 2011. |
 
-Los proyectos de código abierto de la ilustración anterior están disponibles desde Cloud Native Computing Foundation. Tres de las ofertas son productos de base de datos completos, que incluyen compatibilidad con .NET Core. El otro, Vitess, es un sistema de agrupación en clústeres de bases de datos que escala horizontalmente grandes clústeres de instancias de MySQL.
+Los proyectos de código abierto de la ilustración anterior están disponibles desde Cloud Native Computing Foundation. Tres de las ofertas son productos de base de datos completos, que incluyen compatibilidad con .NET. El otro, Vitess, es un sistema de agrupación en clústeres de bases de datos que escala horizontalmente grandes clústeres de instancias de MySQL.
 
 Un objetivo de diseño clave para las bases de datos de NewSQL es trabajar de forma nativa en Kubernetes, aprovechando la resistencia y la escalabilidad de la plataforma.
 

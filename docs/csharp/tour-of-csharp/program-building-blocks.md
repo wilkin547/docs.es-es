@@ -2,12 +2,12 @@
 title: Bloques de creación de "programas" de C#
 description: Obtenga información sobre miembros, expresiones e instrucciones de C#. Los tipos contienen miembros que se escriben. Estos miembros se crean a partir de instrucciones y expresiones.
 ms.date: 08/06/2020
-ms.openlocfilehash: e4350f2c2b6005fb59dd868f0f7f628bd07b0053
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 0ac45eee180b60062a328fca9ab5c63a1537debe
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "93342701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216621"
 ---
 # <a name="program-building-blocks"></a>Bloques de creación de programas
 
@@ -189,7 +189,7 @@ A diferencia de otros miembros, los constructores de instancias no se heredan. U
 
 Las *propiedades* son una extensión natural de los campos. Ambos son miembros con nombre con tipos asociados y la sintaxis para acceder a los campos y las propiedades es la misma. Pero a diferencia de los campos, las propiedades no denotan ubicaciones de almacenamiento. Las propiedades tienen *descriptores de acceso* que especifican las instrucciones ejecutadas cuando se leen o escriben sus valores.
 
-Una propiedad se declara como un campo, salvo que la declaración finaliza con un descriptor de acceso get o un descriptor de acceso set escrito entre los delimitadores `{` y `}` en lugar de finalizar en un punto y coma. Una propiedad que tiene un descriptor de acceso get y un descriptor de acceso set es una *propiedad de lectura y escritura*, una propiedad que tiene solo un descriptor de acceso get es una *propiedad de solo lectura* y una propiedad que tiene solo un descriptor de acceso set es una *propiedad de solo escritura*.
+Una propiedad se declara como un campo, salvo que la declaración finaliza con un descriptor de acceso get o un descriptor de acceso set escrito entre los delimitadores `{` y `}` en lugar de finalizar en un punto y coma. Una propiedad que tiene un descriptor de acceso get y un descriptor de acceso set es una *propiedad de lectura y escritura*. Una propiedad que solo tiene un descriptor de acceso get es una *propiedad de solo lectura*. Una propiedad que solo tiene un descriptor de acceso set es una *propiedad de solo escritura*.
 
 Un descriptor de acceso get corresponde a un método sin parámetros con un valor devuelto del tipo de propiedad. Un descriptor de acceso set corresponde a un método con un solo parámetro denominado value y ningún tipo de valor devuelto. El descriptor de acceso get calcula el valor de la propiedad. El descriptor de acceso set proporciona un nuevo valor para la propiedad. Cuando la propiedad es el destino de una asignación, o el operando de `++` o `--`, se invoca al descriptor de acceso set. En otros casos en los que se hace referencia a la propiedad, se invoca al descriptor de acceso get.
 

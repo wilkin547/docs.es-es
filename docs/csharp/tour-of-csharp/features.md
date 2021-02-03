@@ -1,13 +1,13 @@
 ---
 title: 'Recorrido por C#: áreas principales del lenguaje'
-description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
+description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje. Este artículo contiene una encuesta sobre las principales características del lenguaje.
 ms.date: 08/06/2020
-ms.openlocfilehash: a73399643ada05a4bfb17fadd17bf3267514e99d
-ms.sourcegitcommit: 0802ac583585110022beb6af8ea0b39188b77c43
+ms.openlocfilehash: 943701b544dd3495fa2286e804e2566da146cb45
+ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "93400753"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99216660"
 ---
 # <a name="major-language-areas"></a>Áreas principales del lenguaje
 
@@ -21,11 +21,11 @@ Una matriz [***array** _](../programming-guide/arrays/index.md) es una estructur
 
 Los tipos de matriz son tipos de referencia, y la declaración de una variable de matriz simplemente establece un espacio reservado para una referencia a una instancia de matriz. Las instancias de matriz reales se crean dinámicamente en tiempo de ejecución mediante el operador `new`. La operación `new` especifica la _*_longitud_*_ de la nueva instancia de matriz, que luego se fija para la vigencia de la instancia. Los índices de los elementos de una matriz van de `0` a `Length - 1`. El operador `new` inicializa automáticamente los elementos de una matriz a su valor predeterminado, que, por ejemplo, es cero para todos los tipos numéricos y `null` para todos los tipos de referencias.
 
-En el ejemplo siguiente se crea una matriz de elementos `int`, se inicializa la matriz y se imprime el contenido de la matriz.
+En el ejemplo siguiente se crea una matriz de elementos `int`, se inicializa y se imprime su contenido.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="ArraysSample":::
 
-Este ejemplo se crea y se pone en funcionamiento en una _*_matriz unidimensional_*_. C# también admite _*_matrices multidimensionales_*_. El número de dimensiones de un tipo de matriz, conocido también como _*_rango_*_ del tipo de matriz, es una más el número de comas escritas entre los corchetes del tipo de matriz. En el ejemplo siguiente se asignan una matriz unidimensional, bidimensional y tridimensional, respectivamente.
+Este ejemplo se crea y se pone en funcionamiento en una _*_matriz unidimensional_*_. C# también admite _*_matrices multidimensionales_*_. El número de dimensiones de un tipo de matriz, conocido también como _*_clasificación_*_ del tipo de matriz, es una más el número de comas entre los corchetes del tipo de matriz. En el ejemplo siguiente se asignan una matriz unidimensional, bidimensional y tridimensional, respectivamente.
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="DeclareArrays":::
 
@@ -110,7 +110,7 @@ Todas las clases de atributos se derivan de la clase base <xref:System.Attribute
 
 En este ejemplo se adjunta un atributo `HelpAttribute` a la clase `Widget`. También se agrega otro atributo `HelpAttribute` al método `Display` en la clase. Los constructores públicos de una clase de atributos controlan la información que se debe proporcionar cuando el atributo se adjunta a una entidad de programa. Se puede proporcionar información adicional haciendo referencia a las propiedades públicas de lectura y escritura de la clase de atributos (como la referencia a la propiedad `Topic` usada anteriormente).
 
-Los metadatos definidos por atributos pueden leerse y manipularse en tiempo de ejecución mediante reflexión. Cuando se solicita un atributo determinado mediante esta técnica, se invoca al constructor de la clase de atributos con la información proporcionada en el origen del programa y se devuelve la instancia de atributo resultante. Si se proporciona información adicional mediante propiedades, dichas propiedades se establecen en los valores dados antes de devolver la instancia del atributo.
+Los metadatos definidos por atributos pueden leerse y manipularse en tiempo de ejecución mediante reflexión. Cuando se solicita un atributo determinado mediante esta técnica, se invoca el constructor de la clase de atributos con la información proporcionada en el origen del programa. Se devuelve la instancia del atributo resultante. Si se proporciona información adicional mediante propiedades, dichas propiedades se establecen en los valores dados antes de devolver la instancia del atributo.
 
 El siguiente ejemplo de código demuestra cómo obtener las `HelpAttribute`instancias asociadas a la clase `Widget` y su método `Display`.
 

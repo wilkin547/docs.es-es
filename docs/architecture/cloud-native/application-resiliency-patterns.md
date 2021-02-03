@@ -2,23 +2,23 @@
 title: Patrones de resistencia de las aplicaciones
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de resistencia de aplicaciones
 author: robvet
-ms.date: 05/13/2020
-ms.openlocfilehash: e81d6e1d6b95cf0053de3ba557068ff458a59dc9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.date: 01/19/2021
+ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91161157"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505926"
 ---
 # <a name="application-resiliency-patterns"></a>Patrones de resistencia de las aplicaciones
 
 La primera línea de defensa es la resistencia de las aplicaciones.
 
-Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. [Polly](http://www.thepollyproject.org/) es una biblioteca completa de control de errores y resistencia de .net que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly apunta a las aplicaciones compiladas con el .NET Framework o .NET Core. En la tabla siguiente se describen las características de resistencia, llamadas `policies` , disponibles en la biblioteca Polly. Se pueden aplicar individualmente o agruparse.
+Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. [Polly](http://www.thepollyproject.org/) es una biblioteca completa de control de errores y resistencia de .net que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly tiene como destino aplicaciones compiladas con el .NET Framework o .NET 5. En la tabla siguiente se describen las características de resistencia, llamadas `policies` , disponibles en la biblioteca Polly. Se pueden aplicar individualmente o agruparse.
 
 | Directiva | Experiencia |
 | :-------- | :-------- |
-| Volver a intentar | Configura las operaciones de reintento en las operaciones designadas. |
+| Reintento | Configura las operaciones de reintento en las operaciones designadas. |
 | Disyuntor | Bloquea las operaciones solicitadas para un período predefinido cuando los errores superan un umbral configurado |
 | Tiempo de espera | Establece el límite de tiempo durante el cual un llamador puede esperar una respuesta. |
 | Compartimentado | Restringe las acciones a un grupo de recursos de tamaño fijo para evitar que las llamadas que producen errores impidan un recurso. |
@@ -38,7 +38,7 @@ Observe cómo en la figura anterior las directivas de resistencia se aplican a l
 
 Pregunta: ¿reintentaría un código de Estado HTTP de 403-prohibido? No. En este caso, el sistema funciona correctamente, pero informa al llamador de que no está autorizado para realizar la operación solicitada. Se debe tener cuidado para reintentar solo las operaciones causadas por errores.
 
-Como se recomienda en el capítulo 1, los desarrolladores de Microsoft que crean aplicaciones nativas de la nube deben tener como destino la plataforma .NET Core. La versión 2,1 presentó la biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para crear instancias de cliente http para interactuar con recursos basados en URL. Al sustituir la clase HTTPClient original, la clase Factory admite muchas características mejoradas, una de las cuales es una [integración estrecha](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) con la biblioteca de resistencia Polly. Con él, puede definir fácilmente directivas de resistencia en la clase de inicio de la aplicación para controlar los errores parciales y los problemas de conectividad.
+Como se recomienda en el capítulo 1, los desarrolladores de Microsoft que crean aplicaciones nativas de la nube deben tener como destino la plataforma .NET. La versión 2,1 presentó la biblioteca [HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore) para crear instancias de cliente http para interactuar con recursos basados en URL. Al sustituir la clase HTTPClient original, la clase Factory admite muchas características mejoradas, una de las cuales es una [integración estrecha](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md) con la biblioteca de resistencia Polly. Con él, puede definir fácilmente directivas de resistencia en la clase de inicio de la aplicación para controlar los errores parciales y los problemas de conectividad.
 
 A continuación, vamos a expandir los patrones de reintento y de disyuntor.
 
@@ -82,7 +82,7 @@ Tenga en cuenta que la intención del patrón de disyuntor es *diferente* de la 
 
 ## <a name="testing-for-resiliency"></a>Pruebas de resistencia
 
-Las pruebas de resistencia no siempre se pueden realizar de la misma manera que se prueba la funcionalidad de la aplicación (mediante la ejecución de pruebas unitarias, pruebas de integración, etc.). En su lugar, debe comprobar cómo se realiza la carga de trabajo de un extremo a otro en condiciones de error que solo se producen de forma intermitente. Por ejemplo: inserción de errores mediante procesos bloqueados, certificados expirados, hacer que los servicios dependientes no estén disponibles, etc. Se pueden usar marcos como [caos-Monkey](https://github.com/Netflix/chaosmonkey) para realizar pruebas de caos.
+Las pruebas de resistencia no siempre se pueden realizar de la misma manera que se prueba la funcionalidad de la aplicación (mediante la ejecución de pruebas unitarias, pruebas de integración, etc.). En su lugar, debe probar cómo realiza la carga de trabajo de un extremo a otro en condiciones de error, que solo se producen de forma intermitente. Por ejemplo: inserción de errores mediante procesos bloqueados, certificados expirados, hacer que los servicios dependientes no estén disponibles, etc. Se pueden usar marcos como [caos-Monkey](https://github.com/Netflix/chaosmonkey) para realizar pruebas de caos.
 
 La resistencia de la aplicación es una para controlar las operaciones solicitadas problemáticas. Pero es solo la mitad de la historia. A continuación, se tratan las características de resistencia disponibles en la nube de Azure.
 

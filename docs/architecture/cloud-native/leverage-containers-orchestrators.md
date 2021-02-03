@@ -1,13 +1,13 @@
 ---
 title: Aprovechamiento de contenedores y orquestadores
 description: Aprovechar los contenedores de Docker y los orquestadores de Kubernetes en Azure
-ms.date: 05/31/2020
-ms.openlocfilehash: 0ca69b71aa7d414a7bc55253b123020d49468dee
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.date: 01/19/2021
+ms.openlocfilehash: 63ac91b05a88dc13b7c62e6e04eecb0550cd4652
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672518"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99505759"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Aprovechamiento de contenedores y orquestadores
 
@@ -184,12 +184,12 @@ Visual Studio admite el desarrollo de Docker para aplicaciones basadas en Web. A
 Cuando se selecciona esta opción, el proyecto se crea con un `Dockerfile` en su raíz, que se puede usar para compilar y hospedar la aplicación en un contenedor de Docker. En la ilustración 3 se muestra un Dockerfile de ejemplo -6. git
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
 RUN dotnet restore "eShopWeb/eShopWeb.csproj"

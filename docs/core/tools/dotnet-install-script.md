@@ -2,12 +2,12 @@
 title: Scripts de dotnet-install
 description: Obtenga información sobre los scripts de dotnet-install para instalar el SDK de .NET y el entorno de ejecución compartido.
 ms.date: 09/22/2020
-ms.openlocfilehash: a1598a84aa31aeac970f0493d1481651164d733e
-ms.sourcegitcommit: b201d177e01480a139622f3bf8facd367657a472
+ms.openlocfilehash: 1904d0322774de25aeba7e7a53ab36ce135d685d
+ms.sourcegitcommit: 7e42488c2f8f63f6d499b5f8fb1dec5bac9ad254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2020
-ms.locfileid: "94634447"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98957887"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referencia de scripts de dotnet-install
 
@@ -157,9 +157,15 @@ Los scripts de instalación no actualizan el Registro en Windows. Solo descargan
   - `aspnetcore`: el entorno de tiempo de ejecución compartido `Microsoft.AspNetCore.App`.
   - `windowsdesktop`: el entorno de tiempo de ejecución compartido `Microsoft.WindowsDesktop.App`.
 
-- **`--runtime-id <RID>`**
+- **`--runtime-id <RID>` [En desuso]**
 
-  Especifica el [identificador de entorno de ejecución](../rid-catalog.md) para el que se van a instalar las herramientas. Use `linux-x64` para Linux portátil. (Solo es válido para Linux/macOS).
+  Especifica el [identificador de entorno de ejecución](../rid-catalog.md) para el que se van a instalar las herramientas. Use `linux-x64` para Linux portátil. (Solo es válido para Linux/macOS y versiones anteriores a .NET Core 2.1).
+
+  **`--os <OPERATING_SYSTEM>`**
+
+  Especifica el sistema operativo para el que se instalan las herramientas. Los valores posibles son `osx`, `linux`, `linux-musl`, `freebsd` y `rhel.6`. (Es válido para .NET Core 2.1 y versiones posteriores).
+
+  El parámetro es opcional y solo se debe usar cuando sea necesario invalidar el sistema operativo detectado por el script.
 
 - **`-SharedRuntime|--shared-runtime`**
 
