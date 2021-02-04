@@ -3,22 +3,22 @@ title: Patrones de resistencia de las aplicaciones
 description: Diseño de aplicaciones .NET nativas en la nube para Azure | Patrones de resistencia de aplicaciones
 author: robvet
 ms.date: 01/19/2021
-ms.openlocfilehash: 9a59a7d93b61b0dea11680f6caf0bd3b68a0f853
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: 655df16ef58f1deb2d2f4d0487c47658499f2108
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505926"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99547725"
 ---
 # <a name="application-resiliency-patterns"></a>Patrones de resistencia de las aplicaciones
 
 La primera línea de defensa es la resistencia de las aplicaciones.
 
-Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. [Polly](http://www.thepollyproject.org/) es una biblioteca completa de control de errores y resistencia de .net que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly tiene como destino aplicaciones compiladas con el .NET Framework o .NET 5. En la tabla siguiente se describen las características de resistencia, llamadas `policies` , disponibles en la biblioteca Polly. Se pueden aplicar individualmente o agruparse.
+Aunque podría invertir un tiempo considerable en escribir su propio marco de resistencia, tales productos ya existen. [Polly](https://dotnetfoundation.org/projects/polly) es una biblioteca completa de control de errores y resistencia de .net que permite a los desarrolladores expresar directivas de resistencia de forma fluida y segura para subprocesos. Polly tiene como destino aplicaciones compiladas con el .NET Framework o .NET 5. En la tabla siguiente se describen las características de resistencia, llamadas `policies` , disponibles en la biblioteca Polly. Se pueden aplicar individualmente o agruparse.
 
-| Directiva | Experiencia |
+| Directiva de | Experiencia |
 | :-------- | :-------- |
-| Reintento | Configura las operaciones de reintento en las operaciones designadas. |
+| Volver a intentar | Configura las operaciones de reintento en las operaciones designadas. |
 | Disyuntor | Bloquea las operaciones solicitadas para un período predefinido cuando los errores superan un umbral configurado |
 | Tiempo de espera | Establece el límite de tiempo durante el cual un llamador puede esperar una respuesta. |
 | Compartimentado | Restringe las acciones a un grupo de recursos de tamaño fijo para evitar que las llamadas que producen errores impidan un recurso. |
