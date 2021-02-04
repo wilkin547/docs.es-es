@@ -2,12 +2,12 @@
 title: Registro con pila elástica
 description: Registro con la pila elástica, Logstash y Kibana
 ms.date: 01/19/2021
-ms.openlocfilehash: ebe7eef16d3b1a73d0fd3a010a509bbaf7be3fd5
-ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
+ms.openlocfilehash: f8dbcd68bf809715a10d0ea1ab36cf5ceb6a96a9
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99505822"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548089"
 ---
 # <a name="logging-with-elastic-stack"></a>Registro con pila elástica
 
@@ -17,7 +17,7 @@ Colectivamente, estas herramientas se conocen como la pila elástica o la pila d
 
 ## <a name="elastic-stack"></a>Pila elástica
 
-La pila elástica es una opción eficaz para recopilar información de un clúster de Kubernetes. Kubernetes admite el envío de registros a un punto de conexión de Elasticsearch y, en su [mayor parte](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), todo lo que necesita para empezar es establecer las variables de entorno como se muestra en la figura 7-5:
+La pila elástica es una opción eficaz para recopilar información de un clúster de Kubernetes. Kubernetes admite el envío de registros a un punto de conexión de Elasticsearch y, en su [mayor parte](https://v1-19.docs.kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/), todo lo que necesita para empezar es establecer las variables de entorno como se muestra en la figura 7-5:
 
 ```kubernetes
 KUBE_LOGGING_DESTINATION=elasticsearch

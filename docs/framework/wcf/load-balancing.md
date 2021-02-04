@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: ccafce51cadba588dc6c4e8fc8b476f3cd8ee699
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ccb915c33be217d2a8d00a54c5bd57384286140f
+ms.sourcegitcommit: 4df8e005c074ceb1f978f007b222fe253be2baf3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262715"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99548102"
 ---
 # <a name="load-balancing"></a>Equilibrio de carga
 
@@ -85,7 +85,9 @@ Una manera de aumentar la capacidad de las aplicaciones de Windows Communication
 
  <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> pueden tener la carga equilibrada gracias a las técnicas de equilibrio de carga de HTTP siempre que se hagan algunas modificaciones a la configuración de enlace predeterminada.  
   
-- Desactive el establecimiento del contexto de seguridad: puede lograrse definiendo la propiedad <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> de <xref:System.ServiceModel.WSHttpBinding> en `false`. Como alternativa, si se requieren sesiones de seguridad, es posible usar sesiones de seguridad con estado como se describe en el tema [sesiones seguras](./feature-details/secure-sessions.md) . Las sesiones de seguridad con estado permiten al servicio seguir estando sin estado ya que se transmitirá todo el estado para la sesión de seguridad con cada solicitud como parte del token de seguridad de protección. Tenga en cuenta que para habilitar una sesión de seguridad con estado, es necesario utilizar <xref:System.ServiceModel.Channels.CustomBinding> o <xref:System.ServiceModel.Channels.Binding> definido por el usuario ya que no se exponen los valores de configuración necesarios en <xref:System.ServiceModel.WSHttpBinding> y <xref:System.ServiceModel.WSDualHttpBinding> que son proporcionados por el sistema.  
+- Desactivar el establecimiento del contexto de seguridad o usar sesiones de seguridad con estado. El establecimiento del contexto de seguridad se puede desactivar estableciendo la <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> propiedad de <xref:System.ServiceModel.WSHttpBinding> en `false` . Si está utilizando <xref:System.ServiceModel.WSDualHttpBinding> o se requieren sesiones de seguridad, es posible usar sesiones de seguridad con estado como se describe en [sesiones seguras](./feature-details/secure-sessions.md). Las sesiones de seguridad con estado permiten al servicio permanecer sin estado, ya que todo el estado de la sesión de seguridad se transmite con cada solicitud como parte del token de seguridad de protección. Para habilitar una sesión de seguridad con estado, debe usar <xref:System.ServiceModel.Channels.CustomBinding> o definido por el usuario <xref:System.ServiceModel.Channels.Binding> , ya que los valores de configuración necesarios no se exponen en el proporcionado por el sistema <xref:System.ServiceModel.WSHttpBinding> y en <xref:System.ServiceModel.WSDualHttpBinding> .
+
+- Si desactiva el establecimiento del contexto de seguridad, también debe desactivar la negociación de credenciales de servicio. Para desactivarla, establezca la <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential> propiedad en <xref:System.ServiceModel.WSHttpBinding> `false` . Para deshabilitar la negociación de credenciales de servicio, es posible que tenga que especificar explícitamente la identidad del punto de conexión en el cliente.
   
 - No utilice las sesiones confiables. Esta característica está desactivada de manera predeterminada.  
   
