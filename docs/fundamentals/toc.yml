@@ -1296,6 +1296,8 @@ items:
                 href: ../core/dependency-loading/loading-resources.md
               - name: Carga de bibliotecas no administradas
                 href: ../core/dependency-loading/loading-unmanaged.md
+              - name: Recopilación de información detallada de carga de ensamblados
+                href: ../core/dependency-loading/collect-details.md
           - name: Tutoriales
             items:
               - name: Creación de una aplicación de .NET con complementos
@@ -2133,6 +2135,8 @@ items:
             href: ../standard/native-interop/customize-struct-marshaling.md
           - name: Personalización de la serialización de parámetros
             href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Multiplataforma P/Invoke
+            href: ../standard/native-interop/cross-platform.md
           - name: Guía de interoperabilidad
             href: ../standard/native-interop/best-practices.md
           - name: Juegos de caracteres y serialización
