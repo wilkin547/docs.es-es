@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: 4b0464cc81cf0908a907f8305ea4e35b716c18fb
-ms.sourcegitcommit: 965a5af7918acb0a3fd3baf342e15d511ef75188
+ms.openlocfilehash: b81531d77bae1dce9d6cf58fe1b5439bf79f9e9c
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94830667"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506375"
 ---
 # <a name="memory--and-span-related-types"></a>Tipos relacionados con el intervalo y la memoria
 
@@ -21,7 +21,7 @@ A partir de .NET Core 2.1, .NET incluye una serie de tipos interrelacionados qu
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, una versión inmutable de la estructura <xref:System.Span%601>.
 
-- <xref:System.Memory%601?displayProperty=nameWithType>, una región contigua de memoria que se asigna en el montón administrado en lugar de en la pila. Se puede respaldar una instancia de <xref:System.Memory%601> mediante cualquier matriz de tipo `T` o un elemento <xref:System.String>. Dado que puede almacenarse en el montón administrado, <xref:System.Memory%601> no tiene ninguna de las limitaciones de <xref:System.Span%601>.
+- <xref:System.Memory%601?displayProperty=nameWithType>, un contenedor en un área de memoria contigua. Se puede respaldar una instancia de <xref:System.Memory%601> mediante cualquier matriz de tipo `T`, un elemento <xref:System.String> o un administrador de memoria. Como puede almacenarse en el montón administrado, <xref:System.Memory%601> no tiene ninguna de las limitaciones de <xref:System.Span%601>.
 
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>, una versión inmutable de la estructura <xref:System.Memory%601>.
 
@@ -34,6 +34,8 @@ A partir de .NET Core 2.1, .NET incluye una serie de tipos interrelacionados qu
 - <xref:System.ArraySegment%601>, un contenedor para un determinado número de elementos de matriz, que comienza en un índice determinado.
 
 - <xref:System.MemoryExtensions?displayProperty=nameWithType>, una colección de métodos de extensión para convertir cadenas, matrices y segmentos de matriz en bloques de <xref:System.Memory%601>.
+
+<xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Memory%601?displayProperty=nameWithType> y sus homólogos de solo lectura están diseñados para permitir la creación de algoritmos que eviten la copia de memoria o la asignación en el montón administrado más de lo necesario. Su creación (ya sea mediante `Slice` o sus constructores) no implica la duplicación de los búferes subyacentes: solo se actualizan las referencias y desplazamientos relevantes, que representan la "vista" de la memoria encapsulada.
 
 > [!NOTE]
 > En plataformas anteriores, <xref:System.Span%601> y <xref:System.Memory%601> están disponibles en el [paquete NuGet System.Memory](https://www.nuget.org/packages/System.Memory/).

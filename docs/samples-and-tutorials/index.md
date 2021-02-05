@@ -3,19 +3,19 @@ title: Ejemplos y tutoriales de .NET
 description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core y el lenguaje C# que lo ayuda a conocer más sobre .NET.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/19/2020
-ms.openlocfilehash: 00718491df00e5747ba6e0043b70dc1019dd906b
-ms.sourcegitcommit: 636af37170ae75a11c4f7d1ecd770820e7dfe7bd
+ms.date: 02/01/2021
+ms.openlocfilehash: 3f54221f0b22b2ee24750c01885e39a6eec39e0e
+ms.sourcegitcommit: f2ab02d9a780819ca2e5310bbcf5cfe5b7993041
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91805016"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99506414"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
-La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET Core, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn/). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#view-and-download-samples).
+La documentación de .NET contiene una serie de ejemplos y tutoriales con información sobre .NET. En este tema se describe cómo buscar, ver y descargar los tutoriales y ejemplos de .NET, ASP.NET Core y C#. Puede encontrar recursos para obtener información sobre el lenguaje de programación F# en el [sitio de la Fundación F#](https://fsharp.org/learn/). Si le interesa explorar C# usando un editor de código en línea, comience con [este tutorial interactivo](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1) y continúe con el [tutorial interactivo de C#](../csharp/tutorials/intro-to-csharp/index.md). Para obtener instrucciones sobre cómo ver y descargar código de ejemplo, vea la sección [Consulta y descarga de ejemplos](#view-and-download-samples).
 
-## <a name="net-core"></a>.NET Core
+## <a name="net"></a>.NET
 
 ### <a name="samples"></a>Muestras
 
@@ -25,13 +25,15 @@ En esta guía se explica cómo crear una aplicación web de ASP.NET Core y las p
 
 ### <a name="tutorials"></a>Tutoriales
 
-**[Tutorial: Depuración de una aplicación de consola de .NET Core con Visual Studio Code](../core/tutorials/with-visual-studio-code.md)**
+**[Tutorial: Creación de una aplicación de consola de .NET con Visual Studio Code](../core/tutorials/with-visual-studio-code.md)**
 
-En este tutorial se explica cómo crear y ejecutar una aplicación de consola de .NET Core mediante Visual Studio Code y la CLI de .NET Core. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET Core.
+En este tutorial se muestra cómo crear y ejecutar una aplicación de consola de .NET mediante Visual Studio Code y la CLI de .NET. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET.
 
-**[Escribir bibliotecas con herramientas multiplataforma](../core/tutorials/libraries.md)**
+**[Tutorial: Creación de una biblioteca de clases de .NET con Visual Studio Code](../core/tutorials/library-with-visual-studio-code.md)**
 
-En este ejemplo se explica cómo escribir bibliotecas para .NET con la CLI de .NET Core. que proporcionan una experiencia eficaz y de bajo nivel que funciona en todos los sistemas operativos compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) está disponible en el repositorio dotnet/samples de GitHub.
+En este tutorial se muestra cómo escribir bibliotecas para .NET mediante Visual Studio Code y la CLI de .NET. Las tareas de proyecto, como crear, compilar y ejecutar un proyecto, se realizan mediante la CLI de .NET.
+
+Para más información sobre los tutoriales de .NET, consulte [Aprendizaje de .NET y las herramientas del SDK de .NET](../core/tutorials/index.md).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -83,13 +85,13 @@ En este tutorial se muestran las comunicaciones web, la serialización de JSON y
 
 Este tutorial muestra muchas de las características de LINQ y los elementos del lenguaje compatibles. El [ejemplo completo](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) está disponible en el repositorio dotnet/samples de GitHub.
 
-**[Tutorial: Creación de una aplicación de consola de .NET Core con Visual Studio para Mac](../core/tutorials/with-visual-studio-mac.md)**
+**[Tutorial: Creación de una aplicación de consola de .NET con Visual Studio para Mac](../core/tutorials/with-visual-studio-mac.md)**
 
-En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET Core con Visual Studio para Mac.
+En este tutorial se muestra cómo crear una sencilla aplicación de consola de .NET con Visual Studio para Mac.
 
-**[Creación de una biblioteca de .NET Standard en macOS mediante Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md)**
+**[Creación de una biblioteca de clases .NET en macOS mediante Visual Studio para Mac](../core/tutorials/library-with-visual-studio-mac.md)**
 
-En este tutorial se muestra cómo crear una biblioteca de .NET Standard con Visual Studio para Mac.
+En este tutorial se muestra cómo crear una biblioteca de clases de .NET con Visual Studio para Mac.
 
 **[Creación de una aplicación de .NET Core con complementos](../core/tutorials/creating-app-with-plugin-support.md)**
 
@@ -111,7 +113,7 @@ Muchos temas muestran el código fuente y los ejemplos que están disponibles pa
    * Clone el repositorio en modo local. Si se clona un repositorio de documentos directamente en el sistema local, no se podrán realizar confirmaciones directamente en el repositorio oficial, por lo que no será posible realizar contribuciones a la documentación más adelante. Use el procedimiento de bifurcación y clonación descrito anteriormente si desea seguir teniendo la oportunidad de contribuir a la documentación más adelante.
 1. Navegue por las carpetas del repositorio hasta la ubicación del ejemplo. La ruta de acceso relativa a la ubicación del ejemplo aparece en la barra de direcciones del explorador si sigue el vínculo al ejemplo.
 1. Para ejecutar un ejemplo, cuenta con varias opciones:
-   * Use la [CLI de .NET Core](../core/tools/index.md): en una ventana de consola, vaya hasta la carpeta del ejemplo y use los comandos de la CLI de dotnet.
+   * Utilice la [CLI de .NET](../core/tools/index.md). en una ventana de consola, vaya hasta la carpeta del ejemplo y use los comandos de la CLI de dotnet.
    * Use [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): abra el ejemplo; para ello, seleccione **Archivo > Abrir > Proyecto/Solución** en la barra de menús, vaya hasta la carpeta del proyecto de ejemplo y seleccione el archivo del proyecto ( *.csproj* o *.fsproj*).
    * Use [Visual Studio Code](https://code.visualstudio.com/): abra el ejemplo; para ello, seleccione **Archivo > Abrir carpeta** en la barra de menús y seleccione la carpeta del proyecto del ejemplo.
    * Use un IDE distinto que admita proyectos de .NET Core.

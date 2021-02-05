@@ -28,6 +28,8 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: Las propiedades de TableLayoutSettings producen una excepción InvalidEnumArgumentException.
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: TreeNodeCollection.Item produce una excepción si el nodo se asigna en otro lugar.
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
         - name: ".NET\_5.0"
           items:
             - name: Información general
@@ -260,6 +262,8 @@
                   href: serialization/5.0/options-honored-when-serializing-key-value-pairs.md
             - name: Windows Forms
               items:
+                - name: El código nativo no puede acceder a objetos Windows Forms.
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType se establece en WinExe
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView no restablece las fuentes personalizadas
@@ -566,8 +570,12 @@
                   href: windows-forms/6.0/notifyicon-text-max-text-length-increased.md
                 - name: Las propiedades de TableLayoutSettings producen una excepción InvalidEnumArgumentException.
                   href: windows-forms/6.0/tablelayoutsettings-apis-throw-invalidenumargumentexception.md
+                - name: TreeNodeCollection.Item produce una excepción si el nodo se asigna en otro lugar.
+                  href: windows-forms/6.0/treenodecollection-item-throws-argumentexception.md
             - name: ".NET\_5.0"
               items:
+                - name: El código nativo no puede acceder a objetos Windows Forms.
+                  href: windows-forms/5.0/winforms-objects-not-accessible-from-native-code.md
                 - name: OutputType se establece en WinExe
                   href: windows-forms/5.0/automatically-infer-winexe-output-type.md
                 - name: DataGridView no restablece las fuentes personalizadas
