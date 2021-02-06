@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: usar certificados X. 509 independientes para la firma y el cifrado'
 title: Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 ms.date: 03/30/2017
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a1cb72265d9fa2742718b88bd574efe4cc9a4918
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644247"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 
@@ -36,7 +37,7 @@ El diagrama siguiente muestra las clases principales que se utilizan, las clases
 
 ![Gráfico que muestra cómo se usan las credenciales del cliente](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-Para obtener más información acerca de las credenciales personalizadas, vea [Tutorial: Crear credenciales](walkthrough-creating-custom-client-and-service-credentials.md)de cliente y servicio personalizadas.
+Para obtener más información sobre las credenciales personalizadas, vea [Tutorial: crear credenciales de cliente y servicio personalizadas](walkthrough-creating-custom-client-and-service-credentials.md).
 
 Además, debe crear un comprobador de identidad personalizado y vincularlo a un elemento de enlace de seguridad en un enlace personalizado. También debe utilizar las credenciales personalizadas en lugar de las credenciales predeterminadas.
 
@@ -44,7 +45,7 @@ En el diagrama siguiente, se muestran las clases implicadas en el enlace persona
 
 ![Gráfico que muestra un elemento de enlace personalizado](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-Para obtener más información acerca de cómo crear un comprobador de identidad personalizado, consulte Cómo: [Procedimientos: Cree un comprobador](how-to-create-a-custom-client-identity-verifier.md)de identidad de cliente personalizado.
+Para obtener más información acerca de cómo crear un comprobador de identidad personalizado, consulte Cómo: [crear un comprobador de identidad de cliente personalizado](how-to-create-a-custom-client-identity-verifier.md).
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Para utilizar certificados independientes para la firma y el cifrado
 
@@ -97,4 +98,4 @@ Para obtener más información acerca de cómo crear un comprobador de identidad
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Tutorial: Creación de credenciales de cliente y servicio personalizadas](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Tutorial: Crear credenciales de cliente y servicio personalizadas](walkthrough-creating-custom-client-and-service-credentials.md)

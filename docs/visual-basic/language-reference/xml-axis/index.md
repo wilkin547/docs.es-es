@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: propiedades del eje XML (Visual Basic)'
 title: Propiedades de eje XML
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 5766d1f2a0b306374a33844e9e66d161badeb683
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 05919f7caeb293f5c9a4bc9ad12c5714da3025a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866484"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640425"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>Propiedades de eje XML (Visual Basic)
 
@@ -28,6 +29,6 @@ En los temas de esta sección se documenta la sintaxis de las propiedades del ej
 |[Propiedad de indexador de extensión](extension-indexer-property.md)|Describe cómo obtener acceso a los elementos individuales de una colección de <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> objetos o.|  
 |[Propiedad de valor XML](xml-value-property.md)|Describe cómo obtener acceso al valor del primer elemento de una colección de <xref:System.Xml.Linq.XElement> objetos o <xref:System.Xml.Linq.XAttribute> .|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [XML](../../programming-guide/language-features/xml/index.md)

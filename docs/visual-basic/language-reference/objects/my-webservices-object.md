@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: My. WebServices (objeto)'
 title: My.WebServices (Objeto)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 0b63b44c2cd9d55094fb83fed6c04e4de528a25c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e8d7ef8b349fef6d69b92d9df4a23222bd3c912e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867205"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640542"
 ---
 # <a name="mywebservices-object"></a>My.WebServices (Objeto)
 
 Proporciona propiedades para crear y obtener acceso a una sola instancia de cada servicio Web XML al que hace referencia el proyecto actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El objeto `My.WebServices` proporciona una instancia de cada servicio Web al que hace referencia el proyecto actual. Cada una de las instancias se crea a petición. Puede tener acceso a estos servicios Web a través de las propiedades del objeto `My.WebServices`. El nombre de la propiedad es igual que el nombre del servicio Web al que tiene acceso la propiedad. Cualquier clase que hereda de <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> es un servicio web. Para obtener información sobre cómo agregar servicios web a un proyecto, consulte [acceso a servicios Web de aplicaciones](../../developing-apps/programming/accessing-application-web-services.md).  
   
@@ -31,7 +32,7 @@ Proporciona propiedades para crear y obtener acceso a una sola instancia de cada
  Cada propiedad del `My.WebServices` objeto proporciona acceso a una instancia de un servicio Web al que hace referencia el proyecto actual. El nombre de la propiedad es el mismo que el nombre del servicio Web al que tiene acceso la propiedad y el tipo de propiedad es el mismo que el tipo del servicio Web.  
   
 > [!NOTE]
-> Si hay un conflicto de nombres, el nombre de la propiedad para tener acceso a un servicio web es *RootNamespace*_*namespace* \_ *ServiceName*. Por ejemplo, considere dos servicios web denominados `Service1` . Si uno de estos servicios está en el espacio de nombres raíz `WindowsApplication1` y en el espacio de nombres `Namespace1` , tendría acceso a ese servicio mediante `My.WebServices.WindowsApplication1_Namespace1_Service1` .  
+> Si hay un conflicto de nombres, el nombre de la propiedad para tener acceso a un servicio web es *RootNamespace* _ *namespace* \_ *ServiceName*. Por ejemplo, considere dos servicios web denominados `Service1` . Si uno de estos servicios está en el espacio de nombres raíz `WindowsApplication1` y en el espacio de nombres `Namespace1` , tendría acceso a ese servicio mediante `My.WebServices.WindowsApplication1_Namespace1_Service1` .  
   
  La primera vez que se obtiene acceso a una de las `My.WebServices` propiedades del objeto, se crea una nueva instancia del servicio Web y se almacena. Los accesos posteriores de esa propiedad devuelven esa instancia del servicio Web.  
   

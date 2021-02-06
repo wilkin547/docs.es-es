@@ -1,24 +1,25 @@
 ---
-title: Cómo registrar y configurar un moniker de servicio
+description: 'Más información acerca de cómo: registrar y configurar un moniker de servicio'
+title: Procedimiento para registrar y configurar un moniker de servicio
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: fc0b2d00bcc8e3b14c491446f16297c1036b783b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 9c6867941a5b96c6ced0f8e371e10697144bd121
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747096"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643467"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Cómo registrar y configurar un moniker de servicio
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Procedimiento para registrar y configurar un moniker de servicio
 
-Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF) dentro de una aplicación COM con un contrato con tipo, debe registrar los tipos con atributos necesarios en COM y configurar la aplicación COM y el moniker con el enlace necesario configuraciones.
+Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF) dentro de una aplicación COM con un contrato con tipo, debe registrar los tipos con atributos necesarios en COM y configurar la aplicación COM y el moniker con la configuración de enlace necesaria.
 
 ## <a name="register-the-required-attributed-types-with-com"></a>Registrar los tipos con atributos necesarios con COM
 
-1. Use la herramienta de [utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para recuperar el contrato de metadatos del servicio WCF. Esto genera el código fuente para un ensamblado de cliente de WCF y un archivo de configuración de la aplicación cliente.
+1. Use la herramienta de [utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) para recuperar el contrato de metadatos del servicio WCF. Esto genera el código fuente para un ensamblado de cliente de WCF y un archivo de configuración de la aplicación cliente.
 
 2. Asegúrese de que los tipos del ensamblado se marcan como `ComVisible`. Para ello, agregue el siguiente atributo al archivo *AssemblyInfo.CS* en el proyecto de Visual Studio.
 
@@ -37,7 +38,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
 
 ## <a name="configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Configurar la aplicación COM y el moniker con la configuración de enlace necesaria
 
-- Coloque las definiciones de enlace (generadas por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) en el archivo de configuración de la aplicación cliente generada) en el archivo de configuración de la aplicación cliente. Por ejemplo, para un ejecutable de Visual Basic 6.0 denominado CallCenterClient.exe, la configuración debe encontrarse en un archivo denominado CallCenterConfig.exe.config en el mismo directorio que la aplicación ejecutable. De este modo la aplicación cliente puede utilizar el moniker. Tenga en cuenta que la configuración de enlace no es necesaria si se usa uno de los tipos de enlace estándar que proporciona WCF.
+- Coloque las definiciones de enlace (generadas por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) en el archivo de configuración de la aplicación cliente generada en el archivo de configuración de la aplicación cliente. Por ejemplo, para un ejecutable de Visual Basic 6.0 denominado CallCenterClient.exe, la configuración debe encontrarse en un archivo denominado CallCenterConfig.exe.config en el mismo directorio que la aplicación ejecutable. De este modo la aplicación cliente puede utilizar el moniker. Tenga en cuenta que la configuración de enlace no es necesaria si se usa uno de los tipos de enlace estándar que proporciona WCF.
 
      El siguiente tipo está registrado:
 
@@ -60,7 +61,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1
     ```
 
-     or
+     o bien
 
     ```
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}
@@ -80,7 +81,7 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
     result = mathProxy.Add(3, 5)
     ```
 
-     En este ejemplo, la definición del `Binding1` de configuración de enlace se almacena en un archivo de configuración con un nombre adecuado para la aplicación cliente, como *vb6appname. exe. config*.
+     En este ejemplo, la definición de la configuración de enlace `Binding1` se almacena en un archivo de configuración con un nombre adecuado para la aplicación cliente, como *vb6appname.exe.config*.
 
     > [!NOTE]
     > Puede utilizar un código similar en una aplicación C#, C++, o cualquier otra aplicación de lenguaje .NET.
@@ -96,6 +97,6 @@ Antes de utilizar el moniker del servicio Windows Communication Foundation (WCF)
 
      De este modo se modifican las definiciones de la interfaz importada para que todos los métodos devuelvan `HResult`. Cualquier otro valor devuelto se convierte en parámetros de salida. La ejecución global de los métodos sigue siendo la misma. Esto permite determinar la causa de una excepción al llamar a un método en el proxy. Esta funcionalidad sólo está disponible en el código de C++.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

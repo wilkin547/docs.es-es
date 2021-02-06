@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <section> elemento'
 title: <section> elemento
 ms.date: 05/01/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-ms.openlocfilehash: 88f74c02ef627e9136e4437ffa150c36445266a3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7756f7ee3be2391a0d068708f3719083640b5595
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153740"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639944"
 ---
 # <a name="section-element"></a>Elemento \<section>
 
@@ -50,14 +51,14 @@ Los atributos siguientes solo son aplicables a las aplicaciones ASP.NET. El sist
 
 |                     | Descripción |
 | ------------------- | ----------- |
-| **allowDefinition** | Especifica el archivo de configuración en el que se puede usar la sección. Utilice uno de los valores siguientes:<br><br>**En todas partes**<br>Permite que la sección se use en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite que la sección se use solo en el archivo de configuración del equipo (*Machine. config*).<br>**MachineToApplication**<br>Permite usar la sección en el archivo de configuración del equipo o en el archivo de configuración de la aplicación. |
+| **allowDefinition** | Especifica el archivo de configuración en el que se puede usar la sección. Utilice uno de los valores siguientes:<br><br>**En todas partes**<br>Permite que la sección se use en cualquier archivo de configuración. Este es el valor predeterminado.<br>**MachineOnly**<br>Permite que la sección se use solo en el archivo de configuración del equipo (*Machine.config*).<br>**MachineToApplication**<br>Permite usar la sección en el archivo de configuración del equipo o en el archivo de configuración de la aplicación. |
 | **allowLocation**   | Determina si la sección se puede usar dentro del **\<location>** elemento. Utilice uno de los valores siguientes:<br><br>**true**<br>Permite que la sección se use dentro del **\<location>** elemento. Este es el valor predeterminado.<br>**false**<br>No permite el uso de la sección dentro del **\<location>** elemento. |
 
 ## <a name="parent-elements"></a>Elementos primarios
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configSections>** Element](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
+| [**\<configSections>** Elemento](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
 | [**\<sectionGroup>** Element](sectiongroup-element-for-configsections.md) | Define un espacio de nombres para las secciones de configuración. |
 
 > [!NOTE]
@@ -65,13 +66,13 @@ Los atributos siguientes solo son aplicables a las aplicaciones ASP.NET. El sist
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
 
 ## <a name="remarks"></a>Observaciones
 
 Al declarar una sección de configuración, básicamente se define un nuevo elemento para el archivo de configuración. El nuevo elemento contiene la configuración que lee un controlador de sección de configuración (es decir, una clase que implementa la <xref:System.Configuration.IConfigurationSectionHandler> interfaz). Los atributos y elementos secundarios de una sección que se define dependen del controlador de la sección que se usa para leer la configuración.
 
-Declarar un controlador de sección de configuración en el archivo *Machine. config* permite usar la sección de configuración en cualquier archivo de configuración de la aplicación de ese equipo, a menos que el atributo **allowDefinition** especifique lo contrario.
+Declarar un controlador de sección de configuración en el archivo *Machine.config* le permite usar la sección de configuración en cualquier archivo de configuración de la aplicación de ese equipo, a menos que el atributo **allowDefinition** especifique lo contrario.
 
 ## <a name="example"></a>Ejemplo
 
@@ -92,8 +93,8 @@ En el ejemplo siguiente se muestra cómo definir una sección de configuración 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine.config*) y *Web.config* archivos que no están en el nivel de directorio de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema del archivo de configuración para el .NET Framework](index.md)

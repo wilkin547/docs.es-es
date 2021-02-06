@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <callbackDebug>'
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 02632cc3f668bb9e4cc6f8c9726d7bcb3cab2c5d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 911d738764baa800831c19f4e5d181118d1d3e00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183824"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639216"
 ---
 # \<callbackDebug>
 
@@ -20,7 +21,7 @@ Especifica la depuración del servicio para un objeto de devolución de llamada 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-endpointbehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<callbackDebug>**  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```xml  
 <callbackDebug includeExceptionDetailInFaults="Boolean" />
@@ -50,7 +51,7 @@ Especifica la depuración del servicio para un objeto de devolución de llamada 
 |-------------|-----------------|  
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.CallbackDebugElement>
 - <xref:System.ServiceModel.Description.CallbackDebugBehavior>

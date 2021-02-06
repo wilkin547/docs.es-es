@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <add> elemento para <listeners> para <source>'
 title: <add> (Elemento <listeners> ) para <source>
 ms.date: 03/30/2017
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-ms.openlocfilehash: a5abaffbad986785b8879297883da9614f0a8103
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cb2145738b81574397a8de13f68d0d4e572f20cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201699"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639840"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<add> (Elemento \<listeners> ) para \<source>
 
@@ -123,9 +124,9 @@ Agrega un agente de escucha a la colección `Listeners` para un origen de seguim
 </configuration>
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Esquema de configuración de seguimiento y depuración](index.md)
 - [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

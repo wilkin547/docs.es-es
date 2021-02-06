@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: escribir una extensión para ServiceContractGenerator'
 title: Procedimiento para escribir una extensión para ServiceContractGenerator
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 3a81204ca470b9b94d9e8f048ecccbade74b2e10
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 29d6d65cc3f9d29009f72b9a0c81b6cb1f472ac9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254641"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644208"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Procedimiento para escribir una extensión para ServiceContractGenerator
 

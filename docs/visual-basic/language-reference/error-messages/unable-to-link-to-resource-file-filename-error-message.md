@@ -1,4 +1,5 @@
 ---
+description: "Más información acerca de: BC30144: no se puede vincular al archivo de recursos ' <filename> ': <error message>"
 title: "No se puede vincular al archivo de recursos '<filename>': <error message>"
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
-ms.openlocfilehash: 47c1733792da94d2543ce9c1237b626d0ba6c71f
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 79c4c99dee252ae32837a99378fbf32d7d0d8470
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92161626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640932"
 ---
 # <a name="bc30144-unable-to-link-to-resource-file-filename-error-message"></a>BC30144: no se puede vincular al archivo de recursos ' \<filename> ': \<error message>
 

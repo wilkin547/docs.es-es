@@ -1,15 +1,16 @@
 ---
-title: <bookmarkResumptionQueries>de WCF
+description: 'Más información sobre: <bookmarkResumptionQueries> de WCF'
+title: <bookmarkResumptionQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 94ff9f44f295b45c03e1bd8f52a85d6b7b0c6e3b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dfe631865549915760255b1df22ee970b806e368
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639372"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries>de WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries> de WCF
   
 Representa una colección de consultas que se usan para realizar el seguimiento de la reanudación de un marcador dentro de una instancia de flujo de trabajo. La consulta es necesaria para que un participante del seguimiento se suscriba a los registros de reanudación del marcador.  
   
@@ -59,7 +60,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<workflow>](../windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad `activityDefinitionId`.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>

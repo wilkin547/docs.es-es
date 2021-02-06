@@ -1,4 +1,5 @@
 ---
+description: "Más información sobre: BC30941: la estructura ' <structurename> ' debe contener al menos una variable miembro de instancia o una declaración de evento de instancia que no esté marcada como ' Custom '"
 title: La estructura '<structurename>' debe contener al menos una variable miembro de instancia o una declaración de evento de instancia que no esté marcada como 'Custom'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: 4e7ef82659c43be08ee444eaf3f4df663f7aaa53
-ms.sourcegitcommit: ff5a4eb5cffbcac9521bc44a907a118cd7e8638d
+ms.openlocfilehash: 08596997decd9d739ac95ad3e4191cb126b3efb3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92159656"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99641452"
 ---
 # <a name="bc30941-structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>BC30941: la estructura ' \<structurename> ' debe contener al menos una variable miembro de instancia o una declaración de evento de instancia que no esté marcada como ' Custom '
 

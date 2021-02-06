@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: operador + = (Visual Basic)'
 title: += (Operador)
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-ms.openlocfilehash: a3a37798a3ddb480ac5322c4b2d3e9396e739aa6
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: e5a6b8fcc75e44c00ee18fec9cd57e68b1218de7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873488"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640477"
 ---
 # <a name="-operator-visual-basic"></a>+= (Operador, Visual Basic)
 
@@ -30,12 +31,12 @@ variableorproperty += expression
 ## <a name="parts"></a>Partes  
 
  `variableorproperty`  
- Obligatorio. Cualquier valor numérico o `String` variable o propiedad.  
+ Necesario. Cualquier valor numérico o `String` variable o propiedad.  
   
  `expression`  
- Obligatorio. Cualquier expresión numérica o numérica `String` .  
+ Necesario. Cualquier expresión numérica o numérica `String` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento del lado izquierdo del `+=` operador puede ser una variable escalar simple, una propiedad o un elemento de una matriz. La variable o la propiedad no pueden ser de [solo lectura](../modifiers/readonly.md).  
   
@@ -62,7 +63,7 @@ variableorproperty += expression
   
  El valor de `num1` es ahora 13 y el valor de `str1` es ahora "103".  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [+ (Operador)](addition-operator.md)
 - [Operadores de asignación](assignment-operators.md)

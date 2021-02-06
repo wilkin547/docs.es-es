@@ -1,15 +1,16 @@
 ---
-title: <bookmarkResumptionQuery>de WCF
+description: 'Más información sobre: <bookmarkResumptionQuery> de WCF'
+title: <bookmarkResumptionQuery> de WCF
 ms.date: 03/30/2017
 ms.assetid: 755a34f0-87c9-4a1e-ae4d-0fb8a6fbdc0e
-ms.openlocfilehash: 8cb254599a9742305ec958fd77174f4c4b8a57c2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9dadab3e304a2507a404bf43c377df46d5b33dda
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "71834005"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639333"
 ---
-# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery>de WCF
+# <a name="bookmarkresumptionquery-of-wcf"></a>\<bookmarkResumptionQuery> de WCF
 
 Representa una consulta que se usa para realizar el seguimiento de la reanudación de un marcador dentro de una instancia de flujo de trabajo. La consulta es necesaria para que un participante del seguimiento se suscriba a los registros de reanudación del marcador.  
   
@@ -60,7 +61,7 @@ Ninguno.
 |-------------|-----------------|  
 |[\<bookmarkResumptionQueries>](bookmarkresumptionqueries-of-wcf.md)|Representa una colección de consultas que se usan para realizar el seguimiento de la reanudación de un marcador dentro de una instancia de flujo de trabajo.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>

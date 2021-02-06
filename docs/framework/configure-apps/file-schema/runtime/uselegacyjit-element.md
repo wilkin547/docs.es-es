@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <useLegacyJit> elemento'
 title: <useLegacyJit> (Elemento)
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
-ms.openlocfilehash: a126b8c0050a8d1fd96a3d090f9b018a9faa07a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a1449cbc69f0aa1b91cc427fbfc5b984bf605169
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73968851"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640009"
 ---
 # <a name="uselegacyjit-element"></a>\<useLegacyJit> (Elemento)
 
@@ -44,7 +45,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="child-elements"></a>Elementos secundarios
 
-None
+Ninguno
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -53,7 +54,7 @@ None
 | `configuration` | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |  
 | `runtime`       | Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.                                                        |  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 A partir de la .NET Framework 4,6, el Common Language Runtime utiliza de forma predeterminada un nuevo compilador de 64 bits para la compilación Just-in-Time (JIT). En algunos casos, esto puede dar lugar a una diferencia en el comportamiento del código de la aplicación que compiló JIT por la versión anterior del compilador JIT de 64 bits. Al establecer el `enabled` atributo del `<useLegacyJit>` elemento en `1` , puede deshabilitar el nuevo compilador JIT de 64 bits y compilar la aplicación con el compilador JIT de 64 bits heredado.  
   
@@ -91,8 +92,8 @@ El siguiente archivo de configuración deshabilita la compilación con el nuevo 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [\<runtime>Element](runtime-element.md)
-- [\<configuration>Element](../configuration-element.md)
+- [Elemento \<runtime>](runtime-element.md)
+- [Elemento \<configuration>](../configuration-element.md)
 - [Mitigación: Nuevo compilador JIT de 64 bits](../../../migration-guide/mitigation-new-64-bit-jit-compiler.md)

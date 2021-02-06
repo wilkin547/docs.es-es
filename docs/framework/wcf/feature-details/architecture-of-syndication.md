@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: arquitectura de sindicación'
 title: Arquitectura de distribución
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: bc8c9cfbdc4f5d8ee01dfcf5098cfbc74afc2467
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 274ec121629bcb4e596401ad989309d3ef02c128
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643740"
 ---
 # <a name="architecture-of-syndication"></a>Arquitectura de distribución
 
@@ -42,7 +43,7 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
  Dar formato a las clases:  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Una clase que serializa una instancia de <xref:System.ServiceModel.Syndication.SyndicationFeed> al formato Atom 1.0.|  
 |<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Una clase que serializa las clases derivadas de <xref:System.ServiceModel.Syndication.SyndicationFeed> al formato Atom 1.0.|  
@@ -55,7 +56,7 @@ La API de distribución está diseñada para proporcionar un modelo de programac
   
  Clases de modelo de objetos:  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Syndication.SyndicationCategory>|Una clase que representa la categoría de una fuente de distribución.|  
 |<xref:System.ServiceModel.Syndication.SyndicationContent>|Una clase base que representa el contenido de distribución.|  

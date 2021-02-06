@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de la compatibilidad con el almacenamiento en caché para los servicios Web HTTP de WCF
 title: Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 6ce3ceccde01879876960e0288cb600a3a20c204
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a1f7351566c06010ed70093a1cab3697ae0e9356
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96279342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643493"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Soporte de almacenamiento en memoria caché para servicios web HTTP de WCF
 
@@ -166,6 +167,6 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
 
  Las solicitudes que requieren autorización no deberían tener sus respuestas almacenadas en memoria caché, porque la autorización no se realiza cuando la respuesta se sirve desde la memoria caché.  Si se almacena en memoria caché tales respuestas, se introduce una vulnerabilidad de seguridad grave.  Normalmente, las solicitudes que requieren autorización proporcionan los datos específicos del usuario y, por consiguiente, el almacenamiento en caché del lado servidor no es beneficioso.  En tales situaciones, será más apropiado usar el almacenamiento en caché del lado cliente o, simplemente, no usar el almacenamiento en memoria caché.

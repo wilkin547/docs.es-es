@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <bindings>'
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: fe8f620668e35183890b8bba1f254a74c962f8d3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2cf5b42b8478e34a528cd36435023cac62bf0c1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139663"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639385"
 ---
 # \<bindings>
 
@@ -41,7 +42,7 @@ El orden de aparición de los elementos en la pila es importante, porque es el o
 
  Los enlaces personalizados se identifican mediante su atributo `name`. Para obtener más información sobre los enlaces personalizados, vea [enlaces personalizados](../../../wcf/extending/custom-bindings.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>

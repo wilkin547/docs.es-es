@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: configurar una confirmación de firma'
 title: Procedimiento para establecer una confirmación de firma
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 158ec2a5f74038f5c1ca1af847f57457a8881974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586928"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643194"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Procedimiento para establecer una confirmación de firma
 
@@ -25,7 +26,7 @@ Los procedimientos siguientes especifican cómo habilitar la confirmación de fi
 
 1. Cree una instancia de la clase <xref:System.ServiceModel.Channels.BindingElementCollection>.
 
-2. Cree una instancia de la <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> clase.
+2. Cree una instancia de la  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> clase.
 
 3. Establecer <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> en `true`.
 

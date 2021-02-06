@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <behaviorExtensions>'
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 27bf9e380df1586b42cbe96a628a794364fae743
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0bd641f8e26d309c592c07bcc19ff02897fe71cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639528"
 ---
 # \<behaviorExtensions>
 
@@ -53,7 +54,7 @@ Las extensiones de comportamiento le permiten al usuario crear los elementos de 
   
  Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](../../../deployment/how-the-runtime-locates-assemblies.md) y <xref:System.AppDomain.TypeResolve> .  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
 - [Configuración y extensión del tiempo de ejecución con comportamientos](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

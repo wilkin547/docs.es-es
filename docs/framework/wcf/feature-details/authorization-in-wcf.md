@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: autorización en WCF'
 title: Autorización en WCF
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 67da01508fbb8f14b6405b79445bdef297e63288
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3fda699a33d8b512d047232398e9cfac63661a85
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247491"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643714"
 ---
 # <a name="authorization-in-wcf"></a>Autorización en WCF
 
@@ -18,7 +19,7 @@ La autorización es el proceso para controlar el acceso y los derechos a los rec
   
 ## <a name="in-this-section"></a>En esta sección  
 
- [Mecanismos de control de acceso](access-control-mechanisms.md)  
+ [Mecanismos de Access Control](access-control-mechanisms.md)  
  Proporciona una breve descripción de los mecanismos de autorización en WCF y los usos sugeridos.  
   
  [Procedimiento para restringir el acceso con la clase PrincipalPermissionAttribute](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)  

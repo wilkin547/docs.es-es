@@ -1,15 +1,16 @@
 ---
+description: Más información acerca de la auditoría de eventos de seguridad
 title: Auditoría de eventos de seguridad
 ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 985004313c7d9843f2e9960805a6c0623d43a41f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 84eebeec5ebeec047d840e9902d52b4ae409599f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96234822"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643727"
 ---
 # <a name="auditing-security-events"></a>Auditoría de eventos de seguridad
 
@@ -49,7 +50,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
 
  La tabla siguiente describe las clases y propiedades utilizadas para programar el comportamiento de la auditoría.  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Habilita opciones de configuración para la auditoría como un comportamiento de servicio.|  
 |<xref:System.ServiceModel.AuditLogLocation>|Enumeración para especificar en qué registro escribir. Los valores posibles son Predeterminado, Aplicación y Seguridad. Si se selecciona Predeterminado, el sistema operativo determina la ubicación del registro real. Vea la sección "Elección de registro de eventos de seguridad o aplicación" más adelante en este tema.|  
@@ -82,7 +83,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   
  Si auditar está habilitado y no se especifica una `auditLogLocation`, el nombre del registro predeterminado es "Seguridad", para que la plataforma admita la escritura en el registro de seguridad; de lo contrario, el nombre será "Aplicación". Solo los sistemas operativos Windows Server 2003 y Windows Vista admiten la escritura en el registro de seguridad. Para obtener más información, vea la sección "sistema operativo" más adelante en este tema.  
   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
 
  Si un usuario malintencionado sabe que la auditoría está habilitada, el atacante puede enviar mensajes no válidos y de este modo hacer que se escriban entradas de auditoría. Si el registro de auditoría se rellena de esta manera, el sistema de auditoría falla. Para mitigar esto, establezca la propiedad <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> en `true` y use las propiedades del Visor de eventos para controlar el comportamiento de la auditoría.  
   
@@ -105,7 +106,7 @@ Las aplicaciones creadas con Windows Communication Foundation (WCF) pueden regis
   
 |Factor|Registro de aplicaciones|Registro de seguridad|  
 |------------|---------------------|------------------|  
-|Administración de la directiva de auditoría|No es aplicable.|La directiva de la autoridad de seguridad local (LSA) controla el registro de Seguridad, además de la configuración. También se ha de habilitar la categoría “Acceso a objetos de auditoría”.|  
+|Administración de la directiva de auditoría|No aplicable.|La directiva de la autoridad de seguridad local (LSA) controla el registro de Seguridad, además de la configuración. También se ha de habilitar la categoría “Acceso a objetos de auditoría”.|  
 |Experiencia de usuario predeterminada|Todos los usuarios autenticados pueden escribir en el registro de aplicaciones, por lo que no es necesario ningún paso de permiso adicional para los procesos de aplicación.|El proceso de aplicación (contexto) debe tener `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Vea también

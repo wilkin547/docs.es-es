@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <byteStreamMessageEncoding>'
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: ceb40558cd979a54f72c2e9aa88f3af47bee9b68
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9cbb4eacb1a960481ee262db662160b5a342e27f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183902"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639294"
 ---
 # \<byteStreamMessageEncoding>
 
@@ -48,7 +49,7 @@ Especifica la codificación de mensajes como un flujo de bytes, con la opción e
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

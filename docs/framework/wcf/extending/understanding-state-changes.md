@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Descripción de los cambios de estado'
 title: Introducción a los cambios de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: babc62206fc700fe68c2220c4f2cd717cd758d56
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e537a7421ffa8ab924e4e9e4ab841343245534b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96294057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644013"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
 
@@ -110,7 +111,7 @@ Invalide el método OnOpen para implementar lógica abierta personalizada como a
  ![Diagrama de flujo de entrada de los cambios de estado de ICommunicationObject. Close.](./media/understanding-state-changes/ico-close-process-override-onclose.gif)  
 Invalide el método OnClose para implementar la lógica del cierre personalizada, como cerrar un objeto de comunicación interno. Toda lógica de cierre elegante que se pueda bloquear durante mucho tiempo (por ejemplo, esperando a que el otro lado responda) se debería implementar en OnClose() porque toma un parámetro de tiempo de espera y porque no se llama como parte de Abort().  
   
- Anulación  
+ Abort  
   
  Condición previa: ninguna.  
 Condición posterior: el estado es Cerrado. Podría iniciar una excepción.  
@@ -142,14 +143,14 @@ Invalide el método OnAbort para implementar lógica de finalización personaliz
   
  Las excepciones iniciadas dependen del estado. La tabla siguiente muestra los diferentes estados y el tipo de excepción correspondiente iniciados llamando a ThrowIfXxx que se inicia en ese estado.  
   
-|State|¿Se ha llamado a Anular?|Excepción|  
+|Estado|¿Se ha llamado a Anular?|Excepción|  
 |-----------|----------------------------|---------------|  
 |Creado|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Apertura|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Abierto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
-|Cierre|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
+|Cierre|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
 |Cierre|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
-|Closed|Yes|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> en el caso de que una llamada anterior y explícita de Anular cerrara un objeto. Si llama a Cerrar en el objeto, se produce <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
+|Closed|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> en el caso de que una llamada anterior y explícita de Anular cerrara un objeto. Si llama a Cerrar en el objeto, se produce <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
 |Closed|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Error|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   

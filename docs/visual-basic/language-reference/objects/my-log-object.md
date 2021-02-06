@@ -1,21 +1,22 @@
 ---
+description: 'Más información acerca de: My. log (objeto)'
 title: My.Log (Objeto)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d8e27ec4f2583f84eec4eb78e6775d9ec3b8599e
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: f1a3cf537133120d8aa02d88d4fb1d10347969c3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867365"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640672"
 ---
 # <a name="mylog-object"></a>My.Log (Objeto)
 
 Proporciona una propiedad y métodos para escribir información sobre excepciones y eventos en los agentes de escucha de registro de la aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información acerca de los métodos y las propiedades del objeto `My.Log` , vea <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   

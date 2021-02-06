@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3507-ServiceEndpointAdded'
 title: 3507 - ServiceEndpointAdded
 ms.date: 03/30/2017
 ms.assetid: c068fc0e-07ee-4551-9824-ea7216e1fe37
-ms.openlocfilehash: 903071e7b1f89dc3489b8d3ac05427d699a33a7e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 7de51cb8908d3bf4b450c545c1a4c0f2bdc6a453
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240763"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631481"
 ---
 # <a name="3507---serviceendpointadded"></a>3507 - ServiceEndpointAdded
 
@@ -15,7 +16,7 @@ ms.locfileid: "96240763"
   
 |||  
 |-|-|  
-|ID|3507|  
+|Id.|3507|  
 |Palabras clave|WFServices|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  
@@ -33,6 +34,6 @@ ms.locfileid: "96240763"
 |Nombre del elemento de datos|Tipo del elemento de datos|Descripción|  
 |--------------------|--------------------|-----------------|  
 |Dirección|xs:string|Dirección del extremo.|  
-|Enlaces|xs:string|El enlace del punto de conexión.|  
+|Enlace|xs:string|El enlace del punto de conexión.|  
 |Contrato|xs:string|Contrato del punto de conexión.|  
 |AppDomain|xs:string|La cadena devuelta por AppDomain.CurrentDomain.FriendlyName.|

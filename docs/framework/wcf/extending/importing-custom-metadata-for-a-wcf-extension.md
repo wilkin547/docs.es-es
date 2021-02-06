@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo importar metadatos personalizados para una extensión WCF
 title: Importación de  metadatos personalizados para una extensión de WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b231ff676ffc81666713987a24605b8ae98bb6d6
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8fc0517298a7170941e7d3ed34b3ddfd9834c7c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644195"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importación de  metadatos personalizados para una extensión de WCF
 

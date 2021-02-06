@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo anticiparse a la adopción del Windows Communication Foundation: facilitar la migración futura'
 title: 'Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: bf3155f19e42787746d59ce7b593273522e2840a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6ea81b1dd01ed45ff62fa50c1b17442f88fc05af
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96245060"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643818"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipación de la adopción de Windows Communication Foundation: cómo facilitar la futura migración
 

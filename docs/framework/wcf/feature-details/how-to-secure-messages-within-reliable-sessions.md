@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: proteger mensajes dentro de sesiones confiables'
 title: Procedimiento para proteger mensajes dentro de sesiones confiables
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: cec9356467886be022d05ead55d5cb6ccddcd838
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 73ca0d543edc2445dc72264e7eccf6c1eb616313
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643363"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Procedimiento para proteger mensajes dentro de sesiones confiables
 

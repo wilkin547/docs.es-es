@@ -8,12 +8,12 @@ ms.custom: updateeachrelease
 helpviewer_keywords:
 - code analysis
 - code analyzers
-ms.openlocfilehash: efc440adb59da1ef9838ec5445d9c55544c14380
-ms.sourcegitcommit: 68c9d9d9a97aab3b59d388914004b5474cf1dbd7
+ms.openlocfilehash: 2cda5a23bbc90ca5dc2305b5d7023e8ea6120b79
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99216478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643077"
 ---
 # <a name="overview-of-net-source-code-analysis"></a>Información general sobre el análisis de código fuente de .NET
 
@@ -144,15 +144,13 @@ Siga estos pasos para habilitar el análisis de estilo de código en la compilac
 
 ## <a name="suppress-a-warning"></a>Suprimir una advertencia
 
-Para suprimir una infracción de regla, establezca la opción Severity para ese ID `none` . de regla en en un archivo EditorConfig. Por ejemplo:
+Una manera de suprimir una infracción de la regla es establecer la opción Severity para ese ID. de regla `none` en un archivo EditorConfig. Por ejemplo:
 
 ```ini
 dotnet_diagnostic.CA1822.severity = none
 ```
 
-Visual Studio proporciona formas adicionales de suprimir las advertencias de las reglas de análisis de código. Para obtener más información, vea [suprimir infracciones](/visualstudio/code-quality/use-roslyn-analyzers#suppress-violations).
-
-Para obtener más información sobre los niveles de gravedad de las reglas, consulte [configurar la gravedad](configuration-options.md#severity-level)de la regla.
+Para obtener más información y otras formas de suprimir las advertencias, vea [Cómo suprimir advertencias de análisis de código](suppress-warnings.md).
 
 ## <a name="third-party-analyzers"></a>Analizadores de terceros
 

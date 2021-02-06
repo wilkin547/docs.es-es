@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: Cómo: proteger los puntos de conexión de metadatos'
 title: Procedimiento para proteger puntos de conexión de metadatos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bcce3fd0708049435c791cae5064f84133dfd612
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592962"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643311"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Procedimiento para proteger puntos de conexión de metadatos
 

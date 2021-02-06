@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <binaryMessageEncoding>'
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 1b72b73f0d9d312fd54ea6a5517d55bf251c0e05
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 910b8b70bab40c1eb099ed2b54c0545e73e96c6f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639502"
 ---
 # \<binaryMessageEncoding>
 
@@ -68,7 +69,7 @@ Define un codificador del mensaje binario que codifica los mensajes de la Window
                        maxSessionSize="3141" />
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

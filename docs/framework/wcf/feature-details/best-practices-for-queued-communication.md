@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: procedimientos recomendados para la comunicación en cola'
 title: Procedimientos recomendados para la comunicación en cola
 ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 412b30a497fcf4c341f80a64c76fcbbc425e70b2
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 895b0a1a87bc84cf590f3dd4b5269b61e9399d15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247452"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99643688"
 ---
 # <a name="best-practices-for-queued-communication"></a>Procedimientos recomendados para la comunicación en cola
 

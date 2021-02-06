@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: My. Settings (objeto)'
 title: My.Settings (Objeto)
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 92323c5379d0c5a4dbf96cfdbe0becccc2bad7cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90867300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99640607"
 ---
 # <a name="mysettings-object"></a>My.Settings (Objeto)
 
 Proporciona propiedades y métodos para tener acceso a la configuración de la aplicación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `My.Settings` objeto proporciona acceso a la configuración de la aplicación y permite almacenar y recuperar dinámicamente la configuración de propiedades y otra información de la aplicación. Para obtener más información, vea [Administrar la configuración de la aplicación (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
@@ -26,7 +27,7 @@ Proporciona propiedades y métodos para tener acceso a la configuración de la a
 
  Las propiedades del objeto `My.Settings` proporcionan acceso a la configuración de la aplicación. Para agregar o quitar la configuración, use el **Diseñador de configuración**.  
   
- Cada configuración tiene un **nombre**, **tipo**, **ámbito**y **valor**, y esta configuración determina cómo aparece la propiedad para tener acceso a cada configuración en el `My.Settings` objeto:  
+ Cada configuración tiene un **nombre**, **tipo**, **ámbito** y **valor**, y esta configuración determina cómo aparece la propiedad para tener acceso a cada configuración en el `My.Settings` objeto:  
   
 - **Nombre** determina el nombre de la propiedad.  
   
@@ -64,7 +65,7 @@ Proporciona propiedades y métodos para tener acceso a la configuración de la a
   
  Para que este ejemplo funcione, la aplicación debe tener una configuración `Nickname` de tipo `String`.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [Cómo: Leer la configuración de la aplicación en Visual Basic](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)
