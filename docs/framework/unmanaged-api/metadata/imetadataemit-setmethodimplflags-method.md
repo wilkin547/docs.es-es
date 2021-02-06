@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataEmit:: Setmethodimplflags ((método)'
 title: IMetaDataEmit::SetMethodImplFlags (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 4bc82d9b-9544-4be3-ba51-a2d4d806158a
 topic_type:
 - apiref
-ms.openlocfilehash: 486d545413337f6696bd9f21c516466fc3747256
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea7f3122a21c8651014e60de3629db87eeaf6260
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730362"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657843"
 ---
-# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="6d6aa-102">IMetaDataEmit::SetMethodImplFlags (Método)</span><span class="sxs-lookup"><span data-stu-id="6d6aa-102">IMetaDataEmit::SetMethodImplFlags Method</span></span>
+# <a name="imetadataemitsetmethodimplflags-method"></a><span data-ttu-id="4828f-103">IMetaDataEmit::SetMethodImplFlags (Método)</span><span class="sxs-lookup"><span data-stu-id="4828f-103">IMetaDataEmit::SetMethodImplFlags Method</span></span>
 
-<span data-ttu-id="6d6aa-103">Establece o actualiza la firma de metadatos de la implementación del método heredado a la que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-103">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
+<span data-ttu-id="4828f-104">Establece o actualiza la firma de metadatos de la implementación del método heredado a la que hace referencia el token especificado.</span><span class="sxs-lookup"><span data-stu-id="4828f-104">Sets or updates the metadata signature of the inherited method implementation that is referenced by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d6aa-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="6d6aa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4828f-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4828f-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetMethodImplFlags (
@@ -35,25 +36,25 @@ HRESULT SetMethodImplFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d6aa-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="6d6aa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4828f-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4828f-106">Parameters</span></span>  
 
  `md`  
- <span data-ttu-id="6d6aa-106">de Token para el método que se va a cambiar.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-106">[in] The token for the method to be changed.</span></span>  
+ <span data-ttu-id="4828f-107">de Token para el método que se va a cambiar.</span><span class="sxs-lookup"><span data-stu-id="4828f-107">[in] The token for the method to be changed.</span></span>  
   
  `dwImplFlags`  
- <span data-ttu-id="6d6aa-107">de Una combinación de los valores de la enumeración [CorMethodImpl (](cormethodimpl-enumeration.md) que especifica las características de implementación del método.</span><span class="sxs-lookup"><span data-stu-id="6d6aa-107">[in] A combination of the values of the [CorMethodImpl](cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
+ <span data-ttu-id="4828f-108">de Una combinación de los valores de la enumeración [CorMethodImpl (](cormethodimpl-enumeration.md) que especifica las características de implementación del método.</span><span class="sxs-lookup"><span data-stu-id="4828f-108">[in] A combination of the values of the [CorMethodImpl](cormethodimpl-enumeration.md) enumeration that specifies the method implementation features.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6d6aa-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="6d6aa-108">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4828f-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4828f-109">Requirements</span></span>  
 
- <span data-ttu-id="6d6aa-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d6aa-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="4828f-110">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4828f-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6d6aa-110">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="6d6aa-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4828f-111">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="4828f-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6d6aa-111">**Biblioteca:** Se usa como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6d6aa-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4828f-112">**Biblioteca:** Se usa como un recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4828f-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6d6aa-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d6aa-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4828f-113">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4828f-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d6aa-113">Consulte también</span><span class="sxs-lookup"><span data-stu-id="6d6aa-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4828f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="4828f-114">See also</span></span>
 
-- [<span data-ttu-id="6d6aa-114">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="6d6aa-114">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
-- [<span data-ttu-id="6d6aa-115">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="6d6aa-115">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
+- [<span data-ttu-id="4828f-115">IMetaDataEmit (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="4828f-115">IMetaDataEmit Interface</span></span>](imetadataemit-interface.md)
+- [<span data-ttu-id="4828f-116">IMetaDataEmit2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="4828f-116">IMetaDataEmit2 Interface</span></span>](imetadataemit2-interface.md)
