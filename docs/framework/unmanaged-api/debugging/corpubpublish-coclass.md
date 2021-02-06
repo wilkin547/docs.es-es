@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: coclase Corpubpublish ('
 title: CorpubPublish (coclase)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-ms.openlocfilehash: c73eab14bf6f9f9599bed79f4c5f85ed035c0518
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fdf4be6ff2d20391e989998cd0045ed27d602561
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722354"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661706"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish (coclase)
 
@@ -47,7 +48,7 @@ coclass CorpubPublish {
 |[ICorPublishProcess (Interfaz)](icorpublishprocess-interface.md)|Representa un proceso que se está ejecutando en un equipo.|  
 |[ICorPublishProcessEnum (Interfaz)](icorpublishprocessenum-interface.md)|Proporciona métodos que atraviesan una colección de procesos que se ejecutan en un equipo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un escenario de publicación típico implica a un desarrollador que desea depurar el código administrado que se ejecuta en un equipo dentro de un dominio de aplicación. Es posible que el entorno de hospedaje ejecute más de un dominio de aplicación dentro de un proceso. El desarrollador desea usar una interfaz gráfica de usuario u otros medios para enumerar todos los procesos que se ejecutan en el equipo y elegir un proceso específico. La lista debe incluir todos los dominios de aplicación dentro de los procesos que ejecutan código administrado. A continuación, el desarrollador puede identificar el dominio de aplicación específico y asociar un depurador a ese dominio.  
   
@@ -61,6 +62,6 @@ coclass CorpubPublish {
   
  **.NET Framework versiones:**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)

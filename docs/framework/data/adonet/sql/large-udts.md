@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: UDT grandes'
 title: UDT grandes
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 032093244f51893cd3b0cf50ad81c79413aaa32e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1a40330bb48d6320dc96533e764f1b856e0f410
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91194549"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663188"
 ---
 # <a name="large-udts"></a>UDT grandes
 
@@ -25,7 +26,7 @@ Los tipos definidos por el usuario (UDT) permiten a los desarrolladores extender
   
  **Documentación de SQL Server**  
   
-1. [Tipos definidos por el usuario CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
+1. [Tipos CLR definidos por el usuario](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperar los esquemas UDT mediante GetSchema  
 
@@ -35,7 +36,7 @@ Los tipos definidos por el usuario (UDT) permiten a los desarrolladores extender
 
  El método <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> de <xref:System.Data.SqlClient.SqlDataReader> devuelve un valor <xref:System.Data.DataTable> que describe los metadatos de la columna. En la tabla siguiente se describen las diferencias en los metadatos de columna para los UDT de gran tamaño entre SQL Server 2005 y SQL Server 2008.  
   
-|Columna SqlDataReader|SQL Server 2005|SQL Server 2008 y posterior|  
+|Columna SqlDataReader|SQL Server 2005|SQL Server 2008 y versiones posteriores|  
 |--------------------------|---------------------|-------------------------------|  
 |`ColumnSize`|Varía|Varía|  
 |`NumericPrecision`|255|255|  
@@ -137,10 +138,10 @@ Using connection As New SqlConnection( _
 End Using  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Configurar parámetros y tipos de datos de parámetros](../configuring-parameters-and-parameter-data-types.md)
-- [Recuperar información del esquema de la base de datos](../retrieving-database-schema-information.md)
+- [Recuperación de la información del esquema de la base de datos](../retrieving-database-schema-information.md)
 - [Asignaciones de tipos de datos de SQL Server](../sql-server-data-type-mappings.md)
-- [SQL Server datos binarios y de valores grandes](sql-server-binary-and-large-value-data.md)
+- [Datos binarios y datos de valores grandes de SQL Server](sql-server-binary-and-large-value-data.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

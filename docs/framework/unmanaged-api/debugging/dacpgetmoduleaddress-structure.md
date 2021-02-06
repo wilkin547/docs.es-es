@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura DacpGetModuleAddress'
 title: Estructura DacpGetModuleAddress
 ms.date: 01/16/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a65fa9974165fa36e59a7fb83dca6dd902f7d8dc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3de76cc4f15bffd35d7a43ae25a313eb2fe59b82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661602"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>Estructura DacpGetModuleAddress
 
@@ -37,7 +38,7 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 | Miembro      | Descripción                |
 | ----------- | -------------------------- |
@@ -49,7 +50,7 @@ struct DacpGetModuleAddress
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [Solicitud](dacpgetmoduleaddress-request-method.md) | Realiza una solicitud para rellenar la estructura a partir de la estructura en tiempo de ejecución especificada. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura como se especificó anteriormente, donde `CLRDATA_ADDRESS` es un entero de 64 bits sin signo.
 
@@ -60,7 +61,7 @@ Esta estructura reside dentro del tiempo de ejecución y no se expone a través 
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Estructuras de depuración](debugging-structures.md)

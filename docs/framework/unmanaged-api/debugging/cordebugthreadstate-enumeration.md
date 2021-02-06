@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorDebugThreadState ('
 title: CorDebugThreadState (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-ms.openlocfilehash: 5eee2aee5873fe512136bc5407e395acdc31af29
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0cf83ee31547e49ccc7d09e0ab4ee85548688b36
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722614"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661814"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState (Enumeración)
 
@@ -34,14 +35,14 @@ typedef enum CorDebugThreadState {
 } CorDebugThreadState;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`THREAD_RUN`|El subproceso se ejecuta libremente, a menos que se produzca un evento de depuración.|  
 |`THREAD_SUSPEND`|No se puede ejecutar el subproceso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El depurador utiliza la `CorDebugThreadState` enumeración para controlar la ejecución de un subproceso. El estado de un subproceso se puede establecer mediante el método [ICorDebugThread:: setdebugstate (](icordebugthread-setdebugstate-method.md) o [ICorDebugController:: setallthreadsdebugstate (](icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
@@ -57,6 +58,6 @@ typedef enum CorDebugThreadState {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

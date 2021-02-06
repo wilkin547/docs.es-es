@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <Parameter> elemento (.net Native)'
 title: <Parameter> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
-ms.openlocfilehash: 7e812ab60eb0a89eb868346733a8ea74e2f76d3e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 53b84027e8393e0a799d9652767d173c2787cd27
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287870"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662798"
 ---
 # <a name="parameter-element-net-native"></a>\<Parameter> Elemento (.NET Native)
 
@@ -51,13 +52,13 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*parameter_name*|Nombre del parámetro de método al que se aplica la directiva. Por ejemplo, para la signatura del método `String.CompareTo(Object value)`, el valor del atributo `Name` es "value".|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -71,7 +72,7 @@ Aplica la directiva de reflexión al tipo del argumento que se pasa a un método
 |-------------|-----------------|  
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `<Parameter>` elemento es un elemento secundario del [\<Method>](method-element-net-native.md) elemento y se utiliza para aplicar la Directiva a un parámetro de método determinado. El parámetro de método determinado se especifica mediante el nombre en lugar del tipo. Debe haber presente al menos un atributo que represente un tipo de directiva, como `Activate` o `Dynamic`.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorDebugUserState ('
 title: CorDebugUserState (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: 968874a46279b7eac651d45c3890429a326651b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c556e7943751fb8e159e3e0d0b9a71baf1f6b5b5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726956"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661745"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState (Enumeración)
 
@@ -41,7 +42,7 @@ typedef enum CorDebugUserState {
 } CorDebugUserState;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -55,7 +56,7 @@ typedef enum CorDebugUserState {
 |`USER_UNSAFE_POINT`|El subproceso está en un punto no seguro. Es decir, el subproceso está en un punto de la ejecución donde puede bloquear la recolección de elementos no utilizados.<br /><br /> Los eventos de depuración se pueden enviar desde puntos no seguros, pero si se suspende un subproceso en un punto no seguro, es muy probable que se produzca un interbloqueo hasta que se reanude el subproceso. Los puntos Safe y Unsafe se determinan mediante la implementación Just-in-Time (JIT) y la recolección de elementos no utilizados.|  
 |`USER_THREADPOOL`|El subproceso procede del grupo de subprocesos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El estado de usuario de un subproceso es el estado que tiene el subproceso cuando el depurador lo examina. Un subproceso puede tener una combinación de Estados de usuario.  
   
@@ -71,6 +72,6 @@ typedef enum CorDebugUserState {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

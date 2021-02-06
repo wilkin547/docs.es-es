@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorDebugInternalFrameType ('
 title: CorDebugInternalFrameType (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-ms.openlocfilehash: 1c94e03aa088d8f48eb7f7a418cebd0492319513
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0479ae7602224e03086b9dacf91d360253b61818
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662005"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType (Enumeración)
 
@@ -44,7 +45,7 @@ typedef enum CorDebugInternalFrameType {
 } CorDebugInternalFrameType;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -70,6 +71,6 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

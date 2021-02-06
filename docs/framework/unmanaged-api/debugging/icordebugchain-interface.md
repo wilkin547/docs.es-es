@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz ICorDebugChain'
 title: Interfaz ICorDebugChain
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: a0285970a8a42c078aa663579e1d5998d0d1c037
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 391c9a3e54d06d303728da5ab7f105bc8e2558ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724460"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661212"
 ---
 # <a name="icordebugchain-interface"></a>Interfaz ICorDebugChain
 
@@ -42,7 +43,7 @@ Representa un segmento de una pila de llamadas física o lógica.
 |[Método GetThread](icordebugchain-getthread-method.md)|Obtiene el subproceso físico del que forma parte esta cadena de llamadas.|  
 |[Método IsManaged](icordebugchain-ismanaged-method.md)|Obtiene un valor que indica si esta cadena ejecuta código administrado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los marcos de pila de una cadena ocupan el espacio de pila contiguo y comparten el mismo subproceso y contexto. Una cadena puede representar cadenas de código administradas o no administradas. Una `ICorDebugChain` instancia vacía representa una cadena de código no administrada.  
   
@@ -59,6 +60,6 @@ Representa un segmento de una pila de llamadas física o lógica.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorDebugRegister ('
 title: CorDebugRegister (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-ms.openlocfilehash: 85df98e83396c9439c28dd41a3ffa02b820c9c3e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a5dc771a239a82448f898e2f518e920993ec35a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726059"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661891"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister (Enumeración)
 
@@ -113,7 +114,7 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -190,7 +191,7 @@ typedef enum CorDebugRegister {
 |`REGISTER_ARM_R12`|Registro R12 en el procesador ARM.|  
 |`REGISTER_ARM_LR`|Registro de vínculo (R14) en el procesador ARM.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Hay 128 registros de datos de uso general y 128 registros de datos de punto flotante en el procesador IA-64, pero solo se proporcionan los valores `REGISTER_IA64_R0` y `REGISTER_IA64_F0`. Los demás valores se pueden determinar de la siguiente manera:  
   
@@ -210,6 +211,6 @@ typedef enum CorDebugRegister {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

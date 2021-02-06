@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo conceder permisos de Row-Level en SQL Server
 title: Conceder permisos de nivel de fila en SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: fe69a023b5befbdb53473881647fff8bdf0e9795
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554858"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663305"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Conceder permisos de nivel de fila en SQL Server
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: LINQ to SQL N niveles con servicios Web'
 title: N niveles de LINQ to SQL con servicios Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: dd1f756fae99fbae591b27aaefc7cc4ad7501bd6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7c97cc80f071ae964f329265f5c3d0e68e12b84f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175296"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663110"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
 
@@ -19,7 +20,7 @@ ms.locfileid: "91175296"
   
  A continuación, se define la interfaz con los métodos a los que los clientes llamarán para recuperar, insertar y actualizar datos. Los métodos de interfaz ajustan las consultas LINQ. Puede utilizar cualquier tipo de mecanismo de serialización para administrar las llamadas a métodos remotos y la serialización de datos. El único requisito es que, si tiene relaciones cíclicas o bidireccionales en su modelo de objetos, como las que existen entre Clientes y Pedidos en el modelo de objetos estándar de Northwind, deberá utilizar un serializador que admita esa situación. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> admite relaciones bidireccionales, pero no así el serializador XmlSerializer que se utiliza con servicios Web que no son de WCF. Si selecciona el serializador XmlSerializer, deberá asegurarse de que su modelo de objetos no contenga relaciones cíclicas.  
   
- Para obtener más información sobre Windows Communication Foundation, consulte [Windows Communication Foundation Services y WCF Data Services en Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio).  
+ Para obtener más información sobre Windows Communication Foundation, consulte [Windows Communication Foundation Services y servicios de datos de WCF en Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio).  
   
  Implemente sus reglas de empresa u otra lógica específica del dominio utilizando las clases parciales y métodos de <xref:System.Data.Linq.DataContext> y las clases de entidad para conectar con eventos de tiempo de ejecución de  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Para obtener más información, consulte [implementación de la lógica de negocios de N niveles](implementing-business-logic-linq-to-sql.md).  
   
@@ -41,7 +42,7 @@ ms.locfileid: "91175296"
   
  Para obtener más información, vea [operaciones de recuperación de datos y CUD en aplicaciones de N niveles (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Aplicaciones de N niveles y remotas con LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Información general sobre el control de servidor Web LinqDataSource](/previous-versions/aspnet/bb547113(v=vs.100))

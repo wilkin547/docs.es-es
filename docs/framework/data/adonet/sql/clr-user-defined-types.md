@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: tipos de User-Defined CLR'
 title: Tipos CLR definidos por el usuario
 ms.date: 03/30/2017
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-ms.openlocfilehash: 84d588e0c415daa7de19ea695c817f3eb24f732f
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f1732c254d3bf3cb8aa4ba727c420c46ef55c2cf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173593"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99663370"
 ---
 # <a name="clr-user-defined-types"></a>Tipos CLR definidos por el usuario
 
@@ -23,8 +24,8 @@ Microsoft SQL Server proporciona compatibilidad con tipos definidos por el usuar
   
  **Documentación de SQL Server**
   
-1. [Tipos definidos por el usuario CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
+1. [Tipos CLR definidos por el usuario](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](../ado-net-overview.md)

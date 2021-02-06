@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Setassemblyfile2 ('
 title: SetAssemblyFile2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-ms.openlocfilehash: 131f5d951e524ef48f2cfe1e3e88ef80ac21c452
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 890646b718c211b476d013daf021f8889198c1ba
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703686"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662408"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 (Método)
 
@@ -58,7 +59,7 @@ HRESULT SetAssemblyFile2(
 
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IALink2 (Interfaz)](ialink2-interface.md)
 - [IALink (Interfaz)](ialink-interface.md)

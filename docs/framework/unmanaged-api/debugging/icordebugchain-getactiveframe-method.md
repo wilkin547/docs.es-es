@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugChain:: GetActiveFrame ((método)'
 title: ICorDebugChain::GetActiveFrame (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-ms.openlocfilehash: daecd216b4d7e9c23336b8956c13735549be901b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d46906d9d6c671880d9446d889cdf9f83f3b4366
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730141"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661429"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetActiveFrame (
  `ppFrame`  
  enuncia Puntero a la dirección de un objeto ICorDebugFrame que representa el marco activo (es decir, el más reciente) en la cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si no hay ningún marco de pila administrado disponible, `ppFrame` se establece en NULL.  
   

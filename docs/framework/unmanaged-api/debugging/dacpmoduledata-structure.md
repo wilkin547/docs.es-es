@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura DacpModuleData'
 title: Estructura DacpModuleData
 ms.date: 02/01/2019
 api.name:
@@ -15,12 +16,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 376a49ab78db08e5906e8d33389cdc45fe76e81e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661589"
 ---
 # <a name="dacpmoduledata-structure"></a>Estructura DacpModuleData
 
@@ -40,7 +41,7 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a>Miembros
+## <a name="members"></a>Members
 
 | Miembro    | Descripción                                                             |
 | --------- | ----------------------------------------------------------------------- |
@@ -49,7 +50,7 @@ struct DacpModuleData
 | `ilBase`  | Dirección de la base de la imagen cargada.                                 |
 | `payLoad` | Búfer de carga para la información adicional del módulo que utiliza el motor en tiempo de ejecución. |
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca. Para usarlo, defina la estructura tal y como se especificó anteriormente.
 
@@ -60,7 +61,7 @@ Esta estructura reside dentro del tiempo de ejecución y no se expone a través 
 **Biblioteca:** Ninguna  
 **.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Depuración](index.md)
 - [Estructuras de depuración](debugging-structures.md)

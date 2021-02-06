@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método SetPEKind ('
 title: SetPEKind (Método)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: be8a11cbf70e2c6f19ace67648b124515c1fb3c3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4154e9e80b7f88b6951c9aa8da5fc23d340c96dc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99662304"
 ---
 # <a name="setpekind-method"></a>SetPEKind (Método)
 
@@ -58,7 +59,7 @@ HRESULT SetPEKind(
 
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetPEKind](../metadata/imetadataimport2-getpekind-method.md)
 - [IALink2 (Interfaz)](ialink2-interface.md)

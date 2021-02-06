@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Createversionstringfrommodule ((función)'
 title: CreateVersionStringFromModule (Función)
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-ms.openlocfilehash: 1b944034251b34350057866b2a52e63e934d72d4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 45ae3ec31cf77e4c96e42a58b23e1f52dcf7c54b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661550"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule (Función)
 
@@ -74,7 +75,7 @@ HRESULT CreateVersionStringFromModule (
  E_FAIL (u otros códigos devueltos de E_)  
  `pidDebuggee` no hace referencia a un proceso válido, u otro error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta función acepta un proceso de CLR que se identifica mediante `pidDebuggee` y una ruta de acceso de cadena especificada por `szModuleName`. La cadena de versión se devuelve en el búfer al que `pBuffer` apunta. Esta cadena es opaca para el usuario de la función; es decir, no tiene ningún significado intrínseco en la propia cadena de versión. Se usa únicamente en el contexto de esta función y de la [función CreateDebuggingInterfaceFromVersion (](createdebugginginterfacefromversion-function-for-silverlight.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Cordebugplatform ('
 title: CorDebugPlatform (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5444816-7378-4521-afd3-bf5e4b5303d5
 topic_type:
 - apiref
-ms.openlocfilehash: 5435f78b28975a5426fcb2fce94904efc1051c5b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6a78ec00f99ff34158f784e039372c8937e6d16
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696406"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661862"
 ---
 # <a name="cordebugplatform-enumeration"></a>CorDebugPlatform (Enumeración)
 
@@ -40,7 +41,7 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -64,6 +65,6 @@ typedef enum CorDebugPlatform
   
  Los miembros `CORDB_PLATFORM_WINDOWS_ARM` y `CORDB_PLATFORM_MAC_AMD64` están disponible en .NET Framework 4.5.2 y versiones posteriores.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)
