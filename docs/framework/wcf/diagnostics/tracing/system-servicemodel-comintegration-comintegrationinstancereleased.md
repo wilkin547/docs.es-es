@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. comintegration. ComIntegrationInstanceReleased'
 title: System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 ms.date: 03/30/2017
 ms.assetid: 21922b4d-9a83-45cb-a6fc-5b1c2f9a2c17
-ms.openlocfilehash: 7435294869db4304147b040b80a4798d4ce2ef2e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ddf58b680c23a610e209b996e763b92e06951f91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634055"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancereleased"></a>System.ServiceModel.ComIntegration.ComIntegrationInstanceReleased
 

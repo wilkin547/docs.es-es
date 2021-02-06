@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. RequestContextAbort'
 title: System.ServiceModel.Channels.RequestContextAbort
 ms.date: 03/30/2017
 ms.assetid: b41c78a2-c885-418d-831f-2db86fa3a52d
-ms.openlocfilehash: f469e496eb8684d4cd3109527a9193514fc01cb7
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8caefe8d1e8f3e253530b72fbd5f893fb3f41b7f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292030"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634666"
 ---
 # <a name="systemservicemodelchannelsrequestcontextabort"></a>System.ServiceModel.Channels.RequestContextAbort
 

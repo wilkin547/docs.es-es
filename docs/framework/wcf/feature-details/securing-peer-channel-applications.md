@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo proteger aplicaciones de canal del mismo nivel
 title: Protección de las aplicaciones de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 21bec1279d0f0172aa0e8acbcc05adf30a97c5b9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cff94fe618ca25a6810d68efe8cb99b4316d95b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288429"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632664"
 ---
 # <a name="securing-peer-channel-applications"></a>Protección de las aplicaciones de canal del mismo nivel
 

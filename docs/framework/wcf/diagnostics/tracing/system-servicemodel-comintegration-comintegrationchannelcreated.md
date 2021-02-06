@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. comintegration. ComIntegrationChannelCreated'
 title: System.ServiceModel.ComIntegration.ComIntegrationChannelCreated
 ms.date: 03/30/2017
 ms.assetid: 7c0d4c95-6ab4-49c2-ad1d-f52035ea4827
-ms.openlocfilehash: 784c6f003279900001b2a8023b15fa8b94f83231
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4475627db15d71f49aa41ed25e07b3ca23bac738
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246789"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634354"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationchannelcreated"></a>System.ServiceModel.ComIntegration.ComIntegrationChannelCreated
 

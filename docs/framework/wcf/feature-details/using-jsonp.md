@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: uso de JSONP'
 title: Utilizar JSONP
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 82290319b5d8b58708f0b2ebf40522ee76127b84
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f4d21670cf468328b8579fa8a9cf2c2e06f09337
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594964"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632196"
 ---
 # <a name="using-jsonp"></a>Utilizar JSONP
 
@@ -74,7 +75,7 @@ Las respuestas JSONP con códigos de estado HTTP distintos de 200 incluyen un se
 anotherFunction ({"root":"Something"}, 201);
 ```
 
-## <a name="validations"></a>Validations (Validaciones)
+## <a name="validations"></a>Validaciones
 
 Se realizan las siguientes validaciones cuando JSONP está habilitado:
 
@@ -84,6 +85,6 @@ Se realizan las siguientes validaciones cuando JSONP está habilitado:
 
 - Si el nombre de devolución de llamada es `null` o una cadena vacía, la respuesta no obtiene el formato JSONP.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general del modelo de programación web HTTP de WCF](wcf-web-http-programming-model-overview.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 39456-TrackingRecordDropped'
 title: 39456 - TrackingRecordDropped
 ms.date: 03/30/2017
 ms.assetid: da13d5bc-1736-47a4-b3fd-064ca8040326
-ms.openlocfilehash: d958b506e057bc0d59f954debdc9da6015bf5f1f
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0f6920ef85327318f4ea8662ae36f26c7494bcb2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96273105"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631299"
 ---
 # <a name="39456---trackingrecorddropped"></a>39456 - TrackingRecordDropped
 
@@ -15,7 +16,7 @@ ms.locfileid: "96273105"
   
 |||  
 |-|-|  
-|ID|39456|  
+|Id.|39456|  
 |Palabras clave|WFTracking|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

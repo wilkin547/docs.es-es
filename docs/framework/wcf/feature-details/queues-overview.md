@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: Introducción a las colas'
 title: Información general de colas
 ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 464b82c41fe1268d53d77f7bf3cb9463cf235072
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8414a8f9121c30a97f5fef5e1f26dfe57abc7956
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244644"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99633034"
 ---
 # <a name="queues-overview"></a>Información general sobre colas
 
@@ -83,7 +84,7 @@ En esta sección se presentan los conceptos generales y básicos detrás de la c
 
 - [Las colas en WCF](queuing-in-wcf.md)
 - [Sesiones y colas](../samples/sessions-and-queues.md)
-- [Colas con problemas de entrega](../samples/dead-letter-queues.md)
+- [Colas de mensajes con problemas de entrega](../samples/dead-letter-queues.md)
 - [Comunicación en cola volátil](../samples/volatile-queued-communication.md)
 - [Windows Communication Foundation a Message Queuing](../samples/wcf-to-message-queuing.md)
 - [Instalar Message Queuing (MSMQ)](../samples/installing-message-queuing-msmq.md)

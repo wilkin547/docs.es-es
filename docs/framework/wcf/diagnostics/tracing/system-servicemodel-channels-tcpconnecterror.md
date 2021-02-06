@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. TcpConnectError'
 title: System.ServiceModel.Channels.TcpConnectError
 ms.date: 03/30/2017
 ms.assetid: 22d93797-072e-405d-a3e0-5c519ddf290b
-ms.openlocfilehash: 5efc14109fb2ad2d4444baae0d9423694e0f5b25
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e8c8e682100080e8622d0371505c9f3b9ddb84d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246815"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634393"
 ---
 # <a name="systemservicemodelchannelstcpconnecterror"></a>System.ServiceModel.Channels.TcpConnectError
 

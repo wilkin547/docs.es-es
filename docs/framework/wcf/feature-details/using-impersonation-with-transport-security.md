@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo usar la suplantación con la seguridad de transporte
 title: Utilización de la suplantación con la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 14914bc65d5033c54640e06b79713ea1871daf18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 49b454369e6bf02c5c3f20661f4116f51c64c6eb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96289508"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632326"
 ---
 # <a name="using-impersonation-with-transport-security"></a>Utilización de la suplantación con la seguridad de transporte
 
@@ -20,7 +21,7 @@ La *suplantación* es la capacidad de una aplicación de servidor de asumir la i
 |Nivel de suplantación|Descripción|  
 |-------------------------|-----------------|  
 |None|La aplicación de servidor no intenta suplantar al cliente.|  
-|Anónimas|La aplicación de servidor puede realizar comprobaciones de acceso frente a las credenciales de cliente, pero no recibe ninguna información sobre la identidad del cliente. Este nivel de suplantación solo es significativo para la comunicación en equipo, como, por ejemplo, en canalizaciones con nombre. Al utilizar `Anonymous` con una conexión remota, se promueve el nivel de suplantación a identificar.|  
+|Anónimo|La aplicación de servidor puede realizar comprobaciones de acceso frente a las credenciales de cliente, pero no recibe ninguna información sobre la identidad del cliente. Este nivel de suplantación solo es significativo para la comunicación en equipo, como, por ejemplo, en canalizaciones con nombre. Al utilizar `Anonymous` con una conexión remota, se promueve el nivel de suplantación a identificar.|  
 |Identificar|La aplicación de servidor conoce la identidad del cliente y puede realizar validación de acceso frente a las credenciales del cliente, pero no puede suplantar al cliente. Identificar es el nivel de suplantación predeterminado que se usa con las credenciales de SSPI en WCF a menos que el proveedor de tokens proporcione un nivel de suplantación diferente.|  
 |Impersonate|La aplicación de servidor puede obtener acceso a recursos en el equipo del servidor como el cliente además de realizar las comprobaciones de acceso. La aplicación de servidor no puede tener acceso a los recursos en los equipos remotos utilizando la identidad del cliente porque el token suplantado no tiene credenciales de red.|  
 |Delegado|Además de tener las mismas funciones que `Impersonate`, el nivel de suplantación de Delegar también permite a la aplicación de servidor obtener acceso a los recursos en los equipos remotos utilizando la identidad del cliente y pasar la identidad a otras aplicaciones.<br /><br /> **Importante** La cuenta de dominio del servidor debe estar marcada como de confianza para la delegación en el controlador de dominio para usar estas características adicionales. Este nivel de suplantación no se puede utilizar con cuentas de dominio de cliente marcadas como sensibles.|  

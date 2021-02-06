@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: consideraciones de seguridad para los datos'
 title: Consideraciones de seguridad para datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: b9b033f779b083be8bcec195caf8e55607f14d31
-ms.sourcegitcommit: 7588b1f16b7608bc6833c05f91ae670c22ef56f8
+ms.openlocfilehash: 6e0bf681ad8dd141ad030ef850c3e50c1d6e65c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93188320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99632625"
 ---
 # <a name="security-considerations-for-data"></a>Consideraciones de seguridad para datos
 
@@ -44,7 +45,7 @@ Tenga en cuenta que cuando se realiza la ejecución en confianza parcial, la inf
 
 Al diseñar los tipos serializables con seguridad en mente, la divulgación de información es una posible preocupación.
 
-Considere los siguientes puntos:
+Tenga en cuenta lo siguiente:
 
 - El modelo de programación <xref:System.Runtime.Serialization.DataContractSerializer> permite la exposición de datos privados e internos fuera del tipo o ensamblado durante la serialización. Además, la forma de un tipo puede exponerse durante la exportación del esquema. Asegúrese de entender la proyección de la serialización de su tipo. Si no desea nada expuesto, deshabilite la serialización (por ejemplo, no aplicando el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> en el caso de un contrato de datos).
 
@@ -175,7 +176,7 @@ Esta cuota limita el tamaño máximo de una matriz de primitivas que devuelve el
 
 La codificación XML binaria WCF compatible con incluye una característica de *cadenas de diccionario* . Una cadena grande puede estar codificada utilizando solo unos bytes. Esto permite considerables ganancias de rendimiento, pero introduce nuevas amenazas de la denegación de servicio que se deben mitigar.
 
-Hay dos tipos de diccionarios: *estático* y *dinámico* . El diccionario estático es una lista integrada de cadenas largas que se puede representar utilizando un código corto en la codificación binaria. Esta lista de cadenas se fija cuando el lector se crea y no se puede modificar. Ninguna de las cadenas del diccionario estático que WCF utiliza de forma predeterminada es lo suficientemente grande como para suponer una amenaza grave de denegación de servicio, aunque todavía se pueden utilizar en un ataque de expansión de diccionario. En escenarios avanzados donde proporciona su propio diccionario estático, vaya con cuidado al introducir cadenas de diccionario grandes.
+Hay dos tipos de diccionarios: *estático* y *dinámico*. El diccionario estático es una lista integrada de cadenas largas que se puede representar utilizando un código corto en la codificación binaria. Esta lista de cadenas se fija cuando el lector se crea y no se puede modificar. Ninguna de las cadenas del diccionario estático que WCF utiliza de forma predeterminada es lo suficientemente grande como para suponer una amenaza grave de denegación de servicio, aunque todavía se pueden utilizar en un ataque de expansión de diccionario. En escenarios avanzados donde proporciona su propio diccionario estático, vaya con cuidado al introducir cadenas de diccionario grandes.
 
 La característica de diccionarios dinámicos permite a los mensajes definir sus propias cadenas y asociarlas a códigos cortos. Estas asignaciones de cadena a código se mantienen en memoria durante la sesión completa de comunicación, de manera que los mensajes subsiguientes no tienen que reenviar las cadenas y pueden utilizar los códigos ya definidos. Estas cadenas pueden ser de longitud arbitraria y por consiguiente provocar una amenaza más seria que aquellas en el diccionario estático.
 
@@ -388,7 +389,7 @@ WCF es un sistema flexible y personalizable. La mayor parte del contenido de est
 
 - En general, al utilizar cualquier componente que acepte una cuota, entienda sus implicaciones de seguridad y establézcalo en un valor seguro.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>

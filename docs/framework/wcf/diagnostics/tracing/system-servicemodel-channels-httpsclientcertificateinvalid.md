@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. HttpsClientCertificateInvalid'
 title: System.ServiceModel.Channels.HttpsClientCertificateInvalid
 ms.date: 03/30/2017
 ms.assetid: 8884dda1-fa0e-4d2a-8079-7042c51b64ef
-ms.openlocfilehash: afacbb13f4b193083d22e025cb6e1e97194e1ee4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c9d6545beee55000dc609c68824f27e33b71f60f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258119"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635238"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificateinvalid"></a>System.ServiceModel.Channels.HttpsClientCertificateInvalid
 

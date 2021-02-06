@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: crear un servicio de flujo de trabajo que consuma un contrato de servicio existente'
 title: Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 05c59bde424049eb5bef8f8bd09c472b58eaa9ef
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0a31f0f4e205c72b857b59726437e896a7c68231
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631260"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
 
@@ -50,15 +51,15 @@ ms.locfileid: "96248830"
   
 ### <a name="importing-the-service-contract"></a>Importar el contrato de servicio  
   
-1. Haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **importar contrato de servicio**. En **\<Current Project>** , Abra todos los subnodos y seleccione **IBookService**. Haga clic en **OK**.  
+1. Haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **importar contrato de servicio**. En **\<Current Project>** , Abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**.  
   
-2. Verá un cuadro de diálogo que avisa de que la operación se ha completado correctamente y de que las actividades generadas aparecerán en el cuadro de herramientas tras haber compilado el proyecto. Haga clic en **OK**.  
+2. Verá un cuadro de diálogo que avisa de que la operación se ha completado correctamente y de que las actividades generadas aparecerán en el cuadro de herramientas tras haber compilado el proyecto. Haga clic en **Aceptar**.  
   
 3. Para compilar el proyecto, presione **Ctrl + Mayús + B**, de modo que las actividades importadas aparezcan en el cuadro de herramientas.  
   
 4. En **Explorador de soluciones**, abra Service1. xamlx. El servicio de flujo de trabajo aparecerá en el diseñador.  
   
-5. Seleccione la actividad **secuencia** . En el ventana Propiedades, haga clic en **...** en la propiedad **ImplementedContract** . En la ventana **Editor de colección de tipos** que aparece, haga clic en la lista desplegable **tipo** y seleccione el botón **Buscar tipos..** . y haga clic en ella. En el cuadro de diálogo **examinar y seleccionar un tipo .net** , en **\<Current Project>** , Abra todos los subnodos y seleccione **IBookService**. Haga clic en **OK**. En el cuadro de diálogo **Editor de colección de tipos** , haga clic en **Aceptar**.  
+5. Seleccione la actividad **secuencia** . En el ventana Propiedades, haga clic en **...** en la propiedad **ImplementedContract** . En la ventana **Editor de colección de tipos** que aparece, haga clic en la lista desplegable **tipo** y seleccione el botón **Buscar tipos..** . y haga clic en ella. En el cuadro de diálogo **examinar y seleccionar un tipo .net** , en **\<Current Project>** , Abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**. En el cuadro de diálogo **Editor de colección de tipos** , haga clic en **Aceptar**.  
   
 6. Seleccione y elimine las actividades **ReceiveRequest** y **SendResponse** .  
   

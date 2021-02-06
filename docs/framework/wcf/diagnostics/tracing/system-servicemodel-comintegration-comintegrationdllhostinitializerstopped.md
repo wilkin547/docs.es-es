@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. comintegration. ComIntegrationDllHostInitializerStopped'
 title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped
 ms.date: 03/30/2017
 ms.assetid: 6b2912d4-21a4-4a9c-bb68-8626fca5cc39
-ms.openlocfilehash: a22bf730eb5b465f601b67b70dbd73a89ab2afcb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0ee524b26850d73267f91b67c9ce130375f6b99b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96246633"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99634224"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopped"></a>System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped
 
