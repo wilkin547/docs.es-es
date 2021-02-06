@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2 (interfaz)'
 title: ICorProfilerInfo2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91bd49b6-4d12-494f-a8f1-2f251e8c65e3
 topic_type:
 - apiref
-ms.openlocfilehash: 6c146f3deed31601411bef39ab12b52dfec8cd39
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07828c6f55b72068e9021991600ed17eb6ffe6ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95681591"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647016"
 ---
 # <a name="icorprofilerinfo2-interface"></a>ICorProfilerInfo2 (Interfaz)
 
@@ -51,7 +52,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
 |[Método GetThreadStaticAddress](icorprofilerinfo2-getthreadstaticaddress-method.md)|Obtiene la dirección del campo estático de subproceso especificado que está en el ámbito del subproceso especificado.|  
 |[Método SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)|Especifica las funciones implementadas por el generador de perfiles a las que se llamará en los enlaces "Enter", "Leave" y "llamada" de las funciones administradas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un generador de perfiles llama a un método de la `ICorProfilerInfo2` interfaz para comunicarse con CLR para controlar la supervisión de eventos y solicitar información.  
   
@@ -69,7 +70,7 @@ Proporciona métodos que los perfiles de código usan para comunicarse con el Co
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Resolvetypelib ('
 title: ResolveTypeLib (Método)
 ms.date: 03/30/2017
 api_name:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 84eea78b9c2e73e24238a5ecbc9442f3d63dbd4e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ca7f94f630479d30bb9129497b38bcf04e759e5d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719793"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646288"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib (Método)
 
@@ -60,7 +61,7 @@ HRESULT ResolveTypeLib(
  `pbstrResolvedTlbName`  
  enuncia Un puntero a un [BSTR](/previous-versions/windows/desktop/automat/bstr) que contiene la ruta de acceso completa de la biblioteca de tipos con el nombre en el `bstrSimpleName` parámetro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ResolveTypeLib`La [función LoadTypeLibWithResolver (](loadtypelibwithresolver-function.md) llama al método durante el procesamiento de [Tlbexp.exe (exportador de la biblioteca de tipos)](../../tools/tlbexp-exe-type-library-exporter.md) .  
   
@@ -76,7 +77,7 @@ HRESULT ResolveTypeLib(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones del asistente Tlbexp](index.md)
 - [LoadTypeLibEx](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

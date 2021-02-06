@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo:: SetILFunctionBody ((método)'
 title: ICorProfilerInfo::SetILFunctionBody (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b159c712-00f4-4fc7-a990-40bf9f642e8f
 topic_type:
 - apiref
-ms.openlocfilehash: 376b9fc637993f00722c48db7f51650e0a22d931
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 38e7907080065dc96d72a3d38a67227414637a70
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647172"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody (Método)
 
@@ -46,7 +47,7 @@ HRESULT SetILFunctionBody(
  `pbNewILMethodHeader`  
  de Nuevo encabezado de la función.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `SetILFunctionBody` método reemplaza la dirección virtual relativa de la función en los metadatos para que apunte al nuevo cuerpo de la función y ajusta las estructuras de datos internas según sea necesario.  
   
@@ -64,6 +65,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

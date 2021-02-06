@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo:: Getmoduleinfo ((método)'
 title: ICorProfilerInfo::GetModuleInfo (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a90d16f-7929-4987-8f83-a631becf564d
 topic_type:
 - apiref
-ms.openlocfilehash: 863fa1bf50830bb46e5c2939c99fe1e15897ac3d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 003f40e6637490be23e8bf87a6bac8ab76bc50e5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724135"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647200"
 ---
 # <a name="icorprofilerinfogetmoduleinfo-method"></a>ICorProfilerInfo::GetModuleInfo (Método)
 
@@ -59,7 +60,7 @@ HRESULT GetModuleInfo(
  `pAssemblyId`  
  [out] Puntero al identificador del ensamblado primario del módulo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para los módulos dinámicos, el parámetro `szName` es una cadena vacía y la dirección base es 0 (cero).  
   
@@ -79,7 +80,7 @@ HRESULT GetModuleInfo(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

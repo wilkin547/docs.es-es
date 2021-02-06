@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ITypeLibResolver ('
 title: ITypeLibResolver (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-ms.openlocfilehash: 1398da1ef6f7f62ecd9c9e58f7b6010916bf9c57
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0d80d9b83d0f36fb84837db7b95687fea6a0c0f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719780"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646236"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver (Interfaz)
 
@@ -41,7 +42,7 @@ Proporciona el [método resolvetypelib (](resolvetypelib-method.md), que resuelv
   
  **.NET Framework versión:** 4, 3,5, 3,0, 2,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones del asistente Tlbexp](index.md)
 - [LoadTypeLibEx función)](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

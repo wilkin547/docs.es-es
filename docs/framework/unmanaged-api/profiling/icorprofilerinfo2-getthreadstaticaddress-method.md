@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo2:: Getthreadstaticaddress ((método)'
 title: ICorProfilerInfo2::GetThreadStaticAddress (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9b76fd58d8b3ec5c2d98156b7935051aff074b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bab4190f3751967031806dccbea2fdf6add73f6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647060"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress (Método)
 
@@ -50,7 +51,7 @@ HRESULT GetThreadStaticAddress(
  `ppAddress`  
  enuncia Puntero a la dirección del campo estático que está dentro del subproceso especificado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetThreadStaticAddress` método puede devolver uno de los siguientes:  
   
@@ -70,7 +71,7 @@ HRESULT GetThreadStaticAddress(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 (Interfaz)](icorprofilerinfo2-interface.md)

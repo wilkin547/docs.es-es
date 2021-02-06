@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: interfaz ICorProfilerInfo8'
 title: Interface ICorProfilerInfo8
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: eedd16006781de517587e5138543b9b9eca3ff90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4538c9d314283c67ab0bfe6af3f3768062cffda4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646548"
 ---
 # <a name="icorprofilerinfo8-interface"></a>Interface ICorProfilerInfo8
 
@@ -28,6 +29,6 @@ Una subclase de [ICorProfilerInfo7](icorprofilerinfo7-interface.md) que proporci
 **Encabezado:** CorProf.idl, CorProf.h  
 **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

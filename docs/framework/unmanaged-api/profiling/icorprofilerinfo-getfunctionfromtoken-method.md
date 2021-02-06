@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo:: GetFunctionFromToken ((método)'
 title: ICorProfilerInfo::GetFunctionFromToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eed759f-cce8-405d-88dc-9ee293a38928
 topic_type:
 - apiref
-ms.openlocfilehash: 9c7f01d2e462ad1cb0532be6f369c3118a4deb6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 58dea413539d6e3a625f515aa7e8d5123152c90a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647458"
 ---
 # <a name="icorprofilerinfogetfunctionfromtoken-method"></a>ICorProfilerInfo::GetFunctionFromToken (Método)
 
@@ -35,7 +36,7 @@ HRESULT GetFunctionFromToken(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetFunctionFromToken` método no funcionará para funciones o funciones genéricas en tipos genéricos; ahora está obsoleto. Se usa `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` para todas las funciones.  
   
@@ -49,6 +50,6 @@ HRESULT GetFunctionFromToken(
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

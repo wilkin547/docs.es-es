@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo8:: IsFunctionDynamic (método)'
 title: ICorProfilerInfo8::IsFunctionDynamic
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c88279d361ea78a2e910c4621e92c500902d9124
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646535"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic (método)
 
@@ -39,7 +40,7 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
   \[out] un puntero a que contendrá `BOOL` un valor que indica si la función no tiene metadatos.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Una función se considera dinámica si no tiene metadatos. Ciertos métodos como el código auxiliar de IL o los métodos LCG no tienen metadatos asociados que se pueden recuperar mediante las API de IMetaDataImport. Estos métodos pueden ser detectados por los profileres a través de punteros de instrucción o escuchando a [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).
 
@@ -53,6 +54,6 @@ Una función se considera dinámica si no tiene metadatos. Ciertos métodos como
 
 **.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 - [Interface ICorProfilerInfo8](icorprofilerinfo8-interface.md)

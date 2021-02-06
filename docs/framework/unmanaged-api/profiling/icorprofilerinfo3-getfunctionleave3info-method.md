@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo3:: Getfunctionleave3info ((método)'
 title: ICorProfilerInfo3::GetFunctionLeave3Info (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-ms.openlocfilehash: f365a95b0859f4f97dab96ec85af6d7dfb96d8e5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3031190a3603bedb3f58e7a86747542831c72291
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721626"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646803"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info (Método)
 
@@ -62,7 +63,7 @@ HRESULT GetFunctionLeave3Info(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
 - [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
