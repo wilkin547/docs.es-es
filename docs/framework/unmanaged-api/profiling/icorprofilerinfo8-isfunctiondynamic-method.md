@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo8:: IsFunctionDynamic (método)'
 title: ICorProfilerInfo8::IsFunctionDynamic
 ms.date: 08/06/2019
 dev_langs:
@@ -11,48 +12,48 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c88279d361ea78a2e910c4621e92c500902d9124
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ab942e6919f8029ef0d1c20336917622a1d22ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84495130"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646535"
 ---
-# <a name="icorprofilerinfo8isfunctiondynamic-method"></a><span data-ttu-id="4a1a0-102">ICorProfilerInfo8:: IsFunctionDynamic (método)</span><span class="sxs-lookup"><span data-stu-id="4a1a0-102">ICorProfilerInfo8::IsFunctionDynamic Method</span></span>
+# <a name="icorprofilerinfo8isfunctiondynamic-method"></a><span data-ttu-id="609ae-103">ICorProfilerInfo8:: IsFunctionDynamic (método)</span><span class="sxs-lookup"><span data-stu-id="609ae-103">ICorProfilerInfo8::IsFunctionDynamic Method</span></span>
 
-<span data-ttu-id="4a1a0-103">Determina si una función no tiene metadatos asociados.</span><span class="sxs-lookup"><span data-stu-id="4a1a0-103">Determines if a function does not have associated metadata.</span></span>
+<span data-ttu-id="609ae-104">Determina si una función no tiene metadatos asociados.</span><span class="sxs-lookup"><span data-stu-id="609ae-104">Determines if a function does not have associated metadata.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4a1a0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4a1a0-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="609ae-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="609ae-105">Syntax</span></span>
 
 ```cpp
 HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
                            [out] BOOL        *isDynamic);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="4a1a0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4a1a0-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="609ae-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="609ae-106">Parameters</span></span>
 
 - `functionId`
 
-  <span data-ttu-id="4a1a0-106">\[en] `FunctionID` que identifica la función en cuestión.</span><span class="sxs-lookup"><span data-stu-id="4a1a0-106">\[in]  The `FunctionID` that identifies the function in question.</span></span>
+  <span data-ttu-id="609ae-107">\[en] `FunctionID` que identifica la función en cuestión.</span><span class="sxs-lookup"><span data-stu-id="609ae-107">\[in]  The `FunctionID` that identifies the function in question.</span></span>
 
 - `isDynamic`
 
-  <span data-ttu-id="4a1a0-107">\[out] un puntero a que contendrá `BOOL` un valor que indica si la función no tiene metadatos.</span><span class="sxs-lookup"><span data-stu-id="4a1a0-107">\[out] A pointer to a `BOOL` that will contain a value indicating if the function has no metadata.</span></span>
+  <span data-ttu-id="609ae-108">\[out] un puntero a que contendrá `BOOL` un valor que indica si la función no tiene metadatos.</span><span class="sxs-lookup"><span data-stu-id="609ae-108">\[out] A pointer to a `BOOL` that will contain a value indicating if the function has no metadata.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="4a1a0-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4a1a0-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="609ae-109">Observaciones</span><span class="sxs-lookup"><span data-stu-id="609ae-109">Remarks</span></span>
 
-<span data-ttu-id="4a1a0-109">Una función se considera dinámica si no tiene metadatos.</span><span class="sxs-lookup"><span data-stu-id="4a1a0-109">A function is considered dynamic if it has no metadata.</span></span> <span data-ttu-id="4a1a0-110">Ciertos métodos como el código auxiliar de IL o los métodos LCG no tienen metadatos asociados que se pueden recuperar mediante las API de IMetaDataImport.</span><span class="sxs-lookup"><span data-stu-id="4a1a0-110">Certain methods like IL Stubs or LCG Methods do not have associated metadata that can be retrieved using the IMetaDataImport APIs.</span></span> <span data-ttu-id="4a1a0-111">Estos métodos pueden ser detectados por los profileres a través de punteros de instrucción o escuchando a [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span><span class="sxs-lookup"><span data-stu-id="4a1a0-111">These methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
+<span data-ttu-id="609ae-110">Una función se considera dinámica si no tiene metadatos.</span><span class="sxs-lookup"><span data-stu-id="609ae-110">A function is considered dynamic if it has no metadata.</span></span> <span data-ttu-id="609ae-111">Ciertos métodos como el código auxiliar de IL o los métodos LCG no tienen metadatos asociados que se pueden recuperar mediante las API de IMetaDataImport.</span><span class="sxs-lookup"><span data-stu-id="609ae-111">Certain methods like IL Stubs or LCG Methods do not have associated metadata that can be retrieved using the IMetaDataImport APIs.</span></span> <span data-ttu-id="609ae-112">Estos métodos pueden ser detectados por los profileres a través de punteros de instrucción o escuchando a [ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span><span class="sxs-lookup"><span data-stu-id="609ae-112">These methods can be encountered by profilers through instruction pointers or by listening to [ICorProfilerCallback::DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md).</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="4a1a0-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4a1a0-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="609ae-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="609ae-113">Requirements</span></span>
 
-<span data-ttu-id="4a1a0-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4a1a0-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
+<span data-ttu-id="609ae-114">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="609ae-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="4a1a0-114">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4a1a0-114">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="609ae-115">**Encabezado:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="609ae-115">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="4a1a0-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a1a0-115">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="609ae-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="609ae-116">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="4a1a0-116">**.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="4a1a0-116">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+<span data-ttu-id="609ae-117">**.NET Framework versiones:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="609ae-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4a1a0-117">Consulte también:</span><span class="sxs-lookup"><span data-stu-id="4a1a0-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="609ae-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="609ae-118">See also</span></span>
 
-- [<span data-ttu-id="4a1a0-118">Interface ICorProfilerInfo8</span><span class="sxs-lookup"><span data-stu-id="4a1a0-118">ICorProfilerInfo8 Interface</span></span>](icorprofilerinfo8-interface.md)
+- [<span data-ttu-id="609ae-119">Interface ICorProfilerInfo8</span><span class="sxs-lookup"><span data-stu-id="609ae-119">ICorProfilerInfo8 Interface</span></span>](icorprofilerinfo8-interface.md)
