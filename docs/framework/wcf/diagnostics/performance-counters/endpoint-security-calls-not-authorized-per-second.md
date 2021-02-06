@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: punto de conexión: llamadas de seguridad no autorizadas por segundo'
 title: 'Extremo: Llamadas de seguridad no autorizadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: c8a1547b-986b-45c1-b302-dea0cd4b516d
-ms.openlocfilehash: 5b289d7e026b481576bd7de186364773a57c17bc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 55a49091426538304aceda52308e3f8df2010d6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256526"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655466"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a>Extremo: Llamadas de seguridad no autorizadas por segundo
 

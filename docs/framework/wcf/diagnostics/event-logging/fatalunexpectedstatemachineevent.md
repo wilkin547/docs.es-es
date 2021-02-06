@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: FatalUnexpectedStateMachineEvent'
 title: FatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: 57714066-921f-4ced-90a7-5fdd3dd79552
-ms.openlocfilehash: d0d67340e14f22d14971aac14634962a0d5a0882
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 58ca3473b4a3027094bc5ee6ce6ed2e75834b808
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96284321"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99656051"
 ---
 # <a name="fatalunexpectedstatemachineevent"></a>FatalUnexpectedStateMachineEvent
 

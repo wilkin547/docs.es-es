@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: punto de conexión: llamadas de seguridad no autorizadas'
 title: 'punto de conexión: Llamadas de seguridad no autorizadas'
 ms.date: 03/30/2017
 ms.assetid: d25095ff-9ff0-4c69-a674-4e6a9fe3f4dc
-ms.openlocfilehash: 3979eec15759989b638e1cc813cb78a0c008c3a4
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 258c984e8a7986594b6da6f5c2a8c030907f82ca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96256513"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655479"
 ---
 # <a name="endpoint-security-calls-not-authorized"></a>punto de conexión: Llamadas de seguridad no autorizadas
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerCallback:: UnmanagedToManagedTransition ((método)'
 title: ICorProfilerCallback::UnmanagedToManagedTransition (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-ms.openlocfilehash: 446de663d437c950f3a9be968e7dcbe8d25ed2b0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2b2bd86798df8b8c46506c924ee201c191e6cb82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657156"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition (Método)
 
@@ -42,7 +43,7 @@ HRESULT UnmanagedToManagedTransition(
  `reason`  
  de Un valor de la enumeración [COR_PRF_TRANSITION_REASON](cor-prf-transition-reason-enumeration.md) que indica si la transición se produjo debido a una llamada a código administrado desde código no administrado o debido a una devolución de una función no administrada a la que llama una administrada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el valor de `reason` es COR_PRF_TRANSITION_RETURN y `functionId` no es null, el identificador de función es el de la función no administrada y nunca se ha compilado con el compilador Just-in-Time (JIT). Las funciones no administradas tienen asociada cierta información básica, como un nombre y algunos metadatos.  
   
@@ -58,7 +59,7 @@ HRESULT UnmanagedToManagedTransition(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
 - [Método ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)

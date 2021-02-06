@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: MissingNecessaryEnhancedKeyUsage'
 title: MissingNecessaryEnhancedKeyUsage
 ms.date: 03/30/2017
 ms.assetid: 9dffd071-0b79-4e10-9027-06760b4cc3ca
-ms.openlocfilehash: af624fe0440a0eb9cd8aa8fb8995dc8530a9a767
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 518eb9dd0e9f5dbd9b6764ebe0895f69362838b4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278653"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99655973"
 ---
 # <a name="missingnecessaryenhancedkeyusage"></a>MissingNecessaryEnhancedKeyUsage
 
