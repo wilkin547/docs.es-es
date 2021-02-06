@@ -1,16 +1,17 @@
 ---
+description: Más información sobre cómo sincronizar un DataSet con un XmlDataDocument
 title: Sincronizar un objeto DataSet con un objeto XmlDataDocument
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 95f1d21805dde86cd4eb59147f2fd012279b6dc1
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 5b5d95ef78746bb5b78146557a6ebd307895db13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173749"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651553"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar un objeto DataSet con un objeto XmlDataDocument
 
@@ -158,7 +159,7 @@ En esta sección se muestra un paso del procesamiento de una orden de compra, do
 </xs:schema>  
 ```  
   
- Tenga en cuenta que solo se incluye en el esquema del **conjunto**de datos la información de los elementos **OrderDetails** y **Products** del documento XML original. Sincronizar el **DataSet** con un **XmlDataDocument** garantiza que los elementos que no se incluyen en el **conjunto** de documentos se conservarán con el documento XML.  
+ Tenga en cuenta que solo se incluye en el esquema del **conjunto** de datos la información de los elementos **OrderDetails** y **Products** del documento XML original. Sincronizar el **DataSet** con un **XmlDataDocument** garantiza que los elementos que no se incluyen en el **conjunto** de documentos se conservarán con el documento XML.  
   
  Con el **DataSet** fuertemente tipado generado a partir del esquema XML (con un espacio de nombres **Northwind. FillOrder**), se puede exponer una parte del documento XML original sincronizando el **DataSet** con el **XmlDataDocument** cargado desde el documento XML de origen. Observe que el **conjunto** de datos generado a partir del esquema contiene la estructura, pero no los datos. Los datos se rellenan cuando se carga el XML en el **XmlDataDocument**. Si intenta cargar un **XmlDataDocument** que se ha sincronizado con un **conjunto** de datos que ya contiene datos, se producirá una excepción.  
   

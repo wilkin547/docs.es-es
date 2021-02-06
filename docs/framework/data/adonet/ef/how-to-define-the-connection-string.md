@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: definir la cadena de conexión'
 title: Procedimiento para defina la cadena de conexión
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
-ms.openlocfilehash: 9b029644e0d4e4c7467fbe1e1144579e6edb3478
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 104264299e597bc142a689aa83f3207765d18c67
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650825"
 ---
 # <a name="how-to-define-the-connection-string"></a>Procedimiento para defina la cadena de conexión
 
@@ -30,7 +31,7 @@ En este tema se muestra cómo definir la cadena de conexión que se usa al conec
 </connectionStrings>
 ```
 
-Si el proyecto no tiene un archivo de configuración de la aplicación, puede agregar uno; para ello, seleccione **Agregar nuevo elemento** en el menú **proyecto** , seleccione la categoría **General** , seleccione **archivo de configuración**de la aplicación y, a continuación, haga clic en **Agregar**.
+Si el proyecto no tiene un archivo de configuración de la aplicación, puede agregar uno; para ello, seleccione **Agregar nuevo elemento** en el menú **proyecto** , seleccione la categoría **General** , seleccione **archivo de configuración** de la aplicación y, a continuación, haga clic en **Agregar**.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,14 +1,15 @@
 ---
+description: 'Más información acerca de: <cancelRequestedQuery>'
 title: <cancelRequestedQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8da9b1c4-338a-4f23-9830-6d257772d340
-ms.openlocfilehash: a50e9965a595fce64c383313091334e883dcfbfa
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: efd908fb52d2bc32bf05fce9099c7105abdc9b1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91189492"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652645"
 ---
 # \<cancelRequestedQuery>
 
@@ -60,7 +61,7 @@ Representa una consulta que se usa para realizar un seguimiento de las solicitud
 |-------------|-----------------|  
 |[\<faultPropagationQuery>](faultpropagationquery.md)|Representa una lista de los elementos de configuración que se usan para realizar el seguimiento de las solicitudes de cancelación de una actividad secundaria por parte de la actividad primaria. La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>

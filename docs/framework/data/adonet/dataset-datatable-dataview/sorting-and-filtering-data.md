@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: ordenación y filtrado de datos'
 title: Ordenar y filtrar datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 89e2fdf656fb06ee545ba936f033646ad86182d4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a8b74dc13e88f8d5e70bb27291e0e6e34817f0ef
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183382"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651618"
 ---
 # <a name="sorting-and-filtering-data"></a>Ordenar y filtrar datos
 
@@ -30,13 +31,13 @@ La <xref:System.Data.DataView> proporciona varias formas de ordenación y filtra
   
     |Opciones de DataViewRowState|Descripción|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|Versión de fila **actual** de todas las filas **sin modificar**, **agregadas**y **modificadas** . Este es el valor predeterminado.|  
+    |**CurrentRows**|Versión de fila **actual** de todas las filas **sin modificar**, **agregadas** y **modificadas** . Este es el valor predeterminado.|  
     |**Agregado**|Versión de fila **actual** de todas las filas **agregadas** .|  
     |**Eliminado**|La versión de fila **original** de todas las filas **eliminadas** .|  
     |**ModifiedCurrent**|Versión de fila **actual** de todas las filas **modificadas** .|  
     |**ModifiedOriginal**|La versión de fila **original** de todas las filas **modificadas** .|  
-    |**None**|Ninguna fila.|  
-    |**OriginalRows**|La versión de fila **original** de todas las filas **sin modificar**, **modificadas**y **eliminadas** .|  
+    |**Ninguno**|Ninguna fila.|  
+    |**OriginalRows**|La versión de fila **original** de todas las filas **sin modificar**, **modificadas** y **eliminadas** .|  
     |**Sin cambios**|Versión de fila **actual** de todas las filas **sin modificar** .|  
   
  Para obtener más información sobre los Estados de fila y las versiones de fila, vea [Estados de fila y versiones](row-states-and-row-versions.md)de fila.  
@@ -57,7 +58,7 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
    DataViewRowState.CurrentRows);  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>

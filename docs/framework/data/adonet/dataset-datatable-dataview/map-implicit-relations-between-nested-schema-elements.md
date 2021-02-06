@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo asignar relaciones implícitas entre elementos de esquema anidados
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 32f8bf67242143098717b47c3b7aa175317ba274
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 418dd1210674b2c592cf96c6d369bc43f8dcab9a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652021"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 
@@ -15,7 +16,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 - Una tabla para cada uno de los tipos complejos (primario y secundario).  
   
-- Si no existe ninguna restricción UNIQUE en el elemento principal, una columna de clave principal adicional por cada definición de tabla denominada *tablename*_Id donde *TableName* es el nombre de la tabla primaria.  
+- Si no existe ninguna restricción UNIQUE en el elemento principal, una columna de clave principal adicional por cada definición de tabla denominada *tablename* _Id donde *TableName* es el nombre de la tabla primaria.  
   
 - Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la propiedad **IsPrimaryKey** en **true**). La restricción recibe el nombre Constraint\#, donde \# es 1, 2, 3, etc. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
   
@@ -55,7 +56,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
 </xs:schema>  
 ```  
   
- El proceso de asignación del esquema XML crea lo siguiente en el **conjunto**de elementos:  
+ El proceso de asignación del esquema XML crea lo siguiente en el **conjunto** de elementos:  
   
 - Un **pedido** y una tabla **OrderDetail** .  
   
@@ -98,7 +99,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     Nested: True  
     ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Generar relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
 - [Asignar restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)

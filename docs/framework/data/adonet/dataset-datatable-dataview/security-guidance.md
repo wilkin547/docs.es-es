@@ -1,14 +1,15 @@
 ---
+description: 'Más información sobre: instrucciones de seguridad de DataSet y DataTable'
 title: Guía de seguridad de DataSet y DataTable
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 8798c4542acc578c8f7f00c9b26cd01a0db20c42
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ec0130d5b5ad106cc3a0a26b45ebff34f73e31d9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726072"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651644"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Guía de seguridad de DataSet y DataTable
 
@@ -35,7 +36,7 @@ En todas las versiones compatibles de .NET Framework, .NET Core y .NET, `DataSet
 Si los datos XML entrantes contienen un objeto cuyo tipo no está en esta lista:
 
 * Se produce una excepción con el siguiente mensaje y seguimiento de la pila.
-Mensaje de error: System. InvalidOperationException: type ' \<Type Name\> , version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' no se permite aquí. Vea [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227) para obtener más detalles.
+Mensaje de error: System. InvalidOperationException: type ' \<Type Name\> , version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = \<token value\> ' no se permite aquí. Para más información, consulte [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227).
 Seguimiento de la pila: en System. Data. TypeLimiter. EnsureTypeIsAllowed (tipo Type, TypeLimiter capturedLimiter) en System. Data. DataColumn. UpdateColumnType (Type Type, StorageType typeCode) en System.Data.DataColumn.set_DataType (tipo Value)
 
 * Se produce un error en la operación de deserialización.
@@ -214,7 +215,7 @@ Si una aplicación debe quitar todas las restricciones de limitación de tipos d
 * Las opciones disponibles dependen del marco de trabajo de destino de la aplicación.
 
 > [!WARNING]
-> Al quitar todas las restricciones de tipo, se puede introducir un agujero de seguridad dentro de la aplicación. Al utilizar este mecanismo, asegúrese de que la **not** aplicación no usa `DataSet` o `DataTable` para leer la entrada que no es de confianza. Para obtener más información, vea [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) y la sección siguiente titulada [seguridad con respecto a la entrada que no es de confianza](#swr).
+> Al quitar todas las restricciones de tipo, se puede introducir un agujero de seguridad dentro de la aplicación. Al utilizar este mecanismo, asegúrese de que la  aplicación no usa `DataSet` o `DataTable` para leer la entrada que no es de confianza. Para obtener más información, vea [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) y la sección siguiente titulada [seguridad con respecto a la entrada que no es de confianza](#swr).
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>A través de la configuración de AppContext (.NET Framework 4,6-4,8, .NET Core 2,1 y versiones posteriores, .NET 5,0 y versiones posteriores)
 
@@ -279,7 +280,7 @@ Si `AppContext` no está disponible, las comprobaciones de limitación de tipos 
 | **Clave del Registro** | `HKLM\SOFTWARE\Microsoft\.NETFramework\AppContext` |
 | **Nombre del valor** | `Switch.System.Data.AllowArbitraryDataSetTypeInstantiation` |
 | **Tipo de valor** | `REG_SZ` |
-| **Datos del valor** | `true` |
+| **Datos de valor** | `true` |
 
 En un sistema operativo de 64 bits, es necesario agregar este valor para la clave de 64 bits (mostrada anteriormente) y la clave de 32 bits. La clave de 32 bits se encuentra en `HKLM\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\AppContext` .
 
@@ -475,9 +476,9 @@ La deserialización de un `DataSet` `DataTable` objeto o de este modo desde un B
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>Deserializar un conjunto de DataSet o DataTable a través de BinaryFormatter
 
-Los desarrolladores nunca deben usar `BinaryFormatter` , `NetDataContractSerializer` , o los `SoapFormatter` formateadores ***Unsafe** _ relacionados para deserializar `DataSet` una `DataTable` instancia de o de una carga que no sea de confianza:
+Los desarrolladores nunca deben usar `BinaryFormatter` , `NetDataContractSerializer` , `SoapFormatter` o formateadores ***no seguros*** relacionados para deserializar una `DataSet` `DataTable` instancia de o de una carga que no sea de confianza:
 
-_ Esto es susceptible a un ataque de ejecución de código remoto completo.
+* Esto es susceptible a un ataque de ejecución de código remoto completo.
 * El uso de un personalizado `SerializationBinder` no es suficiente para evitar este tipo de ataque.
 
 ## <a name="safe-replacements"></a>Reemplazos seguros

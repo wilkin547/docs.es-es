@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo escribir el contenido de un conjunto de datos como datos XML
 title: Escribir el contenido de un conjunto de datos como datos XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: c8a5c747e4ec60fcb97edf631aa3a0ae184ffec5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0ad232f744f69f822d09c0af6c4374b6e5f0147d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173723"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651371"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Escribir el contenido de un conjunto de datos como datos XML
 
@@ -18,7 +19,7 @@ En ADO.NET es posible escribir una representación XML de un <xref:System.Data.D
   
  Cuando un <xref:System.Data.DataSet> se escribe como datos XML, las filas del <xref:System.Data.DataSet> se escriben en sus versiones actuales. Sin embargo, el <xref:System.Data.DataSet> también se puede escribir como un DiffGram, de forma que se incluyan los valores actuales y originales de las filas.  
   
- La representación XML de <xref:System.Data.DataSet> se puede escribir en un archivo, una secuencia, un **XmlWriter**o una cadena. Estas opciones ofrecen una gran flexibilidad en cuanto a la forma de transportar la representación XML del <xref:System.Data.DataSet>. Para obtener la representación XML de <xref:System.Data.DataSet> como una cadena, utilice el método **GetXml** tal y como se muestra en el ejemplo siguiente.  
+ La representación XML de <xref:System.Data.DataSet> se puede escribir en un archivo, una secuencia, un **XmlWriter** o una cadena. Estas opciones ofrecen una gran flexibilidad en cuanto a la forma de transportar la representación XML del <xref:System.Data.DataSet>. Para obtener la representación XML de <xref:System.Data.DataSet> como una cadena, utilice el método **GetXml** tal y como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  

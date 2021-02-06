@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Entity Framework proveedores de datos'
 title: Proveedores de datos de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 8ab3946669eb0193c226a6f9691472b057539ff4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 439b04bd25684759d82b2187a324734fc44e6c04
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91185202"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651059"
 ---
 # <a name="entity-framework-data-providers"></a>Proveedores de datos de Entity Framework
 
@@ -26,6 +27,6 @@ En esta sección se proporciona información sobre los proveedores de datos que 
  [Entity Framework (SQL Server Compact)](/previous-versions/sql/compact/sql-server-compact-4.0/cc835494(v=sql.110))  
  Describe las limitaciones del proveedor y cómo usar el Entity Framework con una base de datos de SQL Server Compact.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Trabajar con proveedores de datos](working-with-data-providers.md)

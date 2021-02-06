@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugManagedCallback2:: Mdanotification ((método)'
 title: ICorDebugManagedCallback2::MDANotification (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: 09a410f54ddf07c9a5f6bb7dd34f2aaf266e0734
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f0c69c13ec30e604e07c284adca05f86283a5cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704583"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650500"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification (Método)
 
@@ -53,7 +54,7 @@ HRESULT MDANotification(
  `pMDA`  
  de Puntero a una interfaz [ICorDebugMDA](icordebugmda-interface.md) que expone la información de MDA.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un MDA es una advertencia heurística y no requiere ninguna acción explícita del depurador, salvo llamar a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md) para reanudar la ejecución de la aplicación que se está depurando.  
   
@@ -73,7 +74,7 @@ HRESULT MDANotification(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Diagnóstico de errores con asistentes de depuraciones administradas](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [ICorDebugManagedCallback2 (Interfaz)](icordebugmanagedcallback2-interface.md)

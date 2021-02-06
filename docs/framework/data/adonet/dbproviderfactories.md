@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: DbProviderFactories'
 title: Objetos DbProviderFactory
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
-ms.openlocfilehash: b5f2dbb687348afac98247cb21bae831dea26bfe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 735c78a846fc8df31a922acf90e587c6d96f4995
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91183317"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651267"
 ---
 # <a name="dbproviderfactories"></a>Objetos DbProviderFactory
 
@@ -29,7 +30,7 @@ El espacio de nombres <xref:System.Data.Common> proporciona clases para la creac
  [Modificar datos con un objeto DbDataAdapter](modifying-data-with-a-dbdataadapter.md)  
  Muestra cómo usar un objeto <xref:System.Data.Common.DbCommandBuilder> con <xref:System.Data.Common.DbDataAdapter> para recuperar y modificar datos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
 - [Información general de ADO.NET](ado-net-overview.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: ejecutar una consulta polimórfica'
 title: Procedimiento para ejecutar una consulta polimórfica
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
-ms.openlocfilehash: ad6fd7bf6a23f4cd1591a17b25042fd76ff1d08d
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 02074fb0ad60e5ba8d62094e25f35db40f8a2dbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650747"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>Procedimiento para ejecutar una consulta polimórfica
 

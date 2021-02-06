@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo controlar eventos de DataView
 title: Controlar eventos de DataView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: 2a67cb040c5d438d17ad91d41e97f24f3166262b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d3e72adefa6b320d48b90d481a20644b62009cdd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204546"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652320"
 ---
 # <a name="handling-dataview-events"></a>Controlar eventos de DataView
 
@@ -52,7 +53,7 @@ protected static void OnListChanged(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>

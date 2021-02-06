@@ -1,13 +1,14 @@
 ---
+description: Más información sobre cómo manipular datos en un objeto DataTable
 title: Manipular datos en un objeto DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 3f98832b4aa9361346d06830f2f004fa374222ee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 41f70bd15a023f8d92733bdce142666a08245d9d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652073"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Manipular datos en un objeto DataTable
 
@@ -39,7 +40,7 @@ Después de crear una <xref:System.Data.DataTable> en un <xref:System.Data.DataS
  [Objetos AcceptChange y RejectChange](acceptchanges-and-rejectchanges.md)  
  Explica cómo aceptar o rechazar los cambios realizados en una fila.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Objetos DataTable](datatables.md)
 - [Controlar eventos de DataTable](handling-datatable-events.md)

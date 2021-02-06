@@ -1,16 +1,17 @@
 ---
+description: Más información acerca de cómo combinar el contenido de un conjunto de DataSet
 title: Combinar contenido de DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bdd7184d2b3a46f8ee59a052239dcd472db5e404
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784397"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651878"
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
 
@@ -55,7 +56,7 @@ Es posible utilizar el parámetro opcional <xref:System.Data.MissingSchemaAction
 
 En la siguiente tabla se describen las opciones de `MissingSchemaAction`.
 
-|Opción MissingSchemaAction|DESCRIPCIÓN|
+|Opción MissingSchemaAction|Descripción|
 |--------------------------------|-----------------|
 |<xref:System.Data.MissingSchemaAction.Add>|Agrega al `DataSet` la nueva información de esquema y rellena las nuevas columnas con los valores entrantes. Este es el valor predeterminado.|
 |<xref:System.Data.MissingSchemaAction.AddWithKey>|Agrega al `DataSet` la nueva información de esquema y de clave principal y rellena las nuevas columnas con los valores entrantes.|
@@ -71,7 +72,7 @@ Tomemos como ejemplo un caso en el que una fila existente de un `DataSet` es una
 > [!NOTE]
 > Cuando las filas están insertadas en una base de datos con columnas de incremento automático como puede ser una columna de identidad, el valor de columna de identidad devuelto por la inserción no coincide con el valor de `DataSet`, lo que da lugar a que las filas devueltas se agreguen en lugar de combinarse. Para obtener más información, vea [recuperar valores de identidad o Autonumérico](../retrieving-identity-or-autonumber-values.md).
 
-En el ejemplo de código siguiente se `DataSet` combinan dos objetos con esquemas diferentes `DataSet` en uno con los esquemas combinados de los `DataSet` dos objetos de entrada.
+En el ejemplo de código siguiente se combinan dos `DataSet` objetos con esquemas diferentes en uno `DataSet` con los esquemas combinados de los dos objetos de entrada `DataSet` .
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -90,5 +91,5 @@ En el siguiente ejemplo de código se toma un `DataSet` existente con actualizac
 - [Estados y versiones de filas](row-states-and-row-versions.md)
 - [Objetos DataAdapter y DataReader](../dataadapters-and-datareaders.md)
 - [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)
-- [Recuperación de valores autonuméricos y de identidad](../retrieving-identity-or-autonumber-values.md)
-- [Información general sobre ADO.NET](../ado-net-overview.md)
+- [Recuperar valores autonuméricos y de identidad](../retrieving-identity-or-autonumber-values.md)
+- [Información general de ADO.NET](../ado-net-overview.md)

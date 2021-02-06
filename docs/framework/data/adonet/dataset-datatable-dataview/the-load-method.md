@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: el método Load'
 title: El método de carga
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: ea437d1f8ed567934acafbd8db1f8dba8eb22bcc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a14008597d88ad4af93c3646998244d94b5561d7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177545"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651527"
 ---
 # <a name="the-load-method"></a>El método de carga
 
@@ -22,8 +23,8 @@ Se puede utilizar el método <xref:System.Data.DataTable.Load%2A> para cargar un
 |Valor LoadOption|Descripción|  
 |----------------------|-----------------|  
 |**OverwriteRow**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que una fila ya existente en la **DataTable**, los valores **originales** y **actuales** de cada columna se reemplazan por los valores de la fila entrante y la propiedad **RowState** se establece en **Unchanged**.<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan con un valor **RowState** de **Unchanged**.<br /><br /> Esta opción en efecto actualiza el contenido de la **DataTable** para que coincida con el contenido del origen de datos.|  
-|**PreserveCurrentValues (predeterminado)**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que una fila ya existente en la **DataTable**, el valor **original** se establece en el contenido de la fila entrante y no se cambia el valor **actual** .<br /><br /> Si el **RowState** se **agrega** o se **modifica**, se establece en **Modified**.<br /><br /> Si se **eliminó**el **RowState** , permanecerá **eliminado**.<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece en **Unchanged**.|  
-|**UpdateCurrentValues**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que la fila que ya está en la **DataTable**, el valor **actual** se copia en el valor **original** y el valor **actual** se establece en el contenido de la fila entrante.<br /><br /> Si se **agregó**el **RowState** en la **DataTable** , el **RowState** permanece **agregado**. En el caso de las filas marcadas como **modificadas** o **eliminadas**, se **modifica**el **RowState** .<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece en **Added**.|  
+|**PreserveCurrentValues (predeterminado)**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que una fila ya existente en la **DataTable**, el valor **original** se establece en el contenido de la fila entrante y no se cambia el valor **actual** .<br /><br /> Si el **RowState** se **agrega** o se **modifica**, se establece en **Modified**.<br /><br /> Si se **eliminó** el **RowState** , permanecerá **eliminado**.<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece en **Unchanged**.|  
+|**UpdateCurrentValues**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que la fila que ya está en la **DataTable**, el valor **actual** se copia en el valor **original** y el valor **actual** se establece en el contenido de la fila entrante.<br /><br /> Si se **agregó** el **RowState** en la **DataTable** , el **RowState** permanece **agregado**. En el caso de las filas marcadas como **modificadas** o **eliminadas**, se **modifica** el **RowState** .<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece en **Added**.|  
   
  En el ejemplo siguiente se usa el método **Load** para mostrar una lista de cumpleaños para los empleados de la base de datos **Northwind** .  
   
@@ -69,7 +70,7 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Manipular datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Información general de ADO.NET](../ado-net-overview.md)

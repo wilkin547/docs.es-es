@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo deducir columnas
 title: Inferir columnas
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 45d27b78b5d83d333c16192e172e7b7e3dd88c10
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 528d4ea20260b5f1fbf30536eafcaec8c5f9215a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652255"
 ---
 # <a name="inferring-columns"></a>Inferir columnas
 
@@ -28,7 +29,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
   
 ## <a name="attributes"></a>Atributos  
 
- Como se define en [inferencia de tablas](inferring-tables.md), un elemento con atributos se deduce como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. La propiedad **ColumnMapping** de las columnas se establecerá en **MappingType. Attribute**para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir en XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
+ Como se define en [inferencia de tablas](inferring-tables.md), un elemento con atributos se deduce como una tabla. Los atributos de dicho elemento se deducirán como columnas de la tabla. La propiedad **ColumnMapping** de las columnas se establecerá en **MappingType. Attribute** para asegurarse de que los nombres de columna se escribirán como atributos si el esquema se vuelve a escribir en XML. Los valores de los atributos se almacenan en una fila de la tabla. Por ejemplo, tomemos el siguiente código XML:  
   
 ```xml  
 <DocumentElement>  
@@ -69,7 +70,7 @@ Una vez que ADO.NET determina a partir de un documento XML los elementos que se 
 |-------------------|-------------------|  
 |Text1|Text2|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inferir una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
 - [Cargar un conjunto de datos desde XML](loading-a-dataset-from-xml.md)

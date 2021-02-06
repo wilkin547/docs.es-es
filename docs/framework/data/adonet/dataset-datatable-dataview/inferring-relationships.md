@@ -1,17 +1,18 @@
 ---
+description: 'Más información sobre: inferir relaciones'
 title: Inferir relaciones
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: ee691eee95c34afdb6374cdd7448d4b44ece3055
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a117581d512c1427c638ea862169ab3c7623d783
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177571"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652151"
 ---
 # <a name="inferring-relationships"></a>Inferir relaciones
 
-Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Se agregará una nueva columna con el nombre **ParentTableName_Id** a la tabla creada para el elemento primario y a la tabla creada para el elemento secundario. La propiedad **ColumnMapping** de esta columna de identidad se establecerá en **MappingType. Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se utilizará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System. Int32**, a diferencia del tipo de datos de todas las demás columnas inferidos, que es **System. String**. <xref:System.Data.ForeignKeyConstraint>También se **DeleteRule**  =  creará una con la**cascada** de DeleteRule utilizando la nueva columna en las tablas primaria y secundaria.  
+Si un elemento que se deduce como una tabla tiene un elemento secundario que también se deduce como una tabla, se creará una <xref:System.Data.DataRelation> entre las dos tablas. Se agregará una nueva columna con el nombre **ParentTableName_Id** a la tabla creada para el elemento primario y a la tabla creada para el elemento secundario. La propiedad **ColumnMapping** de esta columna de identidad se establecerá en **MappingType. Hidden**. La columna será una clave principal de incremento automático para la tabla primaria y se utilizará para la **DataRelation** entre las dos tablas. El tipo de datos de la columna de identidad agregada será **System. Int32**, a diferencia del tipo de datos de todas las demás columnas inferidos, que es **System. String**. <xref:System.Data.ForeignKeyConstraint>También se   =  creará una con la **cascada** de DeleteRule utilizando la nueva columna en las tablas primaria y secundaria.  
   
  Por ejemplo, tomemos el siguiente código XML:  
   
@@ -70,7 +71,7 @@ Si un elemento que se deduce como una tabla tiene un elemento secundario que tam
   
  **AcceptRejectRule:** Ninguna  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inferir una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
 - [Cargar un conjunto de datos desde XML](loading-a-dataset-from-xml.md)

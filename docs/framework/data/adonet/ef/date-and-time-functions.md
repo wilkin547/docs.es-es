@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: funciones de fecha y hora'
 title: Funciones de fecha y hora
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: aa024ad748db26cb75111984abdb61fdbd538ef9
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: d8172a3b69f36c183d5288740d4a11e008a97428
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651033"
 ---
 # <a name="date-and-time-functions"></a>Funciones de fecha y hora
 
@@ -30,6 +31,6 @@ El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona fun
   
  Para obtener más información sobre las funciones de fecha y hora que SqlClient admite, vea [tipos de datos y funciones de fecha y hora (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [SqlClient para las funciones de Entity Framework](sqlclient-for-ef-functions.md)

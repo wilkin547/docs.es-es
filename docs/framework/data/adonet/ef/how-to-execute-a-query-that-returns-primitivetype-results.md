@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: ejecutar una consulta que devuelve resultados PrimitiveType'
 title: Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 3f1d589a37eca0254ecd3da96cd5731087c5027a
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e1493351b2c5923dc328b2ca65e784e76c5947ce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650617"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados PrimitiveType
 
@@ -38,7 +39,7 @@ En este tema se muestra cómo ejecutar un comando en un modelo conceptual usando
  [!code-csharp[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlprimitivetypes)]
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](./language-reference/entity-sql-reference.md)
 - [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md)

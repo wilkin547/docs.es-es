@@ -1,24 +1,25 @@
 ---
+description: Más información acerca de cómo escribir información de esquema de conjunto de datos como XSD
 title: Escribir información del esquema de un conjunto de datos como XSD
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: 7634dfc8415b6f73fc60f2ebe59c92a0c31f83a2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e05188c74ca21e73ee5151da817e143102640a13
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173736"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651358"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>Escribir información del esquema de un conjunto de datos como XSD
 
-Puede escribir el esquema de un <xref:System.Data.DataSet> como un esquema de lenguaje de definición de esquemas XML (XSD), de forma que pueda transportarlo, con o sin datos relacionados, a un documento XML. El esquema XML se puede escribir en un archivo, una secuencia, un <xref:System.Xml.XmlWriter> o una cadena; resulta útil para generar un **conjunto**de un DataSet fuertemente tipado. Para obtener más información sobre los objetos de **conjunto** de datos fuertemente tipados, vea [conjuntos de datos con tipo](typed-datasets.md).  
+Puede escribir el esquema de un <xref:System.Data.DataSet> como un esquema de lenguaje de definición de esquemas XML (XSD), de forma que pueda transportarlo, con o sin datos relacionados, a un documento XML. El esquema XML se puede escribir en un archivo, una secuencia, un <xref:System.Xml.XmlWriter> o una cadena; resulta útil para generar un **conjunto** de un DataSet fuertemente tipado. Para obtener más información sobre los objetos de **conjunto** de datos fuertemente tipados, vea [conjuntos de datos con tipo](typed-datasets.md).  
   
  Puede especificar cómo se representa una columna de una tabla en el esquema XML mediante la propiedad **ColumnMapping** del <xref:System.Data.DataColumn> objeto. Para obtener más información, vea "asignar columnas a elementos, atributos y texto XML" al [escribir el contenido del conjunto de datos como datos XML](writing-dataset-contents-as-xml-data.md).  
   
- Para escribir el esquema de un **DataSet** como esquema XML, en un archivo, una secuencia o **XmlWriter**, utilice el método **WriteXmlSchema** del **conjunto**de archivos. **WriteXmlSchema** toma un parámetro que especifica el destino del esquema XML resultante. En los siguientes ejemplos de código se muestra cómo escribir el esquema XML de un **conjunto** de objetos en un archivo pasando una cadena que contiene un nombre de archivo y un <xref:System.IO.StreamWriter> objeto.  
+ Para escribir el esquema de un **DataSet** como esquema XML, en un archivo, una secuencia o **XmlWriter**, utilice el método **WriteXmlSchema** del **conjunto** de archivos. **WriteXmlSchema** toma un parámetro que especifica el destino del esquema XML resultante. En los siguientes ejemplos de código se muestra cómo escribir el esquema XML de un **conjunto** de objetos en un archivo pasando una cadena que contiene un nombre de archivo y un <xref:System.IO.StreamWriter> objeto.  
   
 ```vb  
 dataSet.WriteXmlSchema("Customers.xsd")  

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: modelo conceptual canónico para SQL Server asignación de funciones'
 title: Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 25e366a45e91db97693c42b3c8d2febd912320ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153123"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651072"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server
 
@@ -81,7 +82,7 @@ En este tema se describe cómo se asignan las funciones canónicas del modelo co
 |[Floor(valor)](./language-reference/math-canonical-functions.md)|`FLOOR(value)`|  
 |[Power(valor)](./language-reference/math-canonical-functions.md)|`POWER(value, exponent)`|  
 |[Round(valor)](./language-reference/math-canonical-functions.md)|`ROUND(value, digits, 0)`|  
-|[Truncar](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
+|[Truncate](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>Funciones de cadena  
 

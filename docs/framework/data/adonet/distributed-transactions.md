@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: transacciones distribuidas'
 title: Transacciones distribuidas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: b6553d50039ca0f4888f0610b187c6b419a462b5
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 611fe4e2139e69e9501a3ea04a6aa62425e06728
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91153202"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651124"
 ---
 # <a name="distributed-transactions"></a>Transacciones distribuidas
 
@@ -18,9 +19,9 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
   
 ## <a name="working-with-systemtransactions"></a>Trabajo con System.Transactions  
 
- En .NET Framework, las transacciones distribuidas se administran a través de la API del espacio de nombres <xref:System.Transactions>. Cuando hay implicados varios administradores de recursos persistentes, la API <xref:System.Transactions> delegará el control de las transacciones distribuidas en un monitor de transacciones como el Coordinador de transacciones distribuidas de Microsoft (MS DTC). Para obtener más información, vea [conceptos básicos](../transactions/transaction-fundamentals.md)de las transacciones.  
+ En .NET Framework, las transacciones distribuidas se administran a través de la API del espacio de nombres <xref:System.Transactions>. Cuando hay implicados varios administradores de recursos persistentes, la API <xref:System.Transactions> delegará el control de las transacciones distribuidas en un monitor de transacciones como el Coordinador de transacciones distribuidas de Microsoft (MS DTC). Para obtener más información, vea [Aspectos básicos de las transacciones](../transactions/transaction-fundamentals.md).  
   
- ADO.NET 2.0 incorporó la compatibilidad con la inscripción en una transacción distribuida mediante el método `EnlistTransaction`, que inscribe una conexión en una instancia de <xref:System.Transactions.Transaction>. En las versiones anteriores de ADO.NET, la inscripción explícita en transacciones distribuidas se realizaba mediante el método `EnlistDistributedTransaction` de una conexión que inscribía ésta en una instancia <xref:System.EnterpriseServices.ITransaction>, en la que se permitía la compatibilidad con versiones anteriores. Para obtener más información acerca de las transacciones de Enterprise Services, consulte [interoperabilidad con Enterprise Services y transacciones de com+](../transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ ADO.NET 2.0 incorporó la compatibilidad con la inscripción en una transacción distribuida mediante el método `EnlistTransaction`, que inscribe una conexión en una instancia de <xref:System.Transactions.Transaction>. En las versiones anteriores de ADO.NET, la inscripción explícita en transacciones distribuidas se realizaba mediante el método `EnlistDistributedTransaction` de una conexión que inscribía ésta en una instancia <xref:System.EnterpriseServices.ITransaction>, en la que se permitía la compatibilidad con versiones anteriores. Para obtener más información sobre las transacciones de Enterprise Services, vea [Interoperabilidad con Enterprise Services y transacciones de COM+](../transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
  Cuando se usa una transacción <xref:System.Transactions> con el proveedor .NET Framework para SQL Server en una base de datos de SQL Server, se usará automáticamente un objeto <xref:System.Transactions.Transaction> ligero. A continuación, la transacción se puede promover a una transacción distribuida completa si es necesario. Para obtener más información, vea [integración de System. Transactions con SQL Server](system-transactions-integration-with-sql-server.md).  
   
@@ -37,7 +38,7 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
   
  La inscripción en transacciones distribuidas es especialmente conveniente al agrupar objetos empresariales. Si se agrupa un objeto empresarial con una conexión abierta, la inscripción automática en transacciones sólo se produce cuando se abre esa conexión. Si se realizan varias transacciones con el objeto empresarial agrupado, la conexión abierta para ese objeto no se inscribirá automáticamente en las transacciones recién iniciadas. En este caso, puede deshabilitar la inscripción automática de la conexión en la transacción e inscribir la conexión en las transacciones mediante `EnlistTransaction`.  
   
- `EnlistTransaction` toma un único argumento de tipo <xref:System.Transactions.Transaction> que es una referencia a la transacción existente. Después de llamar al método `EnlistTransaction` de la conexión, todas las modificaciones realizadas en el origen de datos mediante la conexión se incluyen en la transacción. Si se pasa un valor nulo, se anula la inscripción de la conexión de su inscripción actual en transacciones distribuidas. Tenga en cuenta que la conexión se debe abrir antes de llamar a `EnlistTransaction`.  
+ `EnlistTransaction` acepta un único argumento de tipo <xref:System.Transactions.Transaction> que es una referencia a la transacción existente. Después de llamar al método `EnlistTransaction` de la conexión, todas las modificaciones realizadas en el origen de datos mediante la conexión se incluyen en la transacción. Si se pasa un valor nulo, se anula la inscripción de la conexión de su inscripción actual en transacciones distribuidas. Tenga en cuenta que la conexión se debe abrir antes de llamar a `EnlistTransaction`.  
   
 > [!NOTE]
 > Una vez que una conexión se inscribe explícitamente en una transacción, no se puede anular su inscripción ni inscribirse en otra transacción hasta que finaliza la primera transacción.  
@@ -53,8 +54,8 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
 
  Puede que necesite habilitar MS DTC a través de la red para usar transacciones distribuidas. Si tiene Firewall de Windows habilitado, debe permitir que el servicio MS DTC use la red o abrir el puerto MS DTC.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Transacciones y simultaneidad](transactions-and-concurrency.md)
-- [Integración de System.Transactions con SQL Server](system-transactions-integration-with-sql-server.md)
+- [Integración de System. Transactions con SQL Server](system-transactions-integration-with-sql-server.md)
 - [Información general de ADO.NET](ado-net-overview.md)

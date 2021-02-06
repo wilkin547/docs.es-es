@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: consideraciones de implementación (Entity Framework)'
 title: Consideraciones de implementación (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 034fb48050fb0e6a9aabf6c183f8721f0a7115e4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 8dc8212736c6eb8cddbb5a6d88ae7c30c5304f06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91181133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651007"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Consideraciones de implementación (Entity Framework)
 
@@ -29,7 +30,7 @@ En este tema se proporciona información sobre cómo implementar aplicaciones qu
   
 - Dado que Entity Framework es un componente de .NET Framework, se puede redistribuir con la aplicación si lo permite el contrato de licencia de .NET Framework.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ADO.NET Entity Framework](index.md)
 - [Consideraciones de desarrollo e implementación](development-and-deployment-considerations.md)

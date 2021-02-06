@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: ejecutar un procedimiento almacenado parametrizado con EntityCommand'
 title: Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
-ms.openlocfilehash: ec1ff7cdbdc83bc409b191f0aefe2b50cbad9225
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a45c9a276cc33037a4d353e05d1174c9748aab82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91192170"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650695"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Procedimiento para ejecutar un procedimiento almacenado parametrizado mediante EntityCommand
 
@@ -34,6 +35,6 @@ En este tema se muestra cómo ejecutar un procedimiento almacenado parametrizado
  [!code-csharp[DP EntityServices Concepts#StoredProcWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#storedprocwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#StoredProcWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#storedprocwithentitycommand)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md)

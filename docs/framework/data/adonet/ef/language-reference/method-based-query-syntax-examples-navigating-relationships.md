@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de sintaxis de consulta: navegar por relaciones'
 title: 'Ejemplos de sintaxis de consulta basada en métodos: Navegar por relaciones'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: bb40d10165592b25cc6afc1eac799a05b4504e8d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c209b97704fec86834375ad8c9eee4d717a61294
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91191975"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650524"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Ejemplos de sintaxis de consulta basada en métodos: Navegar por relaciones
 
@@ -58,7 +59,7 @@ Las propiedades de navegación en el Entity Framework son propiedades de acceso 
  [!code-csharp[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty)]
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Relaciones, propiedades de navegación y claves externas](/ef/ef6/fundamentals/relationships)
 - [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

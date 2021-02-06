@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: ejecutar una consulta que devuelve resultados RefType'
 title: Procedimiento para ejecutar una consulta que devuelve resultados RefType
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 4d515fa63b62948bcc1b93aeb3a4bb07407b4169
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f62ea7ab3820ebbc63955c13e761726b58fad872
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91198332"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650589"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Procedimiento para ejecutar una consulta que devuelve resultados RefType
 
@@ -38,7 +39,7 @@ En este tema se muestra cómo ejecutar un comando contra un modelo conceptual us
  [!code-csharp[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlreftypes)]
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](./language-reference/entity-sql-reference.md)
 - [Proveedor de EntityClient para Entity Framework](entityclient-provider-for-the-entity-framework.md)

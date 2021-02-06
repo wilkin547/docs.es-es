@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo deducir tablas
 title: Inferir tablas
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 4a3d7b239dbc405cf2acae967b5be401dc772e38
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 00a24cbfc44aea4279b0a115214ec26d3eac59ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91177558"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652164"
 ---
 # <a name="inferring-tables"></a>Inferir tablas
 
@@ -63,7 +64,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
 |-------------------|  
 |Text1|  
   
- El elemento de documento, o raíz, se deduce como una tabla si tiene atributos o elementos secundarios que se deducen como columnas. Si el elemento de documento no tiene ningún atributo y ningún elemento secundario que se deduzca como columnas, el elemento se deduce como un **conjunto**de elementos. Por ejemplo, tomemos el siguiente código XML:  
+ El elemento de documento, o raíz, se deduce como una tabla si tiene atributos o elementos secundarios que se deducen como columnas. Si el elemento de documento no tiene ningún atributo y ningún elemento secundario que se deduzca como columnas, el elemento se deduce como un **conjunto** de elementos. Por ejemplo, tomemos el siguiente código XML:  
   
 ```xml  
 <DocumentElement>  
@@ -122,7 +123,7 @@ Al deducir un esquema para un <xref:System.Data.DataSet> desde un documento XML,
 |Text1|  
 |Text2|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Inferir una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
 - [Cargar un conjunto de datos desde XML](loading-a-dataset-from-xml.md)

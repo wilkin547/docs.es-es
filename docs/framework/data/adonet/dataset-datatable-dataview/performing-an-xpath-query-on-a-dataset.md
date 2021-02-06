@@ -1,22 +1,23 @@
 ---
+description: Obtener más información acerca de cómo realizar una consulta XPath en un conjunto de información
 title: Realizar una consulta XPath en un objeto DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: d7897815874f2e9de2f4c24d3c141d464a296b31
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9febcc545f86f048b2d693f8aa6558a1b7883a60
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201244"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99651722"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Realizar una consulta XPath en un objeto DataSet
 
-La relación entre un sincronizado <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> permite hacer uso de servicios XML, como la consulta XPath (lenguaje de rutas XML), que tienen acceso al **XmlDataDocument** y pueden realizar determinada funcionalidad de forma más cómoda que el acceso directo al **conjunto de DataSet** . Por ejemplo, en lugar de usar el método **Select** de <xref:System.Data.DataTable> para navegar por las relaciones con otras tablas de un **DataSet**, puede realizar una consulta XPath en un **XmlDataDocument** que esté sincronizado con el **DataSet**para obtener una lista de elementos XML en forma de <xref:System.Xml.XmlNodeList> . Los nodos de la **XmlNodeList**, convertidos como <xref:System.Xml.XmlElement> nodos, se pueden pasar al método **GetRowFromElement** de **XmlDataDocument**para devolver las referencias coincidentes <xref:System.Data.DataRow> a las filas de la tabla en el **conjunto**de resultados sincronizado.  
+La relación entre un sincronizado <xref:System.Data.DataSet> y <xref:System.Xml.XmlDataDocument> permite hacer uso de servicios XML, como la consulta XPath (lenguaje de rutas XML), que tienen acceso al **XmlDataDocument** y pueden realizar determinada funcionalidad de forma más cómoda que el acceso directo al **conjunto de DataSet** . Por ejemplo, en lugar de usar el método **Select** de <xref:System.Data.DataTable> para navegar por las relaciones con otras tablas de un **DataSet**, puede realizar una consulta XPath en un **XmlDataDocument** que esté sincronizado con el **DataSet** para obtener una lista de elementos XML en forma de <xref:System.Xml.XmlNodeList> . Los nodos de la **XmlNodeList**, convertidos como <xref:System.Xml.XmlElement> nodos, se pueden pasar al método **GetRowFromElement** de **XmlDataDocument** para devolver las referencias coincidentes <xref:System.Data.DataRow> a las filas de la tabla en el **conjunto** de resultados sincronizado.  
   
- Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath. El **conjunto de DataSet** se rellena con tres tablas: **Customers**, **Orders**y **OrderDetails**. En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre las tablas **Customers** y **Orders** , y entre las tablas **Orders** y **OrderDetails** . Después, se realiza una consulta XPath para devolver una **XmlNodeList** de nodos **Customers** en la que un nodo de **OrderDetails** secundario tiene un nodo **ProductID** con el valor de 43. En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** de 43.  
+ Por ejemplo, en el siguiente ejemplo de código se realiza una consulta "secundaria" de XPath. El **conjunto de DataSet** se rellena con tres tablas: **Customers**, **Orders** y **OrderDetails**. En el ejemplo, primero se crea una relación de elementos primarios y secundarios entre las tablas **Customers** y **Orders** , y entre las tablas **Orders** y **OrderDetails** . Después, se realiza una consulta XPath para devolver una **XmlNodeList** de nodos **Customers** en la que un nodo de **OrderDetails** secundario tiene un nodo **ProductID** con el valor de 43. En esencia, el ejemplo utiliza la consulta XPath para determinar qué clientes han pedido el producto que tiene el **ProductID** de 43.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  

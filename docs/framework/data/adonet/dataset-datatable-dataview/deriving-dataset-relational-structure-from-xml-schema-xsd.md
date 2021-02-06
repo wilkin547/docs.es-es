@@ -1,13 +1,14 @@
 ---
+description: Obtener más información acerca de cómo derivar una estructura relacional de conjunto de objetos a partir de un esquema XML (XSD)
 title: Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 878e39af575328fb0abba096c327d36203a52231
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: c2d2dc8ab9c8a1cf77c79fbde38a06de6f120c82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91164810"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652528"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 
@@ -99,6 +100,6 @@ OutOfStateCustomers (CustomerID, CompanyName, Phone)
  [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)  
  Describe cómo cargar y conservar la estructura relacional y los datos de `DataSet` como datos XML.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general de ADO.NET](../ado-net-overview.md)
