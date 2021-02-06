@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataEmit:: SetHandler (método)'
 title: IMetaDataEmit::SetHandler (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c6c1aaaf-e2cd-407c-b73e-fbe6ffd83bb3
 topic_type:
 - apiref
-ms.openlocfilehash: 9b03dc5460875af3bb3e5e20799a4d26eb74da05
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 07ebf8eef816d373e92a82fc84adacfe5a8599fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730375"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657884"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler (Método)
 
@@ -39,7 +40,7 @@ HRESULT SetHandler (
  `pUnk`  
  de Controlador que se va a registrar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El motor de metadatos envía notificaciones mediante el método proporcionado por `SetHandler` , a los compiladores que no generan registros de una manera optimizada y que desean optimizar los registros guardados.  
   
@@ -55,7 +56,7 @@ HRESULT SetHandler (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataEmit (Interfaz)](imetadataemit-interface.md)
 - [IMetaDataEmit2 (Interfaz)](imetadataemit2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerCallback:: Shutdown (método)'
 title: ICorProfilerCallback::Shutdown (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: 9761eb5085a77279c4d07d39946a5ad1453ecaaf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7afc274579f248ee190e379160f2709b5cb9881a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657325"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown (Método)
 
@@ -32,7 +33,7 @@ Notifica al generador de perfiles que la aplicación se está cerrando.
 HRESULT Shutdown();  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El código del generador de perfiles no puede llamar de forma segura a los métodos de la interfaz [ICorProfilerInfo](icorprofilerinfo-interface.md) después de `Shutdown` llamar al método. Cualquier llamada a `ICorProfilerInfo` métodos produce un comportamiento indefinido después de que el `Shutdown` método devuelva un resultado. Es posible que se sigan produciendo ciertos eventos inmutables después del apagado; el generador de perfiles debe tener cuidado de volver inmediatamente cuando esto suceda.  
   
@@ -50,7 +51,7 @@ HRESULT Shutdown();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerCallback (Interfaz)](icorprofilercallback-interface.md)
-- [Initialize (Método)](icorprofilercallback-initialize-method.md)
+- [Método Initialize](icorprofilercallback-initialize-method.md)

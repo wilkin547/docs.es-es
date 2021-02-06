@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: enumeración COR_PRF_MONITOR'
 title: COR_PRF_MONITOR (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: e5e850e2464c310697c1cd1797d2207958591907
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5b0bd17713e47e40982e88f33721bf7d6d27fd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696874"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99657806"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR (Enumeración)
 
@@ -98,7 +99,7 @@ typedef enum {
 } COR_PRF_MONITOR;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
 
  En las secciones siguientes se enumeran `COR_PRF_MONITOR` los miembros de enumeración por categoría. Las categorías son:  
   
@@ -156,8 +157,8 @@ typedef enum {
 |`COR_PRF_ENABLE_FRAME_INFO`|Habilita la recuperación de un exacto `ClassID` para una función genérica llamando al método [getfunctioninfo2 (](icorprofilerinfo2-getfunctioninfo2-method.md) con un `COR_PRF_FRAME_INFO` valor devuelto por la devolución de llamada [FunctionEnter2](functionenter2-function.md) .|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Habilita el seguimiento de argumentos mediante la devolución de llamada [FunctionEnter2](functionenter2-function.md) o la devolución de llamada [FunctionEnter3WithInfo](functionenter3withinfo-function.md) y el método [GetFunctionEnter3Info (](icorprofilerinfo3-getfunctionenter3info-method.md) .|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|Habilita el seguimiento de valores devueltos mediante la devolución de llamada [FunctionLeave2](functionleave2-function.md) o la devolución de llamada [FunctionLeave3WithInfo](functionleave3withinfo-function.md) y el método [GetFunctionLeave3Info (](icorprofilerinfo3-getfunctionleave3info-method.md) .|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|Desusado.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|Desusado.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|En desuso.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
+|`COR_PRF_ENABLE_JIT_MAPS`|En desuso.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
 |`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informa al tiempo de ejecución que puede que el generador de perfiles quiera notificaciones de asignación de objetos. Esta marca se debe establecer durante la inicialización. Permite al generador de perfiles utilizar posteriormente la `COR_PRF_MONITOR_OBJECT_ALLOCATED` marca para recibir devoluciones de llamada de [ObjectAllocated](icorprofilercallback-objectallocated-method.md) .|  
 |`COR_PRF_ENABLE_REJIT`|Habilita las llamadas a los métodos [requestrejit (](icorprofilerinfo4-requestrejit-method.md) y [requestrevert (](icorprofilerinfo4-requestrevert-method.md) . El generador de perfiles debe establecer esta marca en el inicio.  Si el generador de perfiles especifica esta marca, también debe especificar `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|Habilita las llamadas al método [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) .|  
@@ -186,7 +187,7 @@ typedef enum {
 |`COR_PRF_MONITOR_IMMUTABLE`|Representa todas las marcas `COR_PRF_MONITOR` que se pueden establecer solo durante la inicialización. Al intentar cambiar cualquiera de estas marcas después de la inicialización se genera un valor `HRESULT` que indica error.|  
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|Representa todas las marcas `COR_PRF_MONITOR` que requieren imágenes mejoradas para el perfil.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `COR_PRF_MONITOR`Se usa un valor con los métodos [ICorProfilerInfo:: GetEventMask (](icorprofilerinfo-geteventmask-method.md) y [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para definir las notificaciones de eventos que el Common Language Runtime realiza al generador de perfiles.  
   
@@ -200,7 +201,7 @@ typedef enum {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para generación de perfiles](profiling-enumerations.md)
 - [Método GetEventMask](icorprofilerinfo-geteventmask-method.md)
