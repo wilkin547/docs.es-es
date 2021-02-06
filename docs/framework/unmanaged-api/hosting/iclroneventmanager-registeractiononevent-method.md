@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLROnEventManager:: RegisterActionOnEvent (método)'
 title: ICLROnEventManager::RegisterActionOnEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b944cf49-918d-4c4e-993b-77d097a52550
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0770585e977f5299a40517c28dfb776b2ab898
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b13209aed6a169185b42c6b9520f21f59f6be3bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725617"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637435"
 ---
 # <a name="iclroneventmanagerregisteractiononevent-method"></a>ICLROnEventManager::RegisterActionOnEvent (Método)
 
@@ -54,7 +55,7 @@ HRESULT RegisterActionOnEvent (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Después de que un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede registrar devoluciones de llamada para uno de los dos tipos de eventos descritos por o ambos `EClrEvent` . El host obtiene la `ICLROnEventManager` interfaz llamando al método [ICLRControl:: GetCLRManager (](iclrcontrol-getclrmanager-method.md) .  
   
@@ -71,7 +72,7 @@ HRESULT RegisterActionOnEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [EClrEvent (Enumeración)](eclrevent-enumeration.md)
 - [IActionOnCLREvent (Interfaz)](iactiononclrevent-interface.md)

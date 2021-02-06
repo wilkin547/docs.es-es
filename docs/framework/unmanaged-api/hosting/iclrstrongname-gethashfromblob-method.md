@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICLRStrongName:: GetHashFromBlob ((método)'
 title: ICLRStrongName::GetHashFromBlob (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-ms.openlocfilehash: 6b67aed90585f57d2635bb1a22d3e009edf01159
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20d03184f57e77741e656575038e426ee37968f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95714814"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637071"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob (Método)
 

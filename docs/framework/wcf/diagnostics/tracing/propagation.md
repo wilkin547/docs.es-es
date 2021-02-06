@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: propagación'
 title: Propagación
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: be010178d8f0face8f6c7e986107e4ea90d91953
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 43ecbf7b8db66f26accc058501730300a2891284
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96240139"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635602"
 ---
 # <a name="propagation"></a>Propagación
 
@@ -77,7 +78,7 @@ En este tema se describe la propagación de actividades en el modelo de seguimie
 
  Cuando el identificador de actividad se propaga por los puntos de conexión, el receptor del mensaje emite trazas de inicio y detención con ese identificador de actividad (propagado). Por lo tanto, existe una traza de inicio y una de detención con el gAId de cada origen de seguimiento de traza. Si los puntos de conexión están en el mismo proceso y utilizan el mismo nombre de origen de seguimiento, se crean varios inicios y detenciones con el mismo gAId (mismo gAId, mismo origen de seguimiento, mismo proceso).  
   
-## <a name="synchronization"></a>Synchronization  
+## <a name="synchronization"></a>Sincronización  
 
  Para sincronizar los eventos a través de los puntos de conexión que se ejecutan en distintos equipos, CorrelationId se agrega al encabezado de ActivityId que se propaga en los mensajes. Las herramientas pueden utilizar este id. para sincronizar eventos entre equipos con discrepancia de reloj. En concreto, la herramienta Service Trace Viewer utiliza este identificador para mostrar los flujos de mensaje entre los puntos de conexión.  
   

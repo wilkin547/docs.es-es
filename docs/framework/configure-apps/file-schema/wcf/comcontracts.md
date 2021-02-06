@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <comContracts>'
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 404cc66ce423ba947c2817b56bebb4daf341ef0b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 263210b4499274fe009a6b1b1e46c1f09dd007ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91176050"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638657"
 ---
 # \<comContracts>
 
@@ -35,7 +36,7 @@ La sección de configuración `comContracts` contiene elementos que le permiten 
   
  Además, puede utilizar el [\<exposedMethod>](exposedmethod.md) elemento para especificar los métodos com+ que se exponen cuando la interfaz en un componente com+ se expone como un servicio Web. También puede usar [\<persistableTypes>](persistabletypes.md) para especificar los tipos con persistencia que se usan en la integración de. Por último, puede usar el [\<userDefinedType>](userdefinedtype.md) elemento para incluir tipos definidos por el usuario (UDT) que se van a incluir en el contrato de servicio.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>

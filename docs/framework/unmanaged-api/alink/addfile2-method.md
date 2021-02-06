@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Addfile2 ('
 title: AddFile2 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03bc49bf-a89b-4fb6-a88d-97482e061195
 topic_type:
 - apiref
-ms.openlocfilehash: cff6707496c7d9657796deb8bf6fa9165ff295a2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d53527ecf7e8b3a99a11ea99512fbc812125de3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717089"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638618"
 ---
 # <a name="addfile2-method"></a>AddFile2 (Método)
 
@@ -63,7 +64,7 @@ HRESULT AddFile2(
 
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IALink2 (Interfaz)](ialink2-interface.md)
 - [IALink (Interfaz)](ialink-interface.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <claimTypeRequirements> elemento'
 title: <claimTypeRequirements> (elemento)
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
-ms.openlocfilehash: 6a4e5da3bd3ef6977d6258190d397130b33eb56c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9553c129c246a5f4980d597406bee19ea949bdcc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148976"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638917"
 ---
 # <a name="claimtyperequirements-element"></a>Elemento \<claimTypeRequirements>
 

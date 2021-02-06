@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeInfo:: GetProcAddress (método)'
 title: ICLRRuntimeInfo::GetProcAddress (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7732bfc-689a-4926-88fd-4f81e6f9ed78
 topic_type:
 - apiref
-ms.openlocfilehash: 028cfd51a713d8598598566a5b1edcf3fc70ecfc
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1e5d08ed118930418106b28541b4081d6acad927
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732065"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637149"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress (Método)
 
@@ -54,7 +55,7 @@ HRESULT GetProcAddress(
 |E_POINTER|`pszProcName` o `ppProc` es null.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|La función especificada no es una función exportada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método hace que el CLR se cargue pero no se inicialice.  
   
@@ -68,7 +69,7 @@ HRESULT GetProcAddress(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeInfo (Interfaz)](iclrruntimeinfo-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

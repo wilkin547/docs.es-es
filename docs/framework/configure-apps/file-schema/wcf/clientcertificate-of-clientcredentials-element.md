@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <clientCertificate> del <clientCredentials> elemento'
 title: <clientCertificate> del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 74209c43dcafb1e27bb1d7943ee7832eaea0ef57
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4305b94e62c76436a6bce91251049b3eebd2db2c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91204949"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638839"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate> del \<clientCredentials> elemento
 
@@ -57,7 +58,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 
  Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: especificar valores de credencial de cliente](../../../wcf/how-to-specify-client-credential-values.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>

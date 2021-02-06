@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTask:: RESET (método)'
 title: ICLRTask::Reset (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-ms.openlocfilehash: b87bc026a2cac2d0b913128c43142d56aee03025
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d30738b98003e0543c1a2a31c7471b15811efe5f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725201"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636993"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset (Método)
 
@@ -52,7 +53,7 @@ HRESULT Reset (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR puede reciclar `ICLRTask` las instancias creadas previamente para evitar la sobrecarga que supone crear instancias nuevas de forma repetida cada vez que necesita una nueva tarea. El host habilita esta característica llamando a `ICLRTask::Reset` en lugar de a [ICLRTask:: ExitTask](iclrtask-exittask-method.md) cuando ha completado una tarea. En la lista siguiente se resume el ciclo de vida normal de una `ICLRTask` instancia de:  
   
@@ -80,7 +81,7 @@ HRESULT Reset (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

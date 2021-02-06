@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <comContract>'
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 35596f32bf0e0de9081bc0d4c33fb370c7ab708b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fde1188a087f13da6629460bcebcea16ceefc0e8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173788"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638670"
 ---
 # \<comContract>
 
@@ -55,7 +56,7 @@ Especifica un contrato de servicio de integración de COM+.
 |---------------|-----------------|  
 |contrato|Una cadena que contiene el tipo de contrato.|  
 |name|Una cadena que contiene el nombre del contrato.|  
-|namespace|Una cadena que contiene el espacio de nombres del contrato.|  
+|espacio de nombres|Una cadena que contiene el espacio de nombres del contrato.|  
 |requiresSession|Un valor booleano que especifica si el contrato sólo se puede utilizar en enlaces con canal. Cuando se inicializa el servicio, el tiempo de ejecución de integración garantiza que este valor es coherente con el tipo de enlace que se va a usar. Se genera una excepción si uno o más de los enlaces para el contrato están en conflicto. Si esta propiedad es `false`, y un canal unidireccional está en uso y hay parámetros [fuera], también se genera una excepción.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -93,7 +94,7 @@ Especifica un contrato de servicio de integración de COM+.
   
  Cuando se inicializa el servicio, los espacios de nombres y nombres del contrato especificados se aplican a las descripciones de servicio generadas.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>

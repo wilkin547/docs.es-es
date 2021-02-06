@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Emitassemblycustomattribute ('
 title: EmitAssemblyCustomAttribute (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-ms.openlocfilehash: 2070d1ec2aec80638c20c764eed5086c4a42e0fa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c91eb563c14b442a22db8f328287c10e5cc9a63c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638332"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
 
@@ -71,7 +72,7 @@ HRESULT EmitAssemblyCustomAttribute(
 
  Requiere ALink. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IALink (Interfaz)](ialink-interface.md)
 - [IALink2 (Interfaz)](ialink2-interface.md)

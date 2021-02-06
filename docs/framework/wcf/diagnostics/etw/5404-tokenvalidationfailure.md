@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 5404-TokenValidationFailure'
 title: 5404 - TokenValidationFailure
 ms.date: 03/30/2017
 ms.assetid: 19783336-5560-4334-be13-2efd15da3e2a
-ms.openlocfilehash: 6f0af618fea697340ebbc8329c02fdd8cb0aec9b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9e0d83f0913a591793fdd7eb49f1f6f70b000c43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96276417"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636161"
 ---
 # <a name="5404---tokenvalidationfailure"></a>5404 - TokenValidationFailure
 
@@ -15,7 +16,7 @@ ms.locfileid: "96276417"
   
 |||  
 |-|-|  
-|ID|5404|  
+|Id.|5404|  
 |Palabras clave|Seguridad|  
 |Nivel|Error|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

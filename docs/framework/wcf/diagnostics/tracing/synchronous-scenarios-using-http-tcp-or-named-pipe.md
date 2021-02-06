@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: escenarios sincrónicos con HTTP, TCP o Named-Pipe'
 title: Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 906bceadf56d82570b41cfbb2c96e4b89d595d02
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fd6605be99a9419de27f000b378720adf0ae1a14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274444"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635420"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>Escenarios sincrónicos en los que se utiliza HTTP, TCP o canalizaciones con nombre
 
@@ -31,7 +32,7 @@ En este tema se describen las actividades y transferencias para diferentes escen
 
  La actividad de cierre (I) del cliente se crea a partir de la actividad ambiente. Esto es idéntico a nuevo y abrir.  
   
-### <a name="server"></a>Server  
+### <a name="server"></a>Servidor  
   
 #### <a name="setting-up-a-service-host"></a>Configurar un host de servicio  
 

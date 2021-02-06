@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorConfiguration:: Setgchostcontrol ((método)'
 title: ICorConfiguration::SetGCHostControl (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bca6bd79-e288-475a-aa46-6bf81541d966
 topic_type:
 - apiref
-ms.openlocfilehash: 4824fcfc53bae6c81760a23f76e83fb8ae7efd79
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4d3d6e5e5275adf02f9d693234a5c8e77714fd03
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715828"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636655"
 ---
 # <a name="icorconfigurationsetgchostcontrol-method"></a>ICorConfiguration::SetGCHostControl (Método)
 
@@ -49,6 +50,6 @@ HRESULT SetGCHostControl (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorConfiguration (Interfaz)](icorconfiguration-interface.md)

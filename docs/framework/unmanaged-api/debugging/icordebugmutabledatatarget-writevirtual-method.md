@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMutableDataTarget:: WriteVirtual ((método)'
 title: ICorDebugMutableDataTarget::WriteVirtual (método)
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-ms.openlocfilehash: 453ab23e292c5eab4a8300c32bf76743b787750d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3f3400456b7af51f4b24d7e14e35d641f03a8bfd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709341"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637825"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual (método)
 
@@ -37,7 +38,7 @@ HRESULT WriteVirtual(
 
  `S_OK`, si la operación se realiza correctamente o cualquier otro `HRESULT`, en caso de error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si no se puede escribir bytes, la llamada al método produce un error sin cambiar los bytes en el espacio de la dirección de destino (de lo contrario, el destino estaría en un estado incoherente que haría que las futuras depuraciones resultasen poco fiables).  
   
@@ -51,7 +52,7 @@ HRESULT WriteVirtual(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMutableDataTarget](icordebugmutabledatatarget-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

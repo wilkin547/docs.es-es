@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorConfiguration:: Setdebuggerthreadcontrol ((método)'
 title: ICorConfiguration::SetDebuggerThreadControl (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ded7639-dacb-4db1-961c-d1ceaec01959
 topic_type:
 - apiref
-ms.openlocfilehash: 05df50d80c6b8962b3bdfe2708d5f9d30c58aaea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9bf024f3feb6df44a94f8a5f1a626bb6e0c91d31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636668"
 ---
 # <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a>ICorConfiguration::SetDebuggerThreadControl (Método)
 
@@ -49,6 +50,6 @@ HRESULT SetDebuggerThreadControl (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorConfiguration (Interfaz)](icorconfiguration-interface.md)

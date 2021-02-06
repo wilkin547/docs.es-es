@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorConfiguration:: Adddebuggerspecialthread ((método)'
 title: ICorConfiguration::AddDebuggerSpecialThread (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f1e3239-438e-4be9-a3bb-7d0722d3a76d
 topic_type:
 - apiref
-ms.openlocfilehash: bd89db3fa0b1814a98b016fcf9d1aeeabfff718b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b6904c2e4d5c265244ac096e0d64c2fc7f5d1be5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715854"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636720"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>ICorConfiguration::AddDebuggerSpecialThread (Método)
 
@@ -39,7 +40,7 @@ HRESULT AddDebuggerSpecialThread (
  `dwSpecialThreadId`  
  de IDENTIFICADOR del subproceso al que se debe permitir que continúe la ejecución.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El subproceso especificado no podrá ejecutar código administrado ni entrar en el tiempo de ejecución de ninguna manera. Un ejemplo de este tipo de subproceso sería un subproceso en proceso para admitir depuradores de script heredados.  
   
@@ -53,6 +54,6 @@ HRESULT AddDebuggerSpecialThread (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorConfiguration (Interfaz)](icorconfiguration-interface.md)

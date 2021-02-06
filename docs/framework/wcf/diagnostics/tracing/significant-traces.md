@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: seguimientos significativos'
 title: Seguimientos significativos
 ms.date: 03/30/2017
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-ms.openlocfilehash: 9ad7c217b528cb2ad22169c1aea6391462bab1ae
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6d3e12c82312c2a8a3f0a19b4dc50e99e21b9730
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99635550"
 ---
 # <a name="significant-traces"></a>Seguimientos significativos
 

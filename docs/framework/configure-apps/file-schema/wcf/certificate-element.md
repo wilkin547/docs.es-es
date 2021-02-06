@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <certificate> elemento'
 title: <certificate> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: 8cc0404a5896dd23cffce6f1f77b91a2f01f23d2
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3f67435d86f19f81c1f6fe1fe2a9a8afbef69e53
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151095"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639138"
 ---
 # <a name="certificate-element"></a>\<certificate> (Elemento)
 
@@ -54,7 +55,7 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 |-------------|-----------------|  
 |[\<peer>](peer-of-clientcredentials-element.md)|Especifica las credenciales usadas al autenticar clientes punto a punto.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este elemento de configuración contiene una instancia de X509Certificate2 que se usa al autenticar a los vecinos en la malla del mismo nivel.  
   
@@ -87,7 +88,7 @@ Especifica un certificado X.509 que se va a usar para firmar y cifrar los mensaj
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [Trabajar con certificados](../../../wcf/feature-details/working-with-certificates.md)
-- [Redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Conexión de redes punto a punto](../../../wcf/feature-details/peer-to-peer-networking.md)
 - [Autenticación del mensaje del canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Autenticación personalizada de canal del mismo nivel](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Protección de las aplicaciones de canal del mismo nivel](../../../wcf/feature-details/securing-peer-channel-applications.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugNativeFrame:: GetIP (método)'
 title: ICorDebugNativeFrame::GetIP (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99f693f3-d3b9-4fd8-9d09-b8efd03f7b67
 topic_type:
 - apiref
-ms.openlocfilehash: c9c0598f8e7b3e8654124f50663c912f3cd61659
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f36a14c38aa6c3754cf78eca8c657adc76469067
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637857"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetIP (
  `pnOffset`  
  enuncia Puntero a la ubicación de desplazamiento en el código nativo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el marco de pila representado por este "ICorDebugNativeFrame" está activo, el desplazamiento es la dirección de la siguiente instrucción que se va a ejecutar. Si este marco de pila no está activo, el desplazamiento es la dirección de la siguiente instrucción que se va a ejecutar cuando se reactive el marco de pila.  
   
@@ -53,4 +54,4 @@ HRESULT GetIP (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también

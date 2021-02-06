@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTask:: Switche (método)'
 title: ICLRTask::SwitchIn (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d37ce20-aa65-4043-8f13-7c728b5d8a52
 topic_type:
 - apiref
-ms.openlocfilehash: e98ae17d55c74d32844da96137c258d076ebc2db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0bbcd2b9594a8ce465a1dcd7b5ae3f8a0799826d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691075"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636837"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn (Método)
 
@@ -51,7 +52,7 @@ HRESULT SwitchIn (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |HOST_E_INVALIDOPERATION|`SwitchIn` se llamó a sin una llamada anterior al [método SwitchOut](iclrtask-switchout-method.md).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `threadHandle` parámetro representa un identificador para el subproceso del sistema operativo en el que se ha programado la tarea representada por la `ICLRTask` instancia actual. Si se ha producido la suplantación en este subproceso, debe llamar a [IHostSecurityManager:: RevertToSelf](ihostsecuritymanager-reverttoself-method.md) antes de cambiar en la tarea.  
   
@@ -68,7 +69,7 @@ HRESULT SwitchIn (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

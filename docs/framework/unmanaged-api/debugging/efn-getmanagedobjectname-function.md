@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _EFN_GetManagedObjectName función'
 title: _EFN_GetManagedObjectName (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-ms.openlocfilehash: 0fb694cf85256c0f3ac5ae179e53ff504ab707e9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4fa47848ace973f43acbcf8ab0322db4b974b205
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637903"
 ---
 # <a name="_efn_getmanagedobjectname-function"></a>\_EFN \_ GetManagedObjectName función)
 
@@ -50,7 +51,7 @@ HRESULT _EFN_GetManagedObjectName(
  `cbName`  
  enuncia Número de caracteres disponibles en el búfer de cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
@@ -62,6 +63,6 @@ HRESULT _EFN_GetManagedObjectName(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)

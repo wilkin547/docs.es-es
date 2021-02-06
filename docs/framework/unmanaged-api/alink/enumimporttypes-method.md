@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Enumimporttypes ('
 title: EnumImportTypes (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39570740f3560f5bfef8ba80b95c0eb2aca41f59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638124"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes (Método)
 
@@ -46,10 +47,10 @@ Identificador del enumerador.
 Número máximo de tipos que se van a recuperar.
 
 `aTypeDefs`\
-Recibe tokens de tipo, no supera `dwMax`.
+Recibe tokens de tipo, no superar `dwMax` .
 
 `pdwCount`\
-Recibe el número real de tipo en `aTypeDefs`.
+Recibe el número real de tipo en `aTypeDefs` .
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -61,6 +62,6 @@ Requiere ALink. h
 
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](ialink-interface.md)
-- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (Interfaz)](ialink-interface.md)
+- [IALink2 (Interfaz)](ialink2-interface.md)
 - [API de ALink](index.md)

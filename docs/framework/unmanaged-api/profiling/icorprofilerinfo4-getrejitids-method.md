@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo4:: Getrejitids ((método)'
 title: ICorProfilerInfo4::GetReJITIDs (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: 2ac645cbaaa45554568874653be016e4691bbd2f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 60df4cb6023bbee68d2909e1cc0e9de5595ac0b9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707482"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636408"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs (Método)
 
@@ -50,7 +51,7 @@ HRESULT GetReJITIDs (
  `reJitIds`  
  enuncia Matriz asignada por el llamador que contendrá los identificadores de recompilación JIT de la función especificada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `GetReJITIDs` enumera los identificadores de compilación JIT activos para una instancia de función determinada. Sigue el mismo patrón de uso que otras `ICorProfilerInfo` funciones que aceptan búferes asignados por el autor de la llamada.  
   
@@ -64,7 +65,7 @@ HRESULT GetReJITIDs (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

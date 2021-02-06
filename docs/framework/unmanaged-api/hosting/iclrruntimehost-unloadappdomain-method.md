@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRRuntimeHost:: UnloadAppDomain ((método)'
 title: ICLRRuntimeHost::UnloadAppDomain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 571912bc-3429-4ff8-8eb2-ea993ffbd901
 topic_type:
 - apiref
-ms.openlocfilehash: cc5d0d65d213d952c0897a72d8ec38ea6b8b22db
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2a47c6250434c3ee4122f8eeae75f25ee4c08a34
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95700670"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637292"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain (Método)
 
@@ -54,7 +55,7 @@ HRESULT UnloadAppDomain(
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede obtener el identificador numérico del dominio de aplicación en el que se está ejecutando el subproceso actual llamando a [GetCurrentAppDomainId (](iclrruntimehost-getcurrentappdomainid-method.md). Este identificador corresponde a la <xref:System.AppDomain.Id%2A> propiedad del <xref:System.AppDomain> tipo administrado.  
   
@@ -68,6 +69,6 @@ HRESULT UnloadAppDomain(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRRuntimeHost (Interfaz)](iclrruntimehost-interface.md)

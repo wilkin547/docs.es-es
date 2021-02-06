@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRTask:: RudeAbort ((método)'
 title: ICLRTask::RudeAbort (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 5b0e2265810b00fe0760d4e25c0f9904a96d9f2a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f152f11ce41018b458ed2cb4df255e486ad54da0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95691055"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636889"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort (Método)
 
@@ -43,7 +44,7 @@ HRESULT RudeAbort ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host llama `RudeAbort` a para anular una tarea inmediatamente. No se garantiza que se ejecuten los finalizadores y las rutinas de control de excepciones.  
   
@@ -57,7 +58,7 @@ HRESULT RudeAbort ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Enumerateclrs ((función)'
 title: EnumerateCLRs (Función)
 ms.date: 03/30/2017
 api_name:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe0df3ee08f9915ed43990b6f9686e25b183a0b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 75124ef1e1e8588cb3d709161c3c1119e960be9e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676106"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637786"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs (Función)
 
@@ -66,7 +67,7 @@ HRESULT EnumerateCLRs (
  E_FAIL (u otros códigos devueltos de E_)  
  No se pueden enumerar los CLR cargados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para un proceso de destino identificado por `debuggeePID`, la función devuelve una matriz de rutas de acceso, `ppStringArrayOut`, a los CLR cargados en el proceso; una matriz de identificadores de eventos, `ppHandleArrayOut`, que puede contener un evento de inicio continuo para el CLR en el mismo índice; y el tamaño de las matrices, `pdwArrayLengthOut`, que especifica el número de CLR que hay cargados.  
   

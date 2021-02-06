@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _EFN_GetManagedObjectFieldInfo función'
 title: _EFN_GetManagedObjectFieldInfo (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-ms.openlocfilehash: 4c088b7e1096f8b4cad11a3e27b4045e233989ae
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 749ab286a86db07c1b66ff2b61ff073d15334800
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676223"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99637894"
 ---
 # <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN \_ GetManagedObjectFieldInfo función)
 
@@ -54,7 +55,7 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
  `pOffset`  
  enuncia Desplazamiento desde `objAddr` hasta el campo. Este parámetro puede ser NULL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el desplazamiento es 0, no se escribe ningún desplazamiento.  
   
@@ -68,6 +69,6 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
  **Versión de .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)

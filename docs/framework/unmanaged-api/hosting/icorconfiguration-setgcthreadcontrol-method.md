@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorConfiguration:: Setgcthreadcontrol ((método)'
 title: ICorConfiguration::SetGCThreadControl (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 72e38e61-3d56-4ae3-b8f6-0ab7922aaf11
 topic_type:
 - apiref
-ms.openlocfilehash: 28b012bbe3f8c11ecd0afb8b5905336bd99c349c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8b9388bdefb9da2ce51b62ab68eeee54645e43ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99636649"
 ---
 # <a name="icorconfigurationsetgcthreadcontrol-method"></a>ICorConfiguration::SetGCThreadControl (Método)
 
@@ -39,7 +40,7 @@ HRESULT SetGCThreadControl (
  `pGCThreadControl`  
  de Un puntero a un objeto [IGCThreadControl](igcthreadcontrol-interface.md) que notifica al host la suspensión de subprocesos para tareas que no son de tiempo de ejecución.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede elegir dentro de la devolución de llamada [IGCThreadControl:: ThreadIsBlockingForSuspension (](igcthreadcontrol-threadisblockingforsuspension-method.md) si se va a volver a programar un subproceso.  
   
@@ -53,6 +54,6 @@ HRESULT SetGCThreadControl (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorConfiguration (Interfaz)](icorconfiguration-interface.md)

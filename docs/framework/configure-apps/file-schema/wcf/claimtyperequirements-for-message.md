@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca <claimTypeRequirements> de: para <message>'
 title: <claimTypeRequirements> para <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: e70b036fddbc706c8c16de9a0834140f600aa5ef
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a393a075c64f4a46e5ac055b3c417514861c9661
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91173801"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638904"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements> para \<message>
 
@@ -17,7 +18,7 @@ Especifica una colección de tipos de notificación requeridos.
   
  En los clientes federados, esta colección contiene la lista de notificaciones necesarias y opcionales que se envían al servicio del token de seguridad en la solicitud del cliente para un token emitido.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>

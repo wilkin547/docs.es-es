@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Closeassembly ('
 title: CloseAssembly (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f66a43bc-a5c5-4190-acbe-63fd27640634
 topic_type:
 - apiref
-ms.openlocfilehash: 4e8aeef3520c4d5c9735b2c8975ac1e39470ba93
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 927a66f948f691c00a695c626d9c31950a722cb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717028"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638397"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly (Método)
 
@@ -47,7 +48,7 @@ HRESULT CloseAssembly(
 
  Requiere ALink. h.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IALink (Interfaz)](ialink-interface.md)
 - [IALink2 (Interfaz)](ialink2-interface.md)
