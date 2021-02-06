@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugSymbolProvider:: Getcoderange ((método)'
 title: ICorDebugSymbolProvider::GetCodeRange (método)
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: f61a98dbd5a65207a46e033d54f9d5f60adac201
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 98b228be7483e6365815f6b783167b20fb3bcc48
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659912"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange (método)
 
@@ -34,7 +35,7 @@ HRESULT GetCodeRange(
  `pCodeSize`  
  Puntero al tamaño del código del método (número de bytes del código del método).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -49,7 +50,7 @@ HRESULT GetCodeRange(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

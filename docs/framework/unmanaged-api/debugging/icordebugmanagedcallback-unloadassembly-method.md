@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugManagedCallback:: Unloadassembly ((método)'
 title: ICorDebugManagedCallback::UnloadAssembly (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6734321c-c8a9-401f-a558-cad715ec4a77
 topic_type:
 - apiref
-ms.openlocfilehash: e89b425afb63de8ef496fe545873ce33e5ff828c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b1860e90ba2bab1428a0f8559d18801136bbbb39
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724018"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660341"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly (Método)
 
@@ -43,7 +44,7 @@ HRESULT UnloadAssembly (
  `pAssembly`  
  de Un puntero a un objeto ICorDebugAssembly que representa el ensamblado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El ensamblado no se debe utilizar después de esta devolución de llamada.  
   
@@ -57,7 +58,7 @@ HRESULT UnloadAssembly (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método LoadAssembly](icordebugmanagedcallback-loadassembly-method.md)
 - [ICorDebugManagedCallback (Interfaz)](icordebugmanagedcallback-interface.md)

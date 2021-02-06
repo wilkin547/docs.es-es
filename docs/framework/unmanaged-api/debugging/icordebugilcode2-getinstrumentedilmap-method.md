@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugILCode2:: GetInstrumentedILMap (método)'
 title: ICorDebugILCode2::GetInstrumentedILMap (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 7a4e3085-8f95-40ef-a4be-7d6146f47ce2
 topic_type:
 - apiref
-ms.openlocfilehash: 097502f4321531922d6c4385e2eccbf32f66f026
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6892b059e1774d7b0a61d7a8dd7df69bc2e8c569
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688359"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660575"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap (Método)
 
@@ -43,10 +44,10 @@ HRESULT GetInstrumentedILMap(
  pcMap  
  [out] Número de valores COR_IL_MAP que se escriben en la matriz de asignaciones.  
   
- mapa  
+ map  
  [out] Matriz de valores COR_IL_MAP que proporcionan información sobre las asignaciones del IL instrumentado del generador de perfiles al IL del método original.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el generador de perfiles establece la asignación llamando al método [ICorProfilerInfo:: SetILInstrumentedCodeMap (](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) , el depurador puede llamar a este método para recuperar la asignación y usar la asignación internamente al calcular los desplazamientos de Il para los seguimientos de la pila y la duración de las variables.  
   
@@ -64,7 +65,7 @@ HRESULT GetInstrumentedILMap(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo::SetILInstrumentedCodeMap](../profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [ICorDebugILCode2 (Interfaz)](icordebugilcode2-interface.md)

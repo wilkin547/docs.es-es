@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugModule:: GetToken (método)'
 title: ICorDebugModule::GetToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f759f87a-18ae-4c1a-8300-29b803432d0a
 topic_type:
 - apiref
-ms.openlocfilehash: 6ffc74247a4ecafcc3744923c0def99220b5ca6f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fd1bc4bc397e7f81c77f2fe784c68dbaaceb2695
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95709887"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660172"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetToken(
  `pToken`  
  enuncia Puntero al `mdModule` token que hace referencia a los metadatos del módulo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El token se puede pasar a las interfaces de importación de metadatos [IMetaDataImport](../metadata/imetadataimport-interface.md), [IMetaDataImport2](../metadata/imetadataimport2-interface.md)y [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) .  
   
@@ -53,6 +54,6 @@ HRESULT GetToken(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Metadata](../metadata/index.md)

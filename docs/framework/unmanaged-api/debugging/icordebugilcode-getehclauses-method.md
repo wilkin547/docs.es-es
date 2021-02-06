@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugILCode:: Getehclauses ((método)'
 title: ICorDebugILCode::GetEHClauses (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: 38936a57944e9a0920c374f473c4cbe8e8d70abb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e790f0f1f69a38d3a1be9e98eacfc5e37be0fd05
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728672"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660666"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses (Método)
 
@@ -45,7 +46,7 @@ HRESULT GetEHClauses(
  cláusulas  
  enuncia Matriz de objetos [cordebugehclause (](cordebugehclause-structure.md) que contienen información sobre las cláusulas de control de excepciones definidas para este Il.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `cClauses` es 0 y `pcClauses` no es **null**, `pcClauses` se establece en el número de cláusulas de control de excepciones disponibles. Si `cClauses` no es cero, representa la capacidad de almacenamiento de la matriz `clauses`. Cuando el método vuelve, `clauses` contiene un máximo de elementos `cClauses` y `pcClauses` se establece en el número de cláusulas escritas realmente en la matriz `clauses`.  
   
@@ -59,7 +60,7 @@ HRESULT GetEHClauses(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugILCode (Interfaz)](icordebugilcode-interface.md)
 - [CorDebugEHClause (Estructura)](cordebugehclause-structure.md)

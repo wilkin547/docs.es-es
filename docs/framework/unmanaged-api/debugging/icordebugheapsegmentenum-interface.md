@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz Icordebugheapsegmentenum ('
 title: ICorDebugHeapSegmentEnum (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-ms.openlocfilehash: 42126d15c64175f35bba89a1ab6abacc64128012
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 614bae0ea5e3eb7816fdeec23a0dc7aa6e44801d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95704635"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99660887"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum (Interfaz)
 
@@ -29,9 +30,9 @@ Proporciona un enumerador para las regiones de memoria del montón administrado.
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Next (Método)](icordebugheapsegmentenum-next-method.md)|Obtiene el número especificado de instancias de [COR_SEGMENT](cor-segment-structure.md) que contienen información sobre las regiones del montón administrado.|  
+|[Next (método)](icordebugheapsegmentenum-next-method.md)|Obtiene el número especificado de instancias de [COR_SEGMENT](cor-segment-structure.md) que contienen información sobre las regiones del montón administrado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugHeapSegmentEnum` interfaz implementa la interfaz ICorDebugEnum.  
   
@@ -49,6 +50,6 @@ Proporciona un enumerador para las regiones de memoria del montón administrado.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
