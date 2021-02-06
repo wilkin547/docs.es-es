@@ -1,31 +1,32 @@
 ---
+description: 'Más información acerca de: 1418-MaxOutboundConnectionsPerEndpointExceeded'
 title: 1418 - MaxOutboundConnectionsPerEndpointExceeded
 ms.date: 03/30/2017
 ms.assetid: d0739a83-376a-43a5-946c-1b6641f28e51
-ms.openlocfilehash: 60d84e3b28190e8f3a8d15a88c797ff037c8e631
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f8e2a064b1e1f1ad624bd2a0f4a58674807cf168
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274756"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645599"
 ---
-# <a name="1418---maxoutboundconnectionsperendpointexceeded"></a><span data-ttu-id="3735a-102">1418 - MaxOutboundConnectionsPerEndpointExceeded</span><span class="sxs-lookup"><span data-stu-id="3735a-102">1418 - MaxOutboundConnectionsPerEndpointExceeded</span></span>
+# <a name="1418---maxoutboundconnectionsperendpointexceeded"></a><span data-ttu-id="ecef4-103">1418 - MaxOutboundConnectionsPerEndpointExceeded</span><span class="sxs-lookup"><span data-stu-id="ecef4-103">1418 - MaxOutboundConnectionsPerEndpointExceeded</span></span>
 
-## <a name="properties"></a><span data-ttu-id="3735a-103">Propiedades</span><span class="sxs-lookup"><span data-stu-id="3735a-103">Properties</span></span>  
+## <a name="properties"></a><span data-ttu-id="ecef4-104">Propiedades</span><span class="sxs-lookup"><span data-stu-id="ecef4-104">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3735a-104">ID</span><span class="sxs-lookup"><span data-stu-id="3735a-104">ID</span></span>|<span data-ttu-id="3735a-105">1418</span><span class="sxs-lookup"><span data-stu-id="3735a-105">1418</span></span>|  
-|<span data-ttu-id="3735a-106">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="3735a-106">Keywords</span></span>|<span data-ttu-id="3735a-107">Quota</span><span class="sxs-lookup"><span data-stu-id="3735a-107">Quota</span></span>|  
-|<span data-ttu-id="3735a-108">Nivel</span><span class="sxs-lookup"><span data-stu-id="3735a-108">Level</span></span>|<span data-ttu-id="3735a-109">Información</span><span class="sxs-lookup"><span data-stu-id="3735a-109">Information</span></span>|  
-|<span data-ttu-id="3735a-110">Canal</span><span class="sxs-lookup"><span data-stu-id="3735a-110">Channel</span></span>|<span data-ttu-id="3735a-111">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="3735a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="ecef4-105">Id.</span><span class="sxs-lookup"><span data-stu-id="ecef4-105">ID</span></span>|<span data-ttu-id="ecef4-106">1418</span><span class="sxs-lookup"><span data-stu-id="ecef4-106">1418</span></span>|  
+|<span data-ttu-id="ecef4-107">Palabras clave</span><span class="sxs-lookup"><span data-stu-id="ecef4-107">Keywords</span></span>|<span data-ttu-id="ecef4-108">Quota</span><span class="sxs-lookup"><span data-stu-id="ecef4-108">Quota</span></span>|  
+|<span data-ttu-id="ecef4-109">Nivel</span><span class="sxs-lookup"><span data-stu-id="ecef4-109">Level</span></span>|<span data-ttu-id="ecef4-110">Información</span><span class="sxs-lookup"><span data-stu-id="ecef4-110">Information</span></span>|  
+|<span data-ttu-id="ecef4-111">Canal</span><span class="sxs-lookup"><span data-stu-id="ecef4-111">Channel</span></span>|<span data-ttu-id="ecef4-112">Microsoft-Windows-Application Server-Applications/Debug</span><span class="sxs-lookup"><span data-stu-id="ecef4-112">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3735a-112">Descripción</span><span class="sxs-lookup"><span data-stu-id="3735a-112">Description</span></span>  
+## <a name="description"></a><span data-ttu-id="ecef4-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="ecef4-113">Description</span></span>  
 
- <span data-ttu-id="3735a-113">Se genera este evento cuando las conexiones salientes máximas por punto se superan.</span><span class="sxs-lookup"><span data-stu-id="3735a-113">This event is emitted when maximum outbound connections per point are exceeded.</span></span>  
+ <span data-ttu-id="ecef4-114">Se genera este evento cuando las conexiones salientes máximas por punto se superan.</span><span class="sxs-lookup"><span data-stu-id="ecef4-114">This event is emitted when maximum outbound connections per point are exceeded.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3735a-114">Message</span><span class="sxs-lookup"><span data-stu-id="3735a-114">Message</span></span>  
+## <a name="message"></a><span data-ttu-id="ecef4-115">Message</span><span class="sxs-lookup"><span data-stu-id="ecef4-115">Message</span></span>  
 
- <span data-ttu-id="3735a-115">1 %</span><span class="sxs-lookup"><span data-stu-id="3735a-115">1%</span></span>  
+ <span data-ttu-id="ecef4-116">1 %</span><span class="sxs-lookup"><span data-stu-id="ecef4-116">1%</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3735a-116">Detalles</span><span class="sxs-lookup"><span data-stu-id="3735a-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="ecef4-117">Detalles</span><span class="sxs-lookup"><span data-stu-id="ecef4-117">Details</span></span>
