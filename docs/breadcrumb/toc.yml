@@ -581,3 +581,6 @@ items:
           - name: Bibliotecas .NET IoT
             tocHref: /dotnet/iot/
             topicHref: /dotnet/iot/index
+          - name: Novedades
+            tocHref: /dotnet/whats-new/
+            topicHref: /dotnet/whats-new/index
