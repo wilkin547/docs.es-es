@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: método Enumimporttypes ('
 title: EnumImportTypes (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 83a0e4e7-ec06-40cb-9b63-700b9695bb04
 topic_type:
 - apiref
-ms.openlocfilehash: ca7c7570aff63aa328dddc0626648fa74397addc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 39570740f3560f5bfef8ba80b95c0eb2aca41f59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448735"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99638124"
 ---
-# <a name="enumimporttypes-method"></a><span data-ttu-id="a5a0f-102">EnumImportTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="a5a0f-102">EnumImportTypes Method</span></span>
+# <a name="enumimporttypes-method"></a><span data-ttu-id="65d6b-103">EnumImportTypes (Método)</span><span class="sxs-lookup"><span data-stu-id="65d6b-103">EnumImportTypes Method</span></span>
 
-<span data-ttu-id="a5a0f-103">Enumera cada tipo de cada ámbito.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-103">Enumerates each type in each scope.</span></span>
+<span data-ttu-id="65d6b-104">Enumera cada tipo de cada ámbito.</span><span class="sxs-lookup"><span data-stu-id="65d6b-104">Enumerates each type in each scope.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="a5a0f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a5a0f-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="65d6b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="65d6b-105">Syntax</span></span>
 
 ```cpp
 HRESULT EnumImportTypes(
@@ -37,30 +38,30 @@ HRESULT EnumImportTypes(
 ) PURE;
 ```
 
-## <a name="parameters"></a><span data-ttu-id="a5a0f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a5a0f-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="65d6b-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="65d6b-106">Parameters</span></span>
 
 `hEnum`\
-<span data-ttu-id="a5a0f-106">Identificador del enumerador.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-106">Handle for enumerator.</span></span>
+<span data-ttu-id="65d6b-107">Identificador del enumerador.</span><span class="sxs-lookup"><span data-stu-id="65d6b-107">Handle for enumerator.</span></span>
 
 `dwMax`\
-<span data-ttu-id="a5a0f-107">Número máximo de tipos que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-107">Maximum number of types to retrieve.</span></span>
+<span data-ttu-id="65d6b-108">Número máximo de tipos que se van a recuperar.</span><span class="sxs-lookup"><span data-stu-id="65d6b-108">Maximum number of types to retrieve.</span></span>
 
 `aTypeDefs`\
-<span data-ttu-id="a5a0f-108">Recibe tokens de tipo, no supera `dwMax`.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-108">Receives type tokens, not to exceed `dwMax`.</span></span>
+<span data-ttu-id="65d6b-109">Recibe tokens de tipo, no superar `dwMax` .</span><span class="sxs-lookup"><span data-stu-id="65d6b-109">Receives type tokens, not to exceed `dwMax`.</span></span>
 
 `pdwCount`\
-<span data-ttu-id="a5a0f-109">Recibe el número real de tipo en `aTypeDefs`.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-109">Receives actual number of type in `aTypeDefs`.</span></span>
+<span data-ttu-id="65d6b-110">Recibe el número real de tipo en `aTypeDefs` .</span><span class="sxs-lookup"><span data-stu-id="65d6b-110">Receives actual number of type in `aTypeDefs`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="a5a0f-110">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a5a0f-110">Return Value</span></span>
+## <a name="return-value"></a><span data-ttu-id="65d6b-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="65d6b-111">Return Value</span></span>
 
-<span data-ttu-id="a5a0f-111">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="a5a0f-111">Returns S_OK if the method succeeds.</span></span>
+<span data-ttu-id="65d6b-112">Devuelve S_OK si el método se ejecuta correctamente.</span><span class="sxs-lookup"><span data-stu-id="65d6b-112">Returns S_OK if the method succeeds.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="a5a0f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a5a0f-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="65d6b-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="65d6b-113">Requirements</span></span>
 
-<span data-ttu-id="a5a0f-113">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="a5a0f-113">Requires alink.h</span></span>
+<span data-ttu-id="65d6b-114">Requiere ALink. h</span><span class="sxs-lookup"><span data-stu-id="65d6b-114">Requires alink.h</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a5a0f-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="a5a0f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65d6b-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="65d6b-115">See also</span></span>
 
-- [<span data-ttu-id="a5a0f-115">IALink (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a5a0f-115">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="a5a0f-116">IALink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a5a0f-116">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="a5a0f-117">API de ALink</span><span class="sxs-lookup"><span data-stu-id="a5a0f-117">ALink API</span></span>](index.md)
+- [<span data-ttu-id="65d6b-116">IALink (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="65d6b-116">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="65d6b-117">IALink2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="65d6b-117">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="65d6b-118">API de ALink</span><span class="sxs-lookup"><span data-stu-id="65d6b-118">ALink API</span></span>](index.md)
