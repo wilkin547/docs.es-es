@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: actividad de directiva externa en .NET Framework 4,5'
 title: Actividad Externalized Policy en .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 00b671f169696728610e8ee32f874b44fbff9e33
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 52dad208aacf2993acffa605b896c14c0a906d4e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90556920"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99631234"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Actividad Externalized Policy en .NET Framework 4.5
 
@@ -70,7 +71,7 @@ Este ejemplo contiene dos aplicaciones cliente: ImperativeCodeClientSample y Des
 
 2. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **ImperativeCodeClientSample** y seleccione **establecer como proyecto de inicio**.
 
-3. Presione **Ctrl**F5 para ejecutar el proyecto + **F5**.
+3. Presione **Ctrl** F5 para ejecutar el proyecto + .
 
 ### <a name="run-the-designerclientsample-application"></a>Ejecutar la aplicación DesignerClientSample
 
