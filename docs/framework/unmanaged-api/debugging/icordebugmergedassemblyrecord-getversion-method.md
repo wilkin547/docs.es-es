@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugMergedAssemblyRecord:: GetVersion (método)'
 title: ICorDebugMergedAssemblyRecord::GetVersion (método)
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 7352a77fc8f41124d7e6c78a3dfc6ccd6d3a94aa
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0e87e2bbb1207ebd1eb5775b7f52d5689b4e8727
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710511"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99650344"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion (método)
 
@@ -38,7 +39,7 @@ HRESULT GetVersion(
  `pRevision`  
  [out] Puntero al número de revisión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener información sobre los números de versión del ensamblado, consulte el tema de la clase <xref:System.Version>.  
   
@@ -55,7 +56,7 @@ HRESULT GetVersion(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

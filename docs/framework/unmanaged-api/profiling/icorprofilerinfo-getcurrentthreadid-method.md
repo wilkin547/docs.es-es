@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo:: GetCurrentThreadID (método)'
 title: ICorProfilerInfo::GetCurrentThreadID (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-ms.openlocfilehash: 18298c4c726d7d850e67afbf82ca77b7511d8917
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 562c6cb61f13e9ab568d18c7d179872cbc7cdb06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99647649"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID (Método)
 
@@ -38,7 +39,7 @@ HRESULT GetCurrentThreadID(
  `pThreadId`  
  enuncia Puntero al identificador devuelto del subproceso administrado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el subproceso actual es un subproceso en tiempo de ejecución interno u otro subproceso no administrado, `GetCurrentThreadID` devuelve CORPROF_E_NOT_MANAGED_THREAD como HRESULT y el valor devuelto del `pThreadId` parámetro será null.  
   
@@ -52,6 +53,6 @@ HRESULT GetCurrentThreadID(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

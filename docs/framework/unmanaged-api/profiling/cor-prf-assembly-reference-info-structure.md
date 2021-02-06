@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: estructura de COR_PRF_ASSEMBLY_REFERENCE_INFO'
 title: COR_PRF_ASSEMBLY_REFERENCE_INFO (Estructura)
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: c8c1d916-8d1a-4f82-8128-9fd3732383fc
-ms.openlocfilehash: 7c7d447afcb5a8617aa92212f3325719d5f43bf5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc384e0a302c83af510deefc6f9f3b9cd5a2f77f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95718623"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649226"
 ---
 # <a name="cor_prf_assembly_reference_info-structure"></a>COR_PRF_ASSEMBLY_REFERENCE_INFO (Estructura)
 
@@ -31,7 +32,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
 } COR_PRF_EX_CLAUSE_INFO;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -43,7 +44,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
 |`cbHashValue`|Número de bytes en el BLOB de hash.|  
 |`dwAssemblyRefFlags`|Marcas del ensamblado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El generador de perfiles rellena la estructura `COR_PRF_EX_CLAUSE_INFO` cuando declara referencias de ensamblado adicionales que Common Language Runtime debe tener en cuenta al realizar un rastreo de cierre de referencias de ensamblado.  
   
@@ -59,7 +60,7 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras para generación de perfiles](profiling-structures.md)
 - [GetAssemblyReferences (método)](icorprofilercallback6-getassemblyreferences-method.md)

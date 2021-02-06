@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionIDMapper (función)'
 title: FunctionIDMapper (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8205b60-1893-4303-8cff-7ac5a00892aa
 topic_type:
 - apiref
-ms.openlocfilehash: 17396d3038578c16b74c3717174dc0fa4dc17631
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dca39d9d5269148fda12c50130f35bdeb10cb19d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722848"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648654"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper (Función)
 
@@ -48,7 +49,7 @@ UINT_PTR __stdcall FunctionIDMapper (
 
  El generador de perfiles devuelve un valor que el motor de ejecución utiliza como identificador de función alternativo. El valor devuelto no puede ser null a menos que se devuelva `false` en `pbHookFunction`. De lo contrario, un valor devuelto null producirá resultados imprevisibles, incluso la detención del proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `FunctionIDMapper` función es una devolución de llamada. Lo implementa el generador de perfiles para reasignar un identificador de función a algún otro identificador que sea más útil para el generador de perfiles. `FunctionIDMapper`Devuelve el identificador alternativo que se va a utilizar para una función determinada. A continuación, el motor de ejecución respeta la solicitud del generador de perfiles pasando este identificador alternativo, además del identificador de función tradicional, de nuevo al generador de perfiles en el `clientData` parámetro de los `FunctionEnter2` `FunctionLeave2` enlaces, y `FunctionTailcall2` , para identificar la función para la que se llama al enlace.  
   
@@ -68,7 +69,7 @@ UINT_PTR __stdcall FunctionIDMapper (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [FunctionIDMapper2 (Función)](functionidmapper2-function.md)

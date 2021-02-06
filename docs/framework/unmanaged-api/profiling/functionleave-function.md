@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionLeave ((función)'
 title: FunctionLeave (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 13636da9c3e8ac4aa9e8dc1fa02b2e33afef4717
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cc0db68df8976ce86197cc9b7570b00c6f662cb5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648485"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (Función)
 
@@ -42,7 +43,7 @@ void __stdcall FunctionLeave (
 
   \[in] el identificador de la función que devuelve.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `FunctionLeave` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec` `naked` atributo de clase de almacenamiento ().  
   
@@ -66,7 +67,7 @@ void __stdcall FunctionLeave (
   
  **.NET Framework versiones:** 1,1, 1,0  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionLeave2 (Función)](functionleave2-function.md)

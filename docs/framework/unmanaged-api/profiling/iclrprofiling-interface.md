@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICLRProfiling'
 title: ICLRProfiling (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 30c19af5f579ea5abb88d062a4f536fa2a876625
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 44d0aa6469984589729ec381ebcffe7d3ce9af1b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685346"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648446"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling (Interfaz)
 
@@ -43,7 +44,7 @@ Proporciona el método [ICLRProfiling:: AttachProfiler](iclrprofiling-attachprof
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para generación de perfiles](profiling-interfaces.md)
 - [ICorProfilerInfo (Interfaz)](icorprofilerinfo-interface.md)

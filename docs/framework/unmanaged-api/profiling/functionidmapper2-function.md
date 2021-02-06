@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Functionidmapper2 ((función)'
 title: FunctionIDMapper2 (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 466ad51b-8f0c-41d9-81f7-371aac3374cb
 topic_type:
 - apiref
-ms.openlocfilehash: 7aa90b92d129f1269d901f1cbb5c6a0750de9a90
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1fd6680ffaa7b28e679dc3eaeb9840981ead5c45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728542"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99648576"
 ---
 # <a name="functionidmapper2-function"></a>FunctionIDMapper2 (Función)
 
@@ -53,7 +54,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
 
  El generador de perfiles devuelve un valor que el motor de ejecución utiliza como identificador de función alternativo. El valor devuelto no puede ser null a menos que se devuelva `false` en `pbHookFunction`. De lo contrario, la devolución de un valor nulo genera resultados imprevisibles, que posiblemente incluyan la detención del proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método extiende la función [FunctionIDMapper](functionidmapper-function.md) con un parámetro adicional que se usa para pasar los datos del cliente. Los datos del cliente se usan para eliminar la ambigüedad entre los runtime.  
   
@@ -67,7 +68,7 @@ UINT_PTR __stdcall FunctionIDMapper2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo::SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
 - [ICorProfilerInfo3::SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)

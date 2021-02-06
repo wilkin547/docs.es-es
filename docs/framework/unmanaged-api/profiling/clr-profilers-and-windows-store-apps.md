@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: los perfiles CLR y las aplicaciones de la tienda Windows'
 title: Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: 04b4b529a5a1adaa40e804988dee506942c863c4
-ms.sourcegitcommit: 30a686fd4377fe6472aa04e215c0de711bc1c322
+ms.openlocfilehash: e864f67aff106659194b91814bc2509d50cbf701
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94440085"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649281"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Aplicaciones de la Tienda Windows y generadores de perfiles CLR
 
@@ -94,7 +95,7 @@ Uno de los primeros obstáculos será la carga de inicio y la carga de conexión
 
 **Firma de la DLL del generador de perfiles**
 
-Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos modos para hacer esto:
+Cuando Windows intenta cargar el archivo DLL del generador de perfiles, comprueba que la DLL del generador de perfiles está firmada correctamente. En caso contrario, se produce un error de carga de forma predeterminada. Existen dos formas de hacerlo:
 
 - Asegúrese de que la DLL del generador de perfiles está firmada.
 
@@ -408,7 +409,7 @@ Es posible usar la API de generación de perfiles de CLR para analizar el códig
 
 - [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Aplicaciones de la Tienda Windows**
+**Aplicaciones de la tienda Windows**
 
 - [Acceso a archivos y permisos (aplicaciones de Windows Runtime](/previous-versions/windows/apps/hh967755(v=win.10))
 

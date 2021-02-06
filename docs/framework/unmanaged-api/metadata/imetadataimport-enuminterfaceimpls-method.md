@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMetaDataImport:: Enuminterfaceimpls ((método)'
 title: IMetaDataImport::EnumInterfaceImpls (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ba6e178f-128b-4e47-a13c-b4be73eb106c
 topic_type:
 - apiref
-ms.openlocfilehash: 0b040a2741a44b9d361dabc38c26b8934659003b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5276d1edb3be0cae76b18a06241dc6b9952e1a72
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711525"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99649421"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls (Método)
 
@@ -62,7 +63,7 @@ HRESULT EnumInterfaceImpls (
 |`S_OK`|`EnumInterfaceImpls` se devolvió correctamente.|  
 |`S_FALSE`|No hay tokens de MethodDef que enumerar. En ese caso, `pcImpls` se establece en cero.|  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 La enumeración devuelve una colección de `mdInterfaceImpl` tokens para cada interfaz implementada por el especificado `TypeDef` . Los tokens de interfaz se devuelven en el orden en que se especificaron las interfaces (a través de `DefineTypeDef` o `SetTypeDefProps` ). Las propiedades de los `mdInterfaceImpl` tokens devueltos se pueden consultar mediante [getinterfaceimplprops (](imetadataimport-getinterfaceimplprops-method.md).
   
@@ -76,7 +77,7 @@ La enumeración devuelve una colección de `mdInterfaceImpl` tokens para cada in
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataImport (Interfaz)](imetadataimport-interface.md)
 - [IMetaDataImport2 (Interfaz)](imetadataimport2-interface.md)
