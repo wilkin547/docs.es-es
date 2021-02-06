@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugSymbolProvider:: GetMethodProps ((método)'
 title: ICorDebugSymbolProvider::GetMethodProps (método)
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-ms.openlocfilehash: 5412b2f06445627c1240d6c8f4efb3ce6bbbec54
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 53a329426ecadfe5559c0e6a08ffbd250163e177
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730830"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659730"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps (método)
 
@@ -46,7 +47,7 @@ HRESULT GetMethodProps(
  `signature`  
  [out] Búfer que contiene las firmas de Typespec de todos los parámetros genéricos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Para obtener el tamaño necesario de la matriz del método `signature` , establezca el `cbSignature` argumento en 0 y `signature` en **null**. Con la devolución del método, `pcbSignature` contendrá el número de bytes necesarios para la matriz `signature`.  
   
@@ -63,7 +64,7 @@ HRESULT GetMethodProps(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetTypeProps](icordebugsymbolprovider-gettypeprops-method.md)
 - [Interfaz ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)

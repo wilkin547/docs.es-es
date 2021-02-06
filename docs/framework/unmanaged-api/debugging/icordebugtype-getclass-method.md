@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugType:: GetClass (método)'
 title: ICorDebugType::GetClass (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-ms.openlocfilehash: 1cb9729f175a2e82e88386b0694467c6fe05636a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2e8d68fbc8909599ca649ba0e226cc84af820939
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95684465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658352"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetClass (
  `ppClass`  
  enuncia Puntero a la dirección de una `ICorDebugClass` interfaz que representa el tipo genérico sin instancias.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `GetClass` solo se puede llamar en determinadas condiciones. Llame a [ICorDebugType:: GetType](icordebugtype-gettype-method.md) antes de llamar a `GetClass` . Si `ICorDebugType::GetType` devuelve un valor de CorElementType que es ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE, `GetClass` se puede llamar a para obtener el tipo sin instancia para un tipo genérico.  
   

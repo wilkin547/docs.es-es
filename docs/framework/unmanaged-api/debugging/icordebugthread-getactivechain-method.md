@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugThread:: Getactivechain ((método)'
 title: ICorDebugThread::GetActiveChain (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-ms.openlocfilehash: e6b1d78b2bd95ea27f4b19a045cd2680342e8a80
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d9aff80801fa72a227a84b3b5216e3ffa72b0e24
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728100"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659288"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetActiveChain (
  `ppChain`  
  enuncia Puntero a la dirección de un objeto ICorDebugChain que representa la cadena de pila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `ppChain` parámetro es NULL si no hay ninguna cadena de pila activa actualmente.  
   

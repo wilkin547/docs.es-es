@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugThread2:: getTaskID ((método)'
 title: ICorDebugThread2::GetTaskID (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-ms.openlocfilehash: 9b17a179745af65bde05527bd0157f3ce06c12c6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5429daee9150d63834c747dd5ebb763dd6f0da6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658703"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetTaskID (
  `pTaskId`  
  enuncia Puntero al identificador de la tarea que se ejecuta en el subproceso representado por este objeto ICorDebugThread2.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Una tarea solo se puede ejecutar en el subproceso si el subproceso está asociado a una conexión. `GetTaskID` devuelve cero en `pTaskId` si el subproceso no está asociado a una conexión.  
   

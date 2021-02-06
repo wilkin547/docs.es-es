@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugThread (interfaz)'
 title: Interfaz ICorDebugThread
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-ms.openlocfilehash: 5165ef081aad849c11747807d8cc76b2df0a6c74
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7e16fa2a82a004a5c85d60a278cdd14df6ab2300
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658833"
 ---
 # <a name="icordebugthread-interface"></a>Interfaz ICorDebugThread
 
@@ -46,7 +47,7 @@ Representa un subproceso de un proceso. El período de duración de una instanci
 |[Método GetUserState](icordebugthread-getuserstate-method.md)|Obtiene una combinación bit a bit de los valores de CorDebugUserState (que describen el estado actual de este `ICorDebugThread` .|  
 |[Método SetDebugState](icordebugthread-setdebugstate-method.md)|Establece una combinación bit a bit de `CorDebugThreadState` valores que describen el estado de depuración de este `ICorDebugThread` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -61,6 +62,6 @@ Representa un subproceso de un proceso. El período de duración de una instanci
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugThread:: Createeval ((método)'
 title: ICorDebugThread::CreateEval (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-ms.openlocfilehash: 1c0037530ae4f40be5bef4da8f398afe5f2bbb91
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a789840e099a14b584e5713bee12f5c4b0717fe7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688294"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659392"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval (Método)
 
@@ -39,7 +40,7 @@ HRESULT CreateEval (
  `ppEval`  
  enuncia Puntero a la dirección de un `ICorDebugEval` objeto que recopila y expone la funcionalidad de este subproceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El objeto de evaluación hará que se inserte una nueva cadena en el subproceso antes de realizar su cálculo. Esto interrumpe el cálculo que se está llevando a cabo en el subproceso hasta que se completa la evaluación.  
   

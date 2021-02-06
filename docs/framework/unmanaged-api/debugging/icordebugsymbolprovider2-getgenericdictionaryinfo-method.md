@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Icordebugsymbolprovider2 (:: Getgenericdictionaryinfo ((método)'
 title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: a6c32b72c5924399aeb13d56ddf9242fe7990f35
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3488cab9ee21ea027e16089f066369ab8c6c69d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379320"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659548"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo (método)
 
@@ -24,7 +25,7 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parámetros
 
 `ppMemoryBuffer`\
-enuncia Un puntero a la dirección de un objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contiene la asignación de diccionario genérico. Para obtener más información, vea la sección Comentarios.
+enuncia Un puntero a la dirección de un objeto [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md) que contiene la asignación de diccionario genérico. Vea la sección Comentarios para obtener más información.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -85,7 +86,7 @@ Incluir la longitud de cada elemento del montón permite la ordenación simple d
 
 **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugSymbolProvider2](icordebugsymbolprovider2-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

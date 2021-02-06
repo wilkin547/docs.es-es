@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugSymbolProvider:: GetObjectSize ((método)'
 title: ICorDebugSymbolProvider::GetObjectSize (método)
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: 4937ff1be7736f98be9efb9b01bdb322bf33e037
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 72720a1af9958fd0ab91276b3967733cec77fee7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730813"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659715"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize (método)
 
@@ -34,7 +35,7 @@ HRESULT GetObjectSize(
  `pObjectSize`  
  [out] Puntero al tamaño del objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -49,7 +50,7 @@ HRESULT GetObjectSize(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

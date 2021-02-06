@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugThread:: GetCurrentException ((método)'
 title: ICorDebugThread::GetCurrentException (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 331ed465-a195-4359-8584-b82c6098b29b
 topic_type:
 - apiref
-ms.openlocfilehash: c21be7b062b7e2d4129bafabae004351442ab853
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cb241995520f26ca0e35f2b9e3b3187c2a2906a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728061"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659171"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetCurrentException (
  `ppExceptionObject`  
  enuncia Puntero a la dirección de un `ICorDebugValue` objeto que representa la excepción que el código administrado está produciendo actualmente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El objeto de excepción existirá desde el momento en que se produce la excepción hasta el final del `catch` bloque. Una evaluación de función, que se realiza mediante los métodos ICorDebugEval, borrará el objeto de excepción en el programa de instalación y lo restaurará cuando se complete.  
   

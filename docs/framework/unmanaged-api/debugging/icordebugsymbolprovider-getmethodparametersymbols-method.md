@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugSymbolProvider:: Getmethodparametersymbols ((método)'
 title: ICorDebugSymbolProvider::GetMethodParameterSymbols (método)
 ms.date: 03/30/2017
 ms.assetid: 58b7c0b9-f6ad-4b49-b92d-0e421cfd0ec6
-ms.openlocfilehash: 95b7b61087f3d3fddab36b7835a633534c223b72
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ca71c7427f89cf33c5710d26b56590dbea3d2e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730843"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99659756"
 ---
 # <a name="icordebugsymbolprovidergetmethodparametersymbols-method"></a>ICorDebugSymbolProvider::GetMethodParameterSymbols (método)
 
@@ -38,7 +39,7 @@ HRESULT GetMethodParameterSymbols(
  `pcFetchedSymbols`  
  enuncia Puntero a una matriz [ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md) que contiene los símbolos locales del método.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -53,7 +54,7 @@ HRESULT GetMethodParameterSymbols(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetMethodLocalSymbols](icordebugsymbolprovider-getmethodlocalsymbols-method.md)
 - [Interfaz ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md)

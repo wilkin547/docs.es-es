@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugType:: GetFirstTypeParameter ((método)'
 title: ICorDebugType::GetFirstTypeParameter (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35bb594f-af6a-4349-83fe-e98702674e03
 topic_type:
 - apiref
-ms.openlocfilehash: be69636056d5510b72dbce39917f5e8d3b05cd87
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4c37217f34f80c916d618d88e4917eab794a1d90
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723979"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99658287"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetFirstTypeParameter (
  `value`  
  enuncia Puntero a la dirección de un `ICorDebugType` objeto que representa el primer parámetro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `GetFirstTypeParameter` se puede llamar a en casos en los que la información adicional sobre el tipo implique, como máximo, un parámetro de tipo. En concreto, se puede utilizar si el tipo es un ELEMENT_TYPE_ARRAY, ELEMENT_TYPE_SZARRAY, ELEMENT_TYPE_BYREF o ELEMENT_TYPE_PTR, tal y como se indica en el método [ICorDebugType:: GetType](icordebugtype-gettype-method.md) .  
   
