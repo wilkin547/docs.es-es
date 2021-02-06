@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1405-OpenTimeout'
 title: 1405 - OpenTimeout
 ms.date: 03/30/2017
 ms.assetid: 45470cf9-b84c-4e5e-86e2-2eb7722cbc1a
-ms.openlocfilehash: c9071cd96b7c1d9ca0c61808d575f7f7dc165a7d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ee41084d02119419bc646bc4e6051232c0f85582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645768"
 ---
 # <a name="1405---opentimeout"></a>1405 - OpenTimeout
 
@@ -15,7 +16,7 @@ ms.locfileid: "96241400"
   
 |||  
 |-|-|  
-|ID|1405|  
+|Id.|1405|  
 |Palabras clave|ServiceModel|  
 |Nivel|Error|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

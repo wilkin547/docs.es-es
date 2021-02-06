@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1419-MaxPendingConnectionsExceeded'
 title: 1419 - MaxPendingConnectionsExceeded
 ms.date: 03/30/2017
 ms.assetid: e48e438e-f4c1-4f4f-85d6-c6c820a81df9
-ms.openlocfilehash: 51996ca825d1aa810c8121110a1b893f6bfde420
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 91b0c5380a67bd840dbfc4c36c499a763d92276e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96241335"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645586"
 ---
 # <a name="1419---maxpendingconnectionsexceeded"></a>1419 - MaxPendingConnectionsExceeded
 
@@ -15,7 +16,7 @@ ms.locfileid: "96241335"
   
 |||  
 |-|-|  
-|ID|1419|  
+|Id.|1419|  
 |Palabras clave|Quota|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

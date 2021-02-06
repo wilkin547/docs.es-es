@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 202-ClientMessageInspectorBeforeSendInvoked'
 title: 202 - ClientMessageInspectorBeforeSendInvoked
 ms.date: 03/30/2017
 ms.assetid: 0b02ca82-8a55-45e3-b2e2-ddfe28a7269c
-ms.openlocfilehash: f05a0f817b8cb4857a4fa50eada15d3ff9e06855
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0267304ba805c8f23109c820c8516a27958c3040
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266628"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645053"
 ---
 # <a name="202---clientmessageinspectorbeforesendinvoked"></a>202 - ClientMessageInspectorBeforeSendInvoked
 
@@ -15,7 +16,7 @@ ms.locfileid: "96266628"
   
 |||  
 |-|-|  
-|ID|202|  
+|Id.|202|  
 |Palabras clave|Troubleshooting, ServiceModel|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

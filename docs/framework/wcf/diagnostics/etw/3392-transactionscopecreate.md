@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3392-TransactionScopeCreate'
 title: 3392 - TransactionScopeCreate
 ms.date: 03/30/2017
 ms.assetid: 2b6257a6-683b-4adc-aca5-6d095e4c03a0
-ms.openlocfilehash: 8466396d45e73205c0a51d07af3c7ae1bad014e3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 564e3a594faffd72d3de3d87c196fd4108551a7d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247634"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99644923"
 ---
 # <a name="3392---transactionscopecreate"></a>3392 - TransactionScopeCreate
 
@@ -15,7 +16,7 @@ ms.locfileid: "96247634"
   
 |||  
 |-|-|  
-|ID|3392|  
+|Id.|3392|  
 |Palabras clave|ServiceModel|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

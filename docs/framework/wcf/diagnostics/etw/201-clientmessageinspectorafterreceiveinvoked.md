@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 201-ClientMessageInspectorAfterReceiveInvoked'
 title: 201 - ClientMessageInspectorAfterReceiveInvoked
 ms.date: 03/30/2017
 ms.assetid: 9ff637f1-cc26-4400-ab9b-546f70e5057d
-ms.openlocfilehash: d84f6c6f38868f7915caaaf87e15885099b65456
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 511f8bd039219d031c311f7def7b360b74df1a0a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96266680"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645157"
 ---
 # <a name="201---clientmessageinspectorafterreceiveinvoked"></a>201 - ClientMessageInspectorAfterReceiveInvoked
 
@@ -15,7 +16,7 @@ ms.locfileid: "96266680"
   
 |||  
 |-|-|  
-|ID|201|  
+|Id.|201|  
 |Palabras clave|Troubleshooting, ServiceModel|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

@@ -1,15 +1,16 @@
 ---
+description: Más información sobre cómo diseñar e implementar servicios
 title: Diseño e implementación de servicios
 ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ea32855a3a512b8e96b8d6d72f101523b5d16107
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: fde63fb6d1256b3c9e1fdd69932e378de95d508b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96248778"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99646080"
 ---
 # <a name="designing-and-implementing-services"></a>Diseño e implementación de servicios
 

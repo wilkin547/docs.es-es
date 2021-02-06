@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1424-SecuritySessionRatio'
 title: 1424 - SecuritySessionRatio
 ms.date: 03/30/2017
 ms.assetid: fd960f10-dd43-42d4-a415-75eae0cb7cac
-ms.openlocfilehash: 3e86463d5132d69dd120b0357db44d6c306baeaa
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0f38b356ff94ea9d3d2d3ce8c756773e130dac31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271153"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645508"
 ---
 # <a name="1424---securitysessionratio"></a>1424 - SecuritySessionRatio
 
@@ -15,7 +16,7 @@ ms.locfileid: "96271153"
   
 |||  
 |-|-|  
-|ID|1424|  
+|Id.|1424|  
 |Palabras clave|Quota|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

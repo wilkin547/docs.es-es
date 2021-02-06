@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 133-ActionItemScheduled'
 title: 133 - ActionItemScheduled
 ms.date: 03/30/2017
 ms.assetid: a226aeea-69f4-438c-909b-05bd68b99220
-ms.openlocfilehash: 59507e7ca14e17c18db5df9264bf6363e0593170
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 135a5b8392980fe7d75180ca38ad69341c718c31
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247062"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99645937"
 ---
 # <a name="133---actionitemscheduled"></a>133 - ActionItemScheduled
 
@@ -15,7 +16,7 @@ ms.locfileid: "96247062"
   
 |||  
 |-|-|  
-|ID|133|  
+|Id.|133|  
 |Palabras clave|Subprocesos|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
