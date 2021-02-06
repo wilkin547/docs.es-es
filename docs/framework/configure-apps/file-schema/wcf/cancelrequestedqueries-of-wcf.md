@@ -1,19 +1,20 @@
 ---
+description: 'Más información sobre: <cancelRequestedQueries> de WCF'
 title: <cancelRequestedQueries> de WCF
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 205399330c1aa69b332c2149ee32d9b6098ccdbe
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 3850d7efd01f9092312567a0eba68a6e9547baad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91151173"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99639190"
 ---
-# <a name="cancelrequestedqueries-of-wcf"></a><span data-ttu-id="b23b4-102">\<cancelRequestedQueries> de WCF</span><span class="sxs-lookup"><span data-stu-id="b23b4-102">\<cancelRequestedQueries> of WCF</span></span>
+# <a name="cancelrequestedqueries-of-wcf"></a><span data-ttu-id="ddfc2-103">\<cancelRequestedQueries> de WCF</span><span class="sxs-lookup"><span data-stu-id="ddfc2-103">\<cancelRequestedQueries> of WCF</span></span>
 
-<span data-ttu-id="b23b4-103">Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria.</span><span class="sxs-lookup"><span data-stu-id="b23b4-103">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="b23b4-104">La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.</span><span class="sxs-lookup"><span data-stu-id="b23b4-104">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
+<span data-ttu-id="ddfc2-104">Representa una colección de consultas que se usan para realizar el seguimiento de las solicitudes para cancelar una actividad secundaria por parte de la actividad primaria.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-104">Represents a collection of queries that are used to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="ddfc2-105">La consulta es necesaria para que un participante del seguimiento se suscriba con el fin de cancelar los objetos de registro de solicitud.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-105">The query is necessary for a tracking participant to subscribe to cancel request record objects.</span></span>  
   
-<span data-ttu-id="b23b4-105">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="b23b4-105">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
+<span data-ttu-id="ddfc2-106">Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .</span><span class="sxs-lookup"><span data-stu-id="ddfc2-106">For more information on tracking profile queries, see [Tracking Profiles](../../../windows-workflow-foundation/tracking-profiles.md)</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -23,7 +24,7 @@ ms.locfileid: "91151173"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflow>**](workflow-of-wcf.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<cancelRequestedQueries>**  
   
-## <a name="syntax"></a><span data-ttu-id="b23b4-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b23b4-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddfc2-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ddfc2-107">Syntax</span></span>  
   
 ```xml  
 <tracking>
@@ -40,28 +41,28 @@ ms.locfileid: "91151173"
 </tracking>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b23b4-107">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="b23b4-107">Attributes and elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="ddfc2-108">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="ddfc2-108">Attributes and elements</span></span>  
 
-<span data-ttu-id="b23b4-108">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="b23b4-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="ddfc2-109">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b23b4-109">Atributos</span><span class="sxs-lookup"><span data-stu-id="b23b4-109">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="ddfc2-110">Atributos</span><span class="sxs-lookup"><span data-stu-id="ddfc2-110">Attributes</span></span>
 
-<span data-ttu-id="b23b4-110">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="b23b4-110">None.</span></span>
+<span data-ttu-id="ddfc2-111">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-111">None.</span></span>
   
-### <a name="child-elements"></a><span data-ttu-id="b23b4-111">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="b23b4-111">Child elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="ddfc2-112">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="ddfc2-112">Child elements</span></span>
   
-|<span data-ttu-id="b23b4-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="b23b4-112">Element</span></span>|<span data-ttu-id="b23b4-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="b23b4-113">Description</span></span>|  
+|<span data-ttu-id="ddfc2-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="ddfc2-113">Element</span></span>|<span data-ttu-id="ddfc2-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="ddfc2-114">Description</span></span>|  
 |-------------|-----------------|  
-|[\<cancelRequestedQuery>](cancelrequestedquery-of-wcf.md)|<span data-ttu-id="b23b4-114">Una consulta que se usa para realizar un seguimiento de las solicitudes de cancelación de una actividad secundaria por parte de la actividad primaria.</span><span class="sxs-lookup"><span data-stu-id="b23b4-114">A query that is used to track requests to cancel a child activity by the parent activity</span></span>|  
+|[\<cancelRequestedQuery>](cancelrequestedquery-of-wcf.md)|<span data-ttu-id="ddfc2-115">Una consulta que se usa para realizar un seguimiento de las solicitudes de cancelación de una actividad secundaria por parte de la actividad primaria.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-115">A query that is used to track requests to cancel a child activity by the parent activity</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="b23b4-115">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="b23b4-115">Parent elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="ddfc2-116">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="ddfc2-116">Parent elements</span></span>  
   
-|<span data-ttu-id="b23b4-116">Elemento</span><span class="sxs-lookup"><span data-stu-id="b23b4-116">Element</span></span>|<span data-ttu-id="b23b4-117">Descripción</span><span class="sxs-lookup"><span data-stu-id="b23b4-117">Description</span></span>|  
+|<span data-ttu-id="ddfc2-117">Elemento</span><span class="sxs-lookup"><span data-stu-id="ddfc2-117">Element</span></span>|<span data-ttu-id="ddfc2-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="ddfc2-118">Description</span></span>|  
 |-------------|-----------------|  
-|[\<workflow>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="b23b4-118">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId>.</span><span class="sxs-lookup"><span data-stu-id="b23b4-118">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId> property.</span></span>|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|<span data-ttu-id="ddfc2-119">Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId>.</span><span class="sxs-lookup"><span data-stu-id="ddfc2-119">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId> property.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="b23b4-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="b23b4-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddfc2-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="ddfc2-120">See also</span></span>
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery>
-- [<span data-ttu-id="b23b4-120">Seguimiento y traza del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="b23b4-120">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="b23b4-121">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="b23b4-121">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="ddfc2-121">Seguimiento y traza del flujo de trabajo</span><span class="sxs-lookup"><span data-stu-id="ddfc2-121">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="ddfc2-122">Perfiles de seguimiento</span><span class="sxs-lookup"><span data-stu-id="ddfc2-122">Tracking Profiles</span></span>](../../../windows-workflow-foundation/tracking-profiles.md)
