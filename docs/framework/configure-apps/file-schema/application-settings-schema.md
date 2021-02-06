@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: esquema de configuración de la aplicación'
 title: Esquema de configuración de la aplicación
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 24c5771e9d98d07bbdc8dab5fce0f1535bc9b582
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552315"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652905"
 ---
 # <a name="application-settings-schema"></a>Esquema de configuración de la aplicación
 
@@ -44,7 +45,7 @@ Este elemento define un valor de configuración. Tiene los siguientes atributos.
 | Atributo        | Descripción |
 | ---------------- | ----------- |
 | **name**         | Necesario. IDENTIFICADOR único de la configuración. La configuración creada a través de Visual Studio se guarda con el nombre `ProjectName.Properties.Settings` . |
-| **serializeAs** | Obligatorio. Formato que se va a usar para serializar el valor en el texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena mediante <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa. |
+| **serializeAs** | Necesario. Formato que se va a usar para serializar el valor en el texto. Los valores válidos son:<br><br>- `string`. El valor se serializa como una cadena mediante <xref:System.ComponentModel.TypeConverter> .<br>- `xml`. El valor se serializa mediante la serialización XML.<br>- `binary`. El valor se serializa como binario codificado por texto mediante la serialización binaria.<br />- `custom`. El proveedor de configuración tiene un conocimiento inherente de esta configuración y serializa y deserializa. |
 
 ## <a name="value-element"></a>Elemento \<value>
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: cláusula Take (Visual Basic)'
 title: Cláusula Take
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: f2377d8d1635912885a310b2b0429a6a00083b47
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6542d262490d9d4acff893b2a99ffb60dd1446a2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653542"
 ---
 # <a name="take-clause-visual-basic"></a>Take (Cláusula, Visual Basic)
 
@@ -28,9 +29,9 @@ Take count
 ## <a name="parts"></a>Partes  
 
  `count`  
- Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
+ Necesario. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a devolver.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Take` cláusula hace que una consulta incluya un número especificado de elementos contiguos desde el principio de una lista de resultados. El parámetro especifica el número de elementos que se van a incluir `count` .  
   
@@ -46,12 +47,12 @@ Take count
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
 - [Select (cláusula)](select-clause.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula order by](order-by-clause.md)
 - [Cláusula Take While](take-while-clause.md)
 - [Cláusula Skip](skip-clause.md)

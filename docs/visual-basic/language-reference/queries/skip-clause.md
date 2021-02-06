@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: cláusula SKIP (Visual Basic)'
 title: Cláusula Skip
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: 40e89160baf663f7d6785e5d3e09ad6cc4eefbde
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 6af702f65a724ea8c3d5a6122fb5f7a0ed5f6755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90866313"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653555"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip (Cláusula, Visual Basic)
 
@@ -28,9 +29,9 @@ Skip count
 ## <a name="parts"></a>Partes  
 
  `count`  
- Obligatorio. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
+ Necesario. Un valor o una expresión que se evalúa como el número de elementos de la secuencia que se va a omitir.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `Skip` cláusula hace que una consulta omita los elementos al principio de una lista de resultados y devuelva los elementos restantes. El número de elementos que se van a omitir se identifica mediante el `count` parámetro.  
   
@@ -46,12 +47,12 @@ Skip count
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
 - [Select (cláusula)](select-clause.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula order by](order-by-clause.md)
 - [Cláusula Skip While](skip-while-clause.md)
 - [Cláusula Take](take-clause.md)

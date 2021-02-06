@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: cláusula SELECT (Visual Basic)'
 title: Cláusula Select
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: d96423efbee075a7ad257df72471c71e38e09b63
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 029778ce8262a93eee9a69843579523e8434eb01
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90875753"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653581"
 ---
 # <a name="select-clause-visual-basic"></a>Select (Cláusula, Visual Basic)
 
@@ -31,9 +32,9 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Opcional. Un alias que se puede utilizar para hacer referencia a los resultados de la expresión de columna.  
   
  `fieldName1`  
- Obligatorio. Nombre del campo que se va a devolver en el resultado de la consulta.  
+ Necesario. Nombre del campo que se va a devolver en el resultado de la consulta.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede utilizar la `Select` cláusula para definir los resultados que se van a devolver desde una consulta. Esto le permite definir los miembros de un nuevo tipo anónimo creado por una consulta o establecer como destino los miembros de un tipo con nombre devuelto por una consulta. La `Select` cláusula no es necesaria para una consulta. Si no `Select` se especifica ninguna cláusula, la consulta devolverá un tipo basado en todos los miembros de las variables de rango identificadas para el ámbito actual. Para obtener más información, consulte [Tipos anónimos](../../programming-guide/language-features/objects-and-classes/anonymous-types.md) (Guía de programación de C#). Cuando una consulta crea un tipo con nombre, devolverá un resultado de tipo <xref:System.Collections.Generic.IEnumerable%601> donde `T` es el tipo creado.  
   
@@ -55,11 +56,11 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Introducción a LINQ en Visual Basic](../../programming-guide/language-features/linq/introduction-to-linq.md)
 - [Consultas](index.md)
-- [Cláusula FROM](from-clause.md)
+- [Cláusula From](from-clause.md)
 - [Cláusula WHERE](where-clause.md)
 - [Cláusula order by](order-by-clause.md)
 - [Tipos anónimos](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. HttpsClientCertificateNotPresent'
 title: System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 ms.date: 03/30/2017
 ms.assetid: b13ef1b6-e340-401d-93ca-2710c3842205
-ms.openlocfilehash: 9ec25138130311f8cdd9af8fb32a3e80fb33ed68
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1bca23915a55561c76b73c6b96750f324cb0e4dd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96258093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99654491"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificatenotpresent"></a>System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 

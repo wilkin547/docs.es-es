@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: <runtime> elemento'
 title: <runtime> (Elemento)
 ms.date: 03/30/2017
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3825ae7c3e35193cb835981600fe1ef83097cd2d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eeffc8de4eeb6fb53ef3829b8c5b078be4cee83a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74430458"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99652775"
 ---
 # <a name="runtime-element"></a>\<runtime> (Elemento)
 
@@ -91,13 +92,13 @@ Ninguno.
 |-------------|-----------------|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los elementos secundarios de la [\<runtime>](runtime-element.md) sección de un archivo de configuración se usan en el Common Language Runtime para configurar el modo en que se ejecuta una aplicación. Por ejemplo, el [\<gcServer>](gcserver-element.md) elemento determina si el recolector de elementos no utilizados utiliza la recolección de elementos no utilizados de estación de trabajo o la recolección de elementos no utilizados de servidor, el [\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md) elemento determina si el Common Language Runtime calcula los códigos hash de la cadena en una aplicación o un dominio por aplicación, y el `AppContextSwitchOverrides` elemento permite que los usuarios de la biblioteca opten por la funcionalidad modificada proporcionada por una biblioteca.
 
 [\<runtime>](runtime-element.md)El Common Language Runtime lee automáticamente los elementos de la sección al iniciar la aplicación. También puede definir el archivo de configuración para un dominio de aplicación no predeterminado proporcionando su nombre a la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propiedad; su configuración se lee automáticamente cuando se carga el dominio de aplicación. En raras ocasiones, si es necesario, debe leer directamente la configuración de la sección del [\<runtime>](runtime-element.md) archivo de configuración de la aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)

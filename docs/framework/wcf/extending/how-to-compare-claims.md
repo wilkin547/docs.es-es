@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: comparar notificaciones'
 title: Procedimiento para comparar notificaciones
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c2088ad3992852bdc12e7bcd71d5f3598a237b45
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70797099"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99653854"
 ---
 # <a name="how-to-compare-claims"></a>Procedimiento para comparar notificaciones
 
@@ -31,7 +32,7 @@ Los tipos de notificación integrados se comparan mediante el método <xref:Syst
 [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
 [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]
 
-el código de comparación en <xref:System.IdentityModel.Claims.Claim.Equals%2A> el método `true`devuelve, suponiendo `example\someone` que identifica el mismo usuario desomeone@example.comdominio que "".
+el código de comparación en el <xref:System.IdentityModel.Claims.Claim.Equals%2A> método devuelve `true` , suponiendo `example\someone` que identifica el mismo usuario de dominio que " someone@example.com ".
 
 Los tipos de notificación personalizados también se pueden comparar con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>. Sin embargo, en los casos en que el tipo devuelto por la propiedad <xref:System.IdentityModel.Claims.Claim.Resource%2A> de la notificación es distinto a un tipo primitivo, <xref:System.IdentityModel.Claims.Claim.Equals%2A> solo devuelve `true` si los valores devueltos por las propiedades `Resource` son iguales de acuerdo con el método <xref:System.IdentityModel.Claims.Claim.Equals%2A>. En los casos en que esto no sea adecuado, el tipo personalizado devuelto por la propiedad `Resource` debería invalidar los métodos <xref:System.IdentityModel.Claims.Claim.Equals%2A> y <xref:System.Object.GetHashCode%2A> para realizar el procesamiento personalizado que sea necesario.
 
@@ -75,4 +76,4 @@ El ejemplo siguiente muestra una comparación de notificaciones personalizadas d
 ## <a name="see-also"></a>Vea también
 
 - [Administración de notificaciones y autorización con el modelo de identidad](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Cómo: Creación de una demanda personalizada](how-to-create-a-custom-claim.md)
+- [Procedimiento para crear una notificación personalizada](how-to-create-a-custom-claim.md)
