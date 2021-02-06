@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura DacpModuleData'
 title: Estructura DacpModuleData
 ms.date: 02/01/2019
 api.name:
@@ -15,20 +16,20 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5d27ba2de9ff6ed184b6ddf50a517d0dae7715f5
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 376a49ab78db08e5906e8d33389cdc45fe76e81e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723056"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661589"
 ---
-# <a name="dacpmoduledata-structure"></a><span data-ttu-id="2c332-102">Estructura DacpModuleData</span><span class="sxs-lookup"><span data-stu-id="2c332-102">DacpModuleData Structure</span></span>
+# <a name="dacpmoduledata-structure"></a><span data-ttu-id="56a9a-103">Estructura DacpModuleData</span><span class="sxs-lookup"><span data-stu-id="56a9a-103">DacpModuleData Structure</span></span>
 
-<span data-ttu-id="2c332-103">Define un búfer de transporte para la información de tiempo de ejecución de un módulo.</span><span class="sxs-lookup"><span data-stu-id="2c332-103">Defines a transport buffer for a module's runtime information.</span></span>
+<span data-ttu-id="56a9a-104">Define un búfer de transporte para la información de tiempo de ejecución de un módulo.</span><span class="sxs-lookup"><span data-stu-id="56a9a-104">Defines a transport buffer for a module's runtime information.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="2c332-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2c332-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="56a9a-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="56a9a-105">Syntax</span></span>
 
 ```cpp
 struct DacpModuleData
@@ -40,27 +41,27 @@ struct DacpModuleData
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="2c332-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="2c332-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="56a9a-106">Members</span><span class="sxs-lookup"><span data-stu-id="56a9a-106">Members</span></span>
 
-| <span data-ttu-id="2c332-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="2c332-106">Member</span></span>    | <span data-ttu-id="2c332-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="2c332-107">Description</span></span>                                                             |
+| <span data-ttu-id="56a9a-107">Miembro</span><span class="sxs-lookup"><span data-stu-id="56a9a-107">Member</span></span>    | <span data-ttu-id="56a9a-108">Descripción</span><span class="sxs-lookup"><span data-stu-id="56a9a-108">Description</span></span>                                                             |
 | --------- | ----------------------------------------------------------------------- |
-| `Address` | <span data-ttu-id="2c332-108">Dirección del objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="2c332-108">Address of the module object.</span></span>                                           |
-| `File`    | <span data-ttu-id="2c332-109">Puntero al archivo portable ejecutable (PE).</span><span class="sxs-lookup"><span data-stu-id="2c332-109">A pointer to the portable executable (PE) file.</span></span>                       |
-| `ilBase`  | <span data-ttu-id="2c332-110">Dirección de la base de la imagen cargada.</span><span class="sxs-lookup"><span data-stu-id="2c332-110">The address of the loaded image's base.</span></span>                                 |
-| `payLoad` | <span data-ttu-id="2c332-111">Búfer de carga para la información adicional del módulo que utiliza el motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="2c332-111">A payload buffer for additional module information used by the runtime.</span></span> |
+| `Address` | <span data-ttu-id="56a9a-109">Dirección del objeto de módulo.</span><span class="sxs-lookup"><span data-stu-id="56a9a-109">Address of the module object.</span></span>                                           |
+| `File`    | <span data-ttu-id="56a9a-110">Puntero al archivo portable ejecutable (PE).</span><span class="sxs-lookup"><span data-stu-id="56a9a-110">A pointer to the portable executable (PE) file.</span></span>                       |
+| `ilBase`  | <span data-ttu-id="56a9a-111">Dirección de la base de la imagen cargada.</span><span class="sxs-lookup"><span data-stu-id="56a9a-111">The address of the loaded image's base.</span></span>                                 |
+| `payLoad` | <span data-ttu-id="56a9a-112">Búfer de carga para la información adicional del módulo que utiliza el motor en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="56a9a-112">A payload buffer for additional module information used by the runtime.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="2c332-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2c332-112">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="56a9a-113">Observaciones</span><span class="sxs-lookup"><span data-stu-id="56a9a-113">Remarks</span></span>
 
-<span data-ttu-id="2c332-113">Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="2c332-113">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="2c332-114">Para usarlo, defina la estructura tal y como se especificó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="2c332-114">To use it, define the structure as specified above.</span></span>
+<span data-ttu-id="56a9a-114">Esta estructura reside dentro del tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="56a9a-114">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="56a9a-115">Para usarlo, defina la estructura tal y como se especificó anteriormente.</span><span class="sxs-lookup"><span data-stu-id="56a9a-115">To use it, define the structure as specified above.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="2c332-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2c332-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="56a9a-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="56a9a-116">Requirements</span></span>
 
-<span data-ttu-id="2c332-116">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c332-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="2c332-117">**Encabezado:** Ninguna</span><span class="sxs-lookup"><span data-stu-id="2c332-117">**Header:** None</span></span>  
-<span data-ttu-id="2c332-118">**Biblioteca:** Ninguna</span><span class="sxs-lookup"><span data-stu-id="2c332-118">**Library:** None</span></span>  
-<span data-ttu-id="2c332-119">**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2c332-119">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+<span data-ttu-id="56a9a-117">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="56a9a-117">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="56a9a-118">**Encabezado:** Ninguna</span><span class="sxs-lookup"><span data-stu-id="56a9a-118">**Header:** None</span></span>  
+<span data-ttu-id="56a9a-119">**Biblioteca:** Ninguna</span><span class="sxs-lookup"><span data-stu-id="56a9a-119">**Library:** None</span></span>  
+<span data-ttu-id="56a9a-120">**.NET Framework versiones:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="56a9a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="2c332-120">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2c332-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56a9a-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="56a9a-121">See also</span></span>
 
-- [<span data-ttu-id="2c332-121">Depuración</span><span class="sxs-lookup"><span data-stu-id="2c332-121">Debugging</span></span>](index.md)
-- [<span data-ttu-id="2c332-122">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="2c332-122">Debugging Structures</span></span>](debugging-structures.md)
+- [<span data-ttu-id="56a9a-122">Depuración</span><span class="sxs-lookup"><span data-stu-id="56a9a-122">Debugging</span></span>](index.md)
+- [<span data-ttu-id="56a9a-123">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="56a9a-123">Debugging Structures</span></span>](debugging-structures.md)

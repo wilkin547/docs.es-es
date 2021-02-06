@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugFunctionBreakpoint:: GetOffset (método)'
 title: ICorDebugFunctionBreakpoint::GetOffset (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: e619eae4-3ac3-4c37-bba4-55e59989b9cb
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9e483e24068656ddda0a3ecfee5934a2df962d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 94238b761e0a42a72037f7d44d5e9609f86ac03b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695899"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99661173"
 ---
-# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="d1597-102">ICorDebugFunctionBreakpoint::GetOffset (Método)</span><span class="sxs-lookup"><span data-stu-id="d1597-102">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
+# <a name="icordebugfunctionbreakpointgetoffset-method"></a><span data-ttu-id="4dff6-103">ICorDebugFunctionBreakpoint::GetOffset (Método)</span><span class="sxs-lookup"><span data-stu-id="4dff6-103">ICorDebugFunctionBreakpoint::GetOffset Method</span></span>
 
-<span data-ttu-id="d1597-103">Obtiene el desplazamiento del punto de interrupción dentro de la función.</span><span class="sxs-lookup"><span data-stu-id="d1597-103">Gets the offset of the breakpoint within the function.</span></span>  
+<span data-ttu-id="4dff6-104">Obtiene el desplazamiento del punto de interrupción dentro de la función.</span><span class="sxs-lookup"><span data-stu-id="4dff6-104">Gets the offset of the breakpoint within the function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1597-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d1597-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4dff6-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4dff6-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset (  
@@ -34,17 +35,17 @@ HRESULT GetOffset (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1597-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d1597-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4dff6-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4dff6-106">Parameters</span></span>  
 
  `pnOffset`  
- <span data-ttu-id="d1597-106">enuncia Puntero al desplazamiento del punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="d1597-106">[out] A pointer to the offset of the breakpoint.</span></span>  
+ <span data-ttu-id="4dff6-107">enuncia Puntero al desplazamiento del punto de interrupción.</span><span class="sxs-lookup"><span data-stu-id="4dff6-107">[out] A pointer to the offset of the breakpoint.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1597-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d1597-107">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4dff6-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4dff6-108">Requirements</span></span>  
 
- <span data-ttu-id="d1597-108">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1597-108">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="4dff6-109">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4dff6-109">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1597-109">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d1597-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4dff6-110">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4dff6-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d1597-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d1597-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4dff6-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4dff6-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d1597-111">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d1597-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4dff6-112">**.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4dff6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
