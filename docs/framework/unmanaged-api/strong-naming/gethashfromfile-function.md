@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Gethashfromfile ((función)'
 title: GetHashFromFile (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b3c526a4-8fb4-4ad6-b6af-42ce9c06492e
 topic_type:
 - apiref
-ms.openlocfilehash: ee9f9cd9a9f35c6c54497ad382bb6f9817d186bd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f91bfe8a3988b6aae563b5a852997d6fd3c309d6
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732377"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736601"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile (Función)
 
@@ -56,7 +57,7 @@ HRESULT GetHashFromFile (
  `pchHash`  
  enuncia Tamaño, en bytes, del devuelto `pbHash` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Esta función es igual que [GetHashFromFileW (](gethashfromfilew-function.md), salvo que la especificación de nombre de archivo es ANSI en lugar de Unicode.  
   
@@ -70,7 +71,7 @@ HRESULT GetHashFromFile (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md)
 - [Método GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md)

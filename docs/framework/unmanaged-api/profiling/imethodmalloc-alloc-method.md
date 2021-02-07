@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IMethodMalloc:: Alloc (método)'
 title: IMethodMalloc::Alloc (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-ms.openlocfilehash: 58809f12e4dd4419b754caafc3f8b883b8bc5089
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f8a41530e0e1a126fafa1816e6fed58d10df6587
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721171"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736959"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc (Método)
 
@@ -39,7 +40,7 @@ PVOID Alloc (
 `cb`\
 de Número de bytes que se van a asignar para el cuerpo del método.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  La memoria asignada comenzará en una dirección mayor que la dirección base del módulo que está asociado a este asignador. En otras palabras, cada asignador se crea para un módulo determinado e intentará asignar memoria en un desplazamiento positivo desde su dirección base. Si `Alloc` no puede asignar el número solicitado de bytes en una dirección mayor que la dirección base del módulo, devuelve E_OUTOFMEMORY, independientemente de la cantidad real de espacio de memoria disponible.
 
@@ -55,6 +56,6 @@ de Número de bytes que se van a asignar para el cuerpo del método.
 
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMethodMalloc (Interfaz)](imethodmalloc-interface.md)

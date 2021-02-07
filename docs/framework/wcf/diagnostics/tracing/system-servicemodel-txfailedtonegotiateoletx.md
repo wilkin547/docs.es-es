@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. TxFailedToNegotiateOleTx'
 title: System.ServiceModel.TxFailedToNegotiateOleTx
 ms.date: 03/30/2017
 ms.assetid: 3f0f0b4b-a1ad-4704-8329-455daf54892d
-ms.openlocfilehash: 7b468a57409e9a473a5bbf8e3324435e65e8c60b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c7f18ef73ff9c09cc51ad3aa6c54c2bd672d0cc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295319"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735574"
 ---
 # <a name="systemservicemodeltxfailedtonegotiateoletx"></a>System.ServiceModel.TxFailedToNegotiateOleTx
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un servicio de token de seguridad'
 title: Procedimiento para crear un servicio de token de seguridad
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: cfe1da7c66f5c64ac3f5346bc23e9b618db38d20
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a3bfe6f97eeccdb31d3b8f4ef6c05a3c15257e91
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96286466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734456"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Procedimiento para crear un servicio de token de seguridad
 

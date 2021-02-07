@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: usar varios tokens de seguridad del mismo tipo'
 title: Procedimiento para usar varios tokens de seguridad del mismo tipo
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: 7374eebb9e42ef761b7ab8980b3eacf4d5671e6d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0cbf831c82fdc2aee5a09237c586286a5776d234
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96280707"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734261"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Procedimiento para usar varios tokens de seguridad del mismo tipo
 

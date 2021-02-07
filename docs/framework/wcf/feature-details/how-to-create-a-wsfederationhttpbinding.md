@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un WSFederationHttpBinding'
 title: Procedimiento para crear un WSFederationHttpBinding
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: ccc28c46e8be0b835cf08d372ef85b8a66e989ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f0b40cf074d5c3f2575c5a94baa2fdd4271f280f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595445"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734404"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Procedimiento para crear un WSFederationHttpBinding
 
@@ -24,7 +25,7 @@ En Windows Communication Foundation (WCF), la <xref:System.ServiceModel.WSFedera
 1. Seleccione un modo de seguridad. <xref:System.ServiceModel.WSFederationHttpBinding> admite `Message`, que proporciona seguridad global en el nivel de mensaje, incluso a través de múltiples saltos, y `TransportWithMessageCredential`, que ofrece el mejor rendimiento para los casos en los que el cliente y el servicio pueden realizar una conexión directa sobre HTTPS.
 
     > [!NOTE]
-    > <xref:System.ServiceModel.WSFederationHttpBinding> también admite `None` como modo de seguridad. Este modo no es seguro y se ofrece solo para fines de depuración. Si un punto de conexión de servicio se implementa con un <xref:System.ServiceModel.WSFederationHttpBinding> con su modo de seguridad establecido en `None` , el enlace de cliente resultante (generado por la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)) es un <xref:System.ServiceModel.WSHttpBinding> con un modo de seguridad de `None` .
+    > <xref:System.ServiceModel.WSFederationHttpBinding> también admite `None` como modo de seguridad. Este modo no es seguro y se ofrece solo para fines de depuración. Si un punto de conexión de servicio se implementa con un <xref:System.ServiceModel.WSFederationHttpBinding> con su modo de seguridad establecido en `None` , el enlace de cliente resultante (generado por la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)) es un <xref:System.ServiceModel.WSHttpBinding> con un modo de seguridad de `None` .
 
      A diferencia de otros enlaces proporcionados por el sistema, no es necesario seleccionar un tipo de credencial de cliente cuando se utiliza `WSFederationHttpBinding`. Esto es porque el tipo de credenciales de cliente siempre es un token emitido. WCF adquiere un token de un emisor especificado y presenta ese token al servicio para autenticar el cliente.
 

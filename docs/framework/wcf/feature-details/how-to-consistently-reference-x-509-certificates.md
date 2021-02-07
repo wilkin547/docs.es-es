@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Cómo: hacer referencia a los certificados X. 509 de forma coherente'
 title: Procedimiento para hacer referencia a los certificados X.509 de forma coherente
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
-ms.openlocfilehash: b5be8990384178c1954834204c23c0b9cf4a5ad9
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cdf5535373490e8cb78e28a8fc0cf881df40e041
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96257280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734807"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>Procedimiento para hacer referencia a los certificados X.509 de forma coherente
 

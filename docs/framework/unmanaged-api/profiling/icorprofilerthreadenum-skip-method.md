@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerThreadEnum:: Skip (método)'
 title: ICorProfilerThreadEnum::Skip (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb8b029-4a96-4ed7-ae3c-310204e5ceea
 topic_type:
 - apiref
-ms.openlocfilehash: 12b7b53c408388c21d7508f6591ead5ccf55936b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1da191980364868ed4237fccaf7495d5417705cc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721184"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736900"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip (Método)
 
@@ -47,7 +48,7 @@ HRESULT Skip (    [in] ULONG celt
 |S_OK|`celt` se omitieron los elementos.|  
 |S_FALSE|`celt`Se omitieron menos de elementos, lo que indica que no hay más elementos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La nueva posición del cursor de este enumerador es (posición actual) + `celt` .  
   
@@ -61,7 +62,7 @@ HRESULT Skip (    [in] ULONG celt
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerThreadEnum (Interfaz)](icorprofilerthreadenum-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

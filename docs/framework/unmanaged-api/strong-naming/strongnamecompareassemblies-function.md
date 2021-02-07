@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: StrongNameCompareAssemblies ((función)'
 title: StrongNameCompareAssemblies (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-ms.openlocfilehash: e7292635ea0344f1c77c8d44908a9a811e464ff9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e59bb96a89dc1e1cf8b809c3e0d538aaffe83b8e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732312"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736567"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies (Función)
 
@@ -68,13 +69,13 @@ BOOLEAN StrongNameCompareAssemblies (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La firma de nombre seguro de un ensamblado consta del nombre de texto, la versión, la referencia cultural y el token de clave pública del ensamblado.  
   
  Si la `StrongNameCompareAssemblies` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
 - [ICLRStrongName (Interfaz)](../hosting/iclrstrongname-interface.md)

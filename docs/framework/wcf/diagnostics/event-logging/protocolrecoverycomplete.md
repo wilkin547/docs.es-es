@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ProtocolRecoveryComplete'
 title: ProtocolRecoveryComplete
 ms.date: 03/30/2017
 ms.assetid: 71b2a222-f3a5-4e71-8ecd-ca53c8f8ef00
-ms.openlocfilehash: 743e9ca1d80a87261b27d99b9ea0b85cec45c41e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3f66a2a57768516c4060c5986656978249d55bce
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96278419"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736187"
 ---
 # <a name="protocolrecoverycomplete"></a>ProtocolRecoveryComplete
 

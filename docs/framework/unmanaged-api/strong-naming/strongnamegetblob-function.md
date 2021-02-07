@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Strongnamegetblob ((función)'
 title: StrongNameGetBlob (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15d09166-be00-4696-913f-2c1fbc7ac2e1
 topic_type:
 - apiref
-ms.openlocfilehash: 8f5cb89294004dfb1f020627ceb1edb58735f72c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 72f7ce50ce6170a23e5b24b68f911ff58bebe3bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732286"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736445"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob (Función)
 
@@ -52,7 +53,7 @@ BOOLEAN StrongNameGetBlob (
 
  `true` Cuando se complete correctamente; en caso contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si la `StrongNameGetBlob` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
@@ -66,7 +67,7 @@ BOOLEAN StrongNameGetBlob (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Método StrongNameGetBlob](../hosting/iclrstrongname-strongnamegetblob-method.md)
 - [Método StrongNameGetBlobFromImage](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: crear un proveedor de tokens de seguridad personalizado'
 title: Procedimiento para crear un proveedor de tokens de seguridad personalizado
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 94de506b16d97ec82b84ec6eed34111e99f62977
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4e0970ff01be74d0eb9f4ae8968bd100a0dafe00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96249272"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735041"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Procedimiento para crear un proveedor de tokens de seguridad personalizado
 

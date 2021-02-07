@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. TxSourceTxScopeRequiredIsTransactionFlow'
 title: System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 ms.date: 03/30/2017
 ms.assetid: 41a3a5d7-bb16-4d16-bb51-db7ac0cfb748
-ms.openlocfilehash: 1541b0638f92c1f6b6777462d9cac9a73d1406ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 806504dd4f732824db383a6f971aefdd5bbe76a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735496"
 ---
 # <a name="systemservicemodeltxsourcetxscoperequiredistransactionflow"></a>System.ServiceModel.TxSourceTxScopeRequiredIsTransactionFlow
 

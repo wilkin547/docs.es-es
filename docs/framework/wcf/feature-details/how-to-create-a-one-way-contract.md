@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: crear un contrato de One-Way'
 title: Procedimiento para crear un contrato unidireccional
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: 7f0285ba4824ac842b3644d0834782139fd90657
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 465dc2da20288c918a70743fcbe3ed931620b33b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96268695"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734729"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Procedimiento para crear un contrato unidireccional
 

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. TxCompletionStatusCompletedForAsyncAbort'
 title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
-ms.openlocfilehash: f7b3ca5e049adbb773cb6a3054de0a1520300586
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 892a867607d1c6d34c06a59947cc336db067fb19
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735691"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 

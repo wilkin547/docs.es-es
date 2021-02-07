@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: elegir un codificador de mensajes'
 title: Elección de un codificador de mensajes
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 8b53c17cccc74153e652494ec9753302cda8679b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 16f58dd0510584fa94363f63e1a2e56a9de83b52
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96295163"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735002"
 ---
 # <a name="choose-a-message-encoder"></a>Elegir un codificador de mensajes
 

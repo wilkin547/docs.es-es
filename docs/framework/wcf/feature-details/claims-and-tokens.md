@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: notificaciones y tokens'
 title: Notificaciones y tokens
 ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d7d05fb63886ca7562ce478bcbcea73c3cbafcb8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587032"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99734963"
 ---
 # <a name="claims-and-tokens"></a>Notificaciones y tokens
 

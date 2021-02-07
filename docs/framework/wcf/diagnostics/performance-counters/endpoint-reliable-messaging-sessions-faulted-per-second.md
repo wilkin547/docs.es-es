@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: punto de conexión: errores en las sesiones de mensajería de confianza por segundo'
 title: 'punto de conexión: errores en las sesiones de mensajería de confianza por segundo'
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
-ms.openlocfilehash: b9aa0e62aaf3a7e44f90c37a8611733321969ded
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5c92239d00926e04024c49abde67bb9900fe479b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96290834"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99735788"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>punto de conexión: errores en las sesiones de mensajería de confianza por segundo
 
