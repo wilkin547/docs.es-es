@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: configuración de directivas de directiva de tiempo de ejecución'
 title: Configuración de directiva de la directiva en tiempo de ejecución
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b8bbb0f713900b4f0b3808431ce45ab85a7f8225
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "76738497"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738421"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
 
@@ -111,7 +112,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
   |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
-## <a name="policy-settings"></a>Configuración de la directiva
+## <a name="policy-settings"></a>Configuración de directiva
 
 Cada tipo de directiva se puede establecer en uno de los valores incluidos en la siguiente tabla. Tenga en cuenta que los elementos que representan miembros de tipo admiten un conjunto diferente de opciones de directiva que otros elementos.
 

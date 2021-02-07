@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: simultaneidad optimista'
 title: Simultaneidad optimista
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 681044a9d905f052516ba240e25ffff84928e58e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1034720b2c57b863b87eef440424a7e2f4c2c6c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166643"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739149"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 
@@ -38,18 +39,18 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
 |Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Bob|Bob|  
+|Apellidos|Smith|Smith|Smith|  
+|Nombre|Bob|Bob|Bob|  
   
  A la 1:01 p.m., el Usuario2 lee la misma fila.  
   
- A las 1:03 p.m., el usuario2 cambia el **nombre** de "Bob" a "Robert" y actualiza la base de datos.  
+ A las 13:03, el Usuario2 cambia **FirstName** de "Cris" a "Cristina" y actualiza la base de datos.  
   
 |Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Cristina|Bob|  
+|Apellidos|Smith|Smith|Smith|  
+|Nombre|Bob|Cristina|Bob|  
   
  La actualización se realiza correctamente porque los valores contenidos en la base de datos en el momento de la actualización coinciden con los valores originales que tiene el Usuario2.  
   
@@ -58,8 +59,8 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
 |Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Jaime|Cristina|  
+|Apellidos|Smith|Smith|Smith|  
+|Nombre|Bob|Jaime|Cristina|  
   
  En este momento, el Usuario1 encuentra una infracción de la simultaneidad optimista porque los valores de la base de datos ("Jaime") ya no coinciden con los valores originales que esperaba el Usuario1 ("Cris"). La infracción de simultaneidad simplemente permite saber que se ha producido un error de actualización. Ahora hay que tomar la decisión de sobrescribir los cambios realizados por el Usuario2 con los efectuados por el Usuario1 o cancelar los cambios del Usuario1.  
   
@@ -73,7 +74,7 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Para probar una infracción de la simultaneidad optimista al actualizar una fila en **Table1**, debe emitir la siguiente instrucción UPDATE:  
+ Para probar si hay alguna infracción de simultaneidad optimista al actualizar una fila de **Table1**, tendría que emitir la siguiente instrucción UPDATE:  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -99,15 +100,15 @@ UPDATE Table1 Set Col1 = @NewVal1
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
 
- El evento **RowUpdated** del <xref:System.Data.Common.DataAdapter> objeto se puede usar junto con las técnicas descritas anteriormente para proporcionar una notificación a la aplicación de infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una fila **modificada** de un **conjunto de DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve una propiedad **RecordsAffected** que contiene el número de filas afectadas por un comando UPDATE determinado para una fila modificada de una tabla. Al establecer el comando de actualización para comprobar la simultaneidad optimista, la propiedad **RecordsAffected** , como resultado, devolverá un valor de 0 cuando se haya producido una infracción de simultaneidad optimista, ya que no se ha actualizado ningún registro. En tal caso se inicia una excepción. El evento **RowUpdated** permite controlar esta aparición y evitar la excepción estableciendo un valor **RowUpdatedEventArgs. status** adecuado, como **updateStatus. SkipCurrentRow**. Para obtener más información acerca del evento **RowUpdated** , vea [controlar eventos DataAdapter](handling-dataadapter-events.md).  
+ El evento **RowUpdated** del objeto <xref:System.Data.Common.DataAdapter> se puede usar junto con las técnicas descritas anteriormente para notificar a la aplicación las infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una fila **Modified** de un objeto **DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El objeto <xref:System.Data.Common.RowUpdatedEventArgs> devuelve una propiedad **RecordsAffected** con el número de filas afectadas por un determinado comando de actualización para una fila modificada de una tabla. Al establecer el comando de actualización para que compruebe la simultaneidad optimista, la propiedad **RecordsAffected** devolverá un valor 0 cuando se haya producido una infracción en la simultaneidad optimista, ya que no se ha actualizado ningún registro. En tal caso se inicia una excepción. El evento **RowUpdated** le permite controlar este caso y evitar la excepción al establecer un valor **RowUpdatedEventArgs.Status** apropiado, como **UpdateStatus.SkipCurrentRow**. Para obtener más información sobre el evento **RowUpdated**, vea [Control de eventos de objetos DataAdapter](handling-dataadapter-events.md).  
   
- Opcionalmente, puede establecer **DataAdapter. ContinueUpdateOnError** en **true**antes de llamar a **Update**y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando se complete la **actualización** . Para obtener más información, vea [información sobre los errores de fila](./dataset-datatable-dataview/row-error-information.md).  
+ De forma opcional, puede establecer **DataAdapter.ContinueUpdateOnError** en **true** antes de llamar a **Update** y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando **Update** se complete. Para obtener más información, vea [Información de error de fila](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Ejemplo de simultaneidad optimista  
 
- A continuación se facilita un ejemplo sencillo en el que se establece el **UpdateCommand** de un **DataAdapter** para probar la simultaneidad optimista y, a continuación, se usa el evento **RowUpdated** para comprobar las infracciones de la simultaneidad optimista. Cuando se encuentra una infracción de simultaneidad optimista, la aplicación establece el **RowError** de la fila para la que se emitió la actualización para reflejar una infracción de simultaneidad optimista.  
+ A continuación se muestra un ejemplo sencillo que establece **UpdateCommand** de **DataAdapter** para probar la simultaneidad optimista y, después, usa el evento **RowUpdated** para probar si hay infracciones de la simultaneidad optimista. Cuando se encuentra una infracción de simultaneidad optimista, la aplicación establece el valor **RowError** de la fila para la que se ha emitido la actualización con el fin de reflejar la existencia de una infracción de la simultaneidad optimista.  
   
- Tenga en cuenta que los valores de parámetro que se pasan a la cláusula WHERE del comando UPDATE se asignan a los valores **originales** de sus respectivas columnas.  
+ Tenga en cuenta que los valores de los parámetros pasados a la cláusula WHERE del comando UPDATE se asignan a los valores **Original** de sus respectivas columnas.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -210,7 +211,7 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
 - [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)

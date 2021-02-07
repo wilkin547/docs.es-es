@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: asignar relaciones de base de datos'
 title: Procedimiento para asignar relaciones de base de datos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 2f612877f5e7da6442c242aa0d56d811c0aa7cf8
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: cbccf9ec33a76b6446549fe8031300174506bd00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166461"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738850"
 ---
 # <a name="how-to-map-database-relationships"></a>Procedimiento para asignar relaciones de base de datos
 
@@ -56,7 +57,7 @@ Puede codificar como referencias de propiedad en la clase de entidad cualquier r
  [!code-csharp[DLinqCustomize#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#5)]
  [!code-vb[DLinqCustomize#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para personalizar clases de entidades con el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)

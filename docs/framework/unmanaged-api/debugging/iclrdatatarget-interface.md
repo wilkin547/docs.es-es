@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget (interfaz)'
 title: ICLRDataTarget (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2f05155-9bef-4e11-b703-7f05890665ca
 topic_type:
 - apiref
-ms.openlocfilehash: 0d3e6a95d8fd71a67b97923dac53c1f615dfe666
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f24760f638705a1bde7e055069cbc3a18a0896fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703426"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738226"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget (Interfaz)
 
@@ -29,7 +30,7 @@ Proporciona métodos para la interacción con un elemento de destino del Common 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[GetCurrentThreadID (Método)](iclrdatatarget-getcurrentthreadid-method.md)|Obtiene el identificador del sistema operativo para el subproceso actual.|  
+|[Método GetCurrentThreadID](iclrdatatarget-getcurrentthreadid-method.md)|Obtiene el identificador del sistema operativo para el subproceso actual.|  
 |[Método GetImageBase](iclrdatatarget-getimagebase-method.md)|Obtiene la dirección de memoria base para la imagen especificada.|  
 |[Método GetMachineType](iclrdatatarget-getmachinetype-method.md)|Obtiene un identificador para el tipo de conjunto de instrucciones que está usando el proceso de destino.|  
 |[Método GetPointerSize](iclrdatatarget-getpointersize-method.md)|Obtiene el tamaño, en bytes, de un puntero al destino actual.|  
@@ -41,7 +42,7 @@ Proporciona métodos para la interacción con un elemento de destino del Common 
 |[Método SetTLSValue](iclrdatatarget-settlsvalue-method.md)|Establece un valor en el almacenamiento local de subprocesos (TLS) del subproceso especificado en el proceso de destino.|  
 |[Método WriteVirtual](iclrdatatarget-writevirtual-method.md)|Escribe datos del búfer especificado en la dirección de memoria virtual especificada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El cliente de API (es decir, el depurador) debe implementar esta interfaz según corresponda para el elemento de destino determinado. Por ejemplo, un proceso activo tendría una implementación diferente de la de un volcado de memoria.  
   
@@ -55,7 +56,7 @@ Proporciona métodos para la interacción con un elemento de destino del Common 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget2 (Interfaz)](iclrdatatarget2-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

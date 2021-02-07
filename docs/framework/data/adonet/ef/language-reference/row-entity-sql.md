@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ROW (Entity SQL)'
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 2ab91d0c6d3c3ed3f88a7f0ddbf3a6c2f36d8b04
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2d0bcf3c5be8ef3b67e170af5159ae7dd8744630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202270"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739279"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 
@@ -59,7 +60,7 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
  [!code-sql[DP EntityServices Concepts#ROW](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#row)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos de constructores](constructing-types-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: Cómo: personalizar clases de entidad mediante el editor de código'
 title: Procedimiento para personalizar clases de entidades con el editor de código
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
-ms.openlocfilehash: 5e61acc9de1ef2f00d5e81a3c3080a9dc46f074d
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6b4e8b5dcd5cb11095667fe95293a376cc63ade8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91147702"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738993"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Procedimiento para personalizar clases de entidades con el editor de código
 

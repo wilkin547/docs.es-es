@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: clase MissingMetadataException (.NET Native)'
 title: Clase MissingMetadataException (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-ms.openlocfilehash: d73d66529bc30358c946eb0a7072f0cb8910b19a
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b5d93a8dc098a542791df303450d64e4abcc5de9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738655"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>Clase MissingMetadataException (.NET Native)
 
@@ -33,7 +34,7 @@ La clase `MissingMetadataException` tiene los siguientes miembros:
 |Constructor|Descripción|
 |-----------------|-----------------|
 |`public MissingMetadataException()`|Inicializa una nueva instancia de la clase `MissingMetadataException` mediante un mensaje proporcionado por el sistema que describe el error.<br /><br /> Este constructor es para uso interno solo por la cadena de herramientas de .NET Native.|
-|`public MissingMetadataException(String message)`|Inicializa una instancia nueva de la clase `MissingMetadataException` con un mensaje de error especificado.<br /><br /> Este constructor es para uso interno solo por la cadena de herramientas de .NET Native.|
+|`public MissingMetadataException(String message)`|Inicializa una nueva instancia de la clase `MissingMetadataException` con el mensaje de error especificado.<br /><br /> Este constructor es para uso interno solo por la cadena de herramientas de .NET Native.|
 
 ## <a name="properties"></a>Propiedades
 
@@ -62,7 +63,7 @@ La clase `MissingMetadataException` tiene los siguientes miembros:
 |`protected Object MemberwiseClone()`|Crea una copia superficial del objeto actual. (Se hereda de <xref:System.Object>).|
 |`public string ToString()`|Devuelve la representación de cadena de la excepción actual. (Se hereda de <xref:System.Exception?displayProperty=nameWithType>).|
 
-## <a name="events"></a>Eventos
+## <a name="events"></a>Events
 
 |Evento|Descripción|
 |-----------|-----------------|
@@ -72,7 +73,7 @@ La clase `MissingMetadataException` tiene los siguientes miembros:
 
 La excepción `MissingMetadataException` se produce cuando se utiliza la reflexión para acceder a los metadatos que no están disponibles en un ensamblado.
 
-Los metadatos que están disponibles para una aplicación en tiempo de ejecución se definen mediante el archivo de directivas de tiempo de ejecución (configuración XML), \* . Rd. Xml. Para evitar que la aplicación genere esta excepción, debe modificar \*.rd.xml para definir los metadatos que deben estar presentes en tiempo de ejecución. Para obtener información sobre el formato del archivo \*.rd.xml, vea [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).
+Los metadatos que están disponibles para una aplicación en tiempo de ejecución se definen mediante el archivo de directivas de tiempo de ejecución (configuración XML), \*.rd.xml. Para evitar que la aplicación genere esta excepción, debe modificar \*.rd.xml para definir los metadatos que deben estar presentes en tiempo de ejecución. Para obtener información sobre el formato del archivo \*.rd.xml, vea [Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)).
 
 > [!IMPORTANT]
 > Puesto que esta excepción indica que los metadatos que la aplicación necesita no están disponibles en tiempo de ejecución, no debe controlar esta excepción en un bloque `try`/`catch`. En su lugar, diagnostique la causa de la excepción y elimínela mediante un archivo de directivas en tiempo de ejecución. Para obtener la entrada que se puede agregar al archivo de directivas en tiempo de ejecución que elimina la excepción, puede usar uno de estos dos solucionadores de problemas:
@@ -82,7 +83,7 @@ Los metadatos que están disponibles para una aplicación en tiempo de ejecució
 
 La clase `MissingMetadataException` no contiene ningún miembro único; todos sus miembros se heredan de la clase base, <xref:System.TypeAccessException>.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Exception?displayProperty=nameWithType>
 - <xref:System.TypeAccessException>

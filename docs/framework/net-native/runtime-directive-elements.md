@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: elementos de la Directiva en tiempo de ejecución'
 title: Elementos de directivas en tiempo de ejecución
 ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-ms.openlocfilehash: 96bce89c02ad17d1b30eda66237f69a15123dcd3
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 74ff6c7d782f48106e37b99187770d8e82926be4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250806"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738434"
 ---
 # <a name="runtime-directive-elements"></a>Elementos de directivas en tiempo de ejecución
 

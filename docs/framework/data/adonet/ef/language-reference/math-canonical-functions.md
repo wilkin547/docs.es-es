@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: funciones canónicas matemáticas'
 title: Funciones canónicas matemáticas
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 55072099f5766d48ea3067a2e9eaa187a8b3f111
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739370"
 ---
 # <a name="math-canonical-functions"></a>Funciones canónicas matemáticas
 
@@ -19,7 +20,7 @@ Devuelve el valor absoluto de `value`.
 
 **Argumentos**
 
-`Int16`, ,,`Int64`,, Y`Double`. `Byte` `Int32` `Single` `Decimal`
+`Int16`, `Int32` , `Int64` , `Byte` , `Single` , `Double` Y `Decimal` .
 
 **Valor devuelto**
 
@@ -35,7 +36,7 @@ Devuelve el menor entero que es mayor o igual que `value`.
 
 **Argumentos**
 
-`Single` ,`Double`Y .`Decimal`
+`Single`, `Double` Y `Decimal` .
 
 **Valor devuelto**
 
@@ -52,7 +53,7 @@ Devuelve el mayor entero que es menor o igual que `value`.
 
 **Argumentos**
 
-`Single` ,`Double`Y .`Decimal`
+`Single`, `Double` Y `Decimal` .
 
 **Valor devuelto**
 
@@ -71,8 +72,8 @@ Devuelve el resultado del `value` especificado al `exponent` especificado.
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`O .`Decimal` |
-|`exponent` | `Int64` ,`Double`O .`Decimal` |
+|`value` | `Int32, Int64, Double` o `Decimal`. |
+|`exponent` | `Int64`, `Double` O `Decimal` . |
 
 **Valor devuelto**
 
@@ -88,7 +89,7 @@ Devuelve la parte entera de `value`, redondeada al entero más próximo.
 
 **Argumentos**
 
-`Single` ,`Double`Y .`Decimal`
+`Single`, `Double` Y `Decimal` .
 
 **Valor devuelto**
 

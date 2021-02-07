@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: consideraciones sobre la migración (Entity Framework)'
 title: Consideraciones de migración (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d5151f0215cde1c5e35cc87c3cd667e16a23a1df
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6824d28fecc743e17046c826b887900218c90f3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175478"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739253"
 ---
 # <a name="migration-considerations-entity-framework"></a>Consideraciones de migración (Entity Framework)
 
@@ -99,7 +100,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
   
 - Aplicaciones que utilizan datos XML.  
 
-  La serialización de objetos permite crear Entity Framework Data Services. Estos servicios proporcionan datos a las aplicaciones que consumen datos XML, como las aplicaciones de Internet basadas en AJAX. En estos casos, considere la posibilidad de usar WCF Data Services. Estos servicios de datos se basan en Entity Data Model y proporcionan acceso dinámico a los datos de entidad a través de acciones HTTP de Transferencia de datos de representación (REST) estándar, como GET, PUT y POST. Para obtener más información, vea [WCF Data Services 4.5](../../wcf/index.md).  
+  La serialización de objetos permite crear Entity Framework Data Services. Estos servicios proporcionan datos a las aplicaciones que consumen datos XML, como las aplicaciones de Internet basadas en AJAX. En estos casos, considere la posibilidad de usar Servicios de datos de WCF. Estos servicios de datos se basan en Entity Data Model y proporcionan acceso dinámico a los datos de entidad a través de acciones HTTP de Transferencia de datos de representación (REST) estándar, como GET, PUT y POST. Para obtener más información, vea [WCF Data Services 4.5](../../wcf/index.md).  
   
   El Entity Framework no admite un tipo de datos XML nativo. Esto significa que cuando una entidad se asigna a una tabla con una columna XML, la propiedad de entidad equivalente para la columna XML es una cadena. Los objetos se pueden desconectar y serializar como XML. Para obtener más información, vea [serializar objetos](/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
@@ -109,7 +110,7 @@ El Entity Framework ADO.NET proporciona varias ventajas a una aplicación existe
 
   Las aplicaciones Web de ASP.NET deben mantener con frecuencia el estado de una página web o de una sesión de usuario. Los objetos de una <xref:System.Data.Objects.ObjectContext> instancia de pueden almacenarse en el estado de vista de cliente o en el estado de sesión en el servidor y, posteriormente, recuperarse y volver a adjuntarse a un nuevo contexto de objeto. Para obtener más información, vea [adjuntar y separar objetos](/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Consideraciones de implementación](deployment-considerations.md)
 - [Terminología de Entity Framework](terminology.md)

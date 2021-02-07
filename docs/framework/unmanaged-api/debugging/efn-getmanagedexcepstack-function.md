@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: _EFN_GetManagedExcepStack función'
 title: _EFN_GetManagedExcepStack (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: b86277836b1be48c9f8020d59071aba8c5b1e457
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a3c7e30a377e10b9d4d0b1dd663a594a0e872f3c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95676249"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738317"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN \_ GetManagedExcepStack función)
 
@@ -50,7 +51,7 @@ HRESULT _EFN_GetManagedExcepStack(
  `cbString`  
  enuncia Número de caracteres disponibles en el búfer de cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si no hay código administrado en el subproceso actualmente en contexto, la función devuelve HRESULT SOS_E_NOMANAGEDCODE con un valor de instalación de 0XA0 y un código de error de 0x1000.  
   
@@ -62,6 +63,6 @@ HRESULT _EFN_GetManagedExcepStack(
   
  **Versión de .NET Framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: .NET Native y compilación'
 title: .NET Native y compilación
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1a847340f48d97eb255869895f9a5b963e45e8ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738564"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
 
@@ -102,7 +103,7 @@ El [generador de imágenes nativas](../tools/ngen-exe-native-image-generator.md)
 
 - Las imágenes NGEN suelen ser frágiles. Por ejemplo, si se producen una revisión o un cambio en una dependencia, es necesario aplicar de nuevo NGEN en los ensamblados que la usan. Esto es particularmente cierto con los ensamblados del sistema de la biblioteca de clases de .NET Framework. En cambio, .NET Native permite que las aplicaciones se sirvan de forma independiente.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Metadatos y componentes autodescriptivos](../../standard/metadata-and-self-describing-components.md)
 - [Buceando en .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)

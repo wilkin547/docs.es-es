@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: .NET Native solución de problemas generales'
 title: Solución de problemas generales de .NET Native
 ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-ms.openlocfilehash: 2bea81e380fed6c456898e9883658ef874c8dd97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c486b1968036c42ac6d6e565abd9a9f7d795abc3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128240"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738538"
 ---
 # <a name="net-native-general-troubleshooting"></a>Solución de problemas generales de .NET Native
 
@@ -27,13 +28,13 @@ En este tema se describe cómo solucionar los posibles problemas que pueden surg
 
 - **Problema:** No sabe si la aplicación se compiló mediante .NET Native.
 
-  **Solución:** Si se invoca el compilador de .NET Native, observará que los tiempos de compilación son más prolongados y que el administrador de tareas mostrará diversos procesos de componentes de .NET Native como ILC. exe y nutc_driver. exe.
+  **Solución:** Si se invoca el compilador de .NET Native, observará que los tiempos de compilación son más prolongados y que el administrador de tareas mostrará diversos procesos de componentes de .NET Native como ILC.exe y nutc_driver.exe.
 
-  Después de compilar correctamente el proyecto con .net Native, encontrará la salida en la \\ *configuración*de obj \  *Arch* \\ *projectname*. ilc\out.  El contenido del paquete nativo final se encuentra en bin \\ *Arch* \\ *config*\AppX. El contenido del paquete nativo final está en \Bin \\ *Arch* \\ *config*\appx. Si ha implementado la aplicación.
+  Después de compilar correctamente el proyecto con .net Native, encontrará la salida en la \\ *configuración* de obj \  *Arch* \\ . ilc\out.  El contenido del paquete nativo final se encuentra en bin \\ *Arch* \\ *config*\AppX. El contenido del paquete nativo final está en \Bin \\ *Arch* \\ *config*\appx. Si ha implementado la aplicación.
 
 - **Problema:** su aplicación compilada con .NET Native produce excepciones en tiempo de ejecución (normalmente excepciones [MissingMetadataException](missingmetadataexception-class-net-native.md) o [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)) que no produjo al compilarse sin .NET Native.
 
-  **Solución:** las excepciones se producen porque .NET Native no ha proporcionado los metadatos o el código de implementación, que en otras circunstancias están disponibles a través de reflexión (Para obtener más información, vea [.net Native y compilación](net-native-and-compilation.md)). Para eliminar la excepción, tiene que agregar una entrada al archivo de [directivas en tiempo de ejecución (Rd. xml)](runtime-directives-rd-xml-configuration-file-reference.md) para que la cadena de herramientas de .net Native pueda hacer que el código de implementación o metadatos esté disponible en tiempo de ejecución. Existen dos solucionadores de problemas que generarán la entrada necesaria para agregar al archivo de directivas en tiempo de ejecución:
+  **Solución:** las excepciones se producen porque .NET Native no ha proporcionado los metadatos o el código de implementación, que en otras circunstancias están disponibles a través de reflexión (Para obtener más información, vea [.net Native y compilación](net-native-and-compilation.md)). Para eliminar la excepción, tiene que agregar una entrada al archivo de [directivas en tiempo de ejecución (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md) para que la cadena de herramientas de .net Native pueda hacer que el código de implementación o metadatos esté disponible en tiempo de ejecución. Existen dos solucionadores de problemas que generarán la entrada necesaria para agregar al archivo de directivas en tiempo de ejecución:
 
   - [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) para los tipos.
 
@@ -41,6 +42,6 @@ En este tema se describe cómo solucionar los posibles problemas que pueden surg
 
   Para obtener más información, vea [Reflection and .NET Native](reflection-and-net-native.md) (Reflexión y .NET Native).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Migrar la aplicación de la Tienda Windows a .NET Native](migrating-your-windows-store-app-to-net-native.md)

@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: .NET Native referencia de la API de reflexión'
 title: Referencia de la API de reflexión de .NET nativo
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-ms.openlocfilehash: 4cded310397ffa4dea057899b6f008146d35a03b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 44786812b5bf8c7bd470a588730b7b03ee91f00c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738525"
 ---
 # <a name="net-native-reflection-api-reference"></a>Referencia de la API de reflexión de .NET nativo
 
@@ -30,7 +31,7 @@ ms.locfileid: "96250884"
 
  El espacio de nombres <xref:System.Reflection> contiene los tipos principales utilizados para la reflexión en .NET Framework. Por .NET Native, también incluye dos nuevos tipos de excepción:  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|Excepción que se genera al utilizar reflexión para recuperar metadatos que no están presentes.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|Excepción que se genera cuando hay disponibles metadatos para un tipo o un miembro de tipo, pero su implementación se ha quitado.|  
@@ -41,7 +42,7 @@ ms.locfileid: "96250884"
 
  El espacio de nombres <xref:System.Runtime.CompilerServices> incluye tipos que diseñan los compiladores de lenguaje para el usuario. Por .NET Native, también incluye un nuevo tipo de excepción:  
   
-|Clase|Descripción|  
+|Class|Descripción|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|Excepción que se genera cuando se llama a un método de cálculo de referencias manual, pero el análisis estático no encuentra metadatos para un tipo de análisis o no existen en un archivo de directivas en tiempo de ejecución.|  
   

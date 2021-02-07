@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: almacenar y reutilizar consultas'
 title: Procedimiento para almacenar y reutilizar consultas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: aae1cf3faf2ecb3d8e9511390cdaa1e004905bea
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: a9c467cc9b2e39e6bd7616c6439d02c67f43d7c2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197097"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738824"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Procedimiento para almacenar y reutilizar consultas
 
@@ -36,7 +37,7 @@ Cuando una aplicación ejecuta muchas veces consultas que tienen una estructura 
  [!code-csharp[DLinqQuerying#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#8)]
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.Linq.CompiledQuery>
 - [Conceptos sobre consultas](query-concepts.md)

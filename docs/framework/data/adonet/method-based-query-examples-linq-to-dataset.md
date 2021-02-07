@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Method-Based ejemplos de consultas (LINQ to DataSet)'
 title: Ejemplos de consultas basadas en métodos (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 1c1ef8f1b6c05415ac6f5ee59d9a415bfab2c410
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4597dee40bb3c75b6cbca946e0833672c8512c06
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175387"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99739175"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Ejemplos de consultas basadas en métodos (LINQ to DataSet)
 
@@ -39,7 +40,7 @@ En esta sección se proporciona LINQ to DataSet ejemplos de programación de la 
  [Join](method-based-query-syntax-examples-join-linq-to-dataset.md)  
  Los ejemplos de este tema muestran cómo usar los métodos <xref:System.Linq.Enumerable.GroupJoin%2A> y <xref:System.Linq.Enumerable.Join%2A> para consultar un <xref:System.Data.DataSet>.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de expresiones de consultas](query-expression-examples-linq-to-dataset.md)
 - [Ejemplos de operadores específicos de conjuntos de datos](dataset-specific-operator-examples-linq-to-dataset.md)

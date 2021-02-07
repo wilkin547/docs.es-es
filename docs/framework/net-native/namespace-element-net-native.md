@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <Namespace> elemento (.net Native)'
 title: <Namespace> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: 05de04685f8ba746f55bf040c74fd3831c5b63ca
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c24f78d8d9fd59258391e9dd5e59988675163b49
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96287896"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738616"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace> Elemento (.NET Native)
 
@@ -51,13 +52,13 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*namespace_name*|El espacio de nombres. Si el \<Namespace> elemento es un elemento secundario de [\<Application>](application-element-net-native.md) un [\<Library>](library-element-net-native.md) elemento, o [\<Assembly>](assembly-element-net-native.md) , *namespace_name* debe ser un nombre de espacio de nombres completo. Si el \<Namespace> elemento es un elemento secundario de otro \<Namespace> elemento, *namespace_name* debe ser un nombre de espacio de nombres relativo.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|La configuración que se aplica a este tipo de directiva para todos los tipos del espacio de nombres. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -78,7 +79,7 @@ Aplica la de reflexión en tiempo de ejecución a todos los tipos en un espacio 
 |[\<Library>](library-element-net-native.md)|Define el ensamblado que contiene los tipos y miembros de tipo cuyos metadatos están disponibles para la reflexión en tiempo de ejecución. El [\<Library>](library-element-net-native.md) elemento puede tener cero o un [\<Assembly>](assembly-element-net-native.md) elemento.|  
 |`<Namespace>`|Aplica la directiva de reflexión a todos los tipos en un espacio de nombres primario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los atributos `Activate`, `Browse`, `Dynamic` y `Serialize` son opcionales. Si ninguno está presente, el elemento `<Namespace>` solo actúa como contenedor para los elementos secundarios. Si están presentes, el elemento `<Namespace>` aplica la directiva de reflexión en tiempo de ejecución a todos los tipos del espacio de nombres especificado.  
   

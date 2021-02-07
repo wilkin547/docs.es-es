@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICLRDataTarget:: SetThreadContext (método)'
 title: ICLRDataTarget::SetThreadContext (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: c135c051637858682c22db58d562e1d50eea562b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fc428bc887f7ba10f3096cdf17a757fb252418f0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723706"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738210"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetThreadContext (
   
  Los datos del `context` búfer estarán en el formato de la estructura de Win32 `CONTEXT` . El contexto especifica los datos de registro específicos del procesador, por lo que la definición de la estructura de Win32 `CONTEXT` depende de la arquitectura del procesador. Consulte el archivo de encabezado Winnt. h para ver la definición de la estructura de Win32 `CONTEXT` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método lo implementa el escritor de la aplicación de depuración.  
   
@@ -64,6 +65,6 @@ HRESULT SetThreadContext (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRDataTarget (Interfaz)](iclrdatatarget-interface.md)

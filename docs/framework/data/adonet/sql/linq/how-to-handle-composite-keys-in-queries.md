@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: controlar claves compuestas en consultas'
 title: Procedimiento para administrar claves compuestas en consultas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: bc16dde89f67572b03102b1c091993ed163b443c
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9d7c68495810bee6a383d98a75694e7cd24f1015
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203532"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738876"
 ---
 # <a name="how-to-handle-composite-keys-in-queries"></a>Procedimiento para administrar claves compuestas en consultas
 
@@ -30,6 +31,6 @@ Algunos operadores sólo pueden aceptar un argumento. Si su argumento debe inclu
  [!code-csharp[DLinqCompositeKeys#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCompositeKeys/cs/Program.cs#2)]
  [!code-vb[DLinqCompositeKeys#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCompositeKeys/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos sobre consultas](query-concepts.md)
