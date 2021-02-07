@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ISNULL (Entity SQL)'
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 3360ad4ca7306a8cc1b7d6948204f825ff9a93c6
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1dbaf964facf089ab6714ebd58baf8b040288cff
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203623"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748497"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 
@@ -50,7 +51,7 @@ select c from LOB.Customer as c where c.DOB is not null
   
  En la tabla siguiente se muestra el comportamiento de `IS NULL` en algunos patrones. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   
-|Modelo|Comportamiento|  
+|Patrón|Comportamiento|  
 |-------------|--------------|  
 |null IS NULL|Devuelve `true`.|  
 |TREAT (null AS EntityType) IS NULL|Devuelve `true`.|  
@@ -70,6 +71,6 @@ select c from LOB.Customer as c where c.DOB is not null
   
  [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)

@@ -1,18 +1,19 @@
 ---
+description: 'Más información acerca de: <federationConfiguration>'
 title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 39e96a161a2e75d5f00b73f6b08b1e4a0c109aee
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: f8793a8fbd6fc6d5e6994c8e368f587b740e5973
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91201361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748991"
 ---
 # \<federationConfiguration>
 
-Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) al usar la autenticación federada a través del protocolo WS-Federation. Configura <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase o para proporcionar el control de acceso basado en notificaciones.  
+Configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y el <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) cuando se usa la autenticación federada a través del protocolo de WS-Federation. Configura <xref:System.Security.Claims.ClaimsAuthorizationManager> cuando se usa la <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase o para proporcionar el control de acceso basado en notificaciones.  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.identityModel.services>**](system-identitymodel-services.md)\
@@ -96,7 +97,7 @@ Configura <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> 
 </system.identityModel.services>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>

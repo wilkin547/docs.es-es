@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: <useManagedPresentation>'
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: 86a6f975b05133d5f9f21fcfb82ef4c23d2ffaba
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 9203daedcc0553c7a1308b2763b9e818ca6560c1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91148817"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99749043"
 ---
 # \<useManagedPresentation>
 
@@ -44,7 +45,7 @@ Elemento de enlace utilizado para comunicarse con un Servicio de token de seguri
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un proveedor de identidad utiliza este elemento para expresar en su directiva el hecho de que admite el perfil CardSpace de WS-Trust. Los proveedores de identidad que publican este tipo de aserción de directiva deberían poder emitir tokens basados en ese perfil CardSpace.  
   

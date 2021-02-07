@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ISOF (Entity SQL)'
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 3cbbc9b6feda1bde104ed2c95d4dca274b090028
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 4a44ddc74ef16ec16285132f6567ca2500e173a0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91202284"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748354"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 
@@ -43,7 +44,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
   
  En la tabla siguiente se muestra el comportamiento del operador `IS OF` en algunos patrones de esquina típicos. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   
-|Modelo|Comportamiento|  
+|Patrón|Comportamiento|  
 |-------------|--------------|  
 |null IS OF (EntityType)|Produce|  
 |null IS OF (ComplexType)|Produce|  
@@ -61,6 +62,6 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
   
  [! code-SQL [DP EntityServices Concepts # TREAT_ISOF] ~/samples/Snippets/TSQL/VS_Snippets_Data/DP EntityServices Concepts/TSQL/EntitySql. SQL # treat_isof)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)

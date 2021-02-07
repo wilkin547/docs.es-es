@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: IN (Entity SQL)'
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: 582a3b988247f1484197c0905fecf7f4407f88b0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 234ed15430e44d12d4ca7c98fcb4a7bc03d117f9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91203675"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99748601"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 
@@ -44,6 +45,6 @@ value [ NOT ] IN expression
   
  [!code-sql[DP EntityServices Concepts#IN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#in)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
