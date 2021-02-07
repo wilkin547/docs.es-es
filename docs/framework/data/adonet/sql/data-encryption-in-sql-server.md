@@ -1,13 +1,14 @@
 ---
+description: Más información sobre el cifrado de datos en SQL Server
 title: Cifrado de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: d0bda11f1a2933d096aa91d2be79d3af35172284
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ddf46834c408c98e3e82b1375c13cb6c24ba044b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169536"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695923"
 ---
 # <a name="data-encryption-in-sql-server"></a>Cifrado de datos en SQL Server
 
@@ -27,12 +28,12 @@ SQL Server proporciona funciones para cifrar y descifrar datos con un certificad
 
  Para obtener más información sobre el cifrado de datos, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |-|-|  
 |[Cifrado de SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Ofrece información general del cifrado en SQL Server. En este tema se incluyen vínculos a artículos adicionales.|  
 |[Jerarquía de cifrado](/sql/relational-databases/security/encryption/encryption-hierarchy)|Ofrece información general del cifrado en SQL Server. En este tema se proporcionan vínculos a artículos adicionales.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](../securing-ado-net-applications.md)
 - [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-in-sql-server.md)

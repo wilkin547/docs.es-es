@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: | | DE (Entity SQL)'
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 89c0a92030f2f067d5e5d45b58d475414a224ce4
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 83af0211de1dd86b057237c36312e3ce33a3512a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91150809"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696339"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 
@@ -30,7 +31,7 @@ boolean_expression || boolean_expression
 
  `true` cuando alguna de las condiciones es `true`; de lo contrario, `false`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  OR es un operador lógico de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Se usa para combinar dos condiciones. Cuando en una instrucción se utiliza más de un operador lógico, los operadores OR se evalúan después de los operadores AND. Sin embargo, se puede cambiar el orden de evaluación gracias a los paréntesis.  
   

@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: identidad de objeto'
 title: Identidad de objetos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 1a1617b4fb15a6adf94c0241c3ba577308c51a8b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 1e525250e37e697e33ee53ea59b973882633ec15
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695520"
 ---
 # <a name="object-identity"></a>Identidad de objetos
 
@@ -45,6 +46,6 @@ Los objetos en tiempo de ejecución tienen identidades únicas. Dos variables qu
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Información general](background-information.md)

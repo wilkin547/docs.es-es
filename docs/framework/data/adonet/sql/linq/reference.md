@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: referencia'
 title: Referencia
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 05ff05d165ad902eba0e984089ab1dde7f24fca7
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 7125cbea5cf8689a77823ff85b9652bc2ca31096
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184864"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695245"
 ---
 # <a name="reference"></a>Referencia
 
 En esta sección se proporciona información de referencia para programadores de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- También se recomienda buscar Microsoft Docs problemas específicos y, especialmente, participar en el [Foro de LINQ](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql), donde puede analizar los temas más complejos en detalle con expertos. Además, puede leer las notas del producto que detallan la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e incluyen ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
+ También se recomienda buscar Microsoft Docs problemas específicos y, especialmente, participar en el [Foro de LINQ](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql), donde puede analizar los temas más complejos en detalle con expertos. Además, puede leer las notas del producto que detallan la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] e incluyen ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: .net Language-Integrated Query para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
 ## <a name="in-this-section"></a>En esta sección  
 

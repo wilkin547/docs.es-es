@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: ejecución remota frente a ejecución local'
 title: Ejecución remota o ejecución local
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: c99e726902192fc8324e77441b80aa4519c55ddc
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: ea4d85faedd4a299da292029e64d77132e1a65a9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91196954"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695219"
 ---
 # <a name="remote-vs-local-execution"></a>Ejecución remota o ejecución local
 
@@ -18,7 +19,7 @@ Puede decidir ejecutar las consultas de manera remota (es decir, el motor de bas
   
 ## <a name="remote-execution"></a>Ejecución remota  
 
- Considere la siguiente consulta:  
+ Considere la consulta siguiente:  
   
  [!code-csharp[DLinqQueryConcepts#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#7)]
  [!code-vb[DLinqQueryConcepts#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#7)]  
@@ -52,6 +53,6 @@ Puede decidir ejecutar las consultas de manera remota (es decir, el motor de bas
 
  Tenga en cuenta la diferencia importante entre una colección local que implementa <xref:System.Collections.Generic.List%601> y una colección que proporciona consultas remotas ejecutadas en *conjuntos no ordenados* en una base de datos relacional. Los métodos <xref:System.Collections.Generic.List%601>, como los que utilizan valores de índice, requieren semántica de lista, que normalmente no se puede obtener a través de una consulta remota en un conjunto no ordenado. Por esta razón, tales métodos cargan implícitamente <xref:System.Data.Linq.EntitySet%601> para permitir la ejecución local.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Conceptos sobre consultas](query-concepts.md)

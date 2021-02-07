@@ -1,16 +1,17 @@
 ---
+description: Obtener más información acerca de cómo consultar la colección de DataRowView en una DataView
 title: Consultar la colección de DataRowView en un objeto DataView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
-ms.openlocfilehash: 5757079bbc0ef8c498ea1db1a88f6b356ab0409e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 2158e1c82c530c48d7edad71f46f03cbfe566536
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695936"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>Consultar la colección de DataRowView en un objeto DataView
 
@@ -26,6 +27,6 @@ El objeto <xref:System.Data.DataView> expone una colección enumerable de objeto
  [!code-csharp[DP DataView Samples#QueryDataView1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#querydataview1)]
  [!code-vb[DP DataView Samples#QueryDataView1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#querydataview1)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enlace de datos y LINQ to DataSet](data-binding-and-linq-to-dataset.md)

@@ -1,16 +1,17 @@
 ---
+description: 'Más información sobre: devolver u omitir elementos de una secuencia'
 title: Devolver u omitir elementos de una secuencia
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 1a36d3c8457374183148599bf8160d14847cbf3e
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 6eba93562d4c6a8ffa4150453deed88844d4e297
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200425"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695143"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Devolver u omitir elementos de una secuencia
 
@@ -82,7 +83,7 @@ ORDER BY [t0].[CustomerID]
   
  Para los argumentos integrales constantes no negativos basados en la especificación de SQL, tanto <xref:System.Linq.Queryable.Take%2A> como <xref:System.Linq.Queryable.Skip%2A> están perfectamente definidos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplos de consultas](query-examples.md)
 - [Traslación del operador de consulta estándar](standard-query-operator-translation.md)

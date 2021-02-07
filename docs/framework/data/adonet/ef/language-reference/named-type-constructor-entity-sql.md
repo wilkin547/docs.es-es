@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: constructor de tipos con nombre (Entity SQL)'
 title: Constructor de tipos con nombre (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: c673b58ee5811e3d3b74b3744d3f5291888e2253
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: e5ec811f814898661cf8de28de1fb8406647332d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91197786"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696547"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Constructor de tipos con nombre (Entity SQL)
 
@@ -63,7 +64,7 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
   
  [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Tipos de constructores](constructing-types-entity-sql.md)
 - [Referencia de Entity SQL](entity-sql-reference.md)

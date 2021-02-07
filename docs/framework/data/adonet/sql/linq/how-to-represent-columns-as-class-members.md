@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de cómo: representar columnas como miembros de clase'
 title: Procedimiento para representar columnas como miembros de clase
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: e73b017b5a500a8c48b3fe22557f6c6619f3b227
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 81c35060298cde0081d040f1f874728c23d9c8ed
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91166357"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695780"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Procedimiento para representar columnas como miembros de clase
 
@@ -29,7 +30,7 @@ Utilice el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <
   
  No tiene que especificar la propiedad <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> si se puede deducir el nombre. Si no especifica ningún nombre, se supone que es el mismo que el de la propiedad o campo.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [El modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
 - [Procedimiento para personalizar clases de entidades con el editor de código](how-to-customize-entity-classes-by-using-the-code-editor.md)

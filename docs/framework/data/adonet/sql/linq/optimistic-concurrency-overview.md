@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: simultaneidad optimista: información general'
 title: 'Simultaneidad optimista: Información general'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 7a1bc23d9f012b2f3541c1411a25b7527e696873
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: fbf6714851dbb31982a110749c55e5fad7aa2206
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91169406"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695429"
 ---
 # <a name="optimistic-concurrency-overview"></a>Simultaneidad optimista: Información general
 
@@ -92,6 +93,6 @@ ms.locfileid: "91169406"
   
 - <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Procedimiento para administrar conflictos de cambios](how-to-manage-change-conflicts.md)

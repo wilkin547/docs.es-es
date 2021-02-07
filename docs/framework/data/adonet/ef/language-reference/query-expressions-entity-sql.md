@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: expresiones de consulta (Entity SQL)'
 title: Expresiones de consulta (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-ms.openlocfilehash: ca6b79b4b3d3326a74780345decf58367596adb0
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 218e7db0e812bd43a92d3145bc4bf96244ef6a3d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91175608"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99696040"
 ---
 # <a name="query-expressions-entity-sql"></a>Expresiones de consulta (Entity SQL)
 
@@ -21,6 +22,6 @@ Una expresión de consulta combina muchos operadores de consulta diferentes en u
 
  Los nombres que se definen en la cláusula FROM se incluyen en el ámbito de FROM en orden de aparición, de izquierda a derecha. En la lista de JOIN, las expresiones pueden hacer referencia a los nombres que se definieron en la lista anteriormente. Las propiedades públicas de los elementos identificados en la cláusula FROM no se agregan al ámbito de FROM. Siempre se debe hacer referencia a ellas mediante el nombre completo del alias. Normalmente, todas las partes de la expresión SELECT se consideran dentro del ámbito de FROM.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Referencia de Entity SQL](entity-sql-reference.md)
