@@ -1,17 +1,18 @@
 ---
+description: 'Más información acerca de: <useRequestHeadersForMetadataAddress>'
 title: <useRequestHeadersForMetadataAddress>
 ms.date: 03/30/2017
 ms.assetid: 679f0eae-f353-44d1-b42d-a9e247509774
-ms.openlocfilehash: a323e6da0eb173e303d70cc3b7309b898a805573
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 53636b5890eb54095737e2ed62a75e9b81c1c1f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91172819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99664436"
 ---
 # \<useRequestHeadersForMetadataAddress>
 
-<span data-ttu-id="8ba8c-101">Habilita la recuperación de información de direcciones de metadatos de los encabezados de mensajes de solicitud.</span><span class="sxs-lookup"><span data-stu-id="8ba8c-101">Enables the retrieval of metadata address information from the request message headers.</span></span>  
+<span data-ttu-id="0b65e-102">Habilita la recuperación de información de direcciones de metadatos de los encabezados de mensajes de solicitud.</span><span class="sxs-lookup"><span data-stu-id="0b65e-102">Enables the retrieval of metadata address information from the request message headers.</span></span>  
   
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)\
@@ -20,7 +21,7 @@ ms.locfileid: "91172819"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<useRequestHeadersForMetadataAddress>**  
   
-## <a name="syntax"></a><span data-ttu-id="8ba8c-102">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8ba8c-102">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b65e-103">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0b65e-103">Syntax</span></span>  
   
 ```xml  
 <useRequestHeadersForMetadataAddress>
@@ -31,26 +32,26 @@ ms.locfileid: "91172819"
 </useRequestHeadersForMetadataAddress>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8ba8c-103">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="8ba8c-103">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0b65e-104">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="0b65e-104">Attributes and Elements</span></span>  
 
- <span data-ttu-id="8ba8c-104">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="8ba8c-104">The following sections describe attributes, child elements, and parent elements.</span></span>  
+ <span data-ttu-id="0b65e-105">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="0b65e-105">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8ba8c-105">Atributos</span><span class="sxs-lookup"><span data-stu-id="8ba8c-105">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="0b65e-106">Atributos</span><span class="sxs-lookup"><span data-stu-id="0b65e-106">Attributes</span></span>  
 
- <span data-ttu-id="8ba8c-106">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="8ba8c-106">None.</span></span>  
+ <span data-ttu-id="0b65e-107">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="0b65e-107">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="8ba8c-107">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="8ba8c-107">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="0b65e-108">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="0b65e-108">Child Elements</span></span>  
   
-|<span data-ttu-id="8ba8c-108">Elemento</span><span class="sxs-lookup"><span data-stu-id="8ba8c-108">Element</span></span>|<span data-ttu-id="8ba8c-109">Descripción</span><span class="sxs-lookup"><span data-stu-id="8ba8c-109">Description</span></span>|  
+|<span data-ttu-id="0b65e-109">Elemento</span><span class="sxs-lookup"><span data-stu-id="0b65e-109">Element</span></span>|<span data-ttu-id="0b65e-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="0b65e-110">Description</span></span>|  
 |-------------|-----------------|  
-|[\<defaultPorts>](defaultports.md)|<span data-ttu-id="8ba8c-110">Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="8ba8c-110">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
+|[\<defaultPorts>](defaultports.md)|<span data-ttu-id="0b65e-111">Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.</span><span class="sxs-lookup"><span data-stu-id="0b65e-111">A collection of default ports listing the default communications endpoints that the client application listens to.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8ba8c-111">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="8ba8c-111">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="0b65e-112">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="0b65e-112">Parent Elements</span></span>  
   
-|<span data-ttu-id="8ba8c-112">Elemento</span><span class="sxs-lookup"><span data-stu-id="8ba8c-112">Element</span></span>|<span data-ttu-id="8ba8c-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="8ba8c-113">Description</span></span>|  
+|<span data-ttu-id="0b65e-113">Elemento</span><span class="sxs-lookup"><span data-stu-id="0b65e-113">Element</span></span>|<span data-ttu-id="0b65e-114">Descripción</span><span class="sxs-lookup"><span data-stu-id="0b65e-114">Description</span></span>|  
 |-------------|-----------------|  
-|[\<behavior>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="8ba8c-114">Especifica un elemento de comportamiento.</span><span class="sxs-lookup"><span data-stu-id="8ba8c-114">Specifies a behavior element.</span></span>|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="0b65e-115">Especifica un elemento de comportamiento.</span><span class="sxs-lookup"><span data-stu-id="0b65e-115">Specifies a behavior element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8ba8c-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8ba8c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b65e-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="0b65e-116">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.UseRequestHeadersForMetadataAddressElement>
