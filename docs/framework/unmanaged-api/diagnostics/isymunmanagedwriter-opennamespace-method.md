@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: Opennamespace ((método)'
 title: ISymUnmanagedWriter::OpenNamespace (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-ms.openlocfilehash: 2f64f9f4bde3119f9f089becec5a36d69ed43596
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ab848e44dfda1f5caaa92bfd3376bdcbd67d8a9b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730066"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762128"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace (Método)
 
@@ -46,7 +47,7 @@ HRESULT OpenNamespace(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
 - [Método CloseNamespace](isymunmanagedwriter-closenamespace-method.md)

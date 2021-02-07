@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter (interfaz)'
 title: ISymUnmanagedWriter (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d6733ec-f081-4166-bc17-de09e16dc304
 topic_type:
 - apiref
-ms.openlocfilehash: fddfd2a163f6e6513b648ee0b724c0b5bd54c81a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20fc0fd9b76b1aae4090582fe48a8a8e77d77c9f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722939"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762245"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter (Interfaz)
 
@@ -30,7 +31,7 @@ Representa un escritor de símbolos y proporciona métodos para definir document
 |Método|Descripción|  
 |------------|-----------------|  
 |[Abort (Método)](isymunmanagedwriter-abort-method.md)|Cierra el escritor de símbolos sin confirmar los símbolos en el almacén de símbolos.|  
-|[Close (Método)](isymunmanagedwriter-close-method.md)|Cierra el escritor de símbolos después de confirmar los símbolos en el almacén de símbolos.|  
+|[Close (método)](isymunmanagedwriter-close-method.md)|Cierra el escritor de símbolos después de confirmar los símbolos en el almacén de símbolos.|  
 |[Método CloseMethod](isymunmanagedwriter-closemethod-method.md)|Cierra el método actual. Una vez que se cierra un método, no se pueden definir más símbolos en él.|  
 |[Método CloseNamespace](isymunmanagedwriter-closenamespace-method.md)|Cierra el espacio de nombres abierto más recientemente.|  
 |[Método CloseScope](isymunmanagedwriter-closescope-method.md)|Cierra el ámbito léxico actual.|  
@@ -42,7 +43,7 @@ Representa un escritor de símbolos y proporciona métodos para definir document
 |[Método DefineParameter](isymunmanagedwriter-defineparameter-method.md)|Define un único parámetro en el método actual.|  
 |[Método DefineSequencePoints](isymunmanagedwriter-definesequencepoints-method.md)|Define un grupo de puntos de secuencia dentro del método actual.|  
 |[Método GetDebugInfo](isymunmanagedwriter-getdebuginfo-method.md)|Devuelve la información necesaria para que un compilador escriba la entrada del directorio de depuración en el encabezado de archivo portable ejecutable (PE).|  
-|[Initialize (Método)](isymunmanagedwriter-initialize-method.md)|Establece la interfaz emisora de metadatos a la que se asociará este escritor y establece el nombre del archivo de salida en el que se escribirán los símbolos de depuración.|  
+|[Método Initialize](isymunmanagedwriter-initialize-method.md)|Establece la interfaz emisora de metadatos a la que se asociará este escritor y establece el nombre del archivo de salida en el que se escribirán los símbolos de depuración.|  
 |[Método Initialize2](isymunmanagedwriter-initialize2-method.md)|Establece la interfaz emisora de metadatos a la que se asociará este sistema de escritura, establece el nombre del archivo de salida en el que se escribirán los símbolos de depuración y establece la ubicación final del archivo de base de datos de programa (PDB).|  
 |[Método OpenMethod](isymunmanagedwriter-openmethod-method.md)|Abre un método en el que se emite información de símbolos.|  
 |[Método OpenNamespace](isymunmanagedwriter-opennamespace-method.md)|Abre un nuevo espacio de nombres.|  
@@ -58,7 +59,7 @@ Representa un escritor de símbolos y proporciona métodos para definir document
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter2 (Interfaz)](isymunmanagedwriter2-interface.md)

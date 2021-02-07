@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: SetScopeRange ((método)'
 title: ISymUnmanagedWriter::SetScopeRange (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-ms.openlocfilehash: 06dff4847ec3d15f446f1c89219b10eddb8eec4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 43cfbeaa0d366b9f2d25068cfa7b91a0fea8ac59
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683529"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762063"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange (Método)
 
@@ -50,7 +51,7 @@ HRESULT OpenScope(
 
  S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  [ISymUnmanagedWriter:: OpenScope](isymunmanagedwriter-openscope-method.md) devuelve un identificador de ámbito opaco que se puede usar con `ISymUnmanagedWriter::SetScopeRange` para definir el desplazamiento inicial y final de un ámbito en un momento posterior. En este caso, se omiten los desplazamientos pasados a `ISymUnmanagedWriter::OpenScope` y [ISymUnmanagedWriter:: closescope (](isymunmanagedwriter-closescope-method.md) . Los identificadores de ámbito solo son válidos en el método actual.  
   
@@ -58,6 +59,6 @@ HRESULT OpenScope(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

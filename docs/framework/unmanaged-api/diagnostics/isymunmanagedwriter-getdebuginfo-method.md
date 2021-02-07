@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: GetDebugInfo (método)'
 title: ISymUnmanagedWriter::GetDebugInfo (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd31c210-6829-45eb-927e-cc53932638b7
 topic_type:
 - apiref
-ms.openlocfilehash: dcab63b603d4a9a8e1430228043d2a5e597bbf4f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 2255cc90c0bfcd36dacdf81703af67d3f47739db
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762323"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo (Método)
 
@@ -61,6 +62,6 @@ HRESULT GetDebugInfo(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

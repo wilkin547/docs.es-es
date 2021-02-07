@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedVariable:: GetAddressKind ((método)'
 title: ISymUnmanagedVariable::GetAddressKind (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a71563c0-62f2-4eb4-970c-825d61827613
 topic_type:
 - apiref
-ms.openlocfilehash: 6a7824949edc905a3edcd58f60d40f8b1a40c53c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 4b090560335432ad39157fee987ce15728fece63
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726917"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762856"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind (Método)
 
@@ -46,6 +47,6 @@ HRESULT GetAddressKind(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)

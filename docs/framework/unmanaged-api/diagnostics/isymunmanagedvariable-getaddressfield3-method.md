@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymUnmanagedVariable:: Getaddressfield3 ((método)'
 title: ISymUnmanagedVariable::GetAddressField3 (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-ms.openlocfilehash: 13746c4ac6322a401e547c1c7acc99c0eda9accf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 286d8382857e941173c22a7aebe65adc22ab779b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723342"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762921"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 (Método)
 
@@ -46,7 +47,7 @@ HRESULT GetAddressField3(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedVariable (Interfaz)](isymunmanagedvariable-interface.md)
 - [Método GetAddressField1](isymunmanagedvariable-getaddressfield1-method.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: Usingnamespace ((método)'
 title: ISymUnmanagedWriter::UsingNamespace (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-ms.openlocfilehash: 6404252f2c1eb14f0cd723451beb82b4c65960fd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e7d56cded125aac6154d4315c587f58f946a9a82
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683490"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99761959"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace (Método)
 
@@ -46,6 +47,6 @@ HRESULT UsingNamespace(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)

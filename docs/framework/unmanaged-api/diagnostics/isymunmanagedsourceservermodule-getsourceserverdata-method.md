@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Isymunmanagedsourceservermodule (:: Getsourceserverdata ((método)'
 title: ISymUnmanagedSourceServerModule::GetSourceServerData (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: c76c8b23e707b530cbf1c28d03fbf2f84d424482
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cdba764534000273170ccd693a3fbc7b5df9c3c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95734015"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763168"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData (Método)
 
@@ -50,6 +51,6 @@ HRESULT GetSourceServerData(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedSourceServerModule (Interfaz)](isymunmanagedsourceservermodule-interface.md)

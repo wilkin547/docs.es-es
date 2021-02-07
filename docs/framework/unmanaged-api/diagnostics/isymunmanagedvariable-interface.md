@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ISymUnmanagedVariable'
 title: ISymUnmanagedVariable (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704c69ba-77bc-40d7-8c0c-400061686321
 topic_type:
 - apiref
-ms.openlocfilehash: 93e1f8eb17f06e42ddb243f88c593979fcb28030
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 15b6c7018f92ad4c82abb9e5b4e52bf428b3f54b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733287"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762700"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable (Interfaz)
 
@@ -35,7 +36,7 @@ Representa una variable, como un parámetro, una variable local o un campo.
 |[Método GetAddressKind](isymunmanagedvariable-getaddresskind-method.md)|Obtiene el tipo de dirección de esta variable.|  
 |[Método GetAttributes](isymunmanagedvariable-getattributes-method.md)|Obtiene las marcas de atributo para esta variable.|  
 |[GetEndOffset (Método)](isymunmanagedvariable-getendoffset-method.md)|Obtiene el desplazamiento final de esta variable dentro de su elemento primario.|  
-|[GetName (Método)](isymunmanagedvariable-getname-method.md)|Obtiene el nombre de esta variable.|  
+|[Método GetName](isymunmanagedvariable-getname-method.md)|Obtiene el nombre de esta variable.|  
 |[GetSignature (Método)](isymunmanagedvariable-getsignature-method.md)|Obtiene la firma de esta variable.|  
 |[Método GetStartOffset](isymunmanagedvariable-getstartoffset-method.md)|Obtiene el desplazamiento inicial de esta variable dentro de su elemento primario.|  
   
@@ -43,6 +44,6 @@ Representa una variable, como un parámetro, una variable local o un campo.
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)

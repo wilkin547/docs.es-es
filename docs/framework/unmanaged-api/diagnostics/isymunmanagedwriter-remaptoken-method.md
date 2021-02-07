@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedWriter:: RemapToken ((método)'
 title: ISymUnmanagedWriter::RemapToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-ms.openlocfilehash: 8799815f7c6c6aefc7081f3583e6fd174cd478f7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c065d42c3d2749f0262fdd81a74de918274ba67d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683562"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99762089"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken (Método)
 
@@ -50,6 +51,6 @@ HRESULT RemapToken(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedWriter (Interfaz)](isymunmanagedwriter-interface.md)
