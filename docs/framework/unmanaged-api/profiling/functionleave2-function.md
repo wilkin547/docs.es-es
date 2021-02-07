@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: FunctionLeave2 (función)'
 title: FunctionLeave2 (Función)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: 5fa6ffff3cdb64a7471568e1f6e76fea9194c5a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 475def9af448182003ef36782a84d501a9f2661d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95722289"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687576"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 (Función)
 
@@ -58,7 +59,7 @@ void __stdcall FunctionLeave2 (
 
   Para tener acceso a la información de los valores devueltos, `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca. El generador de perfiles puede utilizar el método [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md) para establecer las marcas de evento.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los valores de los `func` `retvalRange` parámetros y no son válidos después de que la `FunctionLeave2` función devuelva, ya que los valores pueden cambiar o destruirse.  
   
@@ -84,7 +85,7 @@ void __stdcall FunctionLeave2 (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [FunctionEnter2 (Función)](functionenter2-function.md)
 - [FunctionTailcall2 (Función)](functiontailcall2-function.md)

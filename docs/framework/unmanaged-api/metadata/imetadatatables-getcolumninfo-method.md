@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataTables:: GetColumnInfo (método)'
 title: IMetaDataTables::GetColumnInfo (Método)
 ms.date: 10/10/2019
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 227d9ab67ab3091508232be3018ca520a6b5dcc6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 21980567c5f9b364362f7e3ff02ee3a5e60b01ee
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711057"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688239"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo (Método)
 
@@ -61,7 +62,7 @@ HRESULT GetColumnInfo (
  `ppName`  
  enuncia Un puntero a un puntero al nombre de la columna.  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 El tipo de columna devuelto está dentro de un intervalo de valores:
 
@@ -97,7 +98,7 @@ Los valores que se almacenan en el *montón* (es decir, `IsHeapType == true` ) s
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
 - [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

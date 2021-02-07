@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataTables:: Getnumtables ((método)'
 title: IMetaDataTables::GetNumTables (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8196f2a3-bbf2-45d3-a6cd-74502c356644
 topic_type:
 - apiref
-ms.openlocfilehash: 7e1ea16e7954f21b1349e88d43d7e3b271a57ed7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d1e386b1f1eb0f73fbd0df8ddff9cebc5817692
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680300"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687849"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables (Método)
 
@@ -49,7 +50,7 @@ HRESULT GetNumTables (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
 - [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataTables:: Getuserstringheapsize ((método)'
 title: IMetaDataTables::GetUserStringHeapSize (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cba9e4d6-9461-4420-9614-96ff7039ec9c
 topic_type:
 - apiref
-ms.openlocfilehash: 048010f00f6581a29c6b1a3150bf5ae8822b5664
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7e6f3eed7803f52e6bde888852c4971900f0868c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672466"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687628"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>IMetaDataTables::GetUserStringHeapSize (Método)
 
@@ -49,7 +50,7 @@ HRESULT GetUserStringHeapSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
 - [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)

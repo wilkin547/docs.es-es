@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IMetaDataTables:: GetStringHeapSize ((método)'
 title: IMetaDataTables::GetStringHeapSize (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed8f6335-81f5-4c09-81a9-2a909fc530c9
 topic_type:
 - apiref
-ms.openlocfilehash: e3f6afaa79b7b299fa374c8220f5c2c3ad545ac9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0ec9f4e2768cc78163db67bc9099fc9cafae8c8c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672570"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99687784"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize (Método)
 
@@ -49,7 +50,7 @@ HRESULT GetStringHeapSize (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IMetaDataTables (Interfaz)](imetadatatables-interface.md)
 - [IMetaDataTables2 (Interfaz)](imetadatatables2-interface.md)
