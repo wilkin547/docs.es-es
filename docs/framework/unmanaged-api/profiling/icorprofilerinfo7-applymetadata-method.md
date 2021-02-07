@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo7:: ApplyMetaData (método)'
 title: 'ICorProfilerInfo7:: ApplyMetaData (método)'
 ms.date: 02/15/2019
 dev_langs:
@@ -10,12 +11,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-ms.openlocfilehash: 2c71db25422740880d8b29576eff247d5eba5f1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3a4554357ede85d936e8bf9c87c6b9c096dab188
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95686116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737134"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7:: ApplyMetaData (método)
 
@@ -36,7 +37,7 @@ HRESULT ApplyMetaData(
  `moduleID`  
  de Identificador del módulo cuyos metadatos se cambiaron.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se realizan cambios en los metadatos después de la devolución de llamada [ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md) , debe llamar a este método antes de usar los nuevos metadatos.  
   
@@ -70,6 +71,6 @@ A partir de .NET Core 3,0, `ApplyMetaData` también admite los siguientes tipos:
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorProfilerInfo7](icorprofilerinfo7-interface.md)

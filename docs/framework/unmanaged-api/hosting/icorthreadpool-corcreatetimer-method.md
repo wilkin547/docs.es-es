@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorThreadpool:: Corcreatetimer ((método)'
 title: ICorThreadpool::CorCreateTimer (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d56ef25-30f1-4499-8a1f-76e7654ec614
 topic_type:
 - apiref
-ms.openlocfilehash: 3eac575e18c7371754401da6498d85ba7ed6c8cf
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dc4258493181430a7e803f3b995e6b32ed2cd8b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95717625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737784"
 ---
 # <a name="icorthreadpoolcorcreatetimer-method"></a>ICorThreadpool::CorCreateTimer (Método)
 
@@ -49,6 +50,6 @@ HRESULT CorCreateTimer (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorThreadpool (Interfaz)](icorthreadpool-interface.md)

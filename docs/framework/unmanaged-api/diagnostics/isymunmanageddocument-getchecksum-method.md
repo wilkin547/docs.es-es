@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedDocument:: getChecksum ((método)'
 title: ISymUnmanagedDocument::GetCheckSum (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9bc881b3-e2ce-48a7-ad69-17eaaa304120
 topic_type:
 - apiref
-ms.openlocfilehash: 4030da31400b7075952d146e5d6740306863e9ad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9f9a42e58b22661a2233fcb457b9b42b0d6a3d1a
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721093"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737693"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum (Método)
 
@@ -50,6 +51,6 @@ HRESULT GetCheckSum(
 
  S_OK si el método se ejecuta correctamente; de lo contrario, un código de error.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedDocument (Interfaz)](isymunmanageddocument-interface.md)

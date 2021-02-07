@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo4:: Requestrevert ((método)'
 title: ICorProfilerInfo4::RequestRevert (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-ms.openlocfilehash: b80de5e0e03f6b3a424ac59a099e361dd6c50c86
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 24a6a86f32bb9657e62a4433edcb5835e16b9754
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733820"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737314"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert (Método)
 
@@ -73,7 +74,7 @@ HRESULT RequestRevert (
 |CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|El CLR no pudo revertir la función especificada porque no se encontró la solicitud de recompilación activa correspondiente. La recompilación nunca se solicitó o la función ya se había revertido.|  
 |Otros|El sistema operativo devolvió un error fuera del control del CLR. Por ejemplo, si se produce un error en una llamada del sistema para cambiar la protección de acceso de una página de memoria, se mostrará el error del sistema operativo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La próxima vez que se llame a cualquiera de las instancias de la función revertida, se ejecutarán las versiones originales de las funciones. Si ya se está ejecutando una función, finalizará la ejecución de la versión que se está ejecutando.  
   
@@ -87,7 +88,7 @@ HRESULT RequestRevert (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorProfilerInfo4 (Interfaz)](icorprofilerinfo4-interface.md)
 - [Interfaces para generación de perfiles](profiling-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorProfilerInfo10:: GetLOHObjectSizeThreshold (método)'
 title: ICorProfilerInfo10::GetLOHObjectSizeThreshold
 ms.date: 08/06/2019
 dev_langs:
@@ -11,12 +12,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 280f0a401f87f81e1ef9d4a2c85c06599442b5ec
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 665a08ae226f04d5282b9584932078736751d5d0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90543951"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99737315"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10:: GetLOHObjectSizeThreshold (método)
 
@@ -34,7 +35,7 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
   \[out] el umbral del montón de objetos grandes en bytes.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los objetos mayores que el umbral del montón de objetos grandes se asignarán en el montón de objetos grandes. A partir de .NET Core 3,0, se puede configurar el umbral del montón de objetos grandes, `pThreshold` que contendrá el tamaño de umbral del montón del objeto grande activo en bytes.
 

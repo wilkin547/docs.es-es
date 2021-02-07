@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ISymENCUnmanagedMethod:: GetFileNameFromOffset ((método)'
 title: ISymENCUnmanagedMethod::GetFileNameFromOffset (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00e2e194-12f5-436e-a997-2b9d3e844d4f
 topic_type:
 - apiref
-ms.openlocfilehash: ad9631039c8d032e7ffdba1e6098b66398f82277
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1322e55f115958a2f4b2634dfa25eff127167d54
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95707391"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99738005"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset (Método)
 
@@ -59,6 +60,6 @@ HRESULT GetFileNameFromOffset(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymENCUnmanagedMethod (Interfaz)](isymencunmanagedmethod-interface.md)

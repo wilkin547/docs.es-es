@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorProfilerInfo7:: ReadInMemorySymbols'
 title: 'ICorProfilerInfo7:: ReadInMemorySymbols'
 ms.date: 03/30/2017
 api_name:
@@ -10,12 +11,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-ms.openlocfilehash: 6917900b7494550992dfa82f45ed0140f95e68cb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7f1a88d823e7cdfcc89aa140681f61cfbe3f63ec
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733625"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99736991"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
 
@@ -58,7 +59,7 @@ HRESULT ReadInMemorySymbols(
   
  `CORPROF_E_MODULE_IS_DYNAMIC`, si el módulo se ha creado con <xref:System.Reflection.Emit> .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `ReadInMemorySymbols` método intenta leer los `countSymbolBytes` datos a partir del desplazamiento en      `symbolsReadOffset` la secuencia en memoria. Los datos se copian en `pSymbolBytes` , lo que se espera que tenga `countSymbolBytes` espacio disponible.     `pCountSymbolsBytesRead` contiene el número real de bytes leídos, que puede ser menor que `countSymbolBytes` si se alcanza el final de la secuencia.  
   
@@ -75,6 +76,6 @@ HRESULT ReadInMemorySymbols(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorProfilerInfo7](icorprofilerinfo7-interface.md)
