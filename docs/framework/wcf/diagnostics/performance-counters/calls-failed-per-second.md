@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: errores de llamadas por segundo'
 title: Errores de llamadas por segundo
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: d3eafc4b31f0e62093a972b7c9f2325a3648d21b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3961754eb73743a1213922f7c9e1bd164334cd6e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285465"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759723"
 ---
 # <a name="calls-failed-per-second"></a>Errores de llamadas por segundo
 

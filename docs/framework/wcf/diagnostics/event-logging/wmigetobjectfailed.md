@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: WmiGetObjectFailed'
 title: WmiGetObjectFailed
 ms.date: 03/30/2017
 ms.assetid: 676691b5-705e-4422-8dca-c6f517964116
-ms.openlocfilehash: b94d41518c518ff0f08547c9ed97e37c796ad52e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 576aa6695859613ae17c599ca0dcb92cff888b23
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277717"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759879"
 ---
 # <a name="wmigetobjectfailed"></a>WmiGetObjectFailed
 

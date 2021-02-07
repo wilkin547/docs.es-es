@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 504-ServiceHostFactoryCreationStop'
 title: 504 - ServiceHostFactoryCreationStop
 ms.date: 03/30/2017
 ms.assetid: 284d240a-ef0c-4572-b3cd-8fbc579db05f
-ms.openlocfilehash: 1e93e7a4d797dbf87d876ba4327709a604695340
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f344aaac54448d08b429bd60ede336d6fde4db0c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254667"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759996"
 ---
 # <a name="504---servicehostfactorycreationstop"></a>504 - ServiceHostFactoryCreationStop
 
@@ -15,7 +16,7 @@ ms.locfileid: "96254667"
   
 |||  
 |-|-|  
-|ID|504|  
+|Id.|504|  
 |Palabras clave|WebHost|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: punto de conexión: errores de llamadas'
 title: 'Extremo: Errores de llamadas'
 ms.date: 03/30/2017
 ms.assetid: 3bdca983-7199-4596-b7e1-de15c0766250
-ms.openlocfilehash: aab2874cb0e93a144ad7066debc2c276873ba025
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: ab806b0aafff0b0fe2bc9257293ea565c8ee3755
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271271"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759632"
 ---
 # <a name="endpoint-calls-failed"></a>Extremo: Errores de llamadas
 

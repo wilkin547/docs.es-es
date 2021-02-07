@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: CreateDebuggingInterfaceFromVersion ((función)'
 title: CreateDebuggingInterfaceFromVersion (Función)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-ms.openlocfilehash: b68fbc713374642c9f55d49ee51a88c5785cf4b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 163ada49f028071b48c93ee3c565152a773782ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95727879"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760638"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion (Función)
 
@@ -58,7 +59,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szDebuggeeVersion` o `ppCordb` es null, o la cadena de versión es incorrecta.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `szDebuggeeVersion` parámetro se asigna a la versión correspondiente de MSCorDbi.dll.  
   
@@ -72,6 +73,6 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones de hospedaje de CLR en desuso](deprecated-clr-hosting-functions.md)

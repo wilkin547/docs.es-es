@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4810-DiscoveryMessageWithNullMessageSequence'
 title: 4810 - DiscoveryMessageWithNullMessageSequence
 ms.date: 03/30/2017
 ms.assetid: aa70573e-8a76-486a-9616-ccca8c7008b6
-ms.openlocfilehash: 183fb9b611855839a2fe5234f7ffce0962a775d8
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e2c767a0c5a39c75a084c1ebcc114e9d15962cbb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267431"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760256"
 ---
 # <a name="4810---discoverymessagewithnullmessagesequence"></a>4810 - DiscoveryMessageWithNullMessageSequence
 
@@ -15,7 +16,7 @@ ms.locfileid: "96267431"
   
 |||  
 |-|-|  
-|ID|4810|  
+|Id.|4810|  
 |Palabras clave|Detección|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

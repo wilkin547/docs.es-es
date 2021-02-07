@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: escenarios de seguimiento de un extremo a otro'
 title: Escenarios de seguimiento de traza de un extremo a otro
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
-ms.openlocfilehash: cd9be9a39ba1ebb331060231bdb481fd21a3ae6d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: dc551a8b2f1649d9a1ce800943dd404be1472dbf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243968"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759450"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Escenarios de seguimiento de traza de un extremo a otro
 
@@ -42,4 +43,4 @@ Esta sección contiene temas que describen los diferentes escenarios de utilizac
 ## <a name="see-also"></a>Vea también
 
 - [Uso del seguimiento para solucionar problemas de su aplicación](using-tracing-to-troubleshoot-your-application.md)
-- [Seguimiento de traza de un extremo a otro](end-to-end-tracing.md)
+- [Seguimiento de un extremo a otro](end-to-end-tracing.md)

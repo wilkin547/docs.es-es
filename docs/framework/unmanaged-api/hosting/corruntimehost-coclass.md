@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: coclase Corruntimehost ('
 title: CorRuntimeHost (Coclase)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-ms.openlocfilehash: cd4e675b4ba50b47146428d204c28cc943c23c69
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd2d01075e5c8264337e1e989b3d9fdc6bf68962
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95688008"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760647"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost (Coclase)
 
@@ -57,6 +58,6 @@ coclass CorRuntimeHost {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Coclases para el hospedaje](hosting-coclasses.md)

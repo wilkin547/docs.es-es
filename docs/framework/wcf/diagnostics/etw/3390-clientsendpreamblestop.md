@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 3390-ClientSendPreambleStop'
 title: 3390 - ClientSendPreambleStop
 ms.date: 03/30/2017
 ms.assetid: fbf6e4ed-8538-417e-b4d1-a30b45ee6b5d
-ms.openlocfilehash: 6a6e5ae844f7ad37394b0c1338e17164e6351786
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6a2abc5c6f0e21d378bc5ae19e065aca178805bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96247725"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760451"
 ---
 # <a name="3390---clientsendpreamblestop"></a>3390 - ClientSendPreambleStop
 
@@ -15,7 +16,7 @@ ms.locfileid: "96247725"
   
 |||  
 |-|-|  
-|ID|3390|  
+|Id.|3390|  
 |Palabras clave|Canal|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

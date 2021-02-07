@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 5009-DCGenWriterStop'
 title: 5009 - DCGenWriterStop
 ms.date: 03/30/2017
 ms.assetid: 8489e542-b2ab-4c31-9150-08d4f6704150
-ms.openlocfilehash: ed51d0b73b76ca5adc42e83340be2cfb87c0765a
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cb8a32a3488c7b27b2114292963e16b7900c11bb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96254745"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760139"
 ---
 # <a name="5009---dcgenwriterstop"></a>5009 - DCGenWriterStop
 
@@ -15,7 +16,7 @@ ms.locfileid: "96254745"
   
 |||  
 |-|-|  
-|ID|5009|  
+|Id.|5009|  
 |Palabras clave|Serialización|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

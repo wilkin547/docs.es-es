@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 404-ResumeSignpostEvent'
 title: 404 - ResumeSignpostEvent
 ms.date: 03/30/2017
 ms.assetid: 395cc7ca-f35f-4295-be97-39a077f99c97
-ms.openlocfilehash: 81b28a5f1ee0470b211ce0c8efbfaffc597de46e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: f735df6133c9708c05b2319e7ea17d7795e901b1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288923"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760295"
 ---
 # <a name="404---resumesignpostevent"></a>404 - ResumeSignpostEvent
 
@@ -15,7 +16,7 @@ ms.locfileid: "96288923"
   
 |||  
 |-|-|  
-|ID|404|  
+|Id.|404|  
 |Palabras clave|Solución de problemas|  
 |Nivel|Información|  
 |Canal|Microsoft-Windows-Application Server-Applications/Analytic|  

@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo emitir seguimientos de User-Code
 title: Emisión de trazas del código de usuario
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: e8b2031165a83e24ba15a2fcf847a170f47e696a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0abc8a4b39979942fd291ffd9cbb96047274dab0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84589297"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759515"
 ---
 # <a name="emitting-user-code-traces"></a>Emisión de trazas del código de usuario
 
@@ -109,7 +110,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
 
 ## <a name="viewing-user-traces-in-the-service-trace-viewer-tool"></a>Ver las trazas de usuario en la herramienta del visor de seguimiento de traza del servicio
 
-Esta sección contiene capturas de pantallas de los seguimientos generados mediante la ejecución del ejemplo de [extensión de seguimiento](../../samples/extending-tracing.md) , cuando se ve mediante la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
+Esta sección contiene capturas de pantallas de los seguimientos generados al ejecutar el ejemplo de [extensión de seguimiento](../../samples/extending-tracing.md) , cuando se ve mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
 En el diagrama siguiente, la actividad "agregar solicitud" creada anteriormente está seleccionada en el panel izquierdo. Se enumera junto con otras tres actividades de operaciones matemáticas (dividir, restar, multiplicar) que constituyen el programa cliente de la aplicación. El código de usuario ha definido una nueva actividad para que cada operación aísle las apariciones de errores potenciales en diferentes solicitudes.
 

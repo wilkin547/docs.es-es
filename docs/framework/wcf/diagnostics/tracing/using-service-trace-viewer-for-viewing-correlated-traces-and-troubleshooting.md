@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo usar el visor de seguimiento de servicios para ver seguimientos correlacionados y solución de problemas
 title: Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: e1cd1443e96e7195127cb95e7ef1b2c4d6d9c176
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3f6f48c3d366a024c5dcc0cdbc85c4aea47a7a8b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587760"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99758169"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Uso del visor de seguimiento de servicios para ver seguimientos asociados y para la solución de problemas
 
@@ -15,9 +16,9 @@ En este tema se describe el formato de datos de seguimiento, cómo verlo y enfoq
 
 ## <a name="using-the-service-trace-viewer-tool"></a>Utilizar la herramienta de visor de seguimiento de servicio
 
-La herramienta del visor de seguimiento del servicio Windows Communication Foundation (WCF) le ayuda a correlacionar los seguimientos de diagnóstico generados por los agentes de escucha de WCF para localizar la causa raíz de un error. La herramienta le permite ver, agrupar y filtrar fácilmente los seguimientos de forma que pueda diagnosticar, reparar y comprobar los problemas con los servicios WCF. Para obtener más información acerca del uso de esta herramienta, vea [Service Trace Viewer Tool (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
+La herramienta del visor de seguimiento del servicio Windows Communication Foundation (WCF) le ayuda a correlacionar los seguimientos de diagnóstico generados por los agentes de escucha de WCF para localizar la causa raíz de un error. La herramienta le permite ver, agrupar y filtrar fácilmente los seguimientos de forma que pueda diagnosticar, reparar y comprobar los problemas con los servicios WCF. Para obtener más información sobre el uso de esta herramienta, vea [herramienta Visor de seguimiento de servicio (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md).
 
-Este tema contiene capturas de pantallas de los seguimientos generados mediante la ejecución del ejemplo de [seguimiento y registro de mensajes](../../samples/tracing-and-message-logging.md) , cuando se ve mediante la [herramienta de visor de seguimiento de servicio (SvcTraceViewer. exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md). En este tema se muestra cómo entender el contenido de los seguimientos, las actividades y su correlación y cómo analizar grandes cantidades de seguimientos al solucionar problemas.
+Este tema contiene capturas de pantallas de los seguimientos generados mediante la ejecución del ejemplo de [seguimiento y registro de mensajes](../../samples/tracing-and-message-logging.md) , cuando se ve mediante la [herramienta Service Trace Viewer (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md). En este tema se muestra cómo entender el contenido de los seguimientos, las actividades y su correlación y cómo analizar grandes cantidades de seguimientos al solucionar problemas.
 
 ## <a name="viewing-trace-content"></a>Ver el contenido del seguimiento
 
@@ -46,15 +47,15 @@ Además, la vista con formato también proporciona una descripción del seguimie
 
 En la vista XML, entre las etiquetas xml útiles se encuentran las siguientes:
 
-- `<SubType>`(nivel de seguimiento).
+- `<SubType>` (nivel de seguimiento).
 
 - `<TimeCreated>`.
 
-- `<Source>`(nombre del origen de seguimiento).
+- `<Source>` (nombre del origen de seguimiento).
 
-- `<Correlation>`(ID. de actividad establecido al emitir el seguimiento).
+- `<Correlation>` (ID. de actividad establecido al emitir el seguimiento).
 
-- `<Execution>`(ID. de proceso y subproceso).
+- `<Execution>` (ID. de proceso y subproceso).
 
 - `<Computer>`.
 

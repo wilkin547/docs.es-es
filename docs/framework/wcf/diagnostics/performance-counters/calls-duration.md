@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: duración de las llamadas'
 title: Duración de llamadas
 ms.date: 03/30/2017
 ms.assetid: e4973ec3-3c66-4c0b-b5d0-294b62c83f7d
-ms.openlocfilehash: 99b4f62182c7864fd32b878373814e85926025b5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 334ab1e6ef0b3b5abc2c58876e018c1a8499cb6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96285504"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759736"
 ---
 # <a name="calls-duration"></a>Duración de llamadas
 

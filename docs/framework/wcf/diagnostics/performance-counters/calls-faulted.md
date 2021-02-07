@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: errores de llamadas'
 title: Errores de llamadas
 ms.date: 03/30/2017
 ms.assetid: bb9e8045-6aeb-4b7f-a825-8283c44252a1
-ms.openlocfilehash: cfd829c6229f4fb483e18cfcecf4d484fad64409
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 0530d7a9bc337ce7ce4ba584a3e72addd13e0779
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96271413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759697"
 ---
 # <a name="calls-faulted"></a>Errores de llamadas
 

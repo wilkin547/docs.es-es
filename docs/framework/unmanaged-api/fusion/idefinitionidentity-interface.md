@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: interfaz IDefinitionIdentity'
 title: IDefinitionIdentity (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce5ba888-5fbe-4efd-91cf-f0ff94d8428b
 topic_type:
 - apiref
-ms.openlocfilehash: 4f08fbbf9c8be16dff092327713e731c5aa14661
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3471879cc822b655b786dd9d8234950cb4b99c1d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732884"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760659"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity (Interfaz)
 
@@ -42,6 +43,6 @@ Representa la firma única del código que define la aplicación en el ámbito a
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de Fusion](fusion-interfaces.md)

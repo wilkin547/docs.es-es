@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4811-DiscoveryMessageWithNullRelatesTo'
 title: 4811 - DiscoveryMessageWithNullRelatesTo
 ms.date: 03/30/2017
 ms.assetid: dab901e8-a2b3-41c1-a76b-bcd8b3c7c29a
-ms.openlocfilehash: 2f2eeee50ed6925ab1f3762dbdd898c375756b7e
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 40b56c7b114246cf28301603b3c33fbf4434d28b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267433"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760269"
 ---
 # <a name="4811---discoverymessagewithnullrelatesto"></a>4811 - DiscoveryMessageWithNullRelatesTo
 
@@ -15,7 +16,7 @@ ms.locfileid: "96267433"
   
 |||  
 |-|-|  
-|ID|4811|  
+|Id.|4811|  
 |Palabras clave|Detección|  
 |Nivel|Advertencia|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

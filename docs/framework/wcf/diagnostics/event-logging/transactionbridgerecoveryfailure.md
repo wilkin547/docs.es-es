@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: TransactionBridgeRecoveryFailure'
 title: TransactionBridgeRecoveryFailure
 ms.date: 03/30/2017
 ms.assetid: a53891d9-67ea-4ead-8d38-3193cb57cd37
-ms.openlocfilehash: d62ed0eeba4ec6b6b870a34ea7dc303b0c2c3b09
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 10873ab308cfdb82e6f99823c363adbffa5dcfac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96259413"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759918"
 ---
 # <a name="transactionbridgerecoveryfailure"></a>TransactionBridgeRecoveryFailure
 

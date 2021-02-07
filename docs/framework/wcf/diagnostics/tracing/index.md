@@ -1,13 +1,14 @@
 ---
-title: Traza
+description: 'Más información acerca de: seguimiento'
+title: Seguimiento
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 10b9be028710cdda378aeef0ca235a00aa451e08
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 373e308357016f128c2eacfc34111d4b4e72b6fb
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96243916"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759424"
 ---
 # <a name="tracing"></a>Seguimiento
 
@@ -25,7 +26,7 @@ Windows Communication Foundation (WCF) proporciona datos de diagnóstico y instr
   
  En este tema se describe cómo puede configurar el seguimiento en diferentes niveles para satisfacer sus necesidades concretas.  
   
- [Seguimiento de traza de un extremo a otro](end-to-end-tracing.md)  
+ [Seguimiento de un extremo a otro](end-to-end-tracing.md)  
   
  En esta sección se describe cómo puede utilizar la propagación y el seguimiento de las actividades para ofrecer una correlación de extremo a extremo que ayude a la depuración.  
   

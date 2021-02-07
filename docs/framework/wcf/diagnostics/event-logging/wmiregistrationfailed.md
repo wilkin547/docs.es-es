@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: WmiRegistrationFailed'
 title: WmiRegistrationFailed
 ms.date: 03/30/2017
 ms.assetid: 69ac6b2b-770c-49e1-9865-34773767971c
-ms.openlocfilehash: e81a0b4e4c519da5d0fb326f5d1a842c80a2c5ab
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: cdc71ec469e3492a747db0aa28bfa831c473676c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96277665"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759801"
 ---
 # <a name="wmiregistrationfailed"></a>WmiRegistrationFailed
 

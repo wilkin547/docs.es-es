@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: System. ServiceModel. Channels. MsmqQueueOpened'
 title: System.ServiceModel.Channels.MsmqQueueOpened
 ms.date: 03/30/2017
 ms.assetid: 282e108a-73b0-499d-8b9e-e37d1198dda6
-ms.openlocfilehash: ce5dc017d4338e14c2b3f6dcdb4b59680f3d243b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3a835c8332edb6fbf60cb85b0b48004d8285cfe1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96244605"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99759216"
 ---
 # <a name="systemservicemodelchannelsmsmqqueueopened"></a>System.ServiceModel.Channels.MsmqQueueOpened
 

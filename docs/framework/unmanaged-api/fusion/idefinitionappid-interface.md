@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IDefinitionAppId (interfaz)'
 title: IDefinitionAppId (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e72f2550-bdec-4a20-a2f4-2e14847266c1
 topic_type:
 - apiref
-ms.openlocfilehash: 1e6c42d8e74d2d3e7925c657c67832f662416e64
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c68044e7e747521e190fad404e89d6d0a994611
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673878"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760672"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId (Interfaz)
 
@@ -44,6 +45,6 @@ Representa un identificador único para el código que define la aplicación en 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de Fusion](fusion-interfaces.md)

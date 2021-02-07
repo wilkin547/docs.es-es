@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 4035-PendingSessionQueueRatio'
 title: 4035 - PendingSessionQueueRatio
 ms.date: 03/30/2017
 ms.assetid: fe40094f-6f2c-4dd8-b872-191c7812118e
-ms.openlocfilehash: c24f0b8caa5441c67416f66ee0f30fca56fae387
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 9c3ecea5f6927082adf4eda1ce499627e48e2e1e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96250182"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99760308"
 ---
 # <a name="4035---pendingsessionqueueratio"></a>4035 - PendingSessionQueueRatio
 
@@ -15,7 +16,7 @@ ms.locfileid: "96250182"
   
 |||  
 |-|-|  
-|ID|4035|  
+|Id.|4035|  
 |Palabras clave|Quota|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  
