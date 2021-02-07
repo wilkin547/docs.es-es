@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Option Infer (instrucción)'
 title: Option Infer (instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 977e492c1c8ec5040c22169d91268c9c2241f6c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0c3de7bdafb7e9b361da7a8538046e3d76b5ce7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404361"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741593"
 ---
 # <a name="option-infer-statement"></a>Option Infer (instrucción)
 
@@ -66,7 +67,7 @@ Si el código fuente no contiene una `Option Infer` instrucción, se utiliza la 
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Cómo establecer Option Infer en el IDE
 
-1. En **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.
 
 2. Haga clic en la pestaña **Compilar**.
 
@@ -101,7 +102,7 @@ El siguiente ejemplo demuestra que el tipo en tiempo de ejecución puede ser dif
 
 [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Dim](dim-statement.md)
 - [Inferencia de tipo de variable local](../../programming-guide/language-features/variables/local-type-inference.md)

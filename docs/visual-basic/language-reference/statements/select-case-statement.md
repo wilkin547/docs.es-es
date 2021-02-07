@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: seleccionar... Instrucción Case (Visual Basic)'
 title: Instrucción Select...Case
 ms.date: 07/20/2015
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 4f8edecd0a0b1afd59e182a372e308c3829a9b93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871779"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741138"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Instrucción Select...Case (Visual Basic)
 
@@ -48,12 +49,12 @@ End Select
 |Término|Definición|  
 |---|---|  
 |`testexpression`|Obligatorio. Expresión. Debe evaluarse como uno de los tipos de datos básicos ( `Boolean` , `Byte` , `Char` , `Date` , `Double` , `Decimal` , `Integer` , `Long` , `Object` , `SByte` , `Short` ,,,, `Single` `String` `UInteger` `ULong` y `UShort` ).|  
-|`expressionlist`|Obligatorio en una `Case` instrucción. Lista de cláusulas de expresión que representan los valores de coincidencia para `testexpression` . Las cláusulas de varias expresiones se separan mediante comas. Cada cláusula puede adoptar uno de los siguientes formatos:<br /><br /> -   *expression1* `To` *expresión2*<br />-[ `Is` ] *comparisonoperator* *expresión* de comparisonoperator<br />-   *Expresiones*<br /><br /> Use la `To` palabra clave para especificar los límites de un intervalo de valores de coincidencia para `testexpression` . El valor de `expression1` debe ser menor o igual que el valor de `expression2` .<br /><br /> Use la `Is` palabra clave con un operador de comparación ( `=` , `<>` , `<` , `<=` , `>` o `>=` ) para especificar una restricción en los valores de coincidencia para `testexpression` . Si `Is` no se proporciona la palabra clave, se inserta automáticamente antes de *comparisonoperator*.<br /><br /> La forma que especifica solo `expression` se trata como un caso especial del `Is` formulario donde *comparisonoperator* es el signo igual ( `=` ). Este formulario se evalúa como `testexpression`  =  `expression` .<br /><br /> Las expresiones de `expressionlist` pueden ser de cualquier tipo de datos, siempre que se puedan convertir implícitamente al tipo de `testexpression` y el adecuado `comparisonoperator` sea válido para los dos tipos con los que se usa.|  
+|`expressionlist`|Obligatorio en una `Case` instrucción. Lista de cláusulas de expresión que representan los valores de coincidencia para `testexpression` . Las cláusulas de varias expresiones se separan mediante comas. Cada cláusula puede adoptar uno de los siguientes formatos:<br /><br /> -   *expression1* `To` *expresión2*<br />-[ `Is` ]  *expresión* de comparisonoperator<br />-   *Expresiones*<br /><br /> Use la `To` palabra clave para especificar los límites de un intervalo de valores de coincidencia para `testexpression` . El valor de `expression1` debe ser menor o igual que el valor de `expression2` .<br /><br /> Use la `Is` palabra clave con un operador de comparación ( `=` , `<>` , `<` , `<=` , `>` o `>=` ) para especificar una restricción en los valores de coincidencia para `testexpression` . Si `Is` no se proporciona la palabra clave, se inserta automáticamente antes de *comparisonoperator*.<br /><br /> La forma que especifica solo `expression` se trata como un caso especial del `Is` formulario donde *comparisonoperator* es el signo igual ( `=` ). Este formulario se evalúa como `testexpression`  =  `expression` .<br /><br /> Las expresiones de `expressionlist` pueden ser de cualquier tipo de datos, siempre que se puedan convertir implícitamente al tipo de `testexpression` y el adecuado `comparisonoperator` sea válido para los dos tipos con los que se usa.|  
 |`statements`|Opcional. Una o más instrucciones que siguen a `Case` que se ejecutan si `testexpression` coincide con cualquier cláusula de `expressionlist` .|  
 |`elsestatements`|Opcional. Una o varias instrucciones que siguen a `Case Else` que se ejecutan si no `testexpression` coinciden con ninguna cláusula en `expressionlist` de cualquiera de las `Case` instrucciones.|  
 |`End Select`|Finaliza la definición de la `Select` construcción... `Case` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si `testexpression` coincide con cualquier `Case` `expressionlist` cláusula, las instrucciones que siguen `Case` a esa instrucción se ejecutan hasta la siguiente `Case` `Case Else` instrucción, o `End Select` . A continuación, el control pasa a la instrucción que sigue a `End Select` . Si `testexpression` coincide con una `expressionlist` cláusula en más de una `Case` cláusula, solo se ejecutan las instrucciones que siguen a la primera coincidencia.  
   
@@ -85,10 +86,10 @@ End Select
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
-- [End (Instrucción)](end-statement.md)
+- [End (instrucción)](end-statement.md)
 - [Instrucción If...Then...Else](if-then-else-statement.md)
 - [Option Compare (instrucción)](option-compare-statement.md)
 - [Instrucción Exit](exit-statement.md)

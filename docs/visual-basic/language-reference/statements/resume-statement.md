@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: resume (instrucción)'
 title: Resume (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: db9d47798d087d60f4318b06fe3291fb895e6618
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fd3a02fc2606355d7e3a34f5c0d69eef577809de
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871873"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741190"
 ---
 # <a name="resume-statement"></a>Resume (Instrucción)
 
@@ -37,7 +38,7 @@ Resume [ Next | line ]
 ## <a name="parts"></a>Partes  
 
  `Resume`  
- Obligatorio. Si el error se produjo en el mismo procedimiento que el controlador de errores, la ejecución se reanuda con la instrucción que causó el error. Si el error se produjo en un procedimiento llamado, la ejecución se reanuda en la instrucción que se ha llamado por última vez en el procedimiento que contiene la rutina de control de errores.  
+ Necesario. Si el error se produjo en el mismo procedimiento que el controlador de errores, la ejecución se reanuda con la instrucción que causó el error. Si el error se produjo en un procedimiento llamado, la ejecución se reanuda en la instrucción que se ha llamado por última vez en el procedimiento que contiene la rutina de control de errores.  
   
  `Next`  
  Opcional. Si el error se produjo en el mismo procedimiento que el controlador de errores, la ejecución se reanudará con la instrucción inmediatamente posterior a la instrucción que causó el error. Si el error se produjo en un procedimiento llamado, la ejecución se reanuda con la instrucción inmediatamente posterior a la instrucción que se ha llamado por última vez en el procedimiento que contiene la rutina de control de errores (o `On Error Resume Next` instrucción).  
@@ -45,7 +46,7 @@ Resume [ Next | line ]
  `line`  
  Opcional. La ejecución se reanuda en la línea especificada en el `line` argumento requerido. El `line` argumento es una etiqueta de línea o un número de línea y debe estar en el mismo procedimiento que el controlador de errores.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Se recomienda usar el control de excepciones estructurado en el código siempre que sea posible, en lugar de usar el control de excepciones no estructurado y las `On Error` `Resume` instrucciones y. Para obtener más información, vea [Instrucción Try...Catch...Finally (Visual Basic)](try-catch-finally-statement.md).  
@@ -66,8 +67,8 @@ Resume [ Next | line ]
   
  **Ensamblado:** Biblioteca en tiempo de ejecución de Visual Basic (en Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Instrucción Try...Catch...Finally](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)
 - [Error (Instrucción)](error-statement.md)
 - [Instrucción On Error](on-error-statement.md)

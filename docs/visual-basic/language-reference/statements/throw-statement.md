@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Throw (instrucción) (Visual Basic)'
 title: Throw (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 95572b1739490e90f53da6b6ec283bfb532c46d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b7fa4183b5997e5dac8045502a8eed1afe66fc0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404140"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740943"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw (Instrucción, Visual Basic)
 
@@ -50,7 +51,7 @@ En el código siguiente se usa la `Throw` instrucción para producir una excepci
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-- [Instrucción Try...Catch...Finally](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)
 - [Instrucción On Error](on-error-statement.md)

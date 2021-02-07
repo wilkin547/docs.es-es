@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo exponer datos con CacheMetadata
 title: Exponer datos con CacheMetadata
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
-ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4623881ebd76270f773a3b7acfe205ad365118
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945709"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742347"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Exponer datos con CacheMetadata
 
@@ -17,19 +18,19 @@ Antes de ejecutar una actividad, el runtime de flujo de trabajo obtiene toda la 
 
 La implementación predeterminada de <xref:System.Activities.NativeActivity.CacheMetadata%2A> para las actividades que derivan de <xref:System.Activities.NativeActivity> procesa los tipos de métodos siguientes de las maneras siguientes:
 
-- <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, o <xref:System.Activities.InOutArgument%601> (argumentos genéricos): Estos argumentos se exponen al runtime como argumentos con un nombre y tipo iguales al nombre de la propiedad expuesta y el tipo, la dirección de argumento apropiada y algunos datos de validación.
+- <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> o <xref:System.Activities.InOutArgument%601> (argumentos genéricos): estos argumentos se exponen al runtime como argumentos con un nombre y un tipo iguales al nombre y el tipo de la propiedad expuesta, la dirección de argumento apropiada y algunos datos de validación.
 
-- <xref:System.Activities.Variable> o cualquier subclase de ella: Estos miembros se exponen al runtime como variables públicas.
+- <xref:System.Activities.Variable> o cualquier subclase de ella: estos miembros se exponen al runtime como variables públicas.
 
-- <xref:System.Activities.Activity> o cualquier subclase de ella: Estos miembros se exponen al runtime como actividades secundarias públicas. El comportamiento predeterminado se puede implementar de forma explícita mediante una llamada a <xref:System.Activities.ActivityMetadata.AddImportedChild%2A>, pasando la actividad secundaria.
+- <xref:System.Activities.Activity> o cualquier subclase de ella: estos miembros se exponen al runtime como actividades secundarias públicas. El comportamiento predeterminado se puede implementar explícitamente llamando a <xref:System.Activities.ActivityMetadata.AddImportedChild%2A> , pasando la actividad secundaria.
 
-- <xref:System.Activities.ActivityDelegate> o cualquier subclase de ella: Estos miembros se exponen al runtime como delegados públicos.
+- <xref:System.Activities.ActivityDelegate> o cualquier subclase de ella: estos miembros se exponen al runtime como delegados públicos.
 
-- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.Variable>: Todos los elementos de la colección se exponen al runtime como variables públicas.
+- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.Variable>: todos los elementos de la colección se exponen al runtime como variables públicas.
 
-- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.Activity>: Todos los elementos de la colección se exponen al runtime como elementos secundarios públicos.
+- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.Activity>: todos los elementos de la colección se exponen al runtime como elementos secundarios públicos.
 
-- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.ActivityDelegate>: Todos los elementos de la colección se exponen al runtime como delegados públicos.
+- <xref:System.Collections.ICollection> de tipo <xref:System.Activities.ActivityDelegate>: todos los elementos de la colección se exponen al runtime como delegados públicos.
 
 El método <xref:System.Activities.Activity.CacheMetadata%2A> para las actividades que derivan de <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity> y <xref:System.Activities.AsyncCodeActivity> también funciona como en los casos anteriores, exceptuando las diferencias siguientes:
 

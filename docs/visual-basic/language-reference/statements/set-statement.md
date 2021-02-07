@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucción set (Visual Basic)'
 title: Instrucción Set
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 5ee27b35a4639bc20d5b6634de8332c6ede9bf12
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871754"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741125"
 ---
 # <a name="set-statement-visual-basic"></a>Instrucción Set (Visual Basic)
 
@@ -37,7 +38,7 @@ End Set
  `accessmodifier`  
  Opcional en, como máximo, una de las `Get` `Set` instrucciones y de esta propiedad. Puede ser uno de los siguientes:  
   
-- [Contra](../modifiers/protected.md)  
+- [Protegido](../modifiers/protected.md)  
   
 - [Friend](../modifiers/friend.md)  
   
@@ -48,7 +49,7 @@ End Set
  Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).  
   
  `value`  
- Obligatorio. Parámetro que contiene el nuevo valor para la propiedad.  
+ Necesario. Parámetro que contiene el nuevo valor para la propiedad.  
   
  `datatype`  
  Obligatorio si `Option Strict` es `On` . Tipo de datos del `value` parámetro. El tipo de datos especificado debe ser el mismo que el del tipo de datos de la propiedad donde `Set` se declara esta instrucción.  
@@ -57,9 +58,9 @@ End Set
  Opcional. Una o varias instrucciones que se ejecutan cuando `Set` se llama al procedimiento de propiedad.  
   
  `End Set`  
- Obligatorio. Finaliza la definición del procedimiento de `Set` propiedad.  
+ Necesario. Finaliza la definición del procedimiento de `Set` propiedad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cada propiedad debe tener un `Set` procedimiento de propiedad a menos que se marque la propiedad `ReadOnly` . El `Set` procedimiento se utiliza para establecer el valor de la propiedad.  
   
@@ -91,7 +92,7 @@ End Set
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Get (Instrucción)](get-statement.md)
 - [Property Statement](property-statement.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Option Compare (instrucción)'
 title: Option Compare (Instrucción)
 ms.date: 07/20/2015
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 396770a2fc6996475d408cf8023a4eafdf6d3011
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: fba8b207c0077f95540485d79311b47f1b8c209c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869647"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741671"
 ---
 # <a name="option-compare-statement"></a>Option Compare (Instrucción)
 
@@ -42,7 +43,7 @@ Option Compare { Binary | Text }
 |`Binary`|Opcional. Genera comparaciones de cadenas basadas en un criterio de ordenación que se deriva de las representaciones binarias internas de los caracteres.<br /><br /> Este tipo de comparación es especialmente útil si las cadenas pueden contener caracteres que no serán interpretados como texto. En este caso, no conviene desviar las comparaciones con equivalencias alfabéticas, como la no distinción entre mayúsculas y minúsculas.|  
 |`Text`|Opcional. Genera comparaciones de cadenas basadas en un criterio de ordenación de texto sin distinción entre mayúsculas y minúsculas, determinado por la configuración regional del sistema.<br /><br /> Este tipo de comparación es útil si las cadenas contienen todos los caracteres de texto y si desea compararlas teniendo en cuenta equivalencias alfabéticas, como la no distinción entre mayúsculas y minúsculas y las letras estrechamente relacionadas. Por ejemplo, tal vez le interese considerar que `A` y `a` son iguales, y que `Ä` y `ä` van antes que `B` y `b`.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se utiliza la instrucción `Option Compare`, debe aparecer en un archivo antes que cualquier otra instrucción de código fuente.  
   
@@ -68,7 +69,7 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>Cómo establecer Option Compare en el IDE  
   
-1. En **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2. Haga clic en la pestaña **Compilar**.  
   
@@ -92,7 +93,7 @@ Option Compare { Binary | Text }
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>

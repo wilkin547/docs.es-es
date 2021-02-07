@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: actividad personalizada SendMail'
 title: Actividad personalizada SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f518beebe336080853e4dec3bca6f8539bbec304
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 853e28d26c41338670d377593d5a3536b011d112
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96267600"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741762"
 ---
 # <a name="sendmail-custom-activity"></a>Actividad personalizada SendMail
 
@@ -18,7 +19,7 @@ En este ejemplo se muestra cómo crear una actividad personalizada que deriva de
 |Nombre|Tipo|Descripción|  
 |-|-|-|  
 |Host|String|Dirección del host del servidor SMTP.|  
-|Port|String|El puerto del servicio SMTP en el host.|  
+|Puerto|String|El puerto del servicio SMTP en el host.|  
 |EnableSsl|bool|Especifica si el objeto <xref:System.Net.Mail.SmtpClient> utiliza SSL (Secure Sockets Layer) para cifrar la conexión.|  
 |UserName|String|Nombre de usuario para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  
 |Contraseña|String|Contraseña para preparar las credenciales para autenticar la propiedad <xref:System.Net.Mail.SmtpClient.Credentials%2A> del remitente.|  

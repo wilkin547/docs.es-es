@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: lista de parámetros (Visual Basic)'
 title: Lista de parámetros
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 706fc2414806db5608cce410bf4156839ec2d83e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f69063fac82887ba4da3119d8ec4fcac11b7f4c9
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741411"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista de parámetros (Visual Basic)
 
@@ -90,7 +91,7 @@ En el ejemplo siguiente se muestra un `Function` procedimiento que define dos pa
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Instrucción Function](function-statement.md)

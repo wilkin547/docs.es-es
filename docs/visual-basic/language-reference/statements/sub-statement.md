@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: sub Statement (Visual Basic)'
 title: Instrucción Sub
 ms.date: 05/12/2018
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: e50b79c31c92ac116d6c82bcececba3340894d74
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9be40c8284c677a151e4b1665f0b49e5f852bf00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740995"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub (Instrucción, Visual Basic)
 
@@ -67,15 +68,15 @@ End Sub
 
   - [Público](../modifiers/public.md)
 
-  - [Contra](../modifiers/protected.md)
+  - [Protegido](../modifiers/protected.md)
 
-  - [Respecto](../modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
   - [Privado](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Privado protegido](../modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
   Consulte [niveles de acceso en Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -175,7 +176,7 @@ Todo el código ejecutable debe estar dentro de un procedimiento. Use un `Sub` p
 
 Solo puede definir un `Sub` procedimiento en el nivel de módulo. El contexto de la declaración para un procedimiento Sub debe, por tanto, ser una clase, una estructura, un módulo o una interfaz y no puede ser un archivo de código fuente, un espacio de nombres, un procedimiento o un bloque. Para obtener más información, vea [Declaration Contexts and Default Access Levels](declaration-contexts-and-default-access-levels.md) (Contextos de declaración y niveles de acceso predeterminados).
 
-`Sub`los procedimientos tienen como valor predeterminado el acceso público. Puede ajustar sus niveles de acceso mediante los modificadores de acceso.
+`Sub` los procedimientos tienen como valor predeterminado el acceso público. Puede ajustar sus niveles de acceso mediante los modificadores de acceso.
 
 Si el procedimiento usa la `Implements` palabra clave, la clase contenedora o la estructura deben tener una `Implements` instrucción que siga inmediatamente a su `Class` `Structure` instrucción o. La `Implements` instrucción debe incluir cada interfaz especificada en `implementslist` . Sin embargo, el nombre por el que una interfaz define `Sub` (en `definedname` ) no tiene que coincidir con el nombre de este procedimiento (en `name` ).
 
@@ -234,7 +235,7 @@ El `startButton_Click` procedimiento es un ejemplo de un `Async Sub` procedimien
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Implements (Instrucción)](implements-statement.md)
 - [Instrucción Function](function-statement.md)

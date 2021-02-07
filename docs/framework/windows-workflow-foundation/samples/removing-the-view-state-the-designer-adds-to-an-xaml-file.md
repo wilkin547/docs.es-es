@@ -1,19 +1,20 @@
 ---
+description: Más información acerca de cómo quitar el estado de vista que el diseñador agrega a un archivo XAML
 title: 'Quitar el estado de vista que el diseñador agrega a un archivo XAML: WF'
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: e6be1e8e4f754085b98f912923ad67cb12893910
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715620"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741801"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Quitar el estado de vista que el diseñador agrega a un archivo XAML
 
-Este ejemplo muestra cómo crear una clase que se deriva de <xref:System.Xaml.XamlWriter> y quita el estado de vista de un archivo XAML. Windows Diseñador de flujo de trabajo escribe información en el documento XAML, que se conoce como estado de vista. El estado de la vista hace referencia a la información que se necesita en tiempo de diseño, como la posición del diseño, que no se necesita en tiempo de ejecución. Diseñador de flujo de trabajo inserta esta información en el documento XAML a medida que se edita. Diseñador de flujo de trabajo escribe el estado de vista en el archivo XAML con el atributo `mc:Ignorable`, por lo que esta información no se carga cuando el tiempo de ejecución carga el archivo XAML. Este ejemplo muestra cómo crear una clase que quite esa información del estado de vista mientras se procesan los nodos XAML.
+Este ejemplo muestra cómo crear una clase que se deriva de <xref:System.Xaml.XamlWriter> y quita el estado de vista de un archivo XAML. Windows Diseñador de flujo de trabajo escribe información en el documento XAML, que se conoce como estado de vista. El estado de la vista hace referencia a la información que se necesita en tiempo de diseño, como la posición del diseño, que no se necesita en tiempo de ejecución. Diseñador de flujo de trabajo inserta esta información en el documento XAML a medida que se edita. Diseñador de flujo de trabajo escribe el estado de vista en el archivo XAML con el `mc:Ignorable` atributo, por lo que esta información no se carga cuando el tiempo de ejecución carga el archivo XAML. Este ejemplo muestra cómo crear una clase que quite esa información del estado de vista mientras se procesan los nodos XAML.
 
-## <a name="discussion"></a>Discusión
+## <a name="discussion"></a>Debate
 
 En este ejemplo se muestra cómo crear un sistema de escritura personalizado.
 
@@ -99,7 +100,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   Esto genera un archivo XAML en \[OUTFILE], que tiene quitada toda su información de estado de vista.
+   Esto genera un archivo XAML en \[ OUTFILE], que tiene quitada toda su información de estado de vista.
 
 > [!NOTE]
 > En un flujo de trabajo <xref:System.Activities.Statements.Sequence>, se quitan varias sugerencias de virtualización. Esto hace que el diseñador vuelva a calcular el diseño la próxima vez que se carga. Cuando se utiliza este ejemplo de <xref:System.Activities.Statements.Flowchart>, se elimina toda la información de posición y de enrutamiento de línea y en la posterior carga en el diseñador, todas las actividades se apilan en el lado izquierdo de la pantalla.
@@ -121,6 +122,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los ejemplos de Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este ejemplo se encuentra en el siguiente directorio.
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

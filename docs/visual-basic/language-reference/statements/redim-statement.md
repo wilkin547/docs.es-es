@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: instrucción ReDim (Visual Basic)'
 title: Instrucción ReDim
 ms.date: 07/20/2015
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 8f7525064c8b32748cf5ebb2df7d4a5dfc76f794
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90872031"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741333"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrucción ReDim (Visual Basic)
 
@@ -48,10 +49,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Término|Definición|  
 |----------|----------------|  
 |`Preserve`|Opcional. Modificador usado para mantener los datos en la matriz existente cuando cambia el tamaño solamente de la última dimensión.|  
-|`name`|Obligatorio. Nombre de la variable de matriz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Obligatorio. Lista de límites de cada dimensión de la matriz redefinida.|  
+|`name`|Necesario. Nombre de la variable de matriz. Vea [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Necesario. Lista de límites de cada dimensión de la matriz redefinida.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Puede utilizar la instrucción `ReDim` para cambiar el tamaño de una o más dimensiones de una matriz que ya se ha declarado. Si tiene una matriz grande y ya no necesita algunos de sus elementos, `ReDim` puede liberar memoria al reducir el tamaño de la matriz. Por otro lado, si la matriz necesita más elementos, `ReDim` puede agregarlos.  
   
@@ -103,7 +104,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Para obtener más ejemplos, consulte [matrices](../../programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.IndexOutOfRangeException>
 - [Instrucción Const](const-statement.md)

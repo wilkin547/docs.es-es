@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Option Explicit (instrucción) (Visual Basic)'
 title: Instrucción Option Explicit
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 44bf8205ec071710ee3660968ab3c3e9af33f74d
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 11f59508125167fde98b4fc359dde7fd7c539b75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90874944"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741619"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit (Instrucción, Visual Basic)
 
@@ -36,7 +37,7 @@ Option Explicit { On | Off }
  `Off`  
  Opcional. Deshabilita la `Option Explicit` comprobación.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cuando `Option Explicit On` o `Option Explicit` aparece en un archivo, debe declarar explícitamente todas las variables mediante las `Dim` `ReDim` instrucciones o. Si intenta usar un nombre de variable no declarado, se produce un error en tiempo de compilación. La `Option Explicit Off` instrucción permite la declaración implícita de variables.  
   
@@ -51,7 +52,7 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Para establecer Option Explicit en el IDE  
   
-1. En **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto**, haga clic en **Propiedades**.  
   
 2. Haga clic en la pestaña **Compilar**.  
   
@@ -71,7 +72,7 @@ Option Explicit { On | Off }
   
  [!code-vb[VbVbalrStatements#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#48)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Dim](dim-statement.md)
 - [Instrucción ReDim](redim-statement.md)

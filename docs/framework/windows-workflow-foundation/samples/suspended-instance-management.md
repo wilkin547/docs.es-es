@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: administración de instancias suspendidas'
 title: Administración de instancias suspendidas
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 620cd2299a3b08ee9330e13830c714c5d0ebb068
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: d68dd8b61b6e0e7a618cf05f1df07e58ab75e27f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96293655"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741736"
 ---
 # <a name="suspended-instance-management"></a>Administración de instancias suspendidas
 
@@ -19,7 +20,7 @@ En este ejemplo se muestra cómo administrar instancias de flujo de trabajo que 
 
  <xref:System.ServiceModel.WorkflowServiceHost> con <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> y <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> en Windows Workflow Foundation (WF).
 
-## <a name="discussion"></a>Discusión
+## <a name="discussion"></a>Debate
 
  La utilidad de línea de comandos implementada en este ejemplo es específica de la implementación del almacén de instancias de SQL que se distribuye con [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Si tiene una implementación personalizada del almacén de instancias, podrá adaptar esta utilidad reemplazando las implementaciones de `WorkflowInstanceCommand` en el ejemplo con implementaciones que sean específicas de su almacén de instancias.
 

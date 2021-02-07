@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: <clear> elemento para webRequestModules (configuración de red)'
 title: Elemento <clear> para webRequestModules (configuración de red)
 ms.date: 03/30/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 892058dd8af8a38bd7bde868b34a2c6899d9a989
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 0782bf9edeafed2d61a368c3f6a8b37ef226c990
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91184045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740423"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>Elemento \<clear> para webRequestModules (configuración de red)
 
@@ -76,7 +77,7 @@ Quita todos los módulos de solicitud Web registrados de la aplicación.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebRequest>
 - [Esquema de la configuración de red](index.md)

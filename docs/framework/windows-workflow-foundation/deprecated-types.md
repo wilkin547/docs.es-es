@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: tipos desusados en Windows Workflow Foundation'
 title: Tipos obsoletos en Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
-ms.openlocfilehash: 628963650d32237dedbb6ab2a0a2d9a79866af18
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: a536f67708c5913040848df52f178dcc2a361f6c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96272877"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99742438"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Tipos obsoletos en Windows Workflow Foundation
 

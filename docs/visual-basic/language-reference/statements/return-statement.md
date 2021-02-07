@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Return (instrucción) (Visual Basic)'
 title: Instrucción Return
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Return statement [Visual Basic]
 - expressions [Visual Basic], returning control to
 ms.assetid: ac86e7f0-5a67-42c3-9834-0e0381efa3ec
-ms.openlocfilehash: 3ca705409bc8233bc2562c64b8e7704f08dd7641
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: 62086090ede7e634b09d3edc3dc42feb28d15793
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90871800"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741203"
 ---
 # <a name="return-statement-visual-basic"></a>Return (Instrucción, Visual Basic)
 
@@ -33,7 +34,7 @@ Return expression
  `expression`  
  Requerido en un `Function` `Get` procedimiento, o `Operator` . Expresión que representa el valor que se va a devolver al código de llamada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  En un `Sub` `Set` procedimiento o, la `Return` instrucción es equivalente a una `Exit Sub` `Exit Property` instrucción o, y `expression` no se debe proporcionar.  
   
@@ -50,7 +51,7 @@ Return expression
   
  [!code-vb[VbVbalrStatements#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#53)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instrucción Function](function-statement.md)
 - [Instrucción Sub](sub-statement.md)
@@ -59,4 +60,4 @@ Return expression
 - [Operator Statement](operator-statement.md)
 - [Property Statement](property-statement.md)
 - [Instrucción Exit](exit-statement.md)
-- [Try... Detectar... Finally (instrucción)](try-catch-finally-statement.md)
+- [Try...Catch...Finally (instrucción)](try-catch-finally-statement.md)

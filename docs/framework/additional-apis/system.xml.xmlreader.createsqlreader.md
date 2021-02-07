@@ -1,5 +1,6 @@
 ---
-title: Método XmlReader.CreateSqlReader (System.Xml)
+description: 'Más información sobre: método XmlReader. CreateSqlReader'
+title: Método XmlReader. CreateSqlReader (System.Xml)
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61d594c0438c86863ce4052387439f5483d8a34c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155744"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740440"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>Método XmlReader.CreateSqlReader
 
@@ -36,7 +37,7 @@ internal static XmlReader CreateSqlReader(Stream input,
 - `inputContext` <xref:System.Xml.XmlParserContext>  
   Información de contexto necesaria para analizar el fragmento XML. Este valor puede ser `null`.
 
-## <a name="returns"></a>Devuelve
+## <a name="returns"></a>Devoluciones
 
 <xref:System.Xml.XmlReader>  
 Objeto usado para leer los datos XML del flujo.
@@ -50,8 +51,8 @@ Objeto usado para leer los datos XML del flujo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Espacio de nombres:**<xref:System.Xml>
+**Espacio de nombres:** <xref:System.Xml>
 
-**Montaje:** System.Xml.dll
+**Ensamblado:** System.Xml.dll
 
-**Versiones de .NET Framework:** Disponible desde 2.0.
+**.NET Framework versiones:** Disponible desde 2,0.

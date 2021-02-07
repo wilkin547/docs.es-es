@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: literales XML (Visual Basic)'
 title: Literales XML
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 3477196230ec5e87b49e94f45c842b90b19102fb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: bbc00530f3ce1efa801ee9fae5dd9a94d8806e43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90869432"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99740878"
 ---
 # <a name="xml-literals-visual-basic"></a>Literales XML (Visual Basic)
 
@@ -30,6 +31,6 @@ En los temas de esta sección se documenta la sintaxis de los literales XML en V
 |[Literal de comentario XML](xml-comment-literal.md)|Describe la sintaxis de literales que representan objetos <xref:System.Xml.Linq.XComment>.|  
 |[Literal de instrucción de procesamiento XML](xml-processing-instruction-literal.md)|Describe la sintaxis de literales que representan objetos <xref:System.Xml.Linq.XProcessingInstruction>.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [XML](../../programming-guide/language-features/xml/index.md)

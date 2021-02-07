@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Option Strict (instrucción)'
 title: Option Strict Statement
 ms.date: 07/20/2015
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: ab1094961e2bc3aed0e975e40369a5f5c1ba93eb
-ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
+ms.openlocfilehash: a128aca1bdaa6ce8bd4c4cd8e63e05348f00e4d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90873128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99741437"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 
@@ -35,7 +36,7 @@ Option Strict { On | Off }
 |`On`|Opcional. Habilita la `Option Strict` comprobación.|  
 |`Off`|Opcional. Deshabilita la `Option Strict` comprobación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Cuando `Option Strict On` o `Option Strict` aparece en un archivo, las siguientes condiciones causan un error en tiempo de compilación:  
   
@@ -117,7 +118,7 @@ Option Strict { On | Off }
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1. En **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto** , haga clic en **Propiedades**.  
+1. En el **Explorador de soluciones**, seleccione un proyecto. En el menú **Proyecto** , haga clic en **Propiedades**.  
   
 2. En la pestaña **compilar** , establezca el valor en el cuadro **Option Strict** .  
   
@@ -133,7 +134,7 @@ Option Strict { On | Off }
   
  Al establecer **Option Strict** en **On**, estos tres valores de configuración de advertencias se establecen en **Error**. Al establecer **Option Strict** en **Off**, las tres opciones se establecen en **None**.  
   
- Puede cambiar individualmente cada valor de configuración de advertencia por **None**, **Warning** o **Error**. Si los tres valores de configuración de advertencia se establecen como **error**, `On` aparece en el `Option strict` cuadro. Si los tres están establecidos en **ninguno**, `Off` aparece en este cuadro. Para cualquier otra combinación de estas opciones, aparece **(personalizado)**.  
+ Puede cambiar individualmente cada valor de configuración de advertencia por **None**, **Warning** o **Error**. Si se establecen las tres opciones de configuración de advertencia en **Error**, `On` aparece en el cuadro `Option strict`. Si se establecen las tres en **None**, `Off` aparece en este cuadro. Para cualquier otra combinación de estas opciones, aparece **(personalizado)**.  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>Para establecer la configuración predeterminada de Option Strict para los nuevos proyectos  
 
@@ -165,7 +166,7 @@ Option Strict { On | Off }
   
  [!code-vb[VbVbalrStatements#164](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class13.vb#164)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversiones implícitas y explícitas](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
