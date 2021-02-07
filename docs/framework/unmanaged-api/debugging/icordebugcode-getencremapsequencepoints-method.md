@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugCode:: GetEnCRemapSequencePoints ((método)'
 title: ICorDebugCode::GetEnCRemapSequencePoints (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-ms.openlocfilehash: 83801f7133df6ffb4bdf4a816142849f40baeb53
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e9785460490aa602a49dff3ab972b409dde48cdc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125659"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99711172"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="cd4de-102">ICorDebugCode::GetEnCRemapSequencePoints (Método)</span><span class="sxs-lookup"><span data-stu-id="cd4de-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="a415b-103">ICorDebugCode::GetEnCRemapSequencePoints (Método)</span><span class="sxs-lookup"><span data-stu-id="a415b-103">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
 
-<span data-ttu-id="cd4de-103">Este método no está implementado en la versión actual del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cd4de-103">This method is not implemented in the current version of the .NET Framework.</span></span>
+<span data-ttu-id="a415b-104">Este método no está implementado en la versión actual del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a415b-104">This method is not implemented in the current version of the .NET Framework.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="cd4de-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cd4de-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a415b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a415b-105">Syntax</span></span>
 
 ```cpp
 HRESULT GetEnCRemapSequencePoints(
