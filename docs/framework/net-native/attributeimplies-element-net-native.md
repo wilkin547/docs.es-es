@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <AttributeImplies> elemento (.net Native)'
 title: <AttributeImplies> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-ms.openlocfilehash: 4171345bb5337436142128623abc7d183c4477ff
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 5af1f60f2c1e556281f2f1d392b1a046e52dd277
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747912"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies> Elemento (.NET Native)
 
@@ -49,7 +50,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
   
 ## <a name="all-attributes"></a>Todos los atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -63,7 +64,7 @@ Define la directiva para los elementos de código a los que se les aplica el atr
 |-------------|-----------------|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión a un tipo y a todos sus miembros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El elemento `<AttributeImplies>` se utiliza si su tipo contenedor es un atributo (es decir, una clase derivada de <xref:System.Attribute?displayProperty=nameWithType>). Si el atributo se aplica a un determinado elemento del programa, la directiva definida por el elemento `<AttributeImplies>` se aplica a ese elemento del programa.  
   

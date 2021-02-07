@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugProcess2:: SetUnmanagedBreakpoint ((método)'
 title: ICorDebugProcess2::SetUnmanagedBreakpoint (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: 1a883878107569145b97d5793f0628efefb13545
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7989f0fc9908941513b7d099fde81c79cef82c5b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675248"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746547"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint (Método)
 
@@ -52,7 +53,7 @@ HRESULT SetUnmanagedBreakpoint (
  `bufLen`  
  enuncia Puntero al número de bytes devuelto en la `buffer` matriz.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el desplazamiento de la imagen nativa se encuentra dentro del Common Language Runtime (CLR), se omitirá el punto de interrupción. Esto permite al CLR evitar el envío de un punto de interrupción fuera de banda, cuando el depurador establece el punto de interrupción.  
   

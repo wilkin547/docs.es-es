@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: <GenericParameter> elemento (.net Native)'
 title: <GenericParameter> Elemento (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
-ms.openlocfilehash: 1400fb7029df533d54e87a1c534f4ac3b0a5fc68
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 57cbb3418289d7da4f25577188299acd55ce6c94
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288026"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747834"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter> Elemento (.NET Native)
 
@@ -51,13 +52,13 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
   
 ## <a name="name-attribute"></a>Name (atributo)  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*generic_parameter_name*|Atributo necesario. Nombre del parámetro de tipo genérico. Por ejemplo, en el delegado genérico <xref:System.Func%603>, un valor *generic_parameter_name* de "TResult" aplica la directiva en tiempo de ejecución al valor devuelto del delegado.|  
   
 ## <a name="all-other-attributes"></a>Resto de atributos  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*policy_setting*|Configuración que se va a aplicar a este tipo de directiva. Los valores posibles son `All`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` y `Required All`. Para obtener más información, vea [Runtime Directive Policy Settings](runtime-directive-policy-settings.md) (Configuración de directiva de la directiva en tiempo de ejecución).|  
   
@@ -72,7 +73,7 @@ Aplica la directiva al tipo de parámetro de un método o tipo genérico.
 |[\<Method>](method-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un constructor o método.|  
 |[\<Type>](type-element-net-native.md)|Aplica la directiva de reflexión en tiempo de ejecución a un tipo determinado, como una clase o una estructura.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `<GenericParameter>` elemento es un elemento secundario del [\<Method>](method-element-net-native.md) elemento o [\<Type>](type-element-net-native.md) y se utiliza para aplicar la Directiva a un parámetro de tipo genérico determinado, que se especifica mediante su nombre en el tipo genérico o en la firma del método.  
   

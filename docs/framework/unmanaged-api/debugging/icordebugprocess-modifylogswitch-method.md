@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: Modifylogswitch ((método)'
 title: ICorDebugProcess::ModifyLogSwitch (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5fd30875-555e-4e96-877b-5dd266cde7c4
 topic_type:
 - apiref
-ms.openlocfilehash: 3ac1b3606131f534195df9b6b59bf72b1bff27fb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3c825d6c6b075139793b54526dca696c8fba35a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724538"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746781"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch (Método)
 
@@ -42,7 +43,7 @@ HRESULT ModifyLogSwitch(
  `lLevel`  
  de Nivel de gravedad que se va a establecer para el modificador de registro especificado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método es válido solo después de que se haya producido la devolución de llamada [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) .  
   

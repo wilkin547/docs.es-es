@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess (interfaz)'
 title: Interfaz ICorDebugProcess
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: 7f9d4ac99234545ef75d9b91e6e84f79a133ffef
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7172ee12bf450235db1c18601c8ff7de51435520
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95694924"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746794"
 ---
 # <a name="icordebugprocess-interface"></a>Interfaz ICorDebugProcess
 
@@ -44,10 +45,10 @@ Representa un proceso que ejecuta código administrado. Esta interfaz es una sub
 |[Método ModifyLogSwitch](icordebugprocess-modifylogswitch-method.md)|Establece el nivel de gravedad del modificador de registro especificado.|  
 |[Método ReadMemory](icordebugprocess-readmemory-method.md)|Lee la memoria del proceso.|  
 |[Método SetThreadContext](icordebugprocess-setthreadcontext-method.md)|Establece el contexto para el subproceso especificado.|  
-|[Método ThreadForFiberCookie](icordebugprocess-threadforfibercookie-method.md)|Desusado.|  
+|[Método ThreadForFiberCookie](icordebugprocess-threadforfibercookie-method.md)|En desuso.|  
 |[Método WriteMemory](icordebugprocess-writememory-method.md)|Escribe datos en un área de memoria del proceso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -62,7 +63,7 @@ Representa un proceso que ejecuta código administrado. Esta interfaz es una sub
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebug (Interfaz)](icordebug-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

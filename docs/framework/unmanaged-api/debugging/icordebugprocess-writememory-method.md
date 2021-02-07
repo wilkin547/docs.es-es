@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: Writememory ((método)'
 title: ICorDebugProcess::WriteMemory (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: 18416954517c3cac09d013b8075bd097305a1dca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6ea48aff2e1ea812d851a228976b458f58a60e14
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673974"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99746630"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory (Método)
 
@@ -50,7 +51,7 @@ HRESULT WriteMemory(
  `written`  
  enuncia Puntero a una variable que recibe el número de bytes escritos en el área de memoria de este proceso. Si `written` es null, se omite este parámetro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los datos se escriben automáticamente detrás de los puntos de interrupción. En la versión .NET Framework 2,0, los depuradores nativos no deben usar este método para insertar puntos de interrupción en la secuencia de instrucciones. Use [ICorDebugProcess2:: SetUnmanagedBreakpoint (](icordebugprocess2-setunmanagedbreakpoint-method.md) en su lugar.  
   

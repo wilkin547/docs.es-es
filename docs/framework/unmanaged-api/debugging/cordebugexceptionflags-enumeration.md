@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Cordebugexceptionflags ('
 title: CorDebugExceptionFlags (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b22687a8-e9cf-4e65-a1b0-f92a81bc524e
 topic_type:
 - apiref
-ms.openlocfilehash: a50272bce2e27963a1d684fef40bac30cf44e1f0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c0036c2674f3202623da1a8fdeea14165a2a6e62
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712721"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747054"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags (Enumeración)
 
@@ -34,14 +35,14 @@ typedef enum CorDebugExceptionFlags {
 } CorDebugExceptionFlags;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_NONE`|No hay ninguna excepción.|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|La excepción se puede interceptar.<br /><br /> Sin embargo, la temporización de la excepción podría hacer que el depurador no la intercepte. Por ejemplo, si no hay ningún código administrado debajo de la devolución de llamada actual o el evento de excepción se produjo por una asociación Just-In-Time (JIT), la excepción no se puede interceptar.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Se pueden agregar nuevos valores a esta enumeración en versiones posteriores, por lo que debe preparar el código que usa `CorDebugExceptionFlags` para valores no esperados.  
   
@@ -55,6 +56,6 @@ typedef enum CorDebugExceptionFlags {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones de depuración](debugging-enumerations.md)

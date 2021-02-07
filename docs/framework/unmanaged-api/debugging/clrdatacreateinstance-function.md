@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: Clrdatacreateinstance ((función)'
 title: CLRDataCreateInstance (Función)
 ms.date: 03/30/2017
 api_name:
@@ -7,7 +8,7 @@ api_location:
 - mscordbi.dll
 - mscordacwks.dll
 api_type:
-- COM
+- DLLExport
 f1_keywords:
 - CLRDataCreateInstance
 helpviewer_keywords:
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-ms.openlocfilehash: 2ffc575cfcef1089a70ef3b6d38787a5b4c50443
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 923b0c687d2b337eacb475973927452e3b47ad0d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729829"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747262"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance (Función)
 
-Crea un objeto de interfaz para el elemento de destino especificado.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-HRESULT CLRDataCreateInstance (  
+Crea un objeto de interfaz para el elemento de destino especificado.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+HRESULT CLRDataCreateInstance (
     [in]  REFIID           iid,
     [in]  ICLRDataTarget  *target,
     [out] void           **iface  
@@ -47,7 +48,7 @@ HRESULT CLRDataCreateInstance (
  `iface`  
  enuncia Puntero a la dirección del objeto de interfaz devuelto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `ICLRDataTarget` escritor de la aplicación de depuración implementa el objeto. La implementación depende del tipo de elemento de destino que se está representando. El elemento de destino puede ser un proceso, un volcado de memoria, una máquina remota, etc.  
   
@@ -58,9 +59,11 @@ HRESULT CLRDataCreateInstance (
  **Encabezado:** ClrData. idl  
   
  **Biblioteca:** CorGuids.lib  
+
+ **Ensamblado**: mscordacwks.dll, mscordbi.dll
   
- **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework versiones:** Disponible desde .NET Framework 2,0
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Funciones estáticas globales para la depuración](debugging-global-static-functions.md)

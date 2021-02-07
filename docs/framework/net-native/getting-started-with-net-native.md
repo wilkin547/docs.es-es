@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: Introducción con .NET Native'
 title: Introducción a .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-ms.openlocfilehash: b6cd4acaa377de7fc172fb12c9fb9ff1b832f88a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6079e21764ebc39515eb9b9f217057d916da8942
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551215"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99747808"
 ---
 # <a name="getting-started-with-net-native"></a>Introducción a .NET Native
 
