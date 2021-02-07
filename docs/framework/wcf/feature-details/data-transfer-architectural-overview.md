@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: información general sobre la arquitectura de Transferencia de datos'
 title: Información general sobre la arquitectura de transferencia de datos
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: efb6933ba90975d5ba35deb2bf22af12fc7c2cdc
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3064797b41e146505062a07dc1786dd492a01298
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291692"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756505"
 ---
 # <a name="data-transfer-architectural-overview"></a>Información general sobre la arquitectura de transferencia de datos
 

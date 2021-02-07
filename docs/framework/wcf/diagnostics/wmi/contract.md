@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: contrato'
 title: Contrato
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 0df39bbd0b273f1e898ccbe585be288cc245b7f5
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3443a7d2eed1a34f07495bd3ceb98c1ba997fabf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96274145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757558"
 ---
 # <a name="contract"></a>Contrato
 
 Contrato  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```csharp
 class Contract  
@@ -54,7 +55,7 @@ class Contract
   
  Los comportamientos asociados a este contrato.  
   
-### <a name="name"></a>NOMBRE  
+### <a name="name"></a>Nombre  
 
  Tipo de datos: cadena  
   
@@ -70,7 +71,7 @@ class Contract
   
  El espacio de nombres del elemento `portType` en WSDL.  
   
-### <a name="operations"></a>Operations  
+### <a name="operations"></a>Operaciones  
 
  Tipo de datos: matriz de operación  
   

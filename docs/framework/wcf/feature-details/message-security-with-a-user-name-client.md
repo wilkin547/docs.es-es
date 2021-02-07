@@ -1,16 +1,17 @@
 ---
+description: 'Más información acerca de: seguridad de mensajes con un cliente de nombre de usuario'
 title: Seguridad de los mensajes con un cliente de nombres de usuario
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 7168b393bde626c8c413cda3c7422e0eee4ce267
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 4502635df3b52ba069c19fca7a73cc9395dd105d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96292875"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756115"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Seguridad de los mensajes con un cliente de nombres de usuario
 
@@ -29,11 +30,11 @@ En la ilustración siguiente se muestra un servicio y un cliente de Windows Comm
 |Integridad|Sí, mediante el contexto de seguridad compartido|  
 |Confidencialidad|Sí, mediante el contexto de seguridad compartido|  
 |Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Servicio  
 
- El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Lleve a cabo una de las siguientes acciones:  
+ El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
   

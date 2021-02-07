@@ -1,15 +1,16 @@
 ---
+description: 'Más información sobre: denegación de servicio'
 title: Denegación de servicio
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 6bf0dd8af32f50164138092684c4b82f12134718
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1f1b40f717453f3e55bedc48aa00ead31adb8725
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96291601"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756479"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 

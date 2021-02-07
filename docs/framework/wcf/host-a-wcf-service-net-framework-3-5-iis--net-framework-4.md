@@ -1,15 +1,16 @@
 ---
-title: 'Cómo: Hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4'
+description: 'Más información acerca de cómo: hospedar un servicio WCF escrito con .NET Framework 3,5 en IIS que se ejecuta en .NET Framework 4'
+title: Procedimiento para hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: d827fe82e8b355c8818d96645b463c1840910a9c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3ea46b589df293b39369521a133cf9facad97d93
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283263"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755972"
 ---
-# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Cómo: Hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Procedimiento para hospedar un servicio WCF escrito con .NET Framework 3.5 en IIS que ejecuta .NET Framework 4
 
 Al hospedar un servicio de Windows Communication Foundation (WCF) escrito con .NET Framework 3,5 en un equipo que ejecuta .NET Framework 4, puede obtener un <xref:System.ServiceModel.ProtocolException> con el siguiente texto.
   
@@ -25,7 +26,7 @@ The application domain or application pool is currently running version 4.0 or l
   
  Estos errores se producen porque el dominio de aplicación en el que se ejecuta IIS se está ejecutando .NET Framework 4 y se espera que el servicio WCF se ejecute en .NET Framework 3,5. Este tema explica las modificaciones necesarias para hacer que el servicio se ejecute.
   
- A continuación, busque el elemento <`compilers`> y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos <`compiler`elementos > en el elemento <`compilers`>. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
+ A continuación, busque el `compilers` elemento <> y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos <`compiler` elementos> en el `compilers` elemento> <. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
   
 ```xml  
 <system.codedom>  
@@ -47,9 +48,9 @@ The application domain or application pool is currently running version 4.0 or l
   
 ### <a name="add-the-required-targetframework-attribute"></a>Adición del atributo targetFramework necesario  
   
-1. Abra el archivo Web. config del servicio y busque el elemento <`compilation`>.  
+1. Abra el archivo de Web.config del servicio y busque el `compilation` elemento> <.  
   
-2. Agregue el atributo `targetFramework` al <`compilation`elemento > como se muestra en el ejemplo siguiente.  
+2. Agregue el `targetFramework` atributo al elemento <`compilation`> como se muestra en el ejemplo siguiente.  
   
     ```xml  
     <compilation debug="false"  
@@ -65,7 +66,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3. Busque el elemento <`compilers`> y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos <`compiler`elementos > en el elemento <`compilers`>. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
+3. Busque el `compilers` elemento <> y cambie la opción del proveedor CompilerVersion para que tenga un valor de 4,0. De forma predeterminada, hay dos <`compiler` elementos> en el `compilers` elemento> <. Debe actualizar la opción de proveedor de CompilerVersion para ambos tal y como se muestra en el siguiente ejemplo.  
   
     ```xml  
     <system.codedom>  

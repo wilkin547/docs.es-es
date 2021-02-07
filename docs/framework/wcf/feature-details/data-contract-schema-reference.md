@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: referencia de esquema de contrato de datos'
 title: Referencia de esquema de contrato de datos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 04d1f753e5788460404942a21a29e1612f674e90
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3449340600ea5c55ef46433031e53266a218bd6d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756648"
 ---
 # <a name="data-contract-schema-reference"></a>Referencia de esquema de contrato de datos
 
@@ -17,7 +18,7 @@ En este tema se describe el subconjunto del esquema XML (XSD) que <xref:System.R
 
 ## <a name="datacontractserializer-mappings"></a>Asignaciones de DataContractSerializer
 
-`DataContractSerializer`Asigna los tipos CLR a XSD cuando los metadatos se exportan desde un servicio de Windows Communication Foundation (WCF) mediante un punto de conexión de metadatos o la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, vea [serializador de contrato de datos](data-contract-serializer.md).
+`DataContractSerializer`Asigna los tipos CLR a XSD cuando los metadatos se exportan desde un servicio de Windows Communication Foundation (WCF) mediante un punto de conexión de metadatos o la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, vea [serializador de contrato de datos](data-contract-serializer.md).
 
 El `DataContractSerializer` también asigna XSD a tipos de CLR cuando Svcutil.exe se utiliza para tener acceso al lenguaje de descripción de servicios Web (WSDL) o documentos XSD y para generar contratos de datos para servicios o clientes.
 
@@ -68,7 +69,7 @@ El `DataContractSerializer` proporciona los niveles siguientes de compatibilidad
 |`attribute`|ignorado. `DataContractSerializer` no admite el uso de `xs:group`, `xs:attributeGroup`ni `xs:attribute`. Estas declaraciones se ignoran como elementos secundarios de `xs:schema`, pero no se puede hacer referencia a ellas desde `complexType` u otras estructuras admitidas.|
 |`notation`|ignorado.|
 
-## <a name="complex-types--xscomplextype"></a>Tipos complejos:\<xs:complexType>
+## <a name="complex-types--xscomplextype"></a>Tipos complejos: \<xs:complexType>
 
 ### <a name="general-information"></a>Información general
 
@@ -100,7 +101,7 @@ Cada tipo complejo \<xs:complexType> se asigna a un contrato de datos.
 |`anyAttribute`|Prohibido.|
 |(vacío)|Se asigna a un contrato de datos sin miembros de datos.|
 
-### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence>en un tipo complejo: atributos
+### <a name="xssequence-in-a-complex-type-attributes"></a>\<xs:sequence> en un tipo complejo: atributos
 
 |Atributo|Schema|
 |---------------|------------|
@@ -108,7 +109,7 @@ Cada tipo complejo \<xs:complexType> se asigna a un contrato de datos.
 |`maxOccurs`|Debe ser 1 (valor predeterminado).|
 |`minOccurs`|Debe ser 1 (valor predeterminado).|
 
-### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence>en un tipo complejo: contenido
+### <a name="xssequence-in-a-complex-type-contents"></a>\<xs:sequence> en un tipo complejo: contenido
 
 |Contenido|Schema|
 |--------------|------------|
@@ -119,7 +120,7 @@ Cada tipo complejo \<xs:complexType> se asigna a un contrato de datos.
 |`any`|Prohibido.|
 |(vacío)|Se asigna a un contrato de datos sin miembros de datos.|
 
-## <a name="elements--xselement"></a>Elemento\<xs:element>
+## <a name="elements--xselement"></a>Elemento \<xs:element>
 
 ### <a name="general-information"></a>Información general
 
@@ -131,7 +132,7 @@ Cada tipo complejo \<xs:complexType> se asigna a un contrato de datos.
 
 - Puede ocurrir dentro de `<xs:schema>` como una declaración de elemento global (GED).
 
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs:element>con maxOccurs = 1 dentro de \<xs:sequence> (miembros de datos)
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs:element> con maxOccurs = 1 dentro de \<xs:sequence> (miembros de datos)
 
 |Atributo|Schema|
 |---------------|------------|
@@ -147,7 +148,7 @@ Cada tipo complejo \<xs:complexType> se asigna a un contrato de datos.
 |`minOccurs`|Se asigna a la propiedad <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> de un miembro de datos (`IsRequired` es true cuando `minOccurs` es 1).|
 |`nillable`|Afecta a la asignación de tipo. Vea Asignación de tipo/primitivo.|
 
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs:element>con maxOccurs>1 en \<xs:sequence> (colecciones)
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs:element> con maxOccurs>1 en \<xs:sequence> (colecciones)
 
 - Asigna a un <xref:System.Runtime.Serialization.CollectionDataContractAttribute>.
 
@@ -171,7 +172,7 @@ Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` s
 |`minOccurs`|ignorado.|
 |`nillable`|Afecta a la asignación de tipo. Este atributo se omite para las colecciones de diccionarios.|
 
-### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs:element>dentro de una \<xs:schema> declaración de elemento global
+### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs:element> dentro de una \<xs:schema> declaración de elemento global
 
 - Una declaración de elemento global (GED) que tiene el mismo nombre y espacio de nombres que un tipo en esquema o que define un tipo anónimo dentro de sí mismo, se dice que está asociado al tipo.
 
@@ -205,7 +206,7 @@ Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` s
 |`keyref`|ignorado.|
 |(en blanco)|Compatible.|
 
-\*Cuando se usa `simpleType` la `complexType,` asignación y para tipos anónimos es igual que para los tipos no anónimos, salvo que no hay ningún contrato de datos anónimos, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre del elemento. Las reglas para los tipos anónimos están en la lista siguiente:
+\* Cuando se usa `simpleType` la `complexType,` asignación y para tipos anónimos es igual que para los tipos no anónimos, salvo que no hay ningún contrato de datos anónimos, por lo que se crea un contrato de datos con nombre, con un nombre generado derivado del nombre del elemento. Las reglas para los tipos anónimos están en la lista siguiente:
 
 - Detalle de implementación de WCF: Si el `xs:element` nombre no contiene puntos, el tipo anónimo se asigna a un tipo interno del tipo de contrato de datos externo. Si el nombre contiene puntos, el tipo de contrato de datos resultante es independiente (no un tipo interno).
 
@@ -213,7 +214,7 @@ Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` s
 
 - Si un contrato de datos con este tipo de nombre ya existe, el nombre se hace único anexando "1", "2", "3", y así sucesivamente, hasta que se cree un nombre único.
 
-## <a name="simple-types---xssimpletype"></a>Tipos simples:\<xs:simpleType>
+## <a name="simple-types---xssimpletype"></a>Tipos simples: \<xs:simpleType>
 
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: atributos
 
@@ -246,7 +247,7 @@ Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` s
 |`base`|Debe ser un tipo simple admitido o `xs:anyType`.|
 |`id`|ignorado.|
 
-### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction>en todos los demás casos: contenido
+### <a name="xsrestriction-for-all-other-cases-contents"></a>\<xs:restriction> en todos los demás casos: contenido
 
 |Contenido|Schema|
 |--------------|------------|
@@ -267,14 +268,14 @@ Las reglas para los atributos `ref`, `block`, `default`, `fixed`, `form`e `id` s
 
 ## <a name="enumeration"></a>Enumeración
 
-### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction>para enumeraciones: atributos
+### <a name="xsrestriction-for-enumerations-attributes"></a>\<xs:restriction> para enumeraciones: atributos
 
 |Atributo|Schema|
 |---------------|------------|
 |`base`|Si está presente, debe ser `xs:string`.|
 |`id`|ignorado.|
 
-### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction>para enumeraciones: contenido
+### <a name="xsrestriction-for-enumerations-contents"></a>\<xs:restriction> para enumeraciones: contenido
 
 |Contenido|Schema|
 |--------------|------------|
@@ -453,14 +454,14 @@ Este contrato de datos asigna a la declaración de tipos de esquema XML siguient
 |`restriction`|Prohibido, excepto cuando base = "`xs:anyType`". Lo último es equivalente a colocar directamente el contenido de `xs:restriction` bajo el contenedor de `xs:complexContent`.|
 |`extension`|Compatible. Asigna a la herencia del contrato de datos.|
 
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension>en \<xs:complexContent> : atributos
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs:extension> en \<xs:complexContent> : atributos
 
 |Atributo|Schema|
 |---------------|------------|
 |`id`|ignorado.|
 |`base`|Compatible. Asigna al tipo de contrato de datos base desde el que este tipo hereda.|
 
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension>en \<xs:complexContent> : contenido
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs:extension> en \<xs:complexContent> : contenido
 
 Las reglas son la mismas que para el contenido `<xs:complexType>` .
 

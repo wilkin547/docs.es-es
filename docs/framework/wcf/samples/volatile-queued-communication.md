@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: comunicación en cola volátil'
 title: Comunicación en cola volátil
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: a9f7e8a96fd293c7f87cc19846a42a42f28de288
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8ced65dc28719416fb9b1059d2be8f29315013b7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755725"
 ---
 # <a name="volatile-queued-communication"></a>Comunicación en cola volátil
 
@@ -49,7 +50,7 @@ public class StockTickerService : IStockTicker
 }
 ```
 
-El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si fuera necesario. El nombre de la cola se lee del archivo de configuración. La [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) usa la dirección base para generar el proxy para el servicio.
+El servicio se hospeda en sí mismo. Al utilizar el transporte de MSMQ, se debe crear la cola utilizada de antemano. Esto se puede hacer manualmente o a través de código. En este ejemplo, el servicio contiene el código para comprobar la existencia de la cola y crearla si fuera necesario. El nombre de la cola se lee del archivo de configuración. La [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) utiliza la dirección base para generar el proxy para el servicio.
 
 ```csharp
 // Host the service within this EXE console application.

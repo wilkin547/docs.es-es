@@ -1,21 +1,22 @@
 ---
+description: 'Más información sobre: objetos extensibles'
 title: Objetos extensibles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 682c391e7b3c68de5bf799f77a93df7539681a37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80082f4c94adf2d668ff4c241d286959d9a05038
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654502"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756700"
 ---
 # <a name="extensible-objects"></a>Objetos extensibles
 
 El patrón de objeto extensible se utiliza para extender clases de tiempo de ejecución existentes con nueva funcionalidad o para agregar un nuevo estado a un objeto. Las extensiones, asociadas a uno de los objetos extensibles, permiten que los comportamientos en fases muy diferentes de procesamiento tengan acceso al estado compartido y funcionalidad adjuntos a un objeto extensible común al que pueden tener acceso.
 
-## <a name="the-iextensibleobjectt-pattern"></a>El IExtensibleObject\<T > patrón
+## <a name="the-iextensibleobjectt-pattern"></a>El \<T> patrón IExtensibleObject
 
 Hay tres interfaces en el patrón de objeto extensible: <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601>y <xref:System.ServiceModel.IExtensionCollection%601>.
 
@@ -42,7 +43,7 @@ Cuando se agrega una extensión a la colección, se llama a <xref:System.Service
 
 El objeto pasado a <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> o <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> no necesita ser <xref:System.ServiceModel.IExtension%601> (por ejemplo, puede pasar cualquier objeto), pero la extensión que se devuelve es <xref:System.ServiceModel.IExtension%601>.
 
-Si ninguna extensión de la colección es un <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> devuelve null, y <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> devuelve una colección vacía. Si varias extensiones implementan <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> devuelve una de ellas. El valor devuelto de <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> es una captura.
+Si ninguna extensión de la colección es <xref:System.ServiceModel.IExtension%601> , <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> devuelve NULL y <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> devuelve una colección vacía. Si varias extensiones implementan <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> devuelve una de ellas. El valor devuelto de <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> es una captura.
 
 Hay dos escenarios principales. El primer escenario utiliza la propiedad <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> como un diccionario basado en tipos para insertar el estado en un objeto y permitir, de este modo, que otro componente lo pueda examinar utilizando el tipo.
 
@@ -60,7 +61,7 @@ Hay cuatro objetos extensibles en Windows Communication Foundation (WCF):
 
 - <xref:System.ServiceModel.OperationContext>. Esta clase representa la información de la operación que el tiempo de ejecución reúne para cada operación.  Esto incluye información como los encabezados de los mensajes entrantes, las propiedades de los mensajes entrantes, la identidad de seguridad de entrada y otra información.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.OperationContext> o almacenar el estado para cada operación.
 
-- <xref:System.ServiceModel.IContextChannel> : Esta interfaz permite la inspección de cada estado para los canales y servidores proxy generados por el tiempo de ejecución WCF.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.IClientChannel> o utilizarlo para almacenar el estado de cada canal.
+- <xref:System.ServiceModel.IContextChannel> : Esta interfaz permite inspeccionar cada estado de los canales y los proxies generados por el tiempo de ejecución de WCF.  Las extensiones de esta clase pueden extender el comportamiento de <xref:System.ServiceModel.IClientChannel> o utilizarlo para almacenar el estado de cada canal.
 
 En el ejemplo de código siguiente se puede ver el uso de una extensión simple para seguir la pista de los objetos <xref:System.ServiceModel.InstanceContext>.
 

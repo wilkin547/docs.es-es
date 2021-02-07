@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: actividades de mensajería'
 title: Actividades de mensajería
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-ms.openlocfilehash: 69a0e9a415b10d9c58d04eac27e48b1ed6a78064
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fc98081cabc552cd51bf35db3bed9443220fc065
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576400"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756076"
 ---
 # <a name="messaging-activities"></a>Actividades de mensajería
 

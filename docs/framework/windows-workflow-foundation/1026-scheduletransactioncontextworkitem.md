@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: 1026-ScheduleTransactionContextWorkItem'
 title: 1026 - ScheduleTransactionContextWorkItem
 ms.date: 03/30/2017
 ms.assetid: 0d5f86ba-ec21-4129-a726-5432e425384c
-ms.openlocfilehash: 7ba2ada1fbd5217592b4e4e3cffd813ffbe978ac
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 913af6903d38cea8f5c8d3e6e72dff04ff706195
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96275250"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99755491"
 ---
 # <a name="1026---scheduletransactioncontextworkitem"></a>1026 - ScheduleTransactionContextWorkItem
 
@@ -15,7 +16,7 @@ ms.locfileid: "96275250"
   
 |||  
 |-|-|  
-|ID|1026|  
+|Id.|1026|  
 |Palabras clave|WFRuntime|  
 |Nivel|Verbose|  
 |Canal|Microsoft-Windows-Application Server-Applications/Debug|  

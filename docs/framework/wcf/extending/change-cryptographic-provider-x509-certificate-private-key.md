@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de cómo: cambiar el proveedor de servicios criptográficos para una clave privada del certificado X. 509'
 title: Procedimiento para cambiar el proveedor criptográfico para la clave privada de un certificado X.509
 ms.date: 03/30/2017
 dev_langs:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 33d42f26407787b26e1447f8b8f619dd6fc15229
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: e68f4ffb5626a2c332853bd97eb513516401a185
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262117"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756713"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Procedimiento para cambiar el proveedor criptográfico para la clave privada de un certificado X.509
 
@@ -35,15 +36,15 @@ En este tema se muestra cómo cambiar el proveedor de servicios criptográficos 
   
 2. Reemplace la propiedad de solo lectura <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>. Esta propiedad devuelve el tamaño de clave real del par de clave pública/privada del certificado.  
   
-3. Invalide el método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. El marco de seguridad de WCF llama a este método para descifrar una clave simétrica con la clave privada del certificado. (La clave se cifró previamente con la clave pública del certificado.)  
+3. Invalide el método <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> . El marco de seguridad de WCF llama a este método para descifrar una clave simétrica con la clave privada del certificado. (La clave se cifró previamente con la clave pública del certificado.)  
   
-4. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. El marco de seguridad de WCF llama a este método para obtener una instancia de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> clase que representa el proveedor de servicios criptográficos para la clave pública o privada del certificado, dependiendo de los parámetros pasados al método.  
+4. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> . El marco de seguridad de WCF llama a este método para obtener una instancia de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> clase que representa el proveedor de servicios criptográficos para la clave pública o privada del certificado, dependiendo de los parámetros pasados al método.  
   
-5. Opcional. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Invalide este método si se requiere una implementación diferente de la clase <xref:System.Security.Cryptography.HashAlgorithm>.  
+5. Opcional. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> . Invalide este método si se requiere una implementación diferente de la clase <xref:System.Security.Cryptography.HashAlgorithm>.  
   
-6. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A>. Este método devuelve una instancia de la clase <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> que está asociada a la clave privada del certificado.  
+6. Invalide el método <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> . Este método devuelve una instancia de la clase <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> que está asociada a la clave privada del certificado.  
   
-7. Invalide el método <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A>. Este método se utiliza para indicar si la implementación de clave de seguridad admite un algoritmo criptográfico determinado.  
+7. Invalide el método <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> . Este método se utiliza para indicar si la implementación de clave de seguridad admite un algoritmo criptográfico determinado.  
   
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  

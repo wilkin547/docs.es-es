@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: uso de NetHttpBinding'
 title: Usar NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 85a81c353e779800a9aa371658f2f799365b759d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 3964c3c3e563d143df1edfcd1f98d3250301c209
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96282033"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756050"
 ---
 # <a name="using-the-nethttpbinding"></a>Usar NetHttpBinding
 

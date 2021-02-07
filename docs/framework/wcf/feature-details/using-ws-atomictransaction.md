@@ -1,15 +1,16 @@
 ---
+description: 'Más información acerca de: uso de WS-AtomicTransaction'
 title: Utilización de WS-AtomicTransaction
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-ms.openlocfilehash: 22b84dc49ab723953ce36402ac14221f410dda11
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: c79a5912289d0dca9f671e614e69e54b82bba854
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96281604"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756037"
 ---
 # <a name="using-ws-atomictransaction"></a>Utilización de WS-AtomicTransaction
 
@@ -25,7 +26,7 @@ WS-AtomicTransaction (WS-AT) es un protocolo de transacción interoperable. Perm
   
 - El protocolo de red utilizado para ejecutar el protocolo de confirmación en dos fases entre el administrador de transacciones del cliente y la transacción del servidor para resolver el resultado de la transacción.  
   
- Si el servidor y el cliente se escriben con WCF, no es necesario usar WS-AT. En su lugar, puede utilizar la configuración predeterminada de `NetTcpBinding` con el atributo `TransactionFlow` habilitado, que utilizará en su lugar el protocolo `OleTransactions`. Para más información, consulte [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md). De lo contrario, si está fluyendo las transacciones a los servicios web creados con tecnologías de otro fabricante, deberá utilizar WS-AT.  
+ Si el servidor y el cliente se escriben con WCF, no es necesario usar WS-AT. En su lugar, puede utilizar la configuración predeterminada de `NetTcpBinding` con el atributo `TransactionFlow` habilitado, que utilizará en su lugar el protocolo `OleTransactions`. Para obtener más información, vea [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md). De lo contrario, si está fluyendo las transacciones a los servicios web creados con tecnologías de otro fabricante, deberá utilizar WS-AT.  
   
 ## <a name="see-also"></a>Vea también
 

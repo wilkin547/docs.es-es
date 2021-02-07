@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: crear un enlace de sesión confiable personalizado con HTTPS'
 title: Procedimiento para crear un enlace personalizado de sesión confiable con HTTPS
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-ms.openlocfilehash: 70f8f4f33626ab0d1705e03750bfd9baa324e60a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97e0386c3694552099a623a319f566fa4db2a39b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599001"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756180"
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>Procedimiento para crear un enlace personalizado de sesión confiable con HTTPS
 
@@ -27,7 +28,7 @@ Para la copia de origen de este ejemplo, consulte el [enlace personalizado de la
 
    [!code-csharp[c_HowTo_CreateReliableSessionHTTPS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/cs/service.cs#1122)]
 
-1. Cree un archivo *Web. config* para configurar un extremo para el `CalculatorService` con un enlace personalizado denominado `reliableSessionOverHttps` que use una sesión confiable y el transporte https.
+1. Cree un archivo de *Web.config* para configurar un extremo para el `CalculatorService` con un enlace personalizado denominado `reliableSessionOverHttps` que utiliza una sesión confiable y el transporte https.
 
    [!code-xml[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]
 
@@ -39,7 +40,7 @@ Para la copia de origen de este ejemplo, consulte el [enlace personalizado de la
 
 ### <a name="configure-the-client-with-a-custombinding-to-use-a-reliable-session-with-https"></a>Configurar el cliente con un CustomBinding para utilizar una sesión confiable con HTTPS
 
-1. Use la [herramienta de utilidad de metadatos de ServiceModel (*SvcUtil. exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.
+1. Use la [herramienta de utilidad de metadatos de ServiceModel (*Svcutil.exe*)](../servicemodel-metadata-utility-tool-svcutil-exe.md) desde la línea de comandos para generar código a partir de los metadatos del servicio.
 
    ```console
    Svcutil.exe <Metadata Exchange (MEX) address or HTTP GET address>
@@ -65,7 +66,7 @@ Para la copia de origen de este ejemplo, consulte el [enlace personalizado de la
 
 ## <a name="net-framework-security"></a>seguridad en .NET Framework
 
-Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con *Makecert. exe*, aparecerá una alerta de seguridad al intentar obtener acceso a una dirección https, como `https://localhost/servicemodelsamples/service.svc` , desde el explorador.
+Dado que el certificado utilizado en este ejemplo es un certificado de prueba creado con *Makecert.exe*, aparece una alerta de seguridad al intentar obtener acceso a una dirección https, como `https://localhost/servicemodelsamples/service.svc` , desde el explorador.
 
 ## <a name="see-also"></a>Vea también
 

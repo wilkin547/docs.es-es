@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de cómo: deshabilitar el cifrado de firmas digitales'
 title: Procedimiento para deshabilitar el cifrado de firmas digitales
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 6d9102ab7676a8e751e608b6081da751464e6ee0
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 95e9bd18b480f5fdf9c98fdb3447610e0d4e3c75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96237396"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756141"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Procedimiento para deshabilitar el cifrado de firmas digitales
 

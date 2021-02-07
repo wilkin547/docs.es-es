@@ -1,13 +1,14 @@
 ---
+description: Más información acerca de cómo crear un servicio de flujo de trabajo de ejecución prolongada
 title: Crear un servicio de flujo de trabajo de larga ejecución
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 4ae01201230bf848c045158424db60097d8dd767
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d26e763e2515f9e9ec2b61201512f02eeaeb1bc
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756908"
 ---
 # <a name="create-a-long-running-workflow-service"></a>Creación de un servicio de flujo de trabajo de ejecución prolongada
 
@@ -27,7 +28,7 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
 ## <a name="set-up-the-sql-database"></a>Configurar el SQL Database
 
-1. Para conservar las instancias del servicio de flujo de trabajo debe tener instalado Microsoft SQL Server y configurar una base de datos con el fin de almacenar las instancias de flujo de trabajo persistentes. Para ejecutar Microsoft SQL Management Studio, haga clic en el botón **Inicio** , seleccione **todos los programas**, **Microsoft SQL Server 2008**y **Microsoft SQL Management Studio**.
+1. Para conservar las instancias del servicio de flujo de trabajo debe tener instalado Microsoft SQL Server y configurar una base de datos con el fin de almacenar las instancias de flujo de trabajo persistentes. Para ejecutar Microsoft SQL Management Studio, haga clic en el botón **Inicio** , seleccione **todos los programas**, **Microsoft SQL Server 2008** y **Microsoft SQL Management Studio**.
 
 2. Haga clic en el botón **conectar** para iniciar sesión en la instancia de SQL Server
 
@@ -93,7 +94,7 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
         De esta forma, se crea un identificador de nuevo pedido y se coloca el valor en la variable orderId.
 
-    6. Seleccione la actividad **ReplyToStartOrder** . En la ventana Propiedades, haga clic en el botón de puntos suspensivos de **CorrelationInitializers**. Seleccione el vínculo **Agregar inicializador** , escriba `orderIdHandle` en el cuadro de texto inicializador, seleccione inicializador de correlación de consulta para el tipo de correlación y, a continuación, seleccione p_orderId en el cuadro desplegable consultas XPath.  Esta configuración se muestra en la siguiente ilustración. Haga clic en **OK**.  De esta forma, se inicializa una correlación entre el cliente y esta instancia del servicio de flujo de trabajo. Cuando se reciba un mensaje con este identificador de pedido, se enruta a esta instancia del servicio de flujo de trabajo.
+    6. Seleccione la actividad **ReplyToStartOrder** . En la ventana Propiedades, haga clic en el botón de puntos suspensivos de **CorrelationInitializers**. Seleccione el vínculo **Agregar inicializador** , escriba `orderIdHandle` en el cuadro de texto inicializador, seleccione inicializador de correlación de consulta para el tipo de correlación y, a continuación, seleccione p_orderId en el cuadro desplegable consultas XPath.  Esta configuración se muestra en la siguiente ilustración. Haga clic en **Aceptar**.  De esta forma, se inicializa una correlación entre el cliente y esta instancia del servicio de flujo de trabajo. Cuando se reciba un mensaje con este identificador de pedido, se enruta a esta instancia del servicio de flujo de trabajo.
 
         ![Agregar un inicializador de correlación](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Agregue un inicializador de correlación.")
 
@@ -122,7 +123,7 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
     5. Arrastre y coloque una actividad **If** inmediatamente después de la actividad **ReceiveAddItem** . Esta actividad actúa como instrucción If.
 
-        1. Establezca la propiedad **Condition** en`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
+        1. Establezca la propiedad **Condition** en `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
         2. Arrastre y coloque una actividad **assign** en la sección **then** y otra en la sección **else** y establezca las propiedades de las actividades de **asignación** tal como se muestra en la siguiente ilustración.
 
@@ -138,7 +139,7 @@ Debe tener instalado el siguiente software para usar este tutorial:
 
             ![Establecer el enlace de datos para la actividad SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "Establezca la propiedad para la actividad SendReplyToAddItem.")
 
-8. Abra el archivo Web. config y agregue los siguientes elementos en la \<behavior> sección para habilitar la persistencia del flujo de trabajo.
+8. Abra el archivo web.config y agregue los siguientes elementos en la \<behavior> sección para habilitar la persistencia del flujo de trabajo.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />

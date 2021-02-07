@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: punto de conexión'
 title: Punto de conexión
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
-ms.openlocfilehash: ceb4e4b41502b00d7bb21f1ecbd8249fccf1ce3b
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 1c28be37d1b1abfe1813e6da8903809affd309e7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96288819"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757467"
 ---
 # <a name="endpoint"></a>Punto de conexión
 
 Punto de conexión  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```csharp
 class Endpoint  
@@ -85,7 +86,7 @@ class Endpoint
   
  Colección de comportamientos implementada por este punto de conexión.  
   
-### <a name="binding"></a>Enlaces  
+### <a name="binding"></a>Enlace  
 
  Tipo de datos: enlace  
   
@@ -117,7 +118,7 @@ class Endpoint
   
  El URI en el que el extremo realiza escuchas.  
   
-### <a name="name"></a>NOMBRE  
+### <a name="name"></a>Nombre  
 
  Tipo de datos: cadena  
   

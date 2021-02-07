@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: detección y FindCriteria de detección'
 title: Búsqueda de detección y FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a4428a89ba4122f528d1c01e4b5a6b8ea8d2935
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599183"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756323"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Búsqueda de detección y FindCriteria
 
@@ -31,7 +32,7 @@ Los criterios de búsqueda incluyen:
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> realiza una comparación básica de cadenas con distinción entre mayúsculas y minúsculas.
 
-  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>coincide por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con ámbito `http://contoso/building/floor1` . Tenga en cuenta que no coincide `http://contoso/building100` porque los dos últimos segmentos no coinciden.
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> coincide por segmentos separados por "/". Una búsqueda de `http://contoso/building1` coincide con un servicio con ámbito `http://contoso/building/floor1` . Tenga en cuenta que no coincide `http://contoso/building100` porque los dos últimos segmentos no coinciden.
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> coincide con ámbitos por segmentos mediante una dirección LDAP URL.
 

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Introducción a la creación de puntos de conexión'
 title: Información general acerca de la creación de puntos finales
 ms.date: 03/30/2017
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: bf6bfb10123223bf689945ef93ff09219a68092c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: ff806428922f2097f0d570118d6b5f7836c1797b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319927"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99756830"
 ---
 # <a name="endpoint-creation-overview"></a>Información general acerca de la creación de puntos finales
 
@@ -22,7 +23,7 @@ Toda la comunicación con un servicio de Windows Communication Foundation (WCF) 
 
 Cada punto de conexión contiene una dirección que indica dónde se encuentra el punto de conexión, un enlace que especifica cómo puede comunicarse un cliente con el punto de conexión, y un contrato que identifica los métodos disponibles.
 
-- **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. Se representa en el modelo de objetos WCF mediante la dirección <xref:System.ServiceModel.EndpointAddress>, que contiene un identificador uniforme de recursos (URI) y propiedades de dirección que incluyen una identidad, algunos elementos del lenguaje de descripción de servicios web (WSDL) y una colección de encabezados opcionales. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, vea [especificar una dirección de extremo](specifying-an-endpoint-address.md).
+- **Dirección**. La dirección identifica únicamente el punto de conexión e indica a los consumidores potenciales dónde se ubica el servicio. Se representa en el modelo de objetos WCF mediante la <xref:System.ServiceModel.EndpointAddress> dirección, que contiene un identificador uniforme de recursos (URI) y propiedades de dirección que incluyen una identidad, algunos elementos del lenguaje de descripción de servicios web (WSDL) y una colección de encabezados opcionales. Los encabezados opcionales proporcionan información de direccionamiento adicional para identificar o interactuar con el punto de conexión. Para obtener más información, vea [especificar una dirección de extremo](specifying-an-endpoint-address.md).
 
 - **Enlace**. El enlace especifica cómo comunicarse con el punto de conexión. El enlace especifica cómo se comunica el punto de conexión con el mundo, incluido el protocolo de transporte que utiliza (por ejemplo, TCP o HTTP), la codificación utilizada en los mensajes (por ejemplo, texto o binario) y los requisitos de seguridad necesarios (por ejemplo, capa de sockets seguros [SSL] o seguridad del mensaje SOAP). Para obtener más información, consulte [uso de enlaces para configurar servicios y clientes](using-bindings-to-configure-services-and-clients.md).
 
@@ -37,7 +38,7 @@ El punto de conexión de un servicio puede especificarse de manera imperativa, m
 
 El siguiente ejemplo muestra cómo especificar un extremo en código:
 
-- Defina un contrato para un tipo de servicio `IEcho` que acepte el nombre de alguien y echo con la respuesta "Hello \<name >!".
+- Defina un contrato para un `IEcho` tipo de servicio que acepte el nombre de alguien y echo con la respuesta "Hello \<name> !".
 
 - Implemente un servicio `Echo` del tipo definido por el contrato `IEcho`.
 
@@ -136,7 +137,7 @@ serviceHost.Open()
 Con frecuencia al crear una aplicación se desea delegar las decisiones al administrador que está implementando la aplicación. Por ejemplo, es habitual que no pueda saberse de antemano cuál será la dirección de servicio (una URI). En lugar de incluir una dirección en el código, es preferible permitir a un administrador hacerlo después de crear un servicio. Esta flexibilidad se logra a través de la configuración. Para obtener más información, vea [configuración de servicios](configuring-services.md).
 
 > [!NOTE]
-> Use la [herramienta de utilidad de metadatos de ServiceModel (SvcUtil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) con el modificador `/config:`*filename*`[,`*nombrearchivo*`]` para crear rápidamente archivos de configuración.
+> Use la [herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) con el modificador nombre de archivo `/config:`  `[,`  `]` para crear rápidamente archivos de configuración.
 
 ## <a name="using-default-endpoints"></a>Usar puntos de conexión predeterminados
 

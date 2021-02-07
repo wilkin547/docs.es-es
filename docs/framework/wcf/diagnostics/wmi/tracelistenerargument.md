@@ -1,19 +1,20 @@
 ---
+description: 'Más información acerca de: TraceListenerArgument'
 title: TraceListenerArgument
 ms.date: 03/30/2017
 ms.assetid: b6c84090-bf96-43f4-9fb0-1ce8fd9c8efe
-ms.openlocfilehash: 5d052d2a74e8da81c18d4ee70b2197232ba8871d
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 8a7b9fa39f16316b4fca859cefbb7a9dbe33f9d8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96239177"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757298"
 ---
 # <a name="tracelistenerargument"></a>TraceListenerArgument
 
 TraceListenerArgument  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```csharp
 class TraceListenerArgument  
@@ -31,7 +32,7 @@ class TraceListenerArgument
 
  La clase TraceListenerArgument tiene las propiedades siguientes:  
   
-### <a name="name"></a>NOMBRE  
+### <a name="name"></a>Nombre  
 
  Tipo de datos: cadena  
   
@@ -39,7 +40,7 @@ class TraceListenerArgument
   
  El nombre del argumento.  
   
-### <a name="value"></a>Valor  
+### <a name="value"></a>Value  
 
  Tipo de datos: cadena  
   

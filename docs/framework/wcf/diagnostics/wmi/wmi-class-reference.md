@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: referencia de clases WMI'
 title: Referencia de clases WMI
 ms.date: 03/30/2017
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-ms.openlocfilehash: 9830fbf50e8df625e3d3077a66c66e0370204acb
-ms.sourcegitcommit: bc293b14af795e0e999e3304dd40c0222cf2ffe4
+ms.openlocfilehash: 6413065b5740b190aee122ef34727da120737afa
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96262260"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99757027"
 ---
 # <a name="wmi-class-reference"></a>Referencia de clases WMI
 
@@ -31,7 +32,7 @@ En esta sección se enumeran todas las clases WMI expuestas por el proveedor WMI
   
  [BinaryMessageEncodingBindingElement](binarymessageencodingbindingelement.md)  
   
- [Enlaces](binding.md)  
+ [Binding](binding.md)  
   
  [BindingElement](bindingelement.md)  
   
