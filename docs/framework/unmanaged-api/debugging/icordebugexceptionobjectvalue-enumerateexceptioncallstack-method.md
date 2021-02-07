@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Icordebugexceptionobjectvalue (:: Enumerateexceptioncallstack ((método)'
 title: ICorDebugExceptionObjectValue::EnumerateExceptionCallStack (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 101151469e2eece20afe289c9d95387ce6dc7c6a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 97918d280299fae16eb55185baee19c27d99005b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95672128"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693283"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack (Método)
 
@@ -39,7 +40,7 @@ HRESULT EnumerateExceptionCallStack(
  ppCallStackEnum  
  enuncia Un puntero a la dirección de un objeto de interfaz [icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md) que es un enumerador de seguimiento de pila para un objeto de excepción administrado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si no hay información disponible sobre la pila de llamadas, el método devuelve `S_OK` y [icordebugexceptionobjectcallstackenum (](icordebugexceptionobjectcallstackenum-interface.md) es un enumerador válido con una longitud de 0. Si el método no puede recuperar la información de seguimiento de la pila, el valor devuelto es `E_FAIL` y no se devuelve ningún enumerador.  
   
@@ -55,7 +56,7 @@ HRESULT EnumerateExceptionCallStack(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugExceptionObjectValue (Interfaz)](icordebugexceptionobjectvalue-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

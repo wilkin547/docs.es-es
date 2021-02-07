@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugFrame:: GetFunction ((método)'
 title: ICorDebugFrame::GetFunction (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 879d2311-0ff1-4616-a8b3-959ea5868b2e
 topic_type:
 - apiref
-ms.openlocfilehash: 9f9a6238057f56459eb8dca2375da412c3cd569d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0309a066f686e55d086de1cbb040eea58e031df3
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95690322"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692997"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetFunction (
  `ppFunction`  
  enuncia Puntero a la dirección de un objeto ICorDebugFunction que representa la función que contiene el código asociado a este marco de pila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetFunction` método puede producir un error si el marco no está asociado a ninguna función determinada.  
   

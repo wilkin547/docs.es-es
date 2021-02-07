@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugFunction2 (interfaz)'
 title: Interfaz ICorDebugFunction2
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: d9e84a70d72db1338c80140ce3350774bfae4bca
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: e5297d46acb9b174537363fc185fa2d540d55a75
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726280"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692204"
 ---
 # <a name="icordebugfunction2-interface"></a>Interfaz ICorDebugFunction2
 
@@ -34,7 +35,7 @@ Extiende lógicamente la interfaz ICorDebugFunction para proporcionar compatibil
 |[GetVersionNumber (Método)](icordebugfunction2-getversionnumber-method.md)|Obtiene la versión de edición y continuación de esta función.|  
 |[SetJMCStatus (Método)](icordebugfunction2-setjmcstatus-method.md)|Marca esta función para Solo mi código la ejecución paso a paso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
@@ -49,6 +50,6 @@ Extiende lógicamente la interfaz ICorDebugFunction para proporcionar compatibil
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugFunction2:: GetVersionNumber ((método)'
 title: ICorDebugFunction2::GetVersionNumber (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-ms.openlocfilehash: 88fb205235cfaf3566fbd74b05a4e9833058f4a0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7a703789099b82121c65214d6b1929e354405c8d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696107"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692217"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetVersionNumber (
  `pnVersion`  
  enuncia Un puntero a un entero que es el número de versión de la función representada por este objeto ICorDebugFunction2.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El tiempo de ejecución realiza un seguimiento del número de modificaciones que se han producido en cada módulo durante una sesión de depuración. El número de versión de una función es uno más que el número de la edición que presentó la función. La versión original de la función es la versión 1. El número se incrementa para un módulo cada vez que se llama a [ICorDebugModule2:: ApplyChanges](icordebugmodule2-applychanges-method.md) en ese módulo. Por lo tanto, si el cuerpo de una función se ha reemplazado en la primera y la tercera llamada a `ICorDebugModule2::ApplyChanges` , `GetVersionNumber` puede devolver la versión 1, 2 o 4 para esa función, pero no la versión 3. (Esa función no tendría la versión 3).  
   

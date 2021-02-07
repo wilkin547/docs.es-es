@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz Icordebugexceptionobjectvalue ('
 title: ICorDebugExceptionObjectValue (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43416dd5-8892-4106-9f59-f9143b19ddb4
 topic_type:
 - apiref
-ms.openlocfilehash: 6a0c33799b2b2aaa48e3b18b7b4bb37643508bd4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67672f9921bab31019a42b742480176e6d0bf3d4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95678888"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693205"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue (Interfaz)
 
@@ -31,7 +32,7 @@ Extiende la interfaz "ICorDebugObjectValue" para proporcionar información de se
 |------------|-----------------|  
 |[Método EnumerateExceptionCallStack](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|Obtiene un enumerador para la pila de llamadas incrustada en un objeto de excepción.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La llamada a `QueryInterface` se realizará correctamente para los objetos administrados que derivan de <xref:System.Exception?displayProperty=nameWithType> .  
   
@@ -45,7 +46,7 @@ Extiende la interfaz "ICorDebugObjectValue" para proporcionar información de se
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

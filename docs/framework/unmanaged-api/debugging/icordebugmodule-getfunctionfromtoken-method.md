@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugModule:: GetFunctionFromToken ((método)'
 title: ICorDebugModule::GetFunctionFromToken (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fe12194-4ef7-43c1-9570-ade35ccf127a
 topic_type:
 - apiref
-ms.openlocfilehash: bf2acd897c9c45e445b864f85550ed7ed6e00886
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d6da43441f3774cff44a6f867c3ccf2a8581ebab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95710160"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691658"
 ---
 # <a name="icordebugmodulegetfunctionfromtoken-method"></a>ICorDebugModule::GetFunctionFromToken (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetFunctionFromToken(
  `ppFunction`  
  enuncia Puntero a la dirección de un objeto de interfaz ICorDebugFunction que representa la función.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `GetFunctionFromToken` método devuelve un CORDBG_E_FUNCTION_NOT_IL HRESULT si el valor pasado `methodDef` no hace referencia a un método de lenguaje intermedio de Microsoft (MSIL).  
   

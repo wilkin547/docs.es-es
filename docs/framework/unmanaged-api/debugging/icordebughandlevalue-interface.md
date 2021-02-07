@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugHandleValue (interfaz)'
 title: Interfaz ICorDebugHandleValue
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66fcd2b8-ac66-414b-83a8-75a925e17772
 topic_type:
 - apiref
-ms.openlocfilehash: e695a93036e00e651ecababb0e1407661bcc48d8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3bdb1f5668be283d8722c15f4779adfe4d7b3a2d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729088"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692049"
 ---
 # <a name="icordebughandlevalue-interface"></a>Interfaz ICorDebugHandleValue
 
@@ -29,10 +30,10 @@ Subclase de ICorDebugReferenceValue que representa un valor de referencia en el 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Dispose (método)](icordebughandlevalue-dispose-method.md)|Libera el identificador al que hace referencia este `ICorDebugHandleValue` objeto sin liberar explícitamente el puntero de interfaz.|  
+|[Dispose (Método)](icordebughandlevalue-dispose-method.md)|Libera el identificador al que hace referencia este `ICorDebugHandleValue` objeto sin liberar explícitamente el puntero de interfaz.|  
 |[Método GetHandleType](icordebughandlevalue-gethandletype-method.md)|Obtiene un valor CorDebugHandleType (que describe el tipo de identificador al que hace referencia este `ICorDebugHandleValue` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un `ICorDebugReferenceValue` objeto queda invalidado por una interrupción en la ejecución de código depurado. Un `ICorDebugHandleValue` mantiene su referencia mediante saltos y continuaciones hasta que se libera explícitamente.  
   
@@ -49,6 +50,6 @@ Subclase de ICorDebugReferenceValue que representa un valor de referencia en el 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

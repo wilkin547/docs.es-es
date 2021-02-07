@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugFunction:: GetModule (método)'
 title: ICorDebugFunction::GetModule (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5031a5d3-2564-412a-9007-e36d4631308a
 topic_type:
 - apiref
-ms.openlocfilehash: 5fad8b56b783748e23c8adc4aee0e1bf3450e243
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 62087cdf0443b2ef495461aab74cfa047b95efca
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696133"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692477"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule (Método)
 

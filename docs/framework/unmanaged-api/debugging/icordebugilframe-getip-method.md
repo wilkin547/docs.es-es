@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugILFrame:: GetIP (método)'
 title: ICorDebugILFrame::GetIP (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-ms.openlocfilehash: 314d2a06c8e246a42b315690dc9fe4b507db285a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3977d4fbe57b24e7b98b7a597b0db7ad171eb1c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703179"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691879"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP (Método)
 
@@ -43,7 +44,7 @@ HRESULT GetIP (
  `pMappingResult`  
  enuncia Puntero a una combinación bit a bit de los valores de enumeración de CorDebugMappingResult (que describen cómo se obtuvo el valor del puntero de instrucción.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor del puntero de instrucción es el desplazamiento del marco de pila en el código del lenguaje intermedio de Microsoft (MSIL) de la función. Si el marco de pila está activo, esta dirección es la siguiente instrucción que se va a ejecutar. Si el marco de pila no está activo, esta dirección es la siguiente instrucción que se debe ejecutar cuando se reactive el marco de pila.  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugFrame:: Createstepper ((método)'
 title: ICorDebugFrame::CreateStepper (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 689e7f28-20c1-4d5c-9baa-17441cd63a88
 topic_type:
 - apiref
-ms.openlocfilehash: 5dfb64d0c440cbd2c8a8a65b2c18d78f02a7615e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 394418b89fd7a1c780a5bc33b97b8ef40bab8df2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679720"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99693101"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper (Método)
 
@@ -39,7 +40,7 @@ HRESULT CreateStepper (
  `ppStepper`  
  enuncia Puntero a la dirección de un objeto ICorDebugStepper que permite al depurador realizar operaciones de ejecución de paso en relación con el marco actual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el marco no está activo, el objeto stepper normalmente tendrá que volver al marco antes de que se complete el paso.  
   

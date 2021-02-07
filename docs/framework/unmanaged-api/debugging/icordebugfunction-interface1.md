@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugFunction (interfaz)'
 title: Interfaz ICorDebugFunction
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 783faea9-8083-41c1-b04a-51a81ac4c8f3
 topic_type:
 - apiref
-ms.openlocfilehash: 668b27932ea7a2bdc244e1ac0bb8e6891cbd4d17
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 835625341889e89e15ceb66ca71531cf7b8311c4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95726306"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692399"
 ---
 # <a name="icordebugfunction-interface"></a>Interfaz ICorDebugFunction
 
@@ -38,7 +39,7 @@ Representa una función o un método administrado.
 |[Método GetNativeCode](icordebugfunction-getnativecode-method.md)|Obtiene el código nativo de esta función.|  
 |[GetToken (Método)](icordebugfunction-gettoken-method.md)|Obtiene el símbolo (token) de metadatos de esta función.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugFunction` interfaz no representa una función con parámetros de tipo genérico. Por ejemplo, una `ICorDebugFunction` instancia de representaría `Func<T>` pero no `Func<string>` . Llame a [ICorDebugILFrame2:: EnumerateTypeParameters (](icordebugilframe2-enumeratetypeparameters-method.md) para obtener los parámetros de tipo genérico.  
   
@@ -61,6 +62,6 @@ Representa una función o un método administrado.
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

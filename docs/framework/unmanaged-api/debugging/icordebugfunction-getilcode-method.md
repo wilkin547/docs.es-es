@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugFunction:: Getilcode ((método)'
 title: ICorDebugFunction::GetILCode (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f794dd47-a7cd-47f6-96e9-a41a4dae8e72
 topic_type:
 - apiref
-ms.openlocfilehash: b7d3fbafaab6d43fa89d45855628dbd6b9ab81e2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 3b7bb29a028b189b24d3fbf02edc8190d9989a51
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95696224"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99692529"
 ---
 # <a name="icordebugfunctiongetilcode-method"></a>ICorDebugFunction::GetILCode (Método)
 
@@ -39,7 +40,7 @@ HRESULT GetILCode (
  `ppCode`  
  enuncia Un puntero a la `ICorDebugCode` instancia de, o null, si la función no se compiló en MSIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si se permite editar y continuar en esta función, el `GetILCode` método obtendrá el código MSIL correspondiente a la versión editada de esta función del código en el Common Language Runtime (CLR).  
   
