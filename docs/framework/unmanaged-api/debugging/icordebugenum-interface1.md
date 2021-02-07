@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugEnum (interfaz)'
 title: Interfaz ICorDebugEnum
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-ms.openlocfilehash: b208444de3b427329988f27b9d252b54143b7240
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 20d2bb14bddcaf40802567ec78a8e318ac1db380
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95698798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694479"
 ---
 # <a name="icordebugenum-interface"></a>Interfaz ICorDebugEnum
 
@@ -29,12 +30,12 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
   
 |Método|Descripción|  
 |------------|-----------------|  
-|[Clone (Método)](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
-|[GetCount (Método)](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
+|[Método Clone](icordebugenum-clone-method.md)|Crea una copia de este objeto `ICorDebugEnum`.|  
+|[Método GetCount](icordebugenum-getcount-method.md)|Obtiene el número de elementos de la enumeración.|  
 |[Reset (Método)](icordebugenum-reset-method.md)|Mueve el cursor al principio de la enumeración.|  
-|[Skip (Método)](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
+|[Método Skip](icordebugenum-skip-method.md)|Mueve el cursor hacia delante en la enumeración el número de elementos especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Los enumeradores siguientes derivan de `ICorDebugEnum` :  
   
@@ -93,6 +94,6 @@ Actúa como la interfaz base abstracta para los enumeradores que se usan en una 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

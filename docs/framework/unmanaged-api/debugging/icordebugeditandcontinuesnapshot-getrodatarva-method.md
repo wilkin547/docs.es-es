@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugEditAndContinueSnapshot:: Getrodatarva ((método)'
 title: ICorDebugEditAndContinueSnapshot::GetRoDataRVA (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: efc32294-292b-419a-9d6e-24251322a85a
 topic_type:
 - apiref
-ms.openlocfilehash: 5c4befabbc8a45da3180dd1f0519396917f672b8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1d86d989a41ff85c78a972937e5ea93f87b8aa3b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95730895"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99694778"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRoDataRVA (Método)
 
 `GetRoDataRVA` está obsoleto. No llame a este método.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)

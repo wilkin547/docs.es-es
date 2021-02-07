@@ -1,13 +1,14 @@
 ---
+description: 'Más información acerca de: ejemplos'
 title: Ejemplos
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 071f561bd1e8c0f60300c0c3cf63ea016899d46b
-ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
+ms.openlocfilehash: 80882a3dfa9a11271b2873e37dd1fd309b16b052
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91200217"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99695000"
 ---
 # <a name="samples"></a>Ejemplos
 
@@ -27,9 +28,9 @@ En este tema se proporcionan vínculos a las soluciones de Visual Basic y C# que
   
 - Participe en el [Foro de LINQ](https://social.msdn.microsoft.com/forums/en-us/home?forum=linqtosql), donde puede discutir con detalle temas más complejos con expertos.  
   
-- Estudie las notas del producto que detallan la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: consulta integrada en el lenguaje .net para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
+- Estudie las notas del producto que detallan la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#. Para obtener más información, vea [LINQ to SQL: .net Language-Integrated Query para datos relacionales](/previous-versions/dotnet/articles/bb425822(v=msdn.10)).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [LINQ to SQL](index.md)
 - [Tutoriales de LINQ to SQL](/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
