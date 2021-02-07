@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ISymUnmanagedConstant'
 title: ISymUnmanagedConstant (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: e11c9baa-4cf1-4bb4-a95f-b1908893b46c
 topic_type:
 - apiref
-ms.openlocfilehash: 0d0c1462bc1c19f47bfbdcfa9694988da9acd9d2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fe54f84d25fee0d98aea9da82655a10e07595974
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95706871"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99689669"
 ---
-# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="8fa51-102">ISymUnmanagedConstant (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="8fa51-102">ISymUnmanagedConstant Interface</span></span>
+# <a name="isymunmanagedconstant-interface"></a><span data-ttu-id="cfbea-103">ISymUnmanagedConstant (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="cfbea-103">ISymUnmanagedConstant Interface</span></span>
 
-<span data-ttu-id="8fa51-103">Proporciona acceso a las constantes no administradas.</span><span class="sxs-lookup"><span data-stu-id="8fa51-103">Provides access to unmanaged constants.</span></span>  
+<span data-ttu-id="cfbea-104">Proporciona acceso a las constantes no administradas.</span><span class="sxs-lookup"><span data-stu-id="cfbea-104">Provides access to unmanaged constants.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="8fa51-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="8fa51-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="cfbea-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="cfbea-105">Methods</span></span>  
   
-|<span data-ttu-id="8fa51-105">Método</span><span class="sxs-lookup"><span data-stu-id="8fa51-105">Method</span></span>|<span data-ttu-id="8fa51-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="8fa51-106">Description</span></span>|  
+|<span data-ttu-id="cfbea-106">Método</span><span class="sxs-lookup"><span data-stu-id="cfbea-106">Method</span></span>|<span data-ttu-id="cfbea-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="cfbea-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="8fa51-107">GetName (Método)</span><span class="sxs-lookup"><span data-stu-id="8fa51-107">GetName Method</span></span>](isymunmanagedconstant-getname-method.md)|<span data-ttu-id="8fa51-108">Obtiene el nombre de la constante.</span><span class="sxs-lookup"><span data-stu-id="8fa51-108">Gets the name of the constant.</span></span>|  
-|[<span data-ttu-id="8fa51-109">GetSignature (Método)</span><span class="sxs-lookup"><span data-stu-id="8fa51-109">GetSignature Method</span></span>](isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="8fa51-110">Obtiene la firma de la constante.</span><span class="sxs-lookup"><span data-stu-id="8fa51-110">Gets the signature of the constant.</span></span>|  
-|[<span data-ttu-id="8fa51-111">GetValue (Método)</span><span class="sxs-lookup"><span data-stu-id="8fa51-111">GetValue Method</span></span>](isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="8fa51-112"> Obtiene el valor de la constante.</span><span class="sxs-lookup"><span data-stu-id="8fa51-112">Gets the value of the constant.</span></span>|  
+|[<span data-ttu-id="cfbea-108">Método GetName</span><span class="sxs-lookup"><span data-stu-id="cfbea-108">GetName Method</span></span>](isymunmanagedconstant-getname-method.md)|<span data-ttu-id="cfbea-109">Obtiene el nombre de la constante.</span><span class="sxs-lookup"><span data-stu-id="cfbea-109">Gets the name of the constant.</span></span>|  
+|[<span data-ttu-id="cfbea-110">GetSignature (Método)</span><span class="sxs-lookup"><span data-stu-id="cfbea-110">GetSignature Method</span></span>](isymunmanagedconstant-getsignature-method.md)|<span data-ttu-id="cfbea-111">Obtiene la firma de la constante.</span><span class="sxs-lookup"><span data-stu-id="cfbea-111">Gets the signature of the constant.</span></span>|  
+|[<span data-ttu-id="cfbea-112">Método GetValue</span><span class="sxs-lookup"><span data-stu-id="cfbea-112">GetValue Method</span></span>](isymunmanagedconstant-getvalue-method.md)|<span data-ttu-id="cfbea-113"> Obtiene el valor de la constante.</span><span class="sxs-lookup"><span data-stu-id="cfbea-113">Gets the value of the constant.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8fa51-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8fa51-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfbea-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cfbea-114">Requirements</span></span>  
 
- <span data-ttu-id="8fa51-114">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="8fa51-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+ <span data-ttu-id="cfbea-115">**Encabezado:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="cfbea-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fa51-115">Consulte también</span><span class="sxs-lookup"><span data-stu-id="8fa51-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfbea-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="cfbea-116">See also</span></span>
 
-- [<span data-ttu-id="8fa51-116">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="8fa51-116">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="cfbea-117">Interfaces de almacén de símbolos de diagnósticos</span><span class="sxs-lookup"><span data-stu-id="cfbea-117">Diagnostics Symbol Store Interfaces</span></span>](diagnostics-symbol-store-interfaces.md)

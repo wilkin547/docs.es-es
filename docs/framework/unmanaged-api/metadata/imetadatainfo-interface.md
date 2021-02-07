@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz IMetaDataInfo'
 title: IMetaDataInfo (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,34 +15,34 @@ helpviewer_keywords:
 ms.assetid: 137cb264-64de-46ac-bc6e-2a7db97e8abe
 topic_type:
 - apiref
-ms.openlocfilehash: 97b2d260dd99f2877157dd0801ac3fd20d0ffb23
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c89c6adcc29b5bcd3005b8f0fcfcd6a313115553
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95728243"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99688421"
 ---
-# <a name="imetadatainfo-interface"></a><span data-ttu-id="46a63-102">IMetaDataInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="46a63-102">IMetaDataInfo Interface</span></span>
+# <a name="imetadatainfo-interface"></a><span data-ttu-id="0c8eb-103">IMetaDataInfo (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="0c8eb-103">IMetaDataInfo Interface</span></span>
 
-<span data-ttu-id="46a63-103">Proporciona un método que obtiene información sobre la asignación de metadatos desde un archivo en disco a la memoria.</span><span class="sxs-lookup"><span data-stu-id="46a63-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
+<span data-ttu-id="0c8eb-104">Proporciona un método que obtiene información sobre la asignación de metadatos desde un archivo en disco a la memoria.</span><span class="sxs-lookup"><span data-stu-id="0c8eb-104">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="46a63-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="46a63-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0c8eb-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="0c8eb-105">Methods</span></span>  
   
-|<span data-ttu-id="46a63-105">Método</span><span class="sxs-lookup"><span data-stu-id="46a63-105">Method</span></span>|<span data-ttu-id="46a63-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="46a63-106">Description</span></span>|  
+|<span data-ttu-id="0c8eb-106">Método</span><span class="sxs-lookup"><span data-stu-id="0c8eb-106">Method</span></span>|<span data-ttu-id="0c8eb-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="0c8eb-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="46a63-107">Método GetFileMapping</span><span class="sxs-lookup"><span data-stu-id="46a63-107">GetFileMapping Method</span></span>](imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="46a63-108">Obtiene la región de memoria del archivo asignado y el tipo de asignación.</span><span class="sxs-lookup"><span data-stu-id="46a63-108">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
+|[<span data-ttu-id="0c8eb-108">Método GetFileMapping</span><span class="sxs-lookup"><span data-stu-id="0c8eb-108">GetFileMapping Method</span></span>](imetadatainfo-getfilemapping-method.md)|<span data-ttu-id="0c8eb-109">Obtiene la región de memoria del archivo asignado y el tipo de asignación.</span><span class="sxs-lookup"><span data-stu-id="0c8eb-109">Gets the memory region of the mapped file, and the kind of mapping.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="46a63-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="46a63-109">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0c8eb-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0c8eb-110">Requirements</span></span>  
 
- <span data-ttu-id="46a63-110">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="46a63-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="0c8eb-111">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0c8eb-111">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="46a63-111">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="46a63-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0c8eb-112">**Encabezado:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="0c8eb-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="46a63-112">**Biblioteca:** Se usa como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="46a63-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0c8eb-113">**Biblioteca:** Se usa como un recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0c8eb-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="46a63-113">**.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="46a63-113">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0c8eb-114">**.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0c8eb-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="46a63-114">Consulte también</span><span class="sxs-lookup"><span data-stu-id="46a63-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0c8eb-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="0c8eb-115">See also</span></span>
 
-- [<span data-ttu-id="46a63-115">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="46a63-115">Metadata Interfaces</span></span>](metadata-interfaces.md)
-- [<span data-ttu-id="46a63-116">CorFileMapping (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="46a63-116">CorFileMapping Enumeration</span></span>](corfilemapping-enumeration.md)
+- [<span data-ttu-id="0c8eb-116">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="0c8eb-116">Metadata Interfaces</span></span>](metadata-interfaces.md)
+- [<span data-ttu-id="0c8eb-117">CorFileMapping (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="0c8eb-117">CorFileMapping Enumeration</span></span>](corfilemapping-enumeration.md)

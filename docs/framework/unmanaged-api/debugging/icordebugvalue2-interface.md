@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugValue2'
 title: ICorDebugValue2 (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: 7aca5fcb5a55331756b4f98c08eb46fc4db1e289
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b408bb5d1732a60fc9aa8ffb93321d3542f2cab7
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720352"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690267"
 ---
-# <a name="icordebugvalue2-interface"></a><span data-ttu-id="34227-102">ICorDebugValue2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="34227-102">ICorDebugValue2 Interface</span></span>
+# <a name="icordebugvalue2-interface"></a><span data-ttu-id="d4c34-103">ICorDebugValue2 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d4c34-103">ICorDebugValue2 Interface</span></span>
 
-<span data-ttu-id="34227-103">Extiende la interfaz "ICorDebugValue" para proporcionar compatibilidad con objetos "ICorDebugType".</span><span class="sxs-lookup"><span data-stu-id="34227-103">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
+<span data-ttu-id="d4c34-104">Extiende la interfaz "ICorDebugValue" para proporcionar compatibilidad con objetos "ICorDebugType".</span><span class="sxs-lookup"><span data-stu-id="d4c34-104">Extends the "ICorDebugValue" interface to provide support for "ICorDebugType" objects.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="34227-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="34227-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d4c34-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="d4c34-105">Methods</span></span>  
   
-|<span data-ttu-id="34227-105">Método</span><span class="sxs-lookup"><span data-stu-id="34227-105">Method</span></span>|<span data-ttu-id="34227-106">Descripción</span><span class="sxs-lookup"><span data-stu-id="34227-106">Description</span></span>|  
+|<span data-ttu-id="d4c34-106">Método</span><span class="sxs-lookup"><span data-stu-id="d4c34-106">Method</span></span>|<span data-ttu-id="d4c34-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="d4c34-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="34227-107">Método GetExactType</span><span class="sxs-lookup"><span data-stu-id="34227-107">GetExactType Method</span></span>](icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="34227-108">Obtiene un puntero de interfaz a un `ICorDebugType` objeto que representa el <xref:System.Type> de este valor.</span><span class="sxs-lookup"><span data-stu-id="34227-108">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
+|[<span data-ttu-id="d4c34-108">Método GetExactType</span><span class="sxs-lookup"><span data-stu-id="d4c34-108">GetExactType Method</span></span>](icordebugvalue2-getexacttype-method.md)|<span data-ttu-id="d4c34-109">Obtiene un puntero de interfaz a un `ICorDebugType` objeto que representa el <xref:System.Type> de este valor.</span><span class="sxs-lookup"><span data-stu-id="d4c34-109">Gets an interface pointer to an `ICorDebugType` object that represents the <xref:System.Type> of this value.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="34227-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="34227-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4c34-110">Observaciones</span><span class="sxs-lookup"><span data-stu-id="d4c34-110">Remarks</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="34227-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="34227-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="d4c34-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="d4c34-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="34227-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="34227-111">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4c34-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d4c34-112">Requirements</span></span>  
 
- <span data-ttu-id="34227-112">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="34227-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="d4c34-113">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4c34-113">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="34227-113">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="34227-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d4c34-114">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4c34-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="34227-114">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="34227-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4c34-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4c34-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="34227-115">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="34227-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d4c34-116">**.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4c34-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34227-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="34227-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4c34-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="d4c34-117">See also</span></span>
 
-- [<span data-ttu-id="34227-117">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="34227-117">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="d4c34-118">Interfaces para depuración</span><span class="sxs-lookup"><span data-stu-id="d4c34-118">Debugging Interfaces</span></span>](debugging-interfaces.md)
 
-- [<span data-ttu-id="34227-118">ICorDebugValue3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="34227-118">ICorDebugValue3 Interface</span></span>](icordebugvalue3-interface.md)
+- [<span data-ttu-id="d4c34-119">ICorDebugValue3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="d4c34-119">ICorDebugValue3 Interface</span></span>](icordebugvalue3-interface.md)
