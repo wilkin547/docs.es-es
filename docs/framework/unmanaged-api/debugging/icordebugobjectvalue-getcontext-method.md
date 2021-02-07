@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugObjectValue:: GetContext (método)'
 title: ICorDebugObjectValue::GetContext (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 40594774-5105-4187-a06b-4e7f50bada3c
 topic_type:
 - apiref
-ms.openlocfilehash: 0ba3a1899abfea10393a57bbf6ed61bbfc483262
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f3536f3256fe6a4b91a0270382aebf9f5b999642
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724668"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99729008"
 ---
-# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="2caee-102">ICorDebugObjectValue::GetContext (Método)</span><span class="sxs-lookup"><span data-stu-id="2caee-102">ICorDebugObjectValue::GetContext Method</span></span>
+# <a name="icordebugobjectvaluegetcontext-method"></a><span data-ttu-id="61a93-103">ICorDebugObjectValue::GetContext (Método)</span><span class="sxs-lookup"><span data-stu-id="61a93-103">ICorDebugObjectValue::GetContext Method</span></span>
 
-<span data-ttu-id="2caee-103">`GetContext` no se implementa en esta versión del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2caee-103">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
+<span data-ttu-id="61a93-104">`GetContext` no se implementa en esta versión del .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="61a93-104">`GetContext` is not implemented in this version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2caee-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2caee-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61a93-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="61a93-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetContext (  
@@ -34,8 +35,8 @@ HRESULT GetContext (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2caee-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2caee-105">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61a93-106">Requisitos</span><span class="sxs-lookup"><span data-stu-id="61a93-106">Requirements</span></span>  
 
- <span data-ttu-id="2caee-106">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2caee-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="61a93-107">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="61a93-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2caee-107">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2caee-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61a93-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="61a93-108">See also</span></span>

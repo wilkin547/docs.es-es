@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugVariableHome:: GetOffset (método)'
 title: 'ICorDebugVariableHome:: GetOffset (método)'
 ms.date: 03/30/2017
 api_name:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: c5d491b66e4ec64dffa4e19dabff876c9c473036
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 48b57856d2825dd2ea9328064a28783b4b36029b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95711798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99728774"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a><span data-ttu-id="b6510-102">ICorDebugVariableHome:: GetOffset (método)</span><span class="sxs-lookup"><span data-stu-id="b6510-102">ICorDebugVariableHome::GetOffset Method</span></span>
+# <a name="icordebugvariablehomegetoffset-method"></a><span data-ttu-id="01f8b-103">ICorDebugVariableHome:: GetOffset (método)</span><span class="sxs-lookup"><span data-stu-id="01f8b-103">ICorDebugVariableHome::GetOffset Method</span></span>
 
-<span data-ttu-id="b6510-103">Obtiene el desplazamiento del registro base para una variable.</span><span class="sxs-lookup"><span data-stu-id="b6510-103">Gets the offset from the base register for a variable.</span></span>  
+<span data-ttu-id="01f8b-104">Obtiene el desplazamiento del registro base para una variable.</span><span class="sxs-lookup"><span data-stu-id="01f8b-104">Gets the offset from the base register for a variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6510-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b6510-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01f8b-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="01f8b-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetOffset(  
@@ -34,30 +35,30 @@ HRESULT GetOffset(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b6510-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b6510-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="01f8b-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="01f8b-106">Parameters</span></span>  
 
  `pOffset`  
- <span data-ttu-id="b6510-106">enuncia Desplazamiento del registro base.</span><span class="sxs-lookup"><span data-stu-id="b6510-106">[out] The offset from the base register.</span></span>  
+ <span data-ttu-id="01f8b-107">enuncia Desplazamiento del registro base.</span><span class="sxs-lookup"><span data-stu-id="01f8b-107">[out] The offset from the base register.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b6510-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="b6510-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="01f8b-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="01f8b-108">Return Value</span></span>  
 
- <span data-ttu-id="b6510-108">El método devuelve los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="b6510-108">The method returns the following values:</span></span>  
+ <span data-ttu-id="01f8b-109">El método devuelve los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="01f8b-109">The method returns the following values:</span></span>  
   
-|<span data-ttu-id="b6510-109">Value</span><span class="sxs-lookup"><span data-stu-id="b6510-109">Value</span></span>|<span data-ttu-id="b6510-110">Descripción</span><span class="sxs-lookup"><span data-stu-id="b6510-110">Description</span></span>|  
+|<span data-ttu-id="01f8b-110">Value</span><span class="sxs-lookup"><span data-stu-id="01f8b-110">Value</span></span>|<span data-ttu-id="01f8b-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="01f8b-111">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="b6510-111">La variable está en una ubicación de memoria relativa de registro.</span><span class="sxs-lookup"><span data-stu-id="b6510-111">The variable is in a register-relative memory location.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="b6510-112">La variable no está en una ubicación de memoria relativa de registro.</span><span class="sxs-lookup"><span data-stu-id="b6510-112">The variable is not in a register-relative memory location.</span></span>|  
+|`S_OK`|<span data-ttu-id="01f8b-112">La variable está en una ubicación de memoria relativa de registro.</span><span class="sxs-lookup"><span data-stu-id="01f8b-112">The variable is in a register-relative memory location.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="01f8b-113">La variable no está en una ubicación de memoria relativa de registro.</span><span class="sxs-lookup"><span data-stu-id="01f8b-113">The variable is not in a register-relative memory location.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b6510-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b6510-113">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01f8b-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="01f8b-114">Requirements</span></span>  
 
- <span data-ttu-id="b6510-114">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6510-114">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+ <span data-ttu-id="01f8b-115">**Plataformas:** Vea [Requisitos de sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01f8b-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6510-115">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b6510-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01f8b-116">**Encabezado:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01f8b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b6510-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6510-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01f8b-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01f8b-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6510-117">**.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6510-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="01f8b-118">**.NET Framework versiones:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01f8b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6510-118">Consulte también</span><span class="sxs-lookup"><span data-stu-id="b6510-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="01f8b-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="01f8b-119">See also</span></span>
 
-- [<span data-ttu-id="b6510-119">Interfaz ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="b6510-119">ICorDebugVariableHome Interface</span></span>](icordebugvariablehome-interface.md)
+- [<span data-ttu-id="01f8b-120">Interfaz ICorDebugVariableHome</span><span class="sxs-lookup"><span data-stu-id="01f8b-120">ICorDebugVariableHome Interface</span></span>](icordebugvariablehome-interface.md)
