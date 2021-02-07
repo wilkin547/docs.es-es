@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: Getnamespaces ((método)'
 title: ISymUnmanagedReader::GetNamespaces (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3feb4796-2fab-45ce-beca-6f5bc530b971
 topic_type:
 - apiref
-ms.openlocfilehash: c90cd0d21eca6875d3dae32e4ca80cf42e6140b2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 47f7bff829ca2a52eb95d7d7693a7486301de092
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720599"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764013"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces (Método)
 
@@ -56,6 +57,6 @@ HRESULT GetNamespaces (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

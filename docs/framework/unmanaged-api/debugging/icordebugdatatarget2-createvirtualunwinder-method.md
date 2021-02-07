@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: método icordebugdatatarget2:: CreateVirtualUnwinder (método)'
 title: Método ICorDebugDataTarget2::CreateVirtualUnwinder
 ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
-ms.openlocfilehash: 0967b1cda86eab35015279edeed9a6b9852036b6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 0646c85000f42b303769d6587354b3105e2deabd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713943"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764416"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>Método ICorDebugDataTarget2::CreateVirtualUnwinder
 
@@ -46,7 +47,7 @@ HRESULT CreateVirtualUnwinder(
 
  `S_OK` si se realiza correctamente. Cualquier otro `HRESULT` indica un error. Cualquier error `HRESULT` recibido por mscordbi se considera fatal y hace que los métodos [ICorDebug](icordebug-interface.md) devuelvan `CORDBG_E_DATA_TARGET_ERROR` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -61,7 +62,7 @@ HRESULT CreateVirtualUnwinder(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugDataTarget2](icordebugdatatarget2-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

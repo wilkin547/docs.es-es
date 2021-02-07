@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: Getsymbolstorefilename ((método)'
 title: ISymUnmanagedReader::GetSymbolStoreFileName (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c84f4846-9bc8-44a4-9a76-e39106d6d8b2
 topic_type:
 - apiref
-ms.openlocfilehash: df503e44f20a0b1f02e2c609cc4b52712520faea
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5cbb33a39cf2e93eab64d5f1f1fefc5ceba1d418
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720573"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763948"
 ---
 # <a name="isymunmanagedreadergetsymbolstorefilename-method"></a>ISymUnmanagedReader::GetSymbolStoreFileName (Método)
 
@@ -55,6 +56,6 @@ HRESULT GetSymbolStoreFileName (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

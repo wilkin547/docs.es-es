@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugDataTarget3:: GetLoadedModules (método)'
 title: Método de ICorDebugDataTarget3::GetLoadedModules
 ms.date: 03/30/2017
 ms.assetid: 9a48c05b-1949-416e-933c-52549b6fcf5e
-ms.openlocfilehash: efbada02b7a24e0a7ed613b86b8a4a1a0b5b051a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: ea6350155fd79b52a37133cad95f624635433a3e
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713758"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764351"
 ---
 # <a name="icordebugdatatarget3getloadedmodules-method"></a>Método de ICorDebugDataTarget3::GetLoadedModules
 
@@ -34,7 +35,7 @@ HRESULT GetLoadedModules(
  `pLoadedModules`  
  enuncia Puntero a una matriz de objetos [ICorDebugLoadedModule](icordebugloadedmodule-interface.md) que proporcionan información sobre los módulos cargados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]
 > Este método solo está disponible con .NET Native.  
@@ -49,7 +50,7 @@ HRESULT GetLoadedModules(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz de ICorDebugDataTarget3](icordebugdatatarget3-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

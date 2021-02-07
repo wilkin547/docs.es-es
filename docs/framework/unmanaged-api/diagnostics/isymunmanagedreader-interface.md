@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader (interfaz)'
 title: ISymUnmanagedReader (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa3cc15d-058e-4e6f-b03e-39569646ba47
 topic_type:
 - apiref
-ms.openlocfilehash: bca84fdba575ed9bfe572b9fd7a5869620962de6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bad4fdbac3bf6f03fa0db79ce54a5b0ca897028f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675872"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763805"
 ---
 # <a name="isymunmanagedreader-interface"></a>ISymUnmanagedReader (Interfaz)
 
@@ -43,7 +44,7 @@ Representa un lector de símbolos que proporciona acceso a los documentos, méto
 |[Método GetSymbolStoreFileName](isymunmanagedreader-getsymbolstorefilename-method.md)|Proporciona el nombre de archivo en disco del almacén de símbolos.|  
 |[Método GetUserEntryPoint](isymunmanagedreader-getuserentrypoint-method.md)|Devuelve el método que se especificó como punto de entrada del usuario para el módulo, si existe.|  
 |[Método GetVariables](isymunmanagedreader-getvariables-method.md)|Devuelve una variable no local, dados su nombre y elemento primario.|  
-|[Initialize (Método)](isymunmanagedreader-initialize-method.md)|Inicializa el lector de símbolos con la interfaz de importador de metadatos a la que se asociará este lector, junto con el nombre de archivo del módulo.|  
+|[Método Initialize](isymunmanagedreader-initialize-method.md)|Inicializa el lector de símbolos con la interfaz de importador de metadatos a la que se asociará este lector, junto con el nombre de archivo del módulo.|  
 |[Método ReplaceSymbolStore](isymunmanagedreader-replacesymbolstore-method.md)|Reemplaza el almacén de símbolos existente con un almacén de símbolos delta.|  
 |[Método UpdateSymbolStore](isymunmanagedreader-updatesymbolstore-method.md)|Actualiza el almacén de símbolos existente con un almacén de símbolos delta.|  
   
@@ -51,7 +52,7 @@ Representa un lector de símbolos que proporciona acceso a los documentos, méto
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces de almacén de símbolos de diagnósticos](diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedReader2 (Interfaz)](isymunmanagedreader2-interface.md)

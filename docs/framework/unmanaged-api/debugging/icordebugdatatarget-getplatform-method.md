@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugDataTarget:: GetPlatform ((método)'
 title: ICorDebugDataTarget::GetPlatform (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ee96c9d-7a3d-4129-a6cc-7675c7f2dda4
 topic_type:
 - apiref
-ms.openlocfilehash: e8612b23cbfa506fddb2fad712848b285b9ac28e
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: dec691238009ad69d2e48d994ac250bfb6641863
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95679798"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764533"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform (Método)
 
@@ -37,7 +38,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
  `pTargetPlatform`  
  enuncia Puntero a una enumeración [CorDebugPlatformEnum (](cordebugplatform-enumeration.md) que describe la plataforma de destino.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `CorDebugPlatformEnum` interfaz [ICorDebug](icordebug-interface.md) usa el valor devuelto de la enumeración para determinar los detalles del proceso de destino, como su tamaño de puntero, el diseño del espacio de direcciones, el conjunto de registros, el formato de instrucciones, el diseño del contexto y las convenciones de llamada.  
   
@@ -59,7 +60,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugDataTarget (Interfaz)](icordebugdatatarget-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

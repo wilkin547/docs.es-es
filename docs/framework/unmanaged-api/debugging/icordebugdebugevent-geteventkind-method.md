@@ -1,13 +1,14 @@
 ---
+description: 'Más información sobre: ICorDebugDebugEvent:: GetEventKind (método)'
 title: Método ICorDebugDebugEvent::GetEventKind
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-ms.openlocfilehash: 7876dc6ec5ecee52b64e54e1c42533f8348e4dc4
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e15eb82195fae8aa3797ea47cb04d0bb407d2ad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95713683"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764325"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>Método ICorDebugDebugEvent::GetEventKind
 
@@ -26,7 +27,7 @@ HRESULT GetEventKind(
  pDebugEventKind  
  Un puntero a un miembro de la enumeración [CorDebugDebugEventKind](cordebugdebugeventkind-enumeration.md) que indica el tipo de evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Según el valor de `pDebugEventKind`, se puede llamar a `QueryInterface` para obtener una interfaz de evento de depuración más precisa con datos adicionales.  
   
@@ -43,7 +44,7 @@ HRESULT GetEventKind(
   
  **.NET Framework versiones:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaz ICorDebugDebugEvent](icordebugdebugevent-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

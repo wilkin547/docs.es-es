@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: GetSymAttribute ((método)'
 title: ISymUnmanagedReader::GetSymAttribute (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-ms.openlocfilehash: aa3b742babe4a94a43e4e6168dea67c0a0245eb0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: cd1c453e9f2ef68799fc5eccf1288a7665c5cfdf
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720586"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763974"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute (Método)
 
@@ -63,6 +64,6 @@ HRESULT GetSymAttribute (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

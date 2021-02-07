@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: Getmethodsfromdocumentposition ((método)'
 title: ISymUnmanagedReader::GetMethodsFromDocumentPosition (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 83605f1e-e4f3-49e6-859b-f13cad68bb54
 topic_type:
 - apiref
-ms.openlocfilehash: 5298dd0f53693d96b748f6c839660838fdfad4ac
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 033bdce2cd70e578ebd3be8a187d983a2c58b99d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95689555"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764039"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition (Método)
 
@@ -67,6 +68,6 @@ HRESULT GetMethodsFromDocumentPosition (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

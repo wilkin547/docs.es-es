@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: GetVariables ((método)'
 title: ISymUnmanagedReader::GetVariables (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-ms.openlocfilehash: c4341a5ffe557694473ae505590b57d39a27a721
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 93208e6c5c65c4c770c533b7ea72de513451d97d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95675898"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763909"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables (Método)
 
@@ -59,6 +60,6 @@ HRESULT GetVariables (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)

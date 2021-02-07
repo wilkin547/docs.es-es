@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: interfaz ICorDebugDataTarget'
 title: ICorDebugDataTarget (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: 14f0b247ded363dedce193886aab50538db3e6a6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 34121b56080a8adc17543ce5716962c17c1a156d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683685"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764429"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget (Interfaz)
 
@@ -33,7 +34,7 @@ Proporciona una interfaz de devolución de llamada que brinda acceso a un proces
 |[Método ReadVirtual](icordebugdatatarget-readvirtual-method.md)|Obtiene un bloque de memoria contigua que comienza en la dirección especificada y lo devuelve en el búfer proporcionado.|  
 |[GetThreadContext (Método)](icordebugdatatarget-getthreadcontext-method.md)|Solicita el contexto del subproceso actual para el subproceso especificado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `ICorDebugDataTarget` y sus métodos tienen las siguientes características:  
   
@@ -60,7 +61,7 @@ Proporciona una interfaz de devolución de llamada que brinda acceso a un proces
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [Depuración](index.md)

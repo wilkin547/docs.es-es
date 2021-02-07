@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedScope:: GetMethod (método)'
 title: ISymUnmanagedScope::GetMethod (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a61866ee-221a-45b9-a1b7-395825b77872
 topic_type:
 - apiref
-ms.openlocfilehash: 75d5638a6f01ba9569a03e5255a7217371c9d177
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7dfc5f41d849d47bfaf600e40a7ccc9dd45da676
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95725942"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99763402"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod (Método)
 
@@ -46,6 +47,6 @@ HRESULT GetMethod(
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedScope (Interfaz)](isymunmanagedscope-interface.md)

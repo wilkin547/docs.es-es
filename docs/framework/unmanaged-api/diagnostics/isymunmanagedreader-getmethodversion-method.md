@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ISymUnmanagedReader:: Getmethodversion ((método)'
 title: ISymUnmanagedReader::GetMethodVersion (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-ms.openlocfilehash: b0590f93c6a4c5ef28e03fc909c1f6a1474e5fad
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 027f65f858aab3e4ad0bc0bfbffd91f6118b80b2
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95720612"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99764026"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion (Método)
 
@@ -50,6 +51,6 @@ HRESULT GetMethodVersion (
 
  **Encabezado:** CorSym. idl, CorSym. h  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ISymUnmanagedReader (Interfaz)](isymunmanagedreader-interface.md)
