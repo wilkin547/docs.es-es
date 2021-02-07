@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración COUNINITIEE ('
 title: COUNINITIEE (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: b0f8c7e6d2acf4d4c080cc147bf6d42bf13cb51b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 893ab96851e9c762a888f3c4cac98b486a0b4614
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95723836"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707239"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE (Enumeración)
 
@@ -35,7 +36,7 @@ typedef enum tagCOUNINITEE
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -52,6 +53,6 @@ typedef enum tagCOUNINITEE
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

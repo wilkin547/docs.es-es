@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostIoCompletionManager:: SetCLRIoCompletionManager ((método)'
 title: IHostIoCompletionManager::SetCLRIoCompletionManager (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4254bb01-3a14-4f34-a3be-60ff1f5072b5
 topic_type:
 - apiref
-ms.openlocfilehash: d370cc81942269bd79e06e0fa57fe5d79832b3c2
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1075c33d6de4f5edf34364d67cbc0a21c4f19802
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724850"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708299"
 ---
 # <a name="ihostiocompletionmanagersetclriocompletionmanager-method"></a>IHostIoCompletionManager::SetCLRIoCompletionManager (Método)
 
@@ -50,7 +51,7 @@ HRESULT SetCLRIoCompletionManager (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Después de llamar a CLR `SetCLRIoCompletionManager` , el host debe llamar a [ICLRIoCompletionManager:: alcomplete](iclriocompletionmanager-oncomplete-method.md) para notificar a CLR cuando se ha completado una solicitud de e/s.  
   
@@ -64,7 +65,7 @@ HRESULT SetCLRIoCompletionManager (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager (Interfaz)](ihostiocompletionmanager-interface.md)

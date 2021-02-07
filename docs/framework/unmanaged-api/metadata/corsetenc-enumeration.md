@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración Corsetenc ('
 title: CorSetENC (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-ms.openlocfilehash: df945803f2d56d04ccc68f314eb55665579ed7fd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ba3e41c10b082ceb2ce7d327f7ff7f857ca98a5
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705993"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707402"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC (Enumeración)
 
@@ -43,7 +44,7 @@ typedef enum CorSetENC {
 } CorSetENC;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -64,6 +65,6 @@ typedef enum CorSetENC {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostIoCompletionManager:: SetMaxThreads (método)'
 title: IHostIoCompletionManager::SetMaxThreads (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ebad4f40-d9f1-4dc6-9b27-a89c9eb3926f
 topic_type:
 - apiref
-ms.openlocfilehash: 3cb001db74587beb5417bf57738c5efb9a274591
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 6b36523b0b0d6cefba383d324eb23debefd7c41b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95724824"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708286"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads (Método)
 
@@ -51,7 +52,7 @@ HRESULT SetMaxThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `SetMaxThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `SetMaxThreads` proporciona a CLR una oportunidad para establecer el número máximo de subprocesos que están disponibles para las solicitudes de servicio en los puertos de e/s. Es posible que un host necesite un control exclusivo sobre el tamaño del grupo de subprocesos, por motivos como la implementación, el rendimiento o la escalabilidad. Por esta razón, no es necesario que el host implemente `SetMaxThreads` . En este caso, un host debe devolver E_NOTIMPL desde este método.  
   
@@ -65,7 +66,7 @@ HRESULT SetMaxThreads (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager (Interfaz)](ihostiocompletionmanager-interface.md)

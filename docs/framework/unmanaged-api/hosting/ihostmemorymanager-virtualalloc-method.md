@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager:: VirtualAlloc (método)'
 title: IHostMemoryManager::VirtualAlloc (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-ms.openlocfilehash: a2deabc5f1c7ea0f42b6d8ec3944d984854ae571
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 28682aea5e6e7951b3b8f0a9af946a3f3828601b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731285"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707857"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc (Método)
 
@@ -71,7 +72,7 @@ HRESULT VirtualAlloc (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No hay suficiente memoria disponible para completar la solicitud de asignación|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Reserva una región en el espacio de direcciones del proceso mediante una llamada a `VirtualAlloc` . El `pAddress` parámetro contiene la dirección inicial del bloque de memoria que desee. Normalmente, este parámetro se establece en NULL. El sistema operativo mantiene un registro de los intervalos de direcciones libres disponibles para el proceso. Un `pAddress` valor null indica al sistema que Reserve la región donde sea adecuado. Como alternativa, puede proporcionar una dirección de inicio específica para el bloque de memoria. En ambos casos, el parámetro de salida `ppMem` se devuelve como un puntero a la memoria asignada. La propia función devuelve un valor HRESULT.  
   
@@ -87,6 +88,6 @@ HRESULT VirtualAlloc (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)

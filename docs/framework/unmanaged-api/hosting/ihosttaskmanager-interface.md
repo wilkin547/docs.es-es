@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostTaskManager (interfaz)'
 title: IHostTaskManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-ms.openlocfilehash: deb14d291bfd511e8f3534f3c5e32787c259c5e8
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 67574550ba26970189ea53b8e6bdb867fea8549b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673116"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707491"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager (Interfaz)
 
@@ -48,7 +49,7 @@ Proporciona métodos que permiten al Common Language Runtime (CLR) trabajar con 
 |[Método Sleep](ihosttaskmanager-sleep-method.md)|Notifica al host que la tarea actual va a entrar en suspensión.|  
 |[Método SwitchToTask](ihosttaskmanager-switchtotask-method.md)|Notifica al host que debe desactivar la tarea actual.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `IHostTaskManager` permite que CLR cree y administre tareas, para proporcionar enlaces para que el host tome medidas cuando el control se transfiere del código administrado al código no administrado y viceversa, y para especificar determinadas acciones que el host puede y no puede realizar durante la ejecución del código.  
   
@@ -62,7 +63,7 @@ Proporciona métodos que permiten al Common Language Runtime (CLR) trabajar con 
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRTask (Interfaz)](iclrtask-interface.md)
 - [ICLRTaskManager (Interfaz)](iclrtaskmanager-interface.md)

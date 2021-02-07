@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: estructura Cvstruct ('
 title: CVStruct (Estructura)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9e4e497-d5fb-464b-991c-3bdd824664fd
 topic_type:
 - apiref
-ms.openlocfilehash: db36b94fafe20b58b9bcbb886b8d285326960f67
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 25e8073f75620bca0737b11499d318cd57d6101c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715581"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707220"
 ---
 # <a name="cvstruct-structure"></a>CVStruct (Estructura)
 
@@ -36,14 +37,14 @@ typedef struct {
 } CVStruct;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
-|Major|Número de compilación de la versión principal.|  
-|Secundaria|Número de compilación de la versión secundaria.|  
+|Principal|Número de compilación de la versión principal.|  
+|Minor|Número de compilación de la versión secundaria.|  
 |Sub|Número de subcompilación.|  
-|Compilar|Número de compilación.|  
+|Build|Número de compilación.|  
   
 ## <a name="requirements"></a>Requisitos  
 
@@ -55,6 +56,6 @@ typedef struct {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estructuras de metadatos](metadata-structures.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostCrst:: Leave (método)'
 title: IHostCrst::Leave (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfc51d9e-b36d-4dba-9ea1-4f63fa0601ae
 topic_type:
 - apiref
-ms.openlocfilehash: 0752afb42b8c512450b047a5e2e7e1ff34533487
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b00e62c7b2683ab6024a7c9b8de4645ceb59fb02
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729582"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708845"
 ---
 # <a name="ihostcrstleave-method"></a>IHostCrst::Leave (Método)
 
@@ -43,7 +44,7 @@ HRESULT Leave ();
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `Leave` permite que el CLR se comunique directamente con la implementación de subprocesos del host, en lugar de usar la función de Win32 correspondiente `LeaveCriticalSection` . Un subproceso que toma la propiedad de la sección crítica representada por la `IHostCrst` instancia actual debe llamar `Leave` una vez para cada vez que entra en la sección crítica.  
   
@@ -57,7 +58,7 @@ HRESULT Leave ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostCrst (Interfaz)](ihostcrst-interface.md)

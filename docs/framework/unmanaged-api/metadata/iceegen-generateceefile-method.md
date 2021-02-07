@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICeeGen:: Generateceefile ((método)'
 title: ICeeGen::GenerateCeeFile (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-ms.openlocfilehash: f84abd9b44310d85bc59e3d09e7fd0398f13fcd0
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 90fc66338980c1a665ddeb051b5473138b823a3f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95715412"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707103"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile (Método)
 
@@ -48,6 +49,6 @@ HRESULT GenerateCeeFile ();
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

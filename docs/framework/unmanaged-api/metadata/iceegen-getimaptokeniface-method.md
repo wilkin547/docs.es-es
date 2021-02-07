@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICeeGen:: Getimaptokeniface ((método)'
 title: ICeeGen::GetIMapTokenIface (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 847a5531-c37d-49cd-8844-9e54b5d86cf7
 topic_type:
 - apiref
-ms.openlocfilehash: 079a599ff87146c4eed4b15d57696338fb25f530
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: bfadcead611a8cc4e3e6117e0f0bb3635c042d50
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95674339"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99706960"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface (Método)
 
@@ -51,6 +52,6 @@ HRESULT GetIMapTokenIface (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICeeGen (Interfaz)](iceegen-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostManualEvent (interfaz)'
 title: IHostManualEvent (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-ms.openlocfilehash: 50e37b770e3ee6e0a5cdfca61fc5b09749e5735f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 1c70935568b9ff4080fd5bcdc372c02d354aa06f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673210"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708169"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent (Interfaz)
 
@@ -43,7 +44,7 @@ Proporciona la implementación del host de una representación de un evento de r
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostAutoEvent (Interfaz)](ihostautoevent-interface.md)

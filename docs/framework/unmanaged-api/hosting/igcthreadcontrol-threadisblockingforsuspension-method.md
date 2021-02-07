@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IGCThreadControl:: ThreadIsBlockingForSuspension ((método)'
 title: IGCThreadControl::ThreadIsBlockingForSuspension (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-ms.openlocfilehash: 39834ba868a21ead3113f2f0d9157cd210d9798c
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 13023a75ab1c438abebbeb16fd9fe7c4b95c37ab
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721652"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709209"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension (Método)
 
@@ -32,7 +33,7 @@ Notifica al host que el subproceso que está realizando la llamada está a punto
 HRESULT ThreadIsBlockingForSuspension ( );  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El host puede elegir dentro de la `ThreadIsBlockingForSuspension` devolución de llamada si se debe volver a programar un subproceso.  
   
@@ -46,6 +47,6 @@ HRESULT ThreadIsBlockingForSuspension ( );
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IGCThreadControl (Interfaz)](igcthreadcontrol-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager (interfaz)'
 title: IHostMemoryManager (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 0f71e4c45e43c2027b12998532f2b04401a51951
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: c9b6f83b5c70a53388e886e1047798f660b826e0
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731337"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707897"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager (Interfaz)
 
@@ -40,7 +41,7 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
 |[Método VirtualProtect](ihostmemorymanager-virtualprotect-method.md)|Actúa como contenedor lógico de la función de Win32 correspondiente, que cambia la protección en una región de páginas confirmadas en el espacio de direcciones virtuales del proceso de llamada.|  
 |[Método VirtualQuery](ihostmemorymanager-virtualquery-method.md)|Actúa como contenedor lógico de la función de Win32 correspondiente, que recupera información sobre un intervalo de páginas en el espacio de direcciones virtuales del proceso de llamada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `IHostMemoryManager` también proporciona métodos para que CLR obtenga un puntero a través del cual se van a realizar solicitudes de memoria en el montón y para obtener el nivel de presión de memoria en el proceso, tal y como lo indica el host.  
   
@@ -54,7 +55,7 @@ Proporciona métodos que permiten que el Common Language Runtime (CLR) realice s
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostMalloc (Interfaz)](ihostmalloc-interface.md)
 - [Interfaces de hospedaje](hosting-interfaces.md)

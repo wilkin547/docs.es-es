@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostCrst:: TryEnter (método)'
 title: IHostCrst::TryEnter (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a922fa98-beab-4f09-a342-cc94fc65687f
 topic_type:
 - apiref
-ms.openlocfilehash: 02f36068f12bf0a40e5f0ac477803abfb84c72a9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 59c632b7c9edd422e2ceee1e0526a7bb077759a4
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95729543"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708741"
 ---
 # <a name="ihostcrsttryenter-method"></a>IHostCrst::TryEnter (Método)
 
@@ -54,7 +55,7 @@ HRESULT TryEnter (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `TryEnter` devuelve inmediatamente e indica si el subproceso que realiza la llamada entró en la sección crítica. Este método refleja la `TryEnterCriticalSection` función Wind32.  
   
@@ -68,7 +69,7 @@ HRESULT TryEnter (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostCrst (Interfaz)](ihostcrst-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IGCThreadControl:: Suspensionending ((método)'
 title: IGCThreadControl::SuspensionEnding (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70814265-c734-4ddc-9502-fe8b28d2b414
 topic_type:
 - apiref
-ms.openlocfilehash: 4638672b1d64a9ea07618212cc514d00996470eb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 5ff889f45ea3664312060f373907e65c367276f1
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721678"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709274"
 ---
 # <a name="igcthreadcontrolsuspensionending-method"></a>IGCThreadControl::SuspensionEnding (Método)
 
@@ -39,7 +40,7 @@ HRESULT SuspensionEnding (
  `Generation`  
  de La generación en la que se ha realizado la recolección de elementos no utilizados.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No vuelva a programar los subprocesos durante la `SuspensionEnding` devolución de llamada.  
   
@@ -53,6 +54,6 @@ HRESULT SuspensionEnding (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IGCThreadControl (Interfaz)](igcthreadcontrol-interface.md)

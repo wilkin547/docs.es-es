@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: enumeración CorUnmanagedCallingConvention ('
 title: CorUnmanagedCallingConvention (Enumeración)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d35f6b1928d714216b669704ec28e53895f6549
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: a4b5c70b7dcb4750d641540662941ed3cc08c94b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95699071"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707298"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention (Enumeración)
 
@@ -43,7 +44,7 @@ typedef enum CorUnmanagedCallingConvention {
 } CorUnmanagedCallingConvention;  
 ```  
   
-## <a name="members"></a>Miembros  
+## <a name="members"></a>Members  
   
 |Miembro|Descripción|  
 |------------|-----------------|  
@@ -56,7 +57,7 @@ typedef enum CorUnmanagedCallingConvention {
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|No se utiliza.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|No se utiliza.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  CLR no admite la Convención de llamada "Fast" en la .NET Framework versión 1,0.  
   
@@ -68,6 +69,6 @@ typedef enum CorUnmanagedCallingConvention {
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Enumeraciones para metadatos](metadata-enumerations.md)

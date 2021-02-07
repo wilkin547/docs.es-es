@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IGCHost:: Setgcstartuplimits ((método)'
 title: IGCHost::SetGCStartupLimits (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-ms.openlocfilehash: 0eea9dba57886edfef13c31948a9cff94c6c1bfd
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 91c74d54189bbfb7e9f208e507fe6e75b7023e00
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95687891"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709508"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits (Método)
 
@@ -46,7 +47,7 @@ HRESULT SetGCStartupLimits (
  `MaxGen0Size`  
  de Tamaño máximo de la generación 0.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `SetGCStartupLimits`Solo se puede llamar una vez al método. Estos valores no se pueden cambiar más adelante.  
   
@@ -60,6 +61,6 @@ HRESULT SetGCStartupLimits (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IGCHost (Interfaz)](igchost-interface.md)

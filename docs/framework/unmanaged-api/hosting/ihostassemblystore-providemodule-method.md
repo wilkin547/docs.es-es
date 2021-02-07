@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostAssemblyStore::P método rovideModule'
 title: IHostAssemblyStore::ProvideModule (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-ms.openlocfilehash: 35805d277774e1de03bb7dee1740a2e1305a97c9
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 9e783b9f8db303d095995507689d7567225a51fd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95733001"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709033"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule (Método)
 
@@ -64,7 +65,7 @@ HRESULT ProvideModule (
 |COR_E_FILENOTFOUND (0x80070002)|No se encontró el ensamblado o el recurso vinculado solicitado.|  
 |E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` no es lo suficientemente grande como para contener el identificador que el host desea devolver.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El valor de identidad devuelto por `pdwModuleId` se especifica mediante el host. Los identificadores deben ser únicos dentro de la duración de un proceso. CLR usa este valor como identificador único para la secuencia asociada. Comprueba cada valor con los valores `pAssemblyId` devueltos por las llamadas a [ProvideAssembly](ihostassemblystore-provideassembly-method.md) y con los valores `pdwModuleId` devueltos por otras llamadas a `ProvideModule` . Si el host devuelve el mismo valor de identificador para otro `IStream` , CLR comprueba si ya se ha asignado el contenido de la secuencia. Si es así, CLR carga la copia existente de la imagen en lugar de asignar una nueva. Por lo tanto, el identificador tampoco debe superponerse con los identificadores de ensamblado devueltos por `ProvideAssembly` .  
   
@@ -78,7 +79,7 @@ HRESULT ProvideModule (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRAssemblyReferenceList (Interfaz)](iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager (Interfaz)](ihostassemblymanager-interface.md)

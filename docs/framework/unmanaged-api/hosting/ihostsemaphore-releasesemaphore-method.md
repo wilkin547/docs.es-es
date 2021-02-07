@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostSemaphore:: ReleaseSemaphore ((método)'
 title: IHostSemaphore::ReleaseSemaphore (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a343d197-979a-4ac6-ab8c-cb8a05f3120e
 topic_type:
 - apiref
-ms.openlocfilehash: 660062fb69bb8fe0a06bbca9046d65175fb72f9a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 368dc5ebe3017e03c0d6e8c57d0f122bc48d439f
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95683035"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707456"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore (Método)
 
@@ -54,7 +55,7 @@ HRESULT ReleaseSemaphore (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El CLR normalmente llama `ReleaseSemaphore` a para notificar al host que ha terminado de usar un recurso, pasando un valor de 1 para el `lReleaseCount` parámetro.  
   
@@ -68,7 +69,7 @@ HRESULT ReleaseSemaphore (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostAutoEvent (Interfaz)](ihostautoevent-interface.md)

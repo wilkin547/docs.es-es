@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IGCThreadControl:: SuspensionStarting ((método)'
 title: IGCThreadControl::SuspensionStarting (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0af312af-98e9-415e-b182-42e80a1aee51
 topic_type:
 - apiref
-ms.openlocfilehash: 9d39ee79f7734f7dd099a07640ecb06f4f8dcbb3
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: b9d068e6995a73e9a9a31d5d5debf008f9748630
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95721666"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99709301"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>IGCThreadControl::SuspensionStarting (Método)
 
@@ -32,7 +33,7 @@ Notifica al host que el motor en tiempo de ejecución está iniciando una suspen
 HRESULT SuspensionStarting ( );  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  No vuelva a programar los subprocesos durante la `SuspensionStarting` devolución de llamada.  
   
@@ -46,6 +47,6 @@ HRESULT SuspensionStarting ( );
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IGCThreadControl (Interfaz)](igcthreadcontrol-interface.md)

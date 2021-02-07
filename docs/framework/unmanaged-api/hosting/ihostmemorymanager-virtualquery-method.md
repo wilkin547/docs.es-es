@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager:: VirtualQuery ((método)'
 title: IHostMemoryManager::VirtualQuery (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 757af1e6-b9e8-49e7-b5db-342be3aa205f
 topic_type:
 - apiref
-ms.openlocfilehash: 6e3cb5bcec831f143d45f733c9e2f977390aade6
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 8518ef71ad7d493fa04d4e2321f1f90ef8ecd18d
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731252"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707558"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery (Método)
 
@@ -62,7 +63,7 @@ HRESULT VirtualQuery (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `VirtualQuery` proporciona información sobre un intervalo de páginas en el espacio de direcciones virtuales del proceso de llamada. Esta implementación establece el valor del `pResult` parámetro en el número de bytes devuelto en el búfer de información y devuelve un valor HRESULT. En la función de Win32 `VirtualQuery` , el valor devuelto es el tamaño del búfer. Para obtener más información, vea la documentación de la plataforma Windows.  
   
@@ -79,6 +80,6 @@ HRESULT VirtualQuery (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)

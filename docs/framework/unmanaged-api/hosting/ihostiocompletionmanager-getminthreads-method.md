@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: IHostIoCompletionManager:: GetMinThreads ((método)'
 title: IHostIoCompletionManager::GetMinThreads (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7a7f733-677d-481c-b3d5-444fcc502b8e
 topic_type:
 - apiref
-ms.openlocfilehash: d321ce08edf4780fc5f26ac627849b9129c2f283
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 73b8d8cbff3777fe6aa956f282d3da5d4ac1b5c8
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95673233"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708526"
 ---
 # <a name="ihostiocompletionmanagergetminthreads-method"></a>IHostIoCompletionManager::GetMinThreads (Método)
 
@@ -51,7 +52,7 @@ HRESULT GetMinThreads (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_NOTIMPL|El host no proporciona una implementación de `GetMinThreads` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Un host podría querer tener un control exclusivo sobre el número de subprocesos asignados a las solicitudes de e/s de servicio, por motivos como la implementación, el rendimiento o la escalabilidad. Por esta razón, no es necesario que el host implemente `GetMinThreads` . En este caso, el host debe devolver E_NOTIMPL desde este método.  
   
@@ -65,7 +66,7 @@ HRESULT GetMinThreads (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRIoCompletionManager (Interfaz)](iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager (Interfaz)](ihostiocompletionmanager-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostCrst (interfaz)'
 title: IHostCrst (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac298ebd-0815-47e4-a823-30b31baab903
 topic_type:
 - apiref
-ms.openlocfilehash: 350af708456914c73929d2b8887173cf784d4294
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7945f0087667c1d610a1a2370528b055af74d579
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95680565"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99708884"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst (Interfaz)
 
@@ -34,7 +35,7 @@ Actúa como la representación del host de una sección crítica para el subproc
 |[Método SetSpinCount](ihostcrst-setspincount-method.md)|Establece el número de giros de la sección crítica.|  
 |[TryEnter](ihostcrst-tryenter-method.md)|Intenta entrar en la sección crítica e informa de éxito o error inmediatamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `IHostCrst` permite que el Common Language Runtime (CLR) se comunique directamente con la representación del host de una sección crítica, en lugar de usar funciones de Win32 como `EnterCriticalSection` o `LeaveCriticalSection` .  
   
@@ -48,7 +49,7 @@ Actúa como la representación del host de una sección crítica para el subproc
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostSyncManager (Interfaz)](ihostsyncmanager-interface.md)

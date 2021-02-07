@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostManualEvent:: Wait (método)'
 title: IHostManualEvent::Wait (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fbb7d8b-8a23-4c2b-8376-1a70cd2d6030
 topic_type:
 - apiref
-ms.openlocfilehash: 3fe8434ba4a7fc49b99bdf3084ce4f3981f25a9b
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: f9e681e5075f1de34dc45ed2b2485a0e1269cb11
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95719832"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707875"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait (Método)
 
@@ -65,7 +66,7 @@ HRESULT Wait (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRSyncManager (Interfaz)](iclrsyncmanager-interface.md)
 - [IHostAutoEvent (Interfaz)](ihostautoevent-interface.md)

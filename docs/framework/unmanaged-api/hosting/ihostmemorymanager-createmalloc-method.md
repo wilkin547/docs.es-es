@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager:: CreateMAlloc ((método)'
 title: IHostMemoryManager::CreateMAlloc (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ee6e052-bef7-4350-9e4f-edfffd99ad6f
 topic_type:
 - apiref
-ms.openlocfilehash: 79580170d544cd3763992a4bc67fd20e3446bb1d
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: de73490a5c8b4e1672beb4750bcc617c2371f07b
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95685726"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707895"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc (Método)
 
@@ -55,7 +56,7 @@ HRESULT CreateMalloc (
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
 |E_OUTOFMEMORY|No había suficiente memoria física disponible para completar la solicitud de asignación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  `CreateMAlloc` Devuelve un objeto que permite que CLR realice solicitudes de asignación a través del host en lugar de usar las funciones estándar de Win32.  
   
@@ -69,7 +70,7 @@ HRESULT CreateMalloc (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostMalloc (Interfaz)](ihostmalloc-interface.md)
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)

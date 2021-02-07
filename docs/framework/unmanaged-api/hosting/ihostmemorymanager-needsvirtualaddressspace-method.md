@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager:: Needsvirtualaddressspace ((método)'
 title: IHostMemoryManager::NeedsVirtualAddressSpace (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 71f0eab5-0170-46f8-9f88-1df5abdeb34a
 topic_type:
 - apiref
-ms.openlocfilehash: 74fbb2f162fbb68871f1bb4e1a1de32f5f913cd7
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 95d4128decffc82fdcb198155b48a31420f71220
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731324"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707792"
 ---
 # <a name="ihostmemorymanagerneedsvirtualaddressspace-method"></a>IHostMemoryManager::NeedsVirtualAddressSpace (Método)
 
@@ -43,7 +44,7 @@ HRESULT NeedsVirtualAddressSpace (
  `size`  
  de Tamaño, en bytes, de la memoria.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El `NeedsVirtualAddressSpace` método es un método de devolución de llamada y debe ser implementado por el escritor de la aplicación de hospedaje. Lo llama el CLR.  
   
@@ -59,6 +60,6 @@ HRESULT NeedsVirtualAddressSpace (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)

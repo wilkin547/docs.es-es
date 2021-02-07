@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: IHostMemoryManager:: RegisterMemoryNotificationCallback ((método)'
 title: IHostMemoryManager::RegisterMemoryNotificationCallback (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-ms.openlocfilehash: edb29378412583d7cdec804b08f8f622d642b02f
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 26a7468aba4f473eebff78a8c67eeb5b3e866e9c
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95731311"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99707772"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback (Método)
 
@@ -50,7 +51,7 @@ HRESULT RegisterMemoryNotificationCallback (
 |HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
 |E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Dado que la `ICLRMemoryNotificationCallback` interfaz define solo un método ([ICLRMemoryNotificationCallback:: OnMemoryNotification](iclrmemorynotificationcallback-onmemorynotification-method.md)), y dado `pCallback` que es un puntero a una `ICLRMemoryNotificationCallback` instancia proporcionada por CLR, el registro es eficaz para la función de devolución de llamada. El host invoca `OnMemoryNotification` para informar de las condiciones de presión de memoria, en lugar de utilizar la función estándar de Win32 `CreateMemoryResourceNotification` . Para obtener más información, vea la documentación de la plataforma Windows.  
   
@@ -67,7 +68,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICLRMemoryNotificationCallback (Interfaz)](iclrmemorynotificationcallback-interface.md)
 - [IHostMemoryManager (Interfaz)](ihostmemorymanager-interface.md)
