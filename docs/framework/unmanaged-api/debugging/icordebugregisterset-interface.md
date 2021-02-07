@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: ICorDebugRegisterSet (interfaz)'
 title: ICorDebugRegisterSet (Interfaz)
 ms.date: 03/30/2017
 api_name:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3d9676d-0b87-4bc3-b679-7bbc7a186c88
 topic_type:
 - apiref
-ms.openlocfilehash: 940810288b72be0d4dfc5366176663c22c369ebb
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 7d888e9e395e9f5fa88c6a6d96b2b8e3171ef4ac
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95712384"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690787"
 ---
 # <a name="icordebugregisterset-interface"></a>ICorDebugRegisterSet (Interfaz)
 
@@ -35,7 +36,7 @@ Representa el conjunto de registros disponibles en el equipo que está ejecutand
 |[Método SetRegisters](icordebugregisterset-setregisters-method.md)|No se ha implementado para la versión .NET Framework 2,0.|  
 |[Método SetThreadContext](icordebugregisterset-setthreadcontext-method.md)|No se ha implementado para el .NET Framework 2,0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  La `ICorDebugRegisterSet` interfaz solo admite registros de 32 bits. Use la interfaz [ICorDebugRegisterSet2](icordebugregisterset2-interface.md) en plataformas como IA-64 que requieran registros adicionales.  
   
@@ -52,7 +53,7 @@ Representa el conjunto de registros disponibles en el equipo que está ejecutand
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Interfaces para depuración](debugging-interfaces.md)
 - [ICorDebugRegisterSet2 (Interfaz)](icordebugregisterset2-interface.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Más información sobre: Icordebugprocess7 (:: Setwriteablemetadataupdatemode ((método)'
 title: ICorDebugProcess7::SetWriteableMetadataUpdateMode (Método)
 ms.date: 03/30/2017
 dev_langs:
@@ -12,12 +13,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 5671f8cb51210c27dffdedba28b4b145b3fedc55
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: 86ece68e160fbd61f44adcf495656c7b5d6b5153
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95732559"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691268"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode (Método)
 
@@ -38,7 +39,7 @@ HRESULT SetWriteableMetadataUpdateMode(
  `flags`  
  Un valor de enumeración [writeablemetadataupdatemode (](writeablemetadataupdatemode-enumeration.md) que especifica si las actualizaciones en memoria de los metadatos en el proceso de destino son visibles ( `WriteableMetadataUpdateMode::AlwaysShowUpdates` ) o no ( `WriteableMetadataUpdateMode::LegacyCompatPolicy` ) en el depurador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Actualiza los metadatos del proceso de destino que proceden de Editar y Continuar, de un generador de perfiles o de <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
@@ -52,7 +53,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugProcess7 (Interfaz)](icordebugprocess7-interface.md)
 - [Interfaces para depuración](debugging-interfaces.md)

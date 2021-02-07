@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugRegisterSet:: Getregisters ((método)'
 title: ICorDebugRegisterSet::GetRegisters (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 315e4cc3b93fc78e11a4fb399bbe6f8a9f55ac84
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: efb0f19fe9eb823912203b82267803739fc3e2cd
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95705012"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690852"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters (Método)
 
@@ -48,7 +49,7 @@ HRESULT GetRegisters (
  `regBuffer`  
  enuncia Matriz de `CORDB_REGISTER` objetos, cada uno de los cuales recibe un valor de un registro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  El tamaño de la matriz debe ser igual al número de bits establecido en uno en la máscara de bits. El `regCount` parámetro especifica el número de elementos en el búfer que recibirán los valores de registro. Si el `regCount` valor es demasiado pequeño para el número de registros indicados por la máscara, los registros con mayor número se truncarán del conjunto. Si el `regCount` valor es demasiado grande, los elementos no utilizados no se `regBuffer` modificarán.  
   
@@ -64,7 +65,7 @@ HRESULT GetRegisters (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugRegisterSet (Interfaz)](icordebugregisterset-interface.md)
 - [ICorDebugRegisterSet2 (Interfaz)](icordebugregisterset2-interface.md)

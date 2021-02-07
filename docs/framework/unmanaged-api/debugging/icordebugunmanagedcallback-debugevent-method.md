@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugUnmanagedCallback (::D ebugEvent (método)'
 title: ICorDebugUnmanagedCallback::DebugEvent (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be9cab04-65ec-44d5-a39a-f90709fdd043
 topic_type:
 - apiref
-ms.openlocfilehash: 75341b1af034972c861b75f29a06eaa2c4e33c3a
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: fcd7bc3b380add7465473cb01585eb1656d00aad
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95703045"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99690580"
 ---
 # <a name="icordebugunmanagedcallbackdebugevent-method"></a>ICorDebugUnmanagedCallback::DebugEvent (Método)
 
@@ -43,7 +44,7 @@ HRESULT DebugEvent (
  `fOutOfBand`  
  [in] `true` , si la interacción con el estado de proceso administrado no es posible después de que se produzca un evento no administrado, hasta que el depurador llama a [ICorDebugController:: Continue](icordebugcontroller-continue-method.md); de lo contrario, `false` .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Si el subproceso que se está depurando es un subproceso de Win32, no use ningún miembro de la interfaz de depuración de Win32. Solo se puede llamar a `ICorDebugController::Continue` en un subproceso de Win32 y solo al continuar después de un evento fuera de banda.  
   
@@ -63,6 +64,6 @@ HRESULT DebugEvent (
   
  **.NET Framework versiones:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [ICorDebugUnmanagedCallback (Interfaz)](icordebugunmanagedcallback-interface.md)

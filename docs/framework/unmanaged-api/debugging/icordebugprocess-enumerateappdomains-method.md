@@ -1,4 +1,5 @@
 ---
+description: 'Más información acerca de: ICorDebugProcess:: Enumerateappdomains ((método)'
 title: ICorDebugProcess::EnumerateAppDomains (Método)
 ms.date: 03/30/2017
 api_name:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: 408658a0abcba9daf4c3046476e21fd4325c7144
-ms.sourcegitcommit: d8020797a6657d0fbbdff362b80300815f682f94
+ms.openlocfilehash: d212fafe7ae1355ba69e07b88c3b96119371fe43
+ms.sourcegitcommit: ddf7edb67715a5b9a45e3dd44536dabc153c1de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95695145"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99691528"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains (Método)
 
@@ -38,7 +39,7 @@ HRESULT EnumerateAppDomains(
  `ppAppDomains`  
  enuncia Puntero a la dirección de un [ICorDebugAppDomainEnum (](icordebugappdomainenum-interface.md) que es un enumerador para los dominios de aplicación de este proceso.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
  Este método se puede usar antes de la devolución de llamada [ICorDebugManagedCallback:: CreateProcess](icordebugmanagedcallback-createprocess-method.md) .  
   
